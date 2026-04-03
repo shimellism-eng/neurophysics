@@ -1,0 +1,34 @@
+.sim-step__instruction {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sim-step__canvas {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sim-loader {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: var(--sp-8);
+  text-align: center;
+}
+
+.sim-step__missing {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: var(--sp-6);
+  text-align: center;
+}
+
+.sim-step__missing code {
+  color: var(--amber);
+}

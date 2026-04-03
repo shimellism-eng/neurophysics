@@ -1,0 +1,109 @@
+.eqbank__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.eqbank__item.card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.eqbank__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 60px;
+  padding: var(--sp-4) var(--sp-5);
+  text-align: left;
+}
+
+.eqbank__row-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.eqbank__canonical { font-size: 1.1rem; }
+.eqbank__name { font-size: 0.8rem; color: var(--muted); }
+
+.eqbank__row-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.eqbank__memorise { font-size: 1rem; }
+
+.eqbank__higher {
+  background: var(--purple-dim);
+  color: var(--purple);
+  font-size: 0.65rem;
+  padding: 2px 6px;
+}
+
+.eqbank__chevron {
+  color: var(--muted);
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.eqbank__chevron--open { transform: rotate(90deg); }
+
+.eqbank__detail {
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  background: var(--bg3);
+}
+
+.eqbank__vars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.eqbank__var {
+  display: grid;
+  grid-template-columns: 32px 1fr auto auto;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 0.875rem;
+}
+
+.eqbank__var .eq { color: var(--cyan); }
+
+.eqbank__const {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--amber);
+}
+
+.eqbank__rearrangements {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.eqbank__rearrangement {
+  display: block;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--bg4);
+  border-radius: var(--r-sm);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.eqbank__memorise-note {
+  font-size: 0.8rem;
+  color: var(--amber);
+  font-weight: 600;
+  background: var(--amber-dim);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--amber);
+}

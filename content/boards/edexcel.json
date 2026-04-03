@@ -1,0 +1,25 @@
+{
+  "id": "edexcel",
+  "name": "Edexcel",
+  "fullName": "Edexcel GCSE Physics",
+  "specCode": "1PH0",
+  "color": "#f472b6",
+  "papers": ["Paper 1", "Paper 2"],
+  "tiers": ["Foundation", "Higher"],
+  "topicMap": {
+    "Paper 1": [
+      { "id": "key-concepts",  "name": "Key Concepts in Physics",   "paper": 1 },
+      { "id": "forces",        "name": "Motion and Forces",         "paper": 1 },
+      { "id": "energy",        "name": "Conservation of Energy",    "paper": 1 },
+      { "id": "waves",         "name": "Waves and the EM Spectrum", "paper": 1 },
+      { "id": "light",         "name": "Light and the EM Spectrum", "paper": 1 }
+    ],
+    "Paper 2": [
+      { "id": "electricity",    "name": "Electricity and Circuits", "paper": 2 },
+      { "id": "magnetism",      "name": "Magnetism and Motors",     "paper": 2 },
+      { "id": "particle-model", "name": "The Particle Model",       "paper": 2 },
+      { "id": "matter",         "name": "Forces and Matter",        "paper": 2 }
+    ]
+  },
+  "separatePhysicsOnly": ["wave-behaviour", "astronomy"]
+}

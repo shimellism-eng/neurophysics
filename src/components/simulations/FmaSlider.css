@@ -1,0 +1,162 @@
+.fma-sim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  padding: var(--sp-4);
+  width: 100%;
+}
+
+/* Visual canvas */
+.fma-sim__visual {
+  background: var(--bg4);
+  border-radius: var(--r);
+  padding: var(--sp-5) var(--sp-4);
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.fma-sim__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.fma-sim__arrow {
+  height: 10px;
+  background: var(--cyan);
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  transition: width 0.1s ease;
+  flex-shrink: 0;
+}
+
+.fma-sim__arrow::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 12px solid transparent;
+  border-left: 16px solid var(--cyan);
+  border-right: none;
+}
+
+.fma-sim__block {
+  width: 80px;
+  height: 70px;
+  background: var(--purple-dim);
+  border: 2px solid var(--purple);
+  border-radius: var(--r-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  margin-left: 16px;
+  flex-shrink: 0;
+  color: var(--purple);
+  gap: 2px;
+}
+
+.fma-sim__block-mass {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* Sliders */
+.fma-sim__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.fma-sim__control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.fma-sim__control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fma-sim__control-header label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fma-sim__control-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.fma-sim__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border2);
+  outline: none;
+  cursor: pointer;
+}
+
+.fma-sim__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--thumb-color, var(--cyan));
+  cursor: pointer;
+  border: 2px solid var(--bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.fma-sim__slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--thumb-color, var(--cyan));
+  cursor: pointer;
+  border: 2px solid var(--bg);
+}
+
+.fma-sim__slider-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* Readouts */
+.fma-sim__readouts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.fma-sim__readout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg4);
+  border: 1px solid;
+  border-radius: var(--r);
+}
+
+.fma-sim__readout-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.fma-sim__readout-value {
+  font-size: 1.4rem;
+}

@@ -1,0 +1,105 @@
+.yourturn__source-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yourturn__source {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.yourturn__marks {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: var(--purple-dim);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.yourturn__fallback-notice {
+  font-size: 0.8rem;
+  color: var(--blue);
+  background: var(--blue-dim);
+  border: 1px solid var(--blue);
+  border-radius: var(--r-sm);
+  padding: var(--sp-2) var(--sp-3);
+}
+
+.yourturn__question.card {
+  background: var(--bg3);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.yourturn__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.yourturn__option {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  background: var(--bg3);
+  color: var(--text);
+  font-size: 0.95rem;
+  text-align: left;
+  min-height: 52px;
+  transition: all 0.15s ease;
+}
+
+.yourturn__option--idle:not(:disabled):active {
+  border-color: var(--purple);
+  background: var(--purple-dim);
+}
+
+.yourturn__option--correct {
+  border-color: var(--green);
+  background: var(--green-dim);
+}
+
+.yourturn__option--wrong {
+  border-color: var(--red);
+  background: var(--red-dim);
+}
+
+.yourturn__option--dim { opacity: 0.4; }
+
+.yourturn__option-label {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.yourturn__result {
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.yourturn__result--correct {
+  background: var(--green-dim);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.yourturn__result--wrong {
+  background: var(--red-dim);
+  color: var(--red);
+  border: 1px solid var(--red);
+}

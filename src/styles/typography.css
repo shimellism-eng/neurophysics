@@ -1,0 +1,51 @@
+/* Base font */
+body {
+  font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dyslexia font override */
+[data-font="atkinson"] body,
+[data-font="atkinson"] {
+  font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+}
+
+/* Text size overrides */
+[data-textsize="large"] { font-size: 18px; }
+[data-textsize="xl"]    { font-size: 20px; }
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: inherit;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.25rem, 4vw, 1.75rem); }
+h3 { font-size: 1.125rem; font-weight: 700; }
+h4 { font-size: 1rem; font-weight: 700; }
+
+p { max-width: 65ch; margin: 0; }
+
+/* Mono / equations */
+code, .eq, .mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-weight: 600;
+}
+
+.text-muted  { color: var(--muted); }
+.text-sm     { font-size: 0.875rem; }
+.text-xs     { font-size: 0.75rem; }
+.text-lg     { font-size: 1.125rem; }
+.text-xl     { font-size: 1.25rem; }
+.font-bold   { font-weight: 700; }
+.font-black  { font-weight: 800; }
+.font-light  { font-weight: 300; }

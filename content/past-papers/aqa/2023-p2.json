@@ -1,0 +1,60 @@
+{
+  "board": "aqa",
+  "year": 2023,
+  "paper": 2,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "aqa-2023-p2-q4b",
+      "number": "4(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A car of mass 1200 kg accelerates from rest to 18 m/s in 9.0 seconds. Calculate the resultant force acting on the car.",
+      "markScheme": {
+        "answer": "2400 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Correct calculation of acceleration: a = (18\u22120)/9 = 2.0 m/s\u00b2" },
+          { "mark": 2, "description": "Correct substitution into F = ma" },
+          { "mark": 3, "description": "Correct final answer: 2400" },
+          { "mark": 4, "description": "Correct unit: N" }
+        ],
+        "allowedAlternatives": ["2.4 kN"],
+        "commonErrors": [
+          "Not finding acceleration first \u2014 using 18 directly as acceleration",
+          "Forgetting to state the unit"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2023-p2-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 3,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A cyclist and their bike have a combined mass of 80 kg. The cyclist applies a resultant force of 160 N. What is the acceleration of the cyclist?",
+      "options": ["0.5 m/s\u00b2", "2.0 m/s\u00b2", "12 800 m/s\u00b2", "80 m/s\u00b2"],
+      "correctIndex": 1,
+      "markScheme": {
+        "answer": "2.0 m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Rearranges to a = F/m" },
+          { "mark": 2, "description": "Correct substitution" },
+          { "mark": 3, "description": "Correct answer 2.0 m/s\u00b2" }
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    }
+  ]
+}

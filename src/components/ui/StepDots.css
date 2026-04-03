@@ -1,0 +1,26 @@
+.step-dots {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+  justify-content: center;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.step-dot--active {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--cyan);
+}
+
+.step-dot--done {
+  background: var(--cyan);
+  opacity: 0.4;
+}

@@ -1,0 +1,24 @@
+{
+  "id": "ocr-gateway",
+  "name": "OCR Gateway",
+  "fullName": "OCR Gateway GCSE Physics",
+  "specCode": "J249",
+  "color": "#a78bfa",
+  "papers": ["Paper 1", "Paper 2"],
+  "tiers": ["Foundation", "Higher"],
+  "topicMap": {
+    "Paper 1": [
+      { "id": "matter",           "name": "Matter",           "paper": 1 },
+      { "id": "forces",           "name": "Forces",           "paper": 1 },
+      { "id": "electricity",      "name": "Electricity",      "paper": 1 },
+      { "id": "magnetism",        "name": "Magnetism",        "paper": 1 }
+    ],
+    "Paper 2": [
+      { "id": "waves",            "name": "Waves",            "paper": 2 },
+      { "id": "radioactivity",    "name": "Radioactivity",    "paper": 2 },
+      { "id": "energy",           "name": "Energy",           "paper": 2 },
+      { "id": "space",            "name": "Space",            "paper": 2 }
+    ]
+  },
+  "separatePhysicsOnly": ["astronomy", "medical-physics"]
+}

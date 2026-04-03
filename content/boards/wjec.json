@@ -1,0 +1,22 @@
+{
+  "id": "wjec",
+  "name": "WJEC",
+  "fullName": "WJEC GCSE Physics",
+  "specCode": "WJEC-GCSE-PHY",
+  "color": "#fbbf24",
+  "papers": ["Unit 1", "Unit 2"],
+  "tiers": ["Foundation", "Higher"],
+  "topicMap": {
+    "Unit 1": [
+      { "id": "forces",  "name": "Motion and Forces", "paper": 1 },
+      { "id": "energy",  "name": "Energy",            "paper": 1 },
+      { "id": "waves",   "name": "Waves",             "paper": 1 }
+    ],
+    "Unit 2": [
+      { "id": "electricity",   "name": "Electricity and Magnetism", "paper": 2 },
+      { "id": "radioactivity", "name": "Nuclear and Radioactivity", "paper": 2 },
+      { "id": "space",         "name": "Space",                     "paper": 2 }
+    ]
+  },
+  "separatePhysicsOnly": []
+}

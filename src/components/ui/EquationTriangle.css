@@ -1,0 +1,56 @@
+.eq-triangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.eq-triangle__shape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 200px;
+}
+
+.eq-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 56px;
+  min-width: 56px;
+}
+
+.eq-slot--top { width: 80px; }
+
+.eq-slot--cyan   { background: var(--cyan-dim);   color: var(--cyan);   border: 1px solid var(--cyan);   }
+.eq-slot--pink   { background: var(--pink-dim);   color: var(--pink);   border: 1px solid var(--pink);   }
+.eq-slot--amber  { background: var(--amber-dim);  color: var(--amber);  border: 1px solid var(--amber);  }
+.eq-slot--purple { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple); }
+.eq-slot--blue   { background: var(--blue-dim);   color: var(--blue);   border: 1px solid var(--blue);   }
+.eq-slot--red    { background: var(--red-dim);    color: var(--red);    border: 1px solid var(--red);    }
+.eq-slot--green  { background: var(--green-dim);  color: var(--green);  border: 1px solid var(--green);  }
+
+.eq-triangle__bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  width: 100%;
+  gap: 2px;
+}
+
+.eq-triangle__divider {
+  background: var(--border2);
+  width: 1px;
+  margin: 4px 0;
+}
+
+.eq-triangle__memorise {
+  font-size: 0.8rem;
+  color: var(--amber);
+  font-weight: 600;
+  text-align: center;
+}

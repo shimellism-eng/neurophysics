@@ -1,0 +1,104 @@
+.settings__info.card {
+  background: var(--bg3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  font-size: 0.9rem;
+}
+
+.settings__section { display: flex; flex-direction: column; gap: var(--sp-5); }
+
+.settings__section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.settings__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.settings__group-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.settings__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.settings__option {
+  display: flex;
+  align-items: center;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 0.875rem;
+  color: var(--text);
+  text-align: left;
+  min-height: 48px;
+  transition: all 0.15s ease;
+}
+
+.settings__option--active {
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.settings__toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-height: 44px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.settings__toggle--on { color: var(--cyan); }
+
+.settings__toggle-track {
+  width: 48px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--border2);
+  position: relative;
+  transition: background 0.15s ease;
+}
+
+.settings__toggle--on .settings__toggle-track {
+  background: var(--cyan);
+}
+
+.settings__toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform 0.15s ease;
+}
+
+.settings__toggle--on .settings__toggle-thumb {
+  transform: translateX(20px);
+  background: var(--bg);
+}
+
+.settings__footer {
+  margin-top: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-6) 0;
+}

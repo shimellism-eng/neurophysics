@@ -1,0 +1,24 @@
+{
+  "id": "aqa",
+  "name": "AQA",
+  "fullName": "AQA GCSE Physics",
+  "specCode": "8463",
+  "color": "#60a5fa",
+  "papers": ["Paper 1", "Paper 2"],
+  "tiers": ["Foundation", "Higher"],
+  "topicMap": {
+    "Paper 1": [
+      { "id": "energy",           "name": "Energy",                   "paper": 1 },
+      { "id": "electricity",      "name": "Electricity",              "paper": 1 },
+      { "id": "particle-model",   "name": "Particle Model of Matter", "paper": 1 },
+      { "id": "atomic-structure", "name": "Atomic Structure",         "paper": 1 }
+    ],
+    "Paper 2": [
+      { "id": "forces",     "name": "Forces",                       "paper": 2 },
+      { "id": "waves",      "name": "Waves",                        "paper": 2 },
+      { "id": "magnetism",  "name": "Magnetism & Electromagnetism", "paper": 2 },
+      { "id": "space",      "name": "Space Physics",                "paper": 2 }
+    ]
+  },
+  "separatePhysicsOnly": ["circular-motion", "field-lines", "astronomy-extended"]
+}

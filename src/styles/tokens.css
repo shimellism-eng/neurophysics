@@ -1,0 +1,82 @@
+:root {
+  /* Backgrounds */
+  --bg:     #0a0a0f;
+  --bg2:    #12121a;
+  --bg3:    #1a1a26;
+  --bg4:    #22223a;
+  --surface:#1e1e2e;
+  --border: rgba(255,255,255,0.08);
+  --border2:rgba(255,255,255,0.15);
+  --text:   #f0efff;
+  --muted:  #888aaa;
+
+  /* Brand accents */
+  --cyan:   #00e5b4;
+  --pink:   #ff4faa;
+  --amber:  #ffb344;
+  --purple: #a78bfa;
+  --blue:   #60a5fa;
+  --red:    #ff6b6b;
+  --green:  #4ade80;
+
+  /* Dim versions */
+  --cyan-dim:   rgba(0,229,180,0.12);
+  --pink-dim:   rgba(255,79,170,0.12);
+  --amber-dim:  rgba(255,179,68,0.12);
+  --purple-dim: rgba(167,139,250,0.12);
+  --blue-dim:   rgba(96,165,250,0.12);
+  --red-dim:    rgba(255,107,107,0.12);
+  --green-dim:  rgba(74,222,128,0.12);
+
+  /* Radius */
+  --r:    14px;
+  --r-sm: 8px;
+
+  /* Spacing (8pt grid) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* Nav height + safe areas */
+  --nav-h: 64px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bot: env(safe-area-inset-bottom, 0px);
+}
+
+/* High contrast override */
+[data-contrast="high"] {
+  --bg:     #000000;
+  --bg2:    #0a0a0a;
+  --bg3:    #111111;
+  --surface:#0d0d0d;
+  --border: rgba(255,255,255,0.2);
+  --text:   #ffffff;
+  --muted:  #aaaaaa;
+}
+
+/* Light mode override */
+[data-background="light"] {
+  --bg:     #f8f7ff;
+  --bg2:    #ededf8;
+  --bg3:    #e4e3f5;
+  --bg4:    #d8d7ef;
+  --surface:#ffffff;
+  --border: rgba(0,0,0,0.08);
+  --border2:rgba(0,0,0,0.15);
+  --text:   #111122;
+  --muted:  #666688;
+}
+
+/* Dim mode override */
+[data-background="dim"] {
+  --bg:     #141420;
+  --bg2:    #1c1c2e;
+  --bg3:    #242438;
+  --surface:#1a1a2e;
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ocr-21c",
+  "name": "OCR 21st Century",
+  "fullName": "OCR 21st Century GCSE Physics",
+  "specCode": "J250",
+  "color": "#34d399",
+  "papers": ["Paper 1", "Paper 2", "Paper 3", "Paper 4"],
+  "tiers": ["Foundation", "Higher"],
+  "topicMap": {
+    "Paper 1": [
+      { "id": "radiation",   "name": "Radiation and Waves",    "paper": 1 },
+      { "id": "energy",      "name": "Sustainable Energy",     "paper": 2 }
+    ],
+    "Paper 2": [
+      { "id": "electricity", "name": "Electric Circuits",      "paper": 3 },
+      { "id": "forces",      "name": "Explaining Motion",      "paper": 4 }
+    ]
+  },
+  "separatePhysicsOnly": ["astronomy", "medical-physics"]
+}

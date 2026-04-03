@@ -1,0 +1,124 @@
+.lesson {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg);
+}
+
+.lesson--loading,
+.lesson--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-6);
+}
+
+.lesson__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  padding-top: calc(var(--safe-top) + var(--sp-3));
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  flex-shrink: 0;
+}
+
+.lesson__close {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  background: var(--bg3);
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesson__title-wrap {
+  text-align: center;
+}
+
+.lesson__concept-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lesson__step-of {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.lesson__time {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.lesson__dots {
+  padding: var(--sp-3) var(--sp-4);
+  flex-shrink: 0;
+}
+
+.lesson__content {
+  flex: 1;
+  min-height: 0;
+  padding: var(--sp-4);
+  padding-bottom: calc(var(--sp-4) + var(--safe-bot));
+}
+
+/* Completion screen */
+.lesson--complete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--bg);
+  padding: var(--sp-6);
+}
+
+.lesson-complete__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-5);
+  text-align: center;
+}
+
+.lesson-complete__icon {
+  font-size: 4rem;
+}
+
+.lesson-complete__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  width: 100%;
+}
+
+.lesson-complete__btn {
+  width: 100%;
+  padding: var(--sp-4);
+  border-radius: var(--r);
+  font-weight: 700;
+  font-size: 1rem;
+  min-height: 52px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--text);
+}
+
+.lesson-complete__btn--primary {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--bg);
+}

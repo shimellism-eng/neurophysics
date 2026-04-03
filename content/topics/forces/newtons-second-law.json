@@ -1,0 +1,255 @@
+{
+  "id": "newtons-second-law",
+  "topicId": "forces",
+  "title": "Newton's Second Law",
+  "subtitle": "F = ma",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A heavier object and a lighter object are dropped from the same height in a vacuum. What happens?",
+      "options": [
+        "The heavier object hits the ground first",
+        "They hit the ground at the same time",
+        "The lighter object hits the ground first",
+        "It depends on their shape"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Many students think heavier = faster falling. In a vacuum, all objects fall with the same gravitational acceleration (g = 9.8 m/s\u00b2) regardless of mass. The confusion comes from air resistance in everyday life \u2014 not gravity itself.",
+      "correctFeedback": "\u2713 Correct! In a vacuum, mass doesn\u2019t affect free fall. All objects accelerate at g = 9.8 m/s\u00b2 \u2014 Galileo demonstrated this. Everyday confusion comes from air resistance, not gravity.",
+      "bestSource": "BEST resource: Forces misconception #3 \u2014 University of York Science Education Group"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Newton\u2019s Second Law",
+      "bodyHTML": "The <strong>resultant force</strong> on an object equals its <strong>mass \u00d7 acceleration</strong>. A bigger force \u2192 more acceleration. A bigger mass \u2192 less acceleration (for the same force). The force and acceleration always act in the <strong>same direction</strong>.",
+      "keyEquation": "F = m \u00d7 a",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "F", "label": "Force",       "unit": "N",    "color": "cyan"   },
+          { "symbol": "m", "label": "Mass",         "unit": "kg",   "color": "purple" },
+          { "symbol": "a", "label": "Acceleration", "unit": "m/s\u00b2", "color": "amber"  }
+        ],
+        "relationships": [
+          "Bigger F \u2192 bigger a (if m is constant)",
+          "Bigger m \u2192 smaller a (if F is constant)"
+        ]
+      },
+      "keyWords": ["resultant force", "mass", "acceleration", "Newton"],
+      "commonErrors": [
+        "Confusing mass (kg) and weight (N)",
+        "Forgetting to find the RESULTANT force before using F = ma",
+        "Using g = 10 instead of 9.8 (always check the mark scheme)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change force and mass. Watch how acceleration responds in real time.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "force", "label": "Force", "unit": "N",  "min": 2,  "max": 50, "default": 10, "color": "cyan",   "step": 1 },
+          { "id": "mass",  "label": "Mass",  "unit": "kg", "min": 1,  "max": 20, "default": 5,  "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "acceleration", "label": "Acceleration", "unit": "m/s\u00b2", "formula": "force / mass", "color": "amber", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "force",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 \u00b7 Q4(b)",
+          "year": 2023, "paper": 2, "questionNumber": "4(b)", "marks": 4,
+          "questionText": "A car of mass 1200 kg accelerates from rest to 18 m/s in 9.0 seconds. Calculate the resultant force acting on the car.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "mass m = 1200 kg\nfinal velocity v = 18 m/s\ntime t = 9.0 s\ninitial velocity u = 0 m/s (from rest)", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Find acceleration", "content": "Use a = (v \u2212 u) / t", "equation": "a = (18 \u2212 0) / 9.0 = 2.0 m/s\u00b2", "markSchemeNote": "1 mark \u2014 correct calculation of acceleration" },
+            { "stepNum": 3, "label": "Apply F = ma", "content": "Substitute into Newton\u2019s Second Law:", "equation": "F = 1200 \u00d7 2.0 = 2400 N", "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer" },
+            { "stepNum": 4, "label": "State answer with units", "content": "Always write the unit \u2014 examiners award a mark for it.", "equation": "F = 2400 N \u2713", "markSchemeNote": "1 mark \u2014 unit stated correctly" }
+          ],
+          "finalAnswer": "2400 N", "finalAnswerUnit": "N", "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q5(c)",
+          "year": 2023, "paper": 1, "questionNumber": "5(c)", "marks": 3,
+          "questionText": "A lorry has a mass of 8000 kg. The resultant force on the lorry is 12 000 N. Calculate the acceleration of the lorry.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "mass m = 8000 kg\nresultant force F = 12 000 N", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Rearrange for acceleration", "content": "Divide both sides by m:", "equation": "a = F / m", "markSchemeNote": "1 mark \u2014 correct rearrangement" },
+            { "stepNum": 3, "label": "Substitute and calculate", "content": "Put in the numbers:", "equation": "a = 12 000 / 8000 = 1.5 m/s\u00b2", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer with unit" }
+          ],
+          "finalAnswer": "1.5 m/s\u00b2", "finalAnswerUnit": "m/s\u00b2", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 \u00b7 Q6(a)",
+          "year": 2022, "paper": 1, "questionNumber": "6(a)", "marks": 3,
+          "questionText": "A motorcycle has a mass of 250 kg. The engine provides a driving force of 1500 N and the friction force is 500 N. Calculate the acceleration of the motorcycle.",
+          "steps": [
+            { "stepNum": 1, "label": "Find the resultant force", "content": "Subtract opposing forces first:", "equation": "F_resultant = 1500 \u2212 500 = 1000 N", "markSchemeNote": "1 mark \u2014 correct resultant force" },
+            { "stepNum": 2, "label": "Apply a = F / m", "content": "Substitute into Newton\u2019s Second Law:", "equation": "a = 1000 / 250 = 4.0 m/s\u00b2", "markSchemeNote": "1 mark \u2014 rearrangement; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "4.0 m/s\u00b2", "finalAnswerUnit": "m/s\u00b2", "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 4 \u00b7 Q3(b)",
+          "year": 2022, "paper": 4, "questionNumber": "3(b)", "marks": 3,
+          "questionText": "A skateboarder of mass 55 kg accelerates at 2.0 m/s\u00b2. Calculate the resultant force on the skateboarder.",
+          "steps": [
+            { "stepNum": 1, "label": "Write the equation", "content": "State Newton\u2019s Second Law:", "equation": "F = m \u00d7 a", "markSchemeNote": "1 mark \u2014 correct equation stated" },
+            { "stepNum": 2, "label": "Substitute and solve", "content": "Put in the values:", "equation": "F = 55 \u00d7 2.0 = 110 N", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "110 N", "finalAnswerUnit": "N", "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 \u00b7 Q4(a)",
+          "year": 2022, "paper": 1, "questionNumber": "4(a)", "marks": 2,
+          "questionText": "A ball of mass 0.40 kg is kicked and accelerates at 25 m/s\u00b2. Calculate the force applied to the ball.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply F = ma directly", "content": "All values given \u2014 substitute straight in:", "equation": "F = 0.40 \u00d7 25 = 10 N", "markSchemeNote": "1 mark \u2014 correct equation and substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "10 N", "finalAnswerUnit": "N", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 \u00b7 Q3(a)",
+          "year": 2022, "paper": 2, "questionNumber": "3(a)", "marks": 3,
+          "questionText": "A cyclist and their bike have a combined mass of 80 kg. The cyclist applies a resultant force of 160 N. What is the acceleration of the cyclist?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "0.5 m/s\u00b2",    "correct": false },
+            { "label": "B", "text": "2.0 m/s\u00b2",    "correct": true  },
+            { "label": "C", "text": "12 800 m/s\u00b2", "correct": false },
+            { "label": "D", "text": "80 m/s\u00b2",     "correct": false }
+          ],
+          "markSchemeSteps": ["Rearrange: a = F / m", "Substitute: a = 160 / 80", "Answer: a = 2.0 m/s\u00b2 \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option C is a trap \u2014 multiplying instead of dividing gives 12 800."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q4(b)",
+          "year": 2022, "paper": 1, "questionNumber": "4(b)", "marks": 2,
+          "questionText": "A skater of mass 60 kg accelerates at 1.5 m/s\u00b2. Calculate the resultant force on the skater.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "40 N",   "correct": false },
+            { "label": "B", "text": "90 N",   "correct": true  },
+            { "label": "C", "text": "61.5 N", "correct": false },
+            { "label": "D", "text": "0.025 N","correct": false }
+          ],
+          "markSchemeSteps": ["F = m \u00d7 a", "F = 60 \u00d7 1.5 = 90 N \u2713"],
+          "markSchemeAward": "1 mark correct equation \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 \u00b7 Q5(b)",
+          "year": 2023, "paper": 1, "questionNumber": "5(b)", "marks": 2,
+          "questionText": "An object of mass 12 kg has a resultant force of 36 N acting on it. What is its acceleration?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "0.33 m/s\u00b2", "correct": false },
+            { "label": "B", "text": "3.0 m/s\u00b2",  "correct": true  },
+            { "label": "C", "text": "432 m/s\u00b2",  "correct": false },
+            { "label": "D", "text": "48 m/s\u00b2",   "correct": false }
+          ],
+          "markSchemeSteps": ["a = F / m = 36 / 12 = 3.0 m/s\u00b2 \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 4 \u00b7 Q2(a)",
+          "year": 2023, "paper": 4, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A car of mass 900 kg accelerates at 3.0 m/s\u00b2. Calculate the resultant force.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "300 N",   "correct": false },
+            { "label": "B", "text": "2700 N",  "correct": true  },
+            { "label": "C", "text": "903 N",   "correct": false },
+            { "label": "D", "text": "0.003 N", "correct": false }
+          ],
+          "markSchemeSteps": ["F = 900 \u00d7 3.0 = 2700 N \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 \u00b7 Q3(a)",
+          "year": 2023, "paper": 1, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A runner of mass 70 kg accelerates at 2.5 m/s\u00b2. Calculate the resultant force.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "28 N",   "correct": false },
+            { "label": "B", "text": "175 N",  "correct": true  },
+            { "label": "C", "text": "72.5 N", "correct": false },
+            { "label": "D", "text": "35 N",   "correct": false }
+          ],
+          "markSchemeSteps": ["F = 70 \u00d7 2.5 = 175 N \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "F = ma \u2014 all rearrangements",
+      "equation": {
+        "id": "newton-second",
+        "canonical": "F = m \u00d7 a",
+        "variables": [
+          { "symbol": "F", "name": "Force",       "unit": "Newtons",        "abbreviation": "N"    },
+          { "symbol": "m", "name": "Mass",         "unit": "kilograms",      "abbreviation": "kg"   },
+          { "symbol": "a", "name": "Acceleration", "unit": "metres/second\u00b2", "abbreviation": "m/s\u00b2" }
+        ],
+        "rearrangements": [
+          { "solveFor": "F", "formula": "F = m \u00d7 a", "label": "Find force"        },
+          { "solveFor": "a", "formula": "a = F / m", "label": "Find acceleration" },
+          { "solveFor": "m", "formula": "m = F / a", "label": "Find mass"         }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "F", "color": "cyan"   },
+          "bottomLeft": { "symbol": "m", "color": "purple" },
+          "bottomRight":{ "symbol": "a", "color": "amber"  }
+        },
+        "examTip": "Always check you have the RESULTANT force \u2014 not just one force. Subtract opposing forces first.",
+        "onFormulaSheet": {
+          "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true
+        },
+        "boardNotes": {
+          "aqa":         "On AQA formula sheet \u2014 must be able to use all three rearrangements.",
+          "edexcel":     "On Edexcel equation sheet. Units must be stated for full marks.",
+          "ocr-gateway": "NOT on formula sheet \u2014 must be memorised for OCR Gateway. \u26a0\ufe0f",
+          "ocr-21c":     "NOT on formula sheet \u2014 must be memorised for OCR 21st Century. \u26a0\ufe0f",
+          "wjec":        "Provided in WJEC exam. Know all three rearrangements."
+        }
+      }
+    }
+  ]
+}

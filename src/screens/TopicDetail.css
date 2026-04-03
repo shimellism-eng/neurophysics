@@ -1,0 +1,88 @@
+.topic-detail__back {
+  align-self: flex-start;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: var(--sp-2) 0;
+  min-height: auto;
+}
+
+.topic-detail__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topic-detail__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.topic-detail__emoji { font-size: 2rem; }
+.topic-detail__title { font-size: 1.5rem; font-weight: 800; }
+
+.topic-detail__board-note {
+  background: var(--blue-dim);
+  border: 1px solid var(--blue);
+  border-radius: var(--r);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.topic-detail__concepts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.topic-detail__concept {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  width: 100%;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.topic-detail__concept:active {
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
+.topic-detail__concept--done {
+  border-color: var(--green);
+  opacity: 0.7;
+}
+
+.topic-detail__concept-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  color: var(--text);
+}
+
+.topic-detail__concept--done .topic-detail__concept-num {
+  background: var(--green-dim);
+  color: var(--green);
+}
+
+.topic-detail__concept-info { flex: 1; }
+.topic-detail__concept-name { font-weight: 700; }
+.topic-detail__concept-meta { font-size: 0.8rem; color: var(--muted); }
+
+.topic-detail__concept-arrow {
+  color: var(--muted);
+  font-size: 1.3rem;
+}

@@ -1,0 +1,26 @@
+{
+  "id": "forces",
+  "name": "Forces",
+  "emoji": "⚡",
+  "color": "#00e5b4",
+  "paper": 2,
+  "boards": ["aqa", "edexcel", "ocr-gateway", "ocr-21c", "wjec"],
+  "conceptOrder": [
+    "resultant-forces",
+    "newtons-first-law",
+    "newtons-second-law",
+    "newtons-third-law",
+    "weight-and-gravity",
+    "momentum",
+    "work-and-energy"
+  ],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": {
+    "aqa":         "Paper 2 — Section 5.5. Momentum is Higher only.",
+    "edexcel":     "Paper 1 — Topic 2: Motion and Forces.",
+    "ocr-gateway": "Paper 1 — Module P5: Forces.",
+    "ocr-21c":     "Paper 4 — Module P4: Explaining Motion.",
+    "wjec":        "Unit 1 — Forces and Motion."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "topicId": "forces",
+  "equations": [
+    {
+      "id": "newton-second",
+      "name": "Newton's Second Law",
+      "canonical": "F = m \u00d7 a",
+      "color": "cyan",
+      "variables": [
+        { "symbol": "F", "name": "Force",       "unit": "N"    },
+        { "symbol": "m", "name": "Mass",         "unit": "kg"   },
+        { "symbol": "a", "name": "Acceleration", "unit": "m/s\u00b2" }
+      ],
+      "rearrangements": [
+        { "solveFor": "F", "formula": "F = m \u00d7 a" },
+        { "solveFor": "a", "formula": "a = F / m" },
+        { "solveFor": "m", "formula": "m = F / a" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "weight",
+      "name": "Weight",
+      "canonical": "W = m \u00d7 g",
+      "color": "purple",
+      "variables": [
+        { "symbol": "W", "name": "Weight",                   "unit": "N"    },
+        { "symbol": "m", "name": "Mass",                     "unit": "kg"   },
+        { "symbol": "g", "name": "Gravitational field strength", "unit": "N/kg", "constant": 9.8 }
+      ],
+      "rearrangements": [
+        { "solveFor": "W", "formula": "W = m \u00d7 g" },
+        { "solveFor": "m", "formula": "m = W / g" },
+        { "solveFor": "g", "formula": "g = W / m" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "work-done",
+      "name": "Work Done",
+      "canonical": "W = F \u00d7 d",
+      "color": "amber",
+      "variables": [
+        { "symbol": "W", "name": "Work done", "unit": "J" },
+        { "symbol": "F", "name": "Force",     "unit": "N" },
+        { "symbol": "d", "name": "Distance",  "unit": "m" }
+      ],
+      "rearrangements": [
+        { "solveFor": "W", "formula": "W = F \u00d7 d" },
+        { "solveFor": "F", "formula": "F = W / d" },
+        { "solveFor": "d", "formula": "d = W / F" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "momentum",
+      "name": "Momentum",
+      "canonical": "p = m \u00d7 v",
+      "color": "green",
+      "variables": [
+        { "symbol": "p", "name": "Momentum", "unit": "kg\u00b7m/s" },
+        { "symbol": "m", "name": "Mass",     "unit": "kg"     },
+        { "symbol": "v", "name": "Velocity", "unit": "m/s"    }
+      ],
+      "rearrangements": [
+        { "solveFor": "p", "formula": "p = m \u00d7 v" },
+        { "solveFor": "m", "formula": "m = p / v" },
+        { "solveFor": "v", "formula": "v = p / m" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "velocity",
+      "name": "Velocity",
+      "canonical": "v = d / t",
+      "color": "pink",
+      "variables": [
+        { "symbol": "v", "name": "Velocity", "unit": "m/s" },
+        { "symbol": "d", "name": "Distance", "unit": "m"   },
+        { "symbol": "t", "name": "Time",     "unit": "s"   }
+      ],
+      "rearrangements": [
+        { "solveFor": "v", "formula": "v = d / t" },
+        { "solveFor": "d", "formula": "d = v \u00d7 t" },
+        { "solveFor": "t", "formula": "t = d / v" }
+      ],
+      "onFormulaSheet": { "aqa": false, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": false },
+      "higherOnly": false
+    },
+    {
+      "id": "suvat-v2",
+      "name": "v\u00b2 = u\u00b2 + 2as",
+      "canonical": "v\u00b2 = u\u00b2 + 2as",
+      "color": "blue",
+      "variables": [
+        { "symbol": "v", "name": "Final velocity",   "unit": "m/s"  },
+        { "symbol": "u", "name": "Initial velocity", "unit": "m/s"  },
+        { "symbol": "a", "name": "Acceleration",     "unit": "m/s\u00b2" },
+        { "symbol": "s", "name": "Displacement",     "unit": "m"    }
+      ],
+      "rearrangements": [
+        { "solveFor": "v", "formula": "v = \u221a(u\u00b2 + 2as)" },
+        { "solveFor": "u", "formula": "u = \u221a(v\u00b2 \u2212 2as)" },
+        { "solveFor": "a", "formula": "a = (v\u00b2 \u2212 u\u00b2) / 2s" },
+        { "solveFor": "s", "formula": "s = (v\u00b2 \u2212 u\u00b2) / 2a" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": true
+    }
+  ]
+}

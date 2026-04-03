@@ -1,0 +1,18 @@
+.step-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.step-tag--cyan   { background: var(--cyan-dim);   color: var(--cyan);   }
+.step-tag--pink   { background: var(--pink-dim);   color: var(--pink);   }
+.step-tag--amber  { background: var(--amber-dim);  color: var(--amber);  }
+.step-tag--purple { background: var(--purple-dim); color: var(--purple); }
+.step-tag--blue   { background: var(--blue-dim);   color: var(--blue);   }
+.step-tag--red    { background: var(--red-dim);    color: var(--red);    }
+.step-tag--green  { background: var(--green-dim);  color: var(--green);  }

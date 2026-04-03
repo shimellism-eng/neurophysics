@@ -1,0 +1,30 @@
+.progress-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progress-ring svg {
+  position: absolute;
+  inset: 0;
+}
+
+.progress-ring__track {
+  fill: none;
+  stroke: var(--border2);
+}
+
+.progress-ring__fill {
+  fill: none;
+  transition: stroke-dashoffset 0.4s ease;
+}
+
+.progress-ring__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+}

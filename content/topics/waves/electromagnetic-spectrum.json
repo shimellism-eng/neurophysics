@@ -1,0 +1,549 @@
+{
+  "id": "electromagnetic-spectrum",
+  "topicId": "waves",
+  "title": "Electromagnetic Spectrum",
+  "subtitle": "Radio to gamma",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "All electromagnetic waves travel at the same speed in a vacuum. What is that speed?",
+      "options": [
+        "340 m/s",
+        "3 × 10⁸ m/s",
+        "It depends on the type of EM wave",
+        "3 × 10⁶ m/s"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "⚠️ Common misconception! 340 m/s is the speed of sound in air, not light. All EM waves travel at 3 × 10⁸ m/s (300 million m/s) in a vacuum. Radio waves, microwaves, visible light, gamma rays - all the same speed.",
+      "correctFeedback": "✓ Correct! All electromagnetic waves travel at 3 × 10⁸ m/s in a vacuum. This is the speed of light, denoted c. Different EM waves differ in frequency and wavelength, not speed.",
+      "bestSource": "BEST resource: AQA Physics specification 6.3: Electromagnetic spectrum"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "The Electromagnetic Spectrum",
+      "svgDiagram": "em-spectrum",
+      "bodyHTML": "Electromagnetic (EM) waves are <strong>transverse</strong> waves that transfer energy. They all travel at the <strong>speed of light</strong> (3 × 10⁸ m/s) in a vacuum. The spectrum, in order of <strong>decreasing wavelength</strong> (increasing frequency), is: <strong>Radio, Microwave, Infrared, Visible light, Ultraviolet, X-rays, Gamma rays</strong>. EM waves do <strong>not</strong> need a medium - they can travel through a vacuum. Higher-frequency EM waves carry <strong>more energy</strong> and are more <strong>dangerous</strong>.",
+      "keyEquation": "v = f × λ (where v = 3 × 10⁸ m/s for all EM waves in a vacuum)",
+      "diagram": {
+        "type": "comparison",
+        "variables": [
+          {
+            "symbol": "R",
+            "label": "Radio waves",
+            "unit": "longest λ",
+            "color": "cyan"
+          },
+          {
+            "symbol": "V",
+            "label": "Visible light",
+            "unit": "mid-range",
+            "color": "green"
+          },
+          {
+            "symbol": "γ",
+            "label": "Gamma rays",
+            "unit": "shortest λ",
+            "color": "pink"
+          }
+        ],
+        "relationships": [
+          "Radio → Microwave → Infrared → Visible → Ultraviolet → X-ray → Gamma",
+          "Wavelength decreases left to right →",
+          "Frequency and energy increase left to right →"
+        ]
+      },
+      "keyWords": [
+        "electromagnetic spectrum",
+        "transverse",
+        "speed of light",
+        "radio",
+        "microwave",
+        "infrared",
+        "visible",
+        "ultraviolet",
+        "X-ray",
+        "gamma"
+      ],
+      "commonErrors": [
+        "Getting the order wrong. Use a mnemonic like 'Raging Martians Invaded Venus Using X-ray Guns'",
+        "Saying EM waves need a medium (they do NOT)",
+        "Confusing higher frequency with longer wavelength (it is shorter)"
+      ],
+      "keyEquationTex": "v = f\\lambda \\quad (v = 3 \\times 10^8 \\text{ m/s in vacuum})"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the slider to explore different parts of the electromagnetic spectrum. See how wavelength and frequency change while speed stays constant.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "wavelength",
+            "label": "Wavelength",
+            "unit": "m",
+            "min": -12,
+            "max": 3,
+            "default": -7,
+            "color": "cyan",
+            "step": 1
+          },
+          {
+            "id": "speedOfLight",
+            "label": "Speed of light",
+            "unit": "m/s",
+            "min": 300000000,
+            "max": 300000000,
+            "default": 300000000,
+            "color": "purple",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "frequency",
+            "label": "Frequency",
+            "unit": "Hz",
+            "formula": "speedOfLight / Math.pow(10, wavelength)",
+            "color": "amber",
+            "decimalPlaces": 0
+          }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "wavelength",
+        "blockLabel": "EM"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 · Q8(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "8(a)",
+          "marks": 3,
+          "questionText": "A radio station broadcasts at a frequency of 100 MHz. The speed of light is 3 × 10⁸ m/s. Calculate the wavelength of the radio wave.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Convert units",
+              "content": "100 MHz = 100 × 10⁶ Hz = 1 × 10⁸ Hz",
+              "equation": null,
+              "markSchemeNote": "1 mark: correct conversion"
+            },
+            {
+              "stepNum": 2,
+              "label": "Rearrange for wavelength",
+              "content": "Use λ = v / f:",
+              "equation": "λ = (3 × 10⁸) / (1 × 10⁸)",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate",
+              "content": "Divide:",
+              "equation": "λ = 3 m",
+              "markSchemeNote": "1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "3 m",
+          "finalAnswerUnit": "m",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q7(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "Green light has a wavelength of 550 nm. Calculate its frequency. (Speed of light = 3 × 10⁸ m/s)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Convert units",
+              "content": "550 nm = 550 × 10⁻⁹ m = 5.5 × 10⁻⁷ m",
+              "equation": null,
+              "markSchemeNote": "1 mark: correct conversion"
+            },
+            {
+              "stepNum": 2,
+              "label": "Rearrange and calculate",
+              "content": "f = v / λ:",
+              "equation": "f = (3 × 10⁸) / (5.5 × 10⁻⁷) = 5.45 × 10¹⁴ Hz",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer"
+            }
+          ],
+          "finalAnswer": "5.45 × 10¹⁴ Hz",
+          "finalAnswerUnit": "Hz",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q7(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "List the parts of the electromagnetic spectrum in order of increasing frequency.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Recall the order",
+              "content": "Start from lowest frequency (longest wavelength):",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "List the seven types",
+              "content": "Radio, Microwave, Infrared, Visible light, Ultraviolet, X-rays, Gamma rays",
+              "equation": null,
+              "markSchemeNote": "1 mark per correct pair in sequence (up to 3 marks)"
+            }
+          ],
+          "finalAnswer": "Radio, Microwave, Infrared, Visible, Ultraviolet, X-rays, Gamma rays",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q6(a)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "Give one use and one danger of ultraviolet radiation.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Use",
+              "content": "UV is used in sun beds, sterilising water, and security marking.",
+              "equation": null,
+              "markSchemeNote": "1 mark: valid use"
+            },
+            {
+              "stepNum": 2,
+              "label": "Danger",
+              "content": "UV can cause skin cancer and premature ageing of skin.",
+              "equation": null,
+              "markSchemeNote": "1 mark: valid danger"
+            }
+          ],
+          "finalAnswer": "Use: sterilising water. Danger: can cause skin cancer.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q8(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "8(a)",
+          "marks": 2,
+          "questionText": "What do all electromagnetic waves have in common when travelling through a vacuum?",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Same type",
+              "content": "They are all transverse waves.",
+              "equation": null,
+              "markSchemeNote": "1 mark: transverse stated"
+            },
+            {
+              "stepNum": 2,
+              "label": "Same speed",
+              "content": "They all travel at the speed of light (3 × 10⁸ m/s) in a vacuum.",
+              "equation": null,
+              "markSchemeNote": "1 mark: same speed / speed of light stated"
+            }
+          ],
+          "finalAnswer": "All EM waves are transverse and travel at 3 × 10⁸ m/s in a vacuum.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 · Q8(b)",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "8(b)",
+          "marks": 1,
+          "questionText": "Which type of electromagnetic wave has the highest frequency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Radio waves",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "X-rays",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "Gamma rays",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "Ultraviolet",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Gamma rays have the highest frequency (and shortest wavelength) ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q7(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "7(b)",
+          "marks": 1,
+          "questionText": "Which of the following is NOT an electromagnetic wave?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Microwaves",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Sound waves",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "Infrared",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "Gamma rays",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Sound is a mechanical (longitudinal) wave, not electromagnetic ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer",
+          "commonMistake": "Sound is not electromagnetic - it is a mechanical wave that needs a medium."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q7(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "7(b)",
+          "marks": 1,
+          "questionText": "What speed do all electromagnetic waves travel at in a vacuum?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "340 m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "3 × 10⁶ m/s",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "3 × 10⁸ m/s",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "It depends on the type",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "All EM waves: 3 × 10⁸ m/s in a vacuum ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q6(b)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "6(b)",
+          "marks": 1,
+          "questionText": "Which part of the EM spectrum is used for TV remote controls?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Radio waves",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Microwaves",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "Infrared",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "Ultraviolet",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Infrared is used in TV remote controls ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q8(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "8(b)",
+          "marks": 1,
+          "questionText": "Which EM wave has the longest wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Gamma rays",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Radio waves",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "Visible light",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "X-rays",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Radio waves have the longest wavelength ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "EM Spectrum: key facts",
+      "equation": {
+        "id": "em-spectrum",
+        "canonical": "c = f × λ (c = 3 × 10⁸ m/s)",
+        "variables": [
+          {
+            "symbol": "c",
+            "name": "Speed of light",
+            "unit": "metres per second",
+            "abbreviation": "m/s"
+          },
+          {
+            "symbol": "f",
+            "name": "Frequency",
+            "unit": "hertz",
+            "abbreviation": "Hz"
+          },
+          {
+            "symbol": "λ",
+            "name": "Wavelength",
+            "unit": "metres",
+            "abbreviation": "m"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "c",
+            "formula": "c = f × λ",
+            "label": "Find speed (always 3 × 10⁸)"
+          },
+          {
+            "solveFor": "f",
+            "formula": "f = c / λ",
+            "label": "Find frequency"
+          },
+          {
+            "solveFor": "λ",
+            "formula": "λ = c / f",
+            "label": "Find wavelength"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "c",
+            "color": "cyan"
+          },
+          "bottomLeft": {
+            "symbol": "f",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "λ",
+            "color": "amber",
+            "tex": "\\lambda"
+          }
+        },
+        "examTip": "Mnemonic for the order: 'Raging Martians Invaded Venus Using X-ray Guns'. Frequency INCREASES in that order, wavelength DECREASES.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": true,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "Know uses AND dangers of each type. Often a 6-mark question.",
+          "edexcel": "Must link each EM wave to its uses. Practise wavelength/frequency calculations.",
+          "ocr-gateway": "Know the order, uses, and hazards. Standard conversion questions.",
+          "ocr-21c": "Link to real-world: medical imaging (X-rays), communication (radio/microwaves).",
+          "wjec": "Must state the order and give uses/dangers. Often combined with wave equation."
+        }
+      }
+    }
+  ]
+}

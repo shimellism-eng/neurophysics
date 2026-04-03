@@ -1,0 +1,169 @@
+{
+  "board": "aqa",
+  "year": 2019,
+  "paper": 2,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "aqa-2019-p2-q1a",
+      "number": "1(a)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "An object moves at a steady speed in a straight line. What can be said about the forces acting on it?",
+      "options": ["The forces are unbalanced", "There are no forces acting", "The resultant force is zero", "The driving force is greater than friction"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "The resultant force is zero",
+        "steps": [
+          { "mark": 1, "description": "Identifies that constant velocity means balanced forces" },
+          { "mark": 2, "description": "Correct answer: resultant force is zero" }
+        ],
+        "commonErrors": [
+          "Thinking no forces act on the object",
+          "Thinking driving force must be greater because the object is moving"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2019-p2-q2b",
+      "number": "2(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A motorcycle and rider have a combined mass of 250 kg. The motorcycle accelerates at 4.0 m/s\u00b2. Calculate the resultant force on the motorcycle.",
+      "markScheme": {
+        "answer": "1000 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls F = ma" },
+          { "mark": 2, "description": "Substitutes: F = 250 \u00d7 4.0" },
+          { "mark": 3, "description": "Correct answer: 1000 N" },
+          { "mark": 4, "description": "Correct unit: N" }
+        ],
+        "allowedAlternatives": ["1.0 kN", "1 kN"],
+        "commonErrors": [
+          "Using a = F/m and getting confused",
+          "Forgetting the unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "aqa-2019-p2-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A bag of rice has a mass of 5.0 kg. Gravitational field strength g = 10 N/kg. Calculate the weight of the bag.",
+      "markScheme": {
+        "answer": "50 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Substitutes: W = 5.0 \u00d7 10" },
+          { "mark": 3, "description": "Correct answer: 50 N" }
+        ],
+        "commonErrors": [
+          "Writing kg instead of N for the unit",
+          "Dividing instead of multiplying"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2019-p2-q4c",
+      "number": "4(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A lorry of mass 8000 kg travelling at 10 m/s collides with a stationary car of mass 1200 kg. They stick together after the collision. Calculate their velocity after the collision.",
+      "markScheme": {
+        "answer": "8.7 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum before = 8000 \u00d7 10 + 1200 \u00d7 0 = 80 000 kg m/s" },
+          { "mark": 2, "description": "By conservation: momentum after = 80 000 kg m/s" },
+          { "mark": 3, "description": "Combined mass = 8000 + 1200 = 9200 kg" },
+          { "mark": 4, "description": "v = 80 000 / 9200 = 8.7 m/s (to 2 s.f.)" }
+        ],
+        "allowedAlternatives": ["8.69 m/s", "8.696 m/s"],
+        "commonErrors": [
+          "Forgetting to add the masses together after collision",
+          "Not using conservation of momentum"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2019-p2-q5b",
+      "number": "5(b)",
+      "topic": "forces",
+      "concept": "stopping-distance",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "Explain how drinking alcohol affects a driver's stopping distance.",
+      "markScheme": {
+        "answer": "Alcohol increases reaction time, which increases the thinking distance, which increases the overall stopping distance.",
+        "steps": [
+          { "mark": 1, "description": "Alcohol increases the driver's reaction time" },
+          { "mark": 2, "description": "This increases the thinking distance" },
+          { "mark": 3, "description": "Therefore the total stopping distance increases" }
+        ],
+        "commonErrors": [
+          "Saying alcohol affects braking distance instead of thinking distance",
+          "Not explaining the link between reaction time and thinking distance"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2019-p2-q6a",
+      "number": "6(a)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A helicopter has a weight of 25 000 N. The lift force from the rotor blades is 30 000 N. The air resistance is 2000 N horizontally. Calculate the magnitude of the resultant vertical force.",
+      "markScheme": {
+        "answer": "5000 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Identifies vertical forces: lift = 30 000 N up, weight = 25 000 N down" },
+          { "mark": 2, "description": "Subtracts: 30 000 - 25 000" },
+          { "mark": 3, "description": "Correct answer: 5000 N" },
+          { "mark": 4, "description": "Direction: upwards" }
+        ],
+        "commonErrors": [
+          "Including air resistance in the vertical calculation",
+          "Adding lift and weight instead of subtracting"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

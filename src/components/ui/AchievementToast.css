@@ -1,0 +1,46 @@
+/* Achievement toast notification */
+.achievement-toast {
+  position: fixed;
+  top: calc(var(--safe-top, 0px) + var(--sp-4));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-5);
+  background: linear-gradient(135deg, var(--cyan-dim), var(--amber-dim));
+  border: 1px solid var(--cyan);
+  border-radius: var(--r);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+              0 0 16px color-mix(in srgb, var(--cyan) 20%, transparent);
+  min-height: 44px;
+  max-width: calc(100vw - var(--sp-8));
+  pointer-events: auto;
+}
+
+.achievement-toast__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.achievement-toast__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.achievement-toast__heading {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cyan);
+}
+
+.achievement-toast__name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+}

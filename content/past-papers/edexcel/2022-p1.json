@@ -1,0 +1,171 @@
+{
+  "board": "edexcel",
+  "year": 2022,
+  "paper": 1,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "edexcel-2022-p1-q2a",
+      "number": "2(a)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "Three forces act on a box on a smooth surface: 10 N to the right, 4 N to the left, and 2 N to the left. What is the resultant force?",
+      "options": ["4 N to the right", "4 N to the left", "16 N to the right", "8 N to the right"],
+      "correctIndex": 0,
+      "markScheme": {
+        "answer": "4 N to the right",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Forces to left = 4 + 2 = 6 N; resultant = 10 - 6 = 4 N" },
+          { "mark": 2, "description": "Correct direction: to the right" }
+        ],
+        "commonErrors": [
+          "Adding all forces together",
+          "Only subtracting one of the leftward forces"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2022-p1-q3b",
+      "number": "3(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A 1500 kg car starts from rest and reaches a speed of 24 m/s in 8.0 seconds. Calculate: (i) the acceleration, (ii) the resultant force.",
+      "markScheme": {
+        "answer": "4500 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "a = (v - u) / t = (24 - 0) / 8.0" },
+          { "mark": 2, "description": "a = 3.0 m/s\u00b2" },
+          { "mark": 3, "description": "Recalls F = ma" },
+          { "mark": 4, "description": "F = 1500 \u00d7 3.0" },
+          { "mark": 5, "description": "Correct answer: 4500 N" }
+        ],
+        "allowedAlternatives": ["4.5 kN"],
+        "commonErrors": [
+          "Using 24 as acceleration without dividing by time",
+          "Arithmetic errors in multiplication"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2022-p1-q4a",
+      "number": "4(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A student has a mass of 55 kg. Calculate the student's weight on Earth. (g = 10 N/kg)",
+      "markScheme": {
+        "answer": "550 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Substitutes: W = 55 \u00d7 10" },
+          { "mark": 3, "description": "Correct answer: 550 N" }
+        ],
+        "commonErrors": [
+          "Confusing mass and weight",
+          "Writing kg instead of N"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "edexcel-2022-p1-q5c",
+      "number": "5(c)",
+      "topic": "forces",
+      "concept": "stopping-distance",
+      "marks": 4,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "Explain why the stopping distance of a car is greater on a wet road than on a dry road.",
+      "markScheme": {
+        "answer": "On a wet road, there is less friction between the tyres and the road surface. This reduces the braking force. With a smaller braking force, the braking distance is greater. Therefore the total stopping distance increases.",
+        "steps": [
+          { "mark": 1, "description": "Wet road reduces friction between tyres and road" },
+          { "mark": 2, "description": "Reduced friction means a smaller braking force" },
+          { "mark": 3, "description": "Smaller braking force means the car decelerates more slowly" },
+          { "mark": 4, "description": "Therefore braking distance (and total stopping distance) is greater" }
+        ],
+        "commonErrors": [
+          "Saying the thinking distance increases on a wet road",
+          "Not linking reduced friction to reduced braking force"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2022-p1-q6b",
+      "number": "6(b)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": true,
+      "questionText": "A rugby player of mass 90 kg runs at 6 m/s. Calculate the momentum of the rugby player.",
+      "markScheme": {
+        "answer": "540 kg m/s",
+        "unit": "kg m/s",
+        "steps": [
+          { "mark": 1, "description": "Recalls p = mv" },
+          { "mark": 2, "description": "Substitutes: p = 90 \u00d7 6" },
+          { "mark": 3, "description": "Correct answer: 540 kg m/s" }
+        ],
+        "commonErrors": [
+          "Using wrong formula",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2022-p1-q7a",
+      "number": "7(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A rock climber of mass 70 kg climbs 12 m up a cliff face. (g = 10 N/kg) Calculate the work done against gravity by the climber.",
+      "markScheme": {
+        "answer": "8400 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Calculates weight: W = 70 \u00d7 10 = 700 N" },
+          { "mark": 2, "description": "Recalls work = force \u00d7 distance" },
+          { "mark": 3, "description": "Substitutes: work = 700 \u00d7 12" },
+          { "mark": 4, "description": "Correct answer: 8400 J" }
+        ],
+        "allowedAlternatives": ["8.4 kJ"],
+        "commonErrors": [
+          "Using mass (70) instead of weight (700)",
+          "Forgetting to calculate weight first"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

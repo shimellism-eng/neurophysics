@@ -38,7 +38,7 @@ export function Topics() {
               style={{ '--tc': t.color } as React.CSSProperties}
             >
               <div className="topics__card-left">
-                <span className="topics__emoji">{t.emoji}</span>
+                <span className="topics__emoji" aria-hidden="true">{t.emoji}</span>
                 <div>
                   <p className="topics__name">{t.name}</p>
                   <p className="topics__meta">{t.paper}{!t.available ? ' · Coming soon' : ` · ${t.concepts.length} concepts`}</p>
@@ -47,7 +47,7 @@ export function Topics() {
               {t.available ? (
                 <ProgressRing percent={pct} size={48} />
               ) : (
-                <span className="topics__lock">🔒</span>
+                <span className="topics__lock" aria-hidden="true">🔒</span>
               )}
             </button>
           );

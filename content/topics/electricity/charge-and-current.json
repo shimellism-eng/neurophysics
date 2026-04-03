@@ -1,0 +1,253 @@
+{
+  "id": "charge-and-current",
+  "topicId": "electricity",
+  "title": "Charge and Current",
+  "subtitle": "Q = It",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Electric current is the flow of\u2026",
+      "options": [
+        "Electrons from positive to negative",
+        "Charge (electrons move from negative to positive)",
+        "Energy through the wire",
+        "Voltage around the circuit"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Current is the rate of flow of charge. Electrons (which carry the charge) actually move from negative to positive \u2014 the opposite of conventional current direction. Current is NOT the flow of energy or voltage.",
+      "correctFeedback": "\u2713 Correct! Current is the rate of flow of charge. Electrons move from negative to positive (the opposite of conventional current direction shown on circuit diagrams).",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.1 \u2014 Electric charge and current"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Charge and Current",
+      "bodyHTML": "<strong>Electric current</strong> is the rate of flow of electrical <strong>charge</strong>. In metals, current is carried by <strong>electrons</strong>. Electrons flow from negative to positive, but <strong>conventional current</strong> is drawn from positive to negative. The amount of charge that flows depends on the current and the time.",
+      "keyEquation": "Q = I \u00d7 t",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "Q", "label": "Charge",  "unit": "C", "color": "cyan"   },
+          { "symbol": "I", "label": "Current", "unit": "A", "color": "purple" },
+          { "symbol": "t", "label": "Time",    "unit": "s", "color": "amber"  }
+        ],
+        "relationships": [
+          "Bigger I \u2192 more charge flows each second",
+          "Longer t \u2192 more total charge flows"
+        ]
+      },
+      "keyWords": ["charge", "current", "electron", "coulomb", "ampere"],
+      "commonErrors": [
+        "Confusing electron flow direction with conventional current direction",
+        "Forgetting to convert minutes to seconds before using Q = It",
+        "Mixing up charge (Q, coulombs) with current (I, amps)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change current and time. Watch how charge builds up.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "current", "label": "Current", "unit": "A", "min": 0.5, "max": 10, "default": 2, "color": "purple", "step": 0.5 },
+          { "id": "time",    "label": "Time",    "unit": "s", "min": 1,   "max": 60, "default": 10, "color": "amber",  "step": 1 }
+        ],
+        "derived": [
+          { "id": "charge", "label": "Charge", "unit": "C", "formula": "current * time", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "current",
+        "blockLabel": "Q"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q3(a)",
+          "year": 2023, "paper": 1, "questionNumber": "3(a)", "marks": 3,
+          "questionText": "A current of 0.5 A flows through a lamp for 2 minutes. Calculate the charge that flows through the lamp.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "current I = 0.5 A\ntime t = 2 minutes = 120 s", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Convert units", "content": "Time must be in seconds:", "equation": "t = 2 \u00d7 60 = 120 s", "markSchemeNote": "1 mark \u2014 correct conversion to seconds" },
+            { "stepNum": 3, "label": "Apply Q = It", "content": "Substitute into the equation:", "equation": "Q = 0.5 \u00d7 120 = 60 C", "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer with unit" }
+          ],
+          "finalAnswer": "60 C", "finalAnswerUnit": "C", "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q4(a)",
+          "year": 2023, "paper": 1, "questionNumber": "4(a)", "marks": 3,
+          "questionText": "A battery delivers a current of 3.0 A for 5.0 minutes. Calculate the total charge that flows.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "current I = 3.0 A\ntime t = 5.0 minutes = 300 s", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Convert time to seconds", "content": "Multiply minutes by 60:", "equation": "t = 5.0 \u00d7 60 = 300 s", "markSchemeNote": "1 mark \u2014 correct conversion" },
+            { "stepNum": 3, "label": "Calculate charge", "content": "Use Q = I \u00d7 t:", "equation": "Q = 3.0 \u00d7 300 = 900 C", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "900 C", "finalAnswerUnit": "C", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 \u00b7 Q3(a)",
+          "year": 2022, "paper": 2, "questionNumber": "3(a)", "marks": 3,
+          "questionText": "A current of 4.0 A flows through a heater for 30 seconds. Calculate the charge that flows.",
+          "steps": [
+            { "stepNum": 1, "label": "Write the equation", "content": "State the equation:", "equation": "Q = I \u00d7 t", "markSchemeNote": "1 mark \u2014 correct equation" },
+            { "stepNum": 2, "label": "Substitute and calculate", "content": "Put in the values:", "equation": "Q = 4.0 \u00d7 30 = 120 C", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "120 C", "finalAnswerUnit": "C", "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q2(a)",
+          "year": 2022, "paper": 3, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A phone charger draws a current of 2.0 A. How much charge flows in 10 seconds?",
+          "steps": [
+            { "stepNum": 1, "label": "Apply Q = It", "content": "Substitute directly:", "equation": "Q = 2.0 \u00d7 10 = 20 C", "markSchemeNote": "1 mark \u2014 correct equation and substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "20 C", "finalAnswerUnit": "C", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 \u00b7 Q2(a)",
+          "year": 2022, "paper": 2, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A current of 0.25 A flows through a component for 40 seconds. Calculate the charge.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply Q = It", "content": "Substitute into Q = I \u00d7 t:", "equation": "Q = 0.25 \u00d7 40 = 10 C", "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "10 C", "finalAnswerUnit": "C", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q2(b)",
+          "year": 2022, "paper": 1, "questionNumber": "2(b)", "marks": 3,
+          "questionText": "A current of 2.5 A flows through a resistor for 3 minutes. What is the total charge that flows?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "7.5 C",  "correct": false },
+            { "label": "B", "text": "450 C",  "correct": true  },
+            { "label": "C", "text": "72 C",   "correct": false },
+            { "label": "D", "text": "180 C",  "correct": false }
+          ],
+          "markSchemeSteps": ["Convert time: t = 3 \u00d7 60 = 180 s", "Q = I \u00d7 t = 2.5 \u00d7 180", "Q = 450 C \u2713"],
+          "markSchemeAward": "1 mark conversion \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option A is a trap \u2014 using 3 minutes instead of 180 seconds gives 7.5."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q3(a)",
+          "year": 2022, "paper": 1, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "600 C of charge flows through a circuit in 2 minutes. What is the current?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "300 A",  "correct": false },
+            { "label": "B", "text": "5.0 A",  "correct": true  },
+            { "label": "C", "text": "1200 A", "correct": false },
+            { "label": "D", "text": "10 A",   "correct": false }
+          ],
+          "markSchemeSteps": ["I = Q / t = 600 / 120 = 5.0 A \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 \u00b7 Q2(b)",
+          "year": 2023, "paper": 2, "questionNumber": "2(b)", "marks": 2,
+          "questionText": "A current of 0.2 A flows for 50 seconds. How much charge flows?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "250 C",  "correct": false },
+            { "label": "B", "text": "10 C",   "correct": true  },
+            { "label": "C", "text": "0.004 C","correct": false },
+            { "label": "D", "text": "50.2 C", "correct": false }
+          ],
+          "markSchemeSteps": ["Q = 0.2 \u00d7 50 = 10 C \u2713"],
+          "markSchemeAward": "1 mark substitution \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q1(a)",
+          "year": 2023, "paper": 3, "questionNumber": "1(a)", "marks": 2,
+          "questionText": "A torch draws a current of 0.8 A for 25 seconds. Calculate the charge that flows.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "31.25 C", "correct": false },
+            { "label": "B", "text": "20 C",    "correct": true  },
+            { "label": "C", "text": "0.032 C", "correct": false },
+            { "label": "D", "text": "25.8 C",  "correct": false }
+          ],
+          "markSchemeSteps": ["Q = 0.8 \u00d7 25 = 20 C \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 \u00b7 Q1(b)",
+          "year": 2023, "paper": 2, "questionNumber": "1(b)", "marks": 2,
+          "questionText": "A current of 1.5 A flows for 20 seconds. What charge flows?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "13.3 C", "correct": false },
+            { "label": "B", "text": "30 C",   "correct": true  },
+            { "label": "C", "text": "0.075 C","correct": false },
+            { "label": "D", "text": "21.5 C", "correct": false }
+          ],
+          "markSchemeSteps": ["Q = 1.5 \u00d7 20 = 30 C \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Q = It \u2014 all rearrangements",
+      "equation": {
+        "id": "charge",
+        "canonical": "Q = I \u00d7 t",
+        "variables": [
+          { "symbol": "Q", "name": "Charge",  "unit": "coulombs", "abbreviation": "C" },
+          { "symbol": "I", "name": "Current", "unit": "amperes",  "abbreviation": "A" },
+          { "symbol": "t", "name": "Time",    "unit": "seconds",  "abbreviation": "s" }
+        ],
+        "rearrangements": [
+          { "solveFor": "Q", "formula": "Q = I \u00d7 t", "label": "Find charge"  },
+          { "solveFor": "I", "formula": "I = Q / t", "label": "Find current" },
+          { "solveFor": "t", "formula": "t = Q / I", "label": "Find time"    }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "Q", "color": "cyan"   },
+          "bottomLeft": { "symbol": "I", "color": "purple" },
+          "bottomRight":{ "symbol": "t", "color": "amber"  }
+        },
+        "examTip": "Always convert time to seconds before substituting. 1 minute = 60 s.",
+        "onFormulaSheet": {
+          "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+        },
+        "boardNotes": {
+          "aqa":         "On AQA formula sheet. Must be able to rearrange for I or t.",
+          "edexcel":     "On Edexcel equation sheet. Remember to convert minutes to seconds.",
+          "ocr-gateway": "On OCR Gateway formula sheet. Check unit conversions carefully.",
+          "ocr-21c":     "On OCR 21st Century formula sheet.",
+          "wjec":        "Provided in WJEC exam. Know all three rearrangements."
+        }
+      }
+    }
+  ]
+}

@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'icons/*.png'],
+      includeAssets: ['favicon.svg', 'icon.svg', 'apple-touch-icon.svg'],
       manifest: {
         name: 'NeuroPhysics',
         short_name: 'NeuroPhysics',
@@ -19,12 +19,19 @@ export default defineConfig({
         scope: '/',
         start_url: '/',
         icons: [
-          { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
+          { src: 'icon-192.svg', sizes: '192x192', type: 'image/svg+xml', purpose: 'any' },
+          { src: 'icon-512.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'any' },
+          { src: 'maskable-icon.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'maskable' },
+        ],
+        screenshots: [
+          { src: 'icon-512.svg', sizes: '512x512', type: 'image/svg+xml', form_factor: 'wide', label: 'NeuroPhysics home screen' },
+          { src: 'icon-512.svg', sizes: '512x512', type: 'image/svg+xml', form_factor: 'narrow', label: 'NeuroPhysics home screen' },
         ],
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
+        navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/(api|_)/, /\.\w+$/],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

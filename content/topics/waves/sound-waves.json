@@ -1,0 +1,533 @@
+{
+  "id": "sound-waves",
+  "topicId": "waves",
+  "title": "Sound Waves",
+  "subtitle": "How sound travels and behaves",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "In which of these materials does sound travel fastest?",
+      "options": [
+        "Air",
+        "Water",
+        "Steel",
+        "Sound travels at the same speed in all materials"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Common misconception! Sound actually travels fastest in solids like steel (≈ 6000 m/s) because the particles are closest together. In water it is about 1500 m/s, and in air about 340 m/s. Denser/stiffer medium = faster sound.",
+      "correctFeedback": "✓ Correct! Sound travels fastest in solids because the particles are packed most closely and can pass on vibrations more quickly. Steel ≈ 6000 m/s, water ≈ 1500 m/s, air ≈ 340 m/s.",
+      "bestSource": "BEST resource: AQA Physics specification 6.1.3: Sound waves"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Sound Waves",
+      "bodyHTML": "Sound is a <strong>longitudinal</strong> wave produced by <strong>vibrating objects</strong>. It needs a <strong>medium</strong> (solid, liquid or gas) to travel. It cannot travel through a vacuum. Sound travels fastest in <strong>solids</strong>, slower in <strong>liquids</strong>, and slowest in <strong>gases</strong> because particles are closest in solids. In air, the speed of sound is approximately <strong>340 m/s</strong>. The <strong>pitch</strong> of a sound depends on its frequency (higher frequency = higher pitch). The <strong>loudness</strong> depends on its amplitude (bigger amplitude = louder).",
+      "keyEquation": "v = f × λ",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "f",
+            "label": "Frequency (pitch)",
+            "unit": "Hz",
+            "color": "cyan"
+          },
+          {
+            "symbol": "A",
+            "label": "Amplitude (loudness)",
+            "unit": "m",
+            "color": "purple"
+          },
+          {
+            "symbol": "v",
+            "label": "Speed (medium-dependent)",
+            "unit": "m/s",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Higher frequency → higher pitch",
+          "Bigger amplitude → louder sound",
+          "Solids > Liquids > Gases for speed"
+        ]
+      },
+      "keyWords": [
+        "longitudinal",
+        "vibration",
+        "medium",
+        "pitch",
+        "loudness",
+        "frequency",
+        "amplitude",
+        "compression",
+        "rarefaction"
+      ],
+      "commonErrors": [
+        "Saying sound can travel through a vacuum (it cannot)",
+        "Confusing pitch (frequency) with loudness (amplitude)",
+        "Thinking sound travels faster in air than in water"
+      ],
+      "keyEquationTex": "v = f\\lambda"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change frequency (pitch) and amplitude (loudness). Observe how the wave pattern changes.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "frequency",
+            "label": "Frequency (pitch)",
+            "unit": "Hz",
+            "min": 100,
+            "max": 2000,
+            "default": 440,
+            "color": "cyan",
+            "step": 50
+          },
+          {
+            "id": "amplitude",
+            "label": "Amplitude (loudness)",
+            "unit": "units",
+            "min": 1,
+            "max": 10,
+            "default": 5,
+            "color": "purple",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "wavelength",
+            "label": "Wavelength in air",
+            "unit": "m",
+            "formula": "340 / frequency",
+            "color": "amber",
+            "decimalPlaces": 2
+          }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "frequency",
+        "blockLabel": "sound"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 · Q7(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "A sound wave has a frequency of 680 Hz. The speed of sound in air is 340 m/s. Calculate the wavelength.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Use the wave equation:",
+              "equation": "v = f × λ",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Rearrange for wavelength",
+              "content": "Divide both sides by f:",
+              "equation": "λ = v / f",
+              "markSchemeNote": "1 mark: correct rearrangement"
+            },
+            {
+              "stepNum": 3,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "λ = 340 / 680 = 0.5 m",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "0.5 m",
+          "finalAnswerUnit": "m",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q6(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 3,
+          "questionText": "A student claps 50 metres from a wall and hears the echo 0.29 seconds later. Calculate the speed of sound.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Find total distance",
+              "content": "The sound travels to the wall and back:\ntotal distance = 2 × 50 = 100 m",
+              "equation": "d = 100 m",
+              "markSchemeNote": "1 mark: doubling the distance"
+            },
+            {
+              "stepNum": 2,
+              "label": "Apply speed = distance / time",
+              "content": "Use v = d / t:",
+              "equation": "v = 100 / 0.29 = 345 m/s",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "345 m/s",
+          "finalAnswerUnit": "m/s",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q6(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "Explain why sound cannot travel through a vacuum.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Sound is mechanical",
+              "content": "Sound is a longitudinal wave that requires particles to vibrate and transfer energy.",
+              "equation": null,
+              "markSchemeNote": "1 mark: needs particles / medium"
+            },
+            {
+              "stepNum": 2,
+              "label": "Vacuum has no particles",
+              "content": "A vacuum contains no particles, so there is nothing to vibrate and pass the energy along.",
+              "equation": null,
+              "markSchemeNote": "1 mark: no particles in vacuum"
+            }
+          ],
+          "finalAnswer": "Sound needs particles to vibrate; a vacuum has no particles.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q5(b)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "5(b)",
+          "marks": 2,
+          "questionText": "A sound wave in water has a wavelength of 0.15 m and a frequency of 10 000 Hz. Calculate the speed of sound in water.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply the wave equation",
+              "content": "Use v = f × λ:",
+              "equation": "v = 10 000 × 0.15 = 1500 m/s",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "1500 m/s",
+          "finalAnswerUnit": "m/s",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q7(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "7(a)",
+          "marks": 2,
+          "questionText": "A sound wave has a frequency of 200 Hz and travels at 340 m/s. Calculate the wavelength.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply λ = v / f",
+              "content": "All values given:",
+              "equation": "λ = 340 / 200 = 1.7 m",
+              "markSchemeNote": "1 mark: correct equation and substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "1.7 m",
+          "finalAnswerUnit": "m",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 · Q7(b)",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "7(b)",
+          "marks": 1,
+          "questionText": "Which of the following affects the pitch of a sound?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Amplitude",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Frequency",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "Speed",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "Medium",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Pitch depends on frequency ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer",
+          "commonMistake": "Amplitude affects loudness, not pitch."
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q6(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "6(b)",
+          "marks": 1,
+          "questionText": "In which state of matter does sound travel fastest?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Gas",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Liquid",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "Solid",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "Sound travels at the same speed in all states",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Sound fastest in solids: particles closest together ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q6(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(b)",
+          "marks": 2,
+          "questionText": "A sound has a frequency of 500 Hz and travels at 340 m/s in air. What is the wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "170 000 m",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.68 m",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "1.47 m",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "340 m",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "λ = v / f = 340 / 500 = 0.68 m ✓"
+          ],
+          "markSchemeAward": "1 mark rearrangement · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q4(c)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "4(c)",
+          "marks": 1,
+          "questionText": "Why can astronauts in space not hear each other speak without radios?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Sound is too quiet in space",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Space is a vacuum, no particles to vibrate",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "Sound travels too slowly in space",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "Their helmets block the sound",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Sound cannot travel through a vacuum: no particles ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q6(c)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "6(c)",
+          "marks": 1,
+          "questionText": "What determines the loudness of a sound?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "Frequency",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "Wavelength",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "Amplitude",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "Speed",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Loudness depends on amplitude ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Sound waves: key facts & equation",
+      "equation": {
+        "id": "sound-speed",
+        "canonical": "v = f × λ",
+        "variables": [
+          {
+            "symbol": "v",
+            "name": "Speed of sound",
+            "unit": "metres per second",
+            "abbreviation": "m/s"
+          },
+          {
+            "symbol": "f",
+            "name": "Frequency",
+            "unit": "hertz",
+            "abbreviation": "Hz"
+          },
+          {
+            "symbol": "λ",
+            "name": "Wavelength",
+            "unit": "metres",
+            "abbreviation": "m"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "v",
+            "formula": "v = f × λ",
+            "label": "Find speed"
+          },
+          {
+            "solveFor": "f",
+            "formula": "f = v / λ",
+            "label": "Find frequency"
+          },
+          {
+            "solveFor": "λ",
+            "formula": "λ = v / f",
+            "label": "Find wavelength"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "v",
+            "color": "cyan"
+          },
+          "bottomLeft": {
+            "symbol": "f",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "λ",
+            "color": "amber",
+            "tex": "\\lambda"
+          }
+        },
+        "examTip": "The speed of sound in air is about 340 m/s. If the question does not give you a speed, use 340 m/s. Humans can hear 20 Hz to 20 000 Hz.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": true,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "Echo experiments are a required practical. Know how to calculate speed of sound from echo data.",
+          "edexcel": "Remember to double the distance for echo calculations (sound goes there and back).",
+          "ocr-gateway": "Know the approximate speed of sound in air (340 m/s) and that it varies with medium.",
+          "ocr-21c": "Link to ultrasound applications: medical imaging, sonar.",
+          "wjec": "Be able to explain why sound cannot travel in a vacuum using particle theory."
+        }
+      }
+    }
+  ]
+}

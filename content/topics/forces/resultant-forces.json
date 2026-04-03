@@ -1,0 +1,538 @@
+{
+  "id": "resultant-forces",
+  "topicId": "forces",
+  "title": "Resultant Forces",
+  "subtitle": "Adding and subtracting forces",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "Two forces act on an object: 20 N to the right and 8 N to the left. What is the resultant force?",
+      "options": [
+        "28 N to the right",
+        "12 N to the right",
+        "12 N to the left",
+        "28 N to the left"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "⚠️ Common misconception! Many students add the two forces together without thinking about direction. Because the forces act in opposite directions, you subtract: 20 − 8 = 12 N. The resultant acts to the right because the larger force points that way.",
+      "correctFeedback": "✓ Correct! The forces oppose each other, so you subtract: 20 − 8 = 12 N to the right. The resultant always points in the direction of the larger force.",
+      "bestSource": "BEST resource: Forces misconception, AQA Required Practical guidance on resultant forces"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Resultant Forces",
+      "svgDiagram": "force-diagram-unbalanced",
+      "bodyHTML": "Forces have both <strong>size</strong> and <strong>direction</strong>. The <strong>resultant force</strong> is the single force that has the same effect as all the individual forces acting on an object combined. When forces act in the <strong>same direction</strong>, add them. When forces act in <strong>opposite directions</strong>, subtract them. If the resultant force is zero, the forces are <strong>balanced</strong> and the object’s motion does not change. A non-zero resultant means forces are <strong>unbalanced</strong>.",
+      "keyEquation": "Resultant = sum of forces in one direction − sum of forces in opposite direction",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "F₁",
+            "label": "Force 1",
+            "unit": "N",
+            "color": "cyan"
+          },
+          {
+            "symbol": "F₂",
+            "label": "Force 2",
+            "unit": "N",
+            "color": "purple"
+          },
+          {
+            "symbol": "F_R",
+            "label": "Resultant",
+            "unit": "N",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Same direction → F_R = F₁ + F₂",
+          "Opposite directions → F_R = F₁ − F₂"
+        ]
+      },
+      "keyWords": [
+        "resultant force",
+        "direction",
+        "balanced",
+        "unbalanced"
+      ],
+      "commonErrors": [
+        "Forgetting force direction",
+        "Adding when forces oppose each other",
+        "Thinking balanced forces means no forces act"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change force and mass. Watch how acceleration responds in real time.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "force",
+            "label": "Force",
+            "unit": "N",
+            "min": 2,
+            "max": 50,
+            "default": 10,
+            "color": "cyan",
+            "step": 1
+          },
+          {
+            "id": "mass",
+            "label": "Mass",
+            "unit": "kg",
+            "min": 1,
+            "max": 20,
+            "default": 5,
+            "color": "purple",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "acceleration",
+            "label": "Acceleration",
+            "unit": "m/s²",
+            "formula": "force / mass",
+            "color": "amber",
+            "decimalPlaces": 1
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "force",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA style · Resultant forces",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "3(b)",
+          "marks": 3,
+          "questionText": "A box has a driving force of 500 N and friction of 200 N. Calculate the resultant force and the acceleration if the mass is 150 kg.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Find the resultant force",
+              "content": "Subtract opposing forces:\nDriving force = 500 N (forward)\nFriction = 200 N (backward)",
+              "equation": "F_resultant = 500 − 200 = 300 N (forward)",
+              "markSchemeNote": "1 mark: correct resultant force with direction"
+            },
+            {
+              "stepNum": 2,
+              "label": "Find the acceleration",
+              "content": "Use F = ma, rearranged to a = F / m:",
+              "equation": "a = 300 / 150 = 2.0 m/s²",
+              "markSchemeNote": "1 mark: correct substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "Resultant = 300 N forward; acceleration = 2.0 m/s²",
+          "finalAnswerUnit": "N and m/s²",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel style · Resultant forces",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 2,
+          "questionText": "A rocket has thrust 15 000 N upward and weight 12 000 N downward. Find the resultant force.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify forces and directions",
+              "content": "Thrust = 15 000 N (upward)\nWeight = 12 000 N (downward)\nForces are in opposite directions.",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Subtract opposing forces",
+              "content": "The upward force is larger, so the resultant acts upward:",
+              "equation": "F_resultant = 15 000 − 12 000 = 3000 N (upward)",
+              "markSchemeNote": "1 mark: correct calculation; 1 mark: correct answer with direction"
+            }
+          ],
+          "finalAnswer": "3000 N upward",
+          "finalAnswerUnit": "N",
+          "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · Resultant forces",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(c)",
+          "marks": 2,
+          "questionText": "A car has engine force 3000 N, air resistance 1200 N, and friction 800 N. Find the resultant force.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Add all opposing forces",
+              "content": "Engine force = 3000 N (forward)\nAir resistance = 1200 N (backward)\nFriction = 800 N (backward)\nTotal backward force = 1200 + 800 = 2000 N",
+              "equation": null,
+              "markSchemeNote": "1 mark: correctly combining backward forces"
+            },
+            {
+              "stepNum": 2,
+              "label": "Find the resultant",
+              "content": "Subtract total backward from forward:",
+              "equation": "F_resultant = 3000 − 2000 = 1000 N (forward)",
+              "markSchemeNote": "1 mark: correct answer with direction"
+            }
+          ],
+          "finalAnswer": "1000 N forward",
+          "finalAnswerUnit": "N",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · Resultant forces",
+          "year": 2022,
+          "paper": 4,
+          "questionNumber": "2(c)",
+          "marks": 3,
+          "questionText": "Two people push a trolley: 40 N and 60 N in the same direction. A friction force of 30 N opposes the motion. Find the resultant force.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Add forces in the same direction",
+              "content": "Both pushes act forward:\nTotal forward force = 40 + 60 = 100 N",
+              "equation": "F_forward = 40 + 60 = 100 N",
+              "markSchemeNote": "1 mark: correct addition of forward forces"
+            },
+            {
+              "stepNum": 2,
+              "label": "Subtract the friction",
+              "content": "Friction = 30 N (backward):",
+              "equation": "F_resultant = 100 − 30 = 70 N (forward)",
+              "markSchemeNote": "1 mark: correct subtraction; 1 mark: correct answer with direction"
+            }
+          ],
+          "finalAnswer": "70 N forward",
+          "finalAnswerUnit": "N",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC style · Resultant forces",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "A parachutist weighs 700 N. Air resistance is 700 N. Describe the resultant force and the motion of the parachutist.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Find the resultant force",
+              "content": "Weight = 700 N (downward)\nAir resistance = 700 N (upward)\nForces are equal and opposite:",
+              "equation": "F_resultant = 700 − 700 = 0 N",
+              "markSchemeNote": "1 mark: resultant force is zero / balanced forces"
+            },
+            {
+              "stepNum": 2,
+              "label": "Describe the motion",
+              "content": "When forces are balanced (resultant = 0 N), the object continues at constant speed. The parachutist falls at a steady speed: this is called terminal velocity.",
+              "equation": null,
+              "markSchemeNote": "1 mark: constant speed / terminal velocity"
+            }
+          ],
+          "finalAnswer": "Resultant = 0 N; parachutist moves at constant speed (terminal velocity)",
+          "finalAnswerUnit": "N",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA style · Resultant forces practice",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "2(a)",
+          "marks": 2,
+          "questionText": "A sledge is pulled with 250 N forward. Friction is 100 N. What is the resultant force?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "350 N",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "150 N",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "100 N",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "250 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Identify forces: 250 N forward, 100 N backward",
+            "Subtract: 250 − 100 = 150 N forward ✓"
+          ],
+          "markSchemeAward": "1 mark correct method · 1 mark correct answer",
+          "commonMistake": "Option A is a trap: adding instead of subtracting gives 350 N."
+        },
+        "edexcel": {
+          "source": "Edexcel style · Resultant forces practice",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "Forces of 6 N and 4 N act in opposite directions on an object. What is the resultant force?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "10 N",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "2 N",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "24 N",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "6 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Forces oppose: subtract",
+            "6 − 4 = 2 N ✓"
+          ],
+          "markSchemeAward": "1 mark method · 1 mark correct answer",
+          "commonMistake": "Option A is a trap: adding instead of subtracting for opposing forces."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · Resultant forces practice",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 2,
+          "questionText": "Three forces act on an object: 50 N to the right, 30 N to the left, and 10 N to the left. What is the resultant force?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "90 N",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "10 N to the right",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "10 N to the left",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "30 N to the right",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Left forces: 30 + 10 = 40 N",
+            "Resultant: 50 − 40 = 10 N to the right ✓"
+          ],
+          "markSchemeAward": "1 mark combining forces in same direction · 1 mark correct resultant with direction",
+          "commonMistake": "Option A adds all three forces ignoring direction. Option C gives the wrong direction."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · Resultant forces practice",
+          "year": 2023,
+          "paper": 4,
+          "questionNumber": "1(c)",
+          "marks": 2,
+          "questionText": "A boat has engine force 800 N forward and water resistance 800 N backward. What happens to the boat’s motion?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "It speeds up",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "It slows down",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "It moves at constant speed",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "It stops immediately",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Resultant = 800 − 800 = 0 N (balanced)",
+            "Balanced forces → no change in motion → constant speed ✓"
+          ],
+          "markSchemeAward": "1 mark identifying balanced forces · 1 mark correct description of motion",
+          "commonMistake": "Option D is wrong. balanced forces do not mean the object stops; it continues at the same speed."
+        },
+        "wjec": {
+          "source": "WJEC style · Resultant forces practice",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "2(b)",
+          "marks": 2,
+          "questionText": "A trolley has 200 N forward and 50 N friction. What is the resultant force?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "250 N",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "150 N",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "100 N",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "200 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Opposing forces: subtract",
+            "200 − 50 = 150 N forward ✓"
+          ],
+          "markSchemeAward": "1 mark method · 1 mark correct answer",
+          "commonMistake": "Option A adds the forces instead of subtracting. Option D ignores friction entirely."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Resultant Force: combining forces",
+      "equation": {
+        "id": "resultant-force",
+        "canonical": "F_resultant = F₁ + F₂ (same direction) or F₁ − F₂ (opposite)",
+        "variables": [
+          {
+            "symbol": "F_R",
+            "name": "Resultant Force",
+            "unit": "Newtons",
+            "abbreviation": "N"
+          },
+          {
+            "symbol": "F₁",
+            "name": "Force 1",
+            "unit": "Newtons",
+            "abbreviation": "N"
+          },
+          {
+            "symbol": "F₂",
+            "name": "Force 2",
+            "unit": "Newtons",
+            "abbreviation": "N"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "F_R",
+            "formula": "F_R = F₁ + F₂ (same direction)",
+            "label": "Find resultant (same direction)"
+          },
+          {
+            "solveFor": "F_R",
+            "formula": "F_R = F₁ − F₂ (opposite directions)",
+            "label": "Find resultant (opposite)"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "F_R",
+            "color": "cyan",
+            "tex": "F_R"
+          },
+          "bottomLeft": {
+            "symbol": "F₁",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "F₂",
+            "color": "amber"
+          }
+        },
+        "examTip": "Always draw a force diagram first. Label every force with its size and direction.",
+        "onFormulaSheet": {
+          "aqa": false,
+          "edexcel": false,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "AQA tests resultant forces with free body diagrams. You must identify all forces before adding or subtracting.",
+          "edexcel": "Edexcel often combines resultant force with F = ma in multi-step calculations. Always find the resultant first.",
+          "ocr-gateway": "OCR Gateway frequently asks you to calculate resultant from three or more forces. Group forces by direction first.",
+          "ocr-21c": "OCR 21st Century links resultant forces to real-world contexts like cars and parachutes. Explain direction clearly.",
+          "wjec": "WJEC often asks ‘describe’ questions about balanced and unbalanced forces. State both the resultant AND the effect on motion."
+        }
+      }
+    }
+  ]
+}

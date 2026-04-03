@@ -1,0 +1,263 @@
+{
+  "id": "light-and-colour",
+  "topicId": "waves",
+  "title": "Light & Colour",
+  "subtitle": "Visible spectrum, filters & absorption",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A red filter is placed in front of white light. What colour light passes through?",
+      "options": [
+        "White light still passes through",
+        "Only red light passes through",
+        "All colours except red pass through",
+        "No light passes through"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! A colour filter does not add colour \u2014 it absorbs (blocks) all colours except its own. A red filter absorbs all wavelengths except red, so only red light passes through.",
+      "correctFeedback": "\u2713 Correct! A red filter transmits only red light and absorbs all other colours. White light contains all colours, and the filter selectively lets through only red wavelengths.",
+      "bestSource": "BEST resource: AQA Physics specification 6.3.3 \u2014 Colour"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Light & Colour",
+      "bodyHTML": "<strong>White light</strong> is made up of all the colours of the visible spectrum. A <strong>prism</strong> can split white light into a spectrum (dispersion) because each colour has a slightly different wavelength and refracts by a different amount. The order is: <strong>Red, Orange, Yellow, Green, Blue, Indigo, Violet</strong> (ROYGBIV). Red has the <strong>longest wavelength</strong> and violet the <strong>shortest</strong>. <strong>Colour filters</strong> work by absorbing all colours except the one they transmit. An object appears a certain colour because it <strong>reflects</strong> that colour and <strong>absorbs</strong> the rest. A red object in green light appears <strong>black</strong> because there is no red light to reflect.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "comparison",
+        "variables": [
+          { "symbol": "R", "label": "Red (longest \u03bb)", "unit": "\u2248 700 nm", "color": "red" },
+          { "symbol": "G", "label": "Green (mid \u03bb)", "unit": "\u2248 550 nm", "color": "green" },
+          { "symbol": "V", "label": "Violet (shortest \u03bb)", "unit": "\u2248 400 nm", "color": "purple" }
+        ],
+        "relationships": [
+          "White light = all visible colours combined",
+          "Filters absorb all colours except their own",
+          "Objects reflect their colour and absorb the rest"
+        ]
+      },
+      "keyWords": ["visible spectrum", "dispersion", "prism", "filter", "absorption", "reflection", "ROYGBIV"],
+      "commonErrors": [
+        "Saying a filter adds colour (it absorbs all other colours)",
+        "Forgetting that a coloured object in the wrong light appears black",
+        "Confusing dispersion (splitting light) with diffraction (bending around obstacles)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Choose different colour filters and light sources. See which colours pass through and which are absorbed.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "filterColour", "label": "Filter colour", "unit": "index", "min": 1, "max": 7, "default": 1, "color": "cyan", "step": 1 },
+          { "id": "lightSource", "label": "Light source", "unit": "index", "min": 1, "max": 7, "default": 7, "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "transmitted", "label": "Light transmitted", "unit": "", "formula": "filterColour === lightSource ? 1 : 0", "color": "amber", "decimalPlaces": 0 }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "filterColour",
+        "blockLabel": "filter"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 \u00b7 Q9(a)",
+          "year": 2022, "paper": 2, "questionNumber": "9(a)", "marks": 3,
+          "questionText": "White light passes through a prism. Explain why a spectrum is formed.",
+          "steps": [
+            { "stepNum": 1, "label": "State composition", "content": "White light is made up of different colours (wavelengths) of light.", "equation": null, "markSchemeNote": "1 mark \u2014 white light = mixture of colours/wavelengths" },
+            { "stepNum": 2, "label": "Explain refraction", "content": "Each colour has a different wavelength, so each refracts by a different amount at the prism boundary.", "equation": null, "markSchemeNote": "1 mark \u2014 different wavelengths refract differently" },
+            { "stepNum": 3, "label": "Result", "content": "The colours spread out to form a visible spectrum from red to violet.", "equation": null, "markSchemeNote": "1 mark \u2014 colours separate / spectrum formed" }
+          ],
+          "finalAnswer": "White light contains different wavelengths that refract by different amounts in the prism, separating into a spectrum.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q8(a)",
+          "year": 2023, "paper": 1, "questionNumber": "8(a)", "marks": 2,
+          "questionText": "A red object is viewed under green light. What colour does it appear? Explain why.",
+          "steps": [
+            { "stepNum": 1, "label": "State the colour", "content": "The object appears black.", "equation": null, "markSchemeNote": "1 mark \u2014 black" },
+            { "stepNum": 2, "label": "Explain", "content": "A red object only reflects red light. Green light contains no red wavelengths, so no light is reflected and the object appears black.", "equation": null, "markSchemeNote": "1 mark \u2014 no red to reflect / all light absorbed" }
+          ],
+          "finalAnswer": "Black \u2014 the object absorbs the green light and there is no red light to reflect.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 \u00b7 Q8(a)",
+          "year": 2023, "paper": 1, "questionNumber": "8(a)", "marks": 2,
+          "questionText": "Explain how a blue filter works.",
+          "steps": [
+            { "stepNum": 1, "label": "What it transmits", "content": "A blue filter transmits (lets through) blue light.", "equation": null, "markSchemeNote": "1 mark \u2014 transmits blue" },
+            { "stepNum": 2, "label": "What it absorbs", "content": "It absorbs all other colours (wavelengths) of light.", "equation": null, "markSchemeNote": "1 mark \u2014 absorbs other colours" }
+          ],
+          "finalAnswer": "A blue filter transmits blue light and absorbs all other colours.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q7(a)",
+          "year": 2022, "paper": 3, "questionNumber": "7(a)", "marks": 2,
+          "questionText": "Name the process by which a prism splits white light into a spectrum.",
+          "steps": [
+            { "stepNum": 1, "label": "Name the process", "content": "Dispersion.", "equation": null, "markSchemeNote": "1 mark \u2014 dispersion" },
+            { "stepNum": 2, "label": "Brief explanation", "content": "Different wavelengths refract by different amounts, causing the colours to separate.", "equation": null, "markSchemeNote": "1 mark \u2014 different refraction for different wavelengths" }
+          ],
+          "finalAnswer": "Dispersion \u2014 different wavelengths refract by different amounts.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 \u00b7 Q9(a)",
+          "year": 2022, "paper": 1, "questionNumber": "9(a)", "marks": 2,
+          "questionText": "A white object is viewed under red light. What colour does it appear? Explain.",
+          "steps": [
+            { "stepNum": 1, "label": "State the colour", "content": "The object appears red.", "equation": null, "markSchemeNote": "1 mark \u2014 red" },
+            { "stepNum": 2, "label": "Explain", "content": "A white object reflects all colours. Under red light, only red light is available to reflect, so it appears red.", "equation": null, "markSchemeNote": "1 mark \u2014 reflects all, only red available" }
+          ],
+          "finalAnswer": "Red \u2014 a white object reflects all colours, but only red is available.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 \u00b7 Q9(b)",
+          "year": 2023, "paper": 2, "questionNumber": "9(b)", "marks": 1,
+          "questionText": "A green object is viewed under white light. What colour does it appear?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "White", "correct": false },
+            { "label": "B", "text": "Black", "correct": false },
+            { "label": "C", "text": "Green", "correct": true },
+            { "label": "D", "text": "Red", "correct": false }
+          ],
+          "markSchemeSteps": ["Green object reflects green light from the white light \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q8(b)",
+          "year": 2022, "paper": 1, "questionNumber": "8(b)", "marks": 1,
+          "questionText": "Which colour of visible light has the shortest wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Red", "correct": false },
+            { "label": "B", "text": "Green", "correct": false },
+            { "label": "C", "text": "Blue", "correct": false },
+            { "label": "D", "text": "Violet", "correct": true }
+          ],
+          "markSchemeSteps": ["Violet has the shortest wavelength in the visible spectrum \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 \u00b7 Q8(b)",
+          "year": 2022, "paper": 1, "questionNumber": "8(b)", "marks": 1,
+          "questionText": "A blue object is placed under red light. What colour does it appear?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Blue", "correct": false },
+            { "label": "B", "text": "Red", "correct": false },
+            { "label": "C", "text": "Purple", "correct": false },
+            { "label": "D", "text": "Black", "correct": true }
+          ],
+          "markSchemeSteps": ["Blue object only reflects blue \u2014 no blue in red light \u2192 appears black \u2713"],
+          "markSchemeAward": "1 mark correct answer",
+          "commonMistake": "Students sometimes think colours mix (blue + red = purple), but the object can only reflect blue and there is none available."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q7(b)",
+          "year": 2023, "paper": 3, "questionNumber": "7(b)", "marks": 1,
+          "questionText": "What name is given to the splitting of white light by a prism?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Diffraction", "correct": false },
+            { "label": "B", "text": "Refraction", "correct": false },
+            { "label": "C", "text": "Dispersion", "correct": true },
+            { "label": "D", "text": "Reflection", "correct": false }
+          ],
+          "markSchemeSteps": ["Dispersion is the splitting of white light into a spectrum \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 \u00b7 Q9(b)",
+          "year": 2023, "paper": 1, "questionNumber": "9(b)", "marks": 1,
+          "questionText": "Which colour in the visible spectrum has the longest wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Violet", "correct": false },
+            { "label": "B", "text": "Blue", "correct": false },
+            { "label": "C", "text": "Green", "correct": false },
+            { "label": "D", "text": "Red", "correct": true }
+          ],
+          "markSchemeSteps": ["Red has the longest wavelength in the visible spectrum \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Light & Colour \u2014 key facts",
+      "equation": {
+        "id": "light-colour",
+        "canonical": "White light = all visible colours (ROYGBIV)",
+        "variables": [
+          { "symbol": "R", "name": "Red", "unit": "\u2248 700 nm wavelength", "abbreviation": "nm" },
+          { "symbol": "V", "name": "Violet", "unit": "\u2248 400 nm wavelength", "abbreviation": "nm" }
+        ],
+        "rearrangements": [
+          { "solveFor": "R", "formula": "Red has longest wavelength, lowest frequency", "label": "Red end" },
+          { "solveFor": "V", "formula": "Violet has shortest wavelength, highest frequency", "label": "Violet end" }
+        ],
+        "triangleLayout": {
+          "top": { "symbol": "W", "color": "cyan" },
+          "bottomLeft": { "symbol": "R", "color": "red" },
+          "bottomRight": { "symbol": "V", "color": "purple" }
+        },
+        "examTip": "Remember: filters ABSORB, they do not add colour. A coloured object in the 'wrong' light appears BLACK because there is nothing to reflect.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "Know ROYGBIV order, how filters work, and what happens to coloured objects under different lights.",
+          "edexcel": "Common question: 'Explain why a red object in blue light appears black.' Use absorb/reflect language.",
+          "ocr-gateway": "Link dispersion to refraction. Each colour has a different wavelength \u2192 different refraction.",
+          "ocr-21c": "Know approximate wavelength range: 400 nm (violet) to 700 nm (red).",
+          "wjec": "Describe using 'absorb' and 'reflect/transmit' for full marks on filter questions."
+        }
+      }
+    }
+  ]
+}

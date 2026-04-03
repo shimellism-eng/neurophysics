@@ -1,0 +1,529 @@
+{
+  "id": "wave-properties",
+  "topicId": "waves",
+  "title": "Wave Properties",
+  "subtitle": "Amplitude, wavelength, frequency & period",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "If you increase the amplitude of a wave, what happens to its speed?",
+      "options": [
+        "The wave speeds up",
+        "The wave slows down",
+        "The speed stays the same",
+        "It depends on the frequency"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Common misconception! A bigger amplitude means the wave carries more energy, but it does NOT change the speed. Wave speed depends on the medium (and frequency × wavelength), not on amplitude.",
+      "correctFeedback": "✓ Correct! Amplitude affects energy, not speed. A louder sound has a bigger amplitude but travels at the same speed as a quiet one in the same medium.",
+      "bestSource": "BEST resource: GCSE Physics specification: wave properties and definitions"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Wave Properties",
+      "svgDiagram": "wave-diagram",
+      "bodyHTML": "<strong>Amplitude</strong> is the maximum displacement from the rest position: it tells you how much energy the wave carries. <strong>Wavelength (λ)</strong> is the distance from one point on a wave to the same point on the next wave (e.g. crest to crest). <strong>Frequency (f)</strong> is the number of complete waves passing a point per second, measured in <strong>hertz (Hz)</strong>. <strong>Period (T)</strong> is the time for one complete wave to pass a point. Frequency and period are inversely related: <strong>f = 1/T</strong>.",
+      "keyEquation": "f = 1/T",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "A",
+            "label": "Amplitude",
+            "unit": "m",
+            "color": "cyan"
+          },
+          {
+            "symbol": "λ",
+            "label": "Wavelength",
+            "unit": "m",
+            "color": "purple"
+          },
+          {
+            "symbol": "f",
+            "label": "Frequency",
+            "unit": "Hz",
+            "color": "amber"
+          },
+          {
+            "symbol": "T",
+            "label": "Period",
+            "unit": "s",
+            "color": "pink"
+          }
+        ],
+        "relationships": [
+          "Bigger amplitude → more energy (not faster)",
+          "Higher frequency → shorter period",
+          "f = 1/T and T = 1/f"
+        ]
+      },
+      "keyWords": [
+        "amplitude",
+        "wavelength",
+        "frequency",
+        "period",
+        "hertz",
+        "displacement"
+      ],
+      "commonErrors": [
+        "Measuring amplitude from crest to trough instead of from the rest position",
+        "Thinking bigger amplitude means faster wave speed",
+        "Confusing frequency (waves per second) with period (seconds per wave)"
+      ],
+      "keyEquationTex": "f = \\frac{1}{T}"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change frequency and amplitude. Watch how the wave shape changes in real time.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "frequency",
+            "label": "Frequency",
+            "unit": "Hz",
+            "min": 1,
+            "max": 10,
+            "default": 3,
+            "color": "cyan",
+            "step": 1
+          },
+          {
+            "id": "amplitude",
+            "label": "Amplitude",
+            "unit": "cm",
+            "min": 1,
+            "max": 10,
+            "default": 5,
+            "color": "purple",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "period",
+            "label": "Period",
+            "unit": "s",
+            "formula": "1 / frequency",
+            "color": "amber",
+            "decimalPlaces": 2
+          }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "amplitude",
+        "blockLabel": "wave"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 · Q5(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "5(b)",
+          "marks": 2,
+          "questionText": "A wave has a frequency of 5 Hz. Calculate the period of the wave.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Use the relationship between frequency and period:",
+              "equation": "T = 1/f",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "T = 1/5 = 0.2 s",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "0.2 s",
+          "finalAnswerUnit": "s",
+          "totalMarks": 2
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q4(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 2,
+          "questionText": "A wave has a period of 0.04 s. Calculate the frequency of the wave.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Rearrange the period-frequency relationship:",
+              "equation": "f = 1/T",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "f = 1/0.04 = 25 Hz",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "25 Hz",
+          "finalAnswerUnit": "Hz",
+          "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q3(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(a)",
+          "marks": 3,
+          "questionText": "A student observes 20 waves passing a point in 10 seconds. Calculate the frequency and the period of the waves.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Calculate frequency",
+              "content": "Frequency = number of waves / time:",
+              "equation": "f = 20 / 10 = 2 Hz",
+              "markSchemeNote": "1 mark: correct frequency"
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate period",
+              "content": "Period is the inverse of frequency:",
+              "equation": "T = 1/f = 1/2 = 0.5 s",
+              "markSchemeNote": "1 mark: correct period; 1 mark: both units stated"
+            }
+          ],
+          "finalAnswer": "f = 2 Hz, T = 0.5 s",
+          "finalAnswerUnit": "Hz / s",
+          "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q3(a)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "3(a)",
+          "marks": 2,
+          "questionText": "A wave has a frequency of 50 Hz. What is the period?",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Period is the inverse of frequency:",
+              "equation": "T = 1/f",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and solve",
+              "content": "Put in the values:",
+              "equation": "T = 1/50 = 0.02 s",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "0.02 s",
+          "finalAnswerUnit": "s",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q3(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "A wave has a period of 0.25 s. Calculate the frequency.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply f = 1/T",
+              "content": "All values given. Substitute straight in:",
+              "equation": "f = 1/0.25 = 4 Hz",
+              "markSchemeNote": "1 mark: correct equation and substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "4 Hz",
+          "finalAnswerUnit": "Hz",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 · Q5(c)",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "5(c)",
+          "marks": 2,
+          "questionText": "A wave has a period of 0.1 s. What is its frequency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.1 Hz",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "1 Hz",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "10 Hz",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "100 Hz",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "f = 1/T",
+            "f = 1/0.1 = 10 Hz ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit",
+          "commonMistake": "Option A is the period restated, not the frequency."
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q3(c)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(c)",
+          "marks": 2,
+          "questionText": "A wave has a frequency of 200 Hz. What is the period?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "200 s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.5 s",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "0.005 s",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "0.02 s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "T = 1/f",
+            "T = 1/200 = 0.005 s ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q3(c)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "3(c)",
+          "marks": 1,
+          "questionText": "What is the amplitude of a wave?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "The distance from crest to trough",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "The maximum displacement from the rest position",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "The distance between two crests",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "The number of waves per second",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Amplitude = maximum displacement from rest position ✓"
+          ],
+          "markSchemeAward": "1 mark correct answer",
+          "commonMistake": "Option A gives crest-to-trough distance which is DOUBLE the amplitude."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q2(b)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "2(b)",
+          "marks": 2,
+          "questionText": "A wave has a frequency of 4 Hz. Calculate the period.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "4 s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.25 s",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "0.4 s",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "2 s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "T = 1/f = 1/4 = 0.25 s ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q4(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(b)",
+          "marks": 2,
+          "questionText": "A tuning fork vibrates 440 times per second. What is its frequency and period?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "f = 440 Hz, T = 0.0023 s",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "f = 440 Hz, T = 440 s",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "f = 44 Hz, T = 0.023 s",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "f = 440 Hz, T = 0.44 s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "f = 440 Hz (440 vibrations per second)",
+            "T = 1/440 = 0.0023 s ✓"
+          ],
+          "markSchemeAward": "1 mark frequency · 1 mark period + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "f = 1/T: all rearrangements",
+      "equation": {
+        "id": "frequency-period",
+        "canonical": "f = 1 / T",
+        "variables": [
+          {
+            "symbol": "f",
+            "name": "Frequency",
+            "unit": "hertz",
+            "abbreviation": "Hz"
+          },
+          {
+            "symbol": "T",
+            "name": "Period",
+            "unit": "seconds",
+            "abbreviation": "s"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "f",
+            "formula": "f = 1 / T",
+            "label": "Find frequency"
+          },
+          {
+            "solveFor": "T",
+            "formula": "T = 1 / f",
+            "label": "Find period"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "1",
+            "color": "cyan"
+          },
+          "bottomLeft": {
+            "symbol": "f",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "T",
+            "color": "amber"
+          }
+        },
+        "examTip": "Remember: frequency is how MANY waves per second, period is how LONG one wave takes. They are inverses of each other.",
+        "onFormulaSheet": {
+          "aqa": false,
+          "edexcel": false,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "NOT on formula sheet, must be memorised. Very commonly examined.",
+          "edexcel": "NOT on equation sheet. Learn this alongside v = fλ.",
+          "ocr-gateway": "NOT on formula sheet, must be memorised.",
+          "ocr-21c": "NOT on formula sheet, must be memorised.",
+          "wjec": "NOT provided. You must memorise f = 1/T."
+        }
+      }
+    }
+  ]
+}

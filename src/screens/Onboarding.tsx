@@ -38,7 +38,7 @@ export function Onboarding() {
   }
 
   return (
-    <div className="onboarding safe-top safe-bot">
+    <main className="onboarding safe-top safe-bot">
       {step === 'welcome' && (
         <div className="onboarding__screen">
           <div className="onboarding__logo">⚡</div>
@@ -97,7 +97,7 @@ export function Onboarding() {
               >
                 <span className="onboarding__tier-name">{t}</span>
                 <span className="onboarding__tier-desc">
-                  {t === 'Foundation' ? 'Grades 1–5 — core content' : 'Grades 4–9 — includes all Higher content'}
+                  {t === 'Foundation' ? 'Grades 1-5: core content' : 'Grades 4-9: includes all Higher content'}
                 </span>
               </button>
             ))}
@@ -109,6 +109,6 @@ export function Onboarding() {
           )}
         </div>
       )}
-    </div>
+    </main>
   );
 }

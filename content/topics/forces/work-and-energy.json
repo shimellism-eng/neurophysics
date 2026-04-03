@@ -1,0 +1,526 @@
+{
+  "id": "work-and-energy",
+  "topicId": "forces",
+  "title": "Work Done and Energy Transfer",
+  "subtitle": "W = F × d",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "A student carries a heavy box horizontally across a room at constant height. How much work is done against gravity?",
+      "options": [
+        "A lot, the box is heavy",
+        "Some, they used energy",
+        "Zero - the force and movement are at right angles",
+        "It depends on speed"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Common misconception! Work is only done when force and distance are in the SAME direction. Carrying horizontally means the displacement is horizontal but gravity acts vertically - so work done against gravity is zero.",
+      "correctFeedback": "✓ Exactly. Work done = force × distance IN THE DIRECTION of the force. Since gravity is vertical and movement is horizontal, work against gravity = 0."
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Work Done and Energy Transfer",
+      "bodyHTML": "When a <strong>force</strong> moves an object through a <strong>distance</strong>, <strong>work is done</strong>. Work done equals force multiplied by distance moved in the direction of the force. The unit of work is the <strong>joule (J)</strong>: 1 J = 1 N × 1 m. Work done equals <strong>energy transferred</strong> - so doing 500 J of work transfers 500 J of energy. The force must act <em>in the direction of movement</em> for work to be done.",
+      "keyEquation": "W = F × d",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "W",
+            "label": "Work done",
+            "unit": "J",
+            "color": "amber"
+          },
+          {
+            "symbol": "F",
+            "label": "Force",
+            "unit": "N",
+            "color": "cyan"
+          },
+          {
+            "symbol": "d",
+            "label": "Distance",
+            "unit": "m",
+            "color": "purple"
+          }
+        ],
+        "relationships": [
+          "Bigger F → more work done (if d is constant)",
+          "Bigger d → more work done (if F is constant)"
+        ]
+      },
+      "keyWords": [
+        "work done",
+        "energy transfer",
+        "joules",
+        "force",
+        "distance"
+      ],
+      "commonErrors": [
+        "Forgetting to convert units (e.g. km to m)",
+        "Using the wrong force (must be the force in the direction of movement)",
+        "Confusing work done with power"
+      ],
+      "keyEquationTex": "W = Fd"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change force and distance. Watch how work done responds in real time.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "force",
+            "label": "Force",
+            "unit": "N",
+            "min": 1,
+            "max": 100,
+            "default": 20,
+            "color": "cyan",
+            "step": 1
+          },
+          {
+            "id": "distance",
+            "label": "Distance",
+            "unit": "m",
+            "min": 1,
+            "max": 50,
+            "default": 10,
+            "color": "purple",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "work",
+            "label": "Work Done",
+            "unit": "J",
+            "formula": "force * distance",
+            "color": "amber",
+            "decimalPlaces": 0
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "force",
+        "blockLabel": "d"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA style · Work done calculation",
+          "marks": 3,
+          "questionText": "A person pushes a box with a force of 40 N over a distance of 8 m. Calculate the work done.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the work done equation:",
+              "equation": "W = F × d",
+              "markSchemeNote": "1 mark: correct equation recalled"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute the values",
+              "content": "Force F = 40 N, distance d = 8 m:",
+              "equation": "W = 40 × 8",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate with units",
+              "content": "Multiply and state the unit:",
+              "equation": "W = 320 J ✓",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "320 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel style · Work done by a crane",
+          "marks": 3,
+          "questionText": "A crane lifts a load of weight 5000 N through a height of 12 m. Calculate the work done by the crane.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "The weight acts vertically and the distance is vertical, so:",
+              "equation": "W = F × d",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute the values",
+              "content": "Force F = 5000 N (the weight), distance d = 12 m:",
+              "equation": "W = 5000 × 12",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate with units",
+              "content": "Multiply and state the unit:",
+              "equation": "W = 60 000 J ✓",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "60 000 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · Cyclist calculation",
+          "marks": 2,
+          "questionText": "A cyclist pedals with a force of 250 N over 400 m. Calculate the work done.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the equation:",
+              "equation": "W = F × d",
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "F = 250 N, d = 400 m:",
+              "equation": "W = 250 × 400 = 100 000 J ✓",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "100 000 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · Braking calculation",
+          "marks": 3,
+          "questionText": "A car’s braking force is 6000 N. It takes 25 m to stop. Calculate the work done by the brakes and state what happens to the kinetic energy.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the work done equation:",
+              "equation": "W = F × d",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "F = 6000 N, d = 25 m:",
+              "equation": "W = 6000 × 25 = 150 000 J",
+              "markSchemeNote": "1 mark: correct calculation with unit"
+            },
+            {
+              "stepNum": 3,
+              "label": "State the energy transfer",
+              "content": "The brakes convert kinetic energy into thermal energy (heat). The kinetic energy of the car is transferred to the thermal energy store of the brakes.",
+              "equation": null,
+              "markSchemeNote": "1 mark: kinetic energy is transferred to thermal energy"
+            }
+          ],
+          "finalAnswer": "150 000 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC style · Pulling a toy",
+          "marks": 2,
+          "questionText": "A child pulls a toy with a force of 5 N over 3 m. Calculate the work done.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply W = F × d directly",
+              "content": "All values given. Substitute straight in:",
+              "equation": "W = 5 × 3 = 15 J ✓",
+              "markSchemeNote": "1 mark: correct equation and substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "15 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA style · Work done practice",
+          "marks": 2,
+          "questionText": "A force of 200 N pushes a trolley 6 m along a flat floor. What is the work done?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "33.3 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "206 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "1200 J",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "12 000 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = F × d",
+            "W = 200 × 6 = 1200 J ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option A divides instead of multiplying. Option D adds an extra zero."
+        },
+        "edexcel": {
+          "source": "Edexcel style · Work done practice",
+          "marks": 2,
+          "questionText": "A weightlifter raises a barbell of weight 800 N through 1.5 m. How much work is done?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "533 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "801.5 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "1200 J",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "12 000 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = F × d",
+            "W = 800 × 1.5 = 1200 J ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option A divides instead of multiplying. Option B adds instead of multiplying."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · Work done practice",
+          "marks": 2,
+          "questionText": "A dog pulls a sled with a force of 150 N over a distance of 20 m. Calculate the work done.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "7.5 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "170 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "3000 J",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "30 000 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = F × d",
+            "W = 150 × 20 = 3000 J ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option A divides. Option D adds an extra zero."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · Work done practice",
+          "marks": 2,
+          "questionText": "An engine exerts a force of 4000 N to move a boat 50 m. What is the work done by the engine?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "80 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "4050 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "200 000 J",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "20 000 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = F × d",
+            "W = 4000 × 50 = 200 000 J ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option D is a factor of 10 out. always double-check zero counts."
+        },
+        "wjec": {
+          "source": "WJEC style · Work done practice",
+          "marks": 2,
+          "questionText": "A student pushes a chair with a force of 30 N across 4 m of floor. What is the work done?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "7.5 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "34 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "120 J",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "1200 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = F × d",
+            "W = 30 × 4 = 120 J ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option A divides. Option D adds an extra zero."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "W = Fd: all rearrangements",
+      "equation": {
+        "id": "work-done",
+        "canonical": "W = F × d",
+        "variables": [
+          {
+            "symbol": "W",
+            "name": "Work done",
+            "unit": "joules",
+            "abbreviation": "J"
+          },
+          {
+            "symbol": "F",
+            "name": "Force",
+            "unit": "newtons",
+            "abbreviation": "N"
+          },
+          {
+            "symbol": "d",
+            "name": "Distance",
+            "unit": "metres",
+            "abbreviation": "m"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "W",
+            "formula": "W = F × d",
+            "label": "Find work done"
+          },
+          {
+            "solveFor": "F",
+            "formula": "F = W / d",
+            "label": "Find force"
+          },
+          {
+            "solveFor": "d",
+            "formula": "d = W / F",
+            "label": "Find distance"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "W",
+            "color": "amber"
+          },
+          "bottomLeft": {
+            "symbol": "F",
+            "color": "cyan"
+          },
+          "bottomRight": {
+            "symbol": "d",
+            "color": "purple"
+          }
+        },
+        "examTip": "Work done = energy transferred. If a question asks about energy transfer, use W = Fd. Always check units. distance must be in metres.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": true,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Know all three rearrangements and remember W = energy transferred.",
+          "edexcel": "On Edexcel equation sheet. Units must be stated for full marks.",
+          "ocr-gateway": "On OCR Gateway formula sheet. Be ready to rearrange for F or d.",
+          "ocr-21c": "On OCR 21st Century formula sheet. Link work done to energy transfer in 6-mark answers.",
+          "wjec": "Provided in WJEC exam. Practise linking work done to changes in energy stores."
+        }
+      }
+    }
+  ]
+}

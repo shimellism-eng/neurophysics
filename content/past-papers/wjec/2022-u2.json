@@ -1,0 +1,169 @@
+{
+  "board": "wjec",
+  "year": 2022,
+  "paper": "u2",
+  "tier": "Higher",
+  "totalMarks": 80,
+  "questions": [
+    {
+      "id": "wjec-2022-u2-q1b",
+      "number": "1(b)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A kite has a lift force of 15 N upwards, weight of 3 N downwards, and wind drag of 8 N horizontally. Calculate the resultant vertical force on the kite.",
+      "markScheme": {
+        "answer": "12 N upwards",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Identifies vertical forces: 15 N up, 3 N down" },
+          { "mark": 2, "description": "Subtracts: 15 - 3 = 12 N" },
+          { "mark": 3, "description": "Direction: upwards" }
+        ],
+        "commonErrors": [
+          "Including horizontal drag in the vertical calculation",
+          "Adding all three forces together"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "wjec-2022-u2-q2a",
+      "number": "2(a)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A skateboard and rider have a total mass of 65 kg. The resultant force is 130 N. Calculate the acceleration.",
+      "markScheme": {
+        "answer": "2.0 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Recalls a = F/m" },
+          { "mark": 2, "description": "Substitutes: a = 130 / 65" },
+          { "mark": 3, "description": "Correct answer: 2.0 m/s\u00b2" }
+        ],
+        "commonErrors": [
+          "Multiplying instead of dividing",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2022-u2-q3b",
+      "number": "3(b)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A 2.0 kg book rests on a table. What is the weight of the book? (g = 10 N/kg)",
+      "options": ["0.2 N", "2.0 N", "12 N", "20 N"],
+      "correctIndex": 3,
+      "markScheme": {
+        "answer": "20 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "W = mg = 2.0 \u00d7 10" },
+          { "mark": 2, "description": "Correct answer: 20 N" }
+        ],
+        "commonErrors": [
+          "Writing 2.0 N (confusing mass and weight)"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2022-u2-q4a",
+      "number": "4(a)",
+      "topic": "forces",
+      "concept": "stopping-distance",
+      "marks": 4,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A driver sees a hazard and applies the brakes. Describe the difference between thinking distance and braking distance, and give one factor that affects each.",
+      "markScheme": {
+        "answer": "Thinking distance is the distance travelled during the driver's reaction time. It is affected by tiredness, alcohol, or distractions. Braking distance is the distance travelled from when the brakes are applied until the car stops. It is affected by speed, road conditions, or brake condition.",
+        "steps": [
+          { "mark": 1, "description": "Thinking distance: distance travelled during the driver's reaction time" },
+          { "mark": 2, "description": "Factor affecting thinking distance: tiredness / alcohol / drugs / distractions" },
+          { "mark": 3, "description": "Braking distance: distance from applying brakes to stopping" },
+          { "mark": 4, "description": "Factor affecting braking distance: speed / road surface / brake condition / tyre condition" }
+        ],
+        "commonErrors": [
+          "Mixing up factors for thinking and braking distance",
+          "Not clearly defining each distance"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2022-u2-q5c",
+      "number": "5(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 70 kg footballer running at 8 m/s tackles a 80 kg footballer running at 5 m/s in the opposite direction. They hold onto each other after the tackle. Calculate their velocity after the tackle.",
+      "markScheme": {
+        "answer": "1.07 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum of player 1: 70 \u00d7 8 = 560 kg m/s" },
+          { "mark": 2, "description": "Momentum of player 2: 80 \u00d7 (-5) = -400 kg m/s" },
+          { "mark": 3, "description": "Total momentum = 560 + (-400) = 160 kg m/s" },
+          { "mark": 4, "description": "v = 160 / 150 = 1.07 m/s (in direction of player 1)" }
+        ],
+        "allowedAlternatives": ["1.1 m/s"],
+        "commonErrors": [
+          "Not using opposite signs for opposite directions",
+          "Adding momenta without regard to direction"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2022-u2-q6b",
+      "number": "6(b)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A window cleaner of mass 80 kg climbs a ladder to a height of 6.0 m. (g = 10 N/kg) Calculate the work done by the window cleaner against gravity.",
+      "markScheme": {
+        "answer": "4800 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Weight = 80 \u00d7 10 = 800 N" },
+          { "mark": 2, "description": "Recalls work = force \u00d7 distance" },
+          { "mark": 3, "description": "Substitutes: work = 800 \u00d7 6.0" },
+          { "mark": 4, "description": "Correct answer: 4800 J" }
+        ],
+        "allowedAlternatives": ["4.8 kJ"],
+        "commonErrors": [
+          "Using mass (80) instead of weight (800)",
+          "Not calculating weight first"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    }
+  ]
+}

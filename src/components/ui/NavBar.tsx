@@ -1,17 +1,21 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useHaptics } from '../../hooks/useHaptics';
 import './NavBar.css';
 
 const NAV_ITEMS = [
-  { path: '/home',      icon: '⚡', label: 'Home'      },
-  { path: '/topics',    icon: '📚', label: 'Topics'    },
-  { path: '/equations', icon: '∑',  label: 'Equations' },
-  { path: '/papers',    icon: '📝', label: 'Papers'    },
-  { path: '/settings',  icon: '⚙',  label: 'Settings'  },
+  { path: '/home',        icon: '⚡', label: 'Home'       },
+  { path: '/review',      icon: '🔄', label: 'Review'     },
+  { path: '/topics',      icon: '📚', label: 'Topics'     },
+  { path: '/practicals',  icon: '🔬', label: 'Practicals' },
+  { path: '/equations',   icon: '∑',  label: 'Equations'  },
+  { path: '/papers',      icon: '📝', label: 'Papers'     },
+  { path: '/settings',    icon: '⚙',  label: 'Settings'   },
 ];
 
 export function NavBar() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { lightTap } = useHaptics();
 
   return (
     <nav className="navbar safe-bot" role="navigation" aria-label="Main navigation">
@@ -21,7 +25,7 @@ export function NavBar() {
           <button
             key={item.path}
             className={`navbar-item${active ? ' navbar-item--active' : ''}`}
-            onClick={() => navigate(item.path)}
+            onClick={() => { lightTap(); navigate(item.path); }}
             aria-label={item.label}
             aria-current={active ? 'page' : undefined}
           >

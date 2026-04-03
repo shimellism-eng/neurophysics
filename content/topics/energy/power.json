@@ -1,0 +1,540 @@
+{
+  "id": "power",
+  "topicId": "energy",
+  "title": "Power",
+  "subtitle": "P = E/t",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "Two kettles both transfer 100 000 J to heat water. Kettle A takes 60 s and Kettle B takes 120 s. Which is more powerful?",
+      "options": [
+        "Kettle B (it takes longer so uses more power)",
+        "They have the same power (same energy)",
+        "Kettle A (it transfers the same energy in less time)",
+        "It depends on the mass of water"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Common misconception! Power is the RATE of energy transfer, that is how fast energy is transferred, not how much. Since both transfer the same energy but Kettle A does it faster, Kettle A has the higher power.",
+      "correctFeedback": "✓ Correct! Power = energy ÷ time. Kettle A transfers energy faster (same energy, less time), so it has a higher power. Power is about the RATE, not the total amount.",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.4: Power"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Power",
+      "bodyHTML": "<strong>Power</strong> is the <strong>rate</strong> of energy transfer, that is how fast energy is transferred or work is done. It is measured in <strong>watts (W)</strong>. One watt means one joule of energy transferred per second. A more powerful device transfers the same amount of energy in <strong>less time</strong>, or more energy in the same time.",
+      "keyEquation": "P = E / t",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "P",
+            "label": "Power",
+            "unit": "W",
+            "color": "cyan"
+          },
+          {
+            "symbol": "E",
+            "label": "Energy transferred",
+            "unit": "J",
+            "color": "purple"
+          },
+          {
+            "symbol": "t",
+            "label": "Time",
+            "unit": "s",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "1 W = 1 J/s (one joule per second)",
+          "1 kW = 1000 W",
+          "P = W / t also works (W = work done in joules)"
+        ]
+      },
+      "keyWords": [
+        "power",
+        "watt",
+        "rate",
+        "energy transfer",
+        "work done",
+        "joule per second"
+      ],
+      "commonErrors": [
+        "Confusing power (W) with energy (J). Power is the RATE, not the amount",
+        "Forgetting to convert kW to W (multiply by 1000) or minutes to seconds",
+        "Mixing up P = E/t and E = P × t"
+      ],
+      "keyEquationTex": "P = \\frac{E}{t}"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change energy transferred and time. Watch how power responds. Notice that shorter time means higher power.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "energy",
+            "label": "Energy",
+            "unit": "J",
+            "min": 100,
+            "max": 10000,
+            "default": 1000,
+            "color": "purple",
+            "step": 100
+          },
+          {
+            "id": "time",
+            "label": "Time",
+            "unit": "s",
+            "min": 1,
+            "max": 120,
+            "default": 10,
+            "color": "amber",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "power",
+            "label": "Power",
+            "unit": "W",
+            "formula": "energy / time",
+            "color": "cyan",
+            "decimalPlaces": 1
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "energy",
+        "blockLabel": "P"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 · Q7(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "A motor transfers 4500 J of energy in 15 seconds. Calculate the power of the motor.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the power equation:",
+              "equation": "P = E / t",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute values",
+              "content": "E = 4500 J, t = 15 s:",
+              "equation": "P = 4500 / 15",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate",
+              "content": "Divide:",
+              "equation": "P = 300 W",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "300 W",
+          "finalAnswerUnit": "W",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q8(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "8(b)",
+          "marks": 3,
+          "questionText": "A crane does 60 000 J of work lifting a load in 30 seconds. Calculate the power of the crane.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "P = W / t (work done):",
+              "equation": null,
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "W = 60 000 J, t = 30 s:",
+              "equation": "P = 60 000 / 30 = 2000 W",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "2000 W",
+          "finalAnswerUnit": "W",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q9(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "9(a)",
+          "marks": 2,
+          "questionText": "A kettle has a power of 2000 W. It takes 180 seconds to boil water. Calculate the energy transferred.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Rearrange for energy",
+              "content": "E = P × t:",
+              "equation": "E = 2000 × 180 = 360 000 J",
+              "markSchemeNote": "1 mark: rearrangement; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "360 000 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q8(a)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "8(a)",
+          "marks": 3,
+          "questionText": "An athlete does 2400 J of work running up stairs in 4 seconds. Calculate the power.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State equation",
+              "content": "P = W / t",
+              "equation": null,
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate",
+              "content": "W = 2400 J, t = 4 s:",
+              "equation": "P = 2400 / 4 = 600 W",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "600 W",
+          "finalAnswerUnit": "W",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q8(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "8(a)",
+          "marks": 2,
+          "questionText": "A hair dryer transfers 24 000 J in 2 minutes. Calculate its power.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Convert time",
+              "content": "2 minutes = 120 seconds",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate power",
+              "content": "P = E / t:",
+              "equation": "P = 24 000 / 120 = 200 W",
+              "markSchemeNote": "1 mark: time conversion and substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "200 W",
+          "finalAnswerUnit": "W",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 · Q7(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "7(b)",
+          "marks": 3,
+          "questionText": "A microwave oven transfers 36 000 J of energy in 60 seconds. Calculate the power.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "2 160 000 W",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "600 W",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "60 W",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "36 000 W",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "P = E / t",
+            "P = 36 000 / 60",
+            "P = 600 W"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option A multiplies instead of dividing. Option D forgets to divide by time."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q8(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "8(a)",
+          "marks": 2,
+          "questionText": "A heater has a power rating of 1500 W. How much energy does it transfer in 20 seconds?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "75 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "30 000 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "1500 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "300 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "E = P × t = 1500 × 20 = 30 000 J"
+          ],
+          "markSchemeAward": "1 mark rearrangement · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q8(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "8(b)",
+          "marks": 2,
+          "questionText": "A lift motor does 50 000 J of work in 25 seconds. What is the power?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "1 250 000 W",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "2000 W",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "200 W",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "25 000 W",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "P = W / t = 50 000 / 25 = 2000 W"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q7(a)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "7(a)",
+          "marks": 2,
+          "questionText": "A 100 W light bulb is left on for 5 minutes. How much energy does it use?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "500 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "30 000 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "20 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "3000 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Time = 5 × 60 = 300 s",
+            "E = P × t = 100 × 300 = 30 000 J"
+          ],
+          "markSchemeAward": "1 mark time conversion · 1 mark correct answer + unit",
+          "commonMistake": "Option A uses 5 instead of 300 seconds. always convert minutes to seconds."
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q7(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "7(b)",
+          "marks": 2,
+          "questionText": "A blender transfers 15 000 J in 30 seconds. Calculate its power.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "450 000 W",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "500 W",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "50 W",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "15 000 W",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "P = E / t = 15 000 / 30 = 500 W"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "P = E/t: all rearrangements",
+      "equation": {
+        "id": "power",
+        "canonical": "P = E / t",
+        "variables": [
+          {
+            "symbol": "P",
+            "name": "Power",
+            "unit": "watts",
+            "abbreviation": "W"
+          },
+          {
+            "symbol": "E",
+            "name": "Energy transferred",
+            "unit": "joules",
+            "abbreviation": "J"
+          },
+          {
+            "symbol": "t",
+            "name": "Time",
+            "unit": "seconds",
+            "abbreviation": "s"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "P",
+            "formula": "P = E / t",
+            "label": "Find power"
+          },
+          {
+            "solveFor": "E",
+            "formula": "E = P × t",
+            "label": "Find energy"
+          },
+          {
+            "solveFor": "t",
+            "formula": "t = E / P",
+            "label": "Find time"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "E",
+            "color": "purple"
+          },
+          "bottomLeft": {
+            "symbol": "P",
+            "color": "cyan"
+          },
+          "bottomRight": {
+            "symbol": "t",
+            "color": "amber"
+          }
+        },
+        "examTip": "Always convert time to SECONDS before substituting. 1 minute = 60 s, 1 hour = 3600 s. Also works with work done: P = W/t.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Can use energy or work done in the numerator.",
+          "edexcel": "On Edexcel equation sheet. Remember 1 kW = 1000 W.",
+          "ocr-gateway": "NOT on formula sheet, must be memorised. ⚠️",
+          "ocr-21c": "NOT on formula sheet, must be memorised. ⚠️",
+          "wjec": "Provided in WJEC exam. Know all three rearrangements."
+        }
+      }
+    }
+  ]
+}

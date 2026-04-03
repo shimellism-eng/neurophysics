@@ -1,0 +1,768 @@
+[
+  {
+    "id": "rp1",
+    "board": "aqa",
+    "number": "RP1",
+    "title": "Specific Heat Capacity",
+    "topic": "energy",
+    "tripleOnly": false,
+    "aim": "To determine the specific heat capacity of a solid material by measuring the energy supplied electrically and the resulting temperature rise.",
+    "equipment": [
+      { "name": "Metal block (e.g. aluminium or copper)", "purpose": "The material whose specific heat capacity is being measured" },
+      { "name": "Immersion heater (12 V)", "purpose": "Converts electrical energy to thermal energy inside the block" },
+      { "name": "Thermometer or temperature probe", "purpose": "Measures the temperature of the block" },
+      { "name": "Ammeter (0-5 A)", "purpose": "Measures current through the heater (placed in series)" },
+      { "name": "Voltmeter (0-15 V)", "purpose": "Measures voltage across the heater (placed in parallel)" },
+      { "name": "Power supply (12 V d.c.)", "purpose": "Provides electrical energy" },
+      { "name": "Connecting wires", "purpose": "Complete the circuit" },
+      { "name": "Stopwatch", "purpose": "Measures the time the heater is on" },
+      { "name": "Top-pan balance", "purpose": "Measures the mass of the block" },
+      { "name": "Insulating foam or felt", "purpose": "Reduces heat loss to surroundings, improving accuracy" }
+    ],
+    "method": [
+      "Measure and record the mass of the metal block using the top-pan balance.",
+      "Insert the immersion heater and thermometer into the holes in the block. Use thermal paste if available to improve thermal contact.",
+      "Connect the ammeter in series with the heater and the voltmeter in parallel across the heater.",
+      "Record the starting temperature of the block.",
+      "Switch on the power supply and simultaneously start the stopwatch.",
+      "Record the ammeter and voltmeter readings at regular intervals (every 2 minutes). They should remain roughly constant.",
+      "After a set time (e.g. 10 minutes), switch off the power supply and stop the stopwatch.",
+      "Record the maximum temperature reached by the block.",
+      "Calculate the temperature change: delta T = final temperature minus starting temperature.",
+      "Calculate the energy supplied: E = V multiplied by I multiplied by t.",
+      "Rearrange E = mc(delta T) to find c: c = E divided by (m multiplied by delta T)."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Metal block with immersion heater and thermometer inserted, connected via wires to an ammeter (in series) and voltmeter (in parallel), then to a power supply. Block is surrounded by insulating foam."
+    },
+    "keyEquation": "E = mcΔT",
+    "keyEquationTex": "E = mc\\Delta T",
+    "variables": [
+      { "symbol": "E", "name": "Energy transferred", "unit": "J", "color": "cyan" },
+      { "symbol": "m", "name": "Mass", "unit": "kg", "color": "amber" },
+      { "symbol": "c", "name": "Specific heat capacity", "unit": "J/kg°C", "color": "purple" },
+      { "symbol": "ΔT", "name": "Temperature change", "unit": "°C", "color": "pink" }
+    ],
+    "whatToMeasure": [
+      "Mass of the block (kg)",
+      "Starting temperature (°C)",
+      "Final temperature (°C)",
+      "Current through heater (A)",
+      "Voltage across heater (V)",
+      "Time the heater is on (s)"
+    ],
+    "howToProcess": "First calculate electrical energy using E = VIt. Then rearrange the specific heat capacity equation: c = E divided by (m multiplied by delta T). Compare your result with the accepted value (e.g. aluminium = 900 J/kg per degree C).",
+    "commonMistakes": [
+      "Forgetting to record the starting temperature before switching on the heater.",
+      "Not waiting long enough for the thermometer to equalise with the block temperature.",
+      "Using a block that loses a lot of heat (no insulation), giving a value for c that is too high.",
+      "Confusing the ammeter and voltmeter positions: ammeter must be in series, voltmeter in parallel.",
+      "Not converting grams to kilograms when substituting into the equation."
+    ],
+    "examTips": [
+      "The value you calculate will almost always be higher than the textbook value because energy is lost to the surroundings.",
+      "Always show the circuit diagram with ammeter in series and voltmeter in parallel.",
+      "To reduce energy loss: wrap the block in insulating material and minimise the experiment duration.",
+      "The equation E = VIt can also be written as E = Pt, where P = IV is the power of the heater.",
+      "On the formula sheet: E = mcDeltaT. You need to know how to rearrange it for c."
+    ],
+    "safetyPoints": [
+      "Do not touch the immersion heater or block directly after heating. Allow to cool before handling.",
+      "Do not exceed the rated voltage of the heater.",
+      "Keep water away from electrical components."
+    ],
+    "examQuestions": [
+      {
+        "year": 2022,
+        "marks": 4,
+        "text": "A student heats a 0.5 kg aluminium block with an immersion heater. The voltmeter reads 12 V, the ammeter reads 3.0 A, and the heater runs for 5 minutes. The temperature rises from 20°C to 56°C. Calculate the specific heat capacity of aluminium from these results.",
+        "markScheme": [
+          "E = VIt = 12 × 3.0 × 300 = 10 800 J (1 mark)",
+          "delta T = 56 - 20 = 36°C (1 mark)",
+          "c = E / (m × delta T) = 10 800 / (0.5 × 36) (1 mark)",
+          "c = 600 J/kg°C (1 mark)"
+        ]
+      },
+      {
+        "year": 2019,
+        "marks": 2,
+        "text": "The student's calculated value for the specific heat capacity of aluminium is higher than the accepted value of 900 J/kg°C. Suggest two reasons for this.",
+        "markScheme": [
+          "Heat is lost to the surroundings (1 mark)",
+          "Not all the energy heats the block, some heats the heater itself / thermometer / surrounding air (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp2",
+    "board": "aqa",
+    "number": "RP2",
+    "title": "Thermal Insulation",
+    "topic": "energy",
+    "tripleOnly": true,
+    "aim": "To investigate the effectiveness of different insulating materials by comparing the rate of temperature decrease in insulated containers.",
+    "equipment": [
+      { "name": "Beakers or tin cans (identical)", "purpose": "Containers that hold the hot water" },
+      { "name": "Different insulating materials (e.g. cotton wool, bubble wrap, newspaper)", "purpose": "The materials being tested as insulators" },
+      { "name": "Thermometer or temperature probe", "purpose": "Measures the water temperature over time" },
+      { "name": "Stopwatch", "purpose": "Records time at each temperature reading" },
+      { "name": "Kettle or water bath", "purpose": "Provides hot water at a consistent starting temperature" },
+      { "name": "Measuring cylinder", "purpose": "Ensures the same volume of water is used each time" },
+      { "name": "Lids (card or foam)", "purpose": "Reduces heat loss from the top surface" }
+    ],
+    "method": [
+      "Wrap one beaker with the first insulating material. Leave one beaker uninsulated as a control.",
+      "Boil water and pour the same volume (e.g. 200 ml) into each beaker, starting at the same temperature.",
+      "Place lids on the beakers to minimise evaporation losses from the surface.",
+      "Record the starting temperature immediately, then record every 2 minutes for 20 minutes.",
+      "Plot a temperature-time graph for each beaker.",
+      "Compare the gradients: a less steep gradient means better insulation.",
+      "Repeat with different insulating materials to compare effectiveness."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Two beakers side by side, one wrapped in insulating material and one bare. Both have thermometers inserted through card lids. Arrows show heat escaping from the uninsulated beaker."
+    },
+    "keyEquation": "Rate of cooling = ΔT / t",
+    "keyEquationTex": "\\text{Rate of cooling} = \\frac{\\Delta T}{t}",
+    "variables": [
+      { "symbol": "ΔT", "name": "Temperature change", "unit": "°C", "color": "cyan" },
+      { "symbol": "t", "name": "Time", "unit": "s or min", "color": "amber" }
+    ],
+    "whatToMeasure": [
+      "Temperature at regular time intervals (°C)",
+      "Time elapsed (minutes)",
+      "Volume of water used (ml, keep constant)",
+      "Starting temperature (°C, keep constant)"
+    ],
+    "howToProcess": "Plot temperature (y-axis) against time (x-axis) for each insulating material. The gradient of each line shows the rate of cooling. A smaller (less negative) gradient means the material is a better insulator. Compare gradients to rank effectiveness.",
+    "commonMistakes": [
+      "Using different volumes of water in each beaker. Volume must be the same for a fair test.",
+      "Starting at different temperatures. All beakers must begin at the same temperature.",
+      "Forgetting to put a lid on the beaker. Heat loss from the surface must be minimised equally.",
+      "Only recording one data point rather than plotting a full temperature-time graph.",
+      "Not identifying the control variable (uninsulated beaker)."
+    ],
+    "examTips": [
+      "A good insulator slows the rate of heat transfer, shown by a shallower gradient on the cooling curve.",
+      "This practical links to the concept of infrared radiation and thermal conductivity.",
+      "Fair test variables: same volume of water, same starting temperature, same beaker material, same time.",
+      "Results table should include: time (min), temperature with each material (°C).",
+      "Triple Physics students must be able to explain why air trapped in the insulator reduces conduction."
+    ],
+    "safetyPoints": [
+      "Use care when handling boiling water. Use tongs or oven gloves.",
+      "Do not leave the thermometer unattended in hot liquid. Hold or clamp it securely."
+    ],
+    "examQuestions": [
+      {
+        "year": 2021,
+        "marks": 3,
+        "text": "A student compares the effectiveness of three insulating materials. The temperature of water in beaker A falls from 80°C to 52°C in 10 minutes. The temperature in beaker B (bubble wrap) falls from 80°C to 64°C in the same time. Which material is the better insulator? Justify your answer using the data.",
+        "markScheme": [
+          "Beaker B (bubble wrap) is the better insulator (1 mark)",
+          "Beaker A temperature drop = 28°C, Beaker B temperature drop = 16°C (1 mark)",
+          "A smaller temperature drop in the same time means a lower rate of cooling, so better insulation (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp3",
+    "board": "aqa",
+    "number": "RP3",
+    "title": "Resistance of a Wire",
+    "topic": "electricity",
+    "tripleOnly": false,
+    "aim": "To investigate how the length of a wire affects its resistance.",
+    "equipment": [
+      { "name": "Constantan or nichrome wire (on a metre ruler)", "purpose": "The wire whose resistance is being measured" },
+      { "name": "Ammeter (0-1 A)", "purpose": "Measures the current through the wire (in series)" },
+      { "name": "Voltmeter (0-5 V)", "purpose": "Measures the voltage across the wire (in parallel)" },
+      { "name": "Power supply (low voltage d.c.)", "purpose": "Drives current through the circuit" },
+      { "name": "Crocodile clips and wires", "purpose": "Connect to different lengths of wire on the ruler" },
+      { "name": "Metre ruler", "purpose": "Measures the length of wire being tested" },
+      { "name": "Switch", "purpose": "Prevents the wire overheating between readings" },
+      { "name": "Micrometer screw gauge (optional)", "purpose": "Measures the diameter of the wire" }
+    ],
+    "method": [
+      "Set up the circuit: power supply, switch, and ammeter in series with the wire. Connect the voltmeter in parallel across the wire between the crocodile clips.",
+      "Attach one crocodile clip at the 0 cm end of the ruler. Place the second clip at 10 cm.",
+      "Close the switch briefly, record the voltmeter and ammeter readings, then open the switch to prevent overheating.",
+      "Calculate resistance using R = V / I.",
+      "Move the second crocodile clip to 20 cm and repeat.",
+      "Continue for lengths of 30 cm, 40 cm, 50 cm, 60 cm, 70 cm, 80 cm, 90 cm, and 100 cm.",
+      "Plot a graph of resistance (y-axis) against length (x-axis). A straight line through the origin shows resistance is directly proportional to length."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Constantan wire stretched along a metre ruler. One crocodile clip fixed at 0 cm, the other moveable. The wire connects in series with an ammeter and power supply. A voltmeter bridges the two clips in parallel."
+    },
+    "keyEquation": "R = V / I",
+    "keyEquationTex": "R = \\frac{V}{I}",
+    "variables": [
+      { "symbol": "R", "name": "Resistance", "unit": "Ω", "color": "cyan" },
+      { "symbol": "V", "name": "Voltage (potential difference)", "unit": "V", "color": "amber" },
+      { "symbol": "I", "name": "Current", "unit": "A", "color": "purple" }
+    ],
+    "whatToMeasure": [
+      "Length of wire (cm or m)",
+      "Voltage across the wire section (V)",
+      "Current through the wire (A)"
+    ],
+    "howToProcess": "For each length, calculate R = V divided by I. Plot R on the y-axis against length L on the x-axis. A straight line through the origin confirms that R is directly proportional to L. Calculate the gradient of the line to find resistance per unit length.",
+    "commonMistakes": [
+      "Leaving the switch closed too long. The wire heats up, changing its resistance and ruining the fair test.",
+      "Not zeroing the ruler at the crocodile clip position. Measure from clip to clip, not from the end of the ruler.",
+      "Placing the voltmeter in series (it must be in parallel across the test section of wire).",
+      "Only taking one reading per length. Take at least three and average them.",
+      "Not starting the graph at the origin. R = 0 when L = 0."
+    ],
+    "examTips": [
+      "The expected result is a straight line through the origin: R is directly proportional to length.",
+      "Use Ohm's law R = V/I to calculate resistance at each length.",
+      "The independent variable is length, the dependent variable is resistance.",
+      "Control variables: wire material, wire diameter, temperature (keep switch open between readings).",
+      "The gradient of the R vs L graph equals resistivity divided by cross-sectional area (Triple Physics)."
+    ],
+    "safetyPoints": [
+      "Open the switch between readings. Long lengths of thin wire with high current can become very hot.",
+      "Do not touch the wire while current is flowing.",
+      "Keep the voltage low (2-4 V) to prevent overheating."
+    ],
+    "examQuestions": [
+      {
+        "year": 2023,
+        "marks": 4,
+        "text": "A student measures the resistance of a wire at different lengths. At 40 cm, V = 2.4 V and I = 0.6 A. At 80 cm, V = 4.8 V and I = 0.6 A. Calculate the resistance at each length and describe the relationship between resistance and length.",
+        "markScheme": [
+          "R at 40 cm = 2.4 / 0.6 = 4.0 Ω (1 mark)",
+          "R at 80 cm = 4.8 / 0.6 = 8.0 Ω (1 mark)",
+          "When length doubles, resistance doubles (1 mark)",
+          "Resistance is directly proportional to length (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp4",
+    "board": "aqa",
+    "number": "RP4",
+    "title": "I-V Characteristics",
+    "topic": "electricity",
+    "tripleOnly": false,
+    "aim": "To investigate the current-voltage (I-V) characteristics of a resistor, a filament lamp, and a diode.",
+    "equipment": [
+      { "name": "Resistor (fixed, e.g. 100 Ω)", "purpose": "First component: should give a straight I-V line (Ohmic)" },
+      { "name": "Filament lamp (low voltage, e.g. 6 V)", "purpose": "Second component: resistance increases with temperature" },
+      { "name": "Diode", "purpose": "Third component: only conducts in forward bias above about 0.7 V" },
+      { "name": "Variable resistor (rheostat)", "purpose": "Allows the voltage to be varied smoothly from 0 V" },
+      { "name": "Ammeter", "purpose": "Measures current through the component (in series)" },
+      { "name": "Voltmeter", "purpose": "Measures voltage across the component (in parallel)" },
+      { "name": "Power supply (variable d.c.)", "purpose": "Provides the driving voltage" },
+      { "name": "Switch", "purpose": "Isolates the circuit between readings" },
+      { "name": "Connecting wires", "purpose": "Complete the circuit" }
+    ],
+    "method": [
+      "Connect the component (e.g. resistor) in series with the ammeter and rheostat. Connect the voltmeter in parallel across the component.",
+      "Starting with the rheostat at maximum resistance (so voltage = 0 V), slowly increase the voltage using the rheostat.",
+      "Record current and voltage at approximately 8 to 10 different voltage values.",
+      "For the diode, reverse its connections and record current for negative voltages (reverse bias) as well.",
+      "Repeat with the filament lamp.",
+      "Plot I (y-axis) against V (x-axis) for each component on the same or separate axes.",
+      "Identify the shape of each graph and relate it to the component's behaviour."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Circuit diagram showing power supply, switch, rheostat, ammeter (all in series), with a voltmeter in parallel across the component being tested. The component box is labelled with the current component (resistor, lamp, or diode)."
+    },
+    "keyEquation": "R = V / I",
+    "keyEquationTex": "R = \\frac{V}{I}",
+    "variables": [
+      { "symbol": "I", "name": "Current", "unit": "A", "color": "cyan" },
+      { "symbol": "V", "name": "Voltage (potential difference)", "unit": "V", "color": "amber" },
+      { "symbol": "R", "name": "Resistance", "unit": "Ω", "color": "purple" }
+    ],
+    "whatToMeasure": [
+      "Voltage across the component (V)",
+      "Current through the component (A)"
+    ],
+    "howToProcess": "Plot I (y-axis) against V (x-axis). A straight line through the origin = Ohmic conductor (fixed resistance). A curve means resistance changes. For the filament lamp, the curve bends because resistance increases as the filament heats up. The diode only conducts in forward bias above a threshold voltage of about 0.7 V.",
+    "commonMistakes": [
+      "Plotting V on the y-axis and I on the x-axis. Convention is I (y-axis) vs V (x-axis).",
+      "Not reversing the connections to test the diode in reverse bias.",
+      "Leaving the filament lamp on too long between readings. It will overheat and give unreliable results.",
+      "Connecting the ammeter in parallel (it must be in series).",
+      "Forgetting that a straight line through the origin means constant resistance (Ohmic behaviour)."
+    ],
+    "examTips": [
+      "Resistor: straight line through origin (constant resistance, Ohmic).",
+      "Filament lamp: curve that gets shallower as V increases (resistance increases with temperature).",
+      "Diode: almost no current in reverse bias; sharp increase in current in forward bias above ~0.7 V.",
+      "The gradient of the I-V graph for a resistor = 1/R (reciprocal of resistance).",
+      "Use the rheostat as a potential divider to vary voltage smoothly from zero."
+    ],
+    "safetyPoints": [
+      "Do not exceed the rated voltage of any component.",
+      "Switch off between readings to prevent overheating, especially with the filament lamp."
+    ],
+    "examQuestions": [
+      {
+        "year": 2022,
+        "marks": 3,
+        "text": "Sketch the I-V characteristic for (a) a resistor and (b) a filament lamp. Explain why the shapes differ.",
+        "markScheme": [
+          "Resistor: straight line through origin (1 mark)",
+          "Filament lamp: S-shaped curve, gradient decreasing as V increases (1 mark)",
+          "As current increases the filament heats up, increasing resistance, so the same increase in V produces a smaller increase in I (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp5",
+    "board": "aqa",
+    "number": "RP5",
+    "title": "Density",
+    "topic": "particle-model",
+    "tripleOnly": false,
+    "aim": "To measure the density of regular and irregular solid objects and a liquid using the equation density = mass divided by volume.",
+    "equipment": [
+      { "name": "Top-pan balance", "purpose": "Measures the mass of the object" },
+      { "name": "Ruler or vernier calipers", "purpose": "Measures the dimensions of regular solids" },
+      { "name": "Displacement can (eureka can)", "purpose": "Measures the volume of irregular solids by water displacement" },
+      { "name": "Measuring cylinder", "purpose": "Collects and measures the displaced water, or measures liquid volume directly" },
+      { "name": "Irregular solid objects (e.g. a stone or metal bolt)", "purpose": "Objects whose volume cannot be measured directly" },
+      { "name": "Regular solid objects (e.g. a rectangular metal block)", "purpose": "Objects whose volume can be calculated from dimensions" },
+      { "name": "Water", "purpose": "Used in the displacement method" }
+    ],
+    "method": [
+      "For a REGULAR solid: measure length, width, and height with a ruler. Calculate volume = length × width × height. Measure mass on the balance. Calculate density = mass / volume.",
+      "For an IRREGULAR solid: fill the displacement can to the spout. Place a measuring cylinder under the spout. Gently lower the solid into the can. Collect and measure the volume of water displaced. This equals the volume of the solid. Measure mass on the balance. Calculate density = mass / volume.",
+      "For a LIQUID: measure the mass of the empty measuring cylinder. Add a known volume of liquid (e.g. 100 ml). Measure the mass again. Mass of liquid = total mass minus cylinder mass. Calculate density = mass / volume.",
+      "Repeat each measurement three times and calculate mean values to improve reliability."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Three panels: (1) Ruler measuring a rectangular block with length, width and height labelled. (2) Eureka can with water overflowing into a measuring cylinder as a stone is lowered in. (3) Measuring cylinder with liquid, showing volume and mass readings."
+    },
+    "keyEquation": "ρ = m / V",
+    "keyEquationTex": "\\rho = \\frac{m}{V}",
+    "variables": [
+      { "symbol": "ρ", "name": "Density", "unit": "kg/m³", "color": "cyan" },
+      { "symbol": "m", "name": "Mass", "unit": "kg", "color": "amber" },
+      { "symbol": "V", "name": "Volume", "unit": "m³", "color": "purple" }
+    ],
+    "whatToMeasure": [
+      "Mass of the object (g or kg)",
+      "Volume of the object (cm³ or m³)"
+    ],
+    "howToProcess": "Calculate density using rho = m / V. Remember to check units: if mass is in grams and volume in cm³, density is in g/cm³. To convert to kg/m³, multiply by 1000. Compare your result with known densities (e.g. water = 1000 kg/m³, aluminium = 2700 kg/m³).",
+    "commonMistakes": [
+      "Mixing up units: grams and cm³ give g/cm³, not kg/m³. Always state the unit of your answer.",
+      "Not fully submerging the object in the displacement can, so not all water is displaced.",
+      "Allowing water to splash and spill before the object is placed, giving a low displacement reading.",
+      "Using the total mass of cylinder plus liquid instead of the mass of liquid alone.",
+      "Measuring dimensions of a regular solid only once instead of at different points (e.g. average diameter of a cylinder)."
+    ],
+    "examTips": [
+      "Objects that float on water have a density less than 1000 kg/m³. Objects that sink have a density greater than 1000 kg/m³.",
+      "The displacement method works for any irregular object that does not dissolve in water.",
+      "Volume of a cuboid = l × w × h. Volume of a cylinder = pi × r² × h. Learn these for regular solids.",
+      "1 cm³ = 1 ml, and 1 ml of water has a mass of 1 g (at room temperature).",
+      "You may be asked to explain why a hot gas is less dense than a cold gas: the same mass occupies a larger volume."
+    ],
+    "safetyPoints": [
+      "Wipe up spilled water immediately to prevent slipping.",
+      "Handle metal objects carefully to avoid dropping them."
+    ],
+    "examQuestions": [
+      {
+        "year": 2020,
+        "marks": 3,
+        "text": "A student lowers a stone into a displacement can. The volume of water collected is 45 cm³. The mass of the stone is 120 g. Calculate the density of the stone in g/cm³.",
+        "markScheme": [
+          "Volume of stone = 45 cm³ (1 mark)",
+          "Density = mass / volume = 120 / 45 (1 mark)",
+          "Density = 2.7 g/cm³ (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp6",
+    "board": "aqa",
+    "number": "RP6",
+    "title": "Force and Extension (Hooke's Law)",
+    "topic": "forces",
+    "tripleOnly": false,
+    "aim": "To investigate the relationship between the force applied to a spring and its extension, and to determine the spring constant.",
+    "equipment": [
+      { "name": "Spring (steel, approximately 20 cm)", "purpose": "The elastic object being stretched" },
+      { "name": "Clamp stand, boss, and clamp", "purpose": "Holds the spring vertically at a fixed point" },
+      { "name": "100 g mass hangers and slotted masses (10 g to 500 g set)", "purpose": "Apply known forces to the spring" },
+      { "name": "Metre ruler", "purpose": "Measures the natural length and extended length of the spring" },
+      { "name": "Pointer (thin wire or pin attached to the spring)", "purpose": "Makes reading the ruler more accurate" },
+      { "name": "Safety mat or tray", "purpose": "Catches masses if the spring breaks or overloads" }
+    ],
+    "method": [
+      "Set up the clamp stand. Attach the spring to the clamp so it hangs freely.",
+      "Record the natural (unstretched) length of the spring using the metre ruler. Use a pointer attached to the bottom of the spring for accuracy.",
+      "Hang a 100 g mass from the spring. Record the new length and calculate extension = new length minus natural length.",
+      "Convert mass to force: F = mg. For 100 g (0.1 kg), F = 0.1 × 10 = 1 N.",
+      "Add mass in 100 g increments, recording the length (and therefore extension) each time.",
+      "Continue until the spring shows a large, sudden increase in extension, which indicates the elastic limit has been exceeded.",
+      "Plot extension (y-axis) against force (x-axis). A straight line through the origin confirms Hooke's Law.",
+      "Calculate the spring constant from the gradient: k = F / x."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Clamp stand on a bench with a spring hanging vertically from the clamp. A pointer is attached to the bottom of the spring beside a vertical metre ruler. Mass hangers are attached below the spring. A safety mat is shown on the bench below the masses."
+    },
+    "keyEquation": "F = kx",
+    "keyEquationTex": "F = kx",
+    "variables": [
+      { "symbol": "F", "name": "Force (weight applied)", "unit": "N", "color": "cyan" },
+      { "symbol": "k", "name": "Spring constant", "unit": "N/m", "color": "amber" },
+      { "symbol": "x", "name": "Extension", "unit": "m", "color": "purple" }
+    ],
+    "whatToMeasure": [
+      "Natural (unstretched) length of the spring (cm or m)",
+      "Length with each mass added (cm or m)",
+      "Mass added at each step (g, then convert to kg and to N)"
+    ],
+    "howToProcess": "Extension = stretched length minus natural length. Calculate extension for each force. Plot extension (y-axis) against force (x-axis). The gradient of the straight-line section equals 1/k (extension per newton). Therefore k = 1 / gradient. Alternatively, k = F / x at any point on the linear section.",
+    "commonMistakes": [
+      "Confusing extension with total length. Extension = stretched length minus natural length.",
+      "Not converting mass in grams to force in newtons: F = mg where m is in kg.",
+      "Continuing to add masses after the elastic limit. The graph becomes non-linear and the spring is permanently deformed.",
+      "Not using a pointer on the spring, making it hard to read the ruler accurately.",
+      "Plotting force on the y-axis and extension on the x-axis. The convention in AQA GCSE is extension on y, force on x."
+    ],
+    "examTips": [
+      "Hooke's Law states that extension is directly proportional to force, provided the elastic limit is not exceeded.",
+      "On a force-extension graph: the gradient of the straight-line section = 1/k. So k = 1 / gradient.",
+      "The elastic limit is the point beyond which the spring does not return to its original length.",
+      "The area under a force-extension graph equals the elastic potential energy stored: Ee = 0.5 × k × x².",
+      "If F = kx does not pass through the origin on your graph, check you calculated extension and not total length."
+    ],
+    "safetyPoints": [
+      "Place a safety mat or tray beneath the masses in case the spring breaks.",
+      "Do not overload the spring beyond its elastic limit in a single large step, as the spring may snap violently.",
+      "Stand to the side when adding heavy masses."
+    ],
+    "examQuestions": [
+      {
+        "year": 2021,
+        "marks": 4,
+        "text": "A spring has a natural length of 12 cm. When a 400 g mass is attached, the spring length is 20 cm. Calculate (a) the extension and (b) the spring constant. (g = 10 N/kg)",
+        "markScheme": [
+          "Extension = 20 - 12 = 8 cm = 0.08 m (1 mark)",
+          "Force = 0.4 × 10 = 4 N (1 mark)",
+          "k = F / x = 4 / 0.08 (1 mark)",
+          "k = 50 N/m (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp7",
+    "board": "aqa",
+    "number": "RP7",
+    "title": "Acceleration and Newton's Second Law",
+    "topic": "forces",
+    "tripleOnly": false,
+    "aim": "To investigate how the acceleration of an object depends on the resultant force acting on it and on its mass.",
+    "equipment": [
+      { "name": "Dynamics trolley", "purpose": "The object being accelerated" },
+      { "name": "Runway (slightly inclined to compensate for friction)", "purpose": "Track for the trolley to roll along" },
+      { "name": "Light gates (or ticker timer and tape)", "purpose": "Measures the time taken to travel between two points to calculate acceleration" },
+      { "name": "Data logger", "purpose": "Records times from the light gates automatically" },
+      { "name": "String", "purpose": "Connects the hanging mass to the trolley over the pulley" },
+      { "name": "Pulley (attached to end of runway)", "purpose": "Redirects the weight of the hanging mass to a horizontal force on the trolley" },
+      { "name": "Mass hanger and slotted masses", "purpose": "Provide the resultant force on the trolley system" },
+      { "name": "Additional masses to place on trolley", "purpose": "Vary the mass of the trolley while keeping force constant" },
+      { "name": "Metre ruler", "purpose": "Measures the distance between light gates" }
+    ],
+    "method": [
+      "Tilt the runway slightly so the trolley accelerates from rest due to gravity, then reduce the tilt until the trolley moves at constant speed when given a gentle push. This compensates for friction.",
+      "Attach a string from the trolley, over the pulley, to a mass hanger.",
+      "Place the light gates a measured distance apart. Connect to the data logger.",
+      "Release the trolley from rest. The data logger calculates the acceleration from the time taken to pass through each gate.",
+      "Part A (vary force, keep mass constant): start with 100 g on the hanger. Record acceleration. Move 100 g from the trolley to the hanger (so total mass stays constant). Repeat for 200 g, 300 g, and 400 g on the hanger.",
+      "Part B (vary mass, keep force constant): keep the hanging mass constant. Add extra masses to the trolley and record acceleration each time.",
+      "Plot two graphs: acceleration vs force (should be linear) and acceleration vs 1/mass (should be linear)."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "A trolley on a slightly inclined runway. A string over a pulley at the far end connects the trolley to a hanging mass. Two light gates span the runway. A ruler is alongside the track. The data logger is shown attached to the light gates."
+    },
+    "keyEquation": "F = ma",
+    "keyEquationTex": "F = ma",
+    "variables": [
+      { "symbol": "F", "name": "Resultant force", "unit": "N", "color": "cyan" },
+      { "symbol": "m", "name": "Mass", "unit": "kg", "color": "amber" },
+      { "symbol": "a", "name": "Acceleration", "unit": "m/s²", "color": "purple" }
+    ],
+    "whatToMeasure": [
+      "Mass of the hanging weights and trolley (kg)",
+      "Acceleration of the trolley (m/s², recorded by light gates or calculated from ticker tape)",
+      "Force applied (F = weight of hanging mass = mg)"
+    ],
+    "howToProcess": "For Part A: plot acceleration (y-axis) against force (x-axis). A straight line through the origin confirms F is proportional to a. For Part B: plot acceleration against 1/mass. A straight line through the origin confirms a is inversely proportional to m. The gradient of Part A gives 1/m (the total system mass).",
+    "commonMistakes": [
+      "Not tilting the runway to compensate for friction. The trolley will decelerate without compensation, giving incorrect results.",
+      "Transferring mass from the trolley to the hanger in Part A is essential to keep total mass constant. If you just add to the hanger, you are changing both force AND mass at the same time.",
+      "Forgetting that the force on the system = weight of hanging mass = mg in newtons.",
+      "The hanging mass must be much smaller than the trolley mass for F = mg to be a good approximation.",
+      "Using a ticker timer at the wrong frequency, giving inaccurate time measurements."
+    ],
+    "examTips": [
+      "The slope of the acceleration-force graph = 1/total system mass.",
+      "Newton's Second Law: F = ma. If F doubles and m stays the same, a doubles (directly proportional).",
+      "The experiment tests both relationships: a proportional to F and a inversely proportional to m.",
+      "In exams you may be asked to describe the shape of the graph rather than calculate values.",
+      "Always state what variables are kept constant when describing the method."
+    ],
+    "safetyPoints": [
+      "Ensure the trolley cannot run off the end of the runway. Use a stopper at the end.",
+      "Catch or cushion the hanging mass when it reaches the floor."
+    ],
+    "examQuestions": [
+      {
+        "year": 2023,
+        "marks": 3,
+        "text": "A student uses a trolley and pulley system to test Newton's second law. The total mass of the trolley system is 0.8 kg. A hanging mass of 0.2 kg provides the force. Calculate the expected acceleration. (g = 10 N/kg)",
+        "markScheme": [
+          "Force = 0.2 × 10 = 2 N (1 mark)",
+          "Total mass = 0.8 + 0.2 = 1.0 kg (1 mark)",
+          "a = F / m = 2 / 1.0 = 2.0 m/s² (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp8",
+    "board": "aqa",
+    "number": "RP8",
+    "title": "Wave Properties in a Ripple Tank",
+    "topic": "waves",
+    "tripleOnly": false,
+    "aim": "To measure the frequency, wavelength, and speed of waves produced in a ripple tank, and to verify the wave equation.",
+    "equipment": [
+      { "name": "Ripple tank (with transparent base and motor-driven vibrating bar)", "purpose": "Produces regular water waves on a flat water surface" },
+      { "name": "Lamp (stroboscope or overhead lamp)", "purpose": "Illuminates the waves so their shadows are projected onto paper below the tank" },
+      { "name": "White paper or screen placed below the tank", "purpose": "Shows the wave pattern as a shadow image" },
+      { "name": "Ruler", "purpose": "Measures the distance between wave crests (wavelength) on the shadow" },
+      { "name": "Stopwatch", "purpose": "Times how many waves pass per second (frequency)" },
+      { "name": "Stroboscope (optional)", "purpose": "Freezes the wave pattern to make measurement of wavelength easier" },
+      { "name": "Scale factor (known object in tank)", "purpose": "Converts shadow measurements to real measurements" }
+    ],
+    "method": [
+      "Fill the ripple tank with a shallow, uniform layer of water (about 5 mm deep).",
+      "Switch on the motor and lamp. Adjust the motor frequency until clear, even wave ripples are visible on the paper below.",
+      "To find frequency: count how many complete waves pass a fixed point in 10 seconds. Divide by 10 to get frequency in Hz.",
+      "To find wavelength: using the shadow pattern on the paper, measure the distance across several wavelengths (e.g. 5 wave crests). Divide by the number of gaps to find one wavelength. Apply the scale factor if the shadow is magnified.",
+      "Calculate wave speed using v = f × wavelength.",
+      "Vary the frequency using the motor control and repeat.",
+      "Observe that changing frequency changes wavelength but wave speed remains constant (for the same water depth)."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Side view of a ripple tank on a stand with a lamp above. Water waves are visible in the tank. Below the tank, a paper shows the shadow wave pattern with crests and troughs marked and a ruler measuring the wavelength."
+    },
+    "keyEquation": "v = fλ",
+    "keyEquationTex": "v = f\\lambda",
+    "variables": [
+      { "symbol": "v", "name": "Wave speed", "unit": "m/s", "color": "cyan" },
+      { "symbol": "f", "name": "Frequency", "unit": "Hz", "color": "amber" },
+      { "symbol": "λ", "name": "Wavelength", "unit": "m", "color": "purple" }
+    ],
+    "whatToMeasure": [
+      "Number of waves passing a point in 10 seconds (for frequency)",
+      "Distance across several wavelengths in the shadow pattern (for wavelength)",
+      "Scale factor between shadow and real tank"
+    ],
+    "howToProcess": "Frequency = waves counted divided by 10 seconds. Wavelength from shadow = measured distance divided by number of gaps, then divided by the scale factor to get real wavelength. Wave speed = frequency multiplied by wavelength. Compare the calculated speed with the actual speed measured using a stopwatch and ruler (measure how far a crest travels in a set time).",
+    "commonMistakes": [
+      "Measuring from crest to crest but forgetting to divide by the number of wavelengths (e.g. measuring 5 crests gives 4 wavelengths, not 5).",
+      "Not applying the scale factor when reading wavelength from the shadow image (the shadow is magnified).",
+      "Counting individual crests rather than counting the number of complete waves passing per second.",
+      "Making the water too deep or too shallow, causing uneven wave patterns.",
+      "Assuming that changing frequency changes wave speed. Speed depends on the medium (water depth), not frequency."
+    ],
+    "examTips": [
+      "The wave equation v = f × wavelength must be memorised. It is on the formula sheet.",
+      "If you increase frequency (faster motor), wavelength gets shorter but wave speed stays the same.",
+      "Transverse waves in a ripple tank: the water moves up and down while the wave travels horizontally.",
+      "A stroboscope flashing at the same frequency as the wave makes the wave appear frozen, making it easy to measure wavelength.",
+      "In exams, the diagram may show a shadow pattern and ask you to read off the wavelength directly."
+    ],
+    "safetyPoints": [
+      "Keep electrical equipment away from water. Ensure the lamp is above the tank and all wires are secured.",
+      "Wipe up any water spills around the tank base immediately."
+    ],
+    "examQuestions": [
+      {
+        "year": 2021,
+        "marks": 3,
+        "text": "A student counts 30 waves passing a fixed point in 10 seconds. The wavelength measured from the shadow pattern is 2.5 cm. Calculate the wave speed.",
+        "markScheme": [
+          "Frequency = 30 / 10 = 3 Hz (1 mark)",
+          "Wavelength = 0.025 m (conversion from cm, 1 mark)",
+          "Speed = 3 × 0.025 = 0.075 m/s (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp9",
+    "board": "aqa",
+    "number": "RP9",
+    "title": "Reflection and Refraction of Light",
+    "topic": "waves",
+    "tripleOnly": true,
+    "aim": "To investigate the reflection of light by a plane mirror and the refraction of light through a glass block, and to verify the laws of reflection and refraction.",
+    "equipment": [
+      { "name": "Ray box with single-slit card", "purpose": "Produces a single narrow ray of light" },
+      { "name": "Plane mirror (with stand)", "purpose": "Reflects the light ray for the reflection investigation" },
+      { "name": "Rectangular glass block", "purpose": "Refracts the light ray for the refraction investigation" },
+      { "name": "Protractor", "purpose": "Measures angles of incidence, reflection, and refraction" },
+      { "name": "Ruler and pencil", "purpose": "Draws the incident ray, normal, and refracted ray on paper" },
+      { "name": "A4 paper on a flat board", "purpose": "Records the ray paths for accurate angle measurement" },
+      { "name": "Pins (4 per angle)", "purpose": "Alternative to ray box: mark the path of the ray using a pin-and-board method" }
+    ],
+    "method": [
+      "REFLECTION: Place the plane mirror on the paper. Draw a line along its reflective surface. Draw a normal (perpendicular) to this surface at the point of incidence.",
+      "Direct a ray of light at the mirror at an angle of incidence of 10°. Mark the incident and reflected rays with dots or pen marks on the paper.",
+      "Measure the angle of incidence (i) and angle of reflection (r) from the normal.",
+      "Repeat for angles of incidence from 20° to 70° in 10° steps. Record all angles in a table.",
+      "REFRACTION: Place the glass block on the paper. Trace around its outline.",
+      "Direct a ray into the block at an angle of incidence of 10°. Mark where the ray enters and exits the block.",
+      "Remove the block and draw a straight line from entry to exit point. Measure the angle of refraction inside the block.",
+      "Repeat for different angles of incidence. Observe that the ray bends towards the normal when entering the glass (denser medium) and away from the normal when exiting."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Two diagrams side by side. Left: plane mirror with incident ray, normal line, and reflected ray drawn with angle i and angle r labelled on either side of the normal. Right: rectangular glass block with incident ray bending at the surface, ray inside the block, then bending again as it exits."
+    },
+    "keyEquation": "Angle of incidence = Angle of reflection",
+    "keyEquationTex": "\\theta_i = \\theta_r",
+    "variables": [
+      { "symbol": "θi", "name": "Angle of incidence", "unit": "degrees", "color": "cyan" },
+      { "symbol": "θr", "name": "Angle of reflection (or refraction)", "unit": "degrees", "color": "amber" }
+    ],
+    "whatToMeasure": [
+      "Angle of incidence (measured from the normal, not the surface)",
+      "Angle of reflection (measured from the normal)",
+      "Angle of refraction inside the glass (measured from the normal at the entry point)"
+    ],
+    "howToProcess": "For reflection: tabulate angle of incidence and angle of reflection. They should be equal. For refraction: tabulate angle of incidence and angle of refraction. The refracted angle should be smaller than the incident angle when entering glass from air. Plot a graph of sin(angle of incidence) against sin(angle of refraction): the gradient equals the refractive index (Triple Physics).",
+    "commonMistakes": [
+      "Measuring angles from the surface rather than from the normal. Angles must always be measured from the normal (perpendicular to the surface).",
+      "Not drawing the normal before measuring angles.",
+      "Marking the ray path after moving the equipment, giving inaccurate angles.",
+      "Confusing the refracted ray with the emergent ray on the far side of the glass block.",
+      "Forgetting that the ray bends towards the normal when going from air into glass (less dense to more dense)."
+    ],
+    "examTips": [
+      "Law of reflection: angle of incidence equals angle of reflection. Both measured from the normal.",
+      "When light goes from air into glass, it slows down and bends towards the normal.",
+      "When light exits the glass back into air, it speeds up and bends away from the normal.",
+      "The emergent ray from the glass block is parallel to the original incident ray, but displaced sideways.",
+      "Refractive index n = sin(angle of incidence) / sin(angle of refraction). Only required for Triple Physics."
+    ],
+    "safetyPoints": [
+      "Do not look directly into the ray box lamp. Avoid shining the beam at people's eyes.",
+      "Handle glass blocks carefully. Edges can be sharp."
+    ],
+    "examQuestions": [
+      {
+        "year": 2022,
+        "marks": 3,
+        "text": "A ray of light hits a plane mirror at an angle of incidence of 35°. State the angle of reflection and explain what happens to the ray if the angle of incidence is increased to 50°.",
+        "markScheme": [
+          "Angle of reflection = 35° (1 mark)",
+          "The angle of reflection increases to 50° (1 mark)",
+          "Angle of incidence always equals angle of reflection, so the reflected ray makes a larger angle with the normal (1 mark)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rp10",
+    "board": "aqa",
+    "number": "RP10",
+    "title": "Infrared Radiation",
+    "topic": "waves",
+    "tripleOnly": false,
+    "aim": "To investigate how the emission and absorption of infrared radiation depends on the surface type (colour and texture) of an object.",
+    "equipment": [
+      { "name": "Leslie's cube (metal cube with different surfaces: matt black, shiny black, matt white, shiny silver)", "purpose": "Provides four different surfaces for comparison of infrared emission" },
+      { "name": "Infrared detector or thermopile (connected to a voltmeter or data logger)", "purpose": "Detects infrared radiation from each surface" },
+      { "name": "Boiling water or hot water bath", "purpose": "Fills the Leslie's cube to give a consistent high temperature" },
+      { "name": "Ruler", "purpose": "Ensures the detector is the same distance from each surface for each reading" },
+      { "name": "Sheets of different coloured paper or metal", "purpose": "Alternative to Leslie's cube for investigating absorption" },
+      { "name": "Thermometers", "purpose": "Measure the temperature on the surface of the sheets during the absorption investigation" }
+    ],
+    "method": [
+      "EMISSION investigation: Fill the Leslie's cube with boiling water. Allow it to reach a steady temperature.",
+      "Place the infrared detector a fixed distance (e.g. 10 cm) from each of the four surfaces in turn.",
+      "Record the detector reading (voltage from the thermopile) for each surface.",
+      "Repeat readings and average. The matt black surface should give the highest reading.",
+      "ABSORPTION investigation: Set up identical sheets of different surfaces (matt black, shiny white) in front of a radiant heat source (e.g. electric heater).",
+      "Attach thermometers or temperature probes to the back of each sheet.",
+      "Monitor temperature rise over the same time period. The matt black surface should absorb more and warm up faster.",
+      "Record results in a table and present as a bar chart."
+    ],
+    "diagram": {
+      "type": "svg",
+      "description": "Leslie's cube viewed from above, showing all four faces labelled: matt black, shiny black, matt white, shiny silver. An infrared detector on a stand is positioned at a fixed distance from one face. Arrows from the face to the detector represent infrared radiation."
+    },
+    "keyEquation": "Good emitters = good absorbers (matt black surfaces)",
+    "keyEquationTex": "\\text{Good emitters} = \\text{good absorbers}",
+    "variables": [
+      { "symbol": "IR", "name": "Infrared radiation intensity", "unit": "W/m²", "color": "cyan" },
+      { "symbol": "T", "name": "Temperature of source", "unit": "°C", "color": "amber" }
+    ],
+    "whatToMeasure": [
+      "Detector reading (voltage) for each surface (emission experiment)",
+      "Temperature of sheets over time (absorption experiment)",
+      "Distance from detector to surface (keep constant)"
+    ],
+    "howToProcess": "For emission: rank the four surfaces by detector reading. Matt black should give the highest reading. For absorption: compare temperature rise over the same time period. Matt black should warm up the fastest. Discuss results in terms of the link between surface colour, texture, and infrared emission or absorption.",
+    "commonMistakes": [
+      "Not keeping the detector at the same distance from each surface. Distance must be constant for a fair comparison.",
+      "Allowing the cube to cool significantly between readings, so surfaces are at different temperatures.",
+      "Confusing emission and absorption: both are greatest for matt black surfaces.",
+      "Not allowing the detector to reach a steady reading before recording.",
+      "Touching or blocking the surface between measurements, changing the temperature or reflectivity."
+    ],
+    "examTips": [
+      "Matt black surfaces are the best emitters and best absorbers of infrared radiation.",
+      "Shiny silver surfaces are the worst emitters and worst absorbers (best reflectors).",
+      "All objects emit infrared radiation. The hotter they are, the more infrared they emit.",
+      "This practical links to thermal energy transfer: conduction, convection, and radiation.",
+      "In the real world, radiators are painted black to maximise emission and emergency blankets are silver to minimise it."
+    ],
+    "safetyPoints": [
+      "Use care when filling the Leslie's cube with boiling water. Use a kettle with a spout.",
+      "Do not place the detector in direct contact with the hot cube.",
+      "Allow the cube to cool before emptying or moving it."
+    ],
+    "examQuestions": [
+      {
+        "year": 2020,
+        "marks": 3,
+        "text": "A student uses a Leslie's cube to compare infrared emission from different surfaces. The matt black surface gives a detector reading of 4.5 mV and the shiny silver surface gives 0.8 mV. Suggest why a house roof loses less heat in winter if it is covered with a shiny metallic material.",
+        "markScheme": [
+          "Shiny surfaces are poor emitters of infrared radiation (1 mark)",
+          "Less thermal energy is radiated from the shiny surface than from a matt black surface (1 mark)",
+          "So less heat is lost to the surroundings (1 mark)"
+        ]
+      }
+    ]
+  }
+]

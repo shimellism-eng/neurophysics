@@ -1,0 +1,60 @@
+{
+  "topicId": "waves",
+  "equations": [
+    {
+      "id": "wave-equation",
+      "name": "Wave Equation",
+      "canonical": "v = f × λ",
+      "tex": "v = f\\lambda",
+      "color": "cyan",
+      "variables": [
+        { "symbol": "v", "name": "Wave speed", "unit": "m/s" },
+        { "symbol": "f", "name": "Frequency", "unit": "Hz" },
+        { "symbol": "λ", "name": "Wavelength", "unit": "m" }
+      ],
+      "rearrangements": [
+        { "solveFor": "v", "formula": "v = f × λ",  "tex": "v = f\\lambda" },
+        { "solveFor": "f", "formula": "f = v / λ",  "tex": "f = \\frac{v}{\\lambda}" },
+        { "solveFor": "λ", "formula": "λ = v / f",  "tex": "\\lambda = \\frac{v}{f}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "frequency-period",
+      "name": "Frequency and Period",
+      "canonical": "f = 1 / T",
+      "tex": "f = \\frac{1}{T}",
+      "color": "purple",
+      "variables": [
+        { "symbol": "f", "name": "Frequency", "unit": "Hz" },
+        { "symbol": "T", "name": "Period", "unit": "s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "f", "formula": "f = 1 / T", "tex": "f = \\frac{1}{T}" },
+        { "solveFor": "T", "formula": "T = 1 / f", "tex": "T = \\frac{1}{f}" }
+      ],
+      "onFormulaSheet": { "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false },
+      "higherOnly": false
+    },
+    {
+      "id": "wave-speed-distance",
+      "name": "Wave Speed",
+      "canonical": "v = d / t",
+      "tex": "v = \\frac{d}{t}",
+      "color": "amber",
+      "variables": [
+        { "symbol": "v", "name": "Wave speed", "unit": "m/s" },
+        { "symbol": "d", "name": "Distance", "unit": "m" },
+        { "symbol": "t", "name": "Time", "unit": "s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "v", "formula": "v = d / t", "tex": "v = \\frac{d}{t}" },
+        { "solveFor": "d", "formula": "d = v × t", "tex": "d = vt" },
+        { "solveFor": "t", "formula": "t = d / v", "tex": "t = \\frac{d}{v}" }
+      ],
+      "onFormulaSheet": { "aqa": false, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": false },
+      "higherOnly": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "electricity",
+  "name": "Electricity",
+  "emoji": "🔌",
+  "color": "#4a9eff",
+  "paper": 1,
+  "boards": ["aqa", "edexcel", "ocr-gateway", "ocr-21c", "wjec"],
+  "conceptOrder": [
+    "charge-and-current",
+    "potential-difference",
+    "resistance",
+    "ohms-law",
+    "series-circuits",
+    "parallel-circuits",
+    "power-and-energy"
+  ],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": {
+    "aqa":         "Paper 1 - Section 4.2: Electricity. Standard and Higher tier content.",
+    "edexcel":     "Paper 1 - Topic 3: Electricity and Circuits.",
+    "ocr-gateway": "Paper 2 - Module P3: Electric Circuits.",
+    "ocr-21c":     "Paper 3 - Module P3: Sustainable Energy.",
+    "wjec":        "Unit 2 - Electricity."
+  }
+}

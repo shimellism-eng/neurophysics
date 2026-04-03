@@ -1,0 +1,262 @@
+{
+  "id": "reflection-and-refraction",
+  "topicId": "waves",
+  "title": "Reflection & Refraction",
+  "subtitle": "How waves change direction",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "When light travels from air into glass, it slows down. What happens to it?",
+      "options": [
+        "It reflects back",
+        "It bends towards the normal",
+        "It bends away from the normal",
+        "Nothing \u2014 it continues in a straight line"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! When light enters a denser medium (like glass) it slows down and bends TOWARDS the normal. It bends AWAY from the normal only when going into a less dense medium (e.g. glass to air). Remember: slower = towards the normal.",
+      "correctFeedback": "\u2713 Correct! When light enters a denser medium it slows down and bends towards the normal. The rule is: entering a denser medium \u2192 bends towards the normal; entering a less dense medium \u2192 bends away.",
+      "bestSource": "BEST resource: AQA Physics specification 6.1.2 \u2014 Reflection and refraction"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Reflection & Refraction",
+      "bodyHTML": "<strong>Reflection</strong> is when a wave bounces off a surface. The law of reflection states: the <strong>angle of incidence = angle of reflection</strong>. Both angles are measured from the <strong>normal</strong> (an imaginary line perpendicular to the surface). <strong>Refraction</strong> is when a wave changes direction because it changes speed at a boundary between two materials. When a wave enters a <strong>denser</strong> medium, it slows down and bends <strong>towards the normal</strong>. When it enters a <strong>less dense</strong> medium, it speeds up and bends <strong>away from the normal</strong>. The frequency stays the same \u2014 only the speed and wavelength change.",
+      "keyEquation": "angle of incidence = angle of reflection",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "i", "label": "Angle of incidence", "unit": "\u00b0", "color": "cyan" },
+          { "symbol": "r", "label": "Angle of reflection", "unit": "\u00b0", "color": "purple" },
+          { "symbol": "N", "label": "Normal line", "unit": "\u27c2 to surface", "color": "amber" }
+        ],
+        "relationships": [
+          "Angle of incidence = angle of reflection",
+          "Denser medium \u2192 slower \u2192 bends towards normal",
+          "Less dense medium \u2192 faster \u2192 bends away from normal"
+        ]
+      },
+      "keyWords": ["reflection", "refraction", "normal", "angle of incidence", "angle of reflection", "boundary", "denser"],
+      "commonErrors": [
+        "Measuring angles from the surface instead of the normal",
+        "Thinking the frequency changes during refraction (it does not)",
+        "Confusing reflection (bouncing) with refraction (bending)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the slider to change the angle of incidence. Watch how the reflected and refracted rays behave.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "angle", "label": "Angle of incidence", "unit": "\u00b0", "min": 0, "max": 85, "default": 30, "color": "cyan", "step": 5 },
+          { "id": "density", "label": "Medium density", "unit": "ratio", "min": 1, "max": 3, "default": 2, "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "reflectionAngle", "label": "Angle of reflection", "unit": "\u00b0", "formula": "angle", "color": "amber", "decimalPlaces": 0 }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "angle",
+        "blockLabel": "ray"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 \u00b7 Q6(c)",
+          "year": 2022, "paper": 2, "questionNumber": "6(c)", "marks": 3,
+          "questionText": "A ray of light hits a plane mirror at an angle of 35\u00b0 to the mirror surface. Calculate the angle of reflection.",
+          "steps": [
+            { "stepNum": 1, "label": "Find the angle of incidence", "content": "Angles are measured from the normal, not the surface.\nAngle to surface = 35\u00b0, so angle to normal = 90\u00b0 \u2212 35\u00b0 = 55\u00b0", "equation": "angle of incidence = 55\u00b0", "markSchemeNote": "1 mark \u2014 converting surface angle to normal angle" },
+            { "stepNum": 2, "label": "Apply the law of reflection", "content": "The angle of reflection equals the angle of incidence:", "equation": "angle of reflection = 55\u00b0", "markSchemeNote": "1 mark \u2014 law of reflection stated; 1 mark \u2014 correct answer" }
+          ],
+          "finalAnswer": "55\u00b0",
+          "finalAnswerUnit": "\u00b0",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q4(b)",
+          "year": 2023, "paper": 1, "questionNumber": "4(b)", "marks": 3,
+          "questionText": "Explain why a light ray bends towards the normal when it enters a glass block from air.",
+          "steps": [
+            { "stepNum": 1, "label": "State what happens to speed", "content": "Light slows down when entering glass because glass is denser than air.", "equation": null, "markSchemeNote": "1 mark \u2014 light slows down" },
+            { "stepNum": 2, "label": "Explain the bending", "content": "Because the light slows down at the boundary, it bends towards the normal.", "equation": null, "markSchemeNote": "1 mark \u2014 bends towards normal" },
+            { "stepNum": 3, "label": "What stays the same", "content": "The frequency of the light does not change \u2014 only the speed and wavelength change.", "equation": null, "markSchemeNote": "1 mark \u2014 frequency unchanged stated" }
+          ],
+          "finalAnswer": "Light slows in glass (denser medium) and bends towards the normal. Frequency stays the same.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 \u00b7 Q5(b)",
+          "year": 2022, "paper": 1, "questionNumber": "5(b)", "marks": 2,
+          "questionText": "State the law of reflection.",
+          "steps": [
+            { "stepNum": 1, "label": "State the law", "content": "The angle of incidence equals the angle of reflection.", "equation": "angle i = angle r", "markSchemeNote": "1 mark \u2014 angles are equal" },
+            { "stepNum": 2, "label": "Clarify measurement", "content": "Both angles are measured from the normal (perpendicular to the surface).", "equation": null, "markSchemeNote": "1 mark \u2014 measured from the normal" }
+          ],
+          "finalAnswer": "The angle of incidence equals the angle of reflection, both measured from the normal.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q4(b)",
+          "year": 2023, "paper": 3, "questionNumber": "4(b)", "marks": 2,
+          "questionText": "A light ray passes from glass into air. Describe what happens to its speed and direction.",
+          "steps": [
+            { "stepNum": 1, "label": "Speed change", "content": "Light speeds up when leaving glass and entering air (less dense medium).", "equation": null, "markSchemeNote": "1 mark \u2014 speeds up" },
+            { "stepNum": 2, "label": "Direction change", "content": "The ray bends away from the normal.", "equation": null, "markSchemeNote": "1 mark \u2014 bends away from normal" }
+          ],
+          "finalAnswer": "Light speeds up and bends away from the normal when passing from glass to air.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 \u00b7 Q6(b)",
+          "year": 2023, "paper": 1, "questionNumber": "6(b)", "marks": 2,
+          "questionText": "A light ray hits a mirror at 40\u00b0 to the normal. What is the angle of reflection?",
+          "steps": [
+            { "stepNum": 1, "label": "Apply the law of reflection", "content": "The angle is already measured from the normal, so:", "equation": "angle of reflection = 40\u00b0", "markSchemeNote": "1 mark \u2014 law of reflection; 1 mark \u2014 correct answer" }
+          ],
+          "finalAnswer": "40\u00b0",
+          "finalAnswerUnit": "\u00b0",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 \u00b7 Q6(d)",
+          "year": 2023, "paper": 2, "questionNumber": "6(d)", "marks": 1,
+          "questionText": "A light ray hits a plane mirror. The angle between the ray and the mirror surface is 25\u00b0. What is the angle of reflection?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "25\u00b0", "correct": false },
+            { "label": "B", "text": "50\u00b0", "correct": false },
+            { "label": "C", "text": "65\u00b0", "correct": true },
+            { "label": "D", "text": "90\u00b0", "correct": false }
+          ],
+          "markSchemeSteps": ["Angle to normal = 90 \u2212 25 = 65\u00b0", "Angle of reflection = 65\u00b0 \u2713"],
+          "markSchemeAward": "1 mark correct answer",
+          "commonMistake": "Option A assumes the angle to the surface equals the angle of reflection \u2014 but angles must be from the normal."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q4(c)",
+          "year": 2022, "paper": 1, "questionNumber": "4(c)", "marks": 1,
+          "questionText": "What happens to light when it enters a less dense medium?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It slows down and bends towards the normal", "correct": false },
+            { "label": "B", "text": "It speeds up and bends away from the normal", "correct": true },
+            { "label": "C", "text": "It speeds up and bends towards the normal", "correct": false },
+            { "label": "D", "text": "It slows down and bends away from the normal", "correct": false }
+          ],
+          "markSchemeSteps": ["Less dense \u2192 speeds up \u2192 bends away from normal \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 \u00b7 Q5(d)",
+          "year": 2023, "paper": 1, "questionNumber": "5(d)", "marks": 1,
+          "questionText": "During refraction, which property of a wave does NOT change?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Speed", "correct": false },
+            { "label": "B", "text": "Wavelength", "correct": false },
+            { "label": "C", "text": "Frequency", "correct": true },
+            { "label": "D", "text": "Direction", "correct": false }
+          ],
+          "markSchemeSteps": ["Frequency stays constant during refraction \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q5(a)",
+          "year": 2022, "paper": 3, "questionNumber": "5(a)", "marks": 1,
+          "questionText": "Light enters glass from air. Which direction does it bend?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Away from the normal", "correct": false },
+            { "label": "B", "text": "Towards the normal", "correct": true },
+            { "label": "C", "text": "Along the normal", "correct": false },
+            { "label": "D", "text": "It does not bend", "correct": false }
+          ],
+          "markSchemeSteps": ["Air to glass = less dense to denser \u2192 bends towards normal \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 \u00b7 Q6(c)",
+          "year": 2022, "paper": 1, "questionNumber": "6(c)", "marks": 1,
+          "questionText": "The angle of incidence is 30\u00b0. What is the angle of reflection?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "15\u00b0", "correct": false },
+            { "label": "B", "text": "30\u00b0", "correct": true },
+            { "label": "C", "text": "60\u00b0", "correct": false },
+            { "label": "D", "text": "90\u00b0", "correct": false }
+          ],
+          "markSchemeSteps": ["Law of reflection: angle of incidence = angle of reflection = 30\u00b0 \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Reflection & Refraction \u2014 Key rules",
+      "equation": {
+        "id": "reflection-law",
+        "canonical": "angle of incidence = angle of reflection",
+        "variables": [
+          { "symbol": "i", "name": "Angle of incidence", "unit": "degrees", "abbreviation": "\u00b0" },
+          { "symbol": "r", "name": "Angle of reflection", "unit": "degrees", "abbreviation": "\u00b0" }
+        ],
+        "rearrangements": [
+          { "solveFor": "i", "formula": "i = r", "label": "Angle of incidence" },
+          { "solveFor": "r", "formula": "r = i", "label": "Angle of reflection" }
+        ],
+        "triangleLayout": {
+          "top": { "symbol": "N", "color": "cyan" },
+          "bottomLeft": { "symbol": "i", "color": "purple" },
+          "bottomRight": { "symbol": "r", "color": "amber" }
+        },
+        "examTip": "ALWAYS measure from the normal, never from the surface. If given an angle to the surface, subtract it from 90\u00b0 first.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "Must know the law of reflection and explain refraction in terms of speed change.",
+          "edexcel": "Draw ray diagrams accurately with a ruler. Label the normal as a dashed line.",
+          "ocr-gateway": "Know that frequency stays constant during refraction. Speed and wavelength change.",
+          "ocr-21c": "Link refraction to everyday examples: swimming pools looking shallower, lenses.",
+          "wjec": "Be able to draw and label ray diagrams for both reflection and refraction."
+        }
+      }
+    }
+  ]
+}

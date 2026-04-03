@@ -1,0 +1,268 @@
+.circuit-sim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-4);
+  width: 100%;
+}
+
+.circuit-sim__explanation {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg4);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--amber);
+}
+
+/* SVG canvas */
+.circuit-sim__canvas {
+  background: var(--bg4);
+  border-radius: var(--r);
+  padding: var(--sp-3);
+  overflow: hidden;
+}
+
+.circuit-sim__svg {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+/* Wires */
+.circuit-sim__wire {
+  stroke: var(--cyan);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+/* Battery */
+.circuit-sim__battery-long {
+  stroke: var(--cyan);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.circuit-sim__battery-short {
+  stroke: var(--cyan);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Switch */
+.circuit-sim__switch {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.circuit-sim__switch--closed {
+  stroke: var(--cyan);
+}
+
+.circuit-sim__switch--open {
+  stroke: var(--amber);
+}
+
+.circuit-sim__switch-dot {
+  fill: var(--cyan);
+}
+
+/* Bulb */
+.circuit-sim__bulb-body {
+  fill: var(--bg3);
+  stroke: var(--amber);
+  stroke-width: 2;
+}
+
+.circuit-sim__bulb-glow {
+  fill: var(--amber);
+}
+
+.circuit-sim__filament {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke 0.2s;
+}
+
+/* Ammeter */
+.circuit-sim__ammeter {
+  fill: var(--bg3);
+  stroke: var(--purple);
+  stroke-width: 2;
+}
+
+.circuit-sim__ammeter-letter {
+  fill: var(--purple);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Electron dots */
+.circuit-sim__electron {
+  fill: var(--amber);
+  opacity: 0.9;
+}
+
+/* Labels */
+.circuit-sim__comp-label {
+  fill: var(--muted);
+  font-size: 9px;
+  font-family: system-ui, sans-serif;
+}
+
+.circuit-sim__comp-value {
+  fill: var(--text);
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.circuit-sim__pole {
+  fill: var(--amber);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Switch button */
+.circuit-sim__switch-btn {
+  min-height: 52px;
+  width: 100%;
+  border-radius: var(--r-sm);
+  border: 2px solid var(--border2);
+  background: var(--bg3);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.circuit-sim__switch-btn:hover {
+  border-color: var(--amber);
+}
+
+.circuit-sim__switch-btn--on {
+  background: var(--amber-dim);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* Voltage selector */
+.circuit-sim__voltage-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.circuit-sim__voltage-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.circuit-sim__voltage-btn {
+  min-height: 44px;
+  min-width: 52px;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-sm);
+  border: 2px solid var(--border2);
+  background: var(--bg3);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  flex: 1;
+}
+
+.circuit-sim__voltage-btn:hover {
+  border-color: var(--purple);
+  background: var(--purple-dim);
+}
+
+.circuit-sim__voltage-btn--active {
+  background: var(--purple-dim);
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+/* Readouts */
+.circuit-sim__readouts {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.circuit-sim__readout {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-3);
+  background: var(--bg4);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border2);
+}
+
+.circuit-sim__readout--cyan   { border-color: var(--cyan); }
+.circuit-sim__readout--purple { border-color: var(--purple); }
+.circuit-sim__readout--amber  { border-color: var(--amber); }
+
+.circuit-sim__readout-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.circuit-sim__readout-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.circuit-sim__readout--cyan   .circuit-sim__readout-value { color: var(--cyan); }
+.circuit-sim__readout--purple .circuit-sim__readout-value { color: var(--purple); }
+.circuit-sim__readout--amber  .circuit-sim__readout-value { color: var(--amber); }
+
+/* Equation display */
+.circuit-sim__equation {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg4);
+  border-radius: var(--r);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.circuit-sim__eq-cyan   { color: var(--cyan);   font-size: 1.3rem; font-weight: 700; }
+.circuit-sim__eq-purple { color: var(--purple); font-size: 1.3rem; font-weight: 700; }
+.circuit-sim__eq-amber  { color: var(--amber);  font-size: 1.3rem; font-weight: 700; }
+
+.circuit-sim__eq-op {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.circuit-sim__eq-sep {
+  width: 1px;
+  height: 24px;
+  background: var(--border2);
+  margin: 0 var(--sp-2);
+}
+
+.circuit-sim__eq-values {
+  color: var(--muted);
+  font-size: 1rem;
+}

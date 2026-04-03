@@ -1,0 +1,256 @@
+{
+  "id": "conservation-of-energy",
+  "topicId": "energy",
+  "title": "Conservation of Energy",
+  "subtitle": "Energy cannot be created or destroyed",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A ball is dropped and bounces back to a lower height than it started. Where has the 'missing' energy gone?",
+      "options": [
+        "The energy was destroyed on impact",
+        "The energy was transferred to thermal energy stores of the ball and surroundings",
+        "The energy disappeared into the ground",
+        "Gravity used up the energy"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Energy is NEVER destroyed. The 'missing' energy has been transferred to thermal energy stores of the ball, the floor, and the surrounding air during the impact. This is called energy dissipation.",
+      "correctFeedback": "\u2713 Correct! The principle of conservation of energy says energy is never created or destroyed. The ball doesn\u2019t bounce as high because some energy was transferred to thermal stores during the deformation on impact. This is energy dissipation.",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.2 \u2014 Conservation and dissipation of energy"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Conservation of Energy",
+      "bodyHTML": "The <strong>law of conservation of energy</strong> states that energy can be <strong>transferred</strong> between stores, but cannot be <strong>created or destroyed</strong>. The total energy of a closed system always stays the same. In real systems, energy is often <strong>dissipated</strong> (spread out) to thermal energy stores of the surroundings \u2014 this energy is not 'lost', just less useful.",
+      "keyEquation": "Total energy before = Total energy after",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "GPE", "label": "Gravitational PE", "unit": "J", "color": "purple" },
+          { "symbol": "KE", "label": "Kinetic energy", "unit": "J", "color": "cyan" },
+          { "symbol": "Th", "label": "Thermal (dissipated)", "unit": "J", "color": "amber" }
+        ],
+        "relationships": [
+          "GPE at top = KE at bottom (if no air resistance)",
+          "GPE at top = KE at bottom + thermal (with air resistance)",
+          "Total energy is always conserved"
+        ]
+      },
+      "keyWords": ["conservation of energy", "dissipation", "closed system", "thermal energy", "transferred", "useful energy", "wasted energy"],
+      "commonErrors": [
+        "Saying energy is 'lost' or 'used up' \u2014 say 'dissipated' or 'transferred to thermal stores'",
+        "Forgetting to include dissipated energy when balancing energy totals",
+        "Confusing conservation of energy with efficiency"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Watch how GPE converts to KE as the object falls. Drag the friction slider to see how energy is dissipated to thermal stores.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "height", "label": "Drop height", "unit": "m", "min": 1, "max": 20, "default": 10, "color": "purple", "step": 1 },
+          { "id": "mass", "label": "Mass", "unit": "kg", "min": 1, "max": 10, "default": 2, "color": "cyan", "step": 1 }
+        ],
+        "derived": [
+          { "id": "totalEnergy", "label": "Total energy", "unit": "J", "formula": "mass * 9.8 * height", "color": "amber", "decimalPlaces": 0 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "height",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q4(c)",
+          "year": 2023, "paper": 1, "questionNumber": "4(c)", "marks": 4,
+          "questionText": "A ball of mass 0.5 kg is dropped from a height of 8 m. Calculate its speed just before hitting the ground. Assume no air resistance. (g = 9.8 N/kg)",
+          "steps": [
+            { "stepNum": 1, "label": "Find GPE at top", "content": "Ep = m \u00d7 g \u00d7 h", "equation": "Ep = 0.5 \u00d7 9.8 \u00d7 8 = 39.2 J", "markSchemeNote": "1 mark \u2014 correct GPE" },
+            { "stepNum": 2, "label": "Apply conservation", "content": "No air resistance, so all GPE converts to KE:", "equation": "KE = GPE = 39.2 J", "markSchemeNote": "1 mark \u2014 conservation stated" },
+            { "stepNum": 3, "label": "Rearrange KE equation", "content": "Ek = \u00bdmv\u00b2, so v = \u221a(2Ek / m):", "equation": "v = \u221a(2 \u00d7 39.2 / 0.5) = \u221a156.8", "markSchemeNote": "1 mark \u2014 correct rearrangement and substitution" },
+            { "stepNum": 4, "label": "Calculate", "content": "Find the square root:", "equation": "v = 12.5 m/s", "markSchemeNote": "1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "12.5 m/s", "finalAnswerUnit": "m/s", "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q7(a)",
+          "year": 2023, "paper": 1, "questionNumber": "7(a)", "marks": 3,
+          "questionText": "A pendulum bob of mass 0.2 kg is raised 0.4 m above its lowest point. Calculate its speed at the lowest point. (g = 9.8 N/kg)",
+          "steps": [
+            { "stepNum": 1, "label": "Find GPE", "content": "Ep = mgh = 0.2 \u00d7 9.8 \u00d7 0.4 = 0.784 J", "equation": null, "markSchemeNote": "1 mark" },
+            { "stepNum": 2, "label": "GPE = KE at bottom", "content": "v = \u221a(2Ek / m):", "equation": "v = \u221a(2 \u00d7 0.784 / 0.2) = \u221a7.84 = 2.8 m/s", "markSchemeNote": "1 mark \u2014 method; 1 mark \u2014 answer + unit" }
+          ],
+          "finalAnswer": "2.8 m/s", "finalAnswerUnit": "m/s", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 \u00b7 Q8(a)",
+          "year": 2022, "paper": 1, "questionNumber": "8(a)", "marks": 3,
+          "questionText": "A stone of mass 0.3 kg is dropped from 5 m. Calculate its kinetic energy just before it hits the ground. (g = 10 N/kg)",
+          "steps": [
+            { "stepNum": 1, "label": "Find GPE at top", "content": "Ep = mgh:", "equation": "Ep = 0.3 \u00d7 10 \u00d7 5 = 15 J", "markSchemeNote": "1 mark" },
+            { "stepNum": 2, "label": "Apply conservation", "content": "By conservation: KE at bottom = GPE at top (no air resistance):", "equation": "KE = 15 J", "markSchemeNote": "1 mark \u2014 conservation; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "15 J", "finalAnswerUnit": "J", "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q7(a)",
+          "year": 2022, "paper": 3, "questionNumber": "7(a)", "marks": 3,
+          "questionText": "A diver of mass 60 kg jumps from a 10 m board. Calculate her speed when entering the water. Ignore air resistance. (g = 9.8 N/kg)",
+          "steps": [
+            { "stepNum": 1, "label": "GPE at top", "content": "Ep = 60 \u00d7 9.8 \u00d7 10 = 5880 J", "equation": null, "markSchemeNote": "1 mark" },
+            { "stepNum": 2, "label": "Use conservation", "content": "KE at bottom = 5880 J, v = \u221a(2 \u00d7 5880 / 60):", "equation": "v = \u221a196 = 14 m/s", "markSchemeNote": "1 mark \u2014 method; 1 mark \u2014 answer + unit" }
+          ],
+          "finalAnswer": "14 m/s", "finalAnswerUnit": "m/s", "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 \u00b7 Q7(a)",
+          "year": 2022, "paper": 1, "questionNumber": "7(a)", "marks": 3,
+          "questionText": "A roller coaster car of mass 500 kg is at the top of a 20 m drop. Calculate its speed at the bottom. Ignore friction. (g = 10 N/kg)",
+          "steps": [
+            { "stepNum": 1, "label": "Find GPE", "content": "Ep = 500 \u00d7 10 \u00d7 20 = 100 000 J", "equation": null, "markSchemeNote": "1 mark" },
+            { "stepNum": 2, "label": "Use conservation", "content": "v = \u221a(2 \u00d7 100 000 / 500):", "equation": "v = \u221a400 = 20 m/s", "markSchemeNote": "1 mark \u2014 method; 1 mark \u2014 answer + unit" }
+          ],
+          "finalAnswer": "20 m/s", "finalAnswerUnit": "m/s", "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q4(d)",
+          "year": 2022, "paper": 1, "questionNumber": "4(d)", "marks": 3,
+          "questionText": "A ball of mass 0.4 kg is dropped from 5 m. What is its speed just before hitting the ground? Ignore air resistance. (g = 10 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "5.0 m/s", "correct": false },
+            { "label": "B", "text": "10.0 m/s", "correct": true },
+            { "label": "C", "text": "20.0 m/s", "correct": false },
+            { "label": "D", "text": "7.1 m/s", "correct": false }
+          ],
+          "markSchemeSteps": ["GPE = 0.4 \u00d7 10 \u00d7 5 = 20 J", "KE = GPE = 20 J", "v = \u221a(2 \u00d7 20 / 0.4) = \u221a100 = 10 m/s"],
+          "markSchemeAward": "1 mark GPE \u00b7 1 mark conservation \u00b7 1 mark correct speed + unit",
+          "commonMistake": "Option A comes from forgetting to use \u221a(2Ek/m) and just dividing energy by mass."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q7(b)",
+          "year": 2022, "paper": 1, "questionNumber": "7(b)", "marks": 2,
+          "questionText": "A 2 kg object falls from 3.2 m. What is its KE just before hitting the ground? (g = 10 N/kg, ignore air resistance)",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "32 J", "correct": false },
+            { "label": "B", "text": "64 J", "correct": true },
+            { "label": "C", "text": "6.4 J", "correct": false },
+            { "label": "D", "text": "128 J", "correct": false }
+          ],
+          "markSchemeSteps": ["GPE = 2 \u00d7 10 \u00d7 3.2 = 64 J", "KE = GPE = 64 J"],
+          "markSchemeAward": "1 mark conservation \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 \u00b7 Q7(a)",
+          "year": 2023, "paper": 1, "questionNumber": "7(a)", "marks": 2,
+          "questionText": "A skier of mass 70 kg starts from rest at the top of a 15 m slope. What is the maximum KE at the bottom? (g = 10 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "1050 J", "correct": false },
+            { "label": "B", "text": "10 500 J", "correct": true },
+            { "label": "C", "text": "105 J", "correct": false },
+            { "label": "D", "text": "21 000 J", "correct": false }
+          ],
+          "markSchemeSteps": ["GPE = 70 \u00d7 10 \u00d7 15 = 10 500 J", "Max KE = GPE (conservation)"],
+          "markSchemeAward": "1 mark GPE calculation \u00b7 1 mark conservation applied"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q6(a)",
+          "year": 2023, "paper": 3, "questionNumber": "6(a)", "marks": 2,
+          "questionText": "A 1.5 kg coconut falls from 8 m. What is its speed just before hitting the ground? (g = 10 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "80 m/s", "correct": false },
+            { "label": "B", "text": "12.6 m/s", "correct": true },
+            { "label": "C", "text": "4.0 m/s", "correct": false },
+            { "label": "D", "text": "16 m/s", "correct": false }
+          ],
+          "markSchemeSteps": ["GPE = 1.5 \u00d7 10 \u00d7 8 = 120 J", "v = \u221a(2 \u00d7 120 / 1.5) = \u221a160 = 12.6 m/s"],
+          "markSchemeAward": "1 mark method \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 \u00b7 Q6(a)",
+          "year": 2023, "paper": 1, "questionNumber": "6(a)", "marks": 2,
+          "questionText": "A 0.8 kg ball is dropped from 10 m. What is the KE just before hitting the ground? (g = 10 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "8 J", "correct": false },
+            { "label": "B", "text": "80 J", "correct": true },
+            { "label": "C", "text": "800 J", "correct": false },
+            { "label": "D", "text": "40 J", "correct": false }
+          ],
+          "markSchemeSteps": ["GPE = 0.8 \u00d7 10 \u00d7 10 = 80 J", "KE = GPE = 80 J"],
+          "markSchemeAward": "1 mark GPE calculation \u00b7 1 mark conservation"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Conservation of Energy",
+      "equation": {
+        "id": "conservation-energy",
+        "canonical": "Total energy before = Total energy after",
+        "variables": [
+          { "symbol": "GPE", "name": "Gravitational PE", "unit": "joules", "abbreviation": "J" },
+          { "symbol": "KE", "name": "Kinetic energy", "unit": "joules", "abbreviation": "J" },
+          { "symbol": "Th", "name": "Thermal (dissipated)", "unit": "joules", "abbreviation": "J" }
+        ],
+        "rearrangements": [
+          { "solveFor": "KE", "formula": "KE = GPE (no friction)", "label": "Falling object, no friction" },
+          { "solveFor": "KE", "formula": "KE = GPE \u2212 thermal", "label": "Falling with air resistance" },
+          { "solveFor": "v", "formula": "v = \u221a(2gh)", "label": "Speed from height (no friction)" }
+        ],
+        "triangleLayout": {
+          "top":         { "symbol": "GPE", "color": "purple" },
+          "bottomLeft":  { "symbol": "KE", "color": "cyan" },
+          "bottomRight": { "symbol": "Th", "color": "amber" }
+        },
+        "examTip": "When a question says 'ignore air resistance' or 'no friction', it means all GPE converts to KE. If it says 'in practice', some energy is dissipated to thermal stores.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa":         "Not a formula \u2014 a principle. Must explain using correct energy store language.",
+          "edexcel":     "Must be able to calculate using GPE = KE. Show all working.",
+          "ocr-gateway": "Commonly tested in multi-step calculations combining Ep = mgh and Ek = \u00bdmv\u00b2.",
+          "ocr-21c":     "May ask for descriptions of energy transfers in everyday scenarios.",
+          "wjec":        "Frequently combined with efficiency calculations."
+        }
+      }
+    }
+  ]
+}

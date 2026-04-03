@@ -1,0 +1,252 @@
+{
+  "id": "parallel-circuits",
+  "topicId": "electricity",
+  "title": "Parallel Circuits",
+  "subtitle": "Voltage same, current shared",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "In a parallel circuit with two branches, what happens to the total current from the battery compared to a single-branch circuit?",
+      "options": [
+        "The total current halves because it splits between branches",
+        "The total current stays the same regardless of the number of branches",
+        "The total current increases because there are more paths for charge to flow",
+        "The total current decreases because of more resistance"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Adding more parallel branches actually REDUCES the total resistance, so the total current from the battery INCREASES. Each branch provides an extra path for current to flow. The total current is the sum of the branch currents.",
+      "correctFeedback": "\u2713 Correct! Adding parallel branches gives more paths for current. Total resistance decreases, so total current from the battery increases. The total current equals the sum of the branch currents.",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.3 \u2014 Parallel circuits"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Parallel Circuits",
+      "svgDiagram": "parallel-circuit",
+      "bodyHTML": "In a <strong>parallel circuit</strong>, components are connected on <strong>separate branches</strong>. Three key rules: (1) The <strong>p.d. is the same</strong> across each branch. (2) The <strong>total current</strong> is the <strong>sum</strong> of the currents through each branch: I<sub>total</sub> = I<sub>1</sub> + I<sub>2</sub> + \u2026 (3) The <strong>total resistance</strong> is LESS than the smallest individual resistance: 1/R<sub>total</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub> + \u2026",
+      "keyEquation": "1/R_total = 1/R\u2081 + 1/R\u2082 + \u2026",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "V",     "label": "Voltage (same across all branches)", "unit": "V", "color": "cyan"   },
+          { "symbol": "I",     "label": "Current (splits and adds up)",       "unit": "A", "color": "purple" },
+          { "symbol": "R",     "label": "Resistance (decreases overall)",     "unit": "\u03a9", "color": "amber"  }
+        ],
+        "relationships": [
+          "V is the SAME across each parallel branch",
+          "I_total = I\u2081 + I\u2082 + \u2026 (currents add up)",
+          "1/R_total = 1/R\u2081 + 1/R\u2082 + \u2026 (total R is LESS than smallest)"
+        ]
+      },
+      "keyWords": ["parallel", "branch", "current splits", "same voltage", "total resistance"],
+      "commonErrors": [
+        "Adding resistances directly in parallel (must use 1/R formula)",
+        "Thinking voltage splits in parallel (voltage is the SAME across branches)",
+        "Forgetting that total resistance in parallel is LESS than the smallest resistor"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Adjust the two parallel resistors. Notice the total resistance is always less than the smallest one.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "r1", "label": "Resistor 1", "unit": "\u03a9", "min": 2, "max": 50, "default": 10, "color": "purple", "step": 1 },
+          { "id": "r2", "label": "Resistor 2", "unit": "\u03a9", "min": 2, "max": 50, "default": 20, "color": "amber",  "step": 1 }
+        ],
+        "derived": [
+          { "id": "rtotal", "label": "Total Resistance", "unit": "\u03a9", "formula": "(r1 * r2) / (r1 + r2)", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "r1",
+        "blockLabel": "R"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q8(a)",
+          "year": 2023, "paper": 1, "questionNumber": "8(a)", "marks": 4,
+          "questionText": "Two resistors of 6.0 \u03a9 and 12 \u03a9 are connected in parallel to a 12 V supply. Calculate the total current drawn from the battery.",
+          "steps": [
+            { "stepNum": 1, "label": "Find current through R\u2081", "content": "I\u2081 = V / R\u2081:", "equation": "I\u2081 = 12 / 6.0 = 2.0 A", "markSchemeNote": "1 mark \u2014 correct calculation" },
+            { "stepNum": 2, "label": "Find current through R\u2082", "content": "I\u2082 = V / R\u2082:", "equation": "I\u2082 = 12 / 12 = 1.0 A", "markSchemeNote": "1 mark \u2014 correct calculation" },
+            { "stepNum": 3, "label": "Find total current", "content": "Add the branch currents:", "equation": "I_total = 2.0 + 1.0 = 3.0 A", "markSchemeNote": "1 mark \u2014 correct addition; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "3.0 A", "finalAnswerUnit": "A", "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q9(a)",
+          "year": 2023, "paper": 1, "questionNumber": "9(a)", "marks": 3,
+          "questionText": "Two 10 \u03a9 resistors are connected in parallel. Calculate the total resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Use the parallel formula", "content": "1/R_total = 1/R\u2081 + 1/R\u2082:", "equation": "1/R_total = 1/10 + 1/10 = 2/10", "markSchemeNote": "1 mark \u2014 correct substitution" },
+            { "stepNum": 2, "label": "Invert to find R", "content": "Take the reciprocal:", "equation": "R_total = 10/2 = 5.0 \u03a9", "markSchemeNote": "1 mark \u2014 reciprocal; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "5.0 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 \u00b7 Q8(a)",
+          "year": 2022, "paper": 2, "questionNumber": "8(a)", "marks": 3,
+          "questionText": "A 6.0 V battery powers two parallel bulbs. Bulb A draws 0.50 A and Bulb B draws 0.30 A. Calculate the total current from the battery.",
+          "steps": [
+            { "stepNum": 1, "label": "Add branch currents", "content": "I_total = I_A + I_B:", "equation": "I_total = 0.50 + 0.30 = 0.80 A", "markSchemeNote": "1 mark \u2014 correct equation; 1 mark \u2014 correct calculation; 1 mark \u2014 unit" }
+          ],
+          "finalAnswer": "0.80 A", "finalAnswerUnit": "A", "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q7(a)",
+          "year": 2022, "paper": 3, "questionNumber": "7(a)", "marks": 2,
+          "questionText": "Two identical 20 \u03a9 resistors are in parallel. What is the total resistance?",
+          "steps": [
+            { "stepNum": 1, "label": "For identical resistors", "content": "R_total = R / n = 20 / 2:", "equation": "R_total = 10 \u03a9", "markSchemeNote": "1 mark \u2014 method; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "10 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 \u00b7 Q7(a)",
+          "year": 2022, "paper": 2, "questionNumber": "7(a)", "marks": 2,
+          "questionText": "Two parallel branches draw 1.2 A and 0.8 A. What is the total current?",
+          "steps": [
+            { "stepNum": 1, "label": "Add currents", "content": "I_total = I\u2081 + I\u2082:", "equation": "I_total = 1.2 + 0.8 = 2.0 A", "markSchemeNote": "1 mark \u2014 equation; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "2.0 A", "finalAnswerUnit": "A", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q7(b)",
+          "year": 2022, "paper": 1, "questionNumber": "7(b)", "marks": 3,
+          "questionText": "A 4.0 \u03a9 and a 12 \u03a9 resistor are connected in parallel to a 12 V battery. What is the total current from the battery?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "1.0 A", "correct": false },
+            { "label": "B", "text": "4.0 A", "correct": true  },
+            { "label": "C", "text": "3.0 A", "correct": false },
+            { "label": "D", "text": "16 A",  "correct": false }
+          ],
+          "markSchemeSteps": ["I\u2081 = 12/4.0 = 3.0 A", "I\u2082 = 12/12 = 1.0 A", "I_total = 3.0 + 1.0 = 4.0 A \u2713"],
+          "markSchemeAward": "1 mark each branch current \u00b7 1 mark correct total + unit",
+          "commonMistake": "Option C only calculates one branch (12/4 = 3.0 A) and forgets the other."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q9(b)",
+          "year": 2022, "paper": 1, "questionNumber": "9(b)", "marks": 2,
+          "questionText": "Two identical 8.0 \u03a9 resistors are in parallel. What is the total resistance?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "16 \u03a9",  "correct": false },
+            { "label": "B", "text": "4.0 \u03a9", "correct": true  },
+            { "label": "C", "text": "8.0 \u03a9", "correct": false },
+            { "label": "D", "text": "64 \u03a9",  "correct": false }
+          ],
+          "markSchemeSteps": ["R_total = 8.0 / 2 = 4.0 \u03a9 \u2713"],
+          "markSchemeAward": "1 mark method \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 \u00b7 Q7(b)",
+          "year": 2023, "paper": 2, "questionNumber": "7(b)", "marks": 2,
+          "questionText": "Branch A draws 0.40 A and Branch B draws 0.60 A. What is the total current?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "0.24 A", "correct": false },
+            { "label": "B", "text": "1.0 A",  "correct": true  },
+            { "label": "C", "text": "0.20 A", "correct": false },
+            { "label": "D", "text": "0.50 A", "correct": false }
+          ],
+          "markSchemeSteps": ["I = 0.40 + 0.60 = 1.0 A \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q6(a)",
+          "year": 2023, "paper": 3, "questionNumber": "6(a)", "marks": 2,
+          "questionText": "Three identical 30 \u03a9 resistors are in parallel. What is the total resistance?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "90 \u03a9",  "correct": false },
+            { "label": "B", "text": "10 \u03a9",  "correct": true  },
+            { "label": "C", "text": "30 \u03a9",  "correct": false },
+            { "label": "D", "text": "0.10 \u03a9", "correct": false }
+          ],
+          "markSchemeSteps": ["R_total = 30 / 3 = 10 \u03a9 \u2713"],
+          "markSchemeAward": "1 mark method \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 \u00b7 Q6(a)",
+          "year": 2023, "paper": 2, "questionNumber": "6(a)", "marks": 2,
+          "questionText": "A 6.0 V supply powers two parallel branches drawing 2.0 A and 1.0 A. What is the total current?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "1.5 A", "correct": false },
+            { "label": "B", "text": "3.0 A", "correct": true  },
+            { "label": "C", "text": "2.0 A", "correct": false },
+            { "label": "D", "text": "0.33 A","correct": false }
+          ],
+          "markSchemeSteps": ["I = 2.0 + 1.0 = 3.0 A \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Parallel circuit rules",
+      "equation": {
+        "id": "parallel-resistance",
+        "canonical": "1/R_total = 1/R\u2081 + 1/R\u2082 + \u2026",
+        "variables": [
+          { "symbol": "R_total", "name": "Total resistance",  "unit": "ohms", "abbreviation": "\u03a9" },
+          { "symbol": "R\u2081",      "name": "Resistance 1",      "unit": "ohms", "abbreviation": "\u03a9" },
+          { "symbol": "R\u2082",      "name": "Resistance 2",      "unit": "ohms", "abbreviation": "\u03a9" }
+        ],
+        "rearrangements": [
+          { "solveFor": "R_total", "formula": "1/R_total = 1/R\u2081 + 1/R\u2082 + \u2026", "label": "Find total resistance" },
+          { "solveFor": "R_total (2 identical)", "formula": "R_total = R / n", "label": "Shortcut for n identical resistors" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "V",  "color": "cyan"   },
+          "bottomLeft": { "symbol": "I\u2081", "color": "purple" },
+          "bottomRight":{ "symbol": "I\u2082", "color": "amber"  }
+        },
+        "examTip": "Total resistance in parallel is ALWAYS less than the smallest individual resistor. For two identical resistors, R_total = R / 2.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa":         "NOT on formula sheet \u2014 must memorise the 1/R formula. \u26a0\ufe0f",
+          "edexcel":     "NOT on formula sheet \u2014 must be memorised. \u26a0\ufe0f",
+          "ocr-gateway": "NOT on formula sheet \u2014 must be memorised. \u26a0\ufe0f",
+          "ocr-21c":     "NOT on formula sheet \u2014 must be memorised. \u26a0\ufe0f",
+          "wjec":        "NOT on formula sheet \u2014 must be memorised. \u26a0\ufe0f"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "waves",
+  "name": "Waves",
+  "emoji": "〰",
+  "color": "#a78bfa",
+  "paper": 2,
+  "boards": ["aqa", "edexcel", "ocr-gateway", "ocr-21c", "wjec"],
+  "conceptOrder": [
+    "transverse-and-longitudinal",
+    "wave-properties",
+    "wave-equation",
+    "reflection-and-refraction",
+    "sound-waves",
+    "electromagnetic-spectrum",
+    "light-and-colour"
+  ],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": {
+    "aqa":         "Paper 2 - Section 6.1 Waves. EM spectrum and light in 6.3.",
+    "edexcel":     "Paper 1 - Topic 3: Waves and the Electromagnetic Spectrum.",
+    "ocr-gateway": "Paper 1 - Module P3: Waves in Matter.",
+    "ocr-21c":     "Paper 3 - Module P3: Radiation in Life.",
+    "wjec":        "Unit 1 - Waves."
+  }
+}

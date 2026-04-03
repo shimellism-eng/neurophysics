@@ -1,0 +1,541 @@
+{
+  "id": "wave-equation",
+  "topicId": "waves",
+  "title": "The Wave Equation",
+  "subtitle": "v = fλ",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "A wave has a frequency of 10 Hz and a wavelength of 2 m. What is its speed?",
+      "options": [
+        "5 m/s",
+        "12 m/s",
+        "20 m/s",
+        "0.2 m/s"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Check your working! Use v = f × λ. That gives v = 10 × 2 = 20 m/s. A common mistake is dividing instead of multiplying, which gives 5 m/s.",
+      "correctFeedback": "✓ Correct! v = f × λ = 10 × 2 = 20 m/s. You multiplied frequency by wavelength - well done.",
+      "bestSource": "BEST resource: AQA Physics specification 6.1.1: The wave equation"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "The Wave Equation",
+      "bodyHTML": "The wave equation links <strong>wave speed</strong>, <strong>frequency</strong> and <strong>wavelength</strong>. Wave speed (v) is how fast the wave travels through the medium. It equals the number of waves per second (frequency) multiplied by the length of each wave (wavelength). This equation works for <strong>all</strong> types of waves - sound, light, water, seismic waves, etc.",
+      "keyEquation": "v = f × λ",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "v",
+            "label": "Wave speed",
+            "unit": "m/s",
+            "color": "cyan"
+          },
+          {
+            "symbol": "f",
+            "label": "Frequency",
+            "unit": "Hz",
+            "color": "purple"
+          },
+          {
+            "symbol": "λ",
+            "label": "Wavelength",
+            "unit": "m",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Higher frequency → shorter wavelength (if speed is constant)",
+          "Longer wavelength → lower frequency (if speed is constant)",
+          "Speed depends on the medium, not on frequency or wavelength alone"
+        ]
+      },
+      "keyWords": [
+        "wave speed",
+        "frequency",
+        "wavelength",
+        "hertz",
+        "wave equation"
+      ],
+      "commonErrors": [
+        "Dividing instead of multiplying (v = f × λ, not f / λ)",
+        "Forgetting to convert units (e.g. cm to m, kHz to Hz)",
+        "Confusing wave speed with frequency"
+      ],
+      "keyEquationTex": "v = f\\lambda"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Tap Slow, Normal or Fast to change the frequency. Watch the wavelength change as the wave scrolls. Use Freeze to pause and study the wave.",
+      "simId": "wave-sim",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "frequency",
+            "label": "Frequency",
+            "unit": "Hz",
+            "min": 1,
+            "max": 20,
+            "default": 5,
+            "color": "cyan",
+            "step": 1
+          },
+          {
+            "id": "wavelength",
+            "label": "Wavelength",
+            "unit": "m",
+            "min": 1,
+            "max": 10,
+            "default": 3,
+            "color": "purple",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "speed",
+            "label": "Wave speed",
+            "unit": "m/s",
+            "formula": "frequency * wavelength",
+            "color": "amber",
+            "decimalPlaces": 1
+          }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "frequency",
+        "blockLabel": "v = fλ"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 · Q6(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "6(a)",
+          "marks": 3,
+          "questionText": "A sound wave has a frequency of 256 Hz and travels at 340 m/s in air. Calculate the wavelength of the sound wave.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify the knowns",
+              "content": "frequency f = 256 Hz\nwave speed v = 340 m/s",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Rearrange for wavelength",
+              "content": "Start with v = f × λ, then divide both sides by f:",
+              "equation": "λ = v / f",
+              "markSchemeNote": "1 mark: correct rearrangement"
+            },
+            {
+              "stepNum": 3,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "λ = 340 / 256 = 1.33 m",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "1.33 m",
+          "finalAnswerUnit": "m",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q5(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 3,
+          "questionText": "A radio wave has a frequency of 100 MHz and travels at 3 × 10⁸ m/s. Calculate its wavelength.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Convert units",
+              "content": "100 MHz = 100 × 10⁶ Hz = 1 × 10⁸ Hz",
+              "equation": null,
+              "markSchemeNote": "1 mark: correct unit conversion"
+            },
+            {
+              "stepNum": 2,
+              "label": "Rearrange and calculate",
+              "content": "Use λ = v / f:",
+              "equation": "λ = (3 × 10⁸) / (1 × 10⁸) = 3 m",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "3 m",
+          "finalAnswerUnit": "m",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q5(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 3,
+          "questionText": "A wave on a string has a frequency of 4 Hz and a wavelength of 0.5 m. Calculate the wave speed.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Use the wave equation:",
+              "equation": "v = f × λ",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "v = 4 × 0.5 = 2.0 m/s",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "2.0 m/s",
+          "finalAnswerUnit": "m/s",
+          "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q4(a)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "4(a)",
+          "marks": 3,
+          "questionText": "A wave in water travels at 1.5 m/s and has a wavelength of 0.3 m. Calculate the frequency.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Rearrange for frequency",
+              "content": "Start with v = fλ, then divide both sides by λ:",
+              "equation": "f = v / λ",
+              "markSchemeNote": "1 mark: correct rearrangement"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "f = 1.5 / 0.3 = 5 Hz",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "5 Hz",
+          "finalAnswerUnit": "Hz",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q6(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "A wave has a frequency of 8 Hz and a wavelength of 1.5 m. Calculate the wave speed.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply v = fλ directly",
+              "content": "All values given. Substitute straight in:",
+              "equation": "v = 8 × 1.5 = 12 m/s",
+              "markSchemeNote": "1 mark: correct equation and substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "12 m/s",
+          "finalAnswerUnit": "m/s",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 · Q6(b)",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "6(b)",
+          "marks": 3,
+          "questionText": "A wave has a speed of 330 m/s and a wavelength of 1.5 m. What is the frequency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "495 Hz",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "220 Hz",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "331.5 Hz",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "0.0045 Hz",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Rearrange: f = v / λ",
+            "Substitute: f = 330 / 1.5",
+            "Answer: f = 220 Hz ✓"
+          ],
+          "markSchemeAward": "1 mark rearrangement · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option A is from multiplying instead of dividing."
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q5(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(b)",
+          "marks": 2,
+          "questionText": "A wave has a frequency of 50 Hz and a wavelength of 0.4 m. Calculate the wave speed.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "125 m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "20 m/s",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "50.4 m/s",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "0.008 m/s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "v = f × λ",
+            "v = 50 × 0.4 = 20 m/s ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q5(c)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(c)",
+          "marks": 3,
+          "questionText": "A sound wave travels at 340 m/s and has a frequency of 680 Hz. What is its wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "2.0 m",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.5 m",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "231 200 m",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "340 m",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "λ = v / f",
+            "λ = 340 / 680 = 0.5 m ✓"
+          ],
+          "markSchemeAward": "1 mark rearrangement · 1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q3(b)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "A microwave has a frequency of 2.5 GHz and travels at 3 × 10⁸ m/s. What is its wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.12 m",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "1.2 m",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "12 m",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "0.012 m",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Convert: 2.5 GHz = 2.5 × 10⁹ Hz",
+            "λ = (3 × 10⁸) / (2.5 × 10⁹) = 0.12 m ✓"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q5(c)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(c)",
+          "marks": 2,
+          "questionText": "A wave has a speed of 12 m/s and a frequency of 6 Hz. What is the wavelength?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "72 m",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "2 m",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "0.5 m",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "18 m",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "λ = v / f = 12 / 6 = 2 m ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "v = fλ: all rearrangements",
+      "equation": {
+        "id": "wave-equation",
+        "canonical": "v = f × λ",
+        "variables": [
+          {
+            "symbol": "v",
+            "name": "Wave speed",
+            "unit": "metres per second",
+            "abbreviation": "m/s"
+          },
+          {
+            "symbol": "f",
+            "name": "Frequency",
+            "unit": "hertz",
+            "abbreviation": "Hz"
+          },
+          {
+            "symbol": "λ",
+            "name": "Wavelength",
+            "unit": "metres",
+            "abbreviation": "m"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "v",
+            "formula": "v = f × λ",
+            "label": "Find wave speed"
+          },
+          {
+            "solveFor": "f",
+            "formula": "f = v / λ",
+            "label": "Find frequency"
+          },
+          {
+            "solveFor": "λ",
+            "formula": "λ = v / f",
+            "label": "Find wavelength"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "v",
+            "color": "cyan"
+          },
+          "bottomLeft": {
+            "symbol": "f",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "λ",
+            "color": "amber",
+            "tex": "\\lambda"
+          }
+        },
+        "examTip": "This equation works for ALL waves. Check units: convert kHz to Hz (multiply by 1000), MHz to Hz (multiply by 10⁶), nm to m (divide by 10⁹).",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": true,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Must be able to rearrange for f and λ.",
+          "edexcel": "On Edexcel equation sheet. Often combined with f = 1/T.",
+          "ocr-gateway": "On formula sheet. Practise unit conversions (MHz, kHz, nm).",
+          "ocr-21c": "On formula sheet. Link to EM spectrum wavelength calculations.",
+          "wjec": "Provided in WJEC exam. Know all three rearrangements."
+        }
+      }
+    }
+  ]
+}

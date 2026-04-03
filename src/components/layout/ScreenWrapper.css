@@ -3,7 +3,9 @@
   min-height: 0;
   padding: var(--sp-5) var(--sp-4);
   padding-top: calc(var(--safe-top) + var(--sp-5));
+  padding-bottom: calc(var(--nav-h) + var(--safe-bot) + 1.5rem);
   display: flex;
   flex-direction: column;
   gap: var(--sp-5);
+  overflow-x: hidden;
 }

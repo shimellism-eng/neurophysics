@@ -1,0 +1,183 @@
+/* ── Search input ──────────────────────────────────────────────── */
+
+.search__input-wrap {
+  position: relative;
+  margin-bottom: var(--sp-4);
+}
+
+.search__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--muted);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.search__input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--sp-4) 0 44px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search__input::placeholder {
+  color: var(--muted);
+}
+
+.search__input:focus {
+  border-color: var(--cyan);
+}
+
+/* ── Group headers ────────────────────────────────────────────── */
+
+.search__group-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+.search__group-title:first-of-type {
+  margin-top: 0;
+}
+
+/* ── Result cards ─────────────────────────────────────────────── */
+
+.search__results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.search__card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  text-align: left;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+  cursor: pointer;
+}
+
+.search__card:active {
+  opacity: 0.85;
+  border-color: var(--cyan);
+}
+
+.search__card-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.search__card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.search__card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search__card-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search__card-chevron {
+  color: var(--muted);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Topic card accent */
+.search__card--topic {
+  border-left: 3px solid var(--card-accent, var(--cyan));
+}
+
+/* Equation formula */
+.search__card-formula {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--cyan);
+}
+
+/* ── Empty / no-results states ────────────────────────────────── */
+
+.search__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-3);
+  padding: var(--sp-6) var(--sp-4);
+  color: var(--muted);
+}
+
+.search__empty-icon {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.search__empty-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.search__empty-hint {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.search__suggestion {
+  display: inline;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+/* ── Back button ──────────────────────────────────────────────── */
+
+.search__back {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) 0;
+  margin-bottom: var(--sp-2);
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.search__back:active {
+  color: var(--cyan);
+}

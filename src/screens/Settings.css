@@ -94,6 +94,55 @@
   background: var(--bg);
 }
 
+/* ── Teacher View button ─────────────────────────────────── */
+
+.settings__teacher-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  text-align: left;
+  min-height: 56px;
+  transition: border-color 0.15s ease;
+}
+
+.settings__teacher-btn:hover,
+.settings__teacher-btn:focus-visible {
+  border-color: var(--cyan);
+}
+
+.settings__teacher-icon {
+  font-size: 1.5rem;
+}
+
+.settings__teacher-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings__teacher-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.settings__teacher-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.settings__teacher-arrow {
+  font-size: 1.1rem;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
 .settings__footer {
   margin-top: auto;
   text-align: center;

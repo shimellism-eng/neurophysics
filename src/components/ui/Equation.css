@@ -1,0 +1,22 @@
+/* KaTeX overrides for dark background rendering */
+.katex {
+  color: var(--text);
+  font-size: 1.1em;
+}
+
+.katex-display {
+  margin: 0.75em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Ensure KaTeX SVG elements inherit colour correctly */
+.katex .mord,
+.katex .mbin,
+.katex .mrel,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .minner {
+  color: var(--text);
+}

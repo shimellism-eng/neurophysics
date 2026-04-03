@@ -1,3 +1,12 @@
+.concept__svg-diagram {
+  margin-bottom: var(--sp-5);
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  overflow: hidden;
+  padding: var(--sp-3);
+}
+
 .concept__equation {
   display: flex;
   align-items: center;
@@ -8,15 +17,36 @@
   border-radius: var(--r);
   font-size: 1.75rem;
   color: var(--cyan);
+  overflow-x: auto;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.concept__equation svg,
+.concept__body svg,
+.concept__body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .concept__body {
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text);
 }
 
+.concept__body p {
+  margin-bottom: 0.75rem;
+}
+
 .concept__body strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.concept__body .keyword {
   color: var(--cyan);
   font-weight: 700;
 }

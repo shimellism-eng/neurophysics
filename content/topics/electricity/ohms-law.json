@@ -1,0 +1,253 @@
+{
+  "id": "ohms-law",
+  "topicId": "electricity",
+  "title": "Ohm's Law",
+  "subtitle": "V = IR (for ohmic conductors)",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A student says \u201cV = IR is Ohm\u2019s Law.\u201d Is this correct?",
+      "options": [
+        "Yes \u2014 V = IR is always Ohm\u2019s Law",
+        "No \u2014 V = IR is the definition of resistance. Ohm\u2019s Law is that current is proportional to p.d. at constant temperature",
+        "No \u2014 Ohm\u2019s Law only applies to parallel circuits",
+        "Yes \u2014 but only for series circuits"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! V = IR defines resistance for ANY component. Ohm\u2019s Law is a specific statement: for an ohmic conductor at constant temperature, current is directly proportional to potential difference. Not all components obey Ohm\u2019s Law (e.g. filament lamps, diodes).",
+      "correctFeedback": "\u2713 Correct! V = IR defines resistance. Ohm\u2019s Law states that current is directly proportional to p.d. at constant temperature \u2014 this only applies to ohmic conductors like fixed resistors at constant temperature.",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.1 \u2014 Ohm\u2019s Law and I-V characteristics"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Ohm\u2019s Law",
+      "bodyHTML": "<strong>Ohm\u2019s Law</strong> states that the current through an <strong>ohmic conductor</strong> is <strong>directly proportional</strong> to the potential difference across it, provided the <strong>temperature remains constant</strong>. An ohmic conductor (e.g. a fixed resistor at constant temperature) gives a straight-line I-V graph through the origin. A <strong>filament lamp</strong> is non-ohmic \u2014 its resistance increases as it heats up, giving a curved I-V graph.",
+      "keyEquation": "V = I \u00d7 R",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "V", "label": "Potential difference", "unit": "V", "color": "cyan"   },
+          { "symbol": "I", "label": "Current",             "unit": "A", "color": "purple" },
+          { "symbol": "R", "label": "Resistance",          "unit": "\u03a9", "color": "amber"  }
+        ],
+        "relationships": [
+          "For an ohmic conductor: double V \u2192 double I (R stays constant)",
+          "For a filament lamp: double V \u2192 less than double I (R increases)"
+        ]
+      },
+      "keyWords": ["Ohm\u2019s Law", "ohmic conductor", "proportional", "I-V characteristic", "filament lamp"],
+      "commonErrors": [
+        "Saying V = IR IS Ohm\u2019s Law (it is the definition of resistance)",
+        "Forgetting the \u2018at constant temperature\u2019 condition",
+        "Thinking all components obey Ohm\u2019s Law"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Change the voltage and resistance. For an ohmic conductor, notice the straight-line relationship between V and I.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "voltage",    "label": "Voltage",    "unit": "V", "min": 1,  "max": 24, "default": 6, "color": "cyan",   "step": 1 },
+          { "id": "resistance", "label": "Resistance", "unit": "\u03a9", "min": 1,  "max": 50, "default": 10, "color": "amber", "step": 1 }
+        ],
+        "derived": [
+          { "id": "current", "label": "Current", "unit": "A", "formula": "voltage / resistance", "color": "purple", "decimalPlaces": 2 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "voltage",
+        "blockLabel": "I"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q6(b)",
+          "year": 2023, "paper": 1, "questionNumber": "6(b)", "marks": 4,
+          "questionText": "A student investigates a fixed resistor. At 4.0 V the current is 0.20 A. At 8.0 V the current is 0.40 A. Show that the resistor obeys Ohm\u2019s Law and calculate its resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Calculate R at 4.0 V", "content": "Use R = V / I:", "equation": "R = 4.0 / 0.20 = 20 \u03a9", "markSchemeNote": "1 mark \u2014 correct calculation" },
+            { "stepNum": 2, "label": "Calculate R at 8.0 V", "content": "Use R = V / I:", "equation": "R = 8.0 / 0.40 = 20 \u03a9", "markSchemeNote": "1 mark \u2014 correct calculation" },
+            { "stepNum": 3, "label": "Compare results", "content": "Resistance is the same (20 \u03a9) at both voltages. Current is proportional to p.d.", "equation": null, "markSchemeNote": "1 mark \u2014 stating R is constant or I \u221d V" },
+            { "stepNum": 4, "label": "State conclusion", "content": "The resistor obeys Ohm\u2019s Law because current is directly proportional to p.d. (constant R).", "equation": "R = 20 \u03a9", "markSchemeNote": "1 mark \u2014 correct conclusion with correct resistance value" }
+          ],
+          "finalAnswer": "20 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q7(a)",
+          "year": 2023, "paper": 1, "questionNumber": "7(a)", "marks": 3,
+          "questionText": "An ohmic conductor has a resistance of 8.0 \u03a9. Calculate the current when the p.d. is 12 V.",
+          "steps": [
+            { "stepNum": 1, "label": "Rearrange for I", "content": "I = V / R", "equation": null, "markSchemeNote": "1 mark \u2014 correct rearrangement" },
+            { "stepNum": 2, "label": "Substitute", "content": "Put in the values:", "equation": "I = 12 / 8.0 = 1.5 A", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "1.5 A", "finalAnswerUnit": "A", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 \u00b7 Q6(a)",
+          "year": 2022, "paper": 2, "questionNumber": "6(a)", "marks": 3,
+          "questionText": "A resistor has a p.d. of 10 V and carries a current of 2.5 A. Calculate its resistance. State whether this could be an ohmic conductor.",
+          "steps": [
+            { "stepNum": 1, "label": "Calculate resistance", "content": "R = V / I:", "equation": "R = 10 / 2.5 = 4.0 \u03a9", "markSchemeNote": "1 mark \u2014 correct calculation" },
+            { "stepNum": 2, "label": "Explain", "content": "Need more data points to determine if it is ohmic \u2014 R must remain constant at different voltages.", "equation": null, "markSchemeNote": "2 marks \u2014 correct explanation" }
+          ],
+          "finalAnswer": "4.0 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q5(a)",
+          "year": 2022, "paper": 3, "questionNumber": "5(a)", "marks": 2,
+          "questionText": "A wire carries a current of 3.0 A when the p.d. is 6.0 V. Calculate the resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply R = V / I", "content": "Substitute:", "equation": "R = 6.0 / 3.0 = 2.0 \u03a9", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "2.0 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 \u00b7 Q5(a)",
+          "year": 2022, "paper": 2, "questionNumber": "5(a)", "marks": 2,
+          "questionText": "A fixed resistor has a p.d. of 15 V and a current of 0.50 A. Calculate the resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply R = V / I", "content": "Substitute:", "equation": "R = 15 / 0.50 = 30 \u03a9", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "30 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q5(a)",
+          "year": 2022, "paper": 1, "questionNumber": "5(a)", "marks": 3,
+          "questionText": "A student doubles the voltage across a component and the current also doubles. What can be concluded?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "The component is a diode",                              "correct": false },
+            { "label": "B", "text": "The component is an ohmic conductor at constant temperature", "correct": true  },
+            { "label": "C", "text": "The component is a filament lamp",                      "correct": false },
+            { "label": "D", "text": "The resistance has doubled",                             "correct": false }
+          ],
+          "markSchemeSteps": ["Current is directly proportional to p.d.", "Resistance is constant", "This is Ohm\u2019s Law \u2014 ohmic conductor at constant temperature \u2713"],
+          "markSchemeAward": "1 mark proportionality \u00b7 1 mark constant R \u00b7 1 mark conclusion",
+          "commonMistake": "A filament lamp would NOT double current when voltage doubles \u2014 its resistance increases with temperature."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q7(b)",
+          "year": 2022, "paper": 1, "questionNumber": "7(b)", "marks": 2,
+          "questionText": "A 12 \u03a9 resistor is connected to a 6.0 V battery. What current flows?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "72 A",   "correct": false },
+            { "label": "B", "text": "0.50 A", "correct": true  },
+            { "label": "C", "text": "2.0 A",  "correct": false },
+            { "label": "D", "text": "18 A",   "correct": false }
+          ],
+          "markSchemeSteps": ["I = V / R = 6.0 / 12 = 0.50 A \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 \u00b7 Q5(a)",
+          "year": 2023, "paper": 2, "questionNumber": "5(a)", "marks": 2,
+          "questionText": "A current of 0.60 A flows through a 20 \u03a9 resistor. What is the p.d.?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "33.3 V", "correct": false },
+            { "label": "B", "text": "12 V",   "correct": true  },
+            { "label": "C", "text": "20.6 V", "correct": false },
+            { "label": "D", "text": "0.030 V","correct": false }
+          ],
+          "markSchemeSteps": ["V = I \u00d7 R = 0.60 \u00d7 20 = 12 V \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q4(a)",
+          "year": 2023, "paper": 3, "questionNumber": "4(a)", "marks": 2,
+          "questionText": "A 5.0 \u03a9 resistor has a p.d. of 10 V across it. Calculate the current.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "50 A",   "correct": false },
+            { "label": "B", "text": "2.0 A",  "correct": true  },
+            { "label": "C", "text": "0.50 A", "correct": false },
+            { "label": "D", "text": "15 A",   "correct": false }
+          ],
+          "markSchemeSteps": ["I = V / R = 10 / 5.0 = 2.0 A \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 \u00b7 Q4(a)",
+          "year": 2023, "paper": 2, "questionNumber": "4(a)", "marks": 2,
+          "questionText": "A 25 \u03a9 resistor carries a current of 0.80 A. Calculate the p.d.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "31.25 V", "correct": false },
+            { "label": "B", "text": "20 V",    "correct": true  },
+            { "label": "C", "text": "25.8 V",  "correct": false },
+            { "label": "D", "text": "0.032 V", "correct": false }
+          ],
+          "markSchemeSteps": ["V = I \u00d7 R = 0.80 \u00d7 25 = 20 V \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "V = IR \u2014 Ohm\u2019s Law",
+      "equation": {
+        "id": "ohms-law",
+        "canonical": "V = I \u00d7 R",
+        "variables": [
+          { "symbol": "V", "name": "Potential difference", "unit": "volts",   "abbreviation": "V" },
+          { "symbol": "I", "name": "Current",              "unit": "amperes", "abbreviation": "A" },
+          { "symbol": "R", "name": "Resistance",           "unit": "ohms",    "abbreviation": "\u03a9" }
+        ],
+        "rearrangements": [
+          { "solveFor": "V", "formula": "V = I \u00d7 R", "label": "Find voltage"    },
+          { "solveFor": "I", "formula": "I = V / R", "label": "Find current"    },
+          { "solveFor": "R", "formula": "R = V / I", "label": "Find resistance" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "V", "color": "cyan"   },
+          "bottomLeft": { "symbol": "I", "color": "purple" },
+          "bottomRight":{ "symbol": "R", "color": "amber"  }
+        },
+        "examTip": "V = IR defines resistance. Ohm\u2019s Law is specifically that I \u221d V at constant temperature (only for ohmic conductors).",
+        "onFormulaSheet": {
+          "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true
+        },
+        "boardNotes": {
+          "aqa":         "On AQA formula sheet. Must understand I-V characteristics.",
+          "edexcel":     "On Edexcel equation sheet. Know the difference between V=IR and Ohm\u2019s Law.",
+          "ocr-gateway": "NOT on formula sheet \u2014 must be memorised for OCR Gateway. \u26a0\ufe0f",
+          "ocr-21c":     "NOT on formula sheet \u2014 must be memorised for OCR 21st Century. \u26a0\ufe0f",
+          "wjec":        "Provided in WJEC exam. Be able to describe I-V graphs for different components."
+        }
+      }
+    }
+  ]
+}

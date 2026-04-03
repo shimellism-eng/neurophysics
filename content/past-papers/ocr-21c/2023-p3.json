@@ -1,0 +1,167 @@
+{
+  "board": "ocr-21c",
+  "year": 2023,
+  "paper": 3,
+  "tier": "Higher",
+  "totalMarks": 90,
+  "questions": [
+    {
+      "id": "ocr-21c-2023-p3-q2a",
+      "number": "2(a)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A remote-controlled car has a mass of 1.5 kg. It accelerates from rest to 6.0 m/s in 3.0 seconds. Calculate the resultant force acting on the car.",
+      "markScheme": {
+        "answer": "3.0 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Calculates acceleration: a = 6.0 / 3.0 = 2.0 m/s\u00b2" },
+          { "mark": 2, "description": "Recalls F = ma" },
+          { "mark": 3, "description": "Substitutes: F = 1.5 \u00d7 2.0" },
+          { "mark": 4, "description": "Correct answer: 3.0 N" }
+        ],
+        "commonErrors": [
+          "Using velocity (6.0) instead of acceleration (2.0) in F = ma",
+          "Forgetting to calculate acceleration first"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2023-p3-q2b",
+      "number": "2(b)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "An object has a 5 N force acting upwards and a 5 N force acting downwards. What happens to the object?",
+      "options": ["It accelerates upwards", "It accelerates downwards", "It remains stationary or moves at constant velocity", "It moves upwards at constant speed then stops"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "It remains stationary or moves at constant velocity",
+        "steps": [
+          { "mark": 1, "description": "Identifies forces are balanced (resultant = 0)" },
+          { "mark": 2, "description": "Zero resultant means no change in motion" }
+        ],
+        "commonErrors": [
+          "Thinking balanced forces always mean the object is stationary"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2023-p3-q3c",
+      "number": "3(c)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "Explain why an astronaut's weight is different on the Moon compared to on Earth, but their mass stays the same.",
+      "markScheme": {
+        "answer": "Mass is the amount of matter, which does not change with location. Weight depends on gravitational field strength (W = mg). The Moon has a weaker gravitational field than Earth, so the weight is less.",
+        "steps": [
+          { "mark": 1, "description": "Mass is the amount of matter and is constant everywhere" },
+          { "mark": 2, "description": "Weight = mass \u00d7 gravitational field strength" },
+          { "mark": 3, "description": "The Moon has a weaker gravitational field strength, so weight is smaller" }
+        ],
+        "commonErrors": [
+          "Not mentioning gravitational field strength",
+          "Saying there is no gravity on the Moon"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2023-p3-q4a",
+      "number": "4(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A person pushes a wheelbarrow 20 m using a force of 50 N. Calculate the work done.",
+      "markScheme": {
+        "answer": "1000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = Fs" },
+          { "mark": 2, "description": "Substitutes: W = 50 \u00d7 20" },
+          { "mark": 3, "description": "Correct answer: 1000 J" }
+        ],
+        "allowedAlternatives": ["1.0 kJ"],
+        "commonErrors": [
+          "Using the wrong formula",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "ocr-21c-2023-p3-q5b",
+      "number": "5(b)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 500 kg bumper car travelling at 4 m/s collides head-on with a 600 kg bumper car travelling at 3 m/s in the opposite direction. They stick together after the collision. Calculate their velocity after the collision and state the direction.",
+      "markScheme": {
+        "answer": "0.18 m/s in the direction of the first car",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum of car 1: 500 \u00d7 4 = 2000 kg m/s" },
+          { "mark": 2, "description": "Momentum of car 2: 600 \u00d7 (-3) = -1800 kg m/s" },
+          { "mark": 3, "description": "Total momentum = 2000 + (-1800) = 200 kg m/s" },
+          { "mark": 4, "description": "Combined mass = 1100 kg; v = 200 / 1100" },
+          { "mark": 5, "description": "v = 0.18 m/s in the direction of the first car" }
+        ],
+        "allowedAlternatives": ["0.182 m/s"],
+        "commonErrors": [
+          "Not assigning opposite signs for opposite directions",
+          "Adding momenta without considering direction"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2023-p3-q6a",
+      "number": "6(a)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A parachutist jumps from a plane. Describe how the forces on the parachutist change from the moment they jump until they reach terminal velocity (before opening the parachute).",
+      "markScheme": {
+        "answer": "Initially, weight is much greater than air resistance, so the resultant force is large and the parachutist accelerates quickly. As speed increases, air resistance increases. The resultant force decreases so acceleration decreases. Eventually air resistance equals weight, the resultant force is zero and terminal velocity is reached.",
+        "steps": [
+          { "mark": 1, "description": "At first, weight >> air resistance, so there is a large resultant downward force and the parachutist accelerates" },
+          { "mark": 2, "description": "As speed increases, air resistance increases, reducing the resultant force and reducing acceleration" },
+          { "mark": 3, "description": "When air resistance = weight, resultant force is zero and terminal velocity is reached" }
+        ],
+        "commonErrors": [
+          "Not explaining that air resistance increases with speed",
+          "Saying forces are balanced from the start"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

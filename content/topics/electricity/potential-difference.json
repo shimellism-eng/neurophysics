@@ -1,0 +1,250 @@
+{
+  "id": "potential-difference",
+  "topicId": "electricity",
+  "title": "Potential Difference",
+  "subtitle": "V = E / Q",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "What does a voltmeter measure?",
+      "options": [
+        "The current flowing through a component",
+        "The resistance of a component",
+        "The energy transferred per unit charge across a component",
+        "The total energy used by the circuit"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! A voltmeter measures potential difference (voltage) \u2014 the energy transferred per unit of charge between two points. It is connected in parallel, not in series. It does not measure current or resistance directly.",
+      "correctFeedback": "\u2713 Correct! Potential difference (voltage) is the energy transferred per coulomb of charge that passes between two points. A voltmeter is always connected in parallel across a component.",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.1 \u2014 Potential difference"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Potential Difference",
+      "bodyHTML": "<strong>Potential difference</strong> (p.d. or voltage) is the <strong>energy transferred per unit charge</strong> that passes between two points. It tells you how much energy each coulomb of charge transfers as it moves through a component. A voltmeter is connected <strong>in parallel</strong> across a component to measure p.d.",
+      "keyEquation": "V = E / Q",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "V", "label": "Potential difference", "unit": "V", "color": "cyan"   },
+          { "symbol": "E", "label": "Energy transferred",   "unit": "J", "color": "purple" },
+          { "symbol": "Q", "label": "Charge",               "unit": "C", "color": "amber"  }
+        ],
+        "relationships": [
+          "Bigger E \u2192 bigger V (more energy per charge)",
+          "Bigger Q \u2192 smaller V (energy shared between more charge)"
+        ]
+      },
+      "keyWords": ["potential difference", "voltage", "voltmeter", "parallel", "energy transfer"],
+      "commonErrors": [
+        "Connecting a voltmeter in series instead of in parallel",
+        "Confusing potential difference (V) with current (I)",
+        "Forgetting that p.d. is energy per UNIT charge, not total energy"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change energy and charge. Watch how potential difference responds.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "energy", "label": "Energy", "unit": "J", "min": 1,  "max": 100, "default": 12, "color": "purple", "step": 1 },
+          { "id": "charge", "label": "Charge", "unit": "C", "min": 1,  "max": 20,  "default": 4,  "color": "amber",  "step": 1 }
+        ],
+        "derived": [
+          { "id": "voltage", "label": "Potential difference", "unit": "V", "formula": "energy / charge", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "energy",
+        "blockLabel": "V"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q5(a)",
+          "year": 2023, "paper": 1, "questionNumber": "5(a)", "marks": 3,
+          "questionText": "A battery transfers 36 J of energy when 3.0 C of charge flows. Calculate the potential difference across the battery.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "energy E = 36 J\ncharge Q = 3.0 C", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Apply V = E / Q", "content": "Substitute into the equation:", "equation": "V = 36 / 3.0 = 12 V", "markSchemeNote": "1 mark \u2014 correct equation; 1 mark \u2014 correct substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "12 V", "finalAnswerUnit": "V", "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q3(b)",
+          "year": 2023, "paper": 1, "questionNumber": "3(b)", "marks": 3,
+          "questionText": "A component transfers 240 J of energy when 20 C of charge passes through it. Calculate the potential difference.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "E = 240 J, Q = 20 C", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Apply V = E / Q", "content": "Substitute:", "equation": "V = 240 / 20 = 12 V", "markSchemeNote": "1 mark equation; 1 mark substitution; 1 mark answer + unit" }
+          ],
+          "finalAnswer": "12 V", "finalAnswerUnit": "V", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 \u00b7 Q4(a)",
+          "year": 2022, "paper": 2, "questionNumber": "4(a)", "marks": 2,
+          "questionText": "A bulb has a potential difference of 6.0 V across it. 5.0 C of charge flows through the bulb. How much energy is transferred?",
+          "steps": [
+            { "stepNum": 1, "label": "Rearrange for E", "content": "E = V \u00d7 Q", "equation": "E = 6.0 \u00d7 5.0 = 30 J", "markSchemeNote": "1 mark \u2014 rearrangement; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "30 J", "finalAnswerUnit": "J", "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q3(a)",
+          "year": 2022, "paper": 3, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A 9.0 V battery delivers 4.5 C of charge. Calculate the energy transferred.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply E = QV", "content": "Substitute:", "equation": "E = 4.5 \u00d7 9.0 = 40.5 J", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "40.5 J", "finalAnswerUnit": "J", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 \u00b7 Q3(a)",
+          "year": 2022, "paper": 2, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A lamp has a p.d. of 12 V. 8.0 C of charge flows. Calculate the energy transferred.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply E = QV", "content": "E = Q \u00d7 V:", "equation": "E = 8.0 \u00d7 12 = 96 J", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "96 J", "finalAnswerUnit": "J", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q4(a)",
+          "year": 2022, "paper": 1, "questionNumber": "4(a)", "marks": 3,
+          "questionText": "A heater transfers 600 J of energy when 50 C of charge flows through it. What is the potential difference across the heater?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "30 000 V", "correct": false },
+            { "label": "B", "text": "12 V",     "correct": true  },
+            { "label": "C", "text": "550 V",    "correct": false },
+            { "label": "D", "text": "650 V",    "correct": false }
+          ],
+          "markSchemeSteps": ["V = E / Q", "V = 600 / 50", "V = 12 V \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option A is a trap \u2014 multiplying instead of dividing gives 30 000."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q5(a)",
+          "year": 2022, "paper": 1, "questionNumber": "5(a)", "marks": 2,
+          "questionText": "A motor transfers 180 J when 15 C of charge flows. Calculate the p.d.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "2700 V", "correct": false },
+            { "label": "B", "text": "12 V",   "correct": true  },
+            { "label": "C", "text": "165 V",  "correct": false },
+            { "label": "D", "text": "195 V",  "correct": false }
+          ],
+          "markSchemeSteps": ["V = 180 / 15 = 12 V \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 \u00b7 Q3(a)",
+          "year": 2023, "paper": 2, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A 230 V mains supply delivers 10 C of charge. How much energy is transferred?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "23 J",    "correct": false },
+            { "label": "B", "text": "2300 J",  "correct": true  },
+            { "label": "C", "text": "240 J",   "correct": false },
+            { "label": "D", "text": "0.043 J", "correct": false }
+          ],
+          "markSchemeSteps": ["E = Q \u00d7 V = 10 \u00d7 230 = 2300 J \u2713"],
+          "markSchemeAward": "1 mark substitution \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q2(a)",
+          "year": 2023, "paper": 3, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A 6.0 V battery transfers 48 J of energy. How much charge flowed?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "288 C",  "correct": false },
+            { "label": "B", "text": "8.0 C",  "correct": true  },
+            { "label": "C", "text": "42 C",   "correct": false },
+            { "label": "D", "text": "0.125 C","correct": false }
+          ],
+          "markSchemeSteps": ["Q = E / V = 48 / 6.0 = 8.0 C \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 \u00b7 Q2(a)",
+          "year": 2023, "paper": 2, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A 3.0 V cell delivers 15 C. Calculate the energy transferred.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "5.0 J",  "correct": false },
+            { "label": "B", "text": "45 J",   "correct": true  },
+            { "label": "C", "text": "18 J",   "correct": false },
+            { "label": "D", "text": "0.2 J",  "correct": false }
+          ],
+          "markSchemeSteps": ["E = Q \u00d7 V = 15 \u00d7 3.0 = 45 J \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "E = QV \u2014 all rearrangements",
+      "equation": {
+        "id": "energy-qv",
+        "canonical": "E = Q \u00d7 V",
+        "variables": [
+          { "symbol": "E", "name": "Energy transferred",  "unit": "joules", "abbreviation": "J" },
+          { "symbol": "Q", "name": "Charge",              "unit": "coulombs", "abbreviation": "C" },
+          { "symbol": "V", "name": "Potential difference", "unit": "volts",   "abbreviation": "V" }
+        ],
+        "rearrangements": [
+          { "solveFor": "E", "formula": "E = Q \u00d7 V", "label": "Find energy"              },
+          { "solveFor": "Q", "formula": "Q = E / V", "label": "Find charge"              },
+          { "solveFor": "V", "formula": "V = E / Q", "label": "Find potential difference" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "E", "color": "cyan"   },
+          "bottomLeft": { "symbol": "Q", "color": "purple" },
+          "bottomRight":{ "symbol": "V", "color": "amber"  }
+        },
+        "examTip": "Remember: potential difference is energy per unit charge. 1 volt = 1 joule per coulomb.",
+        "onFormulaSheet": {
+          "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+        },
+        "boardNotes": {
+          "aqa":         "On AQA formula sheet. Often rearranged \u2014 practise all three forms.",
+          "edexcel":     "On Edexcel equation sheet.",
+          "ocr-gateway": "On OCR Gateway formula sheet.",
+          "ocr-21c":     "On OCR 21st Century formula sheet.",
+          "wjec":        "Provided in WJEC exam."
+        }
+      }
+    }
+  ]
+}

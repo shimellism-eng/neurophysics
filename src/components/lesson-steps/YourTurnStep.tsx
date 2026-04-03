@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { YourTurnStep as YourTurnStepType, BoardId } from '../../types/content';
+import { useHaptics } from '../../hooks/useHaptics';
 import { StepTag } from '../ui/StepTag';
 import { MarkSchemeReveal } from '../ui/MarkSchemeReveal';
 import './LessonStep.css';
@@ -19,6 +20,7 @@ export function YourTurnStep({ step, boardId, onComplete, onLog }: YourTurnStepP
   const isFallback = !step.questions[boardId] && !!step.questions[AQA_FALLBACK];
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
+  const { lightTap, errorBuzz } = useHaptics();
 
   if (!question) {
     return (
@@ -39,6 +41,7 @@ export function YourTurnStep({ step, boardId, onComplete, onLog }: YourTurnStepP
     setSelected(idx);
     setAnswered(true);
     onLog(qId, isCorrect);
+    if (isCorrect) lightTap(); else errorBuzz();
   }
 
   return (
@@ -54,7 +57,7 @@ export function YourTurnStep({ step, boardId, onComplete, onLog }: YourTurnStepP
 
       {isFallback && (
         <p className="yourturn__fallback-notice">
-          This question is from AQA — your board uses the same method.
+          This question is from AQA. Your board uses the same method.
         </p>
       )}
 
@@ -88,7 +91,7 @@ export function YourTurnStep({ step, boardId, onComplete, onLog }: YourTurnStepP
 
       {answered && (
         <div className={`yourturn__result yourturn__result--${correct ? 'correct' : 'wrong'}`}>
-          {correct ? '✓ Correct!' : '✗ Not quite — check the mark scheme below.'}
+          {correct ? '✓ Correct!' : '✗ Not quite. Check the mark scheme below.'}
         </div>
       )}
 
@@ -102,7 +105,7 @@ export function YourTurnStep({ step, boardId, onComplete, onLog }: YourTurnStepP
 
       {answered && (
         <button className="lesson-step__cta" onClick={() => onComplete(correct)}>
-          {correct ? 'Great work! Continue →' : 'Understood — continue →'}
+          {correct ? 'Great work! Continue →' : 'Understood, continue →'}
         </button>
       )}
     </div>

@@ -1,5 +1,7 @@
 import type { ConceptStep as ConceptStepType } from '../../types/content';
 import { StepTag } from '../ui/StepTag';
+import { Equation } from '../ui/Equation';
+import { DIAGRAM_REGISTRY } from '../diagrams/DiagramRegistry';
 import './LessonStep.css';
 import './ConceptStep.css';
 
@@ -16,11 +18,24 @@ export function ConceptStep({ step, onComplete }: ConceptStepProps) {
         <h2 className="lesson-step__title">{step.title}</h2>
       </div>
 
-      {step.keyEquation && (
+      {(step.keyEquationTex || step.keyEquation) && (
         <div className="concept__equation">
-          <span className="eq">{step.keyEquation}</span>
+          {step.keyEquationTex ? (
+            <Equation tex={step.keyEquationTex} display className="eq" />
+          ) : (
+            <span className="eq">{step.keyEquation}</span>
+          )}
         </div>
       )}
+
+      {step.svgDiagram && DIAGRAM_REGISTRY[step.svgDiagram] && (() => {
+        const DiagramComponent = DIAGRAM_REGISTRY[step.svgDiagram!];
+        return (
+          <div className="concept__svg-diagram">
+            <DiagramComponent />
+          </div>
+        );
+      })()}
 
       <div
         className="concept__body"
@@ -54,7 +69,7 @@ export function ConceptStep({ step, onComplete }: ConceptStepProps) {
       )}
 
       <button className="lesson-step__cta" onClick={onComplete}>
-        Got it — next →
+        Got it, next →
       </button>
     </div>
   );

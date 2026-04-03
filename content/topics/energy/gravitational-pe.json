@@ -1,0 +1,544 @@
+{
+  "id": "gravitational-pe",
+  "topicId": "energy",
+  "title": "Gravitational Potential Energy",
+  "subtitle": "Ep = mgh",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "Two objects are at the same height. Object A has twice the mass of Object B. Which has more gravitational potential energy?",
+      "options": [
+        "Object B (lighter = more energy)",
+        "They have the same GPE",
+        "Object A (heavier = more GPE)",
+        "It depends on their speed"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Gravitational potential energy depends on BOTH mass and height. Since Ep = mgh, at the same height, the heavier object has more GPE. Speed is irrelevant - that affects kinetic energy, not GPE.",
+      "correctFeedback": "✓ Correct! Since Ep = mgh, at the same height h and with the same g, a bigger mass means more GPE. Object A has twice the GPE of Object B.",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.1.3: Gravitational potential energy"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Gravitational Potential Energy",
+      "bodyHTML": "An object raised above the ground has energy in its <strong>gravitational potential energy (GPE) store</strong>. GPE depends on <strong>mass</strong>, <strong>gravitational field strength</strong> (g = 9.8 N/kg on Earth), and <strong>height</strong>. The higher or heavier the object, the more GPE it has. When it falls, GPE is transferred to the kinetic energy store.",
+      "keyEquation": "Ep = m × g × h",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "Ep",
+            "label": "Gravitational PE",
+            "unit": "J",
+            "color": "cyan"
+          },
+          {
+            "symbol": "m",
+            "label": "Mass",
+            "unit": "kg",
+            "color": "purple"
+          },
+          {
+            "symbol": "g",
+            "label": "Gravitational field strength",
+            "unit": "N/kg",
+            "color": "green"
+          },
+          {
+            "symbol": "h",
+            "label": "Height",
+            "unit": "m",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Bigger m → bigger Ep",
+          "Bigger h → bigger Ep",
+          "g = 9.8 N/kg on Earth (sometimes approximated as 10)"
+        ]
+      },
+      "keyWords": [
+        "gravitational potential energy",
+        "mass",
+        "height",
+        "gravitational field strength",
+        "joules"
+      ],
+      "commonErrors": [
+        "Using g = 10 when the question states g = 9.8 (or vice versa). Always check",
+        "Confusing height change with total height. Use the CHANGE in height",
+        "Forgetting units: mass in kg, height in m, GPE in J"
+      ],
+      "keyEquationTex": "E_p = mgh"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change mass and height. Watch how gravitational potential energy changes with each variable.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "mass",
+            "label": "Mass",
+            "unit": "kg",
+            "min": 1,
+            "max": 20,
+            "default": 5,
+            "color": "purple",
+            "step": 1
+          },
+          {
+            "id": "height",
+            "label": "Height",
+            "unit": "m",
+            "min": 0,
+            "max": 50,
+            "default": 10,
+            "color": "amber",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "gpe",
+            "label": "GPE",
+            "unit": "J",
+            "formula": "mass * 9.8 * height",
+            "color": "cyan",
+            "decimalPlaces": 0
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "height",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 · Q5(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 3,
+          "questionText": "A book of mass 2.0 kg is lifted onto a shelf 1.5 m above the floor. Calculate the gravitational potential energy gained. (g = 9.8 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the GPE equation:",
+              "equation": "Ep = m × g × h",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute values",
+              "content": "m = 2.0 kg, g = 9.8 N/kg, h = 1.5 m:",
+              "equation": "Ep = 2.0 × 9.8 × 1.5",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate",
+              "content": "Multiply:",
+              "equation": "Ep = 29.4 J",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "29.4 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q6(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "6(b)",
+          "marks": 3,
+          "questionText": "A climber of mass 65 kg climbs 12 m up a wall. Calculate the GPE gained. Use g = 9.8 N/kg.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Ep = m × g × h",
+              "equation": null,
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "m = 65 kg, g = 9.8, h = 12 m:",
+              "equation": "Ep = 65 × 9.8 × 12 = 7644 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "7644 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q5(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "A ball of mass 0.2 kg is thrown 5 m into the air. Calculate the GPE at its highest point. (g = 10 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply Ep = mgh",
+              "content": "Substitute directly:",
+              "equation": "Ep = 0.2 × 10 × 5 = 10 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "10 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q5(b)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "5(b)",
+          "marks": 3,
+          "questionText": "A bag of mass 8 kg is carried up stairs to a height of 4 m. Calculate the GPE gained. (g = 9.8 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State equation",
+              "content": "Ep = m × g × h",
+              "equation": null,
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate",
+              "content": "m = 8 kg, g = 9.8, h = 4 m:",
+              "equation": "Ep = 8 × 9.8 × 4 = 313.6 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "313.6 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q5(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "A cat of mass 4 kg jumps onto a wall 2 m high. Calculate the GPE gained. (g = 10 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply Ep = mgh",
+              "content": "Substitute:",
+              "equation": "Ep = 4 × 10 × 2 = 80 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "80 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 · Q5(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(b)",
+          "marks": 3,
+          "questionText": "A drone of mass 3 kg rises to a height of 25 m. Calculate the GPE gained. (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "75 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "735 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "73.5 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "7350 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ep = m × g × h",
+            "Ep = 3 × 9.8 × 25",
+            "Ep = 735 J"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option A uses g = 10 and forgets the decimal. always use the value of g given in the question."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q5(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "A brick of mass 2.5 kg is lifted 6 m. Calculate the GPE gained. (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "15 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "147 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "294 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "1470 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ep = 2.5 × 9.8 × 6 = 147 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q5(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(b)",
+          "marks": 2,
+          "questionText": "A person of mass 50 kg walks up stairs of height 3 m. Calculate the GPE gained. (g = 10 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "150 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "1500 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "15 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "500 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ep = 50 × 10 × 3 = 1500 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q4(a)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "4(a)",
+          "marks": 2,
+          "questionText": "A box of mass 12 kg is lifted 2.5 m. Calculate the GPE gained. (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "30 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "294 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "117.6 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "2940 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ep = 12 × 9.8 × 2.5 = 294 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q4(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "4(b)",
+          "marks": 2,
+          "questionText": "A toy rocket of mass 0.5 kg reaches a height of 30 m. Calculate the GPE at its highest point. (g = 10 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "15 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "150 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "300 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "1500 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ep = 0.5 × 10 × 30 = 150 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Ep = mgh: all rearrangements",
+      "equation": {
+        "id": "gravitational-pe",
+        "canonical": "Ep = m × g × h",
+        "variables": [
+          {
+            "symbol": "Ep",
+            "name": "Gravitational PE",
+            "unit": "joules",
+            "abbreviation": "J"
+          },
+          {
+            "symbol": "m",
+            "name": "Mass",
+            "unit": "kilograms",
+            "abbreviation": "kg"
+          },
+          {
+            "symbol": "g",
+            "name": "Gravitational field strength",
+            "unit": "newtons/kilogram",
+            "abbreviation": "N/kg"
+          },
+          {
+            "symbol": "h",
+            "name": "Height",
+            "unit": "metres",
+            "abbreviation": "m"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "Ep",
+            "formula": "Ep = m × g × h",
+            "label": "Find GPE"
+          },
+          {
+            "solveFor": "m",
+            "formula": "m = Ep / (g × h)",
+            "label": "Find mass"
+          },
+          {
+            "solveFor": "h",
+            "formula": "h = Ep / (m × g)",
+            "label": "Find height"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "Ep",
+            "color": "cyan",
+            "tex": "E_p"
+          },
+          "bottomLeft": {
+            "symbol": "m",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "gh",
+            "color": "amber",
+            "tex": "gh"
+          }
+        },
+        "examTip": "Always check which value of g is given - some questions use 9.8, others use 10. Use EXACTLY what the question states.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": false,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Must be able to rearrange for m or h.",
+          "edexcel": "On Edexcel equation sheet. Always state the unit (J).",
+          "ocr-gateway": "On OCR Gateway formula sheet.",
+          "ocr-21c": "NOT on formula sheet, must be memorised for OCR 21C. ⚠️",
+          "wjec": "Provided in WJEC exam. Know all three rearrangements."
+        }
+      }
+    }
+  ]
+}

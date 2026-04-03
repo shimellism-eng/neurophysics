@@ -1,0 +1,119 @@
+{
+  "topicId": "electricity",
+  "equations": [
+    {
+      "id": "charge",
+      "name": "Charge",
+      "canonical": "Q = I × t",
+      "tex": "Q = It",
+      "color": "cyan",
+      "variables": [
+        { "symbol": "Q", "name": "Charge",  "unit": "C" },
+        { "symbol": "I", "name": "Current", "unit": "A" },
+        { "symbol": "t", "name": "Time",    "unit": "s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "Q", "formula": "Q = I × t", "tex": "Q = It" },
+        { "solveFor": "I", "formula": "I = Q / t", "tex": "I = \\frac{Q}{t}" },
+        { "solveFor": "t", "formula": "t = Q / I", "tex": "t = \\frac{Q}{I}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "ohms-law",
+      "name": "Ohm's Law",
+      "canonical": "V = I × R",
+      "tex": "V = IR",
+      "color": "purple",
+      "variables": [
+        { "symbol": "V", "name": "Potential difference", "unit": "V" },
+        { "symbol": "I", "name": "Current",              "unit": "A" },
+        { "symbol": "R", "name": "Resistance",           "unit": "Ω" }
+      ],
+      "rearrangements": [
+        { "solveFor": "V", "formula": "V = I × R", "tex": "V = IR" },
+        { "solveFor": "I", "formula": "I = V / R", "tex": "I = \\frac{V}{R}" },
+        { "solveFor": "R", "formula": "R = V / I", "tex": "R = \\frac{V}{I}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "power-iv",
+      "name": "Power (I × V)",
+      "canonical": "P = I × V",
+      "tex": "P = IV",
+      "color": "amber",
+      "variables": [
+        { "symbol": "P", "name": "Power",                "unit": "W" },
+        { "symbol": "I", "name": "Current",              "unit": "A" },
+        { "symbol": "V", "name": "Potential difference", "unit": "V" }
+      ],
+      "rearrangements": [
+        { "solveFor": "P", "formula": "P = I × V", "tex": "P = IV" },
+        { "solveFor": "I", "formula": "I = P / V", "tex": "I = \\frac{P}{V}" },
+        { "solveFor": "V", "formula": "V = P / I", "tex": "V = \\frac{P}{I}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "power-i2r",
+      "name": "Power (I²R)",
+      "canonical": "P = I² × R",
+      "tex": "P = I^2 R",
+      "color": "green",
+      "variables": [
+        { "symbol": "P", "name": "Power",      "unit": "W" },
+        { "symbol": "I", "name": "Current",    "unit": "A" },
+        { "symbol": "R", "name": "Resistance", "unit": "Ω" }
+      ],
+      "rearrangements": [
+        { "solveFor": "P", "formula": "P = I² × R",  "tex": "P = I^2 R" },
+        { "solveFor": "I", "formula": "I = √(P / R)", "tex": "I = \\sqrt{\\frac{P}{R}}" },
+        { "solveFor": "R", "formula": "R = P / I²",  "tex": "R = \\frac{P}{I^2}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "energy-pt",
+      "name": "Energy (P × t)",
+      "canonical": "E = P × t",
+      "tex": "E = Pt",
+      "color": "pink",
+      "variables": [
+        { "symbol": "E", "name": "Energy", "unit": "J" },
+        { "symbol": "P", "name": "Power",  "unit": "W" },
+        { "symbol": "t", "name": "Time",   "unit": "s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "E", "formula": "E = P × t", "tex": "E = Pt" },
+        { "solveFor": "P", "formula": "P = E / t", "tex": "P = \\frac{E}{t}" },
+        { "solveFor": "t", "formula": "t = E / P", "tex": "t = \\frac{E}{P}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "energy-qv",
+      "name": "Energy transferred (Q × V)",
+      "canonical": "E = Q × V",
+      "tex": "E = QV",
+      "color": "blue",
+      "variables": [
+        { "symbol": "E", "name": "Energy transferred",   "unit": "J" },
+        { "symbol": "Q", "name": "Charge",               "unit": "C" },
+        { "symbol": "V", "name": "Potential difference",  "unit": "V" }
+      ],
+      "rearrangements": [
+        { "solveFor": "E", "formula": "E = Q × V", "tex": "E = QV" },
+        { "solveFor": "Q", "formula": "Q = E / V", "tex": "Q = \\frac{E}{V}" },
+        { "solveFor": "V", "formula": "V = E / Q", "tex": "V = \\frac{E}{Q}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true },
+      "higherOnly": false
+    }
+  ]
+}

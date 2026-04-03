@@ -1,0 +1,172 @@
+{
+  "board": "aqa",
+  "year": 2022,
+  "paper": 2,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "aqa-2022-p2-q2a",
+      "number": "2(a)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "Two forces act on a stationary object. A 12 N force acts to the right and an 8 N force acts to the left. What is the resultant force?",
+      "options": ["4 N to the left", "4 N to the right", "20 N to the right", "20 N to the left"],
+      "correctIndex": 1,
+      "markScheme": {
+        "answer": "4 N to the right",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Correct subtraction: 12 - 8 = 4 N" },
+          { "mark": 2, "description": "Correct direction: to the right" }
+        ],
+        "commonErrors": [
+          "Adding the forces instead of subtracting",
+          "Stating the wrong direction for the resultant"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2022-p2-q3b",
+      "number": "3(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A trolley of mass 2.5 kg is pushed along a frictionless surface with a resultant force of 7.5 N. Calculate the acceleration of the trolley.",
+      "markScheme": {
+        "answer": "3.0 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Recalls F = ma" },
+          { "mark": 2, "description": "Rearranges to a = F/m" },
+          { "mark": 3, "description": "Substitutes: a = 7.5 / 2.5" },
+          { "mark": 4, "description": "Correct answer: 3.0 m/s\u00b2" }
+        ],
+        "allowedAlternatives": ["3 m/s\u00b2"],
+        "commonErrors": [
+          "Multiplying F \u00d7 m instead of dividing",
+          "Forgetting to include the unit m/s\u00b2"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "aqa-2022-p2-q4a",
+      "number": "4(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "An astronaut has a mass of 75 kg. The gravitational field strength on the Moon is 1.6 N/kg. Calculate the weight of the astronaut on the Moon.",
+      "markScheme": {
+        "answer": "120 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Substitutes: W = 75 \u00d7 1.6" },
+          { "mark": 3, "description": "Correct answer: 120 N" }
+        ],
+        "commonErrors": [
+          "Using g = 10 N/kg (Earth) instead of 1.6 N/kg (Moon)",
+          "Confusing mass and weight"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2022-p2-q5c",
+      "number": "5(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 0.15 kg ball travelling at 20 m/s hits a wall and bounces back at 15 m/s. Calculate the change in momentum of the ball.",
+      "markScheme": {
+        "answer": "-5.25 kg m/s",
+        "unit": "kg m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum before: p = 0.15 \u00d7 20 = 3.0 kg m/s" },
+          { "mark": 2, "description": "Recognises direction change: momentum after = 0.15 \u00d7 (-15) = -2.25 kg m/s" },
+          { "mark": 3, "description": "Change in momentum = final - initial" },
+          { "mark": 4, "description": "Change = -2.25 - 3.0 = -5.25 kg m/s" },
+          { "mark": 5, "description": "Correct unit: kg m/s and negative sign indicating direction change" }
+        ],
+        "allowedAlternatives": ["5.25 kg m/s in the opposite direction"],
+        "commonErrors": [
+          "Forgetting that the ball changes direction so velocity is negative",
+          "Subtracting speeds (20 - 15 = 5) without considering direction",
+          "Not using the correct formula for change in momentum"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2022-p2-q6a",
+      "number": "6(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A student pushes a box 4.0 m across a floor using a force of 35 N. Calculate the work done by the student.",
+      "markScheme": {
+        "answer": "140 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = Fs" },
+          { "mark": 2, "description": "Substitutes: W = 35 \u00d7 4.0" },
+          { "mark": 3, "description": "Correct answer: 140 J" }
+        ],
+        "allowedAlternatives": ["0.14 kJ"],
+        "commonErrors": [
+          "Using the wrong formula",
+          "Forgetting units or writing N instead of J"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "aqa-2022-p2-q7b",
+      "number": "7(b)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A car is travelling at a constant speed along a straight road. Explain, in terms of forces, why the car travels at a constant speed.",
+      "markScheme": {
+        "answer": "The driving force equals the friction/air resistance, so the resultant force is zero and the car does not accelerate.",
+        "steps": [
+          { "mark": 1, "description": "The driving force is equal to the resistive forces (friction/air resistance)" },
+          { "mark": 2, "description": "The resultant force is zero" },
+          { "mark": 3, "description": "By Newton's first law, an object with zero resultant force continues at constant velocity" }
+        ],
+        "commonErrors": [
+          "Saying there are no forces acting on the car",
+          "Confusing constant speed with no forces rather than balanced forces"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "id": "newtons-first-law",
+  "topicId": "forces",
+  "title": "Newton's First Law",
+  "subtitle": "Objects at rest stay at rest",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A ball is rolling across a smooth, flat surface with no friction. What happens to its speed?",
+      "options": [
+        "It gradually slows down and stops",
+        "It keeps moving at the same speed",
+        "It speeds up",
+        "It changes direction"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception \u2014 students often think objects need a force to keep moving. Newton\u2019s First Law says an object in motion stays in motion at constant speed UNLESS acted on by an unbalanced force. No friction means no unbalanced force, so the ball rolls on forever.",
+      "correctFeedback": "\u2713 Correct! With no friction (no unbalanced force), the ball continues at the same speed forever. This is Newton\u2019s First Law \u2014 also called the law of inertia.",
+      "bestSource": "BEST resource: Forces misconception #1 \u2014 Institute of Physics Teaching Resources"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Newton\u2019s First Law",
+      "bodyHTML": "An object at rest stays at rest, and an object in motion stays in motion at <strong>constant speed in a straight line</strong>, UNLESS acted on by a <strong>resultant force</strong>. This is <strong>inertia</strong> \u2014 the tendency to resist changes in motion. Heavier objects have more inertia. A change in <strong>speed</strong> or <strong>direction</strong> both require a resultant force.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "concept-breakdown",
+        "variables": [
+          { "symbol": "At rest", "label": "Stationary object stays stationary", "unit": null, "color": "cyan" },
+          { "symbol": "Constant v", "label": "Moving object continues at constant velocity", "unit": null, "color": "purple" },
+          { "symbol": "F \u2260 0", "label": "Resultant force needed to change motion", "unit": null, "color": "amber" }
+        ],
+        "relationships": [
+          "No resultant force \u2192 no change in motion",
+          "Resultant force \u2192 acceleration (speed or direction changes)"
+        ]
+      },
+      "keyWords": ["inertia", "resultant force", "constant speed", "balanced forces"],
+      "commonErrors": [
+        "Thinking a force is needed to keep an object moving",
+        "Confusing constant speed with zero speed",
+        "Forgetting that direction change also needs a force"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Set the force to zero and watch what happens \u2014 the object keeps moving at constant velocity. Then increase the force to see how acceleration changes motion. This helps you understand N1L: when F = 0, velocity stays the same.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "force", "label": "Force", "unit": "N",  "min": 0,  "max": 50, "default": 0, "color": "cyan",   "step": 1 },
+          { "id": "mass",  "label": "Mass",  "unit": "kg", "min": 1,  "max": 20, "default": 5,  "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "acceleration", "label": "Acceleration", "unit": "m/s\u00b2", "formula": "force / mass", "color": "amber", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "force",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Forces \u00b7 N1L Explain",
+          "year": null, "paper": 2, "questionNumber": "N1L-1", "marks": 3,
+          "questionText": "A car is travelling at a constant speed of 30 m/s on a straight road. Explain, using Newton\u2019s First Law, what this tells us about the forces acting on the car.",
+          "steps": [
+            { "stepNum": 1, "label": "State Newton\u2019s First Law", "content": "An object remains at constant velocity (or at rest) unless acted on by a resultant force.", "equation": null, "markSchemeNote": "1 mark \u2014 correct statement of N1L" },
+            { "stepNum": 2, "label": "Apply to the car", "content": "The car is travelling at constant speed in a straight line \u2014 its velocity is not changing.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies constant velocity" },
+            { "stepNum": 3, "label": "Conclude about forces", "content": "Therefore the resultant force on the car must be zero. The driving force equals the total resistive forces (friction + air resistance).", "equation": null, "markSchemeNote": "1 mark \u2014 concludes resultant force = 0 / forces are balanced" }
+          ],
+          "finalAnswer": "The resultant force on the car is zero because it travels at constant velocity.", "finalAnswerUnit": null, "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel Style \u00b7 Forces \u00b7 N1L Space",
+          "year": null, "paper": 1, "questionNumber": "N1L-2", "marks": 2,
+          "questionText": "A spacecraft is moving through deep space where there is no friction or air resistance. Explain why it continues to move at constant velocity.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the forces", "content": "In deep space there is no friction or air resistance, so no forces act on the spacecraft. The resultant force is zero.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies no resultant force" },
+            { "stepNum": 2, "label": "Apply N1L", "content": "By Newton\u2019s First Law, with no resultant force acting, the spacecraft continues at constant velocity (same speed, same direction).", "equation": null, "markSchemeNote": "1 mark \u2014 links zero resultant force to constant velocity via N1L" }
+          ],
+          "finalAnswer": "No resultant force acts, so by N1L the spacecraft continues at constant velocity.", "finalAnswerUnit": null, "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway Style \u00b7 Forces \u00b7 N1L Terminal Velocity",
+          "year": null, "paper": 1, "questionNumber": "N1L-3", "marks": 3,
+          "questionText": "A skydiver reaches terminal velocity. Use Newton\u2019s First Law to explain why her speed stays constant.",
+          "steps": [
+            { "stepNum": 1, "label": "Describe the forces", "content": "At terminal velocity, the weight (downward) equals the air resistance (upward).", "equation": null, "markSchemeNote": "1 mark \u2014 weight equals air resistance" },
+            { "stepNum": 2, "label": "State the resultant force", "content": "Since the forces are balanced, the resultant force is zero.", "equation": null, "markSchemeNote": "1 mark \u2014 resultant force is zero" },
+            { "stepNum": 3, "label": "Apply N1L", "content": "By Newton\u2019s First Law, with zero resultant force, the skydiver continues at constant speed (terminal velocity).", "equation": null, "markSchemeNote": "1 mark \u2014 links to N1L and constant speed" }
+          ],
+          "finalAnswer": "Weight equals air resistance, so resultant force is zero, and by N1L speed stays constant.", "finalAnswerUnit": null, "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century Style \u00b7 Forces \u00b7 N1L Friction",
+          "year": null, "paper": 4, "questionNumber": "N1L-4", "marks": 2,
+          "questionText": "A hockey puck slides across ice at constant speed. Explain why it eventually stops, using Newton\u2019s First Law.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the unbalanced force", "content": "Although ice has very low friction, there is still a small friction force acting backward on the puck. This is an unbalanced (resultant) force.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies friction as an unbalanced force" },
+            { "stepNum": 2, "label": "Apply N1L", "content": "By Newton\u2019s First Law, an object only changes its motion when acted on by a resultant force. The friction force decelerates the puck until it stops.", "equation": null, "markSchemeNote": "1 mark \u2014 uses N1L to explain deceleration" }
+          ],
+          "finalAnswer": "Friction provides a resultant force that, by N1L, changes the puck\u2019s motion until it stops.", "finalAnswerUnit": null, "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC Style \u00b7 Forces \u00b7 N1L Stationary",
+          "year": null, "paper": 1, "questionNumber": "N1L-5", "marks": 2,
+          "questionText": "A book sits on a table. Use Newton\u2019s First Law to explain why it does not move.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the forces", "content": "The weight of the book acts downward. The normal reaction force from the table acts upward. These two forces are equal and opposite, so the resultant force is zero.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies balanced forces / resultant force = 0" },
+            { "stepNum": 2, "label": "Apply N1L", "content": "By Newton\u2019s First Law, an object at rest stays at rest if the resultant force is zero. So the book remains stationary.", "equation": null, "markSchemeNote": "1 mark \u2014 links zero resultant force to remaining at rest via N1L" }
+          ],
+          "finalAnswer": "Weight and normal reaction are balanced (resultant force = 0), so by N1L the book stays at rest.", "finalAnswerUnit": null, "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Forces \u00b7 N1L Practice",
+          "year": null, "paper": 2, "questionNumber": "N1L-P1", "marks": 2,
+          "questionText": "What does Newton\u2019s First Law predict about an object with zero resultant force?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It must be stationary", "correct": false },
+            { "label": "B", "text": "It will decelerate and stop", "correct": false },
+            { "label": "C", "text": "It stays at rest or continues at constant velocity", "correct": true },
+            { "label": "D", "text": "It accelerates in the direction of its motion", "correct": false }
+          ],
+          "markSchemeSteps": ["N1L: zero resultant force means no change in motion", "Object stays at rest OR continues at constant velocity"],
+          "markSchemeAward": "1 mark for stating N1L \u00b7 1 mark for correct answer (C)",
+          "commonMistake": "Option A is the most common wrong answer \u2014 students forget that zero resultant force also applies to objects already moving at constant velocity."
+        },
+        "edexcel": {
+          "source": "Edexcel Style \u00b7 Forces \u00b7 N1L Practice",
+          "year": null, "paper": 1, "questionNumber": "N1L-P2", "marks": 2,
+          "questionText": "A train moves at constant velocity. What can you say about the driving force and friction?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "The driving force is greater than friction", "correct": false },
+            { "label": "B", "text": "The driving force equals friction", "correct": true },
+            { "label": "C", "text": "Friction is greater than the driving force", "correct": false },
+            { "label": "D", "text": "There is no friction acting", "correct": false }
+          ],
+          "markSchemeSteps": ["Constant velocity means zero resultant force (N1L)", "Therefore driving force = friction (forces balanced)"],
+          "markSchemeAward": "1 mark for zero resultant force \u00b7 1 mark for driving force = friction",
+          "commonMistake": "Option A is tempting \u2014 students think you need a bigger driving force to keep moving. N1L says constant velocity means balanced forces."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway Style \u00b7 Forces \u00b7 N1L Practice",
+          "year": null, "paper": 1, "questionNumber": "N1L-P3", "marks": 2,
+          "questionText": "Which of these is an example of Newton\u2019s First Law?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "A rocket accelerates as its engines fire", "correct": false },
+            { "label": "B", "text": "A book remains still on a desk because the forces on it are balanced", "correct": true },
+            { "label": "C", "text": "A ball falls faster and faster due to gravity", "correct": false },
+            { "label": "D", "text": "A car slows down when the brakes are applied", "correct": false }
+          ],
+          "markSchemeSteps": ["N1L applies when resultant force is zero", "Book on desk: weight = normal reaction, so resultant force = 0 and it stays at rest"],
+          "markSchemeAward": "1 mark for identifying balanced forces \u00b7 1 mark for correct answer (B)",
+          "commonMistake": "Options A, C, and D all involve a resultant force causing acceleration or deceleration \u2014 these are Newton\u2019s Second Law, not First."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century Style \u00b7 Forces \u00b7 N1L Practice",
+          "year": null, "paper": 4, "questionNumber": "N1L-P4", "marks": 2,
+          "questionText": "A satellite orbits Earth at constant speed. Is there a resultant force acting on it?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "No \u2014 constant speed means zero resultant force", "correct": false },
+            { "label": "B", "text": "Yes \u2014 gravity acts as a centripetal force, changing its direction", "correct": true },
+            { "label": "C", "text": "No \u2014 it is in a vacuum so no forces act", "correct": false },
+            { "label": "D", "text": "Yes \u2014 the satellite is accelerating forwards", "correct": false }
+          ],
+          "markSchemeSteps": ["Constant speed does NOT mean constant velocity \u2014 direction is changing", "A changing direction means a resultant force acts (gravity provides centripetal force)"],
+          "markSchemeAward": "1 mark for identifying direction change \u00b7 1 mark for correct answer (B)",
+          "commonMistake": "Option A is the classic trap \u2014 students confuse constant speed with constant velocity. The satellite\u2019s direction changes, so a resultant force must act."
+        },
+        "wjec": {
+          "source": "WJEC Style \u00b7 Forces \u00b7 N1L Practice",
+          "year": null, "paper": 1, "questionNumber": "N1L-P5", "marks": 2,
+          "questionText": "A box on a smooth floor is pushed and then released. What happens to the box after it is released?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It immediately stops", "correct": false },
+            { "label": "B", "text": "It gradually slows down due to its weight", "correct": false },
+            { "label": "C", "text": "It continues at constant velocity", "correct": true },
+            { "label": "D", "text": "It speeds up because it was given energy", "correct": false }
+          ],
+          "markSchemeSteps": ["Smooth floor = no friction, so no resultant force after release", "By N1L, the box continues at constant velocity"],
+          "markSchemeAward": "1 mark for no resultant force \u00b7 1 mark for correct answer (C)",
+          "commonMistake": "Option A is the most common error \u2014 students think objects stop when you stop pushing. N1L says no force means no change in motion."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Newton\u2019s First Law \u2014 no equation, but key idea",
+      "equation": {
+        "id": "newtons-first",
+        "canonical": "If F = 0, then a = 0 (velocity constant)",
+        "variables": [
+          { "symbol": "F", "name": "Resultant Force", "unit": "Newtons",        "abbreviation": "N"    },
+          { "symbol": "a", "name": "Acceleration",     "unit": "metres/second\u00b2", "abbreviation": "m/s\u00b2" },
+          { "symbol": "v", "name": "Velocity",         "unit": "metres/second",  "abbreviation": "m/s"  }
+        ],
+        "rearrangements": [
+          { "solveFor": "a", "formula": "If F = 0 \u2192 a = 0", "label": "Zero force means zero acceleration" },
+          { "solveFor": "v", "formula": "If a = 0 \u2192 v = constant", "label": "Zero acceleration means constant velocity" }
+        ],
+        "triangleLayout": {
+          "top":         { "symbol": "F", "color": "cyan"   },
+          "bottomLeft":  { "symbol": "a", "color": "purple" },
+          "bottomRight": { "symbol": "v", "color": "amber"  }
+        },
+        "examTip": "N1L questions are usually \u2018explain\u2019 questions worth 2\u20133 marks. Always mention: resultant force is zero \u2192 acceleration is zero \u2192 constant speed (or stays at rest).",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa":         "N1L is not a formula \u2014 it\u2019s a law stated in words. AQA expects you to explain using the phrase \u2018resultant force\u2019.",
+          "edexcel":     "Edexcel often tests N1L through terminal velocity and constant speed scenarios. Always link to \u2018balanced forces\u2019.",
+          "ocr-gateway": "OCR Gateway may ask you to describe examples of N1L in everyday life. Mention inertia by name.",
+          "ocr-21c":     "OCR 21st Century links N1L to the concept of inertia and may ask about inertial mass.",
+          "wjec":        "WJEC expects clear use of the term \u2018resultant force\u2019 and application to stationary and moving objects."
+        }
+      }
+    }
+  ]
+}

@@ -1,18 +1,347 @@
-.dashboard__inner {
-  flex: 1;
+/* ── Dashboard layout ─────────────────────────────────────── */
+
+.dashboard { padding-bottom: var(--sp-8); }
+
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.dashboard__back {
+  font-size: 1.4rem;
+  color: var(--muted);
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ── Overall stats row ───────────────────────────────────── */
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+.dashboard__stat.card {
+  background: var(--bg3);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: var(--sp-4);
+  gap: var(--sp-1);
+  padding: var(--sp-4);
 }
 
-.dashboard__icon { font-size: 4rem; }
+.dashboard__stat-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--cyan);
+}
 
-.dashboard__desc {
+.dashboard__stat-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 480px) {
+  .dashboard__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── Sections ────────────────────────────────────────────── */
+
+.dashboard__section {
+  margin-bottom: var(--sp-6);
+}
+
+.dashboard__section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+}
+
+.dashboard__empty {
   font-size: 0.9rem;
   color: var(--muted);
-  max-width: 45ch;
-  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ── Performance by Topic ────────────────────────────────── */
+
+.dashboard__topics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.dashboard__topic.card {
+  background: var(--bg3);
+  padding: var(--sp-4);
+}
+
+.dashboard__topic-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+.dashboard__topic-emoji {
+  font-size: 1.3rem;
+}
+
+.dashboard__topic-name {
+  font-weight: 700;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.dashboard__topic-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.dashboard__bar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.dashboard__bar-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  min-width: 70px;
+}
+
+.dashboard__bar-track {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--border2);
+  overflow: hidden;
+}
+
+.dashboard__bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--bar-color, var(--cyan)), var(--bar-color, var(--cyan)));
+  transition: width 0.6s ease;
+  min-width: 2px;
+}
+
+.dashboard__bar-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  min-width: 44px;
+  text-align: right;
+}
+
+/* ── Misconception Heatmap ───────────────────────────────── */
+
+.dashboard__heatmap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.dashboard__heatmap-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--bg3);
+  border-radius: var(--r-sm);
+}
+
+.dashboard__heatmap-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard__heatmap-cells {
+  display: flex;
+  gap: var(--sp-1);
+}
+
+.dashboard__heatmap-cell {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.dashboard__heatmap-cell--green {
+  background: var(--cyan-dim);
+  color: var(--cyan);
+}
+
+.dashboard__heatmap-cell--amber {
+  background: var(--amber-dim);
+  color: var(--amber);
+}
+
+.dashboard__heatmap-cell--red {
+  background: var(--red-dim);
+  color: var(--red);
+}
+
+.dashboard__heatmap-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  min-width: 100px;
+  text-align: right;
+}
+
+@media (max-width: 479px) {
+  .dashboard__heatmap-meta { display: none; }
+}
+
+/* ── Weakest Areas ───────────────────────────────────────── */
+
+.dashboard__weak-areas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.dashboard__weak-card.card {
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: border-color 0.15s ease;
+}
+
+.dashboard__weak-card.card:hover,
+.dashboard__weak-card.card:focus-visible {
+  border-color: var(--cyan);
+}
+
+.dashboard__weak-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dashboard__weak-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.dashboard__weak-reason {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.dashboard__weak-action {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+/* ── Study Patterns ──────────────────────────────────────── */
+
+.dashboard__patterns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 480px) {
+  .dashboard__patterns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.dashboard__pattern-card.card {
+  background: var(--bg3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  text-align: center;
+}
+
+.dashboard__pattern-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.dashboard__pattern-big {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--cyan);
+}
+
+.dashboard__pattern-sub {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* ── Weekly heatmap (inside study patterns) ──────────────── */
+
+.dashboard__week-grid {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.dashboard__week-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.dashboard__week-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--border2);
+  transition: background 0.15s ease;
+}
+
+.dashboard__week-dot--active {
+  background: var(--cyan);
+}
+
+.dashboard__week-label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 600;
 }

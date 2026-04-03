@@ -1,0 +1,531 @@
+{
+  "id": "weight-and-gravity",
+  "topicId": "forces",
+  "title": "Weight and Gravity",
+  "subtitle": "W = m × g",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "An astronaut has a mass of 80 kg on Earth. What is their mass on the Moon?",
+      "options": [
+        "About 13 kg",
+        "80 kg",
+        "About 480 kg",
+        "0 kg, they are weightless"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "⚠️ Mass NEVER changes! Mass is the amount of matter in an object - it stays the same wherever you go. What changes on the Moon is WEIGHT (because g is different). The astronaut’s mass = 80 kg on Earth, on the Moon, and floating in space.",
+      "correctFeedback": "✓ Correct! Mass is always the same - it’s the amount of matter in an object. Only weight changes with gravitational field strength. The astronaut’s mass = 80 kg everywhere in the universe.",
+      "bestSource": "BEST resource: AQA Physics specification 4.5.3: Weight, gravitational field strength"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Weight and Gravity",
+      "bodyHTML": "<strong>Weight</strong> is a <strong>force</strong> caused by gravity acting on an object’s mass. It is measured in <strong>Newtons (N)</strong> using a calibrated spring balance (newtonmeter).<br><br><strong>Mass</strong> is the amount of matter in an object, measured in <strong>kilograms (kg)</strong>. Mass does NOT change with location.<br><br>The equation linking them is:<br><strong>W = m × g</strong><br><br>where <strong>g</strong> is the <strong>gravitational field strength</strong>, measured in <strong>N/kg</strong>. On Earth, g ≈ 9.8 N/kg. On the Moon, g ≈ 1.6 N/kg. On Jupiter, g ≈ 25 N/kg.<br><br>Because weight depends on g, your weight changes depending on which planet you are on, but your mass stays the same.",
+      "keyEquation": "W = m × g",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "W",
+            "label": "Weight",
+            "unit": "N",
+            "color": "cyan"
+          },
+          {
+            "symbol": "m",
+            "label": "Mass",
+            "unit": "kg",
+            "color": "purple"
+          },
+          {
+            "symbol": "g",
+            "label": "Gravitational field strength",
+            "unit": "N/kg",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Bigger m → bigger W (if g is constant)",
+          "Bigger g → bigger W (if m is constant)",
+          "Weight is a FORCE - it acts downwards towards the centre of the Earth"
+        ]
+      },
+      "keyWords": [
+        "weight",
+        "mass",
+        "gravitational field strength",
+        "gravity"
+      ],
+      "commonErrors": [
+        "Confusing weight (N) and mass (kg)",
+        "Using g = 10 without checking the mark scheme",
+        "Saying weight is the same everywhere"
+      ],
+      "keyEquationTex": "W = mg"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Choose a planet and drag the mass slider. Watch the weight arrow and scale change in real time. Try Compare mode to see two planets side by side!",
+      "simId": "weight-gravity-sim",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "mass",
+            "label": "Mass",
+            "unit": "kg",
+            "min": 0.1,
+            "max": 100,
+            "default": 50,
+            "color": "purple",
+            "step": 0.1
+          }
+        ],
+        "derived": [
+          {
+            "id": "weight",
+            "label": "Weight",
+            "unit": "N",
+            "formula": "mass * 9.8",
+            "color": "cyan",
+            "decimalPlaces": 1
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "weight",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA style · W = mg calculation",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 3,
+          "questionText": "Calculate the weight of a 65 kg person on Earth. (g = 9.8 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the equation linking weight, mass, and g:",
+              "equation": "W = m × g",
+              "markSchemeNote": "1 mark: correct equation stated"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute the values",
+              "content": "Put in the numbers:",
+              "equation": "W = 65 × 9.8",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate and state units",
+              "content": "Multiply and include the unit:",
+              "equation": "W = 637 N",
+              "markSchemeNote": "1 mark: correct answer with unit (N)"
+            }
+          ],
+          "finalAnswer": "637 N",
+          "finalAnswerUnit": "N",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel style · W = mg on two bodies",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 3,
+          "questionText": "A rock has a mass of 4.5 kg. Calculate its weight on Earth (g = 9.8 N/kg) and on the Moon (g = 1.6 N/kg).",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Weight on Earth",
+              "content": "Use W = m × g with Earth’s g:",
+              "equation": "W = 4.5 × 9.8 = 44.1 N",
+              "markSchemeNote": "1 mark: correct weight on Earth"
+            },
+            {
+              "stepNum": 2,
+              "label": "Weight on Moon",
+              "content": "Use W = m × g with the Moon’s g:",
+              "equation": "W = 4.5 × 1.6 = 7.2 N",
+              "markSchemeNote": "1 mark: correct weight on Moon"
+            },
+            {
+              "stepNum": 3,
+              "label": "Key point",
+              "content": "The mass stays the same (4.5 kg). Only the weight changes because g is different.",
+              "equation": null,
+              "markSchemeNote": "1 mark: units correct on both answers"
+            }
+          ],
+          "finalAnswer": "Earth: 44.1 N, Moon: 7.2 N",
+          "finalAnswerUnit": "N",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · rearranging for mass",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "An object weighs 490 N on Earth. Calculate its mass. (g = 9.8 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Rearrange for mass",
+              "content": "Start with W = m × g, then divide both sides by g:",
+              "equation": "m = W / g",
+              "markSchemeNote": "1 mark: correct rearrangement"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "Put in the values:",
+              "equation": "m = 490 / 9.8 = 50 kg",
+              "markSchemeNote": "1 mark: correct answer with unit (kg)"
+            }
+          ],
+          "finalAnswer": "50 kg",
+          "finalAnswerUnit": "kg",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · W = mg",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "A bag of sugar has a mass of 1 kg. What is its weight? (g = 9.8 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply W = m × g",
+              "content": "Substitute straight in:",
+              "equation": "W = 1 × 9.8 = 9.8 N",
+              "markSchemeNote": "1 mark: correct equation and substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "9.8 N",
+          "finalAnswerUnit": "N",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC style · W = mg",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "Calculate the weight of a 0.5 kg apple on Earth. (g = 9.8 N/kg)",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply W = m × g directly",
+              "content": "All values given. Substitute straight in:",
+              "equation": "W = 0.5 × 9.8 = 4.9 N",
+              "markSchemeNote": "1 mark: correct equation and substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "4.9 N",
+          "finalAnswerUnit": "N",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA style · W = mg",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 3,
+          "questionText": "A student has a mass of 50 kg. Calculate their weight on Earth. (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "5.1 N",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "59.8 N",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "490 N",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "50 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = m × g",
+            "W = 50 × 9.8",
+            "W = 490 N ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option A is dividing instead of multiplying. Option D is just restating the mass. confusing mass with weight."
+        },
+        "edexcel": {
+          "source": "Edexcel style · W = mg on Moon",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "An astronaut has a mass of 75 kg. What is their weight on the Moon? (g = 1.6 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "120 N",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "735 N",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "46.9 N",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "75 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = 75 × 1.6 = 120 N ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option B uses Earth’s g (9.8) instead of the Moon’s g (1.6). Always use the g value given in the question."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · rearranging for mass",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "A box weighs 196 N on Earth. What is its mass? (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "1920.8 kg",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "20 kg",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "186.2 kg",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "0.05 kg",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "m = W / g = 196 / 9.8 = 20 kg ✓"
+          ],
+          "markSchemeAward": "1 mark rearrangement · 1 mark correct answer + unit",
+          "commonMistake": "Option A multiplies instead of dividing. a common error when students forget the rearrangement."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · W = mg",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "A cat has a mass of 4 kg. What is its weight on Earth? (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "39.2 N",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "2.45 N",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "13.8 N",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "4 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = 4 × 9.8 = 39.2 N ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit",
+          "commonMistake": "Option D just restates the mass as a number of Newtons. mass and weight are not the same!"
+        },
+        "wjec": {
+          "source": "WJEC style · W = mg",
+          "year": null,
+          "paper": null,
+          "questionNumber": null,
+          "marks": 2,
+          "questionText": "A textbook has a mass of 1.5 kg. Calculate its weight. (g = 9.8 N/kg)",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "14.7 N",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "6.53 N",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "11.3 N",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "15 N",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "W = 1.5 × 9.8 = 14.7 N ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit",
+          "commonMistake": "Option D uses g = 10 instead of 9.8. always use the g value given in the question."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "W = mg: all rearrangements",
+      "equation": {
+        "id": "weight",
+        "canonical": "W = m × g",
+        "variables": [
+          {
+            "symbol": "W",
+            "name": "Weight",
+            "unit": "Newtons",
+            "abbreviation": "N"
+          },
+          {
+            "symbol": "m",
+            "name": "Mass",
+            "unit": "kilograms",
+            "abbreviation": "kg"
+          },
+          {
+            "symbol": "g",
+            "name": "Gravitational field strength",
+            "unit": "N/kg",
+            "abbreviation": "N/kg",
+            "constant": 9.8
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "W",
+            "formula": "W = m × g",
+            "label": "Find weight"
+          },
+          {
+            "solveFor": "m",
+            "formula": "m = W / g",
+            "label": "Find mass"
+          },
+          {
+            "solveFor": "g",
+            "formula": "g = W / m",
+            "label": "Find gravitational field strength"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "W",
+            "color": "cyan"
+          },
+          "bottomLeft": {
+            "symbol": "m",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "g",
+            "color": "amber"
+          }
+        },
+        "examTip": "Weight is a FORCE. Mass is NOT a force. Always use the g value given in the question - it might not be 9.8.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": true,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Know all three rearrangements and that weight is measured in Newtons.",
+          "edexcel": "On Edexcel equation sheet. Must state units for full marks. Remember weight is a force.",
+          "ocr-gateway": "On OCR Gateway formula sheet. Be ready to rearrange for mass or g.",
+          "ocr-21c": "On OCR 21st Century formula sheet. Understand the difference between mass and weight.",
+          "wjec": "Provided in WJEC exam. Know all three rearrangements and that g varies by planet."
+        }
+      }
+    }
+  ]
+}

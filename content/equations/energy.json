@@ -1,0 +1,120 @@
+{
+  "topicId": "energy",
+  "equations": [
+    {
+      "id": "kinetic-energy",
+      "name": "Kinetic Energy",
+      "canonical": "Ek = ½ × m × v²",
+      "tex": "E_k = \\frac{1}{2}mv^2",
+      "color": "cyan",
+      "variables": [
+        { "symbol": "Ek", "name": "Kinetic energy", "unit": "J" },
+        { "symbol": "m",  "name": "Mass",           "unit": "kg" },
+        { "symbol": "v",  "name": "Speed",          "unit": "m/s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "Ek", "formula": "Ek = ½ × m × v²", "tex": "E_k = \\frac{1}{2}mv^2" },
+        { "solveFor": "m",  "formula": "m = 2Ek / v²",    "tex": "m = \\frac{2E_k}{v^2}" },
+        { "solveFor": "v",  "formula": "v = √(2Ek / m)",  "tex": "v = \\sqrt{\\frac{2E_k}{m}}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "gravitational-pe",
+      "name": "Gravitational Potential Energy",
+      "canonical": "Ep = m × g × h",
+      "tex": "E_p = mgh",
+      "color": "purple",
+      "variables": [
+        { "symbol": "Ep", "name": "Gravitational PE",            "unit": "J" },
+        { "symbol": "m",  "name": "Mass",                        "unit": "kg" },
+        { "symbol": "g",  "name": "Gravitational field strength", "unit": "N/kg", "constant": 9.8 },
+        { "symbol": "h",  "name": "Height",                      "unit": "m" }
+      ],
+      "rearrangements": [
+        { "solveFor": "Ep", "formula": "Ep = m × g × h",    "tex": "E_p = mgh" },
+        { "solveFor": "m",  "formula": "m = Ep / (g × h)",  "tex": "m = \\frac{E_p}{gh}" },
+        { "solveFor": "h",  "formula": "h = Ep / (m × g)",  "tex": "h = \\frac{E_p}{mg}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "elastic-pe",
+      "name": "Elastic Potential Energy",
+      "canonical": "Ee = ½ × k × e²",
+      "tex": "E_e = \\frac{1}{2}ke^2",
+      "color": "green",
+      "variables": [
+        { "symbol": "Ee", "name": "Elastic PE",      "unit": "J" },
+        { "symbol": "k",  "name": "Spring constant",  "unit": "N/m" },
+        { "symbol": "e",  "name": "Extension",        "unit": "m" }
+      ],
+      "rearrangements": [
+        { "solveFor": "Ee", "formula": "Ee = ½ × k × e²", "tex": "E_e = \\frac{1}{2}ke^2" },
+        { "solveFor": "k",  "formula": "k = 2Ee / e²",    "tex": "k = \\frac{2E_e}{e^2}" },
+        { "solveFor": "e",  "formula": "e = √(2Ee / k)",  "tex": "e = \\sqrt{\\frac{2E_e}{k}}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "efficiency",
+      "name": "Efficiency",
+      "canonical": "efficiency = useful output energy transfer ÷ total input energy transfer",
+      "tex": "\\eta = \\frac{E_{\\text{out}}}{E_{\\text{in}}}",
+      "color": "amber",
+      "variables": [
+        { "symbol": "η",    "name": "Efficiency",           "unit": "decimal or %" },
+        { "symbol": "Eout", "name": "Useful output energy", "unit": "J" },
+        { "symbol": "Ein",  "name": "Total input energy",   "unit": "J" }
+      ],
+      "rearrangements": [
+        { "solveFor": "η",    "formula": "η = useful output / total input", "tex": "\\eta = \\frac{E_{\\text{out}}}{E_{\\text{in}}}" },
+        { "solveFor": "Eout", "formula": "Eout = η × Ein",                  "tex": "E_{\\text{out}} = \\eta E_{\\text{in}}" },
+        { "solveFor": "Ein",  "formula": "Ein = Eout / η",                  "tex": "E_{\\text{in}} = \\frac{E_{\\text{out}}}{\\eta}" }
+      ],
+      "onFormulaSheet": { "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false },
+      "higherOnly": false
+    },
+    {
+      "id": "power-energy",
+      "name": "Power (from energy)",
+      "canonical": "P = E / t",
+      "tex": "P = \\frac{E}{t}",
+      "color": "pink",
+      "variables": [
+        { "symbol": "P", "name": "Power",              "unit": "W" },
+        { "symbol": "E", "name": "Energy transferred",  "unit": "J" },
+        { "symbol": "t", "name": "Time",                "unit": "s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "P", "formula": "P = E / t", "tex": "P = \\frac{E}{t}" },
+        { "solveFor": "E", "formula": "E = P × t", "tex": "E = Pt" },
+        { "solveFor": "t", "formula": "t = E / P", "tex": "t = \\frac{E}{P}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    },
+    {
+      "id": "power-work",
+      "name": "Power (from work done)",
+      "canonical": "P = W / t",
+      "tex": "P = \\frac{W}{t}",
+      "color": "blue",
+      "variables": [
+        { "symbol": "P", "name": "Power",     "unit": "W" },
+        { "symbol": "W", "name": "Work done",  "unit": "J" },
+        { "symbol": "t", "name": "Time",       "unit": "s" }
+      ],
+      "rearrangements": [
+        { "solveFor": "P", "formula": "P = W / t", "tex": "P = \\frac{W}{t}" },
+        { "solveFor": "W", "formula": "W = P × t", "tex": "W = Pt" },
+        { "solveFor": "t", "formula": "t = W / P", "tex": "t = \\frac{W}{P}" }
+      ],
+      "onFormulaSheet": { "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true },
+      "higherOnly": false
+    }
+  ]
+}

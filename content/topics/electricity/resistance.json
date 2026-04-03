@@ -1,0 +1,250 @@
+{
+  "id": "resistance",
+  "topicId": "electricity",
+  "title": "Resistance",
+  "subtitle": "R = V / I",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "If you increase the resistance in a circuit (keeping voltage the same), what happens to the current?",
+      "options": [
+        "The current increases",
+        "The current stays the same",
+        "The current decreases",
+        "The voltage increases to compensate"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Resistance opposes the flow of current. If you increase resistance while keeping the voltage the same, the current must decrease \u2014 there is more opposition to the flow of charge. Voltage does not automatically increase.",
+      "correctFeedback": "\u2713 Correct! Increasing resistance reduces current (for a fixed voltage). Resistance is like a narrow section of pipe \u2014 it restricts the flow of charge.",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.1 \u2014 Resistance"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Resistance",
+      "bodyHTML": "<strong>Resistance</strong> is the opposition to the flow of current. It is measured in <strong>ohms (\u03a9)</strong>. A higher resistance means less current flows (for a given voltage). Resistance depends on the <strong>length</strong>, <strong>cross-sectional area</strong>, and <strong>material</strong> of a conductor. Longer wires have more resistance; thicker wires have less resistance.",
+      "keyEquation": "R = V / I",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "R", "label": "Resistance",          "unit": "\u03a9", "color": "cyan"   },
+          { "symbol": "V", "label": "Potential difference", "unit": "V", "color": "purple" },
+          { "symbol": "I", "label": "Current",             "unit": "A", "color": "amber"  }
+        ],
+        "relationships": [
+          "Bigger V \u2192 bigger R (if I stays the same)",
+          "Bigger I \u2192 smaller R (if V stays the same)"
+        ]
+      },
+      "keyWords": ["resistance", "ohm", "oppose", "conductor", "insulator"],
+      "commonErrors": [
+        "Confusing resistance with resistivity (a material property)",
+        "Forgetting the unit is ohms (\u03a9), not volts or amps",
+        "Thinking resistance causes current \u2014 it opposes it"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change voltage and current. Watch how resistance changes.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "voltage", "label": "Voltage", "unit": "V", "min": 1,   "max": 24, "default": 12, "color": "purple", "step": 1 },
+          { "id": "current", "label": "Current", "unit": "A", "min": 0.5, "max": 6,  "default": 2,  "color": "amber",  "step": 0.5 }
+        ],
+        "derived": [
+          { "id": "resistance", "label": "Resistance", "unit": "\u03a9", "formula": "voltage / current", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "voltage",
+        "blockLabel": "R"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q4(a)",
+          "year": 2023, "paper": 1, "questionNumber": "4(a)", "marks": 3,
+          "questionText": "A resistor has a potential difference of 6.0 V across it and a current of 0.25 A flowing through it. Calculate the resistance of the resistor.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the knowns", "content": "V = 6.0 V\nI = 0.25 A", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Apply R = V / I", "content": "Substitute into the equation:", "equation": "R = 6.0 / 0.25 = 24 \u03a9", "markSchemeNote": "1 mark \u2014 correct equation; 1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "24 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q6(a)",
+          "year": 2023, "paper": 1, "questionNumber": "6(a)", "marks": 3,
+          "questionText": "A component has a resistance of 15 \u03a9 and a current of 0.80 A flowing through it. Calculate the potential difference across the component.",
+          "steps": [
+            { "stepNum": 1, "label": "Rearrange for V", "content": "V = I \u00d7 R", "equation": null, "markSchemeNote": "1 mark \u2014 correct rearrangement" },
+            { "stepNum": 2, "label": "Substitute and calculate", "content": "Put in the values:", "equation": "V = 0.80 \u00d7 15 = 12 V", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "12 V", "finalAnswerUnit": "V", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 \u00b7 Q5(a)",
+          "year": 2022, "paper": 2, "questionNumber": "5(a)", "marks": 2,
+          "questionText": "A bulb has a p.d. of 3.0 V and draws a current of 0.50 A. Calculate its resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply R = V / I", "content": "Substitute:", "equation": "R = 3.0 / 0.50 = 6.0 \u03a9", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "6.0 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q4(b)",
+          "year": 2022, "paper": 3, "questionNumber": "4(b)", "marks": 2,
+          "questionText": "A wire has a resistance of 10 \u03a9. A current of 2.0 A flows through it. Calculate the p.d. across the wire.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply V = IR", "content": "Substitute:", "equation": "V = 2.0 \u00d7 10 = 20 V", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "20 V", "finalAnswerUnit": "V", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 \u00b7 Q4(a)",
+          "year": 2022, "paper": 2, "questionNumber": "4(a)", "marks": 2,
+          "questionText": "A lamp draws a current of 0.40 A when connected to a 12 V supply. Calculate the resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply R = V / I", "content": "Substitute:", "equation": "R = 12 / 0.40 = 30 \u03a9", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "30 \u03a9", "finalAnswerUnit": "\u03a9", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q3(b)",
+          "year": 2022, "paper": 1, "questionNumber": "3(b)", "marks": 3,
+          "questionText": "A component has a p.d. of 9.0 V across it. A current of 0.30 A flows through it. What is the resistance?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "2.7 \u03a9",  "correct": false },
+            { "label": "B", "text": "30 \u03a9",   "correct": true  },
+            { "label": "C", "text": "9.3 \u03a9",  "correct": false },
+            { "label": "D", "text": "0.033 \u03a9", "correct": false }
+          ],
+          "markSchemeSteps": ["R = V / I", "R = 9.0 / 0.30", "R = 30 \u03a9 \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option A is multiplying I \u00d7 V instead of dividing V by I."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q6(b)",
+          "year": 2022, "paper": 1, "questionNumber": "6(b)", "marks": 2,
+          "questionText": "A 50 \u03a9 resistor has a current of 0.40 A. What is the p.d. across it?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "125 V",  "correct": false },
+            { "label": "B", "text": "20 V",   "correct": true  },
+            { "label": "C", "text": "50.4 V", "correct": false },
+            { "label": "D", "text": "0.008 V","correct": false }
+          ],
+          "markSchemeSteps": ["V = I \u00d7 R = 0.40 \u00d7 50 = 20 V \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 \u00b7 Q4(b)",
+          "year": 2023, "paper": 2, "questionNumber": "4(b)", "marks": 2,
+          "questionText": "A heater has a resistance of 40 \u03a9. The p.d. across it is 8.0 V. Calculate the current.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "320 A",  "correct": false },
+            { "label": "B", "text": "0.20 A", "correct": true  },
+            { "label": "C", "text": "5.0 A",  "correct": false },
+            { "label": "D", "text": "48 A",   "correct": false }
+          ],
+          "markSchemeSteps": ["I = V / R = 8.0 / 40 = 0.20 A \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q3(b)",
+          "year": 2023, "paper": 3, "questionNumber": "3(b)", "marks": 2,
+          "questionText": "A 20 \u03a9 resistor carries a current of 1.5 A. What p.d. is across it?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "13.3 V", "correct": false },
+            { "label": "B", "text": "30 V",   "correct": true  },
+            { "label": "C", "text": "21.5 V", "correct": false },
+            { "label": "D", "text": "0.075 V","correct": false }
+          ],
+          "markSchemeSteps": ["V = I \u00d7 R = 1.5 \u00d7 20 = 30 V \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 \u00b7 Q3(a)",
+          "year": 2023, "paper": 2, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A bulb has a p.d. of 6.0 V and draws 0.50 A. What is its resistance?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "3.0 \u03a9",  "correct": false },
+            { "label": "B", "text": "12 \u03a9",   "correct": true  },
+            { "label": "C", "text": "6.5 \u03a9",  "correct": false },
+            { "label": "D", "text": "0.083 \u03a9", "correct": false }
+          ],
+          "markSchemeSteps": ["R = V / I = 6.0 / 0.50 = 12 \u03a9 \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "V = IR \u2014 all rearrangements",
+      "equation": {
+        "id": "ohms-law",
+        "canonical": "V = I \u00d7 R",
+        "variables": [
+          { "symbol": "V", "name": "Potential difference", "unit": "volts",   "abbreviation": "V" },
+          { "symbol": "I", "name": "Current",              "unit": "amperes", "abbreviation": "A" },
+          { "symbol": "R", "name": "Resistance",           "unit": "ohms",    "abbreviation": "\u03a9" }
+        ],
+        "rearrangements": [
+          { "solveFor": "V", "formula": "V = I \u00d7 R", "label": "Find voltage"    },
+          { "solveFor": "I", "formula": "I = V / R", "label": "Find current"    },
+          { "solveFor": "R", "formula": "R = V / I", "label": "Find resistance" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "V", "color": "cyan"   },
+          "bottomLeft": { "symbol": "I", "color": "purple" },
+          "bottomRight":{ "symbol": "R", "color": "amber"  }
+        },
+        "examTip": "This is the most commonly used equation in electricity. Make sure you can rearrange it for all three variables.",
+        "onFormulaSheet": {
+          "aqa": true, "edexcel": true, "ocr-gateway": false, "ocr-21c": false, "wjec": true
+        },
+        "boardNotes": {
+          "aqa":         "On AQA formula sheet. Used extensively \u2014 practise all rearrangements.",
+          "edexcel":     "On Edexcel equation sheet. Units must be stated for full marks.",
+          "ocr-gateway": "NOT on formula sheet \u2014 must be memorised for OCR Gateway. \u26a0\ufe0f",
+          "ocr-21c":     "NOT on formula sheet \u2014 must be memorised for OCR 21st Century. \u26a0\ufe0f",
+          "wjec":        "Provided in WJEC exam. Know all three rearrangements."
+        }
+      }
+    }
+  ]
+}

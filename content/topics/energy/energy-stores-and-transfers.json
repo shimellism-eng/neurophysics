@@ -1,0 +1,255 @@
+{
+  "id": "energy-stores-and-transfers",
+  "topicId": "energy",
+  "title": "Energy Stores and Transfers",
+  "subtitle": "The 8 energy stores",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "When a battery powers a torch, what happens to the energy?",
+      "options": [
+        "The energy is used up",
+        "The energy is created by the battery",
+        "The energy is transferred from one store to another",
+        "The energy disappears as light"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Energy is never created or destroyed \u2014 it is transferred between stores. The battery\u2019s chemical store transfers energy to the thermal and light pathways of the torch. Saying energy is \u2018used up\u2019 is scientifically inaccurate.",
+      "correctFeedback": "\u2713 Correct! Energy is transferred from the chemical store of the battery to the surroundings by light and heating. Energy is never created or used up \u2014 only transferred.",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.1 \u2014 Energy stores and systems"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Energy Stores and Transfers",
+      "bodyHTML": "Energy is stored in <strong>8 energy stores</strong>: kinetic, thermal, chemical, gravitational potential, elastic potential, electrostatic, magnetic, and nuclear. Energy is transferred between stores by four <strong>pathways</strong>: mechanically (by a force), electrically, by heating, or by radiation (light/sound waves). Energy is <strong>never created or destroyed</strong> \u2014 only transferred.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "Ek", "label": "Kinetic", "unit": "J", "color": "cyan" },
+          { "symbol": "Ep", "label": "Gravitational PE", "unit": "J", "color": "purple" },
+          { "symbol": "Ee", "label": "Elastic PE", "unit": "J", "color": "amber" }
+        ],
+        "relationships": [
+          "Chemical \u2192 Kinetic (car engine)",
+          "Gravitational PE \u2192 Kinetic (falling object)",
+          "Elastic PE \u2192 Kinetic (stretched spring released)"
+        ]
+      },
+      "keyWords": ["energy store", "energy transfer", "pathway", "kinetic", "thermal", "chemical", "gravitational potential", "elastic potential", "electrostatic", "magnetic", "nuclear"],
+      "commonErrors": [
+        "Saying energy is 'used up' or 'lost' \u2014 it is transferred (often to thermal stores of surroundings)",
+        "Confusing energy stores with energy pathways/transfer methods",
+        "Forgetting that sound is a transfer pathway, not a store"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to explore how energy transfers between stores. Watch the energy bar chart update in real time.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "height", "label": "Height", "unit": "m", "min": 0, "max": 20, "default": 10, "color": "purple", "step": 1 },
+          { "id": "mass", "label": "Mass", "unit": "kg", "min": 1, "max": 10, "default": 2, "color": "cyan", "step": 1 }
+        ],
+        "derived": [
+          { "id": "gpe", "label": "GPE", "unit": "J", "formula": "mass * 9.8 * height", "color": "purple", "decimalPlaces": 0 },
+          { "id": "ke", "label": "KE at ground", "unit": "J", "formula": "mass * 9.8 * height", "color": "amber", "decimalPlaces": 0 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "height",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q2(a)",
+          "year": 2023, "paper": 1, "questionNumber": "2(a)", "marks": 3,
+          "questionText": "A ball is held above the ground and then dropped. Describe the energy transfers that take place as the ball falls. Ignore air resistance.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the starting store", "content": "The ball is held at a height, so it has energy in its gravitational potential energy store.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies GPE store" },
+            { "stepNum": 2, "label": "Identify the transfer", "content": "As it falls, height decreases so GPE decreases. Speed increases so KE increases.", "equation": null, "markSchemeNote": "1 mark \u2014 GPE decreases, KE increases" },
+            { "stepNum": 3, "label": "State the transfer", "content": "Energy is transferred from the gravitational potential energy store to the kinetic energy store.", "equation": null, "markSchemeNote": "1 mark \u2014 correct transfer described" }
+          ],
+          "finalAnswer": "Energy is transferred from the gravitational potential energy store to the kinetic energy store as the ball falls.", "finalAnswerUnit": "", "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q3(a)",
+          "year": 2023, "paper": 1, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A car brakes and comes to a stop. Describe the energy transfer that takes place.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the stores", "content": "Moving car has energy in its kinetic energy store. Braking involves friction.", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Describe the transfer", "content": "Energy is transferred from the kinetic energy store of the car to the thermal energy store of the brakes (and surroundings) by heating.", "equation": null, "markSchemeNote": "1 mark \u2014 KE to thermal; 1 mark \u2014 by heating/friction" }
+          ],
+          "finalAnswer": "Energy is transferred from the kinetic energy store to the thermal energy store of the brakes by heating.", "finalAnswerUnit": "", "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 \u00b7 Q3(a)",
+          "year": 2022, "paper": 1, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "A catapult is stretched and then released, launching a stone. Describe the energy transfers.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify starting store", "content": "The stretched catapult has energy in its elastic potential energy store.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies elastic PE" },
+            { "stepNum": 2, "label": "Describe the transfer", "content": "When released, energy is transferred from the elastic potential energy store to the kinetic energy store of the stone.", "equation": null, "markSchemeNote": "1 mark \u2014 elastic PE to KE" }
+          ],
+          "finalAnswer": "Elastic potential energy store \u2192 kinetic energy store of the stone.", "finalAnswerUnit": "", "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q2(a)",
+          "year": 2022, "paper": 3, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A kettle is switched on. Describe the energy transfers that take place.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify stores", "content": "Electrical energy is supplied from the mains. The water heats up.", "equation": null, "markSchemeNote": null },
+            { "stepNum": 2, "label": "Describe", "content": "Energy is transferred electrically from the mains to the thermal energy store of the water.", "equation": null, "markSchemeNote": "1 mark \u2014 electrical pathway; 1 mark \u2014 thermal store of water" }
+          ],
+          "finalAnswer": "Energy is transferred electrically to the thermal energy store of the water.", "finalAnswerUnit": "", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 \u00b7 Q2(a)",
+          "year": 2022, "paper": 1, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "A torch is turned on. Name the energy store before and after the transfer.",
+          "steps": [
+            { "stepNum": 1, "label": "Before", "content": "Chemical energy store of the battery.", "equation": null, "markSchemeNote": "1 mark \u2014 chemical store" },
+            { "stepNum": 2, "label": "After", "content": "Energy is transferred to the thermal energy store of the surroundings and by radiation (light).", "equation": null, "markSchemeNote": "1 mark \u2014 thermal store and light" }
+          ],
+          "finalAnswer": "Chemical energy store \u2192 thermal store of surroundings + light radiation.", "finalAnswerUnit": "", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q1(c)",
+          "year": 2022, "paper": 1, "questionNumber": "1(c)", "marks": 2,
+          "questionText": "A wind turbine generates electricity. Which energy store does the energy start in?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Chemical energy store", "correct": false },
+            { "label": "B", "text": "Kinetic energy store of the wind", "correct": true },
+            { "label": "C", "text": "Thermal energy store", "correct": false },
+            { "label": "D", "text": "Nuclear energy store", "correct": false }
+          ],
+          "markSchemeSteps": ["Energy starts in the kinetic energy store of the moving air (wind)"],
+          "markSchemeAward": "1 mark correct store identified \u00b7 1 mark mention of wind/air movement",
+          "commonMistake": "Students often say 'wind energy' which is not an energy store \u2014 the correct answer is kinetic energy store."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q2(b)",
+          "year": 2022, "paper": 1, "questionNumber": "2(b)", "marks": 2,
+          "questionText": "A stretched rubber band is released. What energy transfer takes place?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Chemical to kinetic", "correct": false },
+            { "label": "B", "text": "Elastic potential to kinetic", "correct": true },
+            { "label": "C", "text": "Gravitational potential to kinetic", "correct": false },
+            { "label": "D", "text": "Thermal to kinetic", "correct": false }
+          ],
+          "markSchemeSteps": ["Elastic potential energy store \u2192 kinetic energy store"],
+          "markSchemeAward": "1 mark correct stores \u00b7 1 mark direction of transfer"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 \u00b7 Q2(a)",
+          "year": 2023, "paper": 1, "questionNumber": "2(a)", "marks": 1,
+          "questionText": "Which of these is NOT an energy store?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Kinetic", "correct": false },
+            { "label": "B", "text": "Heating", "correct": true },
+            { "label": "C", "text": "Nuclear", "correct": false },
+            { "label": "D", "text": "Magnetic", "correct": false }
+          ],
+          "markSchemeSteps": ["Heating is a transfer pathway, not a store"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q1(b)",
+          "year": 2023, "paper": 3, "questionNumber": "1(b)", "marks": 2,
+          "questionText": "A person eats food and then runs. Describe the main energy transfers.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Chemical \u2192 kinetic", "correct": true },
+            { "label": "B", "text": "Thermal \u2192 kinetic", "correct": false },
+            { "label": "C", "text": "Nuclear \u2192 kinetic", "correct": false },
+            { "label": "D", "text": "Gravitational PE \u2192 kinetic", "correct": false }
+          ],
+          "markSchemeSteps": ["Chemical energy store (food) \u2192 kinetic energy store (running)"],
+          "markSchemeAward": "1 mark chemical store \u00b7 1 mark kinetic store"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 \u00b7 Q1(a)",
+          "year": 2023, "paper": 1, "questionNumber": "1(a)", "marks": 1,
+          "questionText": "Name the energy store in a compressed spring.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Kinetic energy store", "correct": false },
+            { "label": "B", "text": "Elastic potential energy store", "correct": true },
+            { "label": "C", "text": "Chemical energy store", "correct": false },
+            { "label": "D", "text": "Gravitational potential energy store", "correct": false }
+          ],
+          "markSchemeSteps": ["Elastic potential energy store"],
+          "markSchemeAward": "1 mark correct answer"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Energy Stores \u2014 key summary",
+      "equation": {
+        "id": "energy-stores-summary",
+        "canonical": "8 energy stores, 4 transfer pathways",
+        "variables": [
+          { "symbol": "Ek", "name": "Kinetic", "unit": "joules", "abbreviation": "J" },
+          { "symbol": "Ep", "name": "Gravitational PE", "unit": "joules", "abbreviation": "J" },
+          { "symbol": "Ee", "name": "Elastic PE", "unit": "joules", "abbreviation": "J" }
+        ],
+        "rearrangements": [
+          { "solveFor": "stores", "formula": "Kinetic, Thermal, Chemical, GPE, Elastic PE, Electrostatic, Magnetic, Nuclear", "label": "All 8 stores" },
+          { "solveFor": "pathways", "formula": "Mechanically, Electrically, By heating, By radiation", "label": "All 4 pathways" }
+        ],
+        "triangleLayout": {
+          "top":         { "symbol": "E", "color": "cyan" },
+          "bottomLeft":  { "symbol": "stores", "color": "purple" },
+          "bottomRight": { "symbol": "paths", "color": "amber" }
+        },
+        "examTip": "Always name the specific energy STORE (e.g. \u2018kinetic energy store\u2019) \u2014 never just say \u2018kinetic energy\u2019 without \u2018store\u2019. Examiners penalise vague language.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa":         "You must name specific stores and pathways. \u2018Light energy\u2019 and \u2018sound energy\u2019 are NOT accepted \u2014 use \u2018by radiation\u2019.",
+          "edexcel":     "Edexcel accepts both \u2018energy store\u2019 and \u2018energy transfer\u2019 language.",
+          "ocr-gateway": "OCR Gateway uses the stores model. Learn all 8 stores.",
+          "ocr-21c":     "OCR 21C may refer to \u2018energy dissipation\u2019 \u2014 this means energy transferred to thermal stores of surroundings.",
+          "wjec":        "WJEC expects clear identification of stores and transfer pathways."
+        }
+      }
+    }
+  ]
+}

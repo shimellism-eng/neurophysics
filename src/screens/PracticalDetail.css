@@ -1,0 +1,551 @@
+/* ============================================================
+   PracticalDetail.css  —  BEM, 8pt grid, CSS token-aligned
+   ============================================================ */
+
+/* Back nav */
+.practical-detail__back {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  min-height: 44px;
+  transition: color 0.15s ease;
+}
+
+.practical-detail__back:active {
+  color: var(--cyan);
+}
+
+/* RP header */
+.practical-detail__header {
+  margin-bottom: var(--sp-6);
+}
+
+.practical-detail__rp-number {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1.5px solid var(--cyan);
+  border-radius: var(--r-sm);
+  padding: 2px var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.practical-detail__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: var(--sp-2);
+  color: var(--text);
+}
+
+.practical-detail__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.practical-detail__topic-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px var(--sp-3);
+  border-radius: 12px;
+  text-transform: capitalize;
+  background: var(--purple-dim);
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.practical-detail__topic-badge--energy      { background: var(--amber-dim);  color: var(--amber);  border-color: var(--amber);  }
+.practical-detail__topic-badge--electricity  { background: var(--blue-dim);   color: var(--blue);   border-color: var(--blue);   }
+.practical-detail__topic-badge--forces       { background: var(--cyan-dim);   color: var(--cyan);   border-color: var(--cyan);   }
+.practical-detail__topic-badge--waves        { background: var(--purple-dim); color: var(--purple); border-color: var(--purple); }
+.practical-detail__topic-badge--particle-model { background: var(--green-dim); color: var(--green); border-color: var(--green); }
+
+.practical-detail__triple-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px var(--sp-3);
+  border-radius: 12px;
+  background: var(--amber-dim);
+  color: var(--amber);
+  border: 1px solid var(--amber);
+}
+
+/* Section wrapper */
+.practical-detail__section {
+  margin-bottom: var(--sp-6);
+}
+
+.practical-detail__section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+}
+
+/* Aim */
+.practical-detail__aim {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* Equipment list */
+.practical-detail__equipment-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.practical-detail__equipment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: var(--sp-3) var(--sp-4);
+}
+
+.practical-detail__equipment-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.practical-detail__equipment-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.practical-detail__equipment-purpose {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* SVG diagram panel */
+.practical-detail__diagram {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+}
+
+.practical-detail__diagram-caption {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: var(--sp-3);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Method steps */
+.practical-detail__method-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practical-detail__method-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+}
+
+.practical-detail__step-number {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cyan-dim);
+  border: 1.5px solid var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--cyan);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 2px;
+}
+
+.practical-detail__step-text {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.55;
+  padding-top: 3px;
+}
+
+/* What to measure */
+.practical-detail__measure-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.practical-detail__measure-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.practical-detail__measure-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* How to process */
+.practical-detail__process {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--purple);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* Key equation panel */
+.practical-detail__equation-panel {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: var(--sp-5) var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.practical-detail__equation-display {
+  font-size: 1.5rem;
+}
+
+.practical-detail__variables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  justify-content: center;
+}
+
+.practical-detail__variable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-sm);
+  background: var(--bg4);
+  border: 1px solid var(--border);
+  min-width: 72px;
+}
+
+.practical-detail__variable-symbol {
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.practical-detail__variable-name {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.practical-detail__variable-unit {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.practical-detail__variable--cyan   .practical-detail__variable-symbol { color: var(--cyan);   }
+.practical-detail__variable--amber  .practical-detail__variable-symbol { color: var(--amber);  }
+.practical-detail__variable--purple .practical-detail__variable-symbol { color: var(--purple); }
+.practical-detail__variable--pink   .practical-detail__variable-symbol { color: var(--pink);   }
+.practical-detail__variable--blue   .practical-detail__variable-symbol { color: var(--blue);   }
+.practical-detail__variable--green  .practical-detail__variable-symbol { color: var(--green);  }
+
+/* Warning box (common mistakes) */
+.practical-detail__warning-box {
+  background: var(--amber-dim);
+  border: 1px solid var(--amber);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+}
+
+.practical-detail__warning-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--amber);
+  margin-bottom: var(--sp-3);
+}
+
+.practical-detail__warning-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practical-detail__warning-item {
+  font-size: 0.85rem;
+  color: var(--text);
+  padding-left: var(--sp-4);
+  position: relative;
+  line-height: 1.5;
+}
+
+.practical-detail__warning-item::before {
+  content: '!';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+/* Exam tips box */
+.practical-detail__tips-box {
+  background: var(--cyan-dim);
+  border: 1px solid var(--cyan);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+}
+
+.practical-detail__tips-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+  margin-bottom: var(--sp-3);
+}
+
+.practical-detail__tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practical-detail__tips-item {
+  font-size: 0.85rem;
+  color: var(--text);
+  padding-left: var(--sp-4);
+  position: relative;
+  line-height: 1.5;
+}
+
+.practical-detail__tips-item::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+/* Safety box */
+.practical-detail__safety-box {
+  background: var(--red-dim);
+  border: 1px solid var(--red);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+}
+
+.practical-detail__safety-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  margin-bottom: var(--sp-3);
+}
+
+.practical-detail__safety-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practical-detail__safety-item {
+  font-size: 0.85rem;
+  color: var(--text);
+  padding-left: var(--sp-4);
+  position: relative;
+  line-height: 1.5;
+}
+
+.practical-detail__safety-item::before {
+  content: '\26A0';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-size: 0.75rem;
+}
+
+/* Exam questions */
+.practical-detail__questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.practical-detail__question-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.practical-detail__question-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4);
+  cursor: pointer;
+  transition: background 0.15s ease;
+  min-height: 44px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+.practical-detail__question-header:active {
+  background: var(--bg4);
+}
+
+.practical-detail__question-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.practical-detail__question-year {
+  font-size: 0.7rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--purple);
+  background: var(--purple-dim);
+  border: 1px solid var(--purple);
+  padding: 2px var(--sp-2);
+  border-radius: var(--r-sm);
+}
+
+.practical-detail__question-marks {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.practical-detail__question-text {
+  padding: 0 var(--sp-4) var(--sp-4);
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.practical-detail__question-toggle {
+  font-size: 0.75rem;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.practical-detail__question-toggle--open {
+  transform: rotate(180deg);
+}
+
+.practical-detail__mark-scheme {
+  border-top: 1px solid var(--border);
+  padding: var(--sp-4);
+  background: var(--green-dim);
+}
+
+.practical-detail__mark-scheme-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--green);
+  margin-bottom: var(--sp-2);
+}
+
+.practical-detail__mark-scheme-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.practical-detail__mark-scheme-item {
+  font-size: 0.85rem;
+  color: var(--text);
+  padding-left: var(--sp-4);
+  position: relative;
+  line-height: 1.5;
+}
+
+.practical-detail__mark-scheme-item::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 800;
+}

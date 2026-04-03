@@ -15,9 +15,10 @@
 }
 
 .step-dot--active {
-  width: 24px;
+  width: 28px;
   border-radius: 4px;
   background: var(--cyan);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--cyan) 50%, transparent);
 }
 
 .step-dot--done {

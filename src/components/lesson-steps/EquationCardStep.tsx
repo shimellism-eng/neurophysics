@@ -1,6 +1,7 @@
 import type { EquationCardStep as EquationCardStepType, BoardId } from '../../types/content';
 import { StepTag } from '../ui/StepTag';
 import { EquationTriangle } from '../ui/EquationTriangle';
+import { Equation } from '../ui/Equation';
 import './LessonStep.css';
 import './EquationCardStep.css';
 
@@ -23,7 +24,11 @@ export function EquationCardStep({ step, boardId, onComplete }: EquationCardStep
       </div>
 
       <div className="eq-card__canonical">
-        <code className="eq">{eq.canonical}</code>
+        {eq.tex ? (
+          <Equation tex={eq.tex} display className="eq" />
+        ) : (
+          <code className="eq">{eq.canonical}</code>
+        )}
         {!onSheet && (
           <span className="eq-card__memorise-badge">⚠️ Must memorise</span>
         )}
@@ -40,7 +45,11 @@ export function EquationCardStep({ step, boardId, onComplete }: EquationCardStep
         {eq.rearrangements.map(r => (
           <div key={r.solveFor} className="eq-card__rearrangement">
             {r.label && <span className="eq-card__r-label">{r.label}</span>}
-            <code className="eq eq-card__r-formula">{r.formula}</code>
+            {r.tex ? (
+              <Equation tex={r.tex} className="eq eq-card__r-formula" />
+            ) : (
+              <code className="eq eq-card__r-formula">{r.formula}</code>
+            )}
           </div>
         ))}
       </div>

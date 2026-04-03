@@ -1,0 +1,168 @@
+{
+  "board": "edexcel",
+  "year": 2023,
+  "paper": 1,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "edexcel-2023-p1-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A shopping trolley has a mass of 15 kg. A shopper pushes it with a resultant force of 30 N. Calculate the acceleration of the trolley.",
+      "markScheme": {
+        "answer": "2.0 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Recalls F = ma and rearranges to a = F/m" },
+          { "mark": 2, "description": "Substitutes: a = 30 / 15" },
+          { "mark": 3, "description": "Correct answer: 2.0 m/s\u00b2" }
+        ],
+        "commonErrors": [
+          "Multiplying F \u00d7 m instead of dividing",
+          "Not including the unit"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2023-p1-q3b",
+      "number": "3(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "The same trolley, now loaded with shopping of total mass 25 kg, is pushed with the same force of 30 N. A friction force of 6 N acts on the trolley. Calculate the new acceleration.",
+      "markScheme": {
+        "answer": "0.6 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Total mass = 15 + 25 = 40 kg" },
+          { "mark": 2, "description": "Resultant force = 30 - 6 = 24 N" },
+          { "mark": 3, "description": "Substitutes: a = 24 / 40" },
+          { "mark": 4, "description": "Correct answer: 0.6 m/s\u00b2" }
+        ],
+        "commonErrors": [
+          "Forgetting to add the mass of the shopping to the trolley mass",
+          "Not subtracting friction from the applied force"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "edexcel-2023-p1-q5a",
+      "number": "5(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "Mars has a gravitational field strength of 3.7 N/kg. What is the weight of a 50 kg rover on Mars?",
+      "options": ["13.5 N", "53.7 N", "185 N", "500 N"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "185 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Correct answer: 50 \u00d7 3.7 = 185 N" }
+        ],
+        "commonErrors": [
+          "Using g = 10 N/kg for Earth instead of 3.7 N/kg for Mars"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2023-p1-q6b",
+      "number": "6(b)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A weightlifter raises a 60 kg barbell through a height of 2.0 m. Gravitational field strength g = 10 N/kg. Calculate the work done by the weightlifter.",
+      "markScheme": {
+        "answer": "1200 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Calculates weight: W = 60 \u00d7 10 = 600 N" },
+          { "mark": 2, "description": "Work done = force \u00d7 distance = 600 \u00d7 2.0" },
+          { "mark": 3, "description": "Correct answer: 1200 J" }
+        ],
+        "allowedAlternatives": ["1.2 kJ"],
+        "commonErrors": [
+          "Using mass (60) instead of weight (600) in the calculation",
+          "Forgetting to convert mass to weight first"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2023-p1-q7c",
+      "number": "7(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 0.5 kg ball moving at 8 m/s strikes a 1.5 kg stationary ball. After the collision they move together. Calculate their combined velocity after the collision.",
+      "markScheme": {
+        "answer": "2.0 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum before = 0.5 \u00d7 8 = 4.0 kg m/s" },
+          { "mark": 2, "description": "Stationary ball momentum = 0" },
+          { "mark": 3, "description": "By conservation, momentum after = 4.0 kg m/s" },
+          { "mark": 4, "description": "Combined mass = 0.5 + 1.5 = 2.0 kg" },
+          { "mark": 5, "description": "v = 4.0 / 2.0 = 2.0 m/s" }
+        ],
+        "commonErrors": [
+          "Forgetting to add masses after collision",
+          "Not applying conservation of momentum"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2023-p1-q8a",
+      "number": "8(a)",
+      "topic": "forces",
+      "concept": "newtons-third-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A swimmer pushes backwards on the water with their hands. Using Newton's third law, explain how this allows the swimmer to move forwards.",
+      "markScheme": {
+        "answer": "The swimmer pushes backwards on the water. By Newton's third law, the water pushes forwards on the swimmer with an equal and opposite force. This forward force accelerates the swimmer.",
+        "steps": [
+          { "mark": 1, "description": "The swimmer exerts a force backwards on the water" },
+          { "mark": 2, "description": "By Newton's third law, the water exerts an equal and opposite force on the swimmer" },
+          { "mark": 3, "description": "This reaction force is directed forwards, causing the swimmer to accelerate forward" }
+        ],
+        "commonErrors": [
+          "Not identifying both objects involved in the force pair",
+          "Not mentioning equal and opposite"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

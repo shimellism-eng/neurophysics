@@ -1,0 +1,532 @@
+{
+  "id": "kinetic-energy",
+  "topicId": "energy",
+  "title": "Kinetic Energy",
+  "subtitle": "Ek = ½mv²",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "If you double the speed of a moving object, what happens to its kinetic energy?",
+      "options": [
+        "It doubles",
+        "It quadruples",
+        "It halves",
+        "It stays the same"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "⚠️ Common misconception! Because velocity is squared in Ek = ½mv², doubling the speed means the kinetic energy is multiplied by 2² = 4. Speed has a much bigger effect on KE than mass does.",
+      "correctFeedback": "✓ Correct! Because v is squared, doubling the speed quadruples the kinetic energy. This is why speed is so dangerous on the roads. Double the speed means four times the stopping energy.",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.1.2: Kinetic energy"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Kinetic Energy",
+      "bodyHTML": "Every moving object has energy in its <strong>kinetic energy store</strong>. The kinetic energy depends on the object’s <strong>mass</strong> and <strong>speed</strong>. Because speed is <strong>squared</strong>, doubling speed quadruples the kinetic energy. This explains why braking distances increase rapidly at higher speeds.",
+      "keyEquation": "Ek = ½ × m × v²",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "Ek",
+            "label": "Kinetic energy",
+            "unit": "J",
+            "color": "cyan"
+          },
+          {
+            "symbol": "m",
+            "label": "Mass",
+            "unit": "kg",
+            "color": "purple"
+          },
+          {
+            "symbol": "v",
+            "label": "Speed",
+            "unit": "m/s",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Bigger m → bigger Ek (proportional)",
+          "Bigger v → much bigger Ek (v is squared!)"
+        ]
+      },
+      "keyWords": [
+        "kinetic energy",
+        "mass",
+        "speed",
+        "squared",
+        "joules"
+      ],
+      "commonErrors": [
+        "Forgetting to square the velocity. v², not v",
+        "Forgetting the ½ in the equation",
+        "Not converting units (e.g. grams to kg, km/h to m/s)"
+      ],
+      "keyEquationTex": "E_k = \\frac{1}{2}mv^2"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change mass and speed. Watch how kinetic energy responds. Notice how speed has a much bigger effect than mass.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "mass",
+            "label": "Mass",
+            "unit": "kg",
+            "min": 1,
+            "max": 20,
+            "default": 5,
+            "color": "purple",
+            "step": 1
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "unit": "m/s",
+            "min": 1,
+            "max": 30,
+            "default": 10,
+            "color": "cyan",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "ke",
+            "label": "Kinetic Energy",
+            "unit": "J",
+            "formula": "0.5 * mass * speed * speed",
+            "color": "amber",
+            "decimalPlaces": 0
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "speed",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 · Q3(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 3,
+          "questionText": "A car of mass 1500 kg is travelling at 20 m/s. Calculate the kinetic energy of the car.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the kinetic energy equation:",
+              "equation": "Ek = ½ × m × v²",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute values",
+              "content": "m = 1500 kg, v = 20 m/s:",
+              "equation": "Ek = ½ × 1500 × 20²",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate",
+              "content": "Square the speed first: 20² = 400, then multiply:",
+              "equation": "Ek = ½ × 1500 × 400 = 300 000 J",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "300 000 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q4(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 3,
+          "questionText": "A cyclist and bike have a combined mass of 80 kg. They travel at 12 m/s. Calculate the kinetic energy.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Ek = ½ × m × v²",
+              "equation": null,
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "m = 80 kg, v = 12 m/s:",
+              "equation": "Ek = ½ × 80 × 12² = ½ × 80 × 144 = 5760 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "5760 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q4(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(b)",
+          "marks": 2,
+          "questionText": "A ball of mass 0.5 kg moves at 8 m/s. Calculate its kinetic energy.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply the equation",
+              "content": "Ek = ½ × m × v²",
+              "equation": "Ek = ½ × 0.5 × 8² = ½ × 0.5 × 64 = 16 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "16 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q4(a)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "4(a)",
+          "marks": 3,
+          "questionText": "A runner of mass 70 kg sprints at 9 m/s. Calculate the kinetic energy of the runner.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State the equation",
+              "content": "Ek = ½ × m × v²",
+              "equation": null,
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "m = 70 kg, v = 9 m/s:",
+              "equation": "Ek = ½ × 70 × 81 = 2835 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "2835 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q3(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "A football of mass 0.45 kg is kicked at 15 m/s. Calculate its kinetic energy.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply Ek = ½mv²",
+              "content": "Substitute directly:",
+              "equation": "Ek = ½ × 0.45 × 15² = ½ × 0.45 × 225 = 50.625 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer (accept 50.6 J)"
+            }
+          ],
+          "finalAnswer": "50.6 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 · Q4(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 3,
+          "questionText": "A lorry of mass 6000 kg travels at 15 m/s. Calculate its kinetic energy.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "45 000 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "675 000 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "90 000 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "1 350 000 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ek = ½ × m × v²",
+            "Ek = ½ × 6000 × 15²",
+            "Ek = ½ × 6000 × 225 = 675 000 J"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option A is from forgetting to square the velocity (just ½ × 6000 × 15). Option D forgets the ½."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q3(c)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "3(c)",
+          "marks": 2,
+          "questionText": "A tennis ball of mass 0.06 kg moves at 40 m/s. Calculate its kinetic energy.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "1.2 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "48 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "96 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "2.4 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ek = ½ × 0.06 × 40² = ½ × 0.06 × 1600 = 48 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q4(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 2,
+          "questionText": "A dog of mass 25 kg runs at 6 m/s. What is its kinetic energy?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "75 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "450 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "900 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "150 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ek = ½ × 25 × 36 = 450 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q3(b)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "A skateboard and rider have a combined mass of 65 kg moving at 4 m/s. Calculate the kinetic energy.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "130 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "520 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "1040 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "260 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ek = ½ × 65 × 16 = 520 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q2(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "2(b)",
+          "marks": 2,
+          "questionText": "A bowling ball of mass 6 kg rolls at 5 m/s. Calculate its kinetic energy.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "15 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "75 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "150 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "30 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ek = ½ × 6 × 25 = 75 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Ek = ½mv²: all rearrangements",
+      "equation": {
+        "id": "kinetic-energy",
+        "canonical": "Ek = ½ × m × v²",
+        "variables": [
+          {
+            "symbol": "Ek",
+            "name": "Kinetic energy",
+            "unit": "joules",
+            "abbreviation": "J"
+          },
+          {
+            "symbol": "m",
+            "name": "Mass",
+            "unit": "kilograms",
+            "abbreviation": "kg"
+          },
+          {
+            "symbol": "v",
+            "name": "Speed",
+            "unit": "metres/second",
+            "abbreviation": "m/s"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "Ek",
+            "formula": "Ek = ½ × m × v²",
+            "label": "Find kinetic energy"
+          },
+          {
+            "solveFor": "m",
+            "formula": "m = 2Ek / v²",
+            "label": "Find mass"
+          },
+          {
+            "solveFor": "v",
+            "formula": "v = √(2Ek / m)",
+            "label": "Find speed"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "Ek",
+            "color": "cyan",
+            "tex": "E_k"
+          },
+          "bottomLeft": {
+            "symbol": "½m",
+            "color": "purple",
+            "tex": "\\tfrac{1}{2}m"
+          },
+          "bottomRight": {
+            "symbol": "v²",
+            "color": "amber",
+            "tex": "v^2"
+          }
+        },
+        "examTip": "Always square the speed FIRST before multiplying. And remember the ½. many students lose a mark by forgetting it.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Must be able to rearrange to find m or v.",
+          "edexcel": "On Edexcel equation sheet. Remember to square v before multiplying.",
+          "ocr-gateway": "NOT on formula sheet, must be memorised. ⚠️",
+          "ocr-21c": "NOT on formula sheet, must be memorised. ⚠️",
+          "wjec": "Provided in WJEC exam. Know all rearrangements."
+        }
+      }
+    }
+  ]
+}

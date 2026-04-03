@@ -3,7 +3,7 @@ export type Tier = 'Foundation' | 'Higher';
 export type StepType = 'diagnostic' | 'concept' | 'simulation' | 'worked' | 'yourTurn' | 'equationCard';
 export type QuestionType = 'multiple-choice' | 'calculation' | 'short-answer';
 export type UIColor = 'cyan' | 'purple' | 'amber' | 'pink' | 'blue' | 'green' | 'red';
-export type SimVisualType = 'arrow-and-block' | 'circuit' | 'wave' | 'graph';
+export type SimVisualType = 'arrow-and-block' | 'collision' | 'circuit' | 'wave' | 'graph';
 
 export interface BoardConfig {
   id: BoardId;
@@ -65,11 +65,14 @@ export interface ConceptStep {
   title: string;
   bodyHTML: string;
   keyEquation?: string;
+  keyEquationTex?: string;
   diagram?: {
     type: string;
     variables: ConceptDiagramVariable[];
     relationships?: string[];
   };
+  /** ID of an SVG diagram component from DiagramRegistry */
+  svgDiagram?: string;
   keyWords: string[];
   commonErrors: string[];
 }
@@ -102,12 +105,9 @@ export interface SimulationStep {
   title: string;
   instruction: string;
   simId: string;
-  simConfig: {
-    variables: SimVariable[];
-    derived: SimDerived[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  simConfig: Record<string, any> & {
     visualType: SimVisualType;
-    arrowVariable?: string;
-    blockLabel?: string;
   };
 }
 
@@ -179,6 +179,7 @@ export interface EquationVariable {
 export interface Rearrangement {
   solveFor: string;
   formula: string;
+  tex?: string;
   label?: string;
 }
 
@@ -191,12 +192,13 @@ export interface EquationCardStep {
   equation: {
     id: string;
     canonical: string;
+    tex?: string;
     variables: EquationVariable[];
     rearrangements: Rearrangement[];
     triangleLayout: {
-      top: { symbol: string; color: UIColor };
-      bottomLeft: { symbol: string; color: UIColor };
-      bottomRight: { symbol: string; color: UIColor };
+      top: { symbol: string; tex?: string; color: UIColor };
+      bottomLeft: { symbol: string; tex?: string; color: UIColor };
+      bottomRight: { symbol: string; tex?: string; color: UIColor };
     };
     examTip: string;
     boardNotes: Partial<Record<BoardId, string>>;
@@ -227,6 +229,7 @@ export interface Equation {
   id: string;
   name: string;
   canonical: string;
+  tex?: string;
   color: UIColor;
   variables: EquationVariable[];
   rearrangements: Rearrangement[];
@@ -290,4 +293,5 @@ export interface UserSettings {
   sound: boolean;
   highContrast: boolean;
   timedQuestions: boolean;
+  haptics: boolean;
 }

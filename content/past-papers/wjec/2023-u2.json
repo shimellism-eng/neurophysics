@@ -1,0 +1,171 @@
+{
+  "board": "wjec",
+  "year": 2023,
+  "paper": "u2",
+  "tier": "Higher",
+  "totalMarks": 80,
+  "questions": [
+    {
+      "id": "wjec-2023-u2-q1a",
+      "number": "1(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A satellite has a mass of 800 kg. The gravitational field strength in its orbit is 8.5 N/kg. Calculate the weight of the satellite.",
+      "markScheme": {
+        "answer": "6800 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Substitutes: W = 800 \u00d7 8.5" },
+          { "mark": 3, "description": "Correct answer: 6800 N" }
+        ],
+        "allowedAlternatives": ["6.8 kN"],
+        "commonErrors": [
+          "Using g = 10 instead of 8.5",
+          "Confusing mass and weight"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "wjec-2023-u2-q2b",
+      "number": "2(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A train of mass 40 000 kg accelerates from 10 m/s to 25 m/s in 30 seconds. Calculate the resultant force on the train.",
+      "markScheme": {
+        "answer": "20 000 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Calculates acceleration: a = (25 - 10) / 30 = 0.5 m/s\u00b2" },
+          { "mark": 2, "description": "Recalls F = ma" },
+          { "mark": 3, "description": "Substitutes: F = 40 000 \u00d7 0.5" },
+          { "mark": 4, "description": "Correct answer: 20 000 N" }
+        ],
+        "allowedAlternatives": ["20 kN"],
+        "commonErrors": [
+          "Using final velocity as acceleration",
+          "Arithmetic errors with large numbers"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2023-u2-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A ball is rolling along a flat surface and gradually comes to a stop. Why does the ball stop?",
+      "options": ["The ball has run out of force", "An unbalanced friction force acts on the ball", "Gravity pulls the ball downwards", "The ball's mass is decreasing"],
+      "correctIndex": 1,
+      "markScheme": {
+        "answer": "An unbalanced friction force acts on the ball",
+        "steps": [
+          { "mark": 1, "description": "Identifies friction as an unbalanced force" },
+          { "mark": 2, "description": "This decelerates the ball until it stops" }
+        ],
+        "commonErrors": [
+          "Saying the ball runs out of force",
+          "Not recognising friction as the cause"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2023-u2-q4c",
+      "number": "4(c)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A helicopter lifts a 500 kg rescue stretcher through a vertical height of 30 m. (g = 10 N/kg) Calculate the work done by the helicopter.",
+      "markScheme": {
+        "answer": "150 000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Weight = 500 \u00d7 10 = 5000 N" },
+          { "mark": 2, "description": "Recalls work = force \u00d7 distance" },
+          { "mark": 3, "description": "Substitutes: work = 5000 \u00d7 30" },
+          { "mark": 4, "description": "Correct answer: 150 000 J" }
+        ],
+        "allowedAlternatives": ["150 kJ"],
+        "commonErrors": [
+          "Using mass instead of weight",
+          "Confusing vertical height with horizontal distance"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2023-u2-q5b",
+      "number": "5(b)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 3.0 kg toy car moving at 2.0 m/s collides with and sticks to a stationary 1.0 kg toy car. Calculate the velocity of the combined cars after the collision.",
+      "markScheme": {
+        "answer": "1.5 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum before = 3.0 \u00d7 2.0 = 6.0 kg m/s" },
+          { "mark": 2, "description": "Stationary car momentum = 0" },
+          { "mark": 3, "description": "Total momentum before = 6.0 kg m/s" },
+          { "mark": 4, "description": "Combined mass = 4.0 kg; by conservation, 4.0 \u00d7 v = 6.0" },
+          { "mark": 5, "description": "v = 6.0 / 4.0 = 1.5 m/s" }
+        ],
+        "commonErrors": [
+          "Not combining the masses after collision",
+          "Forgetting conservation of momentum"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "wjec-2023-u2-q6a",
+      "number": "6(a)",
+      "topic": "forces",
+      "concept": "newtons-third-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A rocket engine works by expelling hot gas downwards. Use Newton's third law to explain how this produces an upward force on the rocket.",
+      "markScheme": {
+        "answer": "The rocket pushes the exhaust gas downwards with a force. By Newton's third law, the gas pushes the rocket upwards with an equal and opposite force. This upward force (thrust) accelerates the rocket.",
+        "steps": [
+          { "mark": 1, "description": "The rocket exerts a downward force on the exhaust gas" },
+          { "mark": 2, "description": "By Newton's third law, the gas exerts an equal and opposite (upward) force on the rocket" },
+          { "mark": 3, "description": "This is the thrust that propels the rocket upward" }
+        ],
+        "commonErrors": [
+          "Saying the gas pushes against the ground",
+          "Not identifying both objects in the force pair"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

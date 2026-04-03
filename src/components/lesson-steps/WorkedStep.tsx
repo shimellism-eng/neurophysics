@@ -39,7 +39,7 @@ export function WorkedStep({ step, boardId, onComplete }: WorkedStepProps) {
 
       {isFallback && (
         <p className="worked__fallback-notice">
-          This example is from AQA — your board uses the same method.
+          This example is from AQA. Your board uses the same method.
         </p>
       )}
 

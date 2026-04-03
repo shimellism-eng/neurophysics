@@ -1,0 +1,171 @@
+{
+  "board": "ocr-21c",
+  "year": 2022,
+  "paper": 3,
+  "tier": "Higher",
+  "totalMarks": 90,
+  "questions": [
+    {
+      "id": "ocr-21c-2022-p3-q1c",
+      "number": "1(c)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "The gravitational field strength on the surface of Venus is 8.9 N/kg. What is the weight of a 10 kg object on Venus?",
+      "options": ["1.12 N", "18.9 N", "89 N", "100 N"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "89 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "W = mg = 10 \u00d7 8.9" },
+          { "mark": 2, "description": "Correct answer: 89 N" }
+        ],
+        "commonErrors": [
+          "Using g = 10 for Earth",
+          "Dividing instead of multiplying"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2022-p3-q2b",
+      "number": "2(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A lift has a mass of 600 kg. It accelerates upwards at 1.5 m/s\u00b2. Gravitational field strength g = 10 N/kg. Calculate the tension in the cable pulling the lift upwards.",
+      "markScheme": {
+        "answer": "6900 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Weight of lift = 600 \u00d7 10 = 6000 N" },
+          { "mark": 2, "description": "Resultant force needed = ma = 600 \u00d7 1.5 = 900 N (upwards)" },
+          { "mark": 3, "description": "Tension - Weight = Resultant force" },
+          { "mark": 4, "description": "T = 6000 + 900" },
+          { "mark": 5, "description": "Correct answer: 6900 N" }
+        ],
+        "allowedAlternatives": ["6.9 kN"],
+        "commonErrors": [
+          "Subtracting weight from resultant instead of adding",
+          "Only calculating F = ma without considering weight"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2022-p3-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A drone has four propellers each providing 2.5 N of upward thrust. The drone weighs 8.0 N. Calculate the resultant vertical force on the drone.",
+      "markScheme": {
+        "answer": "2.0 N upwards",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Total thrust = 4 \u00d7 2.5 = 10.0 N" },
+          { "mark": 2, "description": "Resultant = 10.0 - 8.0 = 2.0 N" },
+          { "mark": 3, "description": "Direction: upwards" }
+        ],
+        "commonErrors": [
+          "Using only one propeller's thrust",
+          "Forgetting to subtract the weight"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "ocr-21c-2022-p3-q4c",
+      "number": "4(c)",
+      "topic": "forces",
+      "concept": "stopping-distance",
+      "marks": 4,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "Explain why a car travelling at 40 mph has a much longer braking distance than a car travelling at 20 mph.",
+      "markScheme": {
+        "answer": "At 40 mph, the car has more kinetic energy (KE is proportional to v\u00b2). More work must be done by the brakes to stop the car. Since work = force \u00d7 distance, and the braking force is similar, the distance must be greater. Doubling the speed quadruples the kinetic energy, so braking distance roughly quadruples.",
+        "steps": [
+          { "mark": 1, "description": "Higher speed means greater kinetic energy" },
+          { "mark": 2, "description": "KE is proportional to velocity squared" },
+          { "mark": 3, "description": "More work must be done by the brakes to stop the car" },
+          { "mark": 4, "description": "Since braking force is roughly constant, greater energy means greater braking distance" }
+        ],
+        "commonErrors": [
+          "Saying braking distance doubles when speed doubles (it quadruples)",
+          "Not mentioning the v\u00b2 relationship"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2022-p3-q5a",
+      "number": "5(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A forklift truck raises a 150 kg pallet through a vertical height of 4.0 m. (g = 10 N/kg) Calculate the work done by the forklift.",
+      "markScheme": {
+        "answer": "6000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Weight = 150 \u00d7 10 = 1500 N" },
+          { "mark": 2, "description": "Recalls work = force \u00d7 distance" },
+          { "mark": 3, "description": "Substitutes: work = 1500 \u00d7 4.0" },
+          { "mark": 4, "description": "Correct answer: 6000 J" }
+        ],
+        "allowedAlternatives": ["6.0 kJ"],
+        "commonErrors": [
+          "Using mass instead of weight",
+          "Forgetting to calculate weight first"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-21c-2022-p3-q6b",
+      "number": "6(b)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": true,
+      "questionText": "A tennis ball of mass 0.06 kg is served at 50 m/s. Calculate the momentum of the tennis ball.",
+      "markScheme": {
+        "answer": "3.0 kg m/s",
+        "unit": "kg m/s",
+        "steps": [
+          { "mark": 1, "description": "Recalls p = mv" },
+          { "mark": 2, "description": "Substitutes: p = 0.06 \u00d7 50" },
+          { "mark": 3, "description": "Correct answer: 3.0 kg m/s" }
+        ],
+        "commonErrors": [
+          "Using grams instead of kg (60 instead of 0.06)",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

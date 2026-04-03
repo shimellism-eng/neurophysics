@@ -1,0 +1,253 @@
+{
+  "id": "power-and-energy",
+  "topicId": "electricity",
+  "title": "Electrical Power and Energy",
+  "subtitle": "P = IV, P = I\u00b2R, E = Pt",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A 100 W light bulb and a 60 W light bulb are both connected to the mains (230 V). Which has the higher resistance?",
+      "options": [
+        "The 100 W bulb (higher power means higher resistance)",
+        "The 60 W bulb (lower power means higher resistance)",
+        "They have the same resistance",
+        "Cannot tell without knowing the current"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! At the same voltage, a LOWER power bulb draws LESS current, which means it has a HIGHER resistance. Using P = V\u00b2/R, a smaller P with the same V means a larger R. The 60 W bulb has more resistance than the 100 W bulb.",
+      "correctFeedback": "\u2713 Correct! At the same voltage, lower power means less current flows, which means higher resistance. The 60 W bulb has more resistance \u2014 from P = V\u00b2/R, a smaller P at the same V requires a larger R.",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.4 \u2014 Electrical power and energy transfer"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Electrical Power and Energy",
+      "bodyHTML": "<strong>Electrical power</strong> is the rate of energy transfer. It is measured in <strong>watts (W)</strong>. There are three key equations: <strong>P = I \u00d7 V</strong> (power = current \u00d7 voltage), <strong>P = I\u00b2 \u00d7 R</strong> (useful when you know current and resistance), and <strong>E = P \u00d7 t</strong> (energy = power \u00d7 time). Energy transferred can also be calculated using <strong>E = Q \u00d7 V</strong> (energy = charge \u00d7 voltage).",
+      "keyEquation": "P = I \u00d7 V",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "P", "label": "Power",               "unit": "W", "color": "cyan"   },
+          { "symbol": "I", "label": "Current",             "unit": "A", "color": "purple" },
+          { "symbol": "V", "label": "Potential difference", "unit": "V", "color": "amber"  }
+        ],
+        "relationships": [
+          "Bigger I \u2192 more power (more charge flowing per second)",
+          "Bigger V \u2192 more power (more energy per charge)",
+          "P = I\u00b2R links power to current and resistance directly"
+        ]
+      },
+      "keyWords": ["power", "watt", "energy transfer", "kilowatt-hour", "efficiency"],
+      "commonErrors": [
+        "Forgetting to convert time to seconds when using E = Pt",
+        "Confusing power (W) with energy (J)",
+        "Using the wrong power equation \u2014 choose based on which values you have"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change current and voltage. Watch how power changes with P = IV.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "current", "label": "Current", "unit": "A", "min": 0.5, "max": 10, "default": 2,  "color": "purple", "step": 0.5 },
+          { "id": "voltage", "label": "Voltage", "unit": "V", "min": 1,   "max": 24, "default": 12, "color": "amber",  "step": 1 }
+        ],
+        "derived": [
+          { "id": "power", "label": "Power", "unit": "W", "formula": "current * voltage", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "current",
+        "blockLabel": "P"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q9(a)",
+          "year": 2023, "paper": 1, "questionNumber": "9(a)", "marks": 4,
+          "questionText": "A kettle is rated at 2300 W and is connected to the 230 V mains supply. (a) Calculate the current drawn by the kettle. (b) The kettle is used for 3 minutes. Calculate the energy transferred.",
+          "steps": [
+            { "stepNum": 1, "label": "Find current", "content": "Rearrange P = IV for I:", "equation": "I = P / V = 2300 / 230 = 10 A", "markSchemeNote": "1 mark \u2014 rearrangement; 1 mark \u2014 correct answer + unit" },
+            { "stepNum": 2, "label": "Convert time", "content": "t = 3 minutes = 180 s", "equation": null, "markSchemeNote": null },
+            { "stepNum": 3, "label": "Find energy", "content": "E = P \u00d7 t:", "equation": "E = 2300 \u00d7 180 = 414 000 J = 414 kJ", "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "I = 10 A, E = 414 000 J", "finalAnswerUnit": "J", "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q10(a)",
+          "year": 2023, "paper": 1, "questionNumber": "10(a)", "marks": 3,
+          "questionText": "A heater draws a current of 5.0 A from a 230 V supply. Calculate the power of the heater.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply P = IV", "content": "Substitute:", "equation": "P = 5.0 \u00d7 230 = 1150 W", "markSchemeNote": "1 mark equation; 1 mark substitution; 1 mark answer + unit" }
+          ],
+          "finalAnswer": "1150 W", "finalAnswerUnit": "W", "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 \u00b7 Q9(a)",
+          "year": 2022, "paper": 2, "questionNumber": "9(a)", "marks": 3,
+          "questionText": "A 4.0 A current flows through a 10 \u03a9 resistor. Calculate the power dissipated.",
+          "steps": [
+            { "stepNum": 1, "label": "Use P = I\u00b2R", "content": "Since we know I and R:", "equation": "P = 4.0\u00b2 \u00d7 10 = 16 \u00d7 10 = 160 W", "markSchemeNote": "1 mark equation; 1 mark substitution; 1 mark answer + unit" }
+          ],
+          "finalAnswer": "160 W", "finalAnswerUnit": "W", "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q8(a)",
+          "year": 2022, "paper": 3, "questionNumber": "8(a)", "marks": 2,
+          "questionText": "A lamp has a power of 60 W and is used for 5 minutes. Calculate the energy transferred.",
+          "steps": [
+            { "stepNum": 1, "label": "Convert and calculate", "content": "t = 5 \u00d7 60 = 300 s; E = P \u00d7 t:", "equation": "E = 60 \u00d7 300 = 18 000 J", "markSchemeNote": "1 mark \u2014 conversion + substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "18 000 J", "finalAnswerUnit": "J", "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 \u00b7 Q8(a)",
+          "year": 2022, "paper": 2, "questionNumber": "8(a)", "marks": 2,
+          "questionText": "A 3.0 A current flows through a component with a p.d. of 12 V. Calculate the power.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply P = IV", "content": "Substitute:", "equation": "P = 3.0 \u00d7 12 = 36 W", "markSchemeNote": "1 mark \u2014 substitution; 1 mark \u2014 correct answer + unit" }
+          ],
+          "finalAnswer": "36 W", "finalAnswerUnit": "W", "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 \u00b7 Q8(a)",
+          "year": 2022, "paper": 1, "questionNumber": "8(a)", "marks": 3,
+          "questionText": "A hairdryer is rated at 1800 W and runs on 230 V mains. What current does it draw?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "414 000 A", "correct": false },
+            { "label": "B", "text": "7.8 A",     "correct": true  },
+            { "label": "C", "text": "0.13 A",    "correct": false },
+            { "label": "D", "text": "128 A",     "correct": false }
+          ],
+          "markSchemeSteps": ["I = P / V", "I = 1800 / 230", "I = 7.8 A \u2713"],
+          "markSchemeAward": "1 mark rearrangement \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option A multiplies instead of dividing. Always check your rearrangement."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q10(b)",
+          "year": 2022, "paper": 1, "questionNumber": "10(b)", "marks": 2,
+          "questionText": "A toaster has a power of 900 W and is used for 2 minutes. How much energy is transferred?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "1800 J",    "correct": false },
+            { "label": "B", "text": "108 000 J", "correct": true  },
+            { "label": "C", "text": "450 J",     "correct": false },
+            { "label": "D", "text": "7.5 J",     "correct": false }
+          ],
+          "markSchemeSteps": ["t = 2 \u00d7 60 = 120 s; E = 900 \u00d7 120 = 108 000 J \u2713"],
+          "markSchemeAward": "1 mark conversion + substitution \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 \u00b7 Q8(a)",
+          "year": 2023, "paper": 2, "questionNumber": "8(a)", "marks": 2,
+          "questionText": "A 3.0 A current flows through a 20 \u03a9 resistor. What is the power dissipated?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "60 W",   "correct": false },
+            { "label": "B", "text": "180 W",  "correct": true  },
+            { "label": "C", "text": "6.67 W", "correct": false },
+            { "label": "D", "text": "23 W",   "correct": false }
+          ],
+          "markSchemeSteps": ["P = I\u00b2R = 3.0\u00b2 \u00d7 20 = 9 \u00d7 20 = 180 W \u2713"],
+          "markSchemeAward": "1 mark equation + substitution \u00b7 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q7(a)",
+          "year": 2023, "paper": 3, "questionNumber": "7(a)", "marks": 2,
+          "questionText": "A 500 W microwave runs for 4 minutes. Calculate the energy used.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "2000 J",    "correct": false },
+            { "label": "B", "text": "120 000 J", "correct": true  },
+            { "label": "C", "text": "125 J",     "correct": false },
+            { "label": "D", "text": "8.33 J",    "correct": false }
+          ],
+          "markSchemeSteps": ["t = 240 s; E = 500 \u00d7 240 = 120 000 J \u2713"],
+          "markSchemeAward": "1 mark conversion \u00b7 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 \u00b7 Q7(a)",
+          "year": 2023, "paper": 2, "questionNumber": "7(a)", "marks": 2,
+          "questionText": "A 2.0 A current flows at 6.0 V. What is the power?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "3.0 W",  "correct": false },
+            { "label": "B", "text": "12 W",   "correct": true  },
+            { "label": "C", "text": "0.33 W", "correct": false },
+            { "label": "D", "text": "8.0 W",  "correct": false }
+          ],
+          "markSchemeSteps": ["P = I \u00d7 V = 2.0 \u00d7 6.0 = 12 W \u2713"],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "P = IV \u2014 electrical power",
+      "equation": {
+        "id": "power-iv",
+        "canonical": "P = I \u00d7 V",
+        "variables": [
+          { "symbol": "P", "name": "Power",               "unit": "watts",   "abbreviation": "W" },
+          { "symbol": "I", "name": "Current",             "unit": "amperes", "abbreviation": "A" },
+          { "symbol": "V", "name": "Potential difference", "unit": "volts",   "abbreviation": "V" }
+        ],
+        "rearrangements": [
+          { "solveFor": "P", "formula": "P = I \u00d7 V",     "label": "Find power"   },
+          { "solveFor": "I", "formula": "I = P / V",     "label": "Find current" },
+          { "solveFor": "V", "formula": "V = P / I",     "label": "Find voltage" },
+          { "solveFor": "P", "formula": "P = I\u00b2 \u00d7 R",   "label": "Find power (using R)" },
+          { "solveFor": "E", "formula": "E = P \u00d7 t",     "label": "Find energy"  }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "P", "color": "cyan"   },
+          "bottomLeft": { "symbol": "I", "color": "purple" },
+          "bottomRight":{ "symbol": "V", "color": "amber"  }
+        },
+        "examTip": "Choose the right power equation based on what values you have: P=IV (given I and V), P=I\u00b2R (given I and R), or E=Pt (for energy). Always convert time to seconds.",
+        "onFormulaSheet": {
+          "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+        },
+        "boardNotes": {
+          "aqa":         "P = IV and P = I\u00b2R both on AQA formula sheet. E = Pt also given.",
+          "edexcel":     "All three power/energy equations on Edexcel sheet.",
+          "ocr-gateway": "P = IV on formula sheet. P = I\u00b2R may need to be memorised. \u26a0\ufe0f",
+          "ocr-21c":     "P = IV on formula sheet. Check which forms are provided.",
+          "wjec":        "All power equations provided in WJEC exam."
+        }
+      }
+    }
+  ]
+}

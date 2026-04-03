@@ -1,0 +1,165 @@
+{
+  "board": "ocr-gateway",
+  "year": 2022,
+  "paper": 3,
+  "tier": "Higher",
+  "totalMarks": 90,
+  "questions": [
+    {
+      "id": "ocr-gw-2022-p3-q1a",
+      "number": "1(a)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A hockey puck slides across ice at a steady speed and then gradually slows down. Explain why the puck slows down in terms of forces.",
+      "markScheme": {
+        "answer": "Friction acts on the puck in the opposite direction to its motion. This is an unbalanced force. The resultant force decelerates the puck, causing it to slow down.",
+        "steps": [
+          { "mark": 1, "description": "Friction / air resistance acts on the puck" },
+          { "mark": 2, "description": "There is no forward force, so forces are unbalanced" },
+          { "mark": 3, "description": "The resultant force causes deceleration (slowing down)" }
+        ],
+        "commonErrors": [
+          "Saying the puck runs out of force",
+          "Not identifying friction as the cause"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2022-p3-q2c",
+      "number": "2(c)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A bicycle and rider have a combined mass of 85 kg. The rider pedals with a driving force of 255 N. Friction is 85 N. Calculate the acceleration.",
+      "markScheme": {
+        "answer": "2.0 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Resultant force = 255 - 85 = 170 N" },
+          { "mark": 2, "description": "Recalls a = F/m" },
+          { "mark": 3, "description": "Substitutes: a = 170 / 85" },
+          { "mark": 4, "description": "Correct answer: 2.0 m/s\u00b2" }
+        ],
+        "commonErrors": [
+          "Not subtracting friction first",
+          "Using 255 N as the resultant force"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2022-p3-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "Jupiter has a gravitational field strength of 25 N/kg. Calculate the weight of a 2.0 kg probe on Jupiter.",
+      "markScheme": {
+        "answer": "50 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Substitutes: W = 2.0 \u00d7 25" },
+          { "mark": 3, "description": "Correct answer: 50 N" }
+        ],
+        "commonErrors": [
+          "Using g = 10 for Earth instead of 25 for Jupiter"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "ocr-gw-2022-p3-q4b",
+      "number": "4(b)",
+      "topic": "forces",
+      "concept": "stopping-distance",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "Which factor increases a driver's thinking distance?",
+      "options": ["Worn tyres", "Icy road", "Using a mobile phone", "Worn brake pads"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "Using a mobile phone",
+        "steps": [
+          { "mark": 1, "description": "Identifies a factor that increases reaction time" },
+          { "mark": 2, "description": "Correct answer: using a mobile phone (distraction increases reaction time)" }
+        ],
+        "commonErrors": [
+          "Confusing factors that affect thinking distance with braking distance"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2022-p3-q5c",
+      "number": "5(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 0.4 kg ball is dropped and hits the ground at 7 m/s. It bounces back up at 5 m/s. Calculate the change in momentum.",
+      "markScheme": {
+        "answer": "4.8 kg m/s (upwards)",
+        "unit": "kg m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum before (downwards): 0.4 \u00d7 (-7) = -2.8 kg m/s" },
+          { "mark": 2, "description": "Momentum after (upwards): 0.4 \u00d7 5 = 2.0 kg m/s" },
+          { "mark": 3, "description": "Change = final - initial = 2.0 - (-2.8)" },
+          { "mark": 4, "description": "Change in momentum = 4.8 kg m/s (upwards)" }
+        ],
+        "commonErrors": [
+          "Not accounting for direction change",
+          "Subtracting speeds instead of considering momentum with direction"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2022-p3-q6a",
+      "number": "6(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A child pulls a sledge 50 m across flat snow using a horizontal force of 40 N. Calculate the work done.",
+      "markScheme": {
+        "answer": "2000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = Fs" },
+          { "mark": 2, "description": "Substitutes: W = 40 \u00d7 50" },
+          { "mark": 3, "description": "Correct answer: 2000 J" }
+        ],
+        "allowedAlternatives": ["2.0 kJ"],
+        "commonErrors": [
+          "Using the wrong formula",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

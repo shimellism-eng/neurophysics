@@ -1,0 +1,228 @@
+.wave-sim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-4);
+  width: 100%;
+}
+
+.wave-sim__explanation {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg4);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--cyan);
+}
+
+/* SVG canvas */
+.wave-sim__canvas {
+  background: var(--bg4);
+  border-radius: var(--r);
+  padding: var(--sp-3) var(--sp-2);
+  overflow: hidden;
+}
+
+.wave-sim__svg {
+  width: 100%;
+  height: 120px;
+  display: block;
+}
+
+.wave-sim__path {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.wave-sim__amp-arrow {
+  stroke: var(--purple);
+  stroke-width: 1.5;
+  marker-end: none;
+}
+
+.wave-sim__amp-arrowhead {
+  fill: var(--purple);
+}
+
+.wave-sim__lambda-arrow {
+  stroke: var(--amber);
+  stroke-width: 1.5;
+}
+
+.wave-sim__lambda-arrowhead {
+  fill: var(--amber);
+}
+
+.wave-sim__label-small {
+  fill: var(--purple);
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+.wave-sim__label-lambda {
+  fill: var(--amber);
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* Speed buttons */
+.wave-sim__speed-btns {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.wave-sim__speed-btn,
+.wave-sim__freeze-btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-sm);
+  border: 2px solid var(--border2);
+  background: var(--bg3);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  position: relative;
+  flex: 1;
+}
+
+.wave-sim__speed-btn:hover {
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
+.wave-sim__speed-btn--active {
+  background: var(--cyan-dim);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.wave-sim__speed-btn--tried {
+  border-color: var(--border2);
+}
+
+.wave-sim__tried-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+
+.wave-sim__freeze-btn {
+  background: var(--bg3);
+  border-color: var(--border2);
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.wave-sim__freeze-btn:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.wave-sim__freeze-btn--active {
+  background: var(--amber-dim);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* Readouts */
+.wave-sim__readouts {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.wave-sim__readout {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-3) var(--sp-3);
+  background: var(--bg4);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border2);
+}
+
+.wave-sim__readout--cyan   { border-color: var(--cyan); }
+.wave-sim__readout--purple { border-color: var(--purple); }
+.wave-sim__readout--amber  { border-color: var(--amber); }
+
+.wave-sim__readout-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wave-sim__readout-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.wave-sim__readout--cyan   .wave-sim__readout-value { color: var(--cyan); }
+.wave-sim__readout--purple .wave-sim__readout-value { color: var(--purple); }
+.wave-sim__readout--amber  .wave-sim__readout-value { color: var(--amber); }
+
+/* Equation display */
+.wave-sim__equation {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg4);
+  border-radius: var(--r);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.wave-sim__eq-part {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.wave-sim__eq-op {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.wave-sim__eq-sep {
+  width: 1px;
+  height: 24px;
+  background: var(--border2);
+  margin: 0 var(--sp-2);
+}
+
+.wave-sim__eq-values {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.wave-sim__eq-cyan   { color: var(--cyan); }
+.wave-sim__eq-purple { color: var(--purple); }
+.wave-sim__eq-amber  { color: var(--amber); }
+
+/* Hint */
+.wave-sim__hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+  text-align: center;
+}

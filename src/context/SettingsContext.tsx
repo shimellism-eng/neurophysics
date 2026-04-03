@@ -11,6 +11,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   sound: false,
   highContrast: false,
   timedQuestions: false,
+  haptics: true,
 };
 
 interface SettingsContextValue {

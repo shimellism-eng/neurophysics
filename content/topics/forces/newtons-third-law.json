@@ -1,0 +1,250 @@
+{
+  "id": "newtons-third-law",
+  "topicId": "forces",
+  "title": "Newton's Third Law",
+  "subtitle": "Every action has an equal and opposite reaction",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "You push a wall with 50 N of force. What force does the wall push back on you?",
+      "options": [
+        "0 N \u2014 the wall doesn\u2019t move",
+        "Less than 50 N",
+        "Exactly 50 N",
+        "More than 50 N"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Students often think the wall pushes back less (or not at all) because it doesn\u2019t move. Newton\u2019s Third Law: the wall pushes back with EXACTLY 50 N. The forces are equal and opposite, but act on DIFFERENT objects.",
+      "correctFeedback": "\u2713 Exactly right. The wall pushes back with 50 N. N3L pairs are always equal, opposite, same type, and act on different objects."
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Newton\u2019s Third Law",
+      "svgDiagram": "newtons-third",
+      "bodyHTML": "When object A pushes on object B, object B pushes back on A with an <strong>equal force in the opposite direction</strong>. These are called <strong>Newton\u2019s Third Law pairs</strong>. They are always the <strong>same type of force</strong>, <strong>same size</strong>, <strong>opposite direction</strong>, and act on <strong>different objects</strong>. They never cancel out because they act on different bodies.",
+      "keyWords": ["action-reaction", "equal and opposite", "Newton\u2019s Third Law pair", "interaction"],
+      "commonErrors": [
+        "Thinking N3L pairs cancel out (they act on DIFFERENT objects)",
+        "Confusing N3L pairs with balanced forces",
+        "Thinking the reaction force is smaller when an object doesn\u2019t move"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change force and mass. Watch how acceleration responds in real time.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "force", "label": "Force", "unit": "N",  "min": 2,  "max": 50, "default": 10, "color": "cyan",   "step": 1 },
+          { "id": "mass",  "label": "Mass",  "unit": "kg", "min": 1,  "max": 20, "default": 5,  "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "acceleration", "label": "Acceleration", "unit": "m/s\u00b2", "formula": "force / mass", "color": "amber", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "force",
+        "blockLabel": "m"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA style \u00b7 Newton\u2019s Third Law",
+          "marks": 3,
+          "questionText": "A swimmer pushes backward on the water with her feet. Use Newton\u2019s Third Law to explain how she moves forward.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the action force", "content": "The swimmer pushes backward on the water with her feet.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies the action force on the water" },
+            { "stepNum": 2, "label": "Apply Newton\u2019s Third Law", "content": "By Newton\u2019s Third Law, the water pushes back on the swimmer with an equal force in the opposite (forward) direction.", "equation": null, "markSchemeNote": "1 mark \u2014 states equal and opposite force on the swimmer" },
+            { "stepNum": 3, "label": "Explain the result", "content": "This forward force from the water on the swimmer causes her to accelerate forward.", "equation": null, "markSchemeNote": "1 mark \u2014 links the reaction force to forward motion" }
+          ],
+          "finalAnswer": "The water exerts an equal and opposite forward force on the swimmer, causing her to move forward.",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel style \u00b7 Newton\u2019s Third Law",
+          "marks": 3,
+          "questionText": "A person stands on the ground. Identify the Newton\u2019s Third Law pair for the person\u2019s weight.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the person\u2019s weight", "content": "The person\u2019s weight is the gravitational pull of the Earth on the person (downward).", "equation": null, "markSchemeNote": "1 mark \u2014 identifies weight as Earth pulling person" },
+            { "stepNum": 2, "label": "State the N3L pair", "content": "The N3L pair is the gravitational pull of the person on the Earth (upward).", "equation": null, "markSchemeNote": "1 mark \u2014 correct pair identified acting on the Earth" },
+            { "stepNum": 3, "label": "Confirm the pair properties", "content": "Both forces are gravitational, equal in size, opposite in direction, and act on different objects (person and Earth).", "equation": null, "markSchemeNote": "1 mark \u2014 states same type, equal size, different objects" }
+          ],
+          "finalAnswer": "The N3L pair is the gravitational pull of the person on the Earth \u2014 equal in size, opposite in direction, same type of force, acting on a different object.",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style \u00b7 Newton\u2019s Third Law",
+          "marks": 2,
+          "questionText": "A rocket expels hot gas downward. Use Newton\u2019s Third Law to explain why it moves upward.",
+          "steps": [
+            { "stepNum": 1, "label": "Identify the action force", "content": "The rocket pushes hot gas downward with a large force.", "equation": null, "markSchemeNote": "1 mark \u2014 identifies the force on the gas" },
+            { "stepNum": 2, "label": "Apply N3L", "content": "By Newton\u2019s Third Law, the gas pushes back on the rocket with an equal force in the upward direction, causing the rocket to accelerate upward.", "equation": null, "markSchemeNote": "1 mark \u2014 equal and opposite force on rocket causes upward motion" }
+          ],
+          "finalAnswer": "The gas exerts an equal and opposite upward force on the rocket, propelling it upward.",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style \u00b7 Newton\u2019s Third Law",
+          "marks": 3,
+          "questionText": "Two ice skaters push against each other. Skater A (60 kg) and Skater B (80 kg). If A pushes with 120 N, what force acts on A from B? Who accelerates more and why?",
+          "steps": [
+            { "stepNum": 1, "label": "Apply N3L for the force", "content": "By Newton\u2019s Third Law, skater B pushes back on skater A with exactly 120 N (equal and opposite).", "equation": "F on A from B = 120 N", "markSchemeNote": "1 mark \u2014 120 N by Newton\u2019s Third Law" },
+            { "stepNum": 2, "label": "Calculate accelerations", "content": "Using F = ma for each skater:", "equation": "a_A = 120 / 60 = 2.0 m/s\u00b2\na_B = 120 / 80 = 1.5 m/s\u00b2", "markSchemeNote": "1 mark \u2014 correct accelerations calculated" },
+            { "stepNum": 3, "label": "State who accelerates more", "content": "Skater A accelerates more because they have a smaller mass. The forces are equal (N3L), but the lighter skater gets a larger acceleration (N2L: a = F/m).", "equation": null, "markSchemeNote": "1 mark \u2014 correct reasoning linking N3L and N2L" }
+          ],
+          "finalAnswer": "120 N acts on A. Skater A accelerates more (2.0 m/s\u00b2 vs 1.5 m/s\u00b2) because same force but smaller mass.",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC style \u00b7 Newton\u2019s Third Law",
+          "marks": 2,
+          "questionText": "A ball hits a bat. The ball exerts 500 N on the bat. State the force the bat exerts on the ball.",
+          "steps": [
+            { "stepNum": 1, "label": "Apply N3L", "content": "By Newton\u2019s Third Law, the bat exerts a force of 500 N on the ball.", "equation": "F = 500 N", "markSchemeNote": "1 mark \u2014 correct force of 500 N" },
+            { "stepNum": 2, "label": "State direction", "content": "The force acts in the opposite direction to the force the ball exerts on the bat.", "equation": null, "markSchemeNote": "1 mark \u2014 opposite direction stated" }
+          ],
+          "finalAnswer": "500 N in the opposite direction.",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA style \u00b7 N3L practice",
+          "marks": 2,
+          "questionText": "A book sits on a table. The book pushes down on the table with 15 N. What is the force the table exerts on the book?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "0 N \u2014 the table is not alive so cannot push",    "correct": false },
+            { "label": "B", "text": "15 N upward",  "correct": true  },
+            { "label": "C", "text": "Less than 15 N upward", "correct": false },
+            { "label": "D", "text": "15 N downward", "correct": false }
+          ],
+          "markSchemeSteps": ["By N3L the table pushes back on the book", "Force = 15 N upward (equal and opposite) \u2713"],
+          "markSchemeAward": "1 mark correct size \u00b7 1 mark correct direction",
+          "commonMistake": "Option D is a trap \u2014 the reaction force must be in the OPPOSITE direction."
+        },
+        "edexcel": {
+          "source": "Edexcel style \u00b7 N3L practice",
+          "marks": 2,
+          "questionText": "A horse pulls a cart forward with 800 N. By Newton\u2019s Third Law, what force does the cart exert on the horse?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "800 N backward", "correct": true  },
+            { "label": "B", "text": "800 N forward",  "correct": false },
+            { "label": "C", "text": "0 N \u2014 the cart cannot pull", "correct": false },
+            { "label": "D", "text": "Less than 800 N because the cart is heavier", "correct": false }
+          ],
+          "markSchemeSteps": ["N3L: cart pulls back on horse with equal force", "800 N backward \u2713"],
+          "markSchemeAward": "1 mark correct size \u00b7 1 mark correct direction",
+          "commonMistake": "Option D reflects the misconception that heavier objects exert different N3L forces \u2014 they do not."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style \u00b7 N3L practice",
+          "marks": 2,
+          "questionText": "An astronaut in space throws a tool away from them. What happens to the astronaut and why?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "The astronaut moves in the opposite direction \u2014 the tool pushes back on them (N3L)", "correct": true },
+            { "label": "B", "text": "The astronaut stays still \u2014 there is no gravity in space", "correct": false },
+            { "label": "C", "text": "The astronaut moves in the same direction as the tool", "correct": false },
+            { "label": "D", "text": "Nothing happens \u2014 N3L only works on Earth", "correct": false }
+          ],
+          "markSchemeSteps": ["By N3L, the tool exerts an equal and opposite force on the astronaut", "The astronaut moves in the opposite direction to the tool \u2713"],
+          "markSchemeAward": "1 mark N3L stated \u00b7 1 mark correct direction of motion",
+          "commonMistake": "Option B wrongly links weightlessness with no forces \u2014 contact forces still produce N3L pairs in space."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style \u00b7 N3L practice",
+          "marks": 3,
+          "questionText": "Two magnets repel each other. Magnet A (mass 0.2 kg) and Magnet B (mass 0.5 kg) each experience a force of 4 N. Which magnet accelerates more?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Magnet A \u2014 smaller mass so larger acceleration (a = F/m = 20 m/s\u00b2)", "correct": true },
+            { "label": "B", "text": "Magnet B \u2014 larger mass means larger acceleration", "correct": false },
+            { "label": "C", "text": "Both accelerate equally \u2014 same force means same acceleration", "correct": false },
+            { "label": "D", "text": "Neither accelerates \u2014 the forces cancel out", "correct": false }
+          ],
+          "markSchemeSteps": ["N3L: both experience 4 N (equal and opposite)", "a_A = 4 / 0.2 = 20 m/s\u00b2; a_B = 4 / 0.5 = 8 m/s\u00b2", "Magnet A accelerates more \u2014 smaller mass \u2713"],
+          "markSchemeAward": "1 mark N3L forces equal \u00b7 1 mark correct accelerations \u00b7 1 mark correct reasoning",
+          "commonMistake": "Option D is a common error \u2014 the forces act on DIFFERENT objects so they do not cancel."
+        },
+        "wjec": {
+          "source": "WJEC style \u00b7 N3L practice",
+          "marks": 2,
+          "questionText": "A car tyre pushes backward on the road with 3000 N. What force does the road exert on the tyre?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "3000 N forward", "correct": true  },
+            { "label": "B", "text": "3000 N backward","correct": false },
+            { "label": "C", "text": "0 N \u2014 the road is stationary", "correct": false },
+            { "label": "D", "text": "More than 3000 N because the road is heavier", "correct": false }
+          ],
+          "markSchemeSteps": ["N3L: road pushes on tyre with equal and opposite force", "3000 N forward \u2713"],
+          "markSchemeAward": "1 mark correct size \u00b7 1 mark correct direction",
+          "commonMistake": "Option C wrongly assumes stationary objects cannot exert forces."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Newton\u2019s Third Law \u2014 force pairs",
+      "equation": {
+        "id": "newton-third",
+        "canonical": "F_A on B = \u2212F_B on A",
+        "variables": [
+          { "symbol": "F_A on B", "name": "Force of A on B",  "unit": "Newtons", "abbreviation": "N" },
+          { "symbol": "F_B on A", "name": "Force of B on A",  "unit": "Newtons", "abbreviation": "N" }
+        ],
+        "rearrangements": [
+          { "solveFor": "F_A on B", "formula": "F_A on B = \u2212F_B on A", "label": "Find force of A on B" },
+          { "solveFor": "F_B on A", "formula": "F_B on A = \u2212F_A on B", "label": "Find force of B on A" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "F_A on B", "color": "cyan"   },
+          "bottomLeft": { "symbol": "=",        "color": "grey"   },
+          "bottomRight":{ "symbol": "\u2212F_B on A","color": "amber"  }
+        },
+        "examTip": "Always state: equal in size, opposite in direction, same type, act on DIFFERENT objects. That\u2019s 4 marks in most boards.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa":         "Not on the formula sheet. State all four properties of N3L pairs for full marks: equal size, opposite direction, same type, different objects.",
+          "edexcel":     "Not on the equation sheet. Edexcel often asks you to \u2018identify the interaction pair\u2019 \u2014 name both forces and both objects.",
+          "ocr-gateway": "Not on the formula sheet. OCR Gateway frequently tests N3L in context of rockets and propulsion.",
+          "ocr-21c":     "Not on the formula sheet. OCR 21C likes combining N3L with N2L \u2014 expect to calculate accelerations of both objects.",
+          "wjec":        "Not on the formula sheet. WJEC questions often ask you to \u2018state\u2019 the reaction force \u2014 always include size AND direction."
+        }
+      }
+    }
+  ]
+}

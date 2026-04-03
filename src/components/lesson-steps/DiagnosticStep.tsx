@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { DiagnosticStep as DiagnosticStepType, BoardId } from '../../types/content';
+import { useHaptics } from '../../hooks/useHaptics';
 import { StepTag } from '../ui/StepTag';
 import './LessonStep.css';
 import './DiagnosticStep.css';
@@ -15,6 +16,7 @@ interface DiagnosticStepProps {
 export function DiagnosticStep({ step, onComplete, onLog }: DiagnosticStepProps) {
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
+  const { lightTap, errorBuzz } = useHaptics();
 
   function handleSelect(idx: number) {
     if (answered) return;
@@ -22,6 +24,7 @@ export function DiagnosticStep({ step, onComplete, onLog }: DiagnosticStepProps)
     setSelected(idx);
     setAnswered(true);
     onLog(idx, correct);
+    if (correct) lightTap(); else errorBuzz();
   }
 
   const correct = selected === step.correctIndex;

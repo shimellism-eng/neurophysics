@@ -1,0 +1,189 @@
+/* ============================================================
+   Practicals.css  —  BEM, 8pt grid, CSS token-aligned
+   ============================================================ */
+
+/* Header */
+.practicals__header {
+  margin-bottom: var(--sp-4);
+}
+
+.practicals__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--cyan), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--sp-1);
+}
+
+.practicals__subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Filter chips */
+.practicals__filters {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-5);
+}
+
+.practicals__chip {
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--bg3);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-transform: capitalize;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.practicals__chip--active {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
+.practicals__chip:active {
+  opacity: 0.75;
+}
+
+/* Topic groups */
+.practicals__group {
+  margin-bottom: var(--sp-6);
+}
+
+.practicals__group-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.practicals__group-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Practical cards */
+.practicals__card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: var(--sp-4);
+  margin-bottom: var(--sp-2);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.practicals__card:active {
+  border-color: var(--cyan);
+  background: var(--bg4);
+}
+
+.practicals__card--triple {
+  border-left: 3px solid var(--amber);
+}
+
+/* RP number badge */
+.practicals__rp-badge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-sm);
+  background: var(--cyan-dim);
+  border: 1.5px solid var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--cyan);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.practicals__card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.practicals__card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: var(--sp-1);
+  color: var(--text);
+}
+
+.practicals__card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.practicals__topic-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px var(--sp-2);
+  border-radius: 10px;
+  text-transform: capitalize;
+  background: var(--purple-dim);
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.practicals__topic-badge--energy     { background: var(--amber-dim);  color: var(--amber);  border-color: var(--amber);  }
+.practicals__topic-badge--electricity { background: var(--blue-dim);   color: var(--blue);   border-color: var(--blue);   }
+.practicals__topic-badge--forces      { background: var(--cyan-dim);   color: var(--cyan);   border-color: var(--cyan);   }
+.practicals__topic-badge--waves       { background: var(--purple-dim); color: var(--purple); border-color: var(--purple); }
+.practicals__topic-badge--particle-model { background: var(--green-dim); color: var(--green); border-color: var(--green); }
+
+.practicals__triple-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px var(--sp-2);
+  border-radius: 10px;
+  background: var(--amber-dim);
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  letter-spacing: 0.04em;
+}
+
+.practicals__card-arrow {
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: var(--muted);
+  align-self: center;
+  transition: transform 0.15s ease;
+}
+
+/* Empty state */
+.practicals__empty {
+  text-align: center;
+  padding: var(--sp-10) var(--sp-4);
+  color: var(--muted);
+  font-size: 0.9rem;
+}

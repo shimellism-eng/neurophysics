@@ -10,9 +10,16 @@
   border-radius: var(--r);
   overflow: hidden;
   min-height: 280px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sim-step__canvas svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .sim-loader {

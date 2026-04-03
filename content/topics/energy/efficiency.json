@@ -1,0 +1,528 @@
+{
+  "id": "efficiency",
+  "topicId": "energy",
+  "title": "Efficiency",
+  "subtitle": "Useful output ÷ total input",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "A light bulb is 20% efficient. What happens to the other 80% of the energy?",
+      "options": [
+        "It is destroyed",
+        "It is stored inside the bulb",
+        "It is transferred to thermal energy stores (wasted as heat)",
+        "It goes back to the power supply"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Common misconception! Energy is never destroyed. The 80% is not 'lost' - it is transferred to thermal energy stores of the bulb and surroundings. It is 'wasted' because it’s not useful light, but it still exists as thermal energy.",
+      "correctFeedback": "✓ Correct! The 80% is dissipated to thermal energy stores of the surroundings. It’s wasted because we wanted light, not heat. Energy is always conserved: the 'waste' energy still exists.",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.3: Energy and efficiency"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Efficiency",
+      "bodyHTML": "<strong>Efficiency</strong> is the proportion of input energy that is transferred to <strong>useful</strong> output energy stores. No device is 100% efficient, so some energy is always <strong>dissipated</strong> (wasted) to thermal energy stores of the surroundings. Efficiency can be expressed as a <strong>decimal</strong> (0 to 1) or a <strong>percentage</strong> (0% to 100%).",
+      "keyEquation": "efficiency = useful output energy ÷ total input energy",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "η",
+            "label": "Efficiency",
+            "unit": "decimal or %",
+            "color": "cyan"
+          },
+          {
+            "symbol": "Eout",
+            "label": "Useful output energy",
+            "unit": "J",
+            "color": "purple"
+          },
+          {
+            "symbol": "Ein",
+            "label": "Total input energy",
+            "unit": "J",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Efficiency is always less than 1 (or 100%)",
+          "Multiply decimal by 100 to get percentage",
+          "Can also use power: efficiency = useful power out ÷ total power in"
+        ]
+      },
+      "keyWords": [
+        "efficiency",
+        "useful energy",
+        "wasted energy",
+        "dissipated",
+        "thermal energy",
+        "percentage",
+        "decimal"
+      ],
+      "commonErrors": [
+        "Forgetting to multiply by 100 when the answer should be a percentage",
+        "Dividing total input by useful output (the fraction is upside down)",
+        "Giving an efficiency greater than 100% (impossible!)"
+      ],
+      "keyEquationTex": "\\eta = \\frac{E_{\\text{out}}}{E_{\\text{in}}}"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change the input energy and useful output. Watch how efficiency changes. Notice it can never exceed 100%.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "inputEnergy",
+            "label": "Input energy",
+            "unit": "J",
+            "min": 10,
+            "max": 500,
+            "default": 100,
+            "color": "amber",
+            "step": 10
+          },
+          {
+            "id": "usefulOutput",
+            "label": "Useful output",
+            "unit": "J",
+            "min": 0,
+            "max": 500,
+            "default": 40,
+            "color": "purple",
+            "step": 10
+          }
+        ],
+        "derived": [
+          {
+            "id": "efficiency",
+            "label": "Efficiency",
+            "unit": "%",
+            "formula": "(usefulOutput / inputEnergy) * 100",
+            "color": "cyan",
+            "decimalPlaces": 1
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "usefulOutput",
+        "blockLabel": "η"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 · Q2(c)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "2(c)",
+          "marks": 3,
+          "questionText": "A motor uses 500 J of energy. 350 J is transferred to useful kinetic energy. Calculate the efficiency of the motor. Give your answer as a percentage.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the efficiency equation:",
+              "equation": "efficiency = useful output / total input",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute values",
+              "content": "Useful output = 350 J, total input = 500 J:",
+              "equation": "efficiency = 350 / 500 = 0.70",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Convert to percentage",
+              "content": "Multiply by 100:",
+              "equation": "efficiency = 0.70 × 100 = 70%",
+              "markSchemeNote": "1 mark: correct percentage"
+            }
+          ],
+          "finalAnswer": "70%",
+          "finalAnswerUnit": "%",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q3(c)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(c)",
+          "marks": 2,
+          "questionText": "A light bulb receives 60 J of energy per second. It produces 9 J of useful light energy per second. Calculate the efficiency.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply efficiency equation",
+              "content": "efficiency = useful output / total input:",
+              "equation": "efficiency = 9 / 60 = 0.15 = 15%",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer"
+            }
+          ],
+          "finalAnswer": "15%",
+          "finalAnswerUnit": "%",
+          "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q4(c)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(c)",
+          "marks": 2,
+          "questionText": "A heater uses 2000 J of electrical energy. 1800 J is transferred to the thermal store of the room. Calculate the efficiency as a decimal.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply the equation",
+              "content": "efficiency = useful / total:",
+              "equation": "efficiency = 1800 / 2000 = 0.90",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer as decimal"
+            }
+          ],
+          "finalAnswer": "0.90",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q3(c)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "3(c)",
+          "marks": 3,
+          "questionText": "A washing machine uses 1200 J of energy. 840 J is used to turn the drum. Calculate the efficiency and the wasted energy.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Calculate efficiency",
+              "content": "efficiency = 840 / 1200:",
+              "equation": "efficiency = 0.70 = 70%",
+              "markSchemeNote": "1 mark: correct efficiency"
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate wasted energy",
+              "content": "Wasted = total − useful:",
+              "equation": "Wasted = 1200 − 840 = 360 J",
+              "markSchemeNote": "1 mark: correct wasted energy; 1 mark: unit"
+            }
+          ],
+          "finalAnswer": "70% efficient, 360 J wasted",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q3(c)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "3(c)",
+          "marks": 2,
+          "questionText": "An LED uses 10 J of energy and produces 4 J of useful light. Calculate the efficiency as a percentage.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply the equation",
+              "content": "efficiency = 4 / 10 = 0.40 = 40%",
+              "equation": null,
+              "markSchemeNote": "1 mark: calculation; 1 mark: correct percentage"
+            }
+          ],
+          "finalAnswer": "40%",
+          "finalAnswerUnit": "%",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 · Q2(d)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "2(d)",
+          "marks": 2,
+          "questionText": "A kettle uses 240 000 J. It transfers 204 000 J to the water. What is the efficiency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "117%",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "85%",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "15%",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "36 000%",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "efficiency = 204 000 / 240 000 = 0.85 = 85%"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct percentage",
+          "commonMistake": "Option A divides input by output (upside down). Efficiency can never exceed 100%."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q4(c)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(c)",
+          "marks": 2,
+          "questionText": "A motor transfers 800 J of energy. 200 J is wasted. What is the efficiency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "25%",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "75%",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "600%",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "80%",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Useful = 800 − 200 = 600 J",
+            "efficiency = 600 / 800 = 0.75 = 75%"
+          ],
+          "markSchemeAward": "1 mark finding useful output · 1 mark correct efficiency",
+          "commonMistake": "Option A divides wasted by total. You must first find the useful output (total − wasted)."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q3(c)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(c)",
+          "marks": 2,
+          "questionText": "A microwave uses 1000 J and produces 650 J of useful energy. What is the efficiency as a decimal?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.35",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.65",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "1.54",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "6.5",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "efficiency = 650 / 1000 = 0.65"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct decimal"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q2(c)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "2(c)",
+          "marks": 2,
+          "questionText": "A fan uses 50 J and 30 J moves the air. What is the efficiency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "40%",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "60%",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "167%",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "20%",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "efficiency = 30 / 50 = 0.60 = 60%"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q3(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 2,
+          "questionText": "A solar panel receives 4000 J and converts 600 J to electricity. What is the efficiency?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "85%",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "15%",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "6.7%",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "66%",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "efficiency = 600 / 4000 = 0.15 = 15%"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct percentage"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Efficiency: all forms",
+      "equation": {
+        "id": "efficiency",
+        "canonical": "efficiency = useful output energy transfer ÷ total input energy transfer",
+        "variables": [
+          {
+            "symbol": "η",
+            "name": "Efficiency",
+            "unit": "decimal or percentage",
+            "abbreviation": "%"
+          },
+          {
+            "symbol": "Eout",
+            "name": "Useful output energy",
+            "unit": "joules",
+            "abbreviation": "J"
+          },
+          {
+            "symbol": "Ein",
+            "name": "Total input energy",
+            "unit": "joules",
+            "abbreviation": "J"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "η",
+            "formula": "η = useful output / total input",
+            "label": "Find efficiency"
+          },
+          {
+            "solveFor": "Eout",
+            "formula": "Eout = η × Ein",
+            "label": "Find useful output"
+          },
+          {
+            "solveFor": "Ein",
+            "formula": "Ein = Eout / η",
+            "label": "Find total input"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "Eout",
+            "color": "purple",
+            "tex": "E_{out}"
+          },
+          "bottomLeft": {
+            "symbol": "η",
+            "color": "cyan",
+            "tex": "\\eta"
+          },
+          "bottomRight": {
+            "symbol": "Ein",
+            "color": "amber",
+            "tex": "E_{in}"
+          }
+        },
+        "examTip": "Check whether the question asks for a decimal or a percentage. If percentage, multiply by 100. Efficiency can NEVER be more than 1 (or 100%).",
+        "onFormulaSheet": {
+          "aqa": false,
+          "edexcel": false,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "NOT on formula sheet, must be memorised. Can also use power instead of energy.",
+          "edexcel": "Must be memorised. Edexcel may give wasted energy and ask you to find useful first.",
+          "ocr-gateway": "Must be memorised. Often combined with energy transfer diagrams.",
+          "ocr-21c": "Must be memorised. May be tested in context of renewable energy sources.",
+          "wjec": "Must be memorised. WJEC often asks for both decimal and percentage forms."
+        }
+      }
+    }
+  ]
+}

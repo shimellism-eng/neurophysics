@@ -12,8 +12,17 @@ export function EquationBank() {
   const boardId = (progress?.board ?? 'aqa') as BoardId;
 
   useEffect(() => {
-    import('../../content/equations/forces.json')
-      .then(mod => setEquations((mod.default as any).equations as Equation[]))
+    Promise.all([
+      import('../../content/equations/forces.json'),
+      import('../../content/equations/electricity.json'),
+    ])
+      .then(([forcesMod, electricityMod]) => {
+        const all = [
+          ...((forcesMod.default as any).equations as Equation[]),
+          ...((electricityMod.default as any).equations as Equation[]),
+        ];
+        setEquations(all);
+      })
       .catch(console.error);
   }, []);
 
@@ -37,7 +46,7 @@ export function EquationBank() {
                   <span className="eqbank__name">{eq.name}</span>
                 </div>
                 <div className="eqbank__row-right">
-                  {!onSheet && <span className="eqbank__memorise">⚠️</span>}
+                  {!onSheet && <span className="eqbank__memorise" aria-label="Must memorise">⚠️</span>}
                   {eq.higherOnly && <span className="badge eqbank__higher">H</span>}
                   <span className={`eqbank__chevron ${isOpen ? 'eqbank__chevron--open' : ''}`}>›</span>
                 </div>
@@ -66,7 +75,7 @@ export function EquationBank() {
 
                   {!onSheet && (
                     <p className="eqbank__memorise-note">
-                      ⚠️ Not on {boardId.toUpperCase()} formula sheet — must memorise
+                      ⚠️ Not on {boardId.toUpperCase()} formula sheet, must memorise
                     </p>
                   )}
                 </div>

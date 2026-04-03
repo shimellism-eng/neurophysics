@@ -1,0 +1,167 @@
+{
+  "board": "edexcel",
+  "year": 2021,
+  "paper": 1,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "edexcel-2021-p1-q1c",
+      "number": "1(c)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A space probe travels through deep space at 15 000 m/s with its engines off. Explain why it continues to travel at this speed.",
+      "markScheme": {
+        "answer": "In deep space there is no friction or air resistance. The resultant force on the probe is zero. By Newton's first law, an object with zero resultant force continues at constant velocity.",
+        "steps": [
+          { "mark": 1, "description": "No friction / air resistance in deep space" },
+          { "mark": 2, "description": "Resultant force is zero" },
+          { "mark": 3, "description": "By Newton's first law, it maintains constant velocity" }
+        ],
+        "commonErrors": [
+          "Saying the engines keep it moving",
+          "Saying there is no gravity in space"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2021-p1-q2b",
+      "number": "2(b)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A go-kart and driver have a combined mass of 180 kg. The engine provides a driving force of 900 N. Friction is 180 N. Calculate the acceleration of the go-kart.",
+      "markScheme": {
+        "answer": "4.0 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Resultant force = 900 - 180 = 720 N" },
+          { "mark": 2, "description": "Recalls a = F/m" },
+          { "mark": 3, "description": "Substitutes: a = 720 / 180" },
+          { "mark": 4, "description": "Correct answer: 4.0 m/s\u00b2" }
+        ],
+        "commonErrors": [
+          "Using 900 N without subtracting friction",
+          "Dividing mass by force"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2021-p1-q4a",
+      "number": "4(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "Which row correctly describes mass and weight?",
+      "options": ["Mass is measured in N, weight is measured in kg", "Mass is a force, weight is not a force", "Mass does not change with location, weight does", "Mass depends on gravity, weight does not"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "Mass does not change with location, weight does",
+        "steps": [
+          { "mark": 1, "description": "Identifies mass is constant" },
+          { "mark": 2, "description": "Identifies weight changes with gravitational field strength" }
+        ],
+        "commonErrors": [
+          "Confusing mass and weight definitions"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2021-p1-q5b",
+      "number": "5(b)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "An aeroplane has a weight of 50 000 N. The lift force is 54 000 N. Calculate the resultant vertical force and state the direction the plane will accelerate.",
+      "markScheme": {
+        "answer": "4000 N upwards",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Resultant = 54 000 - 50 000 = 4000 N" },
+          { "mark": 2, "description": "Direction: upwards (lift > weight)" },
+          { "mark": 3, "description": "The plane accelerates upwards" }
+        ],
+        "commonErrors": [
+          "Adding lift and weight together",
+          "Stating the wrong direction"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "edexcel-2021-p1-q6c",
+      "number": "6(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 2.0 kg trolley moving at 3.0 m/s collides with a stationary 1.0 kg trolley. After the collision, the 2.0 kg trolley moves at 1.0 m/s. Calculate the velocity of the 1.0 kg trolley after the collision.",
+      "markScheme": {
+        "answer": "4.0 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum before = 2.0 \u00d7 3.0 + 1.0 \u00d7 0 = 6.0 kg m/s" },
+          { "mark": 2, "description": "Momentum after of 2.0 kg trolley = 2.0 \u00d7 1.0 = 2.0 kg m/s" },
+          { "mark": 3, "description": "By conservation: 6.0 = 2.0 + (1.0 \u00d7 v)" },
+          { "mark": 4, "description": "1.0 \u00d7 v = 4.0" },
+          { "mark": 5, "description": "v = 4.0 m/s" }
+        ],
+        "commonErrors": [
+          "Not applying conservation of momentum correctly",
+          "Forgetting the momentum of the first trolley after collision"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "edexcel-2021-p1-q7b",
+      "number": "7(b)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A tractor pulls a plough with a force of 4500 N over a distance of 200 m. Calculate the work done by the tractor.",
+      "markScheme": {
+        "answer": "900 000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = Fs" },
+          { "mark": 2, "description": "Substitutes: W = 4500 \u00d7 200" },
+          { "mark": 3, "description": "Correct answer: 900 000 J" }
+        ],
+        "allowedAlternatives": ["900 kJ"],
+        "commonErrors": [
+          "Errors in dealing with large numbers",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

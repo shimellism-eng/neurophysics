@@ -1,0 +1,262 @@
+{
+  "id": "transverse-and-longitudinal",
+  "topicId": "waves",
+  "title": "Transverse & Longitudinal Waves",
+  "subtitle": "Two types of wave",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true, "edexcel": true, "ocr-gateway": true, "ocr-21c": true, "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Sound travels through the air. What type of wave is a sound wave?",
+      "options": [
+        "Transverse",
+        "Longitudinal",
+        "Electromagnetic",
+        "It depends on the volume"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Many students think sound is transverse because textbook diagrams show a wavy line. Sound is actually longitudinal \u2014 the air molecules vibrate back and forth parallel to the direction the wave travels, creating compressions and rarefactions.",
+      "correctFeedback": "\u2713 Correct! Sound is a longitudinal wave. The air particles vibrate parallel to the direction of energy transfer, forming compressions (particles close together) and rarefactions (particles spread apart).",
+      "bestSource": "BEST resource: AQA Physics specification 6.1.1 \u2014 Wave behaviour"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Transverse & Longitudinal Waves",
+      "bodyHTML": "All waves transfer <strong>energy</strong> without transferring <strong>matter</strong>. In a <strong>transverse wave</strong>, the oscillations are <strong>perpendicular</strong> (at right angles) to the direction of energy transfer \u2014 like shaking a slinky side to side, or ripples on water. In a <strong>longitudinal wave</strong>, the oscillations are <strong>parallel</strong> to the direction of energy transfer \u2014 like pushing a slinky back and forth. Longitudinal waves have <strong>compressions</strong> (particles squeezed together) and <strong>rarefactions</strong> (particles spread apart).",
+      "keyEquation": null,
+      "diagram": {
+        "type": "comparison",
+        "variables": [
+          { "symbol": "T", "label": "Transverse", "unit": "perpendicular oscillation", "color": "cyan" },
+          { "symbol": "L", "label": "Longitudinal", "unit": "parallel oscillation", "color": "purple" }
+        ],
+        "relationships": [
+          "Transverse: oscillation \u27c2 direction of travel",
+          "Longitudinal: oscillation \u2225 direction of travel",
+          "Both transfer energy, not matter"
+        ]
+      },
+      "keyWords": ["transverse", "longitudinal", "oscillation", "compression", "rarefaction", "perpendicular", "parallel"],
+      "commonErrors": [
+        "Saying sound is a transverse wave",
+        "Forgetting that waves transfer energy, not matter",
+        "Confusing compressions with rarefactions"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change frequency and amplitude. Watch how particles move in transverse and longitudinal waves.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "frequency", "label": "Frequency", "unit": "Hz", "min": 1, "max": 10, "default": 3, "color": "cyan", "step": 1 },
+          { "id": "amplitude", "label": "Amplitude", "unit": "cm", "min": 1, "max": 10, "default": 5, "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "period", "label": "Period", "unit": "s", "formula": "1 / frequency", "color": "amber", "decimalPlaces": 2 }
+        ],
+        "visualType": "wave",
+        "arrowVariable": "frequency",
+        "blockLabel": "wave"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2022 Paper 2 \u00b7 Q5(a)",
+          "year": 2022, "paper": 2, "questionNumber": "5(a)", "marks": 3,
+          "questionText": "Describe the difference between a transverse wave and a longitudinal wave. Give one example of each.",
+          "steps": [
+            { "stepNum": 1, "label": "Define transverse", "content": "In a transverse wave, the oscillations are perpendicular to the direction of energy transfer.", "equation": null, "markSchemeNote": "1 mark \u2014 perpendicular oscillation stated" },
+            { "stepNum": 2, "label": "Define longitudinal", "content": "In a longitudinal wave, the oscillations are parallel to the direction of energy transfer.", "equation": null, "markSchemeNote": "1 mark \u2014 parallel oscillation stated" },
+            { "stepNum": 3, "label": "Give examples", "content": "Transverse: light (or water waves, S-waves).\nLongitudinal: sound (or ultrasound, P-waves).", "equation": null, "markSchemeNote": "1 mark \u2014 one correct example for each" }
+          ],
+          "finalAnswer": "Transverse \u2014 perpendicular oscillations (e.g. light). Longitudinal \u2014 parallel oscillations (e.g. sound).",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 \u00b7 Q3(a)",
+          "year": 2023, "paper": 1, "questionNumber": "3(a)", "marks": 2,
+          "questionText": "Explain why sound cannot travel through a vacuum but light can.",
+          "steps": [
+            { "stepNum": 1, "label": "Sound needs a medium", "content": "Sound is a longitudinal wave that requires particles to vibrate \u2014 it needs a medium (solid, liquid or gas).", "equation": null, "markSchemeNote": "1 mark \u2014 sound needs a medium / particles" },
+            { "stepNum": 2, "label": "Light is electromagnetic", "content": "Light is a transverse electromagnetic wave that can travel through a vacuum \u2014 it does not need particles.", "equation": null, "markSchemeNote": "1 mark \u2014 EM waves do not need a medium" }
+          ],
+          "finalAnswer": "Sound needs particles to travel (mechanical wave); light is electromagnetic and does not need a medium.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 \u00b7 Q4(a)",
+          "year": 2022, "paper": 1, "questionNumber": "4(a)", "marks": 2,
+          "questionText": "State what is meant by a longitudinal wave.",
+          "steps": [
+            { "stepNum": 1, "label": "Define longitudinal wave", "content": "A wave where the oscillations (vibrations) are parallel to the direction of energy transfer.", "equation": null, "markSchemeNote": "1 mark \u2014 oscillations parallel" },
+            { "stepNum": 2, "label": "Mention compressions and rarefactions", "content": "It consists of a series of compressions and rarefactions.", "equation": null, "markSchemeNote": "1 mark \u2014 compressions and rarefactions mentioned" }
+          ],
+          "finalAnswer": "Oscillations parallel to direction of energy transfer, with compressions and rarefactions.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 \u00b7 Q2(a)",
+          "year": 2022, "paper": 3, "questionNumber": "2(a)", "marks": 2,
+          "questionText": "Give two differences between transverse and longitudinal waves.",
+          "steps": [
+            { "stepNum": 1, "label": "First difference", "content": "Transverse: oscillations perpendicular to direction of travel. Longitudinal: oscillations parallel.", "equation": null, "markSchemeNote": "1 mark \u2014 direction of oscillation stated" },
+            { "stepNum": 2, "label": "Second difference", "content": "Longitudinal waves have compressions and rarefactions; transverse waves have crests and troughs.", "equation": null, "markSchemeNote": "1 mark \u2014 second valid difference" }
+          ],
+          "finalAnswer": "Oscillation direction (perpendicular vs parallel) and features (crests/troughs vs compressions/rarefactions).",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 \u00b7 Q5(a)",
+          "year": 2022, "paper": 1, "questionNumber": "5(a)", "marks": 2,
+          "questionText": "Name the type of wave where oscillations are at right angles to the direction of energy transfer. Give one example.",
+          "steps": [
+            { "stepNum": 1, "label": "Name the wave type", "content": "Transverse wave.", "equation": null, "markSchemeNote": "1 mark \u2014 transverse" },
+            { "stepNum": 2, "label": "Give an example", "content": "Light, water waves, or S-waves.", "equation": null, "markSchemeNote": "1 mark \u2014 correct example" }
+          ],
+          "finalAnswer": "Transverse wave, e.g. light.",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 \u00b7 Q4(a)",
+          "year": 2023, "paper": 2, "questionNumber": "4(a)", "marks": 1,
+          "questionText": "Which of the following is a longitudinal wave?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Light", "correct": false },
+            { "label": "B", "text": "Sound", "correct": true },
+            { "label": "C", "text": "Water ripples", "correct": false },
+            { "label": "D", "text": "Radio waves", "correct": false }
+          ],
+          "markSchemeSteps": ["Sound is longitudinal \u2014 particles vibrate parallel to direction of travel \u2713"],
+          "markSchemeAward": "1 mark correct answer",
+          "commonMistake": "Water ripples look like they push forward, but they are transverse \u2014 the water moves up and down."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 \u00b7 Q3(b)",
+          "year": 2022, "paper": 1, "questionNumber": "3(b)", "marks": 1,
+          "questionText": "Which of the following correctly describes a transverse wave?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Oscillations are parallel to the direction of energy transfer", "correct": false },
+            { "label": "B", "text": "Oscillations are perpendicular to the direction of energy transfer", "correct": true },
+            { "label": "C", "text": "The wave can only travel through solids", "correct": false },
+            { "label": "D", "text": "The wave has compressions and rarefactions", "correct": false }
+          ],
+          "markSchemeSteps": ["Transverse \u2014 oscillations perpendicular to energy transfer \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 \u00b7 Q4(b)",
+          "year": 2023, "paper": 1, "questionNumber": "4(b)", "marks": 1,
+          "questionText": "A sound wave travels through air. In which direction do the air particles vibrate?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "At right angles to the wave direction", "correct": false },
+            { "label": "B", "text": "In circles around the wave direction", "correct": false },
+            { "label": "C", "text": "Parallel to the wave direction", "correct": true },
+            { "label": "D", "text": "They do not vibrate", "correct": false }
+          ],
+          "markSchemeSteps": ["Sound is longitudinal \u2014 vibrations parallel to direction of travel \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 \u00b7 Q1(a)",
+          "year": 2023, "paper": 3, "questionNumber": "1(a)", "marks": 1,
+          "questionText": "Which of the following is an example of a transverse wave?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Sound", "correct": false },
+            { "label": "B", "text": "Ultrasound", "correct": false },
+            { "label": "C", "text": "Light", "correct": true },
+            { "label": "D", "text": "P-waves", "correct": false }
+          ],
+          "markSchemeSteps": ["Light is electromagnetic and transverse \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 \u00b7 Q5(b)",
+          "year": 2023, "paper": 1, "questionNumber": "5(b)", "marks": 1,
+          "questionText": "What features are found in longitudinal waves but NOT in transverse waves?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Crests and troughs", "correct": false },
+            { "label": "B", "text": "Compressions and rarefactions", "correct": true },
+            { "label": "C", "text": "Amplitude and frequency", "correct": false },
+            { "label": "D", "text": "Wavelength and period", "correct": false }
+          ],
+          "markSchemeSteps": ["Compressions and rarefactions are unique to longitudinal waves \u2713"],
+          "markSchemeAward": "1 mark correct answer"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Transverse vs Longitudinal \u2014 Key facts",
+      "equation": {
+        "id": "wave-types",
+        "canonical": "Transverse: oscillation \u27c2 travel \u00b7 Longitudinal: oscillation \u2225 travel",
+        "variables": [
+          { "symbol": "T", "name": "Transverse", "unit": "perpendicular oscillation", "abbreviation": "\u27c2" },
+          { "symbol": "L", "name": "Longitudinal", "unit": "parallel oscillation", "abbreviation": "\u2225" }
+        ],
+        "rearrangements": [
+          { "solveFor": "T", "formula": "Examples: light, water, S-waves", "label": "Transverse examples" },
+          { "solveFor": "L", "formula": "Examples: sound, ultrasound, P-waves", "label": "Longitudinal examples" }
+        ],
+        "triangleLayout": {
+          "top": { "symbol": "T", "color": "cyan" },
+          "bottomLeft": { "symbol": "L", "color": "purple" },
+          "bottomRight": { "symbol": "E", "color": "amber" }
+        },
+        "examTip": "If the exam says 'mechanical wave', it means the wave needs a medium. Sound is mechanical. Light is NOT \u2014 it is electromagnetic.",
+        "onFormulaSheet": {
+          "aqa": false, "edexcel": false, "ocr-gateway": false, "ocr-21c": false, "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "Must know examples of each type. Common 1\u20132 mark question.",
+          "edexcel": "Often tested with a diagram \u2014 label the oscillation direction.",
+          "ocr-gateway": "Know compressions and rarefactions for longitudinal waves.",
+          "ocr-21c": "Link to seismic waves \u2014 P-waves (longitudinal) and S-waves (transverse).",
+          "wjec": "Describe using the words perpendicular and parallel for full marks."
+        }
+      }
+    }
+  ]
+}

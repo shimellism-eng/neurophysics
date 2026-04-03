@@ -1,0 +1,534 @@
+{
+  "id": "elastic-pe",
+  "topicId": "energy",
+  "title": "Elastic Potential Energy",
+  "subtitle": "Ee = ½ke²",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "A spring is stretched by 2 cm, then stretched to 4 cm (double the extension). How does the elastic potential energy change?",
+      "options": [
+        "It doubles",
+        "It quadruples",
+        "It stays the same",
+        "It halves"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "⚠️ Common misconception! Because extension is squared in Ee = ½ke², doubling the extension means the elastic PE is multiplied by 2² = 4. Extension has a much bigger effect than you might expect.",
+      "correctFeedback": "✓ Correct! Because e is squared in the equation, doubling the extension quadruples the energy stored. This is the same squaring pattern as in kinetic energy (v²).",
+      "bestSource": "BEST resource: AQA GCSE Physics specification 4.1.1.4: Elastic potential energy"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Elastic Potential Energy",
+      "bodyHTML": "When a spring (or any elastic object) is <strong>stretched or compressed</strong>, energy is stored in its <strong>elastic potential energy store</strong>. This only applies within the <strong>limit of proportionality</strong> - if you stretch too far, the spring deforms permanently and the equation no longer applies. The energy depends on the <strong>spring constant</strong> (stiffness) and the <strong>extension</strong> (how much it has stretched).",
+      "keyEquation": "Ee = ½ × k × e²",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "Ee",
+            "label": "Elastic PE",
+            "unit": "J",
+            "color": "cyan"
+          },
+          {
+            "symbol": "k",
+            "label": "Spring constant",
+            "unit": "N/m",
+            "color": "purple"
+          },
+          {
+            "symbol": "e",
+            "label": "Extension",
+            "unit": "m",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "Bigger k (stiffer spring) → more Ee",
+          "Bigger e → much more Ee (e is squared!)",
+          "Only valid within the limit of proportionality"
+        ]
+      },
+      "keyWords": [
+        "elastic potential energy",
+        "spring constant",
+        "extension",
+        "limit of proportionality",
+        "Hooke’s Law"
+      ],
+      "commonErrors": [
+        "Forgetting to square the extension",
+        "Forgetting the ½ in the equation",
+        "Not converting cm to m for extension",
+        "Using the equation beyond the limit of proportionality"
+      ],
+      "keyEquationTex": "E_e = \\frac{1}{2}ke^2"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change the spring constant and extension. Watch how elastic PE responds. Notice how extension has a much bigger effect.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "springConstant",
+            "label": "Spring constant",
+            "unit": "N/m",
+            "min": 10,
+            "max": 200,
+            "default": 50,
+            "color": "purple",
+            "step": 10
+          },
+          {
+            "id": "extension",
+            "label": "Extension",
+            "unit": "m",
+            "min": 0,
+            "max": 1,
+            "default": 0.2,
+            "color": "amber",
+            "step": 0.05
+          }
+        ],
+        "derived": [
+          {
+            "id": "epe",
+            "label": "Elastic PE",
+            "unit": "J",
+            "formula": "0.5 * springConstant * extension * extension",
+            "color": "cyan",
+            "decimalPlaces": 2
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "extension",
+        "blockLabel": "k"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 · Q6(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 3,
+          "questionText": "A spring has a spring constant of 40 N/m. It is stretched by 0.15 m. Calculate the elastic potential energy stored.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the elastic PE equation:",
+              "equation": "Ee = ½ × k × e²",
+              "markSchemeNote": "1 mark: correct equation"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute values",
+              "content": "k = 40 N/m, e = 0.15 m:",
+              "equation": "Ee = ½ × 40 × 0.15²",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate",
+              "content": "Square extension first: 0.15² = 0.0225, then multiply:",
+              "equation": "Ee = ½ × 40 × 0.0225 = 0.45 J",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "0.45 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q5(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(b)",
+          "marks": 3,
+          "questionText": "A spring with spring constant 80 N/m is compressed by 0.10 m. Calculate the elastic potential energy stored.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "Ee = ½ × k × e²",
+              "equation": null,
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute and calculate",
+              "content": "k = 80 N/m, e = 0.10 m:",
+              "equation": "Ee = ½ × 80 × 0.01 = 0.40 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "0.40 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 1 · Q7(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "7(a)",
+          "marks": 2,
+          "questionText": "A spring (k = 120 N/m) is extended by 0.05 m. Calculate the elastic PE stored.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply the equation",
+              "content": "Ee = ½ × k × e²:",
+              "equation": "Ee = ½ × 120 × 0.0025 = 0.15 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "0.15 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q6(a)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "6(a)",
+          "marks": 3,
+          "questionText": "A bungee cord has a spring constant of 60 N/m. It stretches by 0.30 m. Calculate the elastic PE stored.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State equation",
+              "content": "Ee = ½ × k × e²",
+              "equation": null,
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate",
+              "content": "k = 60, e = 0.30:",
+              "equation": "Ee = ½ × 60 × 0.09 = 2.7 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "2.7 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 1 · Q6(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "A spring (k = 100 N/m) is stretched by 0.08 m. Calculate the elastic PE.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply Ee = ½ke²",
+              "content": "Substitute directly:",
+              "equation": "Ee = ½ × 100 × 0.0064 = 0.32 J",
+              "markSchemeNote": "1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "0.32 J",
+          "finalAnswerUnit": "J",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 · Q6(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(b)",
+          "marks": 3,
+          "questionText": "A spring has a spring constant of 200 N/m and is stretched by 0.10 m. Calculate the elastic PE stored.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "10 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "1.0 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "2.0 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "20 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ee = ½ × k × e²",
+            "Ee = ½ × 200 × 0.01",
+            "Ee = 1.0 J"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option C forgets the ½. Option A forgets to square the extension."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q6(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "A spring (k = 50 N/m) is stretched by 0.20 m. Calculate the elastic PE.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "5.0 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "1.0 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "2.0 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "0.50 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ee = ½ × 50 × 0.04 = 1.0 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 1 · Q6(b)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "6(b)",
+          "marks": 2,
+          "questionText": "A spring (k = 150 N/m) is compressed by 0.04 m. Calculate the elastic PE stored.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.12 J",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "3.0 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "0.24 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "6.0 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ee = ½ × 150 × 0.0016 = 0.12 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q5(b)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "5(b)",
+          "marks": 2,
+          "questionText": "A spring (k = 80 N/m) stretches by 0.25 m. Calculate the elastic PE stored.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "10 J",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "2.5 J",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "5.0 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "1.0 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ee = ½ × 80 × 0.0625 = 2.5 J"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 1 · Q5(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "A spring (k = 60 N/m) is stretched by 0.12 m. Calculate the elastic PE.",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.43 J",
+              "correct": true
+            },
+            {
+              "label": "B",
+              "text": "3.6 J",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "0.86 J",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "7.2 J",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "Ee = ½ × 60 × 0.0144 = 0.432 J (accept 0.43 J)"
+          ],
+          "markSchemeAward": "1 mark substitution · 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Ee = ½ke²: all rearrangements",
+      "equation": {
+        "id": "elastic-pe",
+        "canonical": "Ee = ½ × k × e²",
+        "variables": [
+          {
+            "symbol": "Ee",
+            "name": "Elastic PE",
+            "unit": "joules",
+            "abbreviation": "J"
+          },
+          {
+            "symbol": "k",
+            "name": "Spring constant",
+            "unit": "newtons/metre",
+            "abbreviation": "N/m"
+          },
+          {
+            "symbol": "e",
+            "name": "Extension",
+            "unit": "metres",
+            "abbreviation": "m"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "Ee",
+            "formula": "Ee = ½ × k × e²",
+            "label": "Find elastic PE"
+          },
+          {
+            "solveFor": "k",
+            "formula": "k = 2Ee / e²",
+            "label": "Find spring constant"
+          },
+          {
+            "solveFor": "e",
+            "formula": "e = √(2Ee / k)",
+            "label": "Find extension"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "Ee",
+            "color": "cyan",
+            "tex": "E_e"
+          },
+          "bottomLeft": {
+            "symbol": "½k",
+            "color": "purple",
+            "tex": "\\tfrac{1}{2}k"
+          },
+          "bottomRight": {
+            "symbol": "e²",
+            "color": "amber",
+            "tex": "e^2"
+          }
+        },
+        "examTip": "Always convert extension from cm to m before substituting. And remember. this equation only applies within the limit of proportionality.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Applies only within the limit of proportionality.",
+          "edexcel": "On Edexcel equation sheet. Must convert extension to metres.",
+          "ocr-gateway": "NOT on formula sheet, must be memorised. ⚠️",
+          "ocr-21c": "NOT on formula sheet, must be memorised. ⚠️",
+          "wjec": "Provided in WJEC exam. Remember the ½ and the squared term."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "board": "aqa",
+  "year": 2020,
+  "paper": 2,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "aqa-2020-p2-q1b",
+      "number": "1(b)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A boat is driven forward by a force of 800 N from its engine. Water resistance provides a force of 350 N. Calculate the resultant force on the boat.",
+      "markScheme": {
+        "answer": "450 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Identifies forces act in opposite directions" },
+          { "mark": 2, "description": "Subtracts: 800 - 350" },
+          { "mark": 3, "description": "Correct answer: 450 N (forward)" }
+        ],
+        "commonErrors": [
+          "Adding the forces instead of subtracting",
+          "Not stating the direction of the resultant"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "aqa-2020-p2-q2a",
+      "number": "2(a)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A van of mass 3000 kg accelerates uniformly from 5 m/s to 20 m/s in 10 seconds. Calculate the resultant force acting on the van.",
+      "markScheme": {
+        "answer": "4500 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Calculates change in velocity: 20 - 5 = 15 m/s" },
+          { "mark": 2, "description": "Calculates acceleration: a = 15 / 10 = 1.5 m/s\u00b2" },
+          { "mark": 3, "description": "Recalls F = ma" },
+          { "mark": 4, "description": "Substitutes: F = 3000 \u00d7 1.5" },
+          { "mark": 5, "description": "Correct answer: 4500 N" }
+        ],
+        "allowedAlternatives": ["4.5 kN"],
+        "commonErrors": [
+          "Using final velocity instead of change in velocity for acceleration",
+          "Forgetting to divide by time to find acceleration"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2020-p2-q3c",
+      "number": "3(c)",
+      "topic": "forces",
+      "concept": "newtons-first-law",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A skydiver falls at a constant (terminal) velocity. Which statement about the forces is correct?",
+      "options": ["Weight is greater than air resistance", "Air resistance is greater than weight", "Weight equals air resistance", "There are no forces acting on the skydiver"],
+      "correctIndex": 2,
+      "markScheme": {
+        "answer": "Weight equals air resistance",
+        "steps": [
+          { "mark": 1, "description": "Identifies forces are balanced" },
+          { "mark": 2, "description": "Correct selection: weight equals air resistance" }
+        ],
+        "commonErrors": [
+          "Thinking constant velocity means no forces act",
+          "Thinking weight must be greater because the skydiver is falling"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2020-p2-q4b",
+      "number": "4(b)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 60 kg ice skater standing still pushes a 40 kg ice skater. After the push, the 40 kg skater moves at 3.0 m/s. Using the conservation of momentum, calculate the velocity of the 60 kg skater after the push.",
+      "markScheme": {
+        "answer": "-2.0 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Total momentum before = 0 (both stationary)" },
+          { "mark": 2, "description": "By conservation: total momentum after = 0" },
+          { "mark": 3, "description": "Momentum of 40 kg skater = 40 \u00d7 3.0 = 120 kg m/s" },
+          { "mark": 4, "description": "60 \u00d7 v = -120, so v = -120 / 60" },
+          { "mark": 5, "description": "Correct answer: -2.0 m/s (opposite direction)" }
+        ],
+        "allowedAlternatives": ["2.0 m/s in the opposite direction"],
+        "commonErrors": [
+          "Forgetting that total momentum before is zero",
+          "Not using the negative sign to show opposite direction"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2020-p2-q5a",
+      "number": "5(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "Explain the difference between mass and weight.",
+      "markScheme": {
+        "answer": "Mass is the amount of matter in an object, measured in kg, and does not change with location. Weight is the force of gravity on an object, measured in N, and depends on gravitational field strength.",
+        "steps": [
+          { "mark": 1, "description": "Mass is the amount of matter / measured in kg / does not change" },
+          { "mark": 2, "description": "Weight is a force due to gravity / measured in N" },
+          { "mark": 3, "description": "Weight changes with location / depends on gravitational field strength" }
+        ],
+        "commonErrors": [
+          "Saying mass is how heavy something is",
+          "Not mentioning that weight is a force"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2020-p2-q6b",
+      "number": "6(b)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A cyclist uses a force of 250 N to travel 800 m. Calculate the work done by the cyclist.",
+      "markScheme": {
+        "answer": "200 000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = Fs" },
+          { "mark": 2, "description": "Substitutes: W = 250 \u00d7 800" },
+          { "mark": 3, "description": "Correct answer: 200 000 J" }
+        ],
+        "allowedAlternatives": ["200 kJ"],
+        "commonErrors": [
+          "Dividing instead of multiplying",
+          "Incorrect unit"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    }
+  ]
+}

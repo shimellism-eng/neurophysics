@@ -1,0 +1,529 @@
+{
+  "id": "momentum",
+  "topicId": "forces",
+  "title": "Momentum",
+  "subtitle": "p = m × v",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "A heavy lorry and a light car are both moving at the same speed. Which has more momentum?",
+      "options": [
+        "The car - it’s faster for its size",
+        "They have the same momentum",
+        "The lorry, it has more mass",
+        "It depends on the road surface"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "⚠️ Common misconception! Momentum depends on both mass and velocity: p = mv. Since both are travelling at the same speed (same v), the object with the greater mass has the greater momentum. Road surface has no effect on momentum, only on friction.",
+      "correctFeedback": "✓ Correct! Momentum p = mv, so with the same velocity, the lorry’s larger mass gives it a greater momentum. This is why lorries are much harder to stop than cars at the same speed."
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Momentum",
+      "bodyHTML": "<strong>Momentum</strong> equals <strong>mass × velocity</strong>, measured in <strong>kg m/s</strong>. Momentum is a <strong>vector</strong>: it has both size and direction. In any collision (or explosion), <strong>total momentum is conserved</strong>: the total before equals the total after, provided no external forces act.",
+      "keyEquation": "p = m × v",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "p",
+            "label": "Momentum",
+            "unit": "kg·m/s",
+            "color": "green"
+          },
+          {
+            "symbol": "m",
+            "label": "Mass",
+            "unit": "kg",
+            "color": "purple"
+          },
+          {
+            "symbol": "v",
+            "label": "Velocity",
+            "unit": "m/s",
+            "color": "cyan"
+          }
+        ],
+        "relationships": [
+          "Bigger m → bigger p (if v is constant)",
+          "Bigger v → bigger p (if m is constant)"
+        ]
+      },
+      "keyWords": [
+        "momentum",
+        "conservation",
+        "collision",
+        "vector"
+      ],
+      "commonErrors": [
+        "Forgetting momentum has direction",
+        "Using speed instead of velocity",
+        "Not applying conservation in collision questions"
+      ],
+      "keyEquationTex": "p = mv"
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Set the mass and velocity for each object, then hit Collide. Watch momentum arrows and totals to see conservation in action. Try at least 2 collisions!",
+      "simId": "momentum-sim",
+      "simConfig": {
+        "visualType": "collision",
+        "mass1": {
+          "min": 0.5,
+          "max": 10,
+          "default": 2,
+          "step": 0.5
+        },
+        "mass2": {
+          "min": 0.5,
+          "max": 10,
+          "default": 3,
+          "step": 0.5
+        },
+        "vel1": {
+          "min": -10,
+          "max": 10,
+          "default": 5,
+          "step": 0.5
+        },
+        "vel2": {
+          "min": -10,
+          "max": 10,
+          "default": -2,
+          "step": 0.5
+        }
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA style · Momentum calculation + collision",
+          "marks": 4,
+          "questionText": "A car of mass 1500 kg travels at 20 m/s. Calculate its momentum. The car then collides with a stationary van of mass 2500 kg and they move together. Calculate their speed after collision.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Calculate car’s momentum",
+              "content": "Use p = m × v:",
+              "equation": "p = 1500 × 20 = 30 000 kg·m/s",
+              "markSchemeNote": "1 mark: correct momentum calculation"
+            },
+            {
+              "stepNum": 2,
+              "label": "State conservation of momentum",
+              "content": "Total momentum before = total momentum after. Van is stationary so its momentum = 0.",
+              "equation": "30 000 = (1500 + 2500) × v",
+              "markSchemeNote": "1 mark: conservation stated or implied"
+            },
+            {
+              "stepNum": 3,
+              "label": "Solve for v",
+              "content": "Combined mass = 4000 kg:",
+              "equation": "v = 30 000 / 4000 = 7.5 m/s",
+              "markSchemeNote": "1 mark: correct rearrangement and substitution"
+            },
+            {
+              "stepNum": 4,
+              "label": "State answer with units",
+              "content": "Always include the unit.",
+              "equation": "v = 7.5 m/s ✓",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "Momentum = 30 000 kg·m/s; speed after collision = 7.5 m/s",
+          "finalAnswerUnit": "m/s",
+          "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel style · Momentum calculation",
+          "marks": 3,
+          "questionText": "A bullet of mass 0.01 kg travels at 400 m/s. Calculate its momentum.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Write the equation",
+              "content": "State the momentum equation:",
+              "equation": "p = m × v",
+              "markSchemeNote": "1 mark: correct equation stated"
+            },
+            {
+              "stepNum": 2,
+              "label": "Substitute values",
+              "content": "Put in the numbers:",
+              "equation": "p = 0.01 × 400",
+              "markSchemeNote": "1 mark: correct substitution"
+            },
+            {
+              "stepNum": 3,
+              "label": "Calculate and state units",
+              "content": "Multiply:",
+              "equation": "p = 4 kg·m/s ✓",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "4 kg·m/s",
+          "finalAnswerUnit": "kg·m/s",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · Conservation of momentum",
+          "marks": 3,
+          "questionText": "A trolley of mass 2 kg moving at 3 m/s collides with a stationary trolley of mass 1 kg. They stick together. Find their velocity after collision.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Calculate total momentum before",
+              "content": "Moving trolley: p = 2 × 3 = 6 kg·m/s. Stationary trolley: p = 0.",
+              "equation": "Total momentum before = 6 kg·m/s",
+              "markSchemeNote": "1 mark: correct momentum before"
+            },
+            {
+              "stepNum": 2,
+              "label": "Apply conservation",
+              "content": "Total momentum after = total momentum before:",
+              "equation": "6 = (2 + 1) × v = 3v",
+              "markSchemeNote": "1 mark: conservation applied correctly"
+            },
+            {
+              "stepNum": 3,
+              "label": "Solve",
+              "content": "Divide both sides by 3:",
+              "equation": "v = 6 / 3 = 2 m/s ✓",
+              "markSchemeNote": "1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "2 m/s",
+          "finalAnswerUnit": "m/s",
+          "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · Simple momentum",
+          "marks": 2,
+          "questionText": "Calculate the momentum of a 70 kg runner moving at 8 m/s.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Apply p = mv",
+              "content": "All values given. Substitute straight in:",
+              "equation": "p = 70 × 8 = 560 kg·m/s",
+              "markSchemeNote": "1 mark: correct substitution; 1 mark: correct answer with unit"
+            }
+          ],
+          "finalAnswer": "560 kg·m/s",
+          "finalAnswerUnit": "kg·m/s",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC style · Change in momentum",
+          "marks": 3,
+          "questionText": "A 0.5 kg ball moving at 6 m/s hits a wall and bounces back at 4 m/s. Calculate the change in momentum.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Define direction and calculate momentum before",
+              "content": "Take the initial direction as positive:",
+              "equation": "p_before = 0.5 × 6 = 3 kg·m/s",
+              "markSchemeNote": "1 mark: correct momentum before"
+            },
+            {
+              "stepNum": 2,
+              "label": "Calculate momentum after",
+              "content": "Ball bounces back, so velocity is now negative:",
+              "equation": "p_after = 0.5 × (−4) = −2 kg·m/s",
+              "markSchemeNote": "1 mark: correct sign for reversed direction"
+            },
+            {
+              "stepNum": 3,
+              "label": "Find the change",
+              "content": "Change = final − initial:",
+              "equation": "Δp = −2 − 3 = −5 kg·m/s ✓",
+              "markSchemeNote": "1 mark: correct change in momentum with sign and unit"
+            }
+          ],
+          "finalAnswer": "−5 kg·m/s",
+          "finalAnswerUnit": "kg·m/s",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA style · Momentum and collision",
+          "marks": 3,
+          "questionText": "A 0.2 kg ball travels at 15 m/s and collides with a stationary 0.1 kg ball. They stick together. What is their velocity after the collision?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "5 m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "10 m/s",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "15 m/s",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "45 m/s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "p before = 0.2 × 15 = 3 kg·m/s",
+            "3 = (0.2 + 0.1) × v",
+            "v = 3 / 0.3 = 10 m/s ✓"
+          ],
+          "markSchemeAward": "1 mark momentum before · 1 mark conservation applied · 1 mark correct answer + unit",
+          "commonMistake": "Option A is a trap: dividing by total mass incorrectly. Option D multiplies instead of dividing."
+        },
+        "edexcel": {
+          "source": "Edexcel style · Simple momentum",
+          "marks": 2,
+          "questionText": "A 1200 kg car is travelling at 25 m/s. What is its momentum?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "48 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "1225 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "30 000 kg·m/s",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "300 000 kg·m/s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "p = m × v",
+            "p = 1200 × 25 = 30 000 kg·m/s ✓"
+          ],
+          "markSchemeAward": "1 mark correct equation · 1 mark correct answer + unit",
+          "commonMistake": "Option B is a trap: adding mass and velocity instead of multiplying."
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway style · Rearranging p = mv",
+          "marks": 2,
+          "questionText": "A shopping trolley has a momentum of 60 kg·m/s and a mass of 20 kg. What is its velocity?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.33 m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "3 m/s",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "40 m/s",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "1200 m/s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "v = p / m = 60 / 20 = 3 m/s ✓"
+          ],
+          "markSchemeAward": "1 mark rearrangement · 1 mark correct answer + unit",
+          "commonMistake": "Option D is a trap: multiplying instead of dividing."
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century style · Momentum calculation",
+          "marks": 2,
+          "questionText": "A 50 kg skateboarder moves at 4 m/s. What is their momentum?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "12.5 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "46 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "200 kg·m/s",
+              "correct": true
+            },
+            {
+              "label": "D",
+              "text": "54 kg·m/s",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "p = 50 × 4 = 200 kg·m/s ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit",
+          "commonMistake": "Option B is a trap: subtracting instead of multiplying."
+        },
+        "wjec": {
+          "source": "WJEC style · Change in momentum",
+          "marks": 3,
+          "questionText": "A 0.4 kg ball moving at 10 m/s bounces off a wall and returns at 8 m/s. What is the change in momentum?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.8 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "−0.8 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "C",
+              "text": "7.2 kg·m/s",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "−7.2 kg·m/s",
+              "correct": true
+            }
+          ],
+          "markSchemeSteps": [
+            "p_before = 0.4 × 10 = 4 kg·m/s",
+            "p_after = 0.4 × (−8) = −3.2 kg·m/s",
+            "Δp = −3.2 − 4 = −7.2 kg·m/s ✓"
+          ],
+          "markSchemeAward": "1 mark each momentum · 1 mark correct change with sign and unit",
+          "commonMistake": "Option A forgets direction. subtracting magnitudes (10 − 8) × 0.4 without considering the sign change."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "p = mv: all rearrangements",
+      "equation": {
+        "id": "momentum",
+        "canonical": "p = m × v",
+        "variables": [
+          {
+            "symbol": "p",
+            "name": "Momentum",
+            "unit": "kilogram metres per second",
+            "abbreviation": "kg·m/s"
+          },
+          {
+            "symbol": "m",
+            "name": "Mass",
+            "unit": "kilograms",
+            "abbreviation": "kg"
+          },
+          {
+            "symbol": "v",
+            "name": "Velocity",
+            "unit": "metres per second",
+            "abbreviation": "m/s"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "p",
+            "formula": "p = m × v",
+            "label": "Find momentum"
+          },
+          {
+            "solveFor": "m",
+            "formula": "m = p / v",
+            "label": "Find mass"
+          },
+          {
+            "solveFor": "v",
+            "formula": "v = p / m",
+            "label": "Find velocity"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "p",
+            "color": "green"
+          },
+          "bottomLeft": {
+            "symbol": "m",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "v",
+            "color": "cyan"
+          }
+        },
+        "examTip": "In collision questions, ALWAYS state: total momentum before = total momentum after. This is conservation of momentum.",
+        "onFormulaSheet": {
+          "aqa": true,
+          "edexcel": true,
+          "ocr-gateway": true,
+          "ocr-21c": false,
+          "wjec": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Note: momentum is Higher tier only on AQA.",
+          "edexcel": "On Edexcel equation sheet. Remember direction matters - momentum is a vector.",
+          "ocr-gateway": "On OCR Gateway formula sheet. Conservation of momentum is a key exam topic.",
+          "ocr-21c": "NOT on formula sheet, must be memorised for OCR 21st Century. ⚠️",
+          "wjec": "Provided in WJEC exam. Know all three rearrangements and conservation."
+        }
+      }
+    }
+  ]
+}

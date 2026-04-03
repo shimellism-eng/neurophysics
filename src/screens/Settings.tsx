@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useSettings } from '../context/SettingsContext';
 import { useUser } from '../context/UserContext';
 import { ScreenWrapper } from '../components/layout/ScreenWrapper';
@@ -51,6 +52,7 @@ const GROUPS: OptionGroup<any>[] = [
 export function Settings() {
   const { settings, updateSetting } = useSettings();
   const { progress } = useUser();
+  const navigate = useNavigate();
 
   return (
     <ScreenWrapper>
@@ -70,17 +72,22 @@ export function Settings() {
 
         {GROUPS.map(group => (
           <div key={group.key} className="settings__group">
-            <p className="settings__group-label">{group.label}</p>
-            <div className="settings__options">
-              {group.options.map(opt => (
-                <button
-                  key={String(opt.value)}
-                  className={`settings__option ${(settings as any)[group.key] === opt.value ? 'settings__option--active' : ''}`}
-                  onClick={() => updateSetting(group.key as keyof UserSettings, opt.value)}
-                >
-                  {opt.label}
-                </button>
-              ))}
+            <p className="settings__group-label" id={`settings-${group.key}-label`}>{group.label}</p>
+            <div className="settings__options" role="radiogroup" aria-labelledby={`settings-${group.key}-label`}>
+              {group.options.map(opt => {
+                const isActive = (settings as any)[group.key] === opt.value;
+                return (
+                  <button
+                    key={String(opt.value)}
+                    className={`settings__option ${isActive ? 'settings__option--active' : ''}`}
+                    onClick={() => updateSetting(group.key as keyof UserSettings, opt.value)}
+                    role="radio"
+                    aria-checked={isActive}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}
@@ -92,6 +99,7 @@ export function Settings() {
             onClick={() => updateSetting('highContrast', !settings.highContrast)}
             role="switch"
             aria-checked={settings.highContrast}
+            aria-label="High contrast"
           >
             <span className="settings__toggle-track">
               <span className="settings__toggle-thumb" />
@@ -99,6 +107,37 @@ export function Settings() {
             <span>{settings.highContrast ? 'On' : 'Off'}</span>
           </button>
         </div>
+
+        <div className="settings__group">
+          <p className="settings__group-label">Haptic feedback</p>
+          <button
+            className={`settings__toggle ${settings.haptics ? 'settings__toggle--on' : ''}`}
+            onClick={() => updateSetting('haptics', !settings.haptics)}
+            role="switch"
+            aria-checked={settings.haptics}
+            aria-label="Haptic feedback"
+          >
+            <span className="settings__toggle-track">
+              <span className="settings__toggle-thumb" />
+            </span>
+            <span>{settings.haptics ? 'On' : 'Off'}</span>
+          </button>
+        </div>
+      </section>
+
+      <section className="settings__section">
+        <h2 className="settings__section-title">Analytics</h2>
+        <button
+          className="settings__teacher-btn"
+          onClick={() => navigate('/dashboard')}
+        >
+          <span className="settings__teacher-icon" aria-hidden="true">📊</span>
+          <div className="settings__teacher-text">
+            <span className="settings__teacher-label">Teacher View</span>
+            <span className="settings__teacher-desc">Misconceptions, progress, and study patterns</span>
+          </div>
+          <span className="settings__teacher-arrow" aria-hidden="true">&#8594;</span>
+        </button>
       </section>
 
       <div className="settings__footer">

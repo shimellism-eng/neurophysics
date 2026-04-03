@@ -15,7 +15,7 @@ export function ProgressRing({ percent, size = 56, strokeWidth = 4, color = 'var
 
   return (
     <div className="progress-ring" style={{ width: size, height: size }}>
-      <svg width={size} height={size} aria-label={label ?? `${percent}% complete`}>
+      <svg width={size} height={size} role="img" aria-label={label ?? `${percent}% complete`}>
         <circle
           className="progress-ring__track"
           cx={size / 2} cy={size / 2} r={radius}

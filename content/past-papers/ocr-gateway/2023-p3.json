@@ -1,0 +1,169 @@
+{
+  "board": "ocr-gateway",
+  "year": 2023,
+  "paper": 3,
+  "tier": "Higher",
+  "totalMarks": 90,
+  "questions": [
+    {
+      "id": "ocr-gw-2023-p3-q1b",
+      "number": "1(b)",
+      "topic": "forces",
+      "concept": "resultant-forces",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A tug-of-war team pulls with a force of 2500 N to the left. The opposing team pulls with a force of 2200 N to the right. Calculate the resultant force and state the direction.",
+      "markScheme": {
+        "answer": "300 N to the left",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Subtracts forces: 2500 - 2200 = 300 N" },
+          { "mark": 2, "description": "Correct magnitude: 300 N" },
+          { "mark": 3, "description": "Correct direction: to the left" }
+        ],
+        "commonErrors": [
+          "Adding forces instead of subtracting",
+          "Stating the wrong direction"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "ocr-gw-2023-p3-q2a",
+      "number": "2(a)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A sprinter of mass 70 kg accelerates from rest to 10 m/s in 2.0 seconds. Calculate the resultant force needed to produce this acceleration.",
+      "markScheme": {
+        "answer": "350 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Calculates acceleration: a = (10 - 0) / 2.0 = 5.0 m/s\u00b2" },
+          { "mark": 2, "description": "Recalls F = ma" },
+          { "mark": 3, "description": "Substitutes: F = 70 \u00d7 5.0" },
+          { "mark": 4, "description": "Correct answer: 350 N" }
+        ],
+        "commonErrors": [
+          "Forgetting to calculate acceleration first",
+          "Using velocity instead of acceleration in F = ma"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2023-p3-q3c",
+      "number": "3(c)",
+      "topic": "forces",
+      "concept": "newtons-third-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A ball sits on the floor. A student says: 'The weight of the ball and the normal contact force from the floor are a Newton's third law pair.' Explain why the student is wrong.",
+      "markScheme": {
+        "answer": "Newton's third law pairs must act on different objects and be of the same type. Weight acts between the ball and Earth (gravitational). The normal force acts between the ball and the floor (contact). They are different types of force acting on the same object.",
+        "steps": [
+          { "mark": 1, "description": "Third law pairs must be the same type of force" },
+          { "mark": 2, "description": "Weight is gravitational (Earth on ball); normal force is a contact force (floor on ball)" },
+          { "mark": 3, "description": "They are different types of force / both act on the same object (the ball), so they cannot be a third law pair" }
+        ],
+        "commonErrors": [
+          "Not identifying that the forces must be of the same type",
+          "Not explaining that third law pairs act on different objects"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2023-p3-q4b",
+      "number": "4(b)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "A rock has a mass of 4.5 kg. What is its weight on Earth? (g = 10 N/kg)",
+      "options": ["0.45 N", "4.5 N", "14.5 N", "45 N"],
+      "correctIndex": 3,
+      "markScheme": {
+        "answer": "45 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "W = mg = 4.5 \u00d7 10" },
+          { "mark": 2, "description": "Correct answer: 45 N" }
+        ],
+        "commonErrors": [
+          "Dividing mass by g"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "ocr-gw-2023-p3-q5a",
+      "number": "5(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A removal worker carries a 30 kg box up a flight of stairs 3.5 m high. (g = 10 N/kg) Calculate the work done against gravity.",
+      "markScheme": {
+        "answer": "1050 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Calculates weight: 30 \u00d7 10 = 300 N" },
+          { "mark": 2, "description": "Recalls work = force \u00d7 distance" },
+          { "mark": 3, "description": "Substitutes: 300 \u00d7 3.5" },
+          { "mark": 4, "description": "Correct answer: 1050 J" }
+        ],
+        "allowedAlternatives": ["1.05 kJ"],
+        "commonErrors": [
+          "Using mass (30) instead of weight (300)",
+          "Confusing horizontal distance with vertical height"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "ocr-gw-2023-p3-q6c",
+      "number": "6(c)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 5,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": true,
+      "questionText": "A 800 kg car travelling at 12 m/s rear-ends a 1200 kg car travelling at 4 m/s in the same direction. After the collision they lock together. Calculate their combined speed after the collision.",
+      "markScheme": {
+        "answer": "7.2 m/s",
+        "unit": "m/s",
+        "steps": [
+          { "mark": 1, "description": "Momentum of car 1: 800 \u00d7 12 = 9600 kg m/s" },
+          { "mark": 2, "description": "Momentum of car 2: 1200 \u00d7 4 = 4800 kg m/s" },
+          { "mark": 3, "description": "Total momentum before = 9600 + 4800 = 14 400 kg m/s" },
+          { "mark": 4, "description": "Combined mass = 800 + 1200 = 2000 kg" },
+          { "mark": 5, "description": "v = 14 400 / 2000 = 7.2 m/s" }
+        ],
+        "commonErrors": [
+          "Subtracting momenta instead of adding (they travel in the same direction)",
+          "Forgetting to combine the masses"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

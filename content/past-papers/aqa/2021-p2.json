@@ -1,0 +1,168 @@
+{
+  "board": "aqa",
+  "year": 2021,
+  "paper": 2,
+  "tier": "Higher",
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "aqa-2021-p2-q2c",
+      "number": "2(c)",
+      "topic": "forces",
+      "concept": "newtons-second-law",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "A rocket has a mass of 5000 kg. Its engines produce a thrust of 75 000 N. The weight of the rocket is 50 000 N. Calculate the acceleration of the rocket at launch.",
+      "markScheme": {
+        "answer": "5.0 m/s\u00b2",
+        "unit": "m/s\u00b2",
+        "steps": [
+          { "mark": 1, "description": "Calculates resultant force: 75 000 - 50 000 = 25 000 N" },
+          { "mark": 2, "description": "Recalls F = ma and rearranges to a = F/m" },
+          { "mark": 3, "description": "Substitutes: a = 25 000 / 5000" },
+          { "mark": 4, "description": "Correct answer: 5.0 m/s\u00b2" }
+        ],
+        "commonErrors": [
+          "Using 75 000 N as the resultant force without subtracting weight",
+          "Adding thrust and weight instead of subtracting"
+        ]
+      },
+      "usedAsWorkedExample": true,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2021-p2-q3a",
+      "number": "3(a)",
+      "topic": "forces",
+      "concept": "weight-and-gravity",
+      "marks": 2,
+      "type": "multiple-choice",
+      "difficulty": "easy",
+      "higherOnly": false,
+      "questionText": "What is the weight of a 6.0 kg mass on Earth? (g = 10 N/kg)",
+      "options": ["0.6 N", "6.0 N", "16 N", "60 N"],
+      "correctIndex": 3,
+      "markScheme": {
+        "answer": "60 N",
+        "unit": "N",
+        "steps": [
+          { "mark": 1, "description": "Recalls W = mg" },
+          { "mark": 2, "description": "Correct answer: 6.0 \u00d7 10 = 60 N" }
+        ],
+        "commonErrors": [
+          "Dividing mass by g instead of multiplying"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2021-p2-q4b",
+      "number": "4(b)",
+      "topic": "forces",
+      "concept": "stopping-distance",
+      "marks": 4,
+      "type": "short-answer",
+      "difficulty": "medium",
+      "higherOnly": false,
+      "questionText": "Explain two factors that would increase the braking distance of a car.",
+      "markScheme": {
+        "answer": "Higher speed increases braking distance because more kinetic energy must be transferred. Worn brakes reduce the braking force, meaning the car takes longer to stop.",
+        "steps": [
+          { "mark": 1, "description": "Identifies a valid factor, e.g. higher speed" },
+          { "mark": 2, "description": "Explains why: more kinetic energy needs to be transferred / greater distance to decelerate" },
+          { "mark": 3, "description": "Identifies a second valid factor, e.g. worn brakes, wet/icy road, worn tyres" },
+          { "mark": 4, "description": "Explains why: reduced friction / reduced braking force" }
+        ],
+        "commonErrors": [
+          "Confusing braking distance with thinking distance",
+          "Naming factors that affect thinking distance (tiredness, alcohol) instead of braking distance"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2021-p2-q5a",
+      "number": "5(a)",
+      "topic": "forces",
+      "concept": "momentum",
+      "marks": 3,
+      "type": "calculation",
+      "difficulty": "medium",
+      "higherOnly": true,
+      "questionText": "A 1200 kg car is travelling at 15 m/s. Calculate the momentum of the car.",
+      "markScheme": {
+        "answer": "18 000 kg m/s",
+        "unit": "kg m/s",
+        "steps": [
+          { "mark": 1, "description": "Recalls p = mv" },
+          { "mark": 2, "description": "Substitutes: p = 1200 \u00d7 15" },
+          { "mark": 3, "description": "Correct answer: 18 000 kg m/s" }
+        ],
+        "allowedAlternatives": ["18 kN s"],
+        "commonErrors": [
+          "Dividing instead of multiplying",
+          "Incorrect unit \u2014 writing N instead of kg m/s"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": true
+    },
+    {
+      "id": "aqa-2021-p2-q6c",
+      "number": "6(c)",
+      "topic": "forces",
+      "concept": "newtons-third-law",
+      "marks": 3,
+      "type": "short-answer",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A book rests on a table. Describe the Newton's third law pair for the weight of the book.",
+      "markScheme": {
+        "answer": "The Earth pulls the book downwards with a gravitational force. The book pulls the Earth upwards with an equal and opposite gravitational force.",
+        "steps": [
+          { "mark": 1, "description": "Identifies that the Earth exerts a gravitational pull on the book (weight)" },
+          { "mark": 2, "description": "Identifies that the book exerts an equal gravitational pull on the Earth" },
+          { "mark": 3, "description": "States the forces are equal in size, opposite in direction, and of the same type (gravitational)" }
+        ],
+        "commonErrors": [
+          "Incorrectly pairing weight with the normal contact force from the table",
+          "Not specifying the type of force or the objects involved"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    },
+    {
+      "id": "aqa-2021-p2-q7a",
+      "number": "7(a)",
+      "topic": "forces",
+      "concept": "work-done",
+      "marks": 4,
+      "type": "calculation",
+      "difficulty": "hard",
+      "higherOnly": false,
+      "questionText": "A crane lifts a 200 kg steel beam through a height of 15 m. Gravitational field strength g = 10 N/kg. Calculate the work done against gravity.",
+      "markScheme": {
+        "answer": "30 000 J",
+        "unit": "J",
+        "steps": [
+          { "mark": 1, "description": "Calculates weight: W = mg = 200 \u00d7 10 = 2000 N" },
+          { "mark": 2, "description": "Recalls work done = force \u00d7 distance" },
+          { "mark": 3, "description": "Substitutes: work = 2000 \u00d7 15" },
+          { "mark": 4, "description": "Correct answer: 30 000 J" }
+        ],
+        "allowedAlternatives": ["30 kJ"],
+        "commonErrors": [
+          "Using mass instead of weight in the calculation",
+          "Forgetting to calculate weight first"
+        ]
+      },
+      "usedAsWorkedExample": false,
+      "usedAsYourTurn": false
+    }
+  ]
+}

@@ -27,15 +27,22 @@ export function TopicDetail() {
     'weight-and-gravity': 'Weight and Gravity',
     'momentum':           'Momentum',
     'work-and-energy':    'Work and Energy',
+    'charge-and-current':    'Charge and Current',
+    'potential-difference':  'Potential Difference',
+    'resistance':            'Resistance',
+    'ohms-law':              "Ohm's Law",
+    'series-circuits':       'Series Circuits',
+    'parallel-circuits':     'Parallel Circuits',
+    'power-and-energy':      'Electrical Power and Energy',
   };
 
   return (
     <ScreenWrapper>
-      <button className="topic-detail__back" onClick={() => navigate('/topics')}>← Topics</button>
+      <button className="topic-detail__back" onClick={() => navigate('/topics')} aria-label="Back to topics">← Topics</button>
 
       <div className="topic-detail__header">
         <div className="topic-detail__title-row">
-          <span className="topic-detail__emoji">{meta.emoji}</span>
+          <span className="topic-detail__emoji" aria-hidden="true">{meta.emoji}</span>
           <div>
             <h1 className="topic-detail__title">{meta.name}</h1>
             <p className="text-muted text-sm">{meta.estimatedMinutes} min · {meta.totalConcepts} concepts</p>

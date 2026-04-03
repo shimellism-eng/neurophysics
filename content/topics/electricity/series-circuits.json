@@ -1,0 +1,519 @@
+{
+  "id": "series-circuits",
+  "topicId": "electricity",
+  "title": "Series Circuits",
+  "subtitle": "Current same, voltage shared",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true,
+    "edexcel": true,
+    "ocr-gateway": true,
+    "ocr-21c": true,
+    "wjec": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first…",
+      "question": "In a series circuit with two identical bulbs, what happens to the current as it passes through the first bulb?",
+      "options": [
+        "Some current is used up by the first bulb, so less reaches the second",
+        "The current is the same everywhere in the circuit",
+        "The current doubles after each bulb",
+        "The current splits equally between the two bulbs"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "⚠️ Common misconception! Current is NOT ‘used up’ by components. In a series circuit, the current is the same at every point. What gets transferred is energy, not charge. The electrons keep flowing around the whole loop.",
+      "correctFeedback": "✓ Correct! In a series circuit, current is the same everywhere. Charge is conserved: electrons are not used up. Energy is transferred by each component, but the current stays constant throughout.",
+      "bestSource": "BEST resource: AQA Physics specification 4.2.3: Series circuits"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Series Circuits",
+      "svgDiagram": "series-circuit",
+      "bodyHTML": "In a <strong>series circuit</strong>, components are connected <strong>one after another</strong> in a single loop. Three key rules: (1) The <strong>current is the same</strong> through every component. (2) The <strong>total p.d.</strong> of the supply is <strong>shared</strong> between the components. (3) The <strong>total resistance</strong> is the sum of the individual resistances: R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + …",
+      "keyEquation": "R_total = R₁ + R₂ + …",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          {
+            "symbol": "I",
+            "label": "Current (same everywhere)",
+            "unit": "A",
+            "color": "cyan"
+          },
+          {
+            "symbol": "V",
+            "label": "Voltage (shared)",
+            "unit": "V",
+            "color": "purple"
+          },
+          {
+            "symbol": "R",
+            "label": "Resistance (adds up)",
+            "unit": "Ω",
+            "color": "amber"
+          }
+        ],
+        "relationships": [
+          "I is the SAME at every point in a series circuit",
+          "V_total = V₁ + V₂ + … (voltages add up)",
+          "R_total = R₁ + R₂ + … (resistances add up)"
+        ]
+      },
+      "keyWords": [
+        "series",
+        "current",
+        "potential difference",
+        "shared",
+        "total resistance"
+      ],
+      "commonErrors": [
+        "Thinking current is ‘used up’ by each component",
+        "Adding voltages instead of realising they are shared from the supply",
+        "Forgetting to add all resistances for total resistance"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Tap the switch to complete the circuit. Change the battery voltage and watch the bulb brightness and ammeter reading update in real time.",
+      "simId": "circuit-sim",
+      "simConfig": {
+        "variables": [
+          {
+            "id": "r1",
+            "label": "Resistor 1",
+            "unit": "Ω",
+            "min": 1,
+            "max": 50,
+            "default": 10,
+            "color": "purple",
+            "step": 1
+          },
+          {
+            "id": "r2",
+            "label": "Resistor 2",
+            "unit": "Ω",
+            "min": 1,
+            "max": 50,
+            "default": 20,
+            "color": "amber",
+            "step": 1
+          }
+        ],
+        "derived": [
+          {
+            "id": "rtotal",
+            "label": "Total Resistance",
+            "unit": "Ω",
+            "formula": "r1 + r2",
+            "color": "cyan",
+            "decimalPlaces": 0
+          }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "r1",
+        "blockLabel": "R"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 · Q7(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "7(a)",
+          "marks": 4,
+          "questionText": "Two resistors of 6.0 Ω and 4.0 Ω are connected in series to a 20 V battery. Calculate: (i) the total resistance, (ii) the current in the circuit.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Find total resistance",
+              "content": "Add the resistances:",
+              "equation": "R_total = 6.0 + 4.0 = 10 Ω",
+              "markSchemeNote": "1 mark: correct total resistance"
+            },
+            {
+              "stepNum": 2,
+              "label": "Find the current",
+              "content": "Use I = V / R:",
+              "equation": "I = 20 / 10 = 2.0 A",
+              "markSchemeNote": "1 mark: rearrangement; 1 mark: substitution; 1 mark: correct answer + unit"
+            }
+          ],
+          "finalAnswer": "R = 10 Ω, I = 2.0 A",
+          "finalAnswerUnit": "A",
+          "totalMarks": 4
+        },
+        "edexcel": {
+          "source": "Edexcel 2023 Paper 1 · Q8(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "8(a)",
+          "marks": 3,
+          "questionText": "Three resistors of 5.0 Ω, 10 Ω, and 15 Ω are in series. A current of 0.40 A flows. Calculate the total p.d.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Find total resistance",
+              "content": "Add them:",
+              "equation": "R_total = 5.0 + 10 + 15 = 30 Ω",
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Find total p.d.",
+              "content": "V = I × R:",
+              "equation": "V = 0.40 × 30 = 12 V",
+              "markSchemeNote": "1 mark substitution; 1 mark answer + unit"
+            }
+          ],
+          "finalAnswer": "12 V",
+          "finalAnswerUnit": "V",
+          "totalMarks": 3
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2022 Paper 2 · Q7(a)",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "Two resistors (8.0 Ω and 12 Ω) are in series with a 10 V supply. Calculate the current.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Total resistance",
+              "content": "R = 8.0 + 12 = 20 Ω",
+              "equation": "R_total = 20 Ω",
+              "markSchemeNote": "1 mark"
+            },
+            {
+              "stepNum": 2,
+              "label": "Current",
+              "content": "I = V / R:",
+              "equation": "I = 10 / 20 = 0.50 A",
+              "markSchemeNote": "1 mark substitution; 1 mark answer + unit"
+            }
+          ],
+          "finalAnswer": "0.50 A",
+          "finalAnswerUnit": "A",
+          "totalMarks": 3
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2022 Paper 3 · Q6(a)",
+          "year": 2022,
+          "paper": 3,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "A 4.0 Ω and a 6.0 Ω resistor are in series. Calculate the total resistance.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Add resistances",
+              "content": "In series, R_total = R₁ + R₂:",
+              "equation": "R_total = 4.0 + 6.0 = 10 Ω",
+              "markSchemeNote": "1 mark equation; 1 mark answer + unit"
+            }
+          ],
+          "finalAnswer": "10 Ω",
+          "finalAnswerUnit": "Ω",
+          "totalMarks": 2
+        },
+        "wjec": {
+          "source": "WJEC 2022 Unit 2 · Q6(a)",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "Two resistors of 15 Ω and 25 Ω are connected in series. Calculate the total resistance.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Add resistances",
+              "content": "R_total = R₁ + R₂:",
+              "equation": "R_total = 15 + 25 = 40 Ω",
+              "markSchemeNote": "1 mark equation; 1 mark answer + unit"
+            }
+          ],
+          "finalAnswer": "40 Ω",
+          "finalAnswerUnit": "Ω",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA 2022 Paper 1 · Q6(a)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "6(a)",
+          "marks": 3,
+          "questionText": "A 12 V battery is connected to two resistors in series: 8.0 Ω and 16 Ω. What is the current in the circuit?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.75 A",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.50 A",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "1.5 A",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "2.0 A",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "R_total = 8.0 + 16 = 24 Ω",
+            "I = V / R = 12 / 24",
+            "I = 0.50 A ✓"
+          ],
+          "markSchemeAward": "1 mark total R · 1 mark substitution · 1 mark correct answer + unit",
+          "commonMistake": "Option A uses only the 16 Ω resistor (12/16 = 0.75). Must use total resistance."
+        },
+        "edexcel": {
+          "source": "Edexcel 2022 Paper 1 · Q8(b)",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "8(b)",
+          "marks": 2,
+          "questionText": "Two resistors (10 Ω and 20 Ω) in series carry a current of 0.30 A. What is the p.d. across the 20 Ω resistor?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "3.0 V",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "6.0 V",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "9.0 V",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "66.7 V",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "V = I × R = 0.30 × 20 = 6.0 V ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit"
+        },
+        "ocr-gateway": {
+          "source": "OCR Gateway 2023 Paper 2 · Q6(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "A 5.0 Ω and 15 Ω resistor are in series with a 6.0 V supply. What is the current?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "1.2 A",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.30 A",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "0.40 A",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "120 A",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "R = 5.0 + 15 = 20 Ω; I = 6.0 / 20 = 0.30 A ✓"
+          ],
+          "markSchemeAward": "1 mark total R · 1 mark correct answer + unit"
+        },
+        "ocr-21c": {
+          "source": "OCR 21st Century 2023 Paper 3 · Q5(a)",
+          "year": 2023,
+          "paper": 3,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "Three 10 Ω resistors are in series. What is the total resistance?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "3.3 Ω",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "30 Ω",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "10 Ω",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "1000 Ω",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "R = 10 + 10 + 10 = 30 Ω ✓"
+          ],
+          "markSchemeAward": "1 mark equation · 1 mark correct answer + unit"
+        },
+        "wjec": {
+          "source": "WJEC 2023 Unit 2 · Q5(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "A 20 Ω and 30 Ω resistor are in series with a 10 V supply. What current flows?",
+          "questionType": "multiple-choice",
+          "options": [
+            {
+              "label": "A",
+              "text": "0.50 A",
+              "correct": false
+            },
+            {
+              "label": "B",
+              "text": "0.20 A",
+              "correct": true
+            },
+            {
+              "label": "C",
+              "text": "500 A",
+              "correct": false
+            },
+            {
+              "label": "D",
+              "text": "2.0 A",
+              "correct": false
+            }
+          ],
+          "markSchemeSteps": [
+            "R = 20 + 30 = 50 Ω; I = 10 / 50 = 0.20 A ✓"
+          ],
+          "markSchemeAward": "1 mark total R · 1 mark correct answer + unit"
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Series circuit rules",
+      "equation": {
+        "id": "series-resistance",
+        "canonical": "R_total = R₁ + R₂ + …",
+        "variables": [
+          {
+            "symbol": "R_total",
+            "name": "Total resistance",
+            "unit": "ohms",
+            "abbreviation": "Ω"
+          },
+          {
+            "symbol": "R₁",
+            "name": "Resistance 1",
+            "unit": "ohms",
+            "abbreviation": "Ω"
+          },
+          {
+            "symbol": "R₂",
+            "name": "Resistance 2",
+            "unit": "ohms",
+            "abbreviation": "Ω"
+          }
+        ],
+        "rearrangements": [
+          {
+            "solveFor": "R_total",
+            "formula": "R_total = R₁ + R₂ + …",
+            "label": "Find total resistance"
+          },
+          {
+            "solveFor": "R₁",
+            "formula": "R₁ = R_total − R₂",
+            "label": "Find missing resistor"
+          }
+        ],
+        "triangleLayout": {
+          "top": {
+            "symbol": "R_t",
+            "color": "cyan",
+            "tex": "R_t"
+          },
+          "bottomLeft": {
+            "symbol": "R₁",
+            "color": "purple"
+          },
+          "bottomRight": {
+            "symbol": "R₂",
+            "color": "amber"
+          }
+        },
+        "examTip": "Remember three rules: same current, shared voltage, resistances add up. If one component breaks in series, the whole circuit stops.",
+        "onFormulaSheet": {
+          "aqa": false,
+          "edexcel": false,
+          "ocr-gateway": false,
+          "ocr-21c": false,
+          "wjec": false
+        },
+        "boardNotes": {
+          "aqa": "NOT on formula sheet, you must know series rules. ⚠️",
+          "edexcel": "NOT on formula sheet, must be memorised. ⚠️",
+          "ocr-gateway": "NOT on formula sheet, must be memorised. ⚠️",
+          "ocr-21c": "NOT on formula sheet, must be memorised. ⚠️",
+          "wjec": "NOT on formula sheet, must be memorised. ⚠️"
+        }
+      }
+    }
+  ]
+}

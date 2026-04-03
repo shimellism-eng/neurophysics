@@ -6,22 +6,45 @@ import { MarkSchemeReveal } from '../components/ui/MarkSchemeReveal';
 import type { PastPaperQuestion, BoardId } from '../types/content';
 import './PastPaperMode.css';
 
+/** Maps each board to its available past-paper files (newest first). */
+const PAPER_FILES: Record<BoardId, string[]> = {
+  aqa:         ['2023-p2', '2022-p2', '2021-p2', '2020-p2', '2019-p2'],
+  edexcel:     ['2023-p1', '2022-p1', '2021-p1'],
+  'ocr-gateway': ['2023-p3', '2022-p3'],
+  'ocr-21c':   ['2023-p3', '2022-p3'],
+  wjec:        ['2023-u2', '2022-u2'],
+};
+
+/** Friendly label for a paper file key. */
+function paperLabel(key: string): string {
+  const [year, paper] = key.split('-');
+  return `${year} ${paper.toUpperCase().replace('P', 'Paper ').replace('U', 'Unit ')}`;
+}
+
 export function PastPaperMode() {
   const { progress } = useUser();
   const { logQuestion } = useProgress();
   const boardId = (progress?.board ?? 'aqa') as BoardId;
 
+  const availablePapers = PAPER_FILES[boardId] ?? PAPER_FILES.aqa;
+  const [selectedPaper, setSelectedPaper] = useState(availablePapers[0]);
   const [questions, setQuestions] = useState<PastPaperQuestion[]>([]);
   const [filter, setFilter] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [active, setActive] = useState<PastPaperQuestion | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
 
+  /* Reset paper selection when board changes */
   useEffect(() => {
-    import(`../../content/past-papers/${boardId}/2023-p2.json`)
+    const papers = PAPER_FILES[boardId] ?? PAPER_FILES.aqa;
+    setSelectedPaper(papers[0]);
+  }, [boardId]);
+
+  useEffect(() => {
+    import(`../../content/past-papers/${boardId}/${selectedPaper}.json`)
       .then(mod => setQuestions((mod.default as any).questions))
       .catch(() => setQuestions([]));
-  }, [boardId]);
+  }, [boardId, selectedPaper]);
 
   const filtered = filter === 'all' ? questions : questions.filter(q => q.difficulty === filter);
 
@@ -44,11 +67,11 @@ export function PastPaperMode() {
   if (active) {
     const correct = selected === active.correctIndex;
     return (
-      <div className="pp-question safe-top safe-bot">
+      <main className="pp-question safe-top safe-bot" aria-label="Past paper question">
         <div className="pp-question__topbar">
-          <button className="pp-question__back" onClick={closeQuestion}>← Back</button>
+          <button className="pp-question__back" onClick={closeQuestion} aria-label="Back to question list">← Back</button>
           <div>
-            <p className="pp-question__source">{active.id.replace('aqa-', 'AQA ').replace('-p2-q', ' P2 Q')}</p>
+            <p className="pp-question__source">{active.id.replace(/^([a-z0-9-]+)-(\d{4})-.+-q/, (_, b, y) => `${b.toUpperCase()} ${y} Q`)}</p>
             <span className="pp-question__marks">{active.marks} marks · {active.difficulty}</span>
           </div>
         </div>
@@ -94,7 +117,7 @@ export function PastPaperMode() {
             />
           )}
         </div>
-      </div>
+      </main>
     );
   }
 
@@ -102,7 +125,18 @@ export function PastPaperMode() {
     <ScreenWrapper>
       <div className="pp__header">
         <h1>Past Papers</h1>
-        <p className="text-muted text-sm">{boardId.toUpperCase()} 2023 Paper 2</p>
+        <p className="text-muted text-sm">{boardId.toUpperCase()} {paperLabel(selectedPaper)}</p>
+        <div className="pp__paper-select">
+          {availablePapers.map(p => (
+            <button
+              key={p}
+              className={`pp__filter ${selectedPaper === p ? 'pp__filter--active' : ''}`}
+              onClick={() => setSelectedPaper(p)}
+            >
+              {paperLabel(p)}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="pp__filters">

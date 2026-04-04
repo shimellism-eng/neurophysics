@@ -1,0 +1,129 @@
+{
+  "id": "atomic-structure",
+  "topicId": "atomic",
+  "title": "Atomic Structure",
+  "subtitle": "Protons, neutrons and electrons",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "The nucleus of an atom contains\u2026",
+      "options": [
+        "Protons and electrons",
+        "Neutrons only",
+        "Protons and neutrons",
+        "Electrons and neutrons"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! The nucleus contains <strong>protons</strong> and <strong>neutrons</strong>. Electrons orbit the nucleus in shells \u2014 they are NOT found inside the nucleus.",
+      "correctFeedback": "\u2713 Correct! The nucleus contains protons and neutrons. Electrons orbit the nucleus and are much lighter than either nucleon.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.1 \u2014 Atoms and isotopes"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Atomic Structure",
+      "bodyHTML": "An atom has a tiny central <strong>nucleus</strong> containing <strong>protons</strong> (positive charge) and <strong>neutrons</strong> (no charge), surrounded by <strong>electrons</strong> (negative charge) in shells. The <strong>atomic number</strong> (Z) is the number of protons, and the <strong>mass number</strong> (A) is the total number of protons and neutrons. The relationship between them is A = Z + N, where N is the number of neutrons.",
+      "keyEquation": "A = Z + N",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "A", "label": "Mass number",   "unit": "", "color": "cyan"   },
+          { "symbol": "Z", "label": "Atomic number",  "unit": "", "color": "purple" },
+          { "symbol": "N", "label": "Neutron number", "unit": "", "color": "amber"  }
+        ],
+        "relationships": [
+          "Bigger Z \u2192 more protons \u2192 different element",
+          "Bigger A \u2192 more nucleons in the nucleus"
+        ]
+      },
+      "keyWords": ["nucleus", "proton", "neutron", "electron", "atomic number", "mass number"],
+      "commonErrors": [
+        "Placing electrons inside the nucleus",
+        "Confusing atomic number (protons) with mass number (protons + neutrons)",
+        "Forgetting that neutrons have no charge"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q5(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "5(a)",
+          "marks": 3,
+          "questionText": "An atom of sodium is represented as \u00b2\u00b3\u2081\u2081Na. State the number of protons, neutrons and electrons in this atom.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify atomic number and mass number",
+              "content": "The bottom number is the atomic number Z = 11 (number of protons).\nThe top number is the mass number A = 23 (protons + neutrons).",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correctly identifying Z = 11"
+            },
+            {
+              "stepNum": 2,
+              "label": "Find the number of neutrons",
+              "content": "Use A = Z + N, so N = A \u2212 Z:",
+              "equation": "N = 23 \u2212 11 = 12 neutrons",
+              "markSchemeNote": "1 mark \u2014 correct number of neutrons"
+            },
+            {
+              "stepNum": 3,
+              "label": "State the number of electrons",
+              "content": "A neutral atom has equal numbers of protons and electrons:",
+              "equation": "Electrons = 11",
+              "markSchemeNote": "1 mark \u2014 correct number of electrons"
+            }
+          ],
+          "finalAnswer": "11 protons, 12 neutrons, 11 electrons",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q5(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "5(b)",
+          "marks": 2,
+          "questionText": "An atom has mass number 19 and atomic number 9. How many neutrons does it contain?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "19",  "correct": false },
+            { "label": "B", "text": "9",   "correct": false },
+            { "label": "C", "text": "10",  "correct": true  },
+            { "label": "D", "text": "28",  "correct": false }
+          ],
+          "markSchemeSteps": [
+            "N = A \u2212 Z = 19 \u2212 9",
+            "N = 10 neutrons \u2713"
+          ],
+          "markSchemeAward": "1 mark substitution \u00b7 1 mark correct answer",
+          "commonMistake": "Option A is a trap \u2014 the mass number is the total of protons AND neutrons, not the neutron count alone."
+        }
+      }
+    }
+  ]
+}

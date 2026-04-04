@@ -1,0 +1,189 @@
+{
+  "id": "motor-effect",
+  "topicId": "magnetism",
+  "title": "The Motor Effect",
+  "subtitle": "F = BIl",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A current-carrying wire in a magnetic field experiences a force. What happens to this force if the current is doubled?",
+      "options": [
+        "The force stays the same",
+        "The force is halved",
+        "The force doubles",
+        "The force quadruples"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! From F = BIl, the force is directly proportional to the current I. Doubling I doubles F. The force also depends on the magnetic flux density B and the length of wire in the field l.",
+      "correctFeedback": "\u2713 Correct! F = BIl \u2014 force is directly proportional to current. Doubling the current doubles the force on the wire.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.3 \u2014 Motor effect"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "The Motor Effect",
+      "bodyHTML": "When a current-carrying conductor is placed in a magnetic field, it experiences a <strong>force</strong> \u2014 this is called the <strong>motor effect</strong>. The force is greatest when the current is perpendicular to the magnetic field, and zero when they are parallel. The size of the force is given by <strong>F = BIl</strong>, where B is the magnetic flux density, I is the current, and l is the length of conductor in the field.",
+      "keyEquation": "F = B \u00d7 I \u00d7 l",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "F", "label": "Force",                 "unit": "N", "color": "cyan"   },
+          { "symbol": "B", "label": "Magnetic flux density", "unit": "T", "color": "purple" },
+          { "symbol": "I", "label": "Current",               "unit": "A", "color": "amber"  },
+          { "symbol": "l", "label": "Length in field",       "unit": "m", "color": "blue"   }
+        ],
+        "relationships": [
+          "Bigger B \u2192 greater force",
+          "Bigger I \u2192 greater force",
+          "Longer wire in field \u2192 greater force",
+          "Current parallel to field \u2192 no force"
+        ]
+      },
+      "keyWords": ["motor effect", "force", "magnetic flux density", "tesla", "current", "conductor"],
+      "commonErrors": [
+        "Using the length of the whole wire, not just the length inside the magnetic field",
+        "Forgetting the force is zero when current is parallel to the field",
+        "Mixing up the units for B (tesla, not amps)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change the magnetic flux density and current. Watch how the force on the wire changes. Wire length is fixed at 0.1 m.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "B", "label": "Flux density", "unit": "T", "min": 0.1, "max": 2.0, "default": 1.0, "color": "purple", "step": 0.1 },
+          { "id": "I", "label": "Current",      "unit": "A", "min": 0.5, "max": 10,  "default": 2.0, "color": "amber",  "step": 0.5 }
+        ],
+        "derived": [
+          { "id": "F", "label": "Force", "unit": "N", "formula": "B * I * 0.1", "color": "cyan", "decimalPlaces": 2 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "F",
+        "blockLabel": "F"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 \u00b7 Q4(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "4(a)",
+          "marks": 3,
+          "questionText": "A wire carrying a current of 4.0 A is placed in a magnetic field of flux density 0.3 T. The length of wire in the field is 0.05 m. Calculate the force on the wire.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify the knowns",
+              "content": "B = 0.3 T\nI = 4.0 A\nl = 0.05 m",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Write the equation",
+              "content": "State the equation for the motor effect:",
+              "equation": "F = B \u00d7 I \u00d7 l",
+              "markSchemeNote": "1 mark \u2014 correct equation"
+            },
+            {
+              "stepNum": 3,
+              "label": "Substitute and calculate",
+              "content": "Put the values in:",
+              "equation": "F = 0.3 \u00d7 4.0 \u00d7 0.05 = 0.06 N",
+              "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer with unit"
+            }
+          ],
+          "finalAnswer": "0.06 N",
+          "finalAnswerUnit": "N",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "4(b)",
+          "marks": 3,
+          "questionText": "A wire of length 0.2 m carries a current of 5.0 A. It is placed perpendicular to a magnetic field of flux density 0.4 T. What is the force on the wire?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "0.04 N", "correct": false },
+            { "label": "B", "text": "0.4 N",  "correct": true  },
+            { "label": "C", "text": "4.0 N",  "correct": false },
+            { "label": "D", "text": "1.0 N",  "correct": false }
+          ],
+          "markSchemeSteps": [
+            "F = B \u00d7 I \u00d7 l",
+            "F = 0.4 \u00d7 5.0 \u00d7 0.2",
+            "F = 0.4 N \u2713"
+          ],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option C results from forgetting to include l in the calculation."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "F = BIl \u2014 all rearrangements",
+      "equation": {
+        "id": "motor-effect",
+        "canonical": "F = B \u00d7 I \u00d7 l",
+        "variables": [
+          { "symbol": "F", "name": "Force",                 "unit": "newtons",          "abbreviation": "N" },
+          { "symbol": "B", "name": "Magnetic flux density", "unit": "tesla",             "abbreviation": "T" },
+          { "symbol": "I", "name": "Current",               "unit": "amperes",           "abbreviation": "A" },
+          { "symbol": "l", "name": "Length in field",       "unit": "metres",            "abbreviation": "m" }
+        ],
+        "rearrangements": [
+          { "solveFor": "F", "formula": "F = B \u00d7 I \u00d7 l",     "label": "Find force"           },
+          { "solveFor": "B", "formula": "B = F \u00f7 (I \u00d7 l)", "label": "Find flux density"    },
+          { "solveFor": "I", "formula": "I = F \u00f7 (B \u00d7 l)", "label": "Find current"         },
+          { "solveFor": "l", "formula": "l = F \u00f7 (B \u00d7 I)", "label": "Find length in field" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "F", "color": "cyan"   },
+          "bottomLeft": { "symbol": "B", "color": "purple" },
+          "bottomRight":{ "symbol": "I", "color": "amber"  }
+        },
+        "examTip": "Make sure l is only the length of wire inside the magnetic field, not the total wire length.",
+        "onFormulaSheet": {
+          "aqa": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Must be able to rearrange for B, I, or l."
+        }
+      }
+    }
+  ]
+}

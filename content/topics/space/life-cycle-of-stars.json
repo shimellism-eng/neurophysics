@@ -1,0 +1,115 @@
+{
+  "id": "life-cycle-of-stars",
+  "topicId": "space",
+  "title": "Life Cycle of Stars",
+  "subtitle": "From nebula to final remnant",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "What is the energy source that keeps a main sequence star stable?",
+      "options": [
+        "Gravitational collapse releasing heat",
+        "Chemical combustion of hydrogen gas",
+        "Nuclear fusion of hydrogen nuclei into helium",
+        "Nuclear fission of uranium deep in the star\u2019s core"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Stars are powered by <strong>nuclear fusion</strong>, not combustion or fission. Hydrogen nuclei fuse to form helium, releasing enormous energy. This outward radiation pressure balances gravity, keeping the star stable.",
+      "correctFeedback": "\u2713 Correct! Main sequence stars are powered by nuclear fusion of hydrogen into helium. The energy released as outward pressure balances the inward pull of gravity.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.2 \u2014 Life cycle of stars"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Life Cycle of Stars",
+      "bodyHTML": "Stars form from a cloud of gas and dust called a <strong>nebula</strong>, which contracts under gravity to form a <strong>protostar</strong> and then a stable <strong>main sequence star</strong> powered by nuclear fusion. A star the size of our Sun eventually swells into a <strong>red giant</strong>, then sheds its outer layers to leave a <strong>white dwarf</strong>; more massive stars become <strong>red supergiants</strong> and end in a <strong>supernova</strong> explosion, leaving either a <strong>neutron star</strong> or, for the most massive stars, a <strong>black hole</strong>.",
+      "keyWords": ["nebula", "protostar", "main sequence", "red giant", "supernova", "white dwarf", "neutron star", "black hole", "nuclear fusion"],
+      "commonErrors": [
+        "Thinking the Sun will explode as a supernova \u2014 it is not massive enough; it will become a red giant then white dwarf",
+        "Confusing the order: protostar comes before main sequence, not after",
+        "Forgetting that a supernova is the explosion, not the star itself"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q13(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "13(a)",
+          "marks": 4,
+          "questionText": "Describe the life cycle of a star much more massive than the Sun, starting from the main sequence stage.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Main sequence to red supergiant",
+              "content": "When hydrogen fuel runs low, the core contracts and heats, causing the outer layers to expand. The star becomes a red supergiant.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 red supergiant"
+            },
+            {
+              "stepNum": 2,
+              "label": "Supernova",
+              "content": "The star undergoes a catastrophic explosion called a supernova, releasing enormous energy and dispersing heavy elements into space.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 supernova"
+            },
+            {
+              "stepNum": 3,
+              "label": "Neutron star or black hole",
+              "content": "The remnant core collapses. For very massive stars, it becomes a black hole. For moderately massive stars, it becomes a neutron star.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 neutron star; 1 mark \u2014 black hole (for most massive)"
+            }
+          ],
+          "finalAnswer": "Main sequence \u2192 red supergiant \u2192 supernova \u2192 neutron star (or black hole for most massive).",
+          "finalAnswerUnit": "",
+          "totalMarks": 4
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q13(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "13(b)",
+          "marks": 1,
+          "questionText": "What will eventually happen to our Sun at the end of its main sequence stage?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It will explode as a supernova and leave a neutron star",         "correct": false },
+            { "label": "B", "text": "It will collapse directly into a black hole",                    "correct": false },
+            { "label": "C", "text": "It will expand into a red giant then cool to a white dwarf",     "correct": true  },
+            { "label": "D", "text": "It will shrink into a protostar and begin the cycle again",       "correct": false }
+          ],
+          "markSchemeSteps": [
+            "The Sun is not massive enough for a supernova \u2014 it will expand to a red giant, then shed its layers leaving a white dwarf \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Option A is the path for much more massive stars only \u2014 the Sun is an average-mass star."
+        }
+      }
+    }
+  ]
+}

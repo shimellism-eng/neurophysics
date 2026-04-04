@@ -1,0 +1,115 @@
+{
+  "id": "alpha-beta-gamma",
+  "topicId": "atomic",
+  "title": "Alpha, Beta and Gamma Radiation",
+  "subtitle": "Three types of nuclear radiation",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Which type of radiation has the greatest penetrating power?",
+      "options": [
+        "Alpha (\u03b1)",
+        "Beta (\u03b2)",
+        "Gamma (\u03b3)",
+        "All three have the same penetrating power"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! <strong>Gamma</strong> radiation is the most penetrating \u2014 it requires thick lead or metres of concrete to reduce it significantly. Alpha is the <strong>least</strong> penetrating (stopped by a few cm of air or paper), and beta is intermediate (stopped by a few mm of aluminium).",
+      "correctFeedback": "\u2713 Correct! Gamma is the most penetrating. Remember: more penetrating = less ionising. Alpha is least penetrating but most ionising.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.3 \u2014 Nuclear radiation"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Alpha, Beta and Gamma Radiation",
+      "bodyHTML": "<strong>Alpha (\u03b1)</strong> radiation consists of 2 protons and 2 neutrons (a helium nucleus); it is highly ionising but stopped by a sheet of paper or a few centimetres of air. <strong>Beta (\u03b2)</strong> radiation is a fast-moving electron from the nucleus; it is moderately ionising and stopped by a few millimetres of aluminium. <strong>Gamma (\u03b3)</strong> radiation is a high-frequency electromagnetic wave; it is weakly ionising but highly penetrating, and its intensity is only significantly reduced by thick lead or concrete.",
+      "keyWords": ["alpha", "beta", "gamma", "ionising", "penetrating", "lead", "aluminium"],
+      "commonErrors": [
+        "Thinking more penetrating means more ionising \u2014 it is the opposite",
+        "Forgetting that beta particles are electrons emitted from the nucleus, not electron shells",
+        "Confusing gamma rays (EM waves) with alpha and beta (particles)"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q8(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "8(a)",
+          "marks": 3,
+          "questionText": "A detector records radiation that is stopped by a thin sheet of aluminium but not by paper. Identify the type of radiation and explain your reasoning.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Eliminate alpha",
+              "content": "Alpha radiation is stopped by paper. Since this radiation passes through paper, it is NOT alpha.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correctly eliminating alpha with reasoning"
+            },
+            {
+              "stepNum": 2,
+              "label": "Eliminate gamma",
+              "content": "Gamma radiation passes through aluminium (requires thick lead to reduce it significantly). Since this radiation is stopped by aluminium, it is NOT gamma.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correctly eliminating gamma with reasoning"
+            },
+            {
+              "stepNum": 3,
+              "label": "Identify as beta",
+              "content": "Beta radiation passes through paper but is stopped by a few mm of aluminium. This matches the description.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correctly identifying beta radiation"
+            }
+          ],
+          "finalAnswer": "Beta (\u03b2) radiation",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q8(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "8(b)",
+          "marks": 1,
+          "questionText": "Which type of radiation is most strongly ionising?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Gamma (\u03b3) \u2014 because it is the most penetrating",                         "correct": false },
+            { "label": "B", "text": "Beta (\u03b2) \u2014 because it carries a negative charge",                       "correct": false },
+            { "label": "C", "text": "Alpha (\u03b1) \u2014 because it is large, slow and carries a +2 charge",         "correct": true  },
+            { "label": "D", "text": "All three are equally ionising"                                             , "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Alpha is the most ionising because it is a large, slow-moving particle with a +2 charge \u2014 it interacts strongly with matter \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Greater penetrating power does NOT mean greater ionising ability \u2014 the two are inversely related."
+        }
+      }
+    }
+  ]
+}

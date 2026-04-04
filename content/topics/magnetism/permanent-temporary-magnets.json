@@ -1,0 +1,119 @@
+{
+  "id": "permanent-temporary-magnets",
+  "topicId": "magnetism",
+  "title": "Permanent and Temporary Magnets",
+  "subtitle": "Always on vs switched on",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A permanent magnet\u2026",
+      "options": [
+        "Only attracts metals when placed near another magnet",
+        "Produces a magnetic field at all times without needing a current",
+        "Can be switched off by reversing the current through it",
+        "Only works when heated above room temperature"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! A permanent magnet always produces its own magnetic field \u2014 it does not need a current or another magnet nearby. Temporary (induced) magnets only behave like magnets when placed in an external magnetic field.",
+      "correctFeedback": "\u2713 Correct! A permanent magnet produces a magnetic field all the time. Temporary magnets \u2014 like soft iron \u2014 only become magnetised when placed inside an external field.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.1 \u2014 Poles of a magnet"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Permanent and Temporary Magnets",
+      "bodyHTML": "<strong>Permanent magnets</strong> produce their own magnetic field at all times and cannot easily be demagnetised. <strong>Temporary (induced) magnets</strong>, such as soft iron, only become magnetised when placed inside an external magnetic field and lose their magnetism when removed. Like poles repel and unlike poles attract \u2014 a north pole always repels another north pole but attracts a south pole.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Like poles (N\u2013N or S\u2013S) \u2192 repel",
+          "Unlike poles (N\u2013S) \u2192 attract",
+          "Permanent magnet \u2192 always magnetised",
+          "Induced magnet \u2192 magnetised only in external field"
+        ]
+      },
+      "keyWords": ["permanent", "induced", "magnetic poles", "attract", "repel", "north pole", "south pole"],
+      "commonErrors": [
+        "Thinking a permanent magnet needs a current to work",
+        "Confusing induced magnetism with electromagnets",
+        "Forgetting that like poles repel (not attract)"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Describe question",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "1(a)",
+          "marks": 2,
+          "questionText": "Describe the difference between a permanent magnet and a temporary (induced) magnet.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Define permanent magnet",
+              "content": "State what makes it permanent:",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 produces a magnetic field at all times / does not need an external field"
+            },
+            {
+              "stepNum": 2,
+              "label": "Define temporary magnet",
+              "content": "State what makes it temporary: a temporary magnet only becomes magnetised when placed in an external magnetic field and loses its magnetism when removed from that field.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 only magnetised in external field / loses magnetism when field removed"
+            }
+          ],
+          "finalAnswer": "Permanent magnets always produce a field; temporary magnets only become magnetised inside an external field.",
+          "finalAnswerUnit": null,
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "1(b)",
+          "marks": 1,
+          "questionText": "Two bar magnets are placed with their north poles facing each other. What happens?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "They attract each other", "correct": false },
+            { "label": "B", "text": "They repel each other", "correct": true },
+            { "label": "C", "text": "Nothing happens \u2014 magnets only attract", "correct": false },
+            { "label": "D", "text": "One magnet loses its magnetism", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Like poles (N\u2013N) always repel \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option A is a trap \u2014 unlike poles attract, but like poles repel."
+        }
+      }
+    }
+  ]
+}

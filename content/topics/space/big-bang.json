@@ -1,0 +1,122 @@
+{
+  "id": "big-bang",
+  "topicId": "space",
+  "title": "The Big Bang",
+  "subtitle": "Origin of the universe and the evidence",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Which observation provides the strongest evidence for the Big Bang theory?",
+      "options": [
+        "The Sun produces energy by nuclear fusion",
+        "Red-shift of galaxies and the cosmic microwave background radiation",
+        "The Moon orbits the Earth in a regular period",
+        "Stars come in many different sizes and colours"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! The main evidence for the Big Bang is the <strong>red-shift</strong> of distant galaxies (showing the universe is expanding) and the <strong>cosmic microwave background radiation</strong> (CMB), which is the afterglow of heat from the early universe detected as microwave radiation in all directions.",
+      "correctFeedback": "\u2713 Correct! Red-shift shows the universe is expanding, and the CMB is the remnant heat radiation from the early universe \u2014 both strongly support the Big Bang theory.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.3 \u2014 The Big Bang"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "The Big Bang",
+      "bodyHTML": "The <strong>Big Bang theory</strong> proposes that the universe began approximately <strong>13.8 billion years ago</strong> from an extremely hot, dense point and has been expanding ever since. Key evidence includes the <strong>red-shift</strong> of almost all galaxies (showing they are receding) and the <strong>cosmic microwave background (CMB) radiation</strong>, a uniform microwave signal detected from all directions in space, which is the cooled remnant of radiation from the early universe. The expansion of the universe continues to this day.",
+      "keyWords": ["Big Bang", "expanding universe", "red-shift", "cosmic microwave background", "CMB", "13.8 billion years"],
+      "commonErrors": [
+        "Thinking the Big Bang was an explosion in space \u2014 it was the expansion of space itself from a single point",
+        "Confusing red-shift (evidence for expansion) with CMB (evidence for early hot universe) \u2014 both are needed",
+        "Forgetting the approximate age of the universe (13.8 billion years)"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q16(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "16(a)",
+          "marks": 4,
+          "questionText": "Describe two pieces of evidence that support the Big Bang theory and explain how each supports the theory.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Evidence 1: Red-shift",
+              "content": "Almost all distant galaxies show red-shift, meaning their light is stretched to longer wavelengths.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 names red-shift"
+            },
+            {
+              "stepNum": 2,
+              "label": "How red-shift supports the Big Bang",
+              "content": "This shows galaxies are moving away from us in all directions, meaning the universe is expanding \u2014 consistent with it having originated from a single point.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 explains expansion from a single point"
+            },
+            {
+              "stepNum": 3,
+              "label": "Evidence 2: Cosmic microwave background radiation",
+              "content": "Microwave radiation of a specific temperature is detected uniformly from all directions in space.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 names CMB radiation"
+            },
+            {
+              "stepNum": 4,
+              "label": "How CMB supports the Big Bang",
+              "content": "This is the cooled remnant radiation from the extremely hot, early universe, consistent with a hot Big Bang origin.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 CMB as cooled remnant of hot early universe"
+            }
+          ],
+          "finalAnswer": "Red-shift \u2192 universe is expanding (evidence of origin from single point). CMB \u2192 cooled remnant radiation from the hot early universe.",
+          "finalAnswerUnit": "",
+          "totalMarks": 4
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q16(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "16(b)",
+          "marks": 1,
+          "questionText": "What is the cosmic microwave background radiation?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Radiation emitted by the Sun that has been red-shifted to microwave frequencies",          "correct": false },
+            { "label": "B", "text": "Microwave signals from distant radio galaxies bouncing off the edge of the universe",      "correct": false },
+            { "label": "C", "text": "Uniform microwave radiation from all directions, the remnant heat of the early universe",   "correct": true  },
+            { "label": "D", "text": "Radiation produced when dark matter annihilates in deep space",                            "correct": false }
+          ],
+          "markSchemeSteps": [
+            "CMB is the remnant heat radiation from the hot early universe, now cooled to microwave frequencies and detected uniformly in all directions \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Option A confuses CMB with solar radiation \u2014 the CMB exists throughout all of space and predates any stars."
+        }
+      }
+    }
+  ]
+}

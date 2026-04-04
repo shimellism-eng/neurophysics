@@ -1,0 +1,119 @@
+{
+  "id": "states-of-matter",
+  "topicId": "particles",
+  "title": "States of Matter",
+  "subtitle": "Solid, liquid and gas",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "In a liquid, the particles are\u2026",
+      "options": [
+        "Fixed in position and vibrating about fixed points",
+        "Very far apart with almost no forces between them",
+        "Close together but able to move past each other",
+        "Arranged in a perfect regular lattice"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! In a liquid, particles are close together (similar spacing to a solid) but they can flow and move past each other \u2014 that is why liquids take the shape of their container. Solids have particles fixed in a lattice; gases have particles widely spaced and moving freely.",
+      "correctFeedback": "\u2713 Correct! Liquid particles are close together but free to move past one another, which is why liquids flow and take the shape of their container.",
+      "bestSource": "BEST resource: AQA Physics specification 4.3.1 \u2014 Changes of state"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "States of Matter",
+      "bodyHTML": "Matter exists in three states: <strong>solid</strong> (particles in a regular lattice, vibrating in fixed positions), <strong>liquid</strong> (particles close together but able to flow past each other), and <strong>gas</strong> (particles far apart, moving randomly and rapidly in all directions). The state of a substance depends on the balance between the thermal energy of the particles and the strength of the forces between them.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Solid \u2192 fixed positions, regular lattice, vibrate only",
+          "Liquid \u2192 close together, can flow past each other",
+          "Gas \u2192 far apart, random rapid motion",
+          "More energy \u2192 solid \u2192 liquid \u2192 gas"
+        ]
+      },
+      "keyWords": ["solid", "liquid", "gas", "particle model", "lattice", "intermolecular forces", "state"],
+      "commonErrors": [
+        "Thinking liquid particles are far apart (they are nearly as close as solid particles)",
+        "Saying gas particles are stationary between collisions",
+        "Confusing the state of a substance with its temperature only (pressure also matters)"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Describe question",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "1(a)",
+          "marks": 2,
+          "questionText": "Describe the arrangement and movement of particles in a solid.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Describe the arrangement",
+              "content": "Particles are arranged in a regular pattern (lattice) and are close together with strong forces between them.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 regular arrangement / close together"
+            },
+            {
+              "stepNum": 2,
+              "label": "Describe the movement",
+              "content": "The particles cannot move from their fixed positions but vibrate around those fixed points.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 vibrate about fixed positions / cannot flow"
+            }
+          ],
+          "finalAnswer": "Particles in a solid are in a regular lattice, close together, and vibrate about fixed positions.",
+          "finalAnswerUnit": null,
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 1",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "1(b)",
+          "marks": 1,
+          "questionText": "Which statement correctly describes the particles in a gas?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Close together, moving past each other", "correct": false },
+            { "label": "B", "text": "Fixed in position, vibrating only", "correct": false },
+            { "label": "C", "text": "Far apart, moving rapidly in random directions", "correct": true },
+            { "label": "D", "text": "Close together, vibrating in fixed positions", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Gas particles are far apart and move randomly at high speed \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option A describes a liquid, and option D describes a solid."
+        }
+      }
+    }
+  ]
+}

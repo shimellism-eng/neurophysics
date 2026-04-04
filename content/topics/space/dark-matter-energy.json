@@ -1,0 +1,115 @@
+{
+  "id": "dark-matter-energy",
+  "topicId": "space",
+  "title": "Dark Matter and Dark Energy",
+  "subtitle": "The unseen majority of the universe",
+  "estimatedMinutes": 8,
+  "higherOnly": true,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "How do scientists know dark matter exists if it cannot be seen?",
+      "options": [
+        "Dark matter emits a faint red glow detected by infrared telescopes",
+        "It is inferred from its gravitational effects on visible matter and light",
+        "Dark matter was directly detected in particle accelerator experiments",
+        "Scientists do not actually believe dark matter exists; it is just a theory"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Dark matter does not emit, absorb, or reflect light \u2014 it is truly invisible. Its existence is <strong>inferred from gravitational effects</strong>: galaxies rotate faster than visible mass alone can explain, and gravitational lensing of light is stronger than expected.",
+      "correctFeedback": "\u2713 Correct! Dark matter is inferred from its gravitational effects \u2014 for example, galaxies spin too fast to be held together by visible matter alone.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.3 \u2014 Dark matter and dark energy (Higher)"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Dark Matter and Dark Energy",
+      "bodyHTML": "<strong>Dark matter</strong> is an unknown form of mass that does not interact with light; its existence is inferred from the gravitational effects it has on the rotation of galaxies and the bending (<strong>gravitational lensing</strong>) of light passing massive objects. <strong>Dark energy</strong> is an unknown form of energy thought to be responsible for the <strong>accelerating expansion</strong> of the universe \u2014 observations show distant supernovae are further away than expected, suggesting expansion is speeding up. Together, dark matter and dark energy account for approximately <strong>95%</strong> of the total mass-energy content of the universe.",
+      "keyWords": ["dark matter", "dark energy", "gravitational lensing", "accelerating expansion", "galaxy rotation"],
+      "commonErrors": [
+        "Thinking dark matter is the same as dark energy \u2014 they are completely different phenomena",
+        "Thinking dark matter has been directly observed \u2014 it is only inferred from its effects",
+        "Forgetting that together dark matter and dark energy make up about 95% of the universe"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q17(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "17(a)",
+          "marks": 3,
+          "questionText": "Scientists observe that the outer stars of a galaxy rotate much faster than can be explained by the mass of visible stars. Describe what this suggests and how it provides evidence for dark matter.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify the observation",
+              "content": "The outer stars orbit much faster than expected based on the gravitational effect of all visible mass in the galaxy.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 outer stars rotate faster than predicted by visible mass"
+            },
+            {
+              "stepNum": 2,
+              "label": "Explain the implication",
+              "content": "There must be additional, unseen mass providing extra gravitational force to keep those stars in orbit at high speed.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 additional unseen mass must be present"
+            },
+            {
+              "stepNum": 3,
+              "label": "Link to dark matter",
+              "content": "This unseen mass is called dark matter. It does not emit or absorb light, so it cannot be detected directly, only inferred from its gravitational effects.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 inferred mass is dark matter (undetectable by light)"
+            }
+          ],
+          "finalAnswer": "Outer stars orbit too fast for visible mass alone \u2192 additional unseen (dark) matter provides extra gravitational force.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q17(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "17(b)",
+          "marks": 1,
+          "questionText": "What is the role of dark energy in modern cosmology?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It provides the gravitational force that holds galaxies together",                      "correct": false },
+            { "label": "B", "text": "It is the energy released during the Big Bang that still heats the universe",            "correct": false },
+            { "label": "C", "text": "It is thought to be responsible for the accelerating expansion of the universe",         "correct": true  },
+            { "label": "D", "text": "It is the energy stored inside dark matter particles",                                   "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Dark energy is the name given to whatever is causing the universe\u2019s expansion to accelerate \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Option A describes dark matter (gravitational effects), not dark energy. The two are distinct."
+        }
+      }
+    }
+  ]
+}

@@ -17,20 +17,17 @@ export function ShcDiagram() {
       {/* === METAL BLOCK === */}
       <rect x="170" y="130" width="120" height="100" rx="6"
         fill="var(--bg4)" stroke="var(--cyan)" strokeWidth="2" />
-      <text x="230" y="190" textAnchor="middle" fill="var(--muted)" fontSize="11" fontFamily="sans-serif">
-        Metal
-      </text>
-      <text x="230" y="204" textAnchor="middle" fill="var(--muted)" fontSize="11" fontFamily="sans-serif">
-        block
+      <text x="230" y="222" textAnchor="middle" fill="var(--muted)" fontSize="10" fontFamily="sans-serif">
+        Metal block
       </text>
 
       {/* Immersion heater hole + heater coil */}
       <rect x="198" y="138" width="20" height="50" rx="3"
         fill="var(--bg3)" stroke="var(--amber)" strokeWidth="1.5" />
       <line x1="208" y1="140" x2="208" y2="186" stroke="var(--amber)" strokeWidth="1.5" strokeDasharray="3,2" />
-      <text x="208" y="200" textAnchor="middle" fill="var(--amber)" fontSize="9" fontFamily="sans-serif">
-        Heater
-      </text>
+      {/* Heater label — outside block to left */}
+      <line x1="197" y1="163" x2="170" y2="163" stroke="var(--amber)" strokeWidth="1" strokeDasharray="2,2" />
+      <text x="162" y="167" textAnchor="end" fill="var(--amber)" fontSize="9" fontFamily="sans-serif">Heater</text>
 
       {/* Thermometer hole + thermometer */}
       <rect x="248" y="130" width="10" height="60" rx="3"

@@ -1,0 +1,122 @@
+{
+  "id": "satellites",
+  "topicId": "space",
+  "title": "Satellites",
+  "subtitle": "Natural and artificial objects in orbit",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A geostationary satellite\u2026",
+      "options": [
+        "Orbits Earth every 90 minutes at low altitude",
+        "Stays above the same point on Earth\u2019s surface with a 24-hour period",
+        "Orbits the Sun rather than the Earth",
+        "Moves from pole to pole, scanning the entire surface every day"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! A geostationary satellite orbits at ~35,786 km altitude with a period of exactly <strong>24 hours</strong>, matching Earth\u2019s rotation. This means it appears stationary above one fixed point \u2014 ideal for communications.",
+      "correctFeedback": "\u2713 Correct! Geostationary satellites have a 24-hour orbital period and stay above the same point on Earth\u2019s equator \u2014 making them ideal for TV and communications.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.1 \u2014 Satellites"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Satellites",
+      "bodyHTML": "<strong>Natural satellites</strong> (such as the Moon) and <strong>artificial satellites</strong> orbit planets due to gravity. <strong>Geostationary satellites</strong> orbit at ~35,786 km altitude with a period of 24 hours, staying fixed above one point on the equator \u2014 used for communications and TV. <strong>Low Earth orbit (LEO)</strong> satellites orbit at a few hundred km altitude with much shorter periods (~90 minutes), moving quickly across the sky; they are used for remote sensing, weather monitoring, and the International Space Station.",
+      "keyWords": ["satellite", "geostationary", "low Earth orbit", "LEO", "orbital period", "communications", "remote sensing"],
+      "commonErrors": [
+        "Thinking geostationary satellites are stationary in space \u2014 they are moving, but at the same angular speed as Earth\u2019s rotation",
+        "Confusing the altitude of geostationary (very high, 35,786 km) with LEO (a few hundred km)",
+        "Forgetting that a lower orbit means a faster speed AND a shorter period"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q18(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "18(a)",
+          "marks": 4,
+          "questionText": "Compare geostationary satellites and low Earth orbit (LEO) satellites in terms of their altitude, orbital period and typical uses.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Compare altitude",
+              "content": "Geostationary satellites orbit at ~35,786 km. LEO satellites orbit at a few hundred to a few thousand km.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 geostationary much higher altitude than LEO"
+            },
+            {
+              "stepNum": 2,
+              "label": "Compare orbital period",
+              "content": "Geostationary satellites have a period of 24 hours, matching Earth\u2019s rotation. LEO satellites have periods of around 90 minutes.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 24 h vs ~90 min"
+            },
+            {
+              "stepNum": 3,
+              "label": "Geostationary uses",
+              "content": "Geostationary satellites are used for communications, satellite TV and GPS (because they remain above a fixed point).",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 communications / TV"
+            },
+            {
+              "stepNum": 4,
+              "label": "LEO uses",
+              "content": "LEO satellites are used for Earth observation, weather forecasting, remote sensing and the International Space Station.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 remote sensing / weather"
+            }
+          ],
+          "finalAnswer": "Geostationary: ~35,786 km, 24-hour period, communications/TV. LEO: ~200\u20132000 km, ~90-minute period, remote sensing/weather.",
+          "finalAnswerUnit": "",
+          "totalMarks": 4
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q18(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "18(b)",
+          "marks": 1,
+          "questionText": "Why is a geostationary orbit preferred for satellite television broadcasts?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Geostationary satellites travel faster, so they can transmit more data",              "correct": false },
+            { "label": "B", "text": "The satellite remains above the same point on Earth, so a dish antenna can stay fixed", "correct": true  },
+            { "label": "C", "text": "Geostationary satellites are closer to Earth, so the signal is stronger",              "correct": false },
+            { "label": "D", "text": "Geostationary orbits avoid the Van Allen radiation belts",                            "correct": false }
+          ],
+          "markSchemeSteps": [
+            "A fixed position above the same point means a dish on the ground does not need to track or move \u2013 essential for reliable TV broadcast \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer B",
+          "commonMistake": "Option C is wrong \u2014 geostationary satellites are actually very far away (35,786 km), much further than LEO satellites."
+        }
+      }
+    }
+  ]
+}

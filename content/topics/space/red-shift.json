@@ -1,0 +1,115 @@
+{
+  "id": "red-shift",
+  "topicId": "space",
+  "title": "Red-shift",
+  "subtitle": "Evidence for an expanding universe",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "What does red-shift in the light from a distant galaxy tell us?",
+      "options": [
+        "The galaxy is moving towards us, compressing the light waves",
+        "The galaxy contains more red stars than blue stars",
+        "The galaxy is moving away from us, stretching the light to longer wavelengths",
+        "The galaxy is rotating very quickly, changing its colour"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Red-shift means the light has been <strong>stretched to longer wavelengths</strong> (towards the red end of the spectrum) because the galaxy is <strong>moving away</strong> from us. This is the Doppler effect applied to light \u2014 nothing to do with the colour of the stars.",
+      "correctFeedback": "\u2713 Correct! Red-shift means the galaxy is moving away from us. The faster it moves away, the greater the red-shift observed.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.3 \u2014 Red-shift"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Red-shift",
+      "bodyHTML": "When a galaxy moves away from us, the light it emits is <strong>stretched</strong> to longer wavelengths, shifting it towards the <strong>red end</strong> of the spectrum \u2014 this is called <strong>red-shift</strong>. Astronomers observe that almost all distant galaxies show red-shift, and that <strong>more distant galaxies</strong> show <strong>greater red-shift</strong>, meaning they are moving away faster. This is key evidence that the universe is <strong>expanding</strong>.",
+      "keyWords": ["red-shift", "wavelength", "galaxy", "expanding universe", "Doppler effect", "spectrum"],
+      "commonErrors": [
+        "Thinking red-shift means the galaxy is physically red in colour",
+        "Forgetting that blue-shift (light moving towards us) also exists \u2014 a few nearby galaxies show this",
+        "Confusing red-shift with evidence for the Big Bang itself (it is evidence for expansion, which supports the Big Bang)"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q15(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "15(a)",
+          "marks": 3,
+          "questionText": "Astronomers observe that light from a distant galaxy has a longer wavelength than the same light produced in a laboratory. Explain what this tells us about the galaxy and about the universe.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify red-shift",
+              "content": "The light has been shifted to longer wavelengths \u2014 this is called red-shift.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 identifies red-shift"
+            },
+            {
+              "stepNum": 2,
+              "label": "Explain what it tells us about the galaxy",
+              "content": "The galaxy is moving away from us (receding). The greater the red-shift, the faster the galaxy is moving away.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 galaxy is moving away from us"
+            },
+            {
+              "stepNum": 3,
+              "label": "Explain what it tells us about the universe",
+              "content": "Since almost all galaxies show red-shift, the universe is expanding in all directions.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 universe is expanding"
+            }
+          ],
+          "finalAnswer": "Red-shift detected; galaxy is moving away; universe is expanding.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q15(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "15(b)",
+          "marks": 1,
+          "questionText": "A galaxy that is further away from Earth shows a greater red-shift than a nearer galaxy. What does this indicate?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "The further galaxy is moving towards us more quickly",                           "correct": false },
+            { "label": "B", "text": "The further galaxy contains hotter, redder stars",                              "correct": false },
+            { "label": "C", "text": "The further galaxy is moving away from us more quickly",                        "correct": true  },
+            { "label": "D", "text": "The further galaxy is the same distance away but emits lower-energy light",      "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Greater red-shift = greater recession speed \u2014 the further galaxy is moving away faster \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Option A (blue-shift) would indicate motion towards us \u2014 red-shift always indicates recession."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "electromagnetism",
+  "topicId": "magnetism",
+  "title": "Electromagnetism",
+  "subtitle": "Solenoids and electromagnets",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Which of these would increase the strength of an electromagnet?",
+      "options": [
+        "Decreasing the current through the coil",
+        "Removing the iron core from the solenoid",
+        "Increasing the number of turns on the coil",
+        "Using a thicker wire but fewer turns"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Adding more turns to the coil increases the magnetic field strength \u2014 each loop contributes to the total field. Increasing current also strengthens the field, and adding a soft iron core concentrates the field lines enormously.",
+      "correctFeedback": "\u2713 Correct! More turns on the coil means a stronger electromagnet. You can also increase current or add a soft iron core to boost the field strength.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.2 \u2014 The electromagnet"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Electromagnetism",
+      "bodyHTML": "A <strong>solenoid</strong> is a coil of wire that acts like a bar magnet when a current flows through it, producing a magnetic field along its axis. The field strength of an <strong>electromagnet</strong> can be increased by increasing the current, increasing the number of turns on the coil, or adding a soft iron core. Unlike permanent magnets, electromagnets can be switched on and off by controlling the current.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "More current \u2192 stronger field",
+          "More turns \u2192 stronger field",
+          "Soft iron core \u2192 much stronger field",
+          "No current \u2192 no field (can be switched off)"
+        ]
+      },
+      "keyWords": ["solenoid", "electromagnet", "coil", "turns", "soft iron core", "magnetic field strength"],
+      "commonErrors": [
+        "Thinking a thicker wire alone makes a stronger electromagnet",
+        "Confusing the number of turns with the length of wire used",
+        "Forgetting that the polarity depends on the direction of current"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Describe question",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "3(a)",
+          "marks": 3,
+          "questionText": "Describe three ways a student could increase the strength of an electromagnet.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Method 1 \u2014 increase current",
+              "content": "Increase the current flowing through the wire in the coil.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 increase current"
+            },
+            {
+              "stepNum": 2,
+              "label": "Method 2 \u2014 increase turns",
+              "content": "Increase the number of turns (loops) of wire in the coil.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 increase number of turns"
+            },
+            {
+              "stepNum": 3,
+              "label": "Method 3 \u2014 add iron core",
+              "content": "Place a soft iron core inside the solenoid to concentrate the magnetic field.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 add/use a soft iron core"
+            }
+          ],
+          "finalAnswer": "Increase current; increase number of turns; add a soft iron core.",
+          "finalAnswerUnit": null,
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2022,
+          "paper": 2,
+          "questionNumber": "3(b)",
+          "marks": 1,
+          "questionText": "A student wants to switch off an electromagnet instantly. What should they do?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Remove the iron core", "correct": false },
+            { "label": "B", "text": "Reverse the current direction", "correct": false },
+            { "label": "C", "text": "Turn off the current", "correct": true },
+            { "label": "D", "text": "Reduce the number of turns", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Electromagnets only work when current flows \u2014 switching off the current removes the field instantly \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option B reverses polarity but does not switch the electromagnet off."
+        }
+      }
+    }
+  ]
+}

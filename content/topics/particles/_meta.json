@@ -1,0 +1,22 @@
+{
+  "id": "particles",
+  "name": "Particle Model",
+  "emoji": "\u26db",
+  "color": "#16a34a",
+  "paper": 1,
+  "boards": ["aqa"],
+  "conceptOrder": [
+    "states-of-matter",
+    "particle-model",
+    "density",
+    "changes-of-state",
+    "internal-energy",
+    "specific-heat-capacity",
+    "specific-latent-heat"
+  ],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": {
+    "aqa": "Paper 1 - Section 3: Particle Model of Matter"
+  }
+}

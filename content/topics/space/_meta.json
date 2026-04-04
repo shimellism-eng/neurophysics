@@ -1,0 +1,12 @@
+{
+  "id": "space",
+  "name": "Space Physics",
+  "emoji": "\ud83c\udf0c",
+  "color": "#4f46e5",
+  "paper": 2,
+  "boards": ["aqa"],
+  "conceptOrder": ["solar-system","life-cycle-of-stars","orbital-motion","red-shift","big-bang","dark-matter-energy","satellites"],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": { "aqa": "Paper 2 - Section 8: Space Physics" }
+}

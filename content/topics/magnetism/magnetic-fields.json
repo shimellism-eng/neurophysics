@@ -1,0 +1,126 @@
+{
+  "id": "magnetic-fields",
+  "topicId": "magnetism",
+  "title": "Magnetic Fields",
+  "subtitle": "Field lines, poles and rules",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Magnetic field lines around a bar magnet travel\u2026",
+      "options": [
+        "From south pole to north pole outside the magnet",
+        "From north pole to south pole outside the magnet",
+        "Randomly in all directions with no pattern",
+        "Only along the surface of the magnet"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! By convention, magnetic field lines run from the <strong>north</strong> pole to the <strong>south</strong> pole outside the magnet. They form closed loops that continue south to north inside the magnet.",
+      "correctFeedback": "\u2713 Correct! Field lines run from north to south outside the magnet. They are closest together (most dense) at the poles, where the field is strongest.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.1 \u2014 Magnetic fields"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Magnetic Fields",
+      "bodyHTML": "A <strong>magnetic field</strong> is a region where a magnetic material or moving charge experiences a force. Field lines run from the <strong>north pole to the south pole</strong> outside the magnet, and the strength of the field is shown by how close together the lines are \u2014 the denser the lines, the stronger the field. Field lines never cross each other.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Field lines: north \u2192 south (outside magnet)",
+          "Dense lines \u2192 strong field",
+          "Sparse lines \u2192 weak field",
+          "Lines never cross"
+        ]
+      },
+      "keyWords": ["magnetic field", "field lines", "north pole", "south pole", "flux density", "uniform field"],
+      "commonErrors": [
+        "Drawing field lines from south to north (they go N to S outside the magnet)",
+        "Making field lines cross each other",
+        "Thinking a uniform field means no force acts"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Describe question",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "2(a)",
+          "marks": 3,
+          "questionText": "Describe the magnetic field pattern around a bar magnet.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State the direction of field lines",
+              "content": "Field lines run from the north pole to the south pole outside the magnet.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correct direction: north to south outside"
+            },
+            {
+              "stepNum": 2,
+              "label": "Describe field strength",
+              "content": "The field is strongest at the poles where the field lines are closest together (most dense) and weakest further away where lines are more spread out.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 reference to density of lines / strongest at poles"
+            },
+            {
+              "stepNum": 3,
+              "label": "Describe the shape",
+              "content": "The field lines form closed loops \u2014 they continue from south to north inside the magnet.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 closed loops / continuous through magnet"
+            }
+          ],
+          "finalAnswer": "Field lines run from N to S outside; densest at poles (strongest field); closed loops continuing S to N inside the magnet.",
+          "finalAnswerUnit": null,
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "2(b)",
+          "marks": 1,
+          "questionText": "Where is the magnetic field of a bar magnet strongest?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "In the middle of the magnet", "correct": false },
+            { "label": "B", "text": "At the poles, where field lines are closest together", "correct": true },
+            { "label": "C", "text": "At the poles, where field lines are furthest apart", "correct": false },
+            { "label": "D", "text": "Equally strong everywhere around the magnet", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Strongest at poles \u2014 field lines are most dense (closest together) there \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option C reverses the rule \u2014 dense lines mean strong field, not weak."
+        }
+      }
+    }
+  ]
+}

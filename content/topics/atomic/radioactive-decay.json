@@ -1,0 +1,115 @@
+{
+  "id": "radioactive-decay",
+  "topicId": "atomic",
+  "title": "Radioactive Decay",
+  "subtitle": "Random, spontaneous emission from unstable nuclei",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Radioactive decay is\u2026",
+      "options": [
+        "Caused by high temperatures breaking apart the nucleus",
+        "A random, spontaneous process not affected by external conditions",
+        "Triggered by chemical reactions in the substance",
+        "Only possible in man-made radioactive materials"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Radioactive decay is <strong>random</strong> and <strong>spontaneous</strong>. It cannot be sped up or slowed down by heating, cooling, or chemical changes. It occurs in both natural and man-made materials.",
+      "correctFeedback": "\u2713 Correct! Radioactive decay is a random, spontaneous process \u2014 it cannot be controlled by temperature, pressure, or chemical state.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.2 \u2014 Radioactive decay"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Radioactive Decay",
+      "bodyHTML": "<strong>Radioactive decay</strong> occurs when an <strong>unstable nucleus</strong> emits radiation to become more stable. The process is completely <strong>random</strong> and <strong>spontaneous</strong> \u2014 it is impossible to predict exactly when any individual nucleus will decay. Decay is not affected by the chemical state of the substance, its temperature, or any other external physical condition.",
+      "keyWords": ["radioactive decay", "unstable nucleus", "random", "spontaneous", "radiation"],
+      "commonErrors": [
+        "Thinking decay can be speeded up by heating the substance",
+        "Confusing radioactive decay with chemical decomposition",
+        "Assuming all atoms of a radioactive substance decay at once"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q7(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "A student claims that heating a radioactive sample will make it decay faster. Explain why the student is incorrect.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State that decay is random and spontaneous",
+              "content": "Radioactive decay is a random, spontaneous nuclear process.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 random / spontaneous"
+            },
+            {
+              "stepNum": 2,
+              "label": "Explain what affects decay",
+              "content": "Decay depends only on the stability of the nucleus, not on conditions outside the atom.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 nuclear process unaffected by external conditions"
+            },
+            {
+              "stepNum": 3,
+              "label": "Conclude",
+              "content": "Because heating is a physical/chemical change outside the nucleus, it has no effect on the rate of radioactive decay.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correct conclusion linked to the nuclear origin of decay"
+            }
+          ],
+          "finalAnswer": "Decay is random and spontaneous; temperature cannot affect the nucleus, so heating has no effect on the decay rate.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q7(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "7(b)",
+          "marks": 1,
+          "questionText": "Which statement best describes radioactive decay?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It is predictable and can be controlled by changing temperature",      "correct": false },
+            { "label": "B", "text": "It only occurs in atoms that have been exposed to radiation",           "correct": false },
+            { "label": "C", "text": "It is a random process where unstable nuclei emit radiation to become more stable", "correct": true  },
+            { "label": "D", "text": "It speeds up when the radioactive substance is dissolved in water",     "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Decay is random and spontaneous \u2014 unstable nuclei emit radiation to become more stable \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Options A and D both suggest external conditions affect decay \u2014 they do not, as decay is a nuclear process."
+        }
+      }
+    }
+  ]
+}

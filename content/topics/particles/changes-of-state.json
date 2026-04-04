@@ -1,0 +1,126 @@
+{
+  "id": "changes-of-state",
+  "topicId": "particles",
+  "title": "Changes of State",
+  "subtitle": "Melting, boiling and beyond",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "When water is boiling at 100\u00b0C, its temperature\u2026",
+      "options": [
+        "Continues to rise slowly while it boils",
+        "Stays constant at 100\u00b0C while it boils",
+        "Drops slightly because energy is being used up",
+        "Rises rapidly above 100\u00b0C"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! During a change of state the temperature stays <strong>constant</strong>. The energy supplied is used to break the bonds between particles (increasing potential energy) rather than raising the kinetic energy \u2014 that is why we see a flat section on a heating curve.",
+      "correctFeedback": "\u2713 Correct! Temperature stays constant during a change of state because all the energy goes into breaking intermolecular bonds, not raising kinetic energy.",
+      "bestSource": "BEST resource: AQA Physics specification 4.3.1 \u2014 Changes of state"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Changes of State",
+      "bodyHTML": "When a substance changes state (e.g. melting, boiling, condensing, freezing) its <strong>temperature remains constant</strong> even though energy is being supplied or released. The energy during melting and boiling goes into breaking the forces between particles (increasing potential energy), not into increasing kinetic energy. These changes are <strong>reversible</strong>: the substance can return to its original state without any change to its mass.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Melting: solid \u2192 liquid (energy absorbed, T constant)",
+          "Boiling/evaporating: liquid \u2192 gas (energy absorbed, T constant)",
+          "Condensing: gas \u2192 liquid (energy released, T constant)",
+          "Freezing: liquid \u2192 solid (energy released, T constant)"
+        ]
+      },
+      "keyWords": ["melting", "boiling", "condensing", "freezing", "change of state", "latent heat", "heating curve"],
+      "commonErrors": [
+        "Thinking temperature rises during a change of state",
+        "Confusing boiling (throughout liquid) with evaporation (surface only)",
+        "Thinking changes of state are irreversible"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Describe question",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(a)",
+          "marks": 3,
+          "questionText": "A heating curve shows how the temperature of a substance changes as it is heated at a constant rate. Describe what is happening at the flat (horizontal) sections of the curve.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State what the flat section means",
+              "content": "The temperature is not changing even though energy is still being supplied at a constant rate.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 temperature constant / not rising"
+            },
+            {
+              "stepNum": 2,
+              "label": "Explain where the energy goes",
+              "content": "The energy is being used to break the forces (bonds) between particles, increasing the potential energy of the particles rather than their kinetic energy.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 energy used to break bonds / overcome intermolecular forces"
+            },
+            {
+              "stepNum": 3,
+              "label": "Name the process",
+              "content": "This is a change of state \u2014 either melting (solid to liquid) or boiling (liquid to gas), depending on which flat section it is.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correctly identifies melting or boiling as the change of state"
+            }
+          ],
+          "finalAnswer": "Temperature is constant; energy is breaking bonds between particles (potential energy increases, not kinetic energy); a change of state is occurring.",
+          "finalAnswerUnit": null,
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 1",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "3(b)",
+          "marks": 1,
+          "questionText": "What happens to the mass of a substance when it changes state from liquid to gas?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "It increases because the particles spread out", "correct": false },
+            { "label": "B", "text": "It decreases because some particles escape", "correct": false },
+            { "label": "C", "text": "It stays the same \u2014 no particles are created or destroyed", "correct": true },
+            { "label": "D", "text": "It decreases because the particles get lighter", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Changes of state are physical changes \u2014 no particles are created or destroyed, so mass is conserved \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Options A and B confuse volume change (particles spread out) with mass change \u2014 mass is always conserved."
+        }
+      }
+    }
+  ]
+}

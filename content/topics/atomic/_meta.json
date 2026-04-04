@@ -1,0 +1,12 @@
+{
+  "id": "atomic",
+  "name": "Atomic Structure",
+  "emoji": "\u2622",
+  "color": "#dc2626",
+  "paper": 2,
+  "boards": ["aqa"],
+  "conceptOrder": ["atomic-structure","isotopes","radioactive-decay","alpha-beta-gamma","half-life","uses-of-radiation","nuclear-fission-fusion"],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": { "aqa": "Paper 2 - Section 4: Atomic Structure" }
+}

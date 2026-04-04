@@ -1,0 +1,189 @@
+{
+  "id": "transformers",
+  "topicId": "magnetism",
+  "title": "Transformers",
+  "subtitle": "Vp/Vs = np/ns",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A step-up transformer\u2026",
+      "options": [
+        "Has more turns on the primary coil than the secondary coil",
+        "Increases the voltage and increases the current by the same factor",
+        "Has more turns on the secondary coil than the primary coil",
+        "Only works with direct current (DC)"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! A step-up transformer has <strong>more</strong> turns on the secondary coil than the primary. It increases voltage but \u2014 for an ideal transformer \u2014 decreases current proportionally to conserve power. Transformers only work with AC, not DC.",
+      "correctFeedback": "\u2713 Correct! A step-up transformer has more secondary turns (ns > np), which gives a higher output voltage. Current decreases to conserve power.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.5 \u2014 Transformers"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Transformers",
+      "bodyHTML": "A <strong>transformer</strong> uses electromagnetic induction to change the voltage of an alternating current. It consists of two coils (primary and secondary) wound around a soft iron core. The ratio of voltages equals the ratio of turns: <strong>Vp/Vs = np/ns</strong>. A <strong>step-up</strong> transformer has more secondary turns and increases voltage; a <strong>step-down</strong> transformer has fewer secondary turns and decreases voltage.",
+      "keyEquation": "Vp / Vs = np / ns",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "Vp", "label": "Primary voltage",    "unit": "V",     "color": "cyan"   },
+          { "symbol": "Vs", "label": "Secondary voltage",  "unit": "V",     "color": "purple" },
+          { "symbol": "np", "label": "Primary turns",      "unit": "turns", "color": "amber"  },
+          { "symbol": "ns", "label": "Secondary turns",    "unit": "turns", "color": "blue"   }
+        ],
+        "relationships": [
+          "ns > np \u2192 step-up (voltage increases)",
+          "ns < np \u2192 step-down (voltage decreases)",
+          "Power in = Power out (ideal transformer)",
+          "Transformers only work with AC"
+        ]
+      },
+      "keyWords": ["transformer", "step-up", "step-down", "turns ratio", "primary", "secondary", "alternating current"],
+      "commonErrors": [
+        "Thinking transformers work with DC \u2014 they require AC",
+        "Confusing which coil is primary and which is secondary",
+        "Forgetting that increasing voltage decreases current (power is conserved)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change the number of primary turns and the primary voltage. Watch how the secondary voltage changes. Secondary turns are fixed at 200.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "np",  "label": "Primary turns",   "unit": "turns", "min": 50,  "max": 1000, "default": 100, "color": "amber",  "step": 50 },
+          { "id": "Vp",  "label": "Primary voltage",  "unit": "V",     "min": 1,   "max": 230,  "default": 12,  "color": "purple", "step": 1  }
+        ],
+        "derived": [
+          { "id": "Vs", "label": "Secondary voltage", "unit": "V", "formula": "Vp * 200 / np", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "Vp",
+        "blockLabel": "Vs"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 2 \u00b7 Q7(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "7(a)",
+          "marks": 3,
+          "questionText": "A transformer has 500 turns on the primary coil and 2000 turns on the secondary coil. The primary voltage is 230 V. Calculate the secondary (output) voltage.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify the knowns",
+              "content": "np = 500 turns\nns = 2000 turns\nVp = 230 V",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Write the transformer equation",
+              "content": "State the turns-ratio equation:",
+              "equation": "Vp / Vs = np / ns",
+              "markSchemeNote": "1 mark \u2014 correct equation"
+            },
+            {
+              "stepNum": 3,
+              "label": "Rearrange and calculate",
+              "content": "Rearrange for Vs and substitute:",
+              "equation": "Vs = Vp \u00d7 (ns / np) = 230 \u00d7 (2000 / 500) = 920 V",
+              "markSchemeNote": "1 mark \u2014 correct rearrangement; 1 mark \u2014 correct answer with unit"
+            }
+          ],
+          "finalAnswer": "920 V",
+          "finalAnswerUnit": "V",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "7(b)",
+          "marks": 3,
+          "questionText": "A transformer has a primary voltage of 400 V and 1000 turns on the primary coil. The secondary coil has 250 turns. What is the secondary voltage?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "1600 V", "correct": false },
+            { "label": "B", "text": "100 V",  "correct": true  },
+            { "label": "C", "text": "250 V",  "correct": false },
+            { "label": "D", "text": "400 V",  "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Vs = Vp \u00d7 (ns / np)",
+            "Vs = 400 \u00d7 (250 / 1000)",
+            "Vs = 100 V \u2713"
+          ],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option A results from dividing np by ns instead of ns by np \u2014 always multiply Vp by the ratio (ns/np)."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "Vp/Vs = np/ns \u2014 all rearrangements",
+      "equation": {
+        "id": "transformer",
+        "canonical": "Vp / Vs = np / ns",
+        "variables": [
+          { "symbol": "Vp", "name": "Primary voltage",   "unit": "volts",  "abbreviation": "V"     },
+          { "symbol": "Vs", "name": "Secondary voltage",  "unit": "volts",  "abbreviation": "V"     },
+          { "symbol": "np", "name": "Primary turns",      "unit": "turns",  "abbreviation": "turns" },
+          { "symbol": "ns", "name": "Secondary turns",    "unit": "turns",  "abbreviation": "turns" }
+        ],
+        "rearrangements": [
+          { "solveFor": "Vs", "formula": "Vs = Vp \u00d7 (ns / np)", "label": "Find secondary voltage" },
+          { "solveFor": "Vp", "formula": "Vp = Vs \u00d7 (np / ns)", "label": "Find primary voltage"   },
+          { "solveFor": "ns", "formula": "ns = np \u00d7 (Vs / Vp)", "label": "Find secondary turns"   },
+          { "solveFor": "np", "formula": "np = ns \u00d7 (Vp / Vs)", "label": "Find primary turns"     }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "Vp", "color": "cyan"   },
+          "bottomLeft": { "symbol": "Vs", "color": "purple" },
+          "bottomRight":{ "symbol": "np", "color": "amber"  }
+        },
+        "examTip": "Step-up: ns > np so Vs > Vp. Step-down: ns < np so Vs < Vp. Transformers only work with AC.",
+        "onFormulaSheet": {
+          "aqa": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Know how to rearrange for any of the four quantities."
+        }
+      }
+    }
+  ]
+}

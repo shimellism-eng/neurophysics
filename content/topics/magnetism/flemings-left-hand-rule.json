@@ -1,0 +1,119 @@
+{
+  "id": "flemings-left-hand-rule",
+  "topicId": "magnetism",
+  "title": "Fleming's Left-Hand Rule",
+  "subtitle": "Finding the direction of force",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Fleming's left-hand rule is used to find\u2026",
+      "options": [
+        "The direction of an induced current in a generator",
+        "The direction of the force on a current-carrying conductor in a magnetic field",
+        "The direction of the magnetic field around a solenoid",
+        "The magnitude of the force on a current-carrying conductor"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Fleming's <strong>left</strong>-hand rule gives the direction of the <strong>force</strong> (motor effect) \u2014 use your left hand for motors. Fleming's right-hand rule is used for generators (induced current). Neither rule gives you a magnitude.",
+      "correctFeedback": "\u2713 Correct! The left-hand rule tells you the direction of force on a current-carrying conductor placed in a magnetic field \u2014 the motor effect.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.3 \u2014 Fleming's left-hand rule"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Fleming's Left-Hand Rule",
+      "bodyHTML": "<strong>Fleming's left-hand rule</strong> gives the direction of the force on a current-carrying conductor in a magnetic field. Hold your left hand with your <strong>first finger</strong> pointing in the direction of the magnetic field (N to S), your <strong>second finger</strong> pointing in the direction of conventional current, and your <strong>thumb</strong> points in the direction of the force (motion). Remember: <strong>FBI</strong> \u2014 Force (thumb), B-field (first finger), current I (second finger).",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Thumb \u2192 Force (motion)",
+          "First finger \u2192 magnetic Field (N to S)",
+          "Second finger \u2192 current (conventional, + to \u2212)",
+          "Use LEFT hand for motor effect"
+        ]
+      },
+      "keyWords": ["Fleming's left-hand rule", "motor effect", "force direction", "conventional current", "magnetic field direction"],
+      "commonErrors": [
+        "Using the right hand instead of the left hand (right hand is for generators)",
+        "Pointing the first finger along the current instead of the field",
+        "Using electron flow direction instead of conventional current direction"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Apply question",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "5(a)",
+          "marks": 2,
+          "questionText": "A horizontal wire carries a conventional current flowing to the right. The magnetic field points vertically upwards. Using Fleming's left-hand rule, describe the direction of the force on the wire.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Set up the left hand",
+              "content": "Point the first finger of the left hand upwards (direction of magnetic field B). Point the second finger to the right (direction of conventional current).",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correct identification of finger assignments"
+            },
+            {
+              "stepNum": 2,
+              "label": "Read off the thumb direction",
+              "content": "With first finger pointing up and second finger pointing right, the thumb points out of the page (towards you). This is the direction of the force on the wire.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 correct direction: out of the page"
+            }
+          ],
+          "finalAnswer": "The force acts out of the page (towards the observer).",
+          "finalAnswerUnit": null,
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "5(b)",
+          "marks": 1,
+          "questionText": "When using Fleming's left-hand rule, which finger represents the direction of conventional current?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "The thumb", "correct": false },
+            { "label": "B", "text": "The first (index) finger", "correct": false },
+            { "label": "C", "text": "The second (middle) finger", "correct": true },
+            { "label": "D", "text": "The third (ring) finger", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Second finger \u2192 current (I); first finger \u2192 field (B); thumb \u2192 force (motion) \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option B is a common swap \u2014 the first finger points along the magnetic field, not the current."
+        }
+      }
+    }
+  ]
+}

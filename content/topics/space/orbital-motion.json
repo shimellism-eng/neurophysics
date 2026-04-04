@@ -1,0 +1,135 @@
+{
+  "id": "orbital-motion",
+  "topicId": "space",
+  "title": "Orbital Motion",
+  "subtitle": "Gravity, speed and orbital radius",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A planet closer to the Sun orbits\u2026",
+      "options": [
+        "More slowly, because it has less distance to travel",
+        "At the same speed as all other planets",
+        "Faster, because gravity is stronger at smaller orbital radii",
+        "Faster only if it is more massive than the outer planets"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Closer orbits mean stronger gravity, so the planet must travel <strong>faster</strong> to maintain its orbit. A smaller orbital radius also means a shorter circumference, so the orbital period is much shorter.",
+      "correctFeedback": "\u2713 Correct! The closer a planet is to the Sun, the stronger the gravitational pull and the faster it must travel to stay in orbit. It also has a shorter orbital period.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.1 \u2014 Orbital motion"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Orbital Motion",
+      "bodyHTML": "<strong>Gravity</strong> provides the centripetal force that keeps planets and moons in orbit. For a circular orbit, the gravitational force acts towards the centre, constantly changing the direction of motion without doing work on the object. A planet in a <strong>smaller orbital radius</strong> experiences a stronger gravitational pull and must travel at a greater <strong>orbital speed</strong> to maintain its orbit, resulting in a shorter <strong>orbital period</strong>.",
+      "keyWords": ["orbit", "gravity", "centripetal force", "orbital speed", "orbital period", "radius"],
+      "commonErrors": [
+        "Thinking gravity does work on an object in circular orbit \u2014 in a perfect circle the force is perpendicular to motion so no work is done",
+        "Forgetting that closer orbits are faster AND have shorter periods",
+        "Confusing orbital speed with orbital period"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the slider to change the orbital radius. Watch how the relative orbital period changes \u2014 smaller radius means shorter period.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "r", "label": "Orbital radius", "unit": "AU", "min": 1, "max": 10, "default": 3, "color": "purple", "step": 0.5 }
+        ],
+        "derived": [
+          { "id": "period", "label": "Relative period", "unit": "yr", "formula": "Math.pow(r, 1.5)", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "r",
+        "blockLabel": "Period (yr)"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q14(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "14(a)",
+          "marks": 3,
+          "questionText": "Venus is closer to the Sun than Earth. Explain why Venus has a shorter orbital period than Earth.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State the effect of distance on gravity",
+              "content": "Venus is closer to the Sun, so the gravitational force on Venus is stronger than on Earth.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 stronger gravitational force at smaller distance"
+            },
+            {
+              "stepNum": 2,
+              "label": "Explain orbital speed",
+              "content": "To stay in orbit against this stronger gravity, Venus must travel at a higher orbital speed.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 higher orbital speed needed"
+            },
+            {
+              "stepNum": 3,
+              "label": "Explain shorter period",
+              "content": "Venus also has a smaller orbit to travel around, so it completes one full orbit in a shorter time \u2014 a shorter orbital period.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 smaller orbit circumference so shorter period"
+            }
+          ],
+          "finalAnswer": "Stronger gravity at smaller radius \u2192 higher orbital speed + shorter circumference \u2192 shorter period.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q14(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "14(b)",
+          "marks": 1,
+          "questionText": "Which of the following statements about planetary orbits is correct?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "All planets orbit the Sun at the same speed",                                      "correct": false },
+            { "label": "B", "text": "A planet further from the Sun has a shorter orbital period",                       "correct": false },
+            { "label": "C", "text": "The orbital period increases as the orbital radius increases",                      "correct": true  },
+            { "label": "D", "text": "The gravitational force on a planet does not depend on its distance from the Sun",  "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Larger orbital radius \u2192 weaker gravity \u2192 lower speed and larger orbit \u2192 longer period \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Option B is the reverse of the correct relationship \u2014 further planets have LONGER orbital periods."
+        }
+      }
+    }
+  ]
+}

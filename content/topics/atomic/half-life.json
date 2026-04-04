@@ -1,0 +1,142 @@
+{
+  "id": "half-life",
+  "topicId": "atomic",
+  "title": "Half-life",
+  "subtitle": "The time for activity to halve",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "After two half-lives, how much of a radioactive sample remains?",
+      "options": [
+        "None \u2014 it has all decayed",
+        "Half",
+        "A quarter",
+        "Three-quarters"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! After one half-life, <strong>half</strong> remains. After two half-lives, half of that half remains \u2014 so only <strong>a quarter</strong> (25%) is left. The sample never reaches exactly zero.",
+      "correctFeedback": "\u2713 Correct! Each half-life halves the remaining amount: after 2 half-lives, (1/2) \u00d7 (1/2) = 1/4 remains.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.4 \u2014 Half-life"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Half-life",
+      "bodyHTML": "The <strong>half-life</strong> of a radioactive isotope is the time taken for the <strong>activity</strong> (or number of undecayed nuclei) to fall to <strong>half</strong> its initial value. After n half-lives, the fraction of nuclei remaining is (1/2)\u207f, so the percentage remaining = 100 \u00d7 (0.5)\u207f. Because decay is random, the half-life is a statistical property of a large number of nuclei \u2014 individual atoms decay unpredictably.",
+      "keyEquation": "Remaining = N\u2080 \u00d7 (0.5)\u207f",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "N\u2080", "label": "Initial number of nuclei", "unit": "",  "color": "cyan"   },
+          { "symbol": "n",   "label": "Number of half-lives",      "unit": "",  "color": "purple" },
+          { "symbol": "N",   "label": "Remaining nuclei",          "unit": "",  "color": "amber"  }
+        ],
+        "relationships": [
+          "Each additional half-life halves the remaining amount",
+          "The sample approaches zero but theoretically never reaches it"
+        ]
+      },
+      "keyWords": ["half-life", "activity", "decay", "radioactive", "nuclei"],
+      "commonErrors": [
+        "Thinking the sample fully decays after a set number of half-lives",
+        "Adding half-lives instead of multiplying fractions",
+        "Confusing activity (decays per second) with the number of remaining nuclei"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the slider to set the number of half-lives. Watch how the percentage of nuclei remaining drops with each step.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "n", "label": "Half-lives elapsed", "unit": "", "min": 1, "max": 10, "default": 3, "color": "purple", "step": 1 }
+        ],
+        "derived": [
+          { "id": "remaining", "label": "Nuclei remaining", "unit": "%", "formula": "100 * Math.pow(0.5, n)", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "n",
+        "blockLabel": "Remaining %"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q9(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "9(a)",
+          "marks": 3,
+          "questionText": "A radioactive isotope has a half-life of 5 days. A sample initially contains 1600 undecayed nuclei. Calculate the number of undecayed nuclei remaining after 15 days.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Find the number of half-lives",
+              "content": "Divide total time by the half-life:",
+              "equation": "n = 15 \u00f7 5 = 3 half-lives",
+              "markSchemeNote": "1 mark \u2014 correct calculation of n = 3"
+            },
+            {
+              "stepNum": 2,
+              "label": "Apply the half-life formula",
+              "content": "Each half-life halves the number of nuclei:",
+              "equation": "N = 1600 \u00d7 (0.5)\u00b3 = 1600 \u00d7 0.125 = 200",
+              "markSchemeNote": "1 mark \u2014 correct use of (0.5)\u207f; 1 mark \u2014 correct answer"
+            }
+          ],
+          "finalAnswer": "200 undecayed nuclei",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q9(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "9(b)",
+          "marks": 2,
+          "questionText": "A radioactive source has an initial activity of 800 Bq and a half-life of 4 hours. What is its activity after 12 hours?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "400 Bq", "correct": false },
+            { "label": "B", "text": "200 Bq", "correct": false },
+            { "label": "C", "text": "100 Bq", "correct": true  },
+            { "label": "D", "text": "50 Bq",  "correct": false }
+          ],
+          "markSchemeSteps": [
+            "n = 12 \u00f7 4 = 3 half-lives",
+            "Activity = 800 \u00d7 (0.5)\u00b3 = 800 \u00d7 0.125 = 100 Bq \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct number of half-lives \u00b7 1 mark \u2014 correct answer 100 Bq",
+          "commonMistake": "Option A (400 Bq) is after only 1 half-life. Always find n first before halving repeatedly."
+        }
+      }
+    }
+  ]
+}

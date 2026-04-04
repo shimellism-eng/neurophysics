@@ -1,0 +1,115 @@
+{
+  "id": "uses-of-radiation",
+  "topicId": "atomic",
+  "title": "Uses of Radiation",
+  "subtitle": "Medical, industrial and everyday applications",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Which type of radiation is used in smoke detectors?",
+      "options": [
+        "Gamma, because it can penetrate the detector casing",
+        "Beta, because it is stopped by the aluminium housing",
+        "Alpha, because it ionises the air inside the detector",
+        "All three are used together"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Smoke detectors use <strong>alpha</strong> radiation (specifically from americium-241). Alpha ionises the air between two electrodes, creating a small current. Smoke particles absorb the alpha and reduce this current, triggering the alarm.",
+      "correctFeedback": "\u2713 Correct! Alpha radiation ionises the air in a smoke detector. When smoke is present it absorbs the alpha, the ionisation drops, and the alarm sounds.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.3 \u2014 Uses and hazards of nuclear radiation"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Uses of Radiation",
+      "bodyHTML": "Radioactive isotopes have important <strong>medical uses</strong>: gamma-emitting tracers (e.g. technetium-99m) are used to image organs, and high-energy gamma beams are used in <strong>radiotherapy</strong> to destroy cancer cells. In <strong>industry</strong>, beta radiation is used in paper and metal <strong>thickness gauges</strong>, gamma sterilises medical equipment and food, and alpha is used in <strong>smoke detectors</strong>. The choice of isotope depends on its radiation type, half-life, and the risks and benefits for each application.",
+      "keyWords": ["tracer", "radiotherapy", "thickness gauge", "sterilisation", "smoke detector", "gamma", "alpha", "beta"],
+      "commonErrors": [
+        "Thinking any type of radiation can be used for any application \u2014 the type must be matched carefully",
+        "Forgetting that the half-life must be appropriate (short for tracers, longer for industrial sources)",
+        "Assuming radiation is only harmful and has no beneficial uses"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q10(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "10(a)",
+          "marks": 3,
+          "questionText": "A hospital uses a radioactive tracer to image a patient\u2019s thyroid gland. Explain why a gamma-emitting isotope with a short half-life is chosen, rather than an alpha-emitting isotope with a long half-life.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Explain why gamma is chosen",
+              "content": "Gamma radiation can pass through body tissue and be detected outside the body. Alpha radiation is stopped by a few centimetres of tissue and could not be detected externally.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 gamma penetrates tissue and can be detected outside the body"
+            },
+            {
+              "stepNum": 2,
+              "label": "Explain why a short half-life is chosen",
+              "content": "A short half-life means the activity falls quickly, reducing the patient\u2019s total radiation dose after the scan is complete.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 short half-life reduces radiation dose to patient"
+            },
+            {
+              "stepNum": 3,
+              "label": "Explain why alpha with a long half-life is unsuitable",
+              "content": "Alpha is highly ionising and would cause significant tissue damage inside the body, and a long half-life means the patient remains radioactive for a long time.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 alpha causes more damage inside the body / long half-life increases dose"
+            }
+          ],
+          "finalAnswer": "Gamma penetrates tissue; short half-life minimises patient dose. Alpha would cause internal damage and remain in body too long.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q10(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "10(b)",
+          "marks": 1,
+          "questionText": "A factory uses a radioactive source to monitor the thickness of aluminium sheets. Which type of radiation should be used?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Alpha \u2014 it is stopped by a sheet of paper so any aluminium would absorb it entirely", "correct": false },
+            { "label": "B", "text": "Beta \u2014 it is partially absorbed by aluminium, so the count rate varies with thickness",  "correct": true  },
+            { "label": "C", "text": "Gamma \u2014 it passes straight through aluminium without any absorption",                   "correct": false },
+            { "label": "D", "text": "Any type can be used as they all travel the same distance through aluminium",            "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Beta is partially absorbed by aluminium \u2014 if the sheet is too thick, count rate drops; if too thin, count rate rises \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer B",
+          "commonMistake": "Gamma passes through aluminium with very little absorption, so it cannot detect small changes in thickness."
+        }
+      }
+    }
+  ]
+}

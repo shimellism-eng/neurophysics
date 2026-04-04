@@ -1,0 +1,185 @@
+{
+  "id": "specific-latent-heat",
+  "topicId": "particles",
+  "title": "Specific Latent Heat",
+  "subtitle": "E = mL",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Specific latent heat of fusion is the energy needed to\u2026",
+      "options": [
+        "Raise 1 kg of a substance by 1\u00b0C",
+        "Melt 1 kg of a substance at its melting point without changing temperature",
+        "Boil 1 kg of a substance from room temperature",
+        "Heat 1 kg of a substance from 0\u00b0C to 100\u00b0C"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Specific latent heat of fusion is the energy per kilogram to <strong>melt</strong> a substance (change state from solid to liquid) at its melting point \u2014 with <strong>no temperature change</strong>. It is not the energy to raise temperature (that is specific heat capacity).",
+      "correctFeedback": "\u2713 Correct! Specific latent heat of fusion = energy per kg to melt (or freeze) a substance at constant temperature. Specific latent heat of vaporisation = energy per kg to boil (or condense).",
+      "bestSource": "BEST resource: AQA Physics specification 4.3.2 \u2014 Specific latent heat"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Specific Latent Heat",
+      "bodyHTML": "<strong>Specific latent heat</strong> (L) is the energy required to change the state of 1 kg of a substance without any change in temperature. The total energy for a mass m is given by <strong>E = mL</strong>. There are two types: <strong>latent heat of fusion</strong> (melting/freezing) and <strong>latent heat of vaporisation</strong> (boiling/condensing). The energy goes into breaking (or forming) the bonds between particles, not into changing kinetic energy.",
+      "keyEquation": "E = m \u00d7 L",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "E", "label": "Energy",              "unit": "J",    "color": "cyan"   },
+          { "symbol": "m", "label": "Mass",                "unit": "kg",   "color": "purple" },
+          { "symbol": "L", "label": "Specific latent heat","unit": "J/kg", "color": "amber"  }
+        ],
+        "relationships": [
+          "Fusion: energy for melting or freezing (solid \u2194 liquid)",
+          "Vaporisation: energy for boiling or condensing (liquid \u2194 gas)",
+          "Temperature does NOT change during a state change",
+          "Bigger L \u2192 stronger bonds \u2192 more energy needed per kg"
+        ]
+      },
+      "keyWords": ["specific latent heat", "latent heat of fusion", "latent heat of vaporisation", "state change", "boiling", "melting"],
+      "commonErrors": [
+        "Confusing specific latent heat (E = mL) with specific heat capacity (E = mc\u0394\u03b8)",
+        "Thinking the temperature changes during a change of state",
+        "Forgetting that condensing and freezing release latent heat (not absorb it)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change the mass of water being boiled away. Watch how much energy is needed. Specific latent heat of vaporisation of water is fixed at 2\u202f260\u202f000 J/kg.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "mass", "label": "Mass", "unit": "kg", "min": 0.1, "max": 5.0, "default": 1.0, "color": "purple", "step": 0.1 }
+        ],
+        "derived": [
+          { "id": "energy", "label": "Energy", "unit": "J", "formula": "mass * 2260000", "color": "cyan", "decimalPlaces": 0 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "mass",
+        "blockLabel": "E"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q5(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(a)",
+          "marks": 3,
+          "questionText": "Calculate the energy needed to melt 0.4 kg of ice at 0\u00b0C. The specific latent heat of fusion of water is 334\u202f000 J/kg.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Identify the knowns",
+              "content": "m = 0.4 kg\nL = 334\u202f000 J/kg\n(no temperature change \u2014 melting occurs at 0\u00b0C)",
+              "equation": null,
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 2,
+              "label": "Write the equation",
+              "content": "State the latent heat equation:",
+              "equation": "E = m \u00d7 L",
+              "markSchemeNote": "1 mark \u2014 correct equation"
+            },
+            {
+              "stepNum": 3,
+              "label": "Substitute and calculate",
+              "content": "Put the values in:",
+              "equation": "E = 0.4 \u00d7 334\u202f000 = 133\u202f600 J",
+              "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer with unit"
+            }
+          ],
+          "finalAnswer": "133\u202f600 J (1.336 \u00d7 10\u2075 J)",
+          "finalAnswerUnit": "J",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 1",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "5(b)",
+          "marks": 3,
+          "questionText": "How much energy is released when 2.0 kg of steam condenses to water at 100\u00b0C? The specific latent heat of vaporisation of water is 2\u202f260\u202f000 J/kg.",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "1\u202f130\u202f000 J", "correct": false },
+            { "label": "B", "text": "4\u202f520\u202f000 J", "correct": true  },
+            { "label": "C", "text": "840\u202f000 J",   "correct": false },
+            { "label": "D", "text": "2\u202f260\u202f000 J", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "E = m \u00d7 L",
+            "E = 2.0 \u00d7 2\u202f260\u202f000",
+            "E = 4\u202f520\u202f000 J \u2713"
+          ],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option D is the latent heat for 1 kg only \u2014 always multiply L by the mass, not just read off L."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "E = mL \u2014 all rearrangements",
+      "equation": {
+        "id": "latent-heat",
+        "canonical": "E = m \u00d7 L",
+        "variables": [
+          { "symbol": "E", "name": "Energy",               "unit": "joules",           "abbreviation": "J"    },
+          { "symbol": "m", "name": "Mass",                 "unit": "kilograms",         "abbreviation": "kg"   },
+          { "symbol": "L", "name": "Specific latent heat", "unit": "joules per kilogram","abbreviation": "J/kg" }
+        ],
+        "rearrangements": [
+          { "solveFor": "E", "formula": "E = m \u00d7 L",    "label": "Find energy"              },
+          { "solveFor": "m", "formula": "m = E / L",    "label": "Find mass"                },
+          { "solveFor": "L", "formula": "L = E / m",    "label": "Find specific latent heat" }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "E", "color": "cyan"   },
+          "bottomLeft": { "symbol": "m", "color": "purple" },
+          "bottomRight":{ "symbol": "L", "color": "amber"  }
+        },
+        "examTip": "No \u0394\u03b8 here! Temperature does NOT change during a state change. Use E = mL for state changes, E = mc\u0394\u03b8 for temperature changes.",
+        "onFormulaSheet": {
+          "aqa": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Know the difference between fusion (melting/freezing) and vaporisation (boiling/condensing)."
+        }
+      }
+    }
+  ]
+}

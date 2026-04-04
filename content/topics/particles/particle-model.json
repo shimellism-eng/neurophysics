@@ -1,0 +1,126 @@
+{
+  "id": "particle-model",
+  "topicId": "particles",
+  "title": "The Particle Model",
+  "subtitle": "Explaining properties using particles",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Why do gases exert pressure on the walls of a container?",
+      "options": [
+        "Because gas particles are heavy and press down due to gravity",
+        "Because gas particles collide with the walls and exert a force",
+        "Because gases always try to expand to fill the container",
+        "Because gas particles repel each other very strongly"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Gas pressure is caused by the <strong>collisions</strong> of gas particles with the container walls. Each collision exerts a tiny force, and the combined effect of billions of collisions per second creates pressure. It is not due to gravity or repulsion between particles.",
+      "correctFeedback": "\u2713 Correct! Gas particles move randomly and collide with the container walls. The force from these collisions per unit area is the gas pressure.",
+      "bestSource": "BEST resource: AQA Physics specification 4.3.2 \u2014 Particle model and pressure"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "The Particle Model",
+      "bodyHTML": "The <strong>particle model</strong> explains the properties of solids, liquids and gases in terms of the movement and arrangement of particles. Gas pressure arises from the <strong>collisions of gas particles with the container walls</strong> \u2014 increasing temperature increases the average kinetic energy of the particles, so they hit the walls more frequently and with greater force, raising the pressure. The particle model also explains why gases are compressible (large spaces between particles) while solids and liquids are not.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Gas pressure \u2192 caused by particle collisions with walls",
+          "Higher temperature \u2192 faster particles \u2192 greater pressure",
+          "Smaller volume \u2192 more frequent collisions \u2192 greater pressure",
+          "Gas compressible \u2192 large gaps between particles"
+        ]
+      },
+      "keyWords": ["particle model", "gas pressure", "collision", "kinetic energy", "temperature", "compressible"],
+      "commonErrors": [
+        "Saying pressure is caused by particles pushing each other apart",
+        "Thinking cold gas particles are stationary",
+        "Forgetting that reducing volume increases pressure (more frequent collisions)"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Explain question",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "2(a)",
+          "marks": 3,
+          "questionText": "Explain, using the particle model, why the pressure of a gas in a sealed container increases when the temperature is increased.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Link temperature to particle speed",
+              "content": "Increasing the temperature increases the average kinetic energy of the gas particles, so they move faster.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 higher temperature \u2192 greater kinetic energy / faster particles"
+            },
+            {
+              "stepNum": 2,
+              "label": "Link speed to collision rate",
+              "content": "Faster particles collide with the container walls more frequently.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 more frequent collisions with the walls"
+            },
+            {
+              "stepNum": 3,
+              "label": "Link collisions to pressure",
+              "content": "Each collision exerts a force on the wall; more frequent (and harder) collisions mean greater force per unit area, so greater pressure.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 greater force on walls / increased pressure"
+            }
+          ],
+          "finalAnswer": "Higher temperature \u2192 faster particles \u2192 more frequent, harder collisions with walls \u2192 greater pressure.",
+          "finalAnswerUnit": null,
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 1",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "2(b)",
+          "marks": 1,
+          "questionText": "A gas is compressed into a smaller volume at constant temperature. What happens to the pressure?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Pressure decreases because particles slow down", "correct": false },
+            { "label": "B", "text": "Pressure stays the same because temperature is constant", "correct": false },
+            { "label": "C", "text": "Pressure increases because particles collide with the walls more often", "correct": true },
+            { "label": "D", "text": "Pressure decreases because there is less space between particles", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Smaller volume \u2192 particles travel shorter distances before hitting walls \u2192 more frequent collisions \u2192 higher pressure \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option B ignores the effect of volume change \u2014 constant temperature means constant speed, but more frequent collisions still raise pressure."
+        }
+      }
+    }
+  ]
+}

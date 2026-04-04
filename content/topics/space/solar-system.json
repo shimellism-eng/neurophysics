@@ -1,0 +1,115 @@
+{
+  "id": "solar-system",
+  "topicId": "space",
+  "title": "The Solar System",
+  "subtitle": "Structure and scale of our cosmic neighbourhood",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "What keeps the planets in orbit around the Sun?",
+      "options": [
+        "Magnetic forces from the Sun",
+        "The pressure of solar wind pushing the planets",
+        "Gravitational attraction between the planets and the Sun",
+        "The planets are fixed in place on a crystalline sphere"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Planets orbit the Sun because of <strong>gravitational attraction</strong>. The Sun\u2019s gravity constantly pulls the planet inward, providing the centripetal force needed to keep it in a roughly circular orbit.",
+      "correctFeedback": "\u2713 Correct! Gravity from the Sun provides the centripetal force that keeps planets in orbit. The further a planet is, the weaker the gravitational pull and the slower its orbital speed.",
+      "bestSource": "BEST resource: AQA Physics specification 4.8.1 \u2014 Solar system"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "The Solar System",
+      "bodyHTML": "The <strong>Solar System</strong> consists of the <strong>Sun</strong> (a star), eight <strong>planets</strong> and their <strong>moons</strong>, <strong>asteroids</strong> (rocky objects mainly between Mars and Jupiter), and <strong>comets</strong> (icy bodies with highly elliptical orbits). All objects orbit the Sun due to <strong>gravity</strong>, with planets following roughly circular orbits. The scale of the Solar System is enormous \u2014 the distance from Earth to the Sun is approximately 150 million km (1 AU), and the Solar System extends to roughly 100 AU.",
+      "keyWords": ["Solar System", "planet", "moon", "asteroid", "comet", "orbit", "gravity", "AU"],
+      "commonErrors": [
+        "Thinking the Sun orbits the Earth",
+        "Confusing asteroids (rocky) with comets (icy)",
+        "Underestimating the vast scale of the Solar System"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q12(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "12(a)",
+          "marks": 3,
+          "questionText": "Describe the orbit of a comet around the Sun and explain how its speed changes during this orbit.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Describe the shape of the orbit",
+              "content": "A comet follows a highly <strong>elliptical</strong> orbit around the Sun, unlike the roughly circular orbits of planets.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 elliptical orbit"
+            },
+            {
+              "stepNum": 2,
+              "label": "Describe speed when close to the Sun",
+              "content": "When the comet is closest to the Sun, the gravitational pull is strongest, so it moves at its fastest speed.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 fastest when closest to Sun"
+            },
+            {
+              "stepNum": 3,
+              "label": "Describe speed when far from the Sun",
+              "content": "When the comet is furthest from the Sun, the gravitational pull is weakest, so it moves most slowly.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 slowest when furthest from Sun"
+            }
+          ],
+          "finalAnswer": "Elliptical orbit; fastest when closest to the Sun, slowest when furthest away.",
+          "finalAnswerUnit": "",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q12(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "12(b)",
+          "marks": 1,
+          "questionText": "Which of the following correctly describes an asteroid?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "A large ball of ice and dust on a highly elliptical orbit around the Sun",    "correct": false },
+            { "label": "B", "text": "A rocky object, most of which orbit the Sun between Mars and Jupiter",         "correct": true  },
+            { "label": "C", "text": "A moon that has escaped its planet\u2019s gravity and now orbits the Sun",           "correct": false },
+            { "label": "D", "text": "A small planet with its own moons and a circular orbit",                       "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Asteroids are rocky objects; most occupy the asteroid belt between Mars and Jupiter \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer B",
+          "commonMistake": "Option A describes a comet (icy, elliptical orbit), not an asteroid."
+        }
+      }
+    }
+  ]
+}

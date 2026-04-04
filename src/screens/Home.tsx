@@ -11,6 +11,7 @@ import {
   IconForces, IconElectricity, IconWaves, IconEnergy,
   IconMagnetism, IconParticles, IconAtomic, IconSpace,
   IconPracticals, IconEquations, IconPapers, IconAchievements, IconSettings,
+  IconSearch,
 } from '../components/ui/Icons';
 import './Home.css';
 
@@ -134,10 +135,10 @@ const TOPICS: TopicConfig[] = [
   { id: 'electricity', name: 'Electricity',                  Icon: IconElectricity, color: 'var(--topic-electricity)', bg: 'rgba(37,99,235,0.06)',   concepts: 7, paper: 'Paper 1', available: true  },
   { id: 'waves',       name: 'Waves',                        Icon: IconWaves,       color: 'var(--topic-waves)',       bg: 'rgba(8,145,178,0.06)',   concepts: 7, paper: 'Paper 2', available: true  },
   { id: 'energy',      name: 'Energy',                       Icon: IconEnergy,      color: 'var(--topic-energy)',      bg: 'rgba(234,88,12,0.06)',   concepts: 7, paper: 'Paper 1', available: true  },
-  { id: 'magnetism',   name: 'Magnetism',                    Icon: IconMagnetism,   color: 'var(--topic-magnetism)',   bg: 'rgba(219,39,119,0.06)',  concepts: 7, paper: 'Paper 2', available: false },
-  { id: 'particles',   name: 'Particle Model',               Icon: IconParticles,   color: 'var(--topic-particles)',   bg: 'rgba(22,163,74,0.06)',   concepts: 7, paper: 'Paper 1', available: false },
-  { id: 'atomic',      name: 'Atomic Structure',             Icon: IconAtomic,      color: 'var(--topic-nuclear)',     bg: 'rgba(220,38,38,0.06)',   concepts: 7, paper: 'Paper 2', available: false },
-  { id: 'space',       name: 'Space Physics',                Icon: IconSpace,       color: 'var(--topic-space)',       bg: 'rgba(79,70,229,0.06)',   concepts: 7, paper: 'Paper 2', available: false },
+  { id: 'magnetism',   name: 'Magnetism',                    Icon: IconMagnetism,   color: 'var(--topic-magnetism)',   bg: 'rgba(219,39,119,0.06)',  concepts: 7, paper: 'Paper 2', available: true },
+  { id: 'particles',   name: 'Particle Model',               Icon: IconParticles,   color: 'var(--topic-particles)',   bg: 'rgba(22,163,74,0.06)',   concepts: 7, paper: 'Paper 1', available: true },
+  { id: 'atomic',      name: 'Atomic Structure',             Icon: IconAtomic,      color: 'var(--topic-nuclear)',     bg: 'rgba(220,38,38,0.06)',   concepts: 7, paper: 'Paper 2', available: true },
+  { id: 'space',       name: 'Space Physics',                Icon: IconSpace,       color: 'var(--topic-space)',       bg: 'rgba(79,70,229,0.06)',   concepts: 7, paper: 'Paper 2', available: true },
 ];
 
 const TOPIC_CONCEPTS: Record<string, string[]> = {
@@ -229,7 +230,7 @@ export function Home() {
             onClick={() => navigate('/search')}
             aria-label="Search"
           >
-            <span aria-hidden="true">&#128269;</span>
+            <IconSearch size={18} aria-hidden="true" />
           </button>
           <div className="home__streak">
             <span className="home__streak-fire" aria-hidden="true">🔥</span>

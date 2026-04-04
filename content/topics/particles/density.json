@@ -1,0 +1,186 @@
+{
+  "id": "density",
+  "topicId": "particles",
+  "title": "Density",
+  "subtitle": "\u03c1 = m/V",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "A large piece of wood floats on water while a small pebble sinks. This tells us\u2026",
+      "options": [
+        "The wood is lighter than the pebble so it floats",
+        "The wood has a lower density than water; the pebble has a higher density than water",
+        "Large objects always float and small objects always sink",
+        "The wood has more particles than the pebble"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Whether an object floats or sinks depends on its <strong>density</strong> compared to the fluid \u2014 not its mass or size. Wood has a lower density than water (it floats); the pebble has a higher density than water (it sinks).",
+      "correctFeedback": "\u2713 Correct! Floating and sinking depend on density, not mass. Wood is less dense than water; the pebble is more dense than water.",
+      "bestSource": "BEST resource: AQA Physics specification 4.3.1 \u2014 Density"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Density",
+      "bodyHTML": "<strong>Density</strong> is defined as the mass per unit volume of a substance and is calculated using <strong>\u03c1 = m / V</strong>. Density depends on how closely the particles are packed and the mass of each particle \u2014 solids are usually denser than liquids, which are usually much denser than gases. Objects less dense than a liquid will float in it; objects more dense will sink.",
+      "keyEquation": "\u03c1 = m / V",
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [
+          { "symbol": "\u03c1", "label": "Density", "unit": "kg/m\u00b3", "color": "cyan"   },
+          { "symbol": "m", "label": "Mass",    "unit": "kg",    "color": "purple" },
+          { "symbol": "V", "label": "Volume",  "unit": "m\u00b3",   "color": "amber"  }
+        ],
+        "relationships": [
+          "Greater mass, same volume \u2192 higher density",
+          "Same mass, greater volume \u2192 lower density",
+          "\u03c1 < water (1000 kg/m\u00b3) \u2192 object floats",
+          "\u03c1 > water (1000 kg/m\u00b3) \u2192 object sinks"
+        ]
+      },
+      "keyWords": ["density", "mass", "volume", "kg/m\u00b3", "float", "sink"],
+      "commonErrors": [
+        "Confusing density with mass \u2014 a large object is not necessarily denser",
+        "Using cm\u00b3 for volume without converting to m\u00b3 (1 m\u00b3 = 1\u202f000\u202f000 cm\u00b3)",
+        "Forgetting to include the unit for density (kg/m\u00b3 or g/cm\u00b3)"
+      ]
+    },
+    {
+      "id": "simulation",
+      "type": "simulation",
+      "uiTag": "Interactive Simulation",
+      "uiColor": "green",
+      "title": "See it in action",
+      "instruction": "Drag the sliders to change the mass and volume of an object. Watch how the density changes.",
+      "simId": "fma-slider",
+      "simConfig": {
+        "variables": [
+          { "id": "mass",   "label": "Mass",   "unit": "kg",   "min": 0.1, "max": 10,  "default": 2.0, "color": "purple", "step": 0.1 },
+          { "id": "volume", "label": "Volume", "unit": "m\u00b3", "min": 0.001, "max": 0.1, "default": 0.002, "color": "amber", "step": 0.001 }
+        ],
+        "derived": [
+          { "id": "density", "label": "Density", "unit": "kg/m\u00b3", "formula": "mass / volume", "color": "cyan", "decimalPlaces": 1 }
+        ],
+        "visualType": "arrow-and-block",
+        "arrowVariable": "mass",
+        "blockLabel": "\u03c1"
+      }
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA 2023 Paper 1 \u00b7 Q2(a)",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "2(a)",
+          "marks": 3,
+          "questionText": "A block of metal has a mass of 540 g and a volume of 200 cm\u00b3. Calculate its density in kg/m\u00b3.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Convert units",
+              "content": "Convert mass to kg and volume to m\u00b3:",
+              "equation": "m = 540 g = 0.540 kg\nV = 200 cm\u00b3 = 200 \u00d7 10\u207b\u2076 m\u00b3 = 2.0 \u00d7 10\u207b\u2074 m\u00b3",
+              "markSchemeNote": "1 mark \u2014 correct unit conversions"
+            },
+            {
+              "stepNum": 2,
+              "label": "Write the equation",
+              "content": "State the density equation:",
+              "equation": "\u03c1 = m / V",
+              "markSchemeNote": null
+            },
+            {
+              "stepNum": 3,
+              "label": "Substitute and calculate",
+              "content": "Put the values in:",
+              "equation": "\u03c1 = 0.540 / (2.0 \u00d7 10\u207b\u2074) = 2700 kg/m\u00b3",
+              "markSchemeNote": "1 mark \u2014 correct substitution; 1 mark \u2014 correct answer with unit"
+            }
+          ],
+          "finalAnswer": "2700 kg/m\u00b3",
+          "finalAnswerUnit": "kg/m\u00b3",
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 1",
+          "year": 2023,
+          "paper": 1,
+          "questionNumber": "2(b)",
+          "marks": 3,
+          "questionText": "A cube of plastic has a mass of 80 g and a volume of 100 cm\u00b3. What is its density in g/cm\u00b3?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "8.0 g/cm\u00b3",  "correct": false },
+            { "label": "B", "text": "0.80 g/cm\u00b3", "correct": true  },
+            { "label": "C", "text": "1.25 g/cm\u00b3", "correct": false },
+            { "label": "D", "text": "0.008 g/cm\u00b3","correct": false }
+          ],
+          "markSchemeSteps": [
+            "\u03c1 = m / V",
+            "\u03c1 = 80 / 100",
+            "\u03c1 = 0.80 g/cm\u00b3 \u2713"
+          ],
+          "markSchemeAward": "1 mark equation \u00b7 1 mark substitution \u00b7 1 mark correct answer + unit",
+          "commonMistake": "Option C results from dividing volume by mass instead of mass by volume."
+        }
+      }
+    },
+    {
+      "id": "equation-card",
+      "type": "equationCard",
+      "uiTag": "Equation Card",
+      "uiColor": "pink",
+      "title": "\u03c1 = m/V \u2014 all rearrangements",
+      "equation": {
+        "id": "density",
+        "canonical": "\u03c1 = m / V",
+        "variables": [
+          { "symbol": "\u03c1", "name": "Density", "unit": "kilograms per metre cubed", "abbreviation": "kg/m\u00b3" },
+          { "symbol": "m", "name": "Mass",    "unit": "kilograms",                  "abbreviation": "kg"    },
+          { "symbol": "V", "name": "Volume",  "unit": "metres cubed",               "abbreviation": "m\u00b3"  }
+        ],
+        "rearrangements": [
+          { "solveFor": "\u03c1", "formula": "\u03c1 = m / V",     "label": "Find density" },
+          { "solveFor": "m", "formula": "m = \u03c1 \u00d7 V", "label": "Find mass"    },
+          { "solveFor": "V", "formula": "V = m / \u03c1",    "label": "Find volume"  }
+        ],
+        "triangleLayout": {
+          "top":        { "symbol": "m", "color": "purple" },
+          "bottomLeft": { "symbol": "\u03c1", "color": "cyan"   },
+          "bottomRight":{ "symbol": "V", "color": "amber"  }
+        },
+        "examTip": "Watch your units \u2014 convert cm\u00b3 to m\u00b3 by dividing by 1\u202f000\u202f000 (10\u2076). Convert g to kg by dividing by 1000.",
+        "onFormulaSheet": {
+          "aqa": true
+        },
+        "boardNotes": {
+          "aqa": "On AQA formula sheet. Must know all three rearrangements and unit conversions."
+        }
+      }
+    }
+  ]
+}

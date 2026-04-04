@@ -1,0 +1,122 @@
+{
+  "id": "nuclear-fission-fusion",
+  "topicId": "atomic",
+  "title": "Nuclear Fission and Fusion",
+  "subtitle": "Splitting and joining atomic nuclei",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Which process powers the Sun?",
+      "options": [
+        "Nuclear fission \u2014 heavy uranium nuclei split apart",
+        "Nuclear fusion \u2014 light hydrogen nuclei join together",
+        "Combustion \u2014 hydrogen burns in oxygen",
+        "Radioactive decay \u2014 unstable nuclei emit gamma radiation"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! The Sun is powered by <strong>nuclear fusion</strong>, not fission or combustion. Hydrogen nuclei fuse together under extreme temperature and pressure to form helium, releasing enormous amounts of energy.",
+      "correctFeedback": "\u2713 Correct! Stars including our Sun are powered by nuclear fusion \u2014 hydrogen nuclei fuse to form helium, releasing huge amounts of energy.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.5 \u2014 Nuclear fission and fusion"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Nuclear Fission and Fusion",
+      "bodyHTML": "<strong>Nuclear fission</strong> is the splitting of a large, unstable nucleus (such as uranium-235 or plutonium-239) into two smaller nuclei, releasing energy and two or three neutrons that can trigger further fissions \u2014 a <strong>chain reaction</strong>. <strong>Nuclear fusion</strong> is the joining of two light nuclei (such as hydrogen isotopes) to form a heavier nucleus, releasing even more energy per unit mass; it requires extremely high temperatures (\u223c10\u2078 K) to overcome the electrostatic repulsion between the positively charged nuclei. Fission is used in nuclear power stations; fusion powers the stars and is the goal of future clean energy research.",
+      "keyWords": ["fission", "fusion", "chain reaction", "uranium", "neutron", "hydrogen", "energy"],
+      "commonErrors": [
+        "Confusing fission (splitting) with fusion (joining) \u2014 remember: fission = split, fusion = join",
+        "Thinking fission and fusion are the same process",
+        "Forgetting that fusion requires extremely high temperatures to occur"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q11(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "11(a)",
+          "marks": 4,
+          "questionText": "Describe how a chain reaction occurs during nuclear fission of uranium-235.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Initiate fission",
+              "content": "A slow-moving neutron is absorbed by a uranium-235 nucleus, making it unstable.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 neutron absorbed by U-235"
+            },
+            {
+              "stepNum": 2,
+              "label": "Nucleus splits",
+              "content": "The unstable nucleus splits into two smaller nuclei (fission products) and releases energy.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 nucleus splits releasing energy"
+            },
+            {
+              "stepNum": 3,
+              "label": "Neutrons released",
+              "content": "Two or three neutrons are also released during the split.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 two or three neutrons released"
+            },
+            {
+              "stepNum": 4,
+              "label": "Chain reaction",
+              "content": "These neutrons can be absorbed by other uranium-235 nuclei, causing further fissions and releasing more neutrons, creating a self-sustaining chain reaction.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 neutrons trigger further fissions (chain reaction)"
+            }
+          ],
+          "finalAnswer": "Neutron absorbed \u2192 U-235 splits \u2192 releases 2\u20133 neutrons + energy \u2192 neutrons trigger more fissions (chain reaction).",
+          "finalAnswerUnit": "",
+          "totalMarks": 4
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q11(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "11(b)",
+          "marks": 1,
+          "questionText": "Which statement correctly compares nuclear fission and nuclear fusion?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Fission joins light nuclei together; fusion splits heavy nuclei apart",                          "correct": false },
+            { "label": "B", "text": "Both fission and fusion absorb energy from the surroundings",                                      "correct": false },
+            { "label": "C", "text": "Fission splits heavy nuclei; fusion joins light nuclei; both release energy",                       "correct": true  },
+            { "label": "D", "text": "Fusion requires no energy input because nuclei naturally attract each other at all distances",       "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Fission = splitting of heavy nuclei; fusion = joining of light nuclei; both release energy \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer C",
+          "commonMistake": "Option A swaps the definitions \u2014 a very common error in exams. Use a memory aid: fission = split (like \u2018fissure\u2019 = crack)."
+        }
+      }
+    }
+  ]
+}

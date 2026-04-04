@@ -1,0 +1,126 @@
+{
+  "id": "generators-and-induction",
+  "topicId": "magnetism",
+  "title": "Generators and Induction",
+  "subtitle": "Electromagnetic induction",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Electromagnetic induction occurs when\u2026",
+      "options": [
+        "A current is passed through a wire near a magnet",
+        "A conductor moves through a magnetic field (or the field through a conductor)",
+        "Two magnets are placed close together",
+        "A magnet is held still next to a coil of wire"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Electromagnetic induction requires <strong>relative motion</strong> between a conductor and a magnetic field \u2014 or a changing magnetic field. A stationary magnet next to a coil produces no induction and therefore no current.",
+      "correctFeedback": "\u2713 Correct! Induction happens when there is relative motion between a conductor and a magnetic field. Without motion or a changing field, there is no induced EMF or current.",
+      "bestSource": "BEST resource: AQA Physics specification 4.7.4 \u2014 Electromagnetic induction"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Generators and Electromagnetic Induction",
+      "bodyHTML": "<strong>Electromagnetic induction</strong> is the process by which a potential difference (EMF) is induced in a conductor when there is relative motion between the conductor and a magnetic field. A <strong>generator</strong> uses this principle to convert kinetic energy into electrical energy by rotating a coil within a magnetic field. The induced EMF can be increased by moving the conductor faster, using a stronger magnet, or increasing the number of turns on the coil.",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Faster motion \u2192 greater induced EMF",
+          "Stronger magnet \u2192 greater induced EMF",
+          "More coil turns \u2192 greater induced EMF",
+          "No motion \u2192 no induced EMF"
+        ]
+      },
+      "keyWords": ["electromagnetic induction", "induced EMF", "generator", "alternating current", "relative motion", "flux"],
+      "commonErrors": [
+        "Thinking a stationary magnet near a coil induces a current",
+        "Confusing generators (motion \u2192 electricity) with motors (electricity \u2192 motion)",
+        "Forgetting that reversing the direction of motion reverses the induced current"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Describe question",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "6(a)",
+          "marks": 3,
+          "questionText": "Describe three ways to increase the size of the induced EMF in an electromagnetic generator.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "Factor 1 \u2014 speed of rotation",
+              "content": "Rotate the coil faster (increase the speed of relative motion between the coil and the magnetic field).",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 increase speed / rate of change of flux"
+            },
+            {
+              "stepNum": 2,
+              "label": "Factor 2 \u2014 magnetic field strength",
+              "content": "Use a stronger magnet to increase the magnetic flux density through the coil.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 stronger magnet / greater field strength"
+            },
+            {
+              "stepNum": 3,
+              "label": "Factor 3 \u2014 number of turns",
+              "content": "Increase the number of turns on the coil so that more conductors cut through the field lines each cycle.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 more turns on coil"
+            }
+          ],
+          "finalAnswer": "Rotate faster; use a stronger magnet; increase the number of coil turns.",
+          "finalAnswerUnit": null,
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 2",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "6(b)",
+          "marks": 1,
+          "questionText": "A magnet is held stationary inside a coil of wire. What is the induced current?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "A large direct current", "correct": false },
+            { "label": "B", "text": "A small alternating current", "correct": false },
+            { "label": "C", "text": "Zero \u2014 no current is induced", "correct": true },
+            { "label": "D", "text": "A current that gradually increases", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "No relative motion between magnet and coil means no change in flux \u2014 so no induced EMF and no current \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "A common error is to think a magnet always causes a current \u2014 motion (or a changing field) is essential for induction."
+        }
+      }
+    }
+  ]
+}

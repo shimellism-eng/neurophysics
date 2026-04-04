@@ -1,0 +1,109 @@
+{
+  "id": "isotopes",
+  "topicId": "atomic",
+  "title": "Isotopes",
+  "subtitle": "Same element, different neutron numbers",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "Isotopes of an element have\u2026",
+      "options": [
+        "The same mass number but different atomic numbers",
+        "The same number of protons but different numbers of neutrons",
+        "The same number of neutrons but different numbers of protons",
+        "Identical numbers of protons, neutrons and electrons"
+      ],
+      "correctIndex": 1,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Isotopes always have the <strong>same atomic number</strong> (same number of protons \u2014 same element), but a <strong>different number of neutrons</strong>, giving them different mass numbers.",
+      "correctFeedback": "\u2713 Correct! Isotopes have the same number of protons (same element) but different numbers of neutrons, so they have different mass numbers.",
+      "bestSource": "BEST resource: AQA Physics specification 4.4.1 \u2014 Atoms and isotopes"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Isotopes",
+      "bodyHTML": "<strong>Isotopes</strong> are atoms of the <strong>same element</strong> that have the same number of <strong>protons</strong> (same atomic number Z) but a different number of <strong>neutrons</strong>, giving them different <strong>mass numbers</strong>. For example, carbon-12 and carbon-14 are both carbon (Z = 6) but have 6 and 8 neutrons respectively. Some isotopes are <strong>unstable</strong> (radioactive) and will decay over time.",
+      "keyWords": ["isotope", "atomic number", "mass number", "neutron", "radioactive"],
+      "commonErrors": [
+        "Thinking isotopes are different elements \u2014 they are not; same proton number means same element",
+        "Confusing mass number with atomic number",
+        "Forgetting that isotopes of the same element have the same chemical properties"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q6(a)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "6(a)",
+          "marks": 2,
+          "questionText": "Uranium-235 and uranium-238 are isotopes. Uranium has atomic number 92. State how these two isotopes are similar and how they are different.",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State the similarity",
+              "content": "Both isotopes have the same atomic number, so they have the same number of protons:",
+              "equation": "Both have 92 protons",
+              "markSchemeNote": "1 mark \u2014 same number of protons (or same atomic number)"
+            },
+            {
+              "stepNum": 2,
+              "label": "State the difference",
+              "content": "They have different mass numbers, so different numbers of neutrons:\nU-235: neutrons = 235 \u2212 92 = 143\nU-238: neutrons = 238 \u2212 92 = 146",
+              "equation": "Different numbers of neutrons (143 vs 146)",
+              "markSchemeNote": "1 mark \u2014 different number of neutrons (or different mass numbers)"
+            }
+          ],
+          "finalAnswer": "Same number of protons (92); different numbers of neutrons (143 and 146)",
+          "finalAnswerUnit": "",
+          "totalMarks": 2
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA GCSE Physics \u00b7 Paper 2 \u00b7 Q6(b)",
+          "year": 2023,
+          "paper": 2,
+          "questionNumber": "6(b)",
+          "marks": 1,
+          "questionText": "Which of the following pairs are isotopes of the same element?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "An atom with 6 protons and 6 neutrons; an atom with 7 protons and 6 neutrons",  "correct": false },
+            { "label": "B", "text": "An atom with 8 protons and 8 neutrons; an atom with 8 protons and 10 neutrons", "correct": true  },
+            { "label": "C", "text": "An atom with 6 protons and 6 neutrons; an atom with 6 protons and 6 neutrons",  "correct": false },
+            { "label": "D", "text": "An atom with 17 protons and 18 neutrons; an atom with 18 protons and 17 neutrons", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "Isotopes must have the same number of protons",
+            "Option B: both have 8 protons but different neutron numbers (8 and 10) \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer B",
+          "commonMistake": "Option C has identical atoms (not isotopes). Option A and D have different proton numbers, so they are different elements."
+        }
+      }
+    }
+  ]
+}

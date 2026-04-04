@@ -1,0 +1,127 @@
+{
+  "id": "internal-energy",
+  "topicId": "particles",
+  "title": "Internal Energy",
+  "subtitle": "Kinetic and potential energy of particles",
+  "estimatedMinutes": 8,
+  "higherOnly": false,
+  "boardAvailability": {
+    "aqa": true
+  },
+  "steps": [
+    {
+      "id": "diagnostic",
+      "type": "diagnostic",
+      "uiTag": "Misconception check",
+      "uiColor": "red",
+      "title": "Quick question first\u2026",
+      "question": "The internal energy of a substance is\u2026",
+      "options": [
+        "The same as its temperature",
+        "Only the kinetic energy of its particles",
+        "The total kinetic and potential energy stored by its particles",
+        "Only the potential energy stored between its particles"
+      ],
+      "correctIndex": 2,
+      "misconceptionFeedback": "\u26a0\ufe0f Common misconception! Internal energy is the <strong>total</strong> energy stored by the particles \u2014 both their <strong>kinetic energy</strong> (due to motion) and their <strong>potential energy</strong> (due to the forces between them). Temperature is linked to average kinetic energy only, not internal energy.",
+      "correctFeedback": "\u2713 Correct! Internal energy = total kinetic energy + total potential energy of all the particles in the substance.",
+      "bestSource": "BEST resource: AQA Physics specification 4.3.2 \u2014 Internal energy"
+    },
+    {
+      "id": "concept",
+      "type": "concept",
+      "uiTag": "Concept",
+      "uiColor": "blue",
+      "title": "Internal Energy",
+      "bodyHTML": "<strong>Internal energy</strong> is the total energy stored by all the particles in a substance, equal to the sum of their <strong>kinetic energies</strong> (from movement) and their <strong>potential energies</strong> (from the forces between them). Heating a substance increases its internal energy \u2014 if no change of state occurs, the kinetic energy (and therefore temperature) increases; during a change of state, only the potential energy increases (temperature stays constant).",
+      "keyEquation": null,
+      "diagram": {
+        "type": "equation-breakdown",
+        "variables": [],
+        "relationships": [
+          "Internal energy = kinetic energy + potential energy of particles",
+          "Heating with no state change \u2192 KE increases \u2192 temperature rises",
+          "Heating during state change \u2192 PE increases \u2192 temperature constant",
+          "Temperature \u2192 linked to average KE of particles only"
+        ]
+      },
+      "keyWords": ["internal energy", "kinetic energy", "potential energy", "temperature", "thermal energy", "state change"],
+      "commonErrors": [
+        "Thinking internal energy is the same as temperature",
+        "Forgetting that potential energy increases during a change of state",
+        "Confusing internal energy (total) with thermal energy or heat"
+      ]
+    },
+    {
+      "id": "worked-example",
+      "type": "worked",
+      "uiTag": "Worked Example",
+      "uiColor": "amber",
+      "workedExamples": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Explain question",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(a)",
+          "marks": 3,
+          "questionText": "Explain what happens to the internal energy and temperature of a substance when it is heated and its temperature rises (no change of state occurs).",
+          "steps": [
+            {
+              "stepNum": 1,
+              "label": "State what increases",
+              "content": "The internal energy of the substance increases as energy is transferred to it by heating.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 internal energy increases"
+            },
+            {
+              "stepNum": 2,
+              "label": "Link to kinetic energy",
+              "content": "Since there is no change of state, all the extra energy goes into increasing the kinetic energy of the particles (they move faster).",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 kinetic energy of particles increases"
+            },
+            {
+              "stepNum": 3,
+              "label": "Link to temperature",
+              "content": "Greater average kinetic energy of the particles means a higher temperature, so the temperature of the substance rises.",
+              "equation": null,
+              "markSchemeNote": "1 mark \u2014 temperature rises as average KE increases"
+            }
+          ],
+          "finalAnswer": "Internal energy increases; kinetic energy of particles increases; temperature rises.",
+          "finalAnswerUnit": null,
+          "totalMarks": 3
+        }
+      }
+    },
+    {
+      "id": "your-turn",
+      "type": "yourTurn",
+      "uiTag": "Your Turn",
+      "uiColor": "purple",
+      "questions": {
+        "aqa": {
+          "source": "AQA Style \u00b7 Paper 1",
+          "year": 2022,
+          "paper": 1,
+          "questionNumber": "4(b)",
+          "marks": 1,
+          "questionText": "When ice melts at 0\u00b0C, what happens to the internal energy and temperature?",
+          "questionType": "multiple-choice",
+          "options": [
+            { "label": "A", "text": "Internal energy increases; temperature increases", "correct": false },
+            { "label": "B", "text": "Internal energy increases; temperature stays constant", "correct": true },
+            { "label": "C", "text": "Internal energy stays constant; temperature stays constant", "correct": false },
+            { "label": "D", "text": "Internal energy decreases; temperature stays constant", "correct": false }
+          ],
+          "markSchemeSteps": [
+            "During melting, energy is absorbed to break bonds \u2192 potential energy increases \u2192 internal energy increases",
+            "Kinetic energy unchanged \u2192 temperature stays at 0\u00b0C \u2713"
+          ],
+          "markSchemeAward": "1 mark \u2014 correct answer",
+          "commonMistake": "Option A incorrectly links increased internal energy to a temperature rise \u2014 during a state change, all extra energy goes into potential energy, not kinetic energy."
+        }
+      }
+    }
+  ]
+}

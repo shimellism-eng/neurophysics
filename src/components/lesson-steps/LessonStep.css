@@ -22,7 +22,7 @@
   margin-top: auto;
   width: 100%;
   padding: var(--sp-4);
-  background: var(--cyan);
+  background: var(--blue);
   color: #fff;
   font-weight: 800;
   font-size: 1rem;
@@ -30,6 +30,7 @@
   min-height: 52px;
   letter-spacing: 0.02em;
   transition: opacity 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 4px 14px rgba(21,93,252,0.30);
 }
 
 .lesson-step__cta:active {

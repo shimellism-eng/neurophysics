@@ -27,11 +27,11 @@
 }
 
 .navbar-item--active {
-  color: var(--cyan);
+  color: var(--blue);
 }
 
 .navbar-item--active .navbar-icon-wrap {
-  background: var(--cyan-dim);
+  background: var(--blue-dim);
   border-radius: 10px;
 }
 
@@ -61,5 +61,5 @@
 }
 
 .navbar-item--active .navbar-label {
-  color: var(--cyan);
+  color: var(--blue);
 }

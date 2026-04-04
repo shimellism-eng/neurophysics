@@ -49,7 +49,7 @@
 }
 
 .home__title span {
-  color: var(--cyan);
+  color: var(--blue);
 }
 
 .home__board {
@@ -105,7 +105,7 @@
 .home__stat-val {
   font-size: 1.15rem;
   font-weight: 900;
-  color: var(--cyan);
+  color: var(--blue);
 }
 
 .home__stat-label {
@@ -171,15 +171,15 @@
   font-weight: 600;
 }
 
-/* Continue card — teal, not purple/pink */
+/* Continue card — deep blue, Figma-inspired */
 .home__continue.card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #155dfc 0%, #2b7fff 100%);
   border: none;
-  box-shadow: 0 4px 20px rgba(13,148,136,0.30);
+  box-shadow: 0 4px 20px rgba(21,93,252,0.35);
   text-align: left;
   color: #ffffff;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
@@ -191,7 +191,7 @@
 
 .home__continue.card:active {
   transform: scale(0.98);
-  box-shadow: 0 2px 8px rgba(13,148,136,0.20);
+  box-shadow: 0 2px 8px rgba(21,93,252,0.20);
 }
 
 .home__continue-left {
@@ -342,7 +342,7 @@
 }
 
 .home__qa-btn > svg {
-  color: var(--cyan);
+  color: var(--blue);
 }
 
 .home__qa-btn:active {

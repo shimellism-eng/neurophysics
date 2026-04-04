@@ -28,38 +28,57 @@ export function Topics() {
     <ScreenWrapper>
       <div className="topics__header">
         <h1>Topics</h1>
-        <p className="text-muted text-sm">GCSE Physics</p>
+        <p className="text-muted text-sm">GCSE Physics · AQA</p>
       </div>
 
-      <div className="topics__list">
-        {ALL_TOPICS.map(t => {
+      <div className="topics__timeline">
+        {ALL_TOPICS.map((t, idx) => {
           const pct = topicProgress(t.concepts);
+          const isDone = pct >= 100;
+          const isActive = pct > 0 && pct < 100;
+
           return (
-            <button
+            <div
               key={t.id}
-              className={`topics__card card ${!t.available ? 'topics__card--locked' : ''}`}
-              onClick={() => t.available && navigate(`/topic/${t.id}`)}
-              disabled={!t.available}
-              style={{ '--tc': t.color } as React.CSSProperties}
+              className={`topics__item${isDone ? ' topics__item--done' : isActive ? ' topics__item--active' : ''}`}
             >
-              <div className="topics__card-left">
-                <div className="topics__icon-wrap" aria-hidden="true">
-                  <t.Icon size={20} />
-                </div>
-                <div>
-                  <p className="topics__name">{t.name}</p>
-                  <p className="topics__meta">{t.paper}{!t.available ? ' · Coming soon' : ` · ${t.concepts.length} concepts`}</p>
+              <div className="topics__node-col" aria-hidden="true">
+                <div className="topics__node">
+                  {isDone ? (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  ) : (
+                    idx + 1
+                  )}
                 </div>
               </div>
-              {t.available ? (
-                <ProgressRing percent={pct} size={44} />
-              ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="topics__lock-icon" aria-hidden="true">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                </svg>
-              )}
-            </button>
+
+              <button
+                className="topics__card"
+                onClick={() => t.available && navigate(`/topic/${t.id}`)}
+                disabled={!t.available}
+                style={{ '--tc': t.color } as React.CSSProperties}
+              >
+                <div className="topics__card-head">
+                  <div className="topics__icon-wrap" aria-hidden="true">
+                    <t.Icon size={18} />
+                  </div>
+                  <div className="topics__card-title">
+                    <p className="topics__name">{t.name}</p>
+                    <p className="topics__meta">{t.paper} · {t.concepts.length} concepts</p>
+                  </div>
+                  {t.available ? (
+                    <ProgressRing percent={pct} size={38} />
+                  ) : (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="topics__lock-icon" aria-hidden="true">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  )}
+                </div>
+              </button>
+            </div>
           );
         })}
       </div>

@@ -11,11 +11,12 @@
   --muted:  #64748b;
 
   /* Brand accents */
-  --cyan:   #0d9488;   /* teal — primary accent */
+  --cyan:   #0d9488;   /* teal — completion/done accent */
   --pink:   #e91e8c;
   --amber:  #f59e0b;
   --purple: #6d28d9;
-  --blue:   #2563eb;
+  --blue:   #155dfc;   /* primary interactive accent — Figma */
+  --blue2:  #2b7fff;   /* secondary blue / progress bars */
   --red:    #ef4444;
   --green:  #16a34a;
   --orange: #ea580c;
@@ -25,21 +26,21 @@
   --pink-dim:   rgba(233,30,140,0.10);
   --amber-dim:  rgba(245,158,11,0.12);
   --purple-dim: rgba(109,40,217,0.10);
-  --blue-dim:   rgba(37,99,235,0.10);
+  --blue-dim:   rgba(21,93,252,0.12);
   --red-dim:    rgba(239,68,68,0.10);
   --green-dim:  rgba(22,163,74,0.10);
   --orange-dim: rgba(234,88,12,0.10);
 
-  /* Topic palette */
-  --topic-forces:      #6d28d9;
-  --topic-electricity: #1d4ed8;
-  --topic-waves:       #0369a1;
-  --topic-energy:      #c2410c;
-  --topic-particles:   #15803d;
-  --topic-magnetism:   #be185d;
-  --topic-nuclear:     #b91c1c;
-  --topic-space:       #4338ca;
-  --topic-motion:      #0369a1;
+  /* Topic palette — vibrant, Figma-inspired */
+  --topic-forces:      #f97316;   /* orange */
+  --topic-electricity: #eab308;   /* yellow — Figma #fdc700 */
+  --topic-waves:       #06b6d4;   /* cyan */
+  --topic-energy:      #22c55e;   /* green */
+  --topic-particles:   #8b5cf6;   /* purple */
+  --topic-magnetism:   #ec4899;   /* pink */
+  --topic-nuclear:     #ef4444;   /* red */
+  --topic-space:       #6366f1;   /* indigo */
+  --topic-motion:      #0284c7;   /* sky blue */
 
   /* Radius */
   --r:    16px;

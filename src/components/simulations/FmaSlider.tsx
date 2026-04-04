@@ -1,11 +1,35 @@
 import { useState, useCallback } from 'react';
-import type { SimulationStep } from '../../types/content';
 import './FmaSlider.css';
 
-type SimConfig = SimulationStep['simConfig'];
+interface FmaVariable {
+  id: string;
+  label: string;
+  unit: string;
+  min: number;
+  max: number;
+  step: number;
+  default: number;
+  color: string;
+}
+
+interface FmaDerived {
+  id: string;
+  label: string;
+  unit: string;
+  formula: string;
+  decimalPlaces: number;
+  color: string;
+}
+
+interface FmaSliderConfig {
+  variables: FmaVariable[];
+  derived: FmaDerived[];
+  arrowVariable?: string;
+  blockLabel?: string;
+}
 
 interface FmaSliderProps {
-  config: SimConfig;
+  config: FmaSliderConfig;
 }
 
 const COLOR_MAP: Record<string, string> = {

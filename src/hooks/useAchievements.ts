@@ -155,7 +155,7 @@ export const ACHIEVEMENT_DEFS: AchievementDef[] = [
       const boards = new Set<string>();
       for (const q of p.attemptedQuestions) {
         // question IDs contain board prefix e.g. "aqa-2022-p2-q3"
-        const parts = (q.questionId ?? q.id ?? '').split('-');
+        const parts = (q.questionId ?? '').split('-');
         if (parts.length >= 2) boards.add(parts[0]);
       }
       return boards.size >= 3;

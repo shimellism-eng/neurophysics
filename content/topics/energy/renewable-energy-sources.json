@@ -1,0 +1,34 @@
+{
+  "id": "renewable-energy-sources",
+  "title": "Renewable Energy Sources",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Renewable and Non-Renewable Energy",
+          "content": "**Non-renewable** sources (coal, oil, gas, nuclear) will eventually run out and most produce CO₂.\n\n**Renewable** sources will not run out:\n\n| Source | How it works |\n|---|---|\n| Solar | Panels convert light → electricity |\n| Wind | Turbines convert KE of wind → electricity |\n| Hydroelectric | Falling water drives turbines |\n| Tidal | Tidal movement drives turbines |\n| Geothermal | Heat from Earth drives steam turbines |\n| Biomass | Burning organic material releases stored energy |\n\nRenewables have **lower carbon emissions** but can be **intermittent** (sun/wind not always available)."
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Energy Sources",
+          "question": "Which of these is a renewable energy source?",
+          "options": [
+            "Wind energy",
+            "Coal",
+            "Natural gas",
+            "Nuclear fuel"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! Wind energy is renewable — wind will not run out. Coal, natural gas, and nuclear fuel are non-renewable (finite supply).",
+          "misconceptionFeedback": "Renewable = will not run out in human timescales. Wind, solar, tidal, hydroelectric, geothermal, and biomass are renewable. Coal, gas, oil, and nuclear fuels are non-renewable — they take millions of years to form and are being used much faster.",
+          "bestSource": "AQA GCSE Physics — Energy Resources"
+        }
+      ]
+    }
+  }
+}

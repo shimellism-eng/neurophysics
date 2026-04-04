@@ -31,7 +31,7 @@ interface ArrowProps {
   label: string;
   labelX: number;
   labelY: number;
-  textAnchor?: string;
+  textAnchor?: 'middle' | 'start' | 'end' | 'inherit';
 }
 
 function Arrow({ x1, y1, x2, y2, color, label, labelX, labelY, textAnchor = 'middle' }: ArrowProps) {

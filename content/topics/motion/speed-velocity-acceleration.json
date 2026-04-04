@@ -1,0 +1,51 @@
+{
+  "id": "speed-velocity-acceleration",
+  "title": "Speed, Velocity and Acceleration",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Speed, Velocity and Acceleration",
+          "content": "**Speed** is how fast an object moves — it has no direction. **Velocity** is speed in a given direction (a vector). **Acceleration** is the rate of change of velocity.\n\nAverage speed: v = d/t\n\nAcceleration: a = Δv/t",
+          "equations": [
+            { "label": "Average speed", "latex": "v = \\frac{d}{t}" },
+            { "label": "Acceleration", "latex": "a = \\frac{\\Delta v}{t}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Speed vs Velocity",
+          "question": "A car travels 60 km north in 1 hour. Which statement correctly describes its motion?",
+          "options": [
+            "Its speed is 60 km/h and its velocity is 60 km/h north",
+            "Its speed and velocity are both 60 km/h — direction doesn't matter",
+            "Speed and velocity are the same thing",
+            "Its velocity is 60 km/h but its speed cannot be determined"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! Speed is the magnitude (60 km/h) and velocity adds the direction (60 km/h north). They have the same numerical value here but velocity specifies direction.",
+          "misconceptionFeedback": "Speed is a scalar (magnitude only). Velocity is a vector — it includes direction. A car going 60 km/h north has speed = 60 km/h and velocity = 60 km/h north.",
+          "bestSource": "AQA GCSE Physics — Forces and Motion"
+        },
+        {
+          "type": "simulation",
+          "uiTag": "Simulation",
+          "uiColor": "green",
+          "title": "Explore Motion",
+          "instruction": "Adjust the speed and observe how the object moves. Notice how changing direction changes velocity but not speed.",
+          "simId": "phet",
+          "simConfig": {
+            "url": "https://phet.colorado.edu/sims/html/moving-man/latest/moving-man_en.html",
+            "title": "The Moving Man — PhET Simulation",
+            "aspectRatio": 1.6
+          }
+        }
+      ]
+    }
+  }
+}

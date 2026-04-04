@@ -1,0 +1,34 @@
+{
+  "id": "domestic-electricity",
+  "title": "Domestic Electricity",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Mains Electricity and Safety",
+          "content": "UK mains electricity is **alternating current (AC)** at approximately **230 V**, **50 Hz**.\n\nA three-pin plug contains:\n- **Live wire** (brown): carries the voltage\n- **Neutral wire** (blue): completes the circuit at ~0 V\n- **Earth wire** (green/yellow): safety wire connected to ground\n\nA **fuse** melts and breaks the circuit if too much current flows. The fuse should be rated just above the normal operating current."
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Domestic Electricity",
+          "question": "Which wire in a UK plug is brown and carries the mains voltage?",
+          "options": [
+            "The live wire",
+            "The neutral wire",
+            "The earth wire",
+            "The fuse wire"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! The live wire is brown and carries the 230 V mains voltage. Remember: Brown = Live, Blue = Neutral, Green/Yellow = Earth.",
+          "misconceptionFeedback": "UK plug colour code: Brown = Live (dangerous — carries 230 V), Blue = Neutral (near 0 V), Green/Yellow = Earth (safety). The fuse is in the plug, not a wire itself.",
+          "bestSource": "AQA GCSE Physics — Electricity"
+        }
+      ]
+    }
+  }
+}

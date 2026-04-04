@@ -1,0 +1,39 @@
+{
+  "id": "equations-of-motion",
+  "title": "Equations of Motion",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "The Four Equations of Motion",
+          "content": "These equations apply to objects moving with **constant (uniform) acceleration**:\n\n1. v = u + at\n2. s = ut + ½at²\n3. v² = u² + 2as\n4. s = ½(u + v)t\n\nWhere: u = initial velocity, v = final velocity, a = acceleration, t = time, s = displacement",
+          "equations": [
+            { "label": "Final velocity", "latex": "v = u + at" },
+            { "label": "Displacement (time)", "latex": "s = ut + \\frac{1}{2}at^2" },
+            { "label": "Displacement (velocities)", "latex": "v^2 = u^2 + 2as" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Applying Equations of Motion",
+          "question": "A car accelerates from rest at 3 m/s² for 4 seconds. What is its final velocity?",
+          "options": [
+            "12 m/s",
+            "24 m/s",
+            "7 m/s",
+            "0.75 m/s"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! Using v = u + at: v = 0 + (3 × 4) = 12 m/s. Starting from rest means u = 0.",
+          "misconceptionFeedback": "Use v = u + at. The car starts from rest so u = 0. v = 0 + (3 m/s² × 4 s) = 12 m/s. Watch out for common errors: 3 × 4 ≠ 24 (that would need doubling, which isn't in this formula).",
+          "bestSource": "AQA GCSE Physics — Kinematics"
+        }
+      ]
+    }
+  }
+}

@@ -8,6 +8,7 @@ export const SimRegistry: Record<string, React.LazyExoticComponent<ComponentType
   'wave-sim':            lazy(() => import('./WaveSim')),
   'circuit-sim':         lazy(() => import('./CircuitSim')),
   'hookes-law-sim':      lazy(() => import('./HookesLawSim')),
+  'phet':                lazy(() => import('./PhETSimWrapper')),
   // Phase 2 — scaffold only:
   // 'circuit-builder': lazy(() => import('./CircuitBuilder')),
   // 'decay-counter':   lazy(() => import('./DecayCounter')),

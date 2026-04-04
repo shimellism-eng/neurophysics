@@ -36,7 +36,9 @@ export function DiagnosticStep({ step, onComplete, onLog }: DiagnosticStepProps)
         <h2 className="lesson-step__title">{step.title}</h2>
       </div>
 
-      <p className="diagnostic__question">{step.question}</p>
+      <div className="diagnostic__question-card">
+        <p className="diagnostic__question">{step.question}</p>
+      </div>
 
       <div className="diagnostic__options" role="group" aria-label="Answer options">
         {step.options.map((opt, i) => {
@@ -55,7 +57,18 @@ export function DiagnosticStep({ step, onComplete, onLog }: DiagnosticStepProps)
               aria-pressed={selected === i}
             >
               <span className="diagnostic__option-letter">{String.fromCharCode(65 + i)}</span>
-              <span>{opt}</span>
+              <span className="diagnostic__option-text">{opt}</span>
+              {answered && state === 'correct' && (
+                <svg className="diagnostic__option-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              )}
+              {answered && state === 'wrong' && (
+                <svg className="diagnostic__option-icon" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              )}
             </button>
           );
         })}
@@ -63,7 +76,14 @@ export function DiagnosticStep({ step, onComplete, onLog }: DiagnosticStepProps)
 
       {answered && (
         <div className={`diagnostic__feedback diagnostic__feedback--${correct ? 'correct' : 'wrong'}`}>
-          <p>{correct ? step.correctFeedback : step.misconceptionFeedback}</p>
+          <div className="diagnostic__feedback-row">
+            <span className="diagnostic__feedback-emoji" aria-hidden="true">
+              {correct ? '✓' : '✗'}
+            </span>
+            <p className="diagnostic__feedback-body">
+              {correct ? step.correctFeedback : step.misconceptionFeedback}
+            </p>
+          </div>
           {step.bestSource && <p className="diagnostic__source">{step.bestSource}</p>}
         </div>
       )}

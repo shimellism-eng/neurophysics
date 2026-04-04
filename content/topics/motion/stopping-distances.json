@@ -1,0 +1,34 @@
+{
+  "id": "stopping-distances",
+  "title": "Stopping Distances",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Stopping Distances",
+          "content": "**Stopping distance = Thinking distance + Braking distance**\n\n**Thinking distance** — the distance travelled during the driver's reaction time (typically 0.7 s). Increased by: tiredness, drugs/alcohol, distractions.\n\n**Braking distance** — the distance travelled while brakes are applied. Increased by: high speed, wet/icy roads, worn tyres or brakes, heavy vehicle.\n\n⚠️ Braking distance is proportional to v² — doubling speed quadruples braking distance."
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Stopping Distances",
+          "question": "A driver's reaction time is 0.7 s and they are travelling at 20 m/s. What is their thinking distance?",
+          "options": [
+            "14 m",
+            "7 m",
+            "20 m",
+            "0.7 m"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! Thinking distance = speed × reaction time = 20 × 0.7 = 14 m.",
+          "misconceptionFeedback": "Thinking distance = speed × reaction time. Here: 20 m/s × 0.7 s = 14 m. Don't confuse thinking and braking distance — thinking distance depends only on speed and reaction time.",
+          "bestSource": "AQA GCSE Physics — Forces"
+        }
+      ]
+    }
+  }
+}

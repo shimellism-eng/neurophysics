@@ -1,0 +1,38 @@
+{
+  "id": "gas-pressure-temperature",
+  "title": "Gas Pressure and Temperature",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Gas Pressure and the Particle Model",
+          "content": "Gas pressure is caused by particles **colliding with the walls** of a container.\n\n**Increasing temperature** → particles move faster → more frequent and more forceful collisions → **higher pressure** (at constant volume).\n\n**Decreasing volume** → particles collide more frequently → **higher pressure** (at constant temperature).\n\nAt **absolute zero** (0 K = −273 °C), particle movement stops. Temperature in Kelvin:\n\nT(K) = T(°C) + 273",
+          "equations": [
+            { "label": "Celsius to Kelvin", "latex": "T(K) = T(°C) + 273" },
+            { "label": "Pressure–temperature law", "latex": "\\frac{P_1}{T_1} = \\frac{P_2}{T_2}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Gas Pressure",
+          "question": "A gas is heated at constant volume. What happens to the pressure?",
+          "options": [
+            "Pressure increases",
+            "Pressure decreases",
+            "Pressure stays the same",
+            "Pressure first increases then decreases"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! Heating the gas makes particles move faster, so they collide with the walls more frequently and with greater force — increasing pressure.",
+          "misconceptionFeedback": "At constant volume: heating → faster particles → more collisions with walls → greater force per collision → higher pressure. P/T = constant (P₁/T₁ = P₂/T₂) where T is in Kelvin.",
+          "bestSource": "AQA GCSE Physics — Particle Model of Matter"
+        }
+      ]
+    }
+  }
+}

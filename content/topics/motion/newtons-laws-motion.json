@@ -1,0 +1,37 @@
+{
+  "id": "newtons-laws-motion",
+  "title": "Newton's Laws of Motion",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Newton's Three Laws",
+          "content": "**First Law:** An object stays at rest or moves at constant velocity unless a resultant force acts on it.\n\n**Second Law:** Force = mass × acceleration (F = ma)\n\n**Third Law:** When A exerts a force on B, B exerts an equal and opposite force on A. (Action–reaction pairs act on *different* objects.)",
+          "equations": [
+            { "label": "Newton's Second Law", "latex": "F = ma" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Newton's Laws",
+          "question": "A 2 kg trolley accelerates at 5 m/s². What is the resultant force acting on it?",
+          "options": [
+            "10 N",
+            "2.5 N",
+            "7 N",
+            "0.4 N"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! F = ma = 2 × 5 = 10 N. Newton's Second Law: resultant force = mass × acceleration.",
+          "misconceptionFeedback": "Use F = ma. Mass = 2 kg, acceleration = 5 m/s², so F = 2 × 5 = 10 N. Dividing gives the wrong answer — always multiply mass by acceleration.",
+          "bestSource": "AQA GCSE Physics — Newton's Laws"
+        }
+      ]
+    }
+  }
+}

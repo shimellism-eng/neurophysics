@@ -1,0 +1,37 @@
+{
+  "id": "iv-characteristics",
+  "title": "I–V Characteristics",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "I–V Characteristics",
+          "content": "An **I–V graph** shows how current (I) varies with voltage (V) for different components:\n\n**Resistor (ohmic):** Straight line through origin — constant resistance (obeys Ohm's Law)\n\n**Filament lamp:** Curved line — resistance increases as temperature rises\n\n**Diode:** Current only flows in one direction (forward bias). Very high resistance in reverse.",
+          "equations": [
+            { "label": "Resistance from I–V graph", "latex": "R = \\frac{V}{I}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "I–V Characteristics",
+          "question": "A filament lamp's I–V graph curves — it is not a straight line. What does this tell you about its resistance?",
+          "options": [
+            "Its resistance increases as the voltage increases",
+            "Its resistance is constant",
+            "Its resistance decreases as current increases",
+            "It does not obey any electrical laws"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! The curved I–V graph shows that the gradient (I/V) decreases — so V/I (resistance) increases. This is because the filament heats up and resistance rises with temperature.",
+          "misconceptionFeedback": "For an ohmic resistor, R = V/I is constant (straight I–V line). The lamp's curve means the ratio V/I changes — resistance increases at higher temperatures. This is a non-ohmic component.",
+          "bestSource": "AQA GCSE Physics — Electricity"
+        }
+      ]
+    }
+  }
+}

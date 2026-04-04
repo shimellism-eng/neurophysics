@@ -1,0 +1,37 @@
+{
+  "id": "distance-time-graphs",
+  "title": "Distance–Time Graphs",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Reading Distance–Time Graphs",
+          "content": "On a **distance–time graph**:\n\n- A **horizontal line** = stationary (not moving)\n- A **straight diagonal line** = constant speed\n- A **curved line** = changing speed (accelerating or decelerating)\n\nThe **gradient** (slope) of the line equals the speed:\n\nspeed = gradient = Δd / Δt",
+          "equations": [
+            { "label": "Speed from gradient", "latex": "v = \\frac{\\Delta d}{\\Delta t}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Distance–Time Graphs",
+          "question": "A distance–time graph shows a straight line with a steeper gradient in section B than section A. What does this tell you?",
+          "options": [
+            "The object is moving faster in section B than section A",
+            "The object is accelerating in section B",
+            "The object is decelerating in section B",
+            "The object is stationary in section A"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! A steeper gradient means a greater change in distance per unit time — so the object is moving faster. Acceleration would be shown by a curve, not a straight line.",
+          "misconceptionFeedback": "On a d–t graph, gradient = speed. A steeper straight line means faster constant speed. A curve would mean acceleration. Two straight sections with different gradients = two different constant speeds.",
+          "bestSource": "AQA GCSE Physics — Motion"
+        }
+      ]
+    }
+  }
+}

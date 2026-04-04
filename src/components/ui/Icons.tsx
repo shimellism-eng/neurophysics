@@ -204,6 +204,17 @@ export function IconSearch(p: IconProps) {
   );
 }
 
+export function IconMotion(p: IconProps) {
+  return icon(
+    <>
+      <path d="M5 19l14-14" />
+      <polyline points="14 5 19 5 19 10" />
+      <path d="M5 12h6" />
+    </>,
+    p
+  );
+}
+
 export function IconAchievements(p: IconProps) {
   return icon(
     <>

@@ -1,0 +1,38 @@
+{
+  "id": "national-grid",
+  "title": "The National Grid",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "How the National Grid Works",
+          "content": "The **National Grid** transmits electricity from power stations to homes and businesses.\n\nElectricity is transmitted at **very high voltage** (e.g. 400 000 V) and **low current** to reduce **power loss** in cables.\n\nPower loss in cables: P = I²R — higher current means much more energy wasted as heat.\n\n**Step-up transformers** increase voltage before transmission.\n**Step-down transformers** reduce voltage to safe levels for homes (230 V).",
+          "equations": [
+            { "label": "Power loss in cables", "latex": "P_{loss} = I^2 R" },
+            { "label": "Transformer equation", "latex": "\\frac{V_p}{V_s} = \\frac{N_p}{N_s}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "The National Grid",
+          "question": "Why is electricity transmitted at high voltage and low current in the National Grid?",
+          "options": [
+            "To reduce power loss as heat in the cables",
+            "To make it travel faster",
+            "Because high current is dangerous",
+            "To increase the power output"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! P = I²R — power loss is proportional to the square of the current. Transmitting at high voltage (and therefore low current) dramatically reduces energy lost as heat in cables.",
+          "misconceptionFeedback": "The key equation is P = I²R. Since resistance (R) of cables is fixed, reducing current (I) reduces power loss much more effectively than reducing voltage. High voltage → low current → less energy wasted as heat.",
+          "bestSource": "AQA GCSE Physics — Magnetism and Electromagnetism"
+        }
+      ]
+    }
+  }
+}

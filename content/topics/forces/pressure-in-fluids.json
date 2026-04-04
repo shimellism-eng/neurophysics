@@ -1,0 +1,38 @@
+{
+  "id": "pressure-in-fluids",
+  "title": "Pressure in Fluids",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Pressure in Fluids",
+          "content": "Pressure in a fluid (liquid or gas) acts in **all directions** and increases with depth.\n\nPressure due to a column of fluid:\n\nP = hρg\n\nWhere: h = depth (m), ρ = density of fluid (kg/m³), g = gravitational field strength (N/kg)\n\nAtmospheric pressure is about **101 000 Pa** (101 kPa) at sea level.",
+          "equations": [
+            { "label": "Fluid pressure", "latex": "P = h\\rho g" },
+            { "label": "Pressure definition", "latex": "P = \\frac{F}{A}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Pressure in Fluids",
+          "question": "What happens to the pressure in a liquid as depth increases?",
+          "options": [
+            "Pressure increases with depth",
+            "Pressure decreases with depth",
+            "Pressure stays the same regardless of depth",
+            "Pressure only increases if the liquid is moving"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! P = hρg — pressure is directly proportional to depth. The greater the depth, the more fluid above pushing down.",
+          "misconceptionFeedback": "Pressure increases with depth because more fluid is above you. P = hρg — a greater h means greater P. This is why deep-sea submarines need reinforced hulls.",
+          "bestSource": "AQA GCSE Physics — Forces"
+        }
+      ]
+    }
+  }
+}

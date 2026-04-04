@@ -1,0 +1,38 @@
+{
+  "id": "velocity-time-graphs",
+  "title": "Velocity–Time Graphs",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Reading Velocity–Time Graphs",
+          "content": "On a **velocity–time graph**:\n\n- A **horizontal line** = constant velocity (zero acceleration)\n- A **straight diagonal line** = constant acceleration\n- A **curved line** = changing acceleration\n\nThe **gradient** = acceleration\n\nThe **area under the graph** = distance travelled",
+          "equations": [
+            { "label": "Acceleration from gradient", "latex": "a = \\frac{\\Delta v}{\\Delta t}" },
+            { "label": "Distance = area under graph", "latex": "d = \\text{area under } v\\text{–}t \\text{ graph}" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Velocity–Time Graphs",
+          "question": "A velocity–time graph shows a straight line from v = 0 to v = 20 m/s over 5 seconds. What is the acceleration?",
+          "options": [
+            "4 m/s²",
+            "20 m/s²",
+            "100 m/s²",
+            "0.25 m/s²"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! a = Δv/Δt = (20 − 0) / 5 = 4 m/s². The gradient of a v–t graph gives acceleration.",
+          "misconceptionFeedback": "Use a = Δv / Δt. Here Δv = 20 m/s and Δt = 5 s, so a = 20 ÷ 5 = 4 m/s². Don't confuse the final velocity (20 m/s) with the acceleration.",
+          "bestSource": "AQA GCSE Physics — Motion"
+        }
+      ]
+    }
+  }
+}

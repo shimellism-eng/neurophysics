@@ -175,6 +175,9 @@
   text-align: left;
   color: #ffffff;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
+  min-height: 90px;
+  padding: var(--sp-4) var(--sp-5);
+  gap: var(--sp-4);
 }
 
 .home__continue.card:active {
@@ -182,17 +185,24 @@
   box-shadow: 0 2px 8px rgba(124,58,237,0.2);
 }
 
+.home__continue-left {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
 .home__continue-label {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 2px;
+  color: rgba(255,255,255,0.7);
 }
 
 .home__continue-topic {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.2;

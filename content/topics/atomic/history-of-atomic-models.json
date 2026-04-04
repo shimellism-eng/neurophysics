@@ -1,0 +1,34 @@
+{
+  "id": "history-of-atomic-models",
+  "title": "History of the Atomic Model",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "How Our Understanding of the Atom Changed",
+          "content": "Scientific models of the atom have changed as new evidence emerged:\n\n1. **Dalton (1800s):** Solid sphere model — atoms are indivisible solid balls\n2. **Thomson (1904):** Plum pudding model — negative electrons embedded in a cloud of positive charge\n3. **Rutherford (1911):** Nuclear model — alpha particle scattering experiment showed a tiny, dense, positive nucleus with electrons orbiting around it\n4. **Bohr (1913):** Electrons orbit in fixed energy levels (shells)\n5. **Modern quantum model:** Electrons exist in probability clouds (orbitals)\n\nThis is a great example of how **scientific models evolve** when new evidence contradicts the existing model."
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "History of the Atom",
+          "question": "Rutherford's gold foil experiment showed that most alpha particles passed straight through. What did this tell scientists?",
+          "options": [
+            "Atoms are mostly empty space with a tiny dense nucleus",
+            "Alpha particles are very small and can pass through anything",
+            "Gold atoms have no nucleus",
+            "The plum pudding model was correct"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! Most particles passed straight through (empty space), a few deflected (nucleus nearby), and a very small number bounced back (direct hit on nucleus). This disproved the plum pudding model.",
+          "misconceptionFeedback": "The key result: most particles went straight through → atoms are mostly empty space. Some deflected → positive nucleus. A very few bounced back → nucleus is tiny and dense. This replaced Thomson's plum pudding model.",
+          "bestSource": "AQA GCSE Physics — Atomic Structure"
+        }
+      ]
+    }
+  }
+}

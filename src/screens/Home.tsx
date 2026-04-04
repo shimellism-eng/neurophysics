@@ -9,7 +9,7 @@ import { ScreenWrapper } from '../components/layout/ScreenWrapper';
 import { ProgressRing } from '../components/ui/ProgressRing';
 import {
   IconForces, IconElectricity, IconWaves, IconEnergy,
-  IconMagnetism, IconParticles, IconAtomic, IconSpace,
+  IconMagnetism, IconParticles, IconAtomic, IconSpace, IconMotion,
   IconPracticals, IconEquations, IconPapers, IconAchievements, IconSettings,
   IconSearch,
 } from '../components/ui/Icons';
@@ -18,11 +18,13 @@ import './Home.css';
 const FORCES_CONCEPTS = [
   'resultant-forces', 'newtons-first-law', 'newtons-second-law',
   'newtons-third-law', 'weight-and-gravity', 'momentum', 'work-and-energy',
+  'hookes-law', 'pressure-in-fluids',
 ];
 
 const ELECTRICITY_CONCEPTS = [
   'charge-and-current', 'potential-difference', 'resistance',
   'ohms-law', 'series-circuits', 'parallel-circuits', 'power-and-energy',
+  'iv-characteristics', 'domestic-electricity',
 ];
 
 const WAVES_CONCEPTS = [
@@ -33,21 +35,25 @@ const WAVES_CONCEPTS = [
 const ENERGY_CONCEPTS = [
   'energy-stores-and-transfers', 'kinetic-energy', 'gravitational-pe',
   'elastic-pe', 'conservation-of-energy', 'efficiency', 'power',
+  'renewable-energy-sources',
 ];
 
 const MAGNETISM_CONCEPTS = [
   'permanent-temporary-magnets', 'magnetic-fields', 'electromagnetism',
   'motor-effect', 'flemings-left-hand-rule', 'generators-and-induction', 'transformers',
+  'national-grid',
 ];
 
 const PARTICLES_CONCEPTS = [
   'states-of-matter', 'particle-model', 'density',
   'changes-of-state', 'internal-energy', 'specific-heat-capacity', 'specific-latent-heat',
+  'gas-pressure-temperature',
 ];
 
 const ATOMIC_CONCEPTS = [
   'atomic-structure', 'isotopes', 'radioactive-decay',
   'alpha-beta-gamma', 'half-life', 'uses-of-radiation', 'nuclear-fission-fusion',
+  'history-of-atomic-models',
 ];
 
 const SPACE_CONCEPTS = [
@@ -55,9 +61,15 @@ const SPACE_CONCEPTS = [
   'red-shift', 'big-bang', 'dark-matter-energy', 'satellites',
 ];
 
+const MOTION_CONCEPTS = [
+  'speed-velocity-acceleration', 'distance-time-graphs', 'velocity-time-graphs',
+  'equations-of-motion', 'terminal-velocity', 'newtons-laws-motion', 'stopping-distances',
+];
+
 const ALL_CONCEPTS = [
   ...FORCES_CONCEPTS, ...ELECTRICITY_CONCEPTS, ...WAVES_CONCEPTS, ...ENERGY_CONCEPTS,
   ...MAGNETISM_CONCEPTS, ...PARTICLES_CONCEPTS, ...ATOMIC_CONCEPTS, ...SPACE_CONCEPTS,
+  ...MOTION_CONCEPTS,
 ];
 
 const CONCEPT_LABELS: Record<string, string> = {
@@ -117,6 +129,21 @@ const CONCEPT_LABELS: Record<string, string> = {
   'big-bang': 'The Big Bang',
   'dark-matter-energy': 'Dark Matter and Dark Energy',
   'satellites': 'Satellites',
+  'hookes-law': "Hooke's Law",
+  'pressure-in-fluids': 'Pressure in Fluids',
+  'iv-characteristics': 'I–V Characteristics',
+  'domestic-electricity': 'Domestic Electricity',
+  'renewable-energy-sources': 'Renewable Energy Sources',
+  'national-grid': 'The National Grid',
+  'gas-pressure-temperature': 'Gas Pressure and Temperature',
+  'history-of-atomic-models': 'History of the Atomic Model',
+  'speed-velocity-acceleration': 'Speed, Velocity and Acceleration',
+  'distance-time-graphs': 'Distance–Time Graphs',
+  'velocity-time-graphs': 'Velocity–Time Graphs',
+  'equations-of-motion': 'Equations of Motion',
+  'terminal-velocity': 'Terminal Velocity',
+  'newtons-laws-motion': "Newton's Laws of Motion",
+  'stopping-distances': 'Stopping Distances',
 };
 
 type TopicConfig = {
@@ -131,14 +158,15 @@ type TopicConfig = {
 };
 
 const TOPICS: TopicConfig[] = [
-  { id: 'forces',      name: 'Forces',                       Icon: IconForces,      color: 'var(--topic-forces)',      bg: 'rgba(124,58,237,0.06)',  concepts: 7, paper: 'Paper 2', available: true  },
-  { id: 'electricity', name: 'Electricity',                  Icon: IconElectricity, color: 'var(--topic-electricity)', bg: 'rgba(37,99,235,0.06)',   concepts: 7, paper: 'Paper 1', available: true  },
-  { id: 'waves',       name: 'Waves',                        Icon: IconWaves,       color: 'var(--topic-waves)',       bg: 'rgba(8,145,178,0.06)',   concepts: 7, paper: 'Paper 2', available: true  },
-  { id: 'energy',      name: 'Energy',                       Icon: IconEnergy,      color: 'var(--topic-energy)',      bg: 'rgba(234,88,12,0.06)',   concepts: 7, paper: 'Paper 1', available: true  },
-  { id: 'magnetism',   name: 'Magnetism',                    Icon: IconMagnetism,   color: 'var(--topic-magnetism)',   bg: 'rgba(219,39,119,0.06)',  concepts: 7, paper: 'Paper 2', available: true },
-  { id: 'particles',   name: 'Particle Model',               Icon: IconParticles,   color: 'var(--topic-particles)',   bg: 'rgba(22,163,74,0.06)',   concepts: 7, paper: 'Paper 1', available: true },
-  { id: 'atomic',      name: 'Atomic Structure',             Icon: IconAtomic,      color: 'var(--topic-nuclear)',     bg: 'rgba(220,38,38,0.06)',   concepts: 7, paper: 'Paper 2', available: true },
-  { id: 'space',       name: 'Space Physics',                Icon: IconSpace,       color: 'var(--topic-space)',       bg: 'rgba(79,70,229,0.06)',   concepts: 7, paper: 'Paper 2', available: true },
+  { id: 'forces',      name: 'Forces',                       Icon: IconForces,      color: 'var(--topic-forces)',      bg: 'rgba(124,58,237,0.06)',  concepts: 9,  paper: 'Paper 2', available: true  },
+  { id: 'electricity', name: 'Electricity',                  Icon: IconElectricity, color: 'var(--topic-electricity)', bg: 'rgba(37,99,235,0.06)',   concepts: 9,  paper: 'Paper 1', available: true  },
+  { id: 'waves',       name: 'Waves',                        Icon: IconWaves,       color: 'var(--topic-waves)',       bg: 'rgba(8,145,178,0.06)',   concepts: 7,  paper: 'Paper 2', available: true  },
+  { id: 'energy',      name: 'Energy',                       Icon: IconEnergy,      color: 'var(--topic-energy)',      bg: 'rgba(234,88,12,0.06)',   concepts: 8,  paper: 'Paper 1', available: true  },
+  { id: 'magnetism',   name: 'Magnetism',                    Icon: IconMagnetism,   color: 'var(--topic-magnetism)',   bg: 'rgba(219,39,119,0.06)',  concepts: 8,  paper: 'Paper 2', available: true },
+  { id: 'particles',   name: 'Particle Model',               Icon: IconParticles,   color: 'var(--topic-particles)',   bg: 'rgba(22,163,74,0.06)',   concepts: 8,  paper: 'Paper 1', available: true },
+  { id: 'atomic',      name: 'Atomic Structure',             Icon: IconAtomic,      color: 'var(--topic-nuclear)',     bg: 'rgba(220,38,38,0.06)',   concepts: 8,  paper: 'Paper 2', available: true },
+  { id: 'space',       name: 'Space Physics',                Icon: IconSpace,       color: 'var(--topic-space)',       bg: 'rgba(79,70,229,0.06)',   concepts: 7,  paper: 'Paper 2', available: true },
+  { id: 'motion',      name: 'Motion',                       Icon: IconMotion,      color: 'var(--topic-motion)',      bg: 'rgba(2,132,199,0.06)',   concepts: 7,  paper: 'Paper 2', available: true },
 ];
 
 const TOPIC_CONCEPTS: Record<string, string[]> = {
@@ -150,6 +178,7 @@ const TOPIC_CONCEPTS: Record<string, string[]> = {
   particles: PARTICLES_CONCEPTS,
   atomic: ATOMIC_CONCEPTS,
   space: SPACE_CONCEPTS,
+  motion: MOTION_CONCEPTS,
 };
 
 function getGreeting(): string {

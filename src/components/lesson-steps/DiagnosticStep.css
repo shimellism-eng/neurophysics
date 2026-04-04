@@ -1,39 +1,56 @@
-.diagnostic__question {
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--text);
+/* === Diagnostic Step — premium SEN-friendly redesign === */
+
+.diagnostic__question-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: var(--sp-5);
+  box-shadow: var(--shadow-sm);
 }
 
+.diagnostic__question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Options list */
 .diagnostic__options {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
 }
 
 .diagnostic__option {
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
-  padding: var(--sp-3) var(--sp-4);
-  border: 1px solid var(--border2);
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-4);
+  border: 2px solid var(--border);
   border-radius: var(--r);
-  background: var(--bg3);
+  background: var(--surface);
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   text-align: left;
-  min-height: 52px;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  min-height: 64px;
+  width: 100%;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .diagnostic__option--idle:not(:disabled):active {
   border-color: var(--cyan);
   background: var(--cyan-dim);
+  box-shadow: 0 0 0 3px rgba(0,191,165,0.15);
 }
 
 .diagnostic__option--correct {
-  border-color: var(--green);
-  background: var(--green-dim);
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+  box-shadow: 0 0 0 3px rgba(0,191,165,0.15);
 }
 
 .diagnostic__option--wrong {
@@ -42,44 +59,101 @@
 }
 
 .diagnostic__option--dim {
-  opacity: 0.4;
+  opacity: 0.35;
+  box-shadow: none;
 }
 
+/* Letter pill */
 .diagnostic__option-letter {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: var(--border2);
+  background: var(--bg3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   flex-shrink: 0;
+  color: var(--muted);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
+.diagnostic__option--correct .diagnostic__option-letter {
+  background: var(--cyan);
+  color: #fff;
+}
+
+.diagnostic__option--wrong .diagnostic__option-letter {
+  background: var(--red);
+  color: #fff;
+}
+
+/* Option text */
+.diagnostic__option-text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.4;
+}
+
+/* Result icon on the right */
+.diagnostic__option-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.diagnostic__option--correct .diagnostic__option-icon,
+.diagnostic__option--wrong .diagnostic__option-icon {
+  opacity: 1;
+}
+
+/* Feedback card */
 .diagnostic__feedback {
-  padding: var(--sp-4);
   border-radius: var(--r);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  padding: var(--sp-4) var(--sp-5);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
 }
 
 .diagnostic__feedback--correct {
-  background: var(--green-dim);
-  border: 1px solid var(--green);
+  background: var(--cyan-dim);
+  border: 1.5px solid var(--cyan);
   color: var(--text);
 }
 
 .diagnostic__feedback--wrong {
   background: var(--red-dim);
-  border: 1px solid var(--red);
+  border: 1.5px solid var(--red);
   color: var(--text);
 }
 
+.diagnostic__feedback-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+}
+
+.diagnostic__feedback-emoji {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.diagnostic__feedback-body {
+  flex: 1;
+  min-width: 0;
+  font-weight: 500;
+}
+
 .diagnostic__source {
-  margin-top: var(--sp-2);
-  font-size: 0.78rem;
+  margin-top: var(--sp-1);
+  font-size: 0.75rem;
   color: var(--muted);
   font-style: italic;
 }

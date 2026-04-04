@@ -1,0 +1,46 @@
+{
+  "id": "hookes-law",
+  "title": "Hooke's Law",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Hooke's Law",
+          "content": "**Hooke's Law** states that the extension of a spring is directly proportional to the force applied — up to the **elastic limit**.\n\nF = ke\n\nWhere: F = force (N), k = spring constant (N/m), e = extension (m)\n\nBeyond the elastic limit, the spring is **permanently deformed** and Hooke's Law no longer applies.",
+          "equations": [
+            { "label": "Hooke's Law", "latex": "F = ke" }
+          ]
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Hooke's Law",
+          "question": "A spring with k = 40 N/m is stretched by 0.05 m. What is the force applied?",
+          "options": [
+            "2 N",
+            "800 N",
+            "0.8 N",
+            "40.05 N"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! F = ke = 40 × 0.05 = 2 N.",
+          "misconceptionFeedback": "Use F = ke. k = 40 N/m, e = 0.05 m, so F = 40 × 0.05 = 2 N. Don't divide — multiply the spring constant by the extension.",
+          "bestSource": "AQA GCSE Physics — Forces"
+        },
+        {
+          "type": "simulation",
+          "uiTag": "Simulation",
+          "uiColor": "green",
+          "title": "Explore Hooke's Law",
+          "instruction": "Add masses to the spring and observe how it stretches. Check where the elastic limit is.",
+          "simId": "hookes-law-sim",
+          "simConfig": {}
+        }
+      ]
+    }
+  }
+}

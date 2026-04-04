@@ -1,0 +1,47 @@
+{
+  "id": "terminal-velocity",
+  "title": "Terminal Velocity",
+  "boardContent": {
+    "aqa": {
+      "steps": [
+        {
+          "type": "info",
+          "uiTag": "Key Ideas",
+          "uiColor": "cyan",
+          "title": "Terminal Velocity",
+          "content": "When an object falls through a fluid (like air), **drag** (air resistance) acts upward against its motion.\n\nAs speed increases, drag increases. Eventually:\n\n**Drag = Weight** → Net force = 0 → No more acceleration → **Terminal velocity reached**\n\nA skydiver reaches ~55 m/s (120 mph) before opening their parachute, then slows to ~5 m/s with it open."
+        },
+        {
+          "type": "diagnostic",
+          "uiTag": "Quick Check",
+          "uiColor": "purple",
+          "title": "Terminal Velocity",
+          "question": "A skydiver is falling at terminal velocity. Which statement is correct?",
+          "options": [
+            "Weight equals drag force — net force is zero",
+            "Weight is greater than drag — the skydiver is still accelerating",
+            "Drag is greater than weight — the skydiver is decelerating",
+            "There are no forces acting on the skydiver"
+          ],
+          "correctIndex": 0,
+          "correctFeedback": "Correct! At terminal velocity, the forces are balanced. Weight = Drag, so net force = 0, and acceleration = 0. The skydiver moves at constant velocity.",
+          "misconceptionFeedback": "Terminal velocity means balanced forces, not no forces. Weight (down) = Drag (up), so net force = 0. Newton's first law: zero net force = constant velocity (no acceleration).",
+          "bestSource": "AQA GCSE Physics — Forces"
+        },
+        {
+          "type": "simulation",
+          "uiTag": "Simulation",
+          "uiColor": "green",
+          "title": "Falling Objects and Air Resistance",
+          "instruction": "Explore how mass and surface area affect terminal velocity. Try dropping different objects.",
+          "simId": "phet",
+          "simConfig": {
+            "url": "https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html",
+            "title": "Projectile Motion — PhET Simulation",
+            "aspectRatio": 1.6
+          }
+        }
+      ]
+    }
+  }
+}

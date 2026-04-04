@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import type { BoardId, Tier, UserProgress } from '../types/content';
+import type { UserProgress } from '../types/content';
 
 const PROGRESS_KEY = 'neurophysics_progress';
 const ONBOARDED_KEY = 'neurophysics_onboarded';
@@ -17,10 +17,10 @@ function saveProgress(p: UserProgress): void {
   } catch { /* storage unavailable */ }
 }
 
-function createInitialProgress(board: BoardId, tier: Tier): UserProgress {
+function createInitialProgress(): UserProgress {
   return {
-    board,
-    tier,
+    board: 'aqa',
+    tier: 'Higher',
     streak: 1,
     lastActiveDate: new Date().toISOString().split('T')[0],
     completedConcepts: [],
@@ -32,7 +32,7 @@ function createInitialProgress(board: BoardId, tier: Tier): UserProgress {
 interface UserContextValue {
   progress: UserProgress | null;
   isOnboarded: boolean;
-  completeOnboarding: (board: BoardId, tier: Tier) => void;
+  completeOnboarding: () => void;
   markConceptComplete: (conceptId: string) => void;
   logQuestion: (questionId: string, correct: boolean) => void;
   logMisconception: (conceptId: string, answer: number, correct: boolean) => void;
@@ -56,8 +56,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     });
   }
 
-  function completeOnboarding(board: BoardId, tier: Tier) {
-    const p = createInitialProgress(board, tier);
+  function completeOnboarding() {
+    const p = createInitialProgress();
     saveProgress(p);
     setProgress(p);
     localStorage.setItem(ONBOARDED_KEY, 'true');

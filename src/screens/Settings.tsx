@@ -60,8 +60,6 @@ export function Settings() {
 
       {progress && (
         <div className="settings__info card">
-          <p><strong>Board:</strong> {progress.board.toUpperCase()}</p>
-          <p><strong>Tier:</strong> {progress.tier}</p>
           <p><strong>Streak:</strong> {progress.streak} day{progress.streak !== 1 ? 's' : ''}</p>
           <p><strong>Concepts completed:</strong> {progress.completedConcepts.length}</p>
         </div>

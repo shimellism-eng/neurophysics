@@ -1,15 +1,25 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useHaptics } from '../../hooks/useHaptics';
+import {
+  IconHome, IconReview, IconTopics, IconPracticals,
+  IconEquations, IconPapers, IconSettings,
+} from './Icons';
 import './NavBar.css';
 
-const NAV_ITEMS = [
-  { path: '/home',        icon: '⚡', label: 'Home'       },
-  { path: '/review',      icon: '🔄', label: 'Review'     },
-  { path: '/topics',      icon: '📚', label: 'Topics'     },
-  { path: '/practicals',  icon: '🔬', label: 'Practicals' },
-  { path: '/equations',   icon: '∑',  label: 'Equations'  },
-  { path: '/papers',      icon: '📝', label: 'Papers'     },
-  { path: '/settings',    icon: '⚙',  label: 'Settings'   },
+type NavItem = {
+  path: string;
+  Icon: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }>;
+  label: string;
+};
+
+const NAV_ITEMS: NavItem[] = [
+  { path: '/home',       Icon: IconHome,       label: 'Home'       },
+  { path: '/review',     Icon: IconReview,     label: 'Review'     },
+  { path: '/topics',     Icon: IconTopics,     label: 'Topics'     },
+  { path: '/practicals', Icon: IconPracticals, label: 'Practicals' },
+  { path: '/equations',  Icon: IconEquations,  label: 'Equations'  },
+  { path: '/papers',     Icon: IconPapers,     label: 'Papers'     },
+  { path: '/settings',   Icon: IconSettings,   label: 'Settings'   },
 ];
 
 export function NavBar() {
@@ -30,7 +40,7 @@ export function NavBar() {
             aria-current={active ? 'page' : undefined}
           >
             <span className="navbar-icon-wrap" aria-hidden="true">
-              <span className="navbar-icon">{item.icon}</span>
+              <item.Icon size={20} className="navbar-icon" />
             </span>
             <span className="navbar-label">{item.label}</span>
           </button>

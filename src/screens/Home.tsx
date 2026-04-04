@@ -7,12 +7,12 @@ import { useAchievements } from '../hooks/useAchievements';
 import { useSettings } from '../context/SettingsContext';
 import { ScreenWrapper } from '../components/layout/ScreenWrapper';
 import { ProgressRing } from '../components/ui/ProgressRing';
+import {
+  IconForces, IconElectricity, IconWaves, IconEnergy,
+  IconMagnetism, IconParticles, IconAtomic, IconSpace,
+  IconPracticals, IconEquations, IconPapers, IconAchievements, IconSettings,
+} from '../components/ui/Icons';
 import './Home.css';
-
-const BOARD_NAMES: Record<string, string> = {
-  aqa: 'AQA', edexcel: 'Edexcel', 'ocr-gateway': 'OCR Gateway',
-  'ocr-21c': 'OCR 21st Century', wjec: 'WJEC',
-};
 
 const FORCES_CONCEPTS = [
   'resultant-forces', 'newtons-first-law', 'newtons-second-law',
@@ -34,7 +34,30 @@ const ENERGY_CONCEPTS = [
   'elastic-pe', 'conservation-of-energy', 'efficiency', 'power',
 ];
 
-const ALL_CONCEPTS = [...FORCES_CONCEPTS, ...ELECTRICITY_CONCEPTS, ...WAVES_CONCEPTS, ...ENERGY_CONCEPTS];
+const MAGNETISM_CONCEPTS = [
+  'permanent-temporary-magnets', 'magnetic-fields', 'electromagnetism',
+  'motor-effect', 'flemings-left-hand-rule', 'generators-and-induction', 'transformers',
+];
+
+const PARTICLES_CONCEPTS = [
+  'states-of-matter', 'particle-model', 'density',
+  'changes-of-state', 'internal-energy', 'specific-heat-capacity', 'specific-latent-heat',
+];
+
+const ATOMIC_CONCEPTS = [
+  'atomic-structure', 'isotopes', 'radioactive-decay',
+  'alpha-beta-gamma', 'half-life', 'uses-of-radiation', 'nuclear-fission-fusion',
+];
+
+const SPACE_CONCEPTS = [
+  'solar-system', 'life-cycle-of-stars', 'orbital-motion',
+  'red-shift', 'big-bang', 'dark-matter-energy', 'satellites',
+];
+
+const ALL_CONCEPTS = [
+  ...FORCES_CONCEPTS, ...ELECTRICITY_CONCEPTS, ...WAVES_CONCEPTS, ...ENERGY_CONCEPTS,
+  ...MAGNETISM_CONCEPTS, ...PARTICLES_CONCEPTS, ...ATOMIC_CONCEPTS, ...SPACE_CONCEPTS,
+];
 
 const CONCEPT_LABELS: Record<string, string> = {
   'resultant-forces': 'Resultant Forces',
@@ -51,28 +74,82 @@ const CONCEPT_LABELS: Record<string, string> = {
   'series-circuits': 'Series Circuits',
   'parallel-circuits': 'Parallel Circuits',
   'power-and-energy': 'Electrical Power and Energy',
-  'transverse-and-longitudinal': 'Transverse & Longitudinal Waves',
+  'transverse-and-longitudinal': 'Transverse and Longitudinal Waves',
   'wave-properties': 'Wave Properties',
   'wave-equation': 'The Wave Equation',
-  'reflection-and-refraction': 'Reflection & Refraction',
+  'reflection-and-refraction': 'Reflection and Refraction',
   'sound-waves': 'Sound Waves',
   'electromagnetic-spectrum': 'Electromagnetic Spectrum',
   'light-and-colour': 'Light and Colour',
-  'energy-stores-and-transfers': 'Energy Stores & Transfers',
+  'energy-stores-and-transfers': 'Energy Stores and Transfers',
   'kinetic-energy': 'Kinetic Energy',
-  'gravitational-pe': 'Gravitational PE',
-  'elastic-pe': 'Elastic PE',
+  'gravitational-pe': 'Gravitational Potential Energy',
+  'elastic-pe': 'Elastic Potential Energy',
   'conservation-of-energy': 'Conservation of Energy',
   'efficiency': 'Efficiency',
   'power': 'Power',
+  'permanent-temporary-magnets': 'Permanent and Temporary Magnets',
+  'magnetic-fields': 'Magnetic Fields',
+  'electromagnetism': 'Electromagnetism',
+  'motor-effect': 'The Motor Effect',
+  'flemings-left-hand-rule': "Fleming's Left-Hand Rule",
+  'generators-and-induction': 'Generators and Induction',
+  'transformers': 'Transformers',
+  'states-of-matter': 'States of Matter',
+  'particle-model': 'The Particle Model',
+  'density': 'Density',
+  'changes-of-state': 'Changes of State',
+  'internal-energy': 'Internal Energy',
+  'specific-heat-capacity': 'Specific Heat Capacity',
+  'specific-latent-heat': 'Specific Latent Heat',
+  'atomic-structure': 'Atomic Structure',
+  'isotopes': 'Isotopes and Ions',
+  'radioactive-decay': 'Radioactive Decay',
+  'alpha-beta-gamma': 'Alpha, Beta and Gamma',
+  'half-life': 'Half-Life',
+  'uses-of-radiation': 'Uses of Radiation',
+  'nuclear-fission-fusion': 'Nuclear Fission and Fusion',
+  'solar-system': 'The Solar System',
+  'life-cycle-of-stars': 'Life Cycle of Stars',
+  'orbital-motion': 'Orbital Motion',
+  'red-shift': 'Red-Shift',
+  'big-bang': 'The Big Bang',
+  'dark-matter-energy': 'Dark Matter and Dark Energy',
+  'satellites': 'Satellites',
 };
 
-const TOPICS = [
-  { id: 'forces',      name: 'Forces',      emoji: '⚡', color: 'var(--topic-forces)',      bg: 'rgba(124,58,237,0.06)',  concepts: 7, paper: 'Paper 2', available: true },
-  { id: 'electricity', name: 'Electricity', emoji: '🔌', color: 'var(--topic-electricity)', bg: 'rgba(37,99,235,0.06)',   concepts: 7, paper: 'Paper 1', available: true },
-  { id: 'waves',       name: 'Waves',       emoji: '〰', color: 'var(--topic-waves)',       bg: 'rgba(8,145,178,0.06)',   concepts: 7, paper: 'Paper 2', available: true },
-  { id: 'energy',      name: 'Energy',      emoji: '🔋', color: 'var(--topic-energy)',      bg: 'rgba(234,88,12,0.06)',   concepts: 7, paper: 'Paper 1', available: true },
+type TopicConfig = {
+  id: string;
+  name: string;
+  Icon: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }>;
+  color: string;
+  bg: string;
+  concepts: number;
+  paper: string;
+  available: boolean;
+};
+
+const TOPICS: TopicConfig[] = [
+  { id: 'forces',      name: 'Forces',                       Icon: IconForces,      color: 'var(--topic-forces)',      bg: 'rgba(124,58,237,0.06)',  concepts: 7, paper: 'Paper 2', available: true  },
+  { id: 'electricity', name: 'Electricity',                  Icon: IconElectricity, color: 'var(--topic-electricity)', bg: 'rgba(37,99,235,0.06)',   concepts: 7, paper: 'Paper 1', available: true  },
+  { id: 'waves',       name: 'Waves',                        Icon: IconWaves,       color: 'var(--topic-waves)',       bg: 'rgba(8,145,178,0.06)',   concepts: 7, paper: 'Paper 2', available: true  },
+  { id: 'energy',      name: 'Energy',                       Icon: IconEnergy,      color: 'var(--topic-energy)',      bg: 'rgba(234,88,12,0.06)',   concepts: 7, paper: 'Paper 1', available: true  },
+  { id: 'magnetism',   name: 'Magnetism',                    Icon: IconMagnetism,   color: 'var(--topic-magnetism)',   bg: 'rgba(219,39,119,0.06)',  concepts: 7, paper: 'Paper 2', available: false },
+  { id: 'particles',   name: 'Particle Model',               Icon: IconParticles,   color: 'var(--topic-particles)',   bg: 'rgba(22,163,74,0.06)',   concepts: 7, paper: 'Paper 1', available: false },
+  { id: 'atomic',      name: 'Atomic Structure',             Icon: IconAtomic,      color: 'var(--topic-nuclear)',     bg: 'rgba(220,38,38,0.06)',   concepts: 7, paper: 'Paper 2', available: false },
+  { id: 'space',       name: 'Space Physics',                Icon: IconSpace,       color: 'var(--topic-space)',       bg: 'rgba(79,70,229,0.06)',   concepts: 7, paper: 'Paper 2', available: false },
 ];
+
+const TOPIC_CONCEPTS: Record<string, string[]> = {
+  forces: FORCES_CONCEPTS,
+  electricity: ELECTRICITY_CONCEPTS,
+  waves: WAVES_CONCEPTS,
+  energy: ENERGY_CONCEPTS,
+  magnetism: MAGNETISM_CONCEPTS,
+  particles: PARTICLES_CONCEPTS,
+  atomic: ATOMIC_CONCEPTS,
+  space: SPACE_CONCEPTS,
+};
 
 function getGreeting(): string {
   const h = new Date().getHours();
@@ -83,10 +160,18 @@ function getGreeting(): string {
 
 function getWeekHeatmap(): { day: string; active: boolean }[] {
   const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
-  const today = new Date().getDay(); // 0=Sun
+  const today = new Date().getDay();
   const mondayOffset = today === 0 ? 6 : today - 1;
   return days.map((day, i) => ({ day, active: i <= mondayOffset }));
 }
+
+type QuickAction = {
+  Icon: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }>;
+  label: string;
+  accessibleLabel: string;
+  path: string;
+  dynamic?: string;
+};
 
 export function Home() {
   const { progress } = useUser();
@@ -96,7 +181,6 @@ export function Home() {
   const navigate = useNavigate();
   const noAnims = settings.animations === 'none';
 
-  // Check achievements whenever progress changes
   useEffect(() => {
     if (progress) checkAchievements(progress, streak);
   }, [progress, streak, checkAchievements]);
@@ -108,16 +192,9 @@ export function Home() {
 
   if (!progress) return null;
 
-  const TOPIC_CONCEPTS: Record<string, string[]> = {
-    forces: FORCES_CONCEPTS,
-    electricity: ELECTRICITY_CONCEPTS,
-    waves: WAVES_CONCEPTS,
-    energy: ENERGY_CONCEPTS,
-  };
   const getTopicDone = (topicId: string) =>
-    (TOPIC_CONCEPTS[topicId] ?? []).filter(c => progress!.completedConcepts.includes(c)).length;
+    (TOPIC_CONCEPTS[topicId] ?? []).filter(c => progress.completedConcepts.includes(c)).length;
 
-  const boardName = BOARD_NAMES[progress.board] ?? progress.board;
   const done = progress.completedConcepts.length;
   const totalQuestions = progress.attemptedQuestions.length;
   const correctQuestions = progress.attemptedQuestions.filter(q => q.correct).length;
@@ -129,6 +206,14 @@ export function Home() {
     animate: { opacity: 1, y: 0 },
   };
 
+  const quickActions: QuickAction[] = [
+    { Icon: IconPracticals,   label: 'Practicals',  accessibleLabel: 'Required practicals', path: '/practicals' },
+    { Icon: IconEquations,    label: 'Equations',   accessibleLabel: 'Equations',            path: '/equations'  },
+    { Icon: IconPapers,       label: 'Papers',      accessibleLabel: 'Past papers',          path: '/papers'     },
+    { Icon: IconAchievements, label: `${unlockedCount}/${totalCount}`, accessibleLabel: `Achievements: ${unlockedCount} of ${totalCount} unlocked`, path: '/achievements' },
+    { Icon: IconSettings,     label: 'Settings',    accessibleLabel: 'Settings',             path: '/settings'   },
+  ];
+
   return (
     <ScreenWrapper>
       {/* Header */}
@@ -136,7 +221,7 @@ export function Home() {
         <div>
           <p className="home__greeting">{getGreeting()}</p>
           <h1 className="home__title">NeuroPhysics</h1>
-          <p className="home__board">{boardName} · {progress.tier}</p>
+          <p className="home__board">GCSE Physics</p>
         </div>
         <div className="home__header-right">
           <button
@@ -198,40 +283,43 @@ export function Home() {
           <h2 className="home__continue-topic">{CONCEPT_LABELS[nextConcept] ?? 'Forces'}</h2>
           <p className="home__continue-sub">{done} of {ALL_CONCEPTS.length} concepts complete</p>
         </div>
-        <ProgressRing percent={Math.round((done / ALL_CONCEPTS.length) * 100)} size={64} />
+        <ProgressRing percent={Math.round((done / ALL_CONCEPTS.length) * 100)} size={56} />
       </motion.button>
 
       {/* Topics */}
       <section>
         <h2 className="home__section-title">Topics</h2>
         <div className="home__topics">
-          {TOPICS.map(t => (
-            <motion.button
-              key={t.id}
-              className={`home__topic-card card ${!t.available ? 'home__topic-card--locked' : 'home__topic-card--unlocked'}`}
-              onClick={() => t.available && navigate(`/topic/${t.id}`)}
-              disabled={!t.available}
-              style={{ '--topic-color': t.color, '--topic-bg': t.bg } as React.CSSProperties}
-              whileTap={t.available && !noAnims ? { scale: 0.98 } : undefined}
-            >
-              <div className="home__topic-icon-wrap" aria-hidden="true">
-                {t.available ? t.emoji : '🔒'}
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <p className="home__topic-name">{t.name}</p>
-                <p className="home__topic-meta">
-                  {t.available ? `${t.concepts} concepts · ${t.paper}` : 'Coming soon'}
-                </p>
-              </div>
-              {t.available && (
-                <ProgressRing
-                  percent={Math.round((getTopicDone(t.id) / t.concepts) * 100)}
-                  size={40}
-                  strokeWidth={3}
-                />
-              )}
-            </motion.button>
-          ))}
+          {TOPICS.map(t => {
+            const topicDone = getTopicDone(t.id);
+            return (
+              <motion.button
+                key={t.id}
+                className={`home__topic-card card ${!t.available ? 'home__topic-card--locked' : 'home__topic-card--unlocked'}`}
+                onClick={() => t.available && navigate(`/topic/${t.id}`)}
+                disabled={!t.available}
+                style={{ '--topic-color': t.color, '--topic-bg': t.bg } as React.CSSProperties}
+                whileTap={t.available && !noAnims ? { scale: 0.98 } : undefined}
+              >
+                <div className="home__topic-icon-wrap" aria-hidden="true">
+                  <t.Icon size={22} />
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <p className="home__topic-name">{t.name}</p>
+                  <p className="home__topic-meta">
+                    {t.available ? `${t.concepts} concepts · ${t.paper}` : 'Coming soon'}
+                  </p>
+                </div>
+                {t.available && (
+                  <ProgressRing
+                    percent={Math.round((topicDone / t.concepts) * 100)}
+                    size={36}
+                    strokeWidth={3}
+                  />
+                )}
+              </motion.button>
+            );
+          })}
         </div>
       </section>
 
@@ -239,13 +327,7 @@ export function Home() {
       <section>
         <h2 className="home__section-title">Quick access</h2>
         <div className="home__quick-actions">
-          {[
-            { icon: '🔬', label: 'Practicals', accessibleLabel: 'Required practicals', path: '/practicals' },
-            { icon: '∑', label: 'Equations', accessibleLabel: 'Equations', path: '/equations' },
-            { icon: '📝', label: 'Past papers', accessibleLabel: 'Past papers', path: '/papers' },
-            { icon: '🏅', label: `${unlockedCount}/${totalCount}`, accessibleLabel: `Achievements: ${unlockedCount} of ${totalCount} unlocked`, path: '/achievements' },
-            { icon: '⚙', label: 'Settings', accessibleLabel: 'Settings', path: '/settings' },
-          ].map(a => (
+          {quickActions.map(a => (
             <motion.button
               key={a.path}
               className="home__qa-btn"
@@ -253,7 +335,7 @@ export function Home() {
               whileTap={noAnims ? undefined : { scale: 0.95 }}
               aria-label={a.accessibleLabel}
             >
-              <span aria-hidden="true">{a.icon}</span>
+              <a.Icon size={22} aria-hidden="true" />
               <span>{a.label}</span>
             </motion.button>
           ))}

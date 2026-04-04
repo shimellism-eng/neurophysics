@@ -21,9 +21,15 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.onboarding__logo {
-  font-size: 4rem;
-  line-height: 1;
+.onboarding__logo-wrap {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: center;
+}
+
+.onboarding__logo-icon {
+  color: var(--purple);
+  opacity: 0.85;
 }
 
 .onboarding__headline {

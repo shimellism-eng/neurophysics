@@ -1,18 +1,19 @@
 .step-tag {
   display: inline-flex;
   align-items: center;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 999px;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  border: 1px solid transparent;
 }
 
-.step-tag--cyan   { background: var(--cyan-dim);   color: var(--cyan);   }
-.step-tag--pink   { background: var(--pink-dim);   color: var(--pink);   }
-.step-tag--amber  { background: var(--amber-dim);  color: var(--amber);  }
-.step-tag--purple { background: var(--purple-dim); color: var(--purple); }
-.step-tag--blue   { background: var(--blue-dim);   color: var(--blue);   }
-.step-tag--red    { background: var(--red-dim);    color: var(--red);    }
-.step-tag--green  { background: var(--green-dim);  color: var(--green);  }
+.step-tag--cyan   { background: rgba(0,229,180,0.18);   color: var(--cyan);   border-color: rgba(0,229,180,0.35);   }
+.step-tag--pink   { background: rgba(255,79,170,0.18);  color: var(--pink);   border-color: rgba(255,79,170,0.35);  }
+.step-tag--amber  { background: rgba(255,179,68,0.22);  color: var(--amber);  border-color: rgba(255,179,68,0.45);  }
+.step-tag--purple { background: rgba(167,139,250,0.18); color: var(--purple); border-color: rgba(167,139,250,0.35); }
+.step-tag--blue   { background: rgba(96,165,250,0.18);  color: var(--blue);   border-color: rgba(96,165,250,0.35);  }
+.step-tag--red    { background: rgba(255,107,107,0.18); color: var(--red);    border-color: rgba(255,107,107,0.35); }
+.step-tag--green  { background: rgba(74,222,128,0.18);  color: var(--green);  border-color: rgba(74,222,128,0.35);  }

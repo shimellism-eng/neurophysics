@@ -21,12 +21,13 @@
   padding: var(--sp-2) var(--sp-1);
   border-radius: 0;
   color: var(--muted);
-  transition: color 0.15s ease;
+  transition: all 0.2s ease;
   position: relative;
 }
 
 .navbar-item--active {
   color: var(--cyan);
+  font-weight: 800;
 }
 
 .navbar-item--active::before {
@@ -54,4 +55,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
+  transition: font-weight 0.2s ease;
+}
+
+.navbar-item--active .navbar-label {
+  font-weight: 800;
 }

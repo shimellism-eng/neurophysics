@@ -154,6 +154,17 @@
   padding: var(--sp-4);
 }
 
+/* Real-world setup photo (above SVG) */
+.practical-detail__setup-photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--r-sm);
+  margin-bottom: var(--sp-4);
+  object-fit: cover;
+  max-height: 260px;
+}
+
 .practical-detail__diagram-caption {
   font-size: 0.78rem;
   color: var(--muted);

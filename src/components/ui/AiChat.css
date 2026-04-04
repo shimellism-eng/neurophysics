@@ -1,5 +1,5 @@
 /* ============================================================
-   AI Chat Panel — slides up from bottom
+   AI Chat Panel -- slides up from bottom
    ============================================================ */
 
 .ai-chat__backdrop {
@@ -22,7 +22,6 @@
   border-top: 1px solid var(--border);
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  /* Prevent content from bleeding under the panel corners */
   will-change: transform;
 }
 
@@ -150,16 +149,19 @@
   max-width: calc(100% - 44px);
   white-space: pre-wrap;
   word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
 }
 
-/* User bubble — right aligned, cyan */
+/* User bubble -- right aligned, cyan */
 .ai-chat__message--user .ai-chat__bubble {
   background: var(--cyan);
   color: var(--bg);
   border-bottom-right-radius: 4px;
 }
 
-/* Alex bubble — left aligned, bg3 */
+/* Mamo bubble -- left aligned, bg3 */
 .ai-chat__message--assistant .ai-chat__bubble {
   background: var(--bg3);
   color: var(--text);
@@ -168,6 +170,13 @@
 
 .ai-chat__bubble--typing {
   padding: var(--sp-2) var(--sp-3);
+}
+
+/* Image inside a message bubble */
+.ai-chat__bubble-image {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
 }
 
 /* ---- Error ---- */
@@ -182,6 +191,47 @@
   line-height: 1.5;
 }
 
+/* ---- Photo preview bar (above the footer) ---- */
+
+.ai-chat__photo-preview-bar {
+  padding: var(--sp-2) var(--sp-4) 0;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.ai-chat__photo-preview {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.ai-chat__photo-preview img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.ai-chat__photo-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--red, #ff6b6b);
+  color: #fff;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 1;
+}
+
 /* ---- Input footer ---- */
 
 .ai-chat__footer {
@@ -193,6 +243,35 @@
   border-top: 1px solid var(--border);
   background: var(--bg2);
   flex-shrink: 0;
+}
+
+/* Hidden native file input */
+.ai-chat__file-input {
+  display: none;
+}
+
+/* Camera / photo button */
+.ai-chat__photo-btn {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.ai-chat__photo-btn:disabled {
+  opacity: 0.4;
+}
+
+.ai-chat__photo-btn:not(:disabled):active {
+  transform: scale(0.93);
 }
 
 .ai-chat__input {
@@ -209,7 +288,6 @@
   resize: none;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  /* Remove default textarea outline; add custom */
   outline: none;
   transition: border-color 0.15s ease;
   font-family: inherit;
@@ -250,10 +328,10 @@
 }
 
 /* ============================================================
-   Ask Alex floating trigger button
+   Ask Mamo floating trigger button
    ============================================================ */
 
-.ask-alex-btn {
+.ask-mamo-btn {
   position: fixed;
   bottom: calc(var(--nav-h) + var(--safe-bot) + var(--sp-4));
   right: var(--sp-4);
@@ -272,12 +350,12 @@
   white-space: nowrap;
 }
 
-.ask-alex-btn:active {
+.ask-mamo-btn:active {
   transform: scale(0.95);
   box-shadow: 0 2px 10px rgba(0, 229, 180, 0.25);
 }
 
-.ask-alex-btn__avatar {
+.ask-mamo-btn__avatar {
   width: 22px;
   height: 22px;
   border-radius: 50%;

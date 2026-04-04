@@ -29,8 +29,8 @@
   --green-dim:  rgba(74,222,128,0.12);
 
   /* Radius */
-  --r:    14px;
-  --r-sm: 8px;
+  --r:    16px;
+  --r-sm: 10px;
 
   /* Spacing (8pt grid) */
   --sp-1: 4px;

@@ -40,6 +40,7 @@ interface Practical {
   equipment: Equipment[];
   method: string[];
   diagram: { type: string; description: string };
+  setupImageUrl: string | null;
   keyEquation: string;
   keyEquationTex: string;
   variables: Variable[];
@@ -233,6 +234,14 @@ export function PracticalDetail() {
       <section className="practical-detail__section">
         <h2 className="practical-detail__section-title">Apparatus diagram</h2>
         <div className="practical-detail__diagram">
+          {practical.setupImageUrl && (
+            <img
+              className="practical-detail__setup-photo"
+              src={practical.setupImageUrl}
+              alt={`Real-world setup for ${practical.title}`}
+              loading="lazy"
+            />
+          )}
           <DiagramForPractical id={practical.id} description={practical.diagram.description} />
           <p className="practical-detail__diagram-caption">
             {practical.diagram.description}

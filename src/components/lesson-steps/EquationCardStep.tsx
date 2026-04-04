@@ -25,9 +25,9 @@ export function EquationCardStep({ step, boardId, onComplete }: EquationCardStep
 
       <div className="eq-card__canonical">
         {eq.tex ? (
-          <Equation tex={eq.tex} display className="eq" />
+          <Equation tex={eq.tex} display={false} className="eq" />
         ) : (
-          <code className="eq">{eq.canonical}</code>
+          <span className="eq">{eq.canonical}</span>
         )}
         {!onSheet && (
           <span className="eq-card__memorise-badge">⚠️ Must memorise</span>
@@ -57,7 +57,7 @@ export function EquationCardStep({ step, boardId, onComplete }: EquationCardStep
       <div className="eq-card__variables">
         {eq.variables.map(v => (
           <div key={v.symbol} className="eq-card__variable">
-            <code className="eq">{v.symbol}</code>
+            <span className="eq">{v.symbol}</span>
             <span className="eq-card__var-name">{v.name}</span>
             <span className="eq-card__var-unit">{v.unit}{v.abbreviation ? ` (${v.abbreviation})` : ''}</span>
             {v.constant !== undefined && (

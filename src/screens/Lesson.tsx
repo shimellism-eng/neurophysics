@@ -210,15 +210,15 @@ export function Lesson() {
 
   return (
     <div className="lesson">
-      {/* Ask Alex floating button — hidden when chat is open */}
+      {/* Ask Mamo floating button -- hidden when chat is open */}
       {!chatOpen && (
         <button
-          className="ask-alex-btn"
+          className="ask-mamo-btn"
           onClick={() => setChatOpen(true)}
-          aria-label="Ask Alex, your AI tutor"
+          aria-label="Ask Mamo, your AI tutor"
         >
-          <span className="ask-alex-btn__avatar" aria-hidden="true">A</span>
-          Ask Alex
+          <span className="ask-mamo-btn__avatar" aria-hidden="true">M</span>
+          Ask Mamo
         </button>
       )}
 

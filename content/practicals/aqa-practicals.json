@@ -6,6 +6,7 @@
     "title": "Specific Heat Capacity",
     "topic": "energy",
     "tripleOnly": false,
+    "setupImageUrl": null,
     "aim": "To determine the specific heat capacity of a solid material by measuring the energy supplied electrically and the resulting temperature rise.",
     "equipment": [
       { "name": "Metal block (e.g. aluminium or copper)", "purpose": "The material whose specific heat capacity is being measured" },
@@ -102,6 +103,7 @@
     "title": "Thermal Insulation",
     "topic": "energy",
     "tripleOnly": true,
+    "setupImageUrl": null,
     "aim": "To investigate the effectiveness of different insulating materials by comparing the rate of temperature decrease in insulated containers.",
     "equipment": [
       { "name": "Beakers or tin cans (identical)", "purpose": "Containers that hold the hot water" },
@@ -176,6 +178,7 @@
     "title": "Resistance of a Wire",
     "topic": "electricity",
     "tripleOnly": false,
+    "setupImageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Electric_circuit_with_voltmeter_and_ammeter.JPG",
     "aim": "To investigate how the length of a wire affects its resistance.",
     "equipment": [
       { "name": "Constantan or nichrome wire (on a metre ruler)", "purpose": "The wire whose resistance is being measured" },
@@ -253,6 +256,7 @@
     "title": "I-V Characteristics",
     "topic": "electricity",
     "tripleOnly": false,
+    "setupImageUrl": null,
     "aim": "To investigate the current-voltage (I-V) characteristics of a resistor, a filament lamp, and a diode.",
     "equipment": [
       { "name": "Resistor (fixed, e.g. 100 Ω)", "purpose": "First component: should give a straight I-V line (Ohmic)" },
@@ -328,6 +332,7 @@
     "title": "Density",
     "topic": "particle-model",
     "tripleOnly": false,
+    "setupImageUrl": null,
     "aim": "To measure the density of regular and irregular solid objects and a liquid using the equation density = mass divided by volume.",
     "equipment": [
       { "name": "Top-pan balance", "purpose": "Measures the mass of the object" },
@@ -398,6 +403,7 @@
     "title": "Force and Extension (Hooke's Law)",
     "topic": "forces",
     "tripleOnly": false,
+    "setupImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Apparato_legge_di_Hooke.jpg",
     "aim": "To investigate the relationship between the force applied to a spring and its extension, and to determine the spring constant.",
     "equipment": [
       { "name": "Spring (steel, approximately 20 cm)", "purpose": "The elastic object being stretched" },
@@ -474,6 +480,7 @@
     "title": "Acceleration and Newton's Second Law",
     "topic": "forces",
     "tripleOnly": false,
+    "setupImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Atwood-machine.svg",
     "aim": "To investigate how the acceleration of an object depends on the resultant force acting on it and on its mass.",
     "equipment": [
       { "name": "Dynamics trolley", "purpose": "The object being accelerated" },
@@ -550,6 +557,7 @@
     "title": "Wave Properties in a Ripple Tank",
     "topic": "waves",
     "tripleOnly": false,
+    "setupImageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Ripple_Tank_-_Science_City_-_Kolkata_2006-07-03_04721.JPG",
     "aim": "To measure the frequency, wavelength, and speed of waves produced in a ripple tank, and to verify the wave equation.",
     "equipment": [
       { "name": "Ripple tank (with transparent base and motor-driven vibrating bar)", "purpose": "Produces regular water waves on a flat water surface" },
@@ -624,6 +632,7 @@
     "title": "Reflection and Refraction of Light",
     "topic": "waves",
     "tripleOnly": true,
+    "setupImageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Refraction_photo.png",
     "aim": "To investigate the reflection of light by a plane mirror and the refraction of light through a glass block, and to verify the laws of reflection and refraction.",
     "equipment": [
       { "name": "Ray box with single-slit card", "purpose": "Produces a single narrow ray of light" },
@@ -698,6 +707,7 @@
     "title": "Infrared Radiation",
     "topic": "waves",
     "tripleOnly": false,
+    "setupImageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/LesliesCube.png",
     "aim": "To investigate how the emission and absorption of infrared radiation depends on the surface type (colour and texture) of an object.",
     "equipment": [
       { "name": "Leslie's cube (metal cube with different surfaces: matt black, shiny black, matt white, shiny silver)", "purpose": "Provides four different surfaces for comparison of infrared emission" },

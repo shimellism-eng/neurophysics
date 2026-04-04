@@ -11,11 +11,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--sp-5) var(--sp-4);
+  padding: var(--sp-4) var(--sp-4);
   background: var(--cyan-dim);
   border: 1px solid var(--cyan);
   border-radius: var(--r);
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  font-family: inherit;
   color: var(--cyan);
   overflow-x: auto;
   max-width: 100%;
@@ -88,7 +89,7 @@
 .concept__var-unit {
   font-size: 0.8rem;
   color: var(--muted);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: inherit;
 }
 
 .concept__relationship {

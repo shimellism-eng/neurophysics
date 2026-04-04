@@ -1,36 +1,49 @@
 :root {
-  /* Backgrounds */
-  --bg:     #0a0a0f;
-  --bg2:    #12121a;
-  --bg3:    #1a1a26;
-  --bg4:    #22223a;
-  --surface:#1e1e2e;
-  --border: rgba(255,255,255,0.08);
-  --border2:rgba(255,255,255,0.15);
-  --text:   #f0efff;
-  --muted:  #9b9dbf;
+  /* === LIGHT mode is default === */
+  --bg:     #f7f6ff;
+  --bg2:    #eeedf8;
+  --bg3:    #e5e4f4;
+  --bg4:    #d8d7ef;
+  --surface:#ffffff;
+  --border: rgba(0,0,0,0.07);
+  --border2:rgba(0,0,0,0.13);
+  --text:   #12112a;
+  --muted:  #6b6890;
 
-  /* Brand accents */
-  --cyan:   #00e5b4;
-  --pink:   #ff4faa;
-  --amber:  #ffb344;
-  --purple: #a78bfa;
-  --blue:   #60a5fa;
-  --red:    #ff6b6b;
-  --green:  #4ade80;
+  /* Brand accents - vibrant, SEN-friendly */
+  --cyan:   #00bfa5;
+  --pink:   #e91e8c;
+  --amber:  #f59e0b;
+  --purple: #7c3aed;
+  --blue:   #2563eb;
+  --red:    #ef4444;
+  --green:  #16a34a;
+  --orange: #ea580c;
 
-  /* Dim versions */
-  --cyan-dim:   rgba(0,229,180,0.12);
-  --pink-dim:   rgba(255,79,170,0.12);
-  --amber-dim:  rgba(255,179,68,0.12);
-  --purple-dim: rgba(167,139,250,0.12);
-  --blue-dim:   rgba(96,165,250,0.12);
-  --red-dim:    rgba(255,107,107,0.12);
-  --green-dim:  rgba(74,222,128,0.12);
+  /* Dim (tinted) versions */
+  --cyan-dim:   rgba(0,191,165,0.12);
+  --pink-dim:   rgba(233,30,140,0.10);
+  --amber-dim:  rgba(245,158,11,0.12);
+  --purple-dim: rgba(124,58,237,0.10);
+  --blue-dim:   rgba(37,99,235,0.10);
+  --red-dim:    rgba(239,68,68,0.10);
+  --green-dim:  rgba(22,163,74,0.10);
+  --orange-dim: rgba(234,88,12,0.10);
+
+  /* Topic palette (vibrant, like Science Shorts) */
+  --topic-forces:      #7c3aed;
+  --topic-electricity: #2563eb;
+  --topic-waves:       #0891b2;
+  --topic-energy:      #ea580c;
+  --topic-particles:   #16a34a;
+  --topic-magnetism:   #db2777;
+  --topic-nuclear:     #dc2626;
+  --topic-space:       #4f46e5;
 
   /* Radius */
-  --r:    16px;
-  --r-sm: 10px;
+  --r:    18px;
+  --r-sm: 12px;
+  --r-xs: 8px;
 
   /* Spacing (8pt grid) */
   --sp-1: 4px;
@@ -44,39 +57,57 @@
   --sp-12: 48px;
 
   /* Nav height + safe areas */
-  --nav-h: 64px;
+  --nav-h: 68px;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bot: env(safe-area-inset-bottom, 0px);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow:    0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
 }
 
-/* High contrast override */
-[data-contrast="high"] {
-  --bg:     #000000;
-  --bg2:    #0a0a0a;
-  --bg3:    #111111;
-  --surface:#0d0d0d;
-  --border: rgba(255,255,255,0.2);
-  --text:   #ffffff;
-  --muted:  #aaaaaa;
+/* Dark mode override */
+[data-background="dark"] {
+  --bg:     #0d0d14;
+  --bg2:    #14141f;
+  --bg3:    #1c1c2a;
+  --bg4:    #242438;
+  --surface:#1a1a28;
+  --border: rgba(255,255,255,0.08);
+  --border2:rgba(255,255,255,0.15);
+  --text:   #f0efff;
+  --muted:  #9b9dbf;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow:    0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Light mode override */
-[data-background="light"] {
-  --bg:     #f8f7ff;
-  --bg2:    #ededf8;
-  --bg3:    #e4e3f5;
-  --bg4:    #d8d7ef;
-  --surface:#ffffff;
-  --border: rgba(0,0,0,0.08);
-  --border2:rgba(0,0,0,0.15);
-  --text:   #111122;
-  --muted:  #666688;
-}
-
-/* Dim mode override */
+/* Dim mode */
 [data-background="dim"] {
   --bg:     #141420;
   --bg2:    #1c1c2e;
   --bg3:    #242438;
   --surface:#1a1a2e;
+  --border: rgba(255,255,255,0.08);
+  --border2:rgba(255,255,255,0.14);
+  --text:   #e8e7ff;
+  --muted:  #9090b8;
+}
+
+/* High contrast override */
+[data-contrast="high"] {
+  --border: rgba(0,0,0,0.3);
+  --text:   #000000;
+  --muted:  #333333;
+  --bg:     #ffffff;
+  --surface:#ffffff;
+}
+
+[data-background="dark"][data-contrast="high"] {
+  --border: rgba(255,255,255,0.3);
+  --text:   #ffffff;
+  --muted:  #cccccc;
+  --bg:     #000000;
+  --surface:#111111;
 }

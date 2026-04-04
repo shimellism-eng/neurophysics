@@ -29,7 +29,9 @@ export function NavBar() {
             aria-label={item.label}
             aria-current={active ? 'page' : undefined}
           >
-            <span className="navbar-icon" aria-hidden="true">{item.icon}</span>
+            <span className="navbar-icon-wrap" aria-hidden="true">
+              <span className="navbar-icon">{item.icon}</span>
+            </span>
             <span className="navbar-label">{item.label}</span>
           </button>
         );

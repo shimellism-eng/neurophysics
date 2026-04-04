@@ -5,7 +5,7 @@ const SETTINGS_KEY = 'neurophysics_settings';
 
 const DEFAULT_SETTINGS: UserSettings = {
   font: 'default',
-  background: 'dark',
+  background: 'light',
   textSize: 'normal',
   animations: 'full',
   sound: false,

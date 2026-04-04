@@ -68,10 +68,10 @@ const CONCEPT_LABELS: Record<string, string> = {
 };
 
 const TOPICS = [
-  { id: 'forces', name: 'Forces', emoji: '⚡', color: 'var(--cyan)', concepts: 7, paper: 'Paper 2', available: true },
-  { id: 'electricity', name: 'Electricity', emoji: '🔌', color: 'var(--blue)', concepts: 7, paper: 'Paper 1', available: true },
-  { id: 'waves', name: 'Waves', emoji: '〰', color: 'var(--purple)', concepts: 7, paper: 'Paper 2', available: true },
-  { id: 'energy', name: 'Energy', emoji: '🔋', color: 'var(--amber)', concepts: 7, paper: 'Paper 1', available: true },
+  { id: 'forces',      name: 'Forces',      emoji: '⚡', color: 'var(--topic-forces)',      bg: 'rgba(124,58,237,0.06)',  concepts: 7, paper: 'Paper 2', available: true },
+  { id: 'electricity', name: 'Electricity', emoji: '🔌', color: 'var(--topic-electricity)', bg: 'rgba(37,99,235,0.06)',   concepts: 7, paper: 'Paper 1', available: true },
+  { id: 'waves',       name: 'Waves',       emoji: '〰', color: 'var(--topic-waves)',       bg: 'rgba(8,145,178,0.06)',   concepts: 7, paper: 'Paper 2', available: true },
+  { id: 'energy',      name: 'Energy',      emoji: '🔋', color: 'var(--topic-energy)',      bg: 'rgba(234,88,12,0.06)',   concepts: 7, paper: 'Paper 1', available: true },
 ];
 
 function getGreeting(): string {
@@ -208,14 +208,16 @@ export function Home() {
           {TOPICS.map(t => (
             <motion.button
               key={t.id}
-              className={`home__topic-card card ${!t.available ? 'home__topic-card--locked' : ''}`}
+              className={`home__topic-card card ${!t.available ? 'home__topic-card--locked' : 'home__topic-card--unlocked'}`}
               onClick={() => t.available && navigate(`/topic/${t.id}`)}
               disabled={!t.available}
-              style={{ '--topic-color': t.color } as React.CSSProperties}
+              style={{ '--topic-color': t.color, '--topic-bg': t.bg } as React.CSSProperties}
               whileTap={t.available && !noAnims ? { scale: 0.98 } : undefined}
             >
-              <span className="home__topic-emoji" aria-hidden="true">{t.available ? t.emoji : '🔒'}</span>
-              <div>
+              <div className="home__topic-icon-wrap" aria-hidden="true">
+                {t.available ? t.emoji : '🔒'}
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <p className="home__topic-name">{t.name}</p>
                 <p className="home__topic-meta">
                   {t.available ? `${t.concepts} concepts · ${t.paper}` : 'Coming soon'}

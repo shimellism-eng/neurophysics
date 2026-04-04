@@ -2,9 +2,9 @@
   "id": "energy",
   "name": "Energy",
   "emoji": "🔋",
-  "color": "#f59e0b",
+  "color": "#ea580c",
   "paper": 1,
-  "boards": ["aqa", "edexcel", "ocr-gateway", "ocr-21c", "wjec"],
+  "boards": ["aqa"],
   "conceptOrder": [
     "energy-stores-and-transfers",
     "kinetic-energy",
@@ -12,15 +12,12 @@
     "elastic-pe",
     "conservation-of-energy",
     "efficiency",
-    "power"
+    "power",
+    "renewable-energy-sources"
   ],
-  "totalConcepts": 7,
-  "estimatedMinutes": 56,
+  "totalConcepts": 8,
+  "estimatedMinutes": 64,
   "boardNotes": {
-    "aqa":         "Paper 1 - Section 4.1 Energy. All tiers unless stated.",
-    "edexcel":     "Paper 1 - Topic 3: Conservation of Energy.",
-    "ocr-gateway": "Paper 1 - Module P3: Energy.",
-    "ocr-21c":     "Paper 3 - Module P3: Sustainable Energy.",
-    "wjec":        "Unit 1 - Energy."
+    "aqa": "Paper 1 - Section 4.1. Renewable energy sources covered in full."
   }
 }

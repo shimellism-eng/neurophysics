@@ -2,9 +2,9 @@
   "id": "forces",
   "name": "Forces",
   "emoji": "⚡",
-  "color": "#00e5b4",
+  "color": "#7c3aed",
   "paper": 2,
-  "boards": ["aqa", "edexcel", "ocr-gateway", "ocr-21c", "wjec"],
+  "boards": ["aqa"],
   "conceptOrder": [
     "resultant-forces",
     "newtons-first-law",
@@ -12,15 +12,13 @@
     "newtons-third-law",
     "weight-and-gravity",
     "momentum",
-    "work-and-energy"
+    "work-and-energy",
+    "hookes-law",
+    "pressure-in-fluids"
   ],
-  "totalConcepts": 7,
-  "estimatedMinutes": 56,
+  "totalConcepts": 9,
+  "estimatedMinutes": 72,
   "boardNotes": {
-    "aqa":         "Paper 2 - Section 5.5. Momentum is Higher only.",
-    "edexcel":     "Paper 1 - Topic 2: Motion and Forces.",
-    "ocr-gateway": "Paper 1 - Module P5: Forces.",
-    "ocr-21c":     "Paper 4 - Module P4: Explaining Motion.",
-    "wjec":        "Unit 1 - Forces and Motion."
+    "aqa": "Paper 2 - Section 5.5. Momentum and pressure in fluids are Higher only."
   }
 }

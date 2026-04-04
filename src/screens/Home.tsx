@@ -250,7 +250,7 @@ export function Home() {
       <div className="home__header">
         <div>
           <p className="home__greeting">{getGreeting()}</p>
-          <h1 className="home__title">NeuroPhysics</h1>
+          <h1 className="home__title"><span>Neuro</span>Physics</h1>
           <p className="home__board">GCSE Physics</p>
         </div>
         <div className="home__header-right">

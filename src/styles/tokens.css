@@ -1,50 +1,50 @@
 :root {
-  /* === LIGHT mode is default === */
-  --bg:     #f7f6ff;
-  --bg2:    #eeedf8;
-  --bg3:    #e5e4f4;
-  --bg4:    #d8d7ef;
+  /* === LIGHT mode — clean slate, not AI-purple === */
+  --bg:     #f0f4f8;
+  --bg2:    #e2e8f0;
+  --bg3:    #cbd5e1;
+  --bg4:    #b2bfcc;
   --surface:#ffffff;
-  --border: rgba(0,0,0,0.07);
-  --border2:rgba(0,0,0,0.13);
-  --text:   #12112a;
-  --muted:  #6b6890;
+  --border: rgba(15,23,42,0.08);
+  --border2:rgba(15,23,42,0.15);
+  --text:   #0f172a;
+  --muted:  #64748b;
 
-  /* Brand accents - vibrant, SEN-friendly */
-  --cyan:   #00bfa5;
+  /* Brand accents */
+  --cyan:   #0d9488;   /* teal — primary accent */
   --pink:   #e91e8c;
   --amber:  #f59e0b;
-  --purple: #7c3aed;
+  --purple: #6d28d9;
   --blue:   #2563eb;
   --red:    #ef4444;
   --green:  #16a34a;
   --orange: #ea580c;
 
   /* Dim (tinted) versions */
-  --cyan-dim:   rgba(0,191,165,0.12);
+  --cyan-dim:   rgba(13,148,136,0.12);
   --pink-dim:   rgba(233,30,140,0.10);
   --amber-dim:  rgba(245,158,11,0.12);
-  --purple-dim: rgba(124,58,237,0.10);
+  --purple-dim: rgba(109,40,217,0.10);
   --blue-dim:   rgba(37,99,235,0.10);
   --red-dim:    rgba(239,68,68,0.10);
   --green-dim:  rgba(22,163,74,0.10);
   --orange-dim: rgba(234,88,12,0.10);
 
-  /* Topic palette (vibrant, like Science Shorts) */
-  --topic-forces:      #7c3aed;
-  --topic-electricity: #2563eb;
-  --topic-waves:       #0891b2;
-  --topic-energy:      #ea580c;
-  --topic-particles:   #16a34a;
-  --topic-magnetism:   #db2777;
-  --topic-nuclear:     #dc2626;
-  --topic-space:       #4f46e5;
-  --topic-motion:      #0284c7;
+  /* Topic palette */
+  --topic-forces:      #6d28d9;
+  --topic-electricity: #1d4ed8;
+  --topic-waves:       #0369a1;
+  --topic-energy:      #c2410c;
+  --topic-particles:   #15803d;
+  --topic-magnetism:   #be185d;
+  --topic-nuclear:     #b91c1c;
+  --topic-space:       #4338ca;
+  --topic-motion:      #0369a1;
 
   /* Radius */
-  --r:    18px;
-  --r-sm: 12px;
-  --r-xs: 8px;
+  --r:    16px;
+  --r-sm: 10px;
+  --r-xs: 6px;
 
   /* Spacing (8pt grid) */
   --sp-1: 4px;
@@ -63,44 +63,44 @@
   --safe-bot: env(safe-area-inset-bottom, 0px);
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow:    0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+  --shadow-sm: 0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.05);
+  --shadow:    0 4px 12px rgba(15,23,42,0.10), 0 2px 4px rgba(15,23,42,0.06);
+  --shadow-lg: 0 10px 30px rgba(15,23,42,0.12), 0 4px 8px rgba(15,23,42,0.07);
 }
 
-/* Dark mode override */
+/* Dark mode — deep navy, not generic black */
 [data-background="dark"] {
-  --bg:     #0d0d14;
-  --bg2:    #14141f;
-  --bg3:    #1c1c2a;
-  --bg4:    #242438;
-  --surface:#1a1a28;
-  --border: rgba(255,255,255,0.08);
-  --border2:rgba(255,255,255,0.15);
-  --text:   #f0efff;
-  --muted:  #9b9dbf;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
-  --shadow:    0 4px 12px rgba(0,0,0,0.4);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,0.5);
+  --bg:     #0a0f1e;
+  --bg2:    #0f1729;
+  --bg3:    #162033;
+  --bg4:    #1e2d45;
+  --surface:#111827;
+  --border: rgba(148,163,184,0.10);
+  --border2:rgba(148,163,184,0.18);
+  --text:   #f1f5f9;
+  --muted:  #94a3b8;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow:    0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* Dim mode */
 [data-background="dim"] {
-  --bg:     #141420;
-  --bg2:    #1c1c2e;
-  --bg3:    #242438;
-  --surface:#1a1a2e;
-  --border: rgba(255,255,255,0.08);
-  --border2:rgba(255,255,255,0.14);
-  --text:   #e8e7ff;
-  --muted:  #9090b8;
+  --bg:     #0d1520;
+  --bg2:    #141e2e;
+  --bg3:    #1a2840;
+  --surface:#111d30;
+  --border: rgba(148,163,184,0.10);
+  --border2:rgba(148,163,184,0.16);
+  --text:   #e2e8f0;
+  --muted:  #7c8fa8;
 }
 
-/* High contrast override */
+/* High contrast */
 [data-contrast="high"] {
   --border: rgba(0,0,0,0.3);
   --text:   #000000;
-  --muted:  #333333;
+  --muted:  #2d3748;
   --bg:     #ffffff;
   --surface:#ffffff;
 }
@@ -108,7 +108,7 @@
 [data-background="dark"][data-contrast="high"] {
   --border: rgba(255,255,255,0.3);
   --text:   #ffffff;
-  --muted:  #cccccc;
+  --muted:  #cbd5e1;
   --bg:     #000000;
-  --surface:#111111;
+  --surface:#0a0f1e;
 }

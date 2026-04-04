@@ -1,7 +1,7 @@
 {
   "id": "magnetism",
   "name": "Magnetism",
-  "emoji": "\ud83e\uddf2",
+  "emoji": "🧲",
   "color": "#db2777",
   "paper": 2,
   "boards": ["aqa"],
@@ -12,11 +12,12 @@
     "motor-effect",
     "flemings-left-hand-rule",
     "generators-and-induction",
-    "transformers"
+    "transformers",
+    "national-grid"
   ],
-  "totalConcepts": 7,
-  "estimatedMinutes": 56,
+  "totalConcepts": 8,
+  "estimatedMinutes": 64,
   "boardNotes": {
-    "aqa": "Paper 2 - Section 7: Magnetism and Electromagnetism"
+    "aqa": "Paper 2 - Section 7: Magnetism and Electromagnetism. Includes the National Grid."
   }
 }

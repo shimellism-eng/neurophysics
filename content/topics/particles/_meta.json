@@ -1,7 +1,7 @@
 {
   "id": "particles",
   "name": "Particle Model",
-  "emoji": "\u26db",
+  "emoji": "⚛",
   "color": "#16a34a",
   "paper": 1,
   "boards": ["aqa"],
@@ -12,11 +12,12 @@
     "changes-of-state",
     "internal-energy",
     "specific-heat-capacity",
-    "specific-latent-heat"
+    "specific-latent-heat",
+    "gas-pressure-temperature"
   ],
-  "totalConcepts": 7,
-  "estimatedMinutes": 56,
+  "totalConcepts": 8,
+  "estimatedMinutes": 64,
   "boardNotes": {
-    "aqa": "Paper 1 - Section 3: Particle Model of Matter"
+    "aqa": "Paper 1 - Section 3: Particle Model of Matter. Gas pressure laws are Higher only."
   }
 }

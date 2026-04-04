@@ -1,9 +1,11 @@
 {
   "id": "motion",
   "name": "Motion",
-  "paper": "Paper 2",
-  "color": "var(--topic-motion)",
-  "concepts": [
+  "emoji": "🚀",
+  "color": "#0284c7",
+  "paper": 2,
+  "boards": ["aqa"],
+  "conceptOrder": [
     "speed-velocity-acceleration",
     "distance-time-graphs",
     "velocity-time-graphs",
@@ -11,5 +13,10 @@
     "terminal-velocity",
     "newtons-laws-motion",
     "stopping-distances"
-  ]
+  ],
+  "totalConcepts": 7,
+  "estimatedMinutes": 56,
+  "boardNotes": {
+    "aqa": "Paper 2 - Section 5.6: Forces and Motion. Equations of motion are Higher only."
+  }
 }

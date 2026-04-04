@@ -20,6 +20,7 @@ export function TopicDetail() {
   const boardNote = progress?.board ? meta.boardNotes[progress.board] : undefined;
 
   const CONCEPT_LABELS: Record<string, string> = {
+    // Forces
     'resultant-forces':   'Resultant Forces',
     'newtons-first-law':  "Newton's First Law",
     'newtons-second-law': "Newton's Second Law",
@@ -27,6 +28,9 @@ export function TopicDetail() {
     'weight-and-gravity': 'Weight and Gravity',
     'momentum':           'Momentum',
     'work-and-energy':    'Work and Energy',
+    'hookes-law':         "Hooke's Law",
+    'pressure-in-fluids': 'Pressure in Fluids',
+    // Electricity
     'charge-and-current':    'Charge and Current',
     'potential-difference':  'Potential Difference',
     'resistance':            'Resistance',
@@ -34,6 +38,68 @@ export function TopicDetail() {
     'series-circuits':       'Series Circuits',
     'parallel-circuits':     'Parallel Circuits',
     'power-and-energy':      'Electrical Power and Energy',
+    'iv-characteristics':    'I–V Characteristics',
+    'domestic-electricity':  'Domestic Electricity',
+    // Waves
+    'transverse-and-longitudinal': 'Transverse and Longitudinal Waves',
+    'wave-properties':       'Wave Properties',
+    'wave-equation':         'The Wave Equation',
+    'reflection-and-refraction': 'Reflection and Refraction',
+    'sound-waves':           'Sound Waves',
+    'electromagnetic-spectrum': 'Electromagnetic Spectrum',
+    'light-and-colour':      'Light and Colour',
+    // Energy
+    'energy-stores-and-transfers': 'Energy Stores and Transfers',
+    'kinetic-energy':        'Kinetic Energy',
+    'gravitational-pe':      'Gravitational Potential Energy',
+    'elastic-pe':            'Elastic Potential Energy',
+    'conservation-of-energy': 'Conservation of Energy',
+    'efficiency':            'Efficiency',
+    'power':                 'Power',
+    'renewable-energy-sources': 'Renewable Energy Sources',
+    // Magnetism
+    'permanent-temporary-magnets': 'Permanent and Temporary Magnets',
+    'magnetic-fields':       'Magnetic Fields',
+    'electromagnetism':      'Electromagnetism',
+    'motor-effect':          'The Motor Effect',
+    'flemings-left-hand-rule': "Fleming's Left-Hand Rule",
+    'generators-and-induction': 'Generators and Induction',
+    'transformers':          'Transformers',
+    'national-grid':         'The National Grid',
+    // Particles
+    'states-of-matter':      'States of Matter',
+    'particle-model':        'The Particle Model',
+    'density':               'Density',
+    'changes-of-state':      'Changes of State',
+    'internal-energy':       'Internal Energy',
+    'specific-heat-capacity': 'Specific Heat Capacity',
+    'specific-latent-heat':  'Specific Latent Heat',
+    'gas-pressure-temperature': 'Gas Pressure and Temperature',
+    // Atomic
+    'atomic-structure':      'Atomic Structure',
+    'isotopes':              'Isotopes and Ions',
+    'radioactive-decay':     'Radioactive Decay',
+    'alpha-beta-gamma':      'Alpha, Beta and Gamma',
+    'half-life':             'Half-Life',
+    'uses-of-radiation':     'Uses of Radiation',
+    'nuclear-fission-fusion': 'Nuclear Fission and Fusion',
+    'history-of-atomic-models': 'History of the Atomic Model',
+    // Space
+    'solar-system':          'The Solar System',
+    'life-cycle-of-stars':   'Life Cycle of Stars',
+    'orbital-motion':        'Orbital Motion',
+    'red-shift':             'Red-Shift',
+    'big-bang':              'The Big Bang',
+    'dark-matter-energy':    'Dark Matter and Dark Energy',
+    'satellites':            'Satellites',
+    // Motion
+    'speed-velocity-acceleration': 'Speed, Velocity and Acceleration',
+    'distance-time-graphs':  'Distance–Time Graphs',
+    'velocity-time-graphs':  'Velocity–Time Graphs',
+    'equations-of-motion':   'Equations of Motion',
+    'terminal-velocity':     'Terminal Velocity',
+    'newtons-laws-motion':   "Newton's Laws of Motion",
+    'stopping-distances':    'Stopping Distances',
   };
 
   return (

@@ -7,7 +7,7 @@
   padding-bottom: var(--safe-bot);
   flex-shrink: 0;
   z-index: 100;
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 -1px 0 var(--border);
 }
 
 .navbar-item {
@@ -27,11 +27,11 @@
 }
 
 .navbar-item--active {
-  color: var(--purple);
+  color: var(--cyan);
 }
 
 .navbar-item--active .navbar-icon-wrap {
-  background: var(--purple-dim);
+  background: var(--cyan-dim);
   border-radius: 10px;
 }
 
@@ -61,5 +61,5 @@
 }
 
 .navbar-item--active .navbar-label {
-  color: var(--purple);
+  color: var(--cyan);
 }

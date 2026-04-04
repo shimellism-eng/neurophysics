@@ -48,6 +48,57 @@ const CONCEPT_TOPIC_MAP: Record<string, string> = {
   'series-circuits':             'electricity',
   'parallel-circuits':           'electricity',
   'power-and-energy':            'electricity',
+  // Magnetism
+  'permanent-temporary-magnets': 'magnetism',
+  'magnetic-fields':             'magnetism',
+  'electromagnetism':            'magnetism',
+  'motor-effect':                'magnetism',
+  'flemings-left-hand-rule':     'magnetism',
+  'generators-and-induction':    'magnetism',
+  'transformers':                'magnetism',
+  'national-grid':               'magnetism',
+  // Particles
+  'states-of-matter':            'particles',
+  'particle-model':              'particles',
+  'density':                     'particles',
+  'changes-of-state':            'particles',
+  'internal-energy':             'particles',
+  'specific-heat-capacity':      'particles',
+  'specific-latent-heat':        'particles',
+  'gas-pressure-temperature':    'particles',
+  // Atomic
+  'atomic-structure':            'atomic',
+  'isotopes':                    'atomic',
+  'radioactive-decay':           'atomic',
+  'alpha-beta-gamma':            'atomic',
+  'half-life':                   'atomic',
+  'uses-of-radiation':           'atomic',
+  'nuclear-fission-fusion':      'atomic',
+  'history-of-atomic-models':    'atomic',
+  // Space
+  'solar-system':                'space',
+  'life-cycle-of-stars':         'space',
+  'orbital-motion':              'space',
+  'red-shift':                   'space',
+  'big-bang':                    'space',
+  'dark-matter-energy':          'space',
+  'satellites':                  'space',
+  // Forces (new)
+  'hookes-law':                  'forces',
+  'pressure-in-fluids':          'forces',
+  // Electricity (new)
+  'iv-characteristics':          'electricity',
+  'domestic-electricity':        'electricity',
+  // Energy (new)
+  'renewable-energy-sources':    'energy',
+  // Motion
+  'speed-velocity-acceleration': 'motion',
+  'distance-time-graphs':        'motion',
+  'velocity-time-graphs':        'motion',
+  'equations-of-motion':         'motion',
+  'terminal-velocity':           'motion',
+  'newtons-laws-motion':         'motion',
+  'stopping-distances':          'motion',
 };
 
 const STEP_COLORS = ['red', 'blue', 'green', 'amber', 'purple', 'pink'];

@@ -4,3 +4,6 @@ dist/
 ios/
 android/
 *.log
+*.pdf
+.vite/
+.claude/

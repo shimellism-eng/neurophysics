@@ -83,7 +83,7 @@ export default function MamoChat() {
           .map(m => ({ role: m.role, content: m.content })),
       }
       const apiBase = import.meta.env.VITE_API_BASE || ''
-      const res = await fetch(`${apiBase}/api/anthropic/v1/messages`, {
+      const res = await fetch(`${apiBase}/api/anthropic`, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

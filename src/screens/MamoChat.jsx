@@ -59,7 +59,8 @@ export default function MamoChat() {
   const sendMessage = async (text) => {
     const raw = (text || input).trim()
     if (!raw || loading) return
-    if (!apiKey) { setShowKeyInput(true); return }
+    // No client key needed — server uses ANTHROPIC_API_KEY env var.
+    // If a user has entered their own key in Settings it will be used instead.
 
     // Sanitise: hard cap at 1000 chars and strip any injected role/system markers
     const userMsg = raw
@@ -86,7 +87,7 @@ export default function MamoChat() {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
-          'x-api-key': apiKey,
+          ...(apiKey ? { 'x-api-key': apiKey } : {}),
           'anthropic-version': '2023-06-01',
         },
         body: JSON.stringify(body),
@@ -103,7 +104,7 @@ export default function MamoChat() {
     } catch (e) {
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: `⚠️ Couldn't reach Mamo right now.\n\n**Error:** ${e.message}\n\nCheck your API key in the input at the top, then try again.`,
+        content: `⚠️ Couldn't reach Mamo right now.\n\n**Error:** ${e.message}\n\nPlease try again in a moment.`,
       }])
     } finally {
       setLoading(false)
@@ -150,7 +151,7 @@ export default function MamoChat() {
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           onClick={() => setShowKeyInput(v => !v)}
         >
-          <Key size={15} color={apiKey ? '#00bc7d' : '#ef4444'} />
+          <Key size={15} color={apiKey ? '#00bc7d' : '#90a1b9'} />
         </button>
       </div>
 

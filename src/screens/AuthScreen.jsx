@@ -127,7 +127,7 @@ function PrimaryButton({ children, onClick, loading, disabled, style = {} }) {
 }
 
 // ─── OAuth button ─────────────────────────────────────────────────────────────
-function OAuthButton({ icon, label, onClick, loading, dark = false }) {
+function OAuthButton({ icon, label, onClick, loading, dark = false, style: extraStyle = {} }) {
   return (
     <motion.button
       className="w-full py-3.5 rounded-[16px] text-sm font-semibold flex items-center justify-center gap-3"
@@ -139,6 +139,7 @@ function OAuthButton({ icon, label, onClick, loading, dark = false }) {
         cursor: loading ? 'not-allowed' : 'pointer',
         opacity: loading ? 0.6 : 1,
         transition: 'opacity 0.15s',
+        ...extraStyle,
       }}
       onClick={!loading ? onClick : undefined}
       whileTap={!loading ? { scale: 0.97 } : {}}
@@ -191,7 +192,16 @@ function BackHeader({ onBack, title }) {
 }
 
 // ─── Landing ──────────────────────────────────────────────────────────────────
-function Landing({ onSignUp, onSignIn }) {
+function Landing({ onEmail, onSignIn }) {
+  const { signInWithOAuth } = useAuth()
+  const [oauthLoading, setOauthLoading] = useState(null)
+
+  const handleOAuth = async (provider) => {
+    setOauthLoading(provider)
+    const { error } = await signInWithOAuth(provider)
+    if (error) setOauthLoading(null)
+  }
+
   return (
     <motion.div
       className="flex flex-col h-full"
@@ -241,115 +251,58 @@ function Landing({ onSignUp, onSignIn }) {
         </motion.div>
       </div>
 
-      {/* CTA */}
+      {/* Auth options */}
       <motion.div
-        className="px-6 pb-12 flex flex-col gap-3 shrink-0"
+        className="px-6 pb-10 flex flex-col gap-3 shrink-0"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.45 }}
       >
-        <PrimaryButton onClick={onSignUp}>Sign Up</PrimaryButton>
+        {/* Google */}
+        <OAuthButton
+          icon={<GoogleIcon />}
+          label="Continue with Google"
+          onClick={() => handleOAuth('google')}
+          loading={oauthLoading === 'google'}
+        />
 
-        <button
-          className="w-full py-4 rounded-[16px] text-sm font-semibold"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #2d3e55', color: '#f8fafc' }}
-          onClick={onSignIn}
-        >
-          Sign In
-        </button>
+        {/* Apple */}
+        <OAuthButton
+          icon={<AppleIcon />}
+          label="Continue with Apple"
+          onClick={() => handleOAuth('apple')}
+          loading={oauthLoading === 'apple'}
+          dark
+        />
 
-        <p className="text-center text-xs mt-1" style={{ color: '#4a5a72' }}>
+        <Divider label="Or" />
+
+        {/* Email */}
+        <OAuthButton
+          icon={<Mail size={18} color="#fff" />}
+          label="Continue with Email"
+          onClick={onEmail}
+          style={{ background: 'linear-gradient(135deg, #4f6ef7, #6366f1)', color: '#fff', border: 'none', boxShadow: '0 8px 24px rgba(99,102,241,0.35)' }}
+        />
+
+        {/* Sign in link */}
+        <p className="text-center text-sm pt-1" style={{ color: '#90a1b9' }}>
+          Already have an account?{' '}
+          <button
+            onClick={onSignIn}
+            style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 'inherit' }}
+          >
+            Sign In
+          </button>
+        </p>
+
+        <p className="text-center text-xs" style={{ color: '#4a5a72' }}>
           By continuing you agree to our{' '}
           <a href="#/terms" className="underline" style={{ color: '#6366f1' }}>Terms</a>
           {' '}and{' '}
           <a href="#/privacy" className="underline" style={{ color: '#6366f1' }}>Privacy Policy</a>
         </p>
       </motion.div>
-    </motion.div>
-  )
-}
-
-// ─── Sign Up Options ──────────────────────────────────────────────────────────
-function SignUpOptions({ onBack, onEmail, onDone }) {
-  const { signInWithOAuth } = useAuth()
-  const [oauthLoading, setOauthLoading] = useState(null) // 'google' | 'apple' | null
-
-  const handleOAuth = async (provider) => {
-    setOauthLoading(provider)
-    const { error } = await signInWithOAuth(provider)
-    if (error) {
-      setOauthLoading(null)
-      // error shown via toast-like inline message handled by Supabase redirect
-    }
-    // on success, Supabase redirects the page — no further action needed
-  }
-
-  return (
-    <motion.div
-      className="flex flex-col h-full"
-      initial={{ opacity: 0, x: 40 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -40 }}
-      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-    >
-      <div className="flex-1 overflow-y-auto px-6">
-        <BackHeader onBack={onBack} />
-
-        <div className="mb-6">
-          <h1 className="text-3xl font-extrabold mb-1" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
-            Create account
-          </h1>
-          <p className="text-sm" style={{ color: '#90a1b9' }}>
-            Choose how you'd like to sign up.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-3 pb-6">
-          {/* Google */}
-          <OAuthButton
-            icon={<GoogleIcon />}
-            label="Continue with Google"
-            onClick={() => handleOAuth('google')}
-            loading={oauthLoading === 'google'}
-          />
-
-          {/* Apple */}
-          <OAuthButton
-            icon={<AppleIcon />}
-            label="Continue with Apple"
-            onClick={() => handleOAuth('apple')}
-            loading={oauthLoading === 'apple'}
-            dark
-          />
-
-          <Divider />
-
-          {/* Email */}
-          <button
-            className="w-full py-3.5 rounded-[16px] text-sm font-semibold flex items-center justify-center gap-3"
-            style={{
-              background: 'rgba(18,26,47,0.9)',
-              border: '0.75px solid rgba(99,102,241,0.35)',
-              color: '#a5b4fc',
-            }}
-            onClick={onEmail}
-            aria-label="Sign up with email"
-          >
-            <Mail size={18} color="#6366f1" />
-            Continue with Email
-          </button>
-        </div>
-
-        <p className="text-center text-xs pb-6" style={{ color: '#4a5a72' }}>
-          Already have an account?{' '}
-          <button
-            onClick={onBack}
-            style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer', fontSize: 'inherit' }}
-          >
-            Sign In
-          </button>
-        </p>
-      </div>
     </motion.div>
   )
 }
@@ -621,7 +574,7 @@ function ForgotPassword({ initialEmail, onBack }) {
 }
 
 // ─── Main export ──────────────────────────────────────────────────────────────
-// views: 'landing' | 'signup-options' | 'signup-email' | 'signin' | 'forgot'
+// views: 'landing' | 'signup-email' | 'signin' | 'forgot'
 export default function AuthScreen() {
   const [view, setView] = useState('landing')
   const [forgotEmail, setForgotEmail] = useState('')
@@ -637,17 +590,12 @@ export default function AuthScreen() {
       <AnimatePresence mode="wait">
         {view === 'landing' && (
           <motion.div key="landing" className="flex flex-col h-full">
-            <Landing onSignUp={() => setView('signup-options')} onSignIn={() => setView('signin')} />
-          </motion.div>
-        )}
-        {view === 'signup-options' && (
-          <motion.div key="signup-options" className="flex flex-col h-full">
-            <SignUpOptions onBack={() => setView('landing')} onEmail={() => setView('signup-email')} onDone={onDone} />
+            <Landing onEmail={() => setView('signup-email')} onSignIn={() => setView('signin')} />
           </motion.div>
         )}
         {view === 'signup-email' && (
           <motion.div key="signup-email" className="flex flex-col h-full">
-            <SignUpEmail onBack={() => setView('signup-options')} onDone={onDone} />
+            <SignUpEmail onBack={() => setView('landing')} onDone={onDone} />
           </motion.div>
         )}
         {view === 'signin' && (

@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'r
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { Atom, Minus } from 'lucide-react'
+import { AuthProvider, useAuth } from './context/AuthContext'
 import BottomNav from './components/BottomNav'
 import HomeScreen from './screens/HomeScreen'
 import TopicMap from './screens/TopicMap'
@@ -12,7 +13,7 @@ import MasteryScreen from './screens/MasteryScreen'
 import SettingsScreen from './screens/SettingsScreen'
 import MamoChat from './screens/MamoChat'
 import PracticalScreen from './screens/PracticalScreen'
-import SplashScreen from './screens/SplashScreen'
+import AuthScreen from './screens/AuthScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
 import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen'
 import TermsScreen from './screens/TermsScreen'
@@ -62,7 +63,6 @@ function FloatingMamo() {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
               >
-                {/* Main orb */}
                 <motion.button
                   className="w-12 h-12 rounded-full flex items-center justify-center relative"
                   style={{
@@ -80,7 +80,6 @@ function FloatingMamo() {
                     transition={{ repeat: Infinity, duration: 2.2, ease: 'easeOut' }}
                   />
                 </motion.button>
-                {/* Minimize badge  -  top-right corner */}
                 <button
                   className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center"
                   style={{ background: '#0b1121', border: '1.5px solid rgba(99,102,241,0.5)', zIndex: 1 }}
@@ -100,17 +99,38 @@ function FloatingMamo() {
 
 // Routes that show the bottom nav + floating Mamo
 const SHELL_ROUTES = ['/', '/topics', '/mastery', '/settings']
-const ONBOARDING_ROUTES = ['/splash', '/onboarding', '/privacy', '/terms']
+// Routes accessible without auth
+const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms']
 
 function AppShell() {
   const location = useLocation()
-  const onboarded = !!localStorage.getItem('neurophysics_onboarded')
-  const isOnboardingRoute = ONBOARDING_ROUTES.includes(location.pathname)
+  const { user, loading } = useAuth()
+  const isPublic = PUBLIC_ROUTES.includes(location.pathname)
   const showShell = SHELL_ROUTES.includes(location.pathname)
 
-  // Not onboarded and trying to access app routes → push to splash
-  if (!onboarded && !isOnboardingRoute) {
-    return <Navigate to="/splash" replace />
+  // Show nothing while auth state loads
+  if (loading) {
+    return (
+      <div className="flex flex-col h-full items-center justify-center" style={{ background: '#0b1121' }}>
+        <motion.div
+          className="w-8 h-8 rounded-full border-2"
+          style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
+        />
+      </div>
+    )
+  }
+
+  // Not logged in → force to auth (except public routes)
+  if (!user && !isPublic) {
+    return <Navigate to="/auth" replace />
+  }
+
+  // Logged in + hitting /auth → go to app
+  if (user && location.pathname === '/auth') {
+    const onboarded = !!localStorage.getItem('neurophysics_onboarded')
+    return <Navigate to={onboarded ? '/' : '/onboarding'} replace />
   }
 
   return (
@@ -125,11 +145,11 @@ function AppShell() {
         overflow: 'hidden',
       }}
     >
-      {/* Top safe-area spacer — fills the status bar / Dynamic Island area */}
+      {/* Top safe-area spacer */}
       <div style={{ height: 'env(safe-area-inset-top)', background: '#0b1121', flexShrink: 0 }} />
       <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'calc(64px + env(safe-area-inset-bottom))' : 0 }}>
         <Routes>
-          <Route path="/splash" element={<SplashScreen />} />
+          <Route path="/auth" element={<AuthScreen />} />
           <Route path="/onboarding" element={<OnboardingScreen />} />
           <Route path="/" element={<HomeScreen />} />
           <Route path="/topics" element={<TopicMap />} />
@@ -142,7 +162,7 @@ function AppShell() {
           <Route path="/settings" element={<SettingsScreen />} />
           <Route path="/privacy" element={<PrivacyPolicyScreen />} />
           <Route path="/terms" element={<TermsScreen />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
         </Routes>
       </div>
 
@@ -158,8 +178,10 @@ function AppShell() {
 
 export default function App() {
   return (
-    <HashRouter>
-      <AppShell />
-    </HashRouter>
+    <AuthProvider>
+      <HashRouter>
+        <AppShell />
+      </HashRouter>
+    </AuthProvider>
   )
 }

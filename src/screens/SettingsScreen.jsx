@@ -1,8 +1,9 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X, LogOut } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
+import { useAuth } from '../context/AuthContext'
 
 // ─── Profile helpers ──────────────────────────────────────────────────────────
 const PROFILE_KEY = 'neurophysics_profile'
@@ -98,6 +99,12 @@ function Toggle({ on, onToggle, disabled = false }) {
 // ─── Main screen ──────────────────────────────────────────────────────────────
 export default function SettingsScreen() {
   const navigate = useNavigate()
+  const { user, signOut } = useAuth()
+
+  const handleSignOut = async () => {
+    await signOut()
+    navigate('/auth', { replace: true })
+  }
   const [apiKey, setApiKey] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
 
@@ -294,9 +301,9 @@ export default function SettingsScreen() {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-base font-bold truncate" style={{ color: '#f8fafc' }}>
-                  {profile.name || 'Physics Learner'}
+                  {profile.name || user?.user_metadata?.full_name || 'Physics Learner'}
                 </div>
-                <div className="text-sm" style={{ color: '#90a1b9' }}>GCSE Student</div>
+                <div className="text-xs truncate" style={{ color: '#90a1b9' }}>{user?.email}</div>
                 <div className="flex items-center gap-1 mt-1">
                   <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
                   <span className="text-xs" style={{ color: '#00bc7d' }}>Active learner</span>
@@ -449,6 +456,31 @@ export default function SettingsScreen() {
             </div>
           </motion.div>
         ))}
+
+        {/* Sign out */}
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+            Account
+          </div>
+          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
+            <div className="flex items-center gap-3 px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)', borderBottom: '0.75px solid #1d293d' }}>
+              <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
+              <div className="text-xs" style={{ color: '#90a1b9' }}>Signed in as <strong style={{ color: '#f8fafc' }}>{user?.email}</strong></div>
+            </div>
+            <button
+              className="w-full flex items-center gap-3 px-4 py-4 text-left"
+              style={{ background: 'rgba(18,26,47,0.9)' }}
+              onClick={handleSignOut}
+              aria-label="Sign out"
+            >
+              <LogOut size={18} color="#90a1b9" />
+              <div className="flex-1">
+                <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>Sign Out</div>
+                <div className="text-xs" style={{ color: '#90a1b9' }}>Your progress is saved locally</div>
+              </div>
+            </button>
+          </div>
+        </motion.div>
 
         {/* Delete all data */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>

@@ -82,7 +82,7 @@ export default function MamoChat() {
           .filter(m => m.role !== 'assistant' || !m.content.startsWith("Hi! I'm **Mamo**"))
           .map(m => ({ role: m.role, content: m.content })),
       }
-      const apiBase = import.meta.env.VITE_API_BASE || ''
+      const apiBase = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
       const res = await fetch(`${apiBase}/api/anthropic`, {
         method: 'POST',
         headers: {

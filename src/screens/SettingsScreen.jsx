@@ -1,8 +1,19 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
+
+// ─── Profile helpers ──────────────────────────────────────────────────────────
+const PROFILE_KEY = 'neurophysics_profile'
+const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
+
+function loadProfile() {
+  try { return JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}') } catch { return {} }
+}
+function saveProfile(p) {
+  localStorage.setItem(PROFILE_KEY, JSON.stringify(p))
+}
 
 // ─── Persistence ──────────────────────────────────────────────────────────────
 const PREFS_KEY = 'neurophysics_prefs'
@@ -90,6 +101,28 @@ export default function SettingsScreen() {
   const [apiKey, setApiKey] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
 
+  // Profile
+  const [profile, setProfile] = useState(() => loadProfile())
+  const [editingProfile, setEditingProfile] = useState(false)
+  const [editName, setEditName] = useState('')
+  const [editAvatar, setEditAvatar] = useState('')
+
+  const startEditProfile = () => {
+    setEditName(profile.name || '')
+    setEditAvatar(profile.avatar || '🧠')
+    setEditingProfile(true)
+  }
+
+  const saveEditProfile = () => {
+    const trimmed = editName.trim()
+    if (!trimmed) return
+    const updated = { ...profile, name: trimmed, avatar: editAvatar }
+    setProfile(updated)
+    saveProfile(updated)
+    setEditingProfile(false)
+    showToast('Profile updated ✓', '#10b981')
+  }
+
   // Load API key from secure storage on mount
   useEffect(() => {
     secureGet('mamo_api_key').then(v => { if (v) setApiKey(v) })
@@ -163,6 +196,7 @@ export default function SettingsScreen() {
   const handleDeleteData = async () => {
     localStorage.removeItem('neurophysics_prefs')
     localStorage.removeItem('neurophysics_onboarded')
+    localStorage.removeItem('neurophysics_profile')
     localStorage.removeItem('np_progress')
     localStorage.removeItem('np_stats')
     await secureRemove('mamo_api_key')
@@ -244,25 +278,91 @@ export default function SettingsScreen() {
       {/* Profile card */}
       <div className="px-5 mb-6">
         <motion.div
-          className="rounded-[24px] p-5 flex items-center gap-4"
+          className="rounded-[24px] p-5"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <div
-            className="w-16 h-16 rounded-[20px] flex items-center justify-center text-3xl"
-            style={{ background: 'linear-gradient(135deg, #155dfc20, #c084fc20)', border: '1px solid #155dfc40' }}
-          >
-            🧠
-          </div>
-          <div>
-            <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Physics Learner</div>
-            <div className="text-sm" style={{ color: '#90a1b9' }}>GCSE Student</div>
-            <div className="flex items-center gap-1 mt-1">
-              <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
-              <span className="text-xs" style={{ color: '#00bc7d' }}>Active learner</span>
+          {!editingProfile ? (
+            /* View mode */
+            <div className="flex items-center gap-4">
+              <div
+                className="w-16 h-16 rounded-[20px] flex items-center justify-center text-3xl shrink-0"
+                style={{ background: 'linear-gradient(135deg, rgba(21,93,252,0.15), rgba(99,102,241,0.15))', border: '1px solid rgba(99,102,241,0.3)' }}
+              >
+                {profile.avatar || '🧠'}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-base font-bold truncate" style={{ color: '#f8fafc' }}>
+                  {profile.name || 'Physics Learner'}
+                </div>
+                <div className="text-sm" style={{ color: '#90a1b9' }}>GCSE Student</div>
+                <div className="flex items-center gap-1 mt-1">
+                  <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
+                  <span className="text-xs" style={{ color: '#00bc7d' }}>Active learner</span>
+                </div>
+              </div>
+              <button
+                onClick={startEditProfile}
+                className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
+                style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                aria-label="Edit profile"
+              >
+                <Pencil size={14} color="#6366f1" />
+              </button>
             </div>
-          </div>
+          ) : (
+            /* Edit mode */
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Edit Profile</span>
+                <button onClick={() => setEditingProfile(false)} aria-label="Cancel editing">
+                  <X size={16} color="#90a1b9" />
+                </button>
+              </div>
+              {/* Avatar picker */}
+              <div className="flex flex-wrap gap-2 mb-3">
+                {AVATARS.map(em => (
+                  <button
+                    key={em}
+                    className="w-10 h-10 rounded-[12px] text-xl flex items-center justify-center"
+                    style={{
+                      background: editAvatar === em ? 'rgba(99,102,241,0.2)' : 'rgba(11,17,33,0.8)',
+                      border: editAvatar === em ? '2px solid #6366f1' : '0.75px solid #1d293d',
+                      transform: editAvatar === em ? 'scale(1.1)' : 'scale(1)',
+                      transition: 'all 0.15s',
+                    }}
+                    onClick={() => setEditAvatar(em)}
+                    aria-label={`Select avatar ${em}`}
+                  >
+                    {em}
+                  </button>
+                ))}
+              </div>
+              {/* Name input */}
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={editName}
+                  onChange={e => setEditName(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && saveEditProfile()}
+                  placeholder="Your name"
+                  maxLength={30}
+                  className="flex-1 px-3 py-2.5 rounded-[10px] text-sm outline-none"
+                  style={{ background: '#1d293d', color: '#f8fafc', border: '0.75px solid #2d3e55' }}
+                  aria-label="Enter your name"
+                />
+                <button
+                  onClick={saveEditProfile}
+                  className="w-10 h-10 rounded-[10px] flex items-center justify-center"
+                  style={{ background: '#6366f1' }}
+                  aria-label="Save profile"
+                >
+                  <Check size={16} color="#fff" />
+                </button>
+              </div>
+            </div>
+          )}
         </motion.div>
       </div>
 

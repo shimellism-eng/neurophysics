@@ -1,0 +1,457 @@
+export const PRACTICALS = {
+  shc: {
+    id: 'shc',
+    number: 'RP1',
+    title: 'Specific Heat Capacity',
+    topicId: 'internal_energy',
+    aim: 'To determine the specific heat capacity of a solid material (e.g. copper or aluminium block) by measuring temperature rise when electrical energy is supplied.',
+    specRef: '4.1.1.3',
+    equipment: ['Metal block (copper/aluminium) with two holes','Immersion heater (30W)','Thermometer','12V power supply','Ammeter','Voltmeter','Stopwatch','Insulating material','Connecting leads','Balance'],
+    variables: {
+      independent: 'Energy supplied (J) = Power × time',
+      dependent: 'Temperature rise (°C)',
+      control: ['Mass of block (kg)','Power supply voltage','Starting temperature','Type of metal block']
+    },
+    method: [
+      'Measure and record the mass of the metal block in kg',
+      'Insert the immersion heater into the larger hole',
+      'Connect ammeter, power supply and heater in series; voltmeter across power supply',
+      'Add a drop of water to the thermometer hole for good thermal contact',
+      'Wrap the block in insulating material to reduce heat loss',
+      'Record the initial temperature, then switch on the power supply',
+      'Record current (A) and voltage (V)  -  calculate power P = IV',
+      'Record temperature every 60 seconds for 10 minutes',
+      'Calculate energy E = P × t for each reading',
+      'Plot temperature (°C) vs energy (J)  -  gradient = 1/(m × c)',
+      'Rearrange: c = 1 / (mass × gradient) to find SHC'
+    ],
+    resultsTable: {
+      headers: ['Time (s)', 'Voltage V (V)', 'Current I (A)', 'Power P=IV (W)', 'Energy E=Pt (J)', 'Temperature θ (°C)'],
+      sampleData: [[0,12,2.5,30,0,20],[60,12,2.5,30,1800,22.2],[120,12,2.5,30,3600,24.4],[180,12,2.5,30,5400,26.6],[240,12,2.5,30,7200,28.8],[300,12,2.5,30,9000,31.0],[360,12,2.5,30,10800,33.2],[420,12,2.5,30,12600,35.4],[480,12,2.5,30,14400,37.6],[540,12,2.5,30,19800,39.8],[600,12,2.5,30,18000,42.0]]
+    },
+    analysis: 'Plot temperature (y-axis) vs energy supplied (x-axis). Draw line of best fit (ignore curved start due to thermal lag). Gradient = ΔT/ΔE. SHC: c = 1 / (m × gradient). Compare to accepted values: Al = 900 J/kg°C, Cu = 385 J/kg°C, Fe = 450 J/kg°C.',
+    errors: [
+      'Heat loss to surroundings → insulate block, wrap in foam/cotton wool',
+      'Thermal lag: thermometer reading lags behind block temperature → add water droplet to thermometer hole',
+      'Contact resistance in circuit → check all connections are tight',
+      'Heater may not be fully embedded → ensure snug fit',
+      'Parallax error when reading thermometer → eye level with scale'
+    ],
+    hazards: [
+      { hazard: 'Hot immersion heater (~80°C)', risk: 'Burns', precaution: 'Do not touch heater; switch off after use; allow to cool before handling' },
+      { hazard: 'Electrical equipment', risk: 'Electric shock', precaution: 'Check leads for damage; keep away from water' },
+      { hazard: 'Hot metal block', risk: 'Burns', precaution: 'Use heatproof mat; allow to cool before handling' }
+    ],
+    sim: { type: 'shc', power: 30, mass: 1.0, shc: 385, startTemp: 20 }
+  },
+
+  insulation: {
+    id: 'insulation',
+    number: 'RP2',
+    title: 'Thermal Insulation',
+    topicId: 'efficiency',
+    aim: 'To investigate the effectiveness of different materials as thermal insulators by measuring the rate of cooling of hot water.',
+    specRef: '4.1.1.4',
+    equipment: ['100ml beaker (×5)','800ml beaker (×5)','Thermometer','Kettle','Cardboard lid with hole','Stopwatch','Insulating materials: bubble wrap, newspaper, polystyrene, sawdust','Scissors','Rubber bands'],
+    variables: {
+      independent: 'Type of insulating material (or number of layers)',
+      dependent: 'Temperature of water over time (°C)',
+      control: ['Volume of water (80 ml)','Starting temperature','Room temperature','Beaker size']
+    },
+    method: [
+      'Place small beaker inside larger beaker',
+      'Fill the gap between beakers with the insulating material being tested',
+      'Boil water in kettle, add 80 ml to the small beaker',
+      'Place cardboard lid with thermometer through hole',
+      'Record starting temperature and start stopwatch',
+      'Record temperature every 3 minutes for 20 minutes',
+      'Repeat with different insulating materials',
+      'Plot cooling curves (temperature vs time) for each material',
+      'The material with the slowest cooling rate is the best insulator'
+    ],
+    resultsTable: {
+      headers: ['Time (min)', 'No insulation (°C)', 'Bubble wrap (°C)', 'Newspaper (°C)', 'Polystyrene (°C)'],
+      sampleData: [[0,80,80,80,80],[3,72,76,75,77],[6,65,72,71,74],[9,59,69,67,71],[12,54,66,64,69],[15,50,63,61,67],[18,46,61,58,65],[20,43,59,56,63]]
+    },
+    analysis: 'Plot temperature (y-axis) vs time (x-axis) for all materials on the same axes. The material with the least steep gradient (slowest temperature drop) is the best insulator. The temperature difference between start and end = total heat lost.',
+    errors: [
+      'Starting temperature not the same for each trial → boil fresh water each time, check thermometer at start',
+      'Volume of water not exactly the same → use measuring cylinder precisely',
+      'Room temperature changes between trials → do all trials in same session',
+      'Thermometer not in centre of water → position carefully'
+    ],
+    hazards: [
+      { hazard: 'Near-boiling water (100°C)', risk: 'Scalds/burns', precaution: 'Use tongs to carry hot water; pour carefully; immediately wash burns with cold water' },
+      { hazard: 'Hot glassware', risk: 'Burns', precaution: 'Allow to cool before handling; use heatproof mat' }
+    ],
+    sim: { type: 'insulation', materials: ['none','bubble_wrap','newspaper','polystyrene'] }
+  },
+
+  resistance: {
+    id: 'resistance',
+    number: 'RP3',
+    title: 'Resistance of a Wire',
+    topicId: 'circuit_basics',
+    aim: 'To investigate how the resistance of a wire depends on its length.',
+    specRef: '4.2.1.3',
+    equipment: ['Power supply (low voltage)','Ammeter','Voltmeter','Constantan resistance wire (≥1m)','Metre ruler','Crocodile clips (×2)','Connecting leads','Heatproof mat'],
+    variables: {
+      independent: 'Length of wire (cm)',
+      dependent: 'Resistance (Ω) = V/I',
+      control: ['Material of wire (constantan)','Thickness/diameter of wire','Temperature (keep low voltage to prevent heating)','Starting position of crocodile clip']
+    },
+    method: [
+      'Attach resistance wire to metre ruler using tape',
+      'Connect one crocodile clip to the zero end of the wire (to ammeter)',
+      'Connect the other crocodile clip to the wire (this is the movable one)',
+      'Connect ammeter in series with the wire and power supply',
+      'Connect voltmeter across (in parallel with) the wire',
+      'Set to a low voltage (e.g. 2V) to prevent wire heating up',
+      'Record wire length, voltage, and current',
+      'Move the crocodile clip to a new length and repeat',
+      'Calculate resistance: R = V/I for each length',
+      'Plot resistance (y-axis) vs length (x-axis)  -  should be straight line through origin'
+    ],
+    resultsTable: {
+      headers: ['Length (cm)', 'Voltage V (V)', 'Current I (A)', 'Resistance R=V/I (Ω)'],
+      sampleData: [[10,1.0,0.45,2.2],[20,1.0,0.22,4.5],[30,1.0,0.15,6.7],[40,1.0,0.11,9.1],[50,1.0,0.09,11.1],[60,1.0,0.075,13.3],[70,1.0,0.064,15.6],[80,1.0,0.056,17.9],[90,1.0,0.049,20.4],[100,1.0,0.045,22.2]]
+    },
+    analysis: 'Plot resistance (Ω) vs length (cm). Draw line of best fit  -  should be straight through origin. Gradient = resistance per cm. R ∝ L (resistance proportional to length). Longer wire = higher resistance because electrons undergo more collisions.',
+    errors: [
+      'Wire heats up at higher voltages → use low voltage; re-measure after cooling',
+      'Contact resistance at crocodile clips → zero error; graph may not pass through origin',
+      'Crocodile clip not precisely at zero → measure carefully',
+      'Wire not perfectly uniform diameter → average multiple readings'
+    ],
+    hazards: [
+      { hazard: 'Wire heats up (especially at short lengths)', risk: 'Burns', precaution: 'Use low voltage; switch off between readings; use heatproof mat' },
+      { hazard: 'Electrical circuit', risk: 'Electric shock', precaution: 'Check leads for damage; use low voltage power supply' }
+    ],
+    sim: { type: 'resistance', resistivityPerCm: 0.22, maxLength: 100 }
+  },
+
+  iv_characteristics: {
+    id: 'iv_characteristics',
+    number: 'RP4',
+    title: 'I-V Characteristics',
+    topicId: 'circuit_components',
+    aim: 'To investigate the I-V characteristics of a resistor, filament lamp, and diode by measuring current at different potential differences.',
+    specRef: '4.2.1.4',
+    equipment: ['Power supply (variable)','Ammeter / milliammeter','Voltmeter','100Ω resistor','12V, 24W filament lamp','Diode + protective 10Ω resistor','Variable resistor (rheostat)','Component holders','Connecting leads'],
+    variables: {
+      independent: 'Potential difference V (V)',
+      dependent: 'Current I (A or mA)',
+      control: ['Temperature (for resistor)','Component being tested']
+    },
+    method: [
+      'Connect the component (resistor first) in series with ammeter and variable resistor',
+      'Connect voltmeter in parallel across the component',
+      'Set variable resistor to maximum resistance (minimum current)',
+      'Switch on and record voltage and current',
+      'Reduce variable resistance to increase voltage; record at several values',
+      'Reverse battery connections to get negative values',
+      'Plot I-V graph: current (y) vs voltage (x)',
+      'Repeat with filament lamp (expect curved graph as R increases with temperature)',
+      'Repeat with diode (only conducts in one direction; add protective resistor)'
+    ],
+    resultsTable: {
+      headers: ['Voltage V (V)', 'Current (Resistor) (A)', 'Current (Lamp) (A)', 'Current (Diode) (mA)'],
+      sampleData: [[-6,-0.06,-0.055,0],[-4,-0.04,-0.042,0],[-2,-0.02,-0.026,0],[0,0,0,0],[1,0.01,0.009,0],[2,0.02,0.017,0.1],[3,0.03,0.024,1],[4,0.04,0.029,10],[5,0.05,0.032,50],[6,0.06,0.035,100]]
+    },
+    analysis: 'Resistor: straight line through origin (I ∝ V, constant resistance, Ohmic). Filament lamp: curved line that levels off (R increases as temperature increases, non-Ohmic). Diode: no current for negative V; rapid increase past ~0.6V (threshold voltage)  -  only conducts one way.',
+    errors: [
+      'Lamp gets hot → resistance changes with temperature; take readings quickly',
+      'Ammeter resistance affects results → use voltmeter in correct position',
+      'Diode damaged by too much current → use protective resistor',
+      'Connection errors → double check circuit before switching on'
+    ],
+    hazards: [
+      { hazard: 'Hot filament lamp', risk: 'Burns', precaution: 'Do not touch lamp; allow to cool; switch off when not in use' },
+      { hazard: 'Electrical circuit', risk: 'Electric shock', precaution: 'Check leads; do not exceed rated voltage for components' },
+      { hazard: 'Diode without protection', risk: 'Component damage/sparks', precaution: 'Always use protective resistor in series with diode' }
+    ],
+    sim: { type: 'iv', components: ['resistor','lamp','diode'] }
+  },
+
+  density: {
+    id: 'density',
+    number: 'RP5',
+    title: 'Density of Materials',
+    topicId: 'states_density',
+    aim: 'To determine the density of regular solid objects, irregular solid objects, and liquids using appropriate apparatus.',
+    specRef: '4.3.1.1',
+    equipment: ['Digital balance','30cm ruler (mm graduations)','Vernier callipers (optional)','Displacement can','Measuring cylinders (10, 50, 100 ml)','String/cotton','Regular shaped objects (aluminium, copper, iron blocks)','Irregular shaped objects','250ml beaker','Water'],
+    variables: {
+      independent: 'Object/material being measured',
+      dependent: 'Density (g/cm³ or kg/m³)',
+      control: ['Temperature (density varies with T)','Technique used (ruler vs displacement)']
+    },
+    method: [
+      'Activity 1 – Regular solid: measure length, width, height with ruler (mm precision)',
+      'Calculate volume: V = l × w × h (in cm³)',
+      'Measure mass on digital balance',
+      'Calculate density: ρ = m/V',
+      'Activity 2 – Irregular solid: measure mass on balance',
+      'Fill displacement can with water until dripping stops',
+      'Place measuring cylinder under spout',
+      'Lower object into can on string  -  collect displaced water',
+      'Volume of water = volume of object',
+      'Activity 3 – Liquid: measure mass of empty beaker',
+      'Pour 100ml liquid into measuring cylinder, then into beaker',
+      'Measure mass of beaker + liquid; subtract beaker mass for liquid mass',
+      'Calculate density: ρ = mass / volume'
+    ],
+    resultsTable: {
+      headers: ['Object', 'Length (cm)', 'Width (cm)', 'Height (cm)', 'Volume (cm³)', 'Mass (g)', 'Density (g/cm³)'],
+      sampleData: [['Block A',5.0,3.0,2.0,30.0,81.0,2.70],['Block B',4.0,2.5,2.5,25.0,222.5,8.90],['Block C',4.5,3.0,2.0,27.0,213.3,7.90]]
+    },
+    analysis: 'Compare calculated density with known values: Al = 2.7 g/cm³, Cu = 8.9 g/cm³, Fe = 7.9 g/cm³, Zn = 7.1 g/cm³, Au = 19.3 g/cm³. Density = mass/volume. Use units carefully (g/cm³ or kg/m³). Percentage error = |calculated - accepted| / accepted × 100%.',
+    errors: [
+      'Parallax error reading ruler → align eye with measurement edge-on',
+      'Air bubbles trapped on irregular object → tap object to release bubbles',
+      'Water not fully displaced → ensure object is fully submerged',
+      'Balance not zeroed → tare before each measurement',
+      'Measuring cylinder precision → use smallest cylinder that fits object'
+    ],
+    hazards: [
+      { hazard: 'Heavy metal blocks', risk: 'Crush injury', precaution: 'Handle carefully; do not drop' },
+      { hazard: 'Water spill', risk: 'Slip hazard', precaution: 'Mop up spills immediately; work over a tray' },
+      { hazard: 'Sharp edges on metal', risk: 'Cuts', precaution: 'Handle with care; check for sharp edges' }
+    ],
+    sim: { type: 'density', objects: ['aluminium','copper','iron'] }
+  },
+
+  light: {
+    id: 'light',
+    number: 'RP6',
+    title: 'Reflection & Refraction of Light',
+    topicId: 'wave_reflection',
+    aim: 'To investigate the reflection of light from a plane mirror and the refraction of light through a rectangular glass/Perspex block.',
+    specRef: '4.6.1.3',
+    equipment: ['Ray box with power supply','Collimating slit and lens','Rectangular transparent block (glass or Perspex)','Plane mirror','30cm ruler','Protractor','A3 plain paper','Pencil'],
+    variables: {
+      independent: 'Angle of incidence (degrees)',
+      dependent: 'Angle of reflection / angle of refraction (degrees)',
+      control: ['Material of block','Colour/wavelength of light','Distance of ray box from block']
+    },
+    method: [
+      'Draw a straight line on A3 paper (this will be the boundary)',
+      'Draw a normal line perpendicular to the boundary',
+      'Place the transparent block with one face along the boundary line',
+      'Darken the room; set up ray box to produce a narrow ray',
+      'Direct the ray at the point where normal meets the block',
+      'Mark the incident ray path with ×',
+      'Mark the reflected ray path with ×',
+      'Mark the transmitted/refracted ray path with two × (one near block, one further)',
+      'Remove block; draw incident, reflected and refracted rays',
+      'Measure angle of incidence (i) and angle of reflection (r) from normal',
+      'Measure angle of refraction within/exiting block',
+      'Repeat for 3 different angles of incidence',
+      'Compare i and r for reflection; compare i and refraction angle'
+    ],
+    resultsTable: {
+      headers: ['Angle of incidence i (°)', 'Angle of reflection r (°)', 'Angle of refraction (°)', 'sin(i)', 'sin(refraction)', 'n = sin(i)/sin(r)'],
+      sampleData: [[20,20,13,0.34,0.22,1.52],[30,30,19,0.50,0.33,1.52],[40,40,25,0.64,0.42,1.52],[50,50,31,0.77,0.51,1.51],[60,60,35,0.87,0.57,1.52]]
+    },
+    analysis: "Reflection: angle of incidence = angle of reflection (always). Refraction: when entering denser medium (glass), ray bends TOWARD normal (r < i). Plot sin(i) vs sin(refraction angle)  -  gradient = refractive index n ≈ 1.5 for glass. Snell's law: n = sin(i)/sin(r).",
+    errors: [
+      'Wide ray from ray box → difficult to mark path precisely; use single slit collimator',
+      'Block moves during experiment → draw around block before starting',
+      'Parallax when marking ray → hold pencil vertical',
+      'Faint reflected ray → darken room completely',
+      'Protractor reading error → measure to nearest degree; repeat and average'
+    ],
+    hazards: [
+      { hazard: 'Ray box gets very hot', risk: 'Burns', precaution: 'Switch off when not in use; do not touch bulb; allow to cool' },
+      { hazard: 'Reduced lighting', risk: 'Trip/fall hazard', precaution: 'Clear area of obstacles before darkening room; supervisor must be able to see students' },
+      { hazard: 'Laser (if used)', risk: 'Eye damage', precaution: 'Only use class 2 laser; never point at eyes; follow CLEAPSS PS52' }
+    ],
+    sim: { type: 'light', defaultAngle: 40 }
+  },
+
+  spring: {
+    id: 'spring',
+    number: 'RP7',
+    title: "Force and Extension (Hooke's Law)",
+    topicId: 'hookes_law',
+    aim: "To investigate the relationship between force applied to a spring and its extension, and to verify Hooke's Law.",
+    specRef: '4.5.3',
+    equipment: ['Spring (capable of extending >1cm per Newton)','Metre ruler','Clamp stand × 2 with bosses and clamps','Weight stack (10N in 1N steps)','Pointer (splint + tape)','G-clamp','Unknown object to weigh'],
+    variables: {
+      independent: 'Force / weight applied (N)',
+      dependent: 'Extension of spring (cm)',
+      control: ['Spring used (same spring throughout)','Room temperature','Original length of spring']
+    },
+    method: [
+      'Set up clamp stand near edge of bench; secure with G-clamp',
+      'Hang spring from top clamp; attach metre ruler to lower clamp (zero at top)',
+      'Attach pointer (splint) to bottom of spring  -  reads against ruler',
+      'Record natural (unstretched) length of spring',
+      'Add 1N weight and record new length; calculate extension = new length − original length',
+      'Add another 1N; record length and extension',
+      'Continue up to 10N (or until spring deforms permanently)',
+      'Note the point where the graph stops being linear (elastic limit)',
+      'Plot extension (y) vs force (x)  -  straight line through origin up to elastic limit',
+      'Use graph to find the weight of the unknown object'
+    ],
+    resultsTable: {
+      headers: ['Force F (N)', 'Length (cm)', 'Extension e (cm)', 'F/e (N/cm) = k'],
+      sampleData: [[0,10.0,0,'-'],[1,11.8,1.8,0.56],[2,13.6,3.6,0.56],[3,15.4,5.4,0.56],[4,17.2,7.2,0.56],[5,19.0,9.0,0.56],[6,20.8,10.8,0.56],[7,22.6,12.6,0.56],[8,25.0,15.0,0.53],[9,27.8,17.8,0.51],[10,31.2,21.2,0.47]]
+    },
+    analysis: "Plot extension (y) vs force (x). Straight line through origin confirms Hooke's Law: F = ke. Gradient = 1/k (spring constant k = 1/gradient in N/cm). Beyond elastic limit, line curves upward (spring permanently deformed). To find unknown weight: read extension off ruler and use graph or F = ke.",
+    errors: [
+      'Spring oscillates when weight added → wait for spring to stop moving before reading',
+      'Parallax error reading ruler → read pointer at eye level',
+      'Spring not vertical → ensure setup is plumb; ruler aligned with spring',
+      'Spring exceeds elastic limit → only use values from linear region',
+      'Pointer slips on spring → secure firmly with tape at start'
+    ],
+    hazards: [
+      { hazard: 'Falling weights', risk: 'Crush/injury to feet', precaution: 'Stand to side; place padding under spring; wear closed shoes' },
+      { hazard: 'Clamp stand tipping', risk: 'Equipment falls', precaution: 'Use G-clamp to secure stand to bench; place near edge' },
+      { hazard: 'Spring snapping', risk: 'Eye injury', precaution: 'Do not overload spring; wear safety goggles if near elastic limit' }
+    ],
+    sim: { type: 'spring', k: 5.5, maxForce: 10, elasticLimit: 7 }
+  },
+
+  acceleration: {
+    id: 'acceleration',
+    number: 'RP8',
+    title: "Newton's 2nd Law (Acceleration)",
+    topicId: 'newtons_laws',
+    aim: 'To investigate the effect of varying force on the acceleration of a constant mass, and the effect of varying mass at constant force.',
+    specRef: '4.5.6.2.2',
+    equipment: ['Linear air track and gliders','Vacuum cleaner (blow)','Bench pulley + string','Weight stack (1N in 0.2N steps)','Card (5×10cm)','2× light gates + interface + computer','2× clamp stands','Blu-Tack','Metre ruler'],
+    variables: {
+      independent: 'Force (N) [or mass (kg) for second part]',
+      dependent: 'Acceleration (m/s²)',
+      control: ['Total mass of system (add unused weights to glider)','Air track level','Card length (10cm)']
+    },
+    method: [
+      'Set up air track; level by adjusting legs until stationary glider does not drift',
+      'Attach 10cm card to glider horizontally',
+      'Set up two light gates connected to computer; input card length 10cm',
+      'Attach pulley at far end; thread string from glider over pulley to weight stack',
+      'Ensure total mass of system = glider + all weights (move "unused" weights onto glider)',
+      'Switch on vacuum cleaner; release glider; record acceleration from computer',
+      'Repeat 3 times; calculate mean acceleration',
+      'Transfer one weight (0.2N) from stack to glider; repeat for 0.8N, 0.6N, 0.4N, 0.2N',
+      'For Part 2 (mass): keep force constant at 0.5N; add mass to glider',
+      'Plot acceleration vs force (straight line through origin expected)',
+      'Plot acceleration vs 1/mass (straight line through origin expected)'
+    ],
+    resultsTable: {
+      headers: ['Force F (N)', 'Run 1 a (m/s²)', 'Run 2 a (m/s²)', 'Run 3 a (m/s²)', 'Mean a (m/s²)', 'F/a = mass (kg)'],
+      sampleData: [[0.2,0.20,0.21,0.19,0.20,1.0],[0.4,0.40,0.41,0.38,0.40,1.0],[0.6,0.60,0.59,0.61,0.60,1.0],[0.8,0.81,0.79,0.80,0.80,1.0],[1.0,1.01,0.99,1.00,1.00,1.0]]
+    },
+    analysis: 'Plot a (y) vs F (x)  -  straight line through origin confirms F = ma. Gradient = 1/mass. Plot a (y) vs 1/m (x)  -  straight line confirms a ∝ 1/m at constant force. Calculate F/a for each row  -  should give same constant value (= total mass of system).',
+    errors: [
+      'Air track not level → glider accelerates without force; level carefully',
+      'Friction (if track damaged) → use air track; reduce any kinks in string',
+      'Weight hits ground before passing second gate → adjust gate position',
+      'Total system mass not kept constant → always move "unused" weights to glider',
+      'Card tilted → ensure card is horizontal on glider'
+    ],
+    hazards: [
+      { hazard: 'Glider hitting end of track at speed', risk: 'Equipment damage / injury', precaution: 'Do not use large weights; keep hands clear of track' },
+      { hazard: 'Vacuum cleaner cable', risk: 'Trip hazard', precaution: 'Secure cable away from walkways' },
+      { hazard: 'Falling weight stack', risk: 'Crush injury', precaution: 'Keep feet away from below the pulley' }
+    ],
+    sim: { type: 'acceleration', mass: 1.0, maxForce: 1.0 }
+  },
+
+  waves: {
+    id: 'waves',
+    number: 'RP9',
+    title: 'Waves (Ripple Tank & String)',
+    topicId: 'wave_properties',
+    aim: 'To measure the frequency, wavelength, and speed of waves in a ripple tank and on a stretched string.',
+    specRef: '4.6.1.2',
+    equipment: ['Ripple tank + accessories (wooden rod, motor, lamp)','Low voltage power supply','Metre ruler','White card (for floor)','Vibration generator','Variable frequency power supply','String or elasticated cord','Set of 100g masses + hanger','Wooden bridge','Pulley on clamp'],
+    variables: {
+      independent: 'Frequency of vibration (Hz)',
+      dependent: 'Wavelength (m) and wave speed (m/s)',
+      control: ['Depth of water in ripple tank (5mm)','Tension in string','Length of string between bridge and end']
+    },
+    method: [
+      'Part 1 – Ripple Tank:',
+      'Set up ripple tank; fill to 5mm depth',
+      'Place white card on floor below tank',
+      'Set wooden rod to just touch water surface; switch on motor',
+      'Adjust lamp height for clear wave pattern on card',
+      'Measure wavelength: ruler at right angles to waves; measure across 5 waves; divide by 5',
+      'Measure frequency: count waves passing a point in 10 seconds; divide by 10',
+      'Calculate wave speed: v = f × λ',
+      'Part 2 – String:',
+      'Set up vibration generator with string over pulley to hanging masses',
+      'Switch on at low frequency; adjust frequency or tension until standing wave forms',
+      'Count loops; measure total length; calculate λ = 2L/n (n = number of loops)',
+      'Read frequency from power supply display',
+      'Calculate wave speed: v = f × λ'
+    ],
+    resultsTable: {
+      headers: ['Measurement', 'Trial 1', 'Trial 2', 'Trial 3', 'Mean'],
+      sampleData: [['Wavelength λ (m)','0.035','0.036','0.034','0.035'],['Frequency f (Hz)','8','8','8','8'],['Wave speed v=fλ (m/s)','0.28','0.29','0.27','0.28']]
+    },
+    analysis: 'Wave speed v = f × λ. In ripple tank, measuring across more waves gives a more accurate wavelength. In string: λ = 2L/n where L is length between supports and n is number of loops. Wave speed depends on the medium, not frequency.',
+    errors: [
+      'Stroboscopic effect → never use a stroboscope (can trigger epileptic fits)',
+      'Wavelength difficult to measure accurately → measure across as many waves as possible',
+      'Standing wave not stable → adjust tension (hanging mass) and/or frequency carefully',
+      'Water ripples not clear → adjust lamp height; darken room',
+      'Counting frequency by eye → use lower frequency setting; count over longer time'
+    ],
+    hazards: [
+      { hazard: 'Water spillage', risk: 'Slip / electrical hazard', precaution: 'Mop up spills immediately; power supplies on bench, not floor' },
+      { hazard: 'Stroboscope (if suggested)', risk: 'Epileptic fit (7-15Hz)', precaution: 'Do NOT use stroboscope; count waves manually' },
+      { hazard: 'Vibrating string', risk: 'Eye injury', precaution: 'Wear goggles; sit behind safety screen if close to string' }
+    ],
+    sim: { type: 'waves', defaultFreq: 5, defaultDepth: 5 }
+  },
+
+  radiation: {
+    id: 'radiation',
+    number: 'RP10',
+    title: 'Radiation and Absorption',
+    topicId: 'black_body',
+    aim: 'To investigate how the amount of infrared radiation emitted (and absorbed) by a surface depends on the nature of that surface.',
+    specRef: '4.6.2.2',
+    equipment: ['Leslie cube (metal cube with different surfaces)','Kettle / boiling water','Infrared detector (or thermometer with blackened bulb)','Heatproof mat','Ruler (to measure equal distances)','Stopwatch'],
+    variables: {
+      independent: 'Type of surface (matt black, matt white, shiny silver)',
+      dependent: 'Infrared radiation detected / temperature reading',
+      control: ['Distance from cube to detector (equal for each face)','Temperature of water in cube','Same detector used throughout']
+    },
+    method: [
+      'Place Leslie cube on heatproof mat',
+      'Fill with near-boiling water from kettle',
+      'Place infrared detector at a fixed distance (e.g. 10cm) from each face',
+      'Record detector reading for: matt black face, matt white face, shiny silver face',
+      'Repeat and take mean readings',
+      'For absorption: place two metal sheets equidistant from IR source',
+      'One sheet has black paint facing source, other is shiny silver',
+      'Attach a small coin with candle wax to the back of each sheet',
+      'Switch on IR source; observe which coin falls first (better absorber loses wax faster)',
+      'Record and compare results for each surface'
+    ],
+    resultsTable: {
+      headers: ['Surface', 'Reading 1', 'Reading 2', 'Reading 3', 'Mean', 'Relative emission'],
+      sampleData: [['Matt black','87','88','86','87','Highest'],['Matt white','72','71','73','72','High'],['Shiny silver','41','40','42','41','Lowest']]
+    },
+    analysis: 'Matt black surfaces are the best emitters AND best absorbers of infrared radiation. Shiny silver surfaces are the worst emitters and poorest absorbers (best reflectors). Matt white is intermediate. This explains why: radiators are painted white (some emission), teapots are silver (keeps heat in), solar panels are black (maximum absorption).',
+    errors: [
+      'Distance to detector not equal for all faces → measure carefully with ruler each time',
+      'Water cools during experiment → do all readings quickly; refill with hot water if needed',
+      'Detector drifts over time → re-zero between readings',
+      'Background radiation → measure background first and subtract'
+    ],
+    hazards: [
+      { hazard: 'Near-boiling water (100°C)', risk: 'Scalds', precaution: 'Pour carefully; use tongs; fill the cube before placing on bench' },
+      { hazard: 'Hot surfaces of Leslie cube', risk: 'Burns', precaution: 'Do not touch surfaces; use heatproof mat' },
+      { hazard: 'Infrared source (for absorption part)', risk: 'Burns', precaution: 'Keep hands away from source; switch off after use' }
+    ],
+    sim: { type: 'radiation', surfaces: ['matt_black','matt_white','shiny_silver'] }
+  }
+}
+
+export const PRACTICAL_LIST = Object.values(PRACTICALS)

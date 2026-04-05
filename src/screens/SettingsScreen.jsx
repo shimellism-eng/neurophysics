@@ -1,0 +1,338 @@
+import { motion } from 'motion/react'
+import { useState, useEffect } from 'react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Atom } from 'lucide-react'
+import { secureGet, secureSet } from '../utils/secureStorage'
+
+// ─── Persistence ──────────────────────────────────────────────────────────────
+const PREFS_KEY = 'neurophysics_prefs'
+
+function loadPrefs() {
+  try { return JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') } catch { return {} }
+}
+
+function savePrefs(prefs) {
+  localStorage.setItem(PREFS_KEY, JSON.stringify(prefs))
+}
+
+// ─── Effect appliers ─────────────────────────────────────────────────────────
+const RM_STYLE_ID = 'np-reduce-motion'
+
+function applyReduceMotion(on) {
+  let el = document.getElementById(RM_STYLE_ID)
+  if (on) {
+    if (!el) {
+      el = document.createElement('style')
+      el.id = RM_STYLE_ID
+      el.textContent = [
+        '* {',
+        '  transition-duration: 0.01ms !important;',
+        '  transition-delay: 0ms !important;',
+        '  animation-duration: 0.01ms !important;',
+        '  animation-iteration-count: 1 !important;',
+        '}',
+      ].join('\n')
+      document.head.appendChild(el)
+    }
+  } else {
+    el?.remove()
+  }
+}
+
+function applyHighContrast(on) {
+  document.documentElement.style.filter = on ? 'contrast(1.2) brightness(1.06)' : ''
+}
+
+async function requestNotifications() {
+  if (!('Notification' in window)) return 'unsupported'
+  if (Notification.permission === 'granted') return 'granted'
+  const result = await Notification.requestPermission()
+  return result
+}
+
+function fireTestNotification() {
+  if (Notification.permission === 'granted') {
+    new Notification('NeuroPhysics 🔬', {
+      body: "Don't forget to study today  -  keep your streak going! 🔥",
+      icon: '/vite.svg',
+    })
+  }
+}
+
+// ─── Toggle component ─────────────────────────────────────────────────────────
+function Toggle({ on, onToggle, disabled = false }) {
+  return (
+    <motion.button
+      onClick={disabled ? undefined : onToggle}
+      className="w-12 h-6 rounded-full relative shrink-0 outline-none"
+      style={{
+        background: on ? '#6366f1' : '#1d293d',
+        border: `1px solid ${on ? '#6366f1' : '#2d3e55'}`,
+        opacity: disabled ? 0.4 : 1,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+      }}
+      whileTap={disabled ? {} : { scale: 0.93 }}
+      transition={{ duration: 0.15 }}
+    >
+      <motion.div
+        className="absolute top-0.5 w-5 h-5 rounded-full"
+        style={{ background: '#fff', boxShadow: '0 1px 4px rgba(0,0,0,0.35)' }}
+        animate={{ x: on ? 26 : 2 }}
+        transition={{ type: 'spring', stiffness: 600, damping: 38 }}
+      />
+    </motion.button>
+  )
+}
+
+// ─── Main screen ──────────────────────────────────────────────────────────────
+export default function SettingsScreen() {
+  const [apiKey, setApiKey] = useState('')
+
+  // Load API key from secure storage on mount
+  useEffect(() => {
+    secureGet('mamo_api_key').then(v => { if (v) setApiKey(v) })
+  }, [])
+  const [saved, setSaved] = useState(false)
+  const [toast, setToast] = useState(null)
+
+  // All toggles live in one prefs object
+  const [prefs, setPrefs] = useState(() => loadPrefs())
+
+  // Apply effects on mount (restore saved settings on page load)
+  useEffect(() => {
+    applyReduceMotion(!!prefs.reduceMotion)
+    applyHighContrast(!!prefs.highContrast)
+  }, []) // eslint-disable-line
+
+  const showToast = (msg, color = '#6366f1') => {
+    setToast({ msg, color })
+    setTimeout(() => setToast(null), 2800)
+  }
+
+  const setPref = (key, value) => {
+    const next = { ...prefs, [key]: value }
+    setPrefs(next)
+    savePrefs(next)
+  }
+
+  // ── Reduce Motion
+  const toggleReduceMotion = () => {
+    const next = !prefs.reduceMotion
+    applyReduceMotion(next)
+    setPref('reduceMotion', next)
+    showToast(next ? 'Reduce Motion on  -  animations minimised' : 'Reduce Motion off', next ? '#10b981' : '#90a1b9')
+  }
+
+  // ── High Contrast
+  const toggleHighContrast = () => {
+    const next = !prefs.highContrast
+    applyHighContrast(next)
+    setPref('highContrast', next)
+    showToast(next ? 'High Contrast on' : 'High Contrast off', next ? '#10b981' : '#90a1b9')
+  }
+
+  // ── Daily Reminders
+  const toggleReminders = async () => {
+    const next = !prefs.reminders
+    if (next) {
+      const result = await requestNotifications()
+      if (result === 'granted') {
+        setPref('reminders', true)
+        fireTestNotification()
+        showToast('Reminders on  -  test notification sent ✓', '#10b981')
+      } else if (result === 'denied') {
+        showToast('Notifications blocked  -  enable in browser settings', '#ef4444')
+      } else if (result === 'unsupported') {
+        showToast('Notifications not supported in this browser', '#f59e0b')
+      }
+    } else {
+      setPref('reminders', false)
+      showToast('Daily reminders off', '#90a1b9')
+    }
+  }
+
+  const handleSaveKey = () => {
+    secureSet('mamo_api_key', apiKey)
+    setSaved(true)
+    showToast('API key saved ✓', '#10b981')
+    setTimeout(() => setSaved(false), 2000)
+  }
+
+  const sections = [
+    {
+      title: 'Accessibility',
+      items: [
+        {
+          icon: Accessibility,
+          label: 'Reduce Motion',
+          hint: 'Fewer animations across the app',
+          on: !!prefs.reduceMotion,
+          onToggle: toggleReduceMotion,
+        },
+        {
+          icon: Sun,
+          label: 'High Contrast',
+          hint: 'Stronger colour contrast',
+          on: !!prefs.highContrast,
+          onToggle: toggleHighContrast,
+        },
+      ],
+    },
+    {
+      title: 'Notifications',
+      items: [
+        {
+          icon: Bell,
+          label: 'Daily Reminders',
+          hint: 'Study streak notifications',
+          on: !!prefs.reminders,
+          onToggle: toggleReminders,
+        },
+      ],
+    },
+    {
+      title: 'About',
+      items: [
+        {
+          icon: Info,
+          label: 'NeuroPhysics v1.0',
+          hint: 'GCSE Physics for neurodivergent learners',
+          chevron: true,
+        },
+      ],
+    },
+  ]
+
+  return (
+    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#0b1121' }}>
+      <div className="px-5 pt-6 pb-4">
+        <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>Settings</h1>
+        <p className="text-sm mt-1" style={{ color: '#90a1b9' }}>Customise your experience</p>
+      </div>
+
+      {/* Profile card */}
+      <div className="px-5 mb-6">
+        <motion.div
+          className="rounded-[24px] p-5 flex items-center gap-4"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div
+            className="w-16 h-16 rounded-[20px] flex items-center justify-center text-3xl"
+            style={{ background: 'linear-gradient(135deg, #155dfc20, #c084fc20)', border: '1px solid #155dfc40' }}
+          >
+            🧠
+          </div>
+          <div>
+            <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Physics Learner</div>
+            <div className="text-sm" style={{ color: '#90a1b9' }}>GCSE Student</div>
+            <div className="flex items-center gap-1 mt-1">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
+              <span className="text-xs" style={{ color: '#00bc7d' }}>Active learner</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Mamo API key */}
+      <div className="px-5 mb-6">
+        <motion.div
+          className="rounded-[16px] p-4"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid rgba(99,102,241,0.3)' }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <Atom size={16} color="#6366f1" />
+            <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Mamo AI Key</div>
+          </div>
+          <p className="text-xs mb-3" style={{ color: '#90a1b9' }}>
+            Your Anthropic API key powers Mamo. Stored locally on your device only.
+          </p>
+          <div className="flex gap-2">
+            <input
+              type="password"
+              placeholder="sk-ant-..."
+              value={apiKey}
+              onChange={e => setApiKey(e.target.value)}
+              className="flex-1 px-3 py-2.5 rounded-[10px] text-sm font-mono outline-none"
+              style={{ background: '#1d293d', color: '#f8fafc', border: '0.75px solid #2d3e55' }}
+            />
+            <button
+              className="px-4 py-2.5 rounded-[10px] text-xs font-bold"
+              style={{
+                background: saved ? 'rgba(0,188,125,0.2)' : '#6366f1',
+                color: saved ? '#00bc7d' : '#fff',
+                border: saved ? '1px solid #00bc7d40' : 'none',
+                transition: 'all 0.2s',
+              }}
+              onClick={handleSaveKey}
+            >
+              {saved ? 'Saved ✓' : 'Save'}
+            </button>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Sections */}
+      <div className="px-5 pb-8 space-y-5">
+        {sections.map((section, si) => (
+          <motion.div
+            key={section.title}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 + si * 0.08 }}
+          >
+            <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+              {section.title}
+            </div>
+            <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
+              {section.items.map((item, ii) => (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-3 px-4 py-4"
+                  style={{
+                    background: 'rgba(18,26,47,0.9)',
+                    borderBottom: ii < section.items.length - 1 ? '0.75px solid #1d293d' : 'none',
+                  }}
+                >
+                  <item.icon size={18} color={item.on ? '#6366f1' : '#90a1b9'} />
+                  <div className="flex-1">
+                    <div className="text-sm font-medium" style={{ color: item.on ? '#f8fafc' : '#f8fafc' }}>
+                      {item.label}
+                    </div>
+                    <div className="text-xs" style={{ color: '#90a1b9' }}>{item.hint}</div>
+                  </div>
+                  {item.chevron
+                    ? <ChevronRight size={14} color="#90a1b9" />
+                    : <Toggle on={!!item.on} onToggle={item.onToggle} />
+                  }
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Toast */}
+      {toast && (
+        <motion.div
+          className="fixed bottom-24 left-4 right-4 py-3 px-4 rounded-[14px] text-sm font-medium text-center"
+          style={{
+            background: 'rgba(18,26,47,0.97)',
+            border: `0.75px solid ${toast.color}60`,
+            color: toast.color,
+            boxShadow: '0 4px 24px rgba(0,0,0,0.4)',
+            zIndex: 50,
+          }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 16 }}
+        >
+          {toast.msg}
+        </motion.div>
+      )}
+    </div>
+  )
+}

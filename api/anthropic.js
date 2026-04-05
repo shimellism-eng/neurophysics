@@ -48,9 +48,17 @@ export default async function handler(req, res) {
   // ── API key — prefer server-side env var; fall back to client header ───────
   // Set ANTHROPIC_API_KEY in your Vercel project environment variables.
   // If set, the key is NEVER exposed to clients or network traffic.
-  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers['x-api-key']
+  const rawKey = process.env.ANTHROPIC_API_KEY || req.headers['x-api-key'] || ''
+  const apiKey = rawKey.trim()
+
+  // Debug: log key status (never logs the actual key)
+  console.log('[anthropic] key source:', process.env.ANTHROPIC_API_KEY ? 'env' : 'header', '| present:', !!apiKey, '| starts correctly:', apiKey.startsWith('sk-ant-'))
+
   if (!apiKey) {
-    return res.status(401).json({ error: 'No API key configured. Set ANTHROPIC_API_KEY in Vercel env vars, or provide x-api-key header.' })
+    return res.status(401).json({ error: 'No API key configured. Set ANTHROPIC_API_KEY in Vercel env vars.' })
+  }
+  if (!apiKey.startsWith('sk-ant-')) {
+    return res.status(401).json({ error: 'Invalid API key format — must start with sk-ant-' })
   }
 
   // ── Body validation ───────────────────────────────────────────────────────

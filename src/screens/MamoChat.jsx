@@ -133,6 +133,7 @@ export default function MamoChat() {
           className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           onClick={() => navigate(-1)}
+          aria-label="Go back"
         >
           <ChevronDown size={18} color="#90a1b9" />
         </button>
@@ -153,6 +154,19 @@ export default function MamoChat() {
         >
           <Key size={15} color={apiKey ? '#00bc7d' : '#90a1b9'} />
         </button>
+      </div>
+
+      {/* AI disclosure banner — required by App Store guideline 2.5.18 */}
+      <div
+        className="px-4 py-2 shrink-0 flex items-center gap-2"
+        style={{ background: 'rgba(99,102,241,0.07)', borderBottom: '0.75px solid rgba(99,102,241,0.15)' }}
+        role="note"
+        aria-label="AI-generated content disclosure"
+      >
+        <Sparkles size={11} color="#818cf8" />
+        <span className="text-xs" style={{ color: '#818cf8' }}>
+          Mamo's responses are <strong>AI-generated</strong> by Claude (Anthropic). Always verify with your teacher.
+        </span>
       </div>
 
       {/* API key input (collapsible) */}

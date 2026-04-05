@@ -14,6 +14,8 @@ import MamoChat from './screens/MamoChat'
 import PracticalScreen from './screens/PracticalScreen'
 import SplashScreen from './screens/SplashScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
+import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen'
+import TermsScreen from './screens/TermsScreen'
 
 function FloatingMamo() {
   const location = useLocation()
@@ -98,7 +100,7 @@ function FloatingMamo() {
 
 // Routes that show the bottom nav + floating Mamo
 const SHELL_ROUTES = ['/', '/topics', '/mastery', '/settings']
-const ONBOARDING_ROUTES = ['/splash', '/onboarding']
+const ONBOARDING_ROUTES = ['/splash', '/onboarding', '/privacy', '/terms']
 
 function AppShell() {
   const location = useLocation()
@@ -138,6 +140,8 @@ function AppShell() {
           <Route path="/mamo" element={<MamoChat />} />
           <Route path="/practical/:id" element={<PracticalScreen />} />
           <Route path="/settings" element={<SettingsScreen />} />
+          <Route path="/privacy" element={<PrivacyPolicyScreen />} />
+          <Route path="/terms" element={<TermsScreen />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

@@ -1,7 +1,8 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Atom } from 'lucide-react'
-import { secureGet, secureSet } from '../utils/secureStorage'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
 
 // ─── Persistence ──────────────────────────────────────────────────────────────
 const PREFS_KEY = 'neurophysics_prefs'
@@ -85,7 +86,9 @@ function Toggle({ on, onToggle, disabled = false }) {
 
 // ─── Main screen ──────────────────────────────────────────────────────────────
 export default function SettingsScreen() {
+  const navigate = useNavigate()
   const [apiKey, setApiKey] = useState('')
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
 
   // Load API key from secure storage on mount
   useEffect(() => {
@@ -157,6 +160,16 @@ export default function SettingsScreen() {
     setTimeout(() => setSaved(false), 2000)
   }
 
+  const handleDeleteData = async () => {
+    localStorage.removeItem('neurophysics_prefs')
+    localStorage.removeItem('neurophysics_onboarded')
+    localStorage.removeItem('np_progress')
+    localStorage.removeItem('np_stats')
+    await secureRemove('mamo_api_key')
+    showToast('All data deleted ✓', '#10b981')
+    setTimeout(() => navigate('/splash', { replace: true }), 1500)
+  }
+
   const sections = [
     {
       title: 'Accessibility',
@@ -186,6 +199,25 @@ export default function SettingsScreen() {
           hint: 'Study streak notifications',
           on: !!prefs.reminders,
           onToggle: toggleReminders,
+        },
+      ],
+    },
+    {
+      title: 'Legal',
+      items: [
+        {
+          icon: Shield,
+          label: 'Privacy Policy',
+          hint: 'How we handle your data',
+          chevron: true,
+          onPress: () => navigate('/privacy'),
+        },
+        {
+          icon: FileText,
+          label: 'Terms of Service',
+          hint: 'App usage terms',
+          chevron: true,
+          onPress: () => navigate('/terms'),
         },
       ],
     },
@@ -289,30 +321,81 @@ export default function SettingsScreen() {
             </div>
             <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
               {section.items.map((item, ii) => (
-                <div
+                <button
                   key={item.label}
-                  className="flex items-center gap-3 px-4 py-4"
+                  className="w-full flex items-center gap-3 px-4 py-4 text-left"
                   style={{
                     background: 'rgba(18,26,47,0.9)',
                     borderBottom: ii < section.items.length - 1 ? '0.75px solid #1d293d' : 'none',
                   }}
+                  onClick={item.onPress || undefined}
+                  aria-label={item.label}
+                  disabled={!item.onPress && !item.onToggle && !item.chevron}
                 >
                   <item.icon size={18} color={item.on ? '#6366f1' : '#90a1b9'} />
                   <div className="flex-1">
-                    <div className="text-sm font-medium" style={{ color: item.on ? '#f8fafc' : '#f8fafc' }}>
+                    <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>
                       {item.label}
                     </div>
                     <div className="text-xs" style={{ color: '#90a1b9' }}>{item.hint}</div>
                   </div>
                   {item.chevron
                     ? <ChevronRight size={14} color="#90a1b9" />
-                    : <Toggle on={!!item.on} onToggle={item.onToggle} />
+                    : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} />
+                    : null
                   }
-                </div>
+                </button>
               ))}
             </div>
           </motion.div>
         ))}
+
+        {/* Delete all data */}
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+            Data
+          </div>
+          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid rgba(239,68,68,0.25)' }}>
+            {!showDeleteConfirm ? (
+              <button
+                className="w-full flex items-center gap-3 px-4 py-4 text-left"
+                style={{ background: 'rgba(18,26,47,0.9)' }}
+                onClick={() => setShowDeleteConfirm(true)}
+                aria-label="Clear all my data"
+              >
+                <Trash2 size={18} color="#ef4444" />
+                <div className="flex-1">
+                  <div className="text-sm font-medium" style={{ color: '#ef4444' }}>Clear All My Data</div>
+                  <div className="text-xs" style={{ color: '#90a1b9' }}>Deletes progress, preferences and resets the app</div>
+                </div>
+                <ChevronRight size={14} color="#ef444480" />
+              </button>
+            ) : (
+              <div className="px-4 py-4" style={{ background: 'rgba(239,68,68,0.07)' }}>
+                <p className="text-sm font-semibold mb-1" style={{ color: '#ef4444' }}>Are you sure?</p>
+                <p className="text-xs mb-3" style={{ color: '#90a1b9' }}>This will permanently delete all your progress, preferences and API key. This cannot be undone.</p>
+                <div className="flex gap-2">
+                  <button
+                    className="flex-1 py-2.5 rounded-[10px] text-xs font-bold"
+                    style={{ background: '#ef4444', color: '#fff' }}
+                    onClick={handleDeleteData}
+                    aria-label="Confirm delete all data"
+                  >
+                    Yes, delete everything
+                  </button>
+                  <button
+                    className="flex-1 py-2.5 rounded-[10px] text-xs font-semibold"
+                    style={{ background: 'rgba(255,255,255,0.07)', color: '#90a1b9', border: '0.75px solid #1d293d' }}
+                    onClick={() => setShowDeleteConfirm(false)}
+                    aria-label="Cancel data deletion"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </motion.div>
       </div>
 
       {/* Toast */}

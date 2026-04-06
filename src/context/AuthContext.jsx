@@ -14,19 +14,38 @@ export function AuthProvider({ children }) {
       return
     }
 
-    // If ?code= is in the URL, Supabase is mid-PKCE exchange.
-    // Keep loading=true so the auth guard doesn't redirect to /auth
-    // and break the exchange. onAuthStateChange will clear it.
-    const hasOAuthCode = new URLSearchParams(window.location.search).has('code')
+    // PKCE flow: if ?code= is in the URL after OAuth redirect,
+    // explicitly exchange it for a session before doing anything else.
+    const params = new URLSearchParams(window.location.search)
+    const code = params.get('code')
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null)
-      if (!hasOAuthCode) setLoading(false)
-    }).catch(() => setLoading(false))
+    const init = async () => {
+      try {
+        if (code) {
+          // Exchange the PKCE code for a session
+          const { data, error } = await supabase.auth.exchangeCodeForSession(code)
+          if (!error && data?.session) {
+            setUser(data.session.user)
+            // Clean the ?code= from the URL so it's not reused
+            window.history.replaceState({}, '', window.location.pathname + window.location.hash)
+          }
+          setLoading(false)
+          return
+        }
+
+        const { data: { session } } = await supabase.auth.getSession()
+        setUser(session?.user ?? null)
+      } catch (e) {
+        console.error('Auth init error:', e)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    init()
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null)
-      setLoading(false)
     })
 
     return () => subscription.unsubscribe()

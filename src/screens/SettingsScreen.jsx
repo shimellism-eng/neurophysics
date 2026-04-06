@@ -81,7 +81,7 @@ function fireTestNotification() {
 function Toggle({ on, onToggle, disabled = false }) {
   return (
     <motion.button
-      onClick={disabled ? undefined : onToggle}
+      onClick={disabled ? undefined : (e) => { e.stopPropagation(); onToggle() }}
       className="w-12 h-6 rounded-full relative shrink-0 outline-none"
       style={{
         background: on ? '#6366f1' : '#1d293d',
@@ -107,15 +107,22 @@ export default function SettingsScreen() {
   const navigate = useNavigate()
   const { user, signOut } = useAuth()
 
+  const [signingOut, setSigningOut] = useState(false)
+
   const handleSignOut = async () => {
-    localStorage.removeItem('neurophysics_prefs')
-    localStorage.removeItem('neurophysics_onboarded')
-    localStorage.removeItem('neurophysics_profile')
-    localStorage.removeItem('np_progress')
-    localStorage.removeItem('np_stats')
-    await secureRemove('mamo_api_key')
-    await signOut()
-    navigate('/auth', { replace: true })
+    setSigningOut(true)
+    try {
+      // Only clear session-specific data — keep progress/stats/onboarding so
+      // the user doesn't lose their work or have to redo onboarding on re-login
+      localStorage.removeItem('neurophysics_profile')
+      await secureRemove('mamo_api_key')
+      await signOut()
+    } catch (e) {
+      console.error('Sign out error:', e)
+    } finally {
+      setSigningOut(false)
+      navigate('/auth', { replace: true })
+    }
   }
   const [apiKey, setApiKey] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
@@ -484,8 +491,9 @@ export default function SettingsScreen() {
                     background: 'rgba(18,26,47,0.9)',
                     borderBottom: ii < section.items.length - 1 ? '0.75px solid #1d293d' : 'none',
                   }}
-                  onClick={item.onPress || undefined}
+                  onClick={item.onPress || item.onToggle || undefined}
                   aria-label={item.label}
+                  aria-pressed={item.onToggle ? !!item.on : undefined}
                   disabled={!item.onPress && !item.onToggle && !item.chevron}
                 >
                   <item.icon size={18} color={item.on ? '#6366f1' : '#a8b8cc'} />
@@ -518,13 +526,25 @@ export default function SettingsScreen() {
             </div>
             <button
               className="w-full flex items-center gap-3 px-4 py-4 text-left"
-              style={{ background: 'rgba(18,26,47,0.9)' }}
-              onClick={handleSignOut}
+              style={{ background: 'rgba(18,26,47,0.9)', opacity: signingOut ? 0.6 : 1, transition: 'opacity 0.15s' }}
+              onClick={signingOut ? undefined : handleSignOut}
+              disabled={signingOut}
               aria-label="Sign out"
             >
-              <LogOut size={18} color="#a8b8cc" />
+              {signingOut ? (
+                <motion.div
+                  className="w-[18px] h-[18px] rounded-full border-2 shrink-0"
+                  style={{ borderColor: 'rgba(168,184,204,0.3)', borderTopColor: '#a8b8cc' }}
+                  animate={{ rotate: 360 }}
+                  transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
+                />
+              ) : (
+                <LogOut size={18} color="#a8b8cc" />
+              )}
               <div className="flex-1">
-                <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>Sign Out</div>
+                <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>
+                  {signingOut ? 'Signing out…' : 'Sign Out'}
+                </div>
                 <div className="text-xs" style={{ color: '#a8b8cc' }}>Your progress is saved locally</div>
               </div>
             </button>

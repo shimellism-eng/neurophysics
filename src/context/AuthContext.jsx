@@ -110,8 +110,12 @@ export function AuthProvider({ children }) {
   }
 
   const signOut = async () => {
-    if (!supabase) return
-    await supabase.auth.signOut()
+    // Clear user state immediately so AppShell redirects correctly
+    // before the async Supabase call completes
+    setUser(null)
+    if (supabase) {
+      await supabase.auth.signOut().catch(console.error)
+    }
   }
 
   const signInWithOAuth = async (provider) => {

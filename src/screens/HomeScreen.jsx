@@ -4,6 +4,7 @@ import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkl
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
+import { useAuth } from '../context/AuthContext'
 
 function getGreeting() {
   const h = new Date().getHours()
@@ -24,9 +25,17 @@ export default function HomeScreen() {
   const navigate = useNavigate()
   const { progress, stats } = useProgress()
   const { weakTopics, suggestions, overallAccuracy, hasData } = useInsights()
+  const { user } = useAuth()
   const profile = loadProfile()
 
-  const displayName = profile.name || 'Learner'
+  // Priority: manually-set profile name → OAuth display name → email prefix → fallback
+  const rawName = profile.name
+    || user?.user_metadata?.full_name
+    || user?.user_metadata?.name
+    || user?.email?.split('@')[0]
+    || 'Learner'
+  // Use only the first name for a friendlier greeting
+  const displayName = rawName.split(' ')[0]
   const avatar = profile.avatar || '🧠'
   const greeting = getGreeting()
 

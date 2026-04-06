@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb } from 'lucide-react'
 import { TOPICS } from '../data/topics'
+import questionBank from '../data/questionBank'
 
 // Parse **highlighted** segments in model answer strings
 function parseHighlighted(text, color) {
@@ -57,7 +58,6 @@ function SENPanel({ topic, activeTab, onTab }) {
       className="rounded-[16px] overflow-hidden mb-4"
       style={{ background: 'rgba(18,26,47,0.95)', border: '0.75px solid #2d3e55' }}
     >
-      {/* Tabs */}
       <div className="flex border-b" style={{ borderColor: '#1d293d' }}>
         {[
           { id: 'keywords', label: 'Keyword Bank', icon: BookOpen },
@@ -169,16 +169,47 @@ function SENPanel({ topic, activeTab, onTab }) {
   )
 }
 
+// Shuffle array (Fisher-Yates)
+function shuffle(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
 export default function DiagnosticQuestion() {
   const { id } = useParams()
   const navigate = useNavigate()
   const topic = TOPICS[id]
+
+  // Shuffle all questions once on mount
+  const questions = useMemo(() => {
+    const bank = (questionBank && questionBank[id]) || []
+    return bank.length > 0 ? shuffle(bank) : []
+  }, [id])
+
+  const total = questions.length  // 5
+
+  const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState(null)
   const [submitted, setSubmitted] = useState(false)
+  const [score, setScore] = useState(0)
   const [showSEN, setShowSEN] = useState(false)
   const [senTab, setSenTab] = useState('keywords')
 
   if (!topic) return null
+
+  const q = questions[qIndex] || {
+    question: topic?.question,
+    questionSubtitle: topic?.questionSubtitle,
+    options: topic?.options,
+    correctAnswer: topic?.correctAnswer,
+  }
+
+  const isLast = qIndex === total - 1
+  const isCorrect = selected === q.correctAnswer
 
   const VisualComponent = topic.lessonVisual
 
@@ -190,9 +221,18 @@ export default function DiagnosticQuestion() {
   const handleSubmit = () => {
     if (selected === null) return
     setSubmitted(true)
-    setTimeout(() => {
-      navigate(`/feedback/${id}?result=${selected === topic.correctAnswer ? 'correct' : 'wrong'}`)
-    }, 900)
+    if (isCorrect) setScore(s => s + 1)
+  }
+
+  const handleNext = () => {
+    const newScore = score + (isCorrect ? 0 : 0) // already updated in handleSubmit
+    if (isLast) {
+      navigate(`/feedback/${id}?result=${isCorrect ? 'correct' : 'wrong'}&score=${score + (isCorrect ? 1 : 0)}&total=${total}`, { replace: true })
+    } else {
+      setQIndex(i => i + 1)
+      setSelected(null)
+      setSubmitted(false)
+    }
   }
 
   const optionLabels = ['A', 'B', 'C', 'D']
@@ -203,7 +243,7 @@ export default function DiagnosticQuestion() {
         ? { background: `${topic.moduleColor}20`, border: `1.5px solid ${topic.moduleColor}`, color: '#f8fafc' }
         : { background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#cad5e2' }
     }
-    if (idx === topic.correctAnswer) return { background: 'rgba(0,188,125,0.15)', border: '1.5px solid #00bc7d', color: '#f8fafc' }
+    if (idx === q.correctAnswer) return { background: 'rgba(0,188,125,0.15)', border: '1.5px solid #00bc7d', color: '#f8fafc' }
     if (idx === selected) return { background: 'rgba(239,68,68,0.15)', border: '1.5px solid #ef4444', color: '#f8fafc' }
     return { background: 'rgba(18,26,47,0.5)', border: '0.75px solid #1d293d', color: '#a8b8cc' }
   }
@@ -241,10 +281,27 @@ export default function DiagnosticQuestion() {
         </motion.button>
       </div>
 
-      {/* ── Single scroll container  -  everything below header ── */}
+      {/* ── Progress bar ── */}
+      <div className="px-5 pb-3 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
+            <motion.div
+              className="h-full rounded-full"
+              style={{ background: topic.moduleColor }}
+              animate={{ width: `${((qIndex + (submitted ? 1 : 0)) / total) * 100}%` }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+            />
+          </div>
+          <span className="text-xs font-semibold shrink-0" style={{ color: '#a8b8cc' }}>
+            {qIndex + 1} / {total}
+          </span>
+        </div>
+      </div>
+
+      {/* ── Scrollable body ── */}
       <div className="flex-1 overflow-y-auto px-5">
 
-        {/* Support panel  -  inline, expands naturally */}
+        {/* Support panel */}
         <AnimatePresence>
           {showSEN && (
             <motion.div
@@ -274,61 +331,89 @@ export default function DiagnosticQuestion() {
           <VisualComponent />
         </motion.div>
 
-        {/* Question */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="mb-4"
-        >
-          <h2 className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>
-            {topic.question}
-          </h2>
-          {topic.questionSubtitle && (
-            <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{topic.questionSubtitle}</p>
-          )}
-        </motion.div>
+        {/* Question — re-animates when qIndex changes */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={qIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="mb-4"
+          >
+            <h2 className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>
+              {q.question}
+            </h2>
+            {q.questionSubtitle && (
+              <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
+            )}
+          </motion.div>
+        </AnimatePresence>
 
         {/* Options */}
-        <div className="space-y-2">
-          {topic.options.map((opt, idx) => (
-            <motion.button
-              key={idx}
-              className="w-full text-left rounded-[16px] p-4 flex items-center gap-3"
-              style={getOptionStyle(idx)}
-              onClick={() => handleSelect(idx)}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.15 + idx * 0.07 }}
-              whileTap={submitted ? {} : { scale: 0.98 }}
-            >
-              <div
-                className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
-                style={{
-                  background: selected === idx && !submitted
-                    ? topic.moduleColor
-                    : submitted && idx === topic.correctAnswer
-                    ? '#00bc7d'
-                    : submitted && idx === selected
-                    ? '#ef4444'
-                    : '#1d293d',
-                  color: '#fff',
-                }}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={qIndex}
+            className="space-y-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            {q.options.map((opt, idx) => (
+              <motion.button
+                key={idx}
+                className="w-full text-left rounded-[16px] p-4 flex items-center gap-3"
+                style={getOptionStyle(idx)}
+                onClick={() => handleSelect(idx)}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.05 + idx * 0.06 }}
+                whileTap={submitted ? {} : { scale: 0.98 }}
               >
-                {optionLabels[idx]}
-              </div>
-              <span className="text-sm font-medium flex-1 min-w-0 text-left">{opt}</span>
-            </motion.button>
-          ))}
-        </div>
+                <div
+                  className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
+                  style={{
+                    background: selected === idx && !submitted
+                      ? topic.moduleColor
+                      : submitted && idx === q.correctAnswer
+                      ? '#00bc7d'
+                      : submitted && idx === selected
+                      ? '#ef4444'
+                      : '#1d293d',
+                    color: '#fff',
+                  }}
+                >
+                  {optionLabels[idx]}
+                </div>
+                <span className="text-sm font-medium flex-1 min-w-0 text-left">{opt}</span>
+              </motion.button>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
-        {/* Extra bottom padding so last option isn't hidden behind button */}
+        {/* SEN note after submission */}
+        <AnimatePresence>
+          {submitted && q.senNote && (
+            <motion.div
+              className="mt-3 px-4 py-3 rounded-[12px] flex items-start gap-2"
+              style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
+              <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{q.senNote}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <div style={{ height: 24 }} />
       </div>
 
-      {/* ── Check Answer  -  sticky footer, only shows when needed ── */}
+      {/* ── Footer button ── */}
       <AnimatePresence>
-        {selected !== null && !submitted && (
+        {selected !== null && (
           <motion.div
             className="shrink-0 px-5 pb-8 pt-3"
             style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d' }}
@@ -336,18 +421,39 @@ export default function DiagnosticQuestion() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
           >
-            <motion.button
-              className="w-full py-4 rounded-[16px] font-semibold text-base"
-              style={{
-                background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
-                boxShadow: `0px 8px 24px ${topic.moduleColor}40`,
-                color: '#fff',
-              }}
-              onClick={handleSubmit}
-              whileTap={{ scale: 0.97 }}
-            >
-              Check Answer
-            </motion.button>
+            {!submitted ? (
+              <motion.button
+                className="w-full py-4 rounded-[16px] font-semibold text-base"
+                style={{
+                  background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                  boxShadow: `0px 8px 24px ${topic.moduleColor}40`,
+                  color: '#fff',
+                }}
+                onClick={handleSubmit}
+                whileTap={{ scale: 0.97 }}
+              >
+                Check Answer
+              </motion.button>
+            ) : (
+              <motion.button
+                className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
+                style={{
+                  background: isLast
+                    ? 'linear-gradient(135deg, #6366f1, #818cf8)'
+                    : `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                  boxShadow: isLast
+                    ? '0px 8px 24px rgba(99,102,241,0.4)'
+                    : `0px 8px 24px ${topic.moduleColor}40`,
+                  color: '#fff',
+                }}
+                onClick={handleNext}
+                whileTap={{ scale: 0.97 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+              >
+                {isLast ? 'See Results' : 'Next →'}
+              </motion.button>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

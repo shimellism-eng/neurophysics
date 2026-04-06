@@ -40,6 +40,9 @@ export default function MisconceptionFeedback() {
   const { markMastered } = useProgress()
   const topic = TOPICS[id]
   const isCorrect = searchParams.get('result') === 'correct'
+  const score = parseInt(searchParams.get('score') ?? '-1', 10)
+  const total = parseInt(searchParams.get('total') ?? '0', 10)
+  const hasScore = score >= 0 && total > 0
   const [xpEarned, setXpEarned] = useState(0)
   const [showConfetti, setShowConfetti] = useState(false)
   const didMark = useRef(false)
@@ -121,7 +124,9 @@ export default function MisconceptionFeedback() {
               {isCorrect ? 'Correct! Well done.' : "Not quite. Let's look at why."}
             </div>
             <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
-              {isCorrect
+              {hasScore
+                ? `You got ${score} out of ${total} correct`
+                : isCorrect
                 ? "You've mastered this concept."
                 : 'Understanding misconceptions helps you learn faster.'}
             </div>

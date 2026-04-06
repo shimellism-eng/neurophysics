@@ -99,17 +99,19 @@ export default function SettingsScreen() {
   const handleSignOut = async () => {
     setSigningOut(true)
     try {
-      // Only clear session-specific data — keep progress/stats/onboarding so
-      // the user doesn't lose their work or have to redo onboarding on re-login
+      // Keep progress/stats/onboarding — only clear session-specific data
       localStorage.removeItem('neurophysics_profile')
       await secureRemove('mamo_api_key')
+      // signOut() calls setUser(null) immediately, which makes AppShell's
+      // `if (!user && !isPublic)` guard redirect to /auth automatically.
+      // Do NOT call navigate() here — it races with the state update and
+      // causes AppShell to bounce the user back to /
       await signOut()
     } catch (e) {
       console.error('Sign out error:', e)
-    } finally {
       setSigningOut(false)
-      navigate('/auth', { replace: true })
     }
+    // signingOut clears itself when the component unmounts (AppShell redirects)
   }
   const [apiKey, setApiKey] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
@@ -277,9 +279,8 @@ export default function SettingsScreen() {
     localStorage.removeItem('np_progress')
     localStorage.removeItem('np_stats')
     await secureRemove('mamo_api_key')
-    await signOut()
     showToast('Account and all data deleted', '#10b981')
-    setTimeout(() => navigate('/auth', { replace: true }), 1500)
+    await signOut() // setUser(null) → AppShell redirects automatically
   }
 
   const sections = [

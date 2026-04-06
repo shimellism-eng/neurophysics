@@ -73,6 +73,26 @@ export function AuthProvider({ children }) {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null)
+
+      // On every sign-in, sync the display name from OAuth metadata into the
+      // local profile so HomeScreen always has a name even if the profile was
+      // previously cleared.
+      if (session?.user && _event === 'SIGNED_IN') {
+        try {
+          const profile = JSON.parse(localStorage.getItem('neurophysics_profile') || '{}')
+          if (!profile.name) {
+            const meta = session.user.user_metadata || {}
+            const rawName = meta.full_name || meta.name || session.user.email?.split('@')[0]
+            if (rawName) {
+              localStorage.setItem('neurophysics_profile', JSON.stringify({
+                ...profile,
+                name: rawName.split(' ')[0], // first name only
+                avatar: profile.avatar || '🧠',
+              }))
+            }
+          }
+        } catch { /* non-critical */ }
+      }
     })
 
     // Native: listen for deep link callback from OAuth

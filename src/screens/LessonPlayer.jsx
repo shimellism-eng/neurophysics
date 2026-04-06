@@ -83,22 +83,6 @@ export default function LessonPlayer() {
           </motion.button>
         )}
 
-        {/* Exam Practice button */}
-        {examCount > 0 && (
-          <motion.button
-            className="w-full py-3 rounded-[14px] flex items-center justify-center gap-2 font-semibold text-sm mb-4"
-            style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)', color: '#818cf8' }}
-            onClick={() => navigate(`/exam/${id}`)}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <GraduationCap size={16} />
-            Exam Practice ({examCount} questions)
-          </motion.button>
-        )}
-
         {/* Subtitle */}
         <motion.div
           className="flex items-center gap-2 mb-3"
@@ -177,6 +161,22 @@ export default function LessonPlayer() {
           Test Your Knowledge
           <ChevronRight size={20} strokeWidth={2.5} />
         </motion.button>
+
+        {/* Exam Practice button — below Test Your Knowledge */}
+        {examCount > 0 && (
+          <motion.button
+            className="w-full py-4 rounded-[16px] flex items-center justify-center gap-2 font-semibold text-base mb-6"
+            style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)', color: '#818cf8' }}
+            onClick={() => navigate(`/exam/${id}`)}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <GraduationCap size={16} />
+            Exam Practice ({examCount} questions)
+          </motion.button>
+        )}
       </div>
     </div>
   )

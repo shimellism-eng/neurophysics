@@ -195,11 +195,16 @@ function BackHeader({ onBack, title }) {
 function Landing({ onEmail, onSignIn }) {
   const { signInWithOAuth } = useAuth()
   const [oauthLoading, setOauthLoading] = useState(null)
+  const [oauthError, setOauthError] = useState('')
 
   const handleOAuth = async (provider) => {
     setOauthLoading(provider)
+    setOauthError('')
     const { error } = await signInWithOAuth(provider)
-    if (error) setOauthLoading(null)
+    if (error) {
+      setOauthLoading(null)
+      setOauthError(error.message || 'Sign in failed. Please try again.')
+    }
   }
 
   return (
@@ -284,6 +289,13 @@ function Landing({ onEmail, onSignIn }) {
           onClick={onEmail}
           style={{ background: 'linear-gradient(135deg, #4f6ef7, #6366f1)', color: '#fff', border: 'none', boxShadow: '0 8px 24px rgba(99,102,241,0.35)' }}
         />
+
+        {oauthError && (
+          <motion.div className="flex items-center gap-2 px-3 py-2.5 rounded-[12px]" style={{ background: 'rgba(239,68,68,0.1)', border: '0.75px solid rgba(239,68,68,0.4)' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <AlertCircle size={14} color="#ef4444" />
+            <span className="text-xs" style={{ color: '#ef4444' }}>{oauthError}</span>
+          </motion.div>
+        )}
 
         {/* Sign in link */}
         <p className="text-center text-sm pt-1" style={{ color: '#90a1b9' }}>

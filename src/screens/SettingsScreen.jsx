@@ -1,10 +1,11 @@
-import { motion } from 'motion/react'
+import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
 import { useAuth } from '../context/AuthContext'
 import { supabase } from '../lib/supabase'
+import { requestNotificationPermission, scheduleDailyReminder, cancelDailyReminder, checkNotificationPermission } from '../utils/notifications'
 
 // ─── Profile helpers ──────────────────────────────────────────────────────────
 const PROFILE_KEY = 'neurophysics_profile'
@@ -61,21 +62,7 @@ function applyFontSize(size) {
   document.documentElement.style.fontSize = size === 'large' ? '18px' : ''
 }
 
-async function requestNotifications() {
-  if (!('Notification' in window)) return 'unsupported'
-  if (Notification.permission === 'granted') return 'granted'
-  const result = await Notification.requestPermission()
-  return result
-}
-
-function fireTestNotification() {
-  if (Notification.permission === 'granted') {
-    new Notification('NeuroPhysics 🔬', {
-      body: "Don't forget to study today  -  keep your streak going! 🔥",
-      icon: '/vite.svg',
-    })
-  }
-}
+// Notification helpers moved to src/utils/notifications.js
 
 // ─── Toggle component ─────────────────────────────────────────────────────────
 function Toggle({ on, onToggle, disabled = false }) {
@@ -202,23 +189,58 @@ export default function SettingsScreen() {
   }
 
   // ── Daily Reminders
+  const [showTimePicker, setShowTimePicker] = useState(false)
+  const [reminderHour, setReminderHour] = useState(() => prefs.reminderHour ?? 20)
+  const [reminderMinute, setReminderMinute] = useState(() => prefs.reminderMinute ?? 0)
+
+  // On mount, check if permission was revoked externally
+  useEffect(() => {
+    if (prefs.reminders) {
+      checkNotificationPermission().then(status => {
+        if (status === 'denied') {
+          setPref('reminders', false)
+          showToast('Notification permission was revoked — reminders disabled', '#ef4444')
+        }
+      })
+    }
+  }, []) // eslint-disable-line
+
   const toggleReminders = async () => {
     const next = !prefs.reminders
     if (next) {
-      const result = await requestNotifications()
-      if (result === 'granted') {
-        setPref('reminders', true)
-        fireTestNotification()
-        showToast('Reminders on  -  test notification sent ✓', '#10b981')
-      } else if (result === 'denied') {
-        showToast('Notifications blocked  -  enable in browser settings', '#ef4444')
-      } else if (result === 'unsupported') {
-        showToast('Notifications not supported in this browser', '#f59e0b')
+      const status = await requestNotificationPermission()
+      if (status === 'granted') {
+        const h = prefs.reminderHour ?? 20
+        const m = prefs.reminderMinute ?? 0
+        const ok = await scheduleDailyReminder(h, m)
+        if (ok) {
+          setPref('reminders', true)
+          const label = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`
+          showToast(`Daily reminder set for ${label} ✓`, '#10b981')
+        }
+      } else if (status === 'denied') {
+        showToast('Notifications blocked — enable in device settings', '#ef4444')
+      } else {
+        showToast('Notifications not supported here', '#f59e0b')
       }
     } else {
+      await cancelDailyReminder()
       setPref('reminders', false)
+      setShowTimePicker(false)
       showToast('Daily reminders off', '#a8b8cc')
     }
+  }
+
+  const handleSaveReminderTime = async () => {
+    const next = { ...prefs, reminderHour: reminderHour, reminderMinute: reminderMinute }
+    setPrefs(next)
+    savePrefs(next)
+    if (prefs.reminders) {
+      await scheduleDailyReminder(reminderHour, reminderMinute)
+      const label = `${String(reminderHour).padStart(2, '0')}:${String(reminderMinute).padStart(2, '0')}`
+      showToast(`Reminder updated to ${label} ✓`, '#10b981')
+    }
+    setShowTimePicker(false)
   }
 
   const handleSaveKey = () => {
@@ -293,10 +315,19 @@ export default function SettingsScreen() {
         {
           icon: Bell,
           label: 'Daily Reminders',
-          hint: 'Study streak notifications',
+          hint: prefs.reminders
+            ? `Every day at ${String(prefs.reminderHour ?? 20).padStart(2, '0')}:${String(prefs.reminderMinute ?? 0).padStart(2, '0')}`
+            : 'Get a nudge to keep your streak going',
           on: !!prefs.reminders,
           onToggle: toggleReminders,
         },
+        ...(prefs.reminders ? [{
+          icon: Clock,
+          label: 'Reminder time',
+          hint: `Currently ${String(prefs.reminderHour ?? 20).padStart(2, '0')}:${String(prefs.reminderMinute ?? 0).padStart(2, '0')}`,
+          chevron: true,
+          onPress: () => setShowTimePicker(v => !v),
+        }] : []),
       ],
     },
     {
@@ -489,7 +520,7 @@ export default function SettingsScreen() {
                   className="w-full flex items-center gap-3 px-4 py-4 text-left"
                   style={{
                     background: 'rgba(18,26,47,0.9)',
-                    borderBottom: ii < section.items.length - 1 ? '0.75px solid #1d293d' : 'none',
+                    borderBottom: ii < section.items.length - 1 || (section.title === 'Notifications' && showTimePicker) ? '0.75px solid #1d293d' : 'none',
                   }}
                   onClick={item.onPress || item.onToggle || undefined}
                   aria-label={item.label}
@@ -504,12 +535,85 @@ export default function SettingsScreen() {
                     <div className="text-xs" style={{ color: '#a8b8cc' }}>{item.hint}</div>
                   </div>
                   {item.chevron
-                    ? <ChevronRight size={14} color="#a8b8cc" />
+                    ? <ChevronRight size={14} color={item.label === 'Reminder time' && showTimePicker ? '#6366f1' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
                     : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} />
                     : null
                   }
                 </button>
               ))}
+              {/* Time picker — shown inline under Notifications when reminders are on */}
+              <AnimatePresence>
+                {section.title === 'Notifications' && showTimePicker && (
+                  <motion.div
+                    key="time-picker"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.22 }}
+                    style={{ overflow: 'hidden', background: 'rgba(11,17,33,0.95)' }}
+                  >
+                    <div className="px-4 py-4 flex flex-col gap-3">
+                      <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#a8b8cc' }}>
+                        Reminder time
+                      </p>
+                      <div className="flex items-center gap-3">
+                        {/* Hour picker */}
+                        <div className="flex flex-col items-center gap-1">
+                          <button
+                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            onClick={() => setReminderHour(h => (h + 1) % 24)}
+                            aria-label="Increase hour"
+                          >▲</button>
+                          <div className="w-14 h-11 rounded-[10px] flex items-center justify-center text-xl font-bold tabular-nums"
+                            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #2d3e55', color: '#f8fafc' }}>
+                            {String(reminderHour).padStart(2, '0')}
+                          </div>
+                          <button
+                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            onClick={() => setReminderHour(h => (h + 23) % 24)}
+                            aria-label="Decrease hour"
+                          >▼</button>
+                        </div>
+                        <span className="text-2xl font-bold" style={{ color: '#f8fafc' }}>:</span>
+                        {/* Minute picker — 00 / 15 / 30 / 45 */}
+                        <div className="flex flex-col items-center gap-1">
+                          <button
+                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            onClick={() => setReminderMinute(m => (m + 15) % 60)}
+                            aria-label="Increase minute"
+                          >▲</button>
+                          <div className="w-14 h-11 rounded-[10px] flex items-center justify-center text-xl font-bold tabular-nums"
+                            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #2d3e55', color: '#f8fafc' }}>
+                            {String(reminderMinute).padStart(2, '0')}
+                          </div>
+                          <button
+                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            onClick={() => setReminderMinute(m => (m + 45) % 60)}
+                            aria-label="Decrease minute"
+                          >▼</button>
+                        </div>
+                        <div className="flex flex-col gap-1 ml-auto">
+                          <span className="text-xs" style={{ color: '#a8b8cc' }}>
+                            {reminderHour < 12 ? 'AM' : 'PM'}
+                          </span>
+                          <span className="text-xs" style={{ color: '#4a5a72' }}>24h</span>
+                        </div>
+                      </div>
+                      <button
+                        className="w-full py-3 rounded-[12px] text-sm font-bold mt-1"
+                        style={{ background: 'linear-gradient(135deg, #4f6ef7, #6366f1)', color: '#fff', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}
+                        onClick={handleSaveReminderTime}
+                      >
+                        Save time
+                      </button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         ))}

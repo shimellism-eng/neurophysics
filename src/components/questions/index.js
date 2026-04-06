@@ -1,0 +1,5 @@
+export { default as TapMatchQuestion } from './TapMatchQuestion'
+export { default as HotspotQuestion } from './HotspotQuestion'
+export { default as SequenceSortQuestion } from './SequenceSortQuestion'
+export { default as MisconceptionQuestion } from './MisconceptionQuestion'
+export { default as ConfidenceQuestion } from './ConfidenceQuestion'

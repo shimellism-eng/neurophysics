@@ -1,29 +1,25 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import questionBank from '../data/questionBank'
+import { getInteractiveQuestions } from '../data/interactiveIndex'
+import {
+  TapMatchQuestion,
+  HotspotQuestion,
+  SequenceSortQuestion,
+  MisconceptionQuestion,
+  ConfidenceQuestion,
+} from '../components/questions'
 
-// Parse **highlighted** segments in model answer strings
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
 function parseHighlighted(text, color) {
   const parts = text.split(/\*\*(.*?)\*\*/g)
   return parts.map((part, i) =>
     i % 2 === 1
-      ? (
-        <span
-          key={i}
-          style={{
-            color,
-            fontWeight: 700,
-            background: `${color}22`,
-            borderRadius: 4,
-            padding: '1px 4px',
-          }}
-        >
-          {part}
-        </span>
-      )
+      ? <span key={i} style={{ color, fontWeight: 700, background: `${color}22`, borderRadius: 4, padding: '1px 4px' }}>{part}</span>
       : <span key={i}>{part}</span>
   )
 }
@@ -38,14 +34,19 @@ function getKeywords(topic) {
 
 function getSentenceStarters(topic) {
   if (topic.sentenceStarters) return topic.sentenceStarters
-  return [
-    'The answer is...',
-    'This happens because...',
-    'An example of this is...',
-    'The key equation is...',
-    'I think the correct answer is... because...',
-  ]
+  return ['The answer is...', 'This happens because...', 'An example of this is...', 'The key equation is...', 'I think the correct answer is... because...']
 }
+
+function shuffle(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+// ── SEN Panel ────────────────────────────────────────────────────────────────
 
 function SENPanel({ topic, activeTab, onTab }) {
   const [showModelAnswers, setShowModelAnswers] = useState(false)
@@ -54,10 +55,7 @@ function SENPanel({ topic, activeTab, onTab }) {
   const modelAnswers = topic.modelAnswers || []
 
   return (
-    <div
-      className="rounded-[16px] overflow-hidden mb-4"
-      style={{ background: 'rgba(18,26,47,0.95)', border: '0.75px solid #2d3e55' }}
-    >
+    <div className="rounded-[16px] overflow-hidden mb-4" style={{ background: 'rgba(18,26,47,0.95)', border: '0.75px solid #2d3e55' }}>
       <div className="flex border-b" style={{ borderColor: '#1d293d' }}>
         {[
           { id: 'keywords', label: 'Keyword Bank', icon: BookOpen },
@@ -66,10 +64,7 @@ function SENPanel({ topic, activeTab, onTab }) {
           <button
             key={tab.id}
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold"
-            style={{
-              color: activeTab === tab.id ? '#155dfc' : '#a8b8cc',
-              borderBottom: activeTab === tab.id ? '2px solid #155dfc' : '2px solid transparent',
-            }}
+            style={{ color: activeTab === tab.id ? '#155dfc' : '#a8b8cc', borderBottom: activeTab === tab.id ? '2px solid #155dfc' : '2px solid transparent' }}
             onClick={() => onTab(tab.id)}
           >
             <tab.icon size={13} />
@@ -77,83 +72,39 @@ function SENPanel({ topic, activeTab, onTab }) {
           </button>
         ))}
       </div>
-
       <div className="p-3">
         {activeTab === 'keywords' && (
           <div className="flex flex-wrap gap-2">
             {keywords.map((kw, i) => (
-              <motion.span
-                key={kw}
-                className="px-3 py-1.5 rounded-full text-xs font-semibold"
-                style={{ background: `${topic.moduleColor}18`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}40` }}
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.04 }}
-              >
+              <motion.span key={kw} className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: `${topic.moduleColor}18`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}40` }} initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.04 }}>
                 {kw}
               </motion.span>
             ))}
           </div>
         )}
-
         {activeTab === 'starters' && (
           <div>
             <div className="space-y-2">
               {starters.map((s, i) => (
-                <motion.div
-                  key={i}
-                  className="px-3 py-2 rounded-[10px] text-xs"
-                  style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.2)', color: '#cad5e2' }}
-                  initial={{ opacity: 0, x: -8 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
+                <motion.div key={i} className="px-3 py-2 rounded-[10px] text-xs" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.2)', color: '#cad5e2' }} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}>
                   {s}
                 </motion.div>
               ))}
             </div>
-
             {modelAnswers.length > 0 && (
               <div className="mt-3">
-                <motion.button
-                  className="w-full flex items-center gap-2 px-3 py-2.5 rounded-[10px] text-xs font-semibold"
-                  style={{
-                    background: 'rgba(253,199,0,0.07)',
-                    border: '0.75px solid rgba(253,199,0,0.28)',
-                    color: '#fdc700',
-                  }}
-                  onClick={() => setShowModelAnswers(v => !v)}
-                  whileTap={{ scale: 0.97 }}
-                >
+                <motion.button className="w-full flex items-center gap-2 px-3 py-2.5 rounded-[10px] text-xs font-semibold" style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.28)', color: '#fdc700' }} onClick={() => setShowModelAnswers(v => !v)} whileTap={{ scale: 0.97 }}>
                   <Lightbulb size={12} color="#fdc700" />
                   <span className="flex-1 text-left">Want to see model answers?</span>
                   <motion.div animate={{ rotate: showModelAnswers ? 180 : 0 }} transition={{ duration: 0.2 }}>
                     <ChevronDown size={11} color="#fdc700" />
                   </motion.div>
                 </motion.button>
-
                 <AnimatePresence>
                   {showModelAnswers && (
-                    <motion.div
-                      className="mt-2 space-y-2"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.22 }}
-                    >
+                    <motion.div className="mt-2 space-y-2" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.22 }}>
                       {modelAnswers.map((answer, i) => (
-                        <motion.div
-                          key={i}
-                          className="px-3 py-2.5 rounded-[10px] text-xs leading-relaxed"
-                          style={{
-                            background: 'rgba(11,17,33,0.7)',
-                            border: `0.75px solid ${topic.moduleColor}30`,
-                            color: '#a8b8cc',
-                          }}
-                          initial={{ opacity: 0, y: -4 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.05 }}
-                        >
+                        <motion.div key={i} className="px-3 py-2.5 rounded-[10px] text-xs leading-relaxed" style={{ background: 'rgba(11,17,33,0.7)', border: `0.75px solid ${topic.moduleColor}30`, color: '#a8b8cc' }} initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
                           {parseHighlighted(answer, topic.moduleColor)}
                         </motion.div>
                       ))}
@@ -169,69 +120,78 @@ function SENPanel({ topic, activeTab, onTab }) {
   )
 }
 
-// Shuffle array (Fisher-Yates)
-function shuffle(arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
+// ── Interactive question type label ──────────────────────────────────────────
+
+const TYPE_LABELS = {
+  'tap-match': '🔗 Match',
+  'hotspot': '📍 Tap the right area',
+  'sequence': '🔢 Put in order',
+  'misconception': '🤔 True or false?',
+  'confidence': '💭 How confident are you?',
 }
+
+// ── Main component ───────────────────────────────────────────────────────────
 
 export default function DiagnosticQuestion() {
   const { id } = useParams()
   const navigate = useNavigate()
   const topic = TOPICS[id]
 
-  // Shuffle all questions once on mount
+  // Merge MCQ questions (shuffled) + interactive questions (fixed order at end)
   const questions = useMemo(() => {
-    const bank = (questionBank && questionBank[id]) || []
-    return bank.length > 0 ? shuffle(bank) : []
+    const mcqs = (questionBank && questionBank[id]) || []
+    const interactive = getInteractiveQuestions(id)
+    const shuffledMcqs = mcqs.length > 0 ? shuffle(mcqs) : []
+    // MCQs first, then interactive in defined order
+    return [...shuffledMcqs, ...interactive]
   }, [id])
 
-  const total = questions.length  // 5
+  const total = questions.length
 
   const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState(null)
   const [submitted, setSubmitted] = useState(false)
   const [score, setScore] = useState(0)
+  const [interactiveCompleted, setInteractiveCompleted] = useState(false)
   const [showSEN, setShowSEN] = useState(false)
   const [senTab, setSenTab] = useState('keywords')
 
-  if (!topic) return null
+  if (!topic || total === 0) return null
 
-  const q = questions[qIndex] || {
-    question: topic?.question,
-    questionSubtitle: topic?.questionSubtitle,
-    options: topic?.options,
-    correctAnswer: topic?.correctAnswer,
-  }
-
+  const q = questions[qIndex] || {}
+  const qType = q.type || 'mcq'
+  const isInteractive = qType !== 'mcq'
   const isLast = qIndex === total - 1
-  const isCorrect = selected === q.correctAnswer
+  const isCorrect = !isInteractive ? selected === q.correctAnswer : false
 
   const VisualComponent = topic.lessonVisual
 
-  const handleSelect = (idx) => {
-    if (submitted) return
-    setSelected(idx)
-  }
-
+  // MCQ handlers
+  const handleSelect = (idx) => { if (!submitted) setSelected(idx) }
   const handleSubmit = () => {
     if (selected === null) return
     setSubmitted(true)
-    if (isCorrect) setScore(s => s + 1)
+    if (selected === q.correctAnswer) setScore(s => s + 1)
   }
 
+  // Interactive question callback
+  const handleInteractiveComplete = useCallback((correct) => {
+    if (correct) setScore(s => s + 1)
+    setInteractiveCompleted(true)
+  }, [])
+
+  // Next / finish
   const handleNext = () => {
-    const newScore = score + (isCorrect ? 0 : 0) // already updated in handleSubmit
+    const correctThisQ = !isInteractive ? selected === q.correctAnswer : false
+    // Score already updated via handleSubmit or handleInteractiveComplete
     if (isLast) {
-      navigate(`/feedback/${id}?result=${isCorrect ? 'correct' : 'wrong'}&score=${score + (isCorrect ? 1 : 0)}&total=${total}`, { replace: true })
+      const finalScore = score // already includes this Q if correct
+      navigate(`/feedback/${id}?result=${finalScore >= Math.ceil(total * 0.6) ? 'correct' : 'wrong'}&score=${finalScore}&total=${total}`, { replace: true })
     } else {
       setQIndex(i => i + 1)
       setSelected(null)
       setSubmitted(false)
+      setInteractiveCompleted(false)
     }
   }
 
@@ -247,6 +207,22 @@ export default function DiagnosticQuestion() {
     if (idx === selected) return { background: 'rgba(239,68,68,0.15)', border: '1.5px solid #ef4444', color: '#f8fafc' }
     return { background: 'rgba(18,26,47,0.5)', border: '0.75px solid #1d293d', color: '#a8b8cc' }
   }
+
+  // Which interactive component to render
+  const renderInteractive = () => {
+    const props = { data: q, moduleColor: topic.moduleColor, onComplete: handleInteractiveComplete }
+    switch (qType) {
+      case 'tap-match':    return <TapMatchQuestion {...props} />
+      case 'hotspot':      return <HotspotQuestion {...props} />
+      case 'sequence':     return <SequenceSortQuestion {...props} />
+      case 'misconception': return <MisconceptionQuestion {...props} />
+      case 'confidence':   return <ConfidenceQuestion {...props} />
+      default:             return null
+    }
+  }
+
+  // Should footer show?
+  const showFooter = isInteractive ? interactiveCompleted : selected !== null
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
@@ -288,7 +264,7 @@ export default function DiagnosticQuestion() {
             <motion.div
               className="h-full rounded-full"
               style={{ background: topic.moduleColor }}
-              animate={{ width: `${((qIndex + (submitted ? 1 : 0)) / total) * 100}%` }}
+              animate={{ width: `${((qIndex + (showFooter ? 1 : 0)) / total) * 100}%` }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             />
           </div>
@@ -304,116 +280,112 @@ export default function DiagnosticQuestion() {
         {/* Support panel */}
         <AnimatePresence>
           {showSEN && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.25 }}
-              style={{ overflow: 'hidden' }}
-            >
+            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.25 }} style={{ overflow: 'hidden' }}>
               <SENPanel topic={topic} activeTab={senTab} onTab={setSenTab} />
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Visual */}
-        <motion.div
-          className="w-full rounded-[24px] mb-5 overflow-hidden"
-          style={{
-            minHeight: 140,
-            background: 'rgba(18,26,47,0.9)',
-            border: `0.75px solid ${topic.moduleColor}30`,
-            boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.05)',
-          }}
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-        >
-          <VisualComponent />
-        </motion.div>
+        {/* Visual — only show for MCQ questions */}
+        {!isInteractive && (
+          <motion.div
+            className="w-full rounded-[24px] mb-5 overflow-hidden"
+            style={{ minHeight: 140, background: 'rgba(18,26,47,0.9)', border: `0.75px solid ${topic.moduleColor}30`, boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.05)' }}
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+            <VisualComponent />
+          </motion.div>
+        )}
 
-        {/* Question — re-animates when qIndex changes */}
+        {/* Question content — animated on qIndex change */}
         <AnimatePresence mode="wait">
           <motion.div
             key={qIndex}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
-            className="mb-4"
           >
-            <h2 className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>
-              {q.question}
-            </h2>
-            {q.questionSubtitle && (
-              <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
+            {/* Question type badge for interactive */}
+            {isInteractive && TYPE_LABELS[qType] && (
+              <div className="mb-2">
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: `${topic.moduleColor}15`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}30` }}>
+                  {TYPE_LABELS[qType]}
+                </span>
+              </div>
             )}
-          </motion.div>
-        </AnimatePresence>
 
-        {/* Options */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={qIndex}
-            className="space-y-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15 }}
-          >
-            {q.options.map((opt, idx) => (
-              <motion.button
-                key={idx}
-                className="w-full text-left rounded-[16px] p-4 flex items-center gap-3"
-                style={getOptionStyle(idx)}
-                onClick={() => handleSelect(idx)}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.05 + idx * 0.06 }}
-                whileTap={submitted ? {} : { scale: 0.98 }}
-              >
-                <div
-                  className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
-                  style={{
-                    background: selected === idx && !submitted
-                      ? topic.moduleColor
-                      : submitted && idx === q.correctAnswer
-                      ? '#00bc7d'
-                      : submitted && idx === selected
-                      ? '#ef4444'
-                      : '#1d293d',
-                    color: '#fff',
-                  }}
-                >
-                  {optionLabels[idx]}
+            {/* Question text */}
+            <div className="mb-4">
+              <h2 className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>
+                {q.question}
+              </h2>
+              {q.questionSubtitle && (
+                <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
+              )}
+            </div>
+
+            {/* MCQ options */}
+            {!isInteractive && (
+              <>
+                <div className="space-y-2">
+                  {(q.options || []).map((opt, idx) => (
+                    <motion.button
+                      key={idx}
+                      className="w-full text-left rounded-[16px] p-4 flex items-center gap-3"
+                      style={getOptionStyle(idx)}
+                      onClick={() => handleSelect(idx)}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.05 + idx * 0.06 }}
+                      whileTap={submitted ? {} : { scale: 0.98 }}
+                    >
+                      <div
+                        className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
+                        style={{
+                          background: selected === idx && !submitted ? topic.moduleColor
+                            : submitted && idx === q.correctAnswer ? '#00bc7d'
+                            : submitted && idx === selected ? '#ef4444'
+                            : '#1d293d',
+                          color: '#fff',
+                        }}
+                      >
+                        {optionLabels[idx]}
+                      </div>
+                      <span className="text-sm font-medium flex-1 min-w-0 text-left">{opt}</span>
+                    </motion.button>
+                  ))}
                 </div>
-                <span className="text-sm font-medium flex-1 min-w-0 text-left">{opt}</span>
-              </motion.button>
-            ))}
-          </motion.div>
-        </AnimatePresence>
 
-        {/* SEN note after submission */}
-        <AnimatePresence>
-          {submitted && q.senNote && (
-            <motion.div
-              className="mt-3 px-4 py-3 rounded-[12px] flex items-start gap-2"
-              style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-            >
-              <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
-              <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{q.senNote}</p>
-            </motion.div>
-          )}
+                {/* SEN note after MCQ submission */}
+                <AnimatePresence>
+                  {submitted && q.senNote && (
+                    <motion.div
+                      className="mt-3 px-4 py-3 rounded-[12px] flex items-start gap-2"
+                      style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                    >
+                      <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
+                      <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{q.senNote}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </>
+            )}
+
+            {/* Interactive question component */}
+            {isInteractive && renderInteractive()}
+          </motion.div>
         </AnimatePresence>
 
         <div style={{ height: 24 }} />
       </div>
 
-      {/* ── Footer button ── */}
+      {/* ── Footer ── */}
       <AnimatePresence>
-        {selected !== null && (
+        {showFooter && (
           <motion.div
             className="shrink-0 px-5 pb-8 pt-3"
             style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d' }}
@@ -421,7 +393,8 @@ export default function DiagnosticQuestion() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
           >
-            {!submitted ? (
+            {/* MCQ: Check Answer first, then Next */}
+            {!isInteractive && !submitted ? (
               <motion.button
                 className="w-full py-4 rounded-[16px] font-semibold text-base"
                 style={{
@@ -435,29 +408,31 @@ export default function DiagnosticQuestion() {
                 Check Answer
               </motion.button>
             ) : (
-              <motion.button
-                className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
-                style={{
-                  background: isLast
-                    ? 'linear-gradient(135deg, #6366f1, #818cf8)'
-                    : `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
-                  boxShadow: isLast
-                    ? '0px 8px 24px rgba(99,102,241,0.4)'
-                    : `0px 8px 24px ${topic.moduleColor}40`,
-                  color: '#fff',
-                }}
-                onClick={handleNext}
-                whileTap={{ scale: 0.97 }}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-              >
-                {isLast ? 'See Results' : 'Next →'}
-              </motion.button>
+              /* Next / See Results for both MCQ (after submit) and interactive (after complete) */
+              (submitted || interactiveCompleted) && (
+                <motion.button
+                  className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
+                  style={{
+                    background: isLast
+                      ? 'linear-gradient(135deg, #6366f1, #818cf8)'
+                      : `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                    boxShadow: isLast
+                      ? '0px 8px 24px rgba(99,102,241,0.4)'
+                      : `0px 8px 24px ${topic.moduleColor}40`,
+                    color: '#fff',
+                  }}
+                  onClick={handleNext}
+                  whileTap={{ scale: 0.97 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                >
+                  {isLast ? 'See Results' : 'Next →'}
+                </motion.button>
+              )
             )}
           </motion.div>
         )}
       </AnimatePresence>
-
     </div>
   )
 }

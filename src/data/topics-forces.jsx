@@ -20,7 +20,7 @@ function ForceInteractionsLesson() {
         {['balanced', 'unbalanced'].map(m => (
           <button key={m} onClick={() => setMode(m)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold capitalize"
-            style={{ background: mode === m ? `${FC}22` : '#1d293d', color: mode === m ? FC : '#90a1b9', border: `1px solid ${mode === m ? FC : '#1d293d'}` }}>
+            style={{ background: mode === m ? `${FC}22` : '#1d293d', color: mode === m ? FC : '#a8b8cc', border: `1px solid ${mode === m ? FC : '#1d293d'}` }}>
             {m.charAt(0).toUpperCase() + m.slice(1)}
           </button>
         ))}
@@ -71,7 +71,7 @@ function ForceInteractionsLesson() {
         )}
 
         {/* Bottom caption */}
-        <text x="130" y="172" textAnchor="middle" fill="#90a1b9" fontSize={8}>
+        <text x="130" y="172" textAnchor="middle" fill="#a8b8cc" fontSize={8}>
           {balanced ? 'Balanced → a = 0 (rest or constant velocity)' : 'Unbalanced → resultant force → acceleration'}
         </text>
       </svg>
@@ -85,11 +85,11 @@ function ForceInteractionsIdea() {
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${FC}10`, border: `1px solid ${FC}` }}>
           <span className="font-bold" style={{ color: FC }}>Speed</span>
           <span style={{ color: '#ef4444' }}>= vector</span>
-          <span style={{ color: '#90a1b9' }}>60 mph →?</span>
+          <span style={{ color: '#a8b8cc' }}>60 mph →?</span>
         </div>
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
           <span className="font-bold" style={{ color: '#c084fc' }}>Velocity</span>
-          <span style={{ color: '#90a1b9' }}>= vector</span>
+          <span style={{ color: '#a8b8cc' }}>= vector</span>
           <span style={{ color: '#cad5e2' }}>60 mph N</span>
         </div>
       </div>
@@ -108,7 +108,7 @@ function ForceInteractionsReality() {
           ))}
         </div>
         <div className="flex flex-col gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d' }}>
-          <span className="text-xs font-bold" style={{ color: '#90a1b9' }}>Scalars</span>
+          <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>Scalars</span>
           {['Speed', 'Distance', 'Mass', 'Time', 'Energy'].map(s => (
             <span key={s} className="text-xs" style={{ color: '#cad5e2' }}>{s}</span>
           ))}
@@ -151,23 +151,23 @@ function WorkDoneLesson() {
         <polygon points={`${10 + boxX},95 ${10 + boxX},105 ${18 + boxX},100`} fill="#fdc700" />
         <text x={7 + boxX / 2} y="108" textAnchor="middle" fill="#fdc700" fontSize={8}>d = {dist} m</text>
         {/* Formula label */}
-        <text x="200" y="20" textAnchor="middle" fill="#90a1b9" fontSize={8}>Work Done = F × d</text>
-        <text x="200" y="32" textAnchor="middle" fill="#90a1b9" fontSize={7}>1 J = 1 N × 1 m</text>
+        <text x="200" y="20" textAnchor="middle" fill="#a8b8cc" fontSize={8}>Work Done = F × d</text>
+        <text x="200" y="32" textAnchor="middle" fill="#a8b8cc" fontSize={7}>1 J = 1 N × 1 m</text>
       </svg>
       {/* Sliders */}
       <div className="rounded-[12px] p-2" style={{ background: '#1d293d' }}>
         <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#90a1b9' }}>Force (N)</span>
+          <span style={{ color: '#a8b8cc' }}>Force (N)</span>
           <span style={{ color: FC }} className="font-bold">{force} N</span>
         </div>
         <input type="range" min="1" max="50" value={force} onChange={e => setForce(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: FC }} />
         <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#90a1b9' }}>Distance (m)</span>
+          <span style={{ color: '#a8b8cc' }}>Distance (m)</span>
           <span style={{ color: '#fdc700' }} className="font-bold">{dist} m</span>
         </div>
         <input type="range" min="1" max="10" value={dist} onChange={e => setDist(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
         <div className="flex justify-between mt-1.5 pt-1.5 text-xs font-bold" style={{ borderTop: '1px solid #0b1121' }}>
-          <span style={{ color: '#90a1b9' }}>W = {force} × {dist}</span>
+          <span style={{ color: '#a8b8cc' }}>W = {force} × {dist}</span>
           <motion.span key={work} style={{ color: FC }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{work} J</motion.span>
         </div>
       </div>
@@ -206,8 +206,8 @@ function WorkDoneReality() {
           <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Force + movement<br/>= work done</span>
         </div>
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d' }}>
-          <ArrowUp size={18} color="#90a1b9" />
-          <span className="text-xs text-center" style={{ color: '#90a1b9' }}>Pushing wall<br/>= zero work</span>
+          <ArrowUp size={18} color="#a8b8cc" />
+          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>Pushing wall<br/>= zero work</span>
         </div>
       </div>
       <RealityBadge color={FC}>Work = force × distance moved in the direction of force</RealityBadge>
@@ -245,8 +245,8 @@ function HookesLawLesson() {
       <div className="flex gap-6 items-start">
         <svg width="52" height={svgH} viewBox={`0 0 52 ${svgH}`}>
           {/* ceiling bar */}
-          <line x1="4" y1="1" x2="48" y2="1" stroke="#90a1b9" strokeWidth="3" strokeLinecap="round" />
-          <line x1="26" y1="1" x2="26" y2={stemY} stroke="#90a1b9" strokeWidth="2" />
+          <line x1="4" y1="1" x2="48" y2="1" stroke="#a8b8cc" strokeWidth="3" strokeLinecap="round" />
+          <line x1="26" y1="1" x2="26" y2={stemY} stroke="#a8b8cc" strokeWidth="2" />
           {/* spring coils via Spring helper, offset to stemY */}
           <g transform={`translate(0, ${stemY})`}>
             <Spring halfCoilH={halfCoilH} x1={10} x2={42} color={FC} />
@@ -259,12 +259,12 @@ function HookesLawLesson() {
           <FormulaBox formula="F = ke" color={FC} />
           <div className="flex flex-col gap-1">
             <div className="flex justify-between text-xs">
-              <span style={{ color: '#90a1b9' }}>Extension</span>
+              <span style={{ color: '#a8b8cc' }}>Extension</span>
               <span style={{ color: FC }} className="font-bold">{ext} cm</span>
             </div>
             <input type="range" min="1" max="8" value={ext} onChange={e => setExt(+e.target.value)} className="w-full" style={{ accentColor: FC }} />
           </div>
-          <div className="font-mono text-xs" style={{ color: '#90a1b9' }}>
+          <div className="font-mono text-xs" style={{ color: '#a8b8cc' }}>
             <div>k = 10 N/m</div>
             <div>F = 10 × {ext} = <span style={{ color: FC, fontWeight: 700 }}>{force} N</span></div>
           </div>
@@ -282,8 +282,8 @@ function HookesLawIdea() {
         <line x1="15" y1="10" x2="15" y2="80" stroke="#1d293d" strokeWidth="1" />
         <motion.path d="M15 80 L165 10" fill="none" stroke={FC} strokeWidth="2.5"
           initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />
-        <text x="80" y="88" textAnchor="middle" fill="#90a1b9" fontSize="7">Force →</text>
-        <text x="8" y="45" fill="#90a1b9" fontSize="7" transform="rotate(-90,8,45)">Ext →</text>
+        <text x="80" y="88" textAnchor="middle" fill="#a8b8cc" fontSize="7">Force →</text>
+        <text x="8" y="45" fill="#a8b8cc" fontSize="7" transform="rotate(-90,8,45)">Ext →</text>
         <text x="130" y="28" fill={FC} fontSize="8">Always</text>
         <text x="130" y="38" fill={FC} fontSize="8">linear?</text>
         <motion.text x="155" y="22" fill="#ef4444" fontSize="14" fontWeight="bold"
@@ -303,7 +303,7 @@ function HookesLawReality() {
           initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />
         <motion.path d="M130 20 L145 15" fill="none" stroke="#ef4444" strokeWidth="2.5" strokeDasharray="3 2"
           initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.8 }} />
-        <text x="85" y="100" fill="#90a1b9" fontSize="7">Extension →</text>
+        <text x="85" y="100" fill="#a8b8cc" fontSize="7">Extension →</text>
         <text x="38" y="72" fill={FC} fontSize="7">Linear (elastic)</text>
         <text x="112" y="28" fill="#ef4444" fontSize="7">Inelastic</text>
       </svg>
@@ -362,12 +362,12 @@ function MomentsLesson() {
       {/* Slider */}
       <div className="w-full rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
         <div className="flex justify-between text-xs mb-1">
-          <span style={{ color: '#90a1b9' }}>F₁ (N)</span>
+          <span style={{ color: '#a8b8cc' }}>F₁ (N)</span>
           <span style={{ color: '#e879f9' }} className="font-bold">{f1} N</span>
         </div>
         <input type="range" min="1" max="20" value={f1} onChange={e => setF1(+e.target.value)} className="w-full" style={{ accentColor: '#e879f9' }} />
         <div className="flex justify-between text-xs mt-1.5">
-          <span style={{ color: '#90a1b9' }}>Moment = F × d (N·m)</span>
+          <span style={{ color: '#a8b8cc' }}>Moment = F × d (N·m)</span>
           <span style={{ color: FC }} className="font-mono font-bold">{f1}×70 = {f1 * 70}</span>
         </div>
       </div>
@@ -453,27 +453,27 @@ function FluidPressureLesson() {
         </motion.g>
         {/* Depth indicator on right side */}
         <line x1={cX + cW + 6} y1={cY} x2={cX + cW + 6} y2={cY + cH} stroke="#334155" strokeWidth="1" />
-        <motion.line x1={cX + cW + 3} y1={cY} x2={cX + cW + 9} y2={cY} stroke="#90a1b9" strokeWidth="1.5" animate={{ y1: cY, y2: cY }} />
+        <motion.line x1={cX + cW + 3} y1={cY} x2={cX + cW + 9} y2={cY} stroke="#a8b8cc" strokeWidth="1.5" animate={{ y1: cY, y2: cY }} />
         <motion.line x1={cX + cW + 3} y1={selectedY} x2={cX + cW + 9} y2={selectedY} stroke="#fdc700" strokeWidth="1.5"
           animate={{ y1: selectedY, y2: selectedY }} transition={{ duration: 0.25 }} />
         <motion.text x={cX + cW + 18} y={cY + depthPx / 2 + 4} fill="#fdc700" fontSize={8} fontWeight="bold"
           animate={{ y: cY + depthPx / 2 + 4 }} transition={{ duration: 0.25 }}>{depth}m</motion.text>
 
         {/* Formula & result */}
-        <text x="210" y="20" textAnchor="middle" fill="#90a1b9" fontSize={8}>P = ρgh</text>
-        <text x="210" y="34" textAnchor="middle" fill="#90a1b9" fontSize={7}>ρ = 1000 kg/m³</text>
-        <text x="210" y="46" textAnchor="middle" fill="#90a1b9" fontSize={7}>g = 10 N/kg</text>
+        <text x="210" y="20" textAnchor="middle" fill="#a8b8cc" fontSize={8}>P = ρgh</text>
+        <text x="210" y="34" textAnchor="middle" fill="#a8b8cc" fontSize={7}>ρ = 1000 kg/m³</text>
+        <text x="210" y="46" textAnchor="middle" fill="#a8b8cc" fontSize={7}>g = 10 N/kg</text>
         <rect x="182" y="56" width="62" height="30" rx="5" fill="#1d293d" />
         <text x="213" y="70" textAnchor="middle" fill={FC} fontSize={9} fontWeight="bold">{(p/1000).toFixed(0)} kPa</text>
-        <text x="213" y="82" textAnchor="middle" fill="#90a1b9" fontSize={7}>{p.toLocaleString()} Pa</text>
+        <text x="213" y="82" textAnchor="middle" fill="#a8b8cc" fontSize={7}>{p.toLocaleString()} Pa</text>
 
         {/* Note */}
-        <text x="130" y="132" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>Pressure acts equally in all directions at a given depth</text>
+        <text x="130" y="132" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>Pressure acts equally in all directions at a given depth</text>
       </svg>
       {/* Slider */}
       <div className="w-full rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
         <div className="flex justify-between text-xs mb-1">
-          <span style={{ color: '#90a1b9' }}>Depth (m)</span>
+          <span style={{ color: '#a8b8cc' }}>Depth (m)</span>
           <span style={{ color: '#fdc700' }} className="font-bold">{depth} m</span>
         </div>
         <input type="range" min="1" max="10" step="1" value={depth} onChange={e => setDepth(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
@@ -506,7 +506,7 @@ function FluidPressureReality() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="relative w-16 h-20 rounded-[8px]" style={{ background: '#2b7fff20', border: '1px solid #2b7fff' }}>
-        {[['↓', 'top: 8px', 'left: 50%', '#90a1b9'], ['→', 'top: 50%', 'right: -12px', FC], ['↑', 'bottom: 8px', 'left: 50%', '#00bc7d']].map(([arr, t, l, col], i) => (
+        {[['↓', 'top: 8px', 'left: 50%', '#a8b8cc'], ['→', 'top: 50%', 'right: -12px', FC], ['↑', 'bottom: 8px', 'left: 50%', '#00bc7d']].map(([arr, t, l, col], i) => (
           <div key={i} className="absolute text-sm font-bold" style={{ top: t, left: l, color: col, transform: 'translate(-50%,-50%)' }}>{arr}</div>
         ))}
       </div>
@@ -527,7 +527,7 @@ function MotionGraphsLesson() {
         {[['dt', 'Distance-Time'], ['vt', 'Velocity-Time']].map(([key, label]) => (
           <button key={key} onClick={() => setGraph(key)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: graph === key ? `${FC}22` : '#1d293d', color: graph === key ? FC : '#90a1b9', border: `1px solid ${graph === key ? FC : '#1d293d'}` }}>
+            style={{ background: graph === key ? `${FC}22` : '#1d293d', color: graph === key ? FC : '#a8b8cc', border: `1px solid ${graph === key ? FC : '#1d293d'}` }}>
             {label}
           </button>
         ))}
@@ -542,8 +542,8 @@ function MotionGraphsLesson() {
         <polygon points="26,12 34,12 30,4" fill="#334155" />
         <polygon points="248,116 248,124 256,120" fill="#334155" />
         {/* Axis labels */}
-        <text x="141" y="134" textAnchor="middle" fill="#90a1b9" fontSize={8}>Time →</text>
-        <text x="14" y="64" fill="#90a1b9" fontSize={8} textAnchor="middle" transform="rotate(-90,14,64)">{isDT ? 'Distance →' : 'Velocity →'}</text>
+        <text x="141" y="134" textAnchor="middle" fill="#a8b8cc" fontSize={8}>Time →</text>
+        <text x="14" y="64" fill="#a8b8cc" fontSize={8} textAnchor="middle" transform="rotate(-90,14,64)">{isDT ? 'Distance →' : 'Velocity →'}</text>
 
         {isDT ? (
           <g key="dt">
@@ -562,7 +562,7 @@ function MotionGraphsLesson() {
             <text x="115" y="72" textAnchor="middle" fill="#fdc700" fontSize={8}>stationary</text>
             <text x="190" y="42" textAnchor="middle" fill="#00bc7d" fontSize={8}>faster</text>
             {/* Gradient annotation */}
-            <text x="140" y="144" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>gradient = speed   |   curved line = acceleration</text>
+            <text x="140" y="144" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>gradient = speed   |   curved line = acceleration</text>
           </g>
         ) : (
           <g key="vt">
@@ -590,7 +590,7 @@ function MotionGraphsLesson() {
             <text x="92" y="44" fill="#00bc7d" fontSize={8}>accel.</text>
             <text x="175" y="45" fill="#ef4444" fontSize={8}>decel.</text>
             <text x="140" y="110" textAnchor="middle" fill={`${FC}90`} fontSize={7.5}>area = displacement</text>
-            <text x="140" y="144" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>gradient = acceleration (a = Δv/Δt)   |   area = displacement</text>
+            <text x="140" y="144" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>gradient = acceleration (a = Δv/Δt)   |   area = displacement</text>
           </g>
         )}
       </svg>
@@ -609,8 +609,8 @@ function MotionGraphsIdea() {
         <text x="93" y="29" textAnchor="middle" fill={FC} fontSize="8">v = 30 m/s (constant)</text>
         {/* Zero line for reference */}
         <line x1="20" y1="63" x2="170" y2="63" stroke="#1d293d" strokeWidth="1" strokeDasharray="3 2" />
-        <text x="93" y="77" textAnchor="middle" fill="#90a1b9" fontSize="7">v = 0 (actual stopped)</text>
-        <text x="8" y="40" fill="#90a1b9" fontSize="7" transform="rotate(-90,8,40)">v →</text>
+        <text x="93" y="77" textAnchor="middle" fill="#a8b8cc" fontSize="7">v = 0 (actual stopped)</text>
+        <text x="8" y="40" fill="#a8b8cc" fontSize="7" transform="rotate(-90,8,40)">v →</text>
         {/* "Stopped?" label */}
         <motion.text x="155" y="28" fill="#ef4444" fontSize="12" fontWeight="bold"
           animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2 }}>✗</motion.text>
@@ -628,14 +628,14 @@ function MotionGraphsReality() {
         <line x1="10" y1="75" x2="10" y2="20" stroke="#1d293d" strokeWidth="1"/>
         <line x1="10" y1="75" x2="75" y2="75" stroke="#1d293d" strokeWidth="1"/>
         <line x1="10" y1="75" x2="70" y2="22" stroke={FC} strokeWidth="2" strokeLinecap="round"/>
-        <text x="38" y="82" textAnchor="middle" fill="#90a1b9" fontSize="6">slope = speed</text>
+        <text x="38" y="82" textAnchor="middle" fill="#a8b8cc" fontSize="6">slope = speed</text>
         {/* v-t graph (flat = constant v) */}
         <text x="98" y="10" fill="#c084fc" fontSize="7" fontWeight="bold">v-t</text>
         <line x1="98" y1="75" x2="98" y2="20" stroke="#1d293d" strokeWidth="1"/>
         <line x1="98" y1="75" x2="175" y2="75" stroke="#1d293d" strokeWidth="1"/>
         <line x1="98" y1="45" x2="170" y2="45" stroke="#c084fc" strokeWidth="2" strokeLinecap="round"/>
         <text x="134" y="56" textAnchor="middle" fill="#c084fc" fontSize="6">constant v</text>
-        <text x="134" y="82" textAnchor="middle" fill="#90a1b9" fontSize="6">flat ≠ stationary</text>
+        <text x="134" y="82" textAnchor="middle" fill="#a8b8cc" fontSize="6">flat ≠ stationary</text>
       </svg>
       <div className="text-center text-xs font-semibold" style={{ color: FC }}>Flat v-t = moving at constant speed</div>
     </div>
@@ -655,7 +655,7 @@ function NewtonsLawsLesson() {
         {[1, 2, 3].map(n => (
           <button key={n} onClick={() => setLaw(n)}
             className="px-3 py-1 rounded-[8px] text-xs font-bold"
-            style={{ background: law === n ? `${FC}22` : '#1d293d', color: law === n ? FC : '#90a1b9', border: `1px solid ${law === n ? FC : '#1d293d'}` }}>
+            style={{ background: law === n ? `${FC}22` : '#1d293d', color: law === n ? FC : '#a8b8cc', border: `1px solid ${law === n ? FC : '#1d293d'}` }}>
             Law {n}
           </button>
         ))}
@@ -664,13 +664,13 @@ function NewtonsLawsLesson() {
       {law === 1 && (
         <svg width="260" height="118" viewBox="0 0 260 118" key="law1">
           {/* Object at rest  -  balanced arrows */}
-          <rect x="20" y="40" width="50" height="36" rx="6" fill="#1d293d" stroke="#90a1b9" strokeWidth="1.5" />
-          <text x="45" y="63" textAnchor="middle" fill="#90a1b9" fontSize={9}>at rest</text>
+          <rect x="20" y="40" width="50" height="36" rx="6" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1.5" />
+          <text x="45" y="63" textAnchor="middle" fill="#a8b8cc" fontSize={9}>at rest</text>
           <line x1="45" y1="40" x2="45" y2="18" stroke="#00bc7d" strokeWidth="2" strokeLinecap="round" />
           <polygon points="40,22 50,22 45,12" fill="#00bc7d" />
           <line x1="45" y1="76" x2="45" y2="98" stroke="#fdc700" strokeWidth="2" strokeLinecap="round" />
           <polygon points="40,94 50,94 45,104" fill="#fdc700" />
-          <text x="45" y="114" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>F_net = 0</text>
+          <text x="45" y="114" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>F_net = 0</text>
 
           {/* Object moving at constant velocity */}
           <motion.g animate={{ x: [0, 30, 0] }} transition={{ repeat: Infinity, duration: 2.4, ease: 'easeInOut' }}>
@@ -681,7 +681,7 @@ function NewtonsLawsLesson() {
           <line x1="208" y1="58" x2="236" y2="58" stroke={FC} strokeWidth="2" strokeLinecap="round" />
           <polygon points="232,53 232,63 242,58" fill={FC} />
 
-          <text x="130" y="15" textAnchor="middle" fill="#90a1b9" fontSize={8}>No net force → constant velocity (or rest)</text>
+          <text x="130" y="15" textAnchor="middle" fill="#a8b8cc" fontSize={8}>No net force → constant velocity (or rest)</text>
           <line x1="105" y1="8" x2="155" y2="8" stroke="#334155" strokeWidth="1" strokeDasharray="3 2" />
         </svg>
       )}
@@ -705,17 +705,17 @@ function NewtonsLawsLesson() {
           </svg>
           <div className="rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
             <div className="flex justify-between text-xs mb-0.5">
-              <span style={{ color: '#90a1b9' }}>Mass (kg)</span>
+              <span style={{ color: '#a8b8cc' }}>Mass (kg)</span>
               <span style={{ color: '#c084fc' }} className="font-bold">{mass} kg</span>
             </div>
             <input type="range" min="1" max="10" value={mass} onChange={e => setMass(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: '#c084fc' }} />
             <div className="flex justify-between text-xs mb-0.5">
-              <span style={{ color: '#90a1b9' }}>Force (N)</span>
+              <span style={{ color: '#a8b8cc' }}>Force (N)</span>
               <span style={{ color: FC }} className="font-bold">{fN} N</span>
             </div>
             <input type="range" min="1" max="50" value={fN} onChange={e => setFN(+e.target.value)} className="w-full" style={{ accentColor: FC }} />
             <div className="flex justify-between text-xs mt-1.5 pt-1.5 font-bold" style={{ borderTop: '1px solid #0b1121' }}>
-              <span style={{ color: '#90a1b9' }}>a = F/m = {fN}/{mass}</span>
+              <span style={{ color: '#a8b8cc' }}>a = F/m = {fN}/{mass}</span>
               <span style={{ color: '#fdc700' }}>{accel} m/s²</span>
             </div>
           </div>
@@ -743,14 +743,14 @@ function NewtonsLawsLesson() {
 
           {/* Interaction between them */}
           <line x1="76" y1="61" x2="184" y2="61" stroke="#334155" strokeWidth="1.5" strokeDasharray="4 3" />
-          <text x="130" y="55" textAnchor="middle" fill="#90a1b9" fontSize={8}>interaction</text>
+          <text x="130" y="55" textAnchor="middle" fill="#a8b8cc" fontSize={8}>interaction</text>
 
           {/* Equal & opposite labels */}
-          <text x="130" y="98" textAnchor="middle" fill="#90a1b9" fontSize={8}>equal magnitude, opposite direction</text>
+          <text x="130" y="98" textAnchor="middle" fill="#a8b8cc" fontSize={8}>equal magnitude, opposite direction</text>
           <text x="130" y="112" textAnchor="middle" fill={FC} fontSize={8} fontWeight="bold">every action → equal and opposite reaction</text>
 
           {/* Rocket example note */}
-          <text x="130" y="20" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>e.g. rocket: thrust down → rocket moves up</text>
+          <text x="130" y="20" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>e.g. rocket: thrust down → rocket moves up</text>
         </svg>
       )}
     </div>
@@ -780,7 +780,7 @@ function NewtonsLawsIdea() {
             <div style={{ width: 3, height: 22, background: '#c084fc', borderRadius: 1 }} />
             <div style={{ width: 0, height: 0, borderLeft: '6px solid transparent', borderRight: '6px solid transparent', borderTop: '8px solid #c084fc' }} />
           </motion.div>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>slower?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>slower?</span>
         </div>
       </div>
       <IdeaCaption>Heavier objects fall faster because gravity pulls them with more force</IdeaCaption>
@@ -823,7 +823,7 @@ function StoppingDistanceLesson() {
     <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
       {/* Speed slider */}
       <div className="flex items-center gap-3">
-        <span className="text-xs" style={{ color: '#90a1b9' }}>Speed</span>
+        <span className="text-xs" style={{ color: '#a8b8cc' }}>Speed</span>
         <input type="range" min="10" max="30" step="1" value={speed} onChange={e => setSpeed(+e.target.value)} className="flex-1" style={{ accentColor: FC }} />
         <span className="text-xs font-bold w-14 text-right" style={{ color: FC }}>{speed} m/s</span>
       </div>
@@ -831,10 +831,10 @@ function StoppingDistanceLesson() {
       {/* SVG bar diagram */}
       <svg width="280" height="128" viewBox="0 0 280 128">
         {/* Car icon at left */}
-        <rect x="2" y="46" width="28" height="16" rx="4" fill="#1d293d" stroke="#90a1b9" strokeWidth="1.5" />
-        <rect x="7" y="40" width="18" height="10" rx="3" fill="#1d293d" stroke="#90a1b9" strokeWidth="1" />
-        <circle cx="8" cy="62" r="4" fill="#334155" stroke="#90a1b9" strokeWidth="1" />
-        <circle cx="22" cy="62" r="4" fill="#334155" stroke="#90a1b9" strokeWidth="1" />
+        <rect x="2" y="46" width="28" height="16" rx="4" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1.5" />
+        <rect x="7" y="40" width="18" height="10" rx="3" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1" />
+        <circle cx="8" cy="62" r="4" fill="#334155" stroke="#a8b8cc" strokeWidth="1" />
+        <circle cx="22" cy="62" r="4" fill="#334155" stroke="#a8b8cc" strokeWidth="1" />
 
         {/* Ground line */}
         <line x1="34" y1="68" x2="276" y2="68" stroke="#334155" strokeWidth="1" />
@@ -853,17 +853,17 @@ function StoppingDistanceLesson() {
           animate={{ x: 34 + thinkPx + 2 }} transition={{ duration: 0.35 }}>Braking: {braking} m</motion.text>
 
         {/* Total bracket */}
-        <motion.line y1="72" y2="72" stroke="#90a1b9" strokeWidth="1"
+        <motion.line y1="72" y2="72" stroke="#a8b8cc" strokeWidth="1"
           animate={{ x1: 34, x2: 34 + thinkPx + brakePx }} transition={{ duration: 0.35 }} />
-        <line x1="34" y1="70" x2="34" y2="74" stroke="#90a1b9" strokeWidth="1" />
-        <motion.line y1="70" y2="74" stroke="#90a1b9" strokeWidth="1"
+        <line x1="34" y1="70" x2="34" y2="74" stroke="#a8b8cc" strokeWidth="1" />
+        <motion.line y1="70" y2="74" stroke="#a8b8cc" strokeWidth="1"
           animate={{ x1: 34 + thinkPx + brakePx, x2: 34 + thinkPx + brakePx }} transition={{ duration: 0.35 }} />
-        <text x="34" y="82" fill="#90a1b9" fontSize={8}>Total: </text>
+        <text x="34" y="82" fill="#a8b8cc" fontSize={8}>Total: </text>
         <motion.text y="82" fill={FC} fontSize={8} fontWeight="bold"
           animate={{ x: 62 }} transition={{ duration: 0 }}>{total} m</motion.text>
 
         {/* Notes */}
-        <text x="140" y="100" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>wet/icy road → much greater braking distance (less friction)</text>
+        <text x="140" y="100" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>wet/icy road → much greater braking distance (less friction)</text>
         <text x="140" y="114" textAnchor="middle" fill="#fdc700" fontSize={7.5}>2× speed → 4× braking distance (v² relationship)</text>
       </svg>
     </div>
@@ -875,13 +875,13 @@ function StoppingDistanceIdea() {
       <div className="flex flex-col gap-2 w-full px-2">
         {/* Speed 1× */}
         <div className="flex items-center gap-2">
-          <span className="text-xs w-14 shrink-0" style={{ color: '#90a1b9' }}>Speed 1×</span>
+          <span className="text-xs w-14 shrink-0" style={{ color: '#a8b8cc' }}>Speed 1×</span>
           <div className="h-4 rounded-full" style={{ width: 60, background: FC }} />
           <span className="text-xs font-bold" style={{ color: FC }}>20 m</span>
         </div>
         {/* Speed 2× - wrong: shows 2× not 4× */}
         <div className="flex items-center gap-2">
-          <span className="text-xs w-14 shrink-0" style={{ color: '#90a1b9' }}>Speed 2×</span>
+          <span className="text-xs w-14 shrink-0" style={{ color: '#a8b8cc' }}>Speed 2×</span>
           <div className="h-4 rounded-full" style={{ width: 120, background: '#ef4444' }} />
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>40 m?</span>
         </div>
@@ -902,8 +902,8 @@ function StoppingDistanceReality() {
         <line x1="10" y1="55" x2="150" y2="55" stroke="#1d293d" strokeWidth="1"/>
         <line x1="10" y1="5" x2="10" y2="55" stroke="#1d293d" strokeWidth="1"/>
         <path d="M10 55 Q80 55 150 5" fill="none" stroke={FC} strokeWidth="2.5" strokeLinecap="round"/>
-        <text x="80" y="62" textAnchor="middle" fill="#90a1b9" fontSize="7">speed →</text>
-        <text x="5" y="35" fill="#90a1b9" fontSize="7" transform="rotate(-90,5,35)">d →</text>
+        <text x="80" y="62" textAnchor="middle" fill="#a8b8cc" fontSize="7">speed →</text>
+        <text x="5" y="35" fill="#a8b8cc" fontSize="7" transform="rotate(-90,5,35)">d →</text>
         <text x="120" y="22" fill={FC} fontSize="7">∝ v²</text>
       </svg>
       <div className="text-center" style={{ fontSize: 10, color: '#cad5e2' }}>2× speed → 4× braking distance</div>
@@ -947,7 +947,7 @@ function MomentumLesson() {
         {[['inelastic', 'Inelastic (stick)'], ['elastic', 'Elastic (bounce)']].map(([key, label]) => (
           <button key={key} onClick={() => { setCollisionType(key); setPhase('before') }}
             className="px-2 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: collisionType === key ? `${FC}22` : '#1d293d', color: collisionType === key ? FC : '#90a1b9', border: `1px solid ${collisionType === key ? FC : '#1d293d'}` }}>
+            style={{ background: collisionType === key ? `${FC}22` : '#1d293d', color: collisionType === key ? FC : '#a8b8cc', border: `1px solid ${collisionType === key ? FC : '#1d293d'}` }}>
             {label}
           </button>
         ))}
@@ -956,7 +956,7 @@ function MomentumLesson() {
       {/* Collision SVG */}
       <svg width="260" height="116" viewBox="0 0 260 116">
         {/* Phase label */}
-        <text x="130" y="14" textAnchor="middle" fill="#90a1b9" fontSize={8} fontWeight="bold" textDecoration="underline">
+        <text x="130" y="14" textAnchor="middle" fill="#a8b8cc" fontSize={8} fontWeight="bold" textDecoration="underline">
           {phase === 'before' ? 'Before collision' : phase === 'colliding' ? 'At collision' : 'After collision'}
         </text>
 
@@ -1013,7 +1013,7 @@ function MomentumLesson() {
         <text x="130" y="98" textAnchor="middle" fill="#00bc7d" fontSize={8} fontWeight="bold">
           p_before = {p_before} kg·m/s = p_after (conserved)
         </text>
-        <text x="130" y="110" textAnchor="middle" fill="#90a1b9" fontSize={7.5}>momentum is always conserved in collisions</text>
+        <text x="130" y="110" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>momentum is always conserved in collisions</text>
       </svg>
 
       {/* Formula */}
@@ -1033,7 +1033,7 @@ function MomentumIdea() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="flex flex-col gap-3 w-full">
         {/* Before */}
-        <div className="flex items-center gap-2 text-xs" style={{ color: '#90a1b9' }}>
+        <div className="flex items-center gap-2 text-xs" style={{ color: '#a8b8cc' }}>
           <span className="w-12 shrink-0">Before:</span>
           <motion.div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
             style={{ background: `${FC}20`, border: `2px solid ${FC}`, color: FC }}
@@ -1041,10 +1041,10 @@ function MomentumIdea() {
           <div className="w-7 h-7 rounded-full" style={{ background: '#1d293d', border: '2px solid #c084fc' }} />
         </div>
         {/* After (wrong: first ball "stops") */}
-        <div className="flex items-center gap-2 text-xs" style={{ color: '#90a1b9' }}>
+        <div className="flex items-center gap-2 text-xs" style={{ color: '#a8b8cc' }}>
           <span className="w-12 shrink-0">After:</span>
           <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: '#1d293d', border: `2px solid ${FC}`, color: '#90a1b9' }}>●</div>
+            style={{ background: '#1d293d', border: `2px solid ${FC}`, color: '#a8b8cc' }}>●</div>
           <motion.div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
             style={{ background: '#c084fc20', border: '2px solid #c084fc', color: '#c084fc' }}
             animate={{ x: phase >= 1 ? 14 : 0 }}>→</motion.div>
@@ -1063,12 +1063,12 @@ function MomentumReality() {
       <div className="font-mono text-sm font-bold" style={{ color: FC }}>p = mv</div>
       <svg width="160" height="52" viewBox="0 0 160 52">
         {/* Before */}
-        <text x="4" y="14" fill="#90a1b9" fontSize="7">Before</text>
+        <text x="4" y="14" fill="#a8b8cc" fontSize="7">Before</text>
         <circle cx="50" cy="10" r="10" fill={`${FC}20`} stroke={FC} strokeWidth="1.5"/>
         <text x="50" y="14" textAnchor="middle" fill={FC} fontSize="7">→</text>
         <circle cx="90" cy="10" r="7" fill="#c084fc20" stroke="#c084fc" strokeWidth="1.5"/>
         {/* After */}
-        <text x="4" y="44" fill="#90a1b9" fontSize="7">After</text>
+        <text x="4" y="44" fill="#a8b8cc" fontSize="7">After</text>
         <circle cx="70" cy="40" r="10" fill={`${FC}20`} stroke={FC} strokeWidth="1.5"/>
         <text x="70" y="44" textAnchor="middle" fill={FC} fontSize="7">→</text>
         <circle cx="110" cy="40" r="7" fill="#c084fc20" stroke="#c084fc" strokeWidth="1.5"/>

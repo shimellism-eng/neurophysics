@@ -71,7 +71,7 @@ export default function HomeScreen() {
             <h1 className="text-2xl font-extrabold leading-tight truncate" style={{ color: '#f8fafc', letterSpacing: '-0.01em' }}>
               {displayName}
             </h1>
-            <p className="text-xs mt-0.5" style={{ color: '#90a1b9' }}>GCSE Physics · {progressPct}% complete</p>
+            <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>GCSE Physics · {progressPct}% complete</p>
           </div>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function HomeScreen() {
             >
               <s.icon size={18} color={s.color} className="mx-auto mb-2" />
               <div className="text-2xl font-bold" style={{ color: s.color }}>{s.value}</div>
-              <div className="text-xs" style={{ color: '#90a1b9' }}>{s.label}</div>
+              <div className="text-xs" style={{ color: '#a8b8cc' }}>{s.label}</div>
             </motion.div>
           ))}
         </div>
@@ -164,16 +164,16 @@ export default function HomeScreen() {
             </div>
             <div className="text-left">
               <div className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Mastery View</div>
-              <div className="text-xs" style={{ color: '#90a1b9' }}>Track your progress</div>
+              <div className="text-xs" style={{ color: '#a8b8cc' }}>Track your progress</div>
             </div>
           </div>
-          <ChevronRight size={14} color="#90a1b9" />
+          <ChevronRight size={14} color="#a8b8cc" />
         </motion.button>
       </div>
 
       {/* Modules */}
       <div className="px-5 pb-8">
-        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#90a1b9' }}>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
           All Modules
         </div>
         <div className="space-y-2">
@@ -207,10 +207,10 @@ export default function HomeScreen() {
                         style={{ width: `${pct}%`, background: module.color, opacity: 0.75 }}
                       />
                     </div>
-                    <span className="text-xs shrink-0" style={{ color: '#90a1b9' }}>{mastCount}/{module.topics.length}</span>
+                    <span className="text-xs shrink-0" style={{ color: '#a8b8cc' }}>{mastCount}/{module.topics.length}</span>
                   </div>
                 </div>
-                <ChevronRight size={14} color="#90a1b9" />
+                <ChevronRight size={14} color="#a8b8cc" />
               </motion.button>
             )
           })}

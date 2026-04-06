@@ -33,7 +33,7 @@ function Input({ label, type = 'text', value, onChange, placeholder, error, auto
   return (
     <div>
       {label && (
-        <label className="block text-xs font-semibold uppercase tracking-wide mb-1.5" style={{ color: '#90a1b9' }}>
+        <label className="block text-xs font-semibold uppercase tracking-wide mb-1.5" style={{ color: '#a8b8cc' }}>
           {label}
         </label>
       )}
@@ -89,7 +89,7 @@ function PasswordInput({ label, value, onChange, error, autoComplete, placeholde
           type="button"
           onClick={() => setShow(v => !v)}
           aria-label={show ? 'Hide password' : 'Show password'}
-          style={{ color: '#90a1b9', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+          style={{ color: '#a8b8cc', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
         >
           {show ? <EyeOff size={16} /> : <Eye size={16} />}
         </button>
@@ -176,7 +176,7 @@ function BackHeader({ onBack, title }) {
       <button
         onClick={onBack}
         className="flex items-center gap-2 mb-6"
-        style={{ color: '#90a1b9', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+        style={{ color: '#a8b8cc', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
         aria-label="Go back"
       >
         <ArrowLeft size={18} />
@@ -250,7 +250,7 @@ function Landing({ onEmail, onSignIn }) {
           <h1 className="text-4xl font-extrabold tracking-tight mb-2" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
             NeuroPhysics
           </h1>
-          <p className="text-sm leading-relaxed" style={{ color: '#90a1b9' }}>
+          <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc' }}>
             GCSE Physics · Calm, focused, and clear.
           </p>
         </motion.div>
@@ -271,14 +271,15 @@ function Landing({ onEmail, onSignIn }) {
           loading={oauthLoading === 'google'}
         />
 
-        {/* Apple */}
-        <OAuthButton
+        {/* Apple — re-enable once Apple Developer enrollment is approved and
+           the Apple provider is configured in Supabase Auth → Providers */}
+        {/* <OAuthButton
           icon={<AppleIcon />}
           label="Continue with Apple"
           onClick={() => handleOAuth('apple')}
           loading={oauthLoading === 'apple'}
           dark
-        />
+        /> */}
 
         <Divider label="Or" />
 
@@ -298,7 +299,7 @@ function Landing({ onEmail, onSignIn }) {
         )}
 
         {/* Sign in link */}
-        <p className="text-center text-sm pt-1" style={{ color: '#90a1b9' }}>
+        <p className="text-center text-sm pt-1" style={{ color: '#a8b8cc' }}>
           Already have an account?{' '}
           <button
             onClick={onSignIn}
@@ -376,7 +377,7 @@ function SignUpEmail({ onBack, onDone }) {
         </div>
         <div>
           <h2 className="text-2xl font-extrabold mb-2" style={{ color: '#f8fafc' }}>Check your email</h2>
-          <p className="text-sm leading-relaxed" style={{ color: '#90a1b9' }}>
+          <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc' }}>
             We sent a confirmation link to <strong style={{ color: '#f8fafc' }}>{email}</strong>.
             Open it to activate your account, then sign in.
           </p>
@@ -400,7 +401,7 @@ function SignUpEmail({ onBack, onDone }) {
         <BackHeader onBack={onBack} />
         <div className="mb-5">
           <h1 className="text-3xl font-extrabold mb-1" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>Sign up with email</h1>
-          <p className="text-sm" style={{ color: '#90a1b9' }}>Start your GCSE Physics journey.</p>
+          <p className="text-sm" style={{ color: '#a8b8cc' }}>Start your GCSE Physics journey.</p>
         </div>
 
         <div className="flex flex-col gap-4 pb-6">
@@ -423,7 +424,7 @@ function SignUpEmail({ onBack, onDone }) {
             <div className="w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 mt-0.5" style={{ background: ageChecked ? '#6366f1' : 'transparent', border: ageChecked ? 'none' : '1.5px solid #4a5a72', transition: 'all 0.15s' }}>
               {ageChecked && <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
             </div>
-            <span className="text-sm leading-snug" style={{ color: ageChecked ? '#f8fafc' : '#90a1b9' }}>
+            <span className="text-sm leading-snug" style={{ color: ageChecked ? '#f8fafc' : '#a8b8cc' }}>
               I confirm I am <strong style={{ color: '#f8fafc' }}>13 years or older</strong>
             </span>
           </button>
@@ -492,13 +493,13 @@ function SignIn({ onBack, onDone, onForgot }) {
         <BackHeader onBack={onBack} />
         <div className="mb-5">
           <h1 className="text-3xl font-extrabold mb-1" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>Welcome back</h1>
-          <p className="text-sm" style={{ color: '#90a1b9' }}>Sign in to continue your streak.</p>
+          <p className="text-sm" style={{ color: '#a8b8cc' }}>Sign in to continue your streak.</p>
         </div>
 
         {/* Social sign-in */}
         <div className="flex flex-col gap-3 mb-5">
           <OAuthButton icon={<GoogleIcon />} label="Continue with Google" onClick={() => handleOAuth('google')} loading={oauthLoading === 'google'} />
-          <OAuthButton icon={<AppleIcon />} label="Continue with Apple" onClick={() => handleOAuth('apple')} loading={oauthLoading === 'apple'} dark />
+          {/* <OAuthButton icon={<AppleIcon />} label="Continue with Apple" onClick={() => handleOAuth('apple')} loading={oauthLoading === 'apple'} dark /> */}
         </div>
 
         <Divider label="or sign in with email" />
@@ -556,13 +557,13 @@ function ForgotPassword({ initialEmail, onBack }) {
         <BackHeader onBack={onBack} />
         <div className="mb-5">
           <h1 className="text-3xl font-extrabold mb-1" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>Reset password</h1>
-          <p className="text-sm" style={{ color: '#90a1b9' }}>We'll send a reset link to your email.</p>
+          <p className="text-sm" style={{ color: '#a8b8cc' }}>We'll send a reset link to your email.</p>
         </div>
 
         {sent ? (
           <motion.div className="flex flex-col items-center gap-4 pt-8 text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <CheckCircle2 size={48} color="#00bc7d" />
-            <p className="text-sm leading-relaxed" style={{ color: '#90a1b9' }}>
+            <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc' }}>
               Reset link sent to <strong style={{ color: '#f8fafc' }}>{email}</strong>. Check your inbox.
             </p>
             <button onClick={onBack} className="text-sm font-semibold" style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer' }}>

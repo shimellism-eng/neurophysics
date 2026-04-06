@@ -4,6 +4,7 @@ import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, Fil
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
 import { useAuth } from '../context/AuthContext'
+import { supabase } from '../lib/supabase'
 
 // ─── Profile helpers ──────────────────────────────────────────────────────────
 const PROFILE_KEY = 'neurophysics_profile'
@@ -102,6 +103,12 @@ export default function SettingsScreen() {
   const { user, signOut } = useAuth()
 
   const handleSignOut = async () => {
+    localStorage.removeItem('neurophysics_prefs')
+    localStorage.removeItem('neurophysics_onboarded')
+    localStorage.removeItem('neurophysics_profile')
+    localStorage.removeItem('np_progress')
+    localStorage.removeItem('np_stats')
+    await secureRemove('mamo_api_key')
     await signOut()
     navigate('/auth', { replace: true })
   }
@@ -162,7 +169,7 @@ export default function SettingsScreen() {
     const next = !prefs.reduceMotion
     applyReduceMotion(next)
     setPref('reduceMotion', next)
-    showToast(next ? 'Reduce Motion on  -  animations minimised' : 'Reduce Motion off', next ? '#10b981' : '#90a1b9')
+    showToast(next ? 'Reduce Motion on  -  animations minimised' : 'Reduce Motion off', next ? '#10b981' : '#a8b8cc')
   }
 
   // ── High Contrast
@@ -170,7 +177,7 @@ export default function SettingsScreen() {
     const next = !prefs.highContrast
     applyHighContrast(next)
     setPref('highContrast', next)
-    showToast(next ? 'High Contrast on' : 'High Contrast off', next ? '#10b981' : '#90a1b9')
+    showToast(next ? 'High Contrast on' : 'High Contrast off', next ? '#10b981' : '#a8b8cc')
   }
 
   // ── Daily Reminders
@@ -189,7 +196,7 @@ export default function SettingsScreen() {
       }
     } else {
       setPref('reminders', false)
-      showToast('Daily reminders off', '#90a1b9')
+      showToast('Daily reminders off', '#a8b8cc')
     }
   }
 
@@ -201,14 +208,35 @@ export default function SettingsScreen() {
   }
 
   const handleDeleteData = async () => {
+    // Delete Supabase account server-side
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (session?.access_token) {
+        const apiBase = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
+        const res = await fetch(`${apiBase}/api/delete-account`, {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${session.access_token}` },
+        })
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}))
+          showToast(`Deletion failed: ${err.error || 'Unknown error'}`, '#ef4444')
+          return
+        }
+      }
+    } catch (e) {
+      showToast(`Deletion failed: ${e.message}`, '#ef4444')
+      return
+    }
+    // Clear local data
     localStorage.removeItem('neurophysics_prefs')
     localStorage.removeItem('neurophysics_onboarded')
     localStorage.removeItem('neurophysics_profile')
     localStorage.removeItem('np_progress')
     localStorage.removeItem('np_stats')
     await secureRemove('mamo_api_key')
-    showToast('All data deleted ✓', '#10b981')
-    setTimeout(() => navigate('/splash', { replace: true }), 1500)
+    await signOut()
+    showToast('Account and all data deleted', '#10b981')
+    setTimeout(() => navigate('/auth', { replace: true }), 1500)
   }
 
   const sections = [
@@ -279,7 +307,7 @@ export default function SettingsScreen() {
     <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#0b1121' }}>
       <div className="px-5 pt-6 pb-4">
         <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>Settings</h1>
-        <p className="text-sm mt-1" style={{ color: '#90a1b9' }}>Customise your experience</p>
+        <p className="text-sm mt-1" style={{ color: '#a8b8cc' }}>Customise your experience</p>
       </div>
 
       {/* Profile card */}
@@ -303,7 +331,7 @@ export default function SettingsScreen() {
                 <div className="text-base font-bold truncate" style={{ color: '#f8fafc' }}>
                   {profile.name || user?.user_metadata?.full_name || 'Physics Learner'}
                 </div>
-                <div className="text-xs truncate" style={{ color: '#90a1b9' }}>{user?.email}</div>
+                <div className="text-xs truncate" style={{ color: '#a8b8cc' }}>{user?.email}</div>
                 <div className="flex items-center gap-1 mt-1">
                   <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
                   <span className="text-xs" style={{ color: '#00bc7d' }}>Active learner</span>
@@ -311,7 +339,7 @@ export default function SettingsScreen() {
               </div>
               <button
                 onClick={startEditProfile}
-                className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
+                className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
                 style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)' }}
                 aria-label="Edit profile"
               >
@@ -324,7 +352,7 @@ export default function SettingsScreen() {
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Edit Profile</span>
                 <button onClick={() => setEditingProfile(false)} aria-label="Cancel editing">
-                  <X size={16} color="#90a1b9" />
+                  <X size={16} color="#a8b8cc" />
                 </button>
               </div>
               {/* Avatar picker */}
@@ -386,7 +414,7 @@ export default function SettingsScreen() {
             <Atom size={16} color="#6366f1" />
             <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Mamo AI Key</div>
           </div>
-          <p className="text-xs mb-3" style={{ color: '#90a1b9' }}>
+          <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>
             Your Anthropic API key powers Mamo. Stored locally on your device only.
           </p>
           <div className="flex gap-2">
@@ -423,7 +451,7 @@ export default function SettingsScreen() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 + si * 0.08 }}
           >
-            <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+            <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
               {section.title}
             </div>
             <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
@@ -439,15 +467,15 @@ export default function SettingsScreen() {
                   aria-label={item.label}
                   disabled={!item.onPress && !item.onToggle && !item.chevron}
                 >
-                  <item.icon size={18} color={item.on ? '#6366f1' : '#90a1b9'} />
+                  <item.icon size={18} color={item.on ? '#6366f1' : '#a8b8cc'} />
                   <div className="flex-1">
                     <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>
                       {item.label}
                     </div>
-                    <div className="text-xs" style={{ color: '#90a1b9' }}>{item.hint}</div>
+                    <div className="text-xs" style={{ color: '#a8b8cc' }}>{item.hint}</div>
                   </div>
                   {item.chevron
-                    ? <ChevronRight size={14} color="#90a1b9" />
+                    ? <ChevronRight size={14} color="#a8b8cc" />
                     : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} />
                     : null
                   }
@@ -459,13 +487,13 @@ export default function SettingsScreen() {
 
         {/* Sign out */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
             Account
           </div>
           <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
             <div className="flex items-center gap-3 px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)', borderBottom: '0.75px solid #1d293d' }}>
               <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
-              <div className="text-xs" style={{ color: '#90a1b9' }}>Signed in as <strong style={{ color: '#f8fafc' }}>{user?.email}</strong></div>
+              <div className="text-xs" style={{ color: '#a8b8cc' }}>Signed in as <strong style={{ color: '#f8fafc' }}>{user?.email}</strong></div>
             </div>
             <button
               className="w-full flex items-center gap-3 px-4 py-4 text-left"
@@ -473,10 +501,10 @@ export default function SettingsScreen() {
               onClick={handleSignOut}
               aria-label="Sign out"
             >
-              <LogOut size={18} color="#90a1b9" />
+              <LogOut size={18} color="#a8b8cc" />
               <div className="flex-1">
                 <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>Sign Out</div>
-                <div className="text-xs" style={{ color: '#90a1b9' }}>Your progress is saved locally</div>
+                <div className="text-xs" style={{ color: '#a8b8cc' }}>Your progress is saved locally</div>
               </div>
             </button>
           </div>
@@ -484,7 +512,7 @@ export default function SettingsScreen() {
 
         {/* Delete all data */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
             Data
           </div>
           <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid rgba(239,68,68,0.25)' }}>
@@ -497,15 +525,15 @@ export default function SettingsScreen() {
               >
                 <Trash2 size={18} color="#ef4444" />
                 <div className="flex-1">
-                  <div className="text-sm font-medium" style={{ color: '#ef4444' }}>Clear All My Data</div>
-                  <div className="text-xs" style={{ color: '#90a1b9' }}>Deletes progress, preferences and resets the app</div>
+                  <div className="text-sm font-medium" style={{ color: '#ef4444' }}>Delete Account</div>
+                  <div className="text-xs" style={{ color: '#a8b8cc' }}>Permanently deletes your account and all data</div>
                 </div>
                 <ChevronRight size={14} color="#ef444480" />
               </button>
             ) : (
               <div className="px-4 py-4" style={{ background: 'rgba(239,68,68,0.07)' }}>
-                <p className="text-sm font-semibold mb-1" style={{ color: '#ef4444' }}>Are you sure?</p>
-                <p className="text-xs mb-3" style={{ color: '#90a1b9' }}>This will permanently delete all your progress, preferences and API key. This cannot be undone.</p>
+                <p className="text-sm font-semibold mb-1" style={{ color: '#ef4444' }}>Delete your account?</p>
+                <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>This will permanently delete your account, all progress, preferences and API key. This cannot be undone.</p>
                 <div className="flex gap-2">
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-bold"
@@ -517,7 +545,7 @@ export default function SettingsScreen() {
                   </button>
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-semibold"
-                    style={{ background: 'rgba(255,255,255,0.07)', color: '#90a1b9', border: '0.75px solid #1d293d' }}
+                    style={{ background: 'rgba(255,255,255,0.07)', color: '#a8b8cc', border: '0.75px solid #1d293d' }}
                     onClick={() => setShowDeleteConfirm(false)}
                     aria-label="Cancel data deletion"
                   >

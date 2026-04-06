@@ -49,23 +49,23 @@ export default function PrivacyPolicyScreen() {
       <div className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3" style={{ borderBottom: '0.75px solid #1d293d' }}>
         <button
           onClick={() => navigate(-1)}
-          className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           aria-label="Go back"
         >
-          <ArrowLeft size={18} color="#90a1b9" />
+          <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Privacy Policy</h1>
       </div>
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6">
-        <p className="text-xs" style={{ color: '#90a1b9' }}>Last updated: April 2026</p>
+        <p className="text-xs" style={{ color: '#a8b8cc' }}>Last updated: April 2026</p>
 
         {SECTIONS.map(s => (
           <div key={s.title}>
             <h2 className="text-sm font-bold mb-2" style={{ color: '#f8fafc' }}>{s.title}</h2>
-            <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: '#90a1b9' }}>{s.body}</p>
+            <p className="text-sm leading-relaxed whitespace-pre-line break-words" style={{ color: '#a8b8cc' }}>{s.body}</p>
           </div>
         ))}
 

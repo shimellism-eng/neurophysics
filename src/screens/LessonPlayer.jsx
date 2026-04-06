@@ -11,7 +11,7 @@ export default function LessonPlayer() {
   const topic = TOPICS[id]
 
   if (!topic) return (
-    <div className="flex items-center justify-center h-full" style={{ color: '#90a1b9' }}>
+    <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc' }}>
       Topic not found
     </div>
   )
@@ -29,10 +29,10 @@ export default function LessonPlayer() {
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
         <button
           onClick={() => navigate('/topics')}
-          className="w-9 h-9 rounded-[12px] flex items-center justify-center"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
         >
-          <ArrowLeft size={18} color="#90a1b9" />
+          <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
           <div className="text-xs font-medium truncate" style={{ color: topic.moduleColor }}>{topic.module}</div>
@@ -115,7 +115,7 @@ export default function LessonPlayer() {
             <span
               key={i}
               className="px-3 py-1 rounded-full text-xs font-medium"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#90a1b9' }}
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#a8b8cc' }}
             >
               {tag}
             </span>

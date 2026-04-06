@@ -50,8 +50,14 @@ export default function MisconceptionFeedback() {
       const xp = markMastered(id)
       if (xp > 0) {
         setXpEarned(xp)
-        setShowConfetti(true)
-        setTimeout(() => setShowConfetti(false), 2200)
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        const appReduceMotion = (() => {
+          try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
+        })()
+        if (!prefersReducedMotion && !appReduceMotion) {
+          setShowConfetti(true)
+          setTimeout(() => setShowConfetti(false), 2200)
+        }
       }
     }
   }, [])
@@ -72,10 +78,10 @@ export default function MisconceptionFeedback() {
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
         <button
           onClick={() => navigate('/topics')}
-          className="w-9 h-9 rounded-[12px] flex items-center justify-center"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
         >
-          <ArrowLeft size={18} color="#90a1b9" />
+          <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1">
           <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Feedback</div>
@@ -114,7 +120,7 @@ export default function MisconceptionFeedback() {
             <div className="text-sm font-bold" style={{ color: isCorrect ? '#00bc7d' : '#ef4444' }}>
               {isCorrect ? 'Correct! Well done.' : "Not quite. Let's look at why."}
             </div>
-            <div className="text-xs mt-0.5" style={{ color: '#90a1b9' }}>
+            <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
               {isCorrect
                 ? "You've mastered this concept."
                 : 'Understanding misconceptions helps you learn faster.'}
@@ -149,7 +155,7 @@ export default function MisconceptionFeedback() {
         </motion.div>
 
         {/* Side-by-side comparison */}
-        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#90a1b9' }}>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
           Intuition vs Reality
         </div>
 

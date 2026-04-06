@@ -34,7 +34,7 @@ export default function TopicMap() {
       {/* Header */}
       <div className="px-5 pt-6 pb-4 shrink-0">
         <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>GCSE Physics</h1>
-        <p className="text-sm mt-1" style={{ color: '#90a1b9' }}>{Object.keys(TOPICS).length} topics · {MODULES.length} modules</p>
+        <p className="text-sm mt-1" style={{ color: '#a8b8cc' }}>{Object.keys(TOPICS).length} topics · {MODULES.length} modules</p>
       </div>
 
       {/* Scrollable content */}
@@ -68,7 +68,7 @@ export default function TopicMap() {
 
                 <div className="flex-1 text-left">
                   <div className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{module.name}</div>
-                  <div className="text-xs" style={{ color: '#90a1b9' }}>
+                  <div className="text-xs" style={{ color: '#a8b8cc' }}>
                     {masteredInModule}/{module.topics.length} mastered
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function TopicMap() {
                               <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>
                                 {topic.title}
                               </div>
-                              <div className="text-xs truncate mt-0.5" style={{ color: '#90a1b9' }}>
+                              <div className="text-xs truncate mt-0.5" style={{ color: '#a8b8cc' }}>
                                 {topic.subtitle}
                               </div>
                               {/* Mini progress bar */}

@@ -34,7 +34,7 @@ function CircuitBasicsLesson() {
       <button
         onClick={() => setOn(v => !v)}
         className="px-4 py-1.5 rounded-[8px] text-xs font-semibold"
-        style={{ background: on ? `${EC}22` : '#1d293d', color: on ? EC : '#90a1b9', border: `1px solid ${on ? EC : '#2d3e55'}` }}
+        style={{ background: on ? `${EC}22` : '#1d293d', color: on ? EC : '#a8b8cc', border: `1px solid ${on ? EC : '#2d3e55'}` }}
       >
         Switch: {on ? '▪ Closed' : '/ Open'}
       </button>
@@ -79,12 +79,12 @@ function CircuitBasicsLesson() {
           </>
         )}
         {/* Labels */}
-        <text x={120} y={10} textAnchor="middle" fill="#90a1b9" fontSize={7}>switch</text>
+        <text x={120} y={10} textAnchor="middle" fill="#a8b8cc" fontSize={7}>switch</text>
         <text x={255} y={63} fill={on ? '#fdc700' : '#4a5a72'} fontSize={7}>lamp</text>
-        <text x={6} y={65} textAnchor="end" fill="#90a1b9" fontSize={7}>6V</text>
+        <text x={6} y={65} textAnchor="end" fill="#a8b8cc" fontSize={7}>6V</text>
       </svg>
 
-      <p className="text-xs text-center" style={{ color: on ? EC : '#90a1b9' }}>
+      <p className="text-xs text-center" style={{ color: on ? EC : '#a8b8cc' }}>
         {on ? '⚡ Complete circuit — current flows' : '✕ Open circuit — no current'}
       </p>
     </div>
@@ -228,7 +228,7 @@ function CircuitComponentsLesson() {
                 stroke={active ? sym.color : '#253348'} strokeWidth={1.2} />
               <g transform={`translate(${cx}, ${cy - 4})`}>{draws[i]()}</g>
               <text x={cx} y={cy + 17} textAnchor="middle" fontSize={7} fontWeight="600"
-                fill={active ? sym.color : '#90a1b9'}>{sym.name}</text>
+                fill={active ? sym.color : '#a8b8cc'}>{sym.name}</text>
             </g>
           )
         })}
@@ -244,7 +244,7 @@ function CircuitComponentsLesson() {
             <span style={{ fontSize: 11, color: '#cad5e2' }}>{s.desc}</span>
           </motion.div>
         ) : (
-          <motion.p key="hint" style={{ fontSize: 10, color: '#90a1b9', textAlign: 'center', paddingTop: 2 }}
+          <motion.p key="hint" style={{ fontSize: 10, color: '#a8b8cc', textAlign: 'center', paddingTop: 2 }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             Tap a symbol to learn its function
           </motion.p>
@@ -260,11 +260,11 @@ function CircuitComponentsIdea() {
       <div className="flex gap-3">
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Ammeter</span>
-          <span className="text-xs text-center" style={{ color: '#90a1b9' }}>in parallel?  ✗</span>
+          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>in parallel?  ✗</span>
         </div>
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Voltmeter</span>
-          <span className="text-xs text-center" style={{ color: '#90a1b9' }}>in series?  ✗</span>
+          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>in series?  ✗</span>
         </div>
       </div>
       <IdeaCaption>It doesn't matter where you place ammeters or voltmeters — they work anywhere in a circuit</IdeaCaption>
@@ -301,7 +301,7 @@ function SeriesParallelLesson() {
         {['series', 'parallel'].map(m => (
           <button key={m} onClick={() => setMode(m)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold capitalize"
-            style={{ background: mode === m ? `${EC}22` : '#1d293d', color: mode === m ? EC : '#90a1b9', border: `1px solid ${mode === m ? EC : '#2d3e55'}` }}>
+            style={{ background: mode === m ? `${EC}22` : '#1d293d', color: mode === m ? EC : '#a8b8cc', border: `1px solid ${mode === m ? EC : '#2d3e55'}` }}>
             {m.charAt(0).toUpperCase() + m.slice(1)}
           </button>
         ))}
@@ -317,7 +317,7 @@ function SeriesParallelLesson() {
           {/* Battery left */}
           <line x1={8} y1={55} x2={22} y2={55} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
           <line x1={11} y1={63} x2={19} y2={63} stroke="#cad5e2" strokeWidth="1.5" />
-          <text x={28} y={60} fill="#90a1b9" fontSize={8}>6V</text>
+          <text x={28} y={60} fill="#a8b8cc" fontSize={8}>6V</text>
           {/* Bulb 1 */}
           <circle cx={90} cy={15} r={10} fill="#fdc70015" stroke="#fdc700" strokeWidth="1.5" />
           <line x1={84} y1={9} x2={96} y2={21} stroke="#fdc700" strokeWidth="1.5" />
@@ -331,8 +331,8 @@ function SeriesParallelLesson() {
           {/* Ammeter */}
           <AmmSym cx={245} cy={60} />
           {/* Facts */}
-          <text x={130} y={75} textAnchor="middle" fill="#90a1b9" fontSize={8}>Same current everywhere</text>
-          <text x={130} y={88} textAnchor="middle" fill="#90a1b9" fontSize={8}>Voltages add up: V = V₁ + V₂</text>
+          <text x={130} y={75} textAnchor="middle" fill="#a8b8cc" fontSize={8}>Same current everywhere</text>
+          <text x={130} y={88} textAnchor="middle" fill="#a8b8cc" fontSize={8}>Voltages add up: V = V₁ + V₂</text>
           <text x={130} y={101} textAnchor="middle" fill="#ef4444" fontSize={7}>One bulb fails → all go out</text>
         </svg>
       ) : (
@@ -363,16 +363,16 @@ function SeriesParallelLesson() {
           {/* Battery */}
           <line x1={8} y1={60} x2={22} y2={60} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
           <line x1={11} y1={68} x2={19} y2={68} stroke="#cad5e2" strokeWidth="1.5" />
-          <text x={28} y={65} fill="#90a1b9" fontSize={8}>6V</text>
+          <text x={28} y={65} fill="#a8b8cc" fontSize={8}>6V</text>
           {/* Ammeter */}
           <AmmSym cx={245} cy={65} />
           {/* Facts */}
-          <text x={130} y={102} textAnchor="middle" fill="#90a1b9" fontSize={8}>Same voltage across each branch</text>
+          <text x={130} y={102} textAnchor="middle" fill="#a8b8cc" fontSize={8}>Same voltage across each branch</text>
           <text x={130} y={114} textAnchor="middle" fill="#00bc7d" fontSize={7}>One bulb fails → others stay on</text>
         </svg>
       )}
 
-      <p className="text-xs text-center" style={{ color: '#90a1b9' }}>
+      <p className="text-xs text-center" style={{ color: '#a8b8cc' }}>
         {isSeries ? 'Series: one loop — same current, shared voltage' : 'Parallel: multiple paths — same voltage, shared current'}
       </p>
     </div>
@@ -385,11 +385,11 @@ function SeriesParallelIdea() {
       <div className="flex items-center gap-3">
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>More bulbs</span>
-          <span className="text-xs text-center" style={{ color: '#90a1b9' }}>= brighter?  ✗</span>
+          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>= brighter?  ✗</span>
         </div>
         <motion.span className="text-xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>→</motion.span>
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d' }}>
-          <span className="text-xs font-bold" style={{ color: '#90a1b9' }}>Series</span>
+          <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>Series</span>
           <span className="text-xs text-center" style={{ color: '#ef4444' }}>dimmer ✗</span>
         </div>
       </div>
@@ -433,7 +433,7 @@ function DomesticElectricityLesson() {
         {[['ac', 'AC Wave'], ['plug', 'UK Plug']].map(([val, label]) => (
           <button key={val} onClick={() => setTab(val)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: tab === val ? `${EC}22` : '#1d293d', color: tab === val ? EC : '#90a1b9', border: `1px solid ${tab === val ? EC : '#2d3e55'}` }}>
+            style={{ background: tab === val ? `${EC}22` : '#1d293d', color: tab === val ? EC : '#a8b8cc', border: `1px solid ${tab === val ? EC : '#2d3e55'}` }}>
             {label}
           </button>
         ))}
@@ -456,7 +456,7 @@ function DomesticElectricityLesson() {
           <text x={130} y={112} textAnchor="middle" fill="#637b96" fontSize={8}>Time →</text>
           <text x={6} y={60} textAnchor="end" fill="#637b96" fontSize={7}>0V</text>
           {/* Frequency */}
-          <text x={130} y={25} textAnchor="middle" fill="#90a1b9" fontSize={8}>UK mains: 230 V (rms), 50 Hz</text>
+          <text x={130} y={25} textAnchor="middle" fill="#a8b8cc" fontSize={8}>UK mains: 230 V (rms), 50 Hz</text>
         </svg>
       ) : (
         <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
@@ -477,11 +477,11 @@ function DomesticElectricityLesson() {
           {/* Fuse label */}
           <text x={120} y={75} textAnchor="middle" fill="#fdc700" fontSize={7.5}>Fuse inside</text>
           {/* Bottom note */}
-          <text x={130} y={122} textAnchor="middle" fill="#90a1b9" fontSize={7}>Earth prevents electric shock if Live wire touches case</text>
+          <text x={130} y={122} textAnchor="middle" fill="#a8b8cc" fontSize={7}>Earth prevents electric shock if Live wire touches case</text>
         </svg>
       )}
 
-      <p className="text-xs text-center" style={{ color: '#90a1b9' }}>
+      <p className="text-xs text-center" style={{ color: '#a8b8cc' }}>
         {tab === 'ac' ? 'AC alternates 50 times per second (50 Hz) — direction constantly reverses' : 'Three-pin UK plug: Live (brown), Neutral (blue), Earth (green/yellow)'}
       </p>
     </div>
@@ -493,7 +493,7 @@ function DomesticElectricityIdea() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="flex items-center gap-2 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
         <span className="text-xs font-bold" style={{ color: '#ef4444' }}>AC and DC are the same</span>
-        <span className="text-xs" style={{ color: '#90a1b9' }}>— just different voltages ✗</span>
+        <span className="text-xs" style={{ color: '#a8b8cc' }}>— just different voltages ✗</span>
       </div>
       <svg width="180" height="50" viewBox="0 0 180 50">
         <line x1={10} y1={25} x2={80} y2={25} stroke="#cad5e2" strokeWidth="2" />
@@ -543,19 +543,19 @@ function ElectricalPowerLesson() {
       </div>
       <div className="rounded-[12px] p-2.5" style={{ background: `${EC}10`, border: `1px solid ${EC}30` }}>
         <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#90a1b9' }}>Voltage V</span>
+          <span style={{ color: '#a8b8cc' }}>Voltage V</span>
           <span style={{ color: EC, fontWeight: 700 }}>{voltage} V</span>
         </div>
         <input type="range" min="1" max="24" value={voltage}
           onChange={e => setVoltage(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: EC }} />
         <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#90a1b9' }}>Current I</span>
+          <span style={{ color: '#a8b8cc' }}>Current I</span>
           <span style={{ color: '#f97316', fontWeight: 700 }}>{current} A</span>
         </div>
         <input type="range" min="0.5" max="10" step="0.5" value={current}
           onChange={e => setCurrent(+e.target.value)} className="w-full" style={{ accentColor: '#f97316' }} />
         <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
-          <span style={{ color: '#90a1b9' }}>P = {voltage} × {current} =</span>
+          <span style={{ color: '#a8b8cc' }}>P = {voltage} × {current} =</span>
           <motion.span key={power} style={{ color: EC }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{power} W</motion.span>
         </div>
         <div className="flex justify-between text-xs mt-1" style={{ color: '#637b96' }}>
@@ -573,7 +573,7 @@ function ElectricalPowerIdea() {
       <div className="flex items-center gap-3">
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>100 W bulb</span>
-          <span className="text-xs text-center" style={{ color: '#90a1b9' }}>uses 100 J<br/>per hour? ✗</span>
+          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>uses 100 J<br/>per hour? ✗</span>
         </div>
       </div>
       <IdeaCaption>A 100 W appliance uses 100 joules of energy per hour — not per second</IdeaCaption>
@@ -602,7 +602,7 @@ function StaticElectricityLesson() {
     <div className="w-full flex flex-col items-center gap-2 px-3 pt-3 pb-3">
       <button onClick={() => setCharged(v => !v)}
         className="px-4 py-1.5 rounded-[8px] text-xs font-semibold"
-        style={{ background: charged ? '#fdc70022' : '#1d293d', color: charged ? '#fdc700' : '#90a1b9', border: `1px solid ${charged ? '#fdc700' : '#2d3e55'}` }}>
+        style={{ background: charged ? '#fdc70022' : '#1d293d', color: charged ? '#fdc700' : '#a8b8cc', border: `1px solid ${charged ? '#fdc700' : '#2d3e55'}` }}>
         {charged ? '⚡ Charged by friction' : 'Rub balloon →'}
       </button>
 
@@ -642,12 +642,12 @@ function StaticElectricityLesson() {
           </>
         )}
         {/* Labels */}
-        <text x={80} y={122} textAnchor="middle" fill="#90a1b9" fontSize={7}>Balloon A</text>
-        <text x={180} y={122} textAnchor="middle" fill="#90a1b9" fontSize={7}>Balloon B</text>
+        <text x={80} y={122} textAnchor="middle" fill="#a8b8cc" fontSize={7}>Balloon A</text>
+        <text x={180} y={122} textAnchor="middle" fill="#a8b8cc" fontSize={7}>Balloon B</text>
         {charged && <text x={120} y={115} textAnchor="middle" fill="#6366f1" fontSize={8}>Same charge → repulsion force</text>}
       </svg>
 
-      <div className="flex gap-3 text-xs text-center" style={{ color: '#90a1b9' }}>
+      <div className="flex gap-3 text-xs text-center" style={{ color: '#a8b8cc' }}>
         <span>Like charges: <span style={{ color: '#ef4444' }}>repel</span></span>
         <span>Unlike charges: <span style={{ color: '#00bc7d' }}>attract</span></span>
       </div>
@@ -661,7 +661,7 @@ function StaticElectricityIdea() {
       <div className="flex items-center gap-2 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
         <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Rubbing creates charge from nothing ✗</span>
       </div>
-      <div className="text-xs text-center p-2 rounded-[8px]" style={{ background: '#1d293d', color: '#90a1b9' }}>
+      <div className="text-xs text-center p-2 rounded-[8px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>
         balloon + jumper<br />
         <motion.span animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1 }} style={{ display: 'inline-block' }}>→</motion.span>
         <span style={{ color: '#ef4444' }}> charge appears?</span>
@@ -678,7 +678,7 @@ function StaticElectricityReality() {
         <div className="p-2 rounded-[8px]" style={{ background: '#6366f112', border: '1px solid #6366f1', color: '#cad5e2' }}>
           Jumper<br /><span style={{ color: '#6366f1' }}>loses e⁻</span><br />→ +ve charged
         </div>
-        <span style={{ color: '#90a1b9', fontSize: 16 }}>⇌</span>
+        <span style={{ color: '#a8b8cc', fontSize: 16 }}>⇌</span>
         <div className="p-2 rounded-[8px]" style={{ background: '#6366f112', border: '1px solid #6366f1', color: '#cad5e2' }}>
           Balloon<br /><span style={{ color: '#6366f1' }}>gains e⁻</span><br />→ −ve charged
         </div>

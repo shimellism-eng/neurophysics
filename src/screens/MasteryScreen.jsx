@@ -17,7 +17,7 @@ export default function MasteryScreen() {
     <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#0b1121' }}>
       <div className="px-5 pt-6 pb-4">
         <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>Mastery</h1>
-        <p className="text-sm mt-1" style={{ color: '#90a1b9' }}>Track your physics knowledge</p>
+        <p className="text-sm mt-1" style={{ color: '#a8b8cc' }}>Track your physics knowledge</p>
       </div>
 
       {/* Overall progress ring */}
@@ -46,15 +46,15 @@ export default function MasteryScreen() {
           </div>
           <div>
             <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>{mastered.length}/{allTopics.length}</div>
-            <div className="text-sm" style={{ color: '#90a1b9' }}>Topics mastered</div>
+            <div className="text-sm" style={{ color: '#a8b8cc' }}>Topics mastered</div>
             <div className="flex gap-3 mt-3">
               <div className="flex items-center gap-1.5">
                 <CheckCircle size={12} color="#00bc7d" />
-                <span className="text-xs" style={{ color: '#90a1b9' }}>{mastered.length} done</span>
+                <span className="text-xs" style={{ color: '#a8b8cc' }}>{mastered.length} done</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Zap size={12} color="#fdc700" />
-                <span className="text-xs" style={{ color: '#90a1b9' }}>{started.length} active</span>
+                <span className="text-xs" style={{ color: '#a8b8cc' }}>{started.length} active</span>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function MasteryScreen() {
                 <mod.icon size={20} color={mod.color} strokeWidth={2} />
                 <div className="flex-1">
                   <div className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{mod.name}</div>
-                  <div className="text-xs" style={{ color: '#90a1b9' }}>{masteredCount}/{mod.topics.length} mastered</div>
+                  <div className="text-xs" style={{ color: '#a8b8cc' }}>{masteredCount}/{mod.topics.length} mastered</div>
                 </div>
                 <span className="text-xs font-bold" style={{ color: mod.color }}>{pct}%</span>
               </div>
@@ -104,7 +104,7 @@ export default function MasteryScreen() {
                       style={{
                         background: isMastered ? `${mod.color}20` : 'rgba(29,41,61,0.6)',
                         border: `0.75px solid ${isMastered ? mod.color : '#1d293d'}`,
-                        color: isMastered ? mod.color : '#90a1b9',
+                        color: isMastered ? mod.color : '#a8b8cc',
                       }}
                       onClick={() => navigate(`/lesson/${topicId}`)}
                     >

@@ -56,7 +56,7 @@ export default function SplashScreen() {
           >
             NeuroPhysics
           </h1>
-          <p className="text-base text-center leading-relaxed max-w-xs" style={{ color: '#90a1b9' }}>
+          <p className="text-base text-center leading-relaxed max-w-xs" style={{ color: '#a8b8cc' }}>
             Master GCSE Physics step by step.{'\n'}Calm, focused, and clear.
           </p>
         </motion.div>
@@ -98,7 +98,7 @@ export default function SplashScreen() {
               </svg>
             )}
           </div>
-          <span className="text-sm leading-snug" style={{ color: ageConfirmed ? '#f8fafc' : '#90a1b9' }}>
+          <span className="text-sm leading-snug" style={{ color: ageConfirmed ? '#f8fafc' : '#a8b8cc' }}>
             I confirm I am <strong style={{ color: '#f8fafc' }}>13 years or older</strong>
             {' '}(or have parental consent to use this app)
           </span>

@@ -87,7 +87,7 @@ function EnergyStoresLesson() {
               <span style={{
                 fontSize: 9,
                 fontWeight: 700,
-                color: active ? s.color : '#90a1b9',
+                color: active ? s.color : '#a8b8cc',
                 lineHeight: 1.2,
                 textAlign: 'center',
               }}>
@@ -122,7 +122,7 @@ function EnergyStoresLesson() {
             {/* Example */}
             <div className="flex items-start gap-1.5 mb-2.5">
               <span style={{ fontSize: 11 }}>🌍</span>
-              <p style={{ fontSize: 10, color: '#90a1b9', lineHeight: 1.4 }}>{sel.example}</p>
+              <p style={{ fontSize: 10, color: '#a8b8cc', lineHeight: 1.4 }}>{sel.example}</p>
             </div>
             {/* Formula */}
             <div className="inline-flex items-center px-2.5 py-1.5 rounded-[8px]" style={{ background: `${sel.color}18`, border: `0.75px solid ${sel.color}40` }}>
@@ -132,7 +132,7 @@ function EnergyStoresLesson() {
         ) : (
           <motion.p
             key="hint"
-            style={{ fontSize: 10, color: '#90a1b9', textAlign: 'center', paddingTop: 4 }}
+            style={{ fontSize: 10, color: '#a8b8cc', textAlign: 'center', paddingTop: 4 }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           >
             Tap a store to see its definition, example &amp; formula
@@ -196,7 +196,7 @@ function EnergyPathwaysLesson() {
               </div>
               <div>
                 <div style={{ fontSize: 12, fontWeight: 700, color: isActive ? p.color : '#f8fafc' }}>{p.label}</div>
-                <div style={{ fontSize: 9, color: '#90a1b9', lineHeight: 1.3 }}>
+                <div style={{ fontSize: 9, color: '#a8b8cc', lineHeight: 1.3 }}>
                   {isActive ? 'tap to close' : 'tap to explore'}
                 </div>
               </div>
@@ -226,7 +226,7 @@ function EnergyPathwaysLesson() {
             <p style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.5, marginBottom: 8 }}>{sel.desc}</p>
             <div className="flex items-start gap-1.5 mb-2">
               <span style={{ fontSize: 11 }}>🌍</span>
-              <p style={{ fontSize: 10, color: '#90a1b9', lineHeight: 1.4 }}>{sel.example}</p>
+              <p style={{ fontSize: 10, color: '#a8b8cc', lineHeight: 1.4 }}>{sel.example}</p>
             </div>
             <div className="flex items-start gap-1.5">
               <span style={{ fontSize: 11 }}>🔄</span>
@@ -236,7 +236,7 @@ function EnergyPathwaysLesson() {
         ) : (
           <motion.p
             key="hint"
-            style={{ fontSize: 10, color: '#90a1b9', textAlign: 'center', paddingTop: 4 }}
+            style={{ fontSize: 10, color: '#a8b8cc', textAlign: 'center', paddingTop: 4 }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           >
             Tap a pathway to see how energy moves between stores
@@ -263,7 +263,7 @@ function EnergyPathwaysIdea() {
           animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>→ ∅</motion.span>
         <div className="flex flex-col items-center gap-1">
           <div className="w-10 h-10 rounded-full" style={{ background: '#1d293d', border: '2px dashed #2d3e55' }} />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>Gone?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>Gone?</span>
         </div>
       </div>
       <IdeaCaption>Energy is "used up" and disappears as it travels  -  there's no pathway, it just vanishes</IdeaCaption>
@@ -285,7 +285,7 @@ function EnergyPathwaysReality() {
           <motion.div animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.2 }}>
             <Zap size={14} color="#fdc700" />
           </motion.div>
-          <span style={{ fontSize: 7, color: '#90a1b9' }}>electrical</span>
+          <span style={{ fontSize: 7, color: '#a8b8cc' }}>electrical</span>
         </div>
         <div className="flex flex-col items-center gap-1">
           <div className="w-9 h-9 rounded-[10px] flex items-center justify-center"
@@ -298,7 +298,7 @@ function EnergyPathwaysReality() {
           <motion.div animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0.3 }}>
             <Flame size={14} color="#f97316" />
           </motion.div>
-          <span style={{ fontSize: 7, color: '#90a1b9' }}>heating</span>
+          <span style={{ fontSize: 7, color: '#a8b8cc' }}>heating</span>
         </div>
         <div className="flex flex-col items-center gap-1">
           <div className="w-9 h-9 rounded-[10px] flex items-center justify-center"
@@ -329,7 +329,7 @@ function EnergyStoresIdea() {
           animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>→ ∅</motion.span>
         <div className="flex flex-col items-center gap-1">
           <div className="w-10 h-10 rounded-full" style={{ background: '#1d293d', border: '2px dashed #2d3e55' }} />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>Gone?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>Gone?</span>
         </div>
       </div>
       <IdeaCaption>Energy is used up and disappears when things heat up or slow down</IdeaCaption>
@@ -372,7 +372,7 @@ function EnergyEquationsLesson() {
         {tabs.map((t, i) => (
           <button key={i} onClick={() => setTab(i)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: tab === i ? `${colors[i]}20` : '#1d293d', color: tab === i ? colors[i] : '#90a1b9', border: `1px solid ${tab === i ? colors[i] : '#2d3e55'}` }}>
+            style={{ background: tab === i ? `${colors[i]}20` : '#1d293d', color: tab === i ? colors[i] : '#a8b8cc', border: `1px solid ${tab === i ? colors[i] : '#2d3e55'}` }}>
             {t}
           </button>
         ))}
@@ -381,12 +381,12 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₖ = ½mv²" color={C} />
           <div className="rounded-[12px] p-2.5" style={{ background: `${C}10`, border: `1px solid ${C}30` }}>
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Mass m</span><span style={{ color: C, fontWeight: 700 }}>{mKE} kg</span></div>
+            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Mass m</span><span style={{ color: C, fontWeight: 700 }}>{mKE} kg</span></div>
             <input type="range" min="1" max="50" value={mKE} onChange={e => setMKE(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: C }} />
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Speed v</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{vKE} m/s</span></div>
+            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Speed v</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{vKE} m/s</span></div>
             <input type="range" min="1" max="20" value={vKE} onChange={e => setVKE(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
-              <span style={{ color: '#90a1b9' }}>Eₖ =</span>
+              <span style={{ color: '#a8b8cc' }}>Eₖ =</span>
               <motion.span key={keVal} style={{ color: C }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{keVal} J</motion.span>
             </div>
           </div>
@@ -396,12 +396,12 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₚ = mgh" color="#22c55e" />
           <div className="rounded-[12px] p-2.5" style={{ background: '#22c55e10', border: '1px solid #22c55e30' }}>
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Mass m</span><span style={{ color: '#22c55e', fontWeight: 700 }}>{mGPE} kg</span></div>
+            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Mass m</span><span style={{ color: '#22c55e', fontWeight: 700 }}>{mGPE} kg</span></div>
             <input type="range" min="1" max="50" value={mGPE} onChange={e => setMGPE(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: '#22c55e' }} />
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Height h</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{hGPE} m</span></div>
+            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Height h</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{hGPE} m</span></div>
             <input type="range" min="1" max="100" value={hGPE} onChange={e => setHGPE(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
-              <span style={{ color: '#90a1b9' }}>Eₚ =</span>
+              <span style={{ color: '#a8b8cc' }}>Eₚ =</span>
               <motion.span key={gpeVal} style={{ color: '#22c55e' }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{gpeVal} J</motion.span>
             </div>
           </div>
@@ -411,12 +411,12 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₑ = ½ke²" color="#a855f7" />
           <div className="rounded-[12px] p-2.5" style={{ background: '#a855f710', border: '1px solid #a855f730' }}>
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Spring const k</span><span style={{ color: '#a855f7', fontWeight: 700 }}>{kEl} N/m</span></div>
+            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Spring const k</span><span style={{ color: '#a855f7', fontWeight: 700 }}>{kEl} N/m</span></div>
             <input type="range" min="1" max="100" value={kEl} onChange={e => setKEl(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: '#a855f7' }} />
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Extension e</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{eEl} m</span></div>
+            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Extension e</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{eEl} m</span></div>
             <input type="range" min="0.1" max="2" step="0.1" value={eEl} onChange={e => setEEl(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
-              <span style={{ color: '#90a1b9' }}>Eₑ =</span>
+              <span style={{ color: '#a8b8cc' }}>Eₑ =</span>
               <motion.span key={eelVal} style={{ color: '#a855f7' }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{eelVal} J</motion.span>
             </div>
           </div>
@@ -429,12 +429,12 @@ function EnergyEquationsIdea() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
       <div className="flex gap-4 items-end">
-        {[{ v: '1×', ke: '1×', h: 24, col: '#90a1b9' }, { v: '2×', ke: '2×', h: 48, col: '#fdc700' }].map((d, i) => (
+        {[{ v: '1×', ke: '1×', h: 24, col: '#a8b8cc' }, { v: '2×', ke: '2×', h: 48, col: '#fdc700' }].map((d, i) => (
           <div key={i} className="flex flex-col items-center gap-1">
             <span className="text-xs font-bold" style={{ color: d.col }}>KE {d.ke}</span>
             <motion.div className="w-8 rounded-t-[6px]" style={{ height: d.h, background: d.col, opacity: 0.8 }}
               initial={{ height: 0 }} animate={{ height: d.h }} transition={{ delay: i * 0.2, duration: 0.5 }} />
-            <span className="text-xs" style={{ color: '#90a1b9' }}>v = {d.v}</span>
+            <span className="text-xs" style={{ color: '#a8b8cc' }}>v = {d.v}</span>
           </div>
         ))}
         <span className="text-xs font-bold mb-4" style={{ color: '#ef4444' }}>← WRONG</span>
@@ -518,7 +518,7 @@ function EfficiencyLesson() {
 
         {/* ── Labels ── */}
         {/* Input label (left section) */}
-        <text x={splitX / 2} y={topY - 4} textAnchor="middle" fill="#90a1b9" fontSize={7.5}>Input: 100 J</text>
+        <text x={splitX / 2} y={topY - 4} textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>Input: 100 J</text>
         {/* Useful label (above arrow on right) */}
         <text x={(splitX + arrowEndX) / 2} y={topY - 4} textAnchor="middle" fill="#00bc7d" fontSize={7.5} fontWeight="bold">Useful: {useful} J</text>
         {/* Wasted label (right of downward band) */}
@@ -526,7 +526,7 @@ function EfficiencyLesson() {
       </svg>
       <div className="flex flex-col gap-1">
         <div className="flex justify-between text-xs">
-          <span style={{ color: '#90a1b9' }}>Efficiency: <span style={{ color: '#00bc7d', fontWeight: 700 }}>{eff}%</span></span>
+          <span style={{ color: '#a8b8cc' }}>Efficiency: <span style={{ color: '#00bc7d', fontWeight: 700 }}>{eff}%</span></span>
           <span style={{ color: '#ef4444', fontSize: 10 }}>Wasted: {wasted} J</span>
         </div>
         <input type="range" min="10" max="90" value={eff} onChange={e => setEff(+e.target.value)} className="w-full" style={{ accentColor: '#00bc7d' }} />
@@ -554,11 +554,11 @@ function EfficiencyReality() {
       <div className="flex gap-4">
         <div className="flex flex-col items-center gap-1">
           <div className="h-16 w-5 rounded" style={{ background: 'linear-gradient(#ef4444 60%, #00bc7d 40%)' }} />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>LED 10%</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>LED 10%</span>
         </div>
         <div className="flex flex-col items-center gap-1">
           <div className="h-16 w-5 rounded" style={{ background: 'linear-gradient(#ef4444 5%, #00bc7d 95%)' }} />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>LED 95%</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>LED 95%</span>
         </div>
       </div>
       <RealityBadge>Wasted energy is always lost as heat - 100% impossible</RealityBadge>
@@ -585,12 +585,12 @@ function PowerLesson() {
         <FormulaBox formula="P = W/t" color="#3b82f6" />
       </div>
       <div className="rounded-[12px] p-2.5" style={{ background: `${C}10`, border: `1px solid ${C}30` }}>
-        <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Energy (J)</span><span style={{ color: C, fontWeight: 700 }}>{energy} J</span></div>
+        <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Energy (J)</span><span style={{ color: C, fontWeight: 700 }}>{energy} J</span></div>
         <input type="range" min="100" max="10000" step="100" value={energy} onChange={e => setEnergy(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: C }} />
-        <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Time (s)</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{time} s</span></div>
+        <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Time (s)</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{time} s</span></div>
         <input type="range" min="1" max="100" step="1" value={time} onChange={e => setTime(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
         <div className="flex justify-between mt-1.5 pt-1.5 font-bold text-sm" style={{ borderTop: '1px solid #1d293d' }}>
-          <span style={{ color: '#90a1b9' }}>Power</span>
+          <span style={{ color: '#a8b8cc' }}>Power</span>
           <motion.span key={power} style={{ color: C }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>
             {powerNum >= 1000 ? (powerNum / 1000).toFixed(2) + ' kW' : power + ' W'}
           </motion.span>
@@ -599,7 +599,7 @@ function PowerLesson() {
       <div className="flex flex-col gap-1">
         {devices.map((d, i) => (
           <div key={i} className="flex items-center gap-2">
-            <span style={{ fontSize: 9, color: '#90a1b9', width: 72, flexShrink: 0 }}>{d.label}</span>
+            <span style={{ fontSize: 9, color: '#a8b8cc', width: 72, flexShrink: 0 }}>{d.label}</span>
             <div className="flex-1 rounded-full" style={{ height: 7, background: '#1d293d' }}>
               <motion.div style={{ height: 7, borderRadius: 999, background: d.color, width: `${(d.w / maxW) * 100}%` }}
                 initial={{ width: 0 }} animate={{ width: `${(d.w / maxW) * 100}%` }} transition={{ delay: i * 0.1 + 0.2 }} />
@@ -608,7 +608,7 @@ function PowerLesson() {
           </div>
         ))}
       </div>
-      <div style={{ fontSize: 9, color: '#90a1b9', textAlign: 'center' }}>1 kW = 1000 W · 1 kWh = using 1 kW for 1 hour</div>
+      <div style={{ fontSize: 9, color: '#a8b8cc', textAlign: 'center' }}>1 kW = 1000 W · 1 kWh = using 1 kW for 1 hour</div>
     </div>
   )
 }
@@ -678,7 +678,7 @@ function EnergyResourcesLesson() {
             </div>
             {selected === i && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}>
-                <div style={{ fontSize: 7.5, color: '#90a1b9', marginBottom: 2 }}>{r.desc}</div>
+                <div style={{ fontSize: 7.5, color: '#a8b8cc', marginBottom: 2 }}>{r.desc}</div>
                 {r.pros.map((p, j) => <div key={j} style={{ fontSize: 7, color: '#22c55e' }}>+ {p}</div>)}
                 {r.cons.map((c, j) => <div key={j} style={{ fontSize: 7, color: '#ef4444' }}>− {c}</div>)}
               </motion.div>
@@ -686,7 +686,7 @@ function EnergyResourcesLesson() {
           </motion.button>
         ))}
       </div>
-      <div style={{ fontSize: 9, color: '#90a1b9', textAlign: 'center' }}>Tap each resource to see pros and cons</div>
+      <div style={{ fontSize: 9, color: '#a8b8cc', textAlign: 'center' }}>Tap each resource to see pros and cons</div>
     </div>
   )
 }
@@ -779,7 +779,7 @@ function CircuitBasicsLesson() {
         {['series', 'parallel'].map(m => (
           <button key={m} onClick={() => setMode(m)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold capitalize"
-            style={{ background: mode === m ? `${ELEC_C}22` : '#1d293d', color: mode === m ? ELEC_C : '#90a1b9', border: `1px solid ${mode === m ? ELEC_C : '#2d3e55'}` }}>
+            style={{ background: mode === m ? `${ELEC_C}22` : '#1d293d', color: mode === m ? ELEC_C : '#a8b8cc', border: `1px solid ${mode === m ? ELEC_C : '#2d3e55'}` }}>
             {m}
           </button>
         ))}
@@ -848,15 +848,15 @@ function CircuitBasicsLesson() {
           <Switch x1={192} y1={28} x2={216} y2={28}/>
 
           {/* Labels */}
-          <text x={34}  y={84} textAnchor="middle" fontSize={7} fill="#90a1b9">I</text>
-          <text x={71}  y={74} textAnchor="end"    fontSize={7} fill="#90a1b9">I₁</text>
-          <text x={190} y={74} textAnchor="start"  fontSize={7} fill="#90a1b9">I₂</text>
+          <text x={34}  y={84} textAnchor="middle" fontSize={7} fill="#a8b8cc">I</text>
+          <text x={71}  y={74} textAnchor="end"    fontSize={7} fill="#a8b8cc">I₁</text>
+          <text x={190} y={74} textAnchor="start"  fontSize={7} fill="#a8b8cc">I₂</text>
         </svg>
       )}
 
       <div className="rounded-[10px] p-2 flex flex-col gap-0.5" style={{ background: '#1d293d' }}>
         <FormulaBox formula="V = IR" color={ELEC_C} />
-        <div style={{ fontSize: 9, color: '#90a1b9', textAlign: 'center', marginTop: 4 }}>Conventional current flows + to -</div>
+        <div style={{ fontSize: 9, color: '#a8b8cc', textAlign: 'center', marginTop: 4 }}>Conventional current flows + to -</div>
       </div>
     </div>
   )
@@ -887,9 +887,9 @@ function CircuitBasicsReality() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="flex items-center gap-2 text-sm font-mono font-bold">
         <span style={{ color: ELEC_C }}>3A</span>
-        <span style={{ color: '#90a1b9' }}>→</span>
+        <span style={{ color: '#a8b8cc' }}>→</span>
         <div className="w-8 h-6 rounded" style={{ background: '#fdc70030', border: '1px solid #fdc700' }} />
-        <span style={{ color: '#90a1b9' }}>→</span>
+        <span style={{ color: '#a8b8cc' }}>→</span>
         <span style={{ color: ELEC_C }}>3A</span>
       </div>
       <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Current is the same in series - voltage is shared</div>
@@ -935,7 +935,7 @@ function CircuitComponentsLesson() {
         {comps.map((cc, i) => (
           <button key={i} onClick={() => setComp(i)}
             className="px-2 py-0.5 rounded-[7px] font-medium"
-            style={{ fontSize: 10, background: comp === i ? `${cc.color}22` : '#1d293d', color: comp === i ? cc.color : '#90a1b9', border: `1px solid ${comp === i ? cc.color : '#2d3e55'}` }}>
+            style={{ fontSize: 10, background: comp === i ? `${cc.color}22` : '#1d293d', color: comp === i ? cc.color : '#a8b8cc', border: `1px solid ${comp === i ? cc.color : '#2d3e55'}` }}>
             {cc.name}
           </button>
         ))}
@@ -947,8 +947,8 @@ function CircuitComponentsLesson() {
         {/* Arrowheads */}
         <polygon points="10,5 7,11 13,11" fill="#2d3e55" />
         <polygon points="101,92 95,89 95,95" fill="#2d3e55" />
-        <text x="54" y="100" textAnchor="middle" fill="#90a1b9" fontSize={7}>{c.xLabel}</text>
-        <text x="4" y="50" textAnchor="middle" fill="#90a1b9" fontSize={7} transform="rotate(-90,4,50)">{c.yLabel}</text>
+        <text x="54" y="100" textAnchor="middle" fill="#a8b8cc" fontSize={7}>{c.xLabel}</text>
+        <text x="4" y="50" textAnchor="middle" fill="#a8b8cc" fontSize={7} transform="rotate(-90,4,50)">{c.yLabel}</text>
         <motion.path d={c.path} fill="none" stroke={c.color} strokeWidth="2.5" strokeLinecap="round"
           initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8 }} key={comp} />
       </svg>
@@ -982,7 +982,7 @@ function CircuitComponentsReality() {
           <div key={i} className="flex flex-col items-center gap-1">
             <div className="w-10 h-10 rounded-[8px] flex items-center justify-center text-xs font-bold"
               style={{ background: `${col}15`, border: `1px solid ${col}`, color: col }}>{n}</div>
-            <span className="text-xs text-center" style={{ color: '#90a1b9' }}>{d}</span>
+            <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>{d}</span>
           </div>
         ))}
       </div>
@@ -1010,7 +1010,7 @@ function SeriesParallelLesson() {
         {['series', 'parallel'].map(m => (
           <button key={m} onClick={() => setMode(m)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold capitalize"
-            style={{ background: mode === m ? `${ELEC_C}22` : '#1d293d', color: mode === m ? ELEC_C : '#90a1b9', border: `1px solid ${mode === m ? ELEC_C : '#2d3e55'}` }}>
+            style={{ background: mode === m ? `${ELEC_C}22` : '#1d293d', color: mode === m ? ELEC_C : '#a8b8cc', border: `1px solid ${mode === m ? ELEC_C : '#2d3e55'}` }}>
             {m}
           </button>
         ))}
@@ -1021,8 +1021,8 @@ function SeriesParallelLesson() {
             <path d="M20 45 L20 15 L240 15 L240 45 L240 75 L20 75 L20 45" fill="none" stroke={ELEC_C} strokeWidth="2" strokeLinecap="round" />
             {/* Cell */}
             <line x1="12" y1="38" x2="28" y2="38" stroke={ELEC_C} strokeWidth="3" />
-            <line x1="15" y1="47" x2="25" y2="47" stroke="#90a1b9" strokeWidth="2" />
-            <text x="20" y="62" textAnchor="middle" fill="#90a1b9" fontSize={7}>10V</text>
+            <line x1="15" y1="47" x2="25" y2="47" stroke="#a8b8cc" strokeWidth="2" />
+            <text x="20" y="62" textAnchor="middle" fill="#a8b8cc" fontSize={7}>10V</text>
             {/* Bulb R1 */}
             <rect x="75" y="7" width="28" height="16" rx="3" fill="#fdc70015" stroke="#fdc700" strokeWidth="1.5" />
             <text x="89" y="18" textAnchor="middle" fill="#fdc700" fontSize={8}>R₁=4Ω</text>
@@ -1037,7 +1037,7 @@ function SeriesParallelLesson() {
             <text x="200" y="12" fill={ELEC_C} fontSize={7}>→</text>
           </svg>
           <div className="rounded-[10px] p-2 flex flex-col gap-1" style={{ background: '#1d293d' }}>
-            <div style={{ fontSize: 9, color: '#90a1b9' }}>R₁=4Ω, R₂=6Ω, V=10V</div>
+            <div style={{ fontSize: 9, color: '#a8b8cc' }}>R₁=4Ω, R₂=6Ω, V=10V</div>
             <div style={{ fontSize: 9, color: ELEC_C }}>R_total = R₁+R₂ = {Rtotal_s}Ω</div>
             <div style={{ fontSize: 9, color: '#22c55e' }}>I = V/R = {Vsrc}/{Rtotal_s} = {I_s} A (same everywhere)</div>
             <div style={{ fontSize: 9, color: '#fdc700' }}>V₁ = {V1_s} V · V₂ = {V2_s} V (V₁+V₂ = {Vsrc}V)</div>
@@ -1051,8 +1051,8 @@ function SeriesParallelLesson() {
             <line x1="170" y1="15" x2="170" y2="75" stroke={ELEC_C} strokeWidth="1.5" strokeDasharray="3 2" />
             {/* Cell */}
             <line x1="12" y1="38" x2="28" y2="38" stroke={ELEC_C} strokeWidth="3" />
-            <line x1="15" y1="47" x2="25" y2="47" stroke="#90a1b9" strokeWidth="2" />
-            <text x="20" y="62" textAnchor="middle" fill="#90a1b9" fontSize={7}>10V</text>
+            <line x1="15" y1="47" x2="25" y2="47" stroke="#a8b8cc" strokeWidth="2" />
+            <text x="20" y="62" textAnchor="middle" fill="#a8b8cc" fontSize={7}>10V</text>
             {/* Branch bulbs */}
             <rect x="108" y="8" width="28" height="14" rx="3" fill="#fdc70015" stroke="#fdc700" strokeWidth="1.5" />
             <text x="122" y="18" textAnchor="middle" fill="#fdc700" fontSize={8}>R₁=4Ω</text>
@@ -1063,7 +1063,7 @@ function SeriesParallelLesson() {
             <text x="185" y="72" fill="#22c55e" fontSize={7}>I₂={I2_p}A</text>
           </svg>
           <div className="rounded-[10px] p-2 flex flex-col gap-1" style={{ background: '#1d293d' }}>
-            <div style={{ fontSize: 9, color: '#90a1b9' }}>R₁=4Ω, R₂=6Ω, V=10V</div>
+            <div style={{ fontSize: 9, color: '#a8b8cc' }}>R₁=4Ω, R₂=6Ω, V=10V</div>
             <div style={{ fontSize: 9, color: '#fdc700' }}>V same across each branch = 10V</div>
             <div style={{ fontSize: 9, color: '#22c55e' }}>I₁={I1_p}A · I₂={I2_p}A · I_total={Itotal_p}A</div>
             <div style={{ fontSize: 9, color: ELEC_C }}>1/R = 1/R₁+1/R₂ → R_total={Rp}Ω</div>
@@ -1155,7 +1155,7 @@ function DomesticElecLesson() {
         {/* Earth label below */}
         <text x="130" y="110" textAnchor="middle" fill="#22c55e" fontSize={8} fontWeight="bold">Earth (green/yellow)</text>
         <text x="130" y="120" textAnchor="middle" fill="#22c55e" fontSize={7}>Safety  -  0V unless fault</text>
-        <text x="130" y="132" textAnchor="middle" fill="#90a1b9" fontSize={7}>Protects metal case from becoming live</text>
+        <text x="130" y="132" textAnchor="middle" fill="#a8b8cc" fontSize={7}>Protects metal case from becoming live</text>
       </svg>
     </div>
   )
@@ -1184,12 +1184,12 @@ function DomesticElecReality() {
         <div className="flex flex-col items-center gap-1 p-2 rounded-[10px]" style={{ border: '1px solid #155dfc' }}>
           <span className="text-xs font-mono font-bold" style={{ color: '#155dfc' }}>AC</span>
           <span className="text-xs" style={{ color: '#cad5e2' }}>Mains 230V</span>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>50 Hz</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>50 Hz</span>
         </div>
         <div className="flex flex-col items-center gap-1 p-2 rounded-[10px]" style={{ border: '1px solid #fdc700' }}>
           <span className="text-xs font-mono font-bold" style={{ color: '#fdc700' }}>DC</span>
           <span className="text-xs" style={{ color: '#cad5e2' }}>Battery 1.5V</span>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>0 Hz</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>0 Hz</span>
         </div>
       </div>
       <RealityBadge color={ELEC_C}>Mains is AC - alternates direction 50 times per second</RealityBadge>
@@ -1221,7 +1221,7 @@ function ElecPowerLesson() {
         {tabs.map((t, i) => (
           <button key={i} onClick={() => setTab(i)}
             className="px-2 py-0.5 rounded-[7px] font-bold"
-            style={{ fontSize: 10, background: tab === i ? `${colors[i]}22` : '#1d293d', color: tab === i ? colors[i] : '#90a1b9', border: `1px solid ${tab === i ? colors[i] : '#2d3e55'}` }}>
+            style={{ fontSize: 10, background: tab === i ? `${colors[i]}22` : '#1d293d', color: tab === i ? colors[i] : '#a8b8cc', border: `1px solid ${tab === i ? colors[i] : '#2d3e55'}` }}>
             {t}
           </button>
         ))}
@@ -1229,12 +1229,12 @@ function ElecPowerLesson() {
       {tab === 0 && (
         <div className="rounded-[11px] p-2" style={{ background: `${ELEC_C}10`, border: `1px solid ${ELEC_C}30` }}>
           <FormulaBox formula="P = IV" color={ELEC_C} />
-          <div className="flex justify-between text-xs mt-1.5 mb-0.5"><span style={{ color: '#90a1b9' }}>Current I</span><span style={{ color: ELEC_C, fontWeight: 700 }}>{iv_I} A</span></div>
+          <div className="flex justify-between text-xs mt-1.5 mb-0.5"><span style={{ color: '#a8b8cc' }}>Current I</span><span style={{ color: ELEC_C, fontWeight: 700 }}>{iv_I} A</span></div>
           <input type="range" min="0.1" max="10" step="0.1" value={iv_I} onChange={e => setIvI(+e.target.value)} className="w-full mb-1" style={{ accentColor: ELEC_C }} />
-          <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Voltage V</span><span style={{ color: '#fdc700', fontWeight: 700 }}>{iv_V} V</span></div>
+          <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Voltage V</span><span style={{ color: '#fdc700', fontWeight: 700 }}>{iv_V} V</span></div>
           <input type="range" min="1" max="230" step="1" value={iv_V} onChange={e => setIvV(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
           <div className="flex justify-between mt-1.5 pt-1 font-bold" style={{ borderTop: '1px solid #1d293d', fontSize: 13 }}>
-            <span style={{ color: '#90a1b9' }}>P =</span>
+            <span style={{ color: '#a8b8cc' }}>P =</span>
             <motion.span key={pIV} style={{ color: ELEC_C }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{pIV} W</motion.span>
           </div>
         </div>
@@ -1242,12 +1242,12 @@ function ElecPowerLesson() {
       {tab === 1 && (
         <div className="rounded-[11px] p-2" style={{ background: '#c084fc10', border: '1px solid #c084fc30' }}>
           <FormulaBox formula="P = I²R" color="#c084fc" />
-          <div className="flex justify-between text-xs mt-1.5 mb-0.5"><span style={{ color: '#90a1b9' }}>Current I</span><span style={{ color: '#c084fc', fontWeight: 700 }}>{ir_I} A</span></div>
+          <div className="flex justify-between text-xs mt-1.5 mb-0.5"><span style={{ color: '#a8b8cc' }}>Current I</span><span style={{ color: '#c084fc', fontWeight: 700 }}>{ir_I} A</span></div>
           <input type="range" min="0.1" max="10" step="0.1" value={ir_I} onChange={e => setIrI(+e.target.value)} className="w-full mb-1" style={{ accentColor: '#c084fc' }} />
-          <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Resistance R</span><span style={{ color: '#fdc700', fontWeight: 700 }}>{ir_R} Ω</span></div>
+          <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Resistance R</span><span style={{ color: '#fdc700', fontWeight: 700 }}>{ir_R} Ω</span></div>
           <input type="range" min="1" max="1000" step="1" value={ir_R} onChange={e => setIrR(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
           <div className="flex justify-between mt-1.5 pt-1 font-bold" style={{ borderTop: '1px solid #1d293d', fontSize: 13 }}>
-            <span style={{ color: '#90a1b9' }}>P =</span>
+            <span style={{ color: '#a8b8cc' }}>P =</span>
             <motion.span key={pIR} style={{ color: '#c084fc' }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{pIR} W</motion.span>
           </div>
         </div>
@@ -1255,22 +1255,22 @@ function ElecPowerLesson() {
       {tab === 2 && (
         <div className="rounded-[11px] p-2" style={{ background: '#f9731610', border: '1px solid #f9731630' }}>
           <FormulaBox formula="P = V²/R" color="#f97316" />
-          <div className="flex justify-between text-xs mt-1.5 mb-0.5"><span style={{ color: '#90a1b9' }}>Voltage V</span><span style={{ color: '#f97316', fontWeight: 700 }}>{vr_V} V</span></div>
+          <div className="flex justify-between text-xs mt-1.5 mb-0.5"><span style={{ color: '#a8b8cc' }}>Voltage V</span><span style={{ color: '#f97316', fontWeight: 700 }}>{vr_V} V</span></div>
           <input type="range" min="1" max="230" step="1" value={vr_V} onChange={e => setVrV(+e.target.value)} className="w-full mb-1" style={{ accentColor: '#f97316' }} />
-          <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#90a1b9' }}>Resistance R</span><span style={{ color: '#fdc700', fontWeight: 700 }}>{vr_R} Ω</span></div>
+          <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Resistance R</span><span style={{ color: '#fdc700', fontWeight: 700 }}>{vr_R} Ω</span></div>
           <input type="range" min="1" max="1000" step="1" value={vr_R} onChange={e => setVrR(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
           <div className="flex justify-between mt-1.5 pt-1 font-bold" style={{ borderTop: '1px solid #1d293d', fontSize: 13 }}>
-            <span style={{ color: '#90a1b9' }}>P =</span>
+            <span style={{ color: '#a8b8cc' }}>P =</span>
             <motion.span key={pVR} style={{ color: '#f97316' }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{pVR} W</motion.span>
           </div>
         </div>
       )}
       {/* Energy cost calculator */}
       <div className="rounded-[10px] p-2" style={{ background: '#1d293d', border: '1px solid #2d3e55' }}>
-        <div style={{ fontSize: 9, color: '#90a1b9', marginBottom: 3 }}>Energy cost: P={pCurrent}W for <span style={{ color: '#fdc700', fontWeight: 700 }}>{tHours}h</span></div>
+        <div style={{ fontSize: 9, color: '#a8b8cc', marginBottom: 3 }}>Energy cost: P={pCurrent}W for <span style={{ color: '#fdc700', fontWeight: 700 }}>{tHours}h</span></div>
         <input type="range" min="0.5" max="24" step="0.5" value={tHours} onChange={e => setTHours(+e.target.value)} className="w-full mb-1" style={{ accentColor: '#fdc700' }} />
         <div className="flex justify-between" style={{ fontSize: 9 }}>
-          <span style={{ color: '#90a1b9' }}>E = {energyKWh} kWh</span>
+          <span style={{ color: '#a8b8cc' }}>E = {energyKWh} kWh</span>
           <span style={{ color: '#22c55e', fontWeight: 700 }}>Cost ≈ {costPence}p</span>
         </div>
       </div>
@@ -1290,7 +1290,7 @@ function ElecPowerIdea() {
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#fdc70010', border: '1px solid #fdc700' }}>
           <span className="text-sm font-bold" style={{ color: '#fdc700' }}>12V</span>
           <Zap size={14} color="#fdc700" />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>= less power?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>= less power?</span>
         </div>
       </div>
       <IdeaCaption>A device with higher voltage always uses more power than one with lower voltage</IdeaCaption>
@@ -1320,7 +1320,7 @@ function StaticElecLesson() {
         {['before', 'after'].map(s => (
           <button key={s} onClick={() => setStage(s)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold capitalize"
-            style={{ background: stage === s ? `${ELEC_C}22` : '#1d293d', color: stage === s ? ELEC_C : '#90a1b9', border: `1px solid ${stage === s ? ELEC_C : '#2d3e55'}` }}>
+            style={{ background: stage === s ? `${ELEC_C}22` : '#1d293d', color: stage === s ? ELEC_C : '#a8b8cc', border: `1px solid ${stage === s ? ELEC_C : '#2d3e55'}` }}>
             {s === 'before' ? 'Before rubbing' : 'After rubbing'}
           </button>
         ))}
@@ -1332,7 +1332,7 @@ function StaticElecLesson() {
         {after ? (
           <text x="65" y="56" textAnchor="middle" fill="#ec4899" fontSize={10} fontWeight="bold">− − − − −</text>
         ) : (
-          <text x="65" y="56" textAnchor="middle" fill="#90a1b9" fontSize={9}>+ − + − +</text>
+          <text x="65" y="56" textAnchor="middle" fill="#a8b8cc" fontSize={9}>+ − + − +</text>
         )}
         {/* Cloth */}
         <rect x="148" y="30" width="90" height="30" rx="5" fill={after ? '#fdc70020' : '#1d293d'} stroke={after ? '#fdc700' : '#2d3e55'} strokeWidth="1.5" />
@@ -1340,7 +1340,7 @@ function StaticElecLesson() {
         {after ? (
           <text x="193" y="56" textAnchor="middle" fill="#fdc700" fontSize={10} fontWeight="bold">+ + + + +</text>
         ) : (
-          <text x="193" y="56" textAnchor="middle" fill="#90a1b9" fontSize={9}>+ − + − +</text>
+          <text x="193" y="56" textAnchor="middle" fill="#a8b8cc" fontSize={9}>+ − + − +</text>
         )}
         {/* Electron transfer arrow */}
         {after && (
@@ -1355,8 +1355,8 @@ function StaticElecLesson() {
           <motion.g initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <rect x="52" y="78" width="12" height="6" rx="1" fill="#fdc70030" stroke="#fdc700" strokeWidth="1" />
             <rect x="67" y="80" width="10" height="5" rx="1" fill="#fdc70030" stroke="#fdc700" strokeWidth="1" />
-            <text x="65" y="95" textAnchor="middle" fill="#90a1b9" fontSize={7}>Charged rod attracts</text>
-            <text x="65" y="103" textAnchor="middle" fill="#90a1b9" fontSize={7}>neutral paper scraps</text>
+            <text x="65" y="95" textAnchor="middle" fill="#a8b8cc" fontSize={7}>Charged rod attracts</text>
+            <text x="65" y="103" textAnchor="middle" fill="#a8b8cc" fontSize={7}>neutral paper scraps</text>
           </motion.g>
         )}
         <defs>
@@ -1366,7 +1366,7 @@ function StaticElecLesson() {
         </defs>
       </svg>
       <div className="flex flex-col gap-1">
-        <div style={{ fontSize: 9, color: '#90a1b9', textAlign: 'center' }}>
+        <div style={{ fontSize: 9, color: '#a8b8cc', textAlign: 'center' }}>
           {after ? 'Electrons transferred cloth → rod · Rod: negative · Cloth: positive' : 'Both objects are neutral before rubbing'}
         </div>
         <div style={{ fontSize: 9, color: '#cad5e2', textAlign: 'center' }}>Like charges repel · Unlike charges attract · Insulators charged by friction</div>
@@ -1381,7 +1381,7 @@ function StaticElecIdea() {
       <div className="flex items-center gap-2">
         <div className="flex flex-col items-center gap-1">
           <div className="w-10 h-6 rounded" style={{ background: '#1d293d', border: '1px solid #2d3e55' }} />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>Neutral</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>Neutral</span>
         </div>
         <motion.span animate={{ x: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 0.5 }}>
           <span style={{ color: '#e879f9', fontSize: 16 }}>↔</span>

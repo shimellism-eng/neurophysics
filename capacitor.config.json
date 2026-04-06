@@ -1,5 +1,5 @@
 {
-  "appId": "com.neurophysics.app",
+  "appId": "com.mamo.neurophysics",
   "appName": "NeuroPhysics",
   "webDir": "dist",
   "server": {

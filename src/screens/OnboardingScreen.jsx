@@ -48,7 +48,7 @@ function OptionCard({ option, enabled, onToggle, index }) {
         <div className="text-base font-semibold mb-0.5" style={{ color: enabled ? '#818cf8' : '#f8fafc' }}>
           {option.title}
         </div>
-        <div className="text-sm leading-snug" style={{ color: '#90a1b9' }}>{option.desc}</div>
+        <div className="text-sm leading-snug" style={{ color: '#a8b8cc' }}>{option.desc}</div>
       </div>
       <div
         className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center transition-all"
@@ -113,7 +113,7 @@ function StepProfile({ onNext }) {
           >
             Who's{'\n'}studying today?
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: '#90a1b9' }}>
+          <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
             Your progress is saved locally on this device, private and secure.
           </p>
         </motion.div>
@@ -125,7 +125,7 @@ function StepProfile({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.4 }}
         >
-          <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#90a1b9' }}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
             Pick an avatar
           </div>
           <div className="flex flex-wrap gap-2">
@@ -155,7 +155,7 @@ function StepProfile({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4 }}
         >
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>
+          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
             Your first name
           </div>
           <input
@@ -260,7 +260,7 @@ function StepPrefs({ profileData, onFinish }) {
             Hey {profileData.name}!{'\n'}
             <span style={{ color: '#6366f1' }}>How do you learn?</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: '#90a1b9' }}>
+          <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
             Customise NeuroPhysics to match your needs. Change these anytime in Settings.
           </p>
         </motion.div>

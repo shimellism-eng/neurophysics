@@ -52,10 +52,10 @@ export default function BottomNav() {
               )}
               <item.icon
                 size={22}
-                color={active ? '#155dfc' : '#90a1b9'}
+                color={active ? '#155dfc' : '#a8b8cc'}
                 strokeWidth={active ? 2.5 : 1.8}
               />
-              <span className="text-xs font-medium" style={{ color: active ? '#155dfc' : '#90a1b9' }}>
+              <span className="text-xs font-medium" style={{ color: active ? '#155dfc' : '#a8b8cc' }}>
                 {item.label}
               </span>
             </button>

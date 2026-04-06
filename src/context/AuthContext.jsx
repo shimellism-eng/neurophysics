@@ -79,7 +79,7 @@ export function AuthProvider({ children }) {
     let appUrlListener
     if (isNative) {
       appUrlListener = CapApp.addListener('appUrlOpen', async ({ url }) => {
-        // URL looks like: com.neurophysics.app://callback?code=xxx
+        // URL looks like: com.mamo.neurophysics://callback?code=xxx
         const parsed = new URL(url)
         const oauthCode = parsed.searchParams.get('code')
         if (oauthCode) {
@@ -119,7 +119,7 @@ export function AuthProvider({ children }) {
 
     if (isNative) {
       // Native: get the OAuth URL without auto-redirecting, then open in system browser
-      const redirectTo = 'com.neurophysics.app://callback'
+      const redirectTo = 'com.mamo.neurophysics://callback'
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {

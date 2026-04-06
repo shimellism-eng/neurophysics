@@ -67,7 +67,7 @@ function SENPanel({ topic, activeTab, onTab }) {
             key={tab.id}
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold"
             style={{
-              color: activeTab === tab.id ? '#155dfc' : '#90a1b9',
+              color: activeTab === tab.id ? '#155dfc' : '#a8b8cc',
               borderBottom: activeTab === tab.id ? '2px solid #155dfc' : '2px solid transparent',
             }}
             onClick={() => onTab(tab.id)}
@@ -148,7 +148,7 @@ function SENPanel({ topic, activeTab, onTab }) {
                           style={{
                             background: 'rgba(11,17,33,0.7)',
                             border: `0.75px solid ${topic.moduleColor}30`,
-                            color: '#90a1b9',
+                            color: '#a8b8cc',
                           }}
                           initial={{ opacity: 0, y: -4 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -205,7 +205,7 @@ export default function DiagnosticQuestion() {
     }
     if (idx === topic.correctAnswer) return { background: 'rgba(0,188,125,0.15)', border: '1.5px solid #00bc7d', color: '#f8fafc' }
     if (idx === selected) return { background: 'rgba(239,68,68,0.15)', border: '1.5px solid #ef4444', color: '#f8fafc' }
-    return { background: 'rgba(18,26,47,0.5)', border: '0.75px solid #1d293d', color: '#90a1b9' }
+    return { background: 'rgba(18,26,47,0.5)', border: '0.75px solid #1d293d', color: '#a8b8cc' }
   }
 
   return (
@@ -215,17 +215,17 @@ export default function DiagnosticQuestion() {
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
         <button
           onClick={() => navigate(`/lesson/${id}`)}
-          className="w-9 h-9 rounded-[12px] flex items-center justify-center"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
         >
-          <ArrowLeft size={18} color="#90a1b9" />
+          <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
           <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Knowledge Check</div>
           <h1 className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
         </div>
         <motion.button
-          className="flex items-center gap-1.5 px-3 py-2 rounded-[12px]"
+          className="flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] rounded-[12px]"
           style={{
             background: showSEN ? 'rgba(21,93,252,0.15)' : 'rgba(18,26,47,0.9)',
             border: showSEN ? '1px solid #155dfc80' : '0.75px solid #1d293d',
@@ -233,10 +233,10 @@ export default function DiagnosticQuestion() {
           onClick={() => setShowSEN(v => !v)}
           whileTap={{ scale: 0.95 }}
         >
-          <HelpCircle size={14} color={showSEN ? '#155dfc' : '#90a1b9'} />
-          <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#90a1b9' }}>Support</span>
+          <HelpCircle size={14} color={showSEN ? '#155dfc' : '#a8b8cc'} />
+          <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#a8b8cc' }}>Support</span>
           <motion.div animate={{ rotate: showSEN ? 180 : 0 }}>
-            <ChevronDown size={12} color={showSEN ? '#155dfc' : '#90a1b9'} />
+            <ChevronDown size={12} color={showSEN ? '#155dfc' : '#a8b8cc'} />
           </motion.div>
         </motion.button>
       </div>
@@ -285,7 +285,7 @@ export default function DiagnosticQuestion() {
             {topic.question}
           </h2>
           {topic.questionSubtitle && (
-            <p className="text-xs mt-1" style={{ color: '#90a1b9' }}>{topic.questionSubtitle}</p>
+            <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{topic.questionSubtitle}</p>
           )}
         </motion.div>
 

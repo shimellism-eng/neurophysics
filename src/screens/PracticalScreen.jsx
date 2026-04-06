@@ -119,7 +119,7 @@ function SetupSHC() {
       </svg>
 
       <div className="px-1">
-        <div className="flex justify-between text-xs mb-1" style={{ color: '#90a1b9' }}>
+        <div className="flex justify-between text-xs mb-1" style={{ color: '#a8b8cc' }}>
           <span>Time: {time}s</span>
           <span>Energy: {(power * time).toLocaleString()} J</span>
           <span style={{ color: '#ef4444' }}>ΔT +{dT}°C</span>
@@ -260,7 +260,7 @@ function SetupInsulation() {
 
       {/* ── Status + reset ── */}
       <div className="flex items-center justify-between px-1">
-        <span className="text-xs" style={{ color: '#90a1b9' }}>
+        <span className="text-xs" style={{ color: '#a8b8cc' }}>
           {elapsed >= 20 ? 'Complete - tap stopwatch to restart' : `Elapsed: ${elapsed} min`}
         </span>
         {elapsed > 0 && !running && elapsed < 20 && (
@@ -505,7 +505,7 @@ function SetupResistance() {
 
       {/* ── Slider ── */}
       <div className="px-1">
-        <div className="text-xs mb-1" style={{ color: '#90a1b9' }}>
+        <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>
           Wire length: <strong style={{ color: '#f59e0b' }}>{len} cm</strong>
         </div>
         <input type="range" min={10} max={100} step={10} value={len}
@@ -593,7 +593,7 @@ function SetupIV() {
       </svg>
 
       <div className="px-1">
-        <div className="text-xs mb-1" style={{ color: '#90a1b9' }}>Voltage: {volts} V</div>
+        <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>Voltage: {volts} V</div>
         <input type="range" min={-6} max={6} step={0.5} value={volts}
           onChange={e => setVolts(+e.target.value)} className="w-full accent-indigo-400"/>
         <div className="flex justify-between text-xs mt-0.5" style={{ color: '#475569' }}>
@@ -739,7 +739,7 @@ function SetupLight() {
       </svg>
 
       <div className="px-1">
-        <div className="text-xs mb-1" style={{ color: '#90a1b9' }}>
+        <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>
           Angle of incidence: {angle}° → refraction: {r}°
         </div>
         <input type="range" min={10} max={70} step={5} value={angle}
@@ -810,7 +810,7 @@ function SetupSpring() {
       </svg>
 
       <div className="px-1">
-        <div className="flex justify-between text-xs mb-1" style={{ color: '#90a1b9' }}>
+        <div className="flex justify-between text-xs mb-1" style={{ color: '#a8b8cc' }}>
           <span>Force: {force} N</span>
           <span style={{ color: beyondLimit ? '#ef4444' : '#10b981' }}>
             Extension: {ext} cm {beyondLimit ? '(permanent deform!)' : ''}
@@ -885,7 +885,7 @@ function SetupAcceleration() {
       </svg>
 
       <div className="px-1">
-        <div className="text-xs mb-1" style={{ color: '#90a1b9' }}>Force (hanging weights): {force} N</div>
+        <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>Force (hanging weights): {force} N</div>
         <input type="range" min={0.2} max={1.0} step={0.2} value={force}
           onChange={e => setForce(+e.target.value)} className="w-full accent-emerald-400"/>
         <div className="flex justify-between text-xs mt-0.5" style={{ color: '#475569' }}>
@@ -956,7 +956,7 @@ function SetupWaves() {
       </svg>
 
       <div className="px-1">
-        <div className="text-xs mb-1" style={{ color: '#90a1b9' }}>
+        <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>
           Frequency: {freq} Hz → λ = {lambda} m
         </div>
         <input type="range" min={1} max={14} step={1} value={freq}
@@ -1077,7 +1077,7 @@ function TabOverview({ p, color }) {
         </div>
       </div>
       <div>
-        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#90a1b9' }}>Equipment</div>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>Equipment</div>
         <div className="flex flex-wrap gap-2">
           {p.equipment.map((eq, i) => (
             <div key={i} className="px-3 py-1.5 rounded-[10px] text-xs"
@@ -1234,7 +1234,7 @@ function TabAnalysis({ p, color }) {
     <div className="flex flex-col gap-4">
       <div className="rounded-[16px] p-4 text-center font-mono"
         style={{ background: `${color}12`, border: `0.75px solid ${color}50` }}>
-        <div className="text-xs uppercase tracking-wide mb-2" style={{ color: '#90a1b9' }}>Key Formula</div>
+        <div className="text-xs uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>Key Formula</div>
         <div className="text-xl font-bold" style={{ color }}>{formulas[p.id]}</div>
       </div>
       <div className="rounded-[16px] p-4" style={{ background: 'rgba(18,26,47,0.9)', border: `0.75px solid ${color}40` }}>
@@ -1298,7 +1298,7 @@ function TabAnalysis({ p, color }) {
           </svg>
 
           {/* Gradient callout */}
-          <div className="mt-1 px-1 text-xs" style={{ color: '#90a1b9' }}>
+          <div className="mt-1 px-1 text-xs" style={{ color: '#a8b8cc' }}>
             Gradient = <span style={{ color, fontWeight: 700 }}>0.225 Ω/cm</span>
             &nbsp;- resistance per cm of wire
           </div>
@@ -1396,7 +1396,7 @@ export default function PracticalScreen() {
 
   const p = PRACTICALS[id]
   if (!p) return (
-    <div className="flex items-center justify-center h-full" style={{ color: '#90a1b9' }}>
+    <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc' }}>
       Practical not found
     </div>
   )
@@ -1423,7 +1423,7 @@ export default function PracticalScreen() {
         <button onClick={() => navigate(-1)}
           className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-          <ChevronLeft size={18} color="#90a1b9"/>
+          <ChevronLeft size={18} color="#a8b8cc"/>
         </button>
         <div className="flex items-center gap-2 min-w-0 flex-1">
           <div className="px-2 py-0.5 rounded-[6px] text-xs font-bold shrink-0"

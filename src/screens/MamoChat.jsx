@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect } from 'react'
-import { Send, Atom, Sparkles, Key, ChevronDown } from 'lucide-react'
+import { Send, Atom, Sparkles, Key, ArrowLeft, RotateCcw } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet } from '../utils/secureStorage'
 
@@ -39,6 +39,7 @@ export default function MamoChat() {
   const [loading, setLoading] = useState(false)
   const [apiKey, setApiKey] = useState('')
   const [showKeyInput, setShowKeyInput] = useState(false)
+  const [lastUserMessage, setLastUserMessage] = useState('')
   const bottomRef = useRef(null)
   const inputRef = useRef(null)
 
@@ -68,6 +69,7 @@ export default function MamoChat() {
       .replace(/\bsystem\s*:/gi, '')
       .replace(/\bassistant\s*:/gi, '')
 
+    setLastUserMessage(userMsg)
     setInput('')
     const newMessages = [...messages, { role: 'user', content: userMsg }]
     setMessages(newMessages)
@@ -104,7 +106,8 @@ export default function MamoChat() {
     } catch (e) {
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: `⚠️ Couldn't reach Mamo right now.\n\n**Error:** ${e.message}\n\nPlease try again in a moment.`,
+        content: `Couldn't reach Mamo right now.\n\n**Error:** ${e.message}`,
+        isError: true,
       }])
     } finally {
       setLoading(false)
@@ -130,12 +133,12 @@ export default function MamoChat() {
         style={{ borderBottom: '0.75px solid #1d293d' }}
       >
         <button
-          className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           onClick={() => navigate(-1)}
           aria-label="Go back"
         >
-          <ChevronDown size={18} color="#90a1b9" />
+          <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div
           className="w-10 h-10 rounded-[14px] flex items-center justify-center shrink-0"
@@ -148,11 +151,11 @@ export default function MamoChat() {
           <div className="text-xs" style={{ color: '#00bc7d' }}>● Physics Tutor · Always here</div>
         </div>
         <button
-          className="w-9 h-9 rounded-[12px] flex items-center justify-center"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           onClick={() => setShowKeyInput(v => !v)}
         >
-          <Key size={15} color={apiKey ? '#00bc7d' : '#90a1b9'} />
+          <Key size={15} color={apiKey ? '#00bc7d' : '#a8b8cc'} />
         </button>
       </div>
 
@@ -179,7 +182,7 @@ export default function MamoChat() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
           >
-            <div className="text-xs mb-2" style={{ color: '#90a1b9' }}>
+            <div className="text-xs mb-2" style={{ color: '#a8b8cc' }}>
               Anthropic API key - stored locally, never sent anywhere except to Anthropic.
             </div>
             <div className="flex gap-2">
@@ -221,19 +224,37 @@ export default function MamoChat() {
                 <Sparkles size={12} color="#6366f1" />
               </div>
             )}
-            <div
-              className="rounded-[16px] px-4 py-3 text-sm leading-relaxed"
-              style={{
-                maxWidth: '82%',
-                background: msg.role === 'user'
-                  ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
-                  : 'rgba(18,26,47,0.9)',
-                border: msg.role === 'user' ? 'none' : '0.75px solid #1d293d',
-                color: '#f8fafc',
-                boxShadow: msg.role === 'user' ? '0 4px 16px rgba(99,102,241,0.3)' : 'none',
-              }}
-            >
-              {renderContent(msg.content)}
+            <div style={{ maxWidth: '82%' }}>
+              <div
+                className="rounded-[16px] px-4 py-3 text-sm leading-relaxed"
+                style={{
+                  background: msg.role === 'user'
+                    ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
+                    : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(18,26,47,0.9)',
+                  border: msg.role === 'user' ? 'none' : msg.isError ? '0.75px solid rgba(239,68,68,0.3)' : '0.75px solid #1d293d',
+                  color: '#f8fafc',
+                  boxShadow: msg.role === 'user' ? '0 4px 16px rgba(99,102,241,0.3)' : 'none',
+                }}
+              >
+                {renderContent(msg.content)}
+              </div>
+              {msg.isError && lastUserMessage && (
+                <button
+                  className="mt-2 px-4 py-2.5 rounded-[12px] text-xs font-semibold min-h-[44px] flex items-center gap-2"
+                  style={{
+                    background: 'rgba(99,102,241,0.1)',
+                    border: '0.75px solid rgba(99,102,241,0.3)',
+                    color: '#818cf8',
+                  }}
+                  onClick={() => {
+                    setMessages(prev => prev.slice(0, -1))
+                    sendMessage(lastUserMessage)
+                  }}
+                >
+                  <RotateCcw size={13} />
+                  Retry
+                </button>
+              )}
             </div>
           </motion.div>
         ))}
@@ -263,7 +284,7 @@ export default function MamoChat() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="text-xs px-1 mb-1" style={{ color: '#90a1b9' }}>Try asking:</div>
+            <div className="text-xs px-1 mb-1" style={{ color: '#a8b8cc' }}>Try asking:</div>
             {SUGGESTED.map((q, i) => (
               <motion.button
                 key={i}
@@ -328,7 +349,7 @@ export default function MamoChat() {
           whileTap={{ scale: 0.92 }}
           disabled={!input.trim() || loading}
         >
-          <Send size={18} color={input.trim() && !loading ? '#fff' : '#90a1b9'} />
+          <Send size={18} color={input.trim() && !loading ? '#fff' : '#a8b8cc'} />
         </motion.button>
       </div>
     </div>

@@ -45,7 +45,7 @@ function StatesDensityLesson() {
         {states.map((s, i) => (
           <button key={i} onClick={() => setState(i)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: state === i ? `${cols[i]}22` : '#1d293d', color: state === i ? cols[i] : '#90a1b9', border: `1px solid ${state === i ? cols[i] : '#2a3a52'}` }}>
+            style={{ background: state === i ? `${cols[i]}22` : '#1d293d', color: state === i ? cols[i] : '#a8b8cc', border: `1px solid ${state === i ? cols[i] : '#2a3a52'}` }}>
             {s}
           </button>
         ))}
@@ -79,7 +79,7 @@ function StatesDensityLesson() {
         <div className="px-3 py-1 rounded-[10px] font-mono font-bold text-sm" style={{ background: `${PART_C}18`, border: `1px solid ${PART_C}44`, color: PART_C }}>
           ρ = m/V
         </div>
-        <div className="text-xs text-center" style={{ color: '#90a1b9' }}>{stateInfo[state]}</div>
+        <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>{stateInfo[state]}</div>
       </div>
     </div>
   )
@@ -99,7 +99,7 @@ function StatesDensityIdea() {
           <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
             style={{ background: '#c084fc20', border: '2px solid #c084fc', color: '#c084fc' }}>W</div>
           <motion.div className="text-sm" animate={{ y: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }}>↓</motion.div>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>floats?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>floats?</span>
         </div>
       </div>
       <IdeaCaption>Heavy objects always sink - light objects always float, regardless of shape</IdeaCaption>
@@ -116,7 +116,7 @@ function StatesDensityReality() {
         </div>
         <div className="flex flex-col items-center gap-1">
           <div className="w-5 h-5 rounded-full" style={{ background: '#00a8e840', border: '1px solid #00a8e8' }} />
-          <span className="text-xs" style={{ color: '#90a1b9' }}>Steel bolt<br/>sinks</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>Steel bolt<br/>sinks</span>
         </div>
       </div>
       <FormulaBox formula="ρ = m/V" color={PART_C} />
@@ -157,19 +157,19 @@ function InternalEnergyLesson() {
           transition={{ duration: 2, ease: 'easeInOut' }} />
         {/* plateau labels */}
         <text x="81" y="78" textAnchor="middle" fill="#2b7fff" fontSize={7} fontWeight="bold">Melting</text>
-        <text x="67" y="75" textAnchor="start" fill="#90a1b9" fontSize={6.5}>0°C</text>
+        <text x="67" y="75" textAnchor="start" fill="#a8b8cc" fontSize={6.5}>0°C</text>
         <text x="159" y="36" textAnchor="middle" fill="#00a8e8" fontSize={7} fontWeight="bold">Boiling</text>
-        <text x="143" y="33" textAnchor="start" fill="#90a1b9" fontSize={6.5}>100°C</text>
+        <text x="143" y="33" textAnchor="start" fill="#a8b8cc" fontSize={6.5}>100°C</text>
         {/* phase labels */}
-        <text x="45" y="114" textAnchor="middle" fill="#90a1b9" fontSize={6.5}>Solid</text>
-        <text x="121" y="68" textAnchor="middle" fill="#90a1b9" fontSize={6.5}>Liquid</text>
-        <text x="210" y="16" textAnchor="middle" fill="#90a1b9" fontSize={6.5}>Gas</text>
+        <text x="45" y="114" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Solid</text>
+        <text x="121" y="68" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Liquid</text>
+        <text x="210" y="16" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Gas</text>
       </svg>
       <div className="flex items-center gap-3 w-full justify-center">
         <div className="px-3 py-1 rounded-[10px] font-mono font-bold text-sm" style={{ background: `${PART_C}18`, border: `1px solid ${PART_C}44`, color: PART_C }}>
           ΔE = mcΔT
         </div>
-        <div className="text-xs" style={{ color: '#90a1b9' }}>Plateau = latent heat<br/>T stays constant</div>
+        <div className="text-xs" style={{ color: '#a8b8cc' }}>Plateau = latent heat<br/>T stays constant</div>
       </div>
       <div className="text-xs text-center px-1" style={{ color: '#637b96' }}>
         During phase changes: energy breaks bonds  -  temperature stays constant
@@ -183,12 +183,12 @@ function InternalEnergyIdea() {
       <div className="flex items-center gap-2">
         <div className="flex flex-col items-center gap-0.5">
           <span className="text-xs font-bold" style={{ color: '#f97316' }}>100°C</span>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>water</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>water</span>
         </div>
         <div className="px-2 py-1 rounded" style={{ background: '#ef444420', color: '#ef4444', fontSize: 12, border: '1px solid #ef4444' }}>=</div>
         <div className="flex flex-col items-center gap-0.5">
           <span className="text-xs font-bold" style={{ color: '#f97316' }}>100°C</span>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>steam?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>steam?</span>
         </div>
       </div>
       <div className="text-xs" style={{ color: '#ef4444' }}>Same temp → same internal energy?</div>
@@ -253,7 +253,7 @@ function GasPressureLesson() {
         {tabs.map((t, i) => (
           <button key={i} onClick={() => setTab(i)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: tab === i ? `${PART_C}22` : '#1d293d', color: tab === i ? PART_C : '#90a1b9', border: `1px solid ${tab === i ? PART_C : '#2a3a52'}` }}>
+            style={{ background: tab === i ? `${PART_C}22` : '#1d293d', color: tab === i ? PART_C : '#a8b8cc', border: `1px solid ${tab === i ? PART_C : '#2a3a52'}` }}>
             {t}
           </button>
         ))}
@@ -293,7 +293,7 @@ function GasPressureLesson() {
           </svg>
           <div className="w-full flex flex-col gap-1 px-2">
             <div className="flex justify-between text-xs">
-              <span style={{ color: '#90a1b9' }}>Volume (piston position)</span>
+              <span style={{ color: '#a8b8cc' }}>Volume (piston position)</span>
               <span style={{ color: PART_C }} className="font-bold">{vol}%</span>
             </div>
             <input type="range" min="20" max="100" value={vol} onChange={e => setVol(+e.target.value)} className="w-full" style={{ accentColor: PART_C }} />
@@ -330,7 +330,7 @@ function GasPressureLesson() {
           </svg>
           <div className="w-full flex flex-col gap-1 px-2">
             <div className="flex justify-between text-xs">
-              <span style={{ color: '#90a1b9' }}>Temperature</span>
+              <span style={{ color: '#a8b8cc' }}>Temperature</span>
               <span style={{ color: PART_C }} className="font-bold">{tempC}°C</span>
             </div>
             <input type="range" min="0" max="300" value={tempC} onChange={e => setTempC(+e.target.value)} className="w-full" style={{ accentColor: PART_C }} />
@@ -419,14 +419,14 @@ function AtomicStructureLesson() {
       <div className="flex gap-2 w-full justify-center text-xs">
         {[
           { name: 'Proton', charge: '+1', mass: '1 u', col: '#f97316' },
-          { name: 'Neutron', charge: '0', mass: '1 u', col: '#90a1b9' },
+          { name: 'Neutron', charge: '0', mass: '1 u', col: '#a8b8cc' },
           { name: 'Electron', charge: '−1', mass: '≈0', col: ATOM_C },
         ].map(p => (
           <div key={p.name} className="flex flex-col items-center gap-0.5 px-2 py-1 rounded-[8px]"
             style={{ background: `${p.col}14`, border: `1px solid ${p.col}33` }}>
             <span className="font-semibold" style={{ color: p.col }}>{p.name}</span>
             <span style={{ color: '#cad5e2' }}>Q: {p.charge}</span>
-            <span style={{ color: '#90a1b9' }}>m: {p.mass}</span>
+            <span style={{ color: '#a8b8cc' }}>m: {p.mass}</span>
           </div>
         ))}
       </div>
@@ -446,7 +446,7 @@ function AtomicStructureIdea() {
             left: `${10 + i * 15}%`,
           }}>{c}</span>
         ))}
-        <span className="text-xs font-bold z-10" style={{ color: '#90a1b9' }}>solid</span>
+        <span className="text-xs font-bold z-10" style={{ color: '#a8b8cc' }}>solid</span>
       </div>
       <div className="text-xs" style={{ color: '#ef4444' }}>Solid sphere - charges mixed throughout?</div>
       <IdeaCaption>The atom is a solid sphere with positive and negative charges spread evenly throughout</IdeaCaption>
@@ -458,9 +458,9 @@ function AtomicStructureReality() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="flex items-center gap-3">
         <div className="w-5 h-5 rounded-full flex items-center justify-center text-xs" style={{ background: '#e879f9', color: '#fff' }}>N</div>
-        <div className="text-xs" style={{ color: '#90a1b9' }}>tiny dense nucleus</div>
+        <div className="text-xs" style={{ color: '#a8b8cc' }}>tiny dense nucleus</div>
         <div className="w-2 h-2 rounded-full" style={{ background: '#e879f9' }} />
-        <div className="text-xs" style={{ color: '#90a1b9' }}>e⁻ shells</div>
+        <div className="text-xs" style={{ color: '#a8b8cc' }}>e⁻ shells</div>
       </div>
       <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Nucleus: 1/10,000 of atom's radius<br/>Atom: mostly empty space</div>
       <RealityBadge color={ATOM_C}>Rutherford proved: tiny dense nucleus + electron shells</RealityBadge>
@@ -474,7 +474,7 @@ function AtomicModelLesson() {
 
   const models = [
     {
-      year: '1803', name: 'Dalton', color: '#90a1b9',
+      year: '1803', name: 'Dalton', color: '#a8b8cc',
       detail: 'Indivisible solid sphere. All matter made of tiny indestructible spheres.',
       diagram: (col) => (
         <svg width="40" height="40" viewBox="0 0 40 40">
@@ -568,7 +568,7 @@ function AtomicModelIdea() {
             top: `${20 + (i % 2) * 40}%`, left: `${15 + i * 20}%`,
           }}>{c}</span>
         ))}
-        <span className="text-xs" style={{ color: '#90a1b9' }}>pudding</span>
+        <span className="text-xs" style={{ color: '#a8b8cc' }}>pudding</span>
       </div>
       <div className="text-xs text-center px-1" style={{ color: '#ef4444' }}>
         Just a theory? No - Geiger-Marsden proved it wrong
@@ -605,15 +605,15 @@ function RadioactiveDecayLesson() {
         <rect x="100" y="4" width="8" height="148" fill="#fdc700" fillOpacity="0.22" stroke="#fdc700" strokeWidth="1" strokeOpacity="0.5" />
         <text x="104" y="156" textAnchor="middle" fill="#fdc700" fontSize={6.5}>Paper</text>
         {/* Aluminium: x=145 */}
-        <rect x="145" y="4" width="10" height="148" fill="#90a1b9" fillOpacity="0.22" stroke="#90a1b9" strokeWidth="1" strokeOpacity="0.5" />
-        <text x="150" y="156" textAnchor="middle" fill="#90a1b9" fontSize={6.5}>Al</text>
+        <rect x="145" y="4" width="10" height="148" fill="#a8b8cc" fillOpacity="0.22" stroke="#a8b8cc" strokeWidth="1" strokeOpacity="0.5" />
+        <text x="150" y="156" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Al</text>
         {/* Lead: x=190 */}
         <rect x="190" y="4" width="14" height="148" fill="#637b96" fillOpacity="0.35" stroke="#637b96" strokeWidth="1.5" strokeOpacity="0.7" />
         <text x="197" y="156" textAnchor="middle" fill="#637b96" fontSize={6.5}>Lead</text>
 
         {/* Source box */}
         <rect x="6" y="6" width="22" height="142" rx="4" fill="#1d293d" stroke="#2a3a52" strokeWidth="1" />
-        <text x="17" y="80" textAnchor="middle" fill="#90a1b9" fontSize={7} transform="rotate(-90,17,80)">Source</text>
+        <text x="17" y="80" textAnchor="middle" fill="#a8b8cc" fontSize={7} transform="rotate(-90,17,80)">Source</text>
 
         {/* ── α row (y center = 30) ── */}
         <text x="30" y="33" fill={AC} fontSize={9} fontWeight="bold">α</text>
@@ -655,7 +655,7 @@ function RadioactiveDecayLesson() {
             style={{ background: `${r.col}14`, border: `1px solid ${r.col}33` }}>
             <span className="font-bold text-sm" style={{ color: r.col }}>{r.sym}</span>
             <span style={{ color: '#cad5e2' }}>{r.name}</span>
-            <span style={{ color: '#90a1b9' }}>Q: {r.charge}</span>
+            <span style={{ color: '#a8b8cc' }}>Q: {r.charge}</span>
             <span style={{ color: '#fdc700' }}>{r.ion} ionising</span>
           </div>
         ))}
@@ -806,7 +806,7 @@ function NuclearEquationsLesson() {
         {tabs.map((t, i) => (
           <button key={i} onClick={() => setTab(i)}
             className="px-3 py-1 rounded-[8px] text-xs font-semibold"
-            style={{ background: tab === i ? `${ATOM_C}22` : '#1d293d', color: tab === i ? ATOM_C : '#90a1b9', border: `1px solid ${tab === i ? ATOM_C : '#2a3a52'}` }}>
+            style={{ background: tab === i ? `${ATOM_C}22` : '#1d293d', color: tab === i ? ATOM_C : '#a8b8cc', border: `1px solid ${tab === i ? ATOM_C : '#2a3a52'}` }}>
             {t}
           </button>
         ))}
@@ -929,7 +929,7 @@ function HalfLifeLesson() {
       <div className="w-full flex items-center gap-3 px-2">
         <div className="flex-1">
           <div className="flex justify-between text-xs mb-1">
-            <span style={{ color: '#90a1b9' }}>Half-lives elapsed</span>
+            <span style={{ color: '#a8b8cc' }}>Half-lives elapsed</span>
             <span style={{ color: '#fdc700' }} className="font-bold">{n}</span>
           </div>
           <input type="range" min="0" max="4" step="1" value={n} onChange={e => setN(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
@@ -937,7 +937,7 @@ function HalfLifeLesson() {
         <div className="text-center">
           <motion.div key={n} className="text-lg font-bold font-mono" style={{ color: '#fdc700' }}
             initial={{ scale: 0.7 }} animate={{ scale: 1 }}>{activity}%</motion.div>
-          <div className="text-xs" style={{ color: '#90a1b9' }}>activity</div>
+          <div className="text-xs" style={{ color: '#a8b8cc' }}>activity</div>
         </div>
       </div>
 
@@ -969,7 +969,7 @@ function HalfLifeIdea() {
         {[['t=0', 100, '#e879f9'], ['t=1T', 50, '#e879f9'], ['t=2T', 0, '#1d293d']].map(([label, pct, col], i) => (
           <div key={i} className="flex flex-col items-center gap-1">
             <div className="w-8 rounded-t-[4px]" style={{ height: Math.max(pct * 0.4, 4), background: col }} />
-            <span className="text-xs" style={{ color: '#90a1b9' }}>{label}</span>
+            <span className="text-xs" style={{ color: '#a8b8cc' }}>{label}</span>
             <span className="text-xs font-bold" style={{ color: i === 2 ? '#ef4444' : ATOM_C }}>{pct}%</span>
           </div>
         ))}
@@ -1059,13 +1059,13 @@ function RadiationHazardsIdea() {
           <span className="text-xs" style={{ color: '#ef4444' }}>Outside</span>
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>MORE danger</span>
         </div>
-        <span style={{ color: '#90a1b9', fontSize: 18 }}>&gt;</span>
+        <span style={{ color: '#a8b8cc', fontSize: 18 }}>&gt;</span>
         <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: '#90a1b920', border: '2px solid #90a1b9' }}>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: '#a8b8cc20', border: '2px solid #a8b8cc' }}>
             <span className="text-base">💊</span>
           </div>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>Inside</span>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>less?</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>Inside</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>less?</span>
         </div>
       </div>
       <IdeaCaption>Radiation from a source outside the body is always more dangerous than swallowing a source</IdeaCaption>
@@ -1197,8 +1197,8 @@ function NuclearFissionLesson() {
       </motion.button>
 
       <div className="flex gap-2 text-xs w-full justify-center">
-        <div className="px-2 py-1 rounded-[6px]" style={{ background: '#1d293d', color: '#90a1b9' }}>Controlled (reactor): 1 neutron/fission</div>
-        <div className="px-2 py-1 rounded-[6px]" style={{ background: '#1d293d', color: '#90a1b9' }}>E = mc²</div>
+        <div className="px-2 py-1 rounded-[6px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>Controlled (reactor): 1 neutron/fission</div>
+        <div className="px-2 py-1 rounded-[6px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>E = mc²</div>
       </div>
     </div>
   )
@@ -1210,7 +1210,7 @@ function NuclearFissionIdea() {
         <div className="w-10 h-10 rounded-full" style={{ background: `${ATOM_C}20`, border: `2px solid ${ATOM_C}` }} />
         <span style={{ color: '#ef4444', fontSize: 14 }}>→</span>
         <div className="w-5 h-5 rounded-full" style={{ background: `${ATOM_C}30`, border: `1px solid ${ATOM_C}` }} />
-        <span className="text-xs" style={{ color: '#90a1b9' }}>+</span>
+        <span className="text-xs" style={{ color: '#a8b8cc' }}>+</span>
         <div className="w-5 h-5 rounded-full" style={{ background: `${ATOM_C}30`, border: `1px solid ${ATOM_C}` }} />
       </div>
       <div className="text-xs" style={{ color: '#ef4444' }}>Two equal halves only?</div>
@@ -1296,10 +1296,10 @@ function NuclearFusionLesson() {
 
             {/* neutron product */}
             <motion.circle cx={218} cy={65} r={6}
-              fill="#90a1b9" stroke="#90a1b9" strokeWidth="1"
+              fill="#a8b8cc" stroke="#a8b8cc" strokeWidth="1"
               initial={{ cx: 130, opacity: 0 }} animate={{ cx: 218, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }} />
-            <motion.text x={218} y={79} textAnchor="middle" fill="#90a1b9" fontSize={7}
+            <motion.text x={218} y={79} textAnchor="middle" fill="#a8b8cc" fontSize={7}
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>n</motion.text>
 
             {/* energy rays */}
@@ -1328,9 +1328,9 @@ function NuclearFusionLesson() {
       </div>
 
       <div className="flex gap-2 text-xs justify-center flex-wrap">
-        <span className="px-2 py-0.5 rounded-[6px]" style={{ background: '#1d293d', color: '#90a1b9' }}>Requires ~10⁸ K (plasma)</span>
-        <span className="px-2 py-0.5 rounded-[6px]" style={{ background: '#1d293d', color: '#90a1b9' }}>Powers the Sun</span>
-        <span className="px-2 py-0.5 rounded-[6px]" style={{ background: '#1d293d', color: '#90a1b9' }}>ITER tokamak</span>
+        <span className="px-2 py-0.5 rounded-[6px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>Requires ~10⁸ K (plasma)</span>
+        <span className="px-2 py-0.5 rounded-[6px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>Powers the Sun</span>
+        <span className="px-2 py-0.5 rounded-[6px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>ITER tokamak</span>
       </div>
     </div>
   )
@@ -1356,12 +1356,12 @@ function NuclearFusionReality() {
         <div className="flex flex-col items-center p-2 rounded-[8px]" style={{ background: `${ATOM_C}10`, border: `1px solid ${ATOM_C}` }}>
           <span style={{ color: ATOM_C }}>Fusion</span>
           <span style={{ color: '#cad5e2' }}>Joins nuclei</span>
-          <span style={{ color: '#90a1b9' }}>Stars</span>
+          <span style={{ color: '#a8b8cc' }}>Stars</span>
         </div>
         <div className="flex flex-col items-center p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
           <span style={{ color: '#c084fc' }}>Fission</span>
           <span style={{ color: '#cad5e2' }}>Splits nucleus</span>
-          <span style={{ color: '#90a1b9' }}>Reactors</span>
+          <span style={{ color: '#a8b8cc' }}>Reactors</span>
         </div>
       </div>
       <RealityBadge color={ATOM_C}>Fusion joins nuclei; fission splits them - both release energy</RealityBadge>

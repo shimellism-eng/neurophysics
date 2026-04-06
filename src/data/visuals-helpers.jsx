@@ -28,7 +28,7 @@ export function RealityBadge({ children, color = '#00bc7d' }) {
 export function AnimBar({ value, max = 100, color, label, delay = 0 }) {
   return (
     <div className="flex items-center gap-2 w-full">
-      <span className="text-xs w-20 shrink-0 text-right" style={{ color: '#90a1b9' }}>{label}</span>
+      <span className="text-xs w-20 shrink-0 text-right" style={{ color: '#a8b8cc' }}>{label}</span>
       <div className="flex-1 h-3 rounded-full" style={{ background: '#1d293d' }}>
         <motion.div className="h-full rounded-full" style={{ background: color }}
           initial={{ width: 0 }} animate={{ width: `${(value / max) * 100}%` }}

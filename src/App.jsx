@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Atom, Minus } from 'lucide-react'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import BottomNav from './components/BottomNav'
@@ -105,6 +105,11 @@ const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms']
 function AppShell() {
   const location = useLocation()
   const { user, loading } = useAuth()
+
+  // Reset scroll on route change
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
   const isPublic = PUBLIC_ROUTES.includes(location.pathname)
   const showShell = SHELL_ROUTES.includes(location.pathname)
 

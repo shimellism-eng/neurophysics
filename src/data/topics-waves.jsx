@@ -21,7 +21,7 @@ function WaveTypesLesson() {
         {[['transverse', 'Transverse'], ['longitudinal', 'Longitudinal']].map(([val, label]) => (
           <button key={val} onClick={() => setType(val)}
             className="px-3 py-1 rounded-[6px] text-xs font-semibold"
-            style={{ background: type === val ? `${WC}25` : '#1d293d', color: type === val ? WC : '#90a1b9', border: `1px solid ${type === val ? WC : '#2d3f5c'}` }}>
+            style={{ background: type === val ? `${WC}25` : '#1d293d', color: type === val ? WC : '#a8b8cc', border: `1px solid ${type === val ? WC : '#2d3f5c'}` }}>
             {label}
           </button>
         ))}
@@ -45,14 +45,14 @@ function WaveTypesLesson() {
           <line x1="70" y1="96" x2="70" y2="104" stroke="#2b7fff" strokeWidth="1.2" />
           <text x="40" y="108" textAnchor="middle" fill="#2b7fff" fontSize={8}>λ</text>
           {/* Crest / trough labels */}
-          <text x="70" y="22" textAnchor="middle" fill="#90a1b9" fontSize={8}>crest</text>
-          <text x="130" y="92" textAnchor="middle" fill="#90a1b9" fontSize={8}>trough</text>
+          <text x="70" y="22" textAnchor="middle" fill="#a8b8cc" fontSize={8}>crest</text>
+          <text x="130" y="92" textAnchor="middle" fill="#a8b8cc" fontSize={8}>trough</text>
           {/* Travel arrow */}
           <line x1="200" y1="55" x2="248" y2="55" stroke={WC} strokeWidth="1.5" markerEnd="url(#arrowHead)" />
           <polygon points="248,52 254,55 248,58" fill={WC} />
           <text x="195" y="48" fill={WC} fontSize={8}>→ travel</text>
           {/* Label */}
-          <text x="130" y="12" textAnchor="middle" fill="#90a1b9" fontSize={8}>vibration ⊥ travel direction</text>
+          <text x="130" y="12" textAnchor="middle" fill="#a8b8cc" fontSize={8}>vibration ⊥ travel direction</text>
         </svg>
       ) : (
         <svg width="260" height="110" viewBox="0 0 260 110">
@@ -71,14 +71,14 @@ function WaveTypesLesson() {
                   cy={55} r={4}
                   fill={WC} opacity={grp.type === 'C' ? 0.9 : 0.4} />
               ))}
-              <text x={grp.cx} y={28} textAnchor="middle" fill={grp.type === 'C' ? WC : '#90a1b9'} fontSize={8}>
+              <text x={grp.cx} y={28} textAnchor="middle" fill={grp.type === 'C' ? WC : '#a8b8cc'} fontSize={8}>
                 {grp.type === 'C' ? 'C' : 'R'}
               </text>
             </motion.g>
           ))}
           {/* C and R legend */}
           <text x="10" y="18" fill={WC} fontSize={8}>C = compression</text>
-          <text x="140" y="18" fill="#90a1b9" fontSize={8}>R = rarefaction</text>
+          <text x="140" y="18" fill="#a8b8cc" fontSize={8}>R = rarefaction</text>
           {/* Travel arrow */}
           <line x1="10" y1="80" x2="244" y2="80" stroke={WC} strokeWidth="1.2" />
           <polygon points="244,77 250,80 244,83" fill={WC} />
@@ -89,11 +89,11 @@ function WaveTypesLesson() {
           <polygon points="130,105 136,108 130,111" fill="#c084fc" />
           <text x="175" y="111" fill="#c084fc" fontSize={8}>particle vibration ↔</text>
           {/* Label */}
-          <text x="130" y="8" textAnchor="middle" fill="#90a1b9" fontSize={8}>vibration ∥ travel direction</text>
+          <text x="130" y="8" textAnchor="middle" fill="#a8b8cc" fontSize={8}>vibration ∥ travel direction</text>
         </svg>
       )}
 
-      <div className="text-center text-xs" style={{ color: '#90a1b9' }}>
+      <div className="text-center text-xs" style={{ color: '#a8b8cc' }}>
         <span style={{ color: WC }}>Transverse:</span> EM waves, water &nbsp;|&nbsp; <span style={{ color: '#2b7fff' }}>Longitudinal:</span> sound
       </div>
     </div>
@@ -117,7 +117,7 @@ function WaveTypesIdea() {
           </div>
           <span className="text-xs font-bold" style={{ color: '#ef4444' }}>↕ ?  ✗</span>
         </div>
-        <div className="text-xs text-center" style={{ color: '#90a1b9' }}>Sound is NOT transverse (↕)</div>
+        <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>Sound is NOT transverse (↕)</div>
       </div>
       <IdeaCaption>Sound waves are transverse - vibrating up and down like water waves</IdeaCaption>
     </div>
@@ -172,10 +172,10 @@ function WavePropertiesLesson() {
       <svg width="260" height="108" viewBox="0 0 260 108">
         {/* Wavelength bracket  -  above wave, peak1 to peak2 */}
         {showFull && peak2X <= xEnd && <>
-          <line x1={peak1X} y1="10" x2={peak2X} y2="10" stroke="#90a1b9" strokeWidth="1.2" />
-          <line x1={peak1X} y1="7" x2={peak1X} y2="14" stroke="#90a1b9" strokeWidth="1.2" />
-          <line x1={peak2X} y1="7" x2={peak2X} y2="14" stroke="#90a1b9" strokeWidth="1.2" />
-          <text x={(peak1X + peak2X) / 2} y="6" textAnchor="middle" fill="#90a1b9" fontSize="6">wavelength</text>
+          <line x1={peak1X} y1="10" x2={peak2X} y2="10" stroke="#a8b8cc" strokeWidth="1.2" />
+          <line x1={peak1X} y1="7" x2={peak1X} y2="14" stroke="#a8b8cc" strokeWidth="1.2" />
+          <line x1={peak2X} y1="7" x2={peak2X} y2="14" stroke="#a8b8cc" strokeWidth="1.2" />
+          <text x={(peak1X + peak2X) / 2} y="6" textAnchor="middle" fill="#a8b8cc" fontSize="6">wavelength</text>
           <text x={(peak1X + peak2X) / 2} y="19" textAnchor="middle" fill={WC} fontSize="6.5" fontWeight="bold">λ = {wavelength} m</text>
         </>}
 
@@ -196,22 +196,22 @@ function WavePropertiesLesson() {
 
         {/* Peak & trough labels */}
         {showFull && <>
-          <text x={Math.min(peak1X + 3, 230)} y={yMid - A + 1} fill="#90a1b9" fontSize="6">peak</text>
-          <text x={Math.min(trough1X + 3, 230)} y={yMid + A + 7} fill="#90a1b9" fontSize="6">trough</text>
+          <text x={Math.min(peak1X + 3, 230)} y={yMid - A + 1} fill="#a8b8cc" fontSize="6">peak</text>
+          <text x={Math.min(trough1X + 3, 230)} y={yMid + A + 7} fill="#a8b8cc" fontSize="6">trough</text>
         </>}
 
         {/* "one complete wave" bracket  -  below wave */}
         {showFull && cycleW <= 200 && <>
-          <line x1={xStart} y1="100" x2={xStart + cycleW} y2="100" stroke="#90a1b9" strokeWidth="1" />
-          <line x1={xStart}           y1="97" x2={xStart}           y2="103" stroke="#90a1b9" strokeWidth="1" />
-          <line x1={xStart + cycleW}  y1="97" x2={xStart + cycleW}  y2="103" stroke="#90a1b9" strokeWidth="1" />
-          <text x={xStart + cycleW / 2} y="107" textAnchor="middle" fill="#90a1b9" fontSize="5.5">one complete wave</text>
+          <line x1={xStart} y1="100" x2={xStart + cycleW} y2="100" stroke="#a8b8cc" strokeWidth="1" />
+          <line x1={xStart}           y1="97" x2={xStart}           y2="103" stroke="#a8b8cc" strokeWidth="1" />
+          <line x1={xStart + cycleW}  y1="97" x2={xStart + cycleW}  y2="103" stroke="#a8b8cc" strokeWidth="1" />
+          <text x={xStart + cycleW / 2} y="107" textAnchor="middle" fill="#a8b8cc" fontSize="5.5">one complete wave</text>
         </>}
       </svg>
 
       <div className="flex flex-col gap-1">
         <div className="flex justify-between text-xs">
-          <span style={{ color: '#90a1b9' }}>Frequency (Hz)</span>
+          <span style={{ color: '#a8b8cc' }}>Frequency (Hz)</span>
           <span style={{ color: WC }} className="font-bold">{freq} Hz</span>
         </div>
         <input type="range" min="1" max="5" step="0.5" value={freq}
@@ -219,7 +219,7 @@ function WavePropertiesLesson() {
       </div>
       <div className="grid grid-cols-2 gap-2 text-xs">
         <div className="p-2 rounded-[8px] text-center" style={{ background: `${WC}10`, color: WC }}>v = fλ = {speed} m/s</div>
-        <div className="p-2 rounded-[8px] text-center" style={{ background: '#1d293d', color: '#90a1b9' }}>T = 1/f = {period} s</div>
+        <div className="p-2 rounded-[8px] text-center" style={{ background: '#1d293d', color: '#a8b8cc' }}>T = 1/f = {period} s</div>
       </div>
     </div>
   )
@@ -229,11 +229,11 @@ function WavePropertiesIdea() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <svg width="190" height="80" viewBox="0 0 190 80">
         {/* Two waves: low freq and high freq, same speed label */}
-        <text x="8" y="16" fill="#90a1b9" fontSize="7">Low f</text>
+        <text x="8" y="16" fill="#a8b8cc" fontSize="7">Low f</text>
         <motion.path d="M40 15 Q55 5 70 15 Q85 25 100 15 Q115 5 130 15 Q145 25 160 15"
           fill="none" stroke="#c084fc" strokeWidth="2"
           initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8 }} />
-        <text x="8" y="46" fill="#90a1b9" fontSize="7">High f</text>
+        <text x="8" y="46" fill="#a8b8cc" fontSize="7">High f</text>
         <motion.path d="M40 45 Q47 38 54 45 Q61 52 68 45 Q75 38 82 45 Q89 52 96 45 Q103 38 110 45 Q117 52 124 45 Q131 38 138 45 Q145 52 152 45 Q159 38 166 45"
           fill="none" stroke={WC} strokeWidth="2"
           initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8, delay: 0.2 }} />
@@ -251,7 +251,7 @@ function WavePropertiesReality() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <FormulaBox formula="v = f × λ" color={WC} />
       <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Speed depends on the medium - NOT on frequency. Higher f → shorter λ (at same speed)</div>
-      <div className="text-xs text-center" style={{ color: '#90a1b9' }}>All EM waves travel at 3×10⁸ m/s in vacuum</div>
+      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>All EM waves travel at 3×10⁸ m/s in vacuum</div>
       <RealityBadge color={WC}>Speed is fixed by the medium - not frequency</RealityBadge>
     </div>
   )
@@ -266,7 +266,7 @@ function WaveReflectionLesson() {
         {[['reflection', 'Reflection'], ['refraction', 'Refraction']].map(([val, label]) => (
           <button key={val} onClick={() => setMode(val)}
             className="px-3 py-1 rounded-[6px] text-xs font-semibold"
-            style={{ background: mode === val ? `${WC}25` : '#1d293d', color: mode === val ? WC : '#90a1b9', border: `1px solid ${mode === val ? WC : '#2d3f5c'}` }}>
+            style={{ background: mode === val ? `${WC}25` : '#1d293d', color: mode === val ? WC : '#a8b8cc', border: `1px solid ${mode === val ? WC : '#2d3f5c'}` }}>
             {label}
           </button>
         ))}
@@ -275,14 +275,14 @@ function WaveReflectionLesson() {
       {mode === 'reflection' ? (
         <svg width="260" height="150" viewBox="0 0 260 150">
           {/* Surface / mirror */}
-          <line x1="20" y1="90" x2="240" y2="90" stroke="#90a1b9" strokeWidth="2" />
+          <line x1="20" y1="90" x2="240" y2="90" stroke="#a8b8cc" strokeWidth="2" />
           {/* Hatch below surface */}
           {[30,50,70,90,110,130,150,170,190,210].map(x => (
             <line key={x} x1={x} y1="90" x2={x - 8} y2="100" stroke="#2d3f5c" strokeWidth="1" />
           ))}
           {/* Normal dashed line */}
           <line x1="130" y1="10" x2="130" y2="140" stroke="#2d3f5c" strokeWidth="1" strokeDasharray="4 3" />
-          <text x="134" y="20" fill="#90a1b9" fontSize={8}>Normal</text>
+          <text x="134" y="20" fill="#a8b8cc" fontSize={8}>Normal</text>
           {/* Incident ray */}
           <motion.line x1="55" y1="18" x2="130" y2="90" stroke={WC} strokeWidth="2.5" strokeLinecap="round"
             initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.6 }} />
@@ -299,18 +299,18 @@ function WaveReflectionLesson() {
           <path d="M 136,78 A 14,14 0 0,1 144,90" fill="none" stroke="#00bc7d" strokeWidth="1.2" />
           <text x="145" y="79" fill="#00bc7d" fontSize={10} fontWeight="bold">r</text>
           {/* Label */}
-          <text x="130" y="140" textAnchor="middle" fill="#90a1b9" fontSize={9}>angle i = angle r</text>
+          <text x="130" y="140" textAnchor="middle" fill="#a8b8cc" fontSize={9}>angle i = angle r</text>
         </svg>
       ) : (
         <svg width="260" height="150" viewBox="0 0 260 150">
           {/* Boundary */}
           <line x1="20" y1="75" x2="240" y2="75" stroke="#2b7fff" strokeWidth="1.5" opacity="0.6" />
           {/* Medium labels */}
-          <text x="22" y="66" fill="#90a1b9" fontSize={8}>air (less dense)</text>
+          <text x="22" y="66" fill="#a8b8cc" fontSize={8}>air (less dense)</text>
           <text x="22" y="90" fill="#2b7fff" fontSize={8}>glass (more dense)</text>
           {/* Normal */}
           <line x1="130" y1="10" x2="130" y2="148" stroke="#2d3f5c" strokeWidth="1" strokeDasharray="4 3" />
-          <text x="134" y="20" fill="#90a1b9" fontSize={8}>Normal</text>
+          <text x="134" y="20" fill="#a8b8cc" fontSize={8}>Normal</text>
           {/* Incident ray (steep angle from top-left) */}
           <motion.line x1="55" y1="15" x2="130" y2="75" stroke={WC} strokeWidth="2.5" strokeLinecap="round"
             initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.6 }} />
@@ -324,9 +324,9 @@ function WaveReflectionLesson() {
           <text x="104" y="64" fill="#c084fc" fontSize={10} fontWeight="bold">i</text>
           <path d="M 134,84 A 14,14 0 0,0 142,76" fill="none" stroke="#00bc7d" strokeWidth="1.2" />
           <text x="144" y="90" fill="#00bc7d" fontSize={10} fontWeight="bold">r</text>
-          <text x="155" y="65" fill="#90a1b9" fontSize={8}>r &lt; i</text>
+          <text x="155" y="65" fill="#a8b8cc" fontSize={8}>r &lt; i</text>
           {/* Note */}
-          <text x="130" y="142" textAnchor="middle" fill="#90a1b9" fontSize={8}>entering denser medium → bends toward normal, slows down</text>
+          <text x="130" y="142" textAnchor="middle" fill="#a8b8cc" fontSize={8}>entering denser medium → bends toward normal, slows down</text>
         </svg>
       )}
     </div>
@@ -338,7 +338,7 @@ function WaveReflectionIdea() {
       <svg width="190" height="90" viewBox="0 0 190 90">
         {/* Air | Glass boundary */}
         <line x1="95" y1="5" x2="95" y2="85" stroke="#1d293d" strokeWidth="2" strokeDasharray="4 2" />
-        <text x="45" y="15" textAnchor="middle" fill="#90a1b9" fontSize="7">Air</text>
+        <text x="45" y="15" textAnchor="middle" fill="#a8b8cc" fontSize="7">Air</text>
         <text x="145" y="15" textAnchor="middle" fill="#2b7fff" fontSize="7">Glass</text>
         {/* Incoming ray */}
         <motion.line x1="20" y1="15" x2="95" y2="55" stroke={WC} strokeWidth="2"
@@ -351,7 +351,7 @@ function WaveReflectionIdea() {
         <text x="155" y="38" fill="#ef4444" fontSize="7">speeds up?</text>
         <motion.text x="155" y="50" fill="#ef4444" fontSize="12" fontWeight="bold"
           animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 2 }}>✗</motion.text>
-        <text x="95" y="84" textAnchor="middle" fill="#90a1b9" fontSize="7">Glass is "clearer" = faster?</text>
+        <text x="95" y="84" textAnchor="middle" fill="#a8b8cc" fontSize="7">Glass is "clearer" = faster?</text>
       </svg>
       <IdeaCaption>When light enters glass it speeds up - glass is more transparent so light goes faster</IdeaCaption>
     </div>
@@ -402,7 +402,7 @@ function SoundWavesLesson() {
                 initial={{ opacity: 0 }} animate={{ opacity: g.kind === 'C' ? 0.9 : 0.35 }}
                 transition={{ delay: gi * 0.1 }} />
             ))}
-            <text x={g.cx} y={26} textAnchor="middle" fill={g.kind === 'C' ? WC : '#90a1b9'} fontSize={8}>{g.kind}</text>
+            <text x={g.cx} y={26} textAnchor="middle" fill={g.kind === 'C' ? WC : '#a8b8cc'} fontSize={8}>{g.kind}</text>
           </g>
         ))}
         {/* Direction of travel arrow */}
@@ -424,7 +424,7 @@ function SoundWavesLesson() {
           ['Ultrasound', '> 20 kHz', '#00bc7d'],
         ].map(([label, val, col], i) => (
           <div key={i} className="p-2 rounded-[8px]" style={{ background: '#121a2f' }}>
-            <div className="text-xs" style={{ color: '#90a1b9' }}>{label}</div>
+            <div className="text-xs" style={{ color: '#a8b8cc' }}>{label}</div>
             <div className="text-xs font-semibold" style={{ color: col }}>{val}</div>
           </div>
         ))}
@@ -440,7 +440,7 @@ function SoundWavesIdea() {
         {/* Wrong order: air fastest */}
         {[['Air', 100, WC, '330 m/s - fastest?'], ['Water', 60, '#2b7fff', '1500 m/s'], ['Steel', 20, '#00bc7d', '5000 m/s - slowest?']].map(([label, w, col, note]) => (
           <div key={label} className="flex items-center gap-2">
-            <span className="text-xs w-10 shrink-0" style={{ color: '#90a1b9' }}>{label}</span>
+            <span className="text-xs w-10 shrink-0" style={{ color: '#a8b8cc' }}>{label}</span>
             <div className="h-3 rounded-full" style={{ width: w, background: col }} />
             <span className="text-xs" style={{ color: col }}>{note}</span>
           </div>
@@ -460,7 +460,7 @@ function SoundWavesReality() {
       <div className="flex flex-col gap-1 w-full">
         {[['Gas (air)', 330, WC, 35], ['Liquid (water)', 1500, '#2b7fff', 60], ['Solid (steel)', 5000, '#00bc7d', 100]].map(([medium, speed, col, pct]) => (
           <div key={medium} className="flex items-center gap-2">
-            <span className="text-xs w-24 shrink-0" style={{ color: '#90a1b9' }}>{medium}</span>
+            <span className="text-xs w-24 shrink-0" style={{ color: '#a8b8cc' }}>{medium}</span>
             <div className="flex-1 h-2 rounded-full" style={{ background: '#1d293d' }}>
               <motion.div className="h-full rounded-full" style={{ background: col }}
                 initial={{ width: 0 }} animate={{ width: `${pct}%` }}
@@ -545,14 +545,14 @@ function EMSpectrumLesson() {
       {/* Wavelength scale */}
       <div className="flex w-full mb-1">
         {bands.map((b, i) => (
-          <div key={i} className="flex-1 text-center" style={{ fontSize: 7, color: '#90a1b9', lineHeight: 1.2 }}>
+          <div key={i} className="flex-1 text-center" style={{ fontSize: 7, color: '#a8b8cc', lineHeight: 1.2 }}>
             {b.λ}
           </div>
         ))}
       </div>
 
       {/* Direction arrows */}
-      <div className="flex justify-between mb-1" style={{ fontSize: 8, color: '#90a1b9' }}>
+      <div className="flex justify-between mb-1" style={{ fontSize: 8, color: '#a8b8cc' }}>
         <span>← longer λ, lower f</span>
         <span>shorter λ, higher f →</span>
       </div>
@@ -566,16 +566,16 @@ function EMSpectrumLesson() {
         >
           <div className="text-xs font-bold mb-0.5" style={{ color: visColor(selected) }}>{bands[selected].name}</div>
           <div style={{ fontSize: 10, color: '#cad5e2' }}>λ = {bands[selected].λ}</div>
-          <div style={{ fontSize: 10, color: '#90a1b9' }}>Use: {bands[selected].use}</div>
+          <div style={{ fontSize: 10, color: '#a8b8cc' }}>Use: {bands[selected].use}</div>
         </motion.div>
       ) : (
-        <div className="text-center" style={{ fontSize: 9, color: '#90a1b9' }}>
+        <div className="text-center" style={{ fontSize: 9, color: '#a8b8cc' }}>
           Tap a band for details
         </div>
       )}
 
       {/* Speed note */}
-      <div className="text-center mt-1" style={{ fontSize: 9, color: '#90a1b9' }}>
+      <div className="text-center mt-1" style={{ fontSize: 9, color: '#a8b8cc' }}>
         All travel at <span style={{ color: '#f8fafc', fontFamily: 'monospace' }}>3×10⁸ m/s</span> in a vacuum
       </div>
     </div>
@@ -595,7 +595,7 @@ function EMSpectrumIdea() {
           animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
           This IS the whole EM spectrum?  ✗
         </motion.div>
-        <div className="text-xs text-center" style={{ color: '#90a1b9' }}>7 types - visible is a tiny slice</div>
+        <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>7 types - visible is a tiny slice</div>
       </div>
       <IdeaCaption>Visible light is the entire EM spectrum - it's just different colours</IdeaCaption>
     </div>
@@ -624,7 +624,7 @@ function LensesLesson() {
         {[['convex', 'Convex'], ['concave', 'Concave']].map(([val, label]) => (
           <button key={val} onClick={() => setType(val)}
             className="px-3 py-1 rounded-[6px] text-xs font-semibold"
-            style={{ background: type === val ? `${WC}25` : '#1d293d', color: type === val ? WC : '#90a1b9', border: `1px solid ${type === val ? WC : '#2d3f5c'}` }}>
+            style={{ background: type === val ? `${WC}25` : '#1d293d', color: type === val ? WC : '#a8b8cc', border: `1px solid ${type === val ? WC : '#2d3f5c'}` }}>
             {label}
           </button>
         ))}
@@ -651,9 +651,9 @@ function LensesLesson() {
           <circle cx="200" cy="75" r="5" fill="#ef4444" />
           <text x="207" y="70" fill="#ef4444" fontSize={9} fontWeight="bold">F</text>
           {/* 2F marker */}
-          <line x1="240" y1="71" x2="240" y2="79" stroke="#90a1b9" strokeWidth="1" />
-          <text x="236" y="68" fill="#90a1b9" fontSize={8}>2F</text>
-          <text x="130" y="143" textAnchor="middle" fill="#90a1b9" fontSize={8}>parallel rays converge at focal point F</text>
+          <line x1="240" y1="71" x2="240" y2="79" stroke="#a8b8cc" strokeWidth="1" />
+          <text x="236" y="68" fill="#a8b8cc" fontSize={8}>2F</text>
+          <text x="130" y="143" textAnchor="middle" fill="#a8b8cc" fontSize={8}>parallel rays converge at focal point F</text>
         </svg>
       ) : (
         <svg width="260" height="150" viewBox="0 0 260 150">
@@ -681,7 +681,7 @@ function LensesLesson() {
           {/* Virtual focal point */}
           <circle cx="60" cy="75" r="5" fill="none" stroke="#ef4444" strokeWidth="1.5" strokeDasharray="2 2" />
           <text x="26" y="70" fill="#ef4444" fontSize={8}>F (virtual)</text>
-          <text x="130" y="143" textAnchor="middle" fill="#90a1b9" fontSize={8}>rays diverge  -  virtual focal point on same side</text>
+          <text x="130" y="143" textAnchor="middle" fill="#a8b8cc" fontSize={8}>rays diverge  -  virtual focal point on same side</text>
         </svg>
       )}
     </div>
@@ -749,13 +749,13 @@ function BlackBodyLesson() {
         </motion.div>
         <div className="flex flex-col gap-1">
           <div className="text-sm font-bold" style={{ color: hex === '#ffffff' ? '#cad5e2' : hex }}>{name}</div>
-          <div className="text-xs" style={{ color: '#90a1b9' }}>{temp.toLocaleString()} K</div>
+          <div className="text-xs" style={{ color: '#a8b8cc' }}>{temp.toLocaleString()} K</div>
         </div>
       </div>
 
       <div className="flex flex-col gap-1">
         <div className="flex justify-between text-xs">
-          <span style={{ color: '#90a1b9' }}>Temperature (K)</span>
+          <span style={{ color: '#a8b8cc' }}>Temperature (K)</span>
           <span style={{ color: WC }}>{temp.toLocaleString()} K</span>
         </div>
         <input type="range" min="1000" max="10000" step="500" value={temp}
@@ -764,19 +764,19 @@ function BlackBodyLesson() {
 
       {/* Spectrum bar with peak marker */}
       <div className="flex flex-col gap-1">
-        <div className="text-xs" style={{ color: '#90a1b9' }}>Peak wavelength position:</div>
+        <div className="text-xs" style={{ color: '#a8b8cc' }}>Peak wavelength position:</div>
         <div className="relative w-full h-5 rounded-[4px] overflow-hidden"
           style={{ background: 'linear-gradient(to right, #7c3aed, #2b7fff, #00bc7d, #fdc700, #f97316, #ef4444)' }}>
           <div className="absolute top-0 bottom-0 w-0.5 bg-white"
             style={{ left: `${100 - peakPct}%`, boxShadow: '0 0 4px white' }} />
         </div>
-        <div className="flex justify-between text-xs" style={{ color: '#90a1b9' }}>
+        <div className="flex justify-between text-xs" style={{ color: '#a8b8cc' }}>
           <span>← UV / short λ</span>
           <span>long λ / IR →</span>
         </div>
       </div>
 
-      <div className="text-xs text-center" style={{ color: '#90a1b9' }}>
+      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>
         Wien's law: hotter → shorter peak λ → bluer colour
         {temp >= 5000 && temp <= 6000 && <span style={{ color: WC }}> ☀ Sun ≈ 5500 K → yellow-white</span>}
       </div>
@@ -815,7 +815,7 @@ function BlackBodyReality() {
       <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${WC}10`, border: `1px solid ${WC}30`, color: '#cad5e2' }}>
         Every object above absolute zero (−273°C) emits infrared radiation. A human body at 37°C constantly emits IR.
       </div>
-      <div className="text-xs text-center" style={{ color: '#90a1b9' }}>At constant temperature: emission rate = absorption rate</div>
+      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>At constant temperature: emission rate = absorption rate</div>
       <RealityBadge color={WC}>All objects emit IR - hotter objects emit more and at shorter wavelengths</RealityBadge>
     </div>
   )
@@ -830,7 +830,7 @@ function MagnetismLesson() {
         {[['bar', 'Bar Magnet'], ['electro', 'Electromagnet']].map(([val, label]) => (
           <button key={val} onClick={() => setView(val)}
             className="px-3 py-1 rounded-[6px] text-xs font-semibold"
-            style={{ background: view === val ? `${MC}25` : '#1d293d', color: view === val ? MC : '#90a1b9', border: `1px solid ${view === val ? MC : '#2d3f5c'}` }}>
+            style={{ background: view === val ? `${MC}25` : '#1d293d', color: view === val ? MC : '#a8b8cc', border: `1px solid ${view === val ? MC : '#2d3f5c'}` }}>
             {label}
           </button>
         ))}
@@ -858,22 +858,22 @@ function MagnetismLesson() {
           <polygon points="132,37 130,32 128,37" fill={MC} opacity="0.8" />
           <polygon points="132,123 130,128 128,123" fill={MC} opacity="0.8" />
           {/* Labels */}
-          <text x="130" y="20" textAnchor="middle" fill="#90a1b9" fontSize={8}>field lines from N to S (outside)</text>
-          <text x="130" y="148" textAnchor="middle" fill="#90a1b9" fontSize={8}>field strongest at poles (lines closer)</text>
+          <text x="130" y="20" textAnchor="middle" fill="#a8b8cc" fontSize={8}>field lines from N to S (outside)</text>
+          <text x="130" y="148" textAnchor="middle" fill="#a8b8cc" fontSize={8}>field strongest at poles (lines closer)</text>
         </svg>
       ) : (
         <svg width="260" height="160" viewBox="0 0 260 160">
           {/* Battery symbol */}
-          <line x1="18" y1="78" x2="18" y2="68" stroke="#90a1b9" strokeWidth="2" />
-          <line x1="14" y1="68" x2="22" y2="68" stroke="#90a1b9" strokeWidth="1.5" />
-          <line x1="12" y1="74" x2="24" y2="74" stroke="#90a1b9" strokeWidth="3" />
-          <text x="18" y="95" textAnchor="middle" fill="#90a1b9" fontSize={7}>bat.</text>
+          <line x1="18" y1="78" x2="18" y2="68" stroke="#a8b8cc" strokeWidth="2" />
+          <line x1="14" y1="68" x2="22" y2="68" stroke="#a8b8cc" strokeWidth="1.5" />
+          <line x1="12" y1="74" x2="24" y2="74" stroke="#a8b8cc" strokeWidth="3" />
+          <text x="18" y="95" textAnchor="middle" fill="#a8b8cc" fontSize={7}>bat.</text>
           {/* Wire from battery to coil */}
-          <line x1="18" y1="78" x2="18" y2="100" stroke="#90a1b9" strokeWidth="1.5" />
-          <line x1="18" y1="100" x2="70" y2="100" stroke="#90a1b9" strokeWidth="1.5" />
+          <line x1="18" y1="78" x2="18" y2="100" stroke="#a8b8cc" strokeWidth="1.5" />
+          <line x1="18" y1="100" x2="70" y2="100" stroke="#a8b8cc" strokeWidth="1.5" />
           {/* Iron core */}
-          <rect x="70" y="70" width="120" height="20" rx="3" fill="#1d293d" stroke="#90a1b9" strokeWidth="1.5" />
-          <text x="130" y="83" textAnchor="middle" fill="#90a1b9" fontSize={8}>iron core</text>
+          <rect x="70" y="70" width="120" height="20" rx="3" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1.5" />
+          <text x="130" y="83" textAnchor="middle" fill="#a8b8cc" fontSize={8}>iron core</text>
           {/* Coil wire squiggles on top */}
           {[75,90,105,120,135,150,165,180].map((x, i) => (
             <path key={i} d={`M${x},70 Q${x+4},62 ${x+8},70`} fill="none" stroke="#f97316" strokeWidth="1.5" />
@@ -893,8 +893,8 @@ function MagnetismLesson() {
           ))}
           <polygon points="132,37 130,32 128,37" fill={MC} opacity="0.8" />
           <polygon points="132,123 130,128 128,123" fill={MC} opacity="0.8" />
-          <text x="130" y="18" textAnchor="middle" fill="#90a1b9" fontSize={8}>current through wire creates magnetic field</text>
-          <text x="130" y="148" textAnchor="middle" fill="#90a1b9" fontSize={7}>more turns / more current = stronger field</text>
+          <text x="130" y="18" textAnchor="middle" fill="#a8b8cc" fontSize={8}>current through wire creates magnetic field</text>
+          <text x="130" y="148" textAnchor="middle" fill="#a8b8cc" fontSize={7}>more turns / more current = stronger field</text>
         </svg>
       )}
     </div>
@@ -907,7 +907,7 @@ function MagnetismIdea() {
         <div className="px-3 py-3 rounded-[8px] font-bold text-sm" style={{ background: '#e879f920', border: '2px solid #e879f9', color: '#e879f9' }}>N</div>
         {/* Gap between magnets */}
         <div className="flex flex-col items-center gap-0.5">
-          <span className="text-xs" style={{ color: '#90a1b9' }}>← gap →</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>← gap →</span>
           <motion.div className="text-xs font-bold" style={{ color: '#ef4444' }}
             animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>
             no force?  ✗
@@ -959,12 +959,12 @@ function MotorEffectLesson() {
         <text x="10" y="151" fill="#f97316" fontSize={9} fontWeight="bold">Current I</text>
         <text x="10" y="161" fill="#f97316" fontSize={8}>(middle)</text>
         {/* Origin dot */}
-        <circle cx="80" cy="110" r="5" fill="#90a1b9" />
+        <circle cx="80" cy="110" r="5" fill="#a8b8cc" />
         {/* FBI reminder */}
-        <text x="130" y="150" textAnchor="middle" fill="#90a1b9" fontSize={8}>FBI: Field=Index, Current=Middle, Force=thuMb</text>
+        <text x="130" y="150" textAnchor="middle" fill="#a8b8cc" fontSize={8}>FBI: Field=Index, Current=Middle, Force=thuMb</text>
       </svg>
       <FormulaBox formula="F = BIL" color={MC} />
-      <div className="text-xs text-center" style={{ color: '#90a1b9' }}>B in Tesla · I in Amps · L in metres</div>
+      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>B in Tesla · I in Amps · L in metres</div>
     </div>
   )
 }
@@ -1010,7 +1010,7 @@ function EMInductionLesson() {
         {[['generator', 'Generator'], ['transformer', 'Transformer']].map(([val, label]) => (
           <button key={val} onClick={() => setMode(val)}
             className="px-3 py-1 rounded-[6px] text-xs font-semibold"
-            style={{ background: mode === val ? `${MC}25` : '#1d293d', color: mode === val ? MC : '#90a1b9', border: `1px solid ${mode === val ? MC : '#2d3f5c'}` }}>
+            style={{ background: mode === val ? `${MC}25` : '#1d293d', color: mode === val ? MC : '#a8b8cc', border: `1px solid ${mode === val ? MC : '#2d3f5c'}` }}>
             {label}
           </button>
         ))}
@@ -1030,8 +1030,8 @@ function EMInductionLesson() {
             style={{ transformOrigin: '127px 80px' }} />
           <text x="127" y="83" textAnchor="middle" fill={MC} fontSize={8}>coil</text>
           {/* Curved rotation arrows */}
-          <path d="M 108 50 Q 127 35 146 50" fill="none" stroke="#90a1b9" strokeWidth="1.2" />
-          <polygon points="146,50 142,44 150,46" fill="#90a1b9" />
+          <path d="M 108 50 Q 127 35 146 50" fill="none" stroke="#a8b8cc" strokeWidth="1.2" />
+          <polygon points="146,50 142,44 150,46" fill="#a8b8cc" />
           {/* AC output line */}
           <line x1="127" y1="105" x2="127" y2="130" stroke={MC} strokeWidth="1.5" />
           <line x1="110" y1="130" x2="250" y2="130" stroke={MC} strokeWidth="1.5" />
@@ -1049,8 +1049,8 @@ function EMInductionLesson() {
             initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
             transition={{ repeat: Infinity, duration: 1.5 }} />
           <text x="246" y="146" fill={MC} fontSize={8}>AC</text>
-          <text x="127" y="18" textAnchor="middle" fill="#90a1b9" fontSize={8}>rotating coil cuts field lines → EMF induced</text>
-          <text x="127" y="30" textAnchor="middle" fill="#90a1b9" fontSize={7}>faster / stronger field / more turns → greater EMF</text>
+          <text x="127" y="18" textAnchor="middle" fill="#a8b8cc" fontSize={8}>rotating coil cuts field lines → EMF induced</text>
+          <text x="127" y="30" textAnchor="middle" fill="#a8b8cc" fontSize={7}>faster / stronger field / more turns → greater EMF</text>
         </svg>
       ) : (
         <>
@@ -1062,8 +1062,8 @@ function EMInductionLesson() {
             ))}
             <text x="50" y="72" textAnchor="middle" fill="#2b7fff" fontSize={7.5}>Primary (nₚ turns)</text>
             {/* Iron core */}
-            <rect x="85" y="55" width="80" height="20" rx="2" fill="#90a1b9" opacity="0.3" stroke="#90a1b9" strokeWidth="1" />
-            <text x="125" y="68" textAnchor="middle" fill="#90a1b9" fontSize={7}>iron core</text>
+            <rect x="85" y="55" width="80" height="20" rx="2" fill="#a8b8cc" opacity="0.3" stroke="#a8b8cc" strokeWidth="1" />
+            <text x="125" y="68" textAnchor="middle" fill="#a8b8cc" fontSize={7}>iron core</text>
             {/* Secondary coil */}
             <rect x="165" y="45" width="70" height="40" rx="4" fill="#1d293d" stroke="#00bc7d" strokeWidth="1.8" />
             {[170,180,190,200,210,220,230].map((x, i) => (
@@ -1084,7 +1084,7 @@ function EMInductionLesson() {
           {/* Turns ratio slider */}
           <div className="flex flex-col gap-1 px-1">
             <div className="flex justify-between text-xs">
-              <span style={{ color: '#90a1b9' }}>nₛ/nₚ ratio: {turns}×</span>
+              <span style={{ color: '#a8b8cc' }}>nₛ/nₚ ratio: {turns}×</span>
               <span style={{ color: Vs > 230 ? '#ef4444' : '#00bc7d' }}>Vₛ = {Vs} V ({stepType})</span>
             </div>
             <input type="range" min="0.5" max="4" step="0.5" value={turns}
@@ -1100,12 +1100,12 @@ function EMInductionIdea() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="flex items-center gap-3">
         {/* DC battery */}
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d', border: '1px solid #90a1b9' }}>
-          <span className="text-xs font-bold" style={{ color: '#90a1b9' }}>DC</span>
+        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d', border: '1px solid #a8b8cc' }}>
+          <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>DC</span>
           <span className="text-xs font-mono" style={{ color: '#cad5e2' }}>──────</span>
-          <span className="text-xs" style={{ color: '#90a1b9' }}>battery</span>
+          <span className="text-xs" style={{ color: '#a8b8cc' }}>battery</span>
         </div>
-        <span style={{ color: '#90a1b9', fontSize: 18 }}>→</span>
+        <span style={{ color: '#a8b8cc', fontSize: 18 }}>→</span>
         {/* Transformer */}
         <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${MC}10`, border: `1px solid ${MC}` }}>
           <span className="text-xs font-bold" style={{ color: MC }}>Transformer</span>
@@ -1260,17 +1260,17 @@ function StellarEvolutionLesson() {
         {/* Main Sequence */}
         <rect x="82" y="62" width="96" height="18" rx="4" fill="#fdc70025" stroke={WC} strokeWidth="1.5" />
         <text x="130" y="72" textAnchor="middle" fill={WC} fontSize={8} fontWeight="bold">Main Sequence Star</text>
-        <text x="130" y="79" textAnchor="middle" fill="#90a1b9" fontSize={7}>(billions of years)</text>
+        <text x="130" y="79" textAnchor="middle" fill="#a8b8cc" fontSize={7}>(billions of years)</text>
 
         {/* Branch line */}
-        <line x1="130" y1="80" x2="130" y2="90" stroke="#90a1b9" strokeWidth="1" />
-        <line x1="62" y1="90" x2="198" y2="90" stroke="#90a1b9" strokeWidth="1" />
+        <line x1="130" y1="80" x2="130" y2="90" stroke="#a8b8cc" strokeWidth="1" />
+        <line x1="62" y1="90" x2="198" y2="90" stroke="#a8b8cc" strokeWidth="1" />
         {/* Left branch  -  Sun-like */}
-        <line x1="62" y1="90" x2="62" y2="100" stroke="#90a1b9" strokeWidth="1" />
-        <text x="62" y="98" textAnchor="middle" fill="#90a1b9" fontSize={7}>small/medium</text>
+        <line x1="62" y1="90" x2="62" y2="100" stroke="#a8b8cc" strokeWidth="1" />
+        <text x="62" y="98" textAnchor="middle" fill="#a8b8cc" fontSize={7}>small/medium</text>
         {/* Right branch  -  massive */}
-        <line x1="198" y1="90" x2="198" y2="100" stroke="#90a1b9" strokeWidth="1" />
-        <text x="198" y="98" textAnchor="middle" fill="#90a1b9" fontSize={7}>massive</text>
+        <line x1="198" y1="90" x2="198" y2="100" stroke="#a8b8cc" strokeWidth="1" />
+        <text x="198" y="98" textAnchor="middle" fill="#a8b8cc" fontSize={7}>massive</text>
 
         {/* ── LEFT PATH ── */}
         <line x1="62" y1="100" x2="62" y2="108" stroke="#ef4444" strokeWidth="1" />
@@ -1290,8 +1290,8 @@ function StellarEvolutionLesson() {
 
         <line x1="62" y1="184" x2="62" y2="192" stroke="#2d3f5c" strokeWidth="1" />
         <polygon points="59,191 62,196 65,191" fill="#2d3f5c" />
-        <rect x="22" y="196" width="80" height="16" rx="3" fill="#2d3f5c" stroke="#90a1b9" strokeWidth="1" />
-        <text x="62" y="207" textAnchor="middle" fill="#90a1b9" fontSize={8}>Black Dwarf</text>
+        <rect x="22" y="196" width="80" height="16" rx="3" fill="#2d3f5c" stroke="#a8b8cc" strokeWidth="1" />
+        <text x="62" y="207" textAnchor="middle" fill="#a8b8cc" fontSize={8}>Black Dwarf</text>
 
         {/* ── RIGHT PATH ── */}
         <line x1="198" y1="100" x2="198" y2="108" stroke="#ef4444" strokeWidth="1" />
@@ -1304,10 +1304,10 @@ function StellarEvolutionLesson() {
         <rect x="155" y="140" width="86" height="16" rx="3" fill="#fffaaa25" stroke="#fffaaa" strokeWidth="1.5" />
         <text x="198" y="151" textAnchor="middle" fill="#fffaaa" fontSize={8} fontWeight="bold">Supernova</text>
 
-        <line x1="198" y1="156" x2="198" y2="164" stroke="#90a1b9" strokeWidth="1" />
-        <polygon points="195,163 198,168 201,163" fill="#90a1b9" />
-        <rect x="138" y="168" width="120" height="16" rx="3" fill="#90a1b925" stroke="#90a1b9" strokeWidth="1.2" />
-        <text x="198" y="179" textAnchor="middle" fill="#90a1b9" fontSize={8}>Neutron Star / Black Hole</text>
+        <line x1="198" y1="156" x2="198" y2="164" stroke="#a8b8cc" strokeWidth="1" />
+        <polygon points="195,163 198,168 201,163" fill="#a8b8cc" />
+        <rect x="138" y="168" width="120" height="16" rx="3" fill="#a8b8cc25" stroke="#a8b8cc" strokeWidth="1.2" />
+        <text x="198" y="179" textAnchor="middle" fill="#a8b8cc" fontSize={8}>Neutron Star / Black Hole</text>
       </svg>
     </div>
   )
@@ -1322,7 +1322,7 @@ function StellarEvolutionIdea() {
           animate={{ scale: [1, 1.05, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
           Sun
         </motion.div>
-        <span style={{ color: '#90a1b9' }}>→</span>
+        <span style={{ color: '#a8b8cc' }}>→</span>
         {/* Explosion (wrong) */}
         <motion.div className="text-2xl"
           animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
@@ -1343,13 +1343,13 @@ function StellarEvolutionReality() {
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
       <div className="flex gap-2 text-xs flex-wrap justify-center">
         <span style={{ color: '#fdc700' }}>Sun → Red giant</span>
-        <span style={{ color: '#90a1b9' }}>→</span>
+        <span style={{ color: '#a8b8cc' }}>→</span>
         <span style={{ color: '#cad5e2' }}>White dwarf</span>
-        <span style={{ color: '#90a1b9' }}>not supernova</span>
+        <span style={{ color: '#a8b8cc' }}>not supernova</span>
       </div>
       <div className="flex gap-2 text-xs flex-wrap justify-center">
         <span style={{ color: '#ef4444' }}>Massive star → Red supergiant</span>
-        <span style={{ color: '#90a1b9' }}>→</span>
+        <span style={{ color: '#a8b8cc' }}>→</span>
         <span style={{ color: '#e879f9' }}>Supernova → Neutron star/Black hole</span>
       </div>
       <RealityBadge color={SC}>Sun → white dwarf (no supernova) - only massive stars explode</RealityBadge>
@@ -1371,7 +1371,7 @@ function RedshiftLesson() {
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
       <svg width="260" height="140" viewBox="0 0 260 140">
         {/* ── Laboratory spectrum ── */}
-        <text x="10" y="14" fill="#90a1b9" fontSize={8} fontWeight="bold">Laboratory spectrum</text>
+        <text x="10" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Laboratory spectrum</text>
         <defs>
           <linearGradient id="specGrad" x1="0" x2="1" y1="0" y2="0">
             <stop offset="0%"   stopColor="#7c3aed" />
@@ -1389,10 +1389,10 @@ function RedshiftLesson() {
         ))}
         <text x="10" y="50" fill="#7c3aed" fontSize={7}>violet</text>
         <text x="225" y="50" fill="#ef4444" fontSize={7}>red</text>
-        <text x="130" y="50" textAnchor="middle" fill="#90a1b9" fontSize={7}>H-β (486nm)   Ca   H-α (656nm)</text>
+        <text x="130" y="50" textAnchor="middle" fill="#a8b8cc" fontSize={7}>H-β (486nm)   Ca   H-α (656nm)</text>
 
         {/* ── Distant galaxy spectrum ── */}
-        <text x="10" y="68" fill="#90a1b9" fontSize={8} fontWeight="bold">Distant galaxy spectrum</text>
+        <text x="10" y="68" fill="#a8b8cc" fontSize={8} fontWeight="bold">Distant galaxy spectrum</text>
         <rect x="10" y="72" width="240" height="22" fill="url(#specGrad)" rx="2" />
         {/* Shifted absorption lines  -  animated further right */}
         {labLines.map((pct, i) => {
@@ -1410,7 +1410,7 @@ function RedshiftLesson() {
         <rect x="10" y="116" width="240" height="20" rx="4" fill="#6366f115" stroke="#6366f150" strokeWidth="1" />
         <text x="130" y="129" textAnchor="middle" fill={WC} fontSize={9} fontWeight="bold">v = H₀ × d (Hubble's Law)</text>
       </svg>
-      <div className="text-xs text-center" style={{ color: '#90a1b9' }}>
+      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>
         greater redshift → faster recession → more distant &nbsp;|&nbsp; <span style={{ color: SC }}>v = z × c</span>
       </div>
     </div>
@@ -1423,7 +1423,7 @@ function RedshiftIdea() {
         {/* Galaxy moving TOWARD (wrong interpretation) */}
         <div className="flex items-center gap-3">
           <div className="flex flex-col items-center gap-1">
-            <div className="text-xs" style={{ color: '#90a1b9' }}>Galaxy</div>
+            <div className="text-xs" style={{ color: '#a8b8cc' }}>Galaxy</div>
             <motion.div className="w-8 h-8 rounded-full flex items-center justify-center"
               style={{ background: '#ef444420', border: '2px solid #ef4444' }}
               animate={{ x: [6, 0, 6] }} transition={{ repeat: Infinity, duration: 2 }}>
@@ -1431,7 +1431,7 @@ function RedshiftIdea() {
             </motion.div>
           </div>
           <div className="flex flex-col items-center gap-1">
-            <div className="text-xs" style={{ color: '#90a1b9' }}>Us</div>
+            <div className="text-xs" style={{ color: '#a8b8cc' }}>Us</div>
             <div className="w-8 h-8 rounded-full" style={{ background: SC + '20', border: `2px solid ${SC}` }} />
           </div>
         </div>
@@ -1450,7 +1450,7 @@ function RedshiftReality() {
       <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${SC}10`, border: `1px solid ${SC}30`, color: '#cad5e2' }}>
         Red-shift means wavelength is stretched - source is moving AWAY. Like the Doppler effect for sound. Galaxies moving away = universe is expanding.
       </div>
-      <div className="text-xs text-center" style={{ color: '#90a1b9' }}>Evidence for Big Bang: all galaxies receding, CMB radiation</div>
+      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>Evidence for Big Bang: all galaxies receding, CMB radiation</div>
       <RealityBadge color={SC}>Red-shift shows galaxies moving away - evidence for expanding universe</RealityBadge>
     </div>
   )

@@ -13,6 +13,7 @@ import MasteryScreen from './screens/MasteryScreen'
 import SettingsScreen from './screens/SettingsScreen'
 import MamoChat from './screens/MamoChat'
 import PracticalScreen from './screens/PracticalScreen'
+import ExamPractice from './screens/ExamPractice'
 import AuthScreen from './screens/AuthScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
 import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen'
@@ -164,6 +165,7 @@ function AppShell() {
           <Route path="/mastery" element={<MasteryScreen />} />
           <Route path="/mamo" element={<MamoChat />} />
           <Route path="/practical/:id" element={<PracticalScreen />} />
+          <Route path="/exam/:id" element={<ExamPractice />} />
           <Route path="/settings" element={<SettingsScreen />} />
           <Route path="/privacy" element={<PrivacyPolicyScreen />} />
           <Route path="/terms" element={<TermsScreen />} />

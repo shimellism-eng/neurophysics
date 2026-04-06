@@ -1,8 +1,9 @@
 import { motion } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, ChevronRight, BookOpen, FlaskConical } from 'lucide-react'
+import { ArrowLeft, ChevronRight, BookOpen, FlaskConical, GraduationCap } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
+import { getExamQuestionCount } from '../data/examIndex'
 
 export default function LessonPlayer() {
   const { id } = useParams()
@@ -17,6 +18,8 @@ export default function LessonPlayer() {
   )
 
   const VisualComponent = topic.lessonVisual
+
+  const examCount = getExamQuestionCount(id)
 
   const handleStartQuiz = () => {
     markStarted(id)
@@ -77,6 +80,22 @@ export default function LessonPlayer() {
           >
             <FlaskConical size={16} />
             Required Practical
+          </motion.button>
+        )}
+
+        {/* Exam Practice button */}
+        {examCount > 0 && (
+          <motion.button
+            className="w-full py-3 rounded-[14px] flex items-center justify-center gap-2 font-semibold text-sm mb-4"
+            style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)', color: '#818cf8' }}
+            onClick={() => navigate(`/exam/${id}`)}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <GraduationCap size={16} />
+            Exam Practice ({examCount} questions)
           </motion.button>
         )}
 

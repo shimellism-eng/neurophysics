@@ -1,0 +1,194 @@
+/**
+ * CalculationQuestion — exam-style calculation with step-by-step working.
+ * Student enters a numeric answer. If wrong, reveals worked solution.
+ */
+import { useState, useRef } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { CheckCircle, XCircle, Lightbulb, Calculator, ChevronRight } from 'lucide-react'
+
+export default function CalculationQuestion({ data, moduleColor, onComplete }) {
+  const { equation, steps, answer, answerUnit, acceptRange, commonMistake, senNote } = data
+  const [input, setInput] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [revealStep, setRevealStep] = useState(0)
+  const inputRef = useRef(null)
+
+  const numericAnswer = parseFloat(input)
+  const isCorrect = submitted && (
+    acceptRange
+      ? numericAnswer >= acceptRange[0] && numericAnswer <= acceptRange[1]
+      : Math.abs(numericAnswer - answer) < Math.abs(answer * 0.02) || numericAnswer === answer
+  )
+
+  const handleSubmit = () => {
+    if (input.trim() === '' || submitted) return
+    setSubmitted(true)
+    const correct = acceptRange
+      ? numericAnswer >= acceptRange[0] && numericAnswer <= acceptRange[1]
+      : Math.abs(numericAnswer - answer) < Math.abs(answer * 0.02) || numericAnswer === answer
+    onComplete(correct)
+  }
+
+  const handleRevealNext = () => {
+    if (revealStep < steps.length) {
+      setRevealStep(s => s + 1)
+    }
+  }
+
+  return (
+    <div>
+      {/* Equation reminder */}
+      <motion.div
+        className="flex items-center gap-2 px-4 py-3 rounded-[14px] mb-4"
+        style={{ background: `${moduleColor}12`, border: `1px solid ${moduleColor}30` }}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <Calculator size={16} color={moduleColor} />
+        <span className="text-sm font-bold" style={{ color: moduleColor }}>{equation}</span>
+      </motion.div>
+
+      {/* Answer input */}
+      <div className="mb-4">
+        <div
+          className="flex items-center gap-2 rounded-[14px] overflow-hidden"
+          style={{
+            background: submitted
+              ? isCorrect ? 'rgba(0,188,125,0.1)' : 'rgba(239,68,68,0.1)'
+              : 'rgba(18,26,47,0.9)',
+            border: submitted
+              ? isCorrect ? '1.5px solid #00bc7d' : '1.5px solid #ef4444'
+              : '1px solid #2d3e55',
+          }}
+        >
+          <input
+            ref={inputRef}
+            type="number"
+            inputMode="decimal"
+            value={input}
+            onChange={e => !submitted && setInput(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+            placeholder="Your answer"
+            disabled={submitted}
+            className="flex-1 bg-transparent px-4 py-4 text-base font-semibold outline-none"
+            style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield' }}
+          />
+          {answerUnit && (
+            <span className="pr-4 text-sm font-semibold" style={{ color: '#a8b8cc' }}>{answerUnit}</span>
+          )}
+        </div>
+
+        {!submitted && (
+          <motion.button
+            className="w-full mt-3 py-3.5 rounded-[14px] font-semibold text-sm"
+            style={{
+              background: input.trim() ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.5)',
+              color: input.trim() ? '#fff' : '#556',
+              boxShadow: input.trim() ? `0 6px 20px ${moduleColor}40` : 'none',
+            }}
+            onClick={handleSubmit}
+            whileTap={input.trim() ? { scale: 0.97 } : {}}
+          >
+            Check Answer
+          </motion.button>
+        )}
+      </div>
+
+      {/* Result feedback */}
+      <AnimatePresence>
+        {submitted && (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
+            {/* Correct / incorrect banner */}
+            <div
+              className="flex items-center gap-2 px-4 py-3 rounded-[12px]"
+              style={{
+                background: isCorrect ? 'rgba(0,188,125,0.12)' : 'rgba(239,68,68,0.12)',
+                border: isCorrect ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)',
+              }}
+            >
+              {isCorrect ? <CheckCircle size={18} color="#00bc7d" /> : <XCircle size={18} color="#ef4444" />}
+              <span className="text-sm font-semibold" style={{ color: isCorrect ? '#00bc7d' : '#ef4444' }}>
+                {isCorrect ? 'Correct!' : `Not quite. The answer is ${typeof answer === 'number' && Math.abs(answer) >= 1000 ? answer.toLocaleString() : answer}${answerUnit ? ' ' + answerUnit : ''}`}
+              </span>
+            </div>
+
+            {/* Worked solution — only if wrong */}
+            {!isCorrect && (
+              <div className="rounded-[14px] p-4" style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}>
+                <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: moduleColor }}>
+                  Worked Solution
+                </div>
+                <div className="space-y-2">
+                  {steps.map((step, i) => (
+                    <AnimatePresence key={i}>
+                      {i < revealStep && (
+                        <motion.div
+                          className="flex items-start gap-2 px-3 py-2.5 rounded-[10px]"
+                          style={{ background: `${moduleColor}08`, border: `0.75px solid ${moduleColor}20` }}
+                          initial={{ opacity: 0, x: -10, height: 0 }}
+                          animate={{ opacity: 1, x: 0, height: 'auto' }}
+                          transition={{ duration: 0.25 }}
+                        >
+                          <span className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5"
+                            style={{ background: moduleColor, color: '#fff' }}>
+                            {i + 1}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <span className="text-xs font-semibold" style={{ color: '#cad5e2' }}>{step.label}: </span>
+                            <span className="text-sm font-bold" style={{ color: '#f8fafc' }}>{step.value} {step.unit}</span>
+                            {step.hint && (
+                              <p className="text-[11px] mt-0.5" style={{ color: '#8899aa' }}>{step.hint}</p>
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  ))}
+                </div>
+                {revealStep < steps.length && (
+                  <motion.button
+                    className="mt-3 flex items-center gap-1.5 px-3 py-2 rounded-[10px] text-xs font-semibold"
+                    style={{ background: `${moduleColor}15`, color: moduleColor, border: `1px solid ${moduleColor}30` }}
+                    onClick={handleRevealNext}
+                    whileTap={{ scale: 0.96 }}
+                  >
+                    Show step {revealStep + 1}
+                    <ChevronRight size={12} />
+                  </motion.button>
+                )}
+              </div>
+            )}
+
+            {/* Common mistake callout */}
+            {!isCorrect && commonMistake && revealStep >= steps.length && (
+              <motion.div
+                className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
+                style={{ background: 'rgba(239,68,68,0.06)', border: '0.75px solid rgba(239,68,68,0.2)' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                <XCircle size={14} color="#ef4444" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#ef9a9a' }}>{commonMistake}</p>
+              </motion.div>
+            )}
+
+            {/* SEN note */}
+            {senNote && (
+              <motion.div
+                className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
+                style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{senNote}</p>
+              </motion.div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}

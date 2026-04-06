@@ -32,6 +32,39 @@ const examParticleModel = {
     }
   ],
 
+  specific_latent_heat: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Why does temperature stay constant during a change of state?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "During a change of state, energy is supplied but the temperature stays ", blank: "constant" },
+        { text: ". This is because the energy is used to break the ", blank: "bonds" },
+        { text: " between particles rather than increasing their ", blank: "kinetic energy" },
+        { text: ". Since temperature is a measure of mean ", blank: "kinetic energy" },
+        { text: ", it does not ", blank: "rise", text2: " while the state is changing." }
+      ],
+      wordBank: ["constant", "bonds", "kinetic energy", "rise", "potential energy", "fall", "temperature", "speed", "mass"],
+      tier: 3,
+      senNote: "Energy breaks bonds, not raises temperature. That's why the graph is flat during state change."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Why is the specific latent heat of vaporisation greater than fusion?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "During fusion (melting), particles only need to ", blank: "partially" },
+        { text: " overcome the forces of attraction to become a liquid. During vaporisation, particles must be completely ", blank: "separated" },
+        { text: " from each other. The particles in a gas are ", blank: "far" },
+        { text: " apart, so much more energy is needed to overcome the ", blank: "intermolecular" },
+        { text: " forces. This means L_vaporisation is much ", blank: "greater", text2: " than L_fusion." }
+      ],
+      wordBank: ["partially", "separated", "far", "intermolecular", "greater", "fully", "closer", "smaller", "atomic"],
+      tier: 3,
+      senNote: "Gas particles are completely separated — far more energy needed than for melting."
+    }
+  ],
+
   internal_energy: [
     {
       type: "fill-steps",
@@ -164,6 +197,143 @@ const examParticleModel = {
     }
   ],
 
+  radiation_hazards: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: How does ionising radiation damage living cells?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Ionising radiation carries enough energy to ", blank: "ionise" },
+        { text: " atoms in living cells. This can break ", blank: "chemical bonds" },
+        { text: " in molecules such as DNA. Damage to DNA can cause ", blank: "mutations" },
+        { text: " in the genetic code. This may lead to ", blank: "cancer" },
+        { text: ". At very high doses, radiation can kill cells directly, causing ", blank: "radiation sickness", text2: "." }
+      ],
+      wordBank: ["ionise", "chemical bonds", "mutations", "cancer", "radiation sickness", "excite", "hydrogen bonds", "duplications", "infection", "sunburn"],
+      tier: 3,
+      senNote: "Ionising radiation → breaks DNA bonds → mutations → cancer or cell death."
+    }
+  ],
+
+  nuclear_fission: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Describe the chain reaction in nuclear fission.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "A slow-moving ", blank: "neutron" },
+        { text: " is absorbed by a uranium-235 or plutonium-239 nucleus. The nucleus becomes unstable and ", blank: "splits" },
+        { text: " into two smaller nuclei (fission fragments). This releases energy and ", blank: "2 or 3" },
+        { text: " more neutrons. These neutrons can be absorbed by other ", blank: "fuel" },
+        { text: " nuclei, causing further fission events. This is called a ", blank: "chain reaction", text2: "." }
+      ],
+      wordBank: ["neutron", "splits", "2 or 3", "fuel", "chain reaction", "proton", "joins", "1", "waste", "single event"],
+      tier: 3,
+      senNote: "One fission releases neutrons → these cause more fissions → chain reaction."
+    }
+  ],
+
+  nuclear_fusion: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Why is nuclear fusion difficult to achieve on Earth?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "In nuclear fusion, two light nuclei (usually isotopes of ", blank: "hydrogen" },
+        { text: ") are forced together to form a heavier nucleus. This releases a large amount of ", blank: "energy" },
+        { text: ". However, nuclei are positively charged and repel each other due to the ", blank: "electrostatic force" },
+        { text: ". To overcome this repulsion, the nuclei must be given very high ", blank: "kinetic energy" },
+        { text: ", which requires temperatures of millions of degrees. Containing a plasma at such temperatures is extremely ", blank: "difficult", text2: "." }
+      ],
+      wordBank: ["hydrogen", "energy", "electrostatic force", "kinetic energy", "difficult", "oxygen", "mass", "gravitational force", "potential energy", "simple"],
+      tier: 3,
+      senNote: "Fusion needs extreme temperatures to give nuclei enough energy to overcome electrostatic repulsion."
+    }
+  ],
+
+  atomic_model_history: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Describe how the model of the atom changed from plum pudding to the nuclear model.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Thomson's plum pudding model described the atom as a ball of positive charge with ", blank: "electrons" },
+        { text: " embedded throughout it. Rutherford fired ", blank: "alpha" },
+        { text: " particles at thin gold foil. Most passed straight through but some were ", blank: "deflected" },
+        { text: " through large angles and a few bounced back. This showed the positive charge was concentrated in a tiny, dense ", blank: "nucleus" },
+        { text: ". Later, Bohr proposed that electrons orbit the nucleus in ", blank: "energy levels", text2: "." }
+      ],
+      wordBank: ["electrons", "alpha", "deflected", "nucleus", "energy levels", "protons", "beta", "attracted", "cloud", "shells"],
+      tier: 3,
+      senNote: "Rutherford's gold foil experiment showed most of the atom is empty space with a tiny dense nucleus."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: What did the alpha particle scattering experiment tell scientists?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Most alpha particles passed through the gold foil without deflection. This showed the atom is mostly ", blank: "empty space" },
+        { text: ". A small number of alpha particles were deflected through large angles. This showed the nucleus is ", blank: "positively charged" },
+        { text: " and very ", blank: "small" },
+        { text: " compared to the atom. Some alpha particles bounced almost straight back. This showed the nucleus is very ", blank: "dense", text2: "." }
+      ],
+      wordBank: ["empty space", "positively charged", "small", "dense", "full", "negatively charged", "large", "hollow"],
+      tier: 3,
+      senNote: "Most through = mostly empty. Large deflections = tiny positive nucleus. Some bounce back = dense nucleus."
+    }
+  ],
+
+  half_life: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: What does the term half-life mean?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "The half-life of a radioactive isotope is the time taken for the number of ", blank: "undecayed nuclei" },
+        { text: " to fall to half its original value. After one half-life, the count rate falls to ", blank: "half" },
+        { text: " of the original. After two half-lives it falls to ", blank: "one quarter" },
+        { text: ". The half-life is a fixed property of the isotope and cannot be changed by ", blank: "temperature" },
+        { text: " or chemical reaction. Radioactive decay is a ", blank: "random", text2: " process." }
+      ],
+      wordBank: ["undecayed nuclei", "half", "one quarter", "temperature", "random", "decayed nuclei", "double", "one third", "pressure", "predictable"],
+      tier: 2,
+      senNote: "Half-life = time for half the nuclei to decay. Fixed for each isotope. Cannot be changed."
+    }
+  ],
+
+  nuclear_equations: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: How do you balance a nuclear equation for alpha decay?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "In a nuclear equation, both the mass number (top) and the atomic number (bottom) must be ", blank: "conserved" },
+        { text: ". An alpha particle has mass number ", blank: "4" },
+        { text: " and atomic number ", blank: "2" },
+        { text: ". In alpha decay, the mass number of the parent nucleus decreases by ", blank: "4" },
+        { text: " and the atomic number decreases by ", blank: "2", text2: ". The remaining nucleus is a different element." }
+      ],
+      wordBank: ["conserved", "4", "2", "1", "0", "changed", "3", "doubled"],
+      tier: 3,
+      senNote: "Alpha decay: mass number −4, atomic number −2. Check both sides balance."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: How do you balance a nuclear equation for beta decay?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "In beta-minus decay, a ", blank: "neutron" },
+        { text: " in the nucleus changes into a proton and an electron (beta particle). The mass number stays the ", blank: "same" },
+        { text: " because the total number of nucleons does not change. The atomic number ", blank: "increases by 1" },
+        { text: " because there is now one more proton. A beta particle has mass number ", blank: "0" },
+        { text: " and atomic number ", blank: "-1", text2: "." }
+      ],
+      wordBank: ["neutron", "same", "increases by 1", "0", "-1", "proton", "changes", "decreases by 1", "4", "1"],
+      tier: 3,
+      senNote: "Beta decay: mass number unchanged, atomic number +1. A neutron becomes a proton."
+    }
+  ],
+
   wave_types: [
     {
       type: "fill-steps",
@@ -194,6 +364,110 @@ const examParticleModel = {
       wordBank: ["longitudinal", "closer", "compression", "rarefaction", "original", "transverse", "further", "reflection", "new"],
       tier: 3,
       senNote: "Sound needs a medium -- particles pass energy along but don't travel themselves"
+    }
+  ],
+
+  // ───── PRIORITY 3: DEEPER CONTENT ─────────────────────────────────────
+
+  energy_resources: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Compare the advantages and disadvantages of wind energy versus fossil fuels.",
+      questionSubtitle: "Fill in the missing words — 6-mark style",
+      template: [
+        { text: "Wind turbines are a ", blank: "renewable" },
+        { text: " energy source — they do not use up natural resources. They produce no ", blank: "carbon dioxide" },
+        { text: " when generating electricity, so they do not contribute to ", blank: "climate change" },
+        { text: ". However, they only generate electricity when the wind ", blank: "blows" },
+        { text: ". Fossil fuels are ", blank: "reliable" },
+        { text: " — they can generate electricity on demand, but they release ", blank: "greenhouse gases", text2: " and are finite." }
+      ],
+      wordBank: ["renewable", "carbon dioxide", "climate change", "blows", "reliable", "greenhouse gases", "non-renewable", "oxygen", "global cooling", "stops", "unreliable", "clean gases"],
+      tier: 3,
+      senNote: "Evaluate both sides: advantages AND disadvantages for each source."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Why is nuclear power considered a low-carbon energy source, and what are its main drawbacks?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Nuclear power stations produce electricity by using the heat from ", blank: "fission" },
+        { text: " to drive turbines. They produce very little ", blank: "carbon dioxide" },
+        { text: " during operation, so they do not contribute greatly to ", blank: "global warming" },
+        { text: ". However, they produce ", blank: "radioactive waste" },
+        { text: " which remains hazardous for thousands of years and is difficult to ", blank: "store safely", text2: ". Building nuclear stations is also very expensive." }
+      ],
+      wordBank: ["fission", "carbon dioxide", "global warming", "radioactive waste", "store safely", "fusion", "oxygen", "cooling", "clean waste", "dispose cheaply"],
+      tier: 3,
+      senNote: "Nuclear: low CO₂ but produces long-lived radioactive waste. Expensive to build and decommission."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Evaluate solar panels as an energy resource for the UK.",
+      questionSubtitle: "Fill in the missing words — consider reliability and environmental impact",
+      template: [
+        { text: "Solar panels convert light energy into electrical energy using the ", blank: "photovoltaic" },
+        { text: " effect. They produce no ", blank: "pollution" },
+        { text: " during operation and use a ", blank: "renewable" },
+        { text: " energy source — sunlight. However, in the UK, solar panels are less effective in ", blank: "winter" },
+        { text: " when days are shorter and cloudier. They cannot generate electricity at ", blank: "night" },
+        { text: ", so energy storage (e.g. batteries) is needed to make them fully ", blank: "reliable", text2: "." }
+      ],
+      wordBank: ["photovoltaic", "pollution", "renewable", "winter", "night", "reliable", "thermoelectric", "radiation", "non-renewable", "summer", "midday", "unreliable"],
+      tier: 3,
+      senNote: "Always discuss reliability, environmental impact, cost, and suitability for the UK climate."
+    }
+  ],
+
+  em_spectrum: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Describe the uses and hazards of X-rays and gamma rays.",
+      questionSubtitle: "Fill in the missing words — ionising radiation",
+      template: [
+        { text: "X-rays and gamma rays are both ", blank: "ionising" },
+        { text: " forms of radiation — they carry enough energy to remove electrons from atoms. X-rays are used in medical ", blank: "imaging" },
+        { text: " and to treat ", blank: "cancer" },
+        { text: ". Gamma rays are used in ", blank: "radiotherapy" },
+        { text: " to destroy tumour cells. Both can damage ", blank: "DNA" },
+        { text: " in cells, which can cause ", blank: "mutations", text2: " and increase cancer risk." }
+      ],
+      wordBank: ["ionising", "imaging", "cancer", "radiotherapy", "DNA", "mutations", "non-ionising", "bones", "infections", "chemotherapy", "RNA", "duplications"],
+      tier: 3,
+      senNote: "X-rays and gamma = ionising = can damage DNA. Used carefully in medicine but handled with shielding."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Describe the uses and hazards of ultraviolet radiation.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Ultraviolet (UV) radiation has a shorter wavelength than ", blank: "visible light" },
+        { text: " and higher ", blank: "frequency" },
+        { text: ". UV causes ", blank: "fluorescence" },
+        { text: " in some materials and is used in security pens and ", blank: "banknote" },
+        { text: " detection. It is also used in ", blank: "sun beds" },
+        { text: ". However, UV can damage ", blank: "skin cells" },
+        { text: " and increase the risk of ", blank: "skin cancer", text2: "." }
+      ],
+      wordBank: ["visible light", "frequency", "fluorescence", "banknote", "sun beds", "skin cells", "skin cancer", "infrared", "amplitude", "reflection", "passport", "hospitals", "bone cells", "tooth decay"],
+      tier: 3,
+      senNote: "UV: uses include fluorescence and banknote detection. Hazards: skin damage and skin cancer."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: Describe how microwaves and infrared radiation are used and any hazards.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Microwaves are used in ", blank: "communications" },
+        { text: " (e.g. mobile phones, satellites) and in ", blank: "cooking" },
+        { text: ". Microwaves can cause ", blank: "internal heating" },
+        { text: " of body tissue if absorbed. Infrared (IR) radiation is emitted by all objects above ", blank: "absolute zero" },
+        { text: " and is used in ", blank: "thermal imaging" },
+        { text: " and TV remote controls. IR can cause ", blank: "skin burns", text2: " at high intensities." }
+      ],
+      wordBank: ["communications", "cooking", "internal heating", "absolute zero", "thermal imaging", "skin burns", "X-ray imaging", "lighting", "external cooling", "0 K", "MRI scanning", "eye damage"],
+      tier: 3,
+      senNote: "Microwaves: comms + cooking, heats tissue. IR: all objects emit it, used in thermal cameras, can burn skin."
     }
   ]
 };

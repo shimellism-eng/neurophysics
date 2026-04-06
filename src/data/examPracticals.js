@@ -33,6 +33,39 @@ const examPracticals = {
     },
   ],
 
+  // ===== RP6: Specific Latent Heat (specific_latent_heat) =====
+  specific_latent_heat: [
+    {
+      type: "sequence",
+      question: "Put the steps for the specific latent heat of fusion experiment in order.",
+      questionSubtitle: "Required Practical 6 — Latent heat of ice",
+      items: [
+        "Crush ice and place it in a funnel over a beaker — allow it to melt at room temperature (control)",
+        "Place a second identical mass of ice in a funnel and add an immersion heater — record the energy supplied",
+        "Measure the mass of water collected in each beaker over the same time period",
+        "Subtract the control mass from the heated mass to find the extra ice melted by the heater",
+        "Calculate L using Q = mL → L = Q ÷ m",
+      ],
+      correctOrder: [0, 1, 2, 3, 4],
+      tier: 2,
+      senNote: "The control experiment removes the effect of room-temperature melting from the result.",
+    },
+    {
+      type: "sequence",
+      question: "How do you improve accuracy in the specific latent heat experiment?",
+      questionSubtitle: "Required Practical 6 — Reducing errors",
+      items: [
+        "Use a joulemeter or record voltage and current to calculate energy accurately",
+        "Run both experiments for the same length of time",
+        "Use the control beaker to account for background melting at room temperature",
+        "Dry the ice first so surface water does not add to the mass",
+      ],
+      correctOrder: [0, 1, 2, 3],
+      tier: 2,
+      senNote: "The control removes background melting. Dry ice prevents extra mass from surface water.",
+    },
+  ],
+
   // ===== RP3: Resistance of a Wire (circuit_basics) =====
   circuit_basics: [
     {

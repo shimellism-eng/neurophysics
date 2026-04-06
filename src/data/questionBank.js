@@ -2818,6 +2818,408 @@ const questionBank = {
       "senNote": "High V → low I → less heating in cables → less wasted energy"
     }
   ],
+  "specific_latent_heat": [
+    {
+      "question": "What is specific latent heat?",
+      "questionSubtitle": "It's about changing state",
+      "options": [
+        "Heat needed to raise temperature by 1°C",
+        "Energy needed to change the state of 1 kg of a substance without changing temperature",
+        "The temperature at which a substance melts",
+        "Heat stored in chemical bonds"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Latent heat = energy for state change, NOT temperature change"
+    },
+    {
+      "question": "Why does temperature stay constant during melting?",
+      "questionSubtitle": "Think about what the energy is used for",
+      "options": [
+        "No energy is absorbed",
+        "All energy breaks intermolecular bonds — none raises temperature",
+        "The material cools down",
+        "Energy is reflected"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Energy breaks bonds → temperature flat on heating curve"
+    },
+    {
+      "question": "Ice has a specific latent heat of fusion of 334 000 J/kg. How much energy to melt 2 kg?",
+      "questionSubtitle": "Q = mL",
+      "options": [
+        "167 000 J",
+        "668 000 J",
+        "334 000 J",
+        "33 400 J"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Q = 2 × 334 000 = 668 000 J"
+    },
+    {
+      "question": "Which is greater: specific latent heat of fusion or vaporisation? Why?",
+      "questionSubtitle": "Think about distance between particles",
+      "options": [
+        "Fusion — more bonds to break",
+        "Vaporisation — particles must be separated much further apart",
+        "They are always equal",
+        "Fusion — gases have less energy"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Liquid → gas: particles fully separate → far more energy than solid → liquid"
+    },
+    {
+      "question": "0.5 kg of water is boiled away. L_v = 2 260 000 J/kg. Calculate energy needed.",
+      "questionSubtitle": "Q = mL",
+      "options": [
+        "4 520 000 J",
+        "1 130 000 J",
+        "2 260 000 J",
+        "226 000 J"
+      ],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "Q = 0.5 × 2 260 000 = 1 130 000 J"
+    }
+  ],
+  "national_grid": [
+    {
+      "question": "What is the National Grid?",
+      "questionSubtitle": "It connects power stations to homes",
+      "options": [
+        "A type of solar panel",
+        "The network of cables and transformers that distributes electricity across the country",
+        "A battery backup system",
+        "A type of nuclear reactor"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "National Grid = power distribution network"
+    },
+    {
+      "question": "Why is electricity transmitted at very high voltage?",
+      "questionSubtitle": "Think about P = IV and P_loss = I²R",
+      "options": [
+        "High voltage travels further",
+        "High voltage means low current, reducing power lost as heat in cables",
+        "High voltage is cheaper to generate",
+        "Low current is safer"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "High V → low I → I²R losses minimised"
+    },
+    {
+      "question": "What does a step-up transformer do in the National Grid?",
+      "questionSubtitle": "It's used at the power station end",
+      "options": [
+        "Decreases voltage for homes",
+        "Increases voltage for efficient transmission",
+        "Converts AC to DC",
+        "Reduces current at homes"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Step-up: more secondary turns → higher voltage for transmission"
+    },
+    {
+      "question": "A cable has resistance 2 Ω and carries 500 A. Calculate power lost as heat.",
+      "questionSubtitle": "P_loss = I²R",
+      "options": [
+        "1 000 W",
+        "500 000 W",
+        "250 000 W",
+        "1 000 000 W"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "P = 500² × 2 = 250 000 × 2 = 500 000 W"
+    },
+    {
+      "question": "Why must step-down transformers be used before electricity reaches homes?",
+      "questionSubtitle": "High voltage is dangerous",
+      "options": [
+        "To increase current",
+        "To reduce the very high transmission voltage to safe mains levels (230 V in UK)",
+        "To convert DC to AC",
+        "To reduce frequency"
+      ],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "Transmission: ~400 kV. Homes: 230 V. Step-down bridges the gap."
+    }
+  ],
+  "terminal_velocity": [
+    {
+      "question": "What is terminal velocity?",
+      "questionSubtitle": "Happens when forces balance",
+      "options": [
+        "Maximum possible speed of any object",
+        "Constant speed reached when drag equals driving force",
+        "Speed just before stopping",
+        "The speed of sound"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "No resultant force → no acceleration → constant (terminal) velocity"
+    },
+    {
+      "question": "A skydiver jumps. What happens to drag as speed increases?",
+      "questionSubtitle": "Air resistance depends on speed",
+      "options": [
+        "Drag decreases",
+        "Drag increases",
+        "Drag stays the same",
+        "Drag disappears"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Faster → more air resistance (drag)"
+    },
+    {
+      "question": "At terminal velocity, what is the resultant force on the skydiver?",
+      "questionSubtitle": "Weight vs drag",
+      "options": [
+        "Equal to weight",
+        "Zero — weight and drag are equal and opposite",
+        "Equal to drag only",
+        "Greater than weight"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Weight = Drag → resultant force = 0 → constant speed"
+    },
+    {
+      "question": "A skydiver opens their parachute. What happens immediately after?",
+      "questionSubtitle": "Parachute increases drag suddenly",
+      "options": [
+        "They speed up momentarily",
+        "Drag suddenly exceeds weight → they decelerate to a lower terminal velocity",
+        "They stay at the same speed",
+        "Weight increases"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Parachute → huge drag increase → net upward force → deceleration → new lower terminal velocity"
+    },
+    {
+      "question": "Two identical balls fall: one in air, one in water. Which reaches a lower terminal velocity? Why?",
+      "questionSubtitle": "Drag depends on the medium",
+      "options": [
+        "Same terminal velocity in both",
+        "Water — much greater drag force at lower speeds",
+        "Air — less resistance allows higher speed",
+        "Depends on mass"
+      ],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "Water is denser → far more drag → balance with weight at lower speed"
+    }
+  ],
+  "electromagnetism": [
+    {
+      "question": "What shape is the magnetic field around a straight current-carrying wire?",
+      "questionSubtitle": "Imagine looking along the wire",
+      "options": [
+        "Straight lines",
+        "Concentric circles centred on the wire",
+        "A bar magnet shape",
+        "Random"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Current in wire → circular magnetic field around it"
+    },
+    {
+      "question": "What is a solenoid?",
+      "questionSubtitle": "Many loops together",
+      "options": [
+        "A single wire in a field",
+        "A coil of wire that acts like a bar magnet when current flows",
+        "A permanent magnet",
+        "A type of battery"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Solenoid = coil → uniform field inside like a bar magnet"
+    },
+    {
+      "question": "How can you increase the strength of an electromagnet?",
+      "questionSubtitle": "Three ways",
+      "options": [
+        "Decrease the current or use fewer coils",
+        "Increase current, add more coil turns, or add an iron core",
+        "Use a thicker wire only",
+        "Use AC current"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "More turns + more current + iron core = stronger electromagnet"
+    },
+    {
+      "question": "The right-hand grip rule is used for solenoids. What does the thumb point to?",
+      "questionSubtitle": "Fingers curl in direction of current",
+      "options": [
+        "Direction of electron flow",
+        "The North pole of the solenoid",
+        "The South pole",
+        "The direction of resistance"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Right hand: fingers = current direction, thumb = North pole"
+    },
+    {
+      "question": "Why is an iron core used in an electromagnet rather than steel?",
+      "questionSubtitle": "Think about how easily it magnetises and demagnetises",
+      "options": [
+        "Iron is cheaper",
+        "Iron is a soft magnetic material — easily magnetised and demagnetised when current stops",
+        "Steel is too heavy",
+        "Iron has higher resistance"
+      ],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "Soft iron: magnetises/demagnetises easily. Steel stays magnetised (hard magnet)."
+    }
+  ],
+  "total_internal_reflection": [
+    {
+      "question": "What is the critical angle?",
+      "questionSubtitle": "The angle where something special happens",
+      "options": [
+        "Angle where refraction is maximum",
+        "The angle of incidence at which the refracted ray travels along the boundary (90°)",
+        "The angle of reflection",
+        "The angle light enters glass"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "At critical angle: refracted ray grazes the surface (90°)"
+    },
+    {
+      "question": "When does total internal reflection occur?",
+      "questionSubtitle": "Two conditions needed",
+      "options": [
+        "Any time light hits glass",
+        "When light travels in a denser medium and the angle exceeds the critical angle",
+        "When light enters a vacuum",
+        "When glass is very thick"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Denser medium + angle > critical angle → TIR"
+    },
+    {
+      "question": "Glass has refractive index 1.5. Calculate the critical angle.",
+      "questionSubtitle": "sin(c) = 1/n",
+      "options": [
+        "48.6°",
+        "41.8°",
+        "56.4°",
+        "30.0°"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "sin(c) = 1/1.5 = 0.667 → c = 41.8°"
+    },
+    {
+      "question": "How do optical fibres use total internal reflection?",
+      "questionSubtitle": "Light bounces along",
+      "options": [
+        "Light is absorbed and re-emitted",
+        "TIR keeps light bouncing along the fibre without escaping",
+        "Fibres focus light like a lens",
+        "Light travels in the cladding"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Angle always > critical angle → light reflects along the fibre"
+    },
+    {
+      "question": "Why must optical fibres have cladding of lower refractive index than the core?",
+      "questionSubtitle": "TIR needs a denser-to-less-dense boundary",
+      "options": [
+        "Cladding increases speed",
+        "For TIR to occur, light must travel from denser core into less dense cladding",
+        "Cladding absorbs stray light",
+        "Lower index = less refraction at entry"
+      ],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "TIR requires light going from high n (core) to low n (cladding)"
+    }
+  ],
+  "ac_generators": [
+    {
+      "question": "What does an AC generator do?",
+      "questionSubtitle": "It converts one energy form to another",
+      "options": [
+        "Converts electrical energy to kinetic energy",
+        "Converts kinetic energy to alternating electrical energy",
+        "Generates DC electricity",
+        "Stores electrical energy"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Generator: kinetic → electrical (alternating)"
+    },
+    {
+      "question": "Why does an AC generator produce alternating current?",
+      "questionSubtitle": "Think about what happens as the coil rotates",
+      "options": [
+        "The magnets alternate polarity",
+        "As the coil rotates, each side alternately moves up then down through the field, reversing current",
+        "Slip rings cause the reversal",
+        "AC is easier to produce"
+      ],
+      "correctAnswer": 1,
+      "tier": 1,
+      "senNote": "Rotation → each side reverses direction through field → alternating EMF"
+    },
+    {
+      "question": "How do slip rings and brushes differ from a split-ring commutator?",
+      "questionSubtitle": "One gives AC, the other DC",
+      "options": [
+        "No difference",
+        "Slip rings maintain continuous connection → AC; split-ring flips each half-turn → DC",
+        "Split rings give AC; slip rings give DC",
+        "Commutators are only for generators"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "Slip rings → AC (generator). Commutator → DC (motor)."
+    },
+    {
+      "question": "How can you increase the EMF produced by an AC generator?",
+      "questionSubtitle": "Three methods",
+      "options": [
+        "Reduce current",
+        "Increase rotation speed, increase number of coil turns, or use a stronger magnet",
+        "Use slip rings instead of a commutator",
+        "Reduce coil area"
+      ],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "More turns + faster spin + stronger magnet = higher EMF"
+    },
+    {
+      "question": "At what position is the EMF from an AC generator maximum? When is it zero?",
+      "questionSubtitle": "Think about rate of cutting field lines",
+      "options": [
+        "Max when coil parallel to field; zero when perpendicular",
+        "Max when coil is parallel to the field (cuts most lines); zero when perpendicular (no cutting)",
+        "Always maximum",
+        "Max at 45° to field"
+      ],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "Coil parallel to field → cuts lines at max rate → max EMF. Perpendicular → zero cutting → zero EMF."
+    }
+  ],
   "solar_system": [
     {
       "question": "What keeps planets in orbit around the Sun?",

@@ -221,6 +221,51 @@ export const PRACTICALS = {
     sim: { type: 'density', objects: ['aluminium','copper','iron'] }
   },
 
+  latent_heat: {
+    id: 'latent_heat',
+    number: 'RP6',
+    title: 'Specific Latent Heat',
+    topicId: 'specific_latent_heat',
+    aim: 'To determine the specific latent heat of fusion of ice by measuring the energy supplied by an immersion heater as it melts.',
+    specRef: '4.3.2.3',
+    equipment: ['Crushed ice in a funnel or beaker','Immersion heater','12V power supply','Ammeter','Voltmeter','Stopwatch','Mass balance','Beaker to collect meltwater','Insulating jacket'],
+    variables: {
+      independent: 'Energy supplied (J) = P × t = IV × t',
+      dependent: 'Mass of water collected (kg)',
+      control: ['Power of heater (measure V and I)', 'Starting temperature of ice (0°C)', 'Same equipment setup']
+    },
+    method: [
+      'Set up funnel with crushed ice; place beaker underneath to collect meltwater',
+      'Run a control experiment first: leave ice melting for same time WITHOUT heater to measure background melt',
+      'Insert immersion heater into ice, connect ammeter in series and voltmeter in parallel',
+      'Switch on heater; record current I and voltage V; calculate power P = IV',
+      'Run heater for measured time t (e.g. 5 minutes = 300 s); calculate energy E = P × t',
+      'Measure mass of water collected in beaker (m kg)',
+      'Subtract mass from control experiment to find mass melted by heater alone',
+      'Calculate: L = E ÷ m (J/kg)',
+      'Compare to accepted value: Lf(water) = 334,000 J/kg'
+    ],
+    resultsTable: {
+      headers: ['Voltage V (V)', 'Current I (A)', 'Power P=IV (W)', 'Time t (s)', 'Energy E=Pt (J)', 'Mass of water m (kg)', 'L = E/m (J/kg)'],
+      sampleData: [[12, 2.5, 30, 300, 9000, 0.025, 360000]]
+    },
+    analysis: 'Calculate L = E ÷ m. Compare to 334,000 J/kg. Likely higher due to heat losses — subtract control experiment mass. Plot energy (x) vs mass melted (y); gradient = 1/L.',
+    errors: [
+      'Heat loss from surroundings also melts ice → run a control experiment without the heater and subtract background melt',
+      'Water clinging to heater or funnel → dry apparatus and weigh carefully',
+      'Not all ice at 0°C → use crushed ice and allow to stand briefly',
+      'Heater not fully in ice → ensure heater is surrounded by ice throughout',
+      'Parallax error reading ammeter/voltmeter → read at eye level'
+    ],
+    hazards: ['Immersion heater gets very hot — do not touch', 'Electrical equipment near water — check all connections are secure before switching on'],
+    examTips: [
+      'Always explain WHY you run a control: background melting would make your L value too small',
+      'The flat section on a heating curve is where latent heat is being absorbed',
+      'L = E/m, not E/ΔT — there is no temperature change during melting',
+      'Lv (2,260,000 J/kg) >> Lf (334,000 J/kg) — vaporisation needs much more energy'
+    ]
+  },
+
   light: {
     id: 'light',
     number: 'RP6',

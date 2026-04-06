@@ -214,6 +214,133 @@ function InternalEnergyReality() {
   )
 }
 
+// ─── 13b. Specific Latent Heat ──────────────────────────────────────────────
+function SpecificLatentHeatLesson() {
+  const sections = [
+    { label: 'Solid', color: '#60a5fa' },
+    { label: 'Melting (flat = latent heat)', color: PART_C },
+    { label: 'Liquid', color: '#34d399' },
+    { label: 'Boiling (flat = latent heat)', color: PART_C },
+    { label: 'Gas', color: '#f97316' },
+  ]
+  const [active, setActive] = useState(null)
+
+  // Heating curve points: rise, flat, rise, flat, rise
+  // SVG 260×150, x: 24–240, y: 130 (cold) to 14 (hot)
+  const pts = [
+    [24, 130], [60, 88],   // solid rising
+    [60, 88],  [100, 88],  // melting flat
+    [100, 88], [150, 50],  // liquid rising
+    [150, 50], [190, 50],  // boiling flat
+    [190, 50], [240, 20],  // gas rising
+  ]
+  // Each section occupies a path segment pair
+  const segPaths = [
+    `M${pts[0][0]},${pts[0][1]} L${pts[1][0]},${pts[1][1]}`,
+    `M${pts[2][0]},${pts[2][1]} L${pts[3][0]},${pts[3][1]}`,
+    `M${pts[4][0]},${pts[4][1]} L${pts[5][0]},${pts[5][1]}`,
+    `M${pts[6][0]},${pts[6][1]} L${pts[7][0]},${pts[7][1]}`,
+    `M${pts[8][0]},${pts[8][1]} L${pts[9][0]},${pts[9][1]}`,
+  ]
+
+  return (
+    <div className="w-full h-full flex flex-col items-center gap-2 pt-2 px-3" style={{ maxWidth: 480 }}>
+      <div className="text-xs font-semibold" style={{ color: PART_C }}>Heating Curve — tap a section</div>
+      <svg width="260" height="150" viewBox="0 0 260 150" style={{ display: 'block' }}>
+        {/* axes */}
+        <line x1="24" y1="136" x2="248" y2="136" stroke="#2a3a52" strokeWidth="1.2" />
+        <line x1="24" y1="10" x2="24" y2="136" stroke="#2a3a52" strokeWidth="1.2" />
+        <text x="136" y="148" textAnchor="middle" fill="#637b96" fontSize={8}>Energy added →</text>
+        <text x="10" y="73" textAnchor="middle" fill="#637b96" fontSize={8} transform="rotate(-90,10,73)">Temperature</text>
+        {/* flat plateau shading */}
+        <rect x="60" y="82" width="40" height="12" fill={PART_C} fillOpacity="0.12" rx="2" />
+        <rect x="150" y="44" width="40" height="12" fill={PART_C} fillOpacity="0.12" rx="2" />
+        {/* curve segments */}
+        {segPaths.map((d, i) => (
+          <path key={i} d={d} fill="none"
+            stroke={active === i ? sections[i].color : '#2a3a52'}
+            strokeWidth={active === i ? 3.5 : 2.2}
+            strokeLinecap="round"
+            style={{ cursor: 'pointer', transition: 'stroke 0.2s, stroke-width 0.2s' }}
+            onClick={() => setActive(active === i ? null : i)}
+          />
+        ))}
+        {/* labels */}
+        <text x="42" y="115" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Solid</text>
+        <text x="80" y="80" textAnchor="middle" fill={PART_C} fontSize={6}>Melting</text>
+        <text x="125" y="72" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Liquid</text>
+        <text x="170" y="42" textAnchor="middle" fill={PART_C} fontSize={6}>Boiling</text>
+        <text x="222" y="16" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>Gas</text>
+      </svg>
+      {/* Section info panel */}
+      <div className="w-full min-h-[36px] flex items-center justify-center px-3 py-1 rounded-[10px] text-xs text-center"
+        style={{ background: active !== null ? `${sections[active].color}18` : '#1d293d', border: `1px solid ${active !== null ? sections[active].color : '#2a3a52'}`, color: active !== null ? sections[active].color : '#637b96' }}>
+        {active !== null ? sections[active].label : 'Tap a section of the curve'}
+      </div>
+      <div className="px-3 py-1 rounded-[10px] font-mono font-bold text-sm" style={{ background: `${PART_C}18`, border: `1px solid ${PART_C}44`, color: PART_C }}>
+        Q = mL
+      </div>
+    </div>
+  )
+}
+
+function SpecificLatentHeatIdea() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
+      <FormulaBox formula="Q = mL" color={PART_C} />
+      <div className="flex flex-col gap-2 w-full max-w-xs">
+        <div className="flex items-center justify-between px-3 py-2 rounded-[10px]"
+          style={{ background: '#2b7fff18', border: '1px solid #2b7fff44' }}>
+          <IdeaCaption>Fusion (melting/freezing)</IdeaCaption>
+          <span className="font-mono text-xs font-bold" style={{ color: '#2b7fff' }}>Lf = 334,000 J/kg</span>
+        </div>
+        <div className="flex items-center justify-between px-3 py-2 rounded-[10px]"
+          style={{ background: '#f9731618', border: '1px solid #f9731644' }}>
+          <IdeaCaption>Vaporisation (boiling/condensing)</IdeaCaption>
+          <span className="font-mono text-xs font-bold" style={{ color: '#f97316' }}>Lv = 2,260,000 J/kg</span>
+        </div>
+      </div>
+      {/* Simple particle bond-breaking diagram */}
+      <div className="flex items-center gap-2 mt-1">
+        <div className="flex gap-1">
+          {[0, 1, 2].map(i => (
+            <div key={i} className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
+              style={{ background: `${PART_C}22`, border: `1.5px solid ${PART_C}`, color: PART_C }}>•</div>
+          ))}
+        </div>
+        <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>+ energy →</span>
+        <div className="flex gap-3">
+          {[0, 1, 2].map(i => (
+            <div key={i} className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
+              style={{ background: `${PART_C}22`, border: `1.5px dashed ${PART_C}`, color: PART_C }}>•</div>
+          ))}
+        </div>
+      </div>
+      <IdeaCaption>Energy breaks bonds — temperature stays constant</IdeaCaption>
+    </div>
+  )
+}
+
+function SpecificLatentHeatReality() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
+      <div className="flex flex-col gap-2 w-full max-w-xs">
+        <div className="flex gap-2 items-start p-2 rounded-[10px]"
+          style={{ background: '#2b7fff15', border: '1px solid #2b7fff44' }}>
+          <span className="text-lg">🧊</span>
+          <span className="text-xs" style={{ color: '#cad5e2' }}>Ice in a drink stays at 0°C until <strong>fully melted</strong> — all absorbed energy goes into latent heat of fusion</span>
+        </div>
+        <div className="flex gap-2 items-start p-2 rounded-[10px]"
+          style={{ background: `${PART_C}15`, border: `1px solid ${PART_C}44` }}>
+          <span className="text-lg">💧</span>
+          <span className="text-xs" style={{ color: '#cad5e2' }}>Sweating cools you down — <strong>evaporation</strong> uses latent heat of vaporisation, removing energy from your skin</span>
+        </div>
+      </div>
+      <RealityBadge color={PART_C}>State changes happen at constant temperature — energy breaks bonds, not heats particles</RealityBadge>
+    </div>
+  )
+}
+
 // ─── 14. Gas Pressure ───────────────────────────────────────────────────────
 function GasPressureLesson() {
   const [tab, setTab] = useState(0) // 0=Boyle's, 1=P-T
@@ -1411,6 +1538,40 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Temperature and internal energy are not the same quantity.',
     concept: 'ΔE = 2 × 4200 × 5 = 42000 J. Water at 100°C and steam at 100°C have the same temperature but different internal energy - the difference is the latent heat of vaporisation.',
+  },
+  specific_latent_heat: {
+    id: 'specific_latent_heat',
+    module: 'Particle Model',
+    moduleColor: PART_C,
+    practicalId: 'latent_heat',
+    course: 'combined',
+    title: 'Specific Latent Heat',
+    subtitle: 'Energy to Change State',
+    description: 'Specific latent heat is the energy needed to change the state of 1 kg of a substance without changing its temperature. Q = mL, where L is the specific latent heat in J/kg. Latent heat of fusion (melting/freezing) and latent heat of vaporisation (boiling/condensing) are different values. Water: Lf = 334,000 J/kg, Lv = 2,260,000 J/kg.',
+    lessonVisual: SpecificLatentHeatLesson,
+    ideaVisual: SpecificLatentHeatIdea,
+    realityVisual: SpecificLatentHeatReality,
+    question: 'How much energy is needed to melt 2 kg of ice? (Latent heat of fusion of water = 334,000 J/kg)',
+    questionSubtitle: 'Use Q = mL',
+    options: ['167,000 J', '334,000 J', '668,000 J', '1,336,000 J'],
+    correctAnswer: 2,
+    keywords: ['specific latent heat', 'latent heat of fusion', 'latent heat of vaporisation', 'Q = mL', 'state change', 'melting', 'boiling', 'flat section', 'heating curve', 'joules per kilogram'],
+    sentenceStarters: [
+      'Specific latent heat is the energy needed to...',
+      'Using Q = mL, I substitute m = 2 kg and L = 334,000 J/kg to get...',
+      'During a state change, temperature does not change because...',
+      'The flat section on a heating curve shows...',
+      'Latent heat of vaporisation is greater than fusion because...',
+    ],
+    modelAnswers: [
+      'Specific latent heat is the energy needed to **change the state of 1 kg of a substance without changing its temperature**.',
+      'Using Q = mL, I substitute **m = 2 kg and L = 334,000 J/kg to get Q = 2 × 334,000 = 668,000 J**.',
+      'During a state change, temperature does not change because **all the energy is used to break intermolecular bonds, not to increase kinetic energy of particles**.',
+      'The flat section on a heating curve shows **the substance is changing state — energy is being absorbed but temperature stays constant**.',
+      'Latent heat of vaporisation is greater than fusion because **more bonds need to be broken to fully separate particles from liquid to gas than from solid to liquid**.',
+    ],
+    misconception: 'Temperature does not rise during a state change — energy goes into breaking bonds, not heating the substance.',
+    concept: 'Specific latent heat (Q = mL) is the energy needed to change state without temperature change. The flat sections on a heating/cooling curve represent state changes. Lv > Lf because more bonds are broken going from liquid to gas.',
   },
   gas_pressure: {
     id: 'gas_pressure', module: 'Particle Model', moduleColor: PART_C, course: 'physics-only',

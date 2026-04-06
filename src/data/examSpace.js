@@ -125,6 +125,32 @@ const examSpace = {
       tier: 2,
       senNote: "Red-shift and CMBR are the two main pieces of evidence for the Big Bang.",
     },
+    {
+      type: "misconception",
+      question: "Is this statement correct?",
+      questionSubtitle: "Think about what cosmic microwave background radiation (CMBR) is.",
+      statement: "The cosmic microwave background radiation is emitted by distant stars.",
+      isCorrect: false,
+      explanation:
+        "CMBR is not from stars. It is the thermal radiation left over from the very early universe, shortly after the Big Bang. It fills the entire universe and is one of the strongest pieces of evidence that the Big Bang occurred.",
+      tier: 2,
+      senNote: "CMBR = leftover energy from the Big Bang itself. It comes from all directions, not from stars.",
+    },
+    {
+      type: "sequence",
+      question: "Put these statements about Big Bang evidence in a logical order, starting from the observation.",
+      questionSubtitle: "From observation to conclusion.",
+      items: [
+        "Light from distant galaxies is observed to be red-shifted",
+        "The amount of red-shift is greater for more distant galaxies",
+        "This means galaxies are moving away from us, and the further away, the faster",
+        "Therefore the universe must be expanding",
+        "If we trace this expansion backwards, the universe began from a single point — the Big Bang",
+      ],
+      correctOrder: [0, 1, 2, 3, 4],
+      tier: 3,
+      senNote: "Observation → pattern → interpretation → conclusion → Big Bang theory.",
+    },
   ],
 };
 

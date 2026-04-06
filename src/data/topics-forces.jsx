@@ -642,6 +642,86 @@ function MotionGraphsReality() {
   )
 }
 
+// ─── 28b. Terminal Velocity ──────────────────────────────────────────────────
+function TerminalVelocityLesson() {
+  const [stage, setStage] = useState(0)
+  const stages = [
+    { label: 'Accelerating', desc: 'Weight > Drag. Resultant force downward. Object speeds up rapidly.', color: '#00a8e8' },
+    { label: 'Decelerating rate', desc: 'As speed increases, drag increases. Resultant force reduces. Still accelerating but more slowly.', color: '#6366f1' },
+    { label: 'Terminal velocity', desc: 'Drag = Weight. Resultant force = 0. Constant velocity (Newton\'s 1st Law).', color: '#10b981' },
+    { label: 'Parachute opens', desc: 'Drag suddenly >> Weight. Upward resultant force. Object decelerates.', color: '#ef4444' },
+    { label: 'New terminal', desc: 'Drag again equals Weight at a much lower speed. New, lower terminal velocity.', color: '#fdc700' },
+  ]
+  // SVG path for the V-T curve
+  // Stage 0-2: curve up and flatten; stage 3: drop; stage 4: flatten at lower level
+  const fullPath = 'M20,105 C40,85 55,55 80,42 C95,35 105,32 120,32 L140,32 C142,32 144,28 146,50 C150,65 155,70 175,72 L240,72'
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
+      <svg width="100%" viewBox="0 0 260 120" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+        <line x1="18" y1="10" x2="18" y2="110" stroke="#2d3e55" strokeWidth="1.2" />
+        <line x1="18" y1="110" x2="250" y2="110" stroke="#2d3e55" strokeWidth="1.2" />
+        <text x="4" y="60" fill="#4a5a72" fontSize="7" textAnchor="middle" transform="rotate(-90,4,60)">Velocity</text>
+        <text x="134" y="120" fill="#4a5a72" fontSize="7" textAnchor="middle">Time</text>
+        <path d={fullPath} fill="none" stroke={stages[stage].color} strokeWidth="2.5" strokeLinecap="round" />
+        {/* Force arrows at terminal velocity stage */}
+        {stage === 2 && <>
+          <text x="190" y="28" fill="#ef4444" fontSize="8" fontWeight="700">↑ Drag</text>
+          <text x="190" y="42" fill="#6366f1" fontSize="8" fontWeight="700">↓ Weight</text>
+          <text x="185" y="56" fill="#10b981" fontSize="7">= balanced</text>
+        </>}
+        {stage === 3 && <text x="140" y="44" fill="#ef4444" fontSize="7" fontWeight="700">Parachute!</text>}
+        {/* Terminal velocity dashed line */}
+        {(stage >= 2) && <line x1="18" y1="32" x2={stage >= 3 ? 140 : 240} y2="32" stroke="#10b981" strokeWidth="1" strokeDasharray="4 3" strokeOpacity="0.5" />}
+        {(stage >= 4) && <line x1="18" y1="72" x2="240" y2="72" stroke="#fdc700" strokeWidth="1" strokeDasharray="4 3" strokeOpacity="0.5" />}
+      </svg>
+      {/* Stage buttons */}
+      <div className="flex flex-wrap gap-1">
+        {stages.map((s, i) => (
+          <button key={i} onClick={() => setStage(i)}
+            className="px-2 py-0.5 rounded-[6px] text-xs font-semibold"
+            style={{ background: stage === i ? `${s.color}25` : '#1d293d', color: stage === i ? s.color : '#a8b8cc', border: `1px solid ${stage === i ? s.color : '#2a3a52'}`, fontSize: 9 }}>
+            {s.label}
+          </button>
+        ))}
+      </div>
+      <div className="px-3 py-2 rounded-[10px] text-xs" style={{ background: `${stages[stage].color}12`, border: `1px solid ${stages[stage].color}30`, color: '#e2e8f0' }}>
+        {stages[stage].desc}
+      </div>
+    </div>
+  )
+}
+function TerminalVelocityIdea() {
+  const panels = [
+    { title: 'W > Drag', sub: 'Accelerating', upLabel: '↑ Drag (small)', downLabel: '↓ Weight (large)', bg: '#00a8e8' },
+    { title: 'W = Drag', sub: 'Terminal velocity', upLabel: '↑ Drag', downLabel: '↓ Weight', bg: '#10b981' },
+    { title: 'Drag > W', sub: 'Decelerating', upLabel: '↑ Drag (large)', downLabel: '↓ Weight (small)', bg: '#ef4444' },
+  ]
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <div className="flex gap-2">
+        {panels.map((p, i) => (
+          <div key={i} className="flex-1 flex flex-col items-center gap-1 px-2 py-2 rounded-[10px]" style={{ background: `${p.bg}10`, border: `1px solid ${p.bg}35` }}>
+            <span className="text-xs font-bold" style={{ color: p.bg }}>{p.title}</span>
+            <span style={{ fontSize: 9, color: '#10b981' }}>{p.upLabel}</span>
+            <div className="w-6 h-6 rounded-full" style={{ background: `${p.bg}30`, border: `1.5px solid ${p.bg}` }} />
+            <span style={{ fontSize: 9, color: '#6366f1' }}>{p.downLabel}</span>
+            <span style={{ fontSize: 8, color: '#a8b8cc', textAlign: 'center' }}>{p.sub}</span>
+          </div>
+        ))}
+      </div>
+      <IdeaCaption>At terminal velocity: resultant force = 0, acceleration = 0, velocity = constant</IdeaCaption>
+    </div>
+  )
+}
+function TerminalVelocityReality() {
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <RealityBadge emoji="🪂" title="Skydiver without parachute" desc="Terminal velocity ≈ 60 m/s (216 km/h). At this speed, air resistance exactly equals body weight — no further acceleration." />
+      <RealityBadge emoji="🎯" title="Opening the parachute" desc="Parachute increases drag area dramatically. Drag >> weight, so the skydiver decelerates to a new terminal velocity of ≈ 6 m/s — safe for landing." />
+    </div>
+  )
+}
+
 // ─── 29. Newton's Laws ───────────────────────────────────────────────────────
 function NewtonsLawsLesson() {
   const [law, setLaw] = useState(1)
@@ -1208,6 +1288,27 @@ export const FORCES_TOPICS = {
     ],
     misconception: 'A horizontal line on a v-t graph means constant velocity, not zero velocity.',
     concept: 'Area under v-t graph = v × t = distance (same as distance = speed × time). A horizontal flat line means constant velocity - the object is moving at steady speed, not stationary.',
+  },
+  terminal_velocity: {
+    id: 'terminal_velocity', module: 'Forces', moduleColor: FC, course: 'combined',
+    title: 'Terminal Velocity', subtitle: 'When Drag Equals Weight',
+    description: 'A falling object accelerates because weight acts downward. As speed increases, drag (air resistance) increases. When drag equals weight, resultant force is zero and the object reaches terminal velocity — falling at constant speed. On a velocity-time graph, terminal velocity is a horizontal line. A parachute increases drag suddenly, causing deceleration to a new, lower terminal velocity.',
+    lessonVisual: TerminalVelocityLesson, ideaVisual: TerminalVelocityIdea, realityVisual: TerminalVelocityReality,
+    question: 'A skydiver is falling at terminal velocity. What can be said about the forces acting on them?',
+    questionSubtitle: 'Think about resultant force at constant velocity',
+    options: ['Weight is greater than drag', 'Drag is greater than weight', 'Weight equals drag — resultant force is zero', 'There are no forces acting on the skydiver'],
+    correctAnswer: 2,
+    keywords: ['terminal velocity', 'drag', 'air resistance', 'weight', 'resultant force', 'constant velocity', 'deceleration', 'parachute', 'velocity-time graph', 'streamlining'],
+    sentenceStarters: ['At terminal velocity, the resultant force is zero because...', 'As the object speeds up, drag increases because...', 'The velocity-time graph shows a curve that flattens because...', 'When a parachute opens, the drag force suddenly...', 'Terminal velocity is reached when...'],
+    modelAnswers: [
+      'At terminal velocity, the resultant force is zero because **drag force equals weight — these two forces are balanced**.',
+      'As the object speeds up, drag increases because **drag force increases with speed, so faster motion means more air resistance**.',
+      'The velocity-time graph shows a curve that flattens because **as drag approaches weight, acceleration decreases, so the rate of speed increase slows until it reaches zero at terminal velocity**.',
+      'When a parachute opens, the drag force suddenly **becomes much larger than weight, creating an upward resultant force that decelerates the skydiver to a new, lower terminal velocity**.',
+      'Terminal velocity is reached when **drag exactly equals weight, giving zero resultant force, so by Newton\'s First Law the velocity stays constant**.',
+    ],
+    misconception: 'At terminal velocity, there are still forces acting — weight and drag both act but they are equal and opposite, giving zero resultant force.',
+    concept: 'Terminal velocity: drag = weight → zero resultant force → constant speed. V-T graph curves then flattens. Parachute opens → deceleration → new lower terminal velocity.',
   },
   newtons_laws: {
     id: 'newtons_laws', module: 'Forces', moduleColor: FC, practicalId: 'acceleration', course: 'combined',

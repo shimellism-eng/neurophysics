@@ -377,6 +377,83 @@ function WaveReflectionReality() {
   )
 }
 
+// ─── Total Internal Reflection ──────────────────────────────────────────────
+function TotalInternalReflectionLesson() {
+  const [angle, setAngle] = useState(0)
+  const cases = [
+    { label: 'Below critical', desc: 'Angle < critical angle. Light partially refracts into air AND partially reflects back. Most light escapes.', color: WC },
+    { label: 'At critical angle', desc: 'Angle = critical angle. Refracted ray travels along the boundary (90°). This is the threshold.', color: '#fdc700' },
+    { label: 'TIR', desc: 'Angle > critical angle. ALL light is reflected back into the glass. No refracted ray. This is Total Internal Reflection!', color: '#10b981' },
+  ]
+  const c = cases[angle]
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
+      <svg width="100%" viewBox="0 0 260 130" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+        {/* Glass block (bottom half) */}
+        <rect x="0" y="65" width="260" height="65" fill="#1e3a5f" opacity="0.7" />
+        <text x="8" y="125" fill="#60a5fa" fontSize="7">Glass (denser)</text>
+        <text x="8" y="18" fill="#a8b8cc" fontSize="7">Air (less dense)</text>
+        {/* Boundary line */}
+        <line x1="0" y1="65" x2="260" y2="65" stroke="#2d3e55" strokeWidth="1.5" strokeDasharray="6 3" />
+        {/* Normal */}
+        <line x1="130" y1="10" x2="130" y2="125" stroke="#4a5a72" strokeWidth="1" strokeDasharray="3 3" />
+        <text x="133" y="20" fill="#4a5a72" fontSize="6">normal</text>
+        {/* Incident ray (always from bottom-left) */}
+        <line x1="60" y1="115" x2="130" y2="65" stroke={c.color} strokeWidth="2" markerEnd="url(#arrowhead)" />
+        {/* Reflected ray (always back into glass) */}
+        <line x1="130" y1="65" x2="200" y2="115" stroke={c.color} strokeWidth={angle === 2 ? "2.5" : "1.5"} strokeOpacity={angle === 2 ? 1 : 0.5} />
+        {/* Refracted ray (only if below/at critical) */}
+        {angle === 0 && <line x1="130" y1="65" x2="175" y2="20" stroke={c.color} strokeWidth="1.5" strokeOpacity="0.8" />}
+        {angle === 1 && <line x1="130" y1="65" x2="255" y2="65" stroke="#fdc700" strokeWidth="1.5" strokeDasharray="4 2" />}
+        {angle === 2 && <text x="145" y="45" fill="#10b981" fontSize="9" fontWeight="800">TIR!</text>}
+        {angle === 0 && <text x="158" y="28" fill={c.color} fontSize="7">refracted</text>}
+        {angle === 1 && <text x="180" y="60" fill="#fdc700" fontSize="7">along boundary</text>}
+      </svg>
+      <div className="flex gap-2">
+        {cases.map((ca, i) => (
+          <button key={i} onClick={() => setAngle(i)}
+            className="flex-1 py-1.5 rounded-[8px] text-xs font-semibold"
+            style={{ background: angle===i ? `${ca.color}25` : '#1d293d', color: angle===i ? ca.color : '#a8b8cc', border: `1px solid ${angle===i ? ca.color : '#2a3a52'}`, fontSize: 9 }}>
+            {ca.label}
+          </button>
+        ))}
+      </div>
+      <div className="px-3 py-2 rounded-[10px] text-xs" style={{ background: `${c.color}10`, border: `1px solid ${c.color}30`, color: '#e2e8f0' }}>
+        {c.desc}
+      </div>
+    </div>
+  )
+}
+
+function TotalInternalReflectionIdea() {
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <FormulaBox formula="sin c = 1 / n" color={WC} />
+      <div className="flex flex-col gap-2">
+        <div className="px-3 py-2 rounded-[10px]" style={{ background: 'rgba(253,199,0,0.08)', border: '1px solid rgba(253,199,0,0.25)' }}>
+          <div className="text-xs font-semibold mb-1" style={{ color: '#fdc700' }}>Two conditions for TIR:</div>
+          <div className="text-xs" style={{ color: '#a8b8cc' }}>1. Light travels from denser → less dense medium</div>
+          <div className="text-xs" style={{ color: '#a8b8cc' }}>2. Angle of incidence &gt; critical angle</div>
+        </div>
+        <div className="px-3 py-2 rounded-[10px]" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
+          <div className="text-xs font-semibold mb-1" style={{ color: '#10b981' }}>Optical fibre</div>
+          <div className="text-xs" style={{ color: '#a8b8cc' }}>Light bounces along fibre by repeated TIR. Used for internet, medical endoscopes.</div>
+        </div>
+      </div>
+      <IdeaCaption>c = critical angle; n = refractive index. Glass: c ≈ 42°</IdeaCaption>
+    </div>
+  )
+}
+
+function TotalInternalReflectionReality() {
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <RealityBadge emoji="💡" title="Optical fibres and the internet" desc="Optical fibres carry internet data as pulses of light at nearly the speed of light, using TIR to keep the signal inside the fibre. One fibre thinner than a human hair can carry millions of phone calls simultaneously." />
+      <RealityBadge emoji="🏥" title="Endoscopes" desc="Doctors use endoscopes — bundles of optical fibres — to see inside the body without surgery. Light travels down one set of fibres; the image returns along another, all via TIR." />
+    </div>
+  )
+}
+
 // ─── 35. Sound & Ultrasound ──────────────────────────────────────────────────
 function SoundWavesLesson() {
   return (
@@ -998,6 +1075,87 @@ function MotorEffectReality() {
   )
 }
 
+// ─── Electromagnetism ────────────────────────────────────────────────────────
+function ElectromagnetismLesson() {
+  const [mode, setMode] = useState(0)
+  const modes = [
+    { label: 'No current', desc: 'No current → no magnetic field. The wire is just a conductor.', fieldLines: 0 },
+    { label: 'Current on', desc: 'Current flows → circular magnetic field forms around the wire. In a solenoid, fields from each turn add together.', fieldLines: 3 },
+    { label: '+ Iron core', desc: 'Soft iron core concentrates field lines dramatically — much stronger electromagnet. Used in MRI, relays, motors.', fieldLines: 6 },
+  ]
+  const m = modes[mode]
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
+      {/* Solenoid SVG */}
+      <svg width="100%" viewBox="0 0 260 100" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+        {/* Iron core (mode 2) */}
+        {mode === 2 && <rect x="40" y="38" width="180" height="24" rx="4" fill="#64748b" opacity="0.6" />}
+        {/* Coil turns */}
+        {[0,1,2,3,4,5,6,7].map(i => (
+          <ellipse key={i} cx={50 + i*22} cy="50" rx="6" ry="16"
+            fill="none" stroke={mode > 0 ? MC : '#2d3e55'} strokeWidth={mode > 0 ? "2" : "1.5"} />
+        ))}
+        {/* Field lines coming out of left end (N pole) */}
+        {mode > 0 && Array.from({length: m.fieldLines}).map((_, i) => {
+          const spread = (i - (m.fieldLines-1)/2) * (m.fieldLines > 3 ? 10 : 14)
+          return <path key={i} d={`M38,${50+spread} Q15,${50+spread*1.5} 5,${50+spread*2}`} fill="none" stroke={MC} strokeWidth="1.2" strokeOpacity="0.7" markerEnd="url(#arr)" />
+        })}
+        {/* Pole labels */}
+        {mode > 0 && <>
+          <text x="4" y="28" fill={MC} fontSize="9" fontWeight="800">N</text>
+          <text x="226" y="28" fill="#ef4444" fontSize="9" fontWeight="800">S</text>
+        </>}
+        {mode === 2 && <text x="90" y="54" fill="#e2e8f0" fontSize="7" fontWeight="600">iron core</text>}
+      </svg>
+      {/* Mode buttons */}
+      <div className="flex gap-2">
+        {modes.map((mo, i) => (
+          <button key={i} onClick={() => setMode(i)}
+            className="flex-1 py-1.5 rounded-[8px] text-xs font-semibold"
+            style={{ background: mode===i ? `${MC}25` : '#1d293d', color: mode===i ? MC : '#a8b8cc', border: `1px solid ${mode===i ? MC : '#2a3a52'}`, fontSize: 9 }}>
+            {mo.label}
+          </button>
+        ))}
+      </div>
+      <div className="px-3 py-2 rounded-[10px] text-xs" style={{ background: `${MC}10`, border: `1px solid ${MC}30`, color: '#e2e8f0' }}>
+        {m.desc}
+      </div>
+    </div>
+  )
+}
+
+function ElectromagnetismIdea() {
+  const factors = [
+    { factor: '↑ Current', effect: '↑ Field strength', color: '#10b981' },
+    { factor: '↑ Turns', effect: '↑ Field strength', color: '#10b981' },
+    { factor: 'Iron core', effect: '↑↑ Field strength', color: '#fdc700' },
+    { factor: 'Thicker wire', effect: 'No effect', color: '#ef4444' },
+  ]
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <FormulaBox formula="Solenoid = Bar Magnet" color={MC} />
+      <div className="flex flex-col gap-1.5">
+        {factors.map((f, i) => (
+          <div key={i} className="flex items-center justify-between px-3 py-1.5 rounded-[8px]" style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+            <span className="text-xs font-semibold" style={{ color: '#f8fafc' }}>{f.factor}</span>
+            <span className="text-xs font-bold" style={{ color: f.color }}>{f.effect}</span>
+          </div>
+        ))}
+      </div>
+      <IdeaCaption>Applications: electric bell, relay switch, loudspeaker, MRI scanner</IdeaCaption>
+    </div>
+  )
+}
+
+function ElectromagnetismReality() {
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <RealityBadge emoji="🧲" title="MRI Scanners" desc="MRI machines use superconducting electromagnets producing fields ~30,000× stronger than Earth's. The magnetic field is created by current in coils of wire cooled to near absolute zero." />
+      <RealityBadge emoji="🔔" title="Electric bell" desc="When the circuit is closed, the electromagnet attracts the iron hammer, which hits the bell. This breaks the circuit, the electromagnet switches off, the hammer resets — repeating rapidly." />
+    </div>
+  )
+}
+
 // ─── 41. EM Induction & Transformers ────────────────────────────────────────
 function EMInductionLesson() {
   const [mode, setMode] = useState('generator')
@@ -1126,6 +1284,98 @@ function EMInductionReality() {
         Transformers only work with AC. DC creates a constant magnetic field - no changing flux → no induced EMF. AC constantly changes the field, continuously inducing current in the secondary coil.
       </div>
       <RealityBadge color={MC}>Transformers require AC - a changing magnetic field is essential</RealityBadge>
+    </div>
+  )
+}
+
+// ─── AC Generators ───────────────────────────────────────────────────────────
+function ACGeneratorsLesson() {
+  const [pos, setPos] = useState(0)
+  const positions = [
+    { label: '0° (vertical)', emf: 0, desc: 'Coil sides move parallel to field lines — no flux cutting — zero EMF induced.', color: '#6366f1' },
+    { label: '90° (horizontal)', emf: 1, desc: 'Coil sides cut field lines at maximum rate — maximum EMF. Current at peak.', color: '#10b981' },
+    { label: '180° (vertical)', emf: 0, desc: 'Coil sides again parallel to field — zero EMF again. Half rotation complete.', color: '#6366f1' },
+    { label: '270° (horizontal)', emf: -1, desc: 'Coil sides cutting field in opposite direction — maximum EMF in reverse direction.', color: '#ef4444' },
+  ]
+  const p = positions[pos]
+  // AC wave SVG — highlight the current point
+  const waveX = [20, 70, 120, 170, 220]
+  const waveY = [70, 20, 70, 120, 70] // sine-like
+  const wavePath = waveX.map((x,i) => `${i===0?'M':'L'}${x},${waveY[i]}`).join(' ')
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
+      <svg width="100%" viewBox="0 0 240 100" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+        {/* Magnets */}
+        <rect x="5" y="20" width="30" height="60" rx="4" fill="#ef444430" stroke="#ef4444" strokeWidth="1.2" />
+        <text x="12" y="54" fill="#ef4444" fontSize="9" fontWeight="800">N</text>
+        <rect x="200" y="20" width="30" height="60" rx="4" fill="#3b82f630" stroke="#3b82f6" strokeWidth="1.2" />
+        <text x="208" y="54" fill="#3b82f6" fontSize="9" fontWeight="800">S</text>
+        {/* Field lines */}
+        {[30,45,60,70].map(y => <line key={y} x1="35" y1={y} x2="200" y2={y} stroke="#4a5a72" strokeWidth="0.8" strokeOpacity="0.5" />)}
+        {/* Rotating coil */}
+        {pos % 2 === 0
+          ? <rect x="105" y="25" width="25" height="50" rx="2" fill="none" stroke={p.color} strokeWidth="2.5" />
+          : <rect x="92" y="38" width="50" height="24" rx="2" fill="none" stroke={p.color} strokeWidth="2.5" />
+        }
+        {/* Slip rings */}
+        <circle cx="130" cy="88" r="5" fill="none" stroke="#a8b8cc" strokeWidth="1.2" />
+        <circle cx="115" cy="88" r="5" fill="none" stroke="#a8b8cc" strokeWidth="1.2" />
+        {/* EMF indicator */}
+        <text x="125" y="13" fill={p.color} fontSize="8" fontWeight="700" textAnchor="middle">EMF: {p.emf === 0 ? '0' : p.emf === 1 ? 'MAX +' : 'MAX −'}</text>
+      </svg>
+      {/* AC output wave */}
+      <svg width="100%" viewBox="0 0 240 90" style={{ background: '#0b1121', borderRadius: 8, border: '1px solid #1d293d' }}>
+        <line x1="10" y1="70" x2="230" y2="70" stroke="#2d3e55" strokeWidth="1" />
+        <line x1="10" y1="10" x2="10" y2="85" stroke="#2d3e55" strokeWidth="1" />
+        <text x="115" y="87" fill="#4a5a72" fontSize="6" textAnchor="middle">Time →</text>
+        <text x="4" y="40" fill="#4a5a72" fontSize="6" textAnchor="middle" transform="rotate(-90,4,40)">EMF</text>
+        <path d="M10,70 Q35,10 60,70 Q85,130 110,70 Q135,10 160,70 Q185,130 210,70" fill="none" stroke="#6366f1" strokeWidth="1.5" />
+        {/* Current position dot */}
+        <circle cx={[10,60,110,160][pos]} cy={[70,70,70,70][pos]} r="4" fill={p.color} />
+      </svg>
+      <div className="flex gap-1">
+        {positions.map((po, i) => (
+          <button key={i} onClick={() => setPos(i)}
+            className="flex-1 py-1 rounded-[6px] text-xs font-semibold"
+            style={{ background: pos===i ? `${po.color}25` : '#1d293d', color: pos===i ? po.color : '#a8b8cc', border: `1px solid ${pos===i ? po.color : '#2a3a52'}`, fontSize: 8 }}>
+            {po.label}
+          </button>
+        ))}
+      </div>
+      <div className="px-2 py-1.5 rounded-[8px] text-xs" style={{ background: `${p.color}10`, border: `1px solid ${p.color}25`, color: '#e2e8f0' }}>
+        {p.desc}
+      </div>
+    </div>
+  )
+}
+
+function ACGeneratorsIdea() {
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <FormulaBox formula="KE → Electrical Energy" color={MC} />
+      <div className="flex flex-col gap-1.5">
+        {[
+          { label: 'Slip rings', desc: 'Maintain contact as coil rotates — preserve AC output', color: '#a8b8cc' },
+          { label: 'Faster rotation', desc: '↑ frequency AND ↑ peak voltage', color: '#10b981' },
+          { label: 'Stronger magnet', desc: '↑ peak voltage only', color: '#fdc700' },
+          { label: 'More turns', desc: '↑ peak voltage only', color: '#fdc700' },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-[8px]" style={{ background: '#1d293d', border: '0.75px solid #2a3a52' }}>
+            <span className="text-xs font-semibold" style={{ color: item.color }}>{item.label}</span>
+            <span className="text-xs" style={{ color: '#a8b8cc' }}>{item.desc}</span>
+          </div>
+        ))}
+      </div>
+      <IdeaCaption>Slip rings ≠ split-ring commutator. Slip rings → AC. Commutator → DC (motor).</IdeaCaption>
+    </div>
+  )
+}
+
+function ACGeneratorsReality() {
+  return (
+    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
+      <RealityBadge emoji="⚡" title="Every UK power station" desc="Nuclear, gas, coal and wind turbines all use AC generators (alternators) spinning at 50 rotations per second to produce 50 Hz AC electricity for the National Grid." />
+      <RealityBadge emoji="🚗" title="Car alternator" desc="Your car's engine spins an alternator to generate electricity, charging the battery and powering electronics — all using the same electromagnetic induction principle." />
     </div>
   )
 }
@@ -1520,6 +1770,27 @@ export const WAVES_TOPICS = {
     misconception: 'Light slows down (not speeds up) when entering denser media like glass.',
     concept: 'Glass is optically denser than air. When light slows down entering glass, it bends towards the normal. When leaving glass back into air (speeding up), it bends away from the normal - causing the familiar prism rainbow effect.',
   },
+  total_internal_reflection: {
+    id: 'total_internal_reflection', module: 'Waves', moduleColor: WC, course: 'physics-only',
+    title: 'Total Internal Reflection', subtitle: 'Critical Angle & Optical Fibres',
+    description: 'Total internal reflection (TIR) occurs when light travels from a denser medium (e.g. glass) to a less dense medium (e.g. air) and the angle of incidence exceeds the critical angle. At the critical angle, the refracted ray travels along the boundary. Above it, all light reflects internally. Optical fibres exploit TIR to transmit data as light pulses over long distances with minimal energy loss.',
+    lessonVisual: TotalInternalReflectionLesson, ideaVisual: TotalInternalReflectionIdea, realityVisual: TotalInternalReflectionReality,
+    question: 'What must be true for total internal reflection to occur?',
+    questionSubtitle: 'Two conditions must both be met',
+    options: ['Light travels from less dense to more dense medium', 'Light travels from more dense to less dense medium AND exceeds the critical angle', 'The angle of incidence must equal exactly 90°', 'The medium must be completely transparent'],
+    correctAnswer: 1,
+    keywords: ['total internal reflection', 'TIR', 'critical angle', 'optical fibre', 'refractive index', 'dense medium', 'endoscope', 'sin c = 1/n', 'refraction', 'boundary'],
+    sentenceStarters: ['Total internal reflection occurs when...', 'The critical angle is the angle at which...', 'Optical fibres use TIR because...', 'For TIR to occur, light must travel from...', 'Above the critical angle, the light...'],
+    modelAnswers: [
+      'Total internal reflection occurs when **light travels from a more dense to a less dense medium AND the angle of incidence exceeds the critical angle**.',
+      'The critical angle is the angle at which **the refracted ray travels exactly along the boundary (refraction angle = 90°) — above this, no refraction occurs**.',
+      'Optical fibres use TIR because **light pulses bounce along the fibre by repeated total internal reflection, travelling long distances with very little energy loss**.',
+      'For TIR to occur, light must travel from **a more optically dense medium (e.g. glass) into a less optically dense medium (e.g. air)**.',
+      'Above the critical angle, the light **is completely reflected back into the denser medium — no refracted ray exits**.',
+    ],
+    misconception: 'TIR only happens when light goes from denser to less dense (glass to air), NOT the other way around. Light entering glass from air cannot undergo TIR.',
+    concept: 'TIR: dense → less dense, angle > critical angle. sin c = 1/n. Used in optical fibres (internet) and endoscopes (medicine). All light reflected — none escapes.',
+  },
   sound_ultrasound: {
     id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only',
     title: 'Sound Waves & Ultrasound', subtitle: 'Hearing Range, Echoes & Medical Imaging',
@@ -1646,6 +1917,27 @@ export const WAVES_TOPICS = {
     misconception: 'Force is zero when current is parallel to the magnetic field, not maximum.',
     concept: 'F = BIL - force is directly proportional to current. Doubling I doubles F. Force is maximum when current is perpendicular (90°) to the field, and zero when parallel (0°). This is why motors rotate - the direction of force changes as the coil turns.',
   },
+  electromagnetism: {
+    id: 'electromagnetism', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'combined',
+    title: 'Electromagnetism', subtitle: 'Current Creates Magnetic Fields',
+    description: 'A current-carrying wire creates a circular magnetic field around it. A solenoid (coil of wire with current) creates a magnetic field similar to a bar magnet, with distinct north and south poles. Strength is increased by: more current, more turns, adding a soft iron core. Applications include electric bells, relay switches and loudspeakers.',
+    lessonVisual: ElectromagnetismLesson, ideaVisual: ElectromagnetismIdea, realityVisual: ElectromagnetismReality,
+    question: 'Which change would NOT increase the strength of an electromagnet?',
+    questionSubtitle: 'Think about what factors affect magnetic field strength',
+    options: ['Increasing the current', 'Adding a soft iron core', 'Increasing the number of coil turns', 'Using a thicker copper wire'],
+    correctAnswer: 3,
+    keywords: ['electromagnet', 'solenoid', 'magnetic field', 'iron core', 'current', 'turns', 'relay', 'electric bell', 'loudspeaker', 'right-hand rule'],
+    sentenceStarters: ['A current-carrying wire creates a magnetic field because...', 'The strength of an electromagnet can be increased by...', 'A solenoid behaves like a bar magnet because...', 'An iron core increases field strength because...', 'In a relay switch, the electromagnet...'],
+    modelAnswers: [
+      'A current-carrying wire creates a magnetic field because **moving electric charges produce a magnetic field around them — the field forms concentric circles around the wire**.',
+      'The strength of an electromagnet can be increased by **increasing the current, increasing the number of turns, or inserting a soft iron core**.',
+      'A solenoid behaves like a bar magnet because **the fields from each loop of wire add together to create a uniform field inside the coil with distinct north and south poles**.',
+      'An iron core increases field strength because **soft iron is easily magnetised and concentrates the magnetic field lines, greatly amplifying the total field**.',
+      'In a relay switch, the electromagnet **attracts a soft iron armature when switched on, closing a separate high-current circuit — allowing a small current to control a much larger one safely**.',
+    ],
+    misconception: 'Thicker wire does not increase magnetic field strength — it is current and number of turns that matter, not wire thickness.',
+    concept: 'Solenoid = bar magnet. Strength: ↑ current, ↑ turns, iron core. Applications: bells, relays, loudspeakers. Thicker wire has NO effect on field strength.',
+  },
   em_induction: {
     id: 'em_induction', module: 'Magnetism', moduleColor: MC, course: 'physics-only',
     title: 'EM Induction & Transformers', subtitle: 'Generators, Alternators & Vp/Vs = Np/Ns',
@@ -1666,6 +1958,27 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Transformers require AC - they cannot work with DC.',
     concept: 'Vs/Vp = Ns/Np → Vs = 50 × (1000/200) = 250 V. This is a step-up transformer. Transformers only work with AC because they need a changing magnetic flux to induce a current in the secondary coil. DC creates a constant field with no change in flux.',
+  },
+  ac_generators: {
+    id: 'ac_generators', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
+    title: 'AC Generators', subtitle: 'Rotating Coil in a Magnetic Field',
+    description: 'An AC generator converts kinetic energy into electrical energy. A coil rotates in a magnetic field — as it cuts through field lines, an EMF is induced. The direction of induced current reverses each half-turn, producing alternating current. Slip rings and brushes maintain continuous electrical contact. Output voltage is increased by rotating faster (also increases frequency), using a stronger magnet, or adding more turns.',
+    lessonVisual: ACGeneratorsLesson, ideaVisual: ACGeneratorsIdea, realityVisual: ACGeneratorsReality,
+    question: 'How does an AC generator produce alternating current?',
+    questionSubtitle: 'Think about what happens as the coil rotates',
+    options: ['The slip rings reverse the current every half-turn', 'The coil cuts field lines and the direction of induced EMF reverses each half-turn', 'The magnetic field automatically alternates direction', 'The brushes push current in alternating directions'],
+    correctAnswer: 1,
+    keywords: ['AC generator', 'alternator', 'slip rings', 'brushes', 'rotating coil', 'magnetic field', 'induced EMF', 'alternating current', 'electromagnetic induction', 'frequency'],
+    sentenceStarters: ['An AC generator works by...', 'The current alternates because...', 'Slip rings are used instead of a commutator because...', 'The output voltage can be increased by...', 'The difference between an AC generator and a DC motor is...'],
+    modelAnswers: [
+      'An AC generator works by **rotating a coil in a magnetic field — as the coil cuts through field lines, an EMF is induced by electromagnetic induction**.',
+      'The current alternates because **each half-turn the coil sides swap which direction they cut through the field lines, reversing the induced EMF and therefore the current direction**.',
+      'Slip rings are used instead of a commutator because **slip rings allow continuous rotation while maintaining contact, preserving the alternating nature of the current — a commutator would rectify it to DC**.',
+      'The output voltage can be increased by **rotating the coil faster (also increases frequency), using a stronger magnet, or increasing the number of turns on the coil**.',
+      'The difference between an AC generator and a DC motor is **a generator converts kinetic energy to electrical energy; a motor does the reverse. Generators use slip rings (AC); DC motors use a split-ring commutator**.',
+    ],
+    misconception: 'Slip rings do NOT reverse the current — they just maintain contact as the coil rotates. The current alternates because of the coil geometry changing relative to the field each half-turn.',
+    concept: 'Rotating coil → cutting field lines → induced EMF reverses each half-turn → AC. Slip rings maintain contact. Output ↑ with speed (and frequency), field strength, or turns.',
   },
   solar_system: {
     id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics-only',

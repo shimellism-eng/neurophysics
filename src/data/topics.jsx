@@ -40,6 +40,7 @@ export const MODULES = [
       'series_parallel',
       'domestic_electricity',
       'electrical_power',
+      'national_grid',
       'static_electricity',
     ],
   },
@@ -50,6 +51,7 @@ export const MODULES = [
     topics: [
       'states_density',
       'internal_energy',
+      'specific_latent_heat',
       'gas_pressure',
     ],
   },
@@ -79,6 +81,7 @@ export const MODULES = [
       'moments',
       'fluid_pressure',
       'motion_graphs',
+      'terminal_velocity',
       'newtons_laws',
       'stopping_distance',
       'momentum',
@@ -92,6 +95,7 @@ export const MODULES = [
       'wave_types',
       'wave_properties',
       'wave_reflection',
+      'total_internal_reflection',
       'sound_ultrasound',
       'em_spectrum',
       'lenses',
@@ -104,8 +108,10 @@ export const MODULES = [
     icon: Magnet,
     topics: [
       'magnetism_fields',
+      'electromagnetism',
       'motor_effect',
       'em_induction',
+      'ac_generators',
     ],
   },
   {

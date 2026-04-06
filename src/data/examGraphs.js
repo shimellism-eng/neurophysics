@@ -153,6 +153,221 @@ const examGraphs = {
     }
   ],
 
+  terminal_velocity: [
+    {
+      type: "graph-read",
+      question: "At what time does the skydiver reach terminal velocity?",
+      questionSubtitle: "Use the velocity-time graph below",
+      graphType: "velocity-time",
+      points: [
+        { t: 0, v: 0 },
+        { t: 8, v: 50 },
+        { t: 14, v: 50 },
+        { t: 16, v: 15 },
+        { t: 22, v: 15 }
+      ],
+      xLabel: "Time (s)",
+      yLabel: "Velocity (m/s)",
+      taskType: "read-value",
+      answer: 8,
+      answerUnit: "s",
+      steps: [
+        "Terminal velocity is where the graph becomes flat (constant velocity)",
+        "The first flat section starts at t = 8 s",
+        "Terminal velocity is reached at t = 8 s"
+      ],
+      commonMistake: "Terminal velocity is not the maximum speed — it is where the speed becomes constant (gradient = 0).",
+      tier: 1,
+      senNote: "Flat section = no acceleration = balanced forces = terminal velocity."
+    },
+    {
+      type: "graph-read",
+      question: "Calculate the acceleration of the skydiver in the first 8 seconds.",
+      questionSubtitle: "Use the velocity-time graph below",
+      graphType: "velocity-time",
+      points: [
+        { t: 0, v: 0 },
+        { t: 8, v: 50 },
+        { t: 14, v: 50 }
+      ],
+      xLabel: "Time (s)",
+      yLabel: "Velocity (m/s)",
+      taskType: "gradient",
+      answer: 6.25,
+      answerUnit: "m/s²",
+      steps: [
+        "Acceleration = gradient = change in velocity ÷ time taken",
+        "Change in velocity = 50 - 0 = 50 m/s",
+        "Time = 8 - 0 = 8 s",
+        "Acceleration = 50 ÷ 8 = 6.25 m/s²"
+      ],
+      commonMistake: "Use only the sloping section (0–8 s) for acceleration. The flat section has zero acceleration.",
+      tier: 2,
+      senNote: "Gradient of a v-t graph = acceleration. Use change in v ÷ change in t."
+    },
+    {
+      type: "graph-read",
+      question: "A skydiver opens their parachute at t = 14 s. Describe what happens to the velocity between t = 14 s and t = 22 s.",
+      questionSubtitle: "Use the velocity-time graph below",
+      graphType: "velocity-time",
+      points: [
+        { t: 0, v: 0 },
+        { t: 8, v: 50 },
+        { t: 14, v: 50 },
+        { t: 18, v: 15 },
+        { t: 22, v: 15 }
+      ],
+      xLabel: "Time (s)",
+      yLabel: "Velocity (m/s)",
+      taskType: "describe",
+      answer: 15,
+      answerUnit: "m/s",
+      steps: [
+        "At t = 14 s, parachute opens → drag suddenly > weight → deceleration",
+        "Velocity decreases from 50 m/s to 15 m/s",
+        "At t = 18 s, new terminal velocity reached (15 m/s) — graph becomes flat again"
+      ],
+      commonMistake: "The skydiver slows down, not stops. A new lower terminal velocity is reached where drag again equals weight.",
+      tier: 3,
+      senNote: "Parachute increases drag → net upward force → deceleration → new terminal velocity."
+    }
+  ],
+
+  half_life: [
+    {
+      type: "graph-read",
+      question: "Use the decay graph to determine the half-life of the radioactive sample.",
+      questionSubtitle: "The graph shows count rate against time.",
+      graphType: "decay",
+      points: [
+        { t: 0, v: 800 },
+        { t: 2, v: 400 },
+        { t: 4, v: 200 },
+        { t: 6, v: 100 },
+        { t: 8, v: 50 }
+      ],
+      xLabel: "Time (hours)",
+      yLabel: "Count rate (counts/min)",
+      taskType: "read-value",
+      answer: 2,
+      answerUnit: "hours",
+      steps: [
+        "Find the initial count rate: 800 counts/min at t = 0",
+        "Find when the count rate has halved: 400 counts/min",
+        "Read the time at 400 counts/min from the graph: t = 2 hours",
+        "Half-life = 2 hours"
+      ],
+      commonMistake: "Read from the initial value to HALF that value. Don't use the time when the count rate reaches zero.",
+      tier: 2,
+      senNote: "Half-life = time for count rate to halve. Start at the top and find when it drops to half."
+    },
+    {
+      type: "graph-read",
+      question: "A radioactive source has a count rate of 640 counts/min. After 6 hours the count rate is 80 counts/min. Calculate the half-life.",
+      questionSubtitle: "Use the decay data provided.",
+      graphType: "decay",
+      points: [
+        { t: 0, v: 640 },
+        { t: 2, v: 320 },
+        { t: 4, v: 160 },
+        { t: 6, v: 80 }
+      ],
+      xLabel: "Time (hours)",
+      yLabel: "Count rate (counts/min)",
+      taskType: "read-value",
+      answer: 2,
+      answerUnit: "hours",
+      steps: [
+        "640 → 320: first half-life (2 hours)",
+        "320 → 160: second half-life (2 hours)",
+        "160 → 80: third half-life (2 hours)",
+        "Three half-lives in 6 hours → half-life = 6 ÷ 3 = 2 hours"
+      ],
+      commonMistake: "Count how many times the count rate halved. Then divide the total time by the number of half-lives.",
+      tier: 2,
+      senNote: "Count the number of halvings. Half-life = total time ÷ number of halvings."
+    },
+    {
+      type: "graph-read",
+      question: "The half-life of iodine-131 is 8 days. A sample starts with count rate 1200 counts/min. What is the count rate after 24 days?",
+      questionSubtitle: "Use the decay graph or calculate using half-lives.",
+      graphType: "decay",
+      points: [
+        { t: 0, v: 1200 },
+        { t: 8, v: 600 },
+        { t: 16, v: 300 },
+        { t: 24, v: 150 }
+      ],
+      xLabel: "Time (days)",
+      yLabel: "Count rate (counts/min)",
+      taskType: "read-value",
+      answer: 150,
+      answerUnit: "counts/min",
+      steps: [
+        "24 days ÷ 8 days = 3 half-lives",
+        "After 1st half-life: 1200 ÷ 2 = 600",
+        "After 2nd half-life: 600 ÷ 2 = 300",
+        "After 3rd half-life: 300 ÷ 2 = 150 counts/min"
+      ],
+      commonMistake: "Halve the count rate once for each half-life. Do NOT just divide the original by the number of half-lives.",
+      tier: 3,
+      senNote: "Divide the time by the half-life to find the number of halvings. Halve the count rate that many times."
+    }
+  ],
+
+  energy_resources: [
+    {
+      type: "graph-read",
+      question: "A bar chart shows the efficiency of four power stations: coal 35%, gas 45%, nuclear 33%, wind 40%. Which power station has the highest efficiency?",
+      questionSubtitle: "Read the bar chart values.",
+      graphType: "bar",
+      points: [
+        { t: 1, v: 35 },
+        { t: 2, v: 45 },
+        { t: 3, v: 33 },
+        { t: 4, v: 40 }
+      ],
+      xLabel: "Power station type",
+      yLabel: "Efficiency (%)",
+      taskType: "read-value",
+      answer: 45,
+      answerUnit: "%",
+      steps: [
+        "Read each bar: coal = 35%, gas = 45%, nuclear = 33%, wind = 40%",
+        "Compare all values",
+        "Gas has the highest efficiency at 45%"
+      ],
+      commonMistake: "Read from the top of each bar, not the middle. Compare all four values before answering.",
+      tier: 1,
+      senNote: "The tallest bar has the highest value. Read each bar carefully from the y-axis."
+    },
+    {
+      type: "graph-read",
+      question: "A bar chart shows annual energy output (TWh) from UK sources: gas 120, nuclear 65, wind 75, solar 15, other 25. What is the total energy output from low-carbon sources (nuclear, wind, solar)?",
+      questionSubtitle: "Use the bar chart data.",
+      graphType: "bar",
+      points: [
+        { t: 1, v: 120 },
+        { t: 2, v: 65 },
+        { t: 3, v: 75 },
+        { t: 4, v: 15 },
+        { t: 5, v: 25 }
+      ],
+      xLabel: "Energy source",
+      yLabel: "Annual output (TWh)",
+      taskType: "area",
+      answer: 155,
+      answerUnit: "TWh",
+      steps: [
+        "Low-carbon sources: nuclear (65) + wind (75) + solar (15)",
+        "Total = 65 + 75 + 15 = 155 TWh"
+      ],
+      commonMistake: "Only add the low-carbon sources (nuclear, wind, solar). Do not include gas.",
+      tier: 2,
+      senNote: "Identify which sources are low-carbon, then add only those values from the chart."
+    }
+  ],
+
   stopping_distance: [
     {
       type: "graph-read",

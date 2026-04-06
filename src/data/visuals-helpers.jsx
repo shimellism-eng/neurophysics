@@ -11,7 +11,23 @@ export function IdeaCaption({ children }) {
   )
 }
 
-export function RealityBadge({ children, color = '#00bc7d' }) {
+export function RealityBadge({ children, color = '#00bc7d', emoji, title, desc }) {
+  if (title || desc) {
+    return (
+      <motion.div
+        className="px-3 py-2 rounded-[10px] text-xs"
+        style={{ background: `${color}18`, border: `1px solid ${color}30` }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <div className="font-bold mb-0.5" style={{ color }}>
+          {emoji && <span className="mr-1">{emoji}</span>}{title}
+        </div>
+        <div style={{ color: '#a8b8cc' }}>{desc}</div>
+      </motion.div>
+    )
+  }
   return (
     <motion.div
       className="px-3 py-1.5 rounded-full text-xs font-semibold text-center"

@@ -594,6 +594,104 @@ function ElectricalPowerReality() {
   )
 }
 
+// ─── 11b. National Grid ───────────────────────────────────────────────────────
+function NationalGridLesson() {
+  const [selected, setSelected] = useState(null)
+
+  const stages = [
+    { id: 'station',   label: 'Power Station',        voltage: '~25 kV',   desc: 'Generates electricity by burning fuel or using renewables. Output voltage ~25 kV AC.' },
+    { id: 'stepup',    label: 'Step-up Transformer',  voltage: '400 kV',   desc: 'Increases voltage from ~25 kV to 400 kV. This reduces current, minimising energy loss in cables.' },
+    { id: 'cables',    label: 'Transmission Cables',  voltage: '400 kV',   desc: 'High-voltage cables carry electricity across the country. High V = low I = less heat wasted (P = I²R).' },
+    { id: 'stepdown',  label: 'Step-down Transformer', voltage: '33 kV → 230 V', desc: 'Reduces voltage in stages back to 230 V for safe use in homes and businesses.' },
+    { id: 'home',      label: 'Home / Business',       voltage: '230 V',    desc: 'Consumers receive 230 V AC — safe for appliances. Mains frequency is 50 Hz.' },
+  ]
+
+  const sel = stages.find(s => s.id === selected)
+
+  return (
+    <div className="w-full flex flex-col items-center gap-2 px-2 pt-3 pb-2">
+      {/* Flow diagram */}
+      <svg width="280" height="72" viewBox="0 0 280 72" style={{ display: 'block', overflow: 'visible' }}>
+        {/* Connecting arrows */}
+        {[56, 112, 168, 224].map((x, i) => (
+          <g key={i}>
+            <line x1={x} y1={36} x2={x + 12} y2={36} stroke="#2d3e55" strokeWidth="1.5" />
+            <polygon points={`${x + 12},32 ${x + 20},36 ${x + 12},40`} fill="#2d3e55" />
+          </g>
+        ))}
+        {/* Stage boxes */}
+        {stages.map((stage, i) => {
+          const x = i * 56 + 2
+          const isSelected = selected === stage.id
+          return (
+            <g key={stage.id} style={{ cursor: 'pointer' }} onClick={() => setSelected(selected === stage.id ? null : stage.id)}>
+              <rect x={x} y={16} width={50} height={40} rx={5}
+                fill={isSelected ? `${EC}22` : '#0b1121'}
+                stroke={isSelected ? EC : '#2d3e55'}
+                strokeWidth={isSelected ? 1.5 : 1} />
+              <text x={x + 25} y={31} textAnchor="middle" fontSize={6} fontWeight="bold" fill={isSelected ? EC : '#a8b8cc'}>
+                {stage.label.split(' ').slice(0, 2).join(' ')}
+              </text>
+              <text x={x + 25} y={41} textAnchor="middle" fontSize={5.5} fill={isSelected ? EC : '#637b96'}>
+                {stage.voltage.split(' ')[0]}
+              </text>
+              <text x={x + 25} y={50} textAnchor="middle" fontSize={5} fill={isSelected ? `${EC}cc` : '#4a5a72'}>
+                {stage.voltage.includes('→') ? '→ 230 V' : ''}
+              </text>
+            </g>
+          )
+        })}
+      </svg>
+
+      {/* Info panel */}
+      <div className="w-full rounded-[10px] px-3 py-2 min-h-[52px]"
+        style={{ background: sel ? `${EC}12` : '#0b1121', border: `1px solid ${sel ? EC + '50' : '#1d293d'}` }}>
+        {sel ? (
+          <>
+            <p className="text-xs font-bold mb-0.5" style={{ color: EC }}>{sel.label} — {sel.voltage}</p>
+            <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{sel.desc}</p>
+          </>
+        ) : (
+          <p className="text-xs text-center" style={{ color: '#637b96' }}>Tap a stage to learn what it does</p>
+        )}
+      </div>
+
+      <p className="text-xs text-center" style={{ color: '#637b96' }}>
+        Power station → step-up → cables → step-down → home
+      </p>
+    </div>
+  )
+}
+
+function NationalGridIdea() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
+      <FormulaBox formula="P_loss = I²R" color={EC} />
+      <div className="flex gap-2 w-full justify-center">
+        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${EC}12`, border: `1px solid ${EC}40` }}>
+          <span className="text-xs font-bold" style={{ color: EC }}>Step-up</span>
+          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>↑ Voltage<br />↓ Current</span>
+        </div>
+        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#10b98112', border: '1px solid #10b98140' }}>
+          <span className="text-xs font-bold" style={{ color: '#10b981' }}>Step-down</span>
+          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>↓ Voltage<br />↑ Current</span>
+        </div>
+      </div>
+      <FormulaBox formula="Vp / Vs = Np / Ns" color="#f97316" />
+      <IdeaCaption>Lower current in cables means far less energy wasted as heat (P = I²R)</IdeaCaption>
+    </div>
+  )
+}
+
+function NationalGridReality() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
+      <RealityBadge color={EC}>The UK's transmission grid runs at up to 400,000 V</RealityBadge>
+      <RealityBadge color="#f97316">Without step-up transformers, most electricity generated would be wasted as heat in cables before reaching your home</RealityBadge>
+    </div>
+  )
+}
+
 // ─── 12. Static Electricity ───────────────────────────────────────────────────
 function StaticElectricityLesson() {
   const [charged, setCharged] = useState(false)
@@ -803,6 +901,45 @@ export const ELECTRICITY_TOPICS = {
     ],
     misconception: 'Power depends on both current AND voltage together — a high voltage with tiny current can mean low power.',
     concept: 'P = IV = 3 × 12 = 36 W. This device transfers 36 J every second. P = I²R shows that power increases with the square of current — doubling current quadruples power dissipated in a resistor.',
+  },
+
+  national_grid: {
+    id: 'national_grid',
+    module: 'Electricity',
+    moduleColor: EC,
+    course: 'combined',
+    title: 'The National Grid',
+    subtitle: 'Efficient Electricity Transmission',
+    description: 'The National Grid distributes electricity from power stations to consumers. Step-up transformers increase voltage before long-distance transmission, reducing current. Since power loss = I²R, lower current means far less energy wasted as heat in cables. Step-down transformers then reduce voltage to safe levels for homes (230 V). Transformers only work with alternating current (AC).',
+    lessonVisual: NationalGridLesson,
+    ideaVisual: NationalGridIdea,
+    realityVisual: NationalGridReality,
+    question: 'Why is electricity transmitted at high voltage in the National Grid?',
+    questionSubtitle: 'Think about the relationship between current and power loss',
+    options: [
+      'High voltage makes electricity travel faster',
+      'High voltage means lower current, reducing power loss in cables (P = I²R)',
+      'High voltage is safer for long distances',
+      'High voltage prevents the cables from overheating by increasing resistance',
+    ],
+    correctAnswer: 1,
+    keywords: ['national grid', 'step-up transformer', 'step-down transformer', 'transmission', 'power loss', 'P = I²R', 'high voltage', 'low current', 'alternating current', 'efficiency'],
+    sentenceStarters: [
+      'The National Grid uses high voltage because...',
+      'A step-up transformer increases voltage so that...',
+      'Power loss in cables is given by P = I²R, so...',
+      'Transformers only work with AC because...',
+      'A step-down transformer is needed at the consumer end because...',
+    ],
+    modelAnswers: [
+      'The National Grid uses high voltage because **high voltage means low current (for the same power), and since P_loss = I²R, less current means far less energy wasted as heat in cables**.',
+      'A step-up transformer increases voltage so that **the current in transmission lines is very small, minimising resistive heating losses over long distances**.',
+      'Power loss in cables is given by P = I²R, so **doubling the current quadruples the power lost — high voltage keeps current low to minimise this**.',
+      'Transformers only work with AC because **a changing magnetic flux is needed to induce a voltage in the secondary coil — DC creates a constant flux with no induction**.',
+      'A step-down transformer is needed at the consumer end because **400,000 V would be lethal — it reduces voltage to 230 V for safe use in homes**.',
+    ],
+    misconception: 'High voltage is not used because it is safer — it is actually more dangerous. It is used because it reduces current, which reduces energy loss (P = I²R).',
+    concept: 'P_loss = I²R means power wasted in cables depends on current squared. Step-up transformers reduce current for transmission; step-down transformers make it safe for consumers. Only works with AC.',
   },
 
   static_electricity: {

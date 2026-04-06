@@ -49,7 +49,7 @@ export function AuthProvider({ children }) {
     if (!supabase) return { error: { message: 'Supabase not configured.' } }
     return supabase.auth.signInWithOAuth({
       provider,
-      options: { redirectTo: `${window.location.origin}/#/` },
+      options: { redirectTo: window.location.origin },
     })
   }
 

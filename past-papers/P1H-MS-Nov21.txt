@@ -1,0 +1,1429 @@
+GCSE
+PHYSICS
+8463/1H
+Paper 1 Higher Tier
+Mark scheme
+June 2021
+Version: 1.1 Final Mark Scheme
+
+*216g8463/1H/MS*
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Mark schemes are prepared by the Lead Assessment Writer and considered, together with the relevant
+questions, by a panel of subject teachers. This mark scheme includes any amendments made at the
+standardisation events which all associates participate in and is the scheme which was used by them in
+this examination. The standardisation process ensures that the mark scheme covers the students’
+responses to questions and that every associate understands and applies it in the same correct way.
+As preparation for standardisation each associate analyses a number of students’ scripts. Alternative
+answers not already covered by the mark scheme are discussed and legislated for. If, after the
+standardisation process, associates encounter unusual answers which have not been raised they are
+required to refer these to the Lead Examiner.
+It must be stressed that a mark scheme is a working document, in many cases further developed and
+expanded on the basis of students’ reactions to a particular paper. Assumptions about future mark
+schemes on the basis of one year’s document should be avoided; whilst the guiding principles of
+assessment remain constant, details will change, depending on the content of a particular examination
+paper.
+Further copies of this mark scheme are available from aqa.org.uk
+
+Copyright information
+AQA retains the copyright on all its publications. However, registered schools/colleges for AQA are permitted to copy material from this booklet for their own
+internal use, with the following important exception: AQA cannot give permission to schools/colleges to photocopy any material that is acknowledged to a third
+party even for internal use within the centre.
+Copyright © 2021 AQA and its licensors. All rights reserved.
+
+2
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Information to Examiners
+1. General
+The mark scheme for each question shows:
+• the marks available for each part of the question
+• the total marks available for the question
+• the typical answer or answers which are expected
+• extra information to help the Examiner make his or her judgement
+• the Assessment Objectives, level of demand and specification content that each question is intended
+to cover.
+The extra information is aligned to the appropriate answer in the left-hand part of the mark scheme and
+should only be applied to that item in the mark scheme.
+At the beginning of a part of a question a reminder may be given, for example: where consequential
+marking needs to be considered in a calculation; or the answer may be on the diagram or at a different
+place on the script.
+In general the right-hand side of the mark scheme is there to provide those extra details which confuse
+the main part of the mark scheme yet may be helpful in ensuring that marking is straightforward and
+consistent.
+
+2. Emboldening and underlining
+2.1
+
+In a list of acceptable answers where more than one mark is available ‘any two from’ is used, with
+the number of marks emboldened. Each of the following bullet points is a potential mark.
+
+2.2
+
+A bold and is used to indicate that both parts of the answer are required to award the mark.
+
+2.3
+
+Alternative answers acceptable for a mark are indicated by the use of or. Different terms in the
+mark scheme are shown by a /; eg allow smooth/free movement.
+
+2.4
+
+Any wording that is underlined is essential for the marking point to be awarded.
+
+3
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+3. Marking points
+3.1
+
+Marking of lists
+This applies to questions requiring a set number of responses, but for which students have
+provided extra responses. The general principle to be followed in such a situation is that ‘right +
+wrong = wrong’.
+Each error/contradiction negates each correct response. So, if the number of error/contradictions
+equals or exceeds the number of marks available for the question, no marks can be awarded.
+However, responses considered to be neutral (indicated as * in example 1) are not penalised.
+Example 1: What is the pH of an acidic solution?
+Student
+1
+2
+3
+
+Response
+green, 5
+red*, 5
+red*, 8
+
+Marks awarded
+0
+1
+0
+
+Example 2: Name two planets in the solar system.
+Student
+1
+2
+3.2
+
+Response
+Neptune, Mars, Moon
+Neptune, Sun, Mars,
+Moon
+
+Marks awarded
+1
+0
+
+[1 mark]
+
+[2 marks]
+
+Use of chemical symbols/formulae
+If a student writes a chemical symbol/formula instead of a required chemical name, full credit can
+be given if the symbol/formula is correct and if, in the context of the question, such action is
+appropriate.
+
+3.3
+
+Marking procedure for calculations
+Marks should be awarded for each stage of the calculation completed correctly, as students are
+instructed to show their working. Full marks can, however, be given for a correct numerical
+answer, without any working shown.
+
+3.4
+
+Interpretation of ‘it’
+Answers using the word ‘it’ should be given credit only if it is clear that the ‘it’ refers to the correct
+subject.
+
+3.5
+
+Errors carried forward
+Any error in the answers to a structured question should be penalised once only.
+Papers should be constructed in such a way that the number of times errors can be carried forward
+is kept to a minimum. Allowances for errors carried forward are most likely to be restricted to
+calculation questions and should be shown by the abbreviation ecf in the marking scheme.
+
+4
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+3.6
+
+Phonetic spelling
+The phonetic spelling of correct scientific terminology should be credited unless there is a possible
+confusion with another technical term.
+
+3.7
+
+Brackets
+(…..) are used to indicate information which is not essential for the mark to be awarded but is
+included to help the examiner identify the sense of the answer required.
+
+3.8
+
+Allow
+In the mark scheme additional information, ‘allow’ is used to indicate creditworthy alternative
+answers.
+
+3.9
+
+Ignore
+Ignore is used when the information given is irrelevant to the question or not enough to gain the
+marking point. Any further correct amplification could gain the marking point.
+
+3.10 Do not accept
+Do not accept means that this is a wrong answer which, even if the correct answer is given as
+well, will still mean that the mark is not awarded.
+
+4. Level of response marking instructions
+Extended response questions are marked on level of response mark schemes.
+• Level of response mark schemes are broken down into levels, each of which has a descriptor.
+• The descriptor for the level shows the average performance for the level.
+• There are two marks in each level.
+Before you apply the mark scheme to a student’s answer, read through the answer and annotate it
+(as instructed) to show the qualities that are being looked for. You can then apply the mark scheme.
+
+5
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Step 1: Determine a level
+Start at the lowest level of the mark scheme and use it as a ladder to see whether the answer meets
+the descriptor for that level. The descriptor for the level indicates the different qualities that might be
+seen in the student’s answer for that level. If it meets the lowest level then go to the next one and
+decide if it meets this level, and so on, until you have a match between the level descriptor and the
+answer.
+When assigning a level you should look at the overall quality of the answer. Do not look to penalise
+small and specific parts of the answer where the student has not performed quite as well as the rest.
+If the answer covers different aspects of different levels of the mark scheme you should use a best
+fit approach for defining the level.
+Use the variability of the response to help decide the mark within the level, ie if the response is
+predominantly level 2 with a small amount of level 3 material it would be placed in level 2 but be
+awarded a mark near the top of the level because of the level 3 content.
+Step 2: Determine a mark
+Once you have assigned a level you need to decide on the mark. The descriptors on how to
+allocate marks can help with this.
+The exemplar materials used during standardisation will help. There will be an answer in the
+standardising materials which will correspond with each level of the mark scheme. This answer will
+have been awarded a mark by the Lead Examiner. You can compare the student’s answer with the
+example to determine if it is the same standard, better or worse than the example. You can then
+use this to allocate a mark for the answer based on the Lead Examiner’s mark on the example.
+You may well need to read back through the answer as you apply the mark scheme to clarify points
+and assure yourself that the level and the mark are appropriate.
+Indicative content in the mark scheme is provided as a guide for examiners. It is not intended to be
+exhaustive and you must credit other valid points. Students do not have to cover all of the points
+mentioned in the indicative content to reach the highest level of the mark scheme.
+You should ignore any irrelevant points made. However, full marks can be awarded only if there are
+no incorrect statements that contradict a correct response.
+An answer which contains nothing of relevance to the question must be awarded no marks.
+
+6
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 1
+AO /
+Spec. Ref.
+
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+01.1
+
+the polarity (of the supply) does
+not change
+
+allow potential difference in one
+direction (only)
+
+1
+
+AO1
+4.2.3.1
+
+01.2
+
+energy transferred = power ×
+time
+
+1
+
+AO1
+4.1.1.4
+4.2.4.2
+
+01.3
+
+162 000 000 = 7200 × t
+
+1
+
+AO2
+4.1.1.4
+4.2.4.2
+
+t=
+
+162 000 000
+7200
+
+1
+
+t = 22 500 (s)
+
+1
+
+01.4
+
+V=I×R
+
+1
+
+AO1
+4.2.1.3
+
+01.5
+
+480 = 15 × R
+
+1
+
+AO2
+4.2.1.3
+
+480
+15
+
+1
+
+R = 32 (Ω)
+
+1
+
+time taken using system A is
+double the time of system B
+
+1
+
+R=
+
+01.6
+
+Total
+
+AO3
+4.2.4.1
+
+10
+
+7
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 2
+Question
+
+02.1
+
+02.2
+
+02.3
+
+8
+
+Answers
+nuclei
+
+Extra information
+do not accept atoms
+
+Mark
+1
+
+decreases
+
+1
+
+m = 0.004 (kg)
+
+1
+
+E = 0.004 × 5200 × 50 000 000
+
+allow a correct substitution of an
+incorrectly/not converted value
+of m
+
+1
+
+E = 1.04 × 109 (J)
+or
+E = 1 040 000 000 (J)
+
+allow a correct calculation using
+an incorrectly/not converted
+value of m
+
+1
+
+any two from:
+• to make sure the fusion
+process is possible
+• to develop an understanding
+of the process
+• to make adaptations to the
+process
+• to assess the efficiency of the
+process
+• to make predictions
+• assess safety risks
+• to assess environmental
+impact
+• set-up cost is lower (for small
+scale experiments)
+
+2
+
+AO /
+Spec. Ref.
+AO1
+4.4.4.2
+
+AO2
+4.3.2.2
+4.1.1.3
+
+AO3
+4.1.3
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+02.4
+
+releases carbon dioxide
+which causes global warming
+
+allow releases greenhouse
+gases
+allow which causes climate
+change
+
+1
+1
+
+AO1
+4.1.3
+
+OR
+releases particulates
+which causes global dimming
+or
+which causes breathing
+problems
+OR
+releases sulfur dioxide
+which causes acid rain
+OR
+releases nitrogen oxides
+which causes breathing
+problems
+or
+which causes acid rain
+Total
+
+9
+
+9
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 3
+Question
+03.1
+
+Answers
+Level 3: The method would lead to the production of a valid
+outcome. All key steps are identified and logically sequenced.
+
+5–6
+
+Level 2: The method would not necessarily lead to a valid
+outcome. Most steps are identified, but the plan is not fully logically
+sequenced.
+
+3–4
+
+Level 1: The method would not lead to a valid outcome. Some
+relevant steps are identified, but links are not made clear.
+
+1–2
+
+No relevant content
+
+0
+
+Indicative content
+• measure the current in R using the ammeter
+• measure the p.d. across R using the voltmeter
+• vary the resistance of the variable resistor
+(or vary the number of cells or use a variable power supply)
+• record a range of values of current and p.d.
+• ensure current is low to avoid temperature increase
+• switch circuit off between readings
+• reverse connection of R to power supply
+• repeat measurements of I and V in negative direction
+• plot a graph of current against p.d.
+
+10
+
+Mark
+
+AO/
+Spec. Ref
+AO1
+4.2.1.4
+RPA4
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Answers
+
+03.2
+
+current and p.d. would not be
+directly proportional
+or
+I-V graph would not be straight
+or
+I-V graph would be curved
+
+1
+
+(because) resistance of R would
+increase
+
+1
+
+0.2 (A)
+
+1
+
+AO3
+4.2.2
+RPA4
+
+1
+
+AO3
+4.2.2
+RPA4
+
+03.3
+
+03.4
+
+any one from:
+• less chance of misreading
+• no parallax error
+• it can give a reading closer to
+the true value
+
+Extra information
+
+Mark
+
+AO /
+Spec. Ref.
+
+Question
+
+allow position of eye(s) does not
+affect reading
+
+AO3
+4.2.1.4
+RPA4
+
+allow ‘it is more accurate’
+ignore ‘no human error’
+ignore ‘easier to read’
+
+Total
+
+10
+
+11
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 4
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+04.1
+
+balance / scales
+
+1
+
+AO1
+4.3.1.1
+RPA5
+
+04.2
+
+density =
+
+mass
+volume
+
+1
+
+AO1
+4.3.1.1
+RPA5
+
+1
+
+AO2
+4.3.1.1
+RPA5
+
+or
+ρ=
+
+04.3
+
+m
+V
+
+85
+V
+85
+V=
+0.68
+0.68 =
+
+1
+1
+
+V = 125 (cm3)
+
+04.4
+
+Total
+
+12
+
+AO /
+Spec. Ref.
+
+repeat readings (of volume)
+need taking (of each fruit) to
+show that the readings are close
+together
+
+1
+allow ‘the same’ for ‘close
+together’
+
+6
+
+AO3
+4.3.1.1
+RPA5
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 5
+Question
+
+05.1
+
+Answers
+
+E=
+
+1.25×1018
+
+Mark
+
+1
+
+7
+
+3.16×10
+
+E = 3.96 × 1010 (J)
+
+05.2
+
+Extra information
+
+an answer that rounds to 3.96 ×
+1010 (J) scores 1 mark
+
+t = 86 400 (s)
+
+1
+1
+
+27 000
+86 400
+
+allow a correct rearrangement
+using an incorrectly/not
+converted value of t
+
+1
+
+I = 0.3125 (A)
+
+allow a correct calculation using
+an incorrectly/not converted
+value of t
+
+1
+
+I=
+
+AO2
+4.1.1.4
+
+1
+
+allow a correct substitution of an
+incorrectly/not converted value
+of t
+
+27 000 = I × 86 400
+
+AO /
+Spec. Ref.
+
+AO2
+4.2.1.2
+
+allow a correctly calculated
+answer rounded to 2 or 3 sf
+05.3
+
+05.4
+
+0.15 =
+
+useful power output
+7800
+
+allow a correct substitution of an
+incorrectly/not converted value
+of total power input
+
+useful power output =
+0.15 × 7800
+
+allow a correct rearrangement
+using an incorrectly/not
+converted value of total power
+input
+
+useful power output = 1170 (W)
+
+this answer only but allow 1200
+(W) if correct working shown
+
+a really large area of land would
+need to be covered with solar
+cells
+due to the low useful power
+output of the solar cells
+
+1
+1
+
+1
+
+1
+
+allow due to the low efficiency of
+the solar cells
+
+AO2
+4.1.2.2
+
+AO2
+4.1.3
+
+1
+13
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+or
+number of hours of daylight is
+too low (in UK)
+or
+low solar intensity (in UK)
+or
+solar radiation (in UK) is too low
+or
+material for construction of solar
+cells and/or lithium batteries is in
+limited supply
+
+Total
+
+14
+
+11
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 6
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+AO /
+Spec. Ref.
+
+06.1
+
+148
+
+1
+
+AO1
+4.4.1.2
+
+06.2
+
+D and E
+
+1
+
+AO1
+4.4.1.2
+
+line between B and 86 protons
+
+1
+
+same line between B and 222
+mass number
+
+1
+
+06.3
+
+06.4
+
+AO2
+4.4.2.2
+
+1
+
+AO1
+4.4.2.3
+
+one alpha decay would
+decrease proton number by 2
+
+1
+
+AO1
+4.4.2.2
+
+two beta decays would increase
+proton number by 2
+
+1
+
+can’t predict which nucleus will
+decay next
+or
+can’t predict when a (particular)
+nucleus will decay
+
+06.5
+
+so the proton / atomic number of
+the final nucleus is the same as
+the proton / atomic number of
+the original nucleus
+Total
+
+this mark is dependent on
+scoring the first two marks
+
+1
+
+8
+
+15
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 7
+Question
+
+07.1
+
+Answers
+
+Extra information
+
+Mark
+
+I = 0.08 (A)
+
+an incorrect value of I from the
+graph can score all subsequent
+marks
+
+1
+
+0.230 = 0.08 × V
+
+allow a correct substitution of an
+incorrectly/not converted value
+of P
+
+1
+
+0.230
+0.08
+
+allow a correct rearrangement
+using an incorrectly/not
+converted value of P
+
+1
+
+V = 2.875 (V)
+
+allow a correct calculation using
+an incorrectly/not converted
+value of P
+
+1
+
+V=
+
+OR
+
+AO /
+Spec. Ref.
+AO2
+4.2.4.1
+
+I = 0.08 (A) (1)
+V = 0.08 × 36 (2)
+V = 2.88 (V) (1)
+OR
+0.230 = I2 × 36 (1)
+I = 0.08 (A) (1)
+V = 0.08 × 36 (1)
+V = 2.88 (V) (1)
+
+07.2
+
+16
+
+the product of current and
+resistance = a constant
+
+1
+
+calculation of constant (2.88)
+using three or more pairs of
+values
+
+1
+if no other marks scored allow
+for one mark a statement that
+doubling one quantity (R or I)
+halves the other quantity
+
+AO2
+
+AO3
+4.2.1.3
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+07.3
+
+current would be (almost) zero
+(in the variable resistor)
+(because) the switch has
+(effectively) zero resistance
+or
+the potential difference across
+the variable resistor is
+(effectively) zero
+
+Total
+
+the switch’s resistance is much
+lower than the variable resistor
+
+1
+
+AO1
+
+1
+
+AO2
+4.2.2
+4.2.1.3
+
+allow the switch creates a short
+circuit
+8
+
+17
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 8
+Question
+
+Answers
+
+08.1
+
+the total energy of the racing
+track and the car is constant.
+
+08.2
+
+Ep = 0.040 × 9.8 × 0.90
+
+allow a correct substitution of an
+incorrectly/not converted value
+of h
+
+1
+
+AO2
+4.1.1.1
+4.1.1.2
+
+Ep = 0.3528 (J)
+
+this answer only
+
+1
+
+0.3528 = 0.5 × 0.040 × v2
+
+allow a correct substitution of a
+calculated Ep
+
+1
+
+allow a correct rearrangement
+using a calculated Ep
+
+1
+
+allow an answer consistent with
+their calculated Ep
+
+1
+
+0.3528
+0.5 × 0.040
+
+more than 0.20 J
+(because) the car needs to be
+moving at the top of the loop
+or
+(because) the car needs to be
+moving to complete the loop
+or
+not all Ek at B will be transferred
+to Ep at C
+
+18
+
+AO /
+Spec. Ref.
+AO1
+4.1.2.1
+
+v = 4.2 (m/s)
+
+Total
+
+Mark
+
+1
+
+v2 =
+
+08.3
+
+Extra information
+
+1
+this mark is dependent on
+scoring the first mark
+
+1
+
+allow energy dissipated to the
+surroundings
+8
+
+AO3
+4.1.1.1
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 9
+Question
+
+Answers
+
+09.1
+
+0(.0) to 12(.0)
+
+09.2
+
+09.3
+
+Extra information
+
+allow 2(.0) to 12(.0) (N)
+
+Mark
+
+AO /
+Spec. Ref.
+
+1
+
+AO1
+4.3.3.2
+
+mass of gas (in the syringe)
+or
+temperature (of the gas)
+
+1
+
+AO3
+4.3.3.2
+
+constant = 60 × 45
+
+1
+
+AO2
+4.3.3.2
+
+or
+constant = 2700
+2700 = p × 40
+
+1
+
+2700
+40
+
+1
+
+p=
+
+p = 67.5 (kPa)
+
+allow 68 (kPa)
+
+1
+
+19
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+09.4
+
+Total
+
+20
+
+there is more time between
+collisions of particles and the
+walls of the syringe
+or
+there are less frequent collisions
+between the particles and the
+walls of the syringe
+
+1
+
+(causing) a lower (average)
+force on the walls of the syringe
+
+1
+
+(and) pressure is the total force
+per unit area
+
+1
+9
+
+AO1
+4.3.3.2
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 10
+Question
+
+Answers
+
+10.1
+
+(very high p.d. means) very low
+currents
+which means less (thermal)
+energy is transferred to
+surroundings
+
+10.2
+
+Extra information
+
+Mark
+1
+
+allow less power loss in cables
+
+1
+
+electric field strength is very
+high
+
+1
+
+(the kite / string) conducts
+charge to the person / earth
+
+allow the air breaks down
+allow the air becomes a
+conductor
+allow the air conducts charge
+
+AO1
+4.2.4.3
+
+1
+
+which increases the efficiency of
+power transmission
+
+causing the air to become
+ionised
+
+AO /
+Spec. Ref.
+
+AO1
+4.2.5.2
+
+1
+
+1
+
+ignore answers referring to the
+kite touching the power cables
+10.3
+
+10.4
+
+Total
+
+straight line passing through the
+origin
+
+1
+
+line drawn below existing line for
+all values
+
+1
+
+the potential difference across
+the wires/cable is the same
+
+1
+
+(but) the resistance of the steel
+wire is greater (and so less
+current in the steel)
+
+1
+
+AO3
+4.2.5.2
+
+AO1
+4.2.2
+4.2.1.4
+
+10
+
+21
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+Question 11
+Question
+
+11.1
+
+11.2
+
+11.3
+
+Answers
+
+the gradient for ice is steeper
+than the gradient for water
+(liquid)
+
+Mark
+
+allow the temperature of the ice
+increased faster than the
+temperature of the water
+
+1
+
+which means that less energy is
+needed to increase the
+temperature by a fixed amount
+
+1
+
+water took more time to
+vaporise than the ice took to
+melt
+
+1
+
+which means that less energy is
+needed to change the state from
+solid to liquid (than from liquid to
+vapour)
+
+1
+
+any two from:
+
+2
+
+• ice/water would take more
+time to increase in
+temperature
+• ice/water would take more
+time to change state
+• the change in temperature
+with time would not be linear
+
+22
+
+Extra information
+
+allow gradients would be less
+steep
+allow horizontal lines would be
+longer
+
+AO /
+Spec. Ref.
+AO3
+4.3.2.2
+
+AO3
+4.3.2.3
+
+AO3
+4.3.2.2
+4.3.2.3
+RPA1
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2021
+
+11.4
+
+1
+
+E = 69 000 (J)
+69 000 = 0.030 × L
+
+69 000
+L=
+0.030
+L = 2 300 000
+or
+
+allow a correct substitution of an
+incorrectly/not converted value
+of E
+
+1
+
+allow a correct rearrangement
+using an incorrectly/not
+converted value of E
+
+1
+
+allow a correct calculation using
+an incorrectly/not converted
+value of E
+
+1
+
+allow a unit consistent with their
+numerical answer
+eg 2300 kJ/kg
+
+1
+
+AO2
+4.3.2.3
+
+L = 2.3 × 106
+J/kg
+
+Total
+
+11
+
+23
+
+

@@ -1,0 +1,1418 @@
+GCSE
+PHYSICS
+8463/2H
+Paper 2 Higher Tier
+Mark scheme
+June 2021
+Version: 1.0 Final Mark Scheme
+
+*216g8463/2H/MS*
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Mark schemes are prepared by the Lead Assessment Writer and considered, together with the relevant
+questions, by a panel of subject teachers. This mark scheme includes any amendments made at the
+standardisation events which all associates participate in and is the scheme which was used by them in
+this examination. The standardisation process ensures that the mark scheme covers the students’
+responses to questions and that every associate understands and applies it in the same correct way.
+As preparation for standardisation each associate analyses a number of students’ scripts. Alternative
+answers not already covered by the mark scheme are discussed and legislated for. If, after the
+standardisation process, associates encounter unusual answers which have not been raised they are
+required to refer these to the Lead Examiner.
+It must be stressed that a mark scheme is a working document, in many cases further developed and
+expanded on the basis of students’ reactions to a particular paper. Assumptions about future mark
+schemes on the basis of one year’s document should be avoided; whilst the guiding principles of
+assessment remain constant, details will change, depending on the content of a particular examination
+paper.
+Further copies of this mark scheme are available from aqa.org.uk
+
+Copyright information
+AQA retains the copyright on all its publications. However, registered schools/colleges for AQA are permitted to copy material from this booklet for their own internal
+use, with the following important exception: AQA cannot give permission to schools/colleges to photocopy any material that is acknowledged to a third party even for
+internal use within the centre.
+Copyright © 2021 AQA and its licensors. All rights reserved.
+
+2
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Information to Examiners
+1. General
+The mark scheme for each question shows:
+• the marks available for each part of the question
+• the total marks available for the question
+• the typical answer or answers which are expected
+• extra information to help the Examiner make his or her judgement
+• the Assessment Objectives, level of demand and specification content that each question is intended
+to cover.
+The extra information is aligned to the appropriate answer in the left-hand part of the mark scheme and
+should only be applied to that item in the mark scheme.
+At the beginning of a part of a question a reminder may be given, for example: where consequential
+marking needs to be considered in a calculation; or the answer may be on the diagram or at a different
+place on the script.
+In general the right-hand side of the mark scheme is there to provide those extra details which confuse
+the main part of the mark scheme yet may be helpful in ensuring that marking is straightforward and
+consistent.
+
+2. Emboldening and underlining
+2.1
+
+In a list of acceptable answers where more than one mark is available ‘any two from’ is used, with
+the number of marks emboldened. Each of the following bullet points is a potential mark.
+
+2.2
+
+A bold and is used to indicate that both parts of the answer are required to award the mark.
+
+2.3
+
+Alternative answers acceptable for a mark are indicated by the use of or. Different terms in the
+mark scheme are shown by a /; eg allow smooth/free movement.
+
+2.4
+
+Any wording that is underlined is essential for the marking point to be awarded.
+
+3
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+3. Marking points
+3.1
+
+Marking of lists
+This applies to questions requiring a set number of responses, but for which students have
+provided extra responses. The general principle to be followed in such a situation is that ‘right +
+wrong = wrong’.
+Each error/contradiction negates each correct response. So, if the number of error/contradictions
+equals or exceeds the number of marks available for the question, no marks can be awarded.
+However, responses considered to be neutral (indicated as * in example 1) are not penalised.
+Example 1: What is the pH of an acidic solution?
+Student
+1
+2
+3
+
+Response
+green, 5
+red*, 5
+red*, 8
+
+Marks awarded
+0
+1
+0
+
+Example 2: Name two planets in the solar system.
+Student
+1
+2
+3.2
+
+Response
+Neptune, Mars, Moon
+Neptune, Sun, Mars,
+Moon
+
+Marks awarded
+1
+0
+
+[1 mark]
+
+[2 marks]
+
+Use of chemical symbols/formulae
+If a student writes a chemical symbol/formula instead of a required chemical name, full credit can
+be given if the symbol/formula is correct and if, in the context of the question, such action is
+appropriate.
+
+3.3
+
+Marking procedure for calculations
+Marks should be awarded for each stage of the calculation completed correctly, as students are
+instructed to show their working. Full marks can, however, be given for a correct numerical
+answer, without any working shown.
+
+3.4
+
+Interpretation of ‘it’
+Answers using the word ‘it’ should be given credit only if it is clear that the ‘it’ refers to the correct
+subject.
+
+3.5
+
+Errors carried forward
+Any error in the answers to a structured question should be penalised once only.
+Papers should be constructed in such a way that the number of times errors can be carried forward
+is kept to a minimum. Allowances for errors carried forward are most likely to be restricted to
+calculation questions and should be shown by the abbreviation ecf in the marking scheme.
+
+4
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+3.6
+
+Phonetic spelling
+The phonetic spelling of correct scientific terminology should be credited unless there is a possible
+confusion with another technical term.
+
+3.7
+
+Brackets
+(…..) are used to indicate information which is not essential for the mark to be awarded but is
+included to help the examiner identify the sense of the answer required.
+
+3.8
+
+Allow
+In the mark scheme additional information, ‘allow’ is used to indicate creditworthy alternative
+answers.
+
+3.9
+
+Ignore
+Ignore is used when the information given is irrelevant to the question or not enough to gain the
+marking point. Any further correct amplification could gain the marking point.
+
+3.10 Do not accept
+Do not accept means that this is a wrong answer which, even if the correct answer is given as
+well, will still mean that the mark is not awarded.
+
+4. Level of response marking instructions
+Extended response questions are marked on level of response mark schemes.
+• Level of response mark schemes are broken down into levels, each of which has a descriptor.
+• The descriptor for the level shows the average performance for the level.
+• There are two marks in each level.
+Before you apply the mark scheme to a student’s answer, read through the answer and annotate it
+(as instructed) to show the qualities that are being looked for. You can then apply the mark scheme.
+
+5
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Step 1: Determine a level
+Start at the lowest level of the mark scheme and use it as a ladder to see whether the answer meets
+the descriptor for that level. The descriptor for the level indicates the different qualities that might be
+seen in the student’s answer for that level. If it meets the lowest level then go to the next one and
+decide if it meets this level, and so on, until you have a match between the level descriptor and the
+answer.
+When assigning a level you should look at the overall quality of the answer. Do not look to penalise
+small and specific parts of the answer where the student has not performed quite as well as the rest.
+If the answer covers different aspects of different levels of the mark scheme you should use a best
+fit approach for defining the level.
+Use the variability of the response to help decide the mark within the level, ie if the response is
+predominantly level 2 with a small amount of level 3 material it would be placed in level 2 but be
+awarded a mark near the top of the level because of the level 3 content.
+Step 2: Determine a mark
+Once you have assigned a level you need to decide on the mark. The descriptors on how to
+allocate marks can help with this.
+The exemplar materials used during standardisation will help. There will be an answer in the
+standardising materials which will correspond with each level of the mark scheme. This answer will
+have been awarded a mark by the Lead Examiner. You can compare the student’s answer with the
+example to determine if it is the same standard, better or worse than the example. You can then
+use this to allocate a mark for the answer based on the Lead Examiner’s mark on the example.
+You may well need to read back through the answer as you apply the mark scheme to clarify points
+and assure yourself that the level and the mark are appropriate.
+Indicative content in the mark scheme is provided as a guide for examiners. It is not intended to be
+exhaustive and you must credit other valid points. Students do not have to cover all of the points
+mentioned in the indicative content to reach the highest level of the mark scheme.
+You should ignore any irrelevant points made. However, full marks can be awarded only if there are
+no incorrect statements that contradict a correct response.
+An answer which contains nothing of relevance to the question must be awarded no marks.
+
+6
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 1
+Question
+01.1
+
+Answers
+
+Extra information
+
+Mark
+
+Level 2: Relevant points (reasons / causes) are identified, given in
+detail and logically linked to form a clear account.
+
+3–4
+
+Level 1: Point are identified and stated simply, but their relevance
+is not clear and there is no attempt at logical linking.
+
+1–2
+
+No relevant content
+
+0
+
+AO/
+Spec. Ref
+AO1
+4.5.6.3.3
+4.5.6.3.4
+4.1.1.2
+
+Indicative content
+Factors
+• poor condition of tyres
+• poor road surface
+• wet or icy road
+• poor/worn brakes
+Explanation
+• because of decreased friction
+Factors
+• increased mass of car/passengers
+Explanation
+• increases kinetic energy of car
+• more work needs to be done to stop car
+• increases momentum of the car
+Factor
+• road slopes downhill
+Explanation
+• (a component of) gravity opposes the braking force
+• resultant (braking) force is reduced
+allow answers in terms of reducing braking distance throughout
+A single factor with no related explanation is insufficient to score a
+mark
+
+7
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+01.2
+
+resultant force = mass ×
+acceleration
+
+01.3
+
+7200 = 1600 × a
+
+01.4
+
+01.5
+
+01.6
+
+ignore negatives throughout
+
+1
+
+AO1
+4.5.6.2.2
+
+1
+
+AO2
+4.5.6.2.2
+
+a = 7200
+1600
+
+1
+
+a = 4.5 (m/s2)
+
+1
+
+15 (m) 38 (m)
+
+two correct values identified
+
+1
+
+= 53 (m)
+
+allow the correct addition of a
+misread braking distance and
+/or a misread thinking distance
+taken from the graph
+
+1
+
+F
+A
+
+AO3
+4.5.6.3.1
+
+1
+
+AO1
+4.5.5.1.1
+
+120 000 = 60
+A
+
+1
+
+AO2
+
+A=
+
+1
+
+AO2
+
+1
+
+AO2
+
+1
+
+AO2
+
+1
+
+AO1
+
+p=
+
+60 .
+120 000
+
+A = 0.0005
+A = 5 (.0) × 10–4
+m2
+
+allow an answer given to 2 sig
+figs from an incorrect calculation
+using the given data
+
+4.5.5.1.1
+Total
+
+8
+
+16
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 2
+Question
+02.1
+
+Answers
+
+Extra information
+
+will return to its original
+shape/length
+when the force is removed
+
+Mark
+1
+
+allow (when) the child gets off
+
+AO/
+Spec. Ref
+AO2
+4.5.3
+
+1
+
+the second mark is dependent
+on scoring the first mark
+02.2
+
+Level 3: The method would lead to the production of a valid
+outcome. The key steps are identified and logically sequenced.
+
+5–6
+
+Level 2: The method would not necessarily lead to a valid
+outcome. Most steps are identified, but the method is not fully
+logically sequenced.
+
+3–4
+
+Level 1: The method would not lead to a valid outcome. Some
+relevant steps are identified, but links are not made clear.
+
+1–2
+
+No relevant content
+
+0
+
+AO1
+4.5.3
+
+Indicative content
+• set up a clamp stand with a clamp
+• hang the spring from the clamp
+• use a second clamp and boss to fix a (half) metre rule alongside
+the spring
+• record the ruler reading that is level with the bottom of the spring
+• hang a 1 N / a known weight from the bottom of the spring
+• record the new position of the bottom of the spring
+• calculate the extension of the spring
+• measure the extension of the spring
+• add further weights to the spring so the force increases 1 N at a
+time up to 5 N
+• for each new force record the position of the bottom of the spring
+and calculate / measure the extension
+
+Indicative content continues on the next page…
+
+9
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Risk Assessment
+Hazard:
+Risk:
+Precaution:
+
+Clamp (stand, boss and masses) might fall off desk
+injury to feet
+Use clamp to fix apparatus to the bench or
+Ensure that the slotted masses hang over the
+base/foot of the stand or
+Ensure that the boss is screwed tightly into the stand
+and clamp or
+Put (heavy) masses on the base/foot of the stand
+or
+Stand up so that you can move out of the way
+
+Hazard:
+Risk:
+Precaution:
+
+Spring could break / come loose
+damage eye
+Wear safety goggles
+
+If a risk assessment / hazard is not given, the answer can still reach
+level 3, but not full marks.
+Full marks may be awarded for alternative feasible methods.
+02.3
+
+force = spring constant ×
+extension
+
+02.4
+
+5.00 0.125
+
+02.5
+
+1
+
+AO1
+4.5.3
+
+allow any correct pair of values
+from the graph
+
+1
+
+AO2
+4.5.3
+
+k = 5.00
+0.125
+
+allow a misread value(s) from
+the graph
+
+1
+
+k = 40 (N/m)
+
+allow a correct calculation using
+their incorrect value(s)
+
+1
+
+the line is straight
+
+allow the line does not curve
+allow a constant gradient
+
+1
+
+and passes through the origin
+
+10
+
+1
+
+AO3
+4.5.3
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+02.6
+
+e = 0.20 m
+Ee = 0.5 × 13 × 0.202
+Ee = 0.26 (J)
+
+1
+allow an incorrectly / not
+converted value of e
+
+1
+
+AO2
+4.5.3
+
+1
+
+use of two incorrectly/not
+converted values scores a
+maximum of 1 mark
+
+Total
+
+17
+
+11
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 3
+Question
+
+Answers
+
+Extra information
+
+03.1
+
+gravitational force inwards and
+forces as a result of fusion
+reactions outwards
+
+allow fusion energy for fusion
+reactions outwards
+
+are in equilibrium / balanced
+
+dependant on scoring 1st mark
+point
+
+Mark
+
+1
+
+AO /
+Spec. Ref.
+AO1
+4.8.1.1
+
+allow radiation pressure for
+fusion reactions outwards
+1
+
+allow for 1 mark forces are in
+equilibrium
+03.2
+
+(the star will) expand to become
+a red giant
+
+the answers must be in the
+correct sequence to score all
+3 marks
+
+1
+
+(the star will) collapse to
+become a white dwarf
+
+allowed outer layers ejected for
+collapsed
+
+1
+
+(the star will) cool to become a
+black dwarf
+
+AO1
+4.8.1.2
+
+1
+
+if no other marks score, allow
+red giant, white dwarf, black
+dwarf in the correct order for
+1 mark
+03.3
+
+A
+it is (moving away from Earth)
+the slowest
+or
+it is the closest (to the Earth)
+
+Total
+
+12
+
+1
+reason only scores if A is
+chosen
+
+1
+
+7
+
+AO3
+4.8.2
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 4
+Question
+04.1
+
+Answers
+both answers correct
+
+Mark
+
+answers may be in either order
+
+1
+
+AO3
+4.6.2.5
+
+2
+
+AO2
+4.6.2.5
+
+virtual
+
+04.2
+
+diminished
+
+allow a description of diminished
+(eg smaller / reduced)
+
+any two correct lines drawn
+from the top of the object,
+passing through the lens and
+traced backwards
+
+allow construction lines that are
+not dashed
+allow 1 mark for two correct
+lines drawn from the top of the
+object, passing through the lens
+BUT not traced backwards
+
+image drawn in the correct
+position and with the correct
+orientation
+
+AO/
+Spec. Ref
+
+Extra information
+
+mark only scores if first two
+marks score
+
+1
+
+13
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+04.3
+
+(increasing the object distance)
+decreases the image distance
+more rapidly at small (object)
+distances / more gradually at
+larger (object) distances
+
+04.4
+
+04.5
+
+Total
+
+14
+
+do not accept inversely
+proportional
+
+1
+
+AO3
+4.6.2.5
+
+(2.2 – 1.4)
+2
+
+1
+
+AO3
+4.6.2.5
+
+uncertainty = (±) 0.4 (cm)
+
+1
+
+allow
+1.9 + 1.7 + 2.2+ 1.4 = 1.8
+4
+
+(1)
+
+(2.2 – 1.8 = ) (±) 0.4 (cm)
+
+(1)
+
+only red is transmitted by the
+filter
+
+1
+
+red is absorbed by the (blue)
+object
+
+1
+
+(so) no light is reflected by the
+(blue) object
+
+1
+
+10
+
+AO1
+4.6.2.6
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 5
+Question
+
+Answers
+
+05.1
+
+any one from:
+• (sun) tan
+• energy efficient lamps
+
+05.2
+
+3 × 10–7 m
+
+05.3
+
+Mark
+
+allow
+• (invisible) security coding
+• detecting forged bank notes
+• kill microbes
+• attract insects
+• sterilise (surgical) equipment
+• cause the body to produce
+vitamin D
+• increasing the growth rate of
+plants
+• water purification
+
+1
+
+AO1
+4.6.2.4
+
+1
+
+AO1
+4.6.2.1
+
+allow ecf from question 05.2
+3.0 × 108 = frequency × 3 × 10–7
+
+1
+
+3.0 × 108
+3 × 10–7
+
+1
+
+frequency =
+
+frequency = 1 × 1015 (Hz)
+
+05.4
+
+AO /
+Spec. Ref.
+
+Extra information
+
+AO2
+4.6.1.2
+
+1
+
+1
+
+AO3
+4.6.2.1
+
+all three lines correct for 1 mark
+
+15
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+05.5
+
+in a transverse wave, the
+oscillations / vibrations are
+perpendicular to the direction of
+energy transfer
+in a longitudinal wave, the
+oscillations / vibrations are
+parallel to the direction of
+energy transfer
+
+Total
+
+16
+
+allow direction of wave travel for
+direction of energy transfer
+
+1
+
+1
+
+8
+
+AO1
+4.6.1.1
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 6
+AO /
+Spec. Ref.
+
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+06.1
+
+to reduce the effect of random
+errors
+
+allow gives a more accurate
+mean
+ignore reference to anomalous
+results
+ignore measurements are more
+accurate
+
+1
+
+AO1
+4.6.1.2
+
+06.2
+
+(8.4+7.8+8.1) = 8.1 (s)
+3
+
+1
+
+AO2
+4.6.1.2
+
+8.1 = 0.81 (s)
+10
+
+1
+
+frequency =
+
+06.3
+
+1
+.
+0.81
+
+allow a correct substitution of an
+incorrectly calculated value for
+time
+
+1
+
+frequency = 1.2345…
+
+this mark may be awarded if the
+time is incorrectly calculated
+
+1
+
+frequency = 1.2 (Hz)
+
+allow a calculated value
+correctly rounded to 2 sig figs
+
+1
+
+measure the distance travelled
+by a wave using a metre rule
+
+allow measure the length of the
+(ripple) tank using a metre rule
+
+1
+
+measure the time taken (for the
+wave to travel the measured
+distance) with a timer /
+stopwatch
+divide the distance by the time
+
+Total
+
+AO1
+4.6.1.2
+
+1
+
+dependant on scoring the first
+two mark points
+
+1
+
+9
+
+17
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 7
+Question
+
+Answers
+
+Extra information
+
+AO /
+Spec. Ref.
+
+07.1
+
+friction
+
+1
+
+AO1
+4.5.1.2
+
+07.2
+
+(area of rectangle = ) 108 (m)
+
+1
+
+(area of triangle = ) 54 (m)
+
+1
+
+AO2
+4.5.6.1.5
+
+(total area / distance = ) 162 (m)
+
+07.3
+
+07.4
+
+allow a correctly calculated total
+area / distance from an
+incorrectly calculated area of
+rectangle and / or triangle
+
+(the force on the pedal) causes
+a moment about the pedal axle
+which causes a force on the
+chain (which causes a moment
+about the rear axle)
+
+1
+
+1
+
+allow gear B for chain
+
+1
+
+a = 2.4 × 2.4
+36
+
+1
+
+a = 0.16 (m/s2)
+
+1
+
+t = 18 / 1.2
+t = 15 (s)
+
+(1)
+
+a = 2.4 / 15 (1)
+
+this mark may be awarded if the
+time is incorrectly calculated
+
+a = 0.16 (m/s2) (1)
+
+allow a correctly calculated
+acceleration from an incorrectly
+calculated time
+
+AO1
+4.5.4
+
+1
+
+2.42 (– 02) = 2 × a × 18
+
+alternative method
+
+18
+
+Mark
+
+AO2
+4.5.6.1.5
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+07.5
+
+horizontal (200N) and vertical
+(75N) forces drawn to the same
+scale
+
+1
+
+resultant force drawn in the
+correct direction
+
+shown by an arrow head from
+bottom right to top left
+
+1
+
+resultant force with a value in
+the range 212 to 218 (N)
+
+allow a calculated value of 213.6
+or 214 (N)
+
+1
+
+direction in the range 20–22
+(degrees from the horizontal)
+
+allow 68–70 (degrees from the
+vertical)
+allow a bearing in the range
+290–292
+
+1
+
+AO2
+4.5.1.4
+
+to gain full marks a vector
+diagram must have been drawn
+
+Total
+
+13
+
+19
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 8
+Question
+
+Answers
+
+Mark
+
+AO /
+Spec. Ref.
+
+08.1
+
+motor (effect)
+
+1
+
+AO1
+4.7.2.4
+
+08.2
+
+current creates a magnetic field
+(around the coil)
+
+1
+
+AO1
+4.7.2.4
+
+(which) interacts with the
+permanent magnet field
+
+1
+
+producing a (resultant) force
+causing the coil/cone to move
+
+1
+
+(when the) direction of the
+current reverses, the direction of
+the (resultant) force reverses
+(producing a sound wave)
+
+1
+allow coil/cone for force
+allow backwards for reverses
+
+the student changed two
+variables at the same time
+
+allow only one variable should
+be changed at a time
+
+08.3
+
+(so) it is not possible to know
+the effect of each variable
+Total
+
+20
+
+Extra information
+
+1
+
+1
+
+7
+
+AO3
+4.6.1.2
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+Question 9
+Question
+
+09.1
+
+Extra information
+
+Mark
+
+AO /
+Spec. Ref.
+
+allow first two fingers/index and
+middle for first and second
+finger throughout
+
+1
+
+AO1
+
+second finger represents the
+current pointing out of the paper
+
+1
+
+AO1
+
+first finger represents the field
+pointing downwards
+
+1
+
+AO3
+
+thumb points in the direction of
+the force / thrust / acceleration
+
+1
+
+AO3
+
+allow correct description (eg
+away from the magnet)
+dependent on scoring marking
+point 3 or 4
+
+1
+
+AO3
+
+decrease the resistance of the
+variable resistor
+
+allow increase the current/pd
+
+1
+
+use a stronger magnet
+
+allow use a magnet with a
+greater flux density
+
+1
+
+Answers
+
+hold thumb first finger and
+second finger (of left hand) at
+right angles to each other
+
+(therefore) the rod moves left to
+right
+
+09.2
+
+4.7.2.2
+AO3
+4.7.2.2
+
+21
+
+MARK SCHEME – GCSE PHYSICS – 8463/2H – JUNE 2021
+
+09.3
+
+F = 0.30 × 1.7 × 0.050
+
+1
+
+F = 0.0255 (N)
+
+1
+
+m = 0.004(0 kg)
+
+1
+
+0.0255 = 0.0040 × a
+
+this mark may be awarded if m
+is incorrectly / not converted
+and / or F is incorrectly
+calculated
+
+1
+
+a = 0.0255 / 0.0040
+or
+a = 6.375
+
+this mark may be awarded if m
+is incorrectly / not converted
+and / or F is incorrectly
+calculated
+
+1
+
+Δv = 6.375 × 0.15 = 0.95625
+(m/s)
+
+allow a correct calculation using
+an incorrectly / not converted m
+and / or an incorrectly
+calculated F
+allow 0.96 or 0.956 (m/s)
+
+1
+
+alternative method
+
+Total
+
+22
+
+F = 0.30 × 1.7 × 0.050
+
+(1)
+
+F = 0.0255 (N)
+
+(1)
+
+m = 0.004(0 kg)
+
+(1)
+
+0.0255 = 0.0040 × Δv
+0.15
+
+(1)
+
+Δv = 0.0255 × 0.15
+0.0040
+
+(1)
+
+this mark may be awarded if m
+is incorrectly / not converted
+and / or F is incorrectly
+calculated
+
+Δv = 0.95625 (m/s)
+
+(1)
+
+allow a correct calculation using
+an incorrectly / not converted m
+and / or an incorrectly
+calculated F
+allow 0.96 or 0.956 (m/s)
+
+this mark may be awarded if m
+is incorrectly / not converted
+and / or F is incorrectly
+calculated
+
+13
+
+AO2
+4.5.6.2.2
+4.5.6.1.5
+4.7.2.2
+
+

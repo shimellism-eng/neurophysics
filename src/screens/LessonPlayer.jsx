@@ -41,11 +41,28 @@ export default function LessonPlayer() {
           <div className="text-xs font-medium truncate" style={{ color: topic.moduleColor }}>{topic.module}</div>
           <h1 className="text-lg font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
         </div>
-        <div
-          className="px-3 py-1 rounded-full text-xs font-medium"
-          style={{ background: `${topic.moduleColor}20`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}40` }}
-        >
-          Lesson
+        <div className="flex items-center gap-2">
+          {topic.course === 'physics-only' ? (
+            <div
+              className="px-2.5 py-1 rounded-full text-xs font-semibold"
+              style={{ background: 'rgba(139,92,246,0.15)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.35)' }}
+            >
+              Physics Only
+            </div>
+          ) : (
+            <div
+              className="px-2.5 py-1 rounded-full text-xs font-semibold"
+              style={{ background: 'rgba(34,197,94,0.12)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.3)' }}
+            >
+              Combined
+            </div>
+          )}
+          <div
+            className="px-3 py-1 rounded-full text-xs font-medium"
+            style={{ background: `${topic.moduleColor}20`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}40` }}
+          >
+            Lesson
+          </div>
         </div>
       </div>
 

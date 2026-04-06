@@ -1371,7 +1371,7 @@ function NuclearFusionReality() {
 
 export const MATTER_TOPICS = {
   states_density: {
-    id: 'states_density', module: 'Particle Model', moduleColor: PART_C, practicalId: 'density',
+    id: 'states_density', module: 'Particle Model', moduleColor: PART_C, practicalId: 'density', course: 'combined',
     title: 'States of Matter & Density', subtitle: 'Particle Model and ρ = m/V',
     description: 'The particle model explains the three states of matter. Solids: particles in fixed lattice positions, vibrate only. Liquids: particles close together, flow freely past each other. Gases: particles far apart, move randomly at high speed. Density (ρ = m/V) depends on how closely packed the particles are.',
     lessonVisual: StatesDensityLesson, ideaVisual: StatesDensityIdea, realityVisual: StatesDensityReality,
@@ -1392,7 +1392,7 @@ export const MATTER_TOPICS = {
     concept: 'ρ = 600 ÷ 400 = 1.5 g/cm³. Objects float when their density is less than the fluid\'s. A steel ship floats because its average density (including hollow interior) is less than water.',
   },
   internal_energy: {
-    id: 'internal_energy', module: 'Particle Model', moduleColor: PART_C, practicalId: 'shc',
+    id: 'internal_energy', module: 'Particle Model', moduleColor: PART_C, practicalId: 'shc', course: 'combined',
     title: 'Internal Energy & Specific Heat', subtitle: 'ΔE = mcΔT and Latent Heat',
     description: 'Internal energy is the total kinetic and potential energy of all particles in a system. Heating raises internal energy. If temperature increases: ΔE = mcΔT (specific heat capacity). During a change of state, temperature stays constant while energy goes into breaking/forming bonds - this is latent heat: E = mL.',
     lessonVisual: InternalEnergyLesson, ideaVisual: InternalEnergyIdea, realityVisual: InternalEnergyReality,
@@ -1413,7 +1413,7 @@ export const MATTER_TOPICS = {
     concept: 'ΔE = 2 × 4200 × 5 = 42000 J. Water at 100°C and steam at 100°C have the same temperature but different internal energy - the difference is the latent heat of vaporisation.',
   },
   gas_pressure: {
-    id: 'gas_pressure', module: 'Particle Model', moduleColor: PART_C,
+    id: 'gas_pressure', module: 'Particle Model', moduleColor: PART_C, course: 'physics-only',
     title: 'Gas Pressure', subtitle: 'Particle Collisions and pV = constant',
     description: 'Gas pressure is caused by particles colliding with the walls of their container. The more frequent and forceful the collisions, the higher the pressure. At constant temperature: pV = constant (Boyle\'s Law). Increasing temperature increases particle speed, increasing collision rate and therefore pressure.',
     lessonVisual: GasPressureLesson, ideaVisual: GasPressureIdea, realityVisual: GasPressureReality,
@@ -1434,7 +1434,7 @@ export const MATTER_TOPICS = {
     concept: 'p₁V₁ = p₂V₂ → 2 × 6 = p₂ × 3 → p₂ = 4 atm. Halving the volume doubles the frequency of wall collisions, doubling the pressure.',
   },
   atomic_structure: {
-    id: 'atomic_structure', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'atomic_structure', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'Structure of the Atom', subtitle: 'Protons, Neutrons, Electrons & Isotopes',
     description: 'An atom has a tiny, dense nucleus containing protons (+1 charge) and neutrons (0 charge), surrounded by electrons (-1 charge) in shells. Atomic number = number of protons. Mass number = protons + neutrons. Isotopes are atoms of the same element with different numbers of neutrons. Atom radius ≈ 1×10⁻¹⁰ m; nucleus radius ≈ 1×10⁻¹⁴ m.',
     lessonVisual: AtomicStructureLesson, ideaVisual: AtomicStructureIdea, realityVisual: AtomicStructureReality,
@@ -1455,7 +1455,7 @@ export const MATTER_TOPICS = {
     concept: 'Neutrons = 14 − 6 = 8. The nucleus (containing all protons and neutrons) occupies only about 1/10,000 of the atom\'s radius. The rest is empty space with electrons in shells.',
   },
   atomic_model_history: {
-    id: 'atomic_model_history', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'atomic_model_history', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'History of the Atomic Model', subtitle: 'Dalton → Thomson → Rutherford → Bohr',
     description: 'The atomic model evolved as new evidence emerged. Dalton (1803): solid sphere. Thomson (1904): plum pudding - electrons embedded in positive mass. Rutherford (1911): nuclear model from alpha-scattering experiment - tiny dense nucleus. Bohr (1913): electrons in fixed shells at specific energy levels.',
     lessonVisual: AtomicModelLesson, ideaVisual: AtomicModelIdea, realityVisual: AtomicModelReality,
@@ -1476,7 +1476,7 @@ export const MATTER_TOPICS = {
     concept: 'Most α particles passed straight through (atom is mostly empty space), but a few bounced back - proving a tiny, dense, positive nucleus. This could not be explained by the plum pudding model.',
   },
   radioactive_decay: {
-    id: 'radioactive_decay', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'radioactive_decay', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'Radioactive Decay', subtitle: 'α, β, γ - Properties & Penetration',
     description: 'Unstable nuclei randomly emit radiation to become more stable. Alpha (α): helium nucleus (2p + 2n), highly ionising, stopped by paper. Beta (β): fast electron from nucleus, medium ionising, stopped by aluminium. Gamma (γ): EM radiation from nucleus, least ionising, reduced by lead/concrete. Activity measured in Becquerels (Bq).',
     lessonVisual: RadioactiveDecayLesson, ideaVisual: RadioactiveDecayIdea, realityVisual: RadioactiveDecayReality,
@@ -1497,7 +1497,7 @@ export const MATTER_TOPICS = {
     concept: 'Alpha is the most ionising (removes electrons from atoms easily) because it is large and slow. But this also means it loses energy quickly, giving it the shortest range and stopping at a sheet of paper.',
   },
   nuclear_equations: {
-    id: 'nuclear_equations', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'nuclear_equations', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'Nuclear Equations', subtitle: 'Balancing Mass & Atomic Numbers',
     description: 'In nuclear equations, both the mass number (top) and atomic number (bottom) must balance on each side. Alpha decay: mass number decreases by 4, atomic number by 2. Beta decay: mass number unchanged, atomic number increases by 1. Gamma emission: no change to mass or atomic number.',
     lessonVisual: NuclearEquationsLesson, ideaVisual: NuclearEquationsIdea, realityVisual: NuclearEquationsReality,
@@ -1518,7 +1518,7 @@ export const MATTER_TOPICS = {
     concept: 'An alpha particle has mass number 4 and atomic number 2. So the parent nucleus loses 4 from mass number and 2 from atomic number. Both sides of the equation must balance for each quantity.',
   },
   half_life: {
-    id: 'half_life', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'half_life', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'Half-Life', subtitle: 'Random Decay and t½',
     description: 'Half-life is the time for half of the radioactive nuclei in a sample to decay (or for activity to halve). Decay is random - you cannot predict when any individual nucleus will decay. The shorter the half-life, the more rapidly active the source. Half-life can range from fractions of a second to millions of years.',
     lessonVisual: HalfLifeLesson, ideaVisual: HalfLifeIdea, realityVisual: HalfLifeReality,
@@ -1539,7 +1539,7 @@ export const MATTER_TOPICS = {
     concept: '800 → 400 → 200 → 100 Bq. After each half-life, activity halves. After 3 half-lives: 800 × (½)³ = 800 ÷ 8 = 100 Bq.',
   },
   radiation_hazards: {
-    id: 'radiation_hazards', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'radiation_hazards', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
     title: 'Background Radiation, Uses & Hazards', subtitle: 'Contamination vs Irradiation',
     description: 'Background radiation is low-level radiation from natural sources (rocks, cosmic rays, radon gas) and man-made sources (medical, nuclear industry). Irradiation is exposure to a source outside the body - stops when source removed. Contamination means radioactive material inside the body - more dangerous. Alpha is most dangerous when inhaled; gamma most dangerous from outside.',
     lessonVisual: RadiationHazardsLesson, ideaVisual: RadiationHazardsIdea, realityVisual: RadiationHazardsReality,
@@ -1560,7 +1560,7 @@ export const MATTER_TOPICS = {
     concept: 'Alpha is stopped by skin externally, making it harmless from outside. But if swallowed or inhaled, alpha directly ionises internal cells, causing maximum biological damage with no protective skin barrier.',
   },
   nuclear_fission: {
-    id: 'nuclear_fission', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'nuclear_fission', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
     title: 'Nuclear Fission', subtitle: 'Chain Reactions & Reactors',
     description: 'Nuclear fission occurs when a large unstable nucleus (e.g. U-235) absorbs a neutron and splits into two smaller nuclei, releasing 2-3 neutrons and a large amount of energy. These neutrons can trigger further fissions - a chain reaction. In a nuclear reactor, control rods absorb neutrons to control the reaction rate.',
     lessonVisual: NuclearFissionLesson, ideaVisual: NuclearFissionIdea, realityVisual: NuclearFissionReality,
@@ -1581,7 +1581,7 @@ export const MATTER_TOPICS = {
     concept: 'Control rods (boron or cadmium) absorb neutrons. Inserting them more deeply reduces the number of available neutrons, slowing the chain reaction. Withdrawing them allows the reaction to speed up.',
   },
   nuclear_fusion: {
-    id: 'nuclear_fusion', module: 'Atomic Structure', moduleColor: ATOM_C,
+    id: 'nuclear_fusion', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
     title: 'Nuclear Fusion', subtitle: 'Joining Nuclei in Stars',
     description: 'Nuclear fusion is when two light nuclei (e.g. hydrogen isotopes) join together to form a heavier nucleus, releasing large amounts of energy. This is the process that powers stars. Fusion requires extremely high temperatures (≥10⁷ K) to overcome the electrostatic repulsion between nuclei. During fusion, some mass is converted into energy (E = mc²).',
     lessonVisual: NuclearFusionLesson, ideaVisual: NuclearFusionIdea, realityVisual: NuclearFusionReality,

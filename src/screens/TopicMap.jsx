@@ -141,8 +141,16 @@ export default function TopicMap() {
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>
-                                {topic.title}
+                              <div className="flex items-center gap-2">
+                                <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>
+                                  {topic.title}
+                                </div>
+                                {topic.course === 'physics-only' && (
+                                  <span className="shrink-0 px-1.5 py-0.5 rounded-full text-[10px] font-semibold"
+                                    style={{ background: 'rgba(139,92,246,0.15)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.3)' }}>
+                                    Physics Only
+                                  </span>
+                                )}
                               </div>
                               <div className="text-xs truncate mt-0.5" style={{ color: '#a8b8cc' }}>
                                 {topic.subtitle}

@@ -1084,7 +1084,7 @@ function MomentumReality() {
 
 export const FORCES_TOPICS = {
   force_interactions: {
-    id: 'force_interactions', module: 'Forces', moduleColor: FC,
+    id: 'force_interactions', module: 'Forces', moduleColor: FC, course: 'combined',
     title: 'Forces & Interactions', subtitle: 'Scalars, Vectors & Free Body Diagrams',
     description: 'Scalar quantities have only magnitude (e.g. speed, distance, mass). Vector quantities have both magnitude and direction (e.g. velocity, force, acceleration). Force is a push or pull - contact forces (friction, normal, tension) or non-contact (gravity, magnetic, electrostatic). Weight = mg.',
     lessonVisual: ForceInteractionsLesson, ideaVisual: ForceInteractionsIdea, realityVisual: ForceInteractionsReality,
@@ -1105,7 +1105,7 @@ export const FORCES_TOPICS = {
     concept: 'Velocity specifies both how fast and in which direction. Speed only gives how fast. This distinction matters: an object moving in a circle has constant speed but changing velocity (direction changes).',
   },
   work_done: {
-    id: 'work_done', module: 'Forces', moduleColor: FC,
+    id: 'work_done', module: 'Forces', moduleColor: FC, course: 'combined',
     title: 'Work Done & Energy Transfer', subtitle: 'W = Fd and Energy Pathways',
     description: 'Work is done when a force causes an object to move in the direction of the force. W = Fd (work done = force × distance moved). Work is measured in joules. When work is done against friction, kinetic energy is transferred to thermal energy - the object and surroundings warm up.',
     lessonVisual: WorkDoneLesson, ideaVisual: WorkDoneIdea, realityVisual: WorkDoneReality,
@@ -1126,7 +1126,7 @@ export const FORCES_TOPICS = {
     concept: 'W = 50 × 3 = 150 J. Work is only done when there is displacement in the direction of the force. If the wall doesn\'t move, no energy is transferred regardless of how hard you push.',
   },
   hookes_law: {
-    id: 'hookes_law', module: 'Forces', moduleColor: FC, practicalId: 'spring',
+    id: 'hookes_law', module: 'Forces', moduleColor: FC, practicalId: 'spring', course: 'combined',
     title: 'Forces & Elasticity (Hooke\'s Law)', subtitle: 'F = ke and Elastic Deformation',
     description: 'A spring obeys Hooke\'s Law: force is directly proportional to extension (F = ke) up to the elastic limit. The spring constant k (N/m) measures stiffness. Beyond the elastic limit, deformation is inelastic - the spring doesn\'t return to its original shape. Elastic PE stored: Ee = ½ke².',
     lessonVisual: HookesLawLesson, ideaVisual: HookesLawIdea, realityVisual: HookesLawReality,
@@ -1147,7 +1147,7 @@ export const FORCES_TOPICS = {
     concept: 'F = 20 × 0.3 = 6 N. The extension is proportional to force only while in the elastic region. Beyond the elastic limit, the relationship becomes non-linear - the spring is permanently deformed.',
   },
   moments: {
-    id: 'moments', module: 'Forces', moduleColor: FC,
+    id: 'moments', module: 'Forces', moduleColor: FC, course: 'physics-only',
     title: 'Moments, Levers & Gears', subtitle: 'Moment = F × d from Pivot',
     description: 'A moment (turning effect) = force × perpendicular distance from pivot. For a balanced system: clockwise moments = anticlockwise moments. Levers multiply force (effort × effort arm = load × load arm). Gears transmit rotational force - a larger gear turns more slowly but with more force.',
     lessonVisual: MomentsLesson, ideaVisual: MomentsIdea, realityVisual: MomentsReality,
@@ -1168,7 +1168,7 @@ export const FORCES_TOPICS = {
     concept: '30 × 2 = 60 N·m. To balance: F × 3 = 60, so F = 20 N. A smaller force placed further from the pivot creates the same moment as a larger force close to the pivot.',
   },
   fluid_pressure: {
-    id: 'fluid_pressure', module: 'Forces', moduleColor: FC,
+    id: 'fluid_pressure', module: 'Forces', moduleColor: FC, course: 'physics-only',
     title: 'Pressure in Fluids', subtitle: 'p = ρgh and Upthrust',
     description: 'Pressure in a fluid acts in all directions. Pressure increases with depth: p = ρgh (density × g × height). The atmosphere is a fluid - atmospheric pressure decreases with altitude as less air is above. Upthrust occurs because pressure at the bottom of a submerged object is greater than at the top.',
     lessonVisual: FluidPressureLesson, ideaVisual: FluidPressureIdea, realityVisual: FluidPressureReality,
@@ -1189,7 +1189,7 @@ export const FORCES_TOPICS = {
     concept: 'p = 1000 × 10 × 5 = 50000 Pa. Pressure increases with depth. This explains why submarines need reinforced hulls and why deep-sea fish have adapted bodies.',
   },
   motion_graphs: {
-    id: 'motion_graphs', module: 'Forces', moduleColor: FC,
+    id: 'motion_graphs', module: 'Forces', moduleColor: FC, course: 'combined',
     title: 'Forces & Motion', subtitle: 'Distance-Time & Velocity-Time Graphs',
     description: 'Distance-time graphs: gradient = speed; flat line = stationary; curved line = accelerating. Velocity-time graphs: gradient = acceleration; flat line = constant velocity; area under graph = distance. Deceleration = negative gradient. Terminal velocity: when air resistance equals driving force.',
     lessonVisual: MotionGraphsLesson, ideaVisual: MotionGraphsIdea, realityVisual: MotionGraphsReality,
@@ -1210,7 +1210,7 @@ export const FORCES_TOPICS = {
     concept: 'Area under v-t graph = v × t = distance (same as distance = speed × time). A horizontal flat line means constant velocity - the object is moving at steady speed, not stationary.',
   },
   newtons_laws: {
-    id: 'newtons_laws', module: 'Forces', moduleColor: FC, practicalId: 'acceleration',
+    id: 'newtons_laws', module: 'Forces', moduleColor: FC, practicalId: 'acceleration', course: 'combined',
     title: "Newton's Laws of Motion", subtitle: 'Inertia, F = ma & Action-Reaction',
     description: "Newton's 1st: object at rest stays at rest, object moving stays moving at constant velocity, unless acted on by a resultant force (inertia). 2nd: F = ma (resultant force = mass × acceleration). 3rd: every action has an equal and opposite reaction force acting on the other object.",
     lessonVisual: NewtonsLawsLesson, ideaVisual: NewtonsLawsIdea, realityVisual: NewtonsLawsReality,
@@ -1231,7 +1231,7 @@ export const FORCES_TOPICS = {
     concept: 'F = 1200 × 3 = 3600 N. Air resistance causes heavier objects to appear to fall faster, but in a vacuum (no air resistance) all objects accelerate at g = 9.8 m/s² regardless of mass.',
   },
   stopping_distance: {
-    id: 'stopping_distance', module: 'Forces', moduleColor: FC,
+    id: 'stopping_distance', module: 'Forces', moduleColor: FC, course: 'combined',
     title: 'Stopping Distance', subtitle: 'Thinking Distance + Braking Distance',
     description: 'Total stopping distance = thinking distance + braking distance. Thinking distance = reaction time × speed (affected by: tiredness, alcohol, drugs, distractions). Braking distance depends on speed squared, road/tyre condition, brake condition. When brakes are applied, KE is transferred to thermal energy in brakes.',
     lessonVisual: StoppingDistanceLesson, ideaVisual: StoppingDistanceIdea, realityVisual: StoppingDistanceReality,
@@ -1252,7 +1252,7 @@ export const FORCES_TOPICS = {
     concept: 'KE = ½mv². If speed doubles, KE quadruples. With the same braking force, four times more distance is needed to remove four times the kinetic energy. Thinking distance doubles (linear with speed).',
   },
   momentum: {
-    id: 'momentum', module: 'Forces', moduleColor: FC,
+    id: 'momentum', module: 'Forces', moduleColor: FC, course: 'physics-only',
     title: 'Momentum', subtitle: 'p = mv and Conservation',
     description: 'Momentum p = mv (kg·m/s). In a closed system, total momentum is conserved: total before = total after any collision or explosion. A force changes momentum: F = Δ(mv)/t = ma. Safety features (airbags, crumple zones) increase collision time, reducing the force experienced (same change in momentum over longer time).',
     lessonVisual: MomentumLesson, ideaVisual: MomentumIdea, realityVisual: MomentumReality,

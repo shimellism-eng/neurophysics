@@ -1,0 +1,1904 @@
+PMT
+
+GCSE
+PHYSICS
+8463/1H
+Paper 1 Higher Tier
+Mark scheme
+June 2024
+Version: 1.0 Final
+
+*246G8463/1h/MS*
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Mark schemes are prepared by the Lead Assessment Writer and considered, together with the relevant
+questions, by a panel of subject teachers. This mark scheme includes any amendments made at the
+standardisation events which all associates participate in and is the scheme which was used by them in
+this examination. The standardisation process ensures that the mark scheme covers the students’
+responses to questions and that every associate understands and applies it in the same correct way.
+As preparation for standardisation each associate analyses a number of students’ scripts. Alternative
+answers not already covered by the mark scheme are discussed and legislated for. If, after the
+standardisation process, associates encounter unusual answers which have not been raised they are
+required to refer these to the Lead Examiner.
+It must be stressed that a mark scheme is a working document, in many cases further developed and
+expanded on the basis of students’ reactions to a particular paper. Assumptions about future mark
+schemes on the basis of one year’s document should be avoided; whilst the guiding principles of
+assessment remain constant, details will change, depending on the content of a particular examination
+paper.
+No student should be disadvantaged on the basis of their gender identity and/or how they refer to the
+gender identity of others in their exam responses.
+A consistent use of ‘they/them’ as a singular and pronouns beyond ‘she/her’ or ‘he/him’ will be credited in
+exam responses in line with existing mark scheme criteria.
+Further copies of this mark scheme are available from aqa.org.uk
+
+Copyright information
+AQA retains the copyright on all its publications. However, registered schools/colleges for AQA are permitted to copy material from this booklet for their own
+internal use, with the following important exception: AQA cannot give permission to schools/colleges to photocopy any material that is acknowledged to a third
+party even for internal use within the centre.
+Copyright © 2024 AQA and its licensors. All rights reserved.
+
+2
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Information to Examiners
+
+1. General
+The mark scheme for each question shows:
+• the marks available for each part of the question
+• the total marks available for the question
+• the typical answer or answers which are expected
+• extra information to help the examiner make their judgement
+• the Assessment Objectives and specification content that each question is intended to cover.
+The extra information is aligned to the appropriate answer in the left-hand part of the mark scheme and
+should only be applied to that item in the mark scheme.
+At the beginning of a part of a question a reminder may be given, for example: where consequential
+marking needs to be considered in a calculation; or the answer may be on the diagram or at a different
+place on the script.
+In general the right-hand side of the mark scheme is there to provide those extra details which confuse
+the main part of the mark scheme yet may be helpful in ensuring that marking is straightforward and
+consistent (for example, a scientifically correct answer that could not reasonably be expected from a
+student’s knowledge of the specification).
+
+2. Emboldening and underlining
+2.1
+
+In a list of acceptable answers where more than one mark is available ‘any two from’ is used, with
+the number of marks emboldened. Each of the following bullet points is a potential mark.
+
+2.2
+
+A bold and is used to indicate that both parts of the answer are required to award the mark.
+
+2.3
+
+Alternative answers acceptable for a mark are indicated by the use of or.
+Alternative words in the mark scheme are shown by a solidus eg allow smooth / free movement.
+
+2.4
+
+Any wording that is underlined is essential for the marking point to be awarded.
+
+3
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+3. Marking points
+3.1
+
+Marking of lists
+This applies to questions requiring a set number of responses, but for which students have
+provided extra responses. The general principle to be followed in such a situation is that
+‘right + wrong = wrong’.
+Each error / contradiction negates each correct response. So, if the number of errors /
+contradictions equals or exceeds the number of marks available for the question, no marks can be
+awarded.
+However, responses considered to be neutral (indicated as * in example 1) are not penalised.
+Example 1: What is the pH of an acidic solution?
+Student
+
+Response
+
+1
+2
+3
+
+green, 5
+red*, 5
+red*, 8
+
+[1 mark]
+Marks
+awarded
+0
+1
+0
+
+Example 2: Name two magnetic materials.
+Student
+1
+2
+3.2
+
+Response
+iron, steel, tin
+cobalt, nickel, nail*
+
+[2 marks]
+Marks awarded
+1
+2
+
+Use of symbols / formulae
+If a student writes a chemical symbol / formula instead of a required chemical name, or uses
+symbols to denote quantities in a physics equation, full credit can be given if the symbol / formula
+is correct and if, in the context of the question, such action is appropriate.
+
+3.3
+
+Marking procedure for calculations
+Marks should be awarded for each stage of the calculation completed correctly, as students are
+instructed to show their working. At any point in a calculation students may omit steps from their
+working. If a subsequent step is given correctly, the relevant marks may be awarded.
+Full marks should be awarded for a correct numerical answer, without any working shown.
+Full marks are not awarded for a correct final answer from incorrect working.
+
+3.4
+
+Interpretation of ‘it’
+Answers using the word ‘it’ should be given credit only if it is clear that the ‘it’ refers to the correct
+subject.
+
+4
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+3.5
+
+Errors carried forward
+An error can be carried forward from one question part to the next and is shown by the
+abbreviation ‘ecf’.
+Within an individual question part, an incorrect value in one step of a calculation does not prevent
+all of the subsequent marks being awarded.
+
+3.6
+
+Phonetic spelling
+Marks should be awarded if spelling is not correct but the intention is clear, unless there is a
+possible confusion with another technical term.
+
+3.7
+
+Brackets
+(…..) are used to indicate information which is not essential for the mark to be awarded but is
+included to help the examiner identify the sense of the answer required.
+
+3.8
+
+Allow
+In the mark scheme additional information, ‘allow’ is used to indicate creditworthy
+alternative answers.
+
+3.9
+
+Ignore
+Ignore is used when the information given is irrelevant to the question or not enough to gain the
+marking point. Any further correct amplification could gain the marking point.
+
+3.10 Do not accept
+Do not accept means that this is a wrong answer which, even if the correct answer is given as
+well, will still mean that the mark is not awarded.
+3.11 Numbered answer lines
+Numbered lines on the question paper are intended to support the student to give the correct
+number of responses. The answer should still be marked as a whole.
+
+4. Level of response marking instructions
+Extended response questions are marked on level of response mark schemes.
+• Level of response mark schemes are broken down into levels, each of which has a descriptor.
+• The descriptor for the level shows the average performance for the level.
+• There are two marks in each level.
+Before you apply the mark scheme to a student’s answer, read through the answer and, if
+necessary, annotate it (as instructed) to show the qualities that are being looked for. You can then
+apply the mark scheme.
+5
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Step 1: Determine a level
+Start at the lowest level of the mark scheme and use it as a ladder to see whether the answer meets
+the descriptor for that level.
+The descriptor for the level indicates the different qualities that might be seen in the student’s
+answer for that level. If it meets the lowest level then go to the next one and decide if it meets this
+level, and so on, until you have a match between the level descriptor and the answer. With practice
+and familiarity you will find that for better answers you will be able to quickly skip through the lower
+levels of the mark scheme.
+When assigning a level you should look at the overall quality of the answer. Do not look to penalise
+small and specific parts of the answer where the student has not performed quite as well as the rest.
+If the answer covers different aspects of different levels of the mark scheme you should use a best
+fit approach for defining the level.
+Use the variability of the response to help decide the mark within the level, ie if the response is
+predominantly level 2 with a small amount of level 3 material it would be placed in level 2 but be
+awarded a mark near the top of the level because of the level 3 content.
+Step 2: Determine a mark
+Once you have assigned a level you need to decide on the mark. The descriptors on how to
+allocate marks can help with this. The exemplar materials used during standardisation will help.
+There will be an answer in the standardising materials which will correspond with each level of the
+mark scheme. This answer will have been awarded a mark by the Lead Examiner. You can
+compare the student’s answer with the example to determine if it is the same standard, better or
+worse than the example. You can then use this to allocate a mark for the answer based on the Lead
+Examiner’s mark on the example.
+You may well need to read back through the answer as you apply the mark scheme to clarify points
+and assure yourself that the level and the mark are appropriate.
+Indicative content in the mark scheme is provided as a guide for examiners. It is not intended to be
+exhaustive and you must credit other valid points. Students do not have to cover all of the points
+mentioned in the indicative content to reach the highest level of the mark scheme.
+You should ignore any irrelevant points made. However, full marks can be awarded only if there are
+no incorrect statements that contradict a correct response.
+An answer which contains nothing of relevance to the question must be awarded no marks.
+
+6
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 1
+Question
+01.1
+
+Answers
+
+Extra information
+
+thermal / internal (energy)
+or
+kinetic (energy of the water
+particles)
+
+ignore heat
+
+Mark
+1
+
+allow Ek
+
+Question
+
+Answers
+
+Extra information
+
+01.2
+
+gravitational potential (energy)
+
+allow Ep / GPE
+allow kinetic / Ek
+
+Mark
+1
+
+Question
+
+Answers
+
+Mark
+
+01.3
+
+Level 2: Scientifically relevant features are identified; the way(s) in
+which they are similar / different is made clear and (where
+appropriate) the magnitude of the similarity / difference is noted.
+
+3–4
+
+Level 1: Relevant features are identified and differences noted.
+
+1–2
+
+No relevant content
+
+0
+
+AO /
+Spec. Ref.
+AO1
+4.1.1.1
+4.3.2.1
+
+AO /
+Spec. Ref.
+AO1
+4.1.1.1
+
+AO /
+Spec. Ref.
+AO3
+4.1.1.1
+4.3.2.1
+4.1.1.2
+4.1.2.2
+4.1.3
+
+Indicative content
+Method A:
+• heated water needs insulating (to maintain high temperature)
+• energy stored by heating water is much greater (per 100 kg)
+• useful energy from heating 100 kg of water = 20 160 (kJ)
+• energy wasted (per 100 kg) = 13 440 (kJ)
+• efficiency = 60 %
+Method B:
+• suitable location needed to pump water uphill
+• pumping water efficiency is higher
+• useful energy from pumping 100 kg of water = 367.5 (kJ)
+• energy wasted (per 100kg) = 122.5 (kJ)
+• efficiency = 75 %
+A level 2 answer should use the data in a relevant calculation that
+compares the two methods.
+
+7
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+
+Answers
+
+01.4
+
+Transport examples:
+don’t use (petrol / diesel) cars
+(for transport)
+or
+don’t burn petrol / diesel (for
+transport)
+
+Extra information
+
+Mark
+
+allow don’t use other transport
+methods e.g. (diesel) buses
+
+1
+
+allow fossil fuels for petrol /
+diesel
+
+(instead) use electric cars
+or
+(instead) use hydrogen-fuelled
+cars
+or
+(instead) use a bicycle
+or
+(instead) use public transport
+or
+(instead) walk
+Generating Electricity
+examples:
+don’t use coal / oil / gas (to
+generate electricity)
+(instead) use renewable
+methods
+or
+(instead) use nuclear power
+
+1
+
+allow fossil fuels for coal / oil /
+gas
+
+1
+
+allow specific examples of
+renewable energy resources
+
+1
+
+OR
+don’t use (electrical) appliances
+when not needed
+
+allow specific examples
+e.g. lights
+
+to reduce the demand for
+electricity (generated) using coal
+/ oil / gas
+
+allow fossil fuels for coal / oil /
+gas
+
+accept other reasonable
+changes with valid alternative
+for 2 marks each
+
+Total Question 1
+
+8
+
+10
+
+AO /
+Spec. Ref.
+AO3
+4.1.3
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 2
+Question
+02.1
+
+Question
+02.2
+
+Question
+02.3
+
+Answers
+
+Extra information
+this order only
+
+nuclei
+
+Mark
+1
+
+neutrons
+
+1
+
+gamma (rays)
+
+1
+
+Answers
+
+Extra information
+
+energy = power × time
+or
+E=P×t
+
+Answers
+
+Mark
+1
+
+Extra information
+
+P = 500 000 000 (W)
+
+Mark
+1
+
+E = 500 000 000 × 3600
+
+allow a correct substitution of an
+incorrectly / not converted value
+of P
+
+1
+
+E = 1 800 000 000 000 (J)
+or
+E = 1.8 × 1012 (J)
+
+allow an answer consistent with
+an incorrectly / not converted
+value of P
+
+1
+
+Extra information
+
+Mark
+
+Question
+
+Answers
+
+02.4
+
+any one from:
+• bury the radioactive waste
+• put the radioactive waste in
+cooling ponds
+• transport the radioactive
+waste in secure vessels
+• store the radioactive waste in
+metal containers
+• cover the radioactive waste in
+concrete
+
+1
+allow store it for (at least) one
+half-life
+
+AO /
+Spec. Ref.
+AO1
+4.4.4.1
+
+AO /
+Spec. Ref.
+AO1
+4.2.4.2
+4.1.1.4
+
+AO /
+Spec. Ref.
+AO2
+4.2.4.2
+4.1.1.4
+
+AO /
+Spec. Ref.
+AO3
+4.4.2.4
+
+ignore references to high /
+medium / low level waste
+ignore label the waste as
+hazardous
+9
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+02.5
+
+Answers
+number of days =
+
+Extra information
+
+92
+× 365
+100
+
+number of days = 335.8
+
+Mark
+1
+
+allow answers of 335 and 336
+days
+
+1
+
+allow an answer of 29.2 (days)
+for 1 mark
+Total Question 2
+
+10
+
+10
+
+AO /
+Spec. Ref.
+AO2
+4.1.3
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 3
+Question
+03.1
+
+Answers
+
+Mark
+
+Level 3: The method would lead to the production of a valid
+outcome. The key steps are identified and logically sequenced.
+
+5–6
+
+Level 2: The method would not necessarily lead to a valid
+outcome. Most steps are identified, but the method is not fully
+logically sequenced.
+
+3–4
+
+Level 1: The method would not lead to a valid outcome. Some
+relevant steps are identified, but links are not made clear.
+
+1–2
+
+No relevant content
+
+0
+
+AO /
+Spec. Ref.
+AO1
+4.2.1.3
+RPA3
+
+Indicative content
+• measure the length of the wire (between the crocodile clips)
+using the ruler
+• length varied by moving crocodile clips
+• current measured with ammeter
+• potential difference measured with voltmeter
+• calculate resistance for each length
+• use V = IR to calculate resistance
+• record current and pd for different lengths
+• repeat readings of current and pd for each length and mean
+values calculated
+• remove any anomalous readings
+• ensure values of current are low to minimise heating of wire
+• ensure circuit is disconnected between readings
+Level 2:
+Varying the length of the wire. Measurements / equipment needed
+for pd and current.
+
+Question
+03.2
+
+Answers
+
+Extra information
+
+Mark
+1
+
+AO /
+Spec. Ref.
+AO1
+4.2.1.3
+4.2.1.4
+RPA3
+
+11
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+
+Answers
+
+03.3
+
+potential difference is (very) low
+(so) no risk of electric shock
+or
+(so) no risk of electrocution
+
+Total Question 3
+
+12
+
+Extra information
+
+allow less risk of electric shock
+
+Mark
+
+AO /
+Spec. Ref.
+
+1
+
+AO1
+
+1
+
+AO3
+4.2.1.3
+RPA3
+
+allow so wire won’t melt
+allow so wire won’t get hot
+9
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 4
+Question
+
+Answers
+
+04.1
+
+electrons are transferred to the
+student
+
+1
+allow each hair has the same
+(negative) charge
+
+1
+
+(and) like charges repel
+
+do not accept student being
+positively charged for MP1 and
+MP2
+
+1
+
+Extra information
+
+Mark
+
+Answers
+
+04.2
+
+the region (around a charged
+object) where another charged
+object experiences a force
+
+Question
+
+Answers
+
+allow space / area for region
+allow particle for object
+
+Extra information
+
+(electric field strength)
+decreases
+
+Question
+04.4
+
+Mark
+
+(so) her hair is negatively
+charged
+
+Question
+
+04.3
+
+Extra information
+
+Answers
+
+1
+
+Mark
+1
+
+Extra information
+
+Q = 2 × 10–6 (C)
+
+Mark
+1
+
+0.6 = 2 × 10–6 × V
+
+allow a correct substitution of an
+incorrectly / not converted value
+of Q
+
+1
+
+0.6
+
+allow a correct rearrangement of
+an incorrectly / not converted
+value of Q
+
+1
+
+allow an answer consistent with
+an incorrectly / not converted
+value of Q
+
+1
+
+V=
+
+–6
+
+2×10
+
+V = 300 000 (V)
+
+AO /
+Spec. Ref.
+AO1
+4.2.5.1
+
+AO /
+Spec. Ref.
+AO1
+4.2.5.2
+
+AO /
+Spec. Ref.
+AO1
+4.2.5.2
+
+AO /
+Spec. Ref.
+AO2
+4.2.4.2
+
+13
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+
+Answers
+
+04.5
+
+decreased electrical resistance
+of air
+
+Total Question 4
+
+14
+
+Extra information
+
+Mark
+1
+
+10
+
+AO /
+Spec. Ref.
+AO3
+4.2.5.1
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 5
+Question
+05.1
+
+Answers
+50 (Hz)
+
+Extra information
+this order only
+
+230 (V)
+
+1
+1
+
+Question
+05.2
+
+Mark
+
+Answers
+
+Extra information
+
+340 mW = 0.34 W
+
+Mark
+1
+
+0.34 = 0.752 × R
+
+allow a correct substitution of an
+incorrectly / not converted value
+of P
+
+1
+
+0.34
+
+allow a correct rearrangement of
+an incorrectly / not converted
+value of P
+
+1
+
+allow an answer consistent with
+an incorrectly / not converted
+value of P
+allow a correct answer given to
+more than 2 sf
+
+1
+
+Extra information
+
+Mark
+
+R=
+
+2
+
+0.75
+
+R = 0.60 (Ω)
+
+Question
+
+Answers
+
+05.3
+
+the dirt changes the (measured)
+resistance of the coin
+or
+the (measured) resistance is
+different from the expected
+resistance (of the coin)
+
+1
+
+AO /
+Spec. Ref.
+AO1
+4.2.3.1
+
+AO /
+Spec. Ref.
+AO2
+4.2.4.1
+
+AO /
+Spec. Ref.
+AO3
+4.2.1.3
+
+allow the measured resistance
+does not match the resistance of
+a known coin
+allow dirt stops charge flow
+(through the coin)
+allow dirt stops the current (in
+the coin)
+
+15
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+05.4
+
+16
+
+Answers
+
+Extra information
+
+Mark
+1
+
+AO /
+Spec. Ref.
+AO1
+4.2.1.1
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+05.5
+
+Answers
+
+Extra information
+
+RTotal = 400 + 80 (= 480 Ω)
+
+Mark
+1
+
+12 = I × 480
+or
+12
+I=
+480
+
+allow a correct substitution /
+rearrangement with RTotal in
+range 470 - 490 Ω
+
+1
+
+I = 0.025 (A)
+
+allow a correct calculation using
+RTotal in range 470 - 490 Ω
+
+1
+
+V = 0.025 × 80
+
+allow a correct substitution using
+their calculated value of I (using
+V = IR) and RTh in range 70 - 90
+Ω
+
+1
+
+V = 2.0 (V)
+
+allow a correct calculation using
+their calculated value of I (using
+V = IR) and RTh in range 70 - 90
+Ω
+
+1
+
+AO /
+Spec. Ref.
+AO2
+4.2.1.3
+4.2.2
+
+OR
+total R = 400 + 80 (= 480) (1)
+ratio (Th:R) = 80:480 (1)
+
+allow a range of RTh between 70
+and 90 Ω
+
+ratio = 1:6 (1)
+
+allow a correct ratio using a
+value of RTh between 70 and 90
+Ω
+
+V = 6 ×12 (1)
+
+allow a correct substitution using
+a value of RTh between 70 and
+90 Ω
+
+V = 2.0 (V) (1)
+
+allow an answer in the range 1.8
+(V) to 2.2 (V)
+
+1
+
+Total Question 5
+
+13
+
+17
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 6
+Question
+06.1
+
+Answers
+elastic potential (energy)
+
+Question
+06.2
+
+Answers
+
+allow Ee / EPE
+
+Mark
+1
+
+AO1
+4.1.1.2
+
+AO /
+Spec. Ref.
+
+Mark
+
+Ee = 0.5 × 735 × 8.02
+
+allow a correct substitution using
+k = 1470 (N/m) and e = 8 (m)
+or
+k = 1470 (N/m) and e = 16 (m)
+or
+k = 735 (N/m) and e = 16 (m)
+
+1
+
+Ee = 23 520 (J)
+
+this answer only
+
+1
+
+total Ee = 47 040 (J)
+
+this answer only
+
+1
+
+47 040 = 240 × 9.8 × h
+
+allow a correct substitution of
+their calculated value of Ee
+(using Ee = 0.5ke2)
+
+1
+
+allow a correct rearrangement
+using their calculated value of Ee
+(using Ee = 0.5ke2)
+
+1
+
+allow an answer consistent with
+their value of Ee
+(using Ee = 0.5ke2)
+
+1
+
+Extra information
+
+Mark
+
+AO /
+Spec. Ref.
+
+1
+
+AO3
+
+1
+
+AO1
+
+47 040
+(240 × 9.8)
+
+h = 20 (m)
+
+Question
+
+Answers
+air resistance (opposes the
+motion of the pod upwards)
+(so) not all of the elastic
+potential energy will be
+transferred to gravitational
+potential energy
+
+allow the energy transfer is not
+100% efficient
+allow some energy is transferred
+to the surroundings
+allow some energy is dissipated
+ignore energy is wasted
+
+Total Question 6
+
+AO2
+4.1.1.2
+
+4.1.2.1
+4.1.2.2
+
+ignore reference to mass of
+person in pod
+
+18
+
+AO /
+Spec. Ref.
+
+Extra information
+
+h=
+
+06.3
+
+Extra information
+
+9
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 7
+Question
+07.1
+
+Answers
+
+Extra information
+
+random error
+
+Mark
+1
+
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+07.2
+
+thin string would affect the
+volume measurement less (than
+thick string)
+
+allow thin string would displace
+less water (than thick string)
+
+1
+
+Question
+
+Answers
+
+Extra information
+
+07.3
+
+the measuring cylinder could not
+be used to measure to 2 dp
+or
+the resolution of the measuring
+cylinder is 0.2 cm3
+
+Question
+07.4
+
+Answers
+subtract 0.02 g from the
+measured value
+
+ignore absorption of water by
+string
+Mark
+1
+allow the resolution is 0.1 cm3
+
+AO /
+Spec. Ref.
+AO3
+4.3.1.1
+RPA5
+
+AO /
+Spec. Ref.
+AO3
+4.3.1.1
+RPA5
+
+AO /
+Spec. Ref.
+AO3
+4.3.1.1
+RPA5
+
+ignore the resolution is too low
+Extra information
+ignore zero the balance
+
+Mark
+1
+
+AO /
+Spec. Ref.
+AO3
+4.3.1.1
+RPA5
+
+19
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+07.5
+
+Answers
+0.44 cm3 = 4.4 × 10–7 m3
+m
+
+Mark
+1
+
+allow a correct substitution of an
+incorrectly / not converted value
+of V
+
+1
+
+m = 21 500 × 4.4 × 10–7
+
+allow a correct rearrangement of
+an incorrectly / not converted
+value of V
+
+1
+
+m = 0.00946 (kg)
+or
+m = 9.46 × 10-3 (kg)
+
+allow an answer consistent with
+an incorrectly / not converted
+value of V
+
+1
+
+21 500 =
+
+Total Question 7
+
+20
+
+Extra information
+
+4.4 × 10
+
+–7
+
+8
+
+AO /
+Spec. Ref.
+AO2
+4.3.1.1
+RPA5
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 8
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+08.1
+
+(air) particles are closer together
+
+ignore reference to kinetic
+energy of particles
+ignore reference to
+concentration of air particles
+
+1
+
+(so) frequency of collision
+between air particles and
+syringe walls increased
+
+do not credit MP2 if linked to an
+increase in kinetic energy
+
+1
+
+larger (total) force on a smaller
+(surface) area
+
+allow larger force per unit area
+
+1
+
+AO /
+Spec. Ref.
+AO1
+4.3.3.2
+
+if no other marks score allow
+1 mark for pressure increases
+because volume decreases and
+pV = constant
+Question
+
+Answers
+
+08.2
+
+the mean kinetic energy of the
+particles increases
+
+Question
+
+Answers
+
+08.3
+
+Extra information
+
+Mark
+1
+
+Extra information
+
+Mark
+
+c = 1010 (J/kg °C)
+
+allow full credit for a correct
+method using E = 0.0000130
+(kJ)
+
+1
+
+0.0130 = 2.60×10–8 × 1010 × Δθ
+
+allow a correct substitution of an
+incorrectly / not converted value
+of c
+
+1
+
+0.0130
+
+allow a correct rearrangement of
+an incorrectly / not converted
+value of c
+
+1
+
+allow an answer consistent with
+an incorrectly / not converted
+value of c
+allow a correct answer given to
+more than 3 sig figs
+
+1
+
+∆θ =
+
+–8
+
+(2.60 × 10
+
+Δθ = 495 (°C)
+
+Total Question 8
+
+× 1010)
+
+AO /
+Spec. Ref.
+AO1
+4.3.3.1
+
+AO /
+Spec.
+Ref.
+AO2
+4.1.1.3
+4.3.2.2
+
+8
+21
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 9
+Question
+09.1
+
+Question
+09.2
+
+Mark
+
+AO /
+Spec. Ref.
+
+radiation (from source A) travels
+(approximately) 3 cm (in air)
+
+1
+
+AO1
+4.4.2.1
+4.4.3.1
+
+(after which) count rate
+decreases to background
+radiation
+
+1
+
+Answers
+
+Extra information
+
+(because) alpha radiation has a
+short range (in air)
+
+allow alpha radiation has (very)
+low penetrating ability
+allow beta and gamma radiation
+have a (much) longer range in
+air
+
+1
+
+Answers
+
+Extra information
+
+Mark
+
+use an aluminium sheet
+
+allow other materials that beta
+would be stopped by e.g. brick,
+sheets of iron / lead, etc.
+ignore sheet(s) of metal foil
+unless thickness is given
+
+1
+
+(which) beta radiation will not
+penetrate but gamma will
+or
+(which) only gamma will
+penetrate
+
+MP2 dependent on scoring MP1
+
+1
+
+Question
+
+Answers
+
+Extra information
+
+Mark
+
+09.3
+
+any one from:
+• increase distance between
+source and teacher
+• limit exposure time
+• use tongs / forceps
+• wear a lead apron
+• keep source in box unless in
+use
+• stand behind safety screen
+• point source away from
+teacher
+
+allow any reasonable precaution
+that increases distance between
+the source and the teacher, or
+limits exposure time
+
+1
+
+22
+
+ignore wear PPE unqualified
+ignore examples of additional
+clothing
+
+AO /
+Spec. Ref.
+AO1
+4.4.2.1
+
+AO /
+Spec. Ref.
+AO1
+4.4.2.4
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+09.4
+
+Answers
+wear gloves / apron
+or
+wear a lab coat
+or
+handle source with tongs /
+forceps
+
+Extra information
+
+Mark
+
+allow no eating / drinking (while
+radioactive source is in the lab)
+allow do not touch the source
+(with bare hands)
+
+1
+
+AO /
+Spec. Ref.
+AO1
+4.4.2.4
+
+ignore wear a mask
+ignore wear safety glasses
+ignore protective clothing
+unqualified
+ignore wear a hazmat suit
+ignore wear PPE unqualified
+
+Mark
+
+AO /
+Spec. Ref.
+
+do not allow a line drawn that
+crosses the graph line
+
+1
+
+AO2
+
+attempt to calculate gradient of
+the tangent
+
+allow missing power for Δy
+
+1
+
+activity = 7.1 × 1020
+
+allow a value between 6.5 and
+7.6 × 1020
+
+1
+
+Question
+
+Answers
+
+09.5
+
+tangent drawn on line at 300 s
+
+Extra information
+
+AO2
+AO2
+
+AO1
+becquerel / Bq
+
+Total Question 9
+
+ignore decays/second
+
+1
+
+4.4.2.1
+
+11
+
+23
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question 10
+Question
+10.1
+
+Answers
+
+Extra information
+
+brown
+
+Question
+
+1
+
+Answers
+
+Extra information
+
+10.2
+
+Answers
+
+Extra information
+
+t = 0.400 (s)
+
+Mark
+1
+
+2.0 = I × 0.400
+
+allow a correct substitution of an
+incorrectly / not converted value
+of t
+
+1
+
+2.0
+0.400
+
+allow a correct rearrangement
+using an incorrectly / not
+converted value of t
+
+1
+
+I = 5.0 (A)
+
+allow an answer consistent with
+an incorrectly / not converted
+value of t
+
+1
+
+I=
+
+24
+
+Mark
+1
+
+Question
+10.3
+
+Mark
+
+AO /
+Spec. Ref.
+AO1
+4.2.3.2
+
+AO /
+Spec. Ref.
+AO1
+4.2.1.1
+
+AO /
+Spec. Ref.
+AO2
+4.2.1.2
+
+PMT
+
+MARK SCHEME – GCSE PHYSICS – 8463/1H – JUNE 2024
+
+Question
+10.4
+
+Answers
+
+Mark
+
+L = 60 000 (J/kg)
+
+allow full credit for a correct
+method using E = 0.00102 (kJ)
+
+1
+
+1.02 = m × 60 000
+
+allow a correct substitution of an
+incorrectly / not converted value
+of L
+
+1
+
+1.02
+60 000
+
+allow a correct rearrangement
+using an incorrectly / not
+converted value of L
+
+1
+
+m = 1.7 × 10–5 (kg)
+
+allow an answer consistent with
+an incorrectly / not converted
+value of L
+
+1
+
+Extra information
+
+Mark
+
+AO /
+Spec. Ref.
+
+1
+
+AO3
+
+1
+
+AO1
+
+m=
+
+Question
+10.5
+
+AO /
+Spec. Ref.
+
+Extra information
+
+Answers
+time taken would increase
+more energy would need to be
+transferred (in total)
+
+Total Question 10
+
+MP2 dependent on scoring MP1
+
+AO2
+4.3.2.3
+
+4.1.2.1
+4.3.2.3
+
+12
+
+25
+
+

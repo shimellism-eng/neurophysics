@@ -1421,7 +1421,7 @@ function StaticElecReality() {
 
 export const ENERGY_TOPICS = {
   energy_stores: {
-    id: 'energy_stores', module: 'Energy', moduleColor: C,
+    id: 'energy_stores', module: 'Energy', moduleColor: C, course: 'combined',
     title: 'Energy Stores', subtitle: 'Systems & Conservation of Energy',
     description: 'A system is an object or group of objects being studied. Energy is stored in kinetic, thermal, chemical, gravitational potential, elastic potential and nuclear stores. When a system changes, energy is transferred between stores - it is never created or destroyed (conservation of energy).',
     lessonVisual: EnergyStoresLesson, ideaVisual: EnergyStoresIdea, realityVisual: EnergyStoresReality,
@@ -1442,7 +1442,7 @@ export const ENERGY_TOPICS = {
     concept: 'As the ball rises and slows, kinetic energy is transferred to gravitational potential energy (GPE = mgh). At maximum height, all kinetic energy has converted to GPE.',
   },
   energy_pathways: {
-    id: 'energy_pathways', module: 'Energy', moduleColor: C,
+    id: 'energy_pathways', module: 'Energy', moduleColor: C, course: 'combined',
     title: 'Energy Pathways', subtitle: 'Four Ways Energy is Transferred',
     description: 'Energy is transferred between stores by four pathways: mechanically (a force doing work), electrically (charge moving through a potential difference), by heating (from hotter to cooler regions), and by radiation (electromagnetic or sound waves). Energy is always conserved  -  it moves between stores, never disappearing.',
     lessonVisual: EnergyPathwaysLesson, ideaVisual: EnergyPathwaysIdea, realityVisual: EnergyPathwaysReality,
@@ -1463,7 +1463,7 @@ export const ENERGY_TOPICS = {
     concept: 'The four energy transfer pathways are: mechanical (by a force), electrical (by current), heating (from hot to cold) and radiation (by waves). Chemical, kinetic, thermal and gravitational PE are energy STORES  -  where energy is held, not how it moves.',
   },
   energy_equations: {
-    id: 'energy_equations', module: 'Energy', moduleColor: C,
+    id: 'energy_equations', module: 'Energy', moduleColor: C, course: 'combined',
     title: 'Energy Equations', subtitle: 'KE, GPE, EPE and Work Done',
     description: 'Key energy equations: Kinetic energy = ½mv², Gravitational PE = mgh, Elastic PE = ½ke², Work done = Fd. These allow you to calculate energy stored in or transferred by a system. Note that KE depends on the square of speed.',
     lessonVisual: EnergyEquationsLesson, ideaVisual: EnergyEquationsIdea, realityVisual: EnergyEquationsReality,
@@ -1484,7 +1484,7 @@ export const ENERGY_TOPICS = {
     concept: 'KE = ½ × 4 × 3² = ½ × 4 × 9 = 18 J. Speed is squared in the formula, so doubling speed quadruples kinetic energy.',
   },
   efficiency: {
-    id: 'efficiency', module: 'Energy', moduleColor: C, practicalId: 'insulation',
+    id: 'efficiency', module: 'Energy', moduleColor: C, practicalId: 'insulation', course: 'combined',
     title: 'Efficiency', subtitle: 'Useful Output ÷ Total Input × 100',
     description: 'Efficiency measures how much of the input energy becomes useful output energy. Efficiency = (useful output energy ÷ total input energy) × 100%. Wasted energy is usually dissipated as heat. No real machine is 100% efficient due to friction and heating.',
     lessonVisual: EfficiencyLesson, ideaVisual: EfficiencyIdea, realityVisual: EfficiencyReality,
@@ -1505,7 +1505,7 @@ export const ENERGY_TOPICS = {
     concept: 'Efficiency = (200 ÷ 500) × 100 = 40%. The remaining 300 J is wasted, usually as thermal energy due to friction.',
   },
   power_calc: {
-    id: 'power_calc', module: 'Energy', moduleColor: C,
+    id: 'power_calc', module: 'Energy', moduleColor: C, course: 'combined',
     title: 'Power', subtitle: 'P = E/t and P = W/t',
     description: 'Power is the rate of energy transfer. P = E/t (power = energy ÷ time) or P = W/t (power = work done ÷ time). The unit of power is the watt (W), where 1 W = 1 J/s. A 100 W bulb transfers 100 joules every second.',
     lessonVisual: PowerLesson, ideaVisual: PowerIdea, realityVisual: PowerReality,
@@ -1526,7 +1526,7 @@ export const ENERGY_TOPICS = {
     concept: 'P = 3000 ÷ 60 = 50 W. Power measures the rate of energy transfer, not total energy. A 50 W device uses energy more slowly than a 1000 W device.',
   },
   energy_resources: {
-    id: 'energy_resources', module: 'Energy', moduleColor: C,
+    id: 'energy_resources', module: 'Energy', moduleColor: C, course: 'combined',
     title: 'Energy Resources', subtitle: 'Renewable vs Non-Renewable',
     description: 'Renewable resources (solar, wind, tidal, hydroelectric, geothermal, wave, biomass) are replenished naturally and produce little/no CO₂. Non-renewable resources (coal, oil, gas, nuclear) will eventually run out. Each has advantages and disadvantages for reliability, environmental impact and cost.',
     lessonVisual: EnergyResourcesLesson, ideaVisual: EnergyResourcesIdea, realityVisual: EnergyResourcesReality,
@@ -1547,7 +1547,7 @@ export const ENERGY_TOPICS = {
     concept: 'Nuclear and fossil fuel power stations can generate electricity continuously regardless of weather. Renewables like solar and wind are intermittent - their output varies with conditions.',
   },
   circuit_basics: {
-    id: 'circuit_basics', module: 'Electricity', moduleColor: ELEC_C, practicalId: 'resistance',
+    id: 'circuit_basics', module: 'Electricity', moduleColor: ELEC_C, practicalId: 'resistance', course: 'combined',
     title: 'Current, PD & Resistance', subtitle: 'Q = It and V = IR',
     description: 'Electric current is the rate of flow of charge (Q = It). Potential difference (voltage) drives the current around a circuit. Resistance opposes current flow. Ohm\'s Law: V = IR. In a closed loop, charge is conserved - current does not get "used up".',
     lessonVisual: CircuitBasicsLesson, ideaVisual: CircuitBasicsIdea, realityVisual: CircuitBasicsReality,
@@ -1568,7 +1568,7 @@ export const ENERGY_TOPICS = {
     concept: 'R = V ÷ I = 6 ÷ 2 = 3 Ω. Current stays the same throughout a series loop - it is the energy (voltage) that is shared between components.',
   },
   circuit_components: {
-    id: 'circuit_components', module: 'Electricity', moduleColor: ELEC_C, practicalId: 'iv_characteristics',
+    id: 'circuit_components', module: 'Electricity', moduleColor: ELEC_C, practicalId: 'iv_characteristics', course: 'combined',
     title: 'Circuit Components', subtitle: 'I-V Characteristics',
     description: 'An ohmic conductor (e.g. resistor at constant temperature) has constant resistance - a straight I-V graph. A filament lamp has increasing resistance as temperature rises - a curved graph. A diode only allows current in one direction. Thermistors decrease resistance with temperature; LDRs decrease resistance with light intensity.',
     lessonVisual: CircuitComponentsLesson, ideaVisual: CircuitComponentsIdea, realityVisual: CircuitComponentsReality,
@@ -1589,7 +1589,7 @@ export const ENERGY_TOPICS = {
     concept: 'An ohmic conductor keeps constant resistance regardless of current, giving a straight-line I-V graph. A filament lamp heats up, increasing resistance, causing the curve to flatten at higher currents.',
   },
   series_parallel: {
-    id: 'series_parallel', module: 'Electricity', moduleColor: ELEC_C,
+    id: 'series_parallel', module: 'Electricity', moduleColor: ELEC_C, course: 'combined',
     title: 'Series & Parallel Circuits', subtitle: 'Current, Voltage & Resistance Rules',
     description: 'Series: current is the same at all points; voltage is shared between components; total resistance = R1 + R2. Parallel: voltage is the same across each branch; current splits between branches; total resistance is less than the smallest individual resistor.',
     lessonVisual: SeriesParallelLesson, ideaVisual: SeriesParallelIdea, realityVisual: SeriesParallelReality,
@@ -1610,7 +1610,7 @@ export const ENERGY_TOPICS = {
     concept: 'In parallel, each branch has the full 12V. Using V = IR: I = 12 ÷ 4 = 3A through each resistor. Adding more parallel branches increases total current from the supply.',
   },
   domestic_electricity: {
-    id: 'domestic_electricity', module: 'Electricity', moduleColor: ELEC_C,
+    id: 'domestic_electricity', module: 'Electricity', moduleColor: ELEC_C, course: 'combined',
     title: 'Domestic Uses & Safety', subtitle: 'Mains AC, 3-Core Cable, Earth Wire',
     description: 'UK mains electricity is AC at approximately 230V and 50Hz. 3-core cable has: live (brown) - alternating pd from supply; neutral (blue) - completes the circuit; earth (yellow/green) - safety wire, only carries current if there is a fault. AC reverses direction 50 times per second (50Hz).',
     lessonVisual: DomesticElecLesson, ideaVisual: DomesticElecIdea, realityVisual: DomesticElecReality,
@@ -1631,7 +1631,7 @@ export const ENERGY_TOPICS = {
     concept: 'UK mains is alternating current (AC) at 230V, 50Hz. AC means current reverses direction 50 times per second. The earth wire (yellow/green) only carries current if a fault causes the casing to become live.',
   },
   electrical_power: {
-    id: 'electrical_power', module: 'Electricity', moduleColor: ELEC_C,
+    id: 'electrical_power', module: 'Electricity', moduleColor: ELEC_C, course: 'combined',
     title: 'Electrical Power & Energy', subtitle: 'P = VI, P = I²R, E = QV',
     description: 'Electrical power: P = VI (power = voltage × current) or P = I²R. Energy transferred: E = Pt = QV. The National Grid transmits electricity at high voltage to reduce current and therefore reduce energy lost as heat in the wires (P = I²R). Step-up transformers increase voltage before transmission; step-down reduce it for homes.',
     lessonVisual: ElecPowerLesson, ideaVisual: ElecPowerIdea, realityVisual: ElecPowerReality,
@@ -1652,7 +1652,7 @@ export const ENERGY_TOPICS = {
     concept: 'P = V × I = 230 × 4 = 920 W. The National Grid uses high voltage (and therefore low current) to minimise power lost as heat in cables, since P_loss = I²R.',
   },
   static_electricity: {
-    id: 'static_electricity', module: 'Electricity', moduleColor: ELEC_C,
+    id: 'static_electricity', module: 'Electricity', moduleColor: ELEC_C, course: 'physics-only',
     title: 'Static Electricity', subtitle: 'Charging by Friction & Electric Fields',
     description: 'When insulating materials are rubbed together, electrons are transferred. The material gaining electrons becomes negatively charged; the one losing electrons becomes positively charged. Like charges repel; unlike charges attract. A charged object creates an electric field - another charged object in this field experiences a force.',
     lessonVisual: StaticElecLesson, ideaVisual: StaticElecIdea, realityVisual: StaticElecReality,

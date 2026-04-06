@@ -691,7 +691,7 @@ function StaticElectricityReality() {
 // ─── Exports ──────────────────────────────────────────────────────────────────
 export const ELECTRICITY_TOPICS = {
   circuit_basics: {
-    id: 'circuit_basics', module: 'Electricity', moduleColor: EC,
+    id: 'circuit_basics', module: 'Electricity', moduleColor: EC, course: 'combined',
     title: 'Circuit Basics',
     subtitle: 'Current, Voltage and Complete Circuits',
     description: 'An electric circuit is a closed loop through which current can flow. Current (I) is the rate of flow of charge, measured in amperes (A). Voltage (V) is the energy transferred per unit charge, measured in volts (V). A circuit must be complete for current to flow — any break stops it.',
@@ -714,7 +714,7 @@ export const ELECTRICITY_TOPICS = {
   },
 
   circuit_components: {
-    id: 'circuit_components', module: 'Electricity', moduleColor: EC,
+    id: 'circuit_components', module: 'Electricity', moduleColor: EC, course: 'combined',
     title: 'Circuit Symbols & Components',
     subtitle: 'Standard Symbols and How to Use Them',
     description: 'Standard circuit symbols allow engineers and scientists worldwide to draw circuits unambiguously. Key rules: an ammeter (low resistance) is connected in series to measure current. A voltmeter (very high resistance) is connected in parallel to measure voltage. An LDR\'s resistance decreases in light. A thermistor\'s resistance decreases with temperature.',
@@ -737,7 +737,7 @@ export const ELECTRICITY_TOPICS = {
   },
 
   series_parallel: {
-    id: 'series_parallel', module: 'Electricity', moduleColor: EC,
+    id: 'series_parallel', module: 'Electricity', moduleColor: EC, course: 'combined',
     title: 'Series & Parallel Circuits',
     subtitle: 'How Current and Voltage Behave in Each',
     description: 'Series circuits have one current path — current is the same everywhere, and voltages add up. Parallel circuits have multiple paths — voltage is the same across each branch, and currents add up at junctions. Most household wiring uses parallel circuits so each appliance receives full mains voltage and can be switched independently.',
@@ -760,7 +760,7 @@ export const ELECTRICITY_TOPICS = {
   },
 
   domestic_electricity: {
-    id: 'domestic_electricity', module: 'Electricity', moduleColor: EC,
+    id: 'domestic_electricity', module: 'Electricity', moduleColor: EC, course: 'combined',
     title: 'Domestic Electricity',
     subtitle: 'AC, Mains Voltage, Plugs & Safety',
     description: 'UK mains electricity is alternating current (AC) at 230 V and 50 Hz. AC reverses direction 50 times per second. A three-pin plug has: Live (brown, 230 V), Neutral (blue, 0 V), Earth (green/yellow, safety). The fuse in a plug melts if current is too high, breaking the circuit and preventing fire or electrocution.',
@@ -783,7 +783,7 @@ export const ELECTRICITY_TOPICS = {
   },
 
   electrical_power: {
-    id: 'electrical_power', module: 'Electricity', moduleColor: EC,
+    id: 'electrical_power', module: 'Electricity', moduleColor: EC, course: 'combined',
     title: 'Electrical Power',
     subtitle: 'P = IV, P = I²R and Energy Transfer',
     description: 'Power (P) is the rate of energy transfer in watts (W). P = IV (power = current × voltage). P = I²R (useful when voltage is unknown). Energy transferred: E = Pt (joules = watts × seconds). A 60 W bulb transfers 60 J every second. Doubling the current quadruples the power (P = I²R).',
@@ -806,7 +806,7 @@ export const ELECTRICITY_TOPICS = {
   },
 
   static_electricity: {
-    id: 'static_electricity', module: 'Electricity', moduleColor: EC,
+    id: 'static_electricity', module: 'Electricity', moduleColor: EC, course: 'physics-only',
     title: 'Static Electricity',
     subtitle: 'Charging by Friction, Electric Fields & Discharge',
     description: 'Static electricity is caused by the transfer of electrons between materials when rubbed together. The material that gains electrons becomes negatively charged; the one that loses electrons becomes positively charged. Like charges repel; unlike charges attract. Large charge builds up on storm clouds — lightning is rapid discharge.',

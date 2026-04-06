@@ -1458,7 +1458,7 @@ function RedshiftReality() {
 
 export const WAVES_TOPICS = {
   wave_types: {
-    id: 'wave_types', module: 'Waves', moduleColor: WC,
+    id: 'wave_types', module: 'Waves', moduleColor: WC, course: 'combined',
     title: 'Transverse & Longitudinal Waves', subtitle: 'Wave Types and What Transfers',
     description: 'Waves transfer energy without transferring matter. Transverse waves: vibration is perpendicular to direction of travel (e.g. light, EM waves, seismic S-waves). Longitudinal waves: vibration is parallel to direction of travel, with compressions and rarefactions (e.g. sound, seismic P-waves).',
     lessonVisual: WaveTypesLesson, ideaVisual: WaveTypesIdea, realityVisual: WaveTypesReality,
@@ -1479,7 +1479,7 @@ export const WAVES_TOPICS = {
     concept: 'Sound causes air particles to oscillate back and forth in the same direction as the wave travels, creating areas of compression and rarefaction. This is longitudinal. Transverse waves (like light) vibrate at 90° to the direction of travel.',
   },
   wave_properties: {
-    id: 'wave_properties', module: 'Waves', moduleColor: WC, practicalId: 'waves',
+    id: 'wave_properties', module: 'Waves', moduleColor: WC, practicalId: 'waves', course: 'combined',
     title: 'Properties of Waves', subtitle: 'Amplitude, Wavelength, Frequency & v = fλ',
     description: 'Key wave properties: amplitude (A) - maximum displacement; wavelength (λ) - distance between two identical points; frequency (f) - oscillations per second (Hz); period (T = 1/f) - time for one complete oscillation. Wave speed: v = fλ. Speed depends on the medium - not the frequency.',
     lessonVisual: WavePropertiesLesson, ideaVisual: WavePropertiesIdea, realityVisual: WavePropertiesReality,
@@ -1500,7 +1500,7 @@ export const WAVES_TOPICS = {
     concept: 'v = 200 × 1.5 = 300 m/s. In a given medium, all waves of that type travel at the same speed. Changing frequency changes wavelength proportionally (v = fλ), not the speed.',
   },
   wave_reflection: {
-    id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light',
+    id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light', course: 'physics-only',
     title: 'Reflection & Refraction', subtitle: 'Boundary Behaviour of Waves',
     description: 'Reflection: angle of incidence = angle of reflection (measured from the normal). Refraction: waves change speed at a boundary between media, causing a change in direction. Entering a denser medium: slows down, bends towards normal. Entering a less dense medium: speeds up, bends away from normal.',
     lessonVisual: WaveReflectionLesson, ideaVisual: WaveReflectionIdea, realityVisual: WaveReflectionReality,
@@ -1521,7 +1521,7 @@ export const WAVES_TOPICS = {
     concept: 'Glass is optically denser than air. When light slows down entering glass, it bends towards the normal. When leaving glass back into air (speeding up), it bends away from the normal - causing the familiar prism rainbow effect.',
   },
   sound_ultrasound: {
-    id: 'sound_ultrasound', module: 'Waves', moduleColor: WC,
+    id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only',
     title: 'Sound Waves & Ultrasound', subtitle: 'Hearing Range, Echoes & Medical Imaging',
     description: 'Sound travels as longitudinal waves - faster in denser media (faster in solids than liquids than gases). Human hearing: 20 Hz to 20 kHz. Ultrasound (>20 kHz) cannot be heard by humans. Ultrasound is partially reflected at boundaries between media - used in medical scanning and flaw detection in materials.',
     lessonVisual: SoundWavesLesson, ideaVisual: SoundWavesIdea, realityVisual: SoundWavesReality,
@@ -1542,7 +1542,7 @@ export const WAVES_TOPICS = {
     concept: 'Sound travels by passing vibrations between particles. In solids, particles are very close together, so vibrations pass between them very quickly. Air particles are far apart, so vibrations take longer to transfer - sound is slower.',
   },
   em_spectrum: {
-    id: 'em_spectrum', module: 'Waves', moduleColor: WC,
+    id: 'em_spectrum', module: 'Waves', moduleColor: WC, course: 'combined',
     title: 'The Electromagnetic Spectrum', subtitle: 'Types, Properties & Applications',
     description: 'All EM waves are transverse and travel at 3×10⁸ m/s in a vacuum. From low to high frequency: radio, microwave, infrared, visible light, ultraviolet, X-rays, gamma. Higher frequency → shorter wavelength → more energy → more hazardous. Ionising radiation (UV, X-rays, gamma) can damage DNA.',
     lessonVisual: EMSpectrumLesson, ideaVisual: EMSpectrumIdea, realityVisual: EMSpectrumReality,
@@ -1563,7 +1563,7 @@ export const WAVES_TOPICS = {
     concept: 'Gamma rays have the highest frequency and energy in the EM spectrum - sufficient to kill bacteria and sterilise equipment. They are also used in cancer treatment (radiotherapy). The visible spectrum (400–700 nm) is a very narrow band.',
   },
   lenses: {
-    id: 'lenses', module: 'Waves', moduleColor: WC,
+    id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics-only',
     title: 'Lenses & Optics', subtitle: 'Convex, Concave, Ray Diagrams & Magnification',
     description: 'Lenses refract (bend) light. Convex (converging) lenses bring parallel rays to a focal point - can produce real or virtual images. Concave (diverging) lenses always produce virtual, upright, diminished images. Magnification = image height ÷ object height = image distance ÷ object distance.',
     lessonVisual: LensesLesson, ideaVisual: LensesIdea, realityVisual: LensesReality,
@@ -1584,7 +1584,7 @@ export const WAVES_TOPICS = {
     concept: 'Magnification = 6 ÷ 2 = 3×. Convex lenses can produce real inverted images (when object is beyond focal point) or virtual upright images (when object is within focal point, like a magnifying glass). Concave lenses always diverge light → always virtual.',
   },
   black_body: {
-    id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation',
+    id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics-only',
     title: 'Black Body Radiation', subtitle: 'Emission, Absorption & Earth\'s Temperature',
     description: 'All objects above absolute zero emit infrared radiation. Hotter objects emit more radiation at shorter wavelengths. A perfect black body absorbs all radiation and is the best possible emitter. At constant temperature, absorption rate = emission rate. Earth\'s temperature depends on absorption and emission of radiation - basis of climate science.',
     lessonVisual: BlackBodyLesson, ideaVisual: BlackBodyIdea, realityVisual: BlackBodyReality,
@@ -1605,7 +1605,7 @@ export const WAVES_TOPICS = {
     concept: 'Even a block of ice at 0°C emits infrared radiation - less than a warm object, but still emitting. Only at absolute zero (−273°C) would emission theoretically stop. This is why thermal cameras can detect any object warmer than absolute zero.',
   },
   magnetism_fields: {
-    id: 'magnetism_fields', module: 'Magnetism', moduleColor: MC,
+    id: 'magnetism_fields', module: 'Magnetism', moduleColor: MC, course: 'combined',
     title: 'Permanent & Induced Magnetism', subtitle: 'Magnetic Fields and Compass',
     description: 'Magnets have north and south poles. Like poles repel; unlike poles attract. The region where a magnetic force acts is called a magnetic field. Magnetic field direction: from north to south pole. Magnetic materials: iron, steel, nickel, cobalt. A compass is a small magnet that aligns with the Earth\'s magnetic field.',
     lessonVisual: MagnetismLesson, ideaVisual: MagnetismIdea, realityVisual: MagnetismReality,
@@ -1626,7 +1626,7 @@ export const WAVES_TOPICS = {
     concept: 'Like poles (N-N or S-S) repel; unlike poles (N-S) attract. The magnetic field extends outward from the poles through space - this is a non-contact force. Iron filings can be used to visualise field lines.',
   },
   motor_effect: {
-    id: 'motor_effect', module: 'Magnetism', moduleColor: MC,
+    id: 'motor_effect', module: 'Magnetism', moduleColor: MC, course: 'combined',
     title: 'The Motor Effect', subtitle: "F = BIL and Fleming's Left Hand Rule",
     description: 'A current-carrying conductor in a magnetic field experiences a force (the motor effect). F = BIL (force = magnetic flux density × current × length). Fleming\'s Left Hand Rule: thumb = force/motion, index = magnetic field (N to S), middle finger = current direction. Used in electric motors and loudspeakers.',
     lessonVisual: MotorEffectLesson, ideaVisual: MotorEffectIdea, realityVisual: MotorEffectReality,
@@ -1647,7 +1647,7 @@ export const WAVES_TOPICS = {
     concept: 'F = BIL - force is directly proportional to current. Doubling I doubles F. Force is maximum when current is perpendicular (90°) to the field, and zero when parallel (0°). This is why motors rotate - the direction of force changes as the coil turns.',
   },
   em_induction: {
-    id: 'em_induction', module: 'Magnetism', moduleColor: MC,
+    id: 'em_induction', module: 'Magnetism', moduleColor: MC, course: 'physics-only',
     title: 'EM Induction & Transformers', subtitle: 'Generators, Alternators & Vp/Vs = Np/Ns',
     description: 'Moving a conductor relative to a magnetic field (or changing the field) induces a potential difference - the generator effect. Factors affecting induced pd: speed of movement, magnetic field strength, number of turns. Transformers use this principle with AC - they change voltage using the ratio of coil turns. National Grid uses high voltage to minimise energy losses (P = I²R).',
     lessonVisual: EMInductionLesson, ideaVisual: EMInductionIdea, realityVisual: EMInductionReality,
@@ -1668,7 +1668,7 @@ export const WAVES_TOPICS = {
     concept: 'Vs/Vp = Ns/Np → Vs = 50 × (1000/200) = 250 V. This is a step-up transformer. Transformers only work with AC because they need a changing magnetic flux to induce a current in the secondary coil. DC creates a constant field with no change in flux.',
   },
   solar_system: {
-    id: 'solar_system', module: 'Space', moduleColor: SC,
+    id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics-only',
     title: 'Solar System & Orbital Motion', subtitle: 'Gravity, Circular Orbits & Satellites',
     description: 'Our solar system: Sun, 8 planets, dwarf planets, moons, asteroids, comets. Gravity provides the centripetal force for orbital motion. For a stable circular orbit, velocity is perpendicular to gravity. Higher orbit = slower orbital speed. Artificial satellites orbit Earth - GPS, communications, weather monitoring.',
     lessonVisual: SolarSystemLesson, ideaVisual: SolarSystemIdea, realityVisual: SolarSystemReality,
@@ -1689,7 +1689,7 @@ export const WAVES_TOPICS = {
     concept: 'Gravitational attraction between the Sun and planet provides the centripetal force needed for circular orbital motion. Without this force, the planet would travel in a straight line (Newton\'s 1st law). Gravity follows an inverse-square law - decreases with distance squared.',
   },
   stellar_evolution: {
-    id: 'stellar_evolution', module: 'Space', moduleColor: SC,
+    id: 'stellar_evolution', module: 'Space', moduleColor: SC, course: 'physics-only',
     title: 'Stellar Evolution', subtitle: 'Life Cycle of Stars',
     description: 'Stars form from nebulae (clouds of gas and dust) pulled together by gravity. Nuclear fusion of hydrogen begins - this is the main sequence stage. When hydrogen runs out, a Sun-like star becomes a red giant, then white dwarf. Massive stars become red supergiants, then supernovae - producing all heavy elements - then neutron stars or black holes.',
     lessonVisual: StellarEvolutionLesson, ideaVisual: StellarEvolutionIdea, realityVisual: StellarEvolutionReality,
@@ -1710,7 +1710,7 @@ export const WAVES_TOPICS = {
     concept: 'The Sun\'s fate: red giant → planetary nebula → white dwarf → black dwarf (over billions of years). Massive stars (several times Sun\'s mass): red supergiant → supernova (explosion) → neutron star or black hole. Supernovae create all elements heavier than iron.',
   },
   redshift: {
-    id: 'redshift', module: 'Space', moduleColor: SC,
+    id: 'redshift', module: 'Space', moduleColor: SC, course: 'physics-only',
     title: 'Red-shift & The Big Bang', subtitle: 'Evidence for an Expanding Universe',
     description: 'Red-shift: light from distant galaxies is shifted towards the red end of the spectrum - their wavelength is stretched. This shows galaxies are moving away from us. Farther galaxies have greater red-shift - moving faster. This is evidence that the universe is expanding and supports the Big Bang theory (universe began from a single hot, dense point ~13.8 billion years ago).',
     lessonVisual: RedshiftLesson, ideaVisual: RedshiftIdea, realityVisual: RedshiftReality,

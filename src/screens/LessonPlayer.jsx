@@ -1,6 +1,7 @@
-import { motion } from 'motion/react'
+import { motion, AnimatePresence } from 'motion/react'
+import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, ChevronRight, BookOpen, FlaskConical, GraduationCap } from 'lucide-react'
+import { ArrowLeft, ChevronRight, BookOpen, FlaskConical, GraduationCap, ChevronDown } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getExamQuestionCount } from '../data/examIndex'
@@ -20,6 +21,7 @@ export default function LessonPlayer() {
   const VisualComponent = topic.lessonVisual
 
   const examCount = getExamQuestionCount(id)
+  const [showFullDesc, setShowFullDesc] = useState(false)
 
   const handleStartQuiz = () => {
     markStarted(id)
@@ -38,32 +40,24 @@ export default function LessonPlayer() {
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
-          <div className="text-xs font-medium truncate" style={{ color: topic.moduleColor }}>{topic.module}</div>
-          <h1 className="text-lg font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
+          <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>{topic.module}</div>
+          <h1 className="text-base font-bold leading-tight" style={{ color: '#f8fafc', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{topic.title}</h1>
         </div>
-        <div className="flex items-center gap-2">
-          {topic.course === 'physics-only' ? (
-            <div
-              className="px-2.5 py-1 rounded-full text-xs font-semibold"
-              style={{ background: 'rgba(139,92,246,0.15)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.35)' }}
-            >
-              Physics Only
-            </div>
-          ) : (
-            <div
-              className="px-2.5 py-1 rounded-full text-xs font-semibold"
-              style={{ background: 'rgba(34,197,94,0.12)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.3)' }}
-            >
-              Combined
-            </div>
-          )}
+        {topic.course === 'physics-only' ? (
           <div
-            className="px-3 py-1 rounded-full text-xs font-medium"
-            style={{ background: `${topic.moduleColor}20`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}40` }}
+            className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold"
+            style={{ background: 'rgba(139,92,246,0.15)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.35)' }}
           >
-            Lesson
+            Physics Only
           </div>
-        </div>
+        ) : (
+          <div
+            className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold"
+            style={{ background: 'rgba(34,197,94,0.12)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.3)' }}
+          >
+            Combined
+          </div>
+        )}
       </div>
 
       {/* Scrollable content */}
@@ -113,33 +107,48 @@ export default function LessonPlayer() {
           </span>
         </motion.div>
 
-        {/* Description */}
-        <motion.p
-          className="text-sm leading-relaxed mb-6"
-          style={{ color: '#cad5e2' }}
+        {/* Description — collapsible for ND learners */}
+        <motion.div
+          className="mb-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          {topic.description}
-        </motion.p>
-
-        {/* Key concepts pills */}
-        <motion.div
-          className="flex flex-wrap gap-2 mb-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          {[topic.subtitle, topic.module, 'GCSE Physics'].map((tag, i) => (
-            <span
-              key={i}
-              className="px-3 py-1 rounded-full text-xs font-medium"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#a8b8cc' }}
-            >
-              {tag}
-            </span>
-          ))}
+          <AnimatePresence initial={false}>
+            {showFullDesc ? (
+              <motion.p
+                key="full"
+                className="text-sm leading-relaxed"
+                style={{ color: '#cad5e2' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {topic.description}
+              </motion.p>
+            ) : (
+              <motion.p
+                key="preview"
+                className="text-sm leading-relaxed"
+                style={{ color: '#cad5e2', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {topic.description}
+              </motion.p>
+            )}
+          </AnimatePresence>
+          <button
+            className="flex items-center gap-1 mt-1.5 text-xs font-semibold"
+            style={{ color: topic.moduleColor }}
+            onClick={() => setShowFullDesc(v => !v)}
+          >
+            {showFullDesc ? 'Show less' : 'Read more'}
+            <motion.div animate={{ rotate: showFullDesc ? 180 : 0 }} transition={{ duration: 0.2 }}>
+              <ChevronDown size={12} />
+            </motion.div>
+          </button>
         </motion.div>
 
         {/* Concept card */}

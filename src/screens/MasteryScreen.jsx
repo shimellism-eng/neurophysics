@@ -100,15 +100,15 @@ export default function MasteryScreen() {
                   return (
                     <button
                       key={topicId}
-                      className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
                       style={{
                         background: isMastered ? `${mod.color}20` : 'rgba(29,41,61,0.6)',
-                        border: `0.75px solid ${isMastered ? mod.color : '#1d293d'}`,
-                        color: isMastered ? mod.color : '#a8b8cc',
+                        border: `0.75px solid ${isMastered ? mod.color : '#2d3e55'}`,
+                        color: isMastered ? mod.color : '#cad5e2',
                       }}
                       onClick={() => navigate(`/lesson/${topicId}`)}
                     >
-                      {isMastered ? <CheckCircle size={10} /> : isStarted ? <Zap size={10} /> : <Circle size={10} />}
+                      {isMastered ? <CheckCircle size={11} /> : isStarted ? <Zap size={11} /> : <Circle size={11} />}
                       {t.title}
                     </button>
                   )

@@ -34,10 +34,11 @@ export default function HomeScreen() {
   const totalTopics = Object.keys(TOPICS).length
   const progressPct = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
 
+  const isNewUser = !stats.xp && !stats.streak && masteredCount === 0
   const statsCards = [
-    { label: 'XP',      value: stats.xp || 0,           icon: Zap,    color: '#fdc700' },
-    { label: 'Streak',  value: `${stats.streak || 0}d`,  icon: Flame,  color: '#f97316' },
-    { label: 'Mastered', value: masteredCount,            icon: Star,   color: '#00bc7d' },
+    { label: 'XP',      value: stats.xp || (isNewUser ? 'Start!' : 0),  icon: Zap,    color: '#fdc700' },
+    { label: 'Streak',  value: stats.streak ? `${stats.streak}d` : (isNewUser ? 'Day 1' : '0d'), icon: Flame, color: '#f97316' },
+    { label: 'Mastered', value: masteredCount || (isNewUser ? '🚀' : 0), icon: Star,   color: '#00bc7d' },
   ]
 
   // Find first unstarted topic to resume
@@ -136,7 +137,7 @@ export default function HomeScreen() {
           aria-label={`Continue learning: ${resumeTopic?.title || 'next topic'}`}
         >
           <div className="text-left">
-            <div className="text-xs opacity-75 font-normal mb-0.5">Continue learning</div>
+            <div className="text-xs opacity-75 font-normal mb-0.5">{masteredCount === 0 ? 'Start with' : 'Continue learning'}</div>
             <div className="text-sm font-bold">{resumeTopic?.title || 'Energy Stores'}</div>
           </div>
           <ChevronRight size={22} strokeWidth={2.5} />

@@ -19,6 +19,29 @@ import OnboardingScreen from './screens/OnboardingScreen'
 import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen'
 import TermsScreen from './screens/TermsScreen'
 
+function PulseRing() {
+  const reduceMotion = (() => {
+    try {
+      const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
+      return prefs.reduceMotion
+    } catch { return false }
+  })()
+  const systemReduceMotion = typeof window !== 'undefined'
+    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    : false
+
+  if (reduceMotion || systemReduceMotion) return null
+
+  return (
+    <motion.div
+      className="absolute inset-0 rounded-full"
+      style={{ border: '2px solid rgba(99,102,241,0.35)' }}
+      animate={{ scale: [1, 1.4], opacity: [0.4, 0] }}
+      transition={{ repeat: Infinity, duration: 3, ease: 'easeOut', repeatDelay: 1.5 }}
+    />
+  )
+}
+
 function FloatingMamo() {
   const location = useLocation()
   const navigate = useNavigate()
@@ -74,12 +97,7 @@ function FloatingMamo() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Atom size={20} color="#fff" />
-                  <motion.div
-                    className="absolute inset-0 rounded-full"
-                    style={{ border: '2px solid rgba(99,102,241,0.4)' }}
-                    animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
-                    transition={{ repeat: Infinity, duration: 2.2, ease: 'easeOut' }}
-                  />
+                  <PulseRing />
                 </motion.button>
                 <button
                   className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center"

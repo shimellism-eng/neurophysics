@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X, LogOut } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
 import { useAuth } from '../context/AuthContext'
@@ -54,6 +54,11 @@ function applyReduceMotion(on) {
 
 function applyHighContrast(on) {
   document.documentElement.style.filter = on ? 'contrast(1.2) brightness(1.06)' : ''
+}
+
+function applyFontSize(size) {
+  // size: 'normal' | 'large'
+  document.documentElement.style.fontSize = size === 'large' ? '18px' : ''
 }
 
 async function requestNotifications() {
@@ -151,6 +156,7 @@ export default function SettingsScreen() {
   useEffect(() => {
     applyReduceMotion(!!prefs.reduceMotion)
     applyHighContrast(!!prefs.highContrast)
+    applyFontSize(prefs.fontSize || 'normal')
   }, []) // eslint-disable-line
 
   const showToast = (msg, color = '#6366f1') => {
@@ -178,6 +184,14 @@ export default function SettingsScreen() {
     applyHighContrast(next)
     setPref('highContrast', next)
     showToast(next ? 'High Contrast on' : 'High Contrast off', next ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Font Size
+  const toggleFontSize = () => {
+    const next = prefs.fontSize === 'large' ? 'normal' : 'large'
+    applyFontSize(next)
+    setPref('fontSize', next)
+    showToast(next === 'large' ? 'Large text on' : 'Normal text restored', next === 'large' ? '#10b981' : '#a8b8cc')
   }
 
   // ── Daily Reminders
@@ -256,6 +270,13 @@ export default function SettingsScreen() {
           hint: 'Stronger colour contrast',
           on: !!prefs.highContrast,
           onToggle: toggleHighContrast,
+        },
+        {
+          icon: Type,
+          label: 'Large Text',
+          hint: 'Increase font size throughout the app',
+          on: prefs.fontSize === 'large',
+          onToggle: toggleFontSize,
         },
       ],
     },

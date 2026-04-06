@@ -169,6 +169,26 @@ export default function ExamPractice() {
                 <span className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{q.senNote}</span>
               </motion.div>
             )}
+            {/* Memory tip card */}
+            <motion.div
+              className="mt-4 px-4 py-3 rounded-[14px] flex items-start gap-3"
+              style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.22)' }}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <span style={{ fontSize: 16 }}>📐</span>
+              <div>
+                <div className="text-xs font-semibold mb-0.5" style={{ color: '#818cf8' }}>
+                  {q.onSheet ? 'On the equation sheet' : 'Must be memorised'}
+                </div>
+                <div className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>
+                  {q.onSheet
+                    ? 'This equation is given to you in the exam. Focus on knowing when and how to use it.'
+                    : 'This equation is NOT provided in the exam. Write it out a few times to commit it to memory.'}
+                </div>
+              </div>
+            </motion.div>
           </div>
         )
       default: return null

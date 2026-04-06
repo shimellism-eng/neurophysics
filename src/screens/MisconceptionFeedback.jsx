@@ -46,6 +46,8 @@ export default function MisconceptionFeedback() {
   const hasScore = score >= 0 && total > 0
   const [xpEarned, setXpEarned] = useState(0)
   const [showConfetti, setShowConfetti] = useState(false)
+  const [showMisconception, setShowMisconception] = useState(false)
+  const [showConcept, setShowConcept] = useState(false)
   const didMark = useRef(false)
 
   useEffect(() => {
@@ -205,28 +207,80 @@ export default function MisconceptionFeedback() {
           </motion.div>
         </div>
 
-        {/* Misconception */}
+        {/* Misconception — tap to reveal */}
         <motion.div
-          className="rounded-[16px] p-4 mb-4"
-          style={{ background: 'rgba(239,68,68,0.08)', border: '0.75px solid rgba(239,68,68,0.3)' }}
+          className="rounded-[16px] mb-4 overflow-hidden"
+          style={{ border: '0.75px solid rgba(239,68,68,0.3)' }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <div className="text-xs font-semibold mb-1.5" style={{ color: '#ef4444' }}>Misconception</div>
-          <p className="text-sm" style={{ color: '#cad5e2' }}>{topic.misconception}</p>
+          <button
+            className="w-full flex items-center justify-between px-4 py-3"
+            style={{ background: 'rgba(239,68,68,0.08)' }}
+            onClick={() => setShowMisconception(v => !v)}
+          >
+            <span className="text-xs font-semibold" style={{ color: '#ef4444' }}>⚠️ Common Misconception</span>
+            <motion.span
+              animate={{ rotate: showMisconception ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+              style={{ color: '#ef4444', fontSize: 14 }}
+            >
+              ▼
+            </motion.span>
+          </button>
+          <AnimatePresence>
+            {showMisconception && (
+              <motion.div
+                className="px-4 pb-3"
+                style={{ background: 'rgba(239,68,68,0.05)' }}
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.22 }}
+              >
+                <p className="text-sm pt-2" style={{ color: '#cad5e2' }}>{topic.misconception}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
 
-        {/* Core concept */}
+        {/* Core concept — tap to reveal */}
         <motion.div
-          className="rounded-[16px] p-4 mb-6"
-          style={{ background: `${topic.moduleColor}10`, border: `0.75px solid ${topic.moduleColor}50` }}
+          className="rounded-[16px] mb-6 overflow-hidden"
+          style={{ border: `0.75px solid ${topic.moduleColor}50` }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <div className="text-xs font-semibold mb-1.5" style={{ color: topic.moduleColor }}>Core Concept</div>
-          <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{topic.concept}</p>
+          <button
+            className="w-full flex items-center justify-between px-4 py-3"
+            style={{ background: `${topic.moduleColor}10` }}
+            onClick={() => setShowConcept(v => !v)}
+          >
+            <span className="text-xs font-semibold" style={{ color: topic.moduleColor }}>✅ Core Concept</span>
+            <motion.span
+              animate={{ rotate: showConcept ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+              style={{ color: topic.moduleColor, fontSize: 14 }}
+            >
+              ▼
+            </motion.span>
+          </button>
+          <AnimatePresence>
+            {showConcept && (
+              <motion.div
+                className="px-4 pb-3"
+                style={{ background: `${topic.moduleColor}06` }}
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.22 }}
+              >
+                <p className="text-sm leading-relaxed pt-2" style={{ color: '#cad5e2' }}>{topic.concept}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
 
         {/* CTAs  -  inside scroll, always reachable */}

@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback } from 'react'
-import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb } from 'lucide-react'
+import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import questionBank from '../data/questionBank'
 import { getInteractiveQuestions } from '../data/interactiveIndex'
@@ -155,6 +155,7 @@ export default function DiagnosticQuestion() {
   const [interactiveCompleted, setInteractiveCompleted] = useState(false)
   const [showSEN, setShowSEN] = useState(false)
   const [senTab, setSenTab] = useState('keywords')
+  const [showHint, setShowHint] = useState(false)
 
   if (!topic || total === 0) return null
 
@@ -192,6 +193,7 @@ export default function DiagnosticQuestion() {
       setSelected(null)
       setSubmitted(false)
       setInteractiveCompleted(false)
+      setShowHint(false)
     }
   }
 
@@ -286,16 +288,39 @@ export default function DiagnosticQuestion() {
           )}
         </AnimatePresence>
 
-        {/* Visual — only show for MCQ questions */}
+        {/* Collapsible hint — replaces full visual on quiz screen */}
         {!isInteractive && (
-          <motion.div
-            className="w-full rounded-[24px] mb-5 overflow-hidden"
-            style={{ minHeight: 140, background: 'rgba(18,26,47,0.9)', border: `0.75px solid ${topic.moduleColor}30`, boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.05)' }}
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-          >
-            <VisualComponent />
-          </motion.div>
+          <div className="mb-4">
+            <button
+              className="w-full flex items-center gap-2 px-4 py-2.5 rounded-[12px] text-xs font-semibold"
+              style={{
+                background: showHint ? `${topic.moduleColor}15` : 'rgba(18,26,47,0.6)',
+                border: `0.75px solid ${showHint ? topic.moduleColor + '50' : '#1d293d'}`,
+                color: showHint ? topic.moduleColor : '#a8b8cc',
+              }}
+              onClick={() => setShowHint(v => !v)}
+            >
+              {showHint ? <EyeOff size={13} /> : <Eye size={13} />}
+              <span className="flex-1 text-left">{showHint ? 'Hide visual' : '💡 Show visual hint'}</span>
+              <motion.div animate={{ rotate: showHint ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                <ChevronDown size={12} />
+              </motion.div>
+            </button>
+            <AnimatePresence>
+              {showHint && (
+                <motion.div
+                  className="w-full rounded-[20px] mt-2 overflow-hidden"
+                  style={{ background: 'rgba(18,26,47,0.9)', border: `0.75px solid ${topic.moduleColor}30` }}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  <VisualComponent />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         )}
 
         {/* Question content — animated on qIndex change */}

@@ -14,13 +14,19 @@ export function AuthProvider({ children }) {
       return
     }
 
+    // If ?code= is in the URL, Supabase is mid-PKCE exchange.
+    // Keep loading=true so the auth guard doesn't redirect to /auth
+    // and break the exchange. onAuthStateChange will clear it.
+    const hasOAuthCode = new URLSearchParams(window.location.search).has('code')
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null)
-      setLoading(false)
+      if (!hasOAuthCode) setLoading(false)
     }).catch(() => setLoading(false))
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null)
+      setLoading(false)
     })
 
     return () => subscription.unsubscribe()

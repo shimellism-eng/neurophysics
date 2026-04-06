@@ -271,15 +271,14 @@ function Landing({ onEmail, onSignIn }) {
           loading={oauthLoading === 'google'}
         />
 
-        {/* Apple — re-enable once Apple Developer enrollment is approved and
-           the Apple provider is configured in Supabase Auth → Providers */}
-        {/* <OAuthButton
+        {/* Apple */}
+        <OAuthButton
           icon={<AppleIcon />}
           label="Continue with Apple"
           onClick={() => handleOAuth('apple')}
           loading={oauthLoading === 'apple'}
           dark
-        /> */}
+        />
 
         <Divider label="Or" />
 
@@ -499,7 +498,7 @@ function SignIn({ onBack, onDone, onForgot }) {
         {/* Social sign-in */}
         <div className="flex flex-col gap-3 mb-5">
           <OAuthButton icon={<GoogleIcon />} label="Continue with Google" onClick={() => handleOAuth('google')} loading={oauthLoading === 'google'} />
-          {/* <OAuthButton icon={<AppleIcon />} label="Continue with Apple" onClick={() => handleOAuth('apple')} loading={oauthLoading === 'apple'} dark /> */}
+          <OAuthButton icon={<AppleIcon />} label="Continue with Apple" onClick={() => handleOAuth('apple')} loading={oauthLoading === 'apple'} dark />
         </div>
 
         <Divider label="or sign in with email" />

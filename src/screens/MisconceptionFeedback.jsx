@@ -4,6 +4,7 @@ import { ArrowLeft, CheckCircle, XCircle, RefreshCw, Map, Star, Zap } from 'luci
 import { useEffect, useRef, useState } from 'react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
+import { saveQuizResult } from '../hooks/useInsights'
 
 function ConfettiParticle({ color, delay, x, rot }) {
   return (
@@ -48,6 +49,12 @@ export default function MisconceptionFeedback() {
   const didMark = useRef(false)
 
   useEffect(() => {
+    // Save quiz result for insights (once per visit)
+    if (hasScore && !didMark.current) {
+      saveQuizResult(id, score, total)
+      // Trigger storage event so useInsights in other components reacts
+      window.dispatchEvent(new Event('storage'))
+    }
     if (isCorrect && !didMark.current) {
       didMark.current = true
       const xp = markMastered(id)

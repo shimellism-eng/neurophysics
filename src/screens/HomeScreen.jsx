@@ -1,8 +1,9 @@
 import { motion } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { ChevronRight, Zap, Star, BookOpen, Flame, Target } from 'lucide-react'
+import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkles } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
+import { useInsights } from '../hooks/useInsights'
 
 function getGreeting() {
   const h = new Date().getHours()
@@ -22,6 +23,7 @@ function loadProfile() {
 export default function HomeScreen() {
   const navigate = useNavigate()
   const { progress, stats } = useProgress()
+  const { weakTopics, suggestions, overallAccuracy, hasData } = useInsights()
   const profile = loadProfile()
 
   const displayName = profile.name || 'Learner'
@@ -170,6 +172,110 @@ export default function HomeScreen() {
           <ChevronRight size={14} color="#a8b8cc" />
         </motion.button>
       </div>
+
+      {/* ── Insights ── */}
+      {hasData && (
+        <div className="px-5 mb-5">
+          {/* Header */}
+          <div className="flex items-center gap-2 mb-3">
+            <TrendingUp size={13} color="#6366f1" />
+            <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#a8b8cc' }}>
+              Your Insights
+            </span>
+            {overallAccuracy !== null && (
+              <span
+                className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
+                style={{
+                  background: overallAccuracy >= 0.7 ? 'rgba(0,188,125,0.15)' : 'rgba(249,115,22,0.15)',
+                  color: overallAccuracy >= 0.7 ? '#00bc7d' : '#f97316',
+                }}
+              >
+                {Math.round(overallAccuracy * 100)}% overall
+              </span>
+            )}
+          </div>
+
+          {/* Needs work */}
+          {weakTopics.length > 0 && (
+            <div className="mb-3">
+              <div className="flex items-center gap-1.5 mb-2">
+                <AlertCircle size={11} color="#f97316" />
+                <span className="text-xs font-semibold" style={{ color: '#f97316' }}>Needs work</span>
+              </div>
+              <div className="space-y-2">
+                {weakTopics.map((x, i) => (
+                  <motion.button
+                    key={x.id}
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-[14px] text-left"
+                    style={{ background: 'rgba(249,115,22,0.07)', border: '0.75px solid rgba(249,115,22,0.25)' }}
+                    onClick={() => navigate(`/diagnostic/${x.id}`)}
+                    whileTap={{ scale: 0.97 }}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                  >
+                    <div
+                      className="w-8 h-8 rounded-[10px] flex items-center justify-center shrink-0 text-xs font-bold"
+                      style={{ background: `${x.topic.moduleColor}20`, color: x.topic.moduleColor }}
+                    >
+                      {Math.round(x.accuracy * 100)}%
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{x.topic.title}</div>
+                      <div className="text-xs" style={{ color: '#a8b8cc' }}>Tap to practise again</div>
+                    </div>
+                    <ChevronRight size={13} color="#f97316" />
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Suggested next */}
+          {suggestions.length > 0 && (
+            <div>
+              <div className="flex items-center gap-1.5 mb-2">
+                <Sparkles size={11} color="#6366f1" />
+                <span className="text-xs font-semibold" style={{ color: '#6366f1' }}>Suggested for you</span>
+              </div>
+              <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
+                {suggestions.map((x, i) => (
+                  <motion.button
+                    key={x.id}
+                    className="flex-shrink-0 w-36 flex flex-col gap-1.5 px-3 py-3 rounded-[14px] text-left"
+                    style={{
+                      background: 'rgba(18,26,47,0.9)',
+                      border: `0.75px solid ${x.topic.moduleColor}40`,
+                    }}
+                    onClick={() => navigate(x.reason === 'needs work' ? `/diagnostic/${x.id}` : `/lesson/${x.id}`)}
+                    whileTap={{ scale: 0.96 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + i * 0.07 }}
+                  >
+                    <div
+                      className="w-7 h-7 rounded-[8px] flex items-center justify-center"
+                      style={{ background: `${x.topic.moduleColor}20` }}
+                    >
+                      <Target size={13} color={x.topic.moduleColor} />
+                    </div>
+                    <div className="text-xs font-semibold leading-snug" style={{ color: '#f8fafc' }}>{x.topic.title}</div>
+                    <div
+                      className="text-xs px-1.5 py-0.5 rounded-full self-start"
+                      style={{
+                        background: x.reason === 'needs work' ? 'rgba(249,115,22,0.15)' : 'rgba(99,102,241,0.15)',
+                        color: x.reason === 'needs work' ? '#f97316' : '#818cf8',
+                      }}
+                    >
+                      {x.reason === 'needs work' ? 'Review' : 'Try it'}
+                    </div>
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Modules */}
       <div className="px-5 pb-8">

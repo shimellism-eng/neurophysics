@@ -24,16 +24,40 @@ export function AuthProvider({ children }) {
     const params = new URLSearchParams(window.location.search)
     const code = params.get('code')
 
+    const handleOAuthCode = async (oauthCode) => {
+      try {
+        const { data, error } = await supabase.auth.exchangeCodeForSession(oauthCode)
+        if (!error && data?.session) {
+          setUser(data.session.user)
+        }
+      } catch (e) {
+        console.error('OAuth code exchange error:', e)
+      } finally {
+        setLoading(false)
+      }
+    }
+
     const init = async () => {
       try {
+        // Web: check for ?code= in URL
         if (code) {
-          const { data, error } = await supabase.auth.exchangeCodeForSession(code)
-          if (!error && data?.session) {
-            setUser(data.session.user)
-            window.history.replaceState({}, '', window.location.pathname + window.location.hash)
-          }
-          setLoading(false)
+          window.history.replaceState({}, '', window.location.pathname + window.location.hash)
+          await handleOAuthCode(code)
           return
+        }
+
+        // Native: check if app was launched via deep link (cold start)
+        if (isNative) {
+          const { url } = await CapApp.getLaunchUrl() ?? {}
+          if (url) {
+            const parsed = new URL(url)
+            const launchCode = parsed.searchParams.get('code')
+            if (launchCode) {
+              await handleOAuthCode(launchCode)
+              Browser.close().catch(() => {})
+              return
+            }
+          }
         }
 
         const { data: { session } } = await supabase.auth.getSession()
@@ -59,15 +83,7 @@ export function AuthProvider({ children }) {
         const parsed = new URL(url)
         const oauthCode = parsed.searchParams.get('code')
         if (oauthCode) {
-          try {
-            const { data, error } = await supabase.auth.exchangeCodeForSession(oauthCode)
-            if (!error && data?.session) {
-              setUser(data.session.user)
-            }
-          } catch (e) {
-            console.error('OAuth code exchange error:', e)
-          }
-          // Close the system browser
+          await handleOAuthCode(oauthCode)
           Browser.close().catch(() => {})
         }
       })

@@ -1,23 +1,41 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { Atom, Minus } from 'lucide-react'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import BottomNav from './components/BottomNav'
+
+// ── Eagerly loaded (needed at startup / auth flow) ────────────────────────────
 import HomeScreen from './screens/HomeScreen'
-import TopicMap from './screens/TopicMap'
-import LessonPlayer from './screens/LessonPlayer'
-import DiagnosticQuestion from './screens/DiagnosticQuestion'
-import MisconceptionFeedback from './screens/MisconceptionFeedback'
-import MasteryScreen from './screens/MasteryScreen'
-import SettingsScreen from './screens/SettingsScreen'
-import MamoChat from './screens/MamoChat'
-import PracticalScreen from './screens/PracticalScreen'
-import ExamPractice from './screens/ExamPractice'
 import AuthScreen from './screens/AuthScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
-import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen'
-import TermsScreen from './screens/TermsScreen'
+
+// ── Lazily loaded (deferred until first navigation) ───────────────────────────
+const TopicMap          = lazy(() => import('./screens/TopicMap'))
+const LessonPlayer      = lazy(() => import('./screens/LessonPlayer'))
+const DiagnosticQuestion = lazy(() => import('./screens/DiagnosticQuestion'))
+const MisconceptionFeedback = lazy(() => import('./screens/MisconceptionFeedback'))
+const MasteryScreen     = lazy(() => import('./screens/MasteryScreen'))
+const SettingsScreen    = lazy(() => import('./screens/SettingsScreen'))
+const MamoChat          = lazy(() => import('./screens/MamoChat'))
+const PracticalScreen   = lazy(() => import('./screens/PracticalScreen'))
+const ExamPractice      = lazy(() => import('./screens/ExamPractice'))
+const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
+const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
+
+// ── Suspense fallback ─────────────────────────────────────────────────────────
+function RouteLoader() {
+  return (
+    <div className="flex items-center justify-center h-full" style={{ background: '#0b1121' }}>
+      <motion.div
+        className="w-8 h-8 rounded-full border-2"
+        style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
+      />
+    </div>
+  )
+}
 
 function PulseRing() {
   const reduceMotion = (() => {
@@ -172,23 +190,25 @@ function AppShell() {
       {/* Top safe-area spacer */}
       <div style={{ height: 'env(safe-area-inset-top)', background: '#0b1121', flexShrink: 0 }} />
       <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'calc(64px + env(safe-area-inset-bottom))' : 0 }}>
-        <Routes>
-          <Route path="/auth" element={<AuthScreen />} />
-          <Route path="/onboarding" element={<OnboardingScreen />} />
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/topics" element={<TopicMap />} />
-          <Route path="/lesson/:id" element={<LessonPlayer />} />
-          <Route path="/diagnostic/:id" element={<DiagnosticQuestion />} />
-          <Route path="/feedback/:id" element={<MisconceptionFeedback />} />
-          <Route path="/mastery" element={<MasteryScreen />} />
-          <Route path="/mamo" element={<MamoChat />} />
-          <Route path="/practical/:id" element={<PracticalScreen />} />
-          <Route path="/exam/:id" element={<ExamPractice />} />
-          <Route path="/settings" element={<SettingsScreen />} />
-          <Route path="/privacy" element={<PrivacyPolicyScreen />} />
-          <Route path="/terms" element={<TermsScreen />} />
-          <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
-        </Routes>
+        <Suspense fallback={<RouteLoader />}>
+          <Routes>
+            <Route path="/auth" element={<AuthScreen />} />
+            <Route path="/onboarding" element={<OnboardingScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/topics" element={<TopicMap />} />
+            <Route path="/lesson/:id" element={<LessonPlayer />} />
+            <Route path="/diagnostic/:id" element={<DiagnosticQuestion />} />
+            <Route path="/feedback/:id" element={<MisconceptionFeedback />} />
+            <Route path="/mastery" element={<MasteryScreen />} />
+            <Route path="/mamo" element={<MamoChat />} />
+            <Route path="/practical/:id" element={<PracticalScreen />} />
+            <Route path="/exam/:id" element={<ExamPractice />} />
+            <Route path="/settings" element={<SettingsScreen />} />
+            <Route path="/privacy" element={<PrivacyPolicyScreen />} />
+            <Route path="/terms" element={<TermsScreen />} />
+            <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
+          </Routes>
+        </Suspense>
       </div>
 
       {showShell && (

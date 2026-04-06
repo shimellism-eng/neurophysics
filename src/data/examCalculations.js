@@ -1,4 +1,58 @@
 const examCalculations = {
+  // ─── 0. ENERGY PATHWAYS ────────────────────────────────────────────
+  energy_pathways: [
+    {
+      type: "calculation",
+      question: "A coal power station inputs 1500 MJ of chemical energy. 450 MJ is transferred usefully as electrical energy. Calculate the efficiency of the power station.",
+      questionSubtitle: "Show your working",
+      equation: "efficiency = useful output ÷ total input",
+      steps: [
+        { label: "Write the useful energy output", value: "450", unit: "MJ", hint: "Useful output is the electrical energy" },
+        { label: "Write the total energy input", value: "1500", unit: "MJ", hint: "Total input is the chemical energy" },
+        { label: "Calculate efficiency", value: "0.3", unit: "", hint: "η = 450 ÷ 1500 = 0.3 (or 30%)" }
+      ],
+      answer: 0.3,
+      answerUnit: "",
+      acceptRange: [0.29, 0.31],
+      commonMistake: "Did you divide the wrong way? Efficiency = useful ÷ total, not total ÷ useful.",
+      tier: 2,
+      senNote: "Efficiency is always between 0 and 1 (or 0% and 100%). A bigger number is not more efficient."
+    },
+    {
+      type: "calculation",
+      question: "A car engine has an efficiency of 0.25. The engine is supplied with 200 kJ of chemical energy. Calculate the useful energy output.",
+      questionSubtitle: "Show your working",
+      equation: "useful output = efficiency × total input",
+      steps: [
+        { label: "Write the efficiency", value: "0.25", unit: "", hint: "Efficiency = 0.25 (25%)" },
+        { label: "Write the total input", value: "200", unit: "kJ", hint: "Total chemical input = 200 kJ" },
+        { label: "Calculate useful output", value: "50", unit: "kJ", hint: "Useful = 0.25 × 200 = 50 kJ" }
+      ],
+      answer: 50,
+      answerUnit: "kJ",
+      acceptRange: [49, 51],
+      commonMistake: "Did you divide instead of multiply? Useful output = efficiency × total input.",
+      tier: 2,
+      senNote: "Rearranging: useful output = efficiency × total input. Here: 0.25 × 200 = 50 kJ."
+    },
+    {
+      type: "calculation",
+      question: "A Sankey diagram shows a light bulb: 60 J input, 6 J as light, the rest as heat. Calculate the wasted energy and the efficiency.",
+      questionSubtitle: "Two-part calculation — find wasted energy first",
+      equation: "wasted = total input − useful output; efficiency = useful ÷ total",
+      steps: [
+        { label: "Calculate wasted energy", value: "54", unit: "J", hint: "Wasted = 60 − 6 = 54 J" },
+        { label: "Calculate efficiency", value: "0.1", unit: "", hint: "η = 6 ÷ 60 = 0.1 (10%)" }
+      ],
+      answer: 0.1,
+      answerUnit: "",
+      acceptRange: [0.09, 0.11],
+      commonMistake: "Don't forget: total energy = useful + wasted. Sankey diagrams show ALL energy, including wasted.",
+      tier: 2,
+      senNote: "In a Sankey diagram the wide arrow is the total. Thin arrows are the useful and wasted outputs."
+    },
+  ],
+
   // ─── 1. POWER CALCULATIONS: E = P × t ───────────────────────────────
   power_calc: [
     {

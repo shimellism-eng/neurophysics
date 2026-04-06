@@ -10,8 +10,34 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     target: 'es2020',
-    // Keep chunks manageable for native WebView
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Stable vendor libs — cached independently
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-motion': ['motion/react'],
+          'vendor-ui': ['lucide-react'],
+          // Exam question data — only loaded when ExamPractice is first visited
+          'data-exam': [
+            './src/data/examCalculations.js',
+            './src/data/examEquations.js',
+            './src/data/examGraphs.js',
+            './src/data/examPracticals.js',
+            './src/data/examParticleModel.js',
+            './src/data/examSpace.js',
+            './src/data/examIndex.js',
+          ],
+          // Diagnostic question data — only loaded when DiagnosticQuestion is first visited
+          'data-questions': [
+            './src/data/questionBank.js',
+            './src/data/interactiveQuestions.js',
+            './src/data/interactiveQuestions2.js',
+            './src/data/interactiveIndex.js',
+          ],
+        },
+      },
+    },
   },
   server: {
     proxy: {

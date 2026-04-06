@@ -1,5 +1,88 @@
 const examEquations = {
 
+  // ===== Energy Pathways =====
+  energy_pathways: [
+    {
+      type: "equation-recall",
+      question: "Which equation correctly calculates efficiency from energy values?",
+      questionSubtitle: "This equation must be memorised.",
+      options: [
+        "efficiency = total input ÷ useful output",
+        "efficiency = useful output ÷ total input",
+        "efficiency = useful output × total input",
+        "efficiency = total input − useful output",
+      ],
+      correctAnswer: 1,
+      onSheet: false,
+      tier: 1,
+      senNote: "Efficiency = useful ÷ total. Useful output is always less than total input, so efficiency is always less than 1.",
+    },
+    {
+      type: "equation-recall",
+      question: "A device inputs 500 J and outputs 125 J usefully. Which calculation gives the correct efficiency?",
+      questionSubtitle: "Apply the efficiency equation.",
+      options: [
+        "500 ÷ 125 = 4",
+        "125 × 500 = 62 500",
+        "125 ÷ 500 = 0.25",
+        "500 − 125 = 375",
+      ],
+      correctAnswer: 2,
+      onSheet: false,
+      tier: 2,
+      senNote: "Efficiency = useful ÷ total = 125 ÷ 500 = 0.25 (25%).",
+    },
+  ],
+
+  // ===== Radioactive Decay =====
+  radioactive_decay: [
+    {
+      type: "equation-recall",
+      question: "A nucleus undergoes alpha decay. What happens to its atomic number?",
+      questionSubtitle: "Alpha particle = ⁴₂He",
+      options: [
+        "Increases by 2",
+        "Decreases by 2",
+        "Decreases by 4",
+        "Stays the same",
+      ],
+      correctAnswer: 1,
+      onSheet: false,
+      tier: 1,
+      senNote: "Alpha particle has 2 protons, so atomic number (proton number) decreases by 2.",
+    },
+    {
+      type: "equation-recall",
+      question: "A nucleus undergoes beta decay. What happens to its mass number?",
+      questionSubtitle: "Beta particle = ⁰₋₁e (an electron from the nucleus)",
+      options: [
+        "Increases by 1",
+        "Decreases by 1",
+        "Stays the same",
+        "Decreases by 4",
+      ],
+      correctAnswer: 2,
+      onSheet: false,
+      tier: 2,
+      senNote: "Beta particle is an electron with no nucleons, so mass number stays the same. Atomic number increases by 1.",
+    },
+    {
+      type: "equation-recall",
+      question: "Which type of nuclear radiation is most penetrating?",
+      questionSubtitle: "Think about what each type is stopped by.",
+      options: [
+        "Alpha — stopped by paper",
+        "Beta — stopped by thin aluminium",
+        "Gamma — requires thick lead to absorb",
+        "All three are equally penetrating",
+      ],
+      correctAnswer: 2,
+      onSheet: false,
+      tier: 1,
+      senNote: "Gamma is most penetrating. Alpha is least penetrating. More penetrating = less ionising.",
+    },
+  ],
+
   // ===== 1. Energy Equations =====
   energy_equations: [
     {

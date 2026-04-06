@@ -157,7 +157,19 @@ export default function DiagnosticQuestion() {
   const [senTab, setSenTab] = useState('keywords')
   const [showHint, setShowHint] = useState(false)
 
-  if (!topic || total === 0) return null
+  if (!topic || total === 0) return (
+    <div className="flex flex-col items-center justify-center h-full px-6" style={{ background: '#0b1121', color: '#a8b8cc' }}>
+      <BookOpen size={48} strokeWidth={1.2} style={{ marginBottom: 16, opacity: 0.4 }} />
+      <p className="text-center text-sm">No questions available for this topic yet.</p>
+      <button
+        className="mt-4 px-6 py-3 rounded-[14px] text-sm font-semibold"
+        style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55', color: '#a8b8cc' }}
+        onClick={() => navigate(`/lesson/${id}`)}
+      >
+        Go Back
+      </button>
+    </div>
+  )
 
   const q = questions[qIndex] || {}
   const qType = q.type || 'mcq'

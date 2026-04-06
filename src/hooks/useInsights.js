@@ -90,7 +90,7 @@ export function useInsights() {
 
   // Topic with most attempts (most studied)
   const mostStudied = attempted.length > 0
-    ? attempted.sort((a, b) => (results[b]?.length || 0) - (results[a]?.length || 0))[0]
+    ? [...attempted].sort((a, b) => (results[b]?.length || 0) - (results[a]?.length || 0))[0]
     : null
 
   return {

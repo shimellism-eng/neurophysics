@@ -1,5 +1,5 @@
 // NeuroPhysics Question Bank
-// 225 questions across 45 subtopics (5 per subtopic)
+// 255 questions across 51 subtopics (5 per subtopic)
 // Tiers: 1=Remember, 2=Apply, 3=Think
 // Auto-generated — paste into src/data/questionBank.js
 

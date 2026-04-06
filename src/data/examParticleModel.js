@@ -1,4 +1,74 @@
 const examParticleModel = {
+
+  // ===== Energy Pathways =====
+  energy_pathways: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: What happens to wasted energy in any transfer process?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "In any energy transfer, the total energy is always ", blank: "conserved" },
+        { text: ". Wasted energy is usually transferred to the ", blank: "thermal" },
+        { text: " store of the surroundings. This causes the surroundings to ", blank: "warm up" },
+        { text: ". The energy is not destroyed — it is just ", blank: "dissipated" },
+        { text: " and becomes very spread out. It is difficult to use this energy for anything ", blank: "useful", text2: "." }
+      ],
+      wordBank: ["conserved", "thermal", "warm up", "dissipated", "useful", "created", "electrical", "cool down", "stored"],
+      tier: 2,
+      senNote: "Energy is never created or destroyed — it is just transferred to less useful stores."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation: How does a Sankey diagram represent energy transfers?",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "A Sankey diagram shows energy transfers using arrows. The ", blank: "width" },
+        { text: " of each arrow represents the ", blank: "amount" },
+        { text: " of energy. The input arrow enters from the ", blank: "left" },
+        { text: ". The useful output arrow points to the ", blank: "right" },
+        { text: ". Wasted energy arrows point ", blank: "downward", text2: ", showing energy lost to the surroundings." }
+      ],
+      wordBank: ["width", "amount", "left", "right", "downward", "upward", "colour", "direction", "temperature"],
+      tier: 2,
+      senNote: "Wider arrow = more energy. In a Sankey diagram all arrows must add up to the total input."
+    },
+  ],
+
+  // ===== Radioactive Decay =====
+  radioactive_decay: [
+    {
+      type: "fill-steps",
+      question: "Complete this comparison of alpha, beta and gamma radiation properties.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "Alpha radiation consists of ", blank: "2 protons and 2 neutrons" },
+        { text: " (a helium nucleus). It has a charge of ", blank: "+2" },
+        { text: " and is stopped by ", blank: "paper or skin" },
+        { text: ". Beta radiation is a high-speed ", blank: "electron" },
+        { text: " emitted from the nucleus. It is stopped by thin ", blank: "aluminium" },
+        { text: ". Gamma radiation is an electromagnetic ", blank: "wave", text2: " and requires thick lead or concrete to be absorbed." }
+      ],
+      wordBank: ["2 protons and 2 neutrons", "+2", "paper or skin", "electron", "aluminium", "wave", "4 protons", "−1", "neutron", "glass", "lead"],
+      tier: 2,
+      senNote: "A-B-G: Alpha (paper), Beta (aluminium), Gamma (lead). More penetrating = less ionising."
+    },
+    {
+      type: "fill-steps",
+      question: "Complete this explanation of what happens to the nucleus during alpha decay.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "During alpha decay, an alpha particle is emitted. An alpha particle contains ", blank: "2" },
+        { text: " protons and ", blank: "2" },
+        { text: " neutrons. The mass number of the nucleus ", blank: "decreases by 4" },
+        { text: ". The atomic number ", blank: "decreases by 2" },
+        { text: ". The nucleus of a different element is formed because the number of ", blank: "protons", text2: " has changed." }
+      ],
+      wordBank: ["2", "4", "decreases by 4", "decreases by 2", "protons", "increases by 2", "stays the same", "neutrons", "electrons"],
+      tier: 2,
+      senNote: "Alpha decay: mass number −4, atomic number −2. Emitting an alpha particle is like losing a helium-4 nucleus."
+    },
+  ],
+
   gas_pressure: [
     {
       type: "fill-steps",

@@ -1,7 +1,12 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import { supabase, supabaseConfigured } from '../lib/supabase'
+import { Capacitor } from '@capacitor/core'
+import { Browser } from '@capacitor/browser'
+import { App as CapApp } from '@capacitor/app'
 
 const AuthContext = createContext(null)
+
+const isNative = Capacitor.isNativePlatform()
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
@@ -14,7 +19,7 @@ export function AuthProvider({ children }) {
       return
     }
 
-    // PKCE flow: if ?code= is in the URL after OAuth redirect,
+    // PKCE flow: if ?code= is in the URL after OAuth redirect (web only),
     // explicitly exchange it for a session before doing anything else.
     const params = new URLSearchParams(window.location.search)
     const code = params.get('code')
@@ -22,11 +27,9 @@ export function AuthProvider({ children }) {
     const init = async () => {
       try {
         if (code) {
-          // Exchange the PKCE code for a session
           const { data, error } = await supabase.auth.exchangeCodeForSession(code)
           if (!error && data?.session) {
             setUser(data.session.user)
-            // Clean the ?code= from the URL so it's not reused
             window.history.replaceState({}, '', window.location.pathname + window.location.hash)
           }
           setLoading(false)
@@ -48,7 +51,32 @@ export function AuthProvider({ children }) {
       setUser(session?.user ?? null)
     })
 
-    return () => subscription.unsubscribe()
+    // Native: listen for deep link callback from OAuth
+    let appUrlListener
+    if (isNative) {
+      appUrlListener = CapApp.addListener('appUrlOpen', async ({ url }) => {
+        // URL looks like: com.neurophysics.app://callback?code=xxx
+        const parsed = new URL(url)
+        const oauthCode = parsed.searchParams.get('code')
+        if (oauthCode) {
+          try {
+            const { data, error } = await supabase.auth.exchangeCodeForSession(oauthCode)
+            if (!error && data?.session) {
+              setUser(data.session.user)
+            }
+          } catch (e) {
+            console.error('OAuth code exchange error:', e)
+          }
+          // Close the system browser
+          Browser.close().catch(() => {})
+        }
+      })
+    }
+
+    return () => {
+      subscription.unsubscribe()
+      if (appUrlListener) appUrlListener.then(l => l.remove())
+    }
   }, [])
 
   const signUp = async ({ email, password, name }) => {
@@ -72,6 +100,25 @@ export function AuthProvider({ children }) {
 
   const signInWithOAuth = async (provider) => {
     if (!supabase) return { error: { message: 'Supabase not configured.' } }
+
+    if (isNative) {
+      // Native: get the OAuth URL without auto-redirecting, then open in system browser
+      const redirectTo = 'com.neurophysics.app://callback'
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider,
+        options: {
+          redirectTo,
+          skipBrowserRedirect: true,
+        },
+      })
+      if (error) return { error }
+      if (data?.url) {
+        await Browser.open({ url: data.url, presentationStyle: 'popover' })
+      }
+      return { error: null }
+    }
+
+    // Web: normal redirect flow
     return supabase.auth.signInWithOAuth({
       provider,
       options: { redirectTo: window.location.origin },

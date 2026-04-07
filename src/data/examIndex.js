@@ -22,9 +22,13 @@ export function getExamQuestions(subtopicId) {
     questions.push(...examCalculations[subtopicId])
   }
 
-  // Required practical sequence sorts
+  // Required practical sequence sorts + describe-method / error-analysis variants
   if (examPracticals[subtopicId]) {
     questions.push(...examPracticals[subtopicId])
+  }
+  // _describe suffix keys hold method-description and error-analysis questions
+  if (examPracticals[subtopicId + '_describe']) {
+    questions.push(...examPracticals[subtopicId + '_describe'])
   }
 
   // Particle model fill-in-the-steps
@@ -69,7 +73,10 @@ export function getExamTopicIds() {
   const allSources = [examCalculations, examPracticals, examParticleModel, examGraphs, examSpace, examEquations, examExtended]
   const ids = new Set()
   allSources.forEach(source => {
-    Object.keys(source).forEach(id => ids.add(id))
+    Object.keys(source).forEach(id => {
+      // Strip _describe suffix so the ID maps to the real topic
+      ids.add(id.replace(/_describe$/, ''))
+    })
   })
   return [...ids]
 }

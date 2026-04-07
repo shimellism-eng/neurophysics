@@ -1520,7 +1520,7 @@ export const MATTER_TOPICS = {
   },
   internal_energy: {
     id: 'internal_energy', module: 'Particle Model', moduleColor: PART_C, practicalId: 'shc', course: 'combined',
-    title: 'Internal Energy & Specific Heat', subtitle: 'ΔE = mcΔT and Latent Heat',
+    title: 'Internal Energy & Specific Heat Capacity (SHC)', subtitle: 'ΔE = mcΔT and Latent Heat',
     description: 'Internal energy is the total kinetic and potential energy of all particles in a system. Heating raises internal energy. If temperature increases: ΔE = mcΔT (specific heat capacity). During a change of state, temperature stays constant while energy goes into breaking/forming bonds - this is latent heat: E = mL.',
     lessonVisual: InternalEnergyLesson, ideaVisual: InternalEnergyIdea, realityVisual: InternalEnergyReality,
     question: 'How much energy is needed to raise 2 kg of water by 5°C? (specific heat capacity of water = 4200 J/kg°C)',

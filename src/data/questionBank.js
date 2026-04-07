@@ -2148,6 +2148,90 @@ const questionBank = {
       "senNote": "Before: 2×5 = 10 kg m/s. After: (2+3)×v = 10 → v = 2 m/s"
     }
   ],
+  "vectors_scalars": [
+    {
+      "question": "Which of the following is a vector quantity?",
+      "questionSubtitle": "Vectors have both magnitude AND direction",
+      "options": ["Speed", "Mass", "Energy", "Velocity"],
+      "correctAnswer": 3,
+      "tier": 1,
+      "senNote": "Speed is a scalar — velocity is the same thing but with direction added."
+    },
+    {
+      "question": "A force of 6 N acts north and a force of 8 N acts east. What is the magnitude of the resultant force?",
+      "questionSubtitle": "Use Pythagoras: R² = a² + b²",
+      "options": ["14 N", "2 N", "10 N", "48 N"],
+      "correctAnswer": 2,
+      "tier": 2,
+      "senNote": "R² = 6² + 8² = 36 + 64 = 100, so R = 10 N"
+    },
+    {
+      "question": "Which of the following is a scalar quantity?",
+      "questionSubtitle": "Scalars only have magnitude — no direction",
+      "options": ["Velocity", "Force", "Acceleration", "Temperature"],
+      "correctAnswer": 3,
+      "tier": 1,
+      "senNote": "Temperature is just a number — 25°C. It has no direction."
+    },
+    {
+      "question": "A car travels 40 m east then 30 m north. What is the magnitude of its resultant displacement?",
+      "questionSubtitle": "Displacement is a vector — use Pythagoras",
+      "options": ["70 m", "10 m", "50 m", "35 m"],
+      "correctAnswer": 2,
+      "tier": 2,
+      "senNote": "√(40² + 30²) = √(1600 + 900) = √2500 = 50 m"
+    },
+    {
+      "question": "Two forces of 5 N act on an object at right angles to each other. What is the magnitude of the resultant?",
+      "questionSubtitle": "R² = 5² + 5²",
+      "options": ["10 N", "5 N", "7.1 N", "25 N"],
+      "correctAnswer": 2,
+      "tier": 3,
+      "senNote": "R = √(5² + 5²) = √50 = 7.07 N ≈ 7.1 N"
+    }
+  ],
+  "equations_of_motion": [
+    {
+      "question": "A car starts from rest and accelerates at 4 m/s² for 5 seconds. What is its final velocity?",
+      "questionSubtitle": "Use v = u + at with u = 0",
+      "options": ["9 m/s", "20 m/s", "4 m/s", "25 m/s"],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "v = 0 + 4 × 5 = 20 m/s. Starting from rest means u = 0."
+    },
+    {
+      "question": "Which SUVAT equation should you use when time is NOT given?",
+      "questionSubtitle": "Each equation links different combinations of s, u, v, a, t",
+      "options": ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "s = ½(u+v)t"],
+      "correctAnswer": 2,
+      "tier": 2,
+      "senNote": "v² = u² + 2as contains s, u, v and a — no t needed."
+    },
+    {
+      "question": "A ball is thrown upwards at 15 m/s. Using v² = u² + 2as (a = −10 m/s²), what is the maximum height reached?",
+      "questionSubtitle": "At maximum height, v = 0",
+      "options": ["7.5 m", "11.25 m", "22.5 m", "150 m"],
+      "correctAnswer": 1,
+      "tier": 3,
+      "senNote": "0 = 225 + 2×(−10)×s → s = 225/20 = 11.25 m"
+    },
+    {
+      "question": "What is the displacement of a car that accelerates from 0 to 20 m/s in 8 seconds?",
+      "questionSubtitle": "Use s = ½(u+v)t",
+      "options": ["160 m", "80 m", "40 m", "320 m"],
+      "correctAnswer": 1,
+      "tier": 2,
+      "senNote": "s = ½ × (0 + 20) × 8 = ½ × 20 × 8 = 80 m"
+    },
+    {
+      "question": "Under what condition do the SUVAT equations apply?",
+      "questionSubtitle": "Think about the type of acceleration required",
+      "options": ["Any type of motion", "Only when starting from rest", "Only for uniform (constant) acceleration", "Only in a vacuum"],
+      "correctAnswer": 2,
+      "tier": 1,
+      "senNote": "SUVAT only works when acceleration is constant throughout the motion."
+    }
+  ],
   "wave_types": [
     {
       "question": "In a transverse wave, how do particles move relative to wave direction?",

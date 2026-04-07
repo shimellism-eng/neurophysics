@@ -489,6 +489,46 @@ const examParticleModel = {
     }
   ],
 
+  // ===== Synoptic — Energy + Forces =====
+  efficiency: [
+    // Note: adding a synoptic question here since efficiency bridges energy and forces
+    {
+      type: "fill-steps",
+      question: "Complete this synoptic explanation linking efficiency, energy and forces in a car engine.",
+      questionSubtitle: "Fill in the missing words — this links multiple topics",
+      template: [
+        { text: "A car engine converts ", blank: "chemical" },
+        { text: " energy from fuel into ", blank: "kinetic" },
+        { text: " energy of the car. The engine is not 100% efficient — some energy is wasted as ", blank: "thermal" },
+        { text: " energy due to friction and ", blank: "sound" },
+        { text: ". The useful output power equals force times velocity: P = ", blank: "Fv" },
+        { text: ". The efficiency = useful output ÷ ", blank: "total input", text2: "." }
+      ],
+      wordBank: ["chemical", "kinetic", "thermal", "sound", "Fv", "total input", "electrical", "potential", "F/v", "total output"],
+      tier: 3,
+      senNote: "Synoptic question: links energy stores + efficiency + P=Fv. All equations are connected."
+    },
+  ],
+
+  // ===== Synoptic — Forces + Momentum =====
+  momentum: [
+    {
+      type: "fill-steps",
+      question: "Complete this explanation of why crumple zones save lives, linking impulse and Newton's second law.",
+      questionSubtitle: "Fill in the missing words",
+      template: [
+        { text: "In a collision, the car decelerates rapidly. The change in momentum (impulse) is fixed by the ", blank: "speed" },
+        { text: " and mass of the car. Impulse = force × ", blank: "time" },
+        { text: ". Crumple zones increase the ", blank: "time" },
+        { text: " of the collision. Since impulse is constant, a longer time means a smaller ", blank: "force" },
+        { text: " on the passengers. This reduces the risk of ", blank: "injury", text2: "." }
+      ],
+      wordBank: ["speed", "time", "force", "injury", "distance", "mass", "acceleration", "energy", "pressure"],
+      tier: 3,
+      senNote: "Impulse = Δp = F×t. Fixed Δp but increased t → smaller F. This is why crumple zones, airbags and seatbelts save lives."
+    },
+  ],
+
   em_spectrum: [
     {
       type: "fill-steps",

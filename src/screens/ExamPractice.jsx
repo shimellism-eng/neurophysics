@@ -19,6 +19,7 @@ import {
   CalculationQuestion,
   FillStepsQuestion,
   GraphQuestion,
+  ExtendedAnswerQuestion,
 } from '../components/questions'
 
 function shuffle(arr) {
@@ -40,6 +41,7 @@ const TYPE_LABELS = {
   'misconception': '🤔 True or false?',
   'confidence': '💭 How confident are you?',
   'equation-recall': '📐 Recall the equation',
+  'extended-answer': '✍️ 6-mark question',
 }
 
 export default function ExamPractice() {
@@ -125,6 +127,7 @@ export default function ExamPractice() {
       case 'sequence':       return <SequenceSortQuestion {...props} />
       case 'misconception':  return <MisconceptionQuestion {...props} />
       case 'confidence':     return <ConfidenceQuestion {...props} />
+      case 'extended-answer': return <ExtendedAnswerQuestion {...props} />
       case 'equation-recall':
         // Render as MCQ
         return (

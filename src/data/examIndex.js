@@ -8,6 +8,7 @@ import examParticleModel from './examParticleModel'
 import examGraphs from './examGraphs'
 import examSpace from './examSpace'
 import examEquations from './examEquations'
+import examExtended from './examExtended'
 
 /**
  * Return all exam practice questions for a given subtopic ID.
@@ -46,6 +47,11 @@ export function getExamQuestions(subtopicId) {
     questions.push(...examEquations[subtopicId])
   }
 
+  // Extended 6-mark open-ended questions
+  if (examExtended[subtopicId]) {
+    questions.push(...examExtended[subtopicId])
+  }
+
   return questions
 }
 
@@ -60,7 +66,7 @@ export function getExamQuestionCount(subtopicId) {
  * Get all topic IDs that have exam questions.
  */
 export function getExamTopicIds() {
-  const allSources = [examCalculations, examPracticals, examParticleModel, examGraphs, examSpace, examEquations]
+  const allSources = [examCalculations, examPracticals, examParticleModel, examGraphs, examSpace, examEquations, examExtended]
   const ids = new Set()
   allSources.forEach(source => {
     Object.keys(source).forEach(id => ids.add(id))

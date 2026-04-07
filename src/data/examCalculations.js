@@ -53,6 +53,120 @@ const examCalculations = {
     },
   ],
 
+  // ─── EQUATIONS OF MOTION (SUVAT) ────────────────────────────────────────────
+  equations_of_motion: [
+    {
+      type: "calculation",
+      question: "A car starts from rest and accelerates uniformly at 2.5 m/s² for 8 seconds. Calculate its final velocity.",
+      questionSubtitle: "Show your working",
+      equation: "v = u + at",
+      steps: [
+        { label: "Write initial velocity (starts from rest)", value: "0", unit: "m/s", hint: "Starts from rest means u = 0" },
+        { label: "Write acceleration", value: "2.5", unit: "m/s²", hint: "Given in the question" },
+        { label: "Write time", value: "8", unit: "s", hint: "Given in the question" },
+        { label: "Calculate final velocity", value: "20", unit: "m/s", hint: "v = 0 + 2.5 × 8 = 20 m/s" }
+      ],
+      answer: 20,
+      answerUnit: "m/s",
+      acceptRange: [19.5, 20.5],
+      commonMistake: "Did you forget that starting from rest means u = 0? Substituting u = 0 simplifies to v = at.",
+      tier: 2,
+      senNote: "Starting from rest always means u = 0. Use v = u + at when you know u, a and t."
+    },
+    {
+      type: "calculation",
+      question: "A train travelling at 30 m/s brakes and decelerates at 1.5 m/s². Calculate the distance it travels before stopping.",
+      questionSubtitle: "Time is not given — use v² = u² + 2as",
+      equation: "v² = u² + 2as",
+      steps: [
+        { label: "Write initial velocity", value: "30", unit: "m/s", hint: "u = 30 m/s" },
+        { label: "Write final velocity (stops)", value: "0", unit: "m/s", hint: "v = 0 m/s because it stops" },
+        { label: "Write acceleration (deceleration is negative)", value: "-1.5", unit: "m/s²", hint: "Deceleration means a is negative: −1.5 m/s²" },
+        { label: "Rearrange and calculate: s = (v²−u²)÷2a", value: "300", unit: "m", hint: "s = (0 − 900) ÷ (2 × −1.5) = −900 ÷ −3 = 300 m" }
+      ],
+      answer: 300,
+      answerUnit: "m",
+      acceptRange: [298, 302],
+      commonMistake: "Did you forget to make a negative for deceleration? The negative signs cancel, giving a positive displacement.",
+      tier: 2,
+      senNote: "When the object stops, v = 0. Rearrange: s = (v² − u²) ÷ 2a"
+    },
+    {
+      type: "calculation",
+      question: "A ball is dropped from rest. Using g = 10 m/s², calculate the distance it falls in 3 seconds.",
+      questionSubtitle: "Use s = ut + ½at² with u = 0",
+      equation: "s = ut + ½at²",
+      steps: [
+        { label: "Initial velocity (dropped from rest)", value: "0", unit: "m/s", hint: "Dropped from rest means u = 0" },
+        { label: "Acceleration due to gravity", value: "10", unit: "m/s²", hint: "g = 10 m/s² downward" },
+        { label: "Time", value: "3", unit: "s", hint: "Given in the question" },
+        { label: "Calculate: s = 0×3 + ½×10×9", value: "45", unit: "m", hint: "s = 0 + ½ × 10 × 9 = 45 m" }
+      ],
+      answer: 45,
+      answerUnit: "m",
+      acceptRange: [44, 46],
+      commonMistake: "Remember t² means t squared: 3² = 9, not 3 × 2.",
+      tier: 2,
+      senNote: "Dropped from rest: u = 0. Equation simplifies to s = ½at². Always square t first."
+    },
+    {
+      type: "calculation",
+      question: "A car accelerates from 5 m/s to 25 m/s in 10 seconds. Calculate the distance travelled during this acceleration.",
+      questionSubtitle: "Use s = ½(u+v)t",
+      equation: "s = ½(u+v)t",
+      steps: [
+        { label: "Initial velocity", value: "5", unit: "m/s", hint: "u = 5 m/s" },
+        { label: "Final velocity", value: "25", unit: "m/s", hint: "v = 25 m/s" },
+        { label: "Time", value: "10", unit: "s", hint: "t = 10 s" },
+        { label: "Calculate: s = ½×(5+25)×10", value: "150", unit: "m", hint: "s = ½ × 30 × 10 = 150 m" }
+      ],
+      answer: 150,
+      answerUnit: "m",
+      acceptRange: [148, 152],
+      commonMistake: "Add u and v FIRST, then multiply by ½ and t. Don't forget the ½.",
+      tier: 2,
+      senNote: "This is the average velocity method: average = (u+v)/2, then multiply by time."
+    },
+  ],
+
+  // ─── VECTORS & SCALARS ─────────────────────────────────────────────────────
+  vectors_scalars: [
+    {
+      type: "calculation",
+      question: "A force of 8 N acts horizontally and a force of 6 N acts vertically. Calculate the magnitude of the resultant force.",
+      questionSubtitle: "Use Pythagoras: R² = a² + b²",
+      equation: "R = √(a² + b²)",
+      steps: [
+        { label: "Square both forces: 8² and 6²", value: "64 and 36", unit: "", hint: "8² = 64, 6² = 36" },
+        { label: "Add the squares", value: "100", unit: "", hint: "64 + 36 = 100" },
+        { label: "Square root to find resultant", value: "10", unit: "N", hint: "√100 = 10 N" }
+      ],
+      answer: 10,
+      answerUnit: "N",
+      acceptRange: [9.9, 10.1],
+      commonMistake: "You must square each force first, then add, then square root — not add first then square.",
+      tier: 2,
+      senNote: "Pythagoras: R² = a² + b². For perpendicular forces only."
+    },
+    {
+      type: "calculation",
+      question: "A force of 5 N acts north and a force of 12 N acts east. Calculate the magnitude of the resultant force.",
+      questionSubtitle: "Pythagoras: R² = 5² + 12²",
+      equation: "R = √(a² + b²)",
+      steps: [
+        { label: "Square both forces", value: "25 and 144", unit: "", hint: "5² = 25, 12² = 144" },
+        { label: "Add the squares", value: "169", unit: "", hint: "25 + 144 = 169" },
+        { label: "Square root", value: "13", unit: "N", hint: "√169 = 13 N" }
+      ],
+      answer: 13,
+      answerUnit: "N",
+      acceptRange: [12.9, 13.1],
+      commonMistake: "Check your squares: 12² = 144, not 24.",
+      tier: 2,
+      senNote: "5-12-13 is a Pythagorean triple — worth remembering!"
+    },
+  ],
+
   // ─── 1. POWER CALCULATIONS: E = P × t ───────────────────────────────
   power_calc: [
     {
@@ -105,7 +219,41 @@ const examCalculations = {
       commonMistake: "Did you convert 2 minutes 30 seconds correctly? It is 150 s, not 230 s or 2.5 s.",
       tier: 3,
       senNote: "Break compound times into parts: convert minutes to seconds first, then add remaining seconds"
-    }
+    },
+    {
+      type: "calculation",
+      question: "A car engine provides a driving force of 2000 N while the car travels at 15 m/s. Calculate the power output of the engine.",
+      questionSubtitle: "Use P = Fv (power = force × velocity)",
+      equation: "P = Fv",
+      steps: [
+        { label: "Write the force", value: "2000", unit: "N", hint: "Driving force = 2000 N" },
+        { label: "Write the velocity", value: "15", unit: "m/s", hint: "Speed = 15 m/s" },
+        { label: "Calculate power: P = F × v", value: "30000", unit: "W", hint: "P = 2000 × 15 = 30 000 W" }
+      ],
+      answer: 30000,
+      answerUnit: "W",
+      acceptRange: [29500, 30500],
+      commonMistake: "P = Fv is for constant velocity. If the car is accelerating, you need to account for resultant force.",
+      tier: 2,
+      senNote: "P = Fv is a second power equation alongside P = E/t. Both give the same answer for the same situation."
+    },
+    {
+      type: "calculation",
+      question: "A cyclist overcomes a resistive force of 80 N at a constant speed of 6 m/s. Calculate the power the cyclist generates.",
+      questionSubtitle: "At constant speed, driving force = resistive force",
+      equation: "P = Fv",
+      steps: [
+        { label: "Write the driving force (equals resistive at constant speed)", value: "80", unit: "N", hint: "At constant speed: thrust = drag" },
+        { label: "Write the speed", value: "6", unit: "m/s", hint: "v = 6 m/s" },
+        { label: "Calculate: P = 80 × 6", value: "480", unit: "W", hint: "P = 80 × 6 = 480 W" }
+      ],
+      answer: 480,
+      answerUnit: "W",
+      acceptRange: [478, 482],
+      commonMistake: "At constant speed the net force is zero, so the driving force equals the resistive force.",
+      tier: 2,
+      senNote: "P = Fv: constant speed → driving force = resistive force → use that force in the equation."
+    },
   ],
 
   // ─── 2. ENERGY EQUATIONS: Ep = mgh and Ek = ½mv² ────────────────────
@@ -1296,6 +1444,83 @@ const examCalculations = {
       tier: 3,
       senNote: "Snell's law: n₁ sin θ₁ = n₂ sin θ₂. For air n=1, so n_glass = sin(θ_air)/sin(θ_glass)."
     }
+  ],
+
+  // ─── MOMENTUM ────────────────────────────────────────────────────────────
+  momentum: [
+    {
+      type: "calculation",
+      question: "A 2 kg trolley moving at 3 m/s collides with and sticks to a 4 kg stationary trolley. Calculate their common velocity after the collision.",
+      questionSubtitle: "Use conservation of momentum: total before = total after",
+      equation: "m₁u₁ + m₂u₂ = (m₁ + m₂)v",
+      steps: [
+        { label: "Calculate momentum before (trolley 1)", value: "6", unit: "kg·m/s", hint: "p = 2 × 3 = 6 kg·m/s" },
+        { label: "Calculate momentum before (trolley 2, stationary)", value: "0", unit: "kg·m/s", hint: "u₂ = 0, so p = 4 × 0 = 0" },
+        { label: "Total momentum before", value: "6", unit: "kg·m/s", hint: "6 + 0 = 6 kg·m/s" },
+        { label: "Calculate v: v = total momentum ÷ total mass", value: "1", unit: "m/s", hint: "v = 6 ÷ (2 + 4) = 6 ÷ 6 = 1 m/s" }
+      ],
+      answer: 1,
+      answerUnit: "m/s",
+      acceptRange: [0.98, 1.02],
+      commonMistake: "Did you add the masses after the collision? They stick together, so use total mass (m₁ + m₂).",
+      tier: 2,
+      senNote: "Inelastic collision (stick together): use (m₁+m₂)v after. Momentum before = momentum after."
+    },
+    {
+      type: "calculation",
+      question: "A 0.5 kg ball moving at 4 m/s hits a 1.5 kg stationary ball. After the collision the 0.5 kg ball stops. Calculate the velocity of the 1.5 kg ball.",
+      questionSubtitle: "Total momentum is conserved",
+      equation: "m₁u₁ = m₂v₂  (since v₁ = 0 after)",
+      steps: [
+        { label: "Calculate total momentum before", value: "2", unit: "kg·m/s", hint: "p = 0.5 × 4 + 1.5 × 0 = 2 kg·m/s" },
+        { label: "Total momentum after = same", value: "2", unit: "kg·m/s", hint: "Momentum is conserved" },
+        { label: "Calculate v of 1.5 kg ball: v = p ÷ m", value: "1.33", unit: "m/s", hint: "v = 2 ÷ 1.5 = 1.33 m/s" }
+      ],
+      answer: 1.33,
+      answerUnit: "m/s",
+      acceptRange: [1.3, 1.36],
+      commonMistake: "Check that total momentum before = total momentum after. If one ball stops, all momentum transfers to the other.",
+      tier: 3,
+      senNote: "When the first ball stops: all the momentum transfers to the second ball. v₂ = m₁u₁ ÷ m₂."
+    },
+  ],
+
+  // ─── GAS PRESSURE ────────────────────────────────────────────────────────
+  gas_pressure: [
+    {
+      type: "calculation",
+      question: "A gas has a pressure of 200 kPa and a volume of 3.0 m³. The gas is compressed to a volume of 1.5 m³ at constant temperature. Calculate the new pressure.",
+      questionSubtitle: "Use Boyle's Law: p₁V₁ = p₂V₂",
+      equation: "p₁V₁ = p₂V₂",
+      steps: [
+        { label: "Write p₁V₁", value: "600", unit: "kPa·m³", hint: "p₁V₁ = 200 × 3.0 = 600" },
+        { label: "Write V₂", value: "1.5", unit: "m³", hint: "New volume = 1.5 m³" },
+        { label: "Calculate p₂ = p₁V₁ ÷ V₂", value: "400", unit: "kPa", hint: "p₂ = 600 ÷ 1.5 = 400 kPa" }
+      ],
+      answer: 400,
+      answerUnit: "kPa",
+      acceptRange: [398, 402],
+      commonMistake: "Did you remember that p × V must be the same before and after? If volume halves, pressure doubles.",
+      tier: 2,
+      senNote: "Boyle's Law: p₁V₁ = p₂V₂. Constant temperature. Halving volume doubles pressure."
+    },
+    {
+      type: "calculation",
+      question: "A gas at 150 kPa occupies 0.40 m³. At constant temperature it expands to 0.60 m³. Calculate the new pressure.",
+      questionSubtitle: "p₁V₁ = p₂V₂",
+      equation: "p₁V₁ = p₂V₂",
+      steps: [
+        { label: "Calculate p₁V₁", value: "60", unit: "kPa·m³", hint: "150 × 0.40 = 60" },
+        { label: "New volume V₂", value: "0.60", unit: "m³", hint: "Volume increases to 0.60 m³" },
+        { label: "p₂ = 60 ÷ 0.60", value: "100", unit: "kPa", hint: "p₂ = 60 ÷ 0.60 = 100 kPa" }
+      ],
+      answer: 100,
+      answerUnit: "kPa",
+      acceptRange: [99, 101],
+      commonMistake: "Volume increased so pressure must decrease — check your answer makes sense.",
+      tier: 2,
+      senNote: "Volume increases → pressure decreases. Always check the direction makes physical sense."
+    },
   ],
 };
 

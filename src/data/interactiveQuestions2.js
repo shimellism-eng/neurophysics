@@ -1603,6 +1603,125 @@ const interactiveQuestions2 = {
     },
   ],
 
+  /* ───── vectors_scalars ───── */
+  vectors_scalars: [
+    {
+      type: "tap-match",
+      question: "Match each quantity to its type (scalar or vector).",
+      questionSubtitle: "Tap an item, then tap its match",
+      pairs: [
+        { item: "Speed", match: "Scalar" },
+        { item: "Velocity", match: "Vector" },
+        { item: "Distance", match: "Scalar" },
+        { item: "Displacement", match: "Vector" },
+      ],
+      tier: 1,
+      senNote: "Scalar = size only. Vector = size AND direction.",
+    },
+    {
+      type: "hotspot",
+      question: "Which of the following is the correct way to find the resultant of two perpendicular forces?",
+      questionSubtitle: "Tap the correct answer",
+      areas: [
+        { label: "Use Pythagoras: R = √(a² + b²)", icon: "📐", correct: true },
+        { label: "Add the forces together: R = a + b", icon: "➕", correct: false },
+        { label: "Subtract the smaller from the larger: R = a − b", icon: "➖", correct: false },
+        { label: "Multiply the forces: R = a × b", icon: "✖️", correct: false },
+      ],
+      tier: 2,
+      senNote: "Pythagoras only works when the two forces are at right angles (perpendicular).",
+    },
+    {
+      type: "sequence",
+      question: "Put these quantities in order from scalar to vector (scalars first).",
+      questionSubtitle: "Tap in the correct order",
+      items: ["Mass", "Temperature", "Speed", "Force", "Velocity", "Acceleration"],
+      correctOrder: [0, 1, 2, 3, 4, 5],
+      tier: 1,
+      senNote: "Mass and temperature have no direction. Force, velocity and acceleration all need a direction to be fully described.",
+    },
+    {
+      type: "misconception",
+      question: "Is this statement correct?",
+      questionSubtitle: "Think carefully",
+      statement: "Speed and velocity are the same thing — they both tell you how fast an object is moving.",
+      isCorrect: false,
+      explanation: "Speed is a scalar (magnitude only). Velocity is a vector — it includes both speed and direction. An object moving in a circle at constant speed has changing velocity because the direction keeps changing.",
+      tier: 2,
+      senNote: "A car going around a roundabout at constant speed has constant speed but changing velocity.",
+    },
+    {
+      type: "confidence",
+      question: "How confident are you about vectors and scalars?",
+      questionSubtitle: "Be honest — this helps us help you",
+      tier: 1,
+      senNote: "There is no wrong answer here. Just reflect on how you feel.",
+    },
+  ],
+
+  /* ───── equations_of_motion ───── */
+  equations_of_motion: [
+    {
+      type: "tap-match",
+      question: "Match each SUVAT equation to the variable it does NOT contain.",
+      questionSubtitle: "Tap an item, then tap its match",
+      pairs: [
+        { item: "v = u + at", match: "No s (displacement)" },
+        { item: "v² = u² + 2as", match: "No t (time)" },
+        { item: "s = ut + ½at²", match: "No v (final velocity)" },
+        { item: "s = ½(u+v)t", match: "No a (acceleration)" },
+      ],
+      tier: 2,
+      senNote: "Choose the equation that has 3 knowns and 1 unknown — the missing variable tells you which equation to use.",
+    },
+    {
+      type: "hotspot",
+      question: "A car starts from rest and accelerates at 5 m/s² for 4 s. Which equation gives the distance travelled?",
+      questionSubtitle: "Tap the correct approach",
+      areas: [
+        { label: "s = ut + ½at² = 0 + ½×5×16 = 40 m", icon: "🚗", correct: true },
+        { label: "s = v × t = 20 × 4 = 80 m (uses final velocity, not average)", icon: "❌", correct: false },
+        { label: "v = u + at = 0 + 5×4 = 20 m (this gives velocity, not distance)", icon: "⚠️", correct: false },
+        { label: "s = ½(u+v)t = ½×20×4 = 40 m (also correct, different equation)", icon: "✅", correct: false },
+      ],
+      tier: 2,
+      senNote: "Starting from rest: u = 0, so s = ½at². Or use s = ½(u+v)t = ½×(0+20)×4 = 40 m.",
+    },
+    {
+      type: "sequence",
+      question: "Put these steps for solving a SUVAT problem in the correct order.",
+      questionSubtitle: "Tap in the correct order",
+      items: [
+        "List the known variables (s, u, v, a, t)",
+        "Identify the unknown variable you need to find",
+        "Choose the equation that contains those variables (3 known + 1 unknown)",
+        "Substitute the values in carefully with units",
+        "Rearrange if necessary and calculate the answer",
+        "Check the answer makes physical sense (e.g. positive distance)",
+      ],
+      correctOrder: [0, 1, 2, 3, 4, 5],
+      tier: 2,
+      senNote: "Always list s, u, v, a, t with their values first. The missing one tells you which equation to pick.",
+    },
+    {
+      type: "misconception",
+      question: "Is this statement correct?",
+      questionSubtitle: "Think carefully",
+      statement: "The SUVAT equations can be used to find the velocity of a ball thrown with changing air resistance.",
+      isCorrect: false,
+      explanation: "SUVAT equations only apply to uniform (constant) acceleration. Air resistance changes with speed, so the acceleration is not constant — SUVAT cannot be used in this case.",
+      tier: 3,
+      senNote: "SUVAT = uniform acceleration only. If acceleration changes, you cannot use these equations.",
+    },
+    {
+      type: "confidence",
+      question: "How confident are you about using the equations of motion?",
+      questionSubtitle: "Be honest — this helps us help you",
+      tier: 1,
+      senNote: "There is no wrong answer here. Just reflect on how you feel.",
+    },
+  ],
+
 };
 
 export default interactiveQuestions2;

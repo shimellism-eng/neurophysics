@@ -1162,7 +1162,195 @@ function MomentumReality() {
   )
 }
 
+// ─── Vectors & Scalars ───────────────────────────────────────────────────────
+function VectorsScalarsLesson() {
+  const [mode, setMode] = useState('scalars')
+  const scalars = mode === 'scalars'
+  const scalarList = ['Speed', 'Distance', 'Mass', 'Temperature', 'Energy', 'Time']
+  const vectorList = ['Velocity', 'Displacement', 'Force', 'Acceleration', 'Momentum', 'Weight']
+  return (
+    <div className="p-4">
+      <div className="flex gap-2 mb-4">
+        {[['scalars', 'Scalars'], ['vectors', 'Vectors'], ['resultant', 'Resultant']].map(([key, label]) => (
+          <button key={key} onClick={() => setMode(key)}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{ background: mode === key ? FC : 'rgba(18,26,47,0.8)', color: mode === key ? '#fff' : '#a8b8cc', border: `1px solid ${mode === key ? FC : '#2d3e55'}` }}>
+            {label}
+          </button>
+        ))}
+      </div>
+      {mode === 'scalars' && (
+        <div>
+          <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>Scalars have <strong style={{ color: FC }}>magnitude only</strong> — no direction needed.</p>
+          <div className="flex flex-wrap gap-2">
+            {scalarList.map(s => (
+              <motion.div key={s} className="px-3 py-1.5 rounded-full text-xs font-semibold"
+                style={{ background: `${FC}18`, color: FC, border: `1px solid ${FC}40` }}
+                initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}>
+                {s}
+              </motion.div>
+            ))}
+          </div>
+          <FormulaBox formula="Speed = distance ÷ time  (no direction)" color={FC} />
+        </div>
+      )}
+      {mode === 'vectors' && (
+        <div>
+          <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>Vectors have <strong style={{ color: '#f97316' }}>magnitude AND direction</strong>.</p>
+          <div className="flex flex-wrap gap-2">
+            {vectorList.map(v => (
+              <motion.div key={v} className="px-3 py-1.5 rounded-full text-xs font-semibold"
+                style={{ background: 'rgba(249,115,22,0.15)', color: '#f97316', border: '1px solid rgba(249,115,22,0.4)' }}
+                initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}>
+                {v}
+              </motion.div>
+            ))}
+          </div>
+          <FormulaBox formula="Velocity = displacement ÷ time  (needs direction)" color="#f97316" />
+        </div>
+      )}
+      {mode === 'resultant' && (
+        <div>
+          <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>Add perpendicular vectors using <strong style={{ color: FC }}>Pythagoras' theorem</strong>.</p>
+          <svg viewBox="0 0 240 160" width="100%" style={{ maxHeight: 160 }}>
+            <defs><marker id="ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill={FC}/></marker>
+            <marker id="av" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f97316"/></marker>
+            <marker id="ar" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#00bc7d"/></marker></defs>
+            <line x1="40" y1="120" x2="160" y2="120" stroke={FC} strokeWidth="2.5" markerEnd="url(#ah)"/>
+            <text x="95" y="138" textAnchor="middle" fill={FC} fontSize="9">3 N →</text>
+            <line x1="160" y1="120" x2="160" y2="40" stroke="#f97316" strokeWidth="2.5" markerEnd="url(#av)"/>
+            <text x="178" y="84" textAnchor="middle" fill="#f97316" fontSize="9">4 N ↑</text>
+            <line x1="40" y1="120" x2="160" y2="40" stroke="#00bc7d" strokeWidth="2.5" strokeDasharray="4,2" markerEnd="url(#ar)"/>
+            <text x="88" y="72" fill="#00bc7d" fontSize="9" transform="rotate(-33,88,72)">5 N resultant</text>
+            <text x="120" y="118" fill="#a8b8cc" fontSize="7">90°</text>
+          </svg>
+          <FormulaBox formula="R = √(3² + 4²) = √25 = 5 N" color="#00bc7d" />
+          <RealityBadge color="#00bc7d">Pythagoras: R² = a² + b²</RealityBadge>
+        </div>
+      )}
+    </div>
+  )
+}
+function VectorsScalarsIdea() {
+  return (
+    <div className="p-4">
+      <IdeaCaption>Speed tells you how fast. Velocity tells you how fast AND which way.</IdeaCaption>
+      <svg viewBox="0 0 240 100" width="100%" style={{ maxHeight: 100 }}>
+        <text x="30" y="30" fill="#a8b8cc" fontSize="10" fontWeight="bold">Scalar</text>
+        <text x="30" y="48" fill={FC} fontSize="9">"60 km/h"</text>
+        <text x="130" y="30" fill="#a8b8cc" fontSize="10" fontWeight="bold">Vector</text>
+        <text x="130" y="48" fill="#f97316" fontSize="9">"60 km/h North"</text>
+        <line x1="115" y1="20" x2="115" y2="80" stroke="#2d3e55" strokeWidth="1"/>
+        <text x="30" y="70" fill="#a8b8cc" fontSize="8">Mass = 5 kg</text>
+        <text x="130" y="70" fill="#a8b8cc" fontSize="8">Weight = 50 N ↓</text>
+      </svg>
+    </div>
+  )
+}
+function VectorsScalarsReality() {
+  return (
+    <div className="p-4">
+      <RealityBadge color={FC}>GPS needs vectors — distance alone won't tell you where you are.</RealityBadge>
+      <RealityBadge color="#f97316">A car going 60 km/h north and 60 km/h south have the same speed but opposite velocities.</RealityBadge>
+    </div>
+  )
+}
+
+// ─── Equations of Motion (SUVAT) ─────────────────────────────────────────────
+function EquationsOfMotionLesson() {
+  const [active, setActive] = useState(0)
+  const eqs = [
+    { eq: 'v = u + at', name: 'Velocity', desc: 'Final velocity from initial velocity, acceleration and time', missing: 'v or u or a or t' },
+    { eq: 'v² = u² + 2as', name: 'No time', desc: 'Useful when time is not given or needed', missing: 'v, u, a or s — no t' },
+    { eq: 's = ut + ½at²', name: 'Displacement', desc: 'Distance covered when accelerating from rest or a speed', missing: 's, u, a or t' },
+    { eq: 's = ½(u+v)t', name: 'Average', desc: 'Displacement using average velocity × time', missing: 's, u, v or t' },
+  ]
+  const eq = eqs[active]
+  return (
+    <div className="p-4">
+      <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>
+        <strong style={{ color: FC }}>s</strong> = displacement &nbsp;
+        <strong style={{ color: '#f97316' }}>u</strong> = initial velocity &nbsp;
+        <strong style={{ color: '#00bc7d' }}>v</strong> = final velocity &nbsp;
+        <strong style={{ color: '#c084fc' }}>a</strong> = acceleration &nbsp;
+        <strong style={{ color: '#fdc700' }}>t</strong> = time
+      </p>
+      <div className="flex gap-1.5 mb-3 flex-wrap">
+        {eqs.map((e, i) => (
+          <button key={i} onClick={() => setActive(i)}
+            className="px-3 py-1.5 rounded-[8px] text-xs font-bold"
+            style={{ background: active === i ? FC : 'rgba(18,26,47,0.8)', color: active === i ? '#fff' : '#a8b8cc', border: `1px solid ${active === i ? FC : '#2d3e55'}` }}>
+            {e.name}
+          </button>
+        ))}
+      </div>
+      <FormulaBox formula={eq.eq} color={FC} />
+      <p className="text-xs mt-2" style={{ color: '#cad5e2' }}>{eq.desc}</p>
+      <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>Use when: can find <em>{eq.missing}</em></p>
+      <div className="mt-3 p-3 rounded-[12px]" style={{ background: 'rgba(0,168,232,0.08)', border: '0.75px solid rgba(0,168,232,0.25)' }}>
+        <p className="text-xs font-semibold mb-1" style={{ color: FC }}>Example</p>
+        <p className="text-xs" style={{ color: '#a8b8cc' }}>
+          {active === 0 && 'Car from 0 m/s, a = 2 m/s², t = 5 s → v = 0 + 2×5 = 10 m/s'}
+          {active === 1 && 'Car from 0 m/s, a = 2 m/s², s = 25 m → v² = 0 + 2×2×25 = 100 → v = 10 m/s'}
+          {active === 2 && 'Car from 0 m/s, a = 2 m/s², t = 5 s → s = 0×5 + ½×2×25 = 25 m'}
+          {active === 3 && 'Car u=0, v=10 m/s, t=5 s → s = ½×(0+10)×5 = 25 m'}
+        </p>
+      </div>
+    </div>
+  )
+}
+function EquationsOfMotionIdea() {
+  return (
+    <div className="p-4">
+      <IdeaCaption>Choose the right equation by identifying which variable is unknown and which is missing from the problem.</IdeaCaption>
+      <div className="rounded-[12px] p-3 mt-2" style={{ background: 'rgba(18,26,47,0.8)', border: '0.75px solid #2d3e55' }}>
+        <p className="text-xs font-semibold mb-2" style={{ color: FC }}>SUVAT Quick Selector</p>
+        {[
+          ['v = u + at', 'no s'],
+          ['v² = u² + 2as', 'no t'],
+          ['s = ut + ½at²', 'no v'],
+          ['s = ½(u+v)t', 'no a'],
+        ].map(([eq, miss]) => (
+          <div key={eq} className="flex justify-between items-center py-1 border-b" style={{ borderColor: '#1d293d' }}>
+            <span className="text-xs font-mono" style={{ color: '#cad5e2' }}>{eq}</span>
+            <span className="text-xs" style={{ color: '#fdc700' }}>{miss}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+function EquationsOfMotionReality() {
+  return (
+    <div className="p-4">
+      <RealityBadge color={FC}>These equations ONLY work for uniform (constant) acceleration.</RealityBadge>
+      <RealityBadge color="#f97316">v² = u² + 2as is the go-to equation when time is not given in the question.</RealityBadge>
+    </div>
+  )
+}
+
 export const FORCES_TOPICS = {
+  vectors_scalars: {
+    id: 'vectors_scalars', module: 'Forces', moduleColor: FC, course: 'combined',
+    title: 'Vectors & Scalars', subtitle: 'Magnitude, Direction & Resultant Forces',
+    description: 'Scalar quantities have magnitude only (e.g. speed, distance, mass, temperature, energy, time). Vector quantities have both magnitude and direction (e.g. velocity, displacement, force, acceleration, momentum, weight). To find the resultant of two perpendicular forces, use Pythagoras: R² = a² + b². Vectors are represented by arrows — the length shows magnitude, the direction shows the direction of the quantity.',
+    lessonVisual: VectorsScalarsLesson, ideaVisual: VectorsScalarsIdea, realityVisual: VectorsScalarsReality,
+    question: 'Which of the following is a vector quantity?',
+    questionSubtitle: 'Vectors have both magnitude AND direction',
+    options: ['Speed', 'Mass', 'Temperature', 'Velocity'],
+    correctAnswer: 3,
+    keywords: ['vector', 'scalar', 'magnitude', 'direction', 'resultant', 'velocity', 'displacement', 'Pythagoras', 'perpendicular', 'speed'],
+    sentenceStarters: ['A vector has both magnitude and direction, for example...', 'Speed is a scalar because it only tells you how fast, not...', 'To find the resultant of two perpendicular forces I use Pythagoras...', 'The difference between speed and velocity is that velocity also has...', 'A scalar quantity only needs a number and a unit, such as...'],
+    modelAnswers: [
+      'Velocity is a vector because **it has both magnitude (speed) and direction  -  e.g. 30 m/s north**.',
+      'Speed is a scalar because **it only tells you how fast something is moving, not which way**.',
+      'To find the resultant of two perpendicular forces I use Pythagoras: **R² = a² + b²**.',
+      'The difference between speed and velocity is that **velocity also specifies direction  -  they are equal in magnitude but velocity is a vector**.',
+      'A scalar quantity only needs a number and a unit, such as **5 kg, 100 J or 20°C**.',
+    ],
+    misconception: 'Speed and velocity are not the same — velocity requires direction.',
+    concept: 'Scalar = magnitude only (speed, mass). Vector = magnitude + direction (velocity, force, acceleration). Resultant of perpendicular forces: R² = a² + b² (Pythagoras).',
+  },
   force_interactions: {
     id: 'force_interactions', module: 'Forces', moduleColor: FC, course: 'combined',
     title: 'Forces & Interactions', subtitle: 'Scalars, Vectors & Free Body Diagrams',
@@ -1288,6 +1476,27 @@ export const FORCES_TOPICS = {
     ],
     misconception: 'A horizontal line on a v-t graph means constant velocity, not zero velocity.',
     concept: 'Area under v-t graph = v × t = distance (same as distance = speed × time). A horizontal flat line means constant velocity - the object is moving at steady speed, not stationary.',
+  },
+  equations_of_motion: {
+    id: 'equations_of_motion', module: 'Forces', moduleColor: FC, course: 'combined',
+    title: 'Equations of Motion', subtitle: 'SUVAT — Uniform Acceleration',
+    description: 'Four equations link the five variables s (displacement), u (initial velocity), v (final velocity), a (acceleration) and t (time) for uniform acceleration: v = u + at; v² = u² + 2as; s = ut + ½at²; s = ½(u+v)t. Choose the equation that contains the three known variables and the one unknown. These equations only work for constant acceleration. Starting from rest means u = 0.',
+    lessonVisual: EquationsOfMotionLesson, ideaVisual: EquationsOfMotionIdea, realityVisual: EquationsOfMotionReality,
+    question: 'A car starts from rest and accelerates at 3 m/s² for 4 seconds. Which equation gives its final velocity?',
+    questionSubtitle: 'Identify the known values: u=0, a=3, t=4',
+    options: ['v² = u² + 2as', 'v = u + at', 's = ut + ½at²', 's = ½(u+v)t'],
+    correctAnswer: 1,
+    keywords: ['SUVAT', 'uniform acceleration', 'displacement', 'initial velocity', 'final velocity', 'acceleration', 'time', 'v=u+at', 'v²=u²+2as', 'equations of motion'],
+    sentenceStarters: ['The SUVAT variables are s, u, v, a and t where...', 'I choose v = u + at when I know u, a and t and need to find...', 'v² = u² + 2as is useful when time is not given because...', 'Starting from rest means u = 0, so the equation simplifies to...', 'Uniform acceleration means the acceleration is constant throughout...'],
+    modelAnswers: [
+      'The SUVAT variables are s (displacement), u (initial velocity), v (final velocity), a (acceleration) and t (time).',
+      'I choose v = u + at when I know u, a and t and need to find **v  -  v = 0 + 3×4 = 12 m/s**.',
+      'v² = u² + 2as is useful when time is not given because **it links v, u, a and s without needing t**.',
+      'Starting from rest means u = 0, so the equation simplifies to **v = at or v² = 2as**.',
+      'Uniform acceleration means **the acceleration value is constant — these equations do not work for changing acceleration**.',
+    ],
+    misconception: 'These equations only work for uniform (constant) acceleration — not for changing acceleration.',
+    concept: 'SUVAT: choose the equation with 3 knowns and 1 unknown. v = u + at (no s); v² = u² + 2as (no t); s = ut + ½at² (no v); s = ½(u+v)t (no a). Starting from rest: u = 0.',
   },
   terminal_velocity: {
     id: 'terminal_velocity', module: 'Forces', moduleColor: FC, course: 'combined',

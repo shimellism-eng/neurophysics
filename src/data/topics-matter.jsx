@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Atom, AlertTriangle, Zap, Shield } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
 
 const PART_C = '#c084fc'
 const ATOM_C = '#e879f9'
@@ -86,41 +86,22 @@ function StatesDensityLesson() {
 }
 function StatesDensityIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex gap-4 items-end">
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-12 h-8 rounded" style={{ background: '#2b7fff20', border: '2px solid #2b7fff' }}>
-            <div className="w-full h-full flex items-center justify-center text-xs font-bold" style={{ color: '#2b7fff' }}>Ship</div>
-          </div>
-          <motion.div className="text-sm" animate={{ y: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 1 }}>↓</motion.div>
-          <span className="text-xs" style={{ color: '#ef4444' }}>sinks?</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: '#c084fc20', border: '2px solid #c084fc', color: '#c084fc' }}>W</div>
-          <motion.div className="text-sm" animate={{ y: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }}>↓</motion.div>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>floats?</span>
-        </div>
-      </div>
-      <IdeaCaption>Heavy objects always sink - light objects always float, regardless of shape</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Heavy objects always sink and light objects always float — it depends on how much the object weighs."
+        right="Floating depends on average density, not total mass. A steel ship floats because its hull shape gives it a low average density (mostly air). A solid steel ball sinks."
+        wrongLabel="Weight confusion"
+        rightLabel="Average density vs fluid"
+      />
     </div>
   )
 }
 function StatesDensityReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-4 items-end">
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-8 rounded-[6px]" style={{ background: '#00a8e820', border: '1px solid #00a8e8' }} />
-          <span className="text-xs" style={{ color: '#00a8e8' }}>Steel ship<br/>floats!</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-5 h-5 rounded-full" style={{ background: '#00a8e840', border: '1px solid #00a8e8' }} />
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>Steel bolt<br/>sinks</span>
-        </div>
-      </div>
-      <FormulaBox formula="ρ = m/V" color={PART_C} />
-      <RealityBadge color={PART_C}>Shape changes average density - density vs fluid determines floating</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚢" title="Aircraft carrier — 100,000 tonnes" desc="Despite being made of steel, its hull displaces enough water to create upthrust equal to its weight (Archimedes' Principle). ρ_average < ρ_water." color="#c084fc" delay={0} />
+      <RealWorldCard icon="🧊" title="Ice floats on water" desc="Ice (ρ ≈ 917 kg/m³) is less dense than liquid water (ρ ≈ 1000 kg/m³) because the crystal structure is more spread out. This is why icebergs float." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🪨" title="Pumice stone" desc="Volcanic pumice is full of tiny gas bubbles, giving it a density below 1000 kg/m³ — making solid rock float in water." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -179,37 +160,22 @@ function InternalEnergyLesson() {
 }
 function InternalEnergyIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex items-center gap-2">
-        <div className="flex flex-col items-center gap-0.5">
-          <span className="text-xs font-bold" style={{ color: '#f97316' }}>100°C</span>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>water</span>
-        </div>
-        <div className="px-2 py-1 rounded" style={{ background: '#ef444420', color: '#ef4444', fontSize: 12, border: '1px solid #ef4444' }}>=</div>
-        <div className="flex flex-col items-center gap-0.5">
-          <span className="text-xs font-bold" style={{ color: '#f97316' }}>100°C</span>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>steam?</span>
-        </div>
-      </div>
-      <div className="text-xs" style={{ color: '#ef4444' }}>Same temp → same internal energy?</div>
-      <IdeaCaption>Temperature and internal energy mean the same thing - the hotter the higher internal energy</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Temperature and internal energy are the same thing — a hotter substance always has more internal energy."
+        right="Internal energy = kinetic energy + potential energy of particles. 100°C steam has more internal energy than 100°C water — same temperature, but bonds were broken during boiling (latent heat)."
+        wrongLabel="Temperature ≠ internal energy"
+        rightLabel="Kinetic + potential energy"
+      />
     </div>
   )
 }
 function InternalEnergyReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[10px]" style={{ background: `${PART_C}15`, border: `1px solid ${PART_C}` }}>
-          <span className="text-xs" style={{ color: PART_C }}>100°C water</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Low internal<br/>energy</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[10px]" style={{ background: '#00bc7d15', border: '1px solid #00bc7d' }}>
-          <span className="text-xs" style={{ color: '#00bc7d' }}>100°C steam</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Higher internal<br/>energy!</span>
-        </div>
-      </div>
-      <RealityBadge color={PART_C}>Same temperature, different internal energy - latent heat explains this</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="♨️" title="Steam burn worse than boiling water" desc="Steam at 100°C has ~2260 kJ/kg more internal energy than water at 100°C (latent heat of vaporisation). Condensing on skin releases all that extra energy." color="#c084fc" delay={0} />
+      <RealWorldCard icon="🧊" title="Ice water vs warm water" desc="A cup of ice water (0°C) has less internal energy than warm water (60°C) of the same mass — fewer particle vibrations and lower PE." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🌡️" title="Thermometer vs calorimeter" desc="A thermometer measures temperature (average KE). A calorimeter measures heat energy (total internal energy change). They measure different things." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -286,57 +252,23 @@ function SpecificLatentHeatLesson() {
 
 function SpecificLatentHeatIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <FormulaBox formula="Q = mL" color={PART_C} />
-      <div className="flex flex-col gap-2 w-full max-w-xs">
-        <div className="flex items-center justify-between px-3 py-2 rounded-[10px]"
-          style={{ background: '#2b7fff18', border: '1px solid #2b7fff44' }}>
-          <IdeaCaption>Fusion (melting/freezing)</IdeaCaption>
-          <span className="font-mono text-xs font-bold" style={{ color: '#2b7fff' }}>Lf = 334,000 J/kg</span>
-        </div>
-        <div className="flex items-center justify-between px-3 py-2 rounded-[10px]"
-          style={{ background: '#f9731618', border: '1px solid #f9731644' }}>
-          <IdeaCaption>Vaporisation (boiling/condensing)</IdeaCaption>
-          <span className="font-mono text-xs font-bold" style={{ color: '#f97316' }}>Lv = 2,260,000 J/kg</span>
-        </div>
-      </div>
-      {/* Simple particle bond-breaking diagram */}
-      <div className="flex items-center gap-2 mt-1">
-        <div className="flex gap-1">
-          {[0, 1, 2].map(i => (
-            <div key={i} className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
-              style={{ background: `${PART_C}22`, border: `1.5px solid ${PART_C}`, color: PART_C }}>•</div>
-          ))}
-        </div>
-        <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>+ energy →</span>
-        <div className="flex gap-3">
-          {[0, 1, 2].map(i => (
-            <div key={i} className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
-              style={{ background: `${PART_C}22`, border: `1.5px dashed ${PART_C}`, color: PART_C }}>•</div>
-          ))}
-        </div>
-      </div>
-      <IdeaCaption>Energy breaks bonds — temperature stays constant</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="When you heat ice to melt it, the temperature rises the whole time — the energy goes into making it hotter."
+        right="During melting, temperature stays at 0°C. All energy goes into breaking bonds (latent heat of fusion = 334 000 J/kg). Temperature only rises again once fully melted."
+        wrongLabel="Heating plateau confusion"
+        rightLabel="Bond-breaking, not warming"
+      />
     </div>
   )
 }
 
 function SpecificLatentHeatReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col gap-2 w-full max-w-xs">
-        <div className="flex gap-2 items-start p-2 rounded-[10px]"
-          style={{ background: '#2b7fff15', border: '1px solid #2b7fff44' }}>
-          <span className="text-lg">🧊</span>
-          <span className="text-xs" style={{ color: '#cad5e2' }}>Ice in a drink stays at 0°C until <strong>fully melted</strong> — all absorbed energy goes into latent heat of fusion</span>
-        </div>
-        <div className="flex gap-2 items-start p-2 rounded-[10px]"
-          style={{ background: `${PART_C}15`, border: `1px solid ${PART_C}44` }}>
-          <span className="text-lg">💧</span>
-          <span className="text-xs" style={{ color: '#cad5e2' }}>Sweating cools you down — <strong>evaporation</strong> uses latent heat of vaporisation, removing energy from your skin</span>
-        </div>
-      </div>
-      <RealityBadge color={PART_C}>State changes happen at constant temperature — energy breaks bonds, not heats particles</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🧊" title="Drinks stay cold longer with ice" desc="Ice stays at 0°C while melting, absorbing 334 000 J/kg as latent heat. This keeps the drink cool far longer than frozen water at –10°C would." color="#3b82f6" delay={0} />
+      <RealWorldCard icon="💦" title="Sweating — body's cooling system" desc="Evaporation of sweat takes 2 260 000 J per kg from the skin's surface. The huge latent heat of vaporisation makes sweating extremely effective at cooling." color="#c084fc" delay={0.1} />
+      <RealWorldCard icon="🌡️" title="Pressure cooker" desc="Increased pressure raises water's boiling point above 100°C. Food cooks faster because the higher-temperature steam transfers more energy per second." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -473,25 +405,22 @@ function GasPressureLesson() {
 }
 function GasPressureIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="relative w-20 h-16 rounded-[8px]" style={{ border: `1.5px solid ${PART_C}`, background: `${PART_C}08` }}>
-        {[0, 1, 2].map(i => (
-          <motion.div key={i} className="absolute w-3 h-3 rounded-full"
-            style={{ background: PART_C, top: '15%', left: `${20 + i * 25}%` }}
-            animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 1.5, delay: i * 0.2 }} />
-        ))}
-        <div className="absolute bottom-1 left-0 right-0 text-center text-xs" style={{ color: '#ef4444' }}>↓ only down</div>
-      </div>
-      <IdeaCaption>Gas pressure is caused by the weight of gas particles pressing down</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Gas pressure is caused by the weight of gas particles pressing down — like water pressure, it acts downward."
+        right="Gas pressure is caused by billions of particles hitting the container walls in all directions. More collisions per second (higher temperature or lower volume) = higher pressure."
+        wrongLabel="Weight confusion"
+        rightLabel="Particle collisions"
+      />
     </div>
   )
 }
 function GasPressureReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <FormulaBox formula="pV = constant" color={PART_C} />
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Pressure caused by particle <strong>collisions</strong> with container walls</div>
-      <RealityBadge color={PART_C}>Pressure × Volume = constant (at fixed temperature)</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚗" title="Tyre pressure" desc="Compressing air into a tyre increases particle collisions per second on the walls. Low tyre pressure = fewer collisions, less support — dangerous at speed." color="#c084fc" delay={0} />
+      <RealWorldCard icon="🌡️" title="Aerosol cans — heat warning" desc="Heating an aerosol can increases particle speed → more collisions → higher pressure. Can explode if heated above 50°C (pV/T = constant)." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🏔️" title="Altitude and pressure" desc="At high altitude, fewer air molecules are above you. Atmospheric pressure drops — boiling point of water falls below 100°C on Everest (~70°C at summit)." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -563,34 +492,22 @@ function AtomicStructureLesson() {
 }
 function AtomicStructureIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="w-16 h-16 rounded-full flex items-center justify-center relative"
-        style={{ background: 'radial-gradient(circle, #e879f930, #e879f910)', border: '2px solid #e879f9' }}>
-        {['+', '−', '+', '−', '+'].map((c, i) => (
-          <span key={i} className="absolute text-xs font-bold" style={{
-            color: c === '+' ? '#e879f9' : '#2b7fff',
-            top: `${15 + (i % 3) * 25}%`,
-            left: `${10 + i * 15}%`,
-          }}>{c}</span>
-        ))}
-        <span className="text-xs font-bold z-10" style={{ color: '#a8b8cc' }}>solid</span>
-      </div>
-      <div className="text-xs" style={{ color: '#ef4444' }}>Solid sphere - charges mixed throughout?</div>
-      <IdeaCaption>The atom is a solid sphere with positive and negative charges spread evenly throughout</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="The atom is a solid ball with positive and negative charges mixed evenly throughout (like a plum pudding)."
+        right="The atom is mostly empty space. A tiny, dense, positive nucleus sits at the centre, with electrons orbiting far away. Proven by Rutherford's gold foil experiment (1909)."
+        wrongLabel="Thomson's plum pudding"
+        rightLabel="Rutherford's nuclear atom"
+      />
     </div>
   )
 }
 function AtomicStructureReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="w-5 h-5 rounded-full flex items-center justify-center text-xs" style={{ background: '#e879f9', color: '#fff' }}>N</div>
-        <div className="text-xs" style={{ color: '#a8b8cc' }}>tiny dense nucleus</div>
-        <div className="w-2 h-2 rounded-full" style={{ background: '#e879f9' }} />
-        <div className="text-xs" style={{ color: '#a8b8cc' }}>e⁻ shells</div>
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Nucleus: 1/10,000 of atom's radius<br/>Atom: mostly empty space</div>
-      <RealityBadge color={ATOM_C}>Rutherford proved: tiny dense nucleus + electron shells</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="⚽" title="Scale of the atom" desc="If an atom were the size of a football stadium, the nucleus would be a marble in the centre. The atom is 99.9999999% empty space — all mass in the tiny nucleus." color="#e879f9" delay={0} />
+      <RealWorldCard icon="🔬" title="Rutherford's gold foil (1909)" desc="Most alpha particles passed straight through gold foil. A few deflected sharply back — proving a small, dense, positive nucleus. Disproved the plum pudding model." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="💡" title="Bohr's electron shells (1913)" desc="Bohr added quantised electron orbits to Rutherford's model. Each shell has a fixed energy — electrons emit photons when dropping to lower shells." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -686,31 +603,22 @@ function AtomicModelLesson() {
 }
 function AtomicModelIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="w-16 h-12 rounded-full flex items-center justify-center relative"
-        style={{ background: '#e879f915', border: '1px solid #e879f940' }}>
-        {['+', '−', '+', '−'].map((c, i) => (
-          <span key={i} className="absolute text-xs font-bold" style={{
-            color: c === '+' ? '#e879f9' : '#2b7fff',
-            top: `${20 + (i % 2) * 40}%`, left: `${15 + i * 20}%`,
-          }}>{c}</span>
-        ))}
-        <span className="text-xs" style={{ color: '#a8b8cc' }}>pudding</span>
-      </div>
-      <div className="text-xs text-center px-1" style={{ color: '#ef4444' }}>
-        Just a theory? No - Geiger-Marsden proved it wrong
-      </div>
-      <IdeaCaption>The plum pudding model was replaced just because scientists found a better theory - not from any experiment</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="The plum pudding model was replaced because scientists thought of a better theory — not because of any experiment."
+        right="The Geiger-Marsden experiment (1909) fired alpha particles at gold foil. Large deflections were unexpected — this experimental evidence directly contradicted the plum pudding model and forced a new model."
+        wrongLabel="Theory-first thinking"
+        rightLabel="Experiment drove the change"
+      />
     </div>
   )
 }
 function AtomicModelReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${ATOM_C}10`, border: `1px solid ${ATOM_C}30`, color: '#cad5e2' }}>
-        Rutherford fired α particles at gold foil. Most passed through - a few deflected sharply back. This proved a tiny dense positive nucleus exists.
-      </div>
-      <RealityBadge color={ATOM_C}>New experimental evidence led directly to model revision</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🥇" title="Thomson → Rutherford (1909)" desc="Thomson's plum pudding predicted all particles would pass through. When 1 in 8000 deflected back, Rutherford said it was 'like firing shells at tissue paper and them bouncing back'." color="#e879f9" delay={0} />
+      <RealWorldCard icon="🔭" title="Rutherford → Bohr (1913)" desc="Bohr added quantised electron orbits to explain why atoms emit specific wavelengths of light — another experimental observation driving model improvement." color="#c084fc" delay={0.1} />
+      <RealWorldCard icon="🔬" title="Science is self-correcting" desc="Each atomic model was accepted until experiment proved it wrong. This is the scientific method — models are updated when evidence demands it." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -792,32 +700,22 @@ function RadioactiveDecayLesson() {
 }
 function RadioactiveDecayIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex gap-2">
-        {[['α', '#f97316'], ['β', '#2b7fff'], ['γ', '#e879f9']].map(([sym, col]) => (
-          <div key={sym} className="flex flex-col items-center gap-1">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm"
-              style={{ background: `${col}20`, border: `2px solid ${col}`, color: col }}>{sym}</div>
-            <span className="text-xs font-bold" style={{ color: '#ef4444' }}>same!</span>
-          </div>
-        ))}
-      </div>
-      <IdeaCaption>All three types of radiation are equally dangerous and can all penetrate the human body</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Alpha radiation is the least dangerous because it can only travel a few centimetres in air."
+        right="Alpha is the most ionising — inside the body (inhaled or ingested) it causes severe damage to DNA. Outside the body it's stopped by skin. Context determines danger level."
+        wrongLabel="Penetration ≠ danger"
+        rightLabel="Depends on exposure route"
+      />
     </div>
   )
 }
 function RadioactiveDecayReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-2 text-xs">
-        {[['α', 'Paper', '#e879f9'], ['β', 'Aluminium', '#c084fc'], ['γ', 'Lead/concrete', '#00a8e8']].map(([s, stop, col]) => (
-          <div key={s} className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${col}10`, border: `1px solid ${col}` }}>
-            <span className="font-bold" style={{ color: col }}>{s}</span>
-            <span className="text-center" style={{ color: '#cad5e2' }}>stopped by {stop}</span>
-          </div>
-        ))}
-      </div>
-      <RealityBadge color={ATOM_C}>Penetration and ionising power are inversely related</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="☢️" title="Smoke detectors — alpha source" desc="Americium-241 emits alpha particles inside the detector. Smoke interrupts the ionisation current, triggering the alarm. Safe because alpha can't penetrate the casing." color="#f97316" delay={0} />
+      <RealWorldCard icon="🏥" title="Medical imaging — gamma rays" desc="Technetium-99m emits gamma rays that pass through the body and can be detected externally. Doctors use it to image organs. Short half-life (6 hours) limits dose." color="#e879f9" delay={0.1} />
+      <RealWorldCard icon="🎯" title="Cancer radiotherapy — beta/gamma" desc="High-energy gamma or beta radiation is targeted at tumour cells to destroy DNA. Surrounding healthy tissue must be shielded — that's why lead aprons are used." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -949,32 +847,22 @@ function NuclearEquationsLesson() {
 }
 function NuclearEquationsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="font-mono text-sm p-2 rounded-[8px]" style={{ background: `${ATOM_C}10`, border: `1px solid ${ATOM_C}30`, color: ATOM_C }}>
-        ²²⁶Ra → ²²²Rn + α
-      </div>
-      <div className="flex gap-3 text-xs">
-        <div className="px-2 py-1 rounded" style={{ background: '#00bc7d15', color: '#00bc7d' }}>Mass ✓ 226=222+4</div>
-        <div className="px-2 py-1 rounded" style={{ background: '#ef444415', color: '#ef4444' }}>Z ignored?</div>
-      </div>
-      <IdeaCaption>In nuclear equations you only need to balance the mass numbers - atomic numbers don't matter</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="In nuclear equations, you only need to balance the mass numbers (top numbers) — atomic numbers don't matter."
+        right="Both mass number (top) AND atomic number (bottom) must balance on each side. The atomic number determines what element is produced — missing this fails the equation."
+        wrongLabel="Half the equation"
+        rightLabel="Both numbers must balance"
+      />
     </div>
   )
 }
 function NuclearEquationsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-4 text-xs">
-        <div className="flex flex-col items-center p-2 rounded-[8px]" style={{ background: `${ATOM_C}10`, border: `1px solid ${ATOM_C}` }}>
-          <span style={{ color: ATOM_C }}>Mass number</span>
-          <span style={{ color: '#cad5e2' }}>top - must balance</span>
-        </div>
-        <div className="flex flex-col items-center p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
-          <span style={{ color: '#c084fc' }}>Atomic number</span>
-          <span style={{ color: '#cad5e2' }}>bottom - must balance</span>
-        </div>
-      </div>
-      <RealityBadge color={ATOM_C}>Both mass AND atomic numbers must balance on each side</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="⚛️" title="Alpha decay — Ra to Rn" desc="²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂α. Mass: 226 = 222+4 ✓. Atomic number: 88 = 86+2 ✓. Both balance — element changes from radium to radon." color="#e879f9" delay={0} />
+      <RealWorldCard icon="⚡" title="Beta decay — changes element" desc="In β⁻ decay, a neutron becomes a proton. Atomic number increases by 1 — the element changes! Mass number stays the same." color="#c084fc" delay={0.1} />
+      <RealWorldCard icon="☀️" title="Gamma emission — no change" desc="Gamma emission doesn't change mass number or atomic number — the nucleus just loses energy as a photon. The element stays the same." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -1091,29 +979,22 @@ function HalfLifeLesson() {
 }
 function HalfLifeIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex gap-2 items-end">
-        {[['t=0', 100, '#e879f9'], ['t=1T', 50, '#e879f9'], ['t=2T', 0, '#1d293d']].map(([label, pct, col], i) => (
-          <div key={i} className="flex flex-col items-center gap-1">
-            <div className="w-8 rounded-t-[4px]" style={{ height: Math.max(pct * 0.4, 4), background: col }} />
-            <span className="text-xs" style={{ color: '#a8b8cc' }}>{label}</span>
-            <span className="text-xs font-bold" style={{ color: i === 2 ? '#ef4444' : ATOM_C }}>{pct}%</span>
-          </div>
-        ))}
-      </div>
-      <div className="text-xs" style={{ color: '#ef4444' }}>After 2 half-lives → 0%?</div>
-      <IdeaCaption>After 2 half-lives the radioactive material is completely gone - used up</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="After 2 half-lives, all the radioactive material is used up — the substance is no longer radioactive."
+        right="Half-life halves the remaining activity each time. After 2 half-lives: 25% remains. After 10 half-lives: ~0.1% remains. It asymptotically approaches zero, never reaching it."
+        wrongLabel="Complete decay myth"
+        rightLabel="Asymptotic decay"
+      />
     </div>
   )
 }
 function HalfLifeReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="font-mono text-xs" style={{ color: ATOM_C }}>
-        Start: 100% → ½-life: 50% → ½-life: 25% → ½-life: 12.5%
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Each half-life halves the remaining activity - it never reaches exactly zero</div>
-      <RealityBadge color={ATOM_C}>Half-life halves remaining activity each time - never reaches 0</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🦴" title="Carbon-14 dating" desc="C-14 has a half-life of 5730 years. Measuring remaining C-14 in organic material lets archaeologists date objects up to ~50 000 years old (about 9 half-lives)." color="#e879f9" delay={0} />
+      <RealWorldCard icon="🏥" title="Technetium-99m — medical tracer" desc="Half-life of 6 hours — short enough to minimise radiation dose to patients, long enough to complete imaging. Activity halves every 6 hours, making it safe quickly." color="#c084fc" delay={0.1} />
+      <RealWorldCard icon="☢️" title="Chernobyl — long-lived isotopes" desc="Caesium-137 (half-life 30 years) still contaminates land near Chernobyl. After 90 years (3 half-lives), only 12.5% of the original activity will remain." color="#ef4444" delay={0.2} />
     </div>
   )
 }
@@ -1177,42 +1058,22 @@ function RadiationHazardsLesson() {
 }
 function RadiationHazardsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex gap-4 items-center">
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: '#ef444420', border: '2px solid #ef4444' }}>
-            <span className="text-base">☢</span>
-          </div>
-          <span className="text-xs" style={{ color: '#ef4444' }}>Outside</span>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>MORE danger</span>
-        </div>
-        <span style={{ color: '#a8b8cc', fontSize: 18 }}>&gt;</span>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: '#a8b8cc20', border: '2px solid #a8b8cc' }}>
-            <span className="text-base">💊</span>
-          </div>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>Inside</span>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>less?</span>
-        </div>
-      </div>
-      <IdeaCaption>Radiation from a source outside the body is always more dangerous than swallowing a source</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A radioactive source outside the body is always more dangerous than one inside — distance gives protection."
+        right="An alpha source inside the body (inhaled or swallowed) is far more dangerous. Alpha particles can't penetrate skin from outside, but directly irradiate cells from within, causing severe DNA damage."
+        wrongLabel="Outside = more dangerous?"
+        rightLabel="Contamination vs irradiation"
+      />
     </div>
   )
 }
 function RadiationHazardsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[10px]" style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid #ef4444' }}>
-          <Shield size={18} color="#ef4444" />
-          <span className="text-xs text-center" style={{ color: '#ef4444' }}>Contamination<br/>inside body = more<br/>dangerous</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[10px]" style={{ background: 'rgba(253,199,0,0.1)', border: '1px solid #fdc700' }}>
-          <AlertTriangle size={18} color="#fdc700" />
-          <span className="text-xs text-center" style={{ color: '#fdc700' }}>Irradiation<br/>outside body = less<br/>dangerous</span>
-        </div>
-      </div>
-      <RealityBadge color={ATOM_C}>Alpha is most dangerous when inhaled/ingested - but stopped by skin externally</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🫁" title="Radon gas — home hazard" desc="Radon-222 seeps from granite rock into buildings. When inhaled, alpha particles irradiate lung cells from inside — the leading cause of lung cancer in non-smokers in the UK." color="#ef4444" delay={0} />
+      <RealWorldCard icon="🏥" title="X-rays — external irradiation" desc="Medical X-rays (gamma-like) pass through the body briefly. Lead shields protect staff from repeated exposure. A single X-ray is far less dangerous than long-term radon exposure." color="#c084fc" delay={0.1} />
+      <RealWorldCard icon="🔒" title="Nuclear worker protection" desc="Workers use film badges to monitor gamma/beta exposure (irradiation). They wear respirators to prevent inhaling alpha-emitting dust (contamination) — different risks, different controls." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -1332,27 +1193,22 @@ function NuclearFissionLesson() {
 }
 function NuclearFissionIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex items-center gap-2">
-        <div className="w-10 h-10 rounded-full" style={{ background: `${ATOM_C}20`, border: `2px solid ${ATOM_C}` }} />
-        <span style={{ color: '#ef4444', fontSize: 14 }}>→</span>
-        <div className="w-5 h-5 rounded-full" style={{ background: `${ATOM_C}30`, border: `1px solid ${ATOM_C}` }} />
-        <span className="text-xs" style={{ color: '#a8b8cc' }}>+</span>
-        <div className="w-5 h-5 rounded-full" style={{ background: `${ATOM_C}30`, border: `1px solid ${ATOM_C}` }} />
-      </div>
-      <div className="text-xs" style={{ color: '#ef4444' }}>Two equal halves only?</div>
-      <IdeaCaption>Nuclear fission just splits the atom in half - producing two equal halves and no other products</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Nuclear fission just splits the atom in half — producing two equal pieces and nothing else."
+        right="Fission produces two unequal daughter nuclei, 2–3 neutrons, and gamma radiation. The released neutrons can trigger further fissions — this is the chain reaction that makes reactors (and bombs) work."
+        wrongLabel="Clean split myth"
+        rightLabel="Neutrons enable chain reaction"
+      />
     </div>
   )
 }
 function NuclearFissionReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${ATOM_C}10`, border: `1px solid ${ATOM_C}30`, color: '#cad5e2' }}>
-        U-235 + neutron → Ba-141 + Kr-92 + 2-3 neutrons + energy
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Released neutrons can trigger further fissions → chain reaction</div>
-      <RealityBadge color={ATOM_C}>Fission releases 2-3 neutrons - enabling a chain reaction</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="⚛️" title="Nuclear power stations" desc="Control rods absorb excess neutrons to slow the chain reaction. Removing rods speeds it up. The reactor maintains a carefully controlled, self-sustaining chain reaction." color="#e879f9" delay={0} />
+      <RealWorldCard icon="💣" title="Atomic bomb — uncontrolled fission" desc="Without control rods, a supercritical mass of U-235 or Pu-239 undergoes a runaway chain reaction. Every fission triggers 2–3 more — exponential energy release." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🌡️" title="E = mc² — where does energy come from?" desc="The total mass of products is slightly less than the original nucleus. This mass deficit (Δm) converts to energy: E = Δmc². Even tiny masses release enormous energy." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -1464,34 +1320,22 @@ function NuclearFusionLesson() {
 }
 function NuclearFusionIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-full" style={{ background: `${ATOM_C}20`, border: `2px solid ${ATOM_C}` }} />
-        <span style={{ color: '#ef4444', fontSize: 14 }}>→</span>
-        <div className="w-4 h-4 rounded-full" style={{ background: `${ATOM_C}20`, border: `1px solid ${ATOM_C}` }} />
-        <span className="text-xs font-bold" style={{ color: '#ef4444' }}>split</span>
-      </div>
-      <div className="text-xs text-center px-1" style={{ color: '#ef4444' }}>Both fusion AND fission split atoms?</div>
-      <IdeaCaption>Nuclear fusion and fission are the same process - both split atoms to release energy</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Nuclear fusion and fission are the same process — both split atoms to release energy."
+        right="Fission splits heavy nuclei (e.g. uranium) apart. Fusion joins light nuclei (e.g. hydrogen) together. Both release energy, but fusion releases far more per kg and produces less radioactive waste."
+        wrongLabel="Opposite processes"
+        rightLabel="Split vs join"
+      />
     </div>
   )
 }
 function NuclearFusionReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3 text-xs">
-        <div className="flex flex-col items-center p-2 rounded-[8px]" style={{ background: `${ATOM_C}10`, border: `1px solid ${ATOM_C}` }}>
-          <span style={{ color: ATOM_C }}>Fusion</span>
-          <span style={{ color: '#cad5e2' }}>Joins nuclei</span>
-          <span style={{ color: '#a8b8cc' }}>Stars</span>
-        </div>
-        <div className="flex flex-col items-center p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
-          <span style={{ color: '#c084fc' }}>Fission</span>
-          <span style={{ color: '#cad5e2' }}>Splits nucleus</span>
-          <span style={{ color: '#a8b8cc' }}>Reactors</span>
-        </div>
-      </div>
-      <RealityBadge color={ATOM_C}>Fusion joins nuclei; fission splits them - both release energy</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="☀️" title="The Sun — fusion reactor" desc="The Sun fuses 620 million tonnes of hydrogen into helium every second. The mass deficit (E = mc²) releases 3.8 × 10²⁶ W — powering all life on Earth." color="#fdc700" delay={0} />
+      <RealWorldCard icon="💥" title="Hydrogen bomb — uncontrolled fusion" desc="A fission bomb triggers extreme temperature and pressure, initiating fusion of hydrogen isotopes. The energy release dwarfs fission bombs by orders of magnitude." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🔬" title="ITER — fusion power future" desc="The ITER reactor under construction in France aims to achieve net energy gain from D-T fusion by the 2030s. The challenge: confining plasma at 150 million °C." color="#3b82f6" delay={0.2} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { IdeaCaption, RealityBadge, FormulaBox } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
 
 const EC = '#155dfc'
 
@@ -93,36 +93,23 @@ function CircuitBasicsLesson() {
 
 function CircuitBasicsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="200" height="70" viewBox="0 0 200 70">
-        <text x={100} y={14} textAnchor="middle" fill="#ef4444" fontSize={8} fontWeight="bold">Electrons flow FROM + TO −</text>
-        <line x1={20} y1={35} x2={180} y2={35} stroke="#ef4444" strokeWidth="2" />
-        <polygon points="170,30 180,35 170,40" fill="#ef4444" />
-        <text x={20} y={32} fill="#cad5e2" fontSize={9} fontWeight="bold">+</text>
-        <text x={185} y={39} fill="#cad5e2" fontSize={9} fontWeight="bold">−</text>
-        <text x={100} y={56} textAnchor="middle" fill="#ef4444" fontSize={8}>← electron flow</text>
-        <line x1={40} y1={58} x2={160} y2={58} stroke="#ef4444" strokeWidth="1.5" strokeDasharray="3 2" />
-        <polygon points="50,53 40,58 50,63" fill="#ef4444" />
-      </svg>
-      <IdeaCaption>Current (conventional) flows from + to −, the same direction as electron flow</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Conventional current flows from − to + (the same direction electrons actually move)."
+        right="Conventional current flows from + to −. Electrons move the opposite way: − to +. The convention was set before electrons were discovered."
+        wrongLabel="Historical confusion"
+        rightLabel="The convention"
+      />
     </div>
   )
 }
 
 function CircuitBasicsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3 w-full justify-center">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${EC}12`, border: `1px solid ${EC}` }}>
-          <span className="text-xs font-bold" style={{ color: EC }}>Conventional current</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>+ → −<br/>(used in circuit diagrams)</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Electron flow</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>− → +<br/>(actual particle movement)</span>
-        </div>
-      </div>
-      <RealityBadge color={EC}>Conventional current flows + to −. Electrons actually move − to +. Both are correct in context.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🔬" title="Electron discovery — too late" desc="Benjamin Franklin defined conventional current in 1752. Electrons were discovered in 1897 — the convention was already universal and impossible to reverse." color="#155dfc" delay={0} />
+      <RealWorldCard icon="⚡" title="Oscilloscopes & CRT screens" desc="In cathode ray tubes, electrons fired from − to + create the beam. Engineers use electron flow direction; physicists use conventional current." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="🏥" title="ECG heart monitors" desc="ECG machines measure the tiny currents from the heart. Doctors use conventional current (+ to −) consistently across all medical devices." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -256,36 +243,23 @@ function CircuitComponentsLesson() {
 
 function CircuitComponentsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Ammeter</span>
-          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>in parallel?  ✗</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Voltmeter</span>
-          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>in series?  ✗</span>
-        </div>
-      </div>
-      <IdeaCaption>It doesn't matter where you place ammeters or voltmeters — they work anywhere in a circuit</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="An ammeter in parallel works fine — it just measures current from both sides of the circuit."
+        right="An ammeter in parallel creates a short circuit (near-zero resistance path). Current bypasses the component and may destroy the ammeter or power source."
+        wrongLabel="Dangerous mistake"
+        rightLabel="Why placement matters"
+      />
     </div>
   )
 }
 
 function CircuitComponentsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#10b98112', border: '1px solid #10b981' }}>
-          <span className="text-xs font-bold" style={{ color: '#10b981' }}>Ammeter (A)</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Series only<br/>Very low resistance</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#f59e0b12', border: '1px solid #f59e0b' }}>
-          <span className="text-xs font-bold" style={{ color: '#f59e0b' }}>Voltmeter (V)</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Parallel only<br/>Very high resistance</span>
-        </div>
-      </div>
-      <RealityBadge color={EC}>Ammeter in series (measures current). Voltmeter in parallel (measures voltage).</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🔌" title="Fuse — series protection" desc="A fuse must be in series so all current flows through it. If current exceeds rating, the fuse melts and breaks the circuit, preventing fires." color="#ef4444" delay={0} />
+      <RealWorldCard icon="🌡️" title="Thermistor — sensor circuits" desc="NTC thermistors drop in resistance as temperature rises. Used in series with a fixed resistor as a voltage divider to detect temperature changes." color="#f59e0b" delay={0.1} />
+      <RealWorldCard icon="💡" title="LDR — light-sensitive switch" desc="A light-dependent resistor has high resistance in the dark. Paired with a relay in series, it can automatically switch street lights on at dusk." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -381,37 +355,23 @@ function SeriesParallelLesson() {
 
 function SeriesParallelIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>More bulbs</span>
-          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>= brighter?  ✗</span>
-        </div>
-        <motion.span className="text-xl" animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>→</motion.span>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d' }}>
-          <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>Series</span>
-          <span className="text-xs text-center" style={{ color: '#ef4444' }}>dimmer ✗</span>
-        </div>
-      </div>
-      <IdeaCaption>Adding more bulbs in series makes them all brighter as more energy is available</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Adding more bulbs in series makes them all brighter — more components means more energy available."
+        right="In series, the supply voltage is shared between all components. Each extra bulb gets a smaller share of the voltage, making all of them dimmer."
+        wrongLabel="Intuition error"
+        rightLabel="Voltage sharing"
+      />
     </div>
   )
 }
 
 function SeriesParallelReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${EC}12`, border: `1px solid ${EC}` }}>
-          <span className="text-xs font-bold" style={{ color: EC }}>Series</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>More bulbs →<br/>each gets less V →<br/>dimmer</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#00bc7d12', border: '1px solid #00bc7d' }}>
-          <span className="text-xs font-bold" style={{ color: '#00bc7d' }}>Parallel</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Each branch gets<br/>full voltage →<br/>same brightness</span>
-        </div>
-      </div>
-      <RealityBadge color={EC}>Series: adding bulbs dims them all. Parallel: each branch keeps full voltage.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🎄" title="Old Christmas lights" desc="Old fairy lights wired in series — one bulb fails and the whole chain goes dark. Every modern string uses parallel wiring so each bulb gets full voltage." color="#ef4444" delay={0} />
+      <RealWorldCard icon="🏠" title="Home ring main" desc="Every socket in a house is wired in parallel. Plugging in an extra device doesn't affect voltage at other sockets — each gets the full 230 V." color="#155dfc" delay={0.1} />
+      <RealWorldCard icon="🔦" title="Series battery packs" desc="Batteries in series add voltages. Two 1.5 V cells in series give 3 V — used in torches, TV remotes, and older power tools." color="#fdc700" delay={0.2} />
     </div>
   )
 }
@@ -490,40 +450,23 @@ function DomesticElectricityLesson() {
 
 function DomesticElectricityIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-2 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-        <span className="text-xs font-bold" style={{ color: '#ef4444' }}>AC and DC are the same</span>
-        <span className="text-xs" style={{ color: '#a8b8cc' }}>— just different voltages ✗</span>
-      </div>
-      <svg width="180" height="50" viewBox="0 0 180 50">
-        <line x1={10} y1={25} x2={80} y2={25} stroke="#cad5e2" strokeWidth="2" />
-        <text x={45} y={18} textAnchor="middle" fill="#cad5e2" fontSize={8}>DC (battery)</text>
-        {[90,100,110,120,130,140,150,160,170].map((x, i) => {
-          const y = 25 + (i < 4 ? -12 : 12) * Math.sin(i * Math.PI / 4)
-          return null
-        })}
-        <path d="M100,25 Q110,10 120,25 Q130,40 140,25 Q150,10 160,25 Q170,40 180,25" fill="none" stroke={EC} strokeWidth="2" />
-        <text x={140} y={18} textAnchor="middle" fill={EC} fontSize={8}>AC (mains)</text>
-      </svg>
-      <IdeaCaption>AC (mains) and DC (battery) are the same type of electricity — just different voltages</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="AC mains and DC battery are the same — just different voltages. Either would work to power appliances."
+        right="AC constantly reverses direction (50 times/s in the UK). DC flows one way only. Transformers only work with AC — that's why the National Grid uses AC, not DC."
+        wrongLabel="Not just voltage"
+        rightLabel="Fundamentally different"
+      />
     </div>
   )
 }
 
 function DomesticElectricityReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${EC}12`, border: `1px solid ${EC}` }}>
-          <span className="text-xs font-bold" style={{ color: EC }}>AC (mains)</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Direction reverses<br/>230V / 50Hz<br/>Power stations</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#fdc70012', border: '1px solid #fdc700' }}>
-          <span className="text-xs font-bold" style={{ color: '#fdc700' }}>DC (battery)</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>One direction only<br/>1.5V – 12V<br/>Chemical cells</span>
-        </div>
-      </div>
-      <RealityBadge color={EC}>AC constantly reverses direction. DC flows one way. They behave very differently.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🔌" title="Plug wiring — why 3 pins" desc="Live (brown): 230V AC. Neutral (blue): return path. Earth (green/yellow): safety — connects metal casing to ground so a fault blows the fuse, not you." color="#155dfc" delay={0} />
+      <RealWorldCard icon="📱" title="Chargers — AC to DC conversion" desc="Your phone charger contains a transformer + rectifier that converts 230V AC → 5V DC. The IC inside needs steady DC, not oscillating AC." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="🚗" title="EV charging" desc="Electric cars store energy in DC batteries. Rapid chargers convert grid AC to DC externally; slow 'type 2' chargers let the car's onboard converter do it." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -569,27 +512,23 @@ function ElectricalPowerLesson() {
 
 function ElectricalPowerIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>100 W bulb</span>
-          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>uses 100 J<br/>per hour? ✗</span>
-        </div>
-      </div>
-      <IdeaCaption>A 100 W appliance uses 100 joules of energy per hour — not per second</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A 100 W appliance uses 100 joules of energy per hour — it's a small device so it can't use much."
+        right="Watts means joules per second. A 100 W bulb uses 100 J every second — in one hour that's 360 000 J (0.1 kWh)."
+        wrongLabel="Unit confusion"
+        rightLabel="Joules per second"
+      />
     </div>
   )
 }
 
 function ElectricalPowerReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${EC}12`, border: `1px solid ${EC}30`, color: '#cad5e2' }}>
-        Power is energy transferred <strong style={{ color: EC }}>per second</strong>.<br />
-        100 W = 100 J every second.<br />
-        In 1 hour: 100 × 3600 = 360 000 J
-      </div>
-      <RealityBadge color={EC}>1 Watt = 1 Joule per second. Power measures the rate of energy transfer.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🍵" title="Electric kettle — 2 kW" desc="Boils 1 litre in ~2 min. Uses 2000 J/s × 120 s = 240 000 J. At UK electricity prices (~30p/kWh) that's about 2p per boil." color="#f97316" delay={0} />
+      <RealWorldCard icon="🖥️" title="Gaming PC — 500 W" desc="P = IV, so at 230V the current drawn is ~2.2 A. Run for 4 hours: 500 × 14 400 = 7 200 000 J = 2 kWh ≈ 60p of electricity." color="#155dfc" delay={0.1} />
+      <RealWorldCard icon="💨" title="Wind turbine — 2 MW" desc="A large offshore turbine generates 2 000 000 W — 20 000 times an LED bulb. P = I²R losses mean cables must carry current efficiently." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -665,29 +604,23 @@ function NationalGridLesson() {
 
 function NationalGridIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <FormulaBox formula="P_loss = I²R" color={EC} />
-      <div className="flex gap-2 w-full justify-center">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${EC}12`, border: `1px solid ${EC}40` }}>
-          <span className="text-xs font-bold" style={{ color: EC }}>Step-up</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>↑ Voltage<br />↓ Current</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#10b98112', border: '1px solid #10b98140' }}>
-          <span className="text-xs font-bold" style={{ color: '#10b981' }}>Step-down</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>↓ Voltage<br />↑ Current</span>
-        </div>
-      </div>
-      <FormulaBox formula="Vp / Vs = Np / Ns" color="#f97316" />
-      <IdeaCaption>Lower current in cables means far less energy wasted as heat (P = I²R)</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="The National Grid transmits electricity at high current to deliver more power to homes quickly."
+        right="High current wastes energy in cables (P_loss = I²R). High voltage with low current delivers the same power with far less loss — that's why transformers are essential."
+        wrongLabel="Current confusion"
+        rightLabel="Why high voltage wins"
+      />
     </div>
   )
 }
 
 function NationalGridReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <RealityBadge color={EC}>The UK's transmission grid runs at up to 400,000 V</RealityBadge>
-      <RealityBadge color="#f97316">Without step-up transformers, most electricity generated would be wasted as heat in cables before reaching your home</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🗼" title="UK transmission — 400 000 V" desc="The UK National Grid transmits at 275 kV–400 kV. At this voltage, the current in cables is tiny, so I²R heating losses are less than 2% of generated power." color="#155dfc" delay={0} />
+      <RealWorldCard icon="🏘️" title="Step-down to your home" desc="Grid voltage is stepped down in stages: 400 kV → 132 kV → 33 kV → 11 kV → 230 V at your street transformer. Each step serves a different part of the network." color="#10b981" delay={0.1} />
+      <RealWorldCard icon="🌐" title="HVDC long-distance links" desc="For very long undersea cables (e.g. UK–Norway), DC is used instead of AC — no reactive power losses over thousands of km." color="#f59e0b" delay={0.2} />
     </div>
   )
 }
@@ -755,33 +688,23 @@ function StaticElectricityLesson() {
 
 function StaticElectricityIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-2 p-2 rounded-[8px]" style={{ background: '#ef444412', border: '1px solid #ef4444' }}>
-        <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Rubbing creates charge from nothing ✗</span>
-      </div>
-      <div className="text-xs text-center p-2 rounded-[8px]" style={{ background: '#1d293d', color: '#a8b8cc' }}>
-        balloon + jumper<br />
-        <motion.span animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1 }} style={{ display: 'inline-block' }}>→</motion.span>
-        <span style={{ color: '#ef4444' }}> charge appears?</span>
-      </div>
-      <IdeaCaption>Friction creates electric charge from nothing — new charge is generated by rubbing</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Rubbing objects together creates electric charge — friction generates new charge from nothing."
+        right="Charge is transferred, not created. Electrons move from one surface to the other. Total charge is conserved — one object gains electrons, the other loses the same number."
+        wrongLabel="Creation myth"
+        rightLabel="Conservation of charge"
+      />
     </div>
   )
 }
 
 function StaticElectricityReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-2 items-center text-xs text-center">
-        <div className="p-2 rounded-[8px]" style={{ background: '#6366f112', border: '1px solid #6366f1', color: '#cad5e2' }}>
-          Jumper<br /><span style={{ color: '#6366f1' }}>loses e⁻</span><br />→ +ve charged
-        </div>
-        <span style={{ color: '#a8b8cc', fontSize: 16 }}>⇌</span>
-        <div className="p-2 rounded-[8px]" style={{ background: '#6366f112', border: '1px solid #6366f1', color: '#cad5e2' }}>
-          Balloon<br /><span style={{ color: '#6366f1' }}>gains e⁻</span><br />→ −ve charged
-        </div>
-      </div>
-      <RealityBadge color="#6366f1">Charge is transferred (not created). Electrons move from one material to the other.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="⛽" title="Fuel tanker earthing" desc="When pumping fuel, static build-up can cause a spark. Tankers are earthed via a wire before opening valves — charge flows safely to ground." color="#ef4444" delay={0} />
+      <RealWorldCard icon="🖨️" title="Laser printer drum" desc="A laser printer charges a drum with static, then uses a laser to neutralise parts of it. Toner (charged powder) sticks only to charged areas — printing your document." color="#6366f1" delay={0.1} />
+      <RealWorldCard icon="🌩️" title="Lightning" desc="Charge separation in storm clouds builds up millions of volts. When the electric field exceeds air's breakdown strength (~3 MV/m), a spark discharges cloud to ground." color="#fdc700" delay={0.2} />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Waves, Radio, Eye, Sun } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
 
 const WC = '#fdc700'
 const MC = '#10b981'
@@ -101,44 +101,22 @@ function WaveTypesLesson() {
 }
 function WaveTypesIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col gap-2 w-full px-2">
-        <div className="text-xs font-bold text-center mb-1" style={{ color: '#ef4444' }}>Sound particles vibrate…</div>
-        {/* Wrong: upward arrows like transverse */}
-        <div className="flex items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444415', border: '1px solid #ef4444' }}>
-          <div className="flex gap-2 items-center flex-1">
-            {[0,1,2,3,4].map(i => (
-              <motion.div key={i} className="flex flex-col items-center"
-                animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 0.8, delay: i * 0.12 }}>
-                <div style={{ width: 2, height: 10, background: '#ef4444', borderRadius: 1 }} />
-                <div style={{ width: 0, height: 0, borderLeft: '4px solid transparent', borderRight: '4px solid transparent', borderBottom: '6px solid #ef4444' }} />
-              </motion.div>
-            ))}
-          </div>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>↕ ?  ✗</span>
-        </div>
-        <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>Sound is NOT transverse (↕)</div>
-      </div>
-      <IdeaCaption>Sound waves are transverse - vibrating up and down like water waves</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Sound waves are transverse — particles vibrate up and down, perpendicular to the wave direction, like water waves."
+        right="Sound is a longitudinal wave — air particles vibrate back and forth parallel to the direction the wave travels, creating compressions and rarefactions."
+        wrongLabel="Transverse confusion"
+        rightLabel="Longitudinal: parallel vibration"
+      />
     </div>
   )
 }
 function WaveTypesReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${WC}10`, border: `1px solid ${WC}` }}>
-          <Waves size={18} color={WC} />
-          <span className="text-xs" style={{ color: WC }}>Transverse</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>EM, light<br/>water, seismic S</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#00a8e820', border: '1px solid #00a8e8' }}>
-          <span className="text-lg font-mono" style={{ color: '#00a8e8' }}>≋</span>
-          <span className="text-xs" style={{ color: '#00a8e8' }}>Longitudinal</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Sound<br/>seismic P</span>
-        </div>
-      </div>
-      <RealityBadge color={WC}>Sound is longitudinal - particles vibrate parallel to wave travel</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🎵" title="Concert hall acoustics" desc="Sound travels as longitudinal pressure waves through air at 343 m/s. Engineers design hall shapes to control reflections and prevent echoes — all based on longitudinal wave behaviour." color="#fdc700" delay={0} />
+      <RealWorldCard icon="🌊" title="Seismic waves — earthquake detection" desc="P-waves (longitudinal) travel through Earth's core; S-waves (transverse) cannot. The absence of S-waves in the shadow zone proved Earth has a liquid outer core." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🌞" title="Light — transverse EM wave" desc="Light waves vibrate perpendicular to their direction of travel — that's why they can be polarised. Longitudinal waves cannot be polarised (polaroid sunglasses work only on transverse waves)." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -226,33 +204,22 @@ function WavePropertiesLesson() {
 }
 function WavePropertiesIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="190" height="80" viewBox="0 0 190 80">
-        {/* Two waves: low freq and high freq, same speed label */}
-        <text x="8" y="16" fill="#a8b8cc" fontSize="7">Low f</text>
-        <motion.path d="M40 15 Q55 5 70 15 Q85 25 100 15 Q115 5 130 15 Q145 25 160 15"
-          fill="none" stroke="#c084fc" strokeWidth="2"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8 }} />
-        <text x="8" y="46" fill="#a8b8cc" fontSize="7">High f</text>
-        <motion.path d="M40 45 Q47 38 54 45 Q61 52 68 45 Q75 38 82 45 Q89 52 96 45 Q103 38 110 45 Q117 52 124 45 Q131 38 138 45 Q145 52 152 45 Q159 38 166 45"
-          fill="none" stroke={WC} strokeWidth="2"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8, delay: 0.2 }} />
-        {/* Wrong "faster" arrow for high freq */}
-        <motion.line x1="165" y1="45" x2="185" y2="45" stroke="#ef4444" strokeWidth="2" markerEnd="url(#arr)"
-          animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2 }} />
-        <text x="95" y="68" textAnchor="middle" fill="#ef4444" fontSize="8">higher f → faster?  ✗</text>
-      </svg>
-      <IdeaCaption>Higher frequency waves travel faster - more oscillations per second means higher speed</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Higher frequency waves travel faster — more oscillations per second must mean the wave covers more ground."
+        right="Wave speed depends on the medium, not the frequency. v = fλ means if frequency doubles, wavelength halves — speed stays the same. All EM waves travel at c = 3×10⁸ m/s in vacuum."
+        wrongLabel="Frequency ≠ speed"
+        rightLabel="v = fλ, speed fixed by medium"
+      />
     </div>
   )
 }
 function WavePropertiesReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <FormulaBox formula="v = f × λ" color={WC} />
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Speed depends on the medium - NOT on frequency. Higher f → shorter λ (at same speed)</div>
-      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>All EM waves travel at 3×10⁸ m/s in vacuum</div>
-      <RealityBadge color={WC}>Speed is fixed by the medium - not frequency</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🎸" title="Guitar strings — pitch vs speed" desc="Plucking harder increases amplitude (louder), not speed. A thinner string vibrates at higher frequency, giving shorter wavelength at the same speed — higher pitch." color="#fdc700" delay={0} />
+      <RealWorldCard icon="📻" title="Radio stations — same speed, different λ" desc="BBC Radio 4 (198 kHz) and Radio 1 (97.6 MHz) both travel at c = 3×10⁸ m/s. Their wavelengths differ: Radio 4 λ ≈ 1500 m, Radio 1 λ ≈ 3 m." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🌊" title="Ripple tank — refraction" desc="Water waves slow down in shallower water. Frequency stays constant (same source), so wavelength decreases — the waves bunch up and change direction." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -334,45 +301,22 @@ function WaveReflectionLesson() {
 }
 function WaveReflectionIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="190" height="90" viewBox="0 0 190 90">
-        {/* Air | Glass boundary */}
-        <line x1="95" y1="5" x2="95" y2="85" stroke="#1d293d" strokeWidth="2" strokeDasharray="4 2" />
-        <text x="45" y="15" textAnchor="middle" fill="#a8b8cc" fontSize="7">Air</text>
-        <text x="145" y="15" textAnchor="middle" fill="#2b7fff" fontSize="7">Glass</text>
-        {/* Incoming ray */}
-        <motion.line x1="20" y1="15" x2="95" y2="55" stroke={WC} strokeWidth="2"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.6 }} />
-        {/* Wrong: ray bends AWAY from normal (as if speeding up) */}
-        <motion.line x1="95" y1="55" x2="170" y2="20" stroke="#ef4444" strokeWidth="2"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.5, duration: 0.5 }} />
-        {/* Normal line */}
-        <line x1="95" y1="10" x2="95" y2="85" stroke="#1d293d" strokeWidth="1" strokeDasharray="3 2" />
-        <text x="155" y="38" fill="#ef4444" fontSize="7">speeds up?</text>
-        <motion.text x="155" y="50" fill="#ef4444" fontSize="12" fontWeight="bold"
-          animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 2 }}>✗</motion.text>
-        <text x="95" y="84" textAnchor="middle" fill="#a8b8cc" fontSize="7">Glass is "clearer" = faster?</text>
-      </svg>
-      <IdeaCaption>When light enters glass it speeds up - glass is more transparent so light goes faster</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="When light enters glass it speeds up — glass is transparent so light passes through more easily and faster."
+        right="Light slows down in denser media (glass, water). The refractive index n = c/v, so n > 1 for glass means v < c. It bends towards the normal because it slows down."
+        wrongLabel="Transparency ≠ speed"
+        rightLabel="Denser medium → slower light"
+      />
     </div>
   )
 }
 function WaveReflectionReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3 text-xs">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${WC}10`, border: `1px solid ${WC}` }}>
-          <span style={{ color: WC }}>Into denser</span>
-          <span style={{ color: '#cad5e2' }}>Slows down</span>
-          <span style={{ color: '#cad5e2' }}>Bends towards normal</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
-          <span style={{ color: '#c084fc' }}>Into less dense</span>
-          <span style={{ color: '#cad5e2' }}>Speeds up</span>
-          <span style={{ color: '#cad5e2' }}>Bends away from normal</span>
-        </div>
-      </div>
-      <RealityBadge color={WC}>Light slows down in denser media like glass</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="💎" title="Diamond sparkle — high refractive index" desc="Diamond has n = 2.42 — much higher than glass (n = 1.5). Light slows dramatically, bends sharply, and undergoes total internal reflection multiple times, creating brilliance." color="#fdc700" delay={0} />
+      <RealWorldCard icon="🌈" title="Rainbows — dispersion in raindrops" desc="White light refracts on entering a raindrop, separating wavelengths (violet bends most). Each colour exits at a slightly different angle — creating the colour arc." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🔭" title="Astronomical refraction" desc="Stars near the horizon appear slightly higher than they are. Earth's atmosphere acts as a lens — light bends as it passes through layers of increasing density." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -427,29 +371,23 @@ function TotalInternalReflectionLesson() {
 
 function TotalInternalReflectionIdea() {
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <FormulaBox formula="sin c = 1 / n" color={WC} />
-      <div className="flex flex-col gap-2">
-        <div className="px-3 py-2 rounded-[10px]" style={{ background: 'rgba(253,199,0,0.08)', border: '1px solid rgba(253,199,0,0.25)' }}>
-          <div className="text-xs font-semibold mb-1" style={{ color: '#fdc700' }}>Two conditions for TIR:</div>
-          <div className="text-xs" style={{ color: '#a8b8cc' }}>1. Light travels from denser → less dense medium</div>
-          <div className="text-xs" style={{ color: '#a8b8cc' }}>2. Angle of incidence &gt; critical angle</div>
-        </div>
-        <div className="px-3 py-2 rounded-[10px]" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
-          <div className="text-xs font-semibold mb-1" style={{ color: '#10b981' }}>Optical fibre</div>
-          <div className="text-xs" style={{ color: '#a8b8cc' }}>Light bounces along fibre by repeated TIR. Used for internet, medical endoscopes.</div>
-        </div>
-      </div>
-      <IdeaCaption>c = critical angle; n = refractive index. Glass: c ≈ 42°</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Total internal reflection happens when light hits any boundary — you just need a reflective surface."
+        right="TIR requires TWO conditions: (1) light travelling from denser to less dense medium, AND (2) angle of incidence exceeding the critical angle. Both must be met — neither alone is enough."
+        wrongLabel="Missing the conditions"
+        rightLabel="Two conditions required"
+      />
     </div>
   )
 }
 
 function TotalInternalReflectionReality() {
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <RealityBadge emoji="💡" title="Optical fibres and the internet" desc="Optical fibres carry internet data as pulses of light at nearly the speed of light, using TIR to keep the signal inside the fibre. One fibre thinner than a human hair can carry millions of phone calls simultaneously." />
-      <RealityBadge emoji="🏥" title="Endoscopes" desc="Doctors use endoscopes — bundles of optical fibres — to see inside the body without surgery. Light travels down one set of fibres; the image returns along another, all via TIR." />
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🌐" title="Fibre optic internet" desc="Light pulses bounce along glass fibres by repeated TIR at near c = 2×10⁸ m/s in glass. One hair-thin fibre carries billions of bits per second — the backbone of the internet." color="#fdc700" delay={0} />
+      <RealWorldCard icon="🏥" title="Medical endoscopes" desc="Surgeons use fibre bundles to image inside the body without surgery. One bundle carries light in; another carries the image out — all via TIR. Critical angle of glass ≈ 42°." color="#10b981" delay={0.1} />
+      <RealWorldCard icon="💎" title="Sparkling jewellery" desc="Diamonds and cut glass are shaped so that most incident light undergoes TIR internally, bouncing multiple times before exiting — creating the characteristic sparkle." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -511,43 +449,22 @@ function SoundWavesLesson() {
 }
 function SoundWavesIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col gap-1.5 w-full px-2">
-        <div className="text-xs font-bold text-center mb-1" style={{ color: '#ef4444' }}>Speed order (wrong):</div>
-        {/* Wrong order: air fastest */}
-        {[['Air', 100, WC, '330 m/s - fastest?'], ['Water', 60, '#2b7fff', '1500 m/s'], ['Steel', 20, '#00bc7d', '5000 m/s - slowest?']].map(([label, w, col, note]) => (
-          <div key={label} className="flex items-center gap-2">
-            <span className="text-xs w-10 shrink-0" style={{ color: '#a8b8cc' }}>{label}</span>
-            <div className="h-3 rounded-full" style={{ width: w, background: col }} />
-            <span className="text-xs" style={{ color: col }}>{note}</span>
-          </div>
-        ))}
-        <motion.div className="text-xs text-center font-bold mt-1" style={{ color: '#ef4444' }}
-          animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
-          Air fastest?  ✗
-        </motion.div>
-      </div>
-      <IdeaCaption>Sound travels fastest through air because air can be compressed easily</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Sound travels fastest through air — air is easy to compress, so the waves move quickly through it."
+        right="Sound travels fastest through solids (steel ~5000 m/s), then liquids (~1500 m/s), then gases (~340 m/s). Closer-packed particles pass vibrations on more quickly."
+        wrongLabel="Compression confusion"
+        rightLabel="Solids fastest"
+      />
     </div>
   )
 }
 function SoundWavesReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col gap-1 w-full">
-        {[['Gas (air)', 330, WC, 35], ['Liquid (water)', 1500, '#2b7fff', 60], ['Solid (steel)', 5000, '#00bc7d', 100]].map(([medium, speed, col, pct]) => (
-          <div key={medium} className="flex items-center gap-2">
-            <span className="text-xs w-24 shrink-0" style={{ color: '#a8b8cc' }}>{medium}</span>
-            <div className="flex-1 h-2 rounded-full" style={{ background: '#1d293d' }}>
-              <motion.div className="h-full rounded-full" style={{ background: col }}
-                initial={{ width: 0 }} animate={{ width: `${pct}%` }}
-                transition={{ duration: 0.6 }} />
-            </div>
-            <span className="text-xs font-mono w-16" style={{ color: col }}>{speed} m/s</span>
-          </div>
-        ))}
-      </div>
-      <RealityBadge color={WC}>Sound travels fastest in solids - particles are closest together</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🏊" title="Underwater communication" desc="Sound travels at ~1500 m/s in water — 4× faster than air. Whales communicate across ocean basins using deep-water acoustic channels. Navy sonar exploits this." color="#3b82f6" delay={0} />
+      <RealWorldCard icon="🌍" title="Seismology — Earth's interior" desc="P-waves travel through Earth at ~8000 m/s through rock. By timing arrivals at different stations, seismologists map the Earth's layers — including the liquid outer core." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🩺" title="Ultrasound scanning" desc="Medical ultrasound (1–20 MHz) reflects off tissue boundaries. The echo timing reveals depth: v = 1540 m/s in tissue, so distance = v × t/2. No radiation risk." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -660,34 +577,22 @@ function EMSpectrumLesson() {
 }
 function EMSpectrumIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col items-center gap-2 w-full px-2">
-        {/* Tiny visible band claimed to be "all" */}
-        <div className="w-full flex rounded-[6px] overflow-hidden h-6 relative">
-          {['#8b5cf6','#2b7fff','#00bc7d','#fdc700','#f97316','#ef4444'].map((col, i) => (
-            <div key={i} className="flex-1" style={{ background: col }} />
-          ))}
-        </div>
-        <motion.div className="text-xs text-center font-bold px-2 py-1 rounded-[6px]" style={{ background: '#ef444415', border: '1px solid #ef4444', color: '#ef4444' }}
-          animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
-          This IS the whole EM spectrum?  ✗
-        </motion.div>
-        <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>7 types - visible is a tiny slice</div>
-      </div>
-      <IdeaCaption>Visible light is the entire EM spectrum - it's just different colours</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Visible light is the entire electromagnetic spectrum — the different colours are just different types of radiation."
+        right="Visible light (400–700 nm) is a tiny slice of the EM spectrum. Radio waves can be kilometres long; gamma rays are smaller than an atom. All travel at c = 3×10⁸ m/s in vacuum."
+        wrongLabel="Human perception limits"
+        rightLabel="7 types, vast range"
+      />
     </div>
   )
 }
 function EMSpectrumReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="w-full flex rounded-[6px] overflow-hidden h-5">
-        {['#6366f1', '#2b7fff', '#f97316', '#00bc7d', '#fdc700', '#c084fc', '#e879f9'].map((col, i) => (
-          <div key={i} className="flex-1" style={{ background: col }} />
-        ))}
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Visible light is a tiny slice. Radio waves are millions of times longer than gamma rays</div>
-      <RealityBadge color={WC}>EM spectrum spans 7+ types - visible is just 400–700nm</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="📡" title="Radio waves — TV & communications" desc="FM radio λ ≈ 3 m. The wavelength is large enough to diffract around hills, which is why you can get radio signal without line-of-sight to the transmitter." color="#6366f1" delay={0} />
+      <RealWorldCard icon="🔬" title="X-rays — medical imaging" desc="X-ray wavelengths (0.01–10 nm) are similar in size to atoms. They pass through soft tissue but are absorbed by denser bone — creating contrast in images." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🌞" title="Infrared — heat cameras" desc="Everything above absolute zero emits infrared. Heat cameras detect temperature differences as small as 0.05°C — used in building insulation checks and medical diagnosis." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -766,37 +671,22 @@ function LensesLesson() {
 }
 function LensesIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3 items-start">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${WC}10`, border: `1px solid ${WC}` }}>
-          <span className="text-xs font-bold" style={{ color: WC }}>Convex</span>
-          <span className="text-lg">🙃</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>inverted</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#ef444415', border: '1px solid #ef4444' }}>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Concave</span>
-          <span className="text-lg">🙃</span>
-          <span className="text-xs text-center" style={{ color: '#ef4444' }}>inverted? ✗</span>
-        </div>
-      </div>
-      <IdeaCaption>Concave lenses produce small, upside-down images - just like convex ones do</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Concave lenses produce small, inverted (upside-down) images — just like convex lenses do when the object is far away."
+        right="Concave (diverging) lenses always produce virtual, upright, diminished images — regardless of object distance. Only convex lenses can produce real, inverted images."
+        wrongLabel="Lens type confusion"
+        rightLabel="Concave = always virtual & upright"
+      />
     </div>
   )
 }
 function LensesReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${WC}10`, border: `1px solid ${WC}` }}>
-          <span className="text-xs font-bold" style={{ color: WC }}>Convex</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Converging<br/>Real OR virtual<br/>image</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
-          <span className="text-xs font-bold" style={{ color: '#c084fc' }}>Concave</span>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Diverging<br/>Always virtual,<br/>upright image</span>
-        </div>
-      </div>
-      <RealityBadge color={WC}>Concave lenses always produce virtual, upright, diminished images</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="📷" title="Camera — convex lens" desc="A camera lens converges light onto the sensor, forming a real, inverted, diminished image. Moving the lens changes focal distance — further lens = closer subject in focus." color="#fdc700" delay={0} />
+      <RealWorldCard icon="👓" title="Glasses — correcting eyesight" desc="Short-sighted (myopia): concave lens diverges light before it reaches the eye, moving the focal point back onto the retina. Long-sighted: convex lens converges early." color="#10b981" delay={0.1} />
+      <RealWorldCard icon="🔬" title="Microscope — compound lenses" desc="Two convex lenses in series: the objective forms a real, magnified image; the eyepiece magnifies it again as a virtual image. Total magnification = product of both." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -862,38 +752,22 @@ function BlackBodyLesson() {
 }
 function BlackBodyIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-4 items-center">
-        {/* Sun: glowing */}
-        <div className="flex flex-col items-center gap-1">
-          <motion.div className="w-12 h-12 rounded-full flex items-center justify-center"
-            style={{ background: 'radial-gradient(circle, #fdc700, #f97316)', boxShadow: '0 0 16px #fdc70080' }}
-            animate={{ scale: [1, 1.08, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
-            <span className="text-xs font-bold text-white">Sun</span>
-          </motion.div>
-          <span className="text-xs" style={{ color: '#fdc700' }}>✓ radiates</span>
-        </div>
-        {/* Ice cube: no glow (wrong label) */}
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-12 h-12 rounded-[8px] flex items-center justify-center"
-            style={{ background: '#2b7fff20', border: '2px solid #2b7fff' }}>
-            <span className="text-xs font-bold" style={{ color: '#2b7fff' }}>Ice</span>
-          </div>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>nothing? ✗</span>
-        </div>
-      </div>
-      <IdeaCaption>Only very hot objects like the Sun emit radiation - cold objects don't emit anything</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Only very hot objects like the Sun emit radiation — cold objects don't emit anything at all."
+        right="Every object above absolute zero (−273°C) emits infrared radiation. At room temperature, objects emit IR but not visible light. A human body emits about 100 W of infrared continuously."
+        wrongLabel="Only hot things radiate?"
+        rightLabel="All objects above 0 K radiate"
+      />
     </div>
   )
 }
 function BlackBodyReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${WC}10`, border: `1px solid ${WC}30`, color: '#cad5e2' }}>
-        Every object above absolute zero (−273°C) emits infrared radiation. A human body at 37°C constantly emits IR.
-      </div>
-      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>At constant temperature: emission rate = absorption rate</div>
-      <RealityBadge color={WC}>All objects emit IR - hotter objects emit more and at shorter wavelengths</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🌡️" title="Thermal cameras — seeing body heat" desc="Military and medical thermal cameras detect IR emitted by warm bodies (~37°C). The human body emits ~100 W of IR — visible to night-vision cameras even in total darkness." color="#fdc700" delay={0} />
+      <RealWorldCard icon="🏠" title="House insulation — IR loss" desc="Thermal imaging shows where heat escapes through poorly insulated walls and roofs. Darker = cooler = better insulated. Warmer patches show energy waste." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="⭐" title="Star colours — Wien's Law" desc="Hotter stars emit shorter wavelength (bluer). The Sun (5500°C) peaks in yellow-green. Betelgeuse (3000°C) peaks in red-orange. Peak λ = 2.9×10⁻³/T." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -979,35 +853,22 @@ function MagnetismLesson() {
 }
 function MagnetismIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="px-3 py-3 rounded-[8px] font-bold text-sm" style={{ background: '#e879f920', border: '2px solid #e879f9', color: '#e879f9' }}>N</div>
-        {/* Gap between magnets */}
-        <div className="flex flex-col items-center gap-0.5">
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>← gap →</span>
-          <motion.div className="text-xs font-bold" style={{ color: '#ef4444' }}
-            animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-            no force?  ✗
-          </motion.div>
-        </div>
-        <div className="px-3 py-3 rounded-[8px] font-bold text-sm" style={{ background: '#2b7fff20', border: '2px solid #2b7fff', color: '#2b7fff' }}>S</div>
-      </div>
-      <IdeaCaption>Magnetic force only acts when magnets physically touch - they need contact</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Magnetic force only acts when magnets physically touch each other — they need contact to attract or repel."
+        right="Magnetic force is a non-contact force that acts through a field extending through space. Magnets attract or repel across a gap — like gravity, no contact is needed."
+        wrongLabel="Contact force myth"
+        rightLabel="Non-contact field force"
+      />
     </div>
   )
 }
 function MagnetismReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="px-3 py-2 rounded font-bold text-sm" style={{ background: '#e879f920', color: '#e879f9' }}>N</div>
-        <motion.div className="flex gap-1" animate={{ scaleX: [1, 1.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>
-          {[1, 2, 3].map(i => <div key={i} className="w-1 h-1 rounded-full" style={{ background: MC }} />)}
-        </motion.div>
-        <div className="px-3 py-2 rounded font-bold text-sm" style={{ background: '#2b7fff20', color: '#2b7fff' }}>S</div>
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Magnetic field extends through space - no contact needed. Iron, steel, nickel, cobalt are magnetic materials.</div>
-      <RealityBadge color={MC}>Magnetic field is a non-contact force - acts at a distance</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🧭" title="Compass navigation" desc="Earth's magnetic field extends thousands of km into space. A compass needle aligns with the field without touching anything — purely non-contact field interaction." color="#10b981" delay={0} />
+      <RealWorldCard icon="🏥" title="MRI scanners" desc="MRI machines use superconducting electromagnets generating fields 30,000× stronger than Earth's — strong enough to pull loose metal objects across the room without contact." color="#e879f9" delay={0.1} />
+      <RealWorldCard icon="🚄" title="Maglev trains" desc="Magnetic levitation (maglev) trains float above the track using repulsion between superconducting magnets — no contact, no friction, speeds exceeding 600 km/h." color="#fdc700" delay={0.2} />
     </div>
   )
 }
@@ -1047,30 +908,22 @@ function MotorEffectLesson() {
 }
 function MotorEffectIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="190" height="80" viewBox="0 0 190 80">
-        {/* Parallel B and I - wrong: claimed to give force */}
-        <text x="10" y="18" fill="#e879f9" fontSize="8">B field →</text>
-        <line x1="60" y1="15" x2="170" y2="15" stroke="#e879f9" strokeWidth="2" markerEnd="url(#arr)" />
-        <text x="10" y="38" fill={MC} fontSize="8">Current →</text>
-        <line x1="60" y1="35" x2="170" y2="35" stroke={MC} strokeWidth="2" markerEnd="url(#arr)" />
-        {/* Wrong: force arrow pointing up */}
-        <motion.line x1="115" y1="35" x2="115" y2="55" stroke="#ef4444" strokeWidth="2"
-          animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }} />
-        <text x="120" y="55" fill="#ef4444" fontSize="7">force?</text>
-        <text x="95" y="72" textAnchor="middle" fill="#ef4444" fontSize="8">Same direction = max force?  ✗</text>
-      </svg>
-      <IdeaCaption>B field and current pointing the same direction creates maximum force</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Maximum force on a current-carrying wire occurs when the current flows in the same direction as the magnetic field."
+        right="Force is maximum when current is perpendicular to the field (F = BIL). When current is parallel to the field, the force is zero. Fleming's Left Hand Rule gives the direction."
+        wrongLabel="Parallel = max force?"
+        rightLabel="Perpendicular = max force"
+      />
     </div>
   )
 }
 function MotorEffectReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${MC}10`, border: `1px solid ${MC}30`, color: '#cad5e2' }}>
-        Force is maximum when current is perpendicular to the magnetic field. Force is zero when current is parallel to the field.
-      </div>
-      <RealityBadge color={MC}>Force requires current to be at an angle to the field - perpendicular gives maximum force</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="⚡" title="Electric motors in EVs" desc="Tesla Model 3 uses a 3-phase AC motor where rotating magnetic fields exert forces on rotor windings (F = BIL). No brushes needed — highly reliable and efficient." color="#10b981" delay={0} />
+      <RealWorldCard icon="🔊" title="Loudspeaker" desc="Current through the voice coil (in a magnetic field) creates a force: F = BIL. Varying the current with the audio signal makes the cone vibrate — producing sound waves." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="🏥" title="Moving-coil galvanometer" desc="Sensitive current meters use F = BIL to deflect a coil against a spring. The deflection angle is proportional to current — the basis of most analogue meters." color="#e879f9" delay={0.2} />
     </div>
   )
 }
@@ -1125,33 +978,24 @@ function ElectromagnetismLesson() {
 }
 
 function ElectromagnetismIdea() {
-  const factors = [
-    { factor: '↑ Current', effect: '↑ Field strength', color: '#10b981' },
-    { factor: '↑ Turns', effect: '↑ Field strength', color: '#10b981' },
-    { factor: 'Iron core', effect: '↑↑ Field strength', color: '#fdc700' },
-    { factor: 'Thicker wire', effect: 'No effect', color: '#ef4444' },
-  ]
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <FormulaBox formula="Solenoid = Bar Magnet" color={MC} />
-      <div className="flex flex-col gap-1.5">
-        {factors.map((f, i) => (
-          <div key={i} className="flex items-center justify-between px-3 py-1.5 rounded-[8px]" style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-            <span className="text-xs font-semibold" style={{ color: '#f8fafc' }}>{f.factor}</span>
-            <span className="text-xs font-bold" style={{ color: f.color }}>{f.effect}</span>
-          </div>
-        ))}
-      </div>
-      <IdeaCaption>Applications: electric bell, relay switch, loudspeaker, MRI scanner</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A thicker wire makes a stronger electromagnet — more metal means a stronger magnetic field."
+        right="Electromagnet strength depends on current, number of turns, and core material — not wire thickness. Thicker wire reduces resistance (allowing more current), but at the same current it makes no difference."
+        wrongLabel="Wire thickness myth"
+        rightLabel="Current, turns & core material"
+      />
     </div>
   )
 }
 
 function ElectromagnetismReality() {
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <RealityBadge emoji="🧲" title="MRI Scanners" desc="MRI machines use superconducting electromagnets producing fields ~30,000× stronger than Earth's. The magnetic field is created by current in coils of wire cooled to near absolute zero." />
-      <RealityBadge emoji="🔔" title="Electric bell" desc="When the circuit is closed, the electromagnet attracts the iron hammer, which hits the bell. This breaks the circuit, the electromagnet switches off, the hammer resets — repeating rapidly." />
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🧲" title="MRI scanners" desc="Superconducting electromagnets cooled to −269°C carry huge currents with zero resistance, producing fields 30 000× Earth's. Increasing turns and current achieves this without heat loss." color="#10b981" delay={0} />
+      <RealWorldCard icon="🔔" title="Electric bell — relay action" desc="The electromagnet attracts the iron armature, striking the bell. This breaks the circuit, de-energising the magnet — the spring resets it, and it repeats ~50× per second." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="🚗" title="Scrapyard electromagnet" desc="Electromagnets in scrap yards can lift several tonnes of steel. The current is switched off to drop the load — permanent magnets couldn't be turned off to release the steel." color="#ef4444" delay={0.2} />
     </div>
   )
 }
@@ -1255,35 +1099,22 @@ function EMInductionLesson() {
 }
 function EMInductionIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        {/* DC battery */}
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d', border: '1px solid #a8b8cc' }}>
-          <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>DC</span>
-          <span className="text-xs font-mono" style={{ color: '#cad5e2' }}>──────</span>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>battery</span>
-        </div>
-        <span style={{ color: '#a8b8cc', fontSize: 18 }}>→</span>
-        {/* Transformer */}
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${MC}10`, border: `1px solid ${MC}` }}>
-          <span className="text-xs font-bold" style={{ color: MC }}>Transformer</span>
-          <motion.span className="text-xs font-bold" style={{ color: '#ef4444' }}
-            animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-            works?  ✗
-          </motion.span>
-        </div>
-      </div>
-      <IdeaCaption>Transformers work on direct current (DC) - they just increase or decrease any voltage</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Transformers work on any type of electricity — DC from a battery can be stepped up or down just like AC."
+        right="Transformers only work with AC. A changing magnetic flux is required to induce an EMF. DC creates a constant flux — no change, no induction, no output voltage."
+        wrongLabel="DC works too?"
+        rightLabel="Changing flux = changing current = AC only"
+      />
     </div>
   )
 }
 function EMInductionReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${MC}10`, border: `1px solid ${MC}30`, color: '#cad5e2' }}>
-        Transformers only work with AC. DC creates a constant magnetic field - no changing flux → no induced EMF. AC constantly changes the field, continuously inducing current in the secondary coil.
-      </div>
-      <RealityBadge color={MC}>Transformers require AC - a changing magnetic field is essential</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="⚡" title="National Grid transformers" desc="Step-up transformers at power stations convert ~25 kV to 400 kV AC for transmission. Step-down transformers near homes reduce it to 230 V. All require AC." color="#10b981" delay={0} />
+      <RealWorldCard icon="📱" title="Wireless charging" desc="Phone wireless chargers use induction between two coils. High-frequency AC (100–200 kHz) in the base coil creates changing flux — inducing current in the phone coil." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="🎸" title="Electric guitar pickup" desc="Guitar strings vibrate near a magnet and coil. The vibrating string changes the magnetic flux through the coil — inducing an AC voltage proportional to the note played." color="#e879f9" delay={0.2} />
     </div>
   )
 }
@@ -1351,31 +1182,23 @@ function ACGeneratorsLesson() {
 
 function ACGeneratorsIdea() {
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <FormulaBox formula="KE → Electrical Energy" color={MC} />
-      <div className="flex flex-col gap-1.5">
-        {[
-          { label: 'Slip rings', desc: 'Maintain contact as coil rotates — preserve AC output', color: '#a8b8cc' },
-          { label: 'Faster rotation', desc: '↑ frequency AND ↑ peak voltage', color: '#10b981' },
-          { label: 'Stronger magnet', desc: '↑ peak voltage only', color: '#fdc700' },
-          { label: 'More turns', desc: '↑ peak voltage only', color: '#fdc700' },
-        ].map((item, i) => (
-          <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-[8px]" style={{ background: '#1d293d', border: '0.75px solid #2a3a52' }}>
-            <span className="text-xs font-semibold" style={{ color: item.color }}>{item.label}</span>
-            <span className="text-xs" style={{ color: '#a8b8cc' }}>{item.desc}</span>
-          </div>
-        ))}
-      </div>
-      <IdeaCaption>Slip rings ≠ split-ring commutator. Slip rings → AC. Commutator → DC (motor).</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A stronger magnet in a generator increases the frequency of the AC output — more magnetic force = faster oscillations."
+        right="Frequency depends only on rotation speed. A stronger magnet (or more turns) increases peak voltage/EMF, not frequency. Frequency = rotations per second only."
+        wrongLabel="Magnet affects frequency?"
+        rightLabel="Frequency = rotation speed only"
+      />
     </div>
   )
 }
 
 function ACGeneratorsReality() {
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <RealityBadge emoji="⚡" title="Every UK power station" desc="Nuclear, gas, coal and wind turbines all use AC generators (alternators) spinning at 50 rotations per second to produce 50 Hz AC electricity for the National Grid." />
-      <RealityBadge emoji="🚗" title="Car alternator" desc="Your car's engine spins an alternator to generate electricity, charging the battery and powering electronics — all using the same electromagnetic induction principle." />
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🏭" title="UK power stations — 50 Hz" desc="Every generator in the UK spins at exactly 50 rotations/second to produce 50 Hz AC. Coal, gas, nuclear, and pumped-hydro stations must stay synchronised with the grid frequency." color="#10b981" delay={0} />
+      <RealWorldCard icon="💨" title="Wind turbine generator" desc="Wind turns blades → shaft spins an alternator. Stronger wind = higher rotational speed = higher frequency AND higher voltage. A gearbox maintains optimal generator speed." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🚗" title="Car alternator — charges battery" desc="The engine spins an alternator via a belt. It generates AC, which is rectified to DC to charge the 12 V battery and power headlights, ignition, and electronics." color="#fdc700" delay={0.2} />
     </div>
   )
 }
@@ -1455,36 +1278,22 @@ function SolarSystemLesson() {
 }
 function SolarSystemIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="relative flex items-center justify-center" style={{ width: 130, height: 90 }}>
-        {/* Earth */}
-        <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
-          style={{ background: '#155dfc20', border: '2px solid #155dfc', color: '#155dfc' }}>Earth</div>
-        {/* Atmosphere bubble - "gravity stops here" label */}
-        <div className="absolute rounded-full" style={{ width: 70, height: 70, top: '50%', left: '50%', transform: 'translate(-50%,-50%)', border: '2px dashed #2b7fff40' }} />
-        <motion.div className="absolute text-xs font-bold" style={{ top: 4, left: '50%', transform: 'translateX(-50%)', color: '#ef4444', whiteSpace: 'nowrap' }}
-          animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
-          gravity stops here?  ✗
-        </motion.div>
-        {/* Planet far away, "floating free" */}
-        <div className="absolute w-4 h-4 rounded-full" style={{ right: 0, top: '50%', transform: 'translateY(-50%)', background: '#c084fc20', border: '2px solid #c084fc' }} />
-      </div>
-      <IdeaCaption>Gravity stops at Earth's atmosphere - planets float freely in empty space</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Gravity stops at Earth's atmosphere — planets and satellites beyond it float freely in empty space with no gravitational force."
+        right="Gravity has infinite range, decreasing with distance (F ∝ 1/r²). The ISS at 400 km altitude still feels ~89% of surface gravity — it's in freefall, not zero gravity."
+        wrongLabel="Gravity has a boundary?"
+        rightLabel="Infinite range, decreasing with r²"
+      />
     </div>
   )
 }
 function SolarSystemReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full" style={{ background: '#fdc70030', border: '2px solid #fdc700' }} />
-        <motion.div animate={{ x: [-3, 3, -3] }} transition={{ repeat: Infinity, duration: 2 }}>
-          <div className="text-xs" style={{ color: SC }}>← gravity →</div>
-        </motion.div>
-        <div className="w-5 h-5 rounded-full" style={{ background: '#155dfc30', border: '2px solid #155dfc' }} />
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Gravity acts at infinite range, decreasing with distance². Planets orbit because gravity provides centripetal force.</div>
-      <RealityBadge color={SC}>Gravity acts across infinite space - holds orbits together</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚀" title="ISS — not zero gravity" desc="The ISS orbits at 400 km. Gravity there is ~89% of surface gravity. Astronauts feel weightless because they're in continuous freefall, not because gravity has stopped." color="#6366f1" delay={0} />
+      <RealWorldCard icon="🌍" title="Moon's orbit — gravity across space" desc="The Moon is 384 000 km away yet Earth's gravity holds it in orbit. Gravity here is ~0.3% of surface gravity — still enough to curve the Moon's path around Earth." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🔭" title="Voyager 1 — still feeling gravity" desc="Voyager 1 launched in 1977 and is now 23 billion km from Earth. The Sun's gravity still slows it — gravity truly has infinite range, just diminishing as 1/r²." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -1564,45 +1373,22 @@ function StellarEvolutionLesson() {
 }
 function StellarEvolutionIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-2">
-        {/* Sun */}
-        <motion.div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
-          style={{ background: 'radial-gradient(circle, #fdc700, #f97316)', color: 'white', boxShadow: '0 0 12px #fdc70080' }}
-          animate={{ scale: [1, 1.05, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
-          Sun
-        </motion.div>
-        <span style={{ color: '#a8b8cc' }}>→</span>
-        {/* Explosion (wrong) */}
-        <motion.div className="text-2xl"
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
-          💥
-        </motion.div>
-        <div className="flex flex-col items-center gap-0.5">
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>Supernova?</span>
-          <motion.span className="text-xs font-bold" style={{ color: '#ef4444' }}
-            animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 2 }}>✗</motion.span>
-        </div>
-      </div>
-      <IdeaCaption>The Sun will eventually explode in a supernova when it runs out of fuel</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="The Sun will eventually explode in a supernova when it runs out of hydrogen fuel."
+        right="Only massive stars (>8 solar masses) end in supernovae. The Sun will expand to a red giant, then gently shed its outer layers as a planetary nebula, leaving a white dwarf — no explosion."
+        wrongLabel="All stars explode?"
+        rightLabel="Only massive stars go supernova"
+      />
     </div>
   )
 }
 function StellarEvolutionReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-2 text-xs flex-wrap justify-center">
-        <span style={{ color: '#fdc700' }}>Sun → Red giant</span>
-        <span style={{ color: '#a8b8cc' }}>→</span>
-        <span style={{ color: '#cad5e2' }}>White dwarf</span>
-        <span style={{ color: '#a8b8cc' }}>not supernova</span>
-      </div>
-      <div className="flex gap-2 text-xs flex-wrap justify-center">
-        <span style={{ color: '#ef4444' }}>Massive star → Red supergiant</span>
-        <span style={{ color: '#a8b8cc' }}>→</span>
-        <span style={{ color: '#e879f9' }}>Supernova → Neutron star/Black hole</span>
-      </div>
-      <RealityBadge color={SC}>Sun → white dwarf (no supernova) - only massive stars explode</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="☀️" title="The Sun — 5 billion years left" desc="The Sun will exhaust hydrogen in ~5 billion years, expanding to a red giant (engulfing Mercury, Venus, maybe Earth). Then: planetary nebula → white dwarf. No supernova." color="#fdc700" delay={0} />
+      <RealWorldCard icon="💥" title="Betelgeuse — imminent supernova" desc="Betelgeuse (in Orion) is a red supergiant ~700× the Sun's radius. It could go supernova any time in the next 100,000 years — briefly visible in daytime from Earth." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🌑" title="Neutron stars & black holes" desc="A supernova of a very massive star (>20 solar masses) creates a black hole. Less massive: a neutron star (teaspoon weighs a billion tonnes) rotating as a pulsar." color="#6366f1" delay={0.2} />
     </div>
   )
 }
@@ -1700,32 +1486,22 @@ function VisibleLightLesson() {
 }
 function VisibleLightIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="w-full p-3 rounded-[10px]" style={{ background: '#2b7fff15', border: '1px solid #2b7fff40' }}>
-        <div className="text-xs font-bold mb-1" style={{ color: '#2b7fff' }}>❌ Common mistake</div>
-        <div className="text-xs" style={{ color: '#cad5e2' }}>
-          "A blue object under red light looks blue"
-        </div>
-        <div className="text-xs mt-1" style={{ color: '#ef4444' }}>
-          ✗ Wrong — a blue object absorbs red light. No blue light to reflect → looks <strong style={{ color: '#ef4444' }}>black</strong>.
-        </div>
-      </div>
-      <div className="w-full p-3 rounded-[10px]" style={{ background: '#10b98115', border: '1px solid #10b98140' }}>
-        <div className="text-xs font-bold mb-1" style={{ color: '#10b981' }}>✓ Remember</div>
-        <div className="text-xs" style={{ color: '#cad5e2' }}>
-          An object can only reflect wavelengths that are present in the light hitting it. If the light source lacks that wavelength, the object cannot reflect it.
-        </div>
-      </div>
-      <IdeaCaption>Colour = reflected wavelengths. No matching wavelength in source → object looks black</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A blue object illuminated by red light still looks blue — the object's colour is fixed and doesn't change with the light source."
+        right="An object can only reflect wavelengths present in the incident light. A blue object illuminated only by red light absorbs the red and has no blue to reflect — it looks black."
+        wrongLabel="Colour is intrinsic?"
+        rightLabel="Colour = what's reflected"
+      />
     </div>
   )
 }
 function VisibleLightReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <RealityBadge emoji="🎭" title="Stage lighting" desc="Lighting designers use coloured filters to control which objects are visible on stage — a red costume looks black under blue stage lighting." color={WC} />
-      <RealityBadge emoji="🔬" title="Microscopy" desc="Scientists use filters to block certain wavelengths, making specific structures fluoresce or stand out — specular reflection from smooth cell surfaces gives clean images." color={WC} />
-      <RealityBadge emoji="🌈" title="Everyday colour" desc="Grass looks green because chlorophyll absorbs red and blue light and reflects green. In red light only, grass would look black." color={WC} />
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🎭" title="Stage lighting — colour control" desc="Red costume under blue stage lighting looks black — no red wavelengths in the source to reflect. Lighting designers exploit this: a single filter can make objects vanish." color="#fdc700" delay={0} />
+      <RealWorldCard icon="🌱" title="Chlorophyll — green reflection" desc="Grass absorbs red and blue light for photosynthesis; green is reflected. Under red/blue grow lights, plants absorb almost everything — leaves appear very dark." color="#10b981" delay={0.1} />
+      <RealWorldCard icon="🔬" title="Fluorescence microscopy" desc="Scientists illuminate samples with specific wavelengths. Fluorescent dyes absorb one wavelength and emit another — allowing individual proteins to be tracked in living cells." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -1791,40 +1567,22 @@ function RedshiftLesson() {
 }
 function RedshiftIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col items-center gap-2 w-full px-2">
-        {/* Galaxy moving TOWARD (wrong interpretation) */}
-        <div className="flex items-center gap-3">
-          <div className="flex flex-col items-center gap-1">
-            <div className="text-xs" style={{ color: '#a8b8cc' }}>Galaxy</div>
-            <motion.div className="w-8 h-8 rounded-full flex items-center justify-center"
-              style={{ background: '#ef444420', border: '2px solid #ef4444' }}
-              animate={{ x: [6, 0, 6] }} transition={{ repeat: Infinity, duration: 2 }}>
-              <span style={{ color: '#ef4444', fontSize: 10 }}>→</span>
-            </motion.div>
-          </div>
-          <div className="flex flex-col items-center gap-1">
-            <div className="text-xs" style={{ color: '#a8b8cc' }}>Us</div>
-            <div className="w-8 h-8 rounded-full" style={{ background: SC + '20', border: `2px solid ${SC}` }} />
-          </div>
-        </div>
-        <motion.div className="text-xs font-bold px-2 py-1 rounded-[6px]" style={{ background: '#ef444415', border: '1px solid #ef4444', color: '#ef4444' }}
-          animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
-          Red = coming toward us?  ✗
-        </motion.div>
-      </div>
-      <IdeaCaption>Red-shift means galaxies are moving towards us - they look redder because they're hotter</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Red-shift means a galaxy is moving towards us — it looks redder because it's hotter and closer, emitting more low-frequency light."
+        right="Red-shift means the galaxy is moving away — the wavelength is stretched (like a receding ambulance siren drops in pitch). All distant galaxies are red-shifted: evidence the universe is expanding."
+        wrongLabel="Moving closer = redder?"
+        rightLabel="Moving away = stretched wavelength"
+      />
     </div>
   )
 }
 function RedshiftReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="text-xs text-center p-2 rounded-[10px]" style={{ background: `${SC}10`, border: `1px solid ${SC}30`, color: '#cad5e2' }}>
-        Red-shift means wavelength is stretched - source is moving AWAY. Like the Doppler effect for sound. Galaxies moving away = universe is expanding.
-      </div>
-      <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>Evidence for Big Bang: all galaxies receding, CMB radiation</div>
-      <RealityBadge color={SC}>Red-shift shows galaxies moving away - evidence for expanding universe</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🌌" title="Hubble's Law — expansion rate" desc="Edwin Hubble (1929) found recession speed ∝ distance (v = Hd). The further the galaxy, the faster it recedes. Extrapolating backwards gives the Big Bang ~13.8 billion years ago." color="#6366f1" delay={0} />
+      <RealWorldCard icon="📡" title="CMB — echo of the Big Bang" desc="The Cosmic Microwave Background is highly red-shifted radiation from 380,000 years after the Big Bang. Detected in 1965 as background radio noise — the strongest evidence for the Big Bang." color="#e879f9" delay={0.1} />
+      <RealWorldCard icon="🚨" title="Doppler effect analogy" desc="An ambulance siren drops in pitch as it passes — sound waves stretch behind the moving source. Red-shift is the same for light: galaxy receding → wavelengths stretched toward red end." color="#f97316" delay={0.2} />
     </div>
   )
 }

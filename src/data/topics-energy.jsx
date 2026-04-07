@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Zap, Flame, Battery, Wind, Sun, Waves, AlertTriangle, Lightbulb, FlaskConical, ArrowDown, Maximize2, Magnet } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
-import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot, MisconceptionCard, RealWorldCard, CompareRow } from './visuals-helpers'
 
 const C = '#f97316'
 
@@ -249,106 +249,41 @@ function EnergyPathwaysLesson() {
 }
 function EnergyPathwaysIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-3">
-        <div className="flex flex-col items-center gap-1">
-          <motion.div className="w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ background: '#f9731630', border: '2px solid #f97316' }}
-            animate={{ scale: [1, 1.1, 1], opacity: [1, 0.6, 1] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}>
-            <Flame size={18} color="#f97316" />
-          </motion.div>
-          <span className="text-xs" style={{ color: '#f97316' }}>Energy</span>
-        </div>
-        <motion.span className="text-xl font-bold" style={{ color: '#ef4444' }}
-          animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>→ ∅</motion.span>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full" style={{ background: '#1d293d', border: '2px dashed #2d3e55' }} />
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>Gone?</span>
-        </div>
-      </div>
-      <IdeaCaption>Energy is "used up" and disappears as it travels  -  there's no pathway, it just vanishes</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A pathway carries energy from A to B — the pathway itself stores the energy while it travels."
+        right="Pathways are the mechanism of transfer only. Energy is always held in a store, not in the pathway."
+        wrongLabel="Common confusion"
+        rightLabel="The distinction"
+      />
     </div>
   )
 }
 function EnergyPathwaysReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-2">
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-9 h-9 rounded-[10px] flex items-center justify-center"
-            style={{ background: '#fdc70020', border: '1.5px solid #fdc700' }}>
-            <Battery size={18} color="#fdc700" />
-          </div>
-          <span style={{ fontSize: 8, color: '#fdc700', fontWeight: 600 }}>Chemical</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <motion.div animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.2 }}>
-            <Zap size={14} color="#fdc700" />
-          </motion.div>
-          <span style={{ fontSize: 7, color: '#a8b8cc' }}>electrical</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-9 h-9 rounded-[10px] flex items-center justify-center"
-            style={{ background: '#fdc70020', border: '1.5px solid #fdc700' }}>
-            <Lightbulb size={18} color="#fdc700" />
-          </div>
-          <span style={{ fontSize: 8, color: '#fdc700', fontWeight: 600 }}>Bulb</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <motion.div animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0.3 }}>
-            <Flame size={14} color="#f97316" />
-          </motion.div>
-          <span style={{ fontSize: 7, color: '#a8b8cc' }}>heating</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-9 h-9 rounded-[10px] flex items-center justify-center"
-            style={{ background: '#f9731620', border: '1.5px solid #f97316' }}>
-            <Flame size={18} color="#f97316" />
-          </div>
-          <span style={{ fontSize: 8, color: '#f97316', fontWeight: 600 }}>Thermal</span>
-        </div>
-      </div>
-      <RealityBadge>Energy always travels via a defined pathway  -  it is never created or destroyed</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚴" title="Cycling uphill" desc="Mechanical pathway — muscles do work via a force, transferring chemical energy from food into kinetic and gravitational PE." color="#3b82f6" delay={0} />
+      <RealWorldCard icon="🔌" title="Phone charging" desc="Electrical pathway — current flows through the wire, carrying energy from the mains into the chemical store of the battery." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="☀️" title="Sun warming Earth" desc="Radiation pathway — infrared waves carry energy from the Sun's nuclear store to Earth's thermal store across 150 million km." color="#f97316" delay={0.2} />
     </div>
   )
 }
 function EnergyStoresIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex items-center gap-3">
-        <div className="flex flex-col items-center gap-1">
-          <motion.div className="w-10 h-10 rounded-full flex items-center justify-center"
-            style={{ background: '#f9731630', border: '2px solid #f97316' }}
-            animate={{ scale: [1, 1.1, 1], opacity: [1, 0.6, 1] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}>
-            <Flame size={18} color="#f97316" />
-          </motion.div>
-          <span className="text-xs" style={{ color: '#f97316' }}>Energy</span>
-        </div>
-        <motion.span className="text-xl font-bold" style={{ color: '#ef4444' }}
-          animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 1 }}>→ ∅</motion.span>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full" style={{ background: '#1d293d', border: '2px dashed #2d3e55' }} />
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>Gone?</span>
-        </div>
-      </div>
-      <IdeaCaption>Energy is used up and disappears when things heat up or slow down</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Energy is 'used up' and disappears when things slow down or cool down."
+        right="Energy always moves between stores — it is never created or destroyed (conservation of energy)."
+      />
     </div>
   )
 }
 function EnergyStoresReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-2">
-        <Battery size={22} color="#00bc7d" />
-        <motion.div animate={{ x: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1 }}>
-          <Zap size={18} color="#f97316" />
-        </motion.div>
-        <Flame size={22} color="#fdc700" />
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Chemical → Electrical → Thermal</div>
-      <RealityBadge>Energy transfers between stores - never disappears</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚗" title="Petrol engine" desc="Chemical → kinetic + thermal stores. Most energy dissipates as heat — that's why engines have coolants." color="#f97316" delay={0} />
+      <RealWorldCard icon="💡" title="LED bulb" desc="Chemical (battery) → electrical → light. Far less thermal waste than an incandescent bulb." color="#fdc700" delay={0.1} />
+      <RealWorldCard icon="🌊" title="Hydroelectric dam" desc="Gravitational PE of water → kinetic → electrical. Highly efficient — ~90% of stored energy used." color="#22c55e" delay={0.2} />
     </div>
   )
 }
@@ -428,28 +363,22 @@ function EnergyEquationsLesson() {
 }
 function EnergyEquationsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex gap-4 items-end">
-        {[{ v: '1×', ke: '1×', h: 24, col: '#a8b8cc' }, { v: '2×', ke: '2×', h: 48, col: '#fdc700' }].map((d, i) => (
-          <div key={i} className="flex flex-col items-center gap-1">
-            <span className="text-xs font-bold" style={{ color: d.col }}>KE {d.ke}</span>
-            <motion.div className="w-8 rounded-t-[6px]" style={{ height: d.h, background: d.col, opacity: 0.8 }}
-              initial={{ height: 0 }} animate={{ height: d.h }} transition={{ delay: i * 0.2, duration: 0.5 }} />
-            <span className="text-xs" style={{ color: '#a8b8cc' }}>v = {d.v}</span>
-          </div>
-        ))}
-        <span className="text-xs font-bold mb-4" style={{ color: '#ef4444' }}>← WRONG</span>
-      </div>
-      <IdeaCaption>Doubling speed only doubles kinetic energy - not quadruples it</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Doubling the speed of a car doubles its kinetic energy — so twice the speed needs twice the braking distance."
+        right="Speed is squared in KE = ½mv². Doubling speed gives 4× the KE — needing 4× the braking distance, not 2×."
+        wrongLabel="Dangerous assumption"
+        rightLabel="The physics"
+      />
     </div>
   )
 }
 function EnergyEquationsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <FormulaBox formula="KE = ½mv²" color={C} />
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Speed is <strong>squared</strong> - doubling speed quadruples KE</div>
-      <RealityBadge>2× speed → 4× kinetic energy</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚗" title="Car braking distance" desc="At 30 mph KE ≈ 135 kJ. At 60 mph (2× speed) KE ≈ 540 kJ — 4× greater. That's why speed limits save lives." color="#f97316" delay={0} />
+      <RealWorldCard icon="🎿" title="Ski jumper" desc="GPE = mgh converts to KE on the slope. A 70 kg skier dropping 40 m gains 27 400 J of kinetic energy." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🏹" title="Elastic catapult" desc="Eₑ = ½ke². A spring with k = 200 N/m stretched 0.3 m stores 9 J — all released as kinetic energy on launch." color="#a855f7" delay={0.2} />
     </div>
   )
 }
@@ -537,32 +466,22 @@ function EfficiencyLesson() {
 }
 function EfficiencyIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="relative w-24 h-16 rounded-[10px] flex items-center justify-center"
-        style={{ background: '#00bc7d15', border: '2px solid #00bc7d' }}>
-        <span className="text-lg font-bold" style={{ color: '#00bc7d' }}>100%</span>
-        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full flex items-center justify-center"
-          style={{ background: '#00bc7d', color: '#fff', fontSize: 11, fontWeight: 'bold' }}>✓</div>
-      </div>
-      <div className="text-xs font-semibold" style={{ color: '#ef4444' }}>Perfectly efficient? ✗</div>
-      <IdeaCaption>A 100% efficient machine is possible if we design it carefully enough</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A well-engineered machine can reach 100% efficiency if we remove all friction and waste."
+        right="The Second Law of Thermodynamics means energy always dissipates — no real machine can ever be 100% efficient."
+        wrongLabel="Engineering myth"
+        rightLabel="Thermodynamics"
+      />
     </div>
   )
 }
 function EfficiencyReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-4">
-        <div className="flex flex-col items-center gap-1">
-          <div className="h-16 w-5 rounded" style={{ background: 'linear-gradient(#ef4444 60%, #00bc7d 40%)' }} />
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>LED 10%</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <div className="h-16 w-5 rounded" style={{ background: 'linear-gradient(#ef4444 5%, #00bc7d 95%)' }} />
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>LED 95%</span>
-        </div>
-      </div>
-      <RealityBadge>Wasted energy is always lost as heat - 100% impossible</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="💡" title="Incandescent vs LED" desc="Old bulbs are ~5% efficient — 95% of energy wasted as heat. LEDs are ~95% efficient — same brightness for 19× less waste." color="#fdc700" delay={0} />
+      <RealWorldCard icon="🚂" title="Steam locomotives" desc="Only ~8% efficient — most energy lost boiling water and in friction. Modern electric trains reach ~85% efficiency." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🫀" title="Human heart" desc="The human heart is ~25% efficient — a remarkable feat of biology, yet most energy still dissipates as body heat." color="#22c55e" delay={0.2} />
     </div>
   )
 }
@@ -615,39 +534,22 @@ function PowerLesson() {
 }
 function PowerIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex items-center gap-2 px-3 py-2 rounded-[10px]"
-        style={{ background: '#ef444415', border: '1px solid #ef444440' }}>
-        <span className="text-sm font-bold" style={{ color: C }}>Power (W)</span>
-        <span className="text-base" style={{ color: '#ef4444' }}>=</span>
-        <span className="text-sm font-bold" style={{ color: '#fdc700' }}>Energy (J)</span>
-      </div>
-      <div className="flex gap-3 text-xs">
-        <div className="px-2 py-1 rounded" style={{ background: `${C}15`, color: C }}>2000W kettle</div>
-        <div className="px-2 py-1 rounded" style={{ background: '#fdc70015', color: '#fdc700' }}>= 2000J?</div>
-      </div>
-      <IdeaCaption>Power and energy are the same thing - a high-power device uses more total energy</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Power and energy are the same thing — a high-power device always uses more total energy."
+        right="Power is the rate of energy transfer (P = E/t). A low-power device running for a long time can use more total energy than a high-power device running briefly."
+        wrongLabel="Common mix-up"
+        rightLabel="Rate vs total"
+      />
     </div>
   )
 }
 function PowerReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-6">
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: `${C}20`, border: `1px solid ${C}` }}>
-            <Zap size={18} color={C} />
-          </div>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>100W for 1s<br/><span style={{ color: C }}>= 100J</span></span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: '#2b7fff20', border: '1px solid #2b7fff' }}>
-            <Battery size={18} color="#2b7fff" />
-          </div>
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>10W for 10s<br/><span style={{ color: '#2b7fff' }}>= 100J</span></span>
-        </div>
-      </div>
-      <RealityBadge>Power = rate of energy transfer, not total energy</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🔋" title="Phone vs kettle" desc="A 2 000 W kettle boils in 2 min (240 kJ). A 5 W phone charger left on all night uses 3 600 J — the kettle is 67× more powerful but used far less total energy." color="#f97316" delay={0} />
+      <RealWorldCard icon="🚀" title="Rocket engine" desc="Saturn V produced 180 GW — 180 billion watts. But it burned for only ~8 minutes, limiting total energy to a feasible amount." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="🧠" title="Human brain" desc="The brain runs on just 20 W — less than a dim bulb — yet processes more information per second than any supercomputer." color="#a855f7" delay={0.2} />
     </div>
   )
 }
@@ -693,39 +595,22 @@ function EnergyResourcesLesson() {
 }
 function EnergyResourcesIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex items-center gap-3">
-        <div className="flex flex-col items-center gap-1">
-          <motion.div animate={{ opacity: [1, 0.1, 1] }} transition={{ repeat: Infinity, duration: 3 }}>
-            <Sun size={28} color="#fdc700" />
-          </motion.div>
-          <span className="text-xs" style={{ color: '#fdc700' }}>Solar ✓</span>
-          <span className="text-xs" style={{ color: '#ef4444' }}>at night?</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <Wind size={28} color="#00a8e8" />
-          <span className="text-xs" style={{ color: '#00a8e8' }}>Wind ✓</span>
-          <span className="text-xs" style={{ color: '#ef4444' }}>no wind?</span>
-        </div>
-      </div>
-      <IdeaCaption>Renewable energy is always better - we should switch everything to renewables immediately</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Renewable energy is always better than fossil fuels — we should switch everything to renewables immediately."
+        right="Each energy resource involves trade-offs: cost, reliability, land use, and environmental impact. A balanced mix is needed while the grid transitions."
+        wrongLabel="Oversimplification"
+        rightLabel="The trade-offs"
+      />
     </div>
   )
 }
 function EnergyResourcesReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-4">
-        <div className="flex flex-col items-center gap-1">
-          <Sun size={22} color="#fdc700" />
-          <span className="text-xs" style={{ color: '#fdc700' }}>Intermittent</span>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <AlertTriangle size={22} color="#e879f9" />
-          <span className="text-xs" style={{ color: '#e879f9' }}>Reliable</span>
-        </div>
-      </div>
-      <RealityBadge>Each resource has trade-offs: reliability, cost, environment</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🇩🇰" title="Denmark — wind leader" desc="Wind turbines supply >50% of Denmark's electricity. But on calm days, they import from neighbouring coal plants." color="#06b6d4" delay={0} />
+      <RealWorldCard icon="🇫🇷" title="France — nuclear baseload" desc="France gets ~70% of electricity from nuclear — very low CO₂, highly reliable, but produces radioactive waste for 10 000 years." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🌍" title="Global energy mix" desc="In 2023, fossil fuels still supplied ~80% of world energy. Transition requires massive investment in storage and grid infrastructure." color="#22c55e" delay={0.2} />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ArrowRight, ArrowLeft, ArrowUp, ArrowDown, Scale, Gauge, Activity, TrendingDown } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow, MisconceptionCard, RealWorldCard } from './visuals-helpers'
 
 const FC = '#00a8e8'
 
@@ -80,41 +80,22 @@ function ForceInteractionsLesson() {
 }
 function ForceInteractionsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-4">
-      <div className="flex gap-3 text-xs">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${FC}10`, border: `1px solid ${FC}` }}>
-          <span className="font-bold" style={{ color: FC }}>Speed</span>
-          <span style={{ color: '#ef4444' }}>= vector</span>
-          <span style={{ color: '#a8b8cc' }}>60 mph →?</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#c084fc10', border: '1px solid #c084fc' }}>
-          <span className="font-bold" style={{ color: '#c084fc' }}>Velocity</span>
-          <span style={{ color: '#a8b8cc' }}>= vector</span>
-          <span style={{ color: '#cad5e2' }}>60 mph N</span>
-        </div>
-      </div>
-      <IdeaCaption>Speed is a vector because it tells you how fast something is going in a direction</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="If you push a wall and it doesn't move, the wall pushes back with less force — because the wall is stationary."
+        right="Newton's 3rd Law: the wall always pushes back with exactly equal and opposite force, regardless of whether anything moves. Action–reaction pairs are always equal."
+        wrongLabel="Newton's 3rd misconception"
+        rightLabel="Equal & opposite always"
+      />
     </div>
   )
 }
 function ForceInteractionsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-3">
-        <div className="flex flex-col gap-1 p-2 rounded-[8px]" style={{ background: `${FC}10`, border: `1px solid ${FC}` }}>
-          <span className="text-xs font-bold" style={{ color: FC }}>Vectors</span>
-          {['Force', 'Velocity', 'Acceleration', 'Displacement', 'Momentum'].map(v => (
-            <span key={v} className="text-xs" style={{ color: '#cad5e2' }}>{v}</span>
-          ))}
-        </div>
-        <div className="flex flex-col gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d' }}>
-          <span className="text-xs font-bold" style={{ color: '#a8b8cc' }}>Scalars</span>
-          {['Speed', 'Distance', 'Mass', 'Time', 'Energy'].map(s => (
-            <span key={s} className="text-xs" style={{ color: '#cad5e2' }}>{s}</span>
-          ))}
-        </div>
-      </div>
-      <RealityBadge color={FC}>Speed is a scalar - velocity is the vector (speed + direction)</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚀" title="Rocket propulsion" desc="Exhaust gases are pushed backward (action). The rocket is pushed forward with equal force (reaction). No ground needed — works in space." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🏊" title="Swimming" desc="Swimmer's hands push water backward. Water pushes the swimmer forward with exactly equal force — Newton's 3rd pair in action." color="#10b981" delay={0.1} />
+      <RealWorldCard icon="🔫" title="Gun recoil" desc="Bullet fired forward at high speed. Rifle kicks backward with the same impulse. Equal forces, but the heavier rifle accelerates less (F = ma)." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -176,41 +157,22 @@ function WorkDoneLesson() {
 }
 function WorkDoneIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-center gap-2">
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-10 h-10 rounded-[8px] flex items-center justify-center text-xs font-bold"
-            style={{ background: '#1d293d', border: `2px solid ${FC}`, color: FC }}>Wall</div>
-        </div>
-        <div className="flex flex-col items-center gap-1">
-          <motion.div animate={{ x: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1, ease: 'easeInOut' }}>
-            <div style={{ width: 32, height: 4, background: FC, borderRadius: 2 }} />
-          </motion.div>
-          <span className="text-xs font-bold" style={{ color: FC }}>Push!</span>
-        </div>
-        <div className="text-xs font-bold px-2 py-1 rounded-[8px]" style={{ background: '#ef444420', border: '1px solid #ef4444', color: '#ef4444' }}>
-          d = 0 m
-        </div>
-      </div>
-      <div className="text-sm font-mono font-bold" style={{ color: '#ef4444' }}>W = F × 0 = 0 J ✗</div>
-      <IdeaCaption>Work is done whenever a force is applied - even if the object doesn't move</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Holding a heavy bag is hard work — you're exerting a force the whole time, so you must be doing lots of work."
+        right="Work = force × distance moved in the direction of force. If the bag doesn't move, displacement = 0, so W = F × 0 = 0 J. Muscles tire, but no physics work is done."
+        wrongLabel="Everyday vs physics"
+        rightLabel="W = Fd"
+      />
     </div>
   )
 }
 function WorkDoneReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-4">
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: `${FC}10`, border: `1px solid ${FC}` }}>
-          <ArrowRight size={18} color={FC} />
-          <span className="text-xs text-center" style={{ color: '#cad5e2' }}>Force + movement<br/>= work done</span>
-        </div>
-        <div className="flex flex-col items-center gap-1 p-2 rounded-[8px]" style={{ background: '#1d293d' }}>
-          <ArrowUp size={18} color="#a8b8cc" />
-          <span className="text-xs text-center" style={{ color: '#a8b8cc' }}>Pushing wall<br/>= zero work</span>
-        </div>
-      </div>
-      <RealityBadge color={FC}>Work = force × distance moved in the direction of force</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🏗️" title="Crane lifting steel" desc="W = Fd = 50 000 N × 20 m = 1 000 000 J = 1 MJ. All that energy is stored as gravitational PE in the load." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🎿" title="Ski slope friction" desc="Friction does negative work on a skier, transferring kinetic energy to thermal energy. W = friction force × slope length." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="💪" title="Weight-lifter holding still" desc="Muscles burn fuel but do zero physics work — the bar doesn't move so displacement = 0 and W = 0 J." color="#a855f7" delay={0.2} />
     </div>
   )
 }
@@ -275,39 +237,22 @@ function HookesLawLesson() {
 }
 function HookesLawIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="180" height="90" viewBox="0 0 180 90">
-        {/* "Always linear" wrong claim */}
-        <line x1="15" y1="80" x2="165" y2="80" stroke="#1d293d" strokeWidth="1" />
-        <line x1="15" y1="10" x2="15" y2="80" stroke="#1d293d" strokeWidth="1" />
-        <motion.path d="M15 80 L165 10" fill="none" stroke={FC} strokeWidth="2.5"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />
-        <text x="80" y="88" textAnchor="middle" fill="#a8b8cc" fontSize="7">Force →</text>
-        <text x="8" y="45" fill="#a8b8cc" fontSize="7" transform="rotate(-90,8,45)">Ext →</text>
-        <text x="130" y="28" fill={FC} fontSize="8">Always</text>
-        <text x="130" y="38" fill={FC} fontSize="8">linear?</text>
-        <motion.text x="155" y="22" fill="#ef4444" fontSize="14" fontWeight="bold"
-          animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2 }}>✗</motion.text>
-      </svg>
-      <IdeaCaption>Doubling the force always doubles the extension - no matter how much force is applied</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Doubling the force always doubles the extension — Hooke's Law applies no matter how much force you apply."
+        right="Hooke's Law (F = ke) only holds up to the elastic limit. Beyond it, the spring deforms permanently — extension is no longer proportional to force."
+        wrongLabel="Ignoring the limit"
+        rightLabel="Elastic limit matters"
+      />
     </div>
   )
 }
 function HookesLawReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="160" height="100" viewBox="0 0 160 100">
-        <line x1="15" y1="90" x2="150" y2="90" stroke="#1d293d" strokeWidth="1" />
-        <line x1="15" y1="10" x2="15" y2="90" stroke="#1d293d" strokeWidth="1" />
-        <motion.path d="M15 90 L70 40 L130 20" fill="none" stroke={FC} strokeWidth="2.5"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />
-        <motion.path d="M130 20 L145 15" fill="none" stroke="#ef4444" strokeWidth="2.5" strokeDasharray="3 2"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.8 }} />
-        <text x="85" y="100" fill="#a8b8cc" fontSize="7">Extension →</text>
-        <text x="38" y="72" fill={FC} fontSize="7">Linear (elastic)</text>
-        <text x="112" y="28" fill="#ef4444" fontSize="7">Inelastic</text>
-      </svg>
-      <RealityBadge color={FC}>Beyond elastic limit: extension no longer proportional to force</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🏹" title="Bow and arrow" desc="Archer's bow acts as a spring: F = ke stores elastic PE. Beyond elastic limit, the bow cracks — experienced archers know the safe draw weight." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🚗" title="Car suspension springs" desc="Designed with a high spring constant k to support the car's weight within elastic range. Overloading permanently deforms the spring." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🏥" title="Medical compression bandages" desc="Elastic bandages obey Hooke's Law at low force. Stretched beyond elastic limit, they lose their compression and must be replaced." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -376,32 +321,22 @@ function MomentsLesson() {
 }
 function MomentsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="200" height="80" viewBox="0 0 200 80">
-        {/* Tilted seesaw - heavy side down */}
-        <motion.g animate={{ rotate: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-          style={{ originX: '100px', originY: '40px' }}>
-          <line x1="20" y1="35" x2="180" y2="45" stroke={FC} strokeWidth="3" strokeLinecap="round" />
-        </motion.g>
-        <polygon points="95,46 100,58 105,46" fill={FC} />
-        {/* Heavy kid, close to pivot */}
-        <circle cx="75" cy="28" r="9" fill={`${FC}30`} stroke={FC} strokeWidth="1.5" />
-        <text x="75" y="32" textAnchor="middle" fill={FC} fontSize="8">60kg</text>
-        {/* Light kid, close too */}
-        <circle cx="130" cy="32" r="6" fill="#c084fc30" stroke="#c084fc" strokeWidth="1.5" />
-        <text x="130" y="36" textAnchor="middle" fill="#c084fc" fontSize="8">30kg</text>
-        <text x="100" y="74" textAnchor="middle" fill="#ef4444" fontSize="8">Heavier always wins?  ✗</text>
-      </svg>
-      <IdeaCaption>A heavier weight always tips the see-saw - only the weight matters, not where it is placed</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="The heavier child always wins on a see-saw — only weight matters, not where you sit."
+        right="Moment = force × perpendicular distance from pivot. A lighter child sitting further from the pivot creates a larger moment and can balance (or beat) a heavier child sitting close."
+        wrongLabel="Weight-only thinking"
+        rightLabel="Moment = F × d"
+      />
     </div>
   )
 }
 function MomentsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <FormulaBox formula="Moment = F × d" color={FC} />
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>A small force far from the pivot can balance a large force close to it</div>
-      <RealityBadge color={FC}>Balance: clockwise moment = anticlockwise moment</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🔧" title="Spanner and bolt" desc="A long spanner handle gives a large distance from pivot, creating a bigger moment with the same force. Mechanic tricks: use a longer spanner for a stubborn bolt." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🏗️" title="Construction crane" desc="Cranes use a counterbalance on the opposite side to prevent tipping. Moment of load = moment of counterbalance about the tower pivot." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🚪" title="Door handle placement" desc="Door handles are placed far from the hinge to maximise the moment with minimal force. A handle near the hinge would require much more force to open." color="#10b981" delay={0.2} />
     </div>
   )
 }
@@ -483,35 +418,22 @@ function FluidPressureLesson() {
 }
 function FluidPressureIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="relative" style={{ width: 100, height: 90 }}>
-        {/* Water container */}
-        <div className="absolute rounded-[6px]" style={{ inset: 0, background: `${FC}15`, border: `1.5px solid ${FC}` }} />
-        {/* Only downward arrows */}
-        {[30, 50, 70].map(x => (
-          <motion.div key={x} className="absolute flex flex-col items-center"
-            style={{ left: x, top: 12 }}
-            animate={{ y: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 1.2, delay: x / 100 }}>
-            <div style={{ width: 2, height: 16, background: FC, borderRadius: 1 }} />
-            <div style={{ width: 0, height: 0, borderLeft: '4px solid transparent', borderRight: '4px solid transparent', borderTop: `6px solid ${FC}` }} />
-          </motion.div>
-        ))}
-        <div className="absolute bottom-2 left-0 right-0 text-center text-xs font-bold" style={{ color: '#ef4444' }}>↓ only?</div>
-      </div>
-      <IdeaCaption>Pressure in a liquid only acts downward - it has no horizontal or upward component</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Pressure in a liquid only acts downward — like gravity, it pushes things to the bottom."
+        right="Fluid pressure acts equally in all directions at a given depth (Pascal's Law). That's why a dam wall bulges outward, not just downward, and why submarines need thick hulls on all sides."
+        wrongLabel="Gravity confusion"
+        rightLabel="All directions equally"
+      />
     </div>
   )
 }
 function FluidPressureReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="relative w-16 h-20 rounded-[8px]" style={{ background: '#2b7fff20', border: '1px solid #2b7fff' }}>
-        {[['↓', 'top: 8px', 'left: 50%', '#a8b8cc'], ['→', 'top: 50%', 'right: -12px', FC], ['↑', 'bottom: 8px', 'left: 50%', '#00bc7d']].map(([arr, t, l, col], i) => (
-          <div key={i} className="absolute text-sm font-bold" style={{ top: t, left: l, color: col, transform: 'translate(-50%,-50%)' }}>{arr}</div>
-        ))}
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Fluid pressure acts in all directions - and increases with depth</div>
-      <RealityBadge color={FC}>p = ρgh - pressure acts equally in all directions</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🌊" title="Deep-sea submarines" desc="At 1000 m depth, pressure = ρgh = 1000 × 10 × 1000 = 10 MPa — 100× atmospheric pressure — acting on every surface of the hull equally." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🩸" title="Blood pressure cuff" desc="Inflated cuff squeezes the arm to briefly stop blood flow. Pressure in the cuff is transmitted in all directions — Pascal's Law in medicine." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🛞" title="Hydraulic brakes" desc="Pressing the brake pedal increases fluid pressure everywhere in the system simultaneously. Equal pressure acts on all four brake pistons — p = F/A." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -599,45 +521,22 @@ function MotionGraphsLesson() {
 }
 function MotionGraphsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <svg width="190" height="80" viewBox="0 0 190 80">
-        <line x1="15" y1="68" x2="175" y2="68" stroke="#1d293d" strokeWidth="1" />
-        <line x1="15" y1="10" x2="15" y2="68" stroke="#1d293d" strokeWidth="1" />
-        {/* Flat v-t line at mid-height (constant non-zero velocity) */}
-        <motion.line x1="20" y1="35" x2="170" y2="35" stroke={FC} strokeWidth="2.5"
-          initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1 }} />
-        <text x="93" y="29" textAnchor="middle" fill={FC} fontSize="8">v = 30 m/s (constant)</text>
-        {/* Zero line for reference */}
-        <line x1="20" y1="63" x2="170" y2="63" stroke="#1d293d" strokeWidth="1" strokeDasharray="3 2" />
-        <text x="93" y="77" textAnchor="middle" fill="#a8b8cc" fontSize="7">v = 0 (actual stopped)</text>
-        <text x="8" y="40" fill="#a8b8cc" fontSize="7" transform="rotate(-90,8,40)">v →</text>
-        {/* "Stopped?" label */}
-        <motion.text x="155" y="28" fill="#ef4444" fontSize="12" fontWeight="bold"
-          animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2 }}>✗</motion.text>
-      </svg>
-      <IdeaCaption>A flat horizontal line on a velocity-time graph means the object is stationary</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="A flat horizontal line on a velocity-time graph means the object has stopped — the line isn't going up or down."
+        right="A flat line on a v-t graph means constant velocity (not zero velocity). Only if the flat line is on the x-axis (v = 0) is the object stationary."
+        wrongLabel="Graph reading error"
+        rightLabel="Flat = constant, not zero"
+      />
     </div>
   )
 }
 function MotionGraphsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-3 py-2">
-      <svg width="180" height="80" viewBox="0 0 180 80">
-        {/* d-t graph (slope = speed) */}
-        <text x="10" y="10" fill={FC} fontSize="7" fontWeight="bold">d-t</text>
-        <line x1="10" y1="75" x2="10" y2="20" stroke="#1d293d" strokeWidth="1"/>
-        <line x1="10" y1="75" x2="75" y2="75" stroke="#1d293d" strokeWidth="1"/>
-        <line x1="10" y1="75" x2="70" y2="22" stroke={FC} strokeWidth="2" strokeLinecap="round"/>
-        <text x="38" y="82" textAnchor="middle" fill="#a8b8cc" fontSize="6">slope = speed</text>
-        {/* v-t graph (flat = constant v) */}
-        <text x="98" y="10" fill="#c084fc" fontSize="7" fontWeight="bold">v-t</text>
-        <line x1="98" y1="75" x2="98" y2="20" stroke="#1d293d" strokeWidth="1"/>
-        <line x1="98" y1="75" x2="175" y2="75" stroke="#1d293d" strokeWidth="1"/>
-        <line x1="98" y1="45" x2="170" y2="45" stroke="#c084fc" strokeWidth="2" strokeLinecap="round"/>
-        <text x="134" y="56" textAnchor="middle" fill="#c084fc" fontSize="6">constant v</text>
-        <text x="134" y="82" textAnchor="middle" fill="#a8b8cc" fontSize="6">flat ≠ stationary</text>
-      </svg>
-      <div className="text-center text-xs font-semibold" style={{ color: FC }}>Flat v-t = moving at constant speed</div>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚆" title="Train between stations" desc="A v-t graph shows a flat line at 50 m/s between stations — the train is moving at constant speed, not stationary. Area under line = distance covered." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="📈" title="d-t graph slope = speed" desc="On a distance-time graph, gradient = speed. A steeper line means faster motion. A flat line on a d-t graph means stationary." color="#10b981" delay={0.1} />
+      <RealWorldCard icon="🚗" title="v-t area = displacement" desc="The area under a velocity-time graph gives displacement. A trapezoid shape under a v-t graph means the object was accelerating then moving at constant speed." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -691,33 +590,23 @@ function TerminalVelocityLesson() {
   )
 }
 function TerminalVelocityIdea() {
-  const panels = [
-    { title: 'W > Drag', sub: 'Accelerating', upLabel: '↑ Drag (small)', downLabel: '↓ Weight (large)', bg: '#00a8e8' },
-    { title: 'W = Drag', sub: 'Terminal velocity', upLabel: '↑ Drag', downLabel: '↓ Weight', bg: '#10b981' },
-    { title: 'Drag > W', sub: 'Decelerating', upLabel: '↑ Drag (large)', downLabel: '↓ Weight (small)', bg: '#ef4444' },
-  ]
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <div className="flex gap-2">
-        {panels.map((p, i) => (
-          <div key={i} className="flex-1 flex flex-col items-center gap-1 px-2 py-2 rounded-[10px]" style={{ background: `${p.bg}10`, border: `1px solid ${p.bg}35` }}>
-            <span className="text-xs font-bold" style={{ color: p.bg }}>{p.title}</span>
-            <span style={{ fontSize: 9, color: '#10b981' }}>{p.upLabel}</span>
-            <div className="w-6 h-6 rounded-full" style={{ background: `${p.bg}30`, border: `1.5px solid ${p.bg}` }} />
-            <span style={{ fontSize: 9, color: '#6366f1' }}>{p.downLabel}</span>
-            <span style={{ fontSize: 8, color: '#a8b8cc', textAlign: 'center' }}>{p.sub}</span>
-          </div>
-        ))}
-      </div>
-      <IdeaCaption>At terminal velocity: resultant force = 0, acceleration = 0, velocity = constant</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="At terminal velocity, the object has no forces acting on it — that's why it stops accelerating."
+        right="At terminal velocity, weight and drag are equal and opposite — the resultant force is zero, so acceleration is zero. Both forces are still acting; they balance."
+        wrongLabel="Forces disappear?"
+        rightLabel="Forces balance, not vanish"
+      />
     </div>
   )
 }
 function TerminalVelocityReality() {
   return (
-    <div className="w-full flex flex-col gap-3 px-4 pt-3 pb-3">
-      <RealityBadge emoji="🪂" title="Skydiver without parachute" desc="Terminal velocity ≈ 60 m/s (216 km/h). At this speed, air resistance exactly equals body weight — no further acceleration." />
-      <RealityBadge emoji="🎯" title="Opening the parachute" desc="Parachute increases drag area dramatically. Drag >> weight, so the skydiver decelerates to a new terminal velocity of ≈ 6 m/s — safe for landing." />
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🪂" title="Skydiver" desc="Without parachute: terminal velocity ≈ 60 m/s (216 km/h). Opening the parachute massively increases drag, decelerating the skydiver to a safe ~6 m/s." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🍂" title="Falling leaves" desc="A leaf's large surface area relative to mass creates high drag. Terminal velocity is just a few m/s — much lower than a dense acorn from the same tree." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🌧️" title="Raindrops" desc="Large raindrops hit terminal velocity (~9 m/s) before reaching the ground. Without air resistance they'd hit at ~100 m/s — enough to cause serious injury." color="#3b82f6" delay={0.2} />
     </div>
   )
 }
@@ -838,52 +727,22 @@ function NewtonsLawsLesson() {
 }
 function NewtonsLawsIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex items-end gap-8">
-        {/* Heavy ball with bigger arrow (wrong: "falls faster") */}
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-12 h-12 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: `${FC}20`, border: `2px solid ${FC}`, color: FC }}>10 kg</div>
-          <motion.div className="flex flex-col items-center"
-            animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 0.9, ease: 'easeIn' }}>
-            <div style={{ width: 3, height: 22, background: FC, borderRadius: 1 }} />
-            <div style={{ width: 0, height: 0, borderLeft: '6px solid transparent', borderRight: '6px solid transparent', borderTop: `8px solid ${FC}` }} />
-          </motion.div>
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>faster? ✗</span>
-        </div>
-        {/* Light ball with same speed arrow */}
-        <div className="flex flex-col items-center gap-1">
-          <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: '#c084fc20', border: '2px solid #c084fc', color: '#c084fc' }}>1 kg</div>
-          <motion.div className="flex flex-col items-center"
-            animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 0.9, ease: 'easeIn' }}>
-            <div style={{ width: 3, height: 22, background: '#c084fc', borderRadius: 1 }} />
-            <div style={{ width: 0, height: 0, borderLeft: '6px solid transparent', borderRight: '6px solid transparent', borderTop: '8px solid #c084fc' }} />
-          </motion.div>
-          <span className="text-xs" style={{ color: '#a8b8cc' }}>slower?</span>
-        </div>
-      </div>
-      <IdeaCaption>Heavier objects fall faster because gravity pulls them with more force</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Heavier objects fall faster — gravity pulls them with more force, so they accelerate more quickly."
+        right="F = ma. A heavier object has more weight (force) but also more mass to accelerate. These cancel: a = F/m = mg/m = g for all objects. All objects fall at the same rate in a vacuum."
+        wrongLabel="Aristotle's error"
+        rightLabel="Newton's 2nd law"
+      />
     </div>
   )
 }
 function NewtonsLawsReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex gap-6 items-end">
-        <motion.div className="flex flex-col items-center gap-1"
-          animate={{ y: [0, 30, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: 'easeIn' }}>
-          <div className="w-10 h-10 rounded-full" style={{ background: `${FC}30`, border: `2px solid ${FC}` }} />
-          <span className="text-xs" style={{ color: FC }}>Heavy</span>
-        </motion.div>
-        <motion.div className="flex flex-col items-center gap-1"
-          animate={{ y: [0, 30, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: 'easeIn' }}>
-          <div className="w-5 h-5 rounded-full" style={{ background: '#c084fc30', border: '2px solid #c084fc' }} />
-          <span className="text-xs" style={{ color: '#c084fc' }}>Light</span>
-        </motion.div>
-      </div>
-      <div className="text-xs text-center" style={{ color: '#cad5e2' }}>Both fall at g = 9.8 m/s² in vacuum</div>
-      <RealityBadge color={FC}>F = ma - more mass = more weight, same acceleration</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🌙" title="Apollo 15 feather drop" desc="On the Moon (no air), astronaut David Scott dropped a hammer and feather simultaneously. They hit the ground at exactly the same time — proving Galileo right." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🚗" title="Car crash safety" desc="F = ma — in a crash, the car decelerates rapidly. Seatbelts and crumple zones increase stopping time (Δt), reducing the force on passengers." color="#ef4444" delay={0.1} />
+      <RealWorldCard icon="🛸" title="Rocket in deep space" desc="In space with no air resistance, a constant thrust produces constant acceleration (Newton's 1st and 2nd). The rocket keeps speeding up indefinitely." color="#a855f7" delay={0.2} />
     </div>
   )
 }
@@ -951,42 +810,22 @@ function StoppingDistanceLesson() {
 }
 function StoppingDistanceIdea() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col gap-2 w-full px-2">
-        {/* Speed 1× */}
-        <div className="flex items-center gap-2">
-          <span className="text-xs w-14 shrink-0" style={{ color: '#a8b8cc' }}>Speed 1×</span>
-          <div className="h-4 rounded-full" style={{ width: 60, background: FC }} />
-          <span className="text-xs font-bold" style={{ color: FC }}>20 m</span>
-        </div>
-        {/* Speed 2× - wrong: shows 2× not 4× */}
-        <div className="flex items-center gap-2">
-          <span className="text-xs w-14 shrink-0" style={{ color: '#a8b8cc' }}>Speed 2×</span>
-          <div className="h-4 rounded-full" style={{ width: 120, background: '#ef4444' }} />
-          <span className="text-xs font-bold" style={{ color: '#ef4444' }}>40 m?</span>
-        </div>
-        <motion.div className="text-xs text-center font-bold" style={{ color: '#ef4444' }}
-          animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
-          2× speed = 2× distance?  ✗
-        </motion.div>
-      </div>
-      <IdeaCaption>Doubling speed doubles stopping distance - it's a simple linear relationship</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Doubling a car's speed doubles the stopping distance — it's a simple proportional relationship."
+        right="Braking distance ∝ v². Doubling speed quadruples braking distance (KE = ½mv², all converted by friction). Reaction distance doubles, so total stopping distance more than doubles."
+        wrongLabel="Linear assumption"
+        rightLabel="Squared relationship"
+      />
     </div>
   )
 }
 function StoppingDistanceReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-3 py-2">
-      <div className="font-mono text-base font-bold" style={{ color: FC }}>d ∝ v²</div>
-      <svg width="160" height="60" viewBox="0 0 160 60">
-        <line x1="10" y1="55" x2="150" y2="55" stroke="#1d293d" strokeWidth="1"/>
-        <line x1="10" y1="5" x2="10" y2="55" stroke="#1d293d" strokeWidth="1"/>
-        <path d="M10 55 Q80 55 150 5" fill="none" stroke={FC} strokeWidth="2.5" strokeLinecap="round"/>
-        <text x="80" y="62" textAnchor="middle" fill="#a8b8cc" fontSize="7">speed →</text>
-        <text x="5" y="35" fill="#a8b8cc" fontSize="7" transform="rotate(-90,5,35)">d →</text>
-        <text x="120" y="22" fill={FC} fontSize="7">∝ v²</text>
-      </svg>
-      <div className="text-center" style={{ fontSize: 10, color: '#cad5e2' }}>2× speed → 4× braking distance</div>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🚗" title="30 mph vs 60 mph" desc="At 30 mph: typical stopping distance ~23 m. At 60 mph (2× speed): ~73 m — over 3× longer, not 2×. This is why 20 mph zones halve pedestrian fatalities." color="#ef4444" delay={0} />
+      <RealWorldCard icon="🌧️" title="Wet roads — higher risk" desc="Reduced friction means braking force is lower, so it takes more distance to lose the same KE. Highway Code stopping distances assume dry conditions." color="#3b82f6" delay={0.1} />
+      <RealWorldCard icon="😴" title="Reaction distance" desc="Reaction time ~0.7 s. At 30 mph (13.4 m/s), you travel 9.4 m before braking starts. Tiredness, drugs, or distractions increase reaction time significantly." color="#f97316" delay={0.2} />
     </div>
   )
 }
@@ -1104,60 +943,23 @@ function MomentumLesson() {
   )
 }
 function MomentumIdea() {
-  const [phase, setPhase] = useState(0)
-  useEffect(() => {
-    const t = setInterval(() => setPhase(p => (p + 1) % 3), 1200)
-    return () => clearInterval(t)
-  }, [])
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
-      <div className="flex flex-col gap-3 w-full">
-        {/* Before */}
-        <div className="flex items-center gap-2 text-xs" style={{ color: '#a8b8cc' }}>
-          <span className="w-12 shrink-0">Before:</span>
-          <motion.div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: `${FC}20`, border: `2px solid ${FC}`, color: FC }}
-            animate={{ x: phase === 0 ? 0 : phase === 1 ? 30 : 30 }}>→</motion.div>
-          <div className="w-7 h-7 rounded-full" style={{ background: '#1d293d', border: '2px solid #c084fc' }} />
-        </div>
-        {/* After (wrong: first ball "stops") */}
-        <div className="flex items-center gap-2 text-xs" style={{ color: '#a8b8cc' }}>
-          <span className="w-12 shrink-0">After:</span>
-          <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: '#1d293d', border: `2px solid ${FC}`, color: '#a8b8cc' }}>●</div>
-          <motion.div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
-            style={{ background: '#c084fc20', border: '2px solid #c084fc', color: '#c084fc' }}
-            animate={{ x: phase >= 1 ? 14 : 0 }}>→</motion.div>
-        </div>
-        <div className="text-xs text-center font-bold" style={{ color: '#ef4444' }}>
-          Moving ball always stops?  ✗
-        </div>
-      </div>
-      <IdeaCaption>In a collision, the moving object always stops and transfers all momentum to the other</IdeaCaption>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="In a collision, the moving object always stops and transfers all its momentum to the stationary object."
+        right="Momentum is conserved (p_before = p_after), but how it's shared depends on masses. A heavier moving object won't stop — it continues with reduced velocity after the collision."
+        wrongLabel="Only true for equal masses"
+        rightLabel="Conservation of momentum"
+      />
     </div>
   )
 }
 function MomentumReality() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-3 py-2">
-      <div className="font-mono text-sm font-bold" style={{ color: FC }}>p = mv</div>
-      <svg width="160" height="52" viewBox="0 0 160 52">
-        {/* Before */}
-        <text x="4" y="14" fill="#a8b8cc" fontSize="7">Before</text>
-        <circle cx="50" cy="10" r="10" fill={`${FC}20`} stroke={FC} strokeWidth="1.5"/>
-        <text x="50" y="14" textAnchor="middle" fill={FC} fontSize="7">→</text>
-        <circle cx="90" cy="10" r="7" fill="#c084fc20" stroke="#c084fc" strokeWidth="1.5"/>
-        {/* After */}
-        <text x="4" y="44" fill="#a8b8cc" fontSize="7">After</text>
-        <circle cx="70" cy="40" r="10" fill={`${FC}20`} stroke={FC} strokeWidth="1.5"/>
-        <text x="70" y="44" textAnchor="middle" fill={FC} fontSize="7">→</text>
-        <circle cx="110" cy="40" r="7" fill="#c084fc20" stroke="#c084fc" strokeWidth="1.5"/>
-        <text x="125" y="44" fill="#c084fc" fontSize="7">→</text>
-        {/* conserved arrow */}
-        <line x1="140" y1="5" x2="140" y2="48" stroke="#00bc7d" strokeWidth="1.5" strokeDasharray="3 2"/>
-        <text x="156" y="28" fill="#00bc7d" fontSize="6" textAnchor="middle" transform="rotate(-90,156,28)">p conserved</text>
-      </svg>
-      <div className="text-center font-semibold" style={{ fontSize: 10, color: '#00bc7d' }}>p before = p after</div>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🎱" title="Snooker — Newton's cradle" desc="In an elastic collision between equal-mass snooker balls, momentum transfers completely. But a cue ball hitting two clustered balls shares momentum — both balls move." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🚀" title="Rocket exhaust" desc="p = mv is conserved. Rocket throws mass backward at high speed, gaining forward momentum. No contact needed — this is how spacecraft manoeuvre in empty space." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🚗" title="Car safety — crumple zones" desc="Impulse = Δp = FΔt. Crumple zones increase collision time Δt, reducing peak force F on passengers — same change in momentum, less deadly." color="#ef4444" delay={0.2} />
     </div>
   )
 }
@@ -1233,25 +1035,22 @@ function VectorsScalarsLesson() {
 }
 function VectorsScalarsIdea() {
   return (
-    <div className="p-4">
-      <IdeaCaption>Speed tells you how fast. Velocity tells you how fast AND which way.</IdeaCaption>
-      <svg viewBox="0 0 240 100" width="100%" style={{ maxHeight: 100 }}>
-        <text x="30" y="30" fill="#a8b8cc" fontSize="10" fontWeight="bold">Scalar</text>
-        <text x="30" y="48" fill={FC} fontSize="9">"60 km/h"</text>
-        <text x="130" y="30" fill="#a8b8cc" fontSize="10" fontWeight="bold">Vector</text>
-        <text x="130" y="48" fill="#f97316" fontSize="9">"60 km/h North"</text>
-        <line x1="115" y1="20" x2="115" y2="80" stroke="#2d3e55" strokeWidth="1"/>
-        <text x="30" y="70" fill="#a8b8cc" fontSize="8">Mass = 5 kg</text>
-        <text x="130" y="70" fill="#a8b8cc" fontSize="8">Weight = 50 N ↓</text>
-      </svg>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Speed and velocity are the same thing — velocity is just the technical word for how fast something moves."
+        right="Speed is a scalar (magnitude only). Velocity is a vector (magnitude + direction). A car driving at 60 km/h north has the same speed as one going 60 km/h south, but opposite velocities."
+        wrongLabel="Same word, different meaning"
+        rightLabel="Scalar vs vector"
+      />
     </div>
   )
 }
 function VectorsScalarsReality() {
   return (
-    <div className="p-4">
-      <RealityBadge color={FC}>GPS needs vectors — distance alone won't tell you where you are.</RealityBadge>
-      <RealityBadge color="#f97316">A car going 60 km/h north and 60 km/h south have the same speed but opposite velocities.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🛰️" title="GPS navigation" desc="GPS calculates your displacement vector (distance + direction from start). Knowing total distance driven is useless for navigation — direction is essential." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="✈️" title="Aircraft crosswind landing" desc="A plane flying at 250 km/h south into a 50 km/h crosswind from the west has a resultant velocity vector — pilots must calculate this to land on the runway." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="🌀" title="Circular motion" desc="An object moving in a circle at constant speed is still accelerating — its direction changes continuously, so velocity changes even though speed stays the same." color="#a855f7" delay={0.2} />
     </div>
   )
 }
@@ -1301,30 +1100,22 @@ function EquationsOfMotionLesson() {
 }
 function EquationsOfMotionIdea() {
   return (
-    <div className="p-4">
-      <IdeaCaption>Choose the right equation by identifying which variable is unknown and which is missing from the problem.</IdeaCaption>
-      <div className="rounded-[12px] p-3 mt-2" style={{ background: 'rgba(18,26,47,0.8)', border: '0.75px solid #2d3e55' }}>
-        <p className="text-xs font-semibold mb-2" style={{ color: FC }}>SUVAT Quick Selector</p>
-        {[
-          ['v = u + at', 'no s'],
-          ['v² = u² + 2as', 'no t'],
-          ['s = ut + ½at²', 'no v'],
-          ['s = ½(u+v)t', 'no a'],
-        ].map(([eq, miss]) => (
-          <div key={eq} className="flex justify-between items-center py-1 border-b" style={{ borderColor: '#1d293d' }}>
-            <span className="text-xs font-mono" style={{ color: '#cad5e2' }}>{eq}</span>
-            <span className="text-xs" style={{ color: '#fdc700' }}>{miss}</span>
-          </div>
-        ))}
-      </div>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="SUVAT equations work for any motion — you just need to pick the right one for what you're given."
+        right="SUVAT equations only work for uniform (constant) acceleration. For variable acceleration (e.g. a car with changing engine force), you need calculus or motion graphs."
+        wrongLabel="Critical limitation"
+        rightLabel="Uniform acceleration only"
+      />
     </div>
   )
 }
 function EquationsOfMotionReality() {
   return (
-    <div className="p-4">
-      <RealityBadge color={FC}>These equations ONLY work for uniform (constant) acceleration.</RealityBadge>
-      <RealityBadge color="#f97316">v² = u² + 2as is the go-to equation when time is not given in the question.</RealityBadge>
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🎯" title="Projectile motion" desc="A ball launched horizontally: horizontal motion uses s = ut (a=0, constant velocity). Vertical uses s = ½at². Two SUVAT analyses — one for each direction." color="#00a8e8" delay={0} />
+      <RealWorldCard icon="🚀" title="Spacecraft re-entry" desc="As a capsule enters atmosphere, drag increases with speed — acceleration isn't constant. SUVAT fails here; engineers use numerical integration to track motion." color="#f97316" delay={0.1} />
+      <RealWorldCard icon="⚡" title="v² = u² + 2as — no time needed" desc="When time isn't given (or isn't needed), v² = u² + 2as is the fastest route. Find final speed after decelerating from 30 m/s over 45 m in one step." color="#10b981" delay={0.2} />
     </div>
   )
 }

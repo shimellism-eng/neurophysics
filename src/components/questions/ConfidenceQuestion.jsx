@@ -41,10 +41,11 @@ export default function ConfidenceQuestion({ data, moduleColor, onComplete }) {
 
   return (
     <div className="space-y-4">
-      {/* Prompt */}
-      <div className="text-center py-2">
-        <p className="text-sm" style={{ color: '#a8b8cc' }}>
-          This helps us personalise your learning
+      {/* F18: explain what confidence logging is for */}
+      <div className="px-4 py-3 rounded-[14px]" style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.2)' }}>
+        <p className="text-xs font-semibold" style={{ color: '#818cf8' }}>What is this?</p>
+        <p className="text-xs mt-1 leading-relaxed" style={{ color: '#a8b8cc' }}>
+          Your answer here tells the app how well this topic is landing. Topics you feel unsure about will be surfaced again more often to help them stick.
         </p>
       </div>
 

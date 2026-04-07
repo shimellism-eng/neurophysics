@@ -12,6 +12,18 @@ const SUGGESTED = [
 ]
 
 function TypingDots() {
+  // F4: stop infinite animation when reduce-motion is on
+  const reduceMotion = (() => {
+    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
+  })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+
+  if (reduceMotion) {
+    return (
+      <div className="flex gap-1 items-center h-5 px-1">
+        <span className="text-xs" style={{ color: '#6366f1' }}>Thinking…</span>
+      </div>
+    )
+  }
   return (
     <div className="flex gap-1 items-center h-5 px-1">
       {[0, 1, 2].map(i => (
@@ -276,8 +288,8 @@ export default function MamoChat() {
           </motion.div>
         )}
 
-        {/* Suggested questions (only at start) */}
-        {messages.length === 1 && (
+        {/* Suggested questions (shown at start, collapsed to chips after first message) */}
+        {messages.length === 1 ? (
           <motion.div
             className="space-y-2 mt-2"
             initial={{ opacity: 0, y: 10 }}
@@ -304,10 +316,29 @@ export default function MamoChat() {
               </motion.button>
             ))}
           </motion.div>
-        )}
+        ) : null}
 
         <div ref={bottomRef} />
       </div>
+
+      {/* F13: Persistent quick-starters chip rail — always visible */}
+      {messages.length > 1 && (
+        <div
+          className="px-4 py-2 shrink-0 flex gap-2 overflow-x-auto"
+          style={{ borderTop: '0.75px solid #1d293d', background: 'rgba(11,17,33,0.9)' }}
+        >
+          {SUGGESTED.map((q, i) => (
+            <button
+              key={i}
+              className="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
+              style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}
+              onClick={() => sendMessage(q)}
+            >
+              {q.slice(0, 28)}{q.length > 28 ? '…' : ''}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Input bar */}
       <div

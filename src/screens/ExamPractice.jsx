@@ -6,7 +6,9 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback } from 'react'
-import { ArrowLeft, GraduationCap, ChevronRight, Award } from 'lucide-react'
+import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2 } from 'lucide-react'
+import { useSessionTimer } from '../hooks/useSessionTimer'
+import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
 import { getExamQuestions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
@@ -64,6 +66,9 @@ export default function ExamPractice() {
   // MCQ state (for equation-recall type)
   const [selected, setSelected] = useState(null)
   const [mcqSubmitted, setMcqSubmitted] = useState(false)
+
+  // F10/F12: session timer for ADHD pacing
+  const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
   if (!topic || total === 0) {
     return (
@@ -260,6 +265,9 @@ export default function ExamPractice() {
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+      {/* F10/F12: Break nudge */}
+      {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
+
       {/* Header */}
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
         <button
@@ -317,13 +325,32 @@ export default function ExamPractice() {
               </div>
             )}
 
-            {/* Question */}
+            {/* Question — F7: text-base + leading-relaxed for readability */}
             <div className="mb-4">
-              <h2 className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>
-                {q.question}
-              </h2>
+              <div className="flex items-start gap-2">
+                <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
+                  {q.question}
+                </h2>
+                {/* F6: TTS speak button */}
+                {(() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })() && (
+                  <button
+                    className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 mt-0.5"
+                    style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                    onClick={() => {
+                      if (!('speechSynthesis' in window)) return
+                      window.speechSynthesis.cancel()
+                      const utt = new SpeechSynthesisUtterance(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))
+                      utt.rate = 0.9
+                      window.speechSynthesis.speak(utt)
+                    }}
+                    aria-label="Read question aloud"
+                  >
+                    <Volume2 size={14} color="#818cf8" />
+                  </button>
+                )}
+              </div>
               {q.questionSubtitle && (
-                <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
+                <p className="text-xs mt-1 leading-relaxed" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
               )}
             </div>
 

@@ -1,7 +1,9 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback } from 'react'
-import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff } from 'lucide-react'
+import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff, Volume2 } from 'lucide-react'
+import { useSessionTimer } from '../hooks/useSessionTimer'
+import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
 import questionBank from '../data/questionBank'
 import { getInteractiveQuestions } from '../data/interactiveIndex'
@@ -157,6 +159,9 @@ export default function DiagnosticQuestion() {
   const [senTab, setSenTab] = useState('keywords')
   const [showHint, setShowHint] = useState(false)
 
+  // F10/F12: session timer for ADHD pacing
+  const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
+
   if (!topic || total === 0) return (
     <div className="flex flex-col items-center justify-center h-full px-6" style={{ background: '#0b1121', color: '#a8b8cc' }}>
       <BookOpen size={48} strokeWidth={1.2} style={{ marginBottom: 16, opacity: 0.4 }} />
@@ -179,12 +184,28 @@ export default function DiagnosticQuestion() {
 
   const VisualComponent = topic.lessonVisual
 
+  // F6: TTS — read question aloud
+  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
+  const speakQuestion = () => {
+    if (!('speechSynthesis' in window)) return
+    window.speechSynthesis.cancel()
+    const utt = new SpeechSynthesisUtterance(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))
+    utt.rate = 0.9
+    window.speechSynthesis.speak(utt)
+  }
+
   // MCQ handlers
   const handleSelect = (idx) => { if (!submitted) setSelected(idx) }
   const handleSubmit = () => {
     if (selected === null) return
     setSubmitted(true)
-    if (selected === q.correctAnswer) setScore(s => s + 1)
+    if (selected === q.correctAnswer) {
+      setScore(s => s + 1)
+    } else {
+      // F5: auto-open SEN panel to sentence starters on first wrong answer
+      setShowSEN(true)
+      setSenTab('starters')
+    }
   }
 
   // Interactive question callback
@@ -240,6 +261,9 @@ export default function DiagnosticQuestion() {
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+
+      {/* F10/F12: Break nudge */}
+      {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
 
       {/* ── Header ── */}
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
@@ -355,9 +379,22 @@ export default function DiagnosticQuestion() {
 
             {/* Question text */}
             <div className="mb-4">
-              <h2 className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>
-                {q.question}
-              </h2>
+              <div className="flex items-start gap-2">
+                <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
+                  {q.question}
+                </h2>
+                {/* F6: TTS speak button */}
+                {ttsEnabled && (
+                  <button
+                    className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 mt-0.5"
+                    style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                    onClick={speakQuestion}
+                    aria-label="Read question aloud"
+                  >
+                    <Volume2 size={14} color="#818cf8" />
+                  </button>
+                )}
+              </div>
               {q.questionSubtitle && (
                 <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
               )}
@@ -394,6 +431,27 @@ export default function DiagnosticQuestion() {
                     </motion.button>
                   ))}
                 </div>
+
+                {/* F8/F15: Growth framing after MCQ submission */}
+                <AnimatePresence>
+                  {submitted && (
+                    <motion.div
+                      className="mt-3 px-4 py-3 rounded-[12px] flex items-center gap-2"
+                      style={isCorrect
+                        ? { background: 'rgba(0,188,125,0.08)', border: '0.75px solid rgba(0,188,125,0.25)' }
+                        : { background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                    >
+                      <span style={{ fontSize: 16 }}>{isCorrect ? '🌟' : '💡'}</span>
+                      <p className="text-xs leading-relaxed font-medium" style={{ color: isCorrect ? '#00bc7d' : '#818cf8' }}>
+                        {isCorrect
+                          ? 'Spot on! That\'s exactly right.'
+                          : 'Great attempt — the correct answer is highlighted in green. Check the sentence starters below for how to explain it.'}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
                 {/* SEN note after MCQ submission */}
                 <AnimatePresence>

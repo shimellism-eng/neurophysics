@@ -8,6 +8,17 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /* ── Keyboard focus ring (F19) ───────────────────────────────────────────── */
+  :focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  /* Remove browser default outline for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
   html, body {
     height: 100%;
     width: 100%;

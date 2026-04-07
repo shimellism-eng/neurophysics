@@ -38,11 +38,12 @@ function applyReduceMotion(on) {
     if (!el) {
       el = document.createElement('style')
       el.id = RM_STYLE_ID
+      // Use 100ms (not 0.01ms) so layouts still transition but motion is minimal (F4/F9)
       el.textContent = [
         '* {',
-        '  transition-duration: 0.01ms !important;',
+        '  transition-duration: 100ms !important;',
         '  transition-delay: 0ms !important;',
-        '  animation-duration: 0.01ms !important;',
+        '  animation-duration: 100ms !important;',
         '  animation-iteration-count: 1 !important;',
         '}',
       ].join('\n')
@@ -52,6 +53,34 @@ function applyReduceMotion(on) {
     el?.remove()
   }
 }
+
+// ── Dyslexic font (F1/F5) ─────────────────────────────────────────────────
+function applyDyslexicFont(on) {
+  document.getElementById('np-dyslexic-link')?.remove()
+  document.getElementById('np-dyslexic-apply')?.remove()
+  if (on) {
+    const link = document.createElement('link')
+    link.id = 'np-dyslexic-link'
+    link.rel = 'stylesheet'
+    link.href = 'https://fonts.cdnfonts.com/css/opendyslexic'
+    document.head.appendChild(link)
+    const style = document.createElement('style')
+    style.id = 'np-dyslexic-apply'
+    style.textContent = 'body, button, input, textarea, p, h1, h2, h3, span { font-family: "OpenDyslexic", sans-serif !important; letter-spacing: 0.05em !important; line-height: 1.7 !important; }'
+    document.head.appendChild(style)
+  }
+}
+
+// ── Hide floating Mamo (F9) ───────────────────────────────────────────────
+function applyHideMamo(on) {
+  // Write a data attribute that FloatingMamo in App.jsx reads via localStorage
+  // (it re-reads prefs on each render via the same PREFS_KEY)
+  // No DOM side-effect needed — the pref key is checked in App.jsx FloatingMamo
+}
+
+// ── Text-to-speech (F6) ───────────────────────────────────────────────────
+// Actual speech triggered from question screens via useTTS hook
+// This setting just stores the pref so question screens show the speak button
 
 function applyHighContrast(on) {
   document.documentElement.style.filter = on ? 'contrast(1.2) brightness(1.06)' : ''
@@ -153,6 +182,7 @@ export default function SettingsScreen() {
     applyReduceMotion(!!prefs.reduceMotion)
     applyHighContrast(!!prefs.highContrast)
     applyFontSize(prefs.fontSize || 'normal')
+    applyDyslexicFont(!!prefs.dyslexicFont)
   }, []) // eslint-disable-line
 
   const showToast = (msg, color = '#6366f1') => {
@@ -188,6 +218,28 @@ export default function SettingsScreen() {
     applyFontSize(next)
     setPref('fontSize', next)
     showToast(next === 'large' ? 'Large text on' : 'Normal text restored', next === 'large' ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Dyslexic Font (F1/F5)
+  const toggleDyslexicFont = () => {
+    const next = !prefs.dyslexicFont
+    applyDyslexicFont(next)
+    setPref('dyslexicFont', next)
+    showToast(next ? 'OpenDyslexic font on' : 'Standard font restored', next ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Text-to-Speech (F6)
+  const toggleTTS = () => {
+    const next = !prefs.tts
+    setPref('tts', next)
+    showToast(next ? 'Read-aloud enabled — tap 🔊 on questions' : 'Read-aloud off', next ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Hide floating Mamo (F9)
+  const toggleHideMamo = () => {
+    const next = !prefs.hideMamo
+    setPref('hideMamo', next)
+    showToast(next ? 'Mamo button hidden' : 'Mamo button restored', next ? '#10b981' : '#a8b8cc')
   }
 
   // ── Daily Reminders
@@ -290,7 +342,7 @@ export default function SettingsScreen() {
         {
           icon: Accessibility,
           label: 'Reduce Motion',
-          hint: 'Fewer animations across the app',
+          hint: 'Minimises animations — good for focus and sensory sensitivity',
           on: !!prefs.reduceMotion,
           onToggle: toggleReduceMotion,
         },
@@ -307,6 +359,27 @@ export default function SettingsScreen() {
           hint: 'Increase font size throughout the app',
           on: prefs.fontSize === 'large',
           onToggle: toggleFontSize,
+        },
+        {
+          icon: Type,
+          label: 'Dyslexia-Friendly Font',
+          hint: 'Switches to OpenDyslexic — wider letter shapes for easier reading',
+          on: !!prefs.dyslexicFont,
+          onToggle: toggleDyslexicFont,
+        },
+        {
+          icon: Info,
+          label: 'Read Questions Aloud',
+          hint: 'Shows a 🔊 button on questions — tap to hear them read out',
+          on: !!prefs.tts,
+          onToggle: toggleTTS,
+        },
+        {
+          icon: Atom,
+          label: 'Hide Mamo Button',
+          hint: 'Removes the floating AI tutor button if it\'s distracting',
+          on: !!prefs.hideMamo,
+          onToggle: toggleHideMamo,
         },
       ],
     },
@@ -561,7 +634,7 @@ export default function SettingsScreen() {
                         {/* Hour picker */}
                         <div className="flex flex-col items-center gap-1">
                           <button
-                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
                             style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
                             onClick={() => setReminderHour(h => (h + 1) % 24)}
                             aria-label="Increase hour"
@@ -571,7 +644,7 @@ export default function SettingsScreen() {
                             {String(reminderHour).padStart(2, '0')}
                           </div>
                           <button
-                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
                             style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
                             onClick={() => setReminderHour(h => (h + 23) % 24)}
                             aria-label="Decrease hour"
@@ -581,7 +654,7 @@ export default function SettingsScreen() {
                         {/* Minute picker — 00 / 15 / 30 / 45 */}
                         <div className="flex flex-col items-center gap-1">
                           <button
-                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
                             style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
                             onClick={() => setReminderMinute(m => (m + 15) % 60)}
                             aria-label="Increase minute"
@@ -591,7 +664,7 @@ export default function SettingsScreen() {
                             {String(reminderMinute).padStart(2, '0')}
                           </div>
                           <button
-                            className="w-10 h-8 rounded-[8px] flex items-center justify-center text-xs font-bold"
+                            className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
                             style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
                             onClick={() => setReminderMinute(m => (m + 45) % 60)}
                             aria-label="Decrease minute"

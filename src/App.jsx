@@ -63,7 +63,12 @@ function PulseRing() {
 function FloatingMamo() {
   const location = useLocation()
   const navigate = useNavigate()
-  const hide = location.pathname === '/mamo'
+  const hiddenByRoute = location.pathname === '/mamo'
+  // F9: respect "Hide Mamo Button" setting
+  const hiddenByPref = (() => {
+    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').hideMamo } catch { return false }
+  })()
+  const hide = hiddenByRoute || hiddenByPref
   const [minimized, setMinimized] = useState(false)
 
   return (

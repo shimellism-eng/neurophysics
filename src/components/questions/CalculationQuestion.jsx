@@ -82,8 +82,8 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
           <motion.button
             className="w-full mt-3 py-3.5 rounded-[14px] font-semibold text-sm"
             style={{
-              background: input.trim() ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.5)',
-              color: input.trim() ? '#fff' : '#556',
+              background: input.trim() ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.7)',
+              color: input.trim() ? '#fff' : '#8899aa',
               boxShadow: input.trim() ? `0 6px 20px ${moduleColor}40` : 'none',
             }}
             onClick={handleSubmit}
@@ -106,10 +106,17 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
                 border: isCorrect ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)',
               }}
             >
-              {isCorrect ? <CheckCircle size={18} color="#00bc7d" /> : <XCircle size={18} color="#ef4444" />}
-              <span className="text-sm font-semibold" style={{ color: isCorrect ? '#00bc7d' : '#ef4444' }}>
-                {isCorrect ? 'Correct!' : `Not quite. The answer is ${typeof answer === 'number' && Math.abs(answer) >= 1000 ? answer.toLocaleString() : answer}${answerUnit ? ' ' + answerUnit : ''}`}
-              </span>
+              {isCorrect ? <CheckCircle size={18} color="#00bc7d" /> : <Lightbulb size={18} color="#818cf8" />}
+              <div>
+                <span className="text-sm font-semibold block" style={{ color: isCorrect ? '#00bc7d' : '#818cf8' }}>
+                  {isCorrect ? 'Spot on! 🌟' : 'Great attempt — here\'s how to work it out:'}
+                </span>
+                {!isCorrect && (
+                  <span className="text-xs" style={{ color: '#a8b8cc' }}>
+                    The answer is {typeof answer === 'number' && Math.abs(answer) >= 1000 ? answer.toLocaleString() : answer}{answerUnit ? ' ' + answerUnit : ''}
+                  </span>
+                )}
+              </div>
             </div>
 
             {/* Worked solution — only if wrong */}

@@ -1204,6 +1204,72 @@ function TabResults({ p, color }) {
   )
 }
 
+// ─── Reusable scatter graph ──────────────────────────────────────────────────
+function ScatterGraph({ title, xLabel, yLabel, xTicks, yTicks, xMax, yMax, points, lobf, lobfLabel, gradient, color, curved }) {
+  const gL = 42, gR = 268, gT = 12, gB = 170
+  const gW = gR - gL, gH = gB - gT
+  const px = v => gL + (v / xMax) * gW
+  const py = v => gB - (v / yMax) * gH
+  return (
+    <div className="rounded-[16px] p-3" style={{ background: 'rgba(18,26,47,0.9)', border: `0.75px solid ${color}40` }}>
+      <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color }}>{title}</div>
+      <svg viewBox="0 0 310 200" width="100%" style={{ display: 'block' }}>
+        {/* Grid */}
+        {yTicks.map(v => (
+          <g key={v}>
+            <line x1={gL} y1={py(v)} x2={gR} y2={py(v)} stroke="#1d293d" strokeWidth={0.7}/>
+            <text x={gL - 4} y={py(v) + 3.5} fontSize={6.5} fill="#475569" textAnchor="end">{v}</text>
+          </g>
+        ))}
+        {xTicks.map(v => (
+          <g key={v}>
+            <line x1={px(v)} y1={gT} x2={px(v)} y2={gB} stroke="#1d293d" strokeWidth={0.7} strokeDasharray="3,2"/>
+            <text x={px(v)} y={gB + 12} fontSize={6.5} fill="#475569" textAnchor="middle">{v}</text>
+          </g>
+        ))}
+        {/* Axes */}
+        <line x1={gL} y1={gT} x2={gL} y2={gB + 1} stroke="#475569" strokeWidth={1.2}/>
+        <line x1={gL - 1} y1={gB} x2={gR} y2={gB} stroke="#475569" strokeWidth={1.2}/>
+        <polygon points={`${gL},${gT-2} ${gL-3},${gT+6} ${gL+3},${gT+6}`} fill="#475569"/>
+        <polygon points={`${gR+2},${gB} ${gR-6},${gB-3} ${gR-6},${gB+3}`} fill="#475569"/>
+        {/* Axis labels */}
+        <text x={13} y={gB - gH/2} fontSize={7} fill="#64748b" textAnchor="middle"
+          transform={`rotate(-90,13,${gB - gH/2})`}>{yLabel}</text>
+        <text x={gL + gW/2} y={196} fontSize={7} fill="#64748b" textAnchor="middle">{xLabel}</text>
+        {/* Line of best fit */}
+        {lobf && !curved && (
+          <>
+            <line x1={px(lobf[0].x)} y1={py(lobf[0].y)} x2={px(lobf[1].x)} y2={py(lobf[1].y)}
+              stroke={color} strokeWidth={1.8} strokeLinecap="round" opacity={0.75}/>
+            <text x={px(lobf[0].x + (lobf[1].x - lobf[0].x) * 0.35)} y={py(lobf[0].y + (lobf[1].y - lobf[0].y) * 0.35) - 8}
+              fontSize={6.5} fill={color} opacity={0.9}>{lobfLabel || 'Line of best fit'}</text>
+          </>
+        )}
+        {lobf && curved && (
+          <>
+            <polyline points={lobf.map(p2 => `${px(p2.x)},${py(p2.y)}`).join(' ')}
+              fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" opacity={0.75}/>
+            <text x={px(lobf[Math.floor(lobf.length/2)].x)} y={py(lobf[Math.floor(lobf.length/2)].y) - 9}
+              fontSize={6.5} fill={color} opacity={0.9}>{lobfLabel || 'Curve of best fit'}</text>
+          </>
+        )}
+        {/* Data points */}
+        {points.map((pt, i) => (
+          <circle key={i} cx={px(pt.x)} cy={py(pt.y)} r={3.5}
+            fill={color} fillOpacity={0.85} stroke="#0b1121" strokeWidth={1}/>
+        ))}
+      </svg>
+      {gradient && (
+        <div className="mt-1 px-1 text-xs" style={{ color: '#a8b8cc' }}>
+          Gradient = <span style={{ color, fontWeight: 700 }}>{gradient.value}</span>
+          {gradient.unit && <span style={{ color: '#64748b' }}> {gradient.unit}</span>}
+          {gradient.note && <span style={{ color: '#64748b' }}> — {gradient.note}</span>}
+        </div>
+      )}
+    </div>
+  )
+}
+
 function TabAnalysis({ p, color }) {
   const formulas = {
     shc: 'c = E / (m × ΔT)',
@@ -1217,18 +1283,175 @@ function TabAnalysis({ p, color }) {
     waves: 'v = f × λ',
     radiation: 'Black body → max emission',
   }
-  // Fixed scatter data for resistance graph (L cm → R Ω, with realistic noise)
-  const resistancePoints = [
-    { L: 10, R: 2.6  }, { L: 20, R: 4.3  }, { L: 30, R: 7.1  },
-    { L: 40, R: 8.8  }, { L: 50, R: 11.7 }, { L: 60, R: 13.2 },
-    { L: 70, R: 16.1 }, { L: 80, R: 17.9 }, { L: 90, R: 20.7 },
-    { L: 100, R: 22.3 },
-  ]
-  // Graph constants
-  const gLeft = 38, gRight = 262, gTop = 10, gBot = 168
-  const gW = gRight - gLeft, gH = gBot - gTop
-  const px = L => gLeft + (L / 100) * gW
-  const py = R => gBot  - (R / 25)  * gH
+
+  const graphs = {
+    shc: (
+      <ScatterGraph
+        title="Graph: Temperature vs Energy Supplied"
+        xLabel="Energy supplied (J)" yLabel="ΔT (°C)"
+        xMax={20000} yMax={55}
+        xTicks={[0,4000,8000,12000,16000,20000]} yTicks={[0,10,20,30,40,50]}
+        points={[
+          {x:2000,y:5.4},{x:4000,y:10.8},{x:6000,y:15.9},{x:8000,y:21.3},
+          {x:10000,y:26.1},{x:12000,y:31.5},{x:14000,y:37.0},{x:16000,y:42.0},
+          {x:18000,y:47.1},{x:20000,y:52.3},
+        ]}
+        lobf={[{x:0,y:0},{x:20000,y:52}]}
+        lobfLabel="Line of best fit"
+        gradient={{ value: '0.0026 °C/J', note: 'gradient = 1/(mc)' }}
+        color={color}
+      />
+    ),
+    insulation: (
+      <ScatterGraph
+        title="Graph: Temperature vs Time (cooling curves)"
+        xLabel="Time (min)" yLabel="Temperature (°C)"
+        xMax={20} yMax={85}
+        xTicks={[0,5,10,15,20]} yTicks={[0,20,40,60,80]}
+        points={[
+          {x:0,y:80},{x:2,y:69},{x:4,y:59},{x:6,y:52},{x:8,y:46},
+          {x:10,y:41},{x:12,y:37},{x:14,y:34},{x:16,y:31},{x:18,y:29},{x:20,y:27},
+        ]}
+        lobf={[
+          {x:0,y:80},{x:2,y:70},{x:4,y:61.3},{x:6,y:53.6},{x:8,y:46.9},
+          {x:10,y:41.0},{x:12,y:35.9},{x:14,y:31.4},{x:16,y:27.5},{x:18,y:24.1},{x:20,y:21.1},
+        ]}
+        lobfLabel="Exponential decay (no insulation)"
+        gradient={{ value: 'steeper gradient', note: 'less insulation → faster cooling' }}
+        color={color}
+        curved
+      />
+    ),
+    resistance: (
+      <ScatterGraph
+        title="Graph: R vs Length"
+        xLabel="Length (cm)" yLabel="Resistance (Ω)"
+        xMax={100} yMax={25}
+        xTicks={[0,20,40,60,80,100]} yTicks={[0,5,10,15,20,25]}
+        points={[
+          {x:10,y:2.6},{x:20,y:4.3},{x:30,y:7.1},{x:40,y:8.8},{x:50,y:11.7},
+          {x:60,y:13.2},{x:70,y:16.1},{x:80,y:17.9},{x:90,y:20.7},{x:100,y:22.3},
+        ]}
+        lobf={[{x:0,y:0},{x:100,y:22.5}]}
+        lobfLabel="Line of best fit"
+        gradient={{ value: '0.225 Ω/cm', note: 'resistance per cm of wire' }}
+        color={color}
+      />
+    ),
+    iv_characteristics: (
+      <ScatterGraph
+        title="Graph: Current vs Voltage (resistor)"
+        xLabel="Voltage (V)" yLabel="Current (mA)"
+        xMax={6} yMax={65}
+        xTicks={[0,1,2,3,4,5,6]} yTicks={[0,10,20,30,40,50,60]}
+        points={[
+          {x:0,y:0},{x:1,y:10.2},{x:2,y:19.8},{x:3,y:30.1},
+          {x:4,y:40.3},{x:5,y:49.7},{x:6,y:60.2},
+        ]}
+        lobf={[{x:0,y:0},{x:6,y:60}]}
+        lobfLabel="Ohmic (straight through origin)"
+        gradient={{ value: '10 mA/V', note: 'gradient = 1/R = 1/100Ω' }}
+        color={color}
+      />
+    ),
+    density: (
+      <ScatterGraph
+        title="Graph: Mass vs Volume"
+        xLabel="Volume (cm³)" yLabel="Mass (g)"
+        xMax={100} yMax={900}
+        xTicks={[0,20,40,60,80,100]} yTicks={[0,200,400,600,800]}
+        points={[
+          {x:10,y:27.1},{x:20,y:54.2},{x:30,y:81.3},{x:40,y:108.4},
+          {x:50,y:135.0},{x:60,y:162.1},{x:70,y:189.3},{x:80,y:216.4},
+          {x:90,y:243.5},{x:100,y:270.1},
+        ]}
+        lobf={[{x:0,y:0},{x:100,y:270}]}
+        lobfLabel="Line of best fit (aluminium)"
+        gradient={{ value: '2.70 g/cm³', note: 'gradient = density' }}
+        color={color}
+      />
+    ),
+    light: (
+      <ScatterGraph
+        title="Graph: sin(r) vs sin(i)"
+        xLabel="sin(i)" yLabel="sin(r)"
+        xMax={1.0} yMax={0.7}
+        xTicks={[0,0.2,0.4,0.6,0.8,1.0]} yTicks={[0,0.1,0.2,0.3,0.4,0.5,0.6]}
+        points={[
+          {x:0.17,y:0.11},{x:0.34,y:0.22},{x:0.50,y:0.32},{x:0.64,y:0.41},
+          {x:0.77,y:0.50},{x:0.87,y:0.56},{x:0.94,y:0.61},
+        ]}
+        lobf={[{x:0,y:0},{x:1.0,y:0.65}]}
+        lobfLabel="Line of best fit"
+        gradient={{ value: '0.65', note: 'gradient = 1/n → n = 1.54 (glass)' }}
+        color={color}
+      />
+    ),
+    spring: (
+      <ScatterGraph
+        title="Graph: Extension vs Force"
+        xLabel="Force (N)" yLabel="Extension (cm)"
+        xMax={10} yMax={22}
+        xTicks={[0,2,4,6,8,10]} yTicks={[0,5,10,15,20]}
+        points={[
+          {x:1,y:2.1},{x:2,y:4.0},{x:3,y:6.2},{x:4,y:8.1},{x:5,y:10.0},
+          {x:6,y:12.3},{x:7,y:14.1},{x:8,y:16.0},{x:9,y:18.2},{x:10,y:20.1},
+        ]}
+        lobf={[{x:0,y:0},{x:10,y:20}]}
+        lobfLabel="Linear (elastic region)"
+        gradient={{ value: '2.0 cm/N', note: '→ spring constant k = 50 N/m' }}
+        color={color}
+      />
+    ),
+    acceleration: (
+      <ScatterGraph
+        title="Graph: Acceleration vs Force"
+        xLabel="Force (N)" yLabel="Acceleration (m/s²)"
+        xMax={5} yMax={12}
+        xTicks={[0,1,2,3,4,5]} yTicks={[0,2,4,6,8,10]}
+        points={[
+          {x:0.5,y:1.1},{x:1.0,y:2.0},{x:1.5,y:3.2},{x:2.0,y:4.1},
+          {x:2.5,y:5.1},{x:3.0,y:6.0},{x:3.5,y:7.2},{x:4.0,y:8.1},
+          {x:4.5,y:9.0},{x:5.0,y:10.2},
+        ]}
+        lobf={[{x:0,y:0},{x:5,y:10}]}
+        lobfLabel="Line of best fit"
+        gradient={{ value: '2.0 m/s²/N', note: 'gradient = 1/m → m = 0.5 kg trolley' }}
+        color={color}
+      />
+    ),
+    waves: (
+      <ScatterGraph
+        title="Graph: Wavelength vs 1/Frequency"
+        xLabel="1/f (s)" yLabel="λ (m)"
+        xMax={1.0} yMax={0.30}
+        xTicks={[0,0.2,0.4,0.6,0.8,1.0]} yTicks={[0,0.05,0.10,0.15,0.20,0.25]}
+        points={[
+          {x:0.071,y:0.020},{x:0.10,y:0.028},{x:0.143,y:0.040},{x:0.20,y:0.056},
+          {x:0.25,y:0.070},{x:0.333,y:0.093},{x:0.50,y:0.140},{x:0.667,y:0.187},
+          {x:1.0,y:0.280},
+        ]}
+        lobf={[{x:0,y:0},{x:1.0,y:0.28}]}
+        lobfLabel="Line of best fit"
+        gradient={{ value: '0.28 m/s', note: 'gradient = wave speed in water' }}
+        color={color}
+      />
+    ),
+    radiation: (
+      <ScatterGraph
+        title="Graph: Emission Rate vs Surface Type"
+        xLabel="Surface" yLabel="Emission rate (arbitrary)"
+        xMax={5} yMax={100}
+        xTicks={[1,2,3,4]} yTicks={[0,20,40,60,80,100]}
+        points={[
+          {x:1,y:87},{x:2,y:72},{x:3,y:60},{x:4,y:41},
+        ]}
+        lobf={null}
+        gradient={{ value: 'Matt black > Matt white > Gloss black > Shiny silver', unit: '' }}
+        color={color}
+      />
+    ),
+  }
 
   return (
     <div className="flex flex-col gap-4">
@@ -1241,69 +1464,7 @@ function TabAnalysis({ p, color }) {
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color }}>Analysis</div>
         <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{p.analysis}</p>
       </div>
-
-      {/* ── Resistance vs Length graph (only for resistance practical) ── */}
-      {p.id === 'resistance' && (
-        <div className="rounded-[16px] p-3" style={{ background: 'rgba(18,26,47,0.9)', border: `0.75px solid ${color}40` }}>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color }}>
-            Graph: R vs Length
-          </div>
-          <svg viewBox="0 0 300 200" width="100%" style={{ display: 'block' }}>
-            {/* Grid lines */}
-            {[0, 5, 10, 15, 20, 25].map(r => (
-              <g key={r}>
-                <line x1={gLeft} y1={py(r)} x2={gRight} y2={py(r)}
-                  stroke="#1d293d" strokeWidth={0.7}/>
-                <text x={gLeft - 4} y={py(r) + 3.5} fontSize={7} fill="#475569" textAnchor="end">{r}</text>
-              </g>
-            ))}
-            {[0, 20, 40, 60, 80, 100].map(l => (
-              <g key={l}>
-                <line x1={px(l)} y1={gTop} x2={px(l)} y2={gBot}
-                  stroke="#1d293d" strokeWidth={0.7} strokeDasharray="3,2"/>
-                <text x={px(l)} y={gBot + 12} fontSize={7} fill="#475569" textAnchor="middle">{l}</text>
-              </g>
-            ))}
-
-            {/* Axes */}
-            <line x1={gLeft} y1={gTop} x2={gLeft} y2={gBot + 1} stroke="#475569" strokeWidth={1.2}/>
-            <line x1={gLeft - 1} y1={gBot} x2={gRight} y2={gBot} stroke="#475569" strokeWidth={1.2}/>
-            {/* Arrowheads */}
-            <polygon points={`${gLeft},${gTop - 2} ${gLeft - 3},${gTop + 6} ${gLeft + 3},${gTop + 6}`} fill="#475569"/>
-            <polygon points={`${gRight + 2},${gBot} ${gRight - 6},${gBot - 3} ${gRight - 6},${gBot + 3}`} fill="#475569"/>
-
-            {/* Axis labels */}
-            <text x={12} y={gBot - gH/2} fontSize={7.5} fill="#64748b" textAnchor="middle"
-              transform={`rotate(-90,12,${gBot - gH/2})`}>Resistance (Ω)</text>
-            <text x={gLeft + gW/2} y={196} fontSize={7.5} fill="#64748b" textAnchor="middle">Length (cm)</text>
-
-            {/* Line of best fit: R = 0.225L, through origin */}
-            <line x1={px(0)} y1={py(0)} x2={px(100)} y2={py(22.5)}
-              stroke={color} strokeWidth={1.8} strokeLinecap="round" opacity={0.8}/>
-            {/* LOBF label — positioned above the line, away from dots */}
-            <text x={px(30)} y={py(6.75) - 8} fontSize={7} fill={color} opacity={0.9}>
-              Line of best fit
-            </text>
-            <line x1={px(30)} y1={py(6.75) - 5} x2={px(30)} y2={py(6.75) - 1}
-              stroke={color} strokeWidth={0.7} opacity={0.6}/>
-
-            {/* Data points with scatter */}
-            {resistancePoints.map(({ L, R }) => (
-              <circle key={L} cx={px(L)} cy={py(R)} r={3.5}
-                fill={color} fillOpacity={0.85} stroke="#0b1121" strokeWidth={1}/>
-            ))}
-
-            {/* Origin dot */}
-            <circle cx={px(0)} cy={py(0)} r={3} fill={color} fillOpacity={0.6}/>
-          </svg>
-
-          {/* Gradient callout */}
-          <div className="mt-1 px-1 text-xs" style={{ color: '#a8b8cc' }}>
-            Gradient = <span style={{ color, fontWeight: 700 }}>0.225 Ω/cm</span>
-            &nbsp;- resistance per cm of wire
-          </div>
-        </div>
-      )}
+      {graphs[p.id]}
     </div>
   )
 }

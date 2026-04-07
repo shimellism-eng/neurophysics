@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Zap, Flame, Battery, Wind, Sun, Waves, AlertTriangle, Lightbulb, FlaskConical, ArrowDown, Maximize2, Atom, Magnet } from 'lucide-react'
+import { Zap, Flame, Battery, Wind, Sun, Waves, AlertTriangle, Lightbulb, FlaskConical, ArrowDown, Maximize2, Magnet } from 'lucide-react'
+import AtomIcon from '../components/AtomIcon'
 import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot } from './visuals-helpers'
 
 const C = '#f97316'
@@ -40,7 +41,7 @@ function EnergyStoresLesson() {
       formula: 'Eₑ = ½ke²',
     },
     {
-      label: 'Nuclear', Icon: Atom, color: '#ef4444',
+      label: 'Nuclear', Icon: AtomIcon, color: '#ef4444',
       def: 'Energy stored in the nucleus of atoms  -  released by fission or fusion.',
       example: 'Nuclear power stations, the Sun, nuclear weapons',
       formula: 'E = mc²',
@@ -816,44 +817,44 @@ export const ENERGY_TOPICS = {
   },
   power_calc: {
     id: 'power_calc', module: 'Energy', moduleColor: C, course: 'combined',
-    title: 'Power', subtitle: 'P = E/t and P = W/t',
-    description: 'Power is the rate of energy transfer. P = E/t (power = energy ÷ time) or P = W/t (power = work done ÷ time). The unit of power is the watt (W), where 1 W = 1 J/s. A 100 W bulb transfers 100 joules every second.',
+    title: 'Power', subtitle: 'P = E/t, P = W/t and P = Fv',
+    description: 'Power is the rate of energy transfer. P = E/t (power = energy ÷ time) or P = W/t (power = work done ÷ time). Also P = Fv (power = force × velocity) — useful when a force acts on a moving object (e.g. a car engine). The unit of power is the watt (W), where 1 W = 1 J/s. A 100 W bulb transfers 100 joules every second.',
     lessonVisual: PowerLesson, ideaVisual: PowerIdea, realityVisual: PowerReality,
-    question: 'An appliance transfers 3000 J in 60 seconds. What is its power?',
-    questionSubtitle: 'Use P = E ÷ t',
-    options: ['50 W', '180000 W', '0.02 W', '3060 W'],
-    correctAnswer: 0,
-    keywords: ['power', 'P = E/t', 'energy', 'time', 'watts', 'joules per second', 'rate', 'divide'],
-    sentenceStarters: ['Using P = E ÷ t, I divide...', 'Power is the rate of energy transfer, so...', 'P = 3000 ÷ 60 = ...', 'The unit of power is the watt (W), which means...', 'A watt is one joule per second, so...'],
+    question: 'A car engine exerts a driving force of 4000 N while the car travels at 20 m/s. What is the engine\'s power output?',
+    questionSubtitle: 'Use P = F × v',
+    options: ['200 W', '80 000 W', '4020 W', '200 000 W'],
+    correctAnswer: 1,
+    keywords: ['power', 'P = E/t', 'P = Fv', 'force', 'velocity', 'watts', 'joules per second', 'rate', 'engine power'],
+    sentenceStarters: ['Using P = Fv, I multiply...', 'P = 4000 × 20 = ...', 'Power is the rate of energy transfer, so...', 'P = Fv applies when a constant force moves an object at constant speed...', 'The unit of power is the watt (W), where 1 W = ...'],
     modelAnswers: [
-      'Using P = E ÷ t, I divide **3000 J by 60 s to get P = 50 W**.',
-      'Power is the rate of energy transfer, so **P = 3000 ÷ 60 = 50 W  -  it transfers 50 joules every second**.',
-      'P = 3000 ÷ 60 = **50 W**.',
-      'The unit of power is the watt (W), which means **one joule transferred per second  -  this device transfers 50 J/s**.',
-      'A watt is one joule per second, so **50 W means 50 joules are transferred every second**.',
+      'Using P = Fv, I multiply **4000 N × 20 m/s = 80 000 W (80 kW)**.',
+      'P = 4000 × 20 = **80 000 W**.',
+      'Power is the rate of energy transfer, so **P = Fv gives the rate at which the engine does work against resistive forces**.',
+      'P = Fv applies when a constant force moves an object at constant speed — **in this case the engine overcomes air resistance at 20 m/s**.',
+      'The unit of power is the watt (W), where **1 W = 1 J/s — so this engine transfers 80 000 joules every second**.',
     ],
-    misconception: 'Power and energy are not the same quantity.',
-    concept: 'P = 3000 ÷ 60 = 50 W. Power measures the rate of energy transfer, not total energy. A 50 W device uses energy more slowly than a 1000 W device.',
+    misconception: 'P = Fv only applies when the object moves at constant velocity (resultant force = 0). If accelerating, the engine power goes into both KE and overcoming resistance.',
+    concept: 'P = Fv = 4000 × 20 = 80 000 W = 80 kW. This equation is equivalent to P = W/t because W = Fd and v = d/t, so P = Fd/t = Fv. Use P = E/t for energy; P = Fv for forces and speed.',
   },
   energy_resources: {
     id: 'energy_resources', module: 'Energy', moduleColor: C, course: 'combined',
-    title: 'Energy Resources', subtitle: 'Renewable vs Non-Renewable',
-    description: 'Renewable resources (solar, wind, tidal, hydroelectric, geothermal, wave, biomass) are replenished naturally and produce little/no CO₂. Non-renewable resources (coal, oil, gas, nuclear) will eventually run out. Each has advantages and disadvantages for reliability, environmental impact and cost.',
+    title: 'Energy Resources', subtitle: 'Renewable vs Non-Renewable — Evaluate for 6 Marks',
+    description: 'Renewable resources (solar, wind, tidal, hydroelectric, geothermal, wave, biomass) are replenished naturally and produce little/no CO₂ during operation. Non-renewable resources (coal, oil, gas, nuclear) will eventually run out. Key criteria for evaluation: Reliability — fossil fuels and nuclear provide continuous (base-load) power; solar, wind, wave and tidal are intermittent (weather/tide-dependent). Environmental impact — fossil fuels release CO₂ (global warming) and pollutants; nuclear produces radioactive waste; renewables have low carbon emissions but visual/habitat impact. Cost — fossil fuel and nuclear plants have high setup and decommissioning costs; solar/wind have high initial cost but near-zero fuel costs. Land/resource use — wind and solar farms require large areas; hydroelectric floods valleys. Social factors — energy security (not dependent on imports), local employment. A 6-mark evaluate answer must weigh at least two criteria, reach a reasoned conclusion, and acknowledge trade-offs.',
     lessonVisual: EnergyResourcesLesson, ideaVisual: EnergyResourcesIdea, realityVisual: EnergyResourcesReality,
     question: 'Which energy resource is most reliable for continuous electricity generation?',
     questionSubtitle: 'Think about which resources are not weather-dependent',
     options: ['Solar panels', 'Wind turbines', 'Nuclear power station', 'Wave power'],
     correctAnswer: 2,
-    keywords: ['renewable', 'non-renewable', 'intermittent', 'nuclear', 'solar', 'wind', 'reliability', 'weather-dependent'],
-    sentenceStarters: ['The most reliable resource is... because...', 'Renewable resources are intermittent, which means...', 'Nuclear power stations are reliable because...', 'Solar and wind are not reliable for continuous generation because...', 'Weather-dependent resources cannot provide... electricity...'],
+    keywords: ['renewable', 'non-renewable', 'intermittent', 'base-load', 'nuclear', 'solar', 'wind', 'reliability', 'weather-dependent', 'CO₂', 'radioactive waste', 'evaluate', 'trade-off', 'environmental impact', 'cost'],
+    sentenceStarters: ['Nuclear is reliable because...however a disadvantage is...', 'Solar is renewable and produces no CO₂, but...', 'To evaluate, I must consider reliability, cost and environmental impact...', 'Wind power is renewable but intermittent, which means...', 'On balance, [resource] is most suitable for [purpose] because...'],
     modelAnswers: [
-      'The most reliable resource is **nuclear** because **it generates electricity continuously, independent of weather conditions**.',
-      'Renewable resources are intermittent, which means **their output varies with weather  -  solar needs sunshine, wind needs wind**.',
-      'Nuclear power stations are reliable because **they burn fuel (uranium) to generate steam regardless of the weather**.',
-      'Solar and wind are not reliable for continuous generation because **they depend on weather, which is unpredictable**.',
-      'Weather-dependent resources cannot provide **continuous electricity  -  they only generate when conditions are suitable**.',
+      'Nuclear is reliable because **it generates continuously regardless of weather — however it produces radioactive waste that remains hazardous for thousands of years**.',
+      'Solar is renewable and produces no CO₂, but **it is intermittent — output depends on sunshine, so it cannot guarantee continuous supply without storage**.',
+      'To evaluate, I must consider reliability, cost and environmental impact — **nuclear scores high on reliability and low on carbon, but waste and decommissioning costs are significant**.',
+      'Wind power is renewable but intermittent, which means **it cannot be used as the sole source of electricity — it works best combined with base-load sources**.',
+      'On balance, for a country prioritising low-carbon base-load power, **nuclear is most suitable; for reducing running costs and carbon over time, a mix of renewables is preferable — but no single resource is ideal for all criteria**.',
     ],
-    misconception: 'Renewable does not automatically mean most practical for all uses.',
-    concept: 'Nuclear and fossil fuel power stations can generate electricity continuously regardless of weather. Renewables like solar and wind are intermittent - their output varies with conditions.',
+    misconception: '"Renewable" does not mean "reliable" — solar and wind are renewable but intermittent. "Clean" energy still has environmental costs (manufacturing, land use, waste).',
+    concept: 'Evaluate = weigh evidence for AND against, then reach a reasoned conclusion. Grade 9 answers cover at least two criteria (e.g. reliability AND environmental impact), acknowledge trade-offs, and justify a conclusion rather than just listing facts.',
   },
 }

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Atom, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock } from 'lucide-react'
+import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
 import { useAuth } from '../context/AuthContext'
@@ -125,22 +126,14 @@ export default function SettingsScreen() {
 
   const [signingOut, setSigningOut] = useState(false)
 
-  const handleSignOut = async () => {
+  const handleSignOut = () => {
     setSigningOut(true)
-    try {
-      // Keep progress/stats/onboarding — only clear session-specific data
-      localStorage.removeItem('neurophysics_profile')
-      await secureRemove('mamo_api_key')
-      // signOut() calls setUser(null) immediately, which makes AppShell's
-      // `if (!user && !isPublic)` guard redirect to /auth automatically.
-      // Do NOT call navigate() here — it races with the state update and
-      // causes AppShell to bounce the user back to /
-      await signOut()
-    } catch (e) {
-      console.error('Sign out error:', e)
-      setSigningOut(false)
-    }
-    // signingOut clears itself when the component unmounts (AppShell redirects)
+    // Clear local session data synchronously
+    localStorage.removeItem('neurophysics_profile')
+    try { secureRemove('mamo_api_key') } catch {}
+    // signOut() calls setUser(null) synchronously → AppShell redirects to /auth.
+    // Fire-and-forget: don't await so a slow/offline Supabase call never blocks.
+    signOut().catch(console.error)
   }
   const [apiKey, setApiKey] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
@@ -375,7 +368,7 @@ export default function SettingsScreen() {
           onToggle: toggleTTS,
         },
         {
-          icon: Atom,
+          icon: AtomIcon,
           label: 'Hide Mamo Button',
           hint: 'Removes the floating AI tutor button if it\'s distracting',
           on: !!prefs.hideMamo,
@@ -544,7 +537,7 @@ export default function SettingsScreen() {
           transition={{ delay: 0.1 }}
         >
           <div className="flex items-center gap-2 mb-3">
-            <Atom size={16} color="#6366f1" />
+            <AtomIcon size={16} color="#6366f1" />
             <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Mamo AI Key</div>
           </div>
           <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>

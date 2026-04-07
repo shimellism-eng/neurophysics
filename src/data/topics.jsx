@@ -4,9 +4,10 @@ import { MATTER_TOPICS } from './topics-matter'
 import { FORCES_TOPICS } from './topics-forces'
 import { WAVES_TOPICS } from './topics-waves'
 import {
-  Zap, Battery, Flame, Wind, Atom, Activity,
+  Zap, Battery, Flame, Wind, Activity,
   Waves, Radio, Magnet, Globe2
 } from 'lucide-react'
+import AtomIcon from '../components/AtomIcon'
 
 export const TOPICS = {
   ...ENERGY_TOPICS,
@@ -58,7 +59,7 @@ export const MODULES = [
   {
     name: 'Atomic Structure',
     color: '#e879f9',
-    icon: Atom,
+    icon: AtomIcon,
     topics: [
       'atomic_structure',
       'atomic_model_history',
@@ -100,6 +101,7 @@ export const MODULES = [
       'total_internal_reflection',
       'sound_ultrasound',
       'em_spectrum',
+      'visible_light',
       'lenses',
       'black_body',
     ],

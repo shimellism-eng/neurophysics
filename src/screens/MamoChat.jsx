@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect } from 'react'
-import { Send, Atom, Sparkles, Key, ArrowLeft, RotateCcw } from 'lucide-react'
+import { Send, Sparkles, Key, ArrowLeft, RotateCcw } from 'lucide-react'
+import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet } from '../utils/secureStorage'
 
@@ -156,7 +157,7 @@ export default function MamoChat() {
           className="w-10 h-10 rounded-[14px] flex items-center justify-center shrink-0"
           style={{ background: 'linear-gradient(135deg, #6366f120, #c084fc20)', border: '1px solid #6366f150' }}
         >
-          <Atom size={20} color="#6366f1" />
+          <AtomIcon size={20} color="#6366f1" />
         </div>
         <div className="flex-1">
           <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>

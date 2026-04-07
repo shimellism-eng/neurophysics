@@ -1607,6 +1607,129 @@ function StellarEvolutionReality() {
   )
 }
 
+// ─── 45. Visible Light ───────────────────────────────────────────────────────
+function VisibleLightLesson() {
+  const [mode, setMode] = useState('reflection')
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
+      <div className="flex gap-2">
+        {[['reflection', 'Reflection'], ['colour', 'Colour']].map(([val, label]) => (
+          <button key={val} onClick={() => setMode(val)}
+            className="px-3 py-1 rounded-[8px] text-xs font-semibold"
+            style={{ background: mode === val ? `${WC}22` : '#1d293d', color: mode === val ? WC : '#a8b8cc', border: `1px solid ${mode === val ? WC : '#1d293d'}` }}>
+            {label}
+          </button>
+        ))}
+      </div>
+      {mode === 'reflection' ? (
+        <svg width="260" height="170" viewBox="0 0 260 170">
+          {/* Specular reflection */}
+          <text x="10" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Specular (smooth surface)</text>
+          <rect x="10" y="18" width="105" height="10" rx="2" fill="#1d293d" stroke="#4a5a72" strokeWidth="1" />
+          {[0,1,2,3].map(i => (
+            <g key={i}>
+              <line x1={20 + i*26} y1="36" x2={32 + i*26} y2="18" stroke={WC} strokeWidth="1.5" strokeLinecap="round" />
+              <line x1={32 + i*26} y1="18" x2={44 + i*26} y2="36" stroke={WC} strokeWidth="1.5" strokeLinecap="round" />
+            </g>
+          ))}
+          <text x="62" y="52" textAnchor="middle" fill={WC} fontSize={7}>parallel rays → single direction</text>
+          {/* Diffuse reflection */}
+          <text x="140" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Diffuse (rough surface)</text>
+          <path d="M140,28 Q147,22 154,28 Q161,22 168,28 Q175,22 182,28 Q189,22 196,28 Q203,22 210,28 Q217,22 224,28 Q231,22 238,28" fill="none" stroke="#4a5a72" strokeWidth="1.5" />
+          {[0,1,2,3,4].map(i => {
+            const cx = 148 + i * 21
+            const angles = [-40, -20, 0, 20, 40]
+            return (
+              <g key={i}>
+                <line x1={cx} y1="46" x2={cx} y2="28" stroke={WC} strokeWidth="1.5" strokeLinecap="round" />
+                <line x1={cx} y1="28" x2={cx + Math.sin(angles[i] * Math.PI / 180) * 16} y2={28 - Math.cos(angles[i] * Math.PI / 180) * 16} stroke={WC} strokeWidth="1.5" strokeLinecap="round" opacity={0.7 + i*0.05} />
+              </g>
+            )
+          })}
+          <text x="192" y="52" textAnchor="middle" fill={WC} fontSize={7}>scattered rays → many directions</text>
+          {/* Rule box */}
+          <rect x="10" y="60" width="240" height="20" rx="4" fill={`${WC}12`} stroke={`${WC}40`} strokeWidth="1" />
+          <text x="130" y="73" textAnchor="middle" fill={WC} fontSize={8} fontWeight="bold">Angle of incidence = Angle of reflection (both from normal)</text>
+          {/* Filter demo */}
+          <text x="10" y="100" fill="#a8b8cc" fontSize={8} fontWeight="bold">Colour filter</text>
+          <defs>
+            <linearGradient id="whiteLight" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stopColor="#7c3aed" /><stop offset="25%" stopColor="#2b7fff" />
+              <stop offset="50%" stopColor="#00bc7d" /><stop offset="75%" stopColor="#fdc700" />
+              <stop offset="100%" stopColor="#ef4444" />
+            </linearGradient>
+          </defs>
+          <rect x="10" y="104" width="70" height="16" rx="2" fill="url(#whiteLight)" />
+          <text x="45" y="115" textAnchor="middle" fill="#fff" fontSize={7} fontWeight="bold">white light</text>
+          <rect x="90" y="100" width="20" height="24" rx="3" fill="#ef444440" stroke="#ef4444" strokeWidth="1.5" />
+          <text x="100" y="115" textAnchor="middle" fill="#ef4444" fontSize={7} fontWeight="bold">RED</text>
+          <text x="100" y="123" textAnchor="middle" fill="#ef4444" fontSize={6}>filter</text>
+          <rect x="120" y="104" width="60" height="16" rx="2" fill="#ef4444" />
+          <text x="150" y="115" textAnchor="middle" fill="#fff" fontSize={7} fontWeight="bold">red light only</text>
+          <line x1="80" y1="112" x2="90" y2="112" stroke="#cad5e2" strokeWidth="1.5" markerEnd="url(#arr)" />
+          <line x1="110" y1="112" x2="120" y2="112" stroke="#cad5e2" strokeWidth="1.5" />
+          <text x="130" y="145" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>Filter absorbs all wavelengths except red — transmits red</text>
+          <text x="130" y="156" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>Blue object under red light → absorbs red → looks BLACK</text>
+        </svg>
+      ) : (
+        <svg width="260" height="170" viewBox="0 0 260 170">
+          <text x="10" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Why objects have colour</text>
+          {[
+            { label: 'Red object', absorbs: ['violet','blue','green','yellow'], reflects: ['red'], fill: '#ef4444', x: 10 },
+            { label: 'Blue object', absorbs: ['red','orange','green','yellow'], reflects: ['blue'], fill: '#2b7fff', x: 90 },
+            { label: 'White object', absorbs: [], reflects: ['all'], fill: '#f8fafc', x: 170 },
+          ].map((obj, oi) => (
+            <g key={oi}>
+              <rect x={obj.x} y="20" width="65" height="28" rx="4" fill={obj.fill} stroke="#ffffff30" strokeWidth="1" />
+              <text x={obj.x + 32} y="38" textAnchor="middle" fill={oi === 2 ? '#0b1121' : '#fff'} fontSize={8} fontWeight="bold">{obj.label}</text>
+              <text x={obj.x + 32} y="60" textAnchor="middle" fill="#a8b8cc" fontSize={7}>reflects: {obj.reflects.join(', ')}</text>
+              <text x={obj.x + 32} y="70" textAnchor="middle" fill="#ef4444" fontSize={7}>absorbs: {obj.absorbs.length > 0 ? 'others' : 'nothing'}</text>
+            </g>
+          ))}
+          <rect x="10" y="80" width="240" height="14" rx="3" fill="#0b1121" stroke="#ef444450" strokeWidth="1" />
+          <text x="130" y="90" textAnchor="middle" fill="#ef4444" fontSize={7.5} fontWeight="bold">Black object absorbs ALL wavelengths — reflects nothing</text>
+          <rect x="10" y="100" width="240" height="14" rx="3" fill="#f8fafc15" stroke="#f8fafc40" strokeWidth="1" />
+          <text x="130" y="110" textAnchor="middle" fill="#f8fafc" fontSize={7.5} fontWeight="bold">White object reflects ALL wavelengths equally</text>
+          <text x="10" y="130" fill="#a8b8cc" fontSize={7.5} fontWeight="bold">Transparent vs Opaque vs Translucent:</text>
+          <text x="10" y="142" fill="#cad5e2" fontSize={7}>Transparent: lets light through (clear glass) · Translucent: partial (frosted glass)</text>
+          <text x="10" y="154" fill="#cad5e2" fontSize={7}>Opaque: no light passes through · colour = wavelengths reflected</text>
+        </svg>
+      )}
+    </div>
+  )
+}
+function VisibleLightIdea() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
+      <div className="w-full p-3 rounded-[10px]" style={{ background: '#2b7fff15', border: '1px solid #2b7fff40' }}>
+        <div className="text-xs font-bold mb-1" style={{ color: '#2b7fff' }}>❌ Common mistake</div>
+        <div className="text-xs" style={{ color: '#cad5e2' }}>
+          "A blue object under red light looks blue"
+        </div>
+        <div className="text-xs mt-1" style={{ color: '#ef4444' }}>
+          ✗ Wrong — a blue object absorbs red light. No blue light to reflect → looks <strong style={{ color: '#ef4444' }}>black</strong>.
+        </div>
+      </div>
+      <div className="w-full p-3 rounded-[10px]" style={{ background: '#10b98115', border: '1px solid #10b98140' }}>
+        <div className="text-xs font-bold mb-1" style={{ color: '#10b981' }}>✓ Remember</div>
+        <div className="text-xs" style={{ color: '#cad5e2' }}>
+          An object can only reflect wavelengths that are present in the light hitting it. If the light source lacks that wavelength, the object cannot reflect it.
+        </div>
+      </div>
+      <IdeaCaption>Colour = reflected wavelengths. No matching wavelength in source → object looks black</IdeaCaption>
+    </div>
+  )
+}
+function VisibleLightReality() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-4">
+      <RealityBadge emoji="🎭" title="Stage lighting" desc="Lighting designers use coloured filters to control which objects are visible on stage — a red costume looks black under blue stage lighting." color={WC} />
+      <RealityBadge emoji="🔬" title="Microscopy" desc="Scientists use filters to block certain wavelengths, making specific structures fluoresce or stand out — specular reflection from smooth cell surfaces gives clean images." color={WC} />
+      <RealityBadge emoji="🌈" title="Everyday colour" desc="Grass looks green because chlorophyll absorbs red and blue light and reflects green. In red light only, grass would look black." color={WC} />
+    </div>
+  )
+}
+
 // ─── 44. Red-shift & Big Bang ────────────────────────────────────────────────
 function RedshiftLesson() {
   // Animate absorption lines shifting right over time
@@ -1793,66 +1916,66 @@ export const WAVES_TOPICS = {
   },
   sound_ultrasound: {
     id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only',
-    title: 'Sound Waves & Ultrasound', subtitle: 'Hearing Range, Echoes & Medical Imaging',
-    description: 'Sound travels as longitudinal waves - faster in denser media (faster in solids than liquids than gases). Human hearing: 20 Hz to 20 kHz. Ultrasound (>20 kHz) cannot be heard by humans. Ultrasound is partially reflected at boundaries between media - used in medical scanning and flaw detection in materials.',
+    title: 'Sound Waves & Ultrasound', subtitle: 'Hearing Range, Seismic Waves & Medical Imaging',
+    description: 'Sound travels as longitudinal waves - faster in denser media (solids > liquids > gases). Human hearing range: 20 Hz to 20 kHz — the ear drum and inner ear structures only vibrate efficiently within this range; very low or very high frequencies do not produce a response. Ultrasound (>20 kHz) is partially reflected at media boundaries — used in medical imaging and flaw detection. Seismic P-waves are longitudinal and travel through both solids and liquids. Seismic S-waves are transverse and cannot travel through liquids — because S-waves do not reach the far side of Earth, this is evidence that Earth has a liquid outer core. Echo sounding uses high-frequency sound to measure water depth: depth = (speed × time) ÷ 2.',
     lessonVisual: SoundWavesLesson, ideaVisual: SoundWavesIdea, realityVisual: SoundWavesReality,
     question: 'Why does sound travel faster in steel than in air?',
     questionSubtitle: 'Think about particle spacing',
     options: ['Steel is hotter', 'Particles in steel are closer together and can transmit vibrations faster', 'Steel is more elastic', 'Air absorbs sound'],
     correctAnswer: 1,
-    keywords: ['sound speed', 'particles', 'closer together', 'solid medium', 'vibrations', 'transmit', 'stiffness', 'density'],
-    sentenceStarters: ['Sound travels faster in steel because particles are closer together...', 'In a solid, particles are closer together so they can transmit vibrations...', 'Sound requires a medium to travel because it is a mechanical wave...', 'The speed of sound is faster in solids than liquids than gases because...', 'Closely packed particles in steel can transmit vibrations more quickly because...'],
+    keywords: ['sound speed', 'particles', 'closer together', 'solid medium', 'vibrations', 'transmit', 'seismic P-wave', 'seismic S-wave', 'P-wave travels through liquid', 'S-wave cannot travel through liquid', 'liquid outer core', 'echo sounding', 'ultrasound boundary', 'hearing range', 'ear drum', '20 Hz', '20 kHz'],
+    sentenceStarters: ['Sound travels faster in steel because particles are closer together...', 'In a solid, particles are closer together so they can transmit vibrations...', 'S-waves cannot travel through liquids, so they do not reach the far side of Earth, which tells us...', 'P-waves are longitudinal seismic waves that travel through both solids and liquids...', 'The human ear can only detect frequencies between 20 Hz and 20 kHz because...'],
     modelAnswers: [
       'Sound travels faster in steel because particles are closer together **and can pass on vibrations more quickly**.',
       'In a solid, particles are closer together so they can transmit vibrations **more rapidly than in a gas like air**.',
-      'Sound requires a medium to travel because it is a mechanical wave **that needs particles to vibrate  -  it cannot travel through a vacuum**.',
-      'The speed of sound is faster in solids than liquids than gases because **particle spacing decreases from gas to liquid to solid**.',
-      'Closely packed particles in steel can transmit vibrations more quickly because **the inter-particle forces are stronger and the distances between particles are smaller**.',
+      'S-waves cannot travel through liquids, so they do not reach the far side of Earth, which tells us **the outer core of the Earth is liquid**.',
+      'P-waves are longitudinal seismic waves that travel through both solids and liquids, **while S-waves are transverse and are blocked by the liquid outer core**.',
+      'The human ear can only detect frequencies between 20 Hz and 20 kHz because **the ear drum and inner ear structures only vibrate efficiently within this limited range**.',
     ],
-    misconception: 'Sound does NOT travel faster in less dense media - the opposite is true.',
-    concept: 'Sound travels by passing vibrations between particles. In solids, particles are very close together, so vibrations pass between them very quickly. Air particles are far apart, so vibrations take longer to transfer - sound is slower.',
+    misconception: 'Sound does NOT travel faster in less dense media - the opposite is true. S-waves not reaching the far side of Earth is key evidence for a liquid outer core.',
+    concept: 'Sound travels by passing vibrations between particles — faster in solids (closer particles). P-waves (longitudinal) pass through solid and liquid. S-waves (transverse) are blocked by liquid — evidence for liquid outer core. Human hearing 20 Hz–20 kHz; ultrasound >20 kHz. Echo sounding depth = (speed × time) ÷ 2.',
   },
   em_spectrum: {
     id: 'em_spectrum', module: 'Waves', moduleColor: WC, course: 'combined',
-    title: 'The Electromagnetic Spectrum', subtitle: 'Types, Properties & Applications',
-    description: 'All EM waves are transverse and travel at 3×10⁸ m/s in a vacuum. From low to high frequency: radio, microwave, infrared, visible light, ultraviolet, X-rays, gamma. Higher frequency → shorter wavelength → more energy → more hazardous. Ionising radiation (UV, X-rays, gamma) can damage DNA.',
+    title: 'The Electromagnetic Spectrum', subtitle: 'Types, Properties, Applications & Hazards',
+    description: 'All EM waves are transverse and travel at 3×10⁸ m/s in a vacuum. From low to high frequency: radio, microwave, infrared, visible light, ultraviolet, X-rays, gamma. Higher frequency → shorter wavelength → more energy → more hazardous. Ionising radiation (UV, X-rays, gamma) can damage DNA and cause cancer; radiation dose (measured in sieverts, Sv) quantifies the risk — 1000 mSv = 1 Sv. Radio waves are produced by oscillating currents in electrical circuits; when absorbed by a conductor, they induce an alternating current at the same frequency.',
     lessonVisual: EMSpectrumLesson, ideaVisual: EMSpectrumIdea, realityVisual: EMSpectrumReality,
     question: 'Which type of EM radiation is used to sterilise surgical equipment?',
     questionSubtitle: 'Think about which type is most ionising and energetic',
     options: ['Radio waves', 'Infrared', 'Gamma rays', 'Microwaves'],
     correctAnswer: 2,
-    keywords: ['gamma rays', 'electromagnetic spectrum', 'sterilisation', 'ionising radiation', 'wavelength', 'frequency', 'kills bacteria', 'penetrating'],
-    sentenceStarters: ['Gamma rays are used for sterilisation because they are highly ionising...', 'Gamma radiation has the shortest wavelength and highest frequency...', 'Sterilisation requires radiation that can kill microorganisms by...', 'The EM spectrum in order of increasing frequency: radio, microwave, IR, visible, UV, X-ray, gamma...', 'Gamma rays can penetrate packaging and destroy bacteria by...'],
+    keywords: ['gamma rays', 'electromagnetic spectrum', 'sterilisation', 'ionising radiation', 'wavelength', 'frequency', 'kills bacteria', 'penetrating', 'radiation dose', 'sieverts', 'radio waves inducing current', 'oscillating circuit'],
+    sentenceStarters: ['Gamma rays are used for sterilisation because they are highly ionising...', 'Gamma radiation has the shortest wavelength and highest frequency...', 'Radiation dose is measured in sieverts — a higher dose means a greater risk of harm because...', 'Radio waves are produced by oscillating currents, and when absorbed they induce...', 'Sterilisation requires radiation that can kill microorganisms by...'],
     modelAnswers: [
       'Gamma rays are used for sterilisation because they are **highly ionising and can penetrate packaging to kill microorganisms**.',
       'Gamma radiation has the shortest wavelength and highest frequency **of all EM radiation, making it very penetrating**.',
+      'Radiation dose is measured in sieverts — a higher dose means a greater risk of harm because **more ionising radiation damages more DNA and body tissue**.',
+      'Radio waves are produced by oscillating currents, and when absorbed they induce **an alternating current at the same frequency as the radio wave in the receiving conductor**.',
       'Sterilisation requires radiation that can kill microorganisms by **ionising and destroying their DNA**.',
-      'The EM spectrum in order of increasing frequency: **radio, microwave, infrared, visible, ultraviolet, X-ray, gamma**.',
-      'Gamma rays can penetrate packaging and destroy bacteria by **ionising their DNA, making gamma ideal for medical sterilisation**.',
     ],
-    misconception: 'Visible light is only a tiny fraction of the electromagnetic spectrum.',
-    concept: 'Gamma rays have the highest frequency and energy in the EM spectrum - sufficient to kill bacteria and sterilise equipment. They are also used in cancer treatment (radiotherapy). The visible spectrum (400–700 nm) is a very narrow band.',
+    misconception: 'Visible light is only a tiny fraction of the electromagnetic spectrum. Radio waves carry very little energy per photon — they are non-ionising.',
+    concept: 'Gamma rays have the highest frequency and energy — sufficient to kill bacteria and sterilise equipment. Radiation dose (sieverts) measures harm risk. Radio waves are generated by oscillating circuits and induce AC when absorbed. The visible spectrum (400–700 nm) is a very narrow band.',
   },
   lenses: {
     id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics-only',
-    title: 'Lenses & Optics', subtitle: 'Convex, Concave, Ray Diagrams & Magnification',
-    description: 'Lenses refract (bend) light. Convex (converging) lenses bring parallel rays to a focal point - can produce real or virtual images. Concave (diverging) lenses always produce virtual, upright, diminished images. Magnification = image height ÷ object height = image distance ÷ object distance.',
+    title: 'Lenses & Optics', subtitle: 'Convex, Concave, Magnification & Lens Power',
+    description: 'Lenses refract (bend) light. Convex (converging) lenses bring parallel rays to a focal point — can produce real inverted images (object beyond focal point) or virtual upright magnified images (object within focal point, like a magnifying glass). Concave (diverging) lenses always produce virtual, upright, diminished images. Magnification = image height ÷ object height = image distance ÷ object distance (no units). Power of a lens: P = 1/f, where f is the focal length in metres — power is measured in dioptres (D). A shorter focal length = more powerful lens = greater bending of light.',
     lessonVisual: LensesLesson, ideaVisual: LensesIdea, realityVisual: LensesReality,
-    question: 'A convex lens produces an image that is 6 cm tall. The original object is 2 cm tall. What is the magnification?',
-    questionSubtitle: 'Magnification = image height ÷ object height',
-    options: ['0.33', '3', '4', '8'],
+    question: 'A convex lens has a focal length of 0.25 m. What is its power?',
+    questionSubtitle: 'Use P = 1/f',
+    options: ['0.25 D', '4 D', '25 D', '2.5 D'],
     correctAnswer: 1,
-    keywords: ['magnification', 'image height', 'object height', 'M = image/object', 'convex lens', 'real image', 'virtual image', 'focal point'],
-    sentenceStarters: ['Magnification = image height ÷ object height...', 'M = 6 ÷ 2 = ...', 'A magnification greater than 1 means the image is larger than the object...', 'A convex lens converges light rays to a focal point...', 'Magnification has no units because it is a ratio...'],
+    keywords: ['magnification', 'power of a lens', 'P = 1/f', 'dioptres', 'focal length', 'convex lens', 'concave lens', 'real image', 'virtual image', 'focal point', 'image height', 'object height'],
+    sentenceStarters: ['Using P = 1/f, the power = ...', 'P = 1 ÷ 0.25 = ...', 'Power is measured in dioptres (D), where 1 D = ...', 'A shorter focal length means a more powerful lens because...', 'Magnification = image height ÷ object height = ...'],
     modelAnswers: [
-      'Magnification = image height ÷ object height, **so M = 6 ÷ 2 = 3**.',
-      'M = 6 ÷ 2 = **3**.',
-      'A magnification greater than 1 means the image is **larger than the object  -  this lens magnifies by ×3**.',
-      'A convex lens converges light rays **to a focal point  -  it can produce magnified images**.',
-      'Magnification has no units because it is **a ratio  -  it compares the size of image to object**.',
+      'Using P = 1/f, the power = **1 ÷ 0.25 = 4 D (dioptres)**.',
+      'P = 1 ÷ 0.25 = **4 D**.',
+      'Power is measured in dioptres (D), where **1 D = 1 m⁻¹ — a lens with f = 1 m has power 1 D**.',
+      'A shorter focal length means a more powerful lens because **it bends parallel rays more steeply to converge them sooner**.',
+      'Magnification = image height ÷ object height — **a magnification of 3 means the image is three times the size of the object**.',
     ],
-    misconception: 'Concave lenses always produce virtual images - never real inverted ones.',
-    concept: 'Magnification = 6 ÷ 2 = 3×. Convex lenses can produce real inverted images (when object is beyond focal point) or virtual upright images (when object is within focal point, like a magnifying glass). Concave lenses always diverge light → always virtual.',
+    misconception: 'Concave lenses always produce virtual images — never real. A higher power lens has a shorter (not longer) focal length.',
+    concept: 'P = 1/f = 1/0.25 = 4 D. Power measures how strongly the lens bends light. Magnification = image/object height (no units). Convex: real image when object > f; virtual magnified when object < f. Concave: always virtual.',
   },
   black_body: {
     id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics-only',
@@ -1898,24 +2021,24 @@ export const WAVES_TOPICS = {
   },
   motor_effect: {
     id: 'motor_effect', module: 'Magnetism', moduleColor: MC, course: 'combined',
-    title: 'The Motor Effect', subtitle: "F = BIL and Fleming's Left Hand Rule",
-    description: 'A current-carrying conductor in a magnetic field experiences a force (the motor effect). F = BIL (force = magnetic flux density × current × length). Fleming\'s Left Hand Rule: thumb = force/motion, index = magnetic field (N to S), middle finger = current direction. Used in electric motors and loudspeakers.',
+    title: 'The Motor Effect', subtitle: "F = BIL, Fleming's Left Hand Rule & Loudspeakers",
+    description: 'A current-carrying conductor in a magnetic field experiences a force (the motor effect). F = BIL (force = magnetic flux density × current × length). Fleming\'s Left Hand Rule: thumb = force/motion, index = magnetic field (N to S), middle finger = current direction. In a loudspeaker, a varying AC current flows through a voice coil inside a permanent magnet — the changing force moves the coil and attached cone in and out, creating pressure variations in air that we hear as sound. Reversing current reverses the force direction, enabling both compressions and rarefactions.',
     lessonVisual: MotorEffectLesson, ideaVisual: MotorEffectIdea, realityVisual: MotorEffectReality,
     question: 'What happens to the force on a current-carrying conductor if the current is doubled?',
     questionSubtitle: 'Use F = BIL',
     options: ['Force halves', 'Force stays the same', 'Force doubles', 'Force quadruples'],
     correctAnswer: 2,
-    keywords: ['current-carrying conductor', 'magnetic field', 'force', 'F = BIL', 'current', 'directly proportional', 'motor effect', 'magnetic flux density'],
-    sentenceStarters: ['Using F = BIL, if I doubles then F...', 'Force on a conductor is directly proportional to current...', 'F = B × I × L, so doubling I means F...', 'The motor effect occurs when a current-carrying conductor is placed in a...', 'Force is directly proportional to current, so doubling current...'],
+    keywords: ['current-carrying conductor', 'magnetic field', 'force', 'F = BIL', 'current', 'directly proportional', 'motor effect', 'magnetic flux density', 'loudspeaker', 'voice coil', 'cone', 'pressure variations', 'sound'],
+    sentenceStarters: ['Using F = BIL, if I doubles then F...', 'Force on a conductor is directly proportional to current...', 'In a loudspeaker, the varying current in the voice coil creates a changing force that...', 'The motor effect occurs when a current-carrying conductor is placed in a...', 'A loudspeaker converts electrical energy to sound by...'],
     modelAnswers: [
       'Using F = BIL, if I doubles then F **doubles  -  force is directly proportional to current**.',
       'Force on a conductor is directly proportional to current, **so doubling current doubles the force**.',
-      'F = B × I × L, so doubling I means F **increases by a factor of 2**.',
+      'In a loudspeaker, the varying current in the voice coil creates a changing force that **moves the cone in and out, creating pressure variations in air that we hear as sound**.',
       'The motor effect occurs when a current-carrying conductor is placed in a **magnetic field  -  it experiences a force**.',
-      'Force is directly proportional to current, so doubling current **doubles the force on the conductor**.',
+      'A loudspeaker converts electrical energy to sound by **using the motor effect: AC current in a coil creates varying forces, vibrating a cone to produce sound waves**.',
     ],
     misconception: 'Force is zero when current is parallel to the magnetic field, not maximum.',
-    concept: 'F = BIL - force is directly proportional to current. Doubling I doubles F. Force is maximum when current is perpendicular (90°) to the field, and zero when parallel (0°). This is why motors rotate - the direction of force changes as the coil turns.',
+    concept: 'F = BIL - force is directly proportional to current. Doubling I doubles F. Force is maximum when current is perpendicular (90°) to the field. Loudspeaker: AC current in voice coil → alternating force → cone vibration → sound waves. Microphone does the reverse (generator effect).',
   },
   electromagnetism: {
     id: 'electromagnetism', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'combined',
@@ -1940,107 +2063,128 @@ export const WAVES_TOPICS = {
   },
   em_induction: {
     id: 'em_induction', module: 'Magnetism', moduleColor: MC, course: 'physics-only',
-    title: 'EM Induction & Transformers', subtitle: 'Generators, Alternators & Vp/Vs = Np/Ns',
-    description: 'Moving a conductor relative to a magnetic field (or changing the field) induces a potential difference - the generator effect. Factors affecting induced pd: speed of movement, magnetic field strength, number of turns. Transformers use this principle with AC - they change voltage using the ratio of coil turns. National Grid uses high voltage to minimise energy losses (P = I²R).',
+    title: 'EM Induction & Transformers', subtitle: 'Generator Effect, Vp/Vs = Np/Ns & VpIp = VsIs',
+    description: 'Moving a conductor relative to a magnetic field (or changing the field) induces a potential difference — the generator effect. Factors affecting induced pd: speed of movement, magnetic field strength, number of turns. Transformers use AC to change voltage: Vp/Vs = Np/Ns. For a 100% efficient transformer, power in = power out: VpIp = VsIs. A microphone uses the generator effect: sound waves vibrate a coil in a magnetic field, inducing a current that mirrors the pressure wave — the reverse of a loudspeaker. National Grid uses high voltage (low current) to minimise energy losses (P = I²R).',
     lessonVisual: EMInductionLesson, ideaVisual: EMInductionIdea, realityVisual: EMInductionReality,
-    question: 'A transformer has 200 turns on the primary coil and 1000 turns on the secondary. If the primary voltage is 50V, what is the secondary voltage?',
-    questionSubtitle: 'Use Vp/Vs = Np/Ns',
-    options: ['10 V', '250 V', '200 V', '1000 V'],
+    question: 'A transformer steps up 25 V to 250 V. If the secondary current is 0.5 A, what is the primary current? (Assume 100% efficiency)',
+    questionSubtitle: 'Use VpIp = VsIs',
+    options: ['0.05 A', '5 A', '0.5 A', '50 A'],
     correctAnswer: 1,
-    keywords: ['transformer', 'turns ratio', 'Vp/Vs = Np/Ns', 'primary coil', 'secondary coil', 'step-up transformer', 'voltage', 'electromagnetic induction'],
-    sentenceStarters: ['Using Vp/Vs = Np/Ns, I rearrange to find Vs...', 'Vs = Vp × (Ns/Np) = 50 × (1000/200) = ...', 'This is a step-up transformer because the secondary has more turns...', 'The turns ratio Ns/Np = 1000/200 = 5...', 'Vs = 50 × 5 = ...'],
+    keywords: ['transformer', 'turns ratio', 'Vp/Vs = Np/Ns', 'VpIp = VsIs', 'primary coil', 'secondary coil', 'step-up transformer', 'transformer efficiency', 'microphone', 'generator effect', 'sound to electrical signal', 'electromagnetic induction'],
+    sentenceStarters: ['Using VpIp = VsIs, power in = power out, so Ip = ...', 'A 100% efficient transformer conserves power, so VpIp = VsIs gives...', 'A microphone uses the generator effect because...', 'The turns ratio Vp/Vs = Np/Ns means that stepping up voltage by 10× means...', 'In the National Grid, high voltage is used to minimise losses because...'],
     modelAnswers: [
-      'Using Vp/Vs = Np/Ns, I rearrange to find Vs = **Vp × (Ns/Np) = 50 × (1000/200) = 250 V**.',
-      'Vs = Vp × (Ns/Np) = 50 × (1000/200) = **250 V**.',
-      'This is a step-up transformer because the secondary has more turns, **so the secondary voltage is higher than the primary**.',
-      'The turns ratio Ns/Np = 1000/200 = **5  -  so the secondary voltage is 5× the primary voltage**.',
-      'Vs = 50 × 5 = **250 V**.',
+      'Using VpIp = VsIs, power in = power out, so Ip = **VsIs ÷ Vp = (250 × 0.5) ÷ 25 = 5 A**.',
+      'A 100% efficient transformer conserves power, so VpIp = VsIs gives **Ip = (250 × 0.5) ÷ 25 = 5 A**.',
+      'A microphone uses the generator effect because **sound waves vibrate a coil inside a magnetic field, inducing a current that mirrors the sound wave — the electrical signal matches the pressure variations**.',
+      'The turns ratio Vp/Vs = Np/Ns means that stepping up voltage by 10× means **the current is reduced by 10× (if 100% efficient), because power = VI must be conserved**.',
+      'In the National Grid, high voltage is used to minimise losses because **P = I²R, so lower current dramatically reduces the power wasted as heat in the cables**.',
     ],
-    misconception: 'Transformers require AC - they cannot work with DC.',
-    concept: 'Vs/Vp = Ns/Np → Vs = 50 × (1000/200) = 250 V. This is a step-up transformer. Transformers only work with AC because they need a changing magnetic flux to induce a current in the secondary coil. DC creates a constant field with no change in flux.',
+    misconception: 'Transformers require AC - they cannot work with DC. A 100% efficient transformer does not gain energy - it trades voltage for current proportionally.',
+    concept: 'Generator effect: moving conductor in field → induced pd. Transformer turns ratio: Vp/Vs = Np/Ns. Power conservation: VpIp = VsIs → Ip = (250 × 0.5) ÷ 25 = 5 A. Microphone = generator effect (sound → electricity). National Grid: high V, low I → minimal I²R losses.',
   },
   ac_generators: {
     id: 'ac_generators', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
-    title: 'AC Generators', subtitle: 'Rotating Coil in a Magnetic Field',
-    description: 'An AC generator converts kinetic energy into electrical energy. A coil rotates in a magnetic field — as it cuts through field lines, an EMF is induced. The direction of induced current reverses each half-turn, producing alternating current. Slip rings and brushes maintain continuous electrical contact. Output voltage is increased by rotating faster (also increases frequency), using a stronger magnet, or adding more turns.',
+    title: 'AC Generators & Dynamos', subtitle: 'Alternators (AC) vs Dynamos (DC)',
+    description: 'An AC generator (alternator) converts kinetic energy into electrical energy. A coil rotates in a magnetic field — as it cuts through field lines, an EMF is induced. The direction of induced current reverses each half-turn, producing alternating current. Slip rings and brushes maintain continuous electrical contact, preserving the AC. A dynamo uses a split-ring commutator instead — the connections are reversed every half-turn so the current always flows the same way through the external circuit, producing direct current (DC). Output voltage is increased by rotating faster (also increases frequency), using a stronger magnet, or adding more turns.',
     lessonVisual: ACGeneratorsLesson, ideaVisual: ACGeneratorsIdea, realityVisual: ACGeneratorsReality,
     question: 'How does an AC generator produce alternating current?',
     questionSubtitle: 'Think about what happens as the coil rotates',
     options: ['The slip rings reverse the current every half-turn', 'The coil cuts field lines and the direction of induced EMF reverses each half-turn', 'The magnetic field automatically alternates direction', 'The brushes push current in alternating directions'],
     correctAnswer: 1,
-    keywords: ['AC generator', 'alternator', 'slip rings', 'brushes', 'rotating coil', 'magnetic field', 'induced EMF', 'alternating current', 'electromagnetic induction', 'frequency'],
-    sentenceStarters: ['An AC generator works by...', 'The current alternates because...', 'Slip rings are used instead of a commutator because...', 'The output voltage can be increased by...', 'The difference between an AC generator and a DC motor is...'],
+    keywords: ['AC generator', 'alternator', 'slip rings', 'brushes', 'rotating coil', 'magnetic field', 'induced EMF', 'alternating current', 'electromagnetic induction', 'frequency', 'dynamo', 'split-ring commutator', 'direct current', 'DC generator'],
+    sentenceStarters: ['An AC generator works by...', 'The current alternates because...', 'A dynamo differs from an AC generator because it uses a split-ring commutator, which...', 'Slip rings are used in an alternator because...', 'The output voltage can be increased by...'],
     modelAnswers: [
       'An AC generator works by **rotating a coil in a magnetic field — as the coil cuts through field lines, an EMF is induced by electromagnetic induction**.',
       'The current alternates because **each half-turn the coil sides swap which direction they cut through the field lines, reversing the induced EMF and therefore the current direction**.',
-      'Slip rings are used instead of a commutator because **slip rings allow continuous rotation while maintaining contact, preserving the alternating nature of the current — a commutator would rectify it to DC**.',
+      'A dynamo differs from an AC generator because it uses a split-ring commutator, which **swaps the connections every half-turn, ensuring current always flows the same way through the external circuit, producing DC**.',
+      'Slip rings are used in an alternator because **they allow continuous rotation while maintaining contact, preserving the alternating nature of the current**.',
       'The output voltage can be increased by **rotating the coil faster (also increases frequency), using a stronger magnet, or increasing the number of turns on the coil**.',
-      'The difference between an AC generator and a DC motor is **a generator converts kinetic energy to electrical energy; a motor does the reverse. Generators use slip rings (AC); DC motors use a split-ring commutator**.',
     ],
-    misconception: 'Slip rings do NOT reverse the current — they just maintain contact as the coil rotates. The current alternates because of the coil geometry changing relative to the field each half-turn.',
-    concept: 'Rotating coil → cutting field lines → induced EMF reverses each half-turn → AC. Slip rings maintain contact. Output ↑ with speed (and frequency), field strength, or turns.',
+    misconception: 'Slip rings do NOT reverse the current — they just maintain contact. It is the split-ring commutator in a dynamo that rectifies the output to DC by reversing connections each half-turn.',
+    concept: 'Alternator (AC): slip rings → output alternates naturally with coil rotation. Dynamo (DC): split-ring commutator → reverses connections each half-turn → DC output. Both increase output with speed, field strength, or turns.',
   },
   solar_system: {
     id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics-only',
     title: 'Solar System & Orbital Motion', subtitle: 'Gravity, Circular Orbits & Satellites',
-    description: 'Our solar system: Sun, 8 planets, dwarf planets, moons, asteroids, comets. Gravity provides the centripetal force for orbital motion. For a stable circular orbit, velocity is perpendicular to gravity. Higher orbit = slower orbital speed. Artificial satellites orbit Earth - GPS, communications, weather monitoring.',
+    description: 'Our solar system: Sun, 8 planets, dwarf planets, moons, asteroids, comets. Gravity provides the centripetal force for orbital motion. In a circular orbit, the speed is constant but the velocity direction continuously changes — the object is always accelerating towards the centre (centripetal acceleration), so velocity is not constant. A satellite moving faster must be in a lower orbit to remain stable; a higher orbit requires a slower speed. Artificial satellites orbit Earth for GPS, communications, and weather monitoring.',
     lessonVisual: SolarSystemLesson, ideaVisual: SolarSystemIdea, realityVisual: SolarSystemReality,
     question: 'What force keeps a planet in its orbit around the Sun?',
     questionSubtitle: 'Think about what provides the centripetal force',
     options: ['The planet\'s own momentum', 'Gravitational attraction towards the Sun', 'Magnetic force from the Sun', 'Atmospheric pressure'],
     correctAnswer: 1,
-    keywords: ['gravity', 'gravitational attraction', 'orbit', 'centripetal force', 'mass', 'distance', 'inverse square law', 'Sun'],
-    sentenceStarters: ['Gravity provides the centripetal force that keeps the planet in orbit...', 'The gravitational force between the Sun and the planet acts...', 'Without gravity, the planet would travel in a straight line...', 'Gravitational force is always attractive and acts towards...', 'The planet orbits because gravity pulls it towards the Sun...'],
+    keywords: ['gravity', 'gravitational attraction', 'orbit', 'centripetal force', 'mass', 'distance', 'inverse square law', 'Sun', 'speed constant velocity changes', 'lower orbit faster', 'higher orbit slower', 'centripetal acceleration'],
+    sentenceStarters: ['Gravity provides the centripetal force that keeps the planet in orbit...', 'In a circular orbit, speed is constant but velocity is not because...', 'A satellite in a higher orbit must travel more slowly because...', 'Without gravity, the planet would travel in a straight line...', 'The planet orbits because gravity constantly changes its direction of travel, so...'],
     modelAnswers: [
       'Gravity provides the centripetal force that keeps the planet in orbit ** -  it always pulls the planet towards the Sun**.',
-      'The gravitational force between the Sun and the planet **acts towards the Sun, providing centripetal acceleration**.',
+      'In a circular orbit, speed is constant but velocity is not because **velocity is a vector — its direction continuously changes as the planet curves around the Sun**.',
+      'A satellite in a higher orbit must travel more slowly because **at a greater distance, the gravitational force is weaker, requiring a lower orbital speed for a stable path**.',
       'Without gravity, the planet would travel in **a straight line at constant speed  -  gravity curves its path into an orbit**.',
-      'Gravitational force is always attractive and acts towards **the centre of mass  -  for a planet, this is towards the Sun**.',
-      'The planet orbits because gravity pulls it towards the Sun, **constantly changing its direction but not (in a circular orbit) its speed**.',
+      'The planet orbits because gravity constantly changes its direction of travel, so **although speed is unchanged, velocity changes — there is centripetal acceleration towards the Sun**.',
     ],
-    misconception: 'Gravity acts across all of space - not just near planets.',
-    concept: 'Gravitational attraction between the Sun and planet provides the centripetal force needed for circular orbital motion. Without this force, the planet would travel in a straight line (Newton\'s 1st law). Gravity follows an inverse-square law - decreases with distance squared.',
+    misconception: 'Gravity acts across all of space - not just near planets. In a circular orbit, speed is constant but velocity is NOT constant — direction changes continuously.',
+    concept: 'Gravity provides centripetal force. In a circular orbit: speed constant, velocity direction always changing → centripetal acceleration. Higher orbit = slower orbital speed; faster satellite → lower orbit needed for stability.',
   },
   stellar_evolution: {
     id: 'stellar_evolution', module: 'Space', moduleColor: SC, course: 'physics-only',
-    title: 'Stellar Evolution', subtitle: 'Life Cycle of Stars',
-    description: 'Stars form from nebulae (clouds of gas and dust) pulled together by gravity. Nuclear fusion of hydrogen begins - this is the main sequence stage. When hydrogen runs out, a Sun-like star becomes a red giant, then white dwarf. Massive stars become red supergiants, then supernovae - producing all heavy elements - then neutron stars or black holes.',
+    title: 'Stellar Evolution', subtitle: 'Life Cycle of Stars & Main Sequence Stability',
+    description: 'Stars form from nebulae (clouds of gas and dust) pulled together by gravity — this is the protostar stage. When core temperature is high enough, hydrogen fusion begins: this is the main sequence stage. During main sequence, the star is stable because inward gravitational force is balanced by outward radiation pressure from fusion — this equilibrium can last billions of years. When hydrogen runs out, balance is lost: a Sun-like star expands to a red giant, ejects its outer layers as a planetary nebula, then collapses to a white dwarf (gradually cooling to a black dwarf). Massive stars become red supergiants, then collapse and explode as supernovae — producing all elements heavier than iron — then form neutron stars or black holes.',
     lessonVisual: StellarEvolutionLesson, ideaVisual: StellarEvolutionIdea, realityVisual: StellarEvolutionReality,
     question: 'What is the final stage of a massive star\'s life cycle?',
     questionSubtitle: 'Larger than the Sun - goes through supernova',
     options: ['White dwarf', 'Red giant', 'Black dwarf', 'Neutron star or black hole'],
     correctAnswer: 3,
-    keywords: ['main sequence', 'red supergiant', 'supernova', 'neutron star', 'black hole', 'stellar evolution', 'nuclear fusion', 'massive star'],
-    sentenceStarters: ['A massive star ends its life as a neutron star or black hole...', 'After the main sequence, a massive star becomes a red supergiant then a...', 'A supernova explosion occurs when the star runs out of...', "The final stage depends on the star's initial mass...", 'Less massive stars become white dwarfs, but massive stars become...'],
+    keywords: ['protostar', 'main sequence', 'red giant', 'white dwarf', 'red supergiant', 'supernova', 'neutron star', 'black hole', 'stellar evolution', 'nuclear fusion', 'radiation pressure', 'gravitational force', 'equilibrium', 'massive star'],
+    sentenceStarters: ['A star is stable on the main sequence because...', 'Radiation pressure from fusion balances...', 'A massive star ends its life as a neutron star or black hole...', 'A supernova explosion occurs when the star runs out of...', 'Elements heavier than iron are formed in...'],
     modelAnswers: [
+      'A star is stable on the main sequence because **radiation pressure from fusion outward exactly balances inward gravitational force**.',
+      'Radiation pressure from fusion balances **the inward pull of gravity, keeping the star at a steady size and temperature for billions of years**.',
       'A massive star ends its life as a neutron star or **black hole, depending on its mass**.',
-      'After the main sequence, a massive star becomes a red supergiant then **explodes as a supernova before forming a neutron star or black hole**.',
-      'A supernova explosion occurs when **the star runs out of fuel for fusion and the core collapses under gravity**.',
-      "The final stage depends on the star's initial mass ** -  the most massive stars form black holes**.",
-      'Less massive stars become white dwarfs, but massive stars become **neutron stars or black holes after a supernova**.',
+      'A supernova explosion occurs when **the star runs out of fuel, fusion stops, radiation pressure drops, and gravity causes rapid collapse then rebound**.',
+      'Elements heavier than iron are formed in **supernova explosions — the only events energetic enough to fuse iron into heavier nuclei**.',
     ],
-    misconception: 'The Sun will NOT become a supernova - only stars much more massive than the Sun do.',
-    concept: 'The Sun\'s fate: red giant → planetary nebula → white dwarf → black dwarf (over billions of years). Massive stars (several times Sun\'s mass): red supergiant → supernova (explosion) → neutron star or black hole. Supernovae create all elements heavier than iron.',
+    misconception: 'The Sun will NOT become a supernova — only stars much more massive than the Sun do. Main sequence stability requires both fusion AND gravity to be present.',
+    concept: 'Main sequence stability: gravity in = radiation pressure out. When fuel runs out, this balance breaks. Sun-like: red giant → white dwarf → black dwarf. Massive: red supergiant → supernova → neutron star/black hole. Supernovae make all elements heavier than iron.',
+  },
+  visible_light: {
+    id: 'visible_light', module: 'Waves', moduleColor: WC, course: 'physics-only',
+    title: 'Visible Light & Colour', subtitle: 'Specular vs Diffuse Reflection, Filters & Colour',
+    description: 'Specular reflection occurs at smooth surfaces — incident rays reflect in a single direction (angle of incidence = angle of reflection). Diffuse reflection occurs at rough surfaces — rays scatter in many directions, making objects visible from all angles. A colour filter absorbs all wavelengths except its own colour, which it transmits. An opaque object reflects some wavelengths and absorbs others — the reflected wavelengths determine its colour. A white object reflects all wavelengths; a black object absorbs all. An object can only reflect wavelengths present in the incident light — a blue object under red light looks black because it absorbs red and has no blue to reflect.',
+    lessonVisual: VisibleLightLesson, ideaVisual: VisibleLightIdea, realityVisual: VisibleLightReality,
+    question: 'A green filter is placed in front of a white light source. A red object is then illuminated. What colour does the red object appear?',
+    questionSubtitle: 'Think about which wavelengths the filter transmits, and which the object can reflect',
+    options: ['Red', 'Green', 'Yellow', 'Black'],
+    correctAnswer: 3,
+    keywords: ['specular reflection', 'diffuse reflection', 'colour filter', 'absorb wavelength', 'transmit wavelength', 'opaque', 'transparent', 'translucent', 'white reflects all', 'black absorbs all', 'angle of incidence', 'angle of reflection', 'smooth surface', 'rough surface'],
+    sentenceStarters: ['The green filter only transmits green light, so...', 'The red object can only reflect red wavelengths, but...', 'Specular reflection occurs at smooth surfaces because...', 'Diffuse reflection happens at rough surfaces because...', 'An object appears a certain colour because it reflects those wavelengths and...'],
+    modelAnswers: [
+      'The green filter only transmits green light, so **only green wavelengths reach the red object**.',
+      'The red object can only reflect red wavelengths, but **no red light is present (it was absorbed by the filter), so it absorbs the green light and appears black**.',
+      'Specular reflection occurs at smooth surfaces because **all rays strike the surface at the same angle and reflect in a single parallel direction**.',
+      'Diffuse reflection happens at rough surfaces because **different parts of the surface face different directions, scattering reflected rays in many directions**.',
+      'An object appears a certain colour because it reflects those wavelengths and **absorbs all others — the reflected wavelengths reach our eyes and we perceive them as colour**.',
+    ],
+    misconception: 'An object cannot create colour — it can only reflect wavelengths that are already in the incident light. If the matching wavelength is absent, the object appears black.',
+    concept: 'Specular (smooth): one reflection direction. Diffuse (rough): scattered. Filter: absorbs other wavelengths, transmits its colour. Object colour = reflected wavelengths. White = reflects all. Black = absorbs all. Blue object + red light → absorbs red, no blue to reflect → looks black.',
   },
   redshift: {
     id: 'redshift', module: 'Space', moduleColor: SC, course: 'physics-only',
-    title: 'Red-shift & The Big Bang', subtitle: 'Evidence for an Expanding Universe',
-    description: 'Red-shift: light from distant galaxies is shifted towards the red end of the spectrum - their wavelength is stretched. This shows galaxies are moving away from us. Farther galaxies have greater red-shift - moving faster. This is evidence that the universe is expanding and supports the Big Bang theory (universe began from a single hot, dense point ~13.8 billion years ago).',
+    title: 'Red-shift & The Big Bang', subtitle: 'Expanding Universe, Dark Matter & Dark Energy',
+    description: 'Red-shift: light from distant galaxies is shifted towards the red end of the spectrum — their wavelength is stretched. This shows galaxies are moving away from us. Farther galaxies have greater red-shift (moving faster) — evidence the universe is expanding and supports the Big Bang theory (universe began from a single hot, dense point ~13.8 billion years ago). Since 1998, observations of supernovae show distant galaxies are receding ever faster. Much remains unexplained: dark matter (provides extra gravity, holds galaxies together, does not emit EM radiation) and dark energy (drives the ever-faster expansion) together account for about 95% of the universe\'s content.',
     lessonVisual: RedshiftLesson, ideaVisual: RedshiftIdea, realityVisual: RedshiftReality,
     question: 'What does red-shift in light from a distant galaxy tell us?',
     questionSubtitle: 'Think about the Doppler effect analogy',
     options: ['The galaxy is very hot', 'The galaxy is moving towards us', 'The galaxy is moving away from us', 'The galaxy contains red stars'],
     correctAnswer: 2,
-    keywords: ['red-shift', 'Doppler effect', 'galaxy', 'moving away', 'wavelength stretched', 'expanding universe', 'Big Bang', 'recession velocity'],
-    sentenceStarters: ['Red-shift means the wavelength of light has increased because...', 'If a galaxy shows red-shift, it is moving away from us...', 'The Doppler effect causes wavelengths to stretch when a source moves away...', 'Red-shift provides evidence that the universe is expanding...', 'The further a galaxy is, the greater its red-shift because...'],
+    keywords: ['red-shift', 'Doppler effect', 'galaxy', 'moving away', 'wavelength stretched', 'expanding universe', 'Big Bang', 'recession velocity', 'dark matter', 'dark energy', 'supernovae', 'universe accelerating'],
+    sentenceStarters: ['Red-shift means the wavelength of light has increased because...', 'If a galaxy shows red-shift, it is moving away from us...', 'Dark matter is matter that does not emit EM radiation but...', 'Dark energy is the name given to the unknown cause of...', 'The further a galaxy is, the greater its red-shift because...'],
     modelAnswers: [
       'Red-shift means the wavelength of light has increased because **the galaxy is moving away from us, stretching the light waves**.',
       'If a galaxy shows red-shift, it is moving **away from us  -  the Doppler effect stretches the wavelength towards the red end**.',
-      'The Doppler effect causes wavelengths to stretch when a source moves away, **making light appear redder than it actually is**.',
-      'Red-shift provides evidence that the universe is **expanding  -  all distant galaxies show red-shift, suggesting they are all moving away**.',
-      'The further a galaxy is, the greater its red-shift because **it is moving away faster  -  evidence for the Big Bang**.',
+      'Dark matter is matter that does not emit EM radiation but **exerts gravitational force — it holds galaxies together and makes up most of the universe\'s mass**.',
+      'Dark energy is the name given to the unknown cause of **the ever-faster expansion of the universe — it appears to oppose gravity on the largest scales**.',
+      'The further a galaxy is, the greater its red-shift because **it is moving away faster  -  evidence for the Big Bang and the expanding universe**.',
     ],
-    misconception: 'Red-shift means the galaxy is moving AWAY - not towards us.',
-    concept: 'When a source moves away, wavelengths are stretched (red-shifted). When moving towards, wavelengths compress (blue-shift). All distant galaxies show red-shift → all moving away → universe is expanding. The further away, the faster they recede - Hubble\'s Law.',
+    misconception: 'Red-shift means the galaxy is moving AWAY - not towards us. Dark matter is NOT dark energy — dark matter provides extra gravity; dark energy drives expansion.',
+    concept: 'Red-shift → galaxies receding → universe expanding → Big Bang. Hubble\'s Law: further = faster recession. Since 1998: expansion accelerating (supernovae evidence). Dark matter: provides gravity, no EM emission; dark energy: drives accelerating expansion. Together ~95% of universe.',
   },
 }

@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Atom, AlertCircle } from 'lucide-react'
+import { AlertCircle } from 'lucide-react'
+import AtomIcon from '../components/AtomIcon'
 
 export default function SplashScreen() {
   const navigate = useNavigate()
@@ -40,7 +41,7 @@ export default function SplashScreen() {
               border: '1.5px solid rgba(99,102,241,0.4)',
             }}
           >
-            <Atom size={58} color="#93c5fd" strokeWidth={1.5} />
+            <AtomIcon size={72} color="#a78bfa" />
           </div>
         </motion.div>
 

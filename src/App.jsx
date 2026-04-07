@@ -1,7 +1,8 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, lazy, Suspense } from 'react'
-import { Atom, Minus } from 'lucide-react'
+import { Minus } from 'lucide-react'
+import AtomIcon from './components/AtomIcon'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import BottomNav from './components/BottomNav'
 
@@ -99,7 +100,7 @@ function FloatingMamo() {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
               >
-                <Atom size={14} color="#fff" />
+                <AtomIcon size={14} color="#fff" />
                 <span className="text-xs font-semibold" style={{ color: '#fff' }}>Mamo</span>
               </motion.button>
             ) : (
@@ -119,7 +120,7 @@ function FloatingMamo() {
                   onClick={() => navigate('/mamo')}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Atom size={20} color="#fff" />
+                  <AtomIcon size={20} color="#fff" />
                   <PulseRing />
                 </motion.button>
                 <button

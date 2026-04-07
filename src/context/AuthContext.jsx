@@ -130,11 +130,12 @@ export function AuthProvider({ children }) {
   }
 
   const signOut = async () => {
-    // Clear user state immediately so AppShell redirects correctly
-    // before the async Supabase call completes
+    // Clear user state immediately — AppShell redirects on setUser(null)
     setUser(null)
     if (supabase) {
-      await supabase.auth.signOut().catch(console.error)
+      // Race against a 3 s timeout so a slow/offline network never blocks the UI
+      const timeout = new Promise(resolve => setTimeout(resolve, 3000))
+      await Promise.race([supabase.auth.signOut().catch(console.error), timeout])
     }
   }
 

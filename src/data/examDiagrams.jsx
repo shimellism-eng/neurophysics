@@ -1,5 +1,5 @@
 // examDiagrams.jsx
-// Library of ~48 premium SVG diagram components for AQA GCSE Physics revision
+// Library of ~48 premium SVG diagram components for GCSE Physics revision
 // Dark-theme optimised — transparent background, renders on #0b1121 / #121a2f cards
 
 import React from 'react';

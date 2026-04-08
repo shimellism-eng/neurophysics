@@ -8,7 +8,7 @@ const SECTIONS = [
   },
   {
     title: '2. What NeuroPhysics provides',
-    body: `NeuroPhysics provides interactive GCSE Physics revision materials aligned to the AQA specification, including lessons, knowledge checks, practical simulations, and an AI-powered tutoring chat (Mamo).\n\nThe app is for educational purposes only and is not a substitute for qualified teacher instruction.`,
+    body: `NeuroPhysics provides interactive GCSE Physics revision materials, including lessons, knowledge checks, practical simulations, and an AI-powered tutoring chat (Mamo).\n\nThe app is for educational purposes only and is not a substitute for qualified teacher instruction.`,
   },
   {
     title: '3. AI tutor (Mamo)',
@@ -24,7 +24,7 @@ const SECTIONS = [
   },
   {
     title: '6. Disclaimer of warranties',
-    body: `NeuroPhysics is provided "as is" without warranties of any kind. We do not guarantee that the app will be error-free, always available, or that revision materials are 100% accurate or up to date with the latest AQA specification.`,
+    body: `NeuroPhysics is provided "as is" without warranties of any kind. We do not guarantee that the app will be error-free, always available, or that revision materials are 100% accurate or up to date with the latest specification.`,
   },
   {
     title: '7. Limitation of liability',

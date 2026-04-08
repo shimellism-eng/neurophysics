@@ -1,5 +1,5 @@
 /**
- * ExtendedAnswerQuestion — AQA-style 6-mark open-ended question.
+ * ExtendedAnswerQuestion — 6-mark open-ended exam question.
  * Student reads the question, optionally views the mark scheme points,
  * then reveals a model answer and self-rates their response.
  */

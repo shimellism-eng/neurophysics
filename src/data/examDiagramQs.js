@@ -7,7 +7,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "sankey_light_bulb",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The Sankey diagram shows the energy transfers for a light bulb rated at 100 J per second.",
       parts: [
         { part: "a", question: "State the useful energy store for a light bulb.", marks: 1, answer: "Thermal (light) energy store — the light emitted is the useful output." },
@@ -22,7 +22,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "energy_chain_coal",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows an energy chain for a coal-fired power station, from coal combustion to electrical output.",
       parts: [
         { part: "a", question: "Name the energy store at the start of the chain, before combustion.", marks: 1, answer: "Chemical energy store (stored in the bonds of coal)." },
@@ -37,7 +37,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "sankey_car_engine",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The Sankey diagram shows the energy transfers in a car engine. The input is 1000 J of chemical energy. The useful kinetic output is 250 J.",
       parts: [
         { part: "a", question: "Calculate the total wasted energy.", marks: 1, answer: "Wasted energy = 1000 − 250 = 750 J." },
@@ -52,7 +52,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "sankey_light_bulb",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A student compares a filament bulb and an LED bulb using Sankey diagrams. Both receive 60 J of electrical energy.",
       parts: [
         { part: "a", question: "The filament bulb emits 3 J as light. The LED emits 48 J as light. Which bulb is more efficient? Show your working.", marks: 2, answer: "Filament: 3/60 = 0.05 (5%). LED: 48/60 = 0.80 (80%). The LED is more efficient." },
@@ -70,7 +70,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "energy_chain_coal",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The diagram shows an energy chain for a coal power station. Arrows represent energy pathways between stores.",
       parts: [
         { part: "a", question: "Name the pathway by which energy is transferred from the burning coal to the water in the boiler.", marks: 1, answer: "Heating (thermal conduction/radiation) pathway." },
@@ -85,7 +85,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "sankey_light_bulb",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "A light bulb converts electrical energy. The diagram shows energy pathways leading away from the bulb.",
       parts: [
         { part: "a", question: "Identify two pathways by which energy leaves the bulb.", marks: 2, answer: "Radiation pathway (light emitted); Heating pathway (infrared radiation and conduction to air)." },
@@ -100,7 +100,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "energy_chain_coal",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "The diagram shows an energy chain: coal → furnace → steam → turbine → generator → power lines → home.",
       parts: [
         { part: "a", question: "At which stage is the mechanical energy pathway used?", marks: 1, answer: "Between the turbine and the generator — the rotating turbine shaft does mechanical work on the generator." },
@@ -118,7 +118,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "sankey_car_engine",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The Sankey diagram shows a car engine receiving 2000 J of chemical energy per second. 600 J is transferred as useful kinetic energy.",
       parts: [
         { part: "a", question: "Write the equation linking useful energy output, total energy input, and wasted energy.", marks: 1, answer: "Total energy input = useful energy output + wasted energy." },
@@ -134,21 +134,21 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "sankey_light_bulb",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A Sankey diagram shows a motor lifting a load. 500 J of electrical energy is input. The motor transfers 350 J as gravitational potential energy to the load.",
       parts: [
         { part: "a", question: "Calculate the efficiency of the motor.", marks: 2, answer: "Efficiency = useful output ÷ total input = 350 ÷ 500 = 0.70 (70%)." },
         { part: "b", question: "The load has a mass of 7 kg and is lifted 5 m. Use E = mgh to verify the 350 J figure. (g = 10 N/kg)", marks: 2, answer: "E = mgh = 7 × 10 × 5 = 350 J. This confirms the GPE gained is 350 J." },
       ],
       hint: "Efficiency = useful output ÷ total input (no units).",
-      senNote: "g = 10 N/kg in AQA exams unless stated otherwise.",
+      senNote: "g = 10 N/kg in exams unless stated otherwise.",
       tier: 2,
     },
     {
       type: "diagram-question",
       marks: 4,
       diagramId: "sankey_car_engine",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The Sankey diagram shows energy transfers in a car. The kinetic energy store increases by ½mv².",
       parts: [
         { part: "a", question: "A car of mass 800 kg accelerates from rest to 20 m/s. Calculate its kinetic energy.", marks: 2, answer: "KE = ½mv² = ½ × 800 × 20² = ½ × 800 × 400 = 160 000 J (160 kJ)." },
@@ -165,7 +165,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "sankey_light_bulb",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The Sankey diagram for a filament light bulb shows 100 J input, 10 J as light, and 90 J as heat.",
       parts: [
         { part: "a", question: "Calculate the efficiency of the bulb.", marks: 2, answer: "Efficiency = 10 ÷ 100 = 0.10 (10%)." },
@@ -179,7 +179,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "sankey_car_engine",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "A car engine Sankey diagram shows 4000 J input, 1200 J kinetic output, 2400 J heat output, and 400 J sound output.",
       parts: [
         { part: "a", question: "Verify that the diagram obeys conservation of energy.", marks: 1, answer: "1200 + 2400 + 400 = 4000 J. Total output = total input, so energy is conserved." },
@@ -194,7 +194,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "sankey_light_bulb",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "Two Sankey diagrams compare an old motor (30% efficient) and a new motor (75% efficient), both with 200 J input.",
       parts: [
         { part: "a", question: "Calculate the useful output for each motor.", marks: 2, answer: "Old motor: 200 × 0.30 = 60 J. New motor: 200 × 0.75 = 150 J." },
@@ -211,7 +211,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "sankey_car_engine",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The Sankey diagram shows a car engine transferring 3000 J of energy every 10 seconds.",
       parts: [
         { part: "a", question: "Calculate the power of the engine.", marks: 2, answer: "P = E ÷ t = 3000 ÷ 10 = 300 W." },
@@ -226,7 +226,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows a series circuit with a 12 V battery and a resistor. The ammeter reads 3 A.",
       parts: [
         { part: "a", question: "Calculate the power dissipated by the resistor.", marks: 2, answer: "P = IV = 3 × 12 = 36 W." },
@@ -240,7 +240,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "sankey_car_engine",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A Sankey diagram shows three appliances: a 60 W bulb, a 1200 W kettle, and a 3000 W oven, each running for 1 hour.",
       parts: [
         { part: "a", question: "Which appliance transfers the most energy in 1 hour? Justify your answer.", marks: 2, answer: "The oven — P = 3000 W is highest. E = 3000 × 3600 = 10 800 000 J (10.8 MJ), which is greater than either other appliance." },
@@ -257,7 +257,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "energy_chain_coal",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows the energy chain for a coal-fired power station.",
       parts: [
         { part: "a", question: "Classify coal as a renewable or non-renewable energy resource. Justify your answer.", marks: 2, answer: "Non-renewable — coal took millions of years to form and is being used much faster than it is replenished. Once used, it cannot be replaced on a human timescale." },
@@ -273,7 +273,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "heating_curve_water",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The heating curve shows temperature against time for water in a solar water heater.",
       parts: [
         { part: "a", question: "Describe the energy pathway from the Sun to the water in a solar water heater.", marks: 2, answer: "Radiation pathway — electromagnetic (infrared and visible light) radiation from the Sun is absorbed by the collector panel, which then transfers energy by heating (conduction) to the water inside." },
@@ -288,7 +288,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "energy_chain_coal",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The diagram compares energy chains for a coal power station and a wind turbine.",
       parts: [
         { part: "a", question: "State one similarity and one difference between the two energy chains.", marks: 2, answer: "Similarity: both produce electrical energy output. Difference: coal uses a thermal stage (burning/steam) whereas wind transfers kinetic energy directly to the generator." },
@@ -308,7 +308,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a series circuit containing a cell, two resistors (R1 and R2), an ammeter (A) and a voltmeter (V) across R2.",
       parts: [
         { part: "a", question: "Name the component labelled A in the circuit.", marks: 1, answer: "Ammeter — it measures the electric current flowing through the circuit." },
@@ -323,7 +323,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "parallel_circuit_lamps",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows two lamps connected in parallel to a 12 V battery.",
       parts: [
         { part: "a", question: "State the potential difference across each lamp.", marks: 1, answer: "12 V — in a parallel circuit, the voltage across each branch is equal to the supply voltage." },
@@ -339,7 +339,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2018 style",
+      source: "Paper 2 2018 style",
       context: "A student builds a series circuit with a 9 V battery, a 3 Ω resistor, and a 6 Ω resistor.",
       parts: [
         { part: "a", question: "Calculate the total resistance.", marks: 1, answer: "Total R = 3 + 6 = 9 Ω." },
@@ -357,7 +357,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows a circuit with labelled components: a cell, switch, fixed resistor, thermistor, ammeter, and voltmeter.",
       parts: [
         { part: "a", question: "Draw and name the circuit symbol for a thermistor.", marks: 1, answer: "A rectangle with an arrow through it (or the standard thermistor symbol). It is a resistor whose resistance decreases as temperature increases." },
@@ -373,7 +373,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "iv_graph_three_components",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The I–V graph shows three lines for: a fixed resistor, a filament lamp, and a diode.",
       parts: [
         { part: "a", question: "Which line represents the fixed resistor? Justify your answer.", marks: 2, answer: "The straight line through the origin — a fixed resistor obeys Ohm's law, so current is directly proportional to voltage (constant gradient)." },
@@ -387,7 +387,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "iv_graph_three_components",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "The I–V graph shows the characteristic of a diode.",
       parts: [
         { part: "a", question: "Describe the current-voltage characteristic of a diode.", marks: 2, answer: "Current is zero (or very small) for negative (reverse) voltage — the diode does not conduct. When voltage exceeds the threshold (about 0.7 V for silicon), current increases steeply — the diode conducts freely in the forward direction." },
@@ -405,7 +405,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a series circuit with a 6 V supply, a 2 Ω resistor and a 4 Ω resistor.",
       parts: [
         { part: "a", question: "Calculate the total resistance and the current in the circuit.", marks: 2, answer: "Total R = 2 + 4 = 6 Ω. I = V/R = 6/6 = 1 A." },
@@ -420,7 +420,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "parallel_circuit_lamps",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "Three identical 6 Ω lamps are connected in parallel to a 6 V battery.",
       parts: [
         { part: "a", question: "State the voltage across each lamp.", marks: 1, answer: "6 V — in parallel, each branch has the same voltage as the supply." },
@@ -436,7 +436,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "parallel_circuit_lamps",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "A student compares a series and a parallel circuit, each with two identical lamps and the same 12 V battery.",
       parts: [
         { part: "a", question: "In which circuit will the lamps be brighter? Explain your answer.", marks: 2, answer: "Parallel circuit — each lamp receives the full 12 V supply, so more power is dissipated. In series, the 12 V is shared between the two lamps (6 V each), giving less power and dimmer brightness." },
@@ -453,7 +453,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "domestic_plug_wires",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows the inside of a three-pin plug with three wires: brown, blue, and green-yellow striped.",
       parts: [
         { part: "a", question: "Name the wire connected to each pin: live, neutral, earth.", marks: 3, answer: "Live = brown wire (right pin, highest voltage, 230 V AC). Neutral = blue wire (left pin, 0 V). Earth = green and yellow striped wire (top pin, safety wire)." },
@@ -467,7 +467,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "national_grid_flow",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "The diagram shows the path of electricity from power station to home via the national grid.",
       parts: [
         { part: "a", question: "State the frequency of UK mains AC electricity.", marks: 1, answer: "50 Hz." },
@@ -482,7 +482,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "domestic_plug_wires",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "A student examines a three-pin plug and notices the fuse is rated at 13 A.",
       parts: [
         { part: "a", question: "Explain the purpose of the fuse in a plug.", marks: 2, answer: "The fuse contains a thin wire that melts if the current exceeds its rated value. This breaks the circuit and prevents overheating, which could cause a fire or damage the appliance." },
@@ -499,7 +499,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "A circuit diagram shows a 12 V supply connected to a 4 Ω resistor.",
       parts: [
         { part: "a", question: "Calculate the current through the resistor.", marks: 1, answer: "I = V/R = 12/4 = 3 A." },
@@ -514,7 +514,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "domestic_plug_wires",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "A domestic appliance is connected to 230 V mains. Its power rating is 920 W.",
       parts: [
         { part: "a", question: "Calculate the current the appliance draws.", marks: 2, answer: "P = IV → I = P/V = 920/230 = 4 A." },
@@ -529,7 +529,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "series_circuit_av",
-      source: "AQA Paper 2 2018 style",
+      source: "Paper 2 2018 style",
       context: "A circuit contains a 6 V battery and a resistor carrying 2 A.",
       parts: [
         { part: "a", question: "Calculate the resistance of the resistor.", marks: 1, answer: "R = V/I = 6/2 = 3 Ω." },
@@ -547,7 +547,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "national_grid_flow",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows the national grid: power station → step-up transformer → cables → step-down transformer → homes.",
       parts: [
         { part: "a", question: "Explain why voltage is stepped up before transmission through the national grid.", marks: 3, answer: "Stepping up voltage reduces the current (by P = IV, same power at higher V means lower I). Lower current means less power lost as heat in the cables (P_loss = I²R). This makes transmission more efficient and reduces energy waste." },
@@ -561,7 +561,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "transformer_step_up",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows a step-up transformer. The primary coil has 500 turns and the secondary has 2500 turns. The input voltage is 400 V.",
       parts: [
         { part: "a", question: "Calculate the output voltage.", marks: 2, answer: "Vₛ/Vₚ = nₛ/nₚ → Vₛ = 400 × (2500/500) = 400 × 5 = 2000 V." },
@@ -575,7 +575,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "national_grid_flow",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "The diagram shows electricity being transmitted at 400 000 V through steel cables.",
       parts: [
         { part: "a", question: "State one environmental concern related to overhead power lines.", marks: 1, answer: "Visual impact on the landscape / habitat disruption / potential health concerns (though not conclusively proven)." },
@@ -592,7 +592,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "static_charge_diagram",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows a polythene rod being rubbed with a cloth. Negative charges move from the cloth to the rod.",
       parts: [
         { part: "a", question: "Explain why the rod becomes negatively charged.", marks: 2, answer: "Electrons are transferred from the cloth to the rod during rubbing. The rod gains extra electrons and so has a net negative charge." },
@@ -607,7 +607,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "static_charge_diagram",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "Two charged spheres on insulating stands are brought near each other. The diagram shows the electric field lines between them.",
       parts: [
         { part: "a", question: "The spheres repel each other. What does this tell you about their charges?", marks: 1, answer: "They have the same sign of charge — either both positive or both negative." },
@@ -622,7 +622,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "static_charge_diagram",
-      source: "AQA Paper 2 2018 style",
+      source: "Paper 2 2018 style",
       context: "A student rubs a balloon on their hair. The diagram shows charge distribution on both objects.",
       parts: [
         { part: "a", question: "After rubbing, the balloon sticks to the wall. Explain why.", marks: 2, answer: "The charged balloon induces an opposite charge on the surface of the wall (charges in the wall redistribute). The unlike charges attract each other, causing the balloon to stick." },
@@ -641,7 +641,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "particle_three_states",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows particle arrangements in solid, liquid, and gas states.",
       parts: [
         { part: "a", question: "Describe the differences in particle arrangement between a solid and a gas.", marks: 2, answer: "In a solid, particles are closely packed in a regular arrangement with strong forces between them. In a gas, particles are far apart, randomly arranged, with negligible forces between them." },
@@ -656,7 +656,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "particle_three_states",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The diagram compares particle arrangement in ice (solid water) and steam (gaseous water).",
       parts: [
         { part: "a", question: "State the change in state from solid to liquid.", marks: 1, answer: "Melting." },
@@ -671,7 +671,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "particle_three_states",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "A student investigates density by measuring the mass and volume of different objects.",
       parts: [
         { part: "a", question: "A liquid has a density of 0.8 g/cm³. Calculate the mass of 250 cm³ of this liquid.", marks: 2, answer: "m = ρV = 0.8 × 250 = 200 g." },
@@ -688,7 +688,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "particle_three_states",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows particles in a solid being heated until they form a gas.",
       parts: [
         { part: "a", question: "Define internal energy.", marks: 2, answer: "Internal energy is the total kinetic energy and potential energy of all the particles in a system. As a substance is heated, the particles gain kinetic energy (move faster) and their average speed increases." },
@@ -702,7 +702,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "latent_heat_graph",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The heating curve shows temperature against time as ice is heated from −20 °C to steam at 120 °C.",
       parts: [
         { part: "a", question: "Identify the flat regions on the graph and explain what is happening.", marks: 2, answer: "The flat regions occur at 0 °C (melting) and 100 °C (boiling). During these stages, energy input increases the potential energy of particles (breaking bonds) rather than kinetic energy — so temperature remains constant." },
@@ -720,7 +720,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "latent_heat_graph",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The heating curve shows a flat section at 100 °C where water changes to steam.",
       parts: [
         { part: "a", question: "Define specific latent heat of vaporisation.", marks: 2, answer: "The specific latent heat of vaporisation is the energy needed to change 1 kg of a liquid to a gas at constant temperature. It has units J/kg." },
@@ -735,7 +735,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "heating_curve_water",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The heating curve shows water being heated. The specific heat capacity of water is 4200 J/kg°C.",
       parts: [
         { part: "a", question: "Calculate the energy needed to heat 2 kg of water from 20 °C to 100 °C.", marks: 2, answer: "Q = mcΔT = 2 × 4200 × (100 − 20) = 2 × 4200 × 80 = 672 000 J (672 kJ)." },
@@ -749,7 +749,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "latent_heat_graph",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A graph shows temperature against energy supplied for a substance with melting point 80 °C.",
       parts: [
         { part: "a", question: "On the graph, the flat section spans 1000 J. The sample has a mass of 0.05 kg. Calculate the specific latent heat of fusion.", marks: 2, answer: "L = E/m = 1000/0.05 = 20 000 J/kg." },
@@ -766,7 +766,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "gas_syringe_pressure",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows a gas syringe. The piston is pushed in, reducing the volume of the gas.",
       parts: [
         { part: "a", question: "Explain, using particle theory, why pressure increases when the volume is decreased.", marks: 3, answer: "When volume decreases, the gas particles are in a smaller space. The same number of particles hit the walls more frequently per second (they travel shorter distances between collisions). More frequent collisions with the walls means greater force per unit area, so pressure increases." },
@@ -781,7 +781,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "boyle_law_graph",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The graph shows pressure against volume for a fixed mass of gas at constant temperature.",
       parts: [
         { part: "a", question: "Describe the shape of the graph and state what relationship it shows.", marks: 2, answer: "The graph is a curved hyperbola (inverse curve). It shows an inverse proportional relationship — as volume increases, pressure decreases proportionally." },
@@ -795,7 +795,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "gas_syringe_pressure",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "A sealed gas syringe is heated from 20 °C to 80 °C. The volume is kept constant.",
       parts: [
         { part: "a", question: "Explain why the pressure increases when the gas is heated at constant volume.", marks: 2, answer: "Heating increases the average kinetic energy of the gas particles — they move faster. Faster-moving particles hit the walls more often and with greater force, increasing the pressure." },
@@ -814,7 +814,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "nuclear_atom_model",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows the nuclear model of an atom with a nucleus surrounded by electrons in shells.",
       parts: [
         { part: "a", question: "State the charge of a proton, neutron, and electron.", marks: 3, answer: "Proton: +1 (positive). Neutron: 0 (neutral). Electron: −1 (negative)." },
@@ -829,7 +829,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "rutherford_scattering",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows alpha particles being fired at a thin gold foil in the Rutherford scattering experiment.",
       parts: [
         { part: "a", question: "Most alpha particles pass straight through the foil. What does this suggest about the atom?", marks: 1, answer: "Most of the atom is empty space — the electrons occupy a very large volume relative to the nucleus." },
@@ -844,7 +844,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "nuclear_atom_model",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "An atom of carbon-14 is shown: 6 protons, 8 neutrons, 6 electrons.",
       parts: [
         { part: "a", question: "State the atomic number and mass number of carbon-14.", marks: 2, answer: "Atomic number = 6 (number of protons). Mass number = 14 (protons + neutrons = 6 + 8)." },
@@ -861,7 +861,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "rutherford_scattering",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows the Geiger-Marsden experiment where alpha particles are fired at gold foil.",
       parts: [
         { part: "a", question: "Describe the results of the experiment.", marks: 2, answer: "Most alpha particles passed straight through the foil with no deflection. A small fraction were deflected at small angles. Very few (about 1 in 8000) were deflected at angles greater than 90°, including some that 'bounced back'." },
@@ -876,7 +876,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "nuclear_atom_model",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram compares the Thomson plum-pudding model with the Rutherford nuclear model.",
       parts: [
         { part: "a", question: "Describe the key feature of the plum-pudding model.", marks: 1, answer: "A diffuse sphere of positive charge with small negative electrons ('plums') scattered throughout." },
@@ -894,7 +894,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "radioactive_decay_graph",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The graph shows the activity (in Bq) of a radioactive source plotted against time.",
       parts: [
         { part: "a", question: "Define radioactive decay.", marks: 2, answer: "Radioactive decay is the spontaneous and random disintegration of an unstable atomic nucleus, releasing radiation and/or particles. It is spontaneous — it cannot be predicted for individual nuclei — and random — it is not affected by temperature, pressure, or chemical state." },
@@ -909,7 +909,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "alpha_decay_equation",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows an alpha decay equation: ²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂He",
       parts: [
         { part: "a", question: "State the composition of an alpha particle.", marks: 2, answer: "An alpha particle consists of 2 protons and 2 neutrons — identical to a helium nucleus (⁴₂He)." },
@@ -923,7 +923,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "radioactive_decay_graph",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "A graph shows activity decreasing from 800 Bq to 100 Bq over 60 minutes.",
       parts: [
         { part: "a", question: "Use the graph to determine the half-life of the source.", marks: 2, answer: "Activity halves from 800 → 400 → 200 → 100. Three half-lives occur over 60 minutes. Half-life = 60/3 = 20 minutes." },
@@ -940,7 +940,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "alpha_decay_equation",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The equation shows: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He",
       parts: [
         { part: "a", question: "Identify the type of decay shown and give evidence from the equation.", marks: 2, answer: "Alpha decay — the emitted particle is ⁴₂He (helium-4 nucleus = alpha particle). Mass number decreases by 4 and atomic number decreases by 2." },
@@ -954,7 +954,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "fission_chain_reaction",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows a fission chain reaction in a nuclear reactor.",
       parts: [
         { part: "a", question: "Write a nuclear equation for the fission of uranium-235 after absorbing a neutron, producing barium-141, krypton-92, and neutrons.", marks: 2, answer: "¹n₀ + ²³⁵₉₂U → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + 3 ¹n₀" },
@@ -969,7 +969,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "alpha_decay_equation",
-      source: "AQA Paper 2 2018 style",
+      source: "Paper 2 2018 style",
       context: "A beta-minus decay equation is shown: ¹⁴₆C → ¹⁴₇N + ⁰₋₁e",
       parts: [
         { part: "a", question: "Describe what happens inside the nucleus during beta-minus decay.", marks: 2, answer: "A neutron in the nucleus changes into a proton and emits a beta particle (fast electron) and an antineutrino. The mass number stays the same but the atomic number increases by 1." },
@@ -986,7 +986,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "half_life_decay_graph",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The graph shows the count rate from a radioactive sample decreasing over time.",
       parts: [
         { part: "a", question: "Define half-life.", marks: 1, answer: "The half-life is the time taken for the activity (or number of undecayed nuclei) of a radioactive source to decrease to half its original value." },
@@ -1001,7 +1001,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "radioactive_decay_graph",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "A decay graph shows activity starting at 1600 Bq. The half-life is 20 years.",
       parts: [
         { part: "a", question: "Calculate the activity after 60 years.", marks: 2, answer: "60 years ÷ 20 years/half-life = 3 half-lives. 1600 → 800 → 400 → 200 Bq." },
@@ -1015,7 +1015,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "half_life_decay_graph",
-      source: "AQA Paper 2 2024 style",
+      source: "Paper 2 2024 style",
       context: "Carbon-14 has a half-life of 5700 years. A wooden artefact originally had 100 g of C-14.",
       parts: [
         { part: "a", question: "Calculate how much C-14 remains after 11 400 years.", marks: 2, answer: "11 400 ÷ 5700 = 2 half-lives. 100 → 50 → 25 g." },
@@ -1032,7 +1032,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "nuclear_atom_model",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows three types of radiation being emitted from a nucleus.",
       parts: [
         { part: "a", question: "State the nature of alpha, beta, and gamma radiation.", marks: 3, answer: "Alpha (α): 2 protons + 2 neutrons (helium nucleus), positively charged, highly ionising, low penetration. Beta (β): fast electron (or positron), negatively/positively charged, moderately ionising. Gamma (γ): electromagnetic radiation (high-frequency photon), no charge, weakly ionising, very high penetration." },
@@ -1046,7 +1046,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "alpha_decay_equation",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows a technician handling radioactive sources.",
       parts: [
         { part: "a", question: "State two precautions a laboratory technician should take when handling radioactive sources.", marks: 2, answer: "1. Use tongs or handling tools — never hold the source directly (reduces exposure). 2. Keep the source at a distance and minimise exposure time. (Accept: store in a lead-lined box; wear dosimeter; work behind a lead shield.)" },
@@ -1060,7 +1060,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "nuclear_atom_model",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "A hospital uses radioactive sources for both cancer treatment and diagnostic imaging.",
       parts: [
         { part: "a", question: "Explain why gamma radiation is used to treat cancer tumours.", marks: 2, answer: "Gamma radiation is highly penetrating — it can reach deep tumours inside the body. It damages the DNA of cancer cells, preventing them from dividing. A focused beam from multiple directions deposits maximum dose at the tumour while minimising damage to surrounding tissue." },
@@ -1077,7 +1077,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "fission_chain_reaction",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a chain reaction in a nuclear fission reactor.",
       parts: [
         { part: "a", question: "Describe the process of nuclear fission.", marks: 2, answer: "A large, unstable nucleus (e.g. uranium-235) absorbs a neutron and splits into two smaller daughter nuclei, releasing 2 or 3 neutrons and a large amount of energy as electromagnetic radiation and kinetic energy." },
@@ -1092,7 +1092,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "fission_chain_reaction",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows the stages of a fission chain reaction.",
       parts: [
         { part: "a", question: "Explain what is meant by a 'critical mass'.", marks: 2, answer: "Critical mass is the minimum mass of fissile material needed for a self-sustaining chain reaction. Below this mass, too many neutrons escape without causing further fissions and the reaction dies out." },
@@ -1106,7 +1106,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "fission_chain_reaction",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows a neutron striking a uranium-235 nucleus.",
       parts: [
         { part: "a", question: "State two products released when uranium-235 undergoes fission.", marks: 2, answer: "Two (or three) neutrons; two daughter nuclei (e.g. barium and krypton); gamma radiation; large amounts of energy (kinetic energy of products). Any two accepted." },
@@ -1123,7 +1123,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "fission_chain_reaction",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows two light nuclei (hydrogen isotopes) approaching each other at high speed.",
       parts: [
         { part: "a", question: "Describe the process of nuclear fusion.", marks: 2, answer: "Nuclear fusion occurs when two light nuclei collide at very high speed and combine to form a heavier nucleus, releasing a large amount of energy. The mass of the product is slightly less than the total mass of the reactants — this mass difference is converted to energy." },
@@ -1138,7 +1138,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "fission_chain_reaction",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram compares fission and fusion reactions.",
       parts: [
         { part: "a", question: "Compare nuclear fusion and nuclear fission in terms of the nuclei involved.", marks: 2, answer: "Fission: a large, heavy nucleus (e.g. uranium) splits into two smaller nuclei. Fusion: two small, light nuclei (e.g. hydrogen isotopes) combine to form a heavier nucleus." },
@@ -1157,7 +1157,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "free_body_stationary",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The diagram shows a stationary object with labelled arrows: weight (W) downward and normal contact force (N) upward.",
       parts: [
         { part: "a", question: "State the difference between a scalar and a vector quantity.", marks: 2, answer: "A scalar quantity has magnitude only (e.g. speed, mass, temperature). A vector quantity has both magnitude and direction (e.g. velocity, force, displacement)." },
@@ -1172,7 +1172,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "free_body_accelerating",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "A force diagram shows two horizontal forces on a car: a driving force of 2000 N to the right and friction of 500 N to the left.",
       parts: [
         { part: "a", question: "Calculate the resultant force and state its direction.", marks: 2, answer: "Resultant = 2000 − 500 = 1500 N to the right." },
@@ -1186,7 +1186,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "free_body_stationary",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The diagram shows a vector triangle for adding two perpendicular forces.",
       parts: [
         { part: "a", question: "A force of 3 N acts horizontally and 4 N acts vertically. Calculate the resultant force using Pythagoras.", marks: 2, answer: "F = √(3² + 4²) = √(9 + 16) = √25 = 5 N." },
@@ -1203,7 +1203,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "free_body_stationary",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows a free-body diagram of a stationary book on a table.",
       parts: [
         { part: "a", question: "State the two forces acting on the book and their directions.", marks: 2, answer: "Weight (gravitational force) acts downward. Normal contact force (from the table surface) acts upward." },
@@ -1218,7 +1218,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "free_body_accelerating",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The free-body diagram shows a sky diver with a large upward air resistance force and smaller weight.",
       parts: [
         { part: "a", question: "What is the direction of the resultant force on the sky diver?", marks: 1, answer: "Upward — the air resistance is greater than the weight, so the resultant force is directed upward." },
@@ -1236,7 +1236,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "free_body_accelerating",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The diagram shows a force of 500 N pushing a box horizontally across a floor for a distance of 8 m.",
       parts: [
         { part: "a", question: "Calculate the work done by the pushing force.", marks: 2, answer: "W = Fd = 500 × 8 = 4000 J." },
@@ -1250,7 +1250,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "vt_graph_uniform",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "A v-t graph shows a car accelerating uniformly from 0 to 20 m/s in 10 seconds.",
       parts: [
         { part: "a", question: "Calculate the acceleration of the car.", marks: 1, answer: "a = Δv/t = 20/10 = 2 m/s²." },
@@ -1266,7 +1266,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "free_body_accelerating",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A person pushes a trolley with a force of 80 N at an angle of 30° below the horizontal.",
       parts: [
         { part: "a", question: "State what is meant by 'work done'.", marks: 1, answer: "Work done is the energy transferred when a force moves an object through a distance in the direction of the force. W = Fd." },
@@ -1283,7 +1283,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "hookes_law_graph",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The graph shows force against extension for a spring. The graph is linear up to point E, then curves.",
       parts: [
         { part: "a", question: "State Hooke's Law.", marks: 1, answer: "Force is directly proportional to extension, provided the elastic limit is not exceeded: F = ke." },
@@ -1299,7 +1299,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "hookes_law_graph",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "A student investigates the extension of a spring by adding 100 g masses. The graph shows a straight line.",
       parts: [
         { part: "a", question: "State the dependent and independent variables in this investigation.", marks: 2, answer: "Independent variable: force applied (mass × g). Dependent variable: extension of the spring." },
@@ -1314,7 +1314,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "hookes_law_graph",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "A force-extension graph for rubber is non-linear, showing a curve that does not go through the origin.",
       parts: [
         { part: "a", question: "Does rubber obey Hooke's Law? Justify your answer.", marks: 2, answer: "No — rubber does not obey Hooke's Law because force is not directly proportional to extension. The graph is not a straight line (or does not pass through the origin at constant gradient)." },
@@ -1331,7 +1331,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "moment_arm_spanner",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows a spanner applying a force to a nut. The force is 40 N and the perpendicular distance from the pivot to the force is 0.25 m.",
       parts: [
         { part: "a", question: "Write the equation for moment of a force.", marks: 1, answer: "Moment = force × perpendicular distance from pivot. (M = Fd)" },
@@ -1347,7 +1347,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "moment_arm_spanner",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "A seesaw is 4 m long. A 400 N child sits 2 m from the pivot. A 500 N child is on the other side.",
       parts: [
         { part: "a", question: "Calculate the anticlockwise moment of the 400 N child.", marks: 1, answer: "M = 400 × 2 = 800 N m (anticlockwise)." },
@@ -1362,7 +1362,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "moment_arm_spanner",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "The diagram shows a lever being used to lift a rock. The effort is 200 N applied 1.5 m from the pivot. The load is 0.5 m from the pivot.",
       parts: [
         { part: "a", question: "Calculate the maximum load that can be lifted.", marks: 2, answer: "Taking moments about pivot: effort × distance = load × distance. 200 × 1.5 = load × 0.5. Load = 300/0.5 = 600 N." },
@@ -1379,7 +1379,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "fluid_pressure_depth",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows a swimming pool. A swimmer is at a depth of 3 m. Atmospheric pressure = 101 000 Pa. Density of water = 1000 kg/m³. g = 10 N/kg.",
       parts: [
         { part: "a", question: "Calculate the pressure due to the water column at 3 m depth.", marks: 2, answer: "P = ρgh = 1000 × 10 × 3 = 30 000 Pa." },
@@ -1394,7 +1394,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "fluid_pressure_depth",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The diagram shows water shooting out of holes at different depths in a tank.",
       parts: [
         { part: "a", question: "Predict which hole produces the jet with the greatest horizontal range and explain why.", marks: 2, answer: "The bottom hole — it is at the greatest depth, so water pressure is highest there. Greater pressure forces the water out at greater speed, giving a longer horizontal range." },
@@ -1408,7 +1408,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "fluid_pressure_depth",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The diagram shows a sealed container with gas at pressure 200 000 Pa.",
       parts: [
         { part: "a", question: "Define pressure.", marks: 1, answer: "Pressure is the force acting per unit area perpendicular to the surface. P = F/A, measured in pascals (Pa)." },
@@ -1425,7 +1425,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "vt_graph_uniform",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "A velocity-time graph shows a car accelerating from 0 to 30 m/s in 15 s, then travelling at constant velocity for 10 s, then decelerating to rest in 5 s.",
       parts: [
         { part: "a", question: "Calculate the acceleration during the first section.", marks: 2, answer: "a = Δv/t = 30/15 = 2 m/s²." },
@@ -1440,7 +1440,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "st_graph_types",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The distance-time graph shows four sections: A (horizontal line), B (straight line up), C (curved line, steepening), D (straight line, steeper than B).",
       parts: [
         { part: "a", question: "Describe the motion in section A.", marks: 1, answer: "The object is stationary — distance is not changing, so speed = 0." },
@@ -1455,7 +1455,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "vt_graph_terminal_velocity",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The v-t graph shows a sky diver jumping from a plane — velocity increases then levels off.",
       parts: [
         { part: "a", question: "What does the levelling off of the graph indicate?", marks: 1, answer: "Terminal velocity — the sky diver has reached a constant (maximum) speed where air resistance equals weight." },
@@ -1473,7 +1473,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "vt_graph_uniform",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The v-t graph shows a ball accelerating uniformly from 5 m/s to 25 m/s in 4 seconds.",
       parts: [
         { part: "a", question: "Calculate the acceleration using the graph.", marks: 1, answer: "a = (v − u)/t = (25 − 5)/4 = 20/4 = 5 m/s²." },
@@ -1488,14 +1488,14 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "st_graph_types",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A ball is dropped from rest. The s-t graph shows a curved line.",
       parts: [
         { part: "a", question: "The ball falls with acceleration 10 m/s². Calculate the velocity after 3 s.", marks: 1, answer: "v = u + at = 0 + 10 × 3 = 30 m/s." },
         { part: "b", question: "Calculate the distance fallen in 3 s.", marks: 2, answer: "s = ut + ½at² = 0 + ½ × 10 × 3² = 5 × 9 = 45 m." },
         { part: "c", question: "Why is the s-t graph curved and not straight?", marks: 1, answer: "The ball is accelerating — speed increases with time — so equal time intervals cover increasing distances, giving a curved s-t graph." },
       ],
-      hint: "For free fall: u = 0, a = g = 10 m/s² (AQA value).",
+      hint: "For free fall: u = 0, a = g = 10 m/s² (standard value).",
       senNote: "Curved s-t graph = changing speed (accelerating or decelerating).",
       tier: 2,
     },
@@ -1503,7 +1503,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "vt_graph_uniform",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "A cyclist decelerates uniformly from 12 m/s to rest over 6 s.",
       parts: [
         { part: "a", question: "Calculate the deceleration.", marks: 1, answer: "a = (v − u)/t = (0 − 12)/6 = −2 m/s². Deceleration = 2 m/s²." },
@@ -1520,7 +1520,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "vt_graph_terminal_velocity",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The v-t graph shows a ball bearing falling through oil. The curve levels off at 0.08 m/s.",
       parts: [
         { part: "a", question: "Explain why the ball bearing accelerates at first.", marks: 2, answer: "Initially, the ball's weight (downward) is greater than the drag force (upward). There is a net downward force, so the ball accelerates downward. As speed increases, drag increases too." },
@@ -1535,7 +1535,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "free_body_stationary",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The free-body diagram shows a parachutist falling at terminal velocity.",
       parts: [
         { part: "a", question: "Draw and label the two forces acting on the parachutist at terminal velocity.", marks: 2, answer: "Weight (W) acting downward and air resistance/drag (F_drag) acting upward. Both arrows must be equal in length (equal magnitudes)." },
@@ -1552,7 +1552,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "free_body_accelerating",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The free-body diagram shows a 2000 kg car with a driving force of 4000 N and friction of 1000 N.",
       parts: [
         { part: "a", question: "State Newton's Second Law.", marks: 1, answer: "The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass: F = ma." },
@@ -1568,7 +1568,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "free_body_stationary",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The diagram shows a book resting on a table. A free-body diagram shows weight W and normal reaction N.",
       parts: [
         { part: "a", question: "The book has a mass of 0.5 kg. Calculate its weight. (g = 10 N/kg)", marks: 1, answer: "W = mg = 0.5 × 10 = 5 N." },
@@ -1583,7 +1583,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "free_body_accelerating",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "A 5 kg ball is kicked with a force of 120 N. It decelerates due to air resistance of 20 N.",
       parts: [
         { part: "a", question: "Calculate the resultant force on the ball.", marks: 1, answer: "Resultant = 120 − 20 = 100 N (in direction of motion)." },
@@ -1601,7 +1601,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "stopping_distance_split",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows a car's stopping distance split into thinking distance and braking distance.",
       parts: [
         { part: "a", question: "Define thinking distance and braking distance.", marks: 2, answer: "Thinking distance: the distance travelled during the driver's reaction time (before brakes are applied). Braking distance: the distance travelled from when the brakes are applied until the car stops." },
@@ -1616,7 +1616,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "stopping_distance_split",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The diagram shows stopping distances at 20 mph (thinking: 6 m, braking: 6 m) and 70 mph (thinking: 21 m, braking: 75 m).",
       parts: [
         { part: "a", question: "Calculate total stopping distances at 20 mph and 70 mph.", marks: 2, answer: "At 20 mph: 6 + 6 = 12 m. At 70 mph: 21 + 75 = 96 m." },
@@ -1630,7 +1630,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "stopping_distance_split",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "A driver reacts in 0.7 s and is travelling at 20 m/s.",
       parts: [
         { part: "a", question: "Calculate the thinking distance.", marks: 1, answer: "Thinking distance = speed × reaction time = 20 × 0.7 = 14 m." },
@@ -1648,7 +1648,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "momentum_collision",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows two trolleys before and after a collision. Trolley A (2 kg) moves at 3 m/s. Trolley B (2 kg) is stationary.",
       parts: [
         { part: "a", question: "State the law of conservation of momentum.", marks: 1, answer: "The total momentum of a closed system is conserved — it does not change unless an external force acts on the system." },
@@ -1664,7 +1664,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "momentum_collision",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "A 0.5 kg ball hits a wall at 10 m/s and rebounds at 8 m/s.",
       parts: [
         { part: "a", question: "Calculate the change in momentum of the ball.", marks: 2, answer: "Taking 'towards wall' as positive: initial p = 0.5 × 10 = +5 kg m/s; final p = 0.5 × (−8) = −4 kg m/s. Δp = −4 − 5 = −9 kg m/s. Magnitude = 9 kg m/s." },
@@ -1678,7 +1678,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "momentum_collision",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The diagram shows a gun firing a bullet. Before firing, both are at rest.",
       parts: [
         { part: "a", question: "State the total momentum before the gun is fired.", marks: 1, answer: "Zero — both the gun and bullet are at rest." },
@@ -1697,7 +1697,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "transverse_wave_labelled",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows a transverse wave with labelled features: crest, trough, wavelength, and amplitude.",
       parts: [
         { part: "a", question: "State what is meant by a transverse wave.", marks: 2, answer: "In a transverse wave, the oscillation of particles (or field) is perpendicular (at 90°) to the direction of energy transfer (wave propagation)." },
@@ -1713,7 +1713,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "longitudinal_wave_labelled",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows a longitudinal wave in a slinky spring with regions of compression and rarefaction.",
       parts: [
         { part: "a", question: "Label a compression and a rarefaction on the diagram.", marks: 2, answer: "Compression: region where coils are closest together (high pressure). Rarefaction: region where coils are furthest apart (low pressure)." },
@@ -1728,7 +1728,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "transverse_wave_labelled",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "A transverse wave diagram shows: wavelength = 0.4 m, amplitude = 0.05 m. The wave travels at 200 m/s.",
       parts: [
         { part: "a", question: "Calculate the frequency of the wave.", marks: 2, answer: "v = fλ → f = v/λ = 200/0.4 = 500 Hz." },
@@ -1746,7 +1746,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "transverse_wave_labelled",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The diagram shows a wave with wavelength 2 m and frequency 5 Hz.",
       parts: [
         { part: "a", question: "Calculate the wave speed.", marks: 2, answer: "v = fλ = 5 × 2 = 10 m/s." },
@@ -1761,7 +1761,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The electromagnetic spectrum bar shows waves from radio to gamma. All travel at 3 × 10⁸ m/s in a vacuum.",
       parts: [
         { part: "a", question: "State the wave speed of all electromagnetic waves in a vacuum.", marks: 1, answer: "3 × 10⁸ m/s (the speed of light)." },
@@ -1776,7 +1776,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "transverse_wave_labelled",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A student uses a ripple tank to study water waves.",
       parts: [
         { part: "a", question: "Describe how to measure the wavelength of a water wave using the diagram.", marks: 1, answer: "Measure the distance between two adjacent crests (or troughs) — this is the wavelength." },
@@ -1793,7 +1793,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "reflection_mirror",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows a ray of light hitting a plane mirror. The angle of incidence is 40°.",
       parts: [
         { part: "a", question: "State the law of reflection.", marks: 1, answer: "The angle of incidence equals the angle of reflection. Both angles are measured from the normal to the surface." },
@@ -1808,7 +1808,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "reflection_mirror",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The diagram shows a periscope using two mirrors.",
       parts: [
         { part: "a", question: "Explain how a periscope uses reflection to allow a person to see over obstacles.", marks: 2, answer: "Light from the scene above reflects off the top mirror (at 45°, deflecting the ray downward). The ray then reflects off the bottom mirror (also at 45°), deflecting it horizontally to the observer's eye." },
@@ -1823,7 +1823,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "reflection_mirror",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "A wave diagram shows wavefronts hitting a barrier and reflecting.",
       parts: [
         { part: "a", question: "State what happens to the wavelength and frequency of a wave during reflection.", marks: 2, answer: "Neither wavelength nor frequency change during reflection. Only the direction of travel changes. (Wave speed also remains the same in the same medium.)" },
@@ -1840,7 +1840,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "total_internal_reflection",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows a ray of light in glass approaching the glass-air boundary at increasing angles of incidence.",
       parts: [
         { part: "a", question: "Define the critical angle.", marks: 1, answer: "The critical angle is the angle of incidence (measured in the denser medium) at which the angle of refraction is exactly 90°. Above this angle, total internal reflection occurs." },
@@ -1856,7 +1856,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "refraction_glass_block",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The diagram shows a ray of light entering a rectangular glass block (n = 1.5) from air.",
       parts: [
         { part: "a", question: "Explain why the ray bends when it enters the glass.", marks: 2, answer: "Light travels slower in glass than in air. When the wave crosses the boundary at an angle, the part of the wavefront that enters glass first slows down while the rest is still in air — this causes the wavefront to change direction (refraction), bending towards the normal." },
@@ -1870,7 +1870,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "total_internal_reflection",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "The critical angle for a diamond-air interface is 24.4°. A ray inside the diamond hits the surface at 30°.",
       parts: [
         { part: "a", question: "State whether total internal reflection occurs. Justify your answer.", marks: 2, answer: "Yes — the angle of incidence (30°) is greater than the critical angle (24.4°), so total internal reflection occurs." },
@@ -1887,7 +1887,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "longitudinal_wave_labelled",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows a longitudinal wave representing sound moving through air.",
       parts: [
         { part: "a", question: "Describe how sound travels as a longitudinal wave.", marks: 2, answer: "Sound travels as a series of compressions (regions of high pressure) and rarefactions (regions of low pressure). Air particles vibrate parallel to the direction of wave travel — they do not move with the wave, only oscillate about their mean positions." },
@@ -1902,7 +1902,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "transverse_wave_labelled",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "An ultrasound scanner sends a pulse into tissue and records the time for echoes to return.",
       parts: [
         { part: "a", question: "Explain how ultrasound is used to produce images of internal body structures.", marks: 3, answer: "Ultrasound pulses are transmitted into the body. At each boundary between different tissues (e.g. bone and soft tissue), some of the pulse is reflected as an echo. The time delay between the transmitted pulse and the returning echo is measured. Using the known speed of ultrasound in tissue, the depth of each boundary can be calculated. A computer builds up a 2D image from multiple echoes." },
@@ -1917,7 +1917,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "longitudinal_wave_labelled",
-      source: "AQA Paper 1 2018 style",
+      source: "Paper 1 2018 style",
       context: "A diagram shows sound waves from two speakers — one producing a loud note and one a quiet, high-pitched note.",
       parts: [
         { part: "a", question: "Describe the difference in wave diagrams for loud and quiet sounds.", marks: 1, answer: "Loud sound: larger amplitude. Quiet sound: smaller amplitude. Frequency (pitch) is unchanged." },
@@ -1935,7 +1935,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows the electromagnetic spectrum from radio waves to gamma rays.",
       parts: [
         { part: "a", question: "List the regions of the EM spectrum in order of increasing frequency.", marks: 2, answer: "Radio waves → microwaves → infrared → visible light → ultraviolet → X-rays → gamma rays." },
@@ -1950,7 +1950,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The EM spectrum bar shows uses for each region.",
       parts: [
         { part: "a", question: "State one use of each: radio waves, microwaves, infrared, ultraviolet.", marks: 4, answer: "Radio: broadcasting (TV/radio). Microwaves: cooking food / satellite communication. Infrared: thermal imaging / remote controls. Ultraviolet: sterilisation / detecting forged banknotes." },
@@ -1963,7 +1963,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The diagram highlights the hazards associated with different regions of the EM spectrum.",
       parts: [
         { part: "a", question: "Explain why gamma rays are more hazardous to living tissue than radio waves.", marks: 2, answer: "Gamma rays have a much higher frequency and energy than radio waves. High-energy photons can ionise atoms in cells, damaging DNA and potentially causing cancer. Radio waves have too little energy to ionise molecules." },
@@ -1980,7 +1980,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "colour_filter",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The diagram shows white light passing through a green filter onto a red object.",
       parts: [
         { part: "a", question: "Explain what a colour filter does to white light.", marks: 2, answer: "A filter transmits only certain wavelengths (colours) of light and absorbs the rest. A green filter transmits green light only, absorbing all other colours in the white light." },
@@ -1995,7 +1995,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The EM spectrum bar shows visible light occupies a narrow band between infrared and ultraviolet.",
       parts: [
         { part: "a", question: "State the colours of visible light in order from lowest to highest frequency.", marks: 2, answer: "Red → orange → yellow → green → blue → indigo → violet. (ROYGBIV; red has lowest f/longest λ, violet has highest f/shortest λ.)" },
@@ -2010,7 +2010,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "colour_filter",
-      source: "AQA Paper 1 2024 style",
+      source: "Paper 1 2024 style",
       context: "A student shines red, green, and blue light onto a white screen.",
       parts: [
         { part: "a", question: "What colour appears where red and green light overlap?", marks: 1, answer: "Yellow." },
@@ -2028,7 +2028,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "converging_lens_real_image",
-      source: "AQA Paper 1 2022 style",
+      source: "Paper 1 2022 style",
       context: "The diagram shows a converging lens with an object placed beyond the focal point.",
       parts: [
         { part: "a", question: "State three characteristics of the image formed by a converging lens when the object is beyond 2F.", marks: 3, answer: "The image is: real (can be projected), inverted (upside down), and diminished (smaller than the object)." },
@@ -2042,7 +2042,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "diverging_lens_image",
-      source: "AQA Paper 1 2020 style",
+      source: "Paper 1 2020 style",
       context: "The diagram shows a diverging (concave) lens with an object to the left.",
       parts: [
         { part: "a", question: "State three properties of the image formed by a diverging lens.", marks: 3, answer: "Virtual (cannot be projected on a screen), upright (same orientation as object), diminished (smaller than object)." },
@@ -2056,7 +2056,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "converging_lens_real_image",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "A converging lens has a focal length of 10 cm. An object is placed 5 cm from the lens (inside the focal length).",
       parts: [
         { part: "a", question: "Describe the image formed when the object is inside the focal length.", marks: 2, answer: "The image is virtual, upright, and magnified (enlarged). It cannot be projected — the eye sees the image by looking back through the lens." },
@@ -2074,7 +2074,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2021 style",
+      source: "Paper 1 2021 style",
       context: "The EM spectrum shows that all objects emit infrared radiation — the peak wavelength depends on temperature.",
       parts: [
         { part: "a", question: "Define a 'perfect black body'.", marks: 2, answer: "A perfect black body is an object that absorbs all incident electromagnetic radiation, reflects none, and emits radiation at the maximum possible rate for its temperature." },
@@ -2088,7 +2088,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "heating_curve_water",
-      source: "AQA Paper 1 2023 style",
+      source: "Paper 1 2023 style",
       context: "The diagram shows a heating curve and the radiation emitted at different temperatures.",
       parts: [
         { part: "a", question: "Explain why the Earth's temperature remains approximately constant.", marks: 2, answer: "The Earth absorbs radiation from the Sun and also emits infrared radiation to space. Over time, the rate of absorption equals the rate of emission — a thermal equilibrium is reached and temperature remains roughly constant." },
@@ -2102,7 +2102,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "em_spectrum_bar",
-      source: "AQA Paper 1 2019 style",
+      source: "Paper 1 2019 style",
       context: "The EM spectrum shows emission peaks at different positions for objects at different temperatures.",
       parts: [
         { part: "a", question: "At room temperature (20 °C), what type of electromagnetic radiation does an object emit?", marks: 1, answer: "Infrared radiation — room-temperature objects emit mainly in the infrared region." },
@@ -2121,7 +2121,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "magnetic_field_lines",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows the magnetic field around a bar magnet with field lines drawn.",
       parts: [
         { part: "a", question: "State two rules for drawing magnetic field lines.", marks: 2, answer: "1. Field lines go from North pole to South pole (outside the magnet). 2. Field lines never cross each other. (Also: closer lines = stronger field; lines emerge perpendicular to the poles.)" },
@@ -2136,7 +2136,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "motor_effect_wire",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a current-carrying wire in a magnetic field between two poles of a magnet.",
       parts: [
         { part: "a", question: "State the name of the force on the current-carrying wire in a magnetic field.", marks: 1, answer: "The motor effect (or the magnetic force / Lorentz force)." },
@@ -2151,7 +2151,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "magnetic_field_lines",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "The diagram shows two bar magnets placed with their North poles facing each other.",
       parts: [
         { part: "a", question: "Describe the field pattern between two like poles.", marks: 1, answer: "The field lines curve away from each other and there is a neutral point between the two poles where the field lines cancel and the net field is zero." },
@@ -2169,7 +2169,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "motor_effect_wire",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows a straight wire carrying current, with circular magnetic field lines around it.",
       parts: [
         { part: "a", question: "Describe the magnetic field produced by a straight current-carrying wire.", marks: 2, answer: "The field consists of concentric circles centred on the wire. The direction follows the right-hand thumb rule (thumb in direction of current, curled fingers show field direction). The field strength decreases with distance from the wire." },
@@ -2184,7 +2184,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "magnetic_field_lines",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows a solenoid with an iron core (electromagnet). Current flows through the coil.",
       parts: [
         { part: "a", question: "State two advantages of an electromagnet over a permanent magnet.", marks: 2, answer: "1. The field can be switched on and off by controlling the current. 2. The strength of the field can be varied by changing the current." },
@@ -2199,7 +2199,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "motor_effect_wire",
-      source: "AQA Paper 2 2018 style",
+      source: "Paper 2 2018 style",
       context: "The diagram shows a wire between two magnets. Current in the wire is reversed.",
       parts: [
         { part: "a", question: "What happens to the direction of the force on the wire when the current is reversed?", marks: 1, answer: "The force reverses direction — if it was previously upward, it is now downward." },
@@ -2217,7 +2217,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "motor_effect_wire",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a simple DC motor with a coil between the poles of a magnet and a split-ring commutator.",
       parts: [
         { part: "a", question: "Explain how the motor effect causes the coil to rotate.", marks: 3, answer: "Current in the coil sides creates a force (motor effect). By Fleming's Left-Hand Rule, the two sides of the coil experience forces in opposite directions, creating a turning effect (torque). The split-ring commutator reverses the current direction every half turn, ensuring the force always acts in the same rotational direction." },
@@ -2231,7 +2231,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "transformer_coils",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows a simple electric motor with labelled components.",
       parts: [
         { part: "a", question: "State the energy transfer in a motor.", marks: 1, answer: "Electrical energy → kinetic energy (+ some thermal energy due to resistance)." },
@@ -2246,7 +2246,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "motor_effect_wire",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "A horizontal wire of length 0.05 m carries a current of 4 A in a magnetic field of strength 0.2 T.",
       parts: [
         { part: "a", question: "Calculate the force on the wire.", marks: 2, answer: "F = BIl = 0.2 × 4 × 0.05 = 0.04 N." },
@@ -2263,7 +2263,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "em_induction_magnet",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a magnet being pushed into a coil connected to a sensitive galvanometer.",
       parts: [
         { part: "a", question: "Describe what happens to the galvanometer reading as the magnet is pushed in.", marks: 1, answer: "The galvanometer deflects — an EMF (voltage) is induced in the coil, causing a current to flow." },
@@ -2278,7 +2278,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "ac_generator_coil",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows the induced EMF from a rotating coil generator plotted against time.",
       parts: [
         { part: "a", question: "Describe the shape of the graph and explain why it has this shape.", marks: 2, answer: "The graph is sinusoidal (alternating). As the coil rotates, the rate of change of flux varies — it is maximum when the coil is parallel to the field and zero when perpendicular. This produces an alternating current that varies sinusoidally." },
@@ -2292,7 +2292,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "em_induction_magnet",
-      source: "AQA Paper 2 2018 style",
+      source: "Paper 2 2018 style",
       context: "A magnet is pulled out of a coil. The ammeter shows a deflection opposite to when the magnet was pushed in.",
       parts: [
         { part: "a", question: "Explain why the current direction reverses when the magnet is pulled out.", marks: 2, answer: "When the magnet is pushed in, the flux through the coil increases — an EMF is induced to oppose this increase. When pulled out, the flux decreases — the induced EMF now acts in the opposite direction to oppose the decrease. The change in direction of induced EMF causes current to reverse." },
@@ -2309,7 +2309,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "ac_generator_coil",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows an AC generator with a rotating coil between magnets and slip rings.",
       parts: [
         { part: "a", question: "Explain why the generator produces alternating current (AC).", marks: 2, answer: "As the coil rotates, each side alternately moves upward and downward through the magnetic field. By Fleming's Right-Hand Rule, the direction of induced current reverses every half-turn. Slip rings (not a commutator) maintain continuous contact and the AC is transferred to the external circuit unchanged." },
@@ -2324,7 +2324,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "transformer_coils",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a transformer with a primary coil of 200 turns and a secondary of 1000 turns. Primary voltage is 230 V.",
       parts: [
         { part: "a", question: "Is this a step-up or step-down transformer? Explain.", marks: 1, answer: "Step-up — the secondary has more turns than the primary, so the output voltage will be higher than the input." },
@@ -2339,7 +2339,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "ac_generator_coil",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "The output EMF vs time graph for a generator shows a sine wave.",
       parts: [
         { part: "a", question: "State two ways to increase the peak EMF of the generator.", marks: 2, answer: "Increase the number of turns on the coil; use stronger magnets; rotate the coil faster; use a coil of larger area." },
@@ -2358,7 +2358,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "solar_system_orbits",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows planets orbiting the Sun in elliptical orbits.",
       parts: [
         { part: "a", question: "State the force that keeps planets in orbit around the Sun.", marks: 1, answer: "Gravity (gravitational attraction) between the planet and the Sun." },
@@ -2373,7 +2373,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "stellar_evolution_path",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The diagram shows the life cycle of stars, starting from a nebula.",
       parts: [
         { part: "a", question: "Describe the sequence of stages for a star the size of our Sun.", marks: 3, answer: "Nebula (cloud of gas and dust) → protostar (gravity causes contraction, temperature rises) → main sequence star (stable, hydrogen fusion) → red giant (hydrogen exhausted, outer layers expand) → white dwarf (planetary nebula expelled, hot dense core remains) → black dwarf." },
@@ -2387,7 +2387,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "solar_system_orbits",
-      source: "AQA Paper 2 2019 style",
+      source: "Paper 2 2019 style",
       context: "The diagram shows the relative sizes and distances of objects in the Solar System.",
       parts: [
         { part: "a", question: "List the correct order of objects from largest to smallest scale: moon, galaxy, planet, solar system, universe.", marks: 2, answer: "Universe > galaxy > solar system > planet > moon." },
@@ -2404,7 +2404,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "stellar_evolution_path",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The stellar evolution diagram shows two paths: one for a solar mass star and one for a star much more massive than the Sun.",
       parts: [
         { part: "a", question: "Compare the end stages of a Sun-like star and a massive star.", marks: 3, answer: "Sun-like star: red giant → planetary nebula → white dwarf → eventually black dwarf. Massive star: red supergiant → supernova (explosive death) → neutron star, or if large enough mass → black hole." },
@@ -2418,7 +2418,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "stellar_evolution_path",
-      source: "AQA Paper 2 2020 style",
+      source: "Paper 2 2020 style",
       context: "The diagram shows the protostar stage of stellar evolution.",
       parts: [
         { part: "a", question: "Describe how a protostar forms from a nebula.", marks: 2, answer: "A nebula is a cloud of hydrogen gas and dust. Gravity pulls the gas and dust inward — the cloud contracts. As it collapses, gravitational potential energy converts to kinetic (thermal) energy, raising the temperature. Eventually the core reaches millions of degrees and nuclear fusion begins." },
@@ -2432,7 +2432,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "stellar_evolution_path",
-      source: "AQA Paper 2 2024 style",
+      source: "Paper 2 2024 style",
       context: "The diagram shows a star collapsing to form a black hole after a supernova.",
       parts: [
         { part: "a", question: "Define a black hole.", marks: 1, answer: "A black hole is an object with such extreme density and gravitational field that no matter or electromagnetic radiation can escape from it — the escape velocity exceeds the speed of light." },
@@ -2449,7 +2449,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "redshift_spectra",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows the absorption spectra of the Sun and a distant galaxy. The galaxy's spectrum is shifted to the red end.",
       parts: [
         { part: "a", question: "Explain what redshift is and what it indicates about the galaxy.", marks: 3, answer: "Redshift is the observation that the spectral lines from a distant galaxy are shifted toward longer wavelengths (the red end of the spectrum). This occurs because the galaxy is moving away from us — the Doppler effect stretches the wavelength of the light received. Greater redshift indicates greater recession speed." },
@@ -2463,7 +2463,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "stellar_evolution_path",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows a cosmic microwave background radiation map and expanding universe model.",
       parts: [
         { part: "a", question: "State two pieces of evidence for the Big Bang theory.", marks: 2, answer: "1. Redshift — all galaxies are moving away, indicating the universe is expanding. 2. Cosmic Microwave Background (CMB) radiation — microwave radiation detected uniformly from all directions, thought to be the afterglow of the Big Bang." },
@@ -2477,7 +2477,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 3,
       diagramId: "redshift_spectra",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "The spectrum of a nearby galaxy shows very little shift; the spectrum of a distant galaxy shows large redshift.",
       parts: [
         { part: "a", question: "Explain why the distant galaxy has a larger redshift than the nearby galaxy.", marks: 2, answer: "The distant galaxy is receding faster than the nearby galaxy (Hubble's Law — recession speed is proportional to distance). Higher recession speed means greater Doppler shift of the spectral lines — larger redshift." },
@@ -2494,7 +2494,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "transformer_step_up",
-      source: "AQA Paper 2 2022 style",
+      source: "Paper 2 2022 style",
       context: "The diagram shows a step-up transformer. The primary coil has 500 turns and is connected to a 25 V AC supply. The secondary coil has 2000 turns.",
       parts: [
         { part: "a", question: "Calculate the secondary voltage. Show your working.", marks: 2, answer: "Using Vp/Vs = Np/Ns: Vs = Vp × (Ns/Np) = 25 × (2000/500) = 25 × 4 = 100 V." },
@@ -2509,7 +2509,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 5,
       diagramId: "transformer_coils",
-      source: "AQA Paper 2 2021 style",
+      source: "Paper 2 2021 style",
       context: "The diagram shows a transformer used in the National Grid. The primary coil is connected to a 25 000 V AC supply with a current of 400 A. The secondary voltage is 400 000 V. Assume the transformer is ideal (100% efficient).",
       parts: [
         { part: "a", question: "Calculate the secondary current.", marks: 2, answer: "Using VpIp = VsIs (ideal transformer, power conserved): Is = VpIp / Vs = (25 000 × 400) / 400 000 = 10 000 000 / 400 000 = 25 A." },
@@ -2524,7 +2524,7 @@ const examDiagramQs = {
       type: "diagram-question",
       marks: 4,
       diagramId: "transformer_step_up",
-      source: "AQA Paper 2 2023 style",
+      source: "Paper 2 2023 style",
       context: "A student connects a transformer to a DC battery instead of an AC supply. The primary coil has 100 turns and the secondary coil has 500 turns.",
       parts: [
         { part: "a", question: "Predict what voltage the student will measure across the secondary coil. Explain your answer.", marks: 2, answer: "The student will measure 0 V across the secondary coil. A transformer only works with AC. A DC supply produces a constant current and therefore a constant (non-changing) magnetic flux in the iron core. No change in flux means no EMF is induced in the secondary coil (Faraday's law requires a changing flux for induction)." },

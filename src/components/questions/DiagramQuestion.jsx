@@ -1,5 +1,5 @@
 /**
- * DiagramQuestion — AQA-style multi-part question with an embedded SVG diagram.
+ * DiagramQuestion — Multi-part exam question with an embedded SVG diagram.
  * Modelled on real past paper (2018-2024) question structure.
  *
  * data shape:
@@ -7,7 +7,7 @@
  *   type: "diagram-question",
  *   marks: 5,
  *   diagramId: "series_circuit_av",
- *   source: "AQA Paper 1 2022 style",
+ *   source: "Paper 1 2022 style",
  *   context: "The diagram shows...",
  *   parts: [
  *     { part: "a", question: "...", marks: 1, answer: "..." },

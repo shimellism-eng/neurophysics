@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 const SECTIONS = [
   {
     title: '1. Who we are',
-    body: `NeuroPhysics is an educational app designed to help GCSE students — particularly neurodivergent learners — revise AQA Physics. The app is operated by the developer ("we", "us", "our").`,
+    body: `NeuroPhysics is an educational app designed to help GCSE students — particularly neurodivergent learners — revise Physics. The app is operated by the developer ("we", "us", "our").`,
   },
   {
     title: '2. What data we collect',

@@ -109,7 +109,7 @@ export default function LessonPlayer() {
             <div className="flex items-center gap-2">
               <span className="text-xs px-2.5 py-1 rounded-full font-medium"
                 style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#64748b' }}>
-                AQA Spec {topic.specRef}
+                Spec {topic.specRef}
               </span>
             </div>
           )}

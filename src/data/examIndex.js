@@ -9,6 +9,7 @@ import examGraphs from './examGraphs'
 import examSpace from './examSpace'
 import examEquations from './examEquations'
 import examExtended from './examExtended'
+import examDiagramQs from './examDiagramQs'
 
 /**
  * Return all exam practice questions for a given subtopic ID.
@@ -56,6 +57,11 @@ export function getExamQuestions(subtopicId) {
     questions.push(...examExtended[subtopicId])
   }
 
+  // Diagram-based past paper style questions
+  if (examDiagramQs[subtopicId]) {
+    questions.push(...examDiagramQs[subtopicId])
+  }
+
   return questions
 }
 
@@ -70,7 +76,7 @@ export function getExamQuestionCount(subtopicId) {
  * Get all topic IDs that have exam questions.
  */
 export function getExamTopicIds() {
-  const allSources = [examCalculations, examPracticals, examParticleModel, examGraphs, examSpace, examEquations, examExtended]
+  const allSources = [examCalculations, examPracticals, examParticleModel, examGraphs, examSpace, examEquations, examExtended, examDiagramQs]
   const ids = new Set()
   allSources.forEach(source => {
     Object.keys(source).forEach(id => {

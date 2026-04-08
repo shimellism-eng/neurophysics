@@ -1,185 +1,298 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, ChevronRight, ChevronDown, Zap } from 'lucide-react'
+import { CheckCircle, Zap, Circle } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 
-export default function TopicMap() {
+// ─── Circular progress ring ─────────────────────────────────────────────────
+
+function ProgressRing({ pct, color, size = 56 }) {
+  const r = (size - 8) / 2        // radius, 4px inset each side
+  const circ = 2 * Math.PI * r
+  const dash = (pct / 100) * circ
+
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{ flexShrink: 0 }}>
+      {/* Track */}
+      <circle
+        cx={size / 2} cy={size / 2} r={r}
+        fill="none"
+        stroke="#1d293d"
+        strokeWidth={4}
+      />
+      {/* Progress arc */}
+      <circle
+        cx={size / 2} cy={size / 2} r={r}
+        fill="none"
+        stroke={color}
+        strokeWidth={4}
+        strokeLinecap="round"
+        strokeDasharray={`${dash} ${circ}`}
+        strokeDashoffset={0}
+        transform={`rotate(-90 ${size / 2} ${size / 2})`}
+        style={{ transition: 'stroke-dasharray 0.8s ease' }}
+      />
+      {/* Percentage label */}
+      <text
+        x={size / 2} y={size / 2}
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontSize={pct === 100 ? 10 : 11}
+        fontWeight={700}
+        fill={pct > 0 ? color : '#4a5a72'}
+      >
+        {Math.round(pct)}%
+      </text>
+    </svg>
+  )
+}
+
+// ─── Topic tile ──────────────────────────────────────────────────────────────
+
+function TopicTile({ topicId, topic, moduleColor, masteryState, masteryPct, index, onTap }) {
+  const isMastered = masteryState === 'mastered'
+  const isStarted  = masteryState === 'started'
+
+  const bg = isMastered
+    ? `${moduleColor}15`
+    : isStarted
+      ? 'rgba(18,26,47,0.95)'
+      : 'rgba(14,20,36,0.9)'
+
+  const border = isMastered
+    ? `0.75px solid ${moduleColor}50`
+    : '0.75px solid #1d293d'
+
+  return (
+    <motion.button
+      className="w-full text-left p-3 rounded-[14px] flex flex-col gap-1.5"
+      style={{ background: bg, border }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: index * 0.04, duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+      whileTap={{ scale: 0.97 }}
+      onClick={onTap}
+    >
+      {/* Row: status icon + title */}
+      <div className="flex items-center gap-2">
+        {/* Status indicator */}
+        <div className="shrink-0">
+          {isMastered ? (
+            <div
+              className="w-5 h-5 rounded-full flex items-center justify-center"
+              style={{ background: '#22c55e' }}
+            >
+              <CheckCircle size={12} color="#fff" strokeWidth={3} />
+            </div>
+          ) : isStarted ? (
+            <div
+              className="w-5 h-5 rounded-full flex items-center justify-center"
+              style={{ background: 'rgba(251,191,36,0.2)', border: '1.5px solid #fbbf24' }}
+            >
+              <Zap size={10} color="#fbbf24" strokeWidth={2.5} />
+            </div>
+          ) : (
+            <div
+              className="w-5 h-5 rounded-full flex items-center justify-center"
+              style={{ border: '1.5px solid #2d3d55' }}
+            >
+              <Circle size={8} color="#4a5a72" strokeWidth={2} />
+            </div>
+          )}
+        </div>
+
+        {/* Topic title */}
+        <span
+          className="text-xs font-medium truncate leading-tight"
+          style={{ color: '#cad5e2' }}
+        >
+          {topic.title}
+        </span>
+      </div>
+
+      {/* Mastery progress bar */}
+      <div className="h-[3px] rounded-full" style={{ background: '#1d293d' }}>
+        <div
+          className="h-full rounded-full"
+          style={{
+            background: moduleColor,
+            width: `${masteryPct}%`,
+            transition: 'width 0.6s ease',
+          }}
+        />
+      </div>
+    </motion.button>
+  )
+}
+
+// ─── Module card ─────────────────────────────────────────────────────────────
+
+function ModuleCard({ module, moduleIndex, progress }) {
   const navigate = useNavigate()
-  const { progress } = useProgress()
+  const [expanded, setExpanded] = useState(moduleIndex === 0)
 
-  // First module open by default
-  const [openModules, setOpenModules] = useState(() => new Set([MODULES[0].name]))
+  const masteredCount = module.topics.filter(t => progress[t]?.mastered).length
+  const startedCount  = module.topics.filter(t => progress[t]?.started && !progress[t]?.mastered).length
+  const totalTopics   = module.topics.length
+  const pct           = totalTopics > 0 ? (masteredCount / totalTopics) * 100 : 0
+  const barPct        = pct
 
-  const toggleModule = (name) => {
-    setOpenModules(prev => {
-      const next = new Set(prev)
-      if (next.has(name)) {
-        next.delete(name)
-      } else {
-        next.add(name)
-      }
-      return next
-    })
+  const getState = (id) => {
+    if (progress[id]?.mastered) return 'mastered'
+    if (progress[id]?.started)  return 'started'
+    return 'untouched'
   }
 
-  const getTopicState = (topicId) => {
-    if (progress[topicId]?.mastered) return 'mastered'
-    return 'active'
+  const getMasteryPct = (id) => {
+    if (progress[id]?.mastered) return 100
+    if (progress[id]?.started)  return 40
+    return 0
   }
 
   return (
+    <motion.div
+      className="rounded-[24px] overflow-hidden"
+      style={{
+        background: 'rgba(18,26,47,0.9)',
+        borderTop: `0.75px solid ${expanded ? module.color + '40' : '#1d293d'}`,
+        borderRight: `0.75px solid ${expanded ? module.color + '40' : '#1d293d'}`,
+        borderBottom: `0.75px solid ${expanded ? module.color + '40' : '#1d293d'}`,
+        borderLeft: `4px solid ${module.color}`,
+      }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: moduleIndex * 0.07, duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {/* ── Card header (always visible) ── */}
+      <button
+        className="w-full flex items-center gap-4 px-4 pt-4 pb-3"
+        onClick={() => setExpanded(prev => !prev)}
+        style={{ background: expanded ? `${module.color}08` : 'transparent' }}
+      >
+        {/* Module icon */}
+        <div
+          className="w-10 h-10 rounded-[14px] flex items-center justify-center shrink-0"
+          style={{
+            background: `${module.color}20`,
+            border: `1px solid ${module.color}40`,
+          }}
+        >
+          <module.icon size={20} color={module.color} strokeWidth={2} />
+        </div>
+
+        {/* Module info */}
+        <div className="flex-1 text-left min-w-0">
+          <div className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>
+            {module.name}
+          </div>
+          <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
+            {totalTopics} topics
+            {masteredCount > 0 && (
+              <span style={{ color: module.color }}> · {masteredCount} mastered</span>
+            )}
+            {startedCount > 0 && (
+              <span style={{ color: '#a8b8cc' }}> · {startedCount} in progress</span>
+            )}
+          </div>
+        </div>
+
+        {/* Circular progress ring */}
+        <ProgressRing pct={pct} color={module.color} size={56} />
+      </button>
+
+      {/* ── Bottom progress bar (always visible) ── */}
+      <div className="px-4 pb-4">
+        <div className="h-[3px] rounded-full" style={{ background: '#1d293d' }}>
+          <motion.div
+            className="h-full rounded-full"
+            style={{ background: module.color }}
+            initial={{ width: 0 }}
+            animate={{ width: `${barPct}%` }}
+            transition={{ duration: 0.9, delay: moduleIndex * 0.08, ease: [0.16, 1, 0.3, 1] }}
+          />
+        </div>
+      </div>
+
+      {/* ── Expanded topic grid ── */}
+      <AnimatePresence initial={false}>
+        {expanded && (
+          <motion.div
+            key="topics"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            style={{ overflow: 'hidden' }}
+          >
+            {/* Divider */}
+            <div className="mx-4 mb-3 h-px" style={{ background: `${module.color}25` }} />
+
+            <div className="px-3 pb-4 grid grid-cols-2 gap-2">
+              {module.topics.map((topicId, i) => {
+                const topic = TOPICS[topicId]
+                if (!topic) return null
+                return (
+                  <TopicTile
+                    key={topicId}
+                    topicId={topicId}
+                    topic={topic}
+                    moduleColor={module.color}
+                    masteryState={getState(topicId)}
+                    masteryPct={getMasteryPct(topicId)}
+                    index={i}
+                    onTap={() => navigate(`/lesson/${topicId}`)}
+                  />
+                )
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  )
+}
+
+// ─── Screen ──────────────────────────────────────────────────────────────────
+
+export default function TopicMap() {
+  const { progress } = useProgress()
+
+  const totalTopics   = Object.keys(TOPICS).length
+  const masteredTotal = Object.values(progress).filter(p => p?.mastered).length
+  const overallPct    = totalTopics > 0 ? Math.round((masteredTotal / totalTopics) * 100) : 0
+
+  return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
-      {/* Header */}
+
+      {/* ── Header ── */}
       <div className="px-5 pt-6 pb-4 shrink-0">
         <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>GCSE Physics</h1>
-        <p className="text-sm mt-1" style={{ color: '#a8b8cc' }}>{Object.keys(TOPICS).length} topics · {MODULES.length} modules</p>
+        <p className="text-sm leading-relaxed mt-1" style={{ color: '#cad5e2' }}>
+          {totalTopics} topics
+          <span style={{ color: '#4a5a72' }}> · </span>
+          {MODULES.length} modules
+          {overallPct > 0 && (
+            <>
+              <span style={{ color: '#4a5a72' }}> · </span>
+              <span style={{ color: '#22c55e', fontWeight: 600 }}>{overallPct}% mastered</span>
+            </>
+          )}
+        </p>
       </div>
 
-      {/* Scrollable content */}
-      <div className="flex-1 overflow-y-auto px-5 pb-8 space-y-3">
-        {MODULES.map((module, moduleIndex) => {
-          const isOpen = openModules.has(module.name)
-          const masteredInModule = module.topics.filter(t => progress[t]?.mastered).length
-          const progressPct = (masteredInModule / module.topics.length) * 100
-
-          return (
-            <motion.div
-              key={module.name}
-              className="rounded-[18px] overflow-hidden"
-              style={{ border: `0.75px solid ${isOpen ? module.color + '50' : '#1d293d'}`, background: 'rgba(18,26,47,0.7)' }}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: moduleIndex * 0.06 }}
-            >
-              {/* ── Module header (tap to expand/collapse) ── */}
-              <button
-                className="w-full flex items-center gap-3 px-4 py-3.5"
-                onClick={() => toggleModule(module.name)}
-                style={{ background: isOpen ? `${module.color}0d` : 'transparent' }}
-              >
-                <div
-                  className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
-                  style={{ background: `${module.color}20`, border: `1px solid ${module.color}50` }}
-                >
-                  <module.icon size={18} color={module.color} strokeWidth={2} />
-                </div>
-
-                <div className="flex-1 text-left">
-                  <div className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{module.name}</div>
-                  <div className="text-xs" style={{ color: '#a8b8cc' }}>
-                    {masteredInModule}/{module.topics.length} mastered
-                  </div>
-                </div>
-
-                {/* Progress bar */}
-                <div className="w-14 h-1.5 rounded-full shrink-0" style={{ background: '#1d293d' }}>
-                  <motion.div
-                    className="h-full rounded-full"
-                    style={{ background: module.color }}
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progressPct}%` }}
-                    transition={{ duration: 0.8, delay: moduleIndex * 0.1 }}
-                  />
-                </div>
-
-                {/* Chevron */}
-                <motion.div
-                  animate={{ rotate: isOpen ? 180 : 0 }}
-                  transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                  className="shrink-0 ml-1"
-                >
-                  <ChevronDown size={16} color={isOpen ? module.color : '#4a5a72'} strokeWidth={2} />
-                </motion.div>
-              </button>
-
-              {/* ── Topics (collapsible) ── */}
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    key="topics"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                    style={{ overflow: 'hidden' }}
-                  >
-                    <div className="px-3 pb-3 space-y-2">
-                      {/* Divider */}
-                      <div className="h-px mx-1 mb-2" style={{ background: `${module.color}25` }} />
-
-                      {module.topics.map((topicId) => {
-                        const topic = TOPICS[topicId]
-                        const state = getTopicState(topicId)
-                        const isMastered = state === 'mastered'
-
-                        return (
-                          <motion.button
-                            key={topicId}
-                            className="relative w-full text-left flex items-center gap-3 p-3.5 rounded-[14px]"
-                            style={{
-                              background: isMastered ? `${module.color}15` : 'rgba(11,17,33,0.6)',
-                              border: `0.75px solid ${isMastered ? module.color + '80' : module.color + '30'}`,
-                              boxShadow: isMastered ? `0 0 16px ${module.color}20` : 'none',
-                            }}
-                            onClick={() => navigate(`/lesson/${topicId}`)}
-                            whileTap={{ scale: 0.97 }}
-                          >
-                            {/* Status dot */}
-                            <div
-                              className="w-8 h-8 rounded-full shrink-0 flex items-center justify-center"
-                              style={{
-                                background: isMastered ? module.color : `${module.color}15`,
-                                border: `1.5px solid ${module.color}`,
-                              }}
-                            >
-                              {isMastered
-                                ? <CheckCircle size={15} color="#fff" strokeWidth={2.5} />
-                                : <Zap size={13} color={module.color} strokeWidth={2} />
-                              }
-                            </div>
-
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2">
-                                <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>
-                                  {topic.title}
-                                </div>
-                                {topic.course === 'physics-only' && (
-                                  <span className="shrink-0 px-1.5 py-0.5 rounded-full text-[10px] font-semibold"
-                                    style={{ background: 'rgba(139,92,246,0.15)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.3)' }}>
-                                    Physics Only
-                                  </span>
-                                )}
-                              </div>
-                              <div className="text-xs truncate mt-0.5" style={{ color: '#a8b8cc' }}>
-                                {topic.subtitle}
-                              </div>
-                              {/* Mini progress bar */}
-                              <div className="mt-1.5 h-1 rounded-full" style={{ background: '#1d293d' }}>
-                                <div
-                                  className="h-full rounded-full"
-                                  style={{
-                                    background: module.color,
-                                    width: isMastered ? '100%' : progress[topicId]?.started ? '40%' : '0%',
-                                    transition: 'width 0.5s ease',
-                                  }}
-                                />
-                              </div>
-                            </div>
-
-                            <ChevronRight size={14} color={module.color + '90'} strokeWidth={2} />
-                          </motion.button>
-                        )
-                      })}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          )
-        })}
+      {/* ── Scrollable module cards ── */}
+      <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-3">
+        {MODULES.map((module, i) => (
+          <ModuleCard
+            key={module.name}
+            module={module}
+            moduleIndex={i}
+            progress={progress}
+          />
+        ))}
       </div>
+
     </div>
   )
 }

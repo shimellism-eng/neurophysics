@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 const XP_STARTED = 5
 const XP_MASTERED = 20
 
+const SR_INTERVALS = [1, 3, 7, 14, 30] // days
+
 function load(key, fallback) {
   try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback } catch { return fallback }
 }
@@ -46,7 +48,15 @@ export function useProgress() {
 
   const markMastered = (id) => {
     const alreadyMastered = progressStore[id]?.mastered
-    progressStore[id] = { ...progressStore[id], started: true, mastered: true }
+    const now = Date.now()
+    progressStore[id] = {
+      ...progressStore[id],
+      started: true,
+      mastered: true,
+      masteredAt: progressStore[id]?.masteredAt || now,
+      reviewCount: progressStore[id]?.reviewCount || 0,
+      nextReviewAt: progressStore[id]?.nextReviewAt || (now + SR_INTERVALS[0] * 24 * 60 * 60 * 1000),
+    }
     let xpEarned = 0
     if (!alreadyMastered) {
       xpEarned = XP_MASTERED
@@ -59,5 +69,22 @@ export function useProgress() {
     return xpEarned
   }
 
-  return { progress, stats, markStarted, markMastered }
+  const markReviewed = (id) => {
+    if (!progressStore[id]?.mastered) return
+    const reviewCount = (progressStore[id].reviewCount || 0) + 1
+    const intervalDays = SR_INTERVALS[reviewCount] ?? SR_INTERVALS[SR_INTERVALS.length - 1]
+    const nextReviewAt = Date.now() + intervalDays * 24 * 60 * 60 * 1000
+    progressStore[id] = { ...progressStore[id], reviewCount, nextReviewAt }
+    save('np_progress', progressStore)
+    notify()
+  }
+
+  const getDueForReview = () => {
+    const now = Date.now()
+    return Object.entries(progressStore)
+      .filter(([, p]) => p.mastered && p.nextReviewAt && p.nextReviewAt <= now)
+      .map(([id]) => id)
+  }
+
+  return { progress, stats, markStarted, markMastered, markReviewed, getDueForReview }
 }

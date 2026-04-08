@@ -15,6 +15,100 @@ import {
   ConfidenceQuestion,
 } from '../components/questions'
 
+// ── Physics glossary (tap-to-define) ────────────────────────────────────────
+
+const PHYSICS_GLOSSARY = {
+  'acceleration': 'How quickly velocity changes. Measured in m/s². a = Δv/t',
+  'amplitude': 'The maximum displacement of a wave from its rest position.',
+  'atom': 'The smallest unit of an element. Has a nucleus (protons + neutrons) with electrons orbiting around it.',
+  'centripetal force': 'The force directed towards the centre of a circular path that keeps an object moving in a circle.',
+  'charge': 'A property of matter. Positive (protons) or negative (electrons). Measured in Coulombs (C).',
+  'compression': 'A region in a longitudinal wave where particles are pushed together (higher pressure).',
+  'conductor': 'A material that allows electric current (or heat) to flow through it easily.',
+  'conservation of energy': 'Energy cannot be created or destroyed — only transferred between stores.',
+  'conservation of momentum': 'The total momentum of a closed system stays constant before and after a collision.',
+  'current': 'The rate of flow of electric charge. Measured in Amperes (A). I = Q/t',
+  'density': 'Mass per unit volume. ρ = m/V. Measured in kg/m³.',
+  'diffraction': 'The spreading out of waves as they pass through a gap or around an obstacle.',
+  'directly proportional': 'As one quantity doubles, the other doubles. Graph is a straight line through the origin.',
+  'displacement': 'Distance moved in a specific direction. A vector quantity. Measured in metres (m).',
+  'efficiency': 'The proportion of input energy that is usefully transferred. efficiency = useful output ÷ total input.',
+  'elastic': 'A material returns to its original shape after a force is removed. Obeys Hooke\'s Law.',
+  'electromagnetic induction': 'A voltage (EMF) is induced when a conductor moves through a magnetic field or the field changes.',
+  'electron': 'A negatively charged particle found in shells around the nucleus. Mass ≈ 0. Charge = -1.',
+  'force': 'A push or pull that can cause acceleration. Measured in Newtons (N). F = ma.',
+  'frequency': 'The number of complete waves passing a point per second. Measured in Hz. f = 1/T.',
+  'friction': 'A contact force that opposes motion between surfaces.',
+  'gravitational field strength': 'The force per unit mass due to gravity. On Earth g ≈ 10 N/kg.',
+  'half-life': 'The time taken for the activity (or number of undecayed nuclei) to halve.',
+  'inertia': 'The tendency of an object to resist changes in its state of motion.',
+  'insulator': 'A material that does not allow electric current (or heat) to flow through it easily.',
+  'inversely proportional': 'As one quantity doubles, the other halves. Graph is a curve (hyperbola).',
+  'ionisation': 'Removing an electron from an atom, giving it a net positive charge.',
+  'isotope': 'Atoms of the same element with different numbers of neutrons.',
+  'kinetic energy': 'Energy due to motion. KE = ½mv².',
+  'magnetic field': 'A region where a magnetic force is experienced. Shown by field lines from N to S.',
+  'mass': 'The amount of matter in an object. Measured in kg. NOT the same as weight.',
+  'momentum': 'Mass × velocity. p = mv. A vector quantity. Conserved in closed systems.',
+  'neutron': 'A neutral particle found in the nucleus. Mass = 1. Charge = 0.',
+  'nuclear fission': 'A heavy nucleus splits into two smaller nuclei, releasing energy and neutrons.',
+  'nuclear fusion': 'Two light nuclei join to form a heavier nucleus, releasing energy.',
+  'nucleus': 'The small, dense, positively charged centre of an atom. Contains protons and neutrons.',
+  'ohm\'s law': 'V = IR — voltage is proportional to current if resistance and temperature are constant.',
+  'parallax': 'The apparent shift in position of an object when viewed from different angles.',
+  'power': 'The rate of energy transfer. P = E/t = W/t. Measured in Watts (W).',
+  'pressure': 'Force per unit area. P = F/A. Measured in Pascals (Pa).',
+  'proton': 'A positively charged particle found in the nucleus. Mass = 1. Charge = +1.',
+  'radiation': 'Energy transferred as waves or particles. Types: alpha, beta, gamma.',
+  'rarefaction': 'A region in a longitudinal wave where particles are spread apart (lower pressure).',
+  'refraction': 'The bending of a wave as it crosses the boundary between two materials at an angle.',
+  'resistance': 'How much a component opposes the flow of current. R = V/I. Measured in Ohms (Ω).',
+  'resultant force': 'The single force that has the same effect as all forces acting on an object combined.',
+  'scalar': 'A quantity with magnitude only (no direction). e.g. speed, mass, temperature.',
+  'specific heat capacity': 'The energy needed to raise 1 kg of a substance by 1°C. E = mcΔθ.',
+  'specific latent heat': 'The energy needed to change the state of 1 kg of a substance without changing temperature.',
+  'terminal velocity': 'The constant velocity reached when drag force equals weight (zero resultant force).',
+  'transformer': 'A device that uses electromagnetic induction to change the voltage of AC. Vp/Vs = Np/Ns.',
+  'vector': 'A quantity with both magnitude and direction. e.g. velocity, force, acceleration.',
+  'velocity': 'Speed in a given direction. A vector quantity. Measured in m/s.',
+  'voltage': 'The energy transferred per unit charge. Also called potential difference. V = W/Q. Measured in Volts (V).',
+  'watt': 'The unit of power. 1 W = 1 J/s.',
+  'wavelength': 'The distance between two consecutive points in phase on a wave (e.g. crest to crest). Symbol λ.',
+  'weight': 'The gravitational force on an object. W = mg. Measured in Newtons (N). NOT the same as mass.',
+  'work done': 'Energy transferred when a force moves through a distance. W = Fd. Measured in Joules (J).',
+}
+
+function findDefinition(keyword) {
+  const lower = keyword.toLowerCase()
+  if (PHYSICS_GLOSSARY[lower]) return PHYSICS_GLOSSARY[lower]
+  const partialKey = Object.keys(PHYSICS_GLOSSARY).find(k => lower.includes(k) || k.includes(lower))
+  if (partialKey) return PHYSICS_GLOSSARY[partialKey]
+  return 'Keep this term in mind — it appears in exam mark schemes for this topic.'
+}
+
+// ── Command word decoder ─────────────────────────────────────────────────────
+
+const COMMAND_WORDS = {
+  'state':    { action: 'Give ONE fact. No explanation needed.', example: 'State the unit of force → "Newton"' },
+  'name':     { action: 'Give ONE word or phrase. No explanation needed.', example: 'Name the particle → "electron"' },
+  'give':     { action: 'Provide a specific value, name, or fact.', example: 'Give the equation → "F = ma"' },
+  'identify': { action: 'Pick out or name something from the context given.', example: 'Identify the dependent variable → "current"' },
+  'describe': { action: 'Say WHAT happens. Use the context. No "because" needed.', example: 'Describe the motion → "The object accelerates then reaches a constant speed"' },
+  'explain':  { action: 'Say WHAT happens AND WHY. Use "because", "so", "therefore".', example: 'Explain why → "The current increases because resistance decreases"' },
+  'suggest':  { action: 'Apply your knowledge to an unfamiliar situation. Justify your answer.', example: 'Suggest a reason → "The anomalous result may be because..."' },
+  'calculate':{ action: 'Show ALL working. Write the equation first, then substitute, then answer with units.', example: 'Calculate the force → F = ma = 5 × 3 = 15 N' },
+  'determine':{ action: 'Use the data given to work out a value. Show working.', example: 'Determine the gradient → rise/run = ...' },
+  'estimate': { action: 'Give an approximate answer using the data available. Show reasoning.', example: 'Estimate the speed → roughly 10 m/s because...' },
+  'evaluate': { action: 'Give advantages AND disadvantages. Reach a conclusion.', example: 'Evaluate → "Advantage: ... Disadvantage: ... Overall..."' },
+  'compare':  { action: 'Say how two things are SIMILAR and how they are DIFFERENT.', example: 'Compare A and B → "Both... However A... whereas B..."' },
+  'justify':  { action: 'Give reasons/evidence that support your answer.', example: 'Justify → "This is correct because the data shows..."' },
+  'predict':  { action: 'Say what you expect to happen and give a reason.', example: 'Predict → "I predict X will happen because..."' },
+  'sketch':   { action: 'Draw a simple, labelled diagram. Accuracy matters more than beauty.', example: 'Sketch the graph → label axes, show the correct shape' },
+  'plot':     { action: 'Draw data points precisely on the axes given. Then draw a line of best fit.', example: 'Plot the points → use a cross (×) for each data point' },
+  'draw':     { action: 'Produce an accurate diagram with labels.', example: 'Draw a circuit diagram → use correct circuit symbols' },
+  'show':     { action: 'Provide working that proves the statement. Include every step.', example: 'Show that v = 30 m/s → write all steps to reach 30' },
+}
+
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
 function parseHighlighted(text, color) {
@@ -52,6 +146,7 @@ function shuffle(arr) {
 
 function SENPanel({ topic, activeTab, onTab }) {
   const [showModelAnswers, setShowModelAnswers] = useState(false)
+  const [activeKeyword, setActiveKeyword] = useState(null)
   const keywords = getKeywords(topic)
   const starters = getSentenceStarters(topic)
   const modelAnswers = topic.modelAnswers || []
@@ -76,12 +171,50 @@ function SENPanel({ topic, activeTab, onTab }) {
       </div>
       <div className="p-3">
         {activeTab === 'keywords' && (
-          <div className="flex flex-wrap gap-2">
-            {keywords.map((kw, i) => (
-              <motion.span key={kw} className="px-3 py-1.5 rounded-full text-xs font-semibold" style={{ background: `${topic.moduleColor}18`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}40` }} initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.04 }}>
-                {kw}
-              </motion.span>
-            ))}
+          <div>
+            <div className="flex flex-wrap gap-2">
+              {keywords.map((kw, i) => {
+                const hasDef = !!findDefinition(kw) && findDefinition(kw) !== 'Keep this term in mind — it appears in exam mark schemes for this topic.'
+                const isActive = activeKeyword === kw
+                return (
+                  <motion.button
+                    key={kw}
+                    className="px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5"
+                    style={{
+                      background: isActive ? `${topic.moduleColor}30` : `${topic.moduleColor}18`,
+                      color: topic.moduleColor,
+                      border: isActive ? `1.5px solid ${topic.moduleColor}` : `1px solid ${topic.moduleColor}40`,
+                    }}
+                    initial={{ opacity: 0, scale: 0.85 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: i * 0.04 }}
+                    whileTap={{ scale: 0.94 }}
+                    onClick={() => setActiveKeyword(prev => prev === kw ? null : kw)}
+                  >
+                    {kw}
+                    {hasDef && (
+                      <span
+                        className="inline-block rounded-full"
+                        style={{ width: 5, height: 5, background: topic.moduleColor, opacity: isActive ? 1 : 0.55, flexShrink: 0 }}
+                      />
+                    )}
+                  </motion.button>
+                )
+              })}
+            </div>
+            {activeKeyword && (
+              <motion.div
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-2 px-3 py-2.5 rounded-[10px]"
+                style={{ background: 'rgba(14,20,36,0.9)', border: '0.75px solid #334155' }}
+              >
+                <p className="text-xs font-bold mb-1" style={{ color: '#f8fafc' }}>{activeKeyword}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#94a3b8' }}>
+                  {findDefinition(activeKeyword)}
+                </p>
+              </motion.div>
+            )}
           </div>
         )}
         {activeTab === 'starters' && (
@@ -158,6 +291,7 @@ export default function DiagnosticQuestion() {
   const [showSEN, setShowSEN] = useState(false)
   const [senTab, setSenTab] = useState('keywords')
   const [showHint, setShowHint] = useState(false)
+  const [showDecoder, setShowDecoder] = useState(false)
 
   // F10/F12: session timer for ADHD pacing
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
@@ -255,6 +389,10 @@ export default function DiagnosticQuestion() {
       default:             return null
     }
   }
+
+  // Command word decoder
+  const questionLower = (q?.question || '').toLowerCase()
+  const detectedWord = Object.keys(COMMAND_WORDS).find(w => questionLower.startsWith(w + ' ') || questionLower.startsWith(w + ','))
 
   // Should footer show?
   const showFooter = isInteractive ? interactiveCompleted : selected !== null
@@ -383,6 +521,15 @@ export default function DiagnosticQuestion() {
                 <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
                   {q.question}
                 </h2>
+                {/* Command word decoder button */}
+                <button
+                  className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
+                  style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+                  onClick={() => setShowDecoder(v => !v)}
+                  aria-label="What is this question asking me?"
+                >
+                  ?
+                </button>
                 {/* F6: TTS speak button */}
                 {ttsEnabled && (
                   <button
@@ -395,6 +542,19 @@ export default function DiagnosticQuestion() {
                   </button>
                 )}
               </div>
+              {showDecoder && (
+                <div className="mt-2 px-3 py-2.5 rounded-[10px]" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+                  <p className="text-xs font-bold mb-1" style={{ color: '#818cf8' }}>
+                    {detectedWord ? `"${detectedWord.charAt(0).toUpperCase() + detectedWord.slice(1)}" means:` : 'Reading the question:'}
+                  </p>
+                  <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                    {detectedWord ? COMMAND_WORDS[detectedWord].action : 'Identify the command word at the start of the question to know what type of answer is expected.'}
+                  </p>
+                  {detectedWord && (
+                    <p className="text-xs mt-1 italic" style={{ color: '#64748b' }}>e.g. {COMMAND_WORDS[detectedWord].example}</p>
+                  )}
+                </div>
+              )}
               {q.questionSubtitle && (
                 <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
               )}

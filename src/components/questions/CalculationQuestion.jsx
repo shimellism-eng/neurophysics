@@ -4,13 +4,14 @@
  */
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, XCircle, Lightbulb, Calculator, ChevronRight } from 'lucide-react'
+import { CheckCircle, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
 
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const { equation, steps, answer, answerUnit, acceptRange, commonMistake, senNote } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [revealStep, setRevealStep] = useState(0)
+  const [showExample, setShowExample] = useState(false)
   const inputRef = useRef(null)
 
   const numericAnswer = parseFloat(input)
@@ -47,6 +48,38 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
         <Calculator size={16} color={moduleColor} />
         <span className="text-sm font-bold" style={{ color: moduleColor }}>{equation}</span>
       </motion.div>
+
+      {/* SEN: worked example panel */}
+      <div className="mb-3">
+        <button
+          className="w-full flex items-center justify-between px-4 py-3 rounded-[12px] text-sm font-semibold"
+          style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)', color: '#fdc700' }}
+          onClick={() => setShowExample(v => !v)}
+        >
+          <span className="flex items-center gap-2">
+            <span>📐</span> See how this type of question works
+          </span>
+          <ChevronDown size={14} style={{ transform: showExample ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+        </button>
+
+        {showExample && (
+          <div className="mt-2 px-4 py-3 rounded-[12px] space-y-2" style={{ background: 'rgba(14,20,36,0.9)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+            <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#fdc700' }}>How to approach this</p>
+            <p className="text-xs font-mono" style={{ color: '#f8fafc' }}>Formula: {equation}</p>
+            <div className="space-y-1.5 mt-2">
+              {steps.map((step, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <span className="text-xs font-bold shrink-0 mt-0.5" style={{ color: '#fdc700' }}>Step {i+1}.</span>
+                  <div>
+                    <p className="text-xs font-medium" style={{ color: '#cad5e2' }}>{step.label}</p>
+                    <p className="text-xs" style={{ color: '#64748b' }}>e.g. {step.hint}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Answer input */}
       <div className="mb-4">

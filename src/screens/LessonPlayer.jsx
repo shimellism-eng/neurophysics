@@ -9,7 +9,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, ChevronRight, BookOpen, FlaskConical, GraduationCap, Zap, Globe, Lightbulb } from 'lucide-react'
+import { ArrowLeft, ChevronRight, BookOpen, FlaskConical, GraduationCap, Zap, Globe, Lightbulb, Volume2 } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getExamQuestionCount } from '../data/examIndex'
@@ -29,6 +29,9 @@ export default function LessonPlayer() {
   const [direction, setDirection] = useState(1) // 1=forward, -1=back
 
   const topic = TOPICS[id]
+
+  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
+
   if (!topic) return (
     <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc' }}>
       Topic not found
@@ -78,10 +81,34 @@ export default function LessonPlayer() {
               {topic.concept}
             </p>
           </div>
-          {/* Description */}
-          <p className="text-sm leading-relaxed px-1" style={{ color: '#cad5e2' }}>
-            {topic.description}
-          </p>
+          {/* TTS read-aloud */}
+          {ttsEnabled && (
+            <button
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+              style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+              onClick={() => {
+                if (!('speechSynthesis' in window)) return
+                window.speechSynthesis.cancel()
+                const utt = new SpeechSynthesisUtterance(topic.concept + '. ' + topic.description)
+                utt.rate = 0.9
+                window.speechSynthesis.speak(utt)
+              }}
+            >
+              <Volume2 size={12} />
+              Read aloud
+            </button>
+          )}
+          {/* Description — chunked into sentences for SEN accessibility */}
+          <div className="flex flex-col gap-2 px-1">
+            {topic.description.split('. ').filter(s => s.trim().length > 0).map((sentence, i) => (
+              <div key={i} className="flex items-start gap-2">
+                <span className="shrink-0 mt-1 w-1.5 h-1.5 rounded-full" style={{ background: topic.moduleColor, marginTop: 6 }} />
+                <p className="text-sm leading-relaxed flex-1" style={{ color: '#cad5e2' }}>
+                  {sentence.endsWith('.') ? sentence : sentence + '.'}
+                </p>
+              </div>
+            ))}
+          </div>
           {/* Equations strip */}
           {topic.equations && topic.equations.length > 0 && (
             <div className="rounded-[14px] p-3" style={{ background: 'rgba(14,20,36,0.8)', border: '0.75px solid #1d293d' }}>

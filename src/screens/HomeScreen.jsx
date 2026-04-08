@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkles } from 'lucide-react'
+import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkles, Calendar } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
@@ -75,7 +75,7 @@ function ProgressRing({ masteredCount, totalTopics }) {
 export default function HomeScreen() {
   const navigate = useNavigate()
   const { progress, stats } = useProgress()
-  const { weakTopics, suggestions, overallAccuracy, hasData } = useInsights()
+  const { weakTopics, suggestions, overallAccuracy, hasData, reviewDue } = useInsights()
   const { user } = useAuth()
   const profile = loadProfile()
 
@@ -260,6 +260,74 @@ export default function HomeScreen() {
           </div>
         </motion.div>
       </div>
+
+      {/* ── REVIEW DUE ──────────────────────────────────────── */}
+      {reviewDue.length > 0 ? (
+        <div className="px-5 mb-4">
+          <motion.div
+            className="w-full rounded-[20px] px-5 py-4"
+            style={{
+              background: 'rgba(99,102,241,0.08)',
+              border: '1px solid rgba(99,102,241,0.25)',
+            }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.18, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {/* Header */}
+            <div className="flex items-center gap-2 mb-3">
+              <Calendar size={14} color="#818cf8" />
+              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#818cf8' }}>
+                Review Due
+              </span>
+            </div>
+            <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>
+              Spaced practice keeps it in long-term memory
+            </p>
+            {/* Topic pill chips */}
+            <div className="flex flex-wrap gap-2">
+              {reviewDue.slice(0, 3).map(({ id, topic }) => (
+                <motion.button
+                  key={id}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+                  style={{
+                    background: topic.moduleColor ? `${topic.moduleColor}20` : 'rgba(99,102,241,0.18)',
+                    border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}40` : 'rgba(99,102,241,0.35)'}`,
+                    color: topic.moduleColor || '#818cf8',
+                  }}
+                  onClick={() => navigate(`/lesson/${id}`)}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={`Review ${topic.title}`}
+                >
+                  <span>{topic.title}</span>
+                  <ChevronRight size={10} strokeWidth={2.5} />
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      ) : masteredCount >= 5 ? (
+        <div className="px-5 mb-4">
+          <motion.div
+            className="w-full rounded-[20px] px-5 py-3 flex items-center gap-3"
+            style={{
+              background: 'rgba(99,102,241,0.06)',
+              border: '1px solid rgba(99,102,241,0.18)',
+            }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.18, duration: 0.4 }}
+          >
+            <Calendar size={14} color="#6366f1" />
+            <span className="text-xs font-semibold" style={{ color: '#818cf8' }}>
+              You're all caught up ✓
+            </span>
+            <span className="text-xs" style={{ color: '#64748b' }}>
+              No reviews due today
+            </span>
+          </motion.div>
+        </div>
+      ) : null}
 
       {/* ── DAILY SPARK ─────────────────────────────────────── */}
       {sparkTopic && (

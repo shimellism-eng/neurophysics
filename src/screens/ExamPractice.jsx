@@ -25,6 +25,29 @@ import {
   DiagramQuestion,
 } from '../components/questions'
 
+// ── Command word decoder ─────────────────────────────────────────────────────
+
+const COMMAND_WORDS = {
+  'state':    { action: 'Give ONE fact. No explanation needed.', example: 'State the unit of force → "Newton"' },
+  'name':     { action: 'Give ONE word or phrase. No explanation needed.', example: 'Name the particle → "electron"' },
+  'give':     { action: 'Provide a specific value, name, or fact.', example: 'Give the equation → "F = ma"' },
+  'identify': { action: 'Pick out or name something from the context given.', example: 'Identify the dependent variable → "current"' },
+  'describe': { action: 'Say WHAT happens. Use the context. No "because" needed.', example: 'Describe the motion → "The object accelerates then reaches a constant speed"' },
+  'explain':  { action: 'Say WHAT happens AND WHY. Use "because", "so", "therefore".', example: 'Explain why → "The current increases because resistance decreases"' },
+  'suggest':  { action: 'Apply your knowledge to an unfamiliar situation. Justify your answer.', example: 'Suggest a reason → "The anomalous result may be because..."' },
+  'calculate':{ action: 'Show ALL working. Write the equation first, then substitute, then answer with units.', example: 'Calculate the force → F = ma = 5 × 3 = 15 N' },
+  'determine':{ action: 'Use the data given to work out a value. Show working.', example: 'Determine the gradient → rise/run = ...' },
+  'estimate': { action: 'Give an approximate answer using the data available. Show reasoning.', example: 'Estimate the speed → roughly 10 m/s because...' },
+  'evaluate': { action: 'Give advantages AND disadvantages. Reach a conclusion.', example: 'Evaluate → "Advantage: ... Disadvantage: ... Overall..."' },
+  'compare':  { action: 'Say how two things are SIMILAR and how they are DIFFERENT.', example: 'Compare A and B → "Both... However A... whereas B..."' },
+  'justify':  { action: 'Give reasons/evidence that support your answer.', example: 'Justify → "This is correct because the data shows..."' },
+  'predict':  { action: 'Say what you expect to happen and give a reason.', example: 'Predict → "I predict X will happen because..."' },
+  'sketch':   { action: 'Draw a simple, labelled diagram. Accuracy matters more than beauty.', example: 'Sketch the graph → label axes, show the correct shape' },
+  'plot':     { action: 'Draw data points precisely on the axes given. Then draw a line of best fit.', example: 'Plot the points → use a cross (×) for each data point' },
+  'draw':     { action: 'Produce an accurate diagram with labels.', example: 'Draw a circuit diagram → use correct circuit symbols' },
+  'show':     { action: 'Provide working that proves the statement. Include every step.', example: 'Show that v = 30 m/s → write all steps to reach 30' },
+}
+
 function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -83,6 +106,9 @@ export default function ExamPractice() {
   // Feature 2: 6-mark writing scaffold
   const [scaffoldOpen, setScaffoldOpen] = useState(false)
 
+  // Command word decoder
+  const [showDecoder, setShowDecoder] = useState(false)
+
   // F10/F12: session timer for ADHD pacing
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
@@ -131,10 +157,15 @@ export default function ExamPractice() {
       setCompleted(false)
       setSelected(null)
       setMcqSubmitted(false)
+      setShowDecoder(false)
     }
   }
 
   const optionLabels = ['A', 'B', 'C', 'D']
+
+  // Command word decoder
+  const questionLower = (q?.question || '').toLowerCase()
+  const detectedWord = Object.keys(COMMAND_WORDS).find(w => questionLower.startsWith(w + ' ') || questionLower.startsWith(w + ','))
 
   const renderQuestion = () => {
     const props = { data: q, moduleColor: topic.moduleColor, onComplete: handleInteractiveComplete }
@@ -366,6 +397,15 @@ export default function ExamPractice() {
                 <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
                   {q.question}
                 </h2>
+                {/* Command word decoder button */}
+                <button
+                  className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
+                  style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+                  onClick={() => setShowDecoder(v => !v)}
+                  aria-label="What is this question asking me?"
+                >
+                  ?
+                </button>
                 {/* F6: TTS speak button */}
                 {(() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })() && (
                   <button
@@ -384,6 +424,19 @@ export default function ExamPractice() {
                   </button>
                 )}
               </div>
+              {showDecoder && (
+                <div className="mt-2 px-3 py-2.5 rounded-[10px]" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+                  <p className="text-xs font-bold mb-1" style={{ color: '#818cf8' }}>
+                    {detectedWord ? `"${detectedWord.charAt(0).toUpperCase() + detectedWord.slice(1)}" means:` : 'Reading the question:'}
+                  </p>
+                  <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                    {detectedWord ? COMMAND_WORDS[detectedWord].action : 'Identify the command word at the start of the question to know what type of answer is expected.'}
+                  </p>
+                  {detectedWord && (
+                    <p className="text-xs mt-1 italic" style={{ color: '#64748b' }}>e.g. {COMMAND_WORDS[detectedWord].example}</p>
+                  )}
+                </div>
+              )}
               {q.questionSubtitle && (
                 <p className="text-xs mt-1 leading-relaxed" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
               )}

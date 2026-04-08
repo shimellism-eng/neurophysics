@@ -11,12 +11,12 @@ import { PRACTICALS } from '../data/practicals'
 // ─── Tabs ──────────────────────────────────────────────────────────────────────
 const TABS = [
   { id: 'overview',   label: 'Overview',   icon: BookOpen },
+  { id: 'safety',     label: 'Safety',     icon: ShieldAlert },
   { id: 'variables',  label: 'Variables',  icon: SlidersHorizontal },
   { id: 'setup',      label: 'Set Up',     icon: FlaskConical },
   { id: 'method',     label: 'Method',     icon: ListOrdered },
   { id: 'results',    label: 'Results',    icon: Table2 },
   { id: 'analysis',   label: 'Analysis',   icon: BarChart2 },
-  { id: 'safety',     label: 'Safety',     icon: ShieldAlert },
 ]
 
 // ─── SVG helper atoms ─────────────────────────────────────────────────────────
@@ -1066,6 +1066,22 @@ const DIAGRAMS = {
 function TabOverview({ p, color }) {
   return (
     <div className="flex flex-col gap-4">
+      {/* ⚠️ Hazard banner — shown on overview for ADHD/SEN students */}
+      {p.hazards && p.hazards.length > 0 && (
+        <div className="mb-4 px-4 py-3 rounded-[14px]" style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.3)' }}>
+          <div className="flex items-center gap-2 mb-2">
+            <span style={{ fontSize: 16 }}>⚠️</span>
+            <span className="text-xs font-bold uppercase tracking-wide" style={{ color: '#ef4444' }}>Safety First</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            {(Array.isArray(p.hazards) ? p.hazards : []).map((h, i) => (
+              <p key={i} className="text-xs leading-relaxed" style={{ color: '#fca5a5' }}>
+                • {typeof h === 'string' ? h : `${h.hazard} — ${h.precaution}`}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="rounded-[16px] p-4" style={{ background: `${color}10`, border: `0.75px solid ${color}40` }}>
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color }}>Aim</div>
         <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{p.aim}</p>

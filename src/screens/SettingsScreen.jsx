@@ -92,6 +92,23 @@ function applyFontSize(size) {
   document.documentElement.style.fontSize = size === 'large' ? '18px' : ''
 }
 
+// ── Background theme (SEN: coloured backgrounds) ────────────────────────────
+const BG_THEMES = {
+  dark:  { bg: '#0b1121', card: 'rgba(18,26,47,0.9)', text: '#f8fafc', label: 'Dark (default)' },
+  cream: { bg: '#f5f0e8', card: 'rgba(245,240,232,0.95)', text: '#1a1a1a', label: 'Cream' },
+  blue:  { bg: '#e8f0f8', card: 'rgba(232,240,248,0.95)', text: '#1a1a1a', label: 'Soft Blue' },
+}
+
+function applyBgTheme(theme) {
+  const t = BG_THEMES[theme] || BG_THEMES.dark
+  document.documentElement.style.setProperty('--np-bg', t.bg)
+  document.documentElement.style.setProperty('--np-card', t.card)
+  // Apply background to root immediately
+  document.body.style.background = t.bg
+  // Store for use by any screen
+  try { localStorage.setItem('np_bg_theme', theme) } catch {}
+}
+
 // Notification helpers moved to src/utils/notifications.js
 
 // ─── Toggle component ─────────────────────────────────────────────────────────
@@ -176,6 +193,7 @@ export default function SettingsScreen() {
     applyHighContrast(!!prefs.highContrast)
     applyFontSize(prefs.fontSize || 'normal')
     applyDyslexicFont(!!prefs.dyslexicFont)
+    applyBgTheme(prefs.bgTheme || 'dark')
   }, []) // eslint-disable-line
 
   const showToast = (msg, color = '#6366f1') => {
@@ -219,6 +237,16 @@ export default function SettingsScreen() {
     applyDyslexicFont(next)
     setPref('dyslexicFont', next)
     showToast(next ? 'OpenDyslexic font on' : 'Standard font restored', next ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Background Colour (SEN: coloured backgrounds)
+  const cycleBgTheme = () => {
+    const order = ['dark', 'cream', 'blue']
+    const current = prefs.bgTheme || 'dark'
+    const next = order[(order.indexOf(current) + 1) % order.length]
+    applyBgTheme(next)
+    setPref('bgTheme', next)
+    showToast(`Background: ${BG_THEMES[next].label}`, '#10b981')
   }
 
   // ── Text-to-Speech (F6)
@@ -608,6 +636,47 @@ export default function SettingsScreen() {
                   }
                 </button>
               ))}
+              {/* Background Colour — shown inline in Accessibility section */}
+              {section.title === 'Accessibility' && (
+                <div
+                  className="flex items-center justify-between px-4 py-4"
+                  style={{ background: 'rgba(18,26,47,0.9)', borderTop: '0.75px solid #1d293d' }}
+                >
+                  <div className="flex-1 min-w-0 pr-4">
+                    <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>Background Colour</div>
+                    <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
+                      Cream and soft blue backgrounds help reduce visual stress
+                    </div>
+                    {/* Colour swatches */}
+                    <div className="flex items-center gap-2 mt-2">
+                      {Object.entries(BG_THEMES).map(([key, t]) => (
+                        <div
+                          key={key}
+                          title={t.label}
+                          className="w-5 h-5 rounded-full shrink-0"
+                          style={{
+                            background: t.bg,
+                            border: (prefs.bgTheme || 'dark') === key
+                              ? '2px solid #6366f1'
+                              : '2px solid #2d3e55',
+                            boxShadow: (prefs.bgTheme || 'dark') === key
+                              ? '0 0 0 1px #6366f1'
+                              : 'none',
+                            transition: 'border 0.15s, box-shadow 0.15s',
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <button
+                    onClick={cycleBgTheme}
+                    className="px-3 py-1.5 rounded-[8px] text-xs font-semibold shrink-0"
+                    style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+                  >
+                    {BG_THEMES[prefs.bgTheme || 'dark'].label}
+                  </button>
+                </div>
+              )}
               {/* Time picker — shown inline under Notifications when reminders are on */}
               <AnimatePresence>
                 {section.title === 'Notifications' && showTimePicker && (

@@ -7,6 +7,12 @@
 import { useState, useEffect } from 'react'
 import { MODULES, TOPICS } from '../data/topics'
 
+const PROGRESS_KEY = 'np_progress'
+
+function loadProgress() {
+  try { return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}') } catch { return {} }
+}
+
 const STORAGE_KEY = 'np_quiz_results'
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -35,13 +41,18 @@ function accuracy(attempts) {
 
 export function useInsights() {
   const [results, setResults] = useState(load)
+  const [progressSnap, setProgressSnap] = useState(loadProgress)
 
   // Re-read whenever storage changes (e.g. after quiz completes)
   useEffect(() => {
-    const onStorage = () => setResults(load())
+    const onStorage = () => {
+      setResults(load())
+      setProgressSnap(loadProgress())
+    }
     window.addEventListener('storage', onStorage)
     // Also poll once on mount in case same-tab update happened before this mounted
     setResults(load())
+    setProgressSnap(loadProgress())
     return () => window.removeEventListener('storage', onStorage)
   }, [])
 
@@ -93,6 +104,16 @@ export function useInsights() {
     ? [...attempted].sort((a, b) => (results[b]?.length || 0) - (results[a]?.length || 0))[0]
     : null
 
+  // Spaced repetition: topics that are due for review today
+  const now = Date.now()
+  const reviewDue = allTopicIds
+    .filter(id => {
+      const p = progressSnap[id]
+      return p?.mastered && p.nextReviewAt && p.nextReviewAt <= now
+    })
+    .map(id => ({ id, topic: TOPICS[id] }))
+    .filter(x => x.topic)
+
   return {
     results,
     accuracyMap,
@@ -103,5 +124,6 @@ export function useInsights() {
     overallAccuracy,
     mostStudied: mostStudied ? TOPICS[mostStudied] : null,
     hasData: attempted.length > 0,
+    reviewDue,
   }
 }

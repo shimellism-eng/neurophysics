@@ -2488,6 +2488,53 @@ const examDiagramQs = {
       tier: 2,
     },
   ],
+
+  transformers: [
+    {
+      type: "diagram-question",
+      marks: 5,
+      diagramId: "transformer_step_up",
+      source: "AQA Paper 2 2022 style",
+      context: "The diagram shows a step-up transformer. The primary coil has 500 turns and is connected to a 25 V AC supply. The secondary coil has 2000 turns.",
+      parts: [
+        { part: "a", question: "Calculate the secondary voltage. Show your working.", marks: 2, answer: "Using Vp/Vs = Np/Ns: Vs = Vp × (Ns/Np) = 25 × (2000/500) = 25 × 4 = 100 V." },
+        { part: "b", question: "Explain why the transformer must be connected to an AC supply and not a DC supply.", marks: 2, answer: "A transformer requires a changing (alternating) current in the primary coil to produce a changing magnetic flux in the iron core. A changing flux induces an EMF in the secondary coil by electromagnetic induction. A DC supply produces a constant (non-changing) magnetic field, so no EMF is induced in the secondary coil." },
+        { part: "c", question: "State the purpose of the iron core in a transformer.", marks: 1, answer: "The iron core concentrates and channels the changing magnetic flux from the primary coil to the secondary coil, maximising the induction of EMF in the secondary." },
+      ],
+      hint: "Vp/Vs = Np/Ns. Transformers require AC — DC gives a static field, no induction.",
+      senNote: "Step-up: more secondary turns → higher secondary voltage. AC is essential — changing flux causes induction.",
+      tier: 2,
+    },
+    {
+      type: "diagram-question",
+      marks: 5,
+      diagramId: "transformer_coils",
+      source: "AQA Paper 2 2021 style",
+      context: "The diagram shows a transformer used in the National Grid. The primary coil is connected to a 25 000 V AC supply with a current of 400 A. The secondary voltage is 400 000 V. Assume the transformer is ideal (100% efficient).",
+      parts: [
+        { part: "a", question: "Calculate the secondary current.", marks: 2, answer: "Using VpIp = VsIs (ideal transformer, power conserved): Is = VpIp / Vs = (25 000 × 400) / 400 000 = 10 000 000 / 400 000 = 25 A." },
+        { part: "b", question: "Explain why the National Grid transmits electricity at high voltage.", marks: 2, answer: "Increasing voltage decreases current (for the same power: P = VI). Lower current reduces resistive heating losses in the cables, calculated using P = I²R. Since losses depend on I², halving the current reduces losses by a factor of four. This makes transmission much more efficient." },
+        { part: "c", question: "Is this transformer a step-up or step-down transformer? Justify your answer.", marks: 1, answer: "Step-up transformer. The secondary voltage (400 000 V) is greater than the primary voltage (25 000 V), so voltage has been stepped up. This means the secondary coil has more turns than the primary coil." },
+      ],
+      hint: "Ideal transformer: VpIp = VsIs (power conserved). National Grid uses high voltage to reduce current and minimise I²R losses.",
+      senNote: "Higher voltage = lower current for same power. Lower current = less heat wasted in cables (P = I²R).",
+      tier: 3,
+    },
+    {
+      type: "diagram-question",
+      marks: 4,
+      diagramId: "transformer_step_up",
+      source: "AQA Paper 2 2023 style",
+      context: "A student connects a transformer to a DC battery instead of an AC supply. The primary coil has 100 turns and the secondary coil has 500 turns.",
+      parts: [
+        { part: "a", question: "Predict what voltage the student will measure across the secondary coil. Explain your answer.", marks: 2, answer: "The student will measure 0 V across the secondary coil. A transformer only works with AC. A DC supply produces a constant current and therefore a constant (non-changing) magnetic flux in the iron core. No change in flux means no EMF is induced in the secondary coil (Faraday's law requires a changing flux for induction)." },
+        { part: "b", question: "The student switches to an AC supply of 10 V. Calculate the expected secondary voltage.", marks: 2, answer: "Using Vp/Vs = Np/Ns: Vs = Vp × (Ns/Np) = 10 × (500/100) = 10 × 5 = 50 V." },
+      ],
+      hint: "DC → static field → no induction → 0 V output. AC → changing flux → induction → EMF induced.",
+      senNote: "Key rule: DC gives no output from a transformer. Only AC creates the changing flux needed for induction.",
+      tier: 2,
+    },
+  ],
 };
 
 export default examDiagramQs;

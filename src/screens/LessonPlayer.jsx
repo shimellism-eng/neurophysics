@@ -82,6 +82,28 @@ export default function LessonPlayer() {
           <p className="text-sm leading-relaxed px-1" style={{ color: '#cad5e2' }}>
             {topic.description}
           </p>
+          {/* Equations strip */}
+          {topic.equations && topic.equations.length > 0 && (
+            <div className="rounded-[14px] p-3" style={{ background: 'rgba(14,20,36,0.8)', border: '0.75px solid #1d293d' }}>
+              <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#64748b' }}>
+                Equations
+              </div>
+              <div className="flex flex-col gap-1.5">
+                {topic.equations.map((eq, i) => (
+                  <div key={i} className="flex items-center justify-between gap-3">
+                    <span className="text-sm font-mono font-medium" style={{ color: '#f8fafc' }}>{eq.expr}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full font-semibold shrink-0"
+                      style={eq.given
+                        ? { background: 'rgba(34,197,94,0.12)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.3)' }
+                        : { background: 'rgba(249,115,22,0.12)', color: '#fb923c', border: '1px solid rgba(249,115,22,0.3)' }
+                      }>
+                      {eq.given ? 'Given in exam' : 'Must recall'}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           {/* Spec ref */}
           {topic.specRef && (
             <div className="flex items-center gap-2">

@@ -255,12 +255,28 @@ function ModuleCard({ module, moduleIndex, progress }) {
 
 // ─── Screen ──────────────────────────────────────────────────────────────────
 
+const PAPER1_MODULES = ['Energy', 'Electricity', 'Particle Model', 'Atomic Structure']
+const PAPER2_MODULES = ['Forces', 'Waves', 'Magnetism & Electromagnetism', 'Space Physics']
+
+const FILTER_PILLS = [
+  { id: 'all',    label: 'All' },
+  { id: 'paper1', label: 'Paper 1' },
+  { id: 'paper2', label: 'Paper 2' },
+]
+
 export default function TopicMap() {
   const { progress } = useProgress()
+  const [paperFilter, setPaperFilter] = useState('all')
 
   const totalTopics   = Object.keys(TOPICS).length
   const masteredTotal = Object.values(progress).filter(p => p?.mastered).length
   const overallPct    = totalTopics > 0 ? Math.round((masteredTotal / totalTopics) * 100) : 0
+
+  const filteredModules = MODULES.filter(m => {
+    if (paperFilter === 'paper1') return PAPER1_MODULES.includes(m.name)
+    if (paperFilter === 'paper2') return PAPER2_MODULES.includes(m.name)
+    return true
+  })
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
@@ -279,18 +295,56 @@ export default function TopicMap() {
             </>
           )}
         </p>
+
+        {/* ── Paper filter pills ── */}
+        <div className="flex gap-2 mt-3">
+          {FILTER_PILLS.map(pill => {
+            const isActive = paperFilter === pill.id
+            return (
+              <button
+                key={pill.id}
+                onClick={() => setPaperFilter(pill.id)}
+                style={{
+                  background: isActive ? '#1d293d' : 'transparent',
+                  color: isActive ? '#f8fafc' : '#64748b',
+                  border: isActive ? '0.75px solid #334155' : '0.75px solid #1d293d',
+                  borderRadius: 999,
+                  paddingLeft: 14,
+                  paddingRight: 14,
+                  paddingTop: 6,
+                  paddingBottom: 6,
+                  fontSize: 12,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  transition: 'background 0.18s ease, color 0.18s ease, border-color 0.18s ease',
+                }}
+              >
+                {pill.label}
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       {/* ── Scrollable module cards ── */}
       <div className="flex-1 overflow-y-auto px-4 pb-8 space-y-3">
-        {MODULES.map((module, i) => (
-          <ModuleCard
-            key={module.name}
-            module={module}
-            moduleIndex={i}
-            progress={progress}
-          />
-        ))}
+        <AnimatePresence mode="popLayout">
+          {filteredModules.map((module, i) => (
+            <motion.div
+              key={module.name}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18, ease: 'easeInOut' }}
+            >
+              <ModuleCard
+                module={module}
+                moduleIndex={i}
+                progress={progress}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
 
     </div>

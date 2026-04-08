@@ -1522,6 +1522,92 @@ const examCalculations = {
       senNote: "Volume increases → pressure decreases. Always check the direction makes physical sense."
     },
   ],
+
+  // ─── SOLAR SYSTEM — Orbital Speed ────────────────────────────────────────────
+  solar_system: [
+    {
+      type: "calculation",
+      question: "The Earth orbits the Sun at a radius of 1.5 × 10¹¹ m with an orbital period of 3.15 × 10⁷ s. Calculate the orbital speed of the Earth.",
+      questionSubtitle: "Use v = 2πr/T",
+      equation: "v = 2πr / T",
+      steps: [
+        { label: "Write the circumference (2πr)", value: "9.42e11", unit: "m", hint: "2 × π × 1.5×10¹¹ ≈ 9.42×10¹¹ m" },
+        { label: "Divide by orbital period T", value: "29900", unit: "m/s", hint: "v = 9.42×10¹¹ ÷ 3.15×10⁷ ≈ 29 900 m/s" }
+      ],
+      answer: 29900,
+      answerUnit: "m/s",
+      acceptRange: [29000, 31000],
+      commonMistake: "Don't forget to multiply r by 2π — the circumference is the full circular path, not just the radius.",
+      tier: 3,
+      senNote: "Orbital speed = distance of one orbit ÷ time for one orbit. Distance = 2πr (circumference of circle)."
+    },
+    {
+      type: "calculation",
+      question: "A satellite orbits Earth at a radius of 6.8 × 10⁶ m with an orbital speed of 7700 m/s. Calculate the orbital period in seconds.",
+      questionSubtitle: "Rearrange v = 2πr/T to find T",
+      equation: "T = 2πr / v",
+      steps: [
+        { label: "Calculate 2πr", value: "4.27e7", unit: "m", hint: "2 × π × 6.8×10⁶ ≈ 4.27×10⁷ m" },
+        { label: "Divide by orbital speed", value: "5545", unit: "s", hint: "T = 4.27×10⁷ ÷ 7700 ≈ 5545 s (about 92 minutes)" }
+      ],
+      answer: 5545,
+      answerUnit: "s",
+      acceptRange: [5300, 5800],
+      commonMistake: "Rearranging: T = 2πr ÷ v (not v ÷ 2πr).",
+      tier: 3,
+      senNote: "Rearrange v = 2πr/T → T = 2πr/v. Substitute carefully."
+    },
+  ],
+  transformers: [
+    {
+      type: "calculation",
+      question: "A transformer has 200 turns on the primary coil and 1000 turns on the secondary. The primary voltage is 20 V. Calculate the secondary voltage.",
+      questionSubtitle: "Use Vp/Vs = Np/Ns",
+      equation: "Vp/Vs = Np/Ns → Vs = Vp × (Ns/Np)",
+      steps: [
+        { label: "Write the turns ratio Ns/Np", value: "5", unit: "", hint: "1000 ÷ 200 = 5" },
+        { label: "Calculate secondary voltage", value: "100", unit: "V", hint: "Vs = 20 × 5 = 100 V" }
+      ],
+      answer: 100,
+      answerUnit: "V",
+      acceptRange: [99, 101],
+      commonMistake: "Make sure you multiply by Ns/Np, not Np/Ns. Secondary is the output.",
+      tier: 2,
+      senNote: "Turns ratio = Ns/Np. Multiply primary voltage by this ratio to find secondary voltage."
+    },
+    {
+      type: "calculation",
+      question: "A step-up transformer has a primary voltage of 230 V and a secondary voltage of 11 500 V. The primary current is 50 A. Calculate the secondary current. Assume the transformer is ideal.",
+      questionSubtitle: "Use VpIp = VsIs for an ideal transformer",
+      equation: "VpIp = VsIs → Is = VpIp / Vs",
+      steps: [
+        { label: "Calculate primary power", value: "11500", unit: "W", hint: "P = Vp × Ip = 230 × 50 = 11 500 W" },
+        { label: "Calculate secondary current", value: "1", unit: "A", hint: "Is = P / Vs = 11 500 / 11 500 = 1 A" }
+      ],
+      answer: 1,
+      answerUnit: "A",
+      acceptRange: [0.9, 1.1],
+      commonMistake: "For an ideal transformer, power is conserved: VpIp = VsIs. Do not just divide voltages.",
+      tier: 3,
+      senNote: "Ideal transformer: power in = power out. VpIp = VsIs. Rearrange to find Is."
+    },
+    {
+      type: "calculation",
+      question: "A transformer is used to step down 400 000 V to 230 V for domestic use. The secondary coil has 115 turns. Calculate the number of turns on the primary coil.",
+      questionSubtitle: "Use Vp/Vs = Np/Ns → Np = Ns × (Vp/Vs)",
+      equation: "Np/Ns = Vp/Vs → Np = Ns × (Vp/Vs)",
+      steps: [
+        { label: "Calculate the voltage ratio Vp/Vs", value: "1739", unit: "", hint: "400 000 ÷ 230 ≈ 1739" },
+        { label: "Calculate number of primary turns", value: "200000", unit: "turns", hint: "Np = 115 × 1739 ≈ 200 000" }
+      ],
+      answer: 200000,
+      answerUnit: "turns",
+      acceptRange: [195000, 205000],
+      commonMistake: "Make sure you multiply by Vp/Vs not Vs/Vp. The high-voltage side always has more turns.",
+      tier: 3,
+      senNote: "Primary is the high-voltage side (400 kV). Np = Ns × (Vp/Vs)."
+    },
+  ],
 };
 
 export default examCalculations;

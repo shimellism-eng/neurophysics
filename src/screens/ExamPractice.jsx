@@ -5,7 +5,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
 import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2 } from 'lucide-react'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import BreakNudge from '../components/BreakNudge'
@@ -68,6 +68,20 @@ export default function ExamPractice() {
   // MCQ state (for equation-recall type)
   const [selected, setSelected] = useState(null)
   const [mcqSubmitted, setMcqSubmitted] = useState(false)
+
+  // Feature 1: Timed Mode — per-question stopwatch
+  const [elapsed, setElapsed] = useState(0)
+  const intervalRef = useRef(null)
+
+  useEffect(() => {
+    setElapsed(0)
+    clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => setElapsed(s => s + 1), 1000)
+    return () => clearInterval(intervalRef.current)
+  }, [qIndex])
+
+  // Feature 2: 6-mark writing scaffold
+  const [scaffoldOpen, setScaffoldOpen] = useState(false)
 
   // F10/F12: session timer for ADHD pacing
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
@@ -305,6 +319,24 @@ export default function ExamPractice() {
           <span className="text-xs font-semibold shrink-0" style={{ color: '#a8b8cc' }}>
             {qIndex + 1} / {total}
           </span>
+          {/* Feature 1: per-question timer badge */}
+          {(() => {
+            const markCount = q.marks ?? (q.parts?.reduce((s, p) => s + p.marks, 0)) ?? 3
+            const overtime = elapsed > markCount * 60
+            return (
+              <span
+                className="text-xs font-mono font-semibold shrink-0 px-2 py-0.5 rounded-full"
+                style={{
+                  background: overtime ? 'rgba(249,115,22,0.12)' : 'rgba(100,116,139,0.12)',
+                  color: overtime ? '#f97316' : '#64748b',
+                  border: `1px solid ${overtime ? 'rgba(249,115,22,0.3)' : 'rgba(100,116,139,0.25)'}`,
+                  transition: 'color 0.3s, background 0.3s, border-color 0.3s',
+                }}
+              >
+                {Math.floor(elapsed / 60)}:{String(elapsed % 60).padStart(2, '0')}
+              </span>
+            )
+          })()}
         </div>
       </div>
 
@@ -356,6 +388,62 @@ export default function ExamPractice() {
                 <p className="text-xs mt-1 leading-relaxed" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
               )}
             </div>
+
+            {/* Feature 2: 6-mark writing scaffold — shown for extended / ≥5-mark questions */}
+            {(qType === 'extended' || qType === 'extended-answer' || (q.marks ?? 0) >= 5) && (
+              <div className="mb-4">
+                <button
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-[12px] text-xs font-semibold"
+                  style={{
+                    background: 'rgba(99,102,241,0.08)',
+                    border: '1px solid rgba(99,102,241,0.25)',
+                    color: '#818cf8',
+                  }}
+                  onClick={() => setScaffoldOpen(o => !o)}
+                >
+                  <span>📝 Writing Guide</span>
+                  <span style={{ transform: scaffoldOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', display: 'inline-block' }}>
+                    ▾
+                  </span>
+                </button>
+                <AnimatePresence>
+                  {scaffoldOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      style={{ overflow: 'hidden' }}
+                    >
+                      <div
+                        className="mt-1 px-4 py-3 rounded-[12px] text-xs leading-relaxed space-y-3"
+                        style={{
+                          background: 'rgba(99,102,241,0.08)',
+                          border: '1px solid rgba(99,102,241,0.25)',
+                          color: '#94a3b8',
+                        }}
+                      >
+                        <div>
+                          <div className="font-bold mb-1.5" style={{ color: '#818cf8' }}>STRUCTURE YOUR ANSWER:</div>
+                          <div>① <span className="font-semibold" style={{ color: '#c7d2fe' }}>Describe</span> — What is happening? (name the physics)</div>
+                          <div>② <span className="font-semibold" style={{ color: '#c7d2fe' }}>Explain</span> — Why does it happen? (link cause to effect)</div>
+                          <div>③ <span className="font-semibold" style={{ color: '#c7d2fe' }}>Apply</span> — How does this link to the question context?</div>
+                          <div>④ <span className="font-semibold" style={{ color: '#c7d2fe' }}>Evaluate</span> — Weigh up evidence or compare factors</div>
+                          <div>⑤ <span className="font-semibold" style={{ color: '#c7d2fe' }}>Conclude</span> — Give a clear final statement</div>
+                        </div>
+                        <div>
+                          <div className="font-bold mb-1.5" style={{ color: '#818cf8' }}>COMMAND WORDS:</div>
+                          <div>• <span style={{ color: '#c7d2fe' }}>"State"</span> → one fact, no explanation needed</div>
+                          <div>• <span style={{ color: '#c7d2fe' }}>"Explain"</span> → must include 'because' or 'therefore'</div>
+                          <div>• <span style={{ color: '#c7d2fe' }}>"Evaluate"</span> → pros/cons + conclusion</div>
+                          <div>• <span style={{ color: '#c7d2fe' }}>"Calculate"</span> → show working with units</div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )}
 
             {/* Question content */}
             {renderQuestion()}

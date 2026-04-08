@@ -1119,6 +1119,84 @@ function EMInductionReality() {
   )
 }
 
+// ─── Transformers ─────────────────────────────────────────────────────────────
+function TransformersLesson() {
+  const [type, setType] = useState('step-up')
+  const isStepUp = type === 'step-up'
+  const Np = isStepUp ? 100 : 400
+  const Ns = isStepUp ? 400 : 100
+  const Vp = 25
+  const Vs = Math.round(Vp * (Ns / Np))
+  const accentP = '#2b7fff'
+  const accentS = isStepUp ? '#ef4444' : '#10b981'
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
+      <div className="flex gap-2 justify-center">
+        {[['step-up', 'Step Up (Vs > Vp)'], ['step-down', 'Step Down (Vs < Vp)']].map(([val, label]) => (
+          <button key={val} onClick={() => setType(val)}
+            className="px-3 py-1 rounded-[6px] text-xs font-semibold"
+            style={{ background: type === val ? `${MC}25` : '#1d293d', color: type === val ? MC : '#a8b8cc', border: `1px solid ${type === val ? MC : '#2d3f5c'}` }}>
+            {label}
+          </button>
+        ))}
+      </div>
+      <svg width="100%" viewBox="0 0 260 120" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+        <rect x="10" y="35" width="70" height="50" rx="5" fill="#0d1e35" stroke={accentP} strokeWidth="1.8" />
+        {[15,22,29,36,43,50,57,64].map((x,i) => (
+          <path key={i} d={`M${x},35 Q${x+3},26 ${x+7},35`} fill="none" stroke={accentP} strokeWidth="1.5"/>
+        ))}
+        <text x="44" y="66" textAnchor="middle" fill={accentP} fontSize="7.5" fontWeight="700">Primary</text>
+        <text x="44" y="76" textAnchor="middle" fill={accentP} fontSize="7">{`Np = ${Np}`}</text>
+        <text x="44" y="86" textAnchor="middle" fill={accentP} fontSize="7">{`Vp = ${Vp} V`}</text>
+        <rect x="80" y="45" width="98" height="30" rx="3" fill="#64748b30" stroke="#64748b" strokeWidth="1" />
+        <text x="129" y="64" textAnchor="middle" fill="#94a3b8" fontSize="7">iron core</text>
+        <path d="M88,60 Q129,40 170,60" fill="none" stroke={MC} strokeWidth="1.2" strokeDasharray="3 2" />
+        <polygon points="168,57 174,61 168,65" fill={MC} />
+        <text x="129" y="36" textAnchor="middle" fill={MC} fontSize="6.5">changing flux (AC only)</text>
+        <rect x="178" y="35" width="70" height="50" rx="5" fill="#0d1e35" stroke={accentS} strokeWidth="1.8" />
+        {[183,190,197,204,211,218,225,232].map((x,i) => (
+          <path key={i} d={`M${x},35 Q${x+3},26 ${x+7},35`} fill="none" stroke={accentS} strokeWidth="1.5"/>
+        ))}
+        <text x="213" y="66" textAnchor="middle" fill={accentS} fontSize="7.5" fontWeight="700">Secondary</text>
+        <text x="213" y="76" textAnchor="middle" fill={accentS} fontSize="7">{`Ns = ${Ns}`}</text>
+        <text x="213" y="86" textAnchor="middle" fill={accentS} fontSize="7">{`Vs = ${Vs} V`}</text>
+        <text x="5" y="25" fill={accentP} fontSize="6.5">AC in</text>
+        <line x1="10" y1="60" x2="2" y2="60" stroke={accentP} strokeWidth="1.2" />
+        <text x="250" y="25" fill={accentS} fontSize="6.5">out</text>
+        <line x1="248" y1="60" x2="256" y2="60" stroke={accentS} strokeWidth="1.2" />
+        <text x="129" y="112" textAnchor="middle" fill="#fdc700" fontSize="9" fontWeight="700">Vp/Vs = Np/Ns</text>
+      </svg>
+      <div className="px-2 py-1.5 rounded-[8px] text-xs" style={{ background: `${MC}10`, border: `1px solid ${MC}25`, color: '#e2e8f0' }}>
+        {isStepUp
+          ? `Step-up: Ns (${Ns}) > Np (${Np}) \u2192 Vs (${Vs} V) > Vp (${Vp} V). Current decreases \u2014 power conserved (VpIp\u00a0=\u00a0VsIs).`
+          : `Step-down: Ns (${Ns}) < Np (${Np}) \u2192 Vs (${Vs} V) < Vp (${Vp} V). Current increases \u2014 power conserved (VpIp\u00a0=\u00a0VsIs).`}
+      </div>
+    </div>
+  )
+}
+
+function TransformersIdea() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Transformers work with any type of current — you can use a DC battery to step up or step down voltage."
+        right="Transformers only work with AC. A changing current is needed to create a changing magnetic flux in the iron core. DC creates a static field — no change in flux, no induction, no output voltage."
+        wrongLabel="DC works too?"
+        rightLabel="AC only — changing flux required for induction"
+      />
+    </div>
+  )
+}
+
+function TransformersReality() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard icon="🗼" title="National Grid — step-up to 400 kV" desc="Power stations use step-up transformers to raise voltage to ~400 kV for transmission. Higher voltage means lower current (I = P/V), dramatically reducing resistive heat losses (P = I²R) in the cables." color="#10b981" delay={0} />
+      <RealWorldCard icon="📱" title="Phone charger — step-down to 5 V" desc="A phone charger contains a step-down transformer that converts 230 V mains AC to 5 V for safe charging. The secondary coil has far fewer turns than the primary." color="#3b82f6" delay={0.1} />
+    </div>
+  )
+}
+
 // ─── AC Generators ───────────────────────────────────────────────────────────
 function ACGeneratorsLesson() {
   const [pos, setPos] = useState(0)
@@ -1614,6 +1692,7 @@ export const WAVES_TOPICS = {
     title: 'Properties of Waves', subtitle: 'Amplitude, Wavelength, Frequency & v = fλ',
     description: 'Key wave properties: amplitude (A) - maximum displacement; wavelength (λ) - distance between two identical points; frequency (f) - oscillations per second (Hz); period (T = 1/f) - time for one complete oscillation. Wave speed: v = fλ. Speed depends on the medium - not the frequency.',
     lessonVisual: WavePropertiesLesson, ideaVisual: WavePropertiesIdea, realityVisual: WavePropertiesReality,
+    equations: [{ expr: 'v = fλ', given: true }, { expr: 'T = 1/f', given: false }],
     question: 'A wave has a frequency of 200 Hz and a wavelength of 1.5 m. What is its speed?',
     questionSubtitle: 'Use v = f × λ',
     options: ['133.3 m/s', '201.5 m/s', '300 m/s', '198.5 m/s'],
@@ -1861,16 +1940,40 @@ export const WAVES_TOPICS = {
     misconception: 'Slip rings do NOT reverse the current — they just maintain contact. It is the split-ring commutator in a dynamo that rectifies the output to DC by reversing connections each half-turn.',
     concept: 'Alternator (AC): slip rings → output alternates naturally with coil rotation. Dynamo (DC): split-ring commutator → reverses connections each half-turn → DC output. Both increase output with speed, field strength, or turns.',
   },
+  transformers: {
+    id: 'transformers', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
+    title: 'Transformers', subtitle: 'Step-Up, Step-Down & The National Grid',
+    specRef: '4.7.5',
+    description: 'A transformer changes the voltage of an alternating current. It works by electromagnetic induction: AC in the primary coil creates a changing magnetic field in the iron core, which induces an alternating voltage in the secondary coil. Step-up transformers increase voltage (more secondary turns); step-down transformers decrease voltage (fewer secondary turns). The turns ratio equation: Vp/Vs = Np/Ns. For an ideal (100% efficient) transformer, power is conserved: VpIp = VsIs, so increasing voltage decreases current proportionally. Transformers ONLY work with AC — a DC current produces a static magnetic field, which cannot induce an EMF in the secondary coil. The National Grid uses step-up transformers (to ~400 kV) to reduce current, minimising resistive heating losses (P = I²R). Step-down transformers then reduce voltage for safe domestic use (230 V).',
+    lessonVisual: TransformersLesson, ideaVisual: TransformersIdea, realityVisual: TransformersReality,
+    equations: [{ expr: 'Vp/Vs = Np/Ns', given: true }, { expr: 'VpIp = VsIs', given: true }],
+    question: 'A transformer has 500 turns on the primary and 2000 turns on the secondary. The primary voltage is 25 V. What is the secondary voltage?',
+    questionSubtitle: 'Use Vp/Vs = Np/Ns',
+    options: ['6.25 V', '100 V', '50 V', '12.5 V'],
+    correctAnswer: 1,
+    keywords: ['transformer', 'step-up', 'step-down', 'turns ratio', 'Vp/Vs = Np/Ns', 'VpIp = VsIs', 'electromagnetic induction', 'iron core', 'primary coil', 'secondary coil', 'AC only', 'National Grid', 'power conservation', '400 kV', 'P = I²R losses'],
+    sentenceStarters: ['A transformer works by electromagnetic induction because...', 'Vp/Vs = Np/Ns, so to find Vs I rearrange...', 'Transformers only work with AC because...', 'The National Grid steps up voltage to reduce...', 'Power conservation means VpIp = VsIs, so increasing voltage...'],
+    modelAnswers: [
+      'A transformer works by electromagnetic induction because **AC in the primary creates a changing magnetic field in the iron core, which induces an AC voltage in the secondary coil**.',
+      'Vp/Vs = Np/Ns, so to find Vs I rearrange: **Vs = Vp × (Ns/Np) = 25 × (2000/500) = 25 × 4 = 100 V**.',
+      'Transformers only work with AC because **DC creates a static (non-changing) magnetic field which cannot induce an EMF — a changing field is required for induction**.',
+      'The National Grid steps up voltage to reduce **the current (I = P/V), which minimises resistive heating losses (P = I²R) in the transmission cables**.',
+      'Power conservation means VpIp = VsIs, so increasing voltage **decreases current proportionally — a transformer does not create energy, it trades voltage for current**.',
+    ],
+    misconception: 'Transformers do NOT work with DC — they require AC to create a changing magnetic field. A transformer does not create or destroy energy — it only converts between high-voltage/low-current and low-voltage/high-current.',
+    concept: 'Vp/Vs = Np/Ns. For ideal transformer: VpIp = VsIs (power conserved). Step-up: Ns > Np → Vs > Vp, Is < Ip. National Grid: step-up to 400 kV → low I → low I²R losses → step-down to 230 V for homes. AC only — DC gives static field, no induction.',
+  },
   solar_system: {
     id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics-only',
     title: 'Solar System & Orbital Motion', subtitle: 'Gravity, Circular Orbits & Satellites',
-    description: 'Our solar system: Sun, 8 planets, dwarf planets, moons, asteroids, comets. Gravity provides the centripetal force for orbital motion. In a circular orbit, the speed is constant but the velocity direction continuously changes — the object is always accelerating towards the centre (centripetal acceleration), so velocity is not constant. A satellite moving faster must be in a lower orbit to remain stable; a higher orbit requires a slower speed. Artificial satellites orbit Earth for GPS, communications, and weather monitoring.',
+    description: 'Our solar system: Sun, 8 planets, dwarf planets, moons, asteroids, comets. Gravity provides the centripetal force for orbital motion. In a circular orbit, speed is constant but velocity direction continuously changes — the object always accelerates towards the centre (centripetal acceleration). Orbital speed: v = 2πr/T, where r = orbital radius and T = orbital period. A planet further from the Sun has a larger orbit and moves more slowly (longer T). Artificial satellites: low Earth orbit (~200 km, short period — imaging/weather); geostationary orbit (~36 000 km, 24 h period, stays above same equatorial point — communications/TV). Comets have highly elliptical orbits — fastest at perihelion (closest to Sun), slowest at aphelion.',
     lessonVisual: SolarSystemLesson, ideaVisual: SolarSystemIdea, realityVisual: SolarSystemReality,
+    equations: [{ expr: 'v = 2πr/T', given: true }],
     question: 'What force keeps a planet in its orbit around the Sun?',
     questionSubtitle: 'Think about what provides the centripetal force',
     options: ['The planet\'s own momentum', 'Gravitational attraction towards the Sun', 'Magnetic force from the Sun', 'Atmospheric pressure'],
     correctAnswer: 1,
-    keywords: ['gravity', 'gravitational attraction', 'orbit', 'centripetal force', 'mass', 'distance', 'inverse square law', 'Sun', 'speed constant velocity changes', 'lower orbit faster', 'higher orbit slower', 'centripetal acceleration'],
+    keywords: ['gravity', 'gravitational attraction', 'orbit', 'centripetal force', 'v = 2πr/T', 'orbital speed', 'orbital period', 'geostationary', 'low Earth orbit', 'centripetal acceleration', 'comet', 'perihelion', 'lower orbit faster', 'higher orbit slower'],
     sentenceStarters: ['Gravity provides the centripetal force that keeps the planet in orbit...', 'In a circular orbit, speed is constant but velocity is not because...', 'A satellite in a higher orbit must travel more slowly because...', 'Without gravity, the planet would travel in a straight line...', 'The planet orbits because gravity constantly changes its direction of travel, so...'],
     modelAnswers: [
       'Gravity provides the centripetal force that keeps the planet in orbit ** -  it always pulls the planet towards the Sun**.',
@@ -1879,8 +1982,8 @@ export const WAVES_TOPICS = {
       'Without gravity, the planet would travel in **a straight line at constant speed  -  gravity curves its path into an orbit**.',
       'The planet orbits because gravity constantly changes its direction of travel, so **although speed is unchanged, velocity changes — there is centripetal acceleration towards the Sun**.',
     ],
-    misconception: 'Gravity acts across all of space - not just near planets. In a circular orbit, speed is constant but velocity is NOT constant — direction changes continuously.',
-    concept: 'Gravity provides centripetal force. In a circular orbit: speed constant, velocity direction always changing → centripetal acceleration. Higher orbit = slower orbital speed; faster satellite → lower orbit needed for stability.',
+    misconception: 'Speed is constant in a circular orbit but velocity is NOT (direction changes). Geostationary satellites are NOT stationary — they orbit at the same rate as Earth rotates. Gravity does not switch off in space — it acts at all distances, just weakens with distance².',
+    concept: 'v = 2πr/T. Gravity = centripetal force. Circular orbit: speed constant, velocity direction changes → centripetal acceleration. Geostationary: 36 000 km, 24 h, above equator. LEO: ~200 km, fast, short period. Comet: elliptical — fastest at perihelion, slowest at aphelion.',
   },
   stellar_evolution: {
     id: 'stellar_evolution', module: 'Space', moduleColor: SC, course: 'physics-only',

@@ -116,6 +116,7 @@ export const MODULES = [
       'motor_effect',
       'em_induction',
       'ac_generators',
+      'transformers',
     ],
   },
   {

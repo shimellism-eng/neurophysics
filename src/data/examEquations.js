@@ -757,6 +757,55 @@ const examEquations = {
       senNote: "F = B x I x l = 0.5 x 3 x 0.2 = 0.3 N.",
     },
   ],
+
+  // ===== Transformers =====
+  transformers: [
+    {
+      type: "equation-recall",
+      question: "Which equation correctly links primary and secondary voltages and turns in a transformer?",
+      questionSubtitle: "This equation is on the equation sheet.",
+      options: [
+        "Vp/Vs = Np/Ns",
+        "Vp × Np = Vs × Ns",
+        "Vp/Np = Vs/Ns",
+        "Vp + Vs = Np + Ns",
+      ],
+      correctAnswer: 0,
+      onSheet: true,
+      tier: 1,
+      senNote: "Turns ratio: Vp/Vs = Np/Ns. The side with more turns has the higher voltage.",
+    },
+    {
+      type: "equation-recall",
+      question: "A transformer has Np = 500 turns, Ns = 2000 turns, and Vp = 50 V. Which calculation gives Vs?",
+      questionSubtitle: "Rearrange Vp/Vs = Np/Ns to find Vs.",
+      options: [
+        "Vs = 50 × (500/2000) = 12.5 V",
+        "Vs = 50 × (2000/500) = 200 V",
+        "Vs = 50 + 2000 - 500 = 1550 V",
+        "Vs = 50 / (500 × 2000) = 0.00005 V",
+      ],
+      correctAnswer: 1,
+      onSheet: true,
+      tier: 2,
+      senNote: "Vs = Vp × (Ns/Np) = 50 × (2000/500) = 50 × 4 = 200 V. More secondary turns = higher voltage.",
+    },
+    {
+      type: "equation-recall",
+      question: "For an ideal (100% efficient) transformer, which equation correctly links primary power and secondary power?",
+      questionSubtitle: "Power in = Power out for an ideal transformer.",
+      options: [
+        "VpIs = VsIp",
+        "VpIp = VsIs",
+        "Vp/Ip = Vs/Is",
+        "VpNp = VsNs",
+      ],
+      correctAnswer: 1,
+      onSheet: true,
+      tier: 2,
+      senNote: "VpIp = VsIs. Power is conserved: stepping up voltage steps down current by the same factor.",
+    },
+  ],
 };
 
 export default examEquations;

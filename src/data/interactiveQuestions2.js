@@ -1722,6 +1722,62 @@ const interactiveQuestions2 = {
     },
   ],
 
+  /* ───── visible_light ───── */
+  visible_light: [
+    {
+      type: "tap-match",
+      question: "Match each colour of visible light to its relative wavelength.",
+      questionSubtitle: "Tap an item, then tap its match",
+      pairs: [
+        { item: "Violet", match: "Shortest wavelength (~400 nm)" },
+        { item: "Green", match: "Middle wavelength (~550 nm)" },
+        { item: "Red", match: "Longest wavelength (~700 nm)" },
+        { item: "Blue", match: "Shorter than green (~450 nm)" },
+      ],
+      tier: 1,
+      senNote: "ROY G BIV — red has the longest wavelength, violet the shortest in the visible spectrum.",
+    },
+    {
+      type: "hotspot",
+      question: "A red jumper is illuminated with green light only. What colour does it appear?",
+      questionSubtitle: "Tap the correct answer",
+      areas: [
+        { label: "Black — it absorbs the green and reflects no red", icon: "🖤", correct: true },
+        { label: "Red — it always appears red whatever the light", icon: "🔴", correct: false },
+        { label: "Green — it reflects the green light", icon: "🟢", correct: false },
+        { label: "White — it reflects all colours equally", icon: "⬜", correct: false },
+      ],
+      tier: 2,
+      senNote: "Objects only reflect their own colour. Red reflects red and absorbs everything else. No red in the light = nothing to reflect = black.",
+    },
+    {
+      type: "sequence",
+      question: "Put the colours of the visible spectrum in order from longest to shortest wavelength.",
+      questionSubtitle: "Tap in the correct order",
+      items: ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"],
+      correctOrder: [0, 1, 2, 3, 4, 5, 6],
+      tier: 1,
+      senNote: "Remember ROY G BIV — Red, Orange, Yellow, Green, Blue, Indigo, Violet. Red is longest, violet shortest.",
+    },
+    {
+      type: "misconception",
+      question: "Is this statement correct?",
+      questionSubtitle: "Think carefully",
+      statement: "A white object appears white because it emits white light.",
+      isCorrect: false,
+      explanation: "White objects appear white because they reflect ALL wavelengths of visible light equally. They do not emit any light themselves — they just reflect the light that hits them from another source.",
+      tier: 2,
+      senNote: "Reflection ≠ emission. A white page reflects all colours. Switch the light off and it's just a dark page.",
+    },
+    {
+      type: "confidence",
+      question: "How confident are you about visible light and colour?",
+      questionSubtitle: "Be honest — this helps us help you",
+      tier: 1,
+      senNote: "There is no wrong answer here. Just reflect on how you feel.",
+    },
+  ],
+
 };
 
 export default interactiveQuestions2;

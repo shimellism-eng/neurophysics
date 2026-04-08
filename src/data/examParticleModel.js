@@ -579,7 +579,67 @@ const examParticleModel = {
       tier: 3,
       senNote: "Microwaves: comms + cooking, heats tissue. IR: all objects emit it, used in thermal cameras, can burn skin."
     }
-  ]
+  ],
+  /* ===== visible_light ===== */
+  visible_light: [
+    {
+      type: "structured",
+      marks: 4,
+      question: "A student shines white light through a prism. Describe what happens and explain why different colours separate.",
+      markScheme: [
+        "White light refracts (bends) when it enters the prism (1)",
+        "Different wavelengths (colours) refract by different amounts (1)",
+        "Violet/blue bends the most; red bends the least (1)",
+        "This spreads the colours into a spectrum / dispersion occurs (1)",
+      ],
+      tier: 2,
+      hint: "Think about what happens when light slows down entering a denser medium — and whether all colours slow down by the same amount.",
+    },
+    {
+      type: "structured",
+      marks: 3,
+      question: "Explain why a banana appears yellow when viewed under white light.",
+      markScheme: [
+        "White light contains all wavelengths/colours of visible light (1)",
+        "The banana absorbs most wavelengths except yellow (1)",
+        "It reflects the yellow wavelengths into our eyes (1)",
+      ],
+      tier: 1,
+      hint: "The colour you see = the colour reflected. Everything else is absorbed.",
+    },
+    {
+      type: "structured",
+      marks: 2,
+      question: "A stage light shines only blue light onto a red costume. Explain what colour the costume appears and why.",
+      markScheme: [
+        "The costume appears black (1)",
+        "Red objects absorb blue light / only reflect red wavelengths, but there is no red in the incident light so no light is reflected (1)",
+      ],
+      tier: 2,
+      hint: "An object can only reflect the wavelengths present in the incoming light.",
+    },
+    {
+      type: "multiple-choice",
+      marks: 1,
+      question: "Which colour of visible light has the highest frequency?",
+      options: ["Red", "Green", "Violet", "Yellow"],
+      answer: "Violet",
+      explanation: "Violet has the shortest wavelength in the visible spectrum. Since v = fλ and the speed of light is constant, shorter wavelength means higher frequency.",
+      tier: 2,
+    },
+    {
+      type: "structured",
+      marks: 3,
+      question: "A student mixes red, green and blue light together. State what colour is produced and give one application of mixing coloured light.",
+      markScheme: [
+        "White light is produced (1)",
+        "Any one application: colour TV screens / computer monitors / stage lighting / LED displays (1)",
+        "The three colours are the primary colours of light (1)",
+      ],
+      tier: 2,
+      hint: "Mixing light is additive — more colours in = closer to white.",
+    },
+  ],
 };
 
 export default examParticleModel;

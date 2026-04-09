@@ -733,6 +733,161 @@ export const ELECTRICITY_TOPICS = {
     ],
     misconception: 'Charge and current are not the same: current is the rate of charge flow (I = Q/t); charge is the total amount that has moved (Q = It).',
     concept: 'Q = It = 2 × 30 = 60 C. Every second, 2 coulombs of charge pass any point. V = W/Q tells you how much energy each coulomb gains from the supply — a 6 V battery gives 6 J to every coulomb.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'A bolt of lightning carries around 300 million volts. Your phone charger uses just 5 volts. Both use the exact same physics you\'re about to learn.',
+      hookQuestion: 'Before we start — what do you think is actually happening inside a wire when you flick a light switch on?',
+      hookEmoji: '⚡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Current',
+        symbol: 'I',
+        unit: 'amperes (A)',
+        definition: 'The rate at which electric charge flows past a point in a circuit.',
+        everydayNote: 'Think of water flowing through a pipe — current is how fast the water is moving.',
+      },
+      {
+        word: 'Voltage',
+        symbol: 'V',
+        unit: 'volts (V)',
+        definition: 'The energy given to each unit of charge by the power supply.',
+        everydayNote: 'Voltage is like water pressure — it\'s what pushes the current around the circuit.',
+      },
+      {
+        word: 'Resistance',
+        symbol: 'R',
+        unit: 'ohms (Ω)',
+        definition: 'How much a component opposes the flow of current through it.',
+        everydayNote: 'A narrow pipe is harder to push water through — that\'s what resistance does to current.',
+      },
+      {
+        word: 'Charge',
+        symbol: 'Q',
+        unit: 'coulombs (C)',
+        definition: 'The total amount of electricity that has passed a point. Q = It.',
+        everydayNote: 'If current is the flow rate, charge is the total volume of water that has flowed.',
+      },
+      {
+        word: 'Ohm\'s Law',
+        symbol: 'V = IR',
+        unit: '',
+        definition: 'The relationship between voltage (V), current (I) and resistance (R): V = I × R.',
+        everydayNote: 'More pressure (voltage) → more flow (current), unless the pipe is narrow (high resistance).',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What must a circuit have for current to flow around it?',
+          answers: ['A battery only', 'A complete, unbroken loop', 'At least two components', 'A resistor'],
+          correct: 1,
+          feedback: 'Correct — current needs a closed, unbroken path. Any break (like an open switch) stops it completely.',
+        },
+        {
+          question: 'Which of these is current measured in?',
+          answers: ['Volts (V)', 'Watts (W)', 'Amperes (A)', 'Joules (J)'],
+          correct: 2,
+          feedback: 'Amperes (A) — named after André-Marie Ampère. Current tells you the rate of charge flow.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Energy Stores', 'Energy Transfer'],
+      current: 'Circuit Basics',
+      after: ['Circuit Components', 'Series & Parallel', 'Electrical Power'],
+    },
+
+    workedExample: {
+      title: 'Finding resistance using V = IR',
+      equation: 'V = I × R   →   R = V ÷ I',
+      context: 'A resistor in a circuit has a voltage of 12 V across it and a current of 3 A flowing through it. What is its resistance?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'V = 12 V,   I = 3 A,   R = ?',
+          annotation: 'Always list your given values first. It shows the examiner you\'ve understood the question and prevents silly substitution errors.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'V = I × R',
+          annotation: 'Ohm\'s Law — this is a must-recall equation. No formula sheet for this one.',
+        },
+        {
+          step: 3,
+          action: 'Rearrange for R',
+          content: 'R = V ÷ I',
+          annotation: 'Divide both sides by I to make R the subject. Tip: use a VAR triangle — V on top, I×R on the bottom.',
+        },
+        {
+          step: 4,
+          action: 'Substitute the values',
+          content: 'R = 12 ÷ 3 = 4',
+          annotation: 'Put the numbers in. Always check: does a bigger resistance mean less current? Yes — so 4 Ω makes sense here.',
+        },
+        {
+          step: 5,
+          action: 'State with the correct unit',
+          content: 'R = 4 Ω',
+          annotation: 'Always write the unit — Ω for ohms, named after Georg Ohm. No unit = no marks in the exam.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'If you double the voltage, the resistance doubles too.',
+        reality: 'Wrong. Resistance is a fixed property of the component (at constant temperature). Doubling the voltage doubles the current — not the resistance. R stays the same in V = IR.',
+        visual: 'The pipe width (resistance) doesn\'t change when you increase the pump pressure (voltage) — only the flow rate (current) changes.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A component has 6 V across it and 2 A flowing through it. What is its resistance?',
+        allSteps: [
+          'Write what you know: V = 6 V, I = 2 A',
+          'Write the equation: V = I × R → R = V ÷ I',
+          'Substitute: R = 6 ÷ 2',
+          '??? — what is 6 ÷ 2?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 6 ÷ 2 = ?',
+        answer: 3,
+        answerUnit: 'Ω',
+      },
+      tier2: {
+        question: 'A resistor has R = 10 Ω and current I = 0.5 A flows through it. What is the voltage across it?',
+        shownEquation: 'V = I × R',
+        shownStep1: 'Write what you know: R = 10 Ω, I = 0.5 A',
+        hint: 'Multiply I by R: 0.5 × 10 = ?',
+        answer: 5,
+        answerUnit: 'V',
+      },
+      tier3: {
+        question: 'A lamp has resistance 24 Ω and is connected to a 12 V supply. What current flows through it?',
+        hint: 'You need I. Rearrange V = IR → I = V ÷ R',
+        methodHint: 'Start with V = IR. You know V and R — rearrange to find I. Make sure you divide, not multiply.',
+        answer: 0.5,
+        answerUnit: 'A',
+      },
+    },
+
+    summary: {
+      equation: 'V = I × R',
+      sentence: 'Voltage drives current through resistance — double the voltage, double the current (as long as resistance stays the same).',
+      promptText: 'Explain what Ohm\'s Law tells us, in one sentence, as if explaining it to a friend who\'s never heard of it.',
+    },
+
+    sessionRecap: [
+      'Current (I) is the rate of charge flow — measured in amperes (A).',
+      'Voltage (V) drives current through a circuit — measured in volts (V).',
+      'Ohm\'s Law: V = IR — resistance opposes the flow of current.',
+    ],
   },
 
   circuit_components: {

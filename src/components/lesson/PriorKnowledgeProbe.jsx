@@ -167,36 +167,55 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
             })}
           </div>
 
-          {/* Non-evaluative feedback */}
+          {/* Feedback + answer reveal */}
           <AnimatePresence>
             {showFeedback && (
               <motion.div
-                className="rounded-[14px] px-4 py-3 mb-5"
-                style={{
-                  background: selected === current.correct
-                    ? 'rgba(34,197,94,0.08)'
-                    : 'rgba(99,102,241,0.1)',
-                  border: selected === current.correct
-                    ? '1px solid rgba(34,197,94,0.25)'
-                    : '1px solid rgba(99,102,241,0.3)',
-                }}
+                className="flex flex-col gap-2 mb-4"
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <p className="text-xs leading-relaxed" style={{
-                  color: selected === current.correct ? '#4ade80' : '#a5b4fc'
-                }}>
-                  {current.feedback}
-                </p>
+                {selected !== current.correct && (
+                  <div
+                    className="rounded-[14px] px-4 py-3"
+                    style={{
+                      background: 'rgba(34,197,94,0.08)',
+                      border: '1px solid rgba(34,197,94,0.3)',
+                    }}
+                  >
+                    <p className="text-xs font-bold mb-0.5" style={{ color: '#4ade80' }}>Correct answer</p>
+                    <p className="text-sm font-semibold" style={{ color: '#f8fafc' }}>
+                      {current.answers[current.correct]}
+                    </p>
+                  </div>
+                )}
+                <div
+                  className="rounded-[14px] px-4 py-3"
+                  style={{
+                    background: selected === current.correct
+                      ? 'rgba(34,197,94,0.08)'
+                      : 'rgba(99,102,241,0.1)',
+                    border: selected === current.correct
+                      ? '1px solid rgba(34,197,94,0.25)'
+                      : '1px solid rgba(99,102,241,0.3)',
+                  }}
+                >
+                  <p className="text-xs leading-relaxed" style={{
+                    color: selected === current.correct ? '#4ade80' : '#a5b4fc'
+                  }}>
+                    {current.feedback}
+                  </p>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
 
           {showFeedback && (
             <motion.button
-              className="w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
+              className="w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2 sticky bottom-4"
               style={{
                 background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+                boxShadow: `0 8px 24px ${moduleColor}40`,
                 color: '#fff',
               }}
               onClick={handleNext}

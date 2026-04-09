@@ -4,6 +4,7 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import { Minus } from 'lucide-react'
 import AtomIcon from './components/AtomIcon'
 import { AuthProvider, useAuth } from './context/AuthContext'
+import { MamoProvider, useMamoState } from './context/MamoContext'
 import BottomNav from './components/BottomNav'
 
 // ── Eagerly loaded (needed at startup / auth flow) ────────────────────────────
@@ -64,6 +65,7 @@ function PulseRing() {
 function FloatingMamo() {
   const location = useLocation()
   const navigate = useNavigate()
+  const reaction = useMamoState()
   const hiddenByRoute = location.pathname === '/mamo'
   // F9: respect "Hide Mamo Button" setting
   const hiddenByPref = (() => {
@@ -71,6 +73,19 @@ function FloatingMamo() {
   })()
   const hide = hiddenByRoute || hiddenByPref
   const [minimized, setMinimized] = useState(false)
+
+  // reaction animations
+  const reactionAnimate = reaction === 'correct'
+    ? { scale: [1, 1.35, 0.9, 1.15, 1], y: [0, -10, 2, -5, 0] }
+    : reaction === 'wrong'
+      ? { x: [0, -6, 6, -4, 4, 0], scale: [1, 0.92, 1] }
+      : reaction === 'complete'
+        ? { scale: [1, 1.5, 0.85, 1.2, 1], y: [0, -16, 4, -8, 0], rotate: [0, -12, 12, -6, 0] }
+        : { scale: 1, x: 0, y: 0 }
+
+  const reactionTransition = reaction
+    ? { duration: reaction === 'complete' ? 0.7 : 0.4, ease: [0.16, 1, 0.3, 1] }
+    : {}
 
   return (
     <AnimatePresence>
@@ -119,7 +134,22 @@ function FloatingMamo() {
                   }}
                   onClick={() => navigate('/mamo')}
                   whileTap={{ scale: 0.9 }}
+                  animate={reactionAnimate}
+                  transition={reactionTransition}
                 >
+                  {reaction && (
+                    <motion.div
+                      className="absolute inset-0 rounded-full"
+                      style={{
+                        background: reaction === 'correct' ? 'rgba(34,197,94,0.35)'
+                          : reaction === 'wrong' ? 'rgba(239,68,68,0.35)'
+                          : 'rgba(253,199,0,0.45)',
+                      }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: [0, 1, 0], scale: [0.8, 1.4, 1.8] }}
+                      transition={{ duration: reaction === 'complete' ? 0.7 : 0.5 }}
+                    />
+                  )}
                   <AtomIcon size={20} color="#fff" />
                   <PulseRing />
                 </motion.button>
@@ -230,9 +260,11 @@ function AppShell() {
 export default function App() {
   return (
     <AuthProvider>
-      <HashRouter>
-        <AppShell />
-      </HashRouter>
+      <MamoProvider>
+        <HashRouter>
+          <AppShell />
+        </HashRouter>
+      </MamoProvider>
     </AuthProvider>
   )
 }

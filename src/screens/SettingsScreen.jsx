@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
@@ -263,6 +263,13 @@ export default function SettingsScreen() {
     showToast(next ? 'Mamo button hidden' : 'Mamo button restored', next ? '#10b981' : '#a8b8cc')
   }
 
+  // ── Sound Effects
+  const toggleSounds = () => {
+    const next = prefs.sounds !== false ? false : true // default on
+    setPref('sounds', next)
+    showToast(next ? 'Sound effects on' : 'Sound effects off', next ? '#10b981' : '#a8b8cc')
+  }
+
   // ── Daily Reminders
   const [showTimePicker, setShowTimePicker] = useState(false)
   const [reminderHour, setReminderHour] = useState(() => prefs.reminderHour ?? 20)
@@ -401,6 +408,13 @@ export default function SettingsScreen() {
           hint: 'Removes the floating AI tutor button if it\'s distracting',
           on: !!prefs.hideMamo,
           onToggle: toggleHideMamo,
+        },
+        {
+          icon: Volume2,
+          label: 'Sound Effects',
+          hint: 'Plays a soft sound for correct and wrong answers',
+          on: prefs.sounds !== false,
+          onToggle: toggleSounds,
         },
       ],
     },

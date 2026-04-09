@@ -25,6 +25,8 @@ import {
 } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
+import { useHearts } from '../hooks/useHearts'
+import HeartsDisplay from '../components/HeartsDisplay'
 import { getExamQuestionCount } from '../data/examIndex'
 
 // New lesson step components
@@ -204,6 +206,7 @@ export default function LessonPlayer() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { markStarted } = useProgress()
+  const { hearts, maxHearts, lost, loseHeart, resetHearts } = useHearts()
   const [step, setStep]           = useState(0)
   const [direction, setDirection] = useState(1)
   const [showIntro, setShowIntro] = useState(true)
@@ -275,6 +278,7 @@ export default function LessonPlayer() {
             moduleColor={topic.moduleColor}
             topicMapHint={topic.topicMapHint}
             onComplete={goNext}
+            onWrongAnswer={loseHeart}
           />
         )
       case 'explore':
@@ -298,6 +302,7 @@ export default function LessonPlayer() {
             moduleColor={topic.moduleColor}
             keywords={topic.lessonKeywords}
             onComplete={goNext}
+            onWrongAnswer={loseHeart}
           />
         ) : null
       case 'lockin':
@@ -352,7 +357,7 @@ export default function LessonPlayer() {
   const showLegacyLastCTA = !isNewFlow && isLast
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+    <div className="relative flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
 
       {/* ── Header ── */}
       <div
@@ -409,6 +414,11 @@ export default function LessonPlayer() {
         >
           {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
         </span>
+
+        {/* Hearts display */}
+        <div style={{ position: 'relative' }}>
+          <HeartsDisplay hearts={hearts} maxHearts={maxHearts} />
+        </div>
       </div>
 
       {/* ── Step progress bar ── */}
@@ -585,6 +595,44 @@ export default function LessonPlayer() {
             transition={{ duration: 0.9, ease: 'easeOut' }}
           >
             +10 XP
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── No hearts overlay ── */}
+      <AnimatePresence>
+        {lost && (
+          <motion.div
+            className="absolute inset-0 z-50 flex flex-col items-center justify-center px-8 text-center"
+            style={{ background: 'rgba(8,15,30,0.95)', backdropFilter: 'blur(12px)' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <motion.div
+              className="text-6xl mb-4"
+              animate={{ rotate: [0, -10, 10, -8, 8, 0] }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              💔
+            </motion.div>
+            <h2 className="font-display text-2xl font-bold mb-2" style={{ color: '#f8fafc' }}>
+              Take a breather
+            </h2>
+            <p className="text-sm mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              You've used all your hearts. Review what you've learned before continuing.
+            </p>
+            <motion.button
+              className="font-display w-full max-w-xs py-4 rounded-[16px] font-bold text-sm"
+              style={{
+                background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
+                boxShadow: '0 6px 0 rgba(0,0,0,0.25), 0 12px 28px rgba(99,102,241,0.35)',
+                color: '#fff',
+              }}
+              onClick={() => { resetHearts() }}
+              whileTap={{ y: 4 }}
+            >
+              Continue anyway →
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

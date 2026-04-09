@@ -7,6 +7,12 @@ const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡'
 
 const OPTIONS = [
   {
+    id: 'sounds',
+    title: 'Sound Effects',
+    desc: 'Plays a soft sound for correct and wrong answers.',
+    defaultOn: true,
+  },
+  {
     id: 'focus',
     title: 'Focus Mode',
     desc: 'Reduces distractions and simplifies the layout.',
@@ -94,6 +100,7 @@ function StepProfile({ onNext }) {
           {/* Step indicator */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
 
@@ -244,6 +251,7 @@ function StepPrefs({ profileData, onFinish }) {
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
           </div>
 
           <div
@@ -303,31 +311,190 @@ function StepPrefs({ profileData, onFinish }) {
   )
 }
 
+// ─── Step 2: Goal ────────────────────────────────────────────────────────────
+function StepGoal({ profileData, onNext }) {
+  const [grade, setGrade] = useState('7')
+  const [examDate, setExamDate] = useState('')
+
+  const GRADES = ['4', '5', '6', '7', '8', '9']
+
+  return (
+    <motion.div
+      className="flex flex-col h-full"
+      key="step-goal"
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -40 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="flex-1 overflow-y-auto px-6">
+        <motion.div
+          className="pt-10 pb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* 3-dot step indicator */}
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+          </div>
+
+          <div className="text-4xl mb-4">{profileData.avatar}</div>
+
+          <h1 className="text-4xl font-extrabold leading-tight mb-3" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+            What's your{'\n'}<span style={{ color: '#6366f1' }}>target grade?</span>
+          </h1>
+          <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
+            NeuroPhysics will prioritise content to help you hit your goal.
+          </p>
+        </motion.div>
+
+        {/* Grade selector */}
+        <motion.div
+          className="mb-6"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
+            Target grade
+          </div>
+          <div className="grid grid-cols-6 gap-2">
+            {GRADES.map(g => {
+              const selected = grade === g
+              const isAspirational = g === '8' || g === '9'
+              return (
+                <motion.button
+                  key={g}
+                  className="aspect-square rounded-[14px] flex flex-col items-center justify-center text-lg font-bold"
+                  style={{
+                    background: selected
+                      ? 'linear-gradient(135deg, #4f6ef7, #6366f1)'
+                      : 'rgba(18,26,47,0.9)',
+                    border: selected
+                      ? '2px solid #6366f1'
+                      : isAspirational
+                        ? '0.75px solid rgba(99,102,241,0.3)'
+                        : '0.75px solid #1d293d',
+                    color: selected ? '#fff' : isAspirational ? '#818cf8' : '#f8fafc',
+                    boxShadow: selected ? '0 4px 20px rgba(99,102,241,0.4)' : 'none',
+                    transform: selected ? 'scale(1.06)' : 'scale(1)',
+                    transition: 'all 0.15s',
+                  }}
+                  onClick={() => setGrade(g)}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {g}
+                  {isAspirational && !selected && (
+                    <span style={{ fontSize: 8, color: '#6366f1', marginTop: 1 }}>★</span>
+                  )}
+                </motion.button>
+              )
+            })}
+          </div>
+        </motion.div>
+
+        {/* Exam date (optional) */}
+        <motion.div
+          className="mb-6"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#a8b8cc' }}>
+              Exam date
+            </div>
+            <span className="text-[10px] px-2 py-0.5 rounded-full font-medium"
+              style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.3)' }}>
+              optional
+            </span>
+          </div>
+          <input
+            type="date"
+            value={examDate}
+            onChange={e => setExamDate(e.target.value)}
+            min={new Date().toISOString().split('T')[0]}
+            className="w-full px-4 py-4 rounded-[16px] text-base outline-none"
+            style={{
+              background: 'rgba(18,26,47,0.9)',
+              border: '0.75px solid #2d3e55',
+              color: examDate ? '#f8fafc' : 'rgba(255,255,255,0.25)',
+              colorScheme: 'dark',
+              transition: 'border-color 0.2s',
+            }}
+          />
+          {examDate && (
+            <motion.p
+              className="text-xs mt-2 font-semibold"
+              style={{ color: '#6366f1' }}
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              📅 {Math.ceil((new Date(examDate) - new Date()) / (1000 * 60 * 60 * 24))} days to go — let's get to work!
+            </motion.p>
+          )}
+        </motion.div>
+      </div>
+
+      {/* Next button */}
+      <motion.div
+        className="px-6 pt-3 pb-10 shrink-0"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.button
+          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+          style={{
+            background: 'linear-gradient(135deg, #4f6ef7, #6366f1)',
+            color: '#fff',
+            boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
+          }}
+          onClick={() => onNext({ grade, examDate: examDate || null })}
+          whileTap={{ scale: 0.97 }}
+        >
+          Next
+          <ArrowRight size={18} />
+        </motion.button>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 // ─── Main Onboarding ──────────────────────────────────────────────────────────
 export default function OnboardingScreen() {
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
   const [profileData, setProfileData] = useState(null)
+  const [goalData, setGoalData] = useState(null)
 
   const handleProfileNext = (data) => {
     setProfileData(data)
     setStep(1)
   }
 
+  const handleGoalNext = (data) => {
+    setGoalData(data)
+    setStep(2)
+  }
+
   const handleFinish = (prefs) => {
     localStorage.setItem('neurophysics_onboarded', '1')
     localStorage.setItem('neurophysics_prefs', JSON.stringify(prefs))
-    localStorage.setItem('neurophysics_profile', JSON.stringify(profileData))
+    localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profileData, ...goalData }))
     navigate('/', { replace: true })
   }
 
   return (
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
-        {step === 0
-          ? <StepProfile key="profile" onNext={handleProfileNext} />
-          : <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />
-        }
+        {step === 0 && <StepProfile key="profile" onNext={handleProfileNext} />}
+        {step === 1 && <StepGoal key="goal" profileData={profileData} onNext={handleGoalNext} />}
+        {step === 2 && <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />}
       </AnimatePresence>
     </div>
   )

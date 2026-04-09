@@ -8,13 +8,17 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { ChevronRight, Map } from 'lucide-react'
+import { useMamoReaction } from '../../context/MamoContext'
+import { useSound } from '../../hooks/useSound'
 
-export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, onComplete }) {
+export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, onComplete, onWrongAnswer }) {
   const { questions } = probe
   const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState(null)
   const [showFeedback, setShowFeedback] = useState(false)
   const [done, setDone] = useState(false)
+  const triggerReaction = useMamoReaction()
+  const { playCorrect, playWrong } = useSound()
 
   const current = questions[qIndex]
 
@@ -22,6 +26,15 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
     if (selected !== null) return
     setSelected(idx)
     setShowFeedback(true)
+    triggerReaction(idx === current.correct ? 'correct' : 'wrong')
+    if (idx === current.correct) {
+      playCorrect()
+    } else {
+      playWrong()
+    }
+    if (idx !== current.correct && onWrongAnswer) {
+      onWrongAnswer()
+    }
   }
 
   const handleNext = () => {
@@ -103,7 +116,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
             boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
           }}
-          onClick={onComplete}
+          onClick={() => { triggerReaction('complete'); onComplete() }}
           whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
         >
           See it in action

@@ -16,31 +16,34 @@ import { useNavigate } from 'react-router-dom'
 import { CheckCircle2, ChevronRight, GraduationCap, CalendarClock } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-// Six confetti dots that animate outward from center on mount
-const CONFETTI_DOTS = [
-  { angle: 0,   color: '#f87171', distance: 52 },
-  { angle: 60,  color: '#fdc700', distance: 58 },
-  { angle: 120, color: '#4ade80', distance: 50 },
-  { angle: 180, color: '#60a5fa', distance: 56 },
-  { angle: 240, color: '#c084fc', distance: 54 },
-  { angle: 300, color: '#fb923c', distance: 52 },
+const CONFETTI_COLORS = [
+  '#f87171', '#fdc700', '#4ade80', '#60a5fa',
+  '#c084fc', '#fb923c', '#f472b6', '#34d399',
 ]
+
+const CONFETTI_PARTICLES = Array.from({ length: 24 }, (_, i) => {
+  const angle = i * 15
+  const isRect = i % 2 === 1
+  const color = CONFETTI_COLORS[i % CONFETTI_COLORS.length]
+  const distance = 40 + ((i * 37 + 13) % 51)
+  return { angle, color, distance, isRect }
+})
 
 function ConfettiDots({ moduleColor }) {
   return (
     <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-      {CONFETTI_DOTS.map((dot, i) => {
-        const rad = (dot.angle * Math.PI) / 180
-        const x = Math.round(Math.cos(rad) * dot.distance)
-        const y = Math.round(Math.sin(rad) * dot.distance)
+      {CONFETTI_PARTICLES.map((p, i) => {
+        const rad = (p.angle * Math.PI) / 180
+        const x = Math.round(Math.cos(rad) * p.distance)
+        const y = Math.round(Math.sin(rad) * p.distance)
         return (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full"
-            style={{ background: dot.color }}
-            initial={{ x: 0, y: 0, opacity: 1, scale: 1 }}
-            animate={{ x, y, opacity: 0, scale: 0.4 }}
-            transition={{ duration: 0.7, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+            className={p.isRect ? 'absolute w-3 h-1.5 rounded-sm' : 'absolute w-2 h-2 rounded-full'}
+            style={{ background: p.color }}
+            initial={{ x: 0, y: 0, opacity: 1, scale: 1, rotate: 0 }}
+            animate={{ x, y, opacity: 0, scale: 0.3, rotate: p.isRect ? 360 : 0 }}
+            transition={{ duration: 0.75, delay: i * 0.035, ease: [0.16, 1, 0.3, 1] }}
           />
         )
       })}

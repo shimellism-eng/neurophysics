@@ -68,6 +68,80 @@ function StreakDots({ streak }) {
   )
 }
 
+function ModuleRings({ progress }) {
+  const navigate = useNavigate()
+  return (
+    <div
+      className="flex gap-3 overflow-x-auto pb-1"
+      style={{ scrollbarWidth: 'none' }}
+    >
+      {MODULES.map((mod, index) => {
+        const masteredCount = mod.topics.filter(id => progress[id]?.mastered).length
+        const total = mod.topics.length
+        const pct = total > 0 ? masteredCount / total : 0
+        const R = 22
+        const C = 2 * Math.PI * R
+        const offset = C * (1 - pct)
+        const gradId = `moduleRingGrad-${index}`
+        return (
+          <motion.button
+            key={mod.name}
+            className="flex-shrink-0 flex flex-col items-center py-3 px-2 rounded-[16px]"
+            style={{
+              width: 72,
+              background: `${mod.color}0d`,
+              border: `1px solid ${mod.color}25`,
+            }}
+            onClick={() => navigate('/topics')}
+            whileTap={{ scale: 0.94 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 + index * 0.05, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="relative" style={{ width: 56, height: 56 }}>
+              <svg width="56" height="56" viewBox="0 0 56 56">
+                <circle cx="28" cy="28" r={R} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="5" />
+                <motion.circle
+                  cx="28" cy="28" r={R}
+                  fill="none"
+                  stroke={`url(#${gradId})`}
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                  strokeDasharray={C}
+                  strokeDashoffset={C}
+                  transform="rotate(-90 28 28)"
+                  animate={{ strokeDashoffset: offset }}
+                  transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 + index * 0.05 }}
+                />
+                <defs>
+                  <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor={mod.color} />
+                    <stop offset="100%" stopColor={mod.color} stopOpacity="0.6" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                <span className="font-bold leading-none" style={{ fontSize: 11, color: '#f8fafc' }}>
+                  {masteredCount}
+                </span>
+                <span className="leading-none mt-0.5" style={{ fontSize: 9, color: 'rgba(255,255,255,0.38)' }}>
+                  /{total}
+                </span>
+              </div>
+            </div>
+            <span
+              className="mt-1.5 text-center leading-tight font-semibold"
+              style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', maxWidth: 64 }}
+            >
+              {mod.name}
+            </span>
+          </motion.button>
+        )
+      })}
+    </div>
+  )
+}
+
 // Progress ring -- animated, sits in hero
 function ProgressRing({ masteredCount, totalTopics }) {
   const pct = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
@@ -228,6 +302,23 @@ export default function HomeScreen() {
                   {masteredCount} mastered
                 </span>
               )}
+              {profile.examDate && (() => {
+                const daysLeft = Math.ceil((new Date(profile.examDate) - new Date()) / (1000 * 60 * 60 * 24))
+                if (daysLeft <= 0 || daysLeft > 365) return null
+                return (
+                  <span
+                    className="font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5"
+                    style={{
+                      fontSize: 12,
+                      background: daysLeft <= 30 ? 'rgba(239,68,68,0.12)' : 'rgba(99,102,241,0.12)',
+                      color: daysLeft <= 30 ? '#f87171' : '#818cf8',
+                      border: `1px solid ${daysLeft <= 30 ? 'rgba(239,68,68,0.25)' : 'rgba(99,102,241,0.25)'}`,
+                    }}
+                  >
+                    📅 {daysLeft}d to exam
+                  </span>
+                )
+              })()}
             </div>
           </div>
 
@@ -262,6 +353,11 @@ export default function HomeScreen() {
             </div>
           </motion.div>
         )}
+      </div>
+
+      {/* ── MODULE RINGS ──────────────────────────────────────────── */}
+      <div className="px-5 mb-4">
+        <ModuleRings progress={progress} />
       </div>
 
       {/* ── STREAK ────────────────────────────────────────────── */}

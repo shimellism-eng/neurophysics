@@ -14,6 +14,8 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { ChevronRight, Lightbulb, CheckCircle2, XCircle, Star } from 'lucide-react'
+import { useMamoReaction } from '../../context/MamoContext'
+import { useSound } from '../../hooks/useSound'
 
 const TIER_LABELS = ['Completion', 'Partial scaffold', 'Independent']
 
@@ -186,7 +188,7 @@ function FeedbackBanner({ correct, correctAnswer, answerUnit, moduleColor }) {
 }
 
 // ─── TIER 1: Completion problem ──────────────────────────────────────────────
-function Tier1({ data, moduleColor, onComplete }) {
+function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, playWrong }) {
   const { question, allSteps, missingStep, missingHint, answer, answerUnit } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -247,7 +249,13 @@ function Tier1({ data, moduleColor, onComplete }) {
             boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
             color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
           }}
-          onClick={() => hasInput && setSubmitted(true)}
+          onClick={() => {
+            if (!hasInput) return
+            const correct = Math.abs(parseFloat(input) - answer) < Math.abs(answer * 0.03 + 0.01)
+            triggerReaction(correct ? 'correct' : 'wrong')
+            if (correct) { playCorrect() } else { playWrong() }
+            setSubmitted(true)
+          }}
           whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
         >
           Check
@@ -283,7 +291,7 @@ function Tier1({ data, moduleColor, onComplete }) {
 }
 
 // ─── TIER 2: Partial scaffold ────────────────────────────────────────────────
-function Tier2({ data, moduleColor, onComplete }) {
+function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, playWrong }) {
   const { question, shownEquation, shownStep1, hint, answer, answerUnit } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -373,7 +381,13 @@ function Tier2({ data, moduleColor, onComplete }) {
             boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
             color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
           }}
-          onClick={() => hasInput && setSubmitted(true)}
+          onClick={() => {
+            if (!hasInput) return
+            const correct = Math.abs(parseFloat(input) - answer) < Math.abs(answer * 0.03 + 0.01)
+            triggerReaction(correct ? 'correct' : 'wrong')
+            if (correct) { playCorrect() } else { playWrong() }
+            setSubmitted(true)
+          }}
           whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
         >
           Check
@@ -412,7 +426,7 @@ function Tier2({ data, moduleColor, onComplete }) {
 const STAR_LABELS = ['Not sure', 'Getting it', 'Confident', 'Really sure', 'Got it!']
 
 // ─── TIER 3: Supported independent ──────────────────────────────────────────
-function Tier3({ data, moduleColor, keywords, onComplete }) {
+function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, triggerReaction, playCorrect, playWrong, playComplete }) {
   const { question, hint, answer, answerUnit, methodHint } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -459,7 +473,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
             boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
           }}
-          onClick={onComplete}
+          onClick={() => { triggerReaction('complete'); playComplete(); onComplete() }}
           whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
         >
           Continue
@@ -526,7 +540,15 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
               boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
               color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
             }}
-            onClick={() => hasInput && setSubmitted(true)}
+            onClick={() => {
+              if (!hasInput) return
+              const num = parseFloat(input)
+              const correct = Math.abs(num - answer) < Math.abs(answer * 0.03 + 0.01)
+              triggerReaction(correct ? 'correct' : 'wrong')
+              if (correct) { playCorrect() } else { playWrong() }
+              if (!correct) onWrongAnswer?.()
+              setSubmitted(true)
+            }}
             whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
           >
             Check answer
@@ -602,8 +624,10 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
 }
 
 // ─── Main component ──────────────────────────────────────────────────────────
-export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywords, onComplete }) {
+export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywords, onComplete, onWrongAnswer }) {
   const [tier, setTier] = useState(1)
+  const triggerReaction = useMamoReaction()
+  const { playCorrect, playWrong, playComplete } = useSound()
 
   return (
     <div className="px-5 py-5 flex flex-col gap-5">
@@ -623,7 +647,13 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
             <Tier1
               data={guidedPractice.tier1}
               moduleColor={moduleColor}
-              onComplete={() => setTier(2)}
+              triggerReaction={triggerReaction}
+              playCorrect={playCorrect}
+              playWrong={playWrong}
+              onComplete={(isCorrect) => {
+                if (!isCorrect) onWrongAnswer?.()
+                setTier(2)
+              }}
             />
           </motion.div>
         )}
@@ -638,7 +668,13 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
             <Tier2
               data={guidedPractice.tier2}
               moduleColor={moduleColor}
-              onComplete={() => setTier(3)}
+              triggerReaction={triggerReaction}
+              playCorrect={playCorrect}
+              playWrong={playWrong}
+              onComplete={(isCorrect) => {
+                if (!isCorrect) onWrongAnswer?.()
+                setTier(3)
+              }}
             />
           </motion.div>
         )}
@@ -654,6 +690,11 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
               data={guidedPractice.tier3}
               moduleColor={moduleColor}
               keywords={keywords}
+              triggerReaction={triggerReaction}
+              playCorrect={playCorrect}
+              playWrong={playWrong}
+              playComplete={playComplete}
+              onWrongAnswer={onWrongAnswer}
               onComplete={onComplete}
             />
           </motion.div>

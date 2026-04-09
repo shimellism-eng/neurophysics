@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: 'Settings', icon: Settings, path: '/settings' },
 ]
 
-const ACTIVE_COLOR = '#818cf8'
+const ACTIVE_COLOR = '#6366f1'
 
 export default function BottomNav() {
   const navigate = useNavigate()
@@ -28,11 +28,12 @@ export default function BottomNav() {
         transform: 'translateX(-50%)',
         width: '100%',
         maxWidth: 480,
-        background: 'rgba(8,15,30,0.96)',
-        borderTop: '1px solid rgba(255,255,255,0.07)',
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
+        background: 'rgba(8,15,30,0.97)',
+        borderTop: '1px solid rgba(255,255,255,0.06)',
+        backdropFilter: 'blur(28px)',
+        WebkitBackdropFilter: 'blur(28px)',
         paddingBottom: 'env(safe-area-inset-bottom)',
+        boxShadow: '0 -1px 0 rgba(255,255,255,0.04), 0 -8px 32px rgba(8,15,30,0.8)',
       }}
     >
       <div className="flex items-center justify-around px-2 py-2">
@@ -41,37 +42,32 @@ export default function BottomNav() {
           return (
             <button
               key={item.path}
-              className="flex flex-col items-center gap-1 px-4 py-2 rounded-[14px] relative"
+              className="flex flex-col items-center gap-1 px-5 py-2 rounded-[16px] relative"
               onClick={() => navigate(item.path)}
             >
-              {/* Active pill indicator */}
+              {/* Active pill background - more visible filled pill, no dot */}
               {active && (
                 <motion.div
-                  className="absolute inset-0 rounded-[14px]"
-                  style={{ background: 'rgba(99,102,241,0.14)' }}
+                  className="absolute inset-0 rounded-[16px]"
+                  style={{ background: `rgba(99,102,241,0.20)` }}
                   layoutId="nav-active"
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 />
               )}
-              {/* Active dot above icon */}
-              <div style={{ height: 3, width: 20, marginBottom: 2 }}>
-                {active && (
-                  <motion.div
-                    className="mx-auto h-full rounded-full"
-                    style={{ background: ACTIVE_COLOR, width: 20 }}
-                    layoutId="nav-dot"
-                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                  />
-                )}
-              </div>
+
               <item.icon
                 size={22}
                 color={active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)'}
                 strokeWidth={active ? 2.5 : 1.8}
+                fill={active ? `${ACTIVE_COLOR}22` : 'none'}
               />
               <span
-                className="text-[10px] font-semibold"
-                style={{ color: active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)' }}
+                className="font-semibold"
+                style={{
+                  fontSize: active ? 11 : 10,
+                  fontWeight: active ? 700 : 500,
+                  color: active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)',
+                }}
               >
                 {item.label}
               </span>

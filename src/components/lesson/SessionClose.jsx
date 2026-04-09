@@ -5,15 +5,48 @@
  *
  * Research:
  * - Spacing effect (Cepeda et al.): memory consolidation requires time-spaced
- *   retrieval — a single lesson without future retrieval = ~70% forgetting in 24 hrs
+ *   retrieval - a single lesson without future retrieval = ~70% forgetting in 24 hrs
  * - ADHD: procedural memory consolidation is time-dependent; scheduled review
  *   = external executive function scaffold replacing internal one
  * - Bullet-point recap (not sentences) supports ADHD end-of-session fatigue
  * - Autistic learners benefit from closing the cognitive loop explicitly
  */
-import { motion } from 'motion/react'
+import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle2, ChevronRight, GraduationCap, RotateCcw } from 'lucide-react'
+import { CheckCircle2, ChevronRight, GraduationCap, CalendarClock } from 'lucide-react'
+import { useEffect, useState } from 'react'
+
+// Six confetti dots that animate outward from center on mount
+const CONFETTI_DOTS = [
+  { angle: 0,   color: '#f87171', distance: 52 },
+  { angle: 60,  color: '#fdc700', distance: 58 },
+  { angle: 120, color: '#4ade80', distance: 50 },
+  { angle: 180, color: '#60a5fa', distance: 56 },
+  { angle: 240, color: '#c084fc', distance: 54 },
+  { angle: 300, color: '#fb923c', distance: 52 },
+]
+
+function ConfettiDots({ moduleColor }) {
+  return (
+    <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+      {CONFETTI_DOTS.map((dot, i) => {
+        const rad = (dot.angle * Math.PI) / 180
+        const x = Math.round(Math.cos(rad) * dot.distance)
+        const y = Math.round(Math.sin(rad) * dot.distance)
+        return (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 rounded-full"
+            style={{ background: dot.color }}
+            initial={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+            animate={{ x, y, opacity: 0, scale: 0.4 }}
+            transition={{ duration: 0.7, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+          />
+        )
+      })}
+    </div>
+  )
+}
 
 export default function SessionClose({
   topic,
@@ -23,76 +56,138 @@ export default function SessionClose({
   recap,
 }) {
   const navigate = useNavigate()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 80)
+    return () => clearTimeout(t)
+  }, [])
 
   return (
     <div className="px-5 py-6 flex flex-col gap-5">
 
       {/* Completion celebration */}
       <motion.div
-        className="flex flex-col items-center gap-3 py-4"
-        initial={{ opacity: 0, scale: 0.95 }}
+        className="flex flex-col items-center gap-3 py-6"
+        initial={{ opacity: 0, scale: 0.93 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center"
-          style={{
-            background: `${topic.moduleColor}20`,
-            border: `2px solid ${topic.moduleColor}50`,
-          }}
-        >
-          <CheckCircle2 size={32} color={topic.moduleColor} />
+        {/* Checkmark with pulsing ring + confetti */}
+        <div className="relative flex items-center justify-center" style={{ width: 120, height: 120 }}>
+          {/* Pulsing ring */}
+          <motion.div
+            className="absolute rounded-full"
+            style={{
+              width: 96,
+              height: 96,
+              background: 'transparent',
+              border: `2px solid ${topic.moduleColor}50`,
+            }}
+            animate={{ scale: [1, 1.18, 1], opacity: [0.6, 0, 0.6] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          {/* Outer slow pulse */}
+          <motion.div
+            className="absolute rounded-full"
+            style={{
+              width: 96,
+              height: 96,
+              background: 'transparent',
+              border: `1px solid ${topic.moduleColor}30`,
+            }}
+            animate={{ scale: [1, 1.32, 1], opacity: [0.4, 0, 0.4] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
+          />
+          {/* Main circle */}
+          <div
+            className="relative w-24 h-24 rounded-full flex items-center justify-center"
+            style={{
+              background: `linear-gradient(135deg, ${topic.moduleColor}28, ${topic.moduleColor}10)`,
+              border: `2.5px solid ${topic.moduleColor}60`,
+              boxShadow: `0 0 32px ${topic.moduleColor}30, inset 0 1px 0 ${topic.moduleColor}40`,
+            }}
+          >
+            <CheckCircle2 size={40} color={topic.moduleColor} strokeWidth={2} />
+          </div>
+          {/* Confetti dots */}
+          <AnimatePresence>
+            {mounted && <ConfettiDots moduleColor={topic.moduleColor} />}
+          </AnimatePresence>
         </div>
+
         <div className="text-center">
-          <h2 className="text-lg font-bold" style={{ color: '#f8fafc' }}>
+          <h2
+            className="font-bold"
+            style={{ color: '#f8fafc', fontSize: 22, letterSpacing: '-0.03em' }}
+          >
             Lesson complete
           </h2>
-          <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+          {topic.emoji && (
+            <div className="text-2xl mt-1">{topic.emoji}</div>
+          )}
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.38)' }}>
             {topic.title}
           </p>
         </div>
       </motion.div>
 
-      {/* What you learned today — 3 bullets */}
+      {/* What you learned today - 3 bullets */}
       <motion.div
-        className="rounded-[18px] px-4 py-4"
+        className="rounded-[18px] overflow-hidden"
         style={{
           background: `${topic.moduleColor}0d`,
-          border: `1px solid ${topic.moduleColor}30`,
+          border: `1px solid ${topic.moduleColor}28`,
+          borderLeft: `4px solid ${topic.moduleColor}`,
         }}
-        initial={{ opacity: 0, y: 12 }}
+        initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.15 }}
+        transition={{ delay: 0.18, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: topic.moduleColor }}>
-          What you learned today
-        </div>
-        <div className="flex flex-col gap-2.5">
-          {recap.map((point, i) => (
-            <div key={i} className="flex items-start gap-2.5">
-              <div
-                className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5"
-                style={{ background: `${topic.moduleColor}25`, color: topic.moduleColor }}
-              >
-                {i + 1}
+        <div className="px-4 pt-4 pb-3">
+          <div className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: topic.moduleColor }}>
+            What you learned today
+          </div>
+          <div className="flex flex-col">
+            {recap.map((point, i) => (
+              <div key={i}>
+                <div className="flex items-start gap-3 py-2.5">
+                  <div
+                    className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5"
+                    style={{
+                      background: `linear-gradient(135deg, ${topic.moduleColor}40, ${topic.moduleColor}20)`,
+                      color: topic.moduleColor,
+                    }}
+                  >
+                    {i + 1}
+                  </div>
+                  <p className="text-[14px] leading-snug" style={{ color: '#e2e8f0' }}>{point}</p>
+                </div>
+                {i < recap.length - 1 && (
+                  <div
+                    className="ml-10"
+                    style={{ height: 1, background: `${topic.moduleColor}15` }}
+                  />
+                )}
               </div>
-              <p className="text-sm leading-snug" style={{ color: '#cad5e2' }}>{point}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </motion.div>
 
       {/* Spaced review message */}
       <motion.div
-        className="flex items-start gap-3 px-4 py-3 rounded-[14px]"
+        className="flex items-start gap-3 px-4 py-3.5 rounded-[14px]"
         style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}
-        initial={{ opacity: 0, y: 8 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.22 }}
+        transition={{ delay: 0.26, duration: 0.35 }}
       >
-        <RotateCcw size={14} color="#818cf8" style={{ marginTop: 1, flexShrink: 0 }} />
+        <CalendarClock size={16} color="#818cf8" style={{ marginTop: 2, flexShrink: 0 }} />
         <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
-          This will come up again in <strong>1 day</strong> for a quick retrieval check.
+          This will come up again in{' '}
+          <strong style={{ color: topic.moduleColor }}>1 day</strong>
+          {' '}for a quick retrieval check.
           Spaced practice is what moves it from short-term to long-term memory.
         </p>
       </motion.div>
@@ -100,17 +195,19 @@ export default function SessionClose({
       {/* CTAs */}
       <div className="flex flex-col gap-3">
         <motion.button
-          className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
+          className="w-full rounded-[16px] font-bold flex items-center justify-center gap-2"
           style={{
+            height: 56,
+            fontSize: 16,
             background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
-            boxShadow: `0 8px 28px ${topic.moduleColor}40`,
+            boxShadow: `0 10px 32px ${topic.moduleColor}45`,
             color: '#fff',
           }}
           onClick={onStartQuiz}
           whileTap={{ scale: 0.97 }}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.33 }}
         >
           Test Your Knowledge
           <ChevronRight size={20} strokeWidth={2.5} />
@@ -118,19 +215,33 @@ export default function SessionClose({
 
         {examCount > 0 && (
           <motion.button
-            className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
+            className="w-full rounded-[16px] font-bold flex items-center justify-center gap-2 relative overflow-hidden"
             style={{
-              background: 'rgba(99,102,241,0.12)',
-              border: '1px solid rgba(99,102,241,0.4)',
+              height: 56,
+              fontSize: 15,
+              background: 'rgba(99,102,241,0.1)',
               color: '#818cf8',
+              // Gradient border via box-shadow trick
+              boxShadow: 'inset 0 0 0 1px rgba(99,102,241,0.5)',
             }}
             onClick={() => navigate(`/exam/${topicId}`)}
             whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.38 }}
+            transition={{ delay: 0.41 }}
           >
-            <GraduationCap size={16} />
+            {/* Gradient border overlay */}
+            <div
+              className="absolute inset-0 rounded-[16px] pointer-events-none"
+              style={{
+                background: 'linear-gradient(135deg, rgba(99,102,241,0.4), rgba(168,85,247,0.25))',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude',
+                padding: 1,
+              }}
+            />
+            <GraduationCap size={17} />
             Exam Practice ({examCount} questions)
           </motion.button>
         )}

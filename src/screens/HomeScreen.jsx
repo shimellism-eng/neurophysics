@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkles, Calendar, BookOpen } from 'lucide-react'
+import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkles, Calendar, BookOpen, ArrowRight } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
@@ -21,7 +21,54 @@ function loadProfile() {
   }
 }
 
-// Progress ring — animated, sits in hero
+// Day-dot streak indicators: Mon-Sun
+function StreakDots({ streak }) {
+  const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+  const today = new Date().getDay() // 0=Sun
+  // Convert JS day (0=Sun) to index where Mon=0
+  const todayIdx = today === 0 ? 6 : today - 1
+  // Fill dots going backwards from today based on streak count
+  return (
+    <div className="flex items-end gap-2 mt-3">
+      {days.map((label, i) => {
+        // How many days ago is index i relative to today?
+        const daysAgo = todayIdx >= i ? todayIdx - i : todayIdx - i + 7
+        const filled = daysAgo < streak
+        const isToday = i === todayIdx
+        return (
+          <div key={i} className="flex flex-col items-center gap-1">
+            <div
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: filled
+                  ? isToday
+                    ? '#f97316'
+                    : 'rgba(249,115,22,0.55)'
+                  : 'rgba(255,255,255,0.1)',
+                boxShadow: filled && isToday ? '0 0 6px rgba(249,115,22,0.7)' : 'none',
+                border: isToday && !filled ? '1px solid rgba(249,115,22,0.4)' : 'none',
+              }}
+            />
+            <span
+              style={{
+                fontSize: 9,
+                color: filled ? (isToday ? '#f97316' : 'rgba(249,115,22,0.5)') : 'rgba(255,255,255,0.2)',
+                fontWeight: isToday ? 700 : 500,
+                lineHeight: 1,
+              }}
+            >
+              {label}
+            </span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+// Progress ring -- animated, sits in hero
 function ProgressRing({ masteredCount, totalTopics }) {
   const pct = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
   const R = 32
@@ -94,6 +141,7 @@ export default function HomeScreen() {
   const firstUnmastered = allTopicIds.find(id => !progress[id]?.mastered) || allTopicIds[0]
   const resumeTopic = TOPICS[firstUnmastered]
   const resumeModule = MODULES.find(m => m.topics.includes(firstUnmastered))
+  const moduleColor = resumeModule?.color || null
 
   const sparkEntry = weakTopics[0] || suggestions[0] || null
   const sparkTopic = sparkEntry ? sparkEntry.topic : resumeTopic
@@ -103,11 +151,19 @@ export default function HomeScreen() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e' }}
+      style={{
+        background: '#080f1e',
+        paddingTop: 'env(safe-area-inset-top, 16px)',
+      }}
     >
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <div className="px-5 pt-8 pb-5">
+      <div
+        className="px-5 pt-6 pb-5 relative"
+        style={{
+          background: `radial-gradient(ellipse 120% 80% at 50% -20%, ${moduleColor || '#6366f1'}18 0%, transparent 70%)`,
+        }}
+      >
         <motion.div
           className="flex items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
@@ -116,13 +172,14 @@ export default function HomeScreen() {
         >
           {/* Avatar */}
           <div
-            className="flex items-center justify-center text-2xl shrink-0"
+            className="flex items-center justify-center text-3xl shrink-0"
             style={{
-              width: 56,
-              height: 56,
-              borderRadius: 18,
-              background: 'linear-gradient(135deg, rgba(99,102,241,0.25), rgba(21,93,252,0.15))',
-              border: '1.5px solid rgba(99,102,241,0.35)',
+              width: 64,
+              height: 64,
+              borderRadius: 20,
+              background: 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(21,93,252,0.18))',
+              border: '2px solid rgba(99,102,241,0.45)',
+              boxShadow: '0 0 0 4px rgba(99,102,241,0.08), 0 8px 24px rgba(99,102,241,0.2)',
             }}
           >
             {avatar}
@@ -131,32 +188,42 @@ export default function HomeScreen() {
           {/* Greeting */}
           <div className="flex-1 min-w-0">
             <p
-              className="text-xs font-semibold uppercase tracking-widest mb-0.5"
+              className="text-[10px] font-bold uppercase tracking-widest mb-0.5"
               style={{ color: '#6366f1' }}
             >
               {greeting}
             </p>
             <h1
-              className="text-[22px] font-bold leading-tight truncate"
-              style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}
+              className="font-bold leading-tight truncate"
+              style={{ color: '#f8fafc', fontSize: 26, letterSpacing: '-0.03em' }}
             >
               {displayName}
             </h1>
             {/* Stat pills */}
-            <div className="flex items-center gap-2 mt-1.5 flex-wrap">
+            <div className="flex items-center gap-2 mt-2 flex-wrap">
               <span
-                className="text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
-                style={{ background: 'rgba(253,199,0,0.1)', color: '#fdc700', border: '1px solid rgba(253,199,0,0.2)' }}
+                className="font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5"
+                style={{
+                  fontSize: 12,
+                  background: 'rgba(253,199,0,0.12)',
+                  color: '#fdc700',
+                  border: '1px solid rgba(253,199,0,0.25)',
+                }}
               >
-                <Zap size={10} />
+                <Zap size={12} />
                 {xp} XP
               </span>
               {masteredCount > 0 && (
                 <span
-                  className="text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
-                  style={{ background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}
+                  className="font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5"
+                  style={{
+                    fontSize: 12,
+                    background: 'rgba(34,197,94,0.12)',
+                    color: '#22c55e',
+                    border: '1px solid rgba(34,197,94,0.25)',
+                  }}
                 >
-                  <Star size={10} />
+                  <Star size={12} />
                   {masteredCount} mastered
                 </span>
               )}
@@ -170,12 +237,12 @@ export default function HomeScreen() {
         {/* Overall progress bar */}
         {progressPct > 0 && (
           <motion.div
-            className="mt-4"
+            className="mt-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="w-full h-[6px] rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+            <div className="w-full rounded-full overflow-hidden" style={{ height: 8, background: 'rgba(255,255,255,0.06)' }}>
               <motion.div
                 className="h-full rounded-full"
                 style={{ background: 'linear-gradient(90deg, #6366f1, #22c55e)' }}
@@ -184,9 +251,14 @@ export default function HomeScreen() {
                 transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
               />
             </div>
-            <p className="text-[11px] font-semibold uppercase tracking-widest mt-1.5" style={{ color: 'rgba(255,255,255,0.3)' }}>
-              GCSE Physics · {progressPct}% complete
-            </p>
+            <div className="flex items-center justify-between mt-1.5">
+              <p className="text-[11px] font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                GCSE Physics - {progressPct}% complete
+              </p>
+              <p className="text-[11px] font-bold" style={{ color: moduleColor || '#6366f1' }}>
+                {masteredCount}/{totalTopics} topics
+              </p>
+            </div>
           </motion.div>
         )}
       </div>
@@ -194,49 +266,54 @@ export default function HomeScreen() {
       {/* ── STREAK ────────────────────────────────────────────── */}
       <div className="px-5 mb-3">
         <motion.div
-          className="w-full rounded-[20px] px-5 py-4 flex items-center gap-4"
+          className="w-full rounded-[22px] px-5 py-4"
           style={{
             background: streak > 0
-              ? 'linear-gradient(135deg, rgba(249,115,22,0.16) 0%, rgba(15,22,41,0.95) 100%)'
+              ? 'linear-gradient(135deg, rgba(249,115,22,0.2) 0%, rgba(15,22,41,0.97) 60%)'
               : 'rgba(255,255,255,0.03)',
-            border: streak > 0 ? '1px solid rgba(249,115,22,0.35)' : '1px solid rgba(255,255,255,0.07)',
+            border: streak > 0 ? '1px solid rgba(249,115,22,0.4)' : '1px solid rgba(255,255,255,0.07)',
+            boxShadow: streak > 0 ? '0 4px 40px rgba(249,115,22,0.12), inset 0 1px 0 rgba(249,115,22,0.15)' : 'none',
           }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
-          <motion.div
-            animate={streak > 0 ? { scale: [1, 1.1, 1] } : {}}
-            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-            style={{ lineHeight: 1 }}
-          >
-            <Flame
-              size={streak > 0 ? 36 : 24}
-              color={streak > 0 ? '#f97316' : 'rgba(255,255,255,0.2)'}
-              strokeWidth={1.8}
-            />
-          </motion.div>
+          <div className="flex items-start gap-4">
+            <motion.div
+              animate={streak > 0 ? { scale: [1, 1.12, 1] } : {}}
+              transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+              style={{ lineHeight: 1, paddingTop: 2 }}
+            >
+              <Flame
+                size={streak > 0 ? 38 : 24}
+                color={streak > 0 ? '#f97316' : 'rgba(255,255,255,0.2)'}
+                strokeWidth={1.6}
+              />
+            </motion.div>
 
-          <div className="flex-1 min-w-0">
-            {streak > 0 ? (
-              <>
-                <div className="text-xl font-bold" style={{ color: '#f97316' }}>
-                  {streak} day streak
-                </div>
-                <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                  Keep going — study something today
-                </p>
-              </>
-            ) : (
-              <>
-                <div className="text-base font-bold" style={{ color: '#f8fafc' }}>
-                  Start your streak
-                </div>
-                <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                  Complete a topic to light it up
-                </p>
-              </>
-            )}
+            <div className="flex-1 min-w-0">
+              {streak > 0 ? (
+                <>
+                  <div className="font-bold" style={{ color: '#f97316', fontSize: 22, letterSpacing: '-0.02em' }}>
+                    {streak} day streak
+                  </div>
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    Keep going - study something today
+                  </p>
+                  <StreakDots streak={streak} />
+                </>
+              ) : (
+                <>
+                  <div className="text-base font-bold" style={{ color: '#f8fafc' }}>
+                    Start your streak
+                  </div>
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                    Complete a topic to light it up
+                  </p>
+                  <StreakDots streak={0} />
+                </>
+              )}
+            </div>
           </div>
         </motion.div>
       </div>
@@ -245,7 +322,7 @@ export default function HomeScreen() {
       {reviewDue.length > 0 ? (
         <div className="px-5 mb-3">
           <motion.div
-            className="w-full rounded-[20px] px-5 py-4"
+            className="w-full rounded-[22px] px-5 py-4"
             style={{
               background: 'rgba(99,102,241,0.07)',
               border: '1px solid rgba(99,102,241,0.22)',
@@ -292,7 +369,7 @@ export default function HomeScreen() {
       ) : masteredCount >= 5 ? (
         <div className="px-5 mb-3">
           <motion.div
-            className="w-full rounded-[20px] px-5 py-3 flex items-center gap-3"
+            className="w-full rounded-[22px] px-5 py-3 flex items-center gap-3"
             style={{ background: 'rgba(99,102,241,0.05)', border: '1px solid rgba(99,102,241,0.15)' }}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -309,12 +386,12 @@ export default function HomeScreen() {
       {sparkTopic && (
         <div className="px-5 mb-3">
           <motion.button
-            className="w-full rounded-[20px] px-5 py-4 text-left flex items-center gap-4"
+            className="w-full rounded-[22px] px-5 py-4 text-left flex items-center gap-4"
             style={{
               background: sparkTopic.moduleColor
-                ? `linear-gradient(135deg, ${sparkTopic.moduleColor}15, rgba(15,22,41,0.95))`
-                : 'linear-gradient(135deg, rgba(99,102,241,0.15), rgba(15,22,41,0.95))',
-              border: `1px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}35` : 'rgba(99,102,241,0.35)'}`,
+                ? `linear-gradient(135deg, ${sparkTopic.moduleColor}20, rgba(15,22,41,0.97))`
+                : 'linear-gradient(135deg, rgba(99,102,241,0.20), rgba(15,22,41,0.97))',
+              border: `1px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}40` : 'rgba(99,102,241,0.4)'}`,
             }}
             onClick={() => navigate(sparkIsWeak ? `/diagnostic/${sparkId}` : `/lesson/${sparkId}`)}
             whileTap={{ scale: 0.97 }}
@@ -322,14 +399,17 @@ export default function HomeScreen() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.22, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
           >
+            {/* Icon area - 48x48 */}
             <div
-              className="w-11 h-11 rounded-[14px] flex items-center justify-center shrink-0"
+              className="rounded-[16px] flex items-center justify-center shrink-0"
               style={{
-                background: sparkTopic.moduleColor ? `${sparkTopic.moduleColor}20` : 'rgba(99,102,241,0.18)',
-                border: `1.5px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}40` : 'rgba(99,102,241,0.35)'}`,
+                width: 48,
+                height: 48,
+                background: sparkTopic.moduleColor ? `${sparkTopic.moduleColor}22` : 'rgba(99,102,241,0.2)',
+                border: `1.5px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}45` : 'rgba(99,102,241,0.38)'}`,
               }}
             >
-              <Sparkles size={20} color={sparkTopic.moduleColor || '#818cf8'} />
+              <Sparkles size={22} color={sparkTopic.moduleColor || '#818cf8'} />
             </div>
 
             <div className="flex-1 min-w-0">
@@ -345,33 +425,37 @@ export default function HomeScreen() {
               </p>
             </div>
 
-            <div
-              className="shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold"
-              style={{
-                background: sparkTopic.moduleColor ? `${sparkTopic.moduleColor}20` : 'rgba(99,102,241,0.2)',
-                color: sparkTopic.moduleColor || '#a5b4fc',
-                border: `1px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}35` : 'rgba(99,102,241,0.35)'}`,
-              }}
+            {/* Pulsing right arrow */}
+            <motion.div
+              className="shrink-0"
+              animate={{ x: [0, 3, 0] }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
             >
-              {sparkIsWeak ? 'Revise' : 'Start'}
-              <ChevronRight size={12} strokeWidth={2.5} />
-            </div>
+              <ArrowRight
+                size={20}
+                color={sparkTopic.moduleColor || '#818cf8'}
+                strokeWidth={2}
+                style={{ opacity: 0.8 }}
+              />
+            </motion.div>
           </motion.button>
         </div>
       )}
 
       {/* ── CONTINUE LEARNING ─────────────────────────────────── */}
-      <div className="px-5 mb-3 space-y-3">
+      <div className="px-5 mb-3 space-y-2.5">
         {/* Primary CTA */}
         <motion.button
-          className="w-full rounded-[20px] flex items-center justify-between px-5 py-4"
+          className="w-full rounded-[22px] flex items-center justify-between px-5"
           style={{
+            paddingTop: 20,
+            paddingBottom: 20,
             background: resumeModule
-              ? `linear-gradient(135deg, ${resumeModule.color}dd, ${resumeModule.color}88)`
+              ? `linear-gradient(135deg, ${resumeModule.color}e0, ${resumeModule.color}90)`
               : 'linear-gradient(135deg, #6366f1, #4f46e5)',
             boxShadow: resumeModule
-              ? `0 8px 32px ${resumeModule.color}35`
-              : '0 8px 32px rgba(99,102,241,0.3)',
+              ? `0 8px 40px ${resumeModule.color}40, 0 2px 0 rgba(255,255,255,0.08) inset`
+              : '0 8px 40px rgba(99,102,241,0.35), 0 2px 0 rgba(255,255,255,0.08) inset',
             color: '#fff',
           }}
           onClick={() => navigate(`/lesson/${firstUnmastered}`)}
@@ -383,17 +467,17 @@ export default function HomeScreen() {
           <div className="flex items-center gap-3">
             {resumeModule && (
               <div
-                className="w-10 h-10 rounded-[12px] flex items-center justify-center"
-                style={{ background: 'rgba(255,255,255,0.15)' }}
+                className="rounded-[14px] flex items-center justify-center"
+                style={{ width: 44, height: 44, background: 'rgba(255,255,255,0.18)' }}
               >
-                <resumeModule.icon size={20} color="#fff" strokeWidth={2} />
+                <resumeModule.icon size={22} color="#fff" strokeWidth={2} />
               </div>
             )}
             <div className="text-left">
               <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5">
                 {masteredCount === 0 ? 'Start here' : 'Continue learning'}
               </div>
-              <div className="text-sm font-bold">
+              <div className="font-bold" style={{ fontSize: 15, letterSpacing: '-0.01em' }}>
                 {resumeTopic?.title || 'Energy Stores'}
               </div>
               {resumeModule && (
@@ -401,17 +485,20 @@ export default function HomeScreen() {
               )}
             </div>
           </div>
-          <ChevronRight size={20} strokeWidth={2.5} />
+          <ChevronRight size={22} strokeWidth={2.5} />
         </motion.button>
 
         {/* Secondary actions row */}
         <div className="grid grid-cols-2 gap-2">
           <motion.button
-            className="py-3.5 rounded-[16px] flex items-center justify-center gap-2"
+            className="rounded-[18px] flex items-center justify-center gap-2"
             style={{
+              paddingTop: 16,
+              paddingBottom: 16,
               background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(99,102,241,0.25)',
+              border: '1px solid rgba(99,102,241,0.28)',
               color: '#a5b4fc',
+              borderLeft: `3px solid ${moduleColor || '#6366f1'}`,
             }}
             onClick={() => navigate('/mastery')}
             whileTap={{ scale: 0.97 }}
@@ -419,13 +506,15 @@ export default function HomeScreen() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
           >
-            <Target size={15} color="#6366f1" />
+            <Target size={15} color={moduleColor || '#6366f1'} />
             <span className="text-xs font-bold">My Progress</span>
           </motion.button>
 
           <motion.button
-            className="py-3.5 rounded-[16px] flex items-center justify-center gap-2"
+            className="rounded-[18px] flex items-center justify-center gap-2"
             style={{
+              paddingTop: 16,
+              paddingBottom: 16,
               background: 'rgba(255,255,255,0.04)',
               border: '1px solid rgba(255,255,255,0.1)',
               color: 'rgba(255,255,255,0.5)',
@@ -452,8 +541,22 @@ export default function HomeScreen() {
             transition={{ delay: 0.4 }}
           >
             <div className="flex items-center gap-2 mb-3">
-              <TrendingUp size={13} color="#6366f1" />
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <TrendingUp size={14} color="#6366f1" />
+              {/* Colored dot before heading */}
+              <div
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: '50%',
+                  background: moduleColor || '#6366f1',
+                  boxShadow: `0 0 6px ${moduleColor || '#6366f1'}`,
+                  flexShrink: 0,
+                }}
+              />
+              <span
+                className="font-bold uppercase tracking-widest"
+                style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)' }}
+              >
                 Insights
               </span>
               {overallAccuracy !== null && (

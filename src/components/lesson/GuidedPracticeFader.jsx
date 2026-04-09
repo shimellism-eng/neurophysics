@@ -7,21 +7,99 @@
  * Research:
  * - Fading effect (Sweller): gradually remove scaffolding
  * - Rosenshine 80% success rate: learners need success at each tier before progressing
- * - ADHD: hint button without penalty critical — shame avoidance blocks help-seeking
+ * - ADHD: hint button without penalty critical - shame avoidance blocks help-seeking
  * - Dyscalculia: "check my method" process feedback (not just answer) prevents
  *   iterating on the wrong method without realising it
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { ChevronRight, Lightbulb, CheckCircle2, XCircle, Star } from 'lucide-react'
 
-function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disabled }) {
+const TIER_LABELS = ['Completion', 'Partial scaffold', 'Independent']
+
+// ─── Tier progress indicator ─────────────────────────────────────────────────
+function TierProgress({ tier, moduleColor }) {
+  return (
+    <div className="flex items-start justify-between px-1 mb-2">
+      {[1, 2, 3].map((t, i) => {
+        const isActive = t === tier
+        const isDone = t < tier
+        return (
+          <div key={t} className="flex flex-col items-center gap-1.5" style={{ flex: 1 }}>
+            {/* Connector line - left side */}
+            <div className="flex items-center w-full">
+              {i > 0 && (
+                <div
+                  className="flex-1 h-px"
+                  style={{
+                    background: isDone ? moduleColor : 'rgba(255,255,255,0.1)',
+                    transition: 'background 0.4s',
+                  }}
+                />
+              )}
+              {/* Circle */}
+              <motion.div
+                className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
+                style={{
+                  background: isActive
+                    ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+                    : isDone
+                      ? 'rgba(34,197,94,0.2)'
+                      : 'transparent',
+                  border: isActive
+                    ? 'none'
+                    : isDone
+                      ? '1.5px solid rgba(34,197,94,0.5)'
+                      : '1.5px solid rgba(255,255,255,0.15)',
+                  color: isActive ? '#fff' : isDone ? '#4ade80' : 'rgba(255,255,255,0.25)',
+                  boxShadow: isActive ? `0 0 16px ${moduleColor}50` : 'none',
+                  transition: 'all 0.35s ease',
+                }}
+                animate={isActive ? { scale: [1, 1.07, 1] } : { scale: 1 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+              >
+                {t}
+              </motion.div>
+              {/* Right connector */}
+              {i < 2 && (
+                <div
+                  className="flex-1 h-px"
+                  style={{
+                    background: t < tier ? moduleColor : 'rgba(255,255,255,0.1)',
+                    transition: 'background 0.4s',
+                  }}
+                />
+              )}
+            </div>
+            {/* Label */}
+            <span
+              className="text-[10px] font-semibold text-center leading-tight"
+              style={{
+                color: isActive ? moduleColor : isDone ? '#4ade80' : 'rgba(255,255,255,0.22)',
+                transition: 'color 0.3s',
+              }}
+            >
+              {TIER_LABELS[i]}
+            </span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+// ─── NumericInput ─────────────────────────────────────────────────────────────
+function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disabled, moduleColor }) {
+  const [focused, setFocused] = useState(false)
   return (
     <div
       className="flex items-center rounded-[14px] overflow-hidden"
       style={{
         background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(255,255,255,0.12)',
+        border: focused
+          ? `2px solid ${moduleColor}70`
+          : '2px solid rgba(255,255,255,0.1)',
+        transition: 'border-color 0.2s',
       }}
     >
       <input
@@ -31,42 +109,75 @@ function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disa
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
         disabled={disabled}
-        className="flex-1 bg-transparent px-4 py-4 text-base font-semibold outline-none"
-        style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield' }}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        className="flex-1 bg-transparent px-4 text-base font-semibold outline-none"
+        style={{
+          color: '#f8fafc',
+          WebkitAppearance: 'none',
+          MozAppearance: 'textfield',
+          paddingTop: 18,
+          paddingBottom: 18,
+        }}
       />
       {unit && (
-        <span className="pr-4 text-sm font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>
+        <div
+          className="px-3 py-1.5 mr-2 rounded-[8px] text-xs font-bold"
+          style={{
+            background: `${moduleColor}22`,
+            color: moduleColor,
+            border: `1px solid ${moduleColor}35`,
+          }}
+        >
           {unit}
-        </span>
+        </div>
       )}
     </div>
   )
 }
 
+// ─── FeedbackBanner ──────────────────────────────────────────────────────────
 function FeedbackBanner({ correct, correctAnswer, answerUnit, moduleColor }) {
   return (
     <motion.div
-      className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
+      className="flex items-start gap-3 px-4 rounded-[14px]"
       style={{
-        background: correct ? 'rgba(34,197,94,0.12)' : 'rgba(99,102,241,0.12)',
+        paddingTop: 16,
+        paddingBottom: 16,
+        background: correct ? 'rgba(34,197,94,0.1)' : 'rgba(99,102,241,0.1)',
         border: correct
           ? '1px solid rgba(34,197,94,0.35)'
           : '1px solid rgba(99,102,241,0.3)',
+        boxShadow: correct ? '0 0 20px rgba(34,197,94,0.08)' : 'none',
       }}
-      initial={{ opacity: 0, y: 8 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
       {correct
-        ? <CheckCircle2 size={18} color="#4ade80" />
-        : <XCircle size={18} color="#a5b4fc" />
+        ? <CheckCircle2 size={20} color="#4ade80" style={{ flexShrink: 0, marginTop: 1 }} />
+        : <XCircle size={20} color="#a5b4fc" style={{ flexShrink: 0, marginTop: 1 }} />
       }
       <div>
         <div className="text-sm font-bold" style={{ color: correct ? '#4ade80' : '#a5b4fc' }}>
-          {correct ? 'Correct!' : `The answer is ${correctAnswer} ${answerUnit || ''}`}
+          {correct ? 'Correct!' : 'Not quite'}
         </div>
         {!correct && (
-          <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            That's fine — the next tier gives you a bit more support.
+          <div className="mt-1">
+            <span className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
+              Correct answer:{' '}
+            </span>
+            <span className="text-sm font-bold font-mono" style={{ color: '#c7d2fe' }}>
+              {correctAnswer}
+            </span>
+            {answerUnit && (
+              <span className="text-xs font-semibold ml-1" style={{ color: 'rgba(199,210,254,0.7)' }}>
+                {answerUnit}
+              </span>
+            )}
+            <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>
+              That's fine - the next tier gives you a bit more support.
+            </p>
           </div>
         )}
       </div>
@@ -86,13 +197,10 @@ function Tier1({ data, moduleColor, onComplete }) {
   return (
     <div className="flex flex-col gap-4">
       <div
-        className="rounded-[16px] px-4 py-3"
+        className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: moduleColor }}>
-          Tier 1 — Complete the last step
-        </div>
-        <p className="text-sm leading-relaxed" style={{ color: '#f8fafc' }}>{question}</p>
+        <p className="text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
       </div>
 
       {/* All steps shown, last one is missing */}
@@ -124,6 +232,7 @@ function Tier1({ data, moduleColor, onComplete }) {
         onChange={setInput}
         unit={answerUnit}
         disabled={submitted}
+        moduleColor={moduleColor}
       />
 
       {!submitted ? (
@@ -181,13 +290,10 @@ function Tier2({ data, moduleColor, onComplete }) {
   return (
     <div className="flex flex-col gap-4">
       <div
-        className="rounded-[16px] px-4 py-3"
+        className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: moduleColor }}>
-          Tier 2 — Equation given, you work it out
-        </div>
-        <p className="text-sm leading-relaxed" style={{ color: '#f8fafc' }}>{question}</p>
+        <p className="text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
       </div>
 
       {/* Partial scaffold */}
@@ -208,7 +314,7 @@ function Tier2({ data, moduleColor, onComplete }) {
           className="px-3 py-2 rounded-[12px] text-xs"
           style={{ background: 'rgba(255,255,255,0.02)', border: '1px dashed rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.3)' }}
         >
-          Your turn — substitute and calculate…
+          Your turn - substitute and calculate...
         </div>
       </div>
 
@@ -217,9 +323,10 @@ function Tier2({ data, moduleColor, onComplete }) {
         onChange={setInput}
         unit={answerUnit}
         disabled={submitted}
+        moduleColor={moduleColor}
       />
 
-      {/* Hint button — no penalty */}
+      {/* Hint button - no penalty */}
       {!submitted && !hintShown && (
         <button
           className="flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
@@ -243,7 +350,7 @@ function Tier2({ data, moduleColor, onComplete }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
           >
-            <p className="text-xs" style={{ color: '#fdc700' }}>💡 {hint}</p>
+            <p className="text-xs" style={{ color: '#fdc700' }}>{hint}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -281,7 +388,7 @@ function Tier2({ data, moduleColor, onComplete }) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Final tier — on your own
+            Final tier - on your own
             <ChevronRight size={16} strokeWidth={2.5} />
           </motion.button>
         </div>
@@ -290,6 +397,9 @@ function Tier2({ data, moduleColor, onComplete }) {
   )
 }
 
+// ─── Confidence star labels ───────────────────────────────────────────────────
+const STAR_LABELS = ['Not sure', 'Getting it', 'Confident', 'Really sure', 'Got it!']
+
 // ─── TIER 3: Supported independent ──────────────────────────────────────────
 function Tier3({ data, moduleColor, keywords, onComplete }) {
   const { question, hint, answer, answerUnit, methodHint } = data
@@ -297,6 +407,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
   const [submitted, setSubmitted] = useState(false)
   const [methodShown, setMethodShown] = useState(false)
   const [confidence, setConfidence] = useState(0)
+  const [hoveredStar, setHoveredStar] = useState(0)
 
   const numAnswer = parseFloat(input)
   const isCorrect = submitted && Math.abs(numAnswer - answer) < Math.abs(answer * 0.03 + 0.01)
@@ -322,7 +433,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
         </div>
         <div className="text-center">
           <p className="text-base font-bold" style={{ color: '#f8fafc' }}>
-            {isCorrect ? 'Nailed it!' : 'Good effort — keep going'}
+            {isCorrect ? 'Nailed it!' : 'Good effort - keep going'}
           </p>
           <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>
             Practice builds confidence. On to the next step.
@@ -347,13 +458,10 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
   return (
     <div className="flex flex-col gap-4">
       <div
-        className="rounded-[16px] px-4 py-3"
+        className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: moduleColor }}>
-          Tier 3 — On your own (glossary available above)
-        </div>
-        <p className="text-sm leading-relaxed" style={{ color: '#f8fafc' }}>{question}</p>
+        <p className="text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
       </div>
 
       <NumericInput
@@ -361,11 +469,12 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
         onChange={setInput}
         unit={answerUnit}
         disabled={submitted}
+        moduleColor={moduleColor}
       />
 
       {!submitted && (
         <div className="flex flex-col gap-2">
-          {/* Method hint — process feedback, not answer */}
+          {/* Method hint - process feedback, not answer */}
           {methodHint && !methodShown && (
             <button
               className="flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
@@ -388,7 +497,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
               >
-                <p className="text-xs" style={{ color: '#a5b4fc' }}>🧠 {methodHint}</p>
+                <p className="text-xs" style={{ color: '#a5b4fc' }}>{methodHint}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -429,26 +538,43 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
               className="rounded-[16px] px-4 py-4"
               style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
             >
-              <p className="text-xs font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              <p className="text-xs font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 How confident do you feel solving a problem like this without support?
               </p>
-              <div className="flex gap-2 justify-center">
-                {[1, 2, 3, 4, 5].map(n => (
-                  <button
-                    key={n}
-                    onClick={() => setConfidence(n)}
-                    className="flex flex-col items-center gap-1"
-                  >
-                    <Star
-                      size={28}
-                      color={n <= confidence ? '#fdc700' : 'rgba(255,255,255,0.15)'}
-                      fill={n <= confidence ? '#fdc700' : 'none'}
-                      strokeWidth={1.5}
-                    />
-                  </button>
-                ))}
+              <div className="flex gap-1 justify-center">
+                {[1, 2, 3, 4, 5].map(n => {
+                  const active = n <= (hoveredStar || confidence)
+                  return (
+                    <button
+                      key={n}
+                      onClick={() => setConfidence(n)}
+                      onMouseEnter={() => setHoveredStar(n)}
+                      onMouseLeave={() => setHoveredStar(0)}
+                      className="flex flex-col items-center gap-1.5"
+                      style={{ flex: 1 }}
+                    >
+                      <motion.div
+                        animate={{ scale: active ? 1.12 : 1 }}
+                        transition={{ duration: 0.18 }}
+                      >
+                        <Star
+                          size={32}
+                          color={active ? '#fdc700' : 'rgba(255,255,255,0.12)'}
+                          fill={active ? '#fdc700' : 'none'}
+                          strokeWidth={1.5}
+                        />
+                      </motion.div>
+                      <span
+                        className="text-[9px] font-semibold text-center leading-tight"
+                        style={{ color: active ? 'rgba(253,199,0,0.8)' : 'rgba(255,255,255,0.2)' }}
+                      >
+                        {STAR_LABELS[n - 1]}
+                      </span>
+                    </button>
+                  )
+                })}
               </div>
-              <p className="text-[10px] text-center mt-2" style={{ color: 'rgba(255,255,255,0.25)' }}>
+              <p className="text-[10px] text-center mt-3" style={{ color: 'rgba(255,255,255,0.22)' }}>
                 This shapes your future practice sessions
               </p>
             </div>
@@ -464,35 +590,9 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
   const [tier, setTier] = useState(1)
 
   return (
-    <div className="px-5 py-5 flex flex-col gap-4">
+    <div className="px-5 py-5 flex flex-col gap-5">
       {/* Tier progress indicators */}
-      <div className="flex items-center gap-2">
-        {[1, 2, 3].map(t => (
-          <div key={t} className="flex items-center gap-2 flex-1">
-            <div
-              className="flex-1 h-1.5 rounded-full"
-              style={{
-                background: t <= tier ? moduleColor : 'rgba(255,255,255,0.08)',
-                transition: 'background 0.3s',
-              }}
-            />
-            {t < 3 && (
-              <ChevronRight size={10} color="rgba(255,255,255,0.2)" />
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-between">
-        {['Completion', 'Partial scaffold', 'Independent'].map((label, i) => (
-          <span
-            key={i}
-            className="text-[10px] font-semibold"
-            style={{ color: i + 1 === tier ? moduleColor : 'rgba(255,255,255,0.25)' }}
-          >
-            {label}
-          </span>
-        ))}
-      </div>
+      <TierProgress tier={tier} moduleColor={moduleColor} />
 
       {/* Active tier */}
       <AnimatePresence mode="wait">

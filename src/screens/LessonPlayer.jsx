@@ -72,11 +72,12 @@ function KeywordGlossaryBar({ keywords, moduleColor }) {
         {keywords.map((kw, i) => (
           <button
             key={i}
-            className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold whitespace-nowrap"
+            className="shrink-0 px-3 py-1 text-[10px] font-bold whitespace-nowrap"
             style={{
-              background: active === i ? `${moduleColor}25` : 'rgba(255,255,255,0.06)',
-              border: active === i ? `1px solid ${moduleColor}50` : '1px solid rgba(255,255,255,0.1)',
-              color: active === i ? moduleColor : 'rgba(255,255,255,0.4)',
+              borderRadius: 999,
+              background: active === i ? `${moduleColor}22` : 'rgba(255,255,255,0.06)',
+              border: active === i ? `1px solid ${moduleColor}55` : '1px solid rgba(255,255,255,0.09)',
+              color: active === i ? moduleColor : 'rgba(255,255,255,0.38)',
               transition: 'all 0.15s',
             }}
             onClick={() => setActive(active === i ? null : i)}
@@ -90,10 +91,12 @@ function KeywordGlossaryBar({ keywords, moduleColor }) {
       <AnimatePresence>
         {active !== null && (
           <motion.div
-            className="mt-2 px-3 py-2.5 rounded-[12px]"
+            className="mt-2 px-4 py-3 rounded-[14px]"
             style={{
-              background: `${moduleColor}12`,
-              border: `1px solid ${moduleColor}30`,
+              background: `${moduleColor}14`,
+              border: `1px solid ${moduleColor}40`,
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
             }}
             initial={{ opacity: 0, y: -6, height: 0 }}
             animate={{ opacity: 1, y: 0, height: 'auto' }}
@@ -103,9 +106,9 @@ function KeywordGlossaryBar({ keywords, moduleColor }) {
             <span className="text-xs font-bold" style={{ color: moduleColor }}>
               {keywords[active].word}
               {keywords[active].symbol ? ` (${keywords[active].symbol})` : ''}
-              {keywords[active].unit ? ` — ${keywords[active].unit}` : ''}
+              {keywords[active].unit ? ` - ${keywords[active].unit}` : ''}
             </span>
-            <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>
               {keywords[active].definition}
             </p>
           </motion.div>
@@ -346,51 +349,105 @@ export default function LessonPlayer() {
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
 
       {/* ── Header ── */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
+      <div
+        className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3"
+        style={{ position: 'relative', overflow: 'hidden' }}
+      >
+        {/* Radial gradient bloom behind header content */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: `radial-gradient(ellipse 100% 120% at 50% -10%, ${topic.moduleColor}15 0%, transparent 60%)`,
+            pointerEvents: 'none',
+          }}
+        />
+
+        {/* Back button */}
         <button
           onClick={goBack}
-          className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
+          className="w-9 h-9 flex items-center justify-center shrink-0"
+          style={{
+            borderRadius: '50%',
+            background: 'rgba(255,255,255,0.06)',
+            border: '1px solid rgba(255,255,255,0.09)',
+            position: 'relative',
+          }}
         >
-          <ArrowLeft size={17} color="rgba(255,255,255,0.5)" />
+          <ArrowLeft size={16} color="rgba(255,255,255,0.45)" />
         </button>
-        <div className="flex-1 min-w-0">
+
+        {/* Title block */}
+        <div className="flex-1 min-w-0" style={{ position: 'relative' }}>
           <div className="text-xs font-bold" style={{ color: topic.moduleColor }}>{topic.module}</div>
-          <h1 className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
+          <h1
+            className="font-bold leading-tight truncate"
+            style={{ color: '#f8fafc', fontSize: 17, letterSpacing: '-0.02em' }}
+          >
+            {topic.title}
+          </h1>
         </div>
-        <span className="shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold"
-          style={topic.course === 'physics-only'
-            ? { background: 'rgba(139,92,246,0.15)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.35)' }
-            : { background: 'rgba(34,197,94,0.12)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.3)' }
-          }>
+
+        {/* Course badge */}
+        <span
+          className="shrink-0 px-3 py-1 text-xs font-semibold"
+          style={{
+            borderRadius: 999,
+            ...(topic.course === 'physics-only'
+              ? { background: 'rgba(139,92,246,0.12)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.28)' }
+              : { background: 'rgba(34,197,94,0.10)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.25)' }
+            ),
+            position: 'relative',
+          }}
+        >
           {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
         </span>
       </div>
 
       {/* ── Step progress bar ── */}
-      <div className="px-5 pb-3 shrink-0">
-        <div className="flex items-center gap-1 mb-2">
-          {STEPS.map((s, i) => (
-            <div key={s.id} className="flex-1 h-1 rounded-full overflow-hidden"
-              style={{ background: 'rgba(255,255,255,0.07)' }}>
-              <motion.div
-                className="h-full rounded-full"
-                style={{ background: topic.moduleColor }}
-                animate={{ width: i <= step ? '100%' : '0%' }}
-                transition={{ duration: 0.35, ease: 'easeOut' }}
-              />
-            </div>
-          ))}
+      <div className="px-5 pb-4 shrink-0">
+        {/* Segment track */}
+        <div className="flex items-center gap-1 mb-2.5">
+          {STEPS.map((s, i) => {
+            const isFilled  = i < step
+            const isActive  = i === step
+            return (
+              <div
+                key={s.id}
+                className="flex-1 overflow-hidden"
+                style={{
+                  height: 10,
+                  borderRadius: 999,
+                  background: 'rgba(255,255,255,0.07)',
+                }}
+              >
+                <motion.div
+                  style={{
+                    height: '100%',
+                    borderRadius: 999,
+                    background: isActive
+                      ? `linear-gradient(90deg, ${topic.moduleColor}dd, ${topic.moduleColor}ff)`
+                      : `linear-gradient(90deg, ${topic.moduleColor}cc, ${topic.moduleColor})`,
+                  }}
+                  animate={{ width: (isFilled || isActive) ? '100%' : '0%' }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                />
+              </div>
+            )
+          })}
         </div>
+
+        {/* Step label row */}
         <div className="flex items-center gap-1.5">
-          <StepIcon size={11} color={topic.moduleColor} />
-          <span className="text-xs font-bold" style={{ color: topic.moduleColor }}>
+          <StepIcon size={12} color={topic.moduleColor} />
+          <span className="text-[13px] font-bold" style={{ color: topic.moduleColor }}>
             {currentStep.label}
           </span>
           <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            · {currentStep.hint}
+            {currentStep.hint}
           </span>
-          <span className="ml-auto text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+          <span className="ml-auto text-xs font-semibold tabular-nums" style={{ color: 'rgba(255,255,255,0.25)' }}>
             {step + 1}/{totalSteps}
           </span>
         </div>
@@ -411,9 +468,9 @@ export default function LessonPlayer() {
             <motion.div
               key={step}
               custom={direction}
-              initial={{ opacity: 0, x: direction * 28 }}
+              initial={{ opacity: 0, x: direction * 40 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: direction * -28 }}
+              exit={{ opacity: 0, x: direction * -40 }}
               transition={{ duration: 0.22, ease: 'easeOut' }}
             >
               {renderContent()}
@@ -478,7 +535,7 @@ export default function LessonPlayer() {
         <div style={{ height: (isLast || stepHasOwnCTA) ? 0 : 80 }} />
       </div>
 
-      {/* ── Next button — only for steps without their own CTA ── */}
+      {/* ── Next button - only for steps without their own CTA ── */}
       {!stepHasOwnCTA && !isLast && (
         <motion.div
           className="shrink-0 px-5 pb-8 pt-3"

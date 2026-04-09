@@ -1361,6 +1361,155 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'It is not total weight that determines floating - it is density relative to the fluid.',
     concept: 'ρ = 600 ÷ 400 = 1.5 g/cm³. Objects float when their density is less than the fluid\'s. A steel ship floats because its average density (including hollow interior) is less than water.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'A teaspoon of material from a neutron star would weigh about 10 million tonnes — because its particles are packed together with almost no space between them. Density is one of the most extreme properties in the universe.',
+      hookQuestion: 'Why do you think a huge steel ship floats, but a small solid steel ball sinks?',
+      hookEmoji: '⚓',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Density',
+        symbol: 'ρ',
+        unit: 'kg/m³ or g/cm³',
+        definition: 'How much mass is packed into a given volume. ρ = m/V.',
+        everydayNote: 'Lead is denser than feathers — not because of their mass, but because lead packs more mass into the same space.',
+      },
+      {
+        word: 'Mass',
+        symbol: 'm',
+        unit: 'kilograms (kg) or grams (g)',
+        definition: 'The amount of matter in an object.',
+        everydayNote: 'Mass doesn\'t change with location — an object has the same mass on Earth and on the Moon.',
+      },
+      {
+        word: 'Volume',
+        symbol: 'V',
+        unit: 'm³ or cm³',
+        definition: 'The amount of space an object occupies.',
+        everydayNote: 'You can measure the volume of an irregular object by lowering it into water and measuring how much water it displaces.',
+      },
+      {
+        word: 'Particle Model',
+        symbol: '',
+        unit: '',
+        definition: 'A model that explains properties of matter using the arrangement and movement of tiny particles.',
+        everydayNote: 'Solids: tightly packed, vibrating. Liquids: close but flowing. Gases: spread far apart, moving fast.',
+      },
+      {
+        word: 'States of Matter',
+        symbol: '',
+        unit: '',
+        definition: 'The three forms matter can take: solid, liquid, and gas — determined by particle arrangement and energy.',
+        everydayNote: 'Water is unique — it exists as ice (solid), water (liquid), and steam (gas) at everyday temperatures.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'In which state of matter are particles most closely packed together?',
+          answers: ['Gas', 'Liquid', 'Solid', 'Plasma'],
+          correct: 2,
+          feedback: 'Solid — particles are tightly packed in a fixed lattice structure. This is why solids have the highest density.',
+        },
+        {
+          question: 'An object has mass 500 g and volume 250 cm³. Which equation gives its density?',
+          answers: ['ρ = 250 ÷ 500', 'ρ = 500 × 250', 'ρ = 500 ÷ 250', 'ρ = 500 + 250'],
+          correct: 2,
+          feedback: 'ρ = m ÷ V = 500 ÷ 250 = 2 g/cm³. Density = mass divided by volume.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Energy Stores', 'Forces Basics'],
+      current: 'States of Matter & Density',
+      after: ['Internal Energy & SHC', 'Specific Latent Heat', 'Gas Pressure'],
+    },
+
+    workedExample: {
+      title: 'Calculating density using ρ = m/V',
+      equation: 'ρ = m ÷ V',
+      context: 'A block of metal has a mass of 810 g and a volume of 300 cm³. What is its density?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'm = 810 g,   V = 300 cm³,   ρ = ?',
+          annotation: 'List your values. Check units are consistent — both in grams and cm³, or both in kg and m³.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'ρ = m ÷ V',
+          annotation: 'Density equation — given on the exam formula sheet. ρ is the Greek letter rho, always used for density.',
+        },
+        {
+          step: 3,
+          action: 'Substitute',
+          content: 'ρ = 810 ÷ 300',
+          annotation: 'Replace m and V with the numbers from step 1.',
+        },
+        {
+          step: 4,
+          action: 'Calculate and state with unit',
+          content: 'ρ = 2.7 g/cm³',
+          annotation: 'The unit is g/cm³ (since mass was in g and volume in cm³). This is aluminium — its density is 2.7 g/cm³.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'A heavier object always has a higher density.',
+        reality: 'Wrong — density depends on mass AND volume. A huge block of polystyrene is much heavier than a small ball bearing, but polystyrene has far lower density (0.015 g/cm³ vs 7.8 g/cm³ for steel). Density = mass per unit volume.',
+        visual: 'A ship is heavier than a pebble, but floats — because its average density (including the hollow interior full of air) is less than water (1 g/cm³).',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A stone has mass 450 g and volume 150 cm³. What is its density?',
+        allSteps: [
+          'Write what you know: m = 450 g, V = 150 cm³',
+          'Write the equation: ρ = m ÷ V',
+          'Substitute: ρ = 450 ÷ 150',
+          '??? — what is 450 ÷ 150?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 450 ÷ 150 = ?',
+        answer: 3,
+        answerUnit: 'g/cm³',
+      },
+      tier2: {
+        question: 'An object has density 8 g/cm³ and volume 50 cm³. What is its mass?',
+        shownEquation: 'ρ = m/V  →  m = ρ × V',
+        shownStep1: 'Write what you know: ρ = 8 g/cm³, V = 50 cm³',
+        hint: 'Multiply: m = 8 × 50 = ?',
+        answer: 400,
+        answerUnit: 'g',
+      },
+      tier3: {
+        question: 'A liquid has mass 1200 g and density 0.8 g/cm³. What is its volume?',
+        hint: 'Rearrange ρ = m/V to make V the subject: V = m ÷ ρ',
+        methodHint: 'Start with ρ = m/V. You know ρ and m. Rearrange to V = m ÷ ρ, then divide.',
+        answer: 1500,
+        answerUnit: 'cm³',
+      },
+    },
+
+    summary: {
+      equation: 'ρ = m / V',
+      sentence: 'Density measures how much mass is packed into a given volume — objects float when their density is less than the fluid they are in.',
+      promptText: 'Explain in one sentence why a steel ship floats even though steel is denser than water.',
+    },
+
+    sessionRecap: [
+      'Density = mass ÷ volume (ρ = m/V) — measured in g/cm³ or kg/m³.',
+      'Solids are densest (particles tightly packed); gases least dense (particles far apart).',
+      'Objects float if their density is less than the fluid — it\'s average density that matters, not total mass.',
+    ],
   },
   internal_energy: {
     id: 'internal_energy', module: 'Particle Model', moduleColor: PART_C, practicalId: 'shc', course: 'combined',
@@ -1461,6 +1610,155 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'The atom is not a solid sphere - it is mostly empty space.',
     concept: 'Neutrons = 14 − 6 = 8. The nucleus (containing all protons and neutrons) occupies only about 1/10,000 of the atom\'s radius. The rest is empty space with electrons in shells.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'If an atom were the size of a football stadium, the nucleus would be smaller than a pea at the centre — and the electrons would be tiny specks orbiting near the outer walls. The atom is almost entirely empty space.',
+      hookQuestion: 'Everything around you — this screen, your hands, the air — is made of atoms. What do you think is inside them?',
+      hookEmoji: '⚛️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Proton',
+        symbol: 'p',
+        unit: 'charge: +1',
+        definition: 'A positively charged particle found in the nucleus of every atom. The number of protons defines which element an atom is.',
+        everydayNote: 'Every carbon atom has exactly 6 protons. Change the proton count and you change the element entirely.',
+      },
+      {
+        word: 'Neutron',
+        symbol: 'n',
+        unit: 'charge: 0',
+        definition: 'An uncharged particle found in the nucleus alongside protons. Neutrons add mass but no charge.',
+        everydayNote: 'Isotopes of the same element have the same protons but different neutron counts — like carbon-12 and carbon-14.',
+      },
+      {
+        word: 'Electron',
+        symbol: 'e',
+        unit: 'charge: −1',
+        definition: 'A negatively charged particle in shells around the nucleus. Electrons are responsible for chemistry and electrical conduction.',
+        everydayNote: 'In a neutral atom, the number of electrons equals the number of protons — balancing the charge.',
+      },
+      {
+        word: 'Atomic Number',
+        symbol: 'Z',
+        unit: '',
+        definition: 'The number of protons in the nucleus of an atom. This uniquely identifies the element.',
+        everydayNote: 'Carbon always has atomic number 6. Oxygen always has 8. The periodic table is ordered by atomic number.',
+      },
+      {
+        word: 'Mass Number',
+        symbol: 'A',
+        unit: '',
+        definition: 'The total number of protons and neutrons in the nucleus. Mass number = protons + neutrons.',
+        everydayNote: 'Carbon-12 has mass number 12 (6 protons + 6 neutrons). Carbon-14 has mass number 14 (6 protons + 8 neutrons).',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Where is almost all of the mass of an atom found?',
+          answers: ['In the electron shells', 'Evenly throughout the atom', 'In the nucleus', 'On the outer surface'],
+          correct: 2,
+          feedback: 'The nucleus — containing protons and neutrons — holds virtually all the atom\'s mass. Electrons have negligible mass (about 1/2000 of a proton).',
+        },
+        {
+          question: 'An atom has atomic number 8 and mass number 16. How many neutrons does it have?',
+          answers: ['8', '16', '24', '2'],
+          correct: 0,
+          feedback: 'Neutrons = mass number − atomic number = 16 − 8 = 8 neutrons. This is oxygen-16.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Particle Model', 'States of Matter'],
+      current: 'Structure of the Atom',
+      after: ['History of the Atomic Model', 'Radioactive Decay', 'Nuclear Equations', 'Half-Life'],
+    },
+
+    workedExample: {
+      title: 'Finding protons, neutrons and electrons from notation',
+      equation: 'Neutrons = mass number − atomic number',
+      context: 'An atom is written as ²³₁₁Na (sodium-23). How many protons, neutrons, and electrons does it have?',
+      steps: [
+        {
+          step: 1,
+          action: 'Identify the atomic number (bottom number)',
+          content: 'Atomic number = 11 → protons = 11',
+          annotation: 'The bottom number is always the atomic number = number of protons. This is what makes it sodium.',
+        },
+        {
+          step: 2,
+          action: 'Identify the mass number (top number)',
+          content: 'Mass number = 23',
+          annotation: 'The top number is always the mass number = total protons + neutrons.',
+        },
+        {
+          step: 3,
+          action: 'Calculate neutrons',
+          content: 'Neutrons = 23 − 11 = 12',
+          annotation: 'Neutrons = mass number − atomic number. Always subtract atomic number from mass number.',
+        },
+        {
+          step: 4,
+          action: 'Find electrons (neutral atom)',
+          content: 'Electrons = protons = 11',
+          annotation: 'In a neutral atom, electrons always equal protons — the charges cancel out. If it\'s an ion, this changes.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'The mass number tells you the number of protons.',
+        reality: 'Wrong — mass number = protons + neutrons. The ATOMIC number tells you the number of protons. Mixing these two up is one of the most common exam errors in this topic.',
+        visual: 'Atomic number (bottom) = protons only. Mass number (top) = protons + neutrons. Neutrons = top − bottom.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'An atom of chlorine is written as ³⁵₁₇Cl. How many neutrons does it have?',
+        allSteps: [
+          'Identify the atomic number: bottom number = 17 (protons = 17)',
+          'Identify the mass number: top number = 35',
+          'Write the equation: Neutrons = mass number − atomic number',
+          '??? — what is 35 − 17?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 35 − 17 = ?',
+        answer: 18,
+        answerUnit: 'neutrons',
+      },
+      tier2: {
+        question: 'An atom has 20 protons and mass number 40. How many neutrons does it have? What element is it?',
+        shownEquation: 'Neutrons = mass number − atomic number',
+        shownStep1: 'Write what you know: protons (atomic number) = 20, mass number = 40',
+        hint: 'Neutrons = 40 − 20 = ?',
+        answer: 20,
+        answerUnit: 'neutrons (calcium)',
+      },
+      tier3: {
+        question: 'Uranium-238 has atomic number 92. How many neutrons does it have? How many electrons in a neutral atom?',
+        hint: 'Neutrons = mass number − atomic number. Electrons = protons (in a neutral atom).',
+        methodHint: 'Mass number = 238, atomic number = 92. Neutrons = 238 − 92. Electrons = protons = 92.',
+        answer: 146,
+        answerUnit: 'neutrons',
+      },
+    },
+
+    summary: {
+      equation: 'Neutrons = A − Z',
+      sentence: 'The atomic number (protons) defines the element; the mass number is protons plus neutrons; a neutral atom has equal protons and electrons.',
+      promptText: 'Explain what the atomic number and mass number tell you about an atom, in one sentence.',
+    },
+
+    sessionRecap: [
+      'Nucleus: protons (+) and neutrons (0). Electrons (−) orbit in shells.',
+      'Atomic number (Z) = protons. Mass number (A) = protons + neutrons. Neutrons = A − Z.',
+      'Isotopes: same element (same Z), different neutron count (different A).',
+    ],
   },
   atomic_model_history: {
     id: 'atomic_model_history', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',

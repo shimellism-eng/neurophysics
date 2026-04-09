@@ -1708,6 +1708,155 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Wave speed does not depend on frequency - it depends on the medium.',
     concept: 'v = 200 × 1.5 = 300 m/s. In a given medium, all waves of that type travel at the same speed. Changing frequency changes wavelength proportionally (v = fλ), not the speed.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'The song you\'re listening to travels to your eardrums as a wave at 340 metres per second. The same physics governs light (300 million m/s), microwaves in your oven, and X-rays at the hospital.',
+      hookQuestion: 'If you double the frequency of a wave but keep the same speed, what do you think happens to the wavelength?',
+      hookEmoji: '🌊',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Wavelength',
+        symbol: 'λ',
+        unit: 'metres (m)',
+        definition: 'The distance between two successive identical points on a wave — e.g. crest to crest.',
+        everydayNote: 'Radio waves have wavelengths of metres. Visible light has wavelengths of about 0.0000005 m.',
+      },
+      {
+        word: 'Frequency',
+        symbol: 'f',
+        unit: 'hertz (Hz)',
+        definition: 'The number of complete waves passing a fixed point per second.',
+        everydayNote: 'A 440 Hz sound wave (the note A) produces 440 complete oscillations every second.',
+      },
+      {
+        word: 'Amplitude',
+        symbol: 'A',
+        unit: 'metres (m)',
+        definition: 'The maximum displacement of a point on the wave from its rest position.',
+        everydayNote: 'Louder sounds have greater amplitude. Brighter light has greater amplitude.',
+      },
+      {
+        word: 'Wave Speed',
+        symbol: 'v',
+        unit: 'm/s',
+        definition: 'How fast the wave travels through the medium. v = fλ.',
+        everydayNote: 'Sound travels at ~340 m/s in air. Light travels at 300,000,000 m/s in a vacuum.',
+      },
+      {
+        word: 'Period',
+        symbol: 'T',
+        unit: 'seconds (s)',
+        definition: 'The time taken for one complete wave to pass a fixed point. T = 1/f.',
+        everydayNote: 'A wave with frequency 50 Hz has period T = 1/50 = 0.02 seconds.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What does frequency measure?',
+          answers: ['The height of a wave', 'The distance between two crests', 'The number of complete waves per second', 'The speed of the wave'],
+          correct: 2,
+          feedback: 'Correct — frequency (Hz) counts how many complete waves pass a point every second.',
+        },
+        {
+          question: 'If a wave has a frequency of 5 Hz, how many complete waves pass a point each second?',
+          answers: ['1', '0.2', '5', '50'],
+          correct: 2,
+          feedback: '5 Hz means 5 complete waves per second. Hertz just means "per second".',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Wave Types (transverse and longitudinal)'],
+      current: 'Properties of Waves',
+      after: ['Reflection & Refraction', 'Sound & Ultrasound', 'EM Spectrum'],
+    },
+
+    workedExample: {
+      title: 'Calculating wave speed using v = fλ',
+      equation: 'v = f × λ',
+      context: 'A water wave has a frequency of 4 Hz and a wavelength of 0.5 m. What is its speed?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'f = 4 Hz,   λ = 0.5 m,   v = ?',
+          annotation: 'List your values. λ is the Greek letter lambda — always used for wavelength.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'v = f × λ',
+          annotation: 'The wave equation — given on the exam formula sheet. v = wave speed, f = frequency, λ = wavelength.',
+        },
+        {
+          step: 3,
+          action: 'Substitute',
+          content: 'v = 4 × 0.5',
+          annotation: 'Replace f and λ with the numbers from step 1.',
+        },
+        {
+          step: 4,
+          action: 'Calculate and state with unit',
+          content: 'v = 2 m/s',
+          annotation: 'Hz × m = m/s. The units work out to metres per second — wave speed. Always include the unit.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Increasing the frequency of a wave makes it travel faster.',
+        reality: 'Wrong — wave speed depends on the medium (what the wave is travelling through), NOT the frequency. If speed stays constant and frequency increases, the wavelength decreases (they are inversely proportional: λ = v/f).',
+        visual: 'Think of cars on a motorway at fixed speed. If cars (waves) leave more frequently, the gaps between them (wavelength) shrink — but the speed stays the same.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A wave has frequency f = 10 Hz and wavelength λ = 3 m. What is its speed?',
+        allSteps: [
+          'Write what you know: f = 10 Hz, λ = 3 m',
+          'Write the equation: v = f × λ',
+          'Substitute: v = 10 × 3',
+          '??? — what is 10 × 3?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 10 × 3 = ?',
+        answer: 30,
+        answerUnit: 'm/s',
+      },
+      tier2: {
+        question: 'A sound wave travels at 340 m/s and has a wavelength of 0.5 m. What is its frequency?',
+        shownEquation: 'v = fλ  →  f = v ÷ λ',
+        shownStep1: 'Write what you know: v = 340 m/s, λ = 0.5 m',
+        hint: 'Divide: f = 340 ÷ 0.5 = ?',
+        answer: 680,
+        answerUnit: 'Hz',
+      },
+      tier3: {
+        question: 'A radio wave has a frequency of 100 MHz (100,000,000 Hz) and travels at 300,000,000 m/s. What is its wavelength?',
+        hint: 'Rearrange v = fλ to make λ the subject: λ = v ÷ f',
+        methodHint: 'Start with v = fλ. You know v and f. Rearrange to get λ = v ÷ f, then divide.',
+        answer: 3,
+        answerUnit: 'm',
+      },
+    },
+
+    summary: {
+      equation: 'v = fλ',
+      sentence: 'Wave speed equals frequency times wavelength — in a given medium, speed is fixed, so higher frequency means shorter wavelength.',
+      promptText: 'Explain what happens to wavelength if you double the frequency of a wave, in one sentence.',
+    },
+
+    sessionRecap: [
+      'Key wave properties: amplitude, wavelength (λ), frequency (f), period (T = 1/f).',
+      'Wave equation: v = fλ — wave speed = frequency × wavelength.',
+      'Wave speed depends on the medium, not the frequency — higher f means shorter λ.',
+    ],
   },
   wave_reflection: {
     id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light', course: 'physics-only',
@@ -1855,6 +2004,155 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Magnetic forces act at a distance - no contact is needed.',
     concept: 'Like poles (N-N or S-S) repel; unlike poles (N-S) attract. The magnetic field extends outward from the poles through space - this is a non-contact force. Iron filings can be used to visualise field lines.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'Migratory birds like robins navigate thousands of miles by sensing Earth\'s magnetic field lines — the same invisible lines you\'ll draw in this lesson. Without magnetism, your credit card, MRI scanner, and electric motor wouldn\'t exist.',
+      hookQuestion: 'Have you ever felt two magnets push each other apart? What do you think is happening between them — even before they touch?',
+      hookEmoji: '🧲',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Magnetic Field',
+        symbol: 'B',
+        unit: 'tesla (T)',
+        definition: 'The region around a magnet (or current-carrying wire) where a magnetic force can be felt.',
+        everydayNote: 'You can\'t see a magnetic field — but iron filings reveal it by lining up along field lines.',
+      },
+      {
+        word: 'Field Lines',
+        symbol: '',
+        unit: '',
+        definition: 'Lines drawn to show the direction and shape of a magnetic field — they go from north to south pole outside the magnet.',
+        everydayNote: 'Where lines are closer together, the field is stronger. Further apart = weaker field.',
+      },
+      {
+        word: 'North Pole',
+        symbol: 'N',
+        unit: '',
+        definition: 'The end of a magnet from which field lines emerge. Like poles repel; unlike poles attract.',
+        everydayNote: 'The north-seeking end of a compass needle points toward geographic north — which is actually Earth\'s magnetic south pole.',
+      },
+      {
+        word: 'Induced Magnetism',
+        symbol: '',
+        unit: '',
+        definition: 'When a magnetic material (e.g. iron) becomes temporarily magnetised when placed in a magnetic field.',
+        everydayNote: 'A paperclip picks up other paperclips when it\'s been near a magnet — it has been temporarily induced.',
+      },
+      {
+        word: 'Non-contact Force',
+        symbol: '',
+        unit: '',
+        definition: 'A force that acts between objects without them touching — like magnetic attraction or repulsion.',
+        everydayNote: 'Gravity and electrostatic forces are also non-contact. Friction is a contact force.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What happens when two south poles of magnets are brought together?',
+          answers: ['They attract', 'They repel', 'Nothing happens', 'The weaker one reverses'],
+          correct: 1,
+          feedback: 'Like poles (S-S or N-N) always repel each other. Unlike poles (N-S) attract.',
+        },
+        {
+          question: 'Which of these materials is magnetic?',
+          answers: ['Copper', 'Aluminium', 'Iron', 'Gold'],
+          correct: 2,
+          feedback: 'Iron is a magnetic material. The magnetic materials are iron, steel, nickel, and cobalt — remember with "FINC".',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Forces & Fields (general)'],
+      current: 'Permanent & Induced Magnetism',
+      after: ['Motor Effect', 'Electromagnetism', 'EM Induction', 'Transformers'],
+    },
+
+    workedExample: {
+      title: 'Drawing and interpreting magnetic field lines',
+      equation: 'Field lines: N → S (outside magnet)',
+      context: 'Describe the magnetic field pattern around a bar magnet and explain what the spacing of field lines tells you.',
+      steps: [
+        {
+          step: 1,
+          action: 'Identify the poles',
+          content: 'North pole (N) on left, South pole (S) on right',
+          annotation: 'Always label north and south poles first. Field lines always leave the north pole and enter the south pole — outside the magnet.',
+        },
+        {
+          step: 2,
+          action: 'Draw field line direction',
+          content: 'Lines curve from N → S outside the magnet',
+          annotation: 'Field lines NEVER cross each other. They are continuous loops — inside the magnet they go from S to N.',
+        },
+        {
+          step: 3,
+          action: 'Describe spacing at different points',
+          content: 'Close together near poles, spread out further away',
+          annotation: 'Closer spacing = stronger field. The field is strongest at the poles — this is where lines are most concentrated.',
+        },
+        {
+          step: 4,
+          action: 'State the key rule',
+          content: 'Like poles repel (lines push apart); unlike poles attract (lines merge)',
+          annotation: 'When two N poles face each other, field lines push outward between them — that\'s why they repel. N-S: lines connect directly, drawing poles together.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Magnetic forces only work when two magnets touch each other.',
+        reality: 'Wrong — magnetism is a non-contact force. It acts through space (and through non-magnetic materials like paper or plastic) without physical contact. This is what "field" means — the force exists throughout the region around the magnet.',
+        visual: 'A compass needle deflects when held near a magnet without touching it — the field is reaching across the gap.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Two magnets are placed with their north poles facing each other. What will happen?',
+        allSteps: [
+          'Identify the poles facing each other: N and N',
+          'Apply the rule: like poles ___',
+          'Like poles → repel',
+          '??? — what force will the magnets experience?',
+        ],
+        missingStep: 3,
+        missingHint: 'Like poles repel — so the magnets will be pushed ___?',
+        answer: 0,
+        answerUnit: '(repulsion)',
+      },
+      tier2: {
+        question: 'A compass is placed next to the north pole of a bar magnet. In which direction does the compass needle point?',
+        shownEquation: 'Field lines: from N → S (away from north pole)',
+        shownStep1: 'Near the north pole, field lines point AWAY from the magnet',
+        hint: 'A compass aligns with the field direction — its north end follows the field line direction',
+        answer: 0,
+        answerUnit: '(away from magnet\'s N pole)',
+      },
+      tier3: {
+        question: 'Explain why a piece of iron is attracted to both poles of a magnet.',
+        hint: 'Think about induced magnetism — what happens to the iron in the magnetic field?',
+        methodHint: 'Iron is a magnetic material — it becomes an induced magnet when in a field. Which pole forms nearest the magnet?',
+        answer: 0,
+        answerUnit: '(unlike poles attract — induced opposite pole always forms nearest)',
+      },
+    },
+
+    summary: {
+      equation: 'Field: N → S (outside)',
+      sentence: 'Magnetic fields exert non-contact forces — like poles repel, unlike attract — and field line density shows field strength.',
+      promptText: 'Explain what magnetic field lines show, in one sentence, as if describing it to someone who has never seen iron filings.',
+    },
+
+    sessionRecap: [
+      'Like poles repel; unlike poles attract — magnetism is a non-contact force.',
+      'Field lines run from N to S outside the magnet — closer = stronger field.',
+      'Magnetic materials (iron, steel, nickel, cobalt) can become induced magnets in a field.',
+    ],
   },
   motor_effect: {
     id: 'motor_effect', module: 'Magnetism', moduleColor: MC, course: 'combined',
@@ -1984,6 +2282,161 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Speed is constant in a circular orbit but velocity is NOT (direction changes). Geostationary satellites are NOT stationary — they orbit at the same rate as Earth rotates. Gravity does not switch off in space — it acts at all distances, just weakens with distance².',
     concept: 'v = 2πr/T. Gravity = centripetal force. Circular orbit: speed constant, velocity direction changes → centripetal acceleration. Geostationary: 36 000 km, 24 h, above equator. LEO: ~200 km, fast, short period. Comet: elliptical — fastest at perihelion, slowest at aphelion.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'If you drove at motorway speed (70 mph) without stopping, it would take 170 years to reach the Sun. Yet Earth completes the entire 940-million-km journey around it every single year.',
+      hookQuestion: 'What do you think keeps the planets moving in circles around the Sun — rather than flying off into space in a straight line?',
+      hookEmoji: '🪐',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Orbit',
+        symbol: '',
+        unit: '',
+        definition: 'The curved path of an object around another, due to the gravitational attraction between them.',
+        everydayNote: 'The Moon orbits Earth; Earth orbits the Sun; satellites orbit Earth.',
+      },
+      {
+        word: 'Orbital Speed',
+        symbol: 'v',
+        unit: 'm/s',
+        definition: 'How fast an object moves along its orbital path. v = 2πr/T.',
+        everydayNote: 'Earth orbits the Sun at about 30,000 m/s (108,000 km/h) — you\'re moving that fast right now.',
+      },
+      {
+        word: 'Orbital Period',
+        symbol: 'T',
+        unit: 'seconds (s)',
+        definition: 'The time taken for one complete orbit.',
+        everydayNote: 'Earth\'s orbital period = 1 year. The Moon\'s orbital period = 27.3 days.',
+      },
+      {
+        word: 'Centripetal Force',
+        symbol: 'F',
+        unit: 'newtons (N)',
+        definition: 'The inward force needed to keep an object moving in a circle. For orbits, gravity provides this force.',
+        everydayNote: 'Spin a ball on a string — the string tension is the centripetal force. Cut the string and the ball flies off in a straight line.',
+      },
+      {
+        word: 'Geostationary',
+        symbol: '',
+        unit: '',
+        definition: 'An orbit at ~36,000 km altitude where the satellite takes exactly 24 hours — so it stays above the same point on Earth.',
+        everydayNote: 'TV satellite dishes always point at the same spot in the sky because the satellite is in geostationary orbit.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What provides the centripetal force to keep a planet in its orbit?',
+          answers: ['The planet\'s engine', 'Gravity from the Sun', 'Magnetic force', 'Air resistance'],
+          correct: 1,
+          feedback: 'Gravity from the Sun continuously pulls the planet inward — this is the centripetal force that curves its path into an orbit.',
+        },
+        {
+          question: 'What would happen to a planet if gravity suddenly switched off?',
+          answers: ['It would fall toward the Sun', 'It would stop moving', 'It would travel in a straight line', 'It would move in a tighter circle'],
+          correct: 2,
+          feedback: 'Newton\'s First Law: without a force, an object continues in a straight line. Gravity is what curves the path into a circle.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Forces & Newton\'s Laws', 'Circular Motion (concept)'],
+      current: 'Solar System & Orbital Motion',
+      after: ['Stellar Evolution', 'Red-shift & Expanding Universe'],
+    },
+
+    workedExample: {
+      title: 'Calculating orbital speed using v = 2πr/T',
+      equation: 'v = 2πr ÷ T',
+      context: 'The Moon orbits Earth at a radius of 3.84 × 10⁸ m with an orbital period of 2.36 × 10⁶ s. What is the Moon\'s orbital speed?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'r = 3.84 × 10⁸ m,   T = 2.36 × 10⁶ s,   v = ?',
+          annotation: 'List the values. r = orbital radius (not diameter). T must be in seconds — convert days/years if needed.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'v = 2πr / T',
+          annotation: '2πr is the circumference of the orbit (distance for one full circle). Dividing by T gives speed. This equation is given in the exam.',
+        },
+        {
+          step: 3,
+          action: 'Calculate the numerator (2πr)',
+          content: '2 × π × 3.84 × 10⁸ = 2.41 × 10⁹ m',
+          annotation: 'Always calculate the top line first. 2 × 3.14159 × 3.84 × 10⁸ ≈ 2.41 × 10⁹ m. This is the full orbital circumference.',
+        },
+        {
+          step: 4,
+          action: 'Divide by T',
+          content: 'v = 2.41 × 10⁹ ÷ 2.36 × 10⁶',
+          annotation: 'Divide top by bottom. With standard form: divide the numbers (2.41 ÷ 2.36 ≈ 1.02) and subtract the powers (10⁹ ÷ 10⁶ = 10³).',
+        },
+        {
+          step: 5,
+          action: 'State with unit',
+          content: 'v ≈ 1020 m/s',
+          annotation: 'Orbital speed in m/s. The Moon moves at about 1 km per second. Always round sensibly and include the unit.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Satellites in higher orbits move faster because they have more distance to cover.',
+        reality: 'Wrong — satellites in higher orbits actually move MORE SLOWLY. Gravity is weaker at greater distances, so a lower orbital speed is needed for a stable orbit. Higher orbit = larger circumference AND longer period — but the period increases more, so speed decreases.',
+        visual: 'Jupiter (far from Sun) takes 12 Earth-years per orbit and moves at only 13 km/s. Earth (closer) takes 1 year and moves at 30 km/s.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A satellite has orbital radius r = 7 × 10⁶ m and period T = 5.6 × 10³ s. What is its orbital speed? (use 2π ≈ 6.28)',
+        allSteps: [
+          'Write what you know: r = 7 × 10⁶ m, T = 5.6 × 10³ s',
+          'Write the equation: v = 2πr / T',
+          'Calculate numerator: 6.28 × 7 × 10⁶ = 4.4 × 10⁷ m',
+          '??? — divide 4.4 × 10⁷ by 5.6 × 10³',
+        ],
+        missingStep: 3,
+        missingHint: '4.4 × 10⁷ ÷ 5.6 × 10³ = ? (divide numbers, subtract powers)',
+        answer: 7857,
+        answerUnit: 'm/s',
+      },
+      tier2: {
+        question: 'A planet orbits at radius r = 1.5 × 10¹¹ m with period T = 3.15 × 10⁷ s. What is its orbital speed? (2π ≈ 6.28)',
+        shownEquation: 'v = 2πr / T',
+        shownStep1: 'Write what you know: r = 1.5 × 10¹¹ m, T = 3.15 × 10⁷ s',
+        hint: 'Numerator: 6.28 × 1.5 × 10¹¹ = 9.42 × 10¹¹. Then divide by T.',
+        answer: 29905,
+        answerUnit: 'm/s',
+      },
+      tier3: {
+        question: 'A geostationary satellite orbits at r = 4.2 × 10⁷ m with T = 86,400 s. Calculate its orbital speed. (2π ≈ 6.28)',
+        hint: 'Use v = 2πr/T. Calculate the numerator first, then divide by T.',
+        methodHint: 'Numerator = 6.28 × 4.2 × 10⁷. Then divide that by 86400. Make sure you keep track of the powers of 10.',
+        answer: 3054,
+        answerUnit: 'm/s',
+      },
+    },
+
+    summary: {
+      equation: 'v = 2πr / T',
+      sentence: 'Gravity provides the centripetal force for orbits — closer orbits are faster, higher orbits are slower.',
+      promptText: 'Explain in one sentence why satellites in lower orbits move faster than those in higher orbits.',
+    },
+
+    sessionRecap: [
+      'Gravity provides centripetal force for all orbits — without it, objects travel in straight lines.',
+      'Orbital speed: v = 2πr/T — lower orbit = higher speed, higher orbit = lower speed.',
+      'Geostationary orbit: ~36,000 km, 24-hour period, stays above the same equatorial point.',
+    ],
   },
   stellar_evolution: {
     id: 'stellar_evolution', module: 'Space', moduleColor: SC, course: 'physics-only',

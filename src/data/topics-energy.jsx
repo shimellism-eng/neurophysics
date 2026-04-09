@@ -637,6 +637,161 @@ export const ENERGY_TOPICS = {
     ],
     misconception: 'Energy does not disappear when a ball slows down.',
     concept: 'As the ball rises and slows, kinetic energy is transferred to gravitational potential energy (GPE = mgh). At maximum height, all kinetic energy has converted to GPE.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'When a skydiver jumps from 4,000 m, their body stores enough gravitational potential energy to power a house for over an hour — all of it converts to kinetic energy before they open their parachute.',
+      hookQuestion: 'Think about a rollercoaster at its highest point. What do you think is happening to its energy before it drops?',
+      hookEmoji: '🎢',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Energy Store',
+        symbol: 'E',
+        unit: 'joules (J)',
+        definition: 'A place where energy is held — such as a moving object, a raised object, a stretched spring, or a battery.',
+        everydayNote: 'Think of energy stores like buckets — energy sits in one until something transfers it to another.',
+      },
+      {
+        word: 'Gravitational PE',
+        symbol: 'Ep',
+        unit: 'joules (J)',
+        definition: 'Energy stored in an object because of its height above the ground. Ep = mgh.',
+        everydayNote: 'A ball held high up has lots of GPE — drop it and all that energy becomes kinetic.',
+      },
+      {
+        word: 'Kinetic Energy',
+        symbol: 'KE',
+        unit: 'joules (J)',
+        definition: 'Energy stored in a moving object. KE = ½mv².',
+        everydayNote: 'A car at 60 mph has more kinetic energy than at 30 mph — four times as much (speed is squared).',
+      },
+      {
+        word: 'Conservation',
+        symbol: '',
+        unit: '',
+        definition: 'Energy cannot be created or destroyed — it can only be transferred between stores.',
+        everydayNote: 'Energy never disappears. When a ball stops bouncing, its KE has transferred to thermal energy in the ball and floor.',
+      },
+      {
+        word: 'Joule',
+        symbol: 'J',
+        unit: '',
+        definition: 'The unit of energy, named after James Prescott Joule.',
+        everydayNote: 'Lifting an apple 1 metre takes about 1 joule of energy.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A ball is thrown upwards and slows down. What is happening to its energy?',
+          answers: ['Energy is destroyed as the ball slows', 'Kinetic energy is transferred to gravitational potential energy', 'Gravitational PE is transferred to kinetic energy', 'Energy stays the same in kinetic form'],
+          correct: 1,
+          feedback: 'Correct — as the ball rises and slows, KE transfers to GPE. Energy is never destroyed, just moved between stores.',
+        },
+        {
+          question: 'What unit is energy measured in?',
+          answers: ['Watts (W)', 'Newtons (N)', 'Joules (J)', 'Metres (m)'],
+          correct: 2,
+          feedback: 'Joules (J) — named after James Joule. Power is measured in watts, force in newtons.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Introduction to Physics'],
+      current: 'Energy Stores',
+      after: ['Energy Pathways', 'Energy Equations', 'Efficiency', 'Power'],
+    },
+
+    workedExample: {
+      title: 'Calculating gravitational potential energy',
+      equation: 'Ep = m × g × h',
+      context: 'A 60 kg student climbs to the top of a 10 m climbing wall. How much gravitational PE have they gained? (g = 10 N/kg)',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'm = 60 kg,   g = 10 N/kg,   h = 10 m',
+          annotation: 'List the given values first. g = 10 N/kg is given in the exam — always check your equation sheet.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'Ep = m × g × h',
+          annotation: 'GPE equation — given on the exam formula sheet. Ep = gravitational potential energy.',
+        },
+        {
+          step: 3,
+          action: 'Substitute the values',
+          content: 'Ep = 60 × 10 × 10',
+          annotation: 'Replace m, g, and h with the numbers from step 1. Multiply all three together.',
+        },
+        {
+          step: 4,
+          action: 'Calculate',
+          content: 'Ep = 6000',
+          annotation: '60 × 10 = 600, then 600 × 10 = 6000. Always do it step by step to avoid errors.',
+        },
+        {
+          step: 5,
+          action: 'State with unit',
+          content: 'Ep = 6000 J',
+          annotation: 'The unit is joules (J). No unit = no marks in the exam. You could also write 6 kJ (kilojoules).',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'A heavier person always has more GPE than a lighter person.',
+        reality: 'Wrong — GPE depends on mass AND height. A lighter person at a greater height can have more GPE than a heavier person at a small height. GPE = mgh.',
+        visual: 'A 10 kg ball at 100 m has Ep = 10 × 10 × 100 = 10,000 J. A 60 kg person at 1 m has only Ep = 600 J.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A 5 kg ball is raised to a height of 8 m. What is its gravitational PE? (g = 10 N/kg)',
+        allSteps: [
+          'Write what you know: m = 5 kg, g = 10 N/kg, h = 8 m',
+          'Write the equation: Ep = m × g × h',
+          'Substitute: Ep = 5 × 10 × 8',
+          '??? — what is 5 × 10 × 8?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 5 × 10 × 8 = ?',
+        answer: 400,
+        answerUnit: 'J',
+      },
+      tier2: {
+        question: 'A 2 kg book is placed on a shelf 1.5 m high. What is its gravitational PE? (g = 10 N/kg)',
+        shownEquation: 'Ep = m × g × h',
+        shownStep1: 'Write what you know: m = 2 kg, g = 10 N/kg, h = 1.5 m',
+        hint: 'Multiply: 2 × 10 × 1.5 = ?',
+        answer: 30,
+        answerUnit: 'J',
+      },
+      tier3: {
+        question: 'A drone of mass 0.8 kg hovers at 25 m. What is its gravitational PE? (g = 10 N/kg)',
+        hint: 'Use Ep = mgh. All three values are given.',
+        methodHint: 'You need Ep = m × g × h. Identify m (0.8 kg), g (10 N/kg) and h (25 m), then multiply all three.',
+        answer: 200,
+        answerUnit: 'J',
+      },
+    },
+
+    summary: {
+      equation: 'Ep = mgh',
+      sentence: 'The higher and heavier an object, the more gravitational potential energy it stores — and that energy converts to kinetic energy as it falls.',
+      promptText: 'Explain what happens to the energy of a ball as it falls, in one sentence, as if telling a friend.',
+    },
+
+    sessionRecap: [
+      'Energy is stored in different stores: kinetic, gravitational PE, thermal, chemical, elastic PE.',
+      'GPE = mgh — depends on mass, gravitational field strength, and height.',
+      'Energy is always conserved — it transfers between stores, never disappears.',
+    ],
   },
   energy_pathways: {
     id: 'energy_pathways', module: 'Energy', moduleColor: C, course: 'combined',

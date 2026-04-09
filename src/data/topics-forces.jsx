@@ -1207,6 +1207,155 @@ export const FORCES_TOPICS = {
     ],
     misconception: 'Hooke\'s Law does not apply beyond the elastic limit.',
     concept: 'F = 20 × 0.3 = 6 N. The extension is proportional to force only while in the elastic region. Beyond the elastic limit, the relationship becomes non-linear - the spring is permanently deformed.',
+
+    // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'Every time you sit on a car seat, walk on a carpeted floor, or press a key on a keyboard, Hooke\'s Law is at work — the material deforms in direct proportion to the force you apply.',
+      hookQuestion: 'If you hang twice as much weight on a spring, what do you think happens to how much it stretches?',
+      hookEmoji: '🌀',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Force',
+        symbol: 'F',
+        unit: 'newtons (N)',
+        definition: 'A push or pull acting on an object.',
+        everydayNote: 'The weight of a 100 g mass applies a force of about 1 N downward.',
+      },
+      {
+        word: 'Extension',
+        symbol: 'e',
+        unit: 'metres (m)',
+        definition: 'How much a spring (or elastic object) has been stretched beyond its natural length.',
+        everydayNote: 'If a spring is 10 cm long normally and 16 cm when stretched, the extension is 6 cm = 0.06 m.',
+      },
+      {
+        word: 'Spring Constant',
+        symbol: 'k',
+        unit: 'N/m',
+        definition: 'A measure of how stiff a spring is — how much force is needed to extend it by 1 metre.',
+        everydayNote: 'A stiff mattress spring has a high k. A soft toy spring has a low k.',
+      },
+      {
+        word: 'Elastic Limit',
+        symbol: '',
+        unit: '',
+        definition: 'The maximum extension beyond which a spring will no longer return to its original shape.',
+        everydayNote: 'Stretch a hair elastic too far and it won\'t spring back — it\'s gone past its elastic limit.',
+      },
+      {
+        word: 'Proportional',
+        symbol: '',
+        unit: '',
+        definition: 'Two quantities are proportional if doubling one doubles the other. Force and extension are proportional below the elastic limit.',
+        everydayNote: 'A graph of F against e is a straight line through the origin — that\'s what proportional looks like.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A spring is stretched from 10 cm to 16 cm. What is the extension?',
+          answers: ['16 cm', '10 cm', '6 cm', '26 cm'],
+          correct: 2,
+          feedback: 'Correct — extension = stretched length − natural length = 16 − 10 = 6 cm. Always measure from the natural (unstretched) length.',
+        },
+        {
+          question: 'Force is measured in which unit?',
+          answers: ['Joules (J)', 'Newtons (N)', 'Pascals (Pa)', 'Metres (m)'],
+          correct: 1,
+          feedback: 'Newtons (N) — named after Isaac Newton. 1 N is roughly the weight of a 100 g mass.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Vectors & Scalars', 'Free Body Diagrams'],
+      current: "Forces & Elasticity (Hooke's Law)",
+      after: ['Work Done', 'Moments', 'Pressure'],
+    },
+
+    workedExample: {
+      title: "Using Hooke's Law: F = ke",
+      equation: 'F = k × e',
+      context: 'A spring with spring constant k = 30 N/m is stretched by 0.4 m. What force is being applied?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'k = 30 N/m,   e = 0.4 m,   F = ?',
+          annotation: 'List your values. Make sure extension is in metres — convert from cm if needed (divide by 100).',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: "F = k × e  (Hooke's Law)",
+          annotation: "Hooke's Law — this is given on the exam formula sheet. F = force, k = spring constant, e = extension.",
+        },
+        {
+          step: 3,
+          action: 'Substitute',
+          content: 'F = 30 × 0.4',
+          annotation: 'Replace k and e with the numbers from step 1.',
+        },
+        {
+          step: 4,
+          action: 'Calculate and state with unit',
+          content: 'F = 12 N',
+          annotation: 'The unit is newtons (N). A spring constant in N/m × extension in m = force in N. Units always balance.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: "Hooke's Law applies to all materials no matter how far you stretch them.",
+        reality: "Wrong — Hooke's Law only applies within the elastic region, up to the elastic limit. Beyond it, force and extension are no longer proportional — the graph curves and the material is permanently deformed.",
+        visual: 'On a force-extension graph: straight line through origin = Hooke\'s Law obeyed. Where the line starts to curve = elastic limit exceeded.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A spring has k = 25 N/m and is extended by 0.2 m. What force is applied?',
+        allSteps: [
+          'Write what you know: k = 25 N/m, e = 0.2 m',
+          "Write the equation: F = k × e (Hooke's Law)",
+          'Substitute: F = 25 × 0.2',
+          '??? — what is 25 × 0.2?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 25 × 0.2 = ?',
+        answer: 5,
+        answerUnit: 'N',
+      },
+      tier2: {
+        question: 'A force of 15 N extends a spring by 0.5 m. What is the spring constant?',
+        shownEquation: 'F = ke  →  k = F ÷ e',
+        shownStep1: 'Write what you know: F = 15 N, e = 0.5 m',
+        hint: 'Divide: k = 15 ÷ 0.5 = ?',
+        answer: 30,
+        answerUnit: 'N/m',
+      },
+      tier3: {
+        question: 'A spring with k = 40 N/m has a force of 6 N applied to it. What is the extension?',
+        hint: 'Rearrange F = ke to make e the subject: e = F ÷ k',
+        methodHint: 'Start with F = ke. You have F and k — rearrange to find e. Divide, not multiply.',
+        answer: 0.15,
+        answerUnit: 'm',
+      },
+    },
+
+    summary: {
+      equation: 'F = ke',
+      sentence: "Force and extension are proportional — double the force, double the extension — but only up to the elastic limit.",
+      promptText: "Explain Hooke's Law in one sentence, as if explaining it to a friend who's never stretched a spring.",
+    },
+
+    sessionRecap: [
+      "Hooke's Law: F = ke — force is proportional to extension below the elastic limit.",
+      'Spring constant k (N/m) measures stiffness — higher k means stiffer spring.',
+      'Beyond the elastic limit, the spring is permanently deformed and the law no longer applies.',
+    ],
   },
   moments: {
     id: 'moments', module: 'Forces', moduleColor: FC, course: 'physics-only',

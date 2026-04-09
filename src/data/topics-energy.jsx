@@ -814,6 +814,135 @@ export const ENERGY_TOPICS = {
     ],
     misconception: 'Chemical is an energy store, not a transfer pathway.',
     concept: 'The four energy transfer pathways are: mechanical (by a force), electrical (by current), heating (from hot to cold) and radiation (by waves). Chemical, kinetic, thermal and gravitational PE are energy STORES  -  where energy is held, not how it moves.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The Sun transfers 3.8 × 10²⁶ joules of energy every second entirely by radiation - electromagnetic waves crossing 150 million km of empty space with no particles to carry them.',
+      hookQuestion: 'If energy always travels from one store to another, what store does sunlight fill when it warms your skin?',
+      hookEmoji: '☀️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Mechanical pathway',
+        symbol: '',
+        unit: 'J',
+        definition: 'Energy transferred when a force does work on an object, causing it to move.',
+        everydayNote: 'Kicking a football transfers energy from your leg muscles (chemical store) to the ball (kinetic store) by the mechanical pathway.',
+      },
+      {
+        word: 'Electrical pathway',
+        symbol: '',
+        unit: 'J',
+        definition: 'Energy transferred by electric charge moving through a potential difference.',
+        everydayNote: 'A phone charger moves energy from the mains supply to the battery by the electrical pathway.',
+      },
+      {
+        word: 'Heating pathway',
+        symbol: '',
+        unit: 'J',
+        definition: 'Energy transferred from a region at higher temperature to one at lower temperature.',
+        everydayNote: 'A hot pan handle warms your hand through the heating pathway - energy always flows from hotter to cooler.',
+      },
+      {
+        word: 'Radiation pathway',
+        symbol: '',
+        unit: 'J',
+        definition: 'Energy transferred by electromagnetic waves (e.g. infrared, light) or by sound waves.',
+        everydayNote: 'A bonfire warms you from a distance by radiating infrared - no air contact needed.',
+      },
+      {
+        word: 'Energy store',
+        symbol: '',
+        unit: 'J',
+        definition: 'A place where energy is held, such as kinetic, gravitational PE, thermal, chemical, elastic PE, nuclear, electrostatic or magnetic.',
+        everydayNote: 'A stretched rubber band holds energy in its elastic store - it is not itself a pathway.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which of the following is an energy PATHWAY, not an energy STORE?',
+          answers: ['Kinetic', 'Thermal', 'Electrical', 'Chemical'],
+          correct: 2,
+          feedback: 'Electrical is a pathway - energy moves when charge flows through a potential difference. Kinetic, thermal and chemical are all stores.',
+        },
+        {
+          question: 'A battery-powered fan converts chemical energy to kinetic energy. Which pathway transfers the energy inside the fan motor?',
+          answers: ['Heating', 'Mechanical', 'Radiation', 'Electrical'],
+          correct: 3,
+          feedback: 'The battery drives current through the motor wires, so the transfer from chemical store to the motor is by the electrical pathway. The motor then uses the mechanical pathway to spin the blades.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Conservation of energy', 'Energy stores'],
+      current: 'Energy Pathways',
+      after: ['Energy Equations', 'Power'],
+    },
+
+    workedExample: {
+      title: 'Identifying stores and pathways for a toaster',
+      equation: 'E = P × t',
+      context: 'A 1000 W toaster runs for 60 s. Identify the energy stores and pathways involved, then calculate the energy transferred.',
+      steps: [
+        { step: 1, action: 'Identify the starting store', content: 'Chemical store (mains supply / fuel burned at power station)', annotation: 'Examiners want you to name the store, not just say "electricity".' },
+        { step: 2, action: 'Identify the pathway into the element', content: 'Electrical pathway - charge flows through the element at a potential difference', annotation: 'This is the pathway, not a store.' },
+        { step: 3, action: 'Identify the store and onward pathway', content: 'Thermal store (element) - then heating and radiation pathways to the bread (thermal store)', annotation: 'Two pathways can act simultaneously: conduction (heating) and infrared (radiation).' },
+        { step: 4, action: 'Calculate energy transferred', content: 'E = P × t = 1000 × 60 = 60 000 J', annotation: 'Check unit: watts × seconds = joules.' },
+      ],
+      misconceptionAfter: {
+        claim: '"Electricity" is an energy store.',
+        reality: 'Electricity is an energy pathway, not a store. Energy is stored chemically (in fuel) or in a gravitational store (reservoir for hydro). The electrical pathway moves it.',
+        visual: 'Think of a river (electrical pathway) carrying water from a reservoir (chemical/gravitational store) to a turbine - the river is the route, not the container.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A 500 W electric heater runs for 4 s. How much energy is transferred?',
+        allSteps: [
+          'Write what you know: P = 500 W, t = 4 s',
+          'Write the equation: E = P × t',
+          'Substitute: E = 500 × 4',
+          '??? - Calculate E in joules.',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 500 × 4 = ?',
+        answer: 2000,
+        answerUnit: 'J',
+      },
+      tier2: {
+        question: 'A 1500 W kettle runs for 3 minutes. Calculate the energy transferred.',
+        shownEquation: 'E = P × t',
+        shownStep1: 'Write what you know: P = 1500 W, t = 3 min = 180 s',
+        hint: 'Multiply 1500 by 180.',
+        answer: 270000,
+        answerUnit: 'J',
+      },
+      tier3: {
+        question: 'A lamp transfers 8400 J of energy in 2 minutes. Calculate its power output.',
+        hint: 'Rearrange E = Pt to find P. Convert minutes to seconds first.',
+        methodHint: 'Start with E = 8400 J and t = 120 s. Rearrange E = Pt to P = E/t, then divide.',
+        answer: 70,
+        answerUnit: 'W',
+      },
+    },
+
+    summary: {
+      equation: 'E = P × t',
+      sentence: 'Energy transferred equals power multiplied by time - measured in joules when power is in watts and time is in seconds.',
+      promptText: 'Without looking, name the four energy pathways and give one example of each. Then name three energy stores.',
+    },
+
+    sessionRecap: [
+      'The four energy transfer pathways are mechanical, electrical, heating and radiation - they describe HOW energy moves, not where it is held.',
+      'Energy stores (kinetic, thermal, chemical, gravitational PE, elastic PE, nuclear, electrostatic, magnetic) describe WHERE energy is held.',
+      'E = P × t lets you calculate energy transferred in joules once you know power (W) and time (s).',
+    ],
   },
   energy_equations: {
     id: 'energy_equations', module: 'Energy', moduleColor: C, course: 'combined',
@@ -836,6 +965,135 @@ export const ENERGY_TOPICS = {
     ],
     misconception: 'Doubling speed does not simply double kinetic energy.',
     concept: 'KE = ½ × 4 × 3² = ½ × 4 × 9 = 18 J. Speed is squared in the formula, so doubling speed quadruples kinetic energy.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'A 1 kg cricket ball bowled at 40 m/s carries 800 J of kinetic energy. Bowl it at 80 m/s and it has 3200 J - four times as much from twice the speed, because KE depends on speed squared.',
+      hookQuestion: 'Why does a car crash at 60 mph cause so much more damage than one at 30 mph, even though the speed only doubled?',
+      hookEmoji: '🏏',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Kinetic energy',
+        symbol: 'KE',
+        unit: 'J',
+        definition: 'Energy stored in a moving object, calculated as half the mass multiplied by speed squared.',
+        everydayNote: 'A cycling commuter at 6 m/s carries four times the kinetic energy of the same cyclist at 3 m/s.',
+      },
+      {
+        word: 'Gravitational potential energy',
+        symbol: 'GPE',
+        unit: 'J',
+        definition: 'Energy stored in an object due to its height above a reference point, equal to mass × gravitational field strength × height.',
+        everydayNote: 'A diver on a 10 m platform has more GPE than on a 5 m platform - lifting them doubled their stored energy.',
+      },
+      {
+        word: 'Elastic potential energy',
+        symbol: 'EPE',
+        unit: 'J',
+        definition: 'Energy stored in a stretched or compressed spring, equal to half the spring constant multiplied by the extension squared.',
+        everydayNote: 'Stretching a catapult elastic stores EPE - release it and that energy transfers to kinetic energy of the projectile.',
+      },
+      {
+        word: 'Work done',
+        symbol: 'W',
+        unit: 'J',
+        definition: 'Energy transferred when a force moves an object through a distance in the direction of the force: W = F × d.',
+        everydayNote: 'Pushing a shopping trolley 20 m with a 50 N force does 1000 J of work - that energy comes from your chemical store.',
+      },
+      {
+        word: 'Spring constant',
+        symbol: 'k',
+        unit: 'N/m',
+        definition: 'A measure of stiffness: how many newtons of force are needed to extend a spring by one metre.',
+        everydayNote: 'A stiff car spring might have k = 20 000 N/m; a soft mattress spring might be 200 N/m.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A 2 kg ball moves at 3 m/s. What is its kinetic energy?',
+          answers: ['6 J', '9 J', '18 J', '36 J'],
+          correct: 1,
+          feedback: 'KE = ½ × 2 × 3² = ½ × 2 × 9 = 9 J. Remember to square the speed first, then multiply by ½ and mass.',
+        },
+        {
+          question: 'Doubling the speed of an object multiplies its kinetic energy by:',
+          answers: ['2', '3', '4', '8'],
+          correct: 2,
+          feedback: 'KE ∝ v², so doubling v gives (2v)² = 4v² - four times the original KE. This is why road speed limits matter so much for stopping distances.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Energy Pathways', 'Forces and motion basics'],
+      current: 'Energy Equations',
+      after: ['Efficiency', 'Power'],
+    },
+
+    workedExample: {
+      title: 'Calculating kinetic energy of a moving ball',
+      equation: 'KE = ½mv²',
+      context: 'A 0.5 kg ball is kicked at 6 m/s. Calculate its kinetic energy.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'm = 0.5 kg, v = 6 m/s', annotation: 'Always list given values before touching an equation.' },
+        { step: 2, action: 'Write the equation', content: 'KE = ½mv²', annotation: 'KE = ½mv² is on the formula sheet - write it out in full.' },
+        { step: 3, action: 'Substitute', content: 'KE = ½ × 0.5 × 6²', annotation: 'Square the speed first: 6² = 36. Do not multiply speed by mass before squaring.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'KE = 0.5 × 0.5 × 36 = 9 J', annotation: 'Unit is joules (J). Check: ½ × 0.5 = 0.25, then 0.25 × 36 = 9 J.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Doubling the speed doubles the kinetic energy.',
+        reality: 'Kinetic energy depends on speed squared. Doubling speed quadruples KE. A car at 60 mph has four times the KE of the same car at 30 mph - stopping distance increases by much more than double.',
+        visual: 'Think of KE as the area of a square with side = speed. Double the side and you get four times the area.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A 2 kg toy car moves at 4 m/s. Calculate its kinetic energy.',
+        allSteps: [
+          'Write what you know: m = 2 kg, v = 4 m/s',
+          'Write the equation: KE = ½mv²',
+          'Square the speed: v² = 4² = 16',
+          '??? - Complete: KE = ½ × 2 × 16 = ?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: ½ × 2 × 16 = ?',
+        answer: 16,
+        answerUnit: 'J',
+      },
+      tier2: {
+        question: 'A 3 kg ball rolls at 10 m/s. Calculate its kinetic energy.',
+        shownEquation: 'KE = ½mv² → KE = ½ × 3 × 10²',
+        shownStep1: 'Write what you know: m = 3 kg, v = 10 m/s',
+        hint: 'Square the speed first: 10² = 100. Then multiply ½ × 3 × 100.',
+        answer: 150,
+        answerUnit: 'J',
+      },
+      tier3: {
+        question: 'An object has kinetic energy of 200 J and mass 4 kg. Calculate its speed.',
+        hint: 'Rearrange KE = ½mv² to find v. Isolate v² first, then square root.',
+        methodHint: 'Start with KE = 200 J and m = 4 kg. Rearrange to v² = 2KE/m, calculate v², then take the square root.',
+        answer: 10,
+        answerUnit: 'm/s',
+      },
+    },
+
+    summary: {
+      equation: 'KE = ½mv²',
+      sentence: 'Kinetic energy equals half the mass multiplied by the speed squared - doubling speed quadruples KE.',
+      promptText: 'Without looking, write down the four energy equations from this topic. Then explain in one sentence why speed is squared in the KE formula.',
+    },
+
+    sessionRecap: [
+      'KE = ½mv² - speed is squared, so doubling speed quadruples kinetic energy.',
+      'GPE = mgh and EPE = ½ke² - both depend on squared terms (height vs h directly, extension vs e²).',
+      'Work done = F × d - energy transferred equals force multiplied by distance moved in the direction of the force.',
+    ],
   },
   efficiency: {
     id: 'efficiency', module: 'Energy', moduleColor: C, practicalId: 'insulation', course: 'combined',
@@ -858,6 +1116,133 @@ export const ENERGY_TOPICS = {
     ],
     misconception: 'A 100% efficient machine is not possible in practice.',
     concept: 'Efficiency = (200 ÷ 500) × 100 = 40%. The remaining 300 J is wasted, usually as thermal energy due to friction.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Edison\'s first power station in New York (1882) converted only about 2.5% of fuel energy into electricity - 97.5% was wasted as heat. A modern gas power station converts around 60%.',
+      hookQuestion: 'Where does the wasted energy in a light bulb actually go, and why can it never be zero?',
+      hookEmoji: '💡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Efficiency',
+        symbol: 'η',
+        unit: '%',
+        definition: 'The fraction of input energy that is transferred as useful output energy, expressed as a percentage.',
+        everydayNote: 'An LED bulb is about 90% efficient at converting electrical energy to light; an old filament bulb was only about 5% efficient.',
+      },
+      {
+        word: 'Useful output energy',
+        symbol: '',
+        unit: 'J',
+        definition: 'The energy that is transferred to the intended store or pathway.',
+        everydayNote: 'For a loudspeaker, the useful output is sound energy - the rest becomes waste heat in the coil.',
+      },
+      {
+        word: 'Wasted energy',
+        symbol: '',
+        unit: 'J',
+        definition: 'Energy transferred to stores or pathways that are not useful - most often thermal energy due to friction or resistance.',
+        everydayNote: 'A car engine wastes energy as heat in the exhaust, which is why the exhaust pipe gets hot.',
+      },
+      {
+        word: 'Total input energy',
+        symbol: '',
+        unit: 'J',
+        definition: 'All the energy supplied to a device, regardless of how much is useful.',
+        everydayNote: 'The total input to a kettle is everything drawn from the mains - useful output is heating the water, wasted output is heating the kettle body.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A device uses 400 J of input energy and produces 100 J of useful output. What is its efficiency?',
+          answers: ['25%', '40%', '75%', '100%'],
+          correct: 0,
+          feedback: 'Efficiency = (100 ÷ 400) × 100 = 25%. Three-quarters of the energy is wasted.',
+        },
+        {
+          question: 'Why can no real machine ever reach 100% efficiency?',
+          answers: [
+            'Because energy is created during operation',
+            'Because some energy is always dissipated as heat due to friction and resistance',
+            'Because useful output can exceed input energy',
+            'Because efficiency only applies to electrical devices',
+          ],
+          correct: 1,
+          feedback: 'Every real machine has friction or electrical resistance, which always dissipates some energy as heat. Conservation of energy means total output equals input, but some of that output is always wasted.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Energy Pathways', 'Energy Equations'],
+      current: 'Efficiency',
+      after: ['Power', 'Energy Resources'],
+    },
+
+    workedExample: {
+      title: 'Calculating efficiency of an electric motor',
+      equation: 'Efficiency = (useful output ÷ total input) × 100',
+      context: 'A motor uses 800 J of electrical energy. 320 J does useful mechanical work. Calculate the efficiency and the wasted energy.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'Total input = 800 J, useful output = 320 J', annotation: 'Identify which figure is input and which is useful output before substituting.' },
+        { step: 2, action: 'Write the equation', content: 'Efficiency = (useful output ÷ total input) × 100', annotation: 'This equation is on the formula sheet. Write it in full before substituting.' },
+        { step: 3, action: 'Substitute', content: 'Efficiency = (320 ÷ 800) × 100', annotation: 'Do not multiply by 100 before dividing - get the fraction first: 320/800 = 0.4.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'Efficiency = 40%. Wasted = 800 - 320 = 480 J', annotation: 'Efficiency is a percentage. Always subtract to find wasted energy - examiners often ask for it.' },
+      ],
+      misconceptionAfter: {
+        claim: 'If efficiency is 40%, the rest of the energy is destroyed.',
+        reality: 'Energy is always conserved. The remaining 60% (480 J) is transferred to thermal stores (heat from friction) and sound - it is not destroyed, just no longer useful.',
+        visual: 'Think of a leaking bucket: the water that drips out is not gone, it is just on the floor and no longer useful. Energy is the same.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A device has a total input of 1000 J and produces 300 J of useful output. What is its efficiency?',
+        allSteps: [
+          'Write what you know: useful output = 300 J, total input = 1000 J',
+          'Write the equation: Efficiency = (useful output ÷ total input) × 100',
+          'Substitute: Efficiency = (300 ÷ 1000) × 100',
+          '??? - Calculate the efficiency in %.',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: (300 ÷ 1000) × 100 = ?',
+        answer: 30,
+        answerUnit: '%',
+      },
+      tier2: {
+        question: 'A motor has an efficiency of 25% and a total input of 600 J. What is the useful output energy?',
+        shownEquation: 'Efficiency = useful output / total input → useful output = efficiency × total input',
+        shownStep1: 'Write what you know: efficiency = 0.25 (25%), total input = 600 J',
+        hint: 'Rearrange: useful output = 0.25 × 600.',
+        answer: 150,
+        answerUnit: 'J',
+      },
+      tier3: {
+        question: 'A machine has a useful power output of 45 W and wastes 15 W. Calculate its efficiency.',
+        hint: 'Find total input power first, then use efficiency = (useful output / total input) × 100.',
+        methodHint: 'Start with useful = 45 W and wasted = 15 W. Add to get total input. Then divide 45 by the total and multiply by 100.',
+        answer: 75,
+        answerUnit: '%',
+      },
+    },
+
+    summary: {
+      equation: 'Efficiency = (useful output ÷ total input) × 100',
+      sentence: 'Efficiency tells you what percentage of input energy is actually useful - the rest is wasted, almost always as heat.',
+      promptText: 'Without looking, write the efficiency equation and give one example of a device with high efficiency and one with low efficiency. State where the wasted energy goes in each case.',
+    },
+
+    sessionRecap: [
+      'Efficiency = (useful output ÷ total input) × 100 - answer in percent.',
+      'Wasted energy = total input minus useful output - it is not destroyed, just transferred to less useful stores (usually thermal).',
+      'No real machine reaches 100% efficiency because friction and resistance always produce unwanted heat.',
+    ],
   },
   power_calc: {
     id: 'power_calc', module: 'Energy', moduleColor: C, course: 'combined',
@@ -880,6 +1265,128 @@ export const ENERGY_TOPICS = {
     ],
     misconception: 'P = Fv only applies when the object moves at constant velocity (resultant force = 0). If accelerating, the engine power goes into both KE and overcoming resistance.',
     concept: 'P = Fv = 4000 × 20 = 80 000 W = 80 kW. This equation is equivalent to P = W/t because W = Fd and v = d/t, so P = Fd/t = Fv. Use P = E/t for energy; P = Fv for forces and speed.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Usain Bolt\'s average power output during his 9.58 s 100 m world record was about 2619 W - roughly 26 times a standard 100 W light bulb. His peak power for a fraction of a second was around 3500 W.',
+      hookQuestion: 'Why does a slow lorry engine produce more power than a fast sports car engine under some conditions?',
+      hookEmoji: '⚡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Power',
+        symbol: 'P',
+        unit: 'W',
+        definition: 'The rate of energy transfer - how much energy is transferred per second.',
+        everydayNote: 'A 1000 W microwave transfers 1000 joules of energy every second. A 60 W bulb transfers 60 joules per second.',
+      },
+      {
+        word: 'Watt',
+        symbol: 'W',
+        unit: 'W',
+        definition: 'The SI unit of power, equal to one joule per second.',
+        everydayNote: 'A standard kettle is about 2000 W (2 kW) - it transfers 2000 joules of thermal energy every second.',
+      },
+      {
+        word: 'P = E/t',
+        symbol: 'P',
+        unit: 'W',
+        definition: 'Power equals energy transferred divided by time taken.',
+        everydayNote: 'If a 60 J torch battery lasts 30 s, the power is 60/30 = 2 W.',
+      },
+      {
+        word: 'P = Fv',
+        symbol: 'P',
+        unit: 'W',
+        definition: 'Power equals force multiplied by velocity - useful when a constant force acts on a moving object.',
+        everydayNote: 'A cyclist pedalling with 80 N of force at 5 m/s produces 400 W of power.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A light bulb transfers 900 J of energy in 15 s. What is its power?',
+          answers: ['13 500 W', '60 W', '900 W', '15 W'],
+          correct: 1,
+          feedback: 'P = E/t = 900 ÷ 15 = 60 W. Power is energy per second, so divide total energy by total time.',
+        },
+        {
+          question: 'Which equation should you use when given force and velocity?',
+          answers: ['P = E/t', 'P = Fv', 'P = W/d', 'P = mv'],
+          correct: 1,
+          feedback: 'P = Fv is derived from P = W/t and W = Fd combined with v = d/t. Use it whenever you know the driving force and the speed of the object.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Energy Equations', 'Efficiency'],
+      current: 'Power',
+      after: ['Energy Resources', 'Specific Heat Capacity'],
+    },
+
+    workedExample: {
+      title: 'Calculating engine power using P = Fv',
+      equation: 'P = Fv',
+      context: 'A lorry engine exerts a driving force of 8000 N while moving at 25 m/s at constant velocity. Calculate the engine\'s power output.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'F = 8000 N, v = 25 m/s', annotation: 'Constant velocity means resultant force = 0, so driving force equals drag. The engine does work at rate P = Fv.' },
+        { step: 2, action: 'Write the equation', content: 'P = Fv', annotation: 'P = Fv is NOT on the formula sheet in some specifications - learn it. It is derived from P = W/t and W = Fd.' },
+        { step: 3, action: 'Substitute', content: 'P = 8000 × 25', annotation: 'Units: N × m/s = J/s = W. No conversion needed here.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'P = 200 000 W = 200 kW', annotation: 'Convert to kW for large values: 200 000 ÷ 1000 = 200 kW. Examiners accept either form.' },
+      ],
+      misconceptionAfter: {
+        claim: 'A higher driving force always means higher power.',
+        reality: 'Power depends on both force AND speed (P = Fv). A slow lorry with a large force can have the same power as a fast car with a small force. Power is the product of the two.',
+        visual: 'Think of carrying shopping: one heavy bag up one flight of stairs vs. many light bags up many flights at speed - similar power, different force and speed combinations.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A motor transfers 4500 J of energy in 15 s. Calculate its power.',
+        allSteps: [
+          'Write what you know: E = 4500 J, t = 15 s',
+          'Write the equation: P = E/t',
+          'Substitute: P = 4500 ÷ 15',
+          '??? - Calculate P in watts.',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 4500 ÷ 15 = ?',
+        answer: 300,
+        answerUnit: 'W',
+      },
+      tier2: {
+        question: 'A cyclist pedals with a force of 600 N at a constant speed of 12 m/s. Calculate the power output.',
+        shownEquation: 'P = Fv',
+        shownStep1: 'Write what you know: F = 600 N, v = 12 m/s',
+        hint: 'Multiply force by velocity: 600 × 12.',
+        answer: 7200,
+        answerUnit: 'W',
+      },
+      tier3: {
+        question: 'A 2400 W pump runs for 45 s. How much energy does it transfer?',
+        hint: 'Rearrange P = E/t to find E. Multiply power by time.',
+        methodHint: 'Start with P = 2400 W and t = 45 s. Rearrange P = E/t to E = P × t, then calculate.',
+        answer: 108000,
+        answerUnit: 'J',
+      },
+    },
+
+    summary: {
+      equation: 'P = E/t  or  P = Fv',
+      sentence: 'Power is the rate of energy transfer - use P = E/t when you have energy and time, and P = Fv when you have force and speed.',
+      promptText: 'Without looking, write both power equations and give a real example for each. State the unit of power and what it means in joules per second.',
+    },
+
+    sessionRecap: [
+      'Power = energy ÷ time (P = E/t) in watts, where 1 W = 1 J/s.',
+      'P = Fv is used when a force acts on a moving object at constant speed - for example, a car engine overcoming drag.',
+      'To find energy from power: rearrange to E = P × t. Always convert time to seconds before calculating.',
+    ],
   },
   energy_resources: {
     id: 'energy_resources', module: 'Energy', moduleColor: C, course: 'combined',
@@ -901,5 +1408,139 @@ export const ENERGY_TOPICS = {
     ],
     misconception: '"Renewable" does not mean "reliable" — solar and wind are renewable but intermittent. "Clean" energy still has environmental costs (manufacturing, land use, waste).',
     concept: 'Evaluate = weigh evidence for AND against, then reach a reasoned conclusion. Grade 9 answers cover at least two criteria (e.g. reliability AND environmental impact), acknowledge trade-offs, and justify a conclusion rather than just listing facts.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'In 2023 the UK went over a year without burning coal for electricity for the first time since 1882. Wind farms now generate more electricity than coal on average across the year.',
+      hookQuestion: 'If wind is free and produces no CO2 during operation, why do countries still build gas and nuclear power stations?',
+      hookEmoji: '🌬️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Renewable resource',
+        symbol: '',
+        unit: '',
+        definition: 'An energy resource that is naturally replenished at a rate faster than it is used, such as solar, wind, tidal, hydroelectric, geothermal, wave and biomass.',
+        everydayNote: 'Solar panels on a school roof keep generating electricity as long as the Sun shines - no fuel is consumed and no CO2 is emitted during operation.',
+      },
+      {
+        word: 'Non-renewable resource',
+        symbol: '',
+        unit: '',
+        definition: 'An energy resource that will eventually run out because it forms far more slowly than it is consumed, such as coal, oil, gas and nuclear fuel.',
+        everydayNote: 'Coal takes millions of years to form from compressed organic material - once burned, that energy source is gone permanently.',
+      },
+      {
+        word: 'Intermittent',
+        symbol: '',
+        unit: '',
+        definition: 'Not continuously available - output depends on weather or tidal conditions rather than human demand.',
+        everydayNote: 'A wind turbine produces no electricity on a calm day, even if millions of homes need power at that moment.',
+      },
+      {
+        word: 'Base-load power',
+        symbol: '',
+        unit: 'W or MW',
+        definition: 'Continuous, reliable electrical power generation that meets minimum demand at all times, regardless of weather.',
+        everydayNote: 'Nuclear and gas stations provide base-load because they generate at full capacity on demand - hospitals and data centres depend on this.',
+      },
+      {
+        word: 'Evaluate',
+        symbol: '',
+        unit: '',
+        definition: 'To weigh evidence for and against each option across multiple criteria, then reach a justified conclusion that acknowledges trade-offs.',
+        everydayNote: 'Choosing between resources is like choosing a phone: you weigh cost, battery life and camera quality before deciding - no single choice wins on every criterion.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which resource is renewable but intermittent?',
+          answers: ['Nuclear', 'Coal', 'Wind', 'Gas'],
+          correct: 2,
+          feedback: 'Wind is renewable because the wind keeps blowing naturally, but it is intermittent because output depends entirely on wind speed - there is no generation on calm days.',
+        },
+        {
+          question: 'A 6-mark evaluate answer must do which of the following?',
+          answers: [
+            'List as many energy resources as possible',
+            'Weigh evidence for and against across at least two criteria and reach a justified conclusion',
+            'State that renewable energy is always better than non-renewable',
+            'Give exactly three advantages and three disadvantages',
+          ],
+          correct: 1,
+          feedback: 'Evaluate means weigh evidence on both sides across criteria such as reliability, environmental impact and cost, then reach a conclusion with a reason. Simply listing facts scores low.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Efficiency', 'Power'],
+      current: 'Energy Resources',
+      after: ['Specific Heat Capacity', 'Thermal insulation'],
+    },
+
+    workedExample: {
+      title: 'Evaluating wind power for a 6-mark answer',
+      equation: 'Energy (MWh) = Power (MW) × Time (h)',
+      context: 'A wind farm is proposed to supply a town. Evaluate wind power as an energy resource. (6 marks)',
+      steps: [
+        { step: 1, action: 'Reliability - for and against', content: 'FOR: wind is free and available most days. AGAINST: output is intermittent - on calm days output is zero, requiring backup from gas or storage.', annotation: 'Name the criterion explicitly. Examiners award marks for each developed point.' },
+        { step: 2, action: 'Environmental impact - for and against', content: 'FOR: no CO2 during operation, helping reduce global warming. AGAINST: turbines require large areas, cause visual impact, and construction disturbs habitats.', annotation: 'Distinguish between operation (no CO2) and construction (some carbon cost and habitat loss).' },
+        { step: 3, action: 'Cost - for and against', content: 'FOR: near-zero fuel costs once built - wind is free. AGAINST: high initial capital cost; expensive offshore installation; grid infrastructure needed.', annotation: 'Cost must distinguish between setup and running costs - examiners look for this nuance.' },
+        { step: 4, action: 'Reasoned conclusion', content: 'Wind is suitable for reducing carbon emissions long-term but cannot be the only source due to intermittency. A mix with gas or storage is needed to guarantee supply.', annotation: 'A conclusion without a reason scores no marks. Always link your conclusion to specific evidence from the criteria above.' },
+      ],
+      misconceptionAfter: {
+        claim: '"Renewable" means the same as "reliable".',
+        reality: 'Renewable means the resource is naturally replenished. Reliable means it generates consistently on demand. Wind is renewable but not reliable. Nuclear is reliable but not renewable.',
+        visual: 'A renewable source is like a river that keeps flowing - but a river can run low in a drought. Reliable power is like a tap you turn on and it always works at the same pressure.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A wind farm produces 500 MW for 6 hours, then 200 MW for 18 hours. Calculate the total energy generated in MWh.',
+        allSteps: [
+          'Energy in first period: 500 MW × 6 h = 3000 MWh',
+          'Energy in second period: 200 MW × 18 h = 3600 MWh',
+          'Total energy = 3000 + 3600',
+          '??? - Calculate the total in MWh.',
+        ],
+        missingStep: 3,
+        missingHint: 'Add the two periods: 3000 + 3600 = ?',
+        answer: 6600,
+        answerUnit: 'MWh',
+      },
+      tier2: {
+        question: 'A coal power station runs at 1200 MW continuously for 24 hours. Calculate the total electrical energy generated in MWh.',
+        shownEquation: 'Energy (MWh) = Power (MW) × Time (h)',
+        shownStep1: 'Write what you know: P = 1200 MW, t = 24 h',
+        hint: 'Multiply 1200 by 24.',
+        answer: 28800,
+        answerUnit: 'MWh',
+      },
+      tier3: {
+        question: 'A gas power station has an efficiency of 35% and burns fuel supplying 80 000 MWh of input energy. Calculate the useful electrical energy output.',
+        hint: 'Use: useful output = efficiency × total input. Convert percentage to a decimal first.',
+        methodHint: 'Start with efficiency = 0.35 and input = 80 000 MWh. Multiply efficiency by input to find useful output.',
+        answer: 28000,
+        answerUnit: 'MWh',
+      },
+    },
+
+    summary: {
+      equation: 'Evaluate = reliability + environmental impact + cost + justified conclusion',
+      sentence: 'No single energy resource is best on every criterion - evaluation means weighing trade-offs and reaching a conclusion backed by evidence.',
+      promptText: 'Without looking, name five renewable and two non-renewable resources. Then state one advantage and one disadvantage of wind power and one advantage and one disadvantage of nuclear power.',
+    },
+
+    sessionRecap: [
+      'Renewable resources are replenished naturally (solar, wind, tidal, hydro, geothermal, wave, biomass) but many are intermittent - output depends on weather.',
+      'Non-renewable resources (coal, oil, gas, nuclear) provide reliable base-load power but produce CO2 (fossil fuels) or radioactive waste (nuclear) and will eventually run out.',
+      'A 6-mark evaluate answer must cover at least two criteria (reliability, environmental impact, cost), weigh evidence on both sides, and end with a reasoned conclusion.',
+    ],
   },
 }

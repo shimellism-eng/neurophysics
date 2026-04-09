@@ -1686,6 +1686,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Sound waves are longitudinal - not transverse like water waves.',
     concept: 'Sound causes air particles to oscillate back and forth in the same direction as the wave travels, creating areas of compression and rarefaction. This is longitudinal. Transverse waves (like light) vibrate at 90° to the direction of travel.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'In space, no one can hear you scream - and that is literally true. Sound cannot travel through a vacuum because there are no particles to vibrate. Yet light (a transverse EM wave) crosses the 150 million km to Earth from the Sun in just 8 minutes through empty space.',
+      hookQuestion: 'If you hit a bell on the Moon, what do you think would happen to the sound? Would anyone nearby hear it?',
+      hookEmoji: '🔔',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Transverse Wave',
+        symbol: '',
+        unit: '',
+        definition: 'A wave in which particles vibrate perpendicular (at 90 degrees) to the direction of wave travel.',
+        everydayNote: 'Light and all EM waves are transverse. Shake a rope up and down - the wave travels sideways while the rope moves up and down.',
+      },
+      {
+        word: 'Longitudinal Wave',
+        symbol: '',
+        unit: '',
+        definition: 'A wave in which particles vibrate parallel to (in the same direction as) the wave travel.',
+        everydayNote: 'Sound is longitudinal. Push and pull a slinky along its length - that is the same motion as a sound wave.',
+      },
+      {
+        word: 'Compression',
+        symbol: '',
+        unit: '',
+        definition: 'A region in a longitudinal wave where particles are pushed together (higher pressure).',
+        everydayNote: 'In a sound wave, compressions are the "loud" pressure peaks - the parts where air molecules are densest.',
+      },
+      {
+        word: 'Rarefaction',
+        symbol: '',
+        unit: '',
+        definition: 'A region in a longitudinal wave where particles are spread apart (lower pressure).',
+        everydayNote: 'Between each compression in a sound wave is a rarefaction - a low-pressure zone.',
+      },
+      {
+        word: 'Seismic Waves',
+        symbol: '',
+        unit: '',
+        definition: 'Waves of energy that travel through the Earth caused by earthquakes. P-waves (longitudinal) travel through solids and liquids; S-waves (transverse) only travel through solids.',
+        everydayNote: 'S-waves not reaching the far side of Earth proved the outer core is liquid - a discovery made purely from wave physics.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which type of wave can travel through a vacuum?',
+          answers: ['Sound waves', 'Seismic S-waves', 'Light waves', 'P-waves'],
+          correct: 2,
+          feedback: 'Light is a transverse electromagnetic wave and needs no medium - it travels at 3x10^8 m/s through a vacuum. Sound cannot travel through a vacuum.',
+        },
+        {
+          question: 'In a transverse wave, how do particles move relative to the direction of wave travel?',
+          answers: ['Parallel - in the same direction', 'Perpendicular - at 90 degrees', 'In circles', 'They do not move'],
+          correct: 1,
+          feedback: 'Transverse wave particles vibrate at 90 degrees (perpendicular) to the direction of travel. Longitudinal wave particles vibrate parallel to the direction of travel.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Energy Transfer', 'Properties of Waves (v = f x lambda)'],
+      current: 'Transverse and Longitudinal Waves',
+      after: ['Sound and Ultrasound', 'Seismic Waves', 'EM Spectrum'],
+    },
+
+    workedExample: {
+      title: 'Comparing P-waves and S-waves to find evidence for liquid outer core',
+      equation: 'P-waves: longitudinal (solid + liquid). S-waves: transverse (solid only).',
+      context: 'An earthquake occurs. Seismometers on the far side of Earth detect P-waves but NOT S-waves. What does this tell us about Earth\'s interior?',
+      steps: [
+        { step: 1, action: 'Recall wave types', content: 'P-waves are longitudinal. S-waves are transverse.', annotation: 'This distinction is the key fact - make sure you know it.' },
+        { step: 2, action: 'Recall what each wave can travel through', content: 'P-waves: solids and liquids. S-waves: solids only, cannot pass through liquids.', annotation: 'S-waves cannot travel through liquids - this is why this matters.' },
+        { step: 3, action: 'Apply to the observation', content: 'S-waves are not detected on the far side → they are blocked somewhere inside Earth.', annotation: 'The blocked zone corresponds to the outer core region.' },
+        { step: 4, action: 'State the conclusion', content: 'The outer core must be liquid, because only a liquid layer could block S-waves completely.', annotation: 'This is one of the best examples of indirect evidence in all of physics.' },
+      ],
+      misconceptionAfter: {
+        claim: 'P-waves are faster so they arrive first - that is why we only detect them.',
+        reality: 'P-waves do arrive first (they are faster), but S-waves are not just slow - they are completely absent on the far side. Absence, not lateness, is the evidence for a liquid outer core.',
+        visual: 'If S-waves were merely slow, seismometers would eventually detect them after a delay. They never arrive at all - they are blocked entirely.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A longitudinal sound wave has frequency 250 Hz and travels at 340 m/s in air. Find its wavelength.',
+        allSteps: [
+          'Write what you know: f = 250 Hz, v = 340 m/s, lambda = ?',
+          'Write the equation: v = f x lambda',
+          'Rearrange: lambda = v / f',
+          '??? - calculate lambda = 340 / 250',
+        ],
+        missingStep: 3,
+        missingHint: 'Divide: 340 / 250 = ?',
+        answer: 1.36,
+        answerUnit: 'm',
+      },
+      tier2: {
+        question: 'A transverse wave on a string has frequency 5 Hz and wavelength 0.4 m. Calculate the wave speed.',
+        shownEquation: 'v = f x lambda',
+        shownStep1: 'Write what you know: f = 5 Hz, lambda = 0.4 m',
+        hint: 'Multiply f x lambda directly. No rearrangement needed.',
+        answer: 2,
+        answerUnit: 'm/s',
+      },
+      tier3: {
+        question: 'Sound travels at 1500 m/s in water. The wavelength of a particular sound in water is 0.3 m. Calculate the frequency.',
+        hint: 'Use v = f x lambda. Rearrange to find f = v / lambda.',
+        methodHint: 'Start with v = f x lambda. Rearrange to f = v / lambda. Substitute v = 1500 and lambda = 0.3.',
+        answer: 5000,
+        answerUnit: 'Hz',
+      },
+    },
+
+    summary: {
+      equation: 'v = f x lambda (applies to all wave types)',
+      sentence: 'Transverse waves vibrate at 90 degrees to travel direction (light, S-waves); longitudinal waves vibrate parallel (sound, P-waves).',
+      promptText: 'Without looking at your notes, explain one piece of evidence that proves Earth has a liquid outer core.',
+    },
+
+    sessionRecap: [
+      'Transverse waves: vibration perpendicular to direction of travel - examples include light and seismic S-waves.',
+      'Longitudinal waves: vibration parallel to direction of travel - examples include sound and seismic P-waves.',
+      'S-waves cannot pass through liquids - their absence on the far side of Earth from an earthquake is evidence for a liquid outer core.',
+    ],
   },
   wave_properties: {
     id: 'wave_properties', module: 'Waves', moduleColor: WC, practicalId: 'waves', course: 'combined',
@@ -1878,6 +2007,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Light slows down (not speeds up) when entering denser media like glass.',
     concept: 'Glass is optically denser than air. When light slows down entering glass, it bends towards the normal. When leaving glass back into air (speeding up), it bends away from the normal - causing the familiar prism rainbow effect.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The mirage you see on a hot road is real refraction - not an illusion. Light from the sky bends near the hot road surface (where air is less dense) and curves upward to your eyes, making it look like a pool of water reflecting the sky.',
+      hookQuestion: 'Why does a straw in a glass of water look bent or broken at the surface? What do you think is happening to the light?',
+      hookEmoji: '🌅',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Reflection',
+        symbol: '',
+        unit: '',
+        definition: 'When a wave bounces off a surface. The angle of incidence equals the angle of reflection, both measured from the normal.',
+        everydayNote: 'A mirror reflects light specularly - all rays bounce at the same angle, producing a clear image.',
+      },
+      {
+        word: 'Refraction',
+        symbol: '',
+        unit: '',
+        definition: 'When a wave changes speed at a boundary between two media, causing it to change direction.',
+        everydayNote: 'Light slows from 3x10^8 m/s in air to about 2x10^8 m/s in glass - this speed change bends the ray.',
+      },
+      {
+        word: 'Normal',
+        symbol: '',
+        unit: '',
+        definition: 'An imaginary line drawn perpendicular (at 90 degrees) to a surface at the point where a ray meets it. Angles of incidence and refraction are measured from the normal.',
+        everydayNote: 'Always draw the normal first in any reflection or refraction diagram - all angles are measured from it, not from the surface.',
+      },
+      {
+        word: 'Angle of Incidence',
+        symbol: 'i',
+        unit: 'degrees',
+        definition: 'The angle between the incoming ray and the normal at the point of incidence.',
+        everydayNote: 'A ray hitting a mirror straight on (perpendicular) has angle of incidence = 0 degrees and reflects straight back.',
+      },
+      {
+        word: 'Optical Density',
+        symbol: '',
+        unit: '',
+        definition: 'A measure of how much a medium slows light. A denser medium slows light more and bends it towards the normal on entry.',
+        everydayNote: 'Glass is more optically dense than air. Water is more optically dense than air but less than glass.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'When a ray of light enters a glass block from air, it slows down. Which way does it bend?',
+          answers: ['Away from the normal', 'Towards the normal', 'Along the surface', 'It does not bend'],
+          correct: 1,
+          feedback: 'Entering a denser medium (air to glass): light slows down and bends towards the normal. Leaving a denser medium (glass to air): light speeds up and bends away from the normal.',
+        },
+        {
+          question: 'Angle of incidence = 40 degrees. A ray reflects off a flat mirror. What is the angle of reflection?',
+          answers: ['50 degrees', '40 degrees', '80 degrees', '90 degrees'],
+          correct: 1,
+          feedback: 'The law of reflection: angle of incidence = angle of reflection. Both are measured from the normal. So angle of reflection = 40 degrees.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Wave Types (transverse vs longitudinal)', 'Properties of Waves'],
+      current: 'Reflection and Refraction',
+      after: ['Total Internal Reflection', 'Lenses', 'Visible Light and Colour'],
+    },
+
+    workedExample: {
+      title: 'Tracing a ray through a glass block',
+      equation: 'Angle of incidence = angle of reflection. Into denser medium: bends towards normal.',
+      context: 'A ray of light hits the flat side of a glass block. Angle of incidence = 30 degrees. The glass is denser than air. Describe what happens and state whether the refracted angle is greater or smaller than 30 degrees.',
+      steps: [
+        { step: 1, action: 'Draw the normal', content: 'Draw a line perpendicular to the glass surface at the point of incidence.', annotation: 'All angles are measured from the normal - never from the surface.' },
+        { step: 2, action: 'Identify the media', content: 'Air (less dense) to glass (more dense).', annotation: 'Less dense to more dense = slows down = bends towards normal.' },
+        { step: 3, action: 'State the direction of bending', content: 'Ray bends towards the normal. Angle of refraction is less than 30 degrees.', annotation: 'A common error: students bend away from the normal instead of towards it when entering glass.' },
+        { step: 4, action: 'Apply at exit face', content: 'When leaving glass to air: speeds up, bends away from normal. Angle increases back towards original direction.', annotation: 'For a parallel-sided block, the exit ray is parallel to the incident ray - just displaced sideways.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Light bends away from the normal when entering glass because glass slows it down.',
+        reality: 'Wrong - entering a denser medium means bending TOWARDS the normal. The mnemonic: "Slow = towards normal. Fast = away from normal."',
+        visual: 'Think of a car driving at an angle from tarmac onto mud. The wheel that hits the mud first slows down, swinging the front of the car toward the mud side - that is bending towards the normal.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A ray hits a flat mirror at an angle of incidence of 35 degrees (measured from the normal). What is the angle of reflection?',
+        allSteps: [
+          'Write what you know: angle of incidence = 35 degrees',
+          'State the law: angle of incidence = angle of reflection',
+          'Apply it: angle of reflection = 35 degrees',
+          '??? - state your answer with units',
+        ],
+        missingStep: 3,
+        missingHint: 'The answer is just the angle of incidence. State it.',
+        answer: 35,
+        answerUnit: 'degrees',
+      },
+      tier2: {
+        question: 'A ray hits a flat mirror at an angle of incidence of 50 degrees. What is the angle of reflection?',
+        shownEquation: 'angle of incidence = angle of reflection',
+        shownStep1: 'Angle of incidence = 50 degrees',
+        hint: 'No calculation needed - just apply the law of reflection.',
+        answer: 50,
+        answerUnit: 'degrees',
+      },
+      tier3: {
+        question: 'A ray of light hits a flat mirror at 25 degrees to the SURFACE (not the normal). What is the angle of reflection from the normal?',
+        hint: 'First find the angle of incidence from the normal. The surface and normal are at 90 degrees to each other.',
+        methodHint: 'Angle from normal = 90 - 25 = 65 degrees. Then apply: angle of reflection = angle of incidence.',
+        answer: 65,
+        answerUnit: 'degrees',
+      },
+    },
+
+    summary: {
+      equation: 'Angle of incidence = angle of reflection (both from normal). Into denser medium: bends towards normal.',
+      sentence: 'Reflection bounces waves off surfaces; refraction bends waves when they change speed at a boundary between different media.',
+      promptText: 'Explain in one sentence why a ray bends towards the normal when entering glass from air.',
+    },
+
+    sessionRecap: [
+      'Angle of incidence = angle of reflection - both measured from the normal, not the surface.',
+      'Refraction: light bends towards the normal when entering a denser medium (slowing down) and away from the normal when leaving it (speeding up).',
+      'Mirages are caused by real refraction: hot air near the ground is less dense, bending light upward so distant sky looks like a puddle on the road.',
+    ],
   },
   total_internal_reflection: {
     id: 'total_internal_reflection', module: 'Waves', moduleColor: WC, course: 'physics-only',
@@ -1899,6 +2157,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'TIR only happens when light goes from denser to less dense (glass to air), NOT the other way around. Light entering glass from air cannot undergo TIR.',
     concept: 'TIR: dense → less dense, angle > critical angle. sin c = 1/n. Used in optical fibres (internet) and endoscopes (medicine). All light reflected — none escapes.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The entire internet backbone - the cables running under oceans between continents - is built on total internal reflection. Light pulses travel at 200,000 km/s inside glass fibres, bouncing along by TIR, carrying billions of messages per second.',
+      hookQuestion: 'If you shone a laser into one end of a bent glass fibre, where do you think the light would come out - and why?',
+      hookEmoji: '💡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Critical Angle',
+        symbol: 'c',
+        unit: 'degrees',
+        definition: 'The angle of incidence (measured from the normal) at which the refracted ray travels exactly along the boundary. Above this angle, TIR occurs.',
+        everydayNote: 'For glass (n = 1.5), the critical angle is about 42 degrees. Any ray hitting the glass-air boundary at more than 42 degrees from the normal reflects completely.',
+      },
+      {
+        word: 'Total Internal Reflection',
+        symbol: 'TIR',
+        unit: '',
+        definition: 'The complete reflection of a light ray at the boundary inside a denser medium when the angle of incidence exceeds the critical angle.',
+        everydayNote: 'TIR makes optical fibres work - light bounces along the inside of glass without leaking out, even around bends.',
+      },
+      {
+        word: 'Refractive Index',
+        symbol: 'n',
+        unit: '',
+        definition: 'A measure of how much a material slows light compared to a vacuum. sin(c) = 1/n, where c is the critical angle.',
+        everydayNote: 'Glass has n ≈ 1.5. Diamond has n ≈ 2.4, giving a critical angle of only 24 degrees - this is why cut diamonds sparkle so much.',
+      },
+      {
+        word: 'Optical Fibre',
+        symbol: '',
+        unit: '',
+        definition: 'A thin strand of glass or plastic that guides light along its length by repeated total internal reflection.',
+        everydayNote: 'Optical fibres carry data as pulses of light. They are also used in endoscopes to see inside the human body without surgery.',
+      },
+      {
+        word: 'Endoscope',
+        symbol: '',
+        unit: '',
+        definition: 'A medical instrument that uses optical fibres to transmit light and images inside the body.',
+        everydayNote: 'Doctors use endoscopes to examine the stomach, colon, and lungs - a long flexible tube with a camera tip guided by TIR.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'For TIR to occur, in which direction must light be travelling?',
+          answers: ['From air into glass', 'From glass into air (denser to less dense)', 'Parallel to the surface', 'Directly towards the normal'],
+          correct: 1,
+          feedback: 'TIR only happens when light travels from a denser medium (like glass) to a less dense medium (like air). Light going from air to glass cannot undergo TIR.',
+        },
+        {
+          question: 'What are the two conditions required for TIR?',
+          answers: ['High frequency and low wavelength', 'Dense to less dense medium AND angle exceeds critical angle', 'Smooth surface AND parallel rays', 'Monochromatic light AND a glass surface'],
+          correct: 1,
+          feedback: 'Both conditions must be met: (1) light travels from denser to less dense medium, and (2) angle of incidence must exceed the critical angle. If only one is met, TIR does not occur.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Refraction', 'Wave Reflection and Boundary Behaviour'],
+      current: 'Total Internal Reflection',
+      after: ['Optical Fibres (applications)', 'Lenses and Optics'],
+    },
+
+    workedExample: {
+      title: 'Calculating the critical angle for glass',
+      equation: 'sin(c) = 1/n, rearranged: c = arcsin(1/n)',
+      context: 'Glass has refractive index n = 1.5. Calculate the critical angle.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'n = 1.5, c = ?', annotation: 'The refractive index is given. You need sin(c) = 1/n.' },
+        { step: 2, action: 'Write the equation', content: 'sin(c) = 1/n', annotation: 'This equation is not always on the formula sheet - learn it. It comes from setting the refracted angle to 90 degrees at the boundary.' },
+        { step: 3, action: 'Substitute', content: 'sin(c) = 1/1.5 = 0.667', annotation: 'Divide 1 by the refractive index. A common error is inverting this to get n/1 = 1.5 - wrong direction.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'c = arcsin(0.667) ≈ 42 degrees', annotation: 'Use the inverse sine button on your calculator (sin⁻¹ or arcsin). Answer is in degrees.' },
+      ],
+      misconceptionAfter: {
+        claim: 'TIR happens because the glass is too thick for light to pass through.',
+        reality: 'TIR is about the angle of the ray, not the thickness of the glass. Even a razor-thin piece of glass will cause TIR if the angle exceeds the critical angle.',
+        visual: 'A ray at 41 degrees (just below critical angle for glass) partially refracts and escapes. The same ray at 43 degrees reflects completely - thickness is irrelevant.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A material has refractive index n = 2.0. Calculate the critical angle.',
+        allSteps: [
+          'Write what you know: n = 2.0, c = ?',
+          'Write the equation: sin(c) = 1/n',
+          'Substitute: sin(c) = 1/2.0 = 0.5',
+          '??? - find c = arcsin(0.5)',
+        ],
+        missingStep: 3,
+        missingHint: 'arcsin(0.5) = ? degrees. Use your calculator or recall that sin(30) = 0.5.',
+        answer: 30,
+        answerUnit: 'degrees',
+      },
+      tier2: {
+        question: 'A material has refractive index n = 1.4. Calculate the critical angle.',
+        shownEquation: 'sin(c) = 1/n -> c = arcsin(1/n)',
+        shownStep1: 'Write what you know: n = 1.4',
+        hint: 'sin(c) = 1/1.4 = 0.714. Then use arcsin.',
+        answer: 46,
+        answerUnit: 'degrees',
+      },
+      tier3: {
+        question: 'A glass fibre has refractive index n = 1.6. Calculate the critical angle.',
+        hint: 'Use sin(c) = 1/n. Calculate 1/1.6 first, then use arcsin.',
+        methodHint: 'sin(c) = 1/1.6 = 0.625. c = arcsin(0.625). Use your calculator.',
+        answer: 39,
+        answerUnit: 'degrees',
+      },
+    },
+
+    summary: {
+      equation: 'sin(c) = 1/n',
+      sentence: 'TIR occurs when light goes from dense to less dense medium and the angle of incidence exceeds the critical angle - used in optical fibres and endoscopes.',
+      promptText: 'State the two conditions for TIR and explain why optical fibres can carry light around bends.',
+    },
+
+    sessionRecap: [
+      'TIR requires two conditions: light travelling from denser to less dense medium, AND angle of incidence exceeding the critical angle.',
+      'Critical angle formula: sin(c) = 1/n. For glass (n = 1.5): c ≈ 42 degrees.',
+      'Optical fibres use TIR to carry internet data and medical imaging - light bounces along with no leakage if the angle always exceeds the critical angle.',
+    ],
   },
   sound_ultrasound: {
     id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only',
@@ -1920,6 +2307,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Sound does NOT travel faster in less dense media - the opposite is true. S-waves not reaching the far side of Earth is key evidence for a liquid outer core.',
     concept: 'Sound travels by passing vibrations between particles — faster in solids (closer particles). P-waves (longitudinal) pass through solid and liquid. S-waves (transverse) are blocked by liquid — evidence for liquid outer core. Human hearing 20 Hz–20 kHz; ultrasound >20 kHz. Echo sounding depth = (speed × time) ÷ 2.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Hospital ultrasound scanners use sound at 2-15 MHz - up to 750 times higher than the highest frequency a human can hear (20,000 Hz). Bats echolocate at 20-120 kHz and can detect objects as thin as a human hair by listening to the reflected pulse.',
+      hookQuestion: 'If sound travels faster in solids than in air, why do you think doctors use sound waves (not light) to image a baby inside the womb?',
+      hookEmoji: '🔊',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Ultrasound',
+        symbol: '',
+        unit: 'Hz',
+        definition: 'Sound with frequency above 20,000 Hz (20 kHz) - above the upper limit of human hearing.',
+        everydayNote: 'Medical scanners use 2-15 MHz. Bats use 20-120 kHz. The higher the frequency, the smaller the detail that can be detected.',
+      },
+      {
+        word: 'Echo',
+        symbol: '',
+        unit: '',
+        definition: 'A reflected sound wave. The time taken for an echo to return is used to calculate distance.',
+        everydayNote: 'Depth = (speed x time) / 2. The divide-by-2 is because sound travels to the object AND back.',
+      },
+      {
+        word: 'P-wave',
+        symbol: '',
+        unit: '',
+        definition: 'A longitudinal seismic wave that travels through both solids and liquids.',
+        everydayNote: 'P-waves travel at about 6-8 km/s in the Earth\'s crust and can pass through the liquid outer core.',
+      },
+      {
+        word: 'S-wave',
+        symbol: '',
+        unit: '',
+        definition: 'A transverse seismic wave that can only travel through solids - it is blocked by liquids.',
+        everydayNote: 'S-waves do not reach the far side of Earth from an earthquake. This absence proved the outer core is liquid.',
+      },
+      {
+        word: 'Hearing Range',
+        symbol: '',
+        unit: 'Hz',
+        definition: 'The range of frequencies detectable by the human ear: 20 Hz to 20,000 Hz (20 kHz).',
+        everydayNote: 'The ear drum and inner ear structures only vibrate efficiently in this range. Above 20 kHz = ultrasound; below 20 Hz = infrasound.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'In which medium does sound travel fastest?',
+          answers: ['Air', 'Water', 'Steel', 'A vacuum'],
+          correct: 2,
+          feedback: 'Sound travels fastest in solids (e.g. steel at ~5100 m/s) because particles are closest together and pass on vibrations most rapidly. It cannot travel in a vacuum at all.',
+        },
+        {
+          question: 'A sound pulse is sent into water and returns as an echo after 0.04 s. The speed of sound in water is 1500 m/s. What is the depth?',
+          answers: ['60 m', '30 m', '15 m', '120 m'],
+          correct: 1,
+          feedback: 'Depth = (speed x time) / 2 = (1500 x 0.04) / 2 = 60 / 2 = 30 m. Divide by 2 because the pulse travels down AND back up.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Wave Types (longitudinal vs transverse)', 'Wave Properties (v = f x lambda)'],
+      current: 'Sound Waves and Ultrasound',
+      after: ['EM Spectrum', 'Echo Sounding and Sonar (applied)'],
+    },
+
+    workedExample: {
+      title: 'Echo sounding - calculating water depth',
+      equation: 'depth = (speed x time) / 2',
+      context: 'A ship sends an ultrasound pulse straight down. The echo returns after 0.04 s. The speed of sound in seawater is 1500 m/s. Calculate the depth of the water.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'v = 1500 m/s, t = 0.04 s, depth = ?', annotation: 'The time is the total round-trip time - sound goes down and back up.' },
+        { step: 2, action: 'Write the equation', content: 'depth = (v x t) / 2', annotation: 'Divide by 2 because the sound travels twice the depth (down and back). This is the most common error in this topic.' },
+        { step: 3, action: 'Substitute', content: 'depth = (1500 x 0.04) / 2 = 60 / 2', annotation: 'Calculate the numerator first: 1500 x 0.04 = 60 m. Then halve it.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'depth = 30 m', annotation: 'Sense check: 30 m is a reasonable ocean depth near shore. Check units are in metres.' },
+      ],
+      misconceptionAfter: {
+        claim: 'The time in the formula is the time for sound to travel to the bottom.',
+        reality: 'The measured time is the total round-trip time - sound travels down to the seabed and back up again. That is why you divide by 2. If you forget to halve, your answer doubles the true depth.',
+        visual: 'Think of a ball dropped and caught: the ball falls for half the total time and rises for the other half. The seabed is at the halfway point in time.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A sonar pulse returns after 0.06 s. Speed of sound in water = 1500 m/s. Calculate the depth.',
+        allSteps: [
+          'Write what you know: v = 1500 m/s, t = 0.06 s',
+          'Write the equation: depth = (v x t) / 2',
+          'Substitute: depth = (1500 x 0.06) / 2 = 90 / 2',
+          '??? - calculate the depth',
+        ],
+        missingStep: 3,
+        missingHint: '90 / 2 = ?',
+        answer: 45,
+        answerUnit: 'm',
+      },
+      tier2: {
+        question: 'A pulse echoes back in 0.02 s. Speed of sound = 340 m/s. Calculate the depth.',
+        shownEquation: 'depth = (v x t) / 2',
+        shownStep1: 'Write what you know: v = 340 m/s, t = 0.02 s',
+        hint: 'Calculate (340 x 0.02) first, then divide by 2.',
+        answer: 3.4,
+        answerUnit: 'm',
+      },
+      tier3: {
+        question: 'The depth of water is 120 m. Speed of sound = 1500 m/s. How long does the echo take to return?',
+        hint: 'Rearrange depth = (v x t) / 2 to find t. Multiply depth by 2, then divide by speed.',
+        methodHint: 'Start with: depth = (v x t) / 2. Rearrange: t = (2 x depth) / v = (2 x 120) / 1500.',
+        answer: 0.16,
+        answerUnit: 's',
+      },
+    },
+
+    summary: {
+      equation: 'depth = (speed x time) / 2',
+      sentence: 'Ultrasound above 20 kHz is used in medical imaging and echo sounding; sound travels faster in denser media (solids > liquids > gases).',
+      promptText: 'Explain in two sentences why S-waves not reaching the far side of Earth is evidence for a liquid outer core.',
+    },
+
+    sessionRecap: [
+      'Sound travels faster in denser media: steel (5100 m/s) > water (1500 m/s) > air (340 m/s).',
+      'Echo sounding: depth = (speed x time) / 2 - divide by 2 because sound travels to the object and back.',
+      'Ultrasound (above 20 kHz) is used in medical imaging and flaw detection; S-waves cannot pass through liquids, which is evidence for Earth\'s liquid outer core.',
+    ],
   },
   em_spectrum: {
     id: 'em_spectrum', module: 'Waves', moduleColor: WC, course: 'combined',
@@ -1941,6 +2457,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Visible light is only a tiny fraction of the electromagnetic spectrum. Radio waves carry very little energy per photon — they are non-ionising.',
     concept: 'Gamma rays have the highest frequency and energy — sufficient to kill bacteria and sterilise equipment. Radiation dose (sieverts) measures harm risk. Radio waves are generated by oscillating circuits and induce AC when absorbed. The visible spectrum (400–700 nm) is a very narrow band.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Your WiFi router emits microwaves at 2.4 GHz or 5 GHz. Your microwave oven uses 2.45 GHz - almost exactly the same frequency - but at 700-1200 watts instead of the router\'s 0.1 watts. The difference between warming your food and browsing the internet is purely a matter of power.',
+      hookQuestion: 'All EM waves travel at the same speed in a vacuum. If radio waves and gamma rays travel at the same speed, what do you think makes them so different from each other?',
+      hookEmoji: '📡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Electromagnetic Spectrum',
+        symbol: '',
+        unit: '',
+        definition: 'The family of all transverse EM waves, ordered by frequency (or wavelength). All travel at 3x10^8 m/s in a vacuum.',
+        everydayNote: 'From low to high frequency: radio, microwave, infrared, visible, UV, X-ray, gamma. A useful mnemonic: "Raging Martians Invaded Venus Using X-ray Guns".',
+      },
+      {
+        word: 'Ionising Radiation',
+        symbol: '',
+        unit: '',
+        definition: 'EM radiation with enough energy to remove electrons from atoms, potentially damaging DNA. UV, X-rays, and gamma rays are ionising.',
+        everydayNote: 'Ionising radiation can cause cancer with repeated exposure. This is why X-ray technicians leave the room during scans.',
+      },
+      {
+        word: 'Radiation Dose',
+        symbol: '',
+        unit: 'sieverts (Sv)',
+        definition: 'A measure of the harm risk from exposure to ionising radiation, taking into account both the amount and type of radiation.',
+        everydayNote: 'A chest X-ray gives about 0.1 mSv. Background radiation in the UK is about 2.7 mSv per year. 1000 mSv = 1 Sv.',
+      },
+      {
+        word: 'Frequency',
+        symbol: 'f',
+        unit: 'hertz (Hz)',
+        definition: 'The number of wave oscillations per second. Higher frequency means shorter wavelength and more energy per photon.',
+        everydayNote: 'Radio waves: ~10^6 Hz. Visible light: ~5x10^14 Hz. Gamma rays: above 10^19 Hz.',
+      },
+      {
+        word: 'Wavelength',
+        symbol: 'lambda',
+        unit: 'metres (m)',
+        definition: 'The distance between two successive identical points on a wave. As frequency increases, wavelength decreases (v = f x lambda).',
+        everydayNote: 'Radio waves: metres to km long. Visible light: ~500 nm (0.0000005 m). Gamma rays: smaller than an atomic nucleus.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'All EM waves travel at the same speed in a vacuum. What is that speed?',
+          answers: ['340 m/s', '3x10^6 m/s', '3x10^8 m/s', '1500 m/s'],
+          correct: 2,
+          feedback: 'All EM waves travel at 3x10^8 m/s (300,000,000 m/s or 300,000 km/s) in a vacuum. This is the speed of light.',
+        },
+        {
+          question: 'Which EM wave has the highest frequency?',
+          answers: ['Radio waves', 'Infrared', 'Visible light', 'Gamma rays'],
+          correct: 3,
+          feedback: 'Gamma rays have the highest frequency, shortest wavelength, and most energy. The order low to high frequency: radio, microwave, infrared, visible, UV, X-ray, gamma.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Wave Properties (v = f x lambda)', 'Wave Types (transverse)'],
+      current: 'The Electromagnetic Spectrum',
+      after: ['Lenses', 'Visible Light and Colour', 'Black Body Radiation'],
+    },
+
+    workedExample: {
+      title: 'Calculating wavelength of a radio wave',
+      equation: 'v = f x lambda, rearranged: lambda = v / f',
+      context: 'A radio station broadcasts at 100 MHz (1x10^8 Hz). Calculate the wavelength of the radio waves. (Speed of light = 3x10^8 m/s)',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'v = 3x10^8 m/s, f = 1x10^8 Hz (100 MHz), lambda = ?', annotation: 'Convert MHz to Hz: 100 MHz = 100x10^6 = 1x10^8 Hz. Always convert to base units.' },
+        { step: 2, action: 'Write the equation', content: 'v = f x lambda, so lambda = v / f', annotation: 'This equation is on the formula sheet. Rearrange by dividing both sides by f.' },
+        { step: 3, action: 'Substitute', content: 'lambda = (3x10^8) / (1x10^8)', annotation: 'Divide the coefficients: 3/1 = 3. Subtract the powers: 10^8 / 10^8 = 10^0 = 1.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'lambda = 3 m', annotation: 'Sense check: radio waves should have wavelengths of metres. 3 m is correct for 100 MHz FM radio.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Higher frequency EM waves travel faster.',
+        reality: 'All EM waves travel at the same speed in a vacuum (3x10^8 m/s). Higher frequency means shorter wavelength - not higher speed. v = f x lambda stays constant because as f increases, lambda decreases proportionally.',
+        visual: 'Think of 10 waves passing a point per second versus 5 waves per second at the same speed - the 10 Hz waves must be shorter (half the wavelength) to all fit past at the same speed.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Visible light has frequency 6x10^14 Hz. Speed = 3x10^8 m/s. Calculate the wavelength.',
+        allSteps: [
+          'Write what you know: f = 6x10^14 Hz, v = 3x10^8 m/s',
+          'Write the equation: lambda = v / f',
+          'Substitute: lambda = (3x10^8) / (6x10^14)',
+          '??? - divide to find lambda',
+        ],
+        missingStep: 3,
+        missingHint: 'Divide 3 by 6 = 0.5. Subtract powers: 10^8 / 10^14 = 10^-6. So lambda = 0.5x10^-6 = 5x10^-7 m.',
+        answer: 5e-7,
+        answerUnit: 'm',
+      },
+      tier2: {
+        question: 'A microwave has wavelength 0.12 m. Speed = 3x10^8 m/s. Calculate the frequency.',
+        shownEquation: 'v = f x lambda -> f = v / lambda',
+        shownStep1: 'Write what you know: lambda = 0.12 m, v = 3x10^8 m/s',
+        hint: 'Divide: f = 3x10^8 / 0.12. Calculate 3/0.12 = 25, then multiply by 10^8.',
+        answer: 2.5e9,
+        answerUnit: 'Hz',
+      },
+      tier3: {
+        question: 'An EM wave has frequency 1.5x10^9 Hz. Speed = 3x10^8 m/s. Calculate the wavelength.',
+        hint: 'Use lambda = v / f. Divide 3x10^8 by 1.5x10^9.',
+        methodHint: 'Divide coefficients: 3 / 1.5 = 2. Subtract powers: 10^8 / 10^9 = 10^-1 = 0.1. So lambda = 2 x 0.1 = 0.2 m.',
+        answer: 0.2,
+        answerUnit: 'm',
+      },
+    },
+
+    summary: {
+      equation: 'v = f x lambda (v = 3x10^8 m/s for all EM waves in vacuum)',
+      sentence: 'All EM waves are transverse and travel at 3x10^8 m/s; higher frequency means shorter wavelength and more energy - ionising above UV.',
+      promptText: 'List the 7 types of EM radiation in order of increasing frequency and name one use and one hazard.',
+    },
+
+    sessionRecap: [
+      'EM spectrum order (low to high frequency): radio, microwave, infrared, visible, UV, X-ray, gamma - all travel at 3x10^8 m/s in vacuum.',
+      'Higher frequency = shorter wavelength = more energy. UV, X-rays and gamma rays are ionising and can damage DNA.',
+      'Radiation dose is measured in sieverts (Sv). Radio waves are produced by oscillating currents and induce AC in a receiving conductor.',
+    ],
   },
   lenses: {
     id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics-only',
@@ -1962,6 +2607,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Concave lenses always produce virtual images — never real. A higher power lens has a shorter (not longer) focal length.',
     concept: 'P = 1/f = 1/0.25 = 4 D. Power measures how strongly the lens bends light. Magnification = image/object height (no units). Convex: real image when object > f; virtual magnified when object < f. Concave: always virtual.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The human eye\'s lens changes shape - squeezed by ciliary muscles - to focus on objects from 25 cm to infinity. This is called accommodation. Around age 40, the lens stiffens and people need reading glasses for the first time because it can no longer bulge enough to focus on near objects.',
+      hookQuestion: 'Hold a finger close to your face and focus on it, then look past it at the wall. What happens to your finger? Why do you think your eye has to physically change to switch focus?',
+      hookEmoji: '🔍',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Convex Lens',
+        symbol: '',
+        unit: '',
+        definition: 'A converging lens that is thicker in the middle. It brings parallel rays to a focal point on the far side.',
+        everydayNote: 'A magnifying glass is a convex lens. Cameras, telescopes, and the human eye all use convex lenses to form images.',
+      },
+      {
+        word: 'Concave Lens',
+        symbol: '',
+        unit: '',
+        definition: 'A diverging lens that is thinner in the middle. It spreads parallel rays outward - they appear to come from a focal point on the same side as the incoming light.',
+        everydayNote: 'Glasses for short-sightedness (myopia) use concave lenses to reduce the converging power of the eye.',
+      },
+      {
+        word: 'Focal Length',
+        symbol: 'f',
+        unit: 'metres (m)',
+        definition: 'The distance from the lens to the point where parallel rays converge (convex) or appear to diverge from (concave).',
+        everydayNote: 'A lens with f = 0.1 m has power 10 D. A lens with f = 0.5 m has power 2 D. Shorter focal length = more powerful.',
+      },
+      {
+        word: 'Power of a Lens',
+        symbol: 'P',
+        unit: 'dioptres (D)',
+        definition: 'A measure of how strongly a lens bends light. P = 1/f, where f is in metres.',
+        everydayNote: 'A typical reading glasses prescription might be +2 D (converging, f = 0.5 m). Stronger prescriptions have higher dioptre values.',
+      },
+      {
+        word: 'Magnification',
+        symbol: 'm',
+        unit: 'no units',
+        definition: 'The ratio of image size to object size. Magnification = image height / object height = image distance / object distance.',
+        everydayNote: 'Magnification of 3 means the image is 3 times the size of the object. Magnification below 1 means the image is smaller than the object.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A convex lens has focal length 0.5 m. What is its power?',
+          answers: ['0.5 D', '2 D', '5 D', '50 D'],
+          correct: 1,
+          feedback: 'P = 1/f = 1/0.5 = 2 D. Power is in dioptres. The shorter the focal length, the higher the power - a 0.1 m focal length lens has power 10 D.',
+        },
+        {
+          question: 'A concave lens always produces what type of image?',
+          answers: ['Real and inverted', 'Virtual and magnified', 'Virtual, upright and diminished', 'Real and upright'],
+          correct: 2,
+          feedback: 'A concave (diverging) lens always produces a virtual, upright, diminished image regardless of object distance. Only convex lenses can produce real images.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Refraction', 'Total Internal Reflection'],
+      current: 'Lenses and Optics',
+      after: ['Visible Light and Colour', 'The Eye and Sight Correction (applied)'],
+    },
+
+    workedExample: {
+      title: 'Calculating lens power and magnification',
+      equation: 'P = 1/f (dioptres). Magnification = image height / object height.',
+      context: 'A converging lens has focal length f = 0.1 m. An object 4 cm tall is placed 0.2 m from the lens and produces an image 4 cm tall. Calculate lens power and magnification.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'f = 0.1 m, object height = 4 cm, image height = 4 cm', annotation: 'Focal length must be in metres for the power formula. Check units before substituting.' },
+        { step: 2, action: 'Calculate power', content: 'P = 1/f = 1/0.1 = 10 D', annotation: 'Dioptres (D) is the unit of lens power. No need to convert - just divide 1 by the focal length in metres.' },
+        { step: 3, action: 'Calculate magnification', content: 'magnification = image height / object height = 4 / 4 = 1', annotation: 'Magnification has no units. A value of 1 means the image is the same size as the object.' },
+        { step: 4, action: 'Interpret the result', content: 'Magnification = 1 means image and object are the same size. Power = 10 D is a relatively strong lens.', annotation: 'Sense check: an image the same size as the object with a 10 D lens - this is consistent with object at 2f distance.' },
+      ],
+      misconceptionAfter: {
+        claim: 'A more powerful lens always produces a bigger image.',
+        reality: 'Magnification depends on where the object is placed relative to the focal length, not just on lens power. A powerful lens with the object far beyond its focal length can produce a tiny, highly diminished real image.',
+        visual: 'A 20 D lens (f = 0.05 m) with an object 1 m away produces a nearly life-size image near the focal point - the object is so far away the rays are almost parallel, giving low magnification despite high power.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A converging lens has focal length f = 0.5 m. Calculate its power.',
+        allSteps: [
+          'Write what you know: f = 0.5 m',
+          'Write the equation: P = 1/f',
+          'Substitute: P = 1/0.5',
+          '??? - calculate P',
+        ],
+        missingStep: 3,
+        missingHint: '1 divided by 0.5 = ?',
+        answer: 2,
+        answerUnit: 'D',
+      },
+      tier2: {
+        question: 'A lens has focal length f = 0.04 m. Calculate its power.',
+        shownEquation: 'P = 1/f',
+        shownStep1: 'Write what you know: f = 0.04 m',
+        hint: 'P = 1/0.04. Think: how many 0.04s fit into 1?',
+        answer: 25,
+        answerUnit: 'D',
+      },
+      tier3: {
+        question: 'An image is 6 cm tall and the object is 2 cm tall. Calculate the magnification.',
+        hint: 'Use magnification = image height / object height. No units in the answer.',
+        methodHint: 'Magnification = 6 / 2. The result is unitless.',
+        answer: 3,
+        answerUnit: '',
+      },
+    },
+
+    summary: {
+      equation: 'P = 1/f (D). Magnification = image height / object height.',
+      sentence: 'Convex lenses converge light to form real or virtual images depending on object position; concave lenses always form virtual, diminished images; lens power is the reciprocal of focal length.',
+      promptText: 'Without notes, state what type of image a convex lens forms when the object is (a) beyond the focal point and (b) inside the focal point.',
+    },
+
+    sessionRecap: [
+      'Lens power: P = 1/f in dioptres. Shorter focal length = more powerful lens.',
+      'Convex lens: real, inverted image when object is beyond focal point; virtual, upright, magnified when object is inside focal point.',
+      'Concave lens: always virtual, upright, diminished image. Magnification = image height / object height (no units).',
+    ],
   },
   black_body: {
     id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics-only',
@@ -1983,6 +2757,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'All objects above absolute zero (−273°C) continuously emit infrared radiation.',
     concept: 'Even a block of ice at 0°C emits infrared radiation - less than a warm object, but still emitting. Only at absolute zero (−273°C) would emission theoretically stop. This is why thermal cameras can detect any object warmer than absolute zero.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The cosmic microwave background is the echo of the Big Bang, still filling every corner of space 13.8 billion years later. It corresponds to a temperature of just 2.7 K - and it is detectable because even at that tiny temperature, every object radiates. Your phone detects it as faint static between TV channels.',
+      hookQuestion: 'A thermal camera can see animals in complete darkness. What do you think the camera is actually detecting - and why would a warmer animal appear brighter?',
+      hookEmoji: '🌡️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Black Body',
+        symbol: '',
+        unit: '',
+        definition: 'A theoretical perfect absorber and emitter. It absorbs all incoming radiation and emits the maximum possible radiation at every wavelength for its temperature.',
+        everydayNote: 'A black body is an idealisation. The Sun is close to a black body. A matt black surface is a better emitter than a shiny one at the same temperature.',
+      },
+      {
+        word: 'Infrared Radiation',
+        symbol: 'IR',
+        unit: '',
+        definition: 'EM radiation emitted by all objects above absolute zero. Hotter objects emit more IR at shorter wavelengths.',
+        everydayNote: 'Thermal cameras detect IR from objects. The human body emits IR at around 9-10 micrometres wavelength.',
+      },
+      {
+        word: 'Absolute Zero',
+        symbol: '',
+        unit: '0 K (-273 degrees C)',
+        definition: 'The lowest possible temperature, at which particles have minimum vibrational energy. At 0 K, an object would theoretically stop emitting radiation.',
+        everydayNote: 'Nothing in practice reaches absolute zero. The coldest recorded temperature in a lab is about 100 picokelvin - still not zero.',
+      },
+      {
+        word: 'Thermal Equilibrium',
+        symbol: '',
+        unit: '',
+        definition: 'When an object\'s temperature is constant because the rate of absorption equals the rate of emission.',
+        everydayNote: 'Earth maintains a roughly constant temperature because the rate of solar energy absorbed equals the rate of IR emitted to space - this is the basis of climate science.',
+      },
+      {
+        word: 'Intensity of Radiation',
+        symbol: '',
+        unit: 'W/m^2',
+        definition: 'The power of emitted radiation per unit area. Doubles rapidly with temperature - proportional to T^4 (Stefan-Boltzmann law, not required at GCSE).',
+        everydayNote: 'An object at 600 K emits 16 times more radiation than the same object at 300 K (2^4 = 16), not just twice as much.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'At what temperature does an object stop emitting infrared radiation?',
+          answers: ['0 degrees C', '-100 degrees C', 'Never - all objects above 0 K emit IR', '100 degrees C'],
+          correct: 2,
+          feedback: 'All objects above absolute zero (0 K / -273 degrees C) continuously emit infrared radiation. The colder the object, the less it emits - but it never stops entirely unless at 0 K.',
+        },
+        {
+          question: 'A hotter object emits infrared radiation at shorter or longer wavelengths than a cooler object?',
+          answers: ['Longer wavelengths', 'Shorter wavelengths', 'The same wavelengths', 'No wavelengths'],
+          correct: 1,
+          feedback: 'Hotter objects emit more radiation AND at shorter wavelengths (higher frequencies). The Sun at 5800 K emits peak radiation in the visible range. Earth at 288 K emits peak radiation in the infrared.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['EM Spectrum', 'Infrared as part of EM spectrum'],
+      current: 'Black Body Radiation',
+      after: ['Climate Science (Earth energy balance)', 'Red-shift and the CMB'],
+    },
+
+    workedExample: {
+      title: 'Comparing radiation emission from objects at different temperatures',
+      equation: 'Emission rate is proportional to T^4 (Stefan-Boltzmann). If temperature doubles: emission x 2^4 = 16.',
+      context: 'Object A is at 300 K. Object B is at 600 K (twice as hot). How many times more radiation does object B emit per second compared to object A?',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'T_A = 300 K, T_B = 600 K. Temperature ratio = 600/300 = 2.', annotation: 'Temperatures must be in Kelvin, not Celsius. K = degrees C + 273.' },
+        { step: 2, action: 'State the relationship', content: 'Emission is proportional to T^4 (Stefan-Boltzmann law).', annotation: 'At GCSE you need to know that hotter objects emit much more - the T^4 relationship explains why small temperature increases have big effects.' },
+        { step: 3, action: 'Calculate the ratio', content: 'Emission ratio = (T_B / T_A)^4 = 2^4 = 16.', annotation: 'Doubling temperature gives 16 times more emission, not 2 times. This is why the Sun is so much more intense than Earth despite being only 20 times hotter.' },
+        { step: 4, action: 'State the answer', content: 'Object B emits 16 times more radiation than object A.', annotation: 'Sense check: a small change in temperature can make a large difference in emission rate - this is why Earth\'s temperature is so sensitive to changes in atmospheric absorption.' },
+      ],
+      misconceptionAfter: {
+        claim: 'If an object is twice as hot, it emits twice as much radiation.',
+        reality: 'Emission scales with T^4. Double the temperature gives 16 times (2^4) more emission. This is why the Sun, at only about 20 times Earth\'s absolute temperature, emits about 20^4 = 160,000 times more radiation per unit area.',
+        visual: 'A stovetop burner going from 400 K to 800 K doubles in temperature but emits 16 times more radiation - that is why it glows visibly red-hot at the higher temperature.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Object X is at 300 K. Object Y is at 600 K. Using the T^4 rule, how many times more radiation does Y emit than X?',
+        allSteps: [
+          'Write the temperatures: T_X = 300 K, T_Y = 600 K',
+          'Find the temperature ratio: 600 / 300 = 2',
+          'Apply T^4: emission ratio = 2^4',
+          '??? - calculate 2^4',
+        ],
+        missingStep: 3,
+        missingHint: '2^4 = 2 x 2 x 2 x 2 = ?',
+        answer: 16,
+        answerUnit: 'times more',
+      },
+      tier2: {
+        question: 'Object P is at 200 K. Object Q is at 400 K. Using the T^4 rule, how many times more radiation does Q emit than P?',
+        shownEquation: 'emission ratio = (T_Q / T_P)^4',
+        shownStep1: 'Temperature ratio = 400 / 200 = 2',
+        hint: 'Calculate 2^4.',
+        answer: 16,
+        answerUnit: 'times more',
+      },
+      tier3: {
+        question: 'Object A is at 250 K. Object B is at 500 K. How many times more radiation does B emit than A? Use the T^4 rule.',
+        hint: 'Find the temperature ratio first. Then raise to the power 4.',
+        methodHint: 'Ratio = 500/250 = 2. Emission ratio = 2^4 = 16.',
+        answer: 16,
+        answerUnit: 'times more',
+      },
+    },
+
+    summary: {
+      equation: 'Emission proportional to T^4. Hotter = more emission + shorter wavelength peak.',
+      sentence: 'All objects above absolute zero emit infrared radiation - hotter objects emit far more and at shorter wavelengths; a perfect black body absorbs all radiation and emits the maximum possible.',
+      promptText: 'Explain in two sentences why Earth\'s temperature stays roughly constant despite constant energy input from the Sun.',
+    },
+
+    sessionRecap: [
+      'All objects above 0 K (-273 degrees C) emit infrared radiation - the hotter the object, the more it emits and the shorter the peak wavelength.',
+      'At thermal equilibrium, absorption rate = emission rate. Earth\'s temperature is governed by this balance with solar radiation.',
+      'Doubling an object\'s absolute temperature increases its emission by a factor of 2^4 = 16 - small temperature changes have a large effect on radiation output.',
+    ],
   },
   magnetism_fields: {
     id: 'magnetism_fields', module: 'Magnetism', moduleColor: MC, course: 'combined',
@@ -2174,6 +3077,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Force is zero when current is parallel to the magnetic field, not maximum.',
     concept: 'F = BIL - force is directly proportional to current. Doubling I doubles F. Force is maximum when current is perpendicular (90°) to the field. Loudspeaker: AC current in voice coil → alternating force → cone vibration → sound waves. Microphone does the reverse (generator effect).',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'MRI scanners use magnetic fields about 60,000 times stronger than Earth\'s field (around 1.5-3 T compared to Earth\'s 0.00005 T). The force on current-carrying wires in these fields is so strong that metal objects brought near them become dangerous projectiles. The same physics as F = BIL, but at industrial scale.',
+      hookQuestion: 'When you play music through a loudspeaker, how do you think electrical signals from your phone turn into vibrations in air? What physics do you think is involved?',
+      hookEmoji: '🔊',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Motor Effect',
+        symbol: '',
+        unit: '',
+        definition: 'The force experienced by a current-carrying conductor placed in a magnetic field.',
+        everydayNote: 'Electric motors use this effect. Every motor in your home - fridge compressor, washing machine drum, electric window in a car - uses the motor effect.',
+      },
+      {
+        word: 'Magnetic Flux Density',
+        symbol: 'B',
+        unit: 'tesla (T)',
+        definition: 'The strength of a magnetic field. 1 T is a strong lab magnet; Earth\'s field is only 0.00005 T.',
+        everydayNote: 'MRI scanners use 1.5-3 T. A fridge magnet is about 0.005 T. The stronger the field, the greater the force on a current-carrying wire.',
+      },
+      {
+        word: 'F = BIL',
+        symbol: 'F',
+        unit: 'newtons (N)',
+        definition: 'Force on a current-carrying conductor: F = magnetic flux density x current x length of conductor in the field.',
+        everydayNote: 'B in tesla, I in amps, L in metres. Double any one of these and the force doubles.',
+      },
+      {
+        word: "Fleming's Left Hand Rule",
+        symbol: '',
+        unit: '',
+        definition: "Hold the left hand with thumb, index finger, and middle finger mutually perpendicular. Thumb = force (motion), index = field (N to S), middle = current direction.",
+        everydayNote: "Use the LEFT hand for motors (force from current). The right hand is for generators. A handy memory: motor cars drive on the Left.",
+      },
+      {
+        word: 'Loudspeaker',
+        symbol: '',
+        unit: '',
+        definition: 'A device that converts electrical signals to sound using the motor effect. AC through a voice coil in a magnetic field creates alternating forces, vibrating a cone.',
+        everydayNote: 'The cone of a loudspeaker moves back and forth millions of times per second for high-frequency sounds, driven by the alternating force from AC current.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Using F = BIL, if the current through a conductor doubles (B and L unchanged), what happens to the force?',
+          answers: ['Force stays the same', 'Force halves', 'Force doubles', 'Force quadruples'],
+          correct: 2,
+          feedback: 'F = BIL. Force is directly proportional to current. Double I, double F. If all three quantities (B, I, L) doubled, the force would be 8 times larger.',
+        },
+        {
+          question: "In Fleming's Left Hand Rule, what does the thumb represent?",
+          answers: ['Current direction', 'Magnetic field direction', 'Force/motion direction', 'Voltage'],
+          correct: 2,
+          feedback: "Thumb = Force (motion/thrust). Index finger = Field (B, from N to S). Middle finger = Current direction. A helpful mnemonic: ThuMb = Motion, First = Field, seCond = Current.",
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Magnetism and Magnetic Fields', 'Current and Circuits'],
+      current: 'The Motor Effect',
+      after: ['Electromagnetism (solenoids)', 'EM Induction', 'AC Generators'],
+    },
+
+    workedExample: {
+      title: 'Calculating force on a current-carrying conductor',
+      equation: 'F = BIL',
+      context: 'A wire of length 0.4 m carries a current of 3 A. It is placed in a magnetic field of flux density 0.5 T, perpendicular to the field. Calculate the force.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'B = 0.5 T, I = 3 A, L = 0.4 m, F = ?', annotation: 'Check that the wire is perpendicular to the field. If the current is parallel to B, the force is zero.' },
+        { step: 2, action: 'Write the equation', content: 'F = BIL', annotation: 'F = BIL is given in the equation sheet. No rearrangement needed here.' },
+        { step: 3, action: 'Substitute', content: 'F = 0.5 x 3 x 0.4', annotation: 'Multiply all three values together. Order does not matter for multiplication.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'F = 0.6 N', annotation: 'Sense check: 0.6 N is a small force - about the weight of a 60 g object. That is realistic for a small wire in a lab magnet.' },
+      ],
+      misconceptionAfter: {
+        claim: 'The force is maximum when the current is parallel to the magnetic field.',
+        reality: 'The force is ZERO when the current runs parallel to the field. The force is maximum when the current is perpendicular (90 degrees) to the field. F = BIL only gives the maximum force at 90 degrees.',
+        visual: 'Think of swimming with the current versus across it - you only get pushed sideways if you cross the current. A wire running along the field direction feels no force.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'B = 0.2 T, I = 5 A, L = 0.3 m. Calculate the force on the wire.',
+        allSteps: [
+          'Write what you know: B = 0.2 T, I = 5 A, L = 0.3 m',
+          'Write the equation: F = BIL',
+          'Substitute: F = 0.2 x 5 x 0.3',
+          '??? - calculate F',
+        ],
+        missingStep: 3,
+        missingHint: '0.2 x 5 x 0.3 = ? Multiply step by step.',
+        answer: 0.3,
+        answerUnit: 'N',
+      },
+      tier2: {
+        question: 'B = 0.4 T, I = 2 A, L = 0.5 m. Calculate the force.',
+        shownEquation: 'F = BIL',
+        shownStep1: 'Write what you know: B = 0.4 T, I = 2 A, L = 0.5 m',
+        hint: 'Multiply B x I x L. Do 0.4 x 2 first, then multiply by 0.5.',
+        answer: 0.4,
+        answerUnit: 'N',
+      },
+      tier3: {
+        question: 'F = 1.2 N, B = 0.6 T, L = 0.5 m. Calculate the current I.',
+        hint: 'Rearrange F = BIL to find I = F / (B x L).',
+        methodHint: 'I = F / (BL) = 1.2 / (0.6 x 0.5) = 1.2 / 0.3.',
+        answer: 4,
+        answerUnit: 'A',
+      },
+    },
+
+    summary: {
+      equation: 'F = BIL (force in N, B in T, I in A, L in m)',
+      sentence: 'A current-carrying conductor in a magnetic field experiences a force - this motor effect drives loudspeakers, electric motors, and is predicted by F = BIL.',
+      promptText: "Describe how a loudspeaker uses the motor effect to produce sound, mentioning AC current, voice coil, and cone.",
+    },
+
+    sessionRecap: [
+      'F = BIL: force on a current-carrying conductor. Doubling B, I, or L each doubles the force.',
+      "Fleming's Left Hand Rule: thumb = force, index = field (N to S), middle = current direction.",
+      'Loudspeaker: AC current through a voice coil in a permanent magnetic field creates alternating forces, vibrating the cone to produce sound waves.',
+    ],
   },
   electromagnetism: {
     id: 'electromagnetism', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'combined',
@@ -2195,6 +3227,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Thicker wire does not increase magnetic field strength — it is current and number of turns that matter, not wire thickness.',
     concept: 'Solenoid = bar magnet. Strength: ↑ current, ↑ turns, iron core. Applications: bells, relays, loudspeakers. Thicker wire has NO effect on field strength.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Scrapyard electromagnets lift cars weighing over 1000 kg using a coil of wire and an electric current. Switch off the current - the car drops instantly. A permanent magnet could never do that. This instant on/off controllability is why electromagnets are so useful in industry.',
+      hookQuestion: 'A doorbell uses an electromagnet that switches on and off rapidly. What do you think happens to the metal clapper inside - and how does the bell keep ringing automatically?',
+      hookEmoji: '🧲',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Solenoid',
+        symbol: '',
+        unit: '',
+        definition: 'A coil of wire that, when carrying current, produces a magnetic field similar to a bar magnet, with distinct north and south poles.',
+        everydayNote: 'The field inside a solenoid is uniform (same strength throughout). Adding more turns or more current strengthens the field.',
+      },
+      {
+        word: 'Electromagnet',
+        symbol: '',
+        unit: '',
+        definition: 'A temporary magnet made from a solenoid with a soft iron core. The magnetism can be switched on and off by controlling the current.',
+        everydayNote: 'Car scrapyards use electromagnets to lift vehicles. Hospital MRI scanners use superconducting electromagnets to create very strong, controlled fields.',
+      },
+      {
+        word: 'Soft Iron Core',
+        symbol: '',
+        unit: '',
+        definition: 'A piece of soft iron placed inside a solenoid to greatly increase the strength of the magnetic field by becoming temporarily magnetised.',
+        everydayNote: 'Soft iron is used because it magnetises and demagnetises easily. Steel would retain magnetism after the current is switched off.',
+      },
+      {
+        word: 'Relay',
+        symbol: '',
+        unit: '',
+        definition: 'An electromagnetic switch that uses a small current to control a much larger current in a separate circuit, safely.',
+        everydayNote: 'Car starter motors use relays. A small current from the ignition key activates the electromagnet, which closes the high-current circuit to the starter motor.',
+      },
+      {
+        word: 'Right-Hand Rule',
+        symbol: '',
+        unit: '',
+        definition: 'Wrap the right hand around a solenoid with fingers pointing in the direction of conventional current - the thumb points to the north pole.',
+        everydayNote: 'This rule tells you which end of a solenoid is the north pole. Reverse the current and the poles swap.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which change would NOT increase the strength of an electromagnet?',
+          answers: ['Increasing the current', 'Adding a soft iron core', 'Increasing the number of turns', 'Using thicker copper wire'],
+          correct: 3,
+          feedback: 'Thicker wire carries the same current without increasing field strength. Only three things increase field strength: more current, more turns, and adding a soft iron core.',
+        },
+        {
+          question: 'Why is soft iron (not steel) used as the core of an electromagnet?',
+          answers: ['Soft iron is cheaper', 'Soft iron demagnetises when the current stops; steel retains magnetism', 'Soft iron conducts electricity better', 'Steel is too heavy'],
+          correct: 1,
+          feedback: 'Soft iron is used because it magnetises and demagnetises easily. Steel would remain magnetised after the current is switched off, which would ruin the on/off controllability.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Permanent Magnets and Magnetic Fields', 'Current and Circuits'],
+      current: 'Electromagnetism',
+      after: ['Motor Effect (F = BIL)', 'EM Induction', 'AC Generators'],
+    },
+
+    workedExample: {
+      title: 'Predicting the effect of changing current and turns on electromagnet strength',
+      equation: 'Field strength is proportional to N x I (number of turns x current)',
+      context: 'A solenoid has 200 turns and carries 2 A. Calculate the relative field strength. Then predict the new field strength if both turns and current are doubled.',
+      steps: [
+        { step: 1, action: 'Calculate original N x I', content: 'Original: N x I = 200 x 2 = 400', annotation: 'N x I is proportional to field strength. The actual field in tesla depends on geometry and core, but the ratio tells us how it changes.' },
+        { step: 2, action: 'Find new values', content: 'New N = 400 turns, new I = 4 A', annotation: 'Both doubled.' },
+        { step: 3, action: 'Calculate new N x I', content: 'New: N x I = 400 x 4 = 1600', annotation: 'When both quantities double, the product quadruples.' },
+        { step: 4, action: 'Find the ratio', content: 'New / Old = 1600 / 400 = 4. Field is 4 times stronger.', annotation: 'Doubling turns AND doubling current each doubles the field, giving an overall factor of 4.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Using thicker wire increases the magnetic field strength of a solenoid.',
+        reality: 'Thicker wire has no effect on field strength. It reduces resistance and allows higher current if connected to the same supply voltage - but the field depends only on the current flowing, the number of turns, and whether there is an iron core.',
+        visual: 'Replace thin wire with thick wire but keep the current the same: the field is identical. The wire is just a conductor for current - its thickness is irrelevant to field production.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A solenoid has N = 100 turns, I = 2 A. The number of turns is doubled to 200 (current unchanged). By what factor does the field strength increase?',
+        allSteps: [
+          'Original N x I = 100 x 2 = 200',
+          'New N x I = 200 x 2 = 400',
+          'Ratio = new / old = 400 / 200',
+          '??? - calculate the ratio',
+        ],
+        missingStep: 3,
+        missingHint: '400 / 200 = ?',
+        answer: 2,
+        answerUnit: 'times stronger',
+      },
+      tier2: {
+        question: 'N = 150, I = 3 A. Current is increased to 6 A (N unchanged). By what factor does the field change?',
+        shownEquation: 'Field proportional to N x I. Ratio = new (N x I) / old (N x I)',
+        shownStep1: 'Original N x I = 150 x 3 = 450',
+        hint: 'New N x I = 150 x 6. Then find the ratio.',
+        answer: 2,
+        answerUnit: 'times stronger',
+      },
+      tier3: {
+        question: 'N = 50, I = 4 A. New: N = 100, I = 2 A. By what factor does the field change?',
+        hint: 'Calculate N x I for both old and new. Divide new by old.',
+        methodHint: 'Old = 50 x 4 = 200. New = 100 x 2 = 200. Ratio = 200/200.',
+        answer: 1,
+        answerUnit: '(unchanged)',
+      },
+    },
+
+    summary: {
+      equation: 'Field strength proportional to N x I. P = 1/f does not apply here.',
+      sentence: 'A current-carrying solenoid behaves like a bar magnet - field strength increases with more turns, more current, or a soft iron core.',
+      promptText: 'Explain in two sentences why a relay switch is useful in electrical circuits, mentioning electromagnets and current.',
+    },
+
+    sessionRecap: [
+      'A solenoid with current acts like a bar magnet. Field strength increases with more turns, more current, or a soft iron core - thicker wire has no effect.',
+      'Applications: electric bells (electromagnet pulls clapper), relay switches (small current controls large current), loudspeakers (varying current creates varying force).',
+      'Soft iron is used as the core because it magnetises and demagnetises easily, allowing the electromagnet to be switched on and off cleanly.',
+    ],
   },
   em_induction: {
     id: 'em_induction', module: 'Magnetism', moduleColor: MC, course: 'physics-only',
@@ -2216,6 +3377,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Transformers require AC - they cannot work with DC. A 100% efficient transformer does not gain energy - it trades voltage for current proportionally.',
     concept: 'Generator effect: moving conductor in field → induced pd. Transformer turns ratio: Vp/Vs = Np/Ns. Power conservation: VpIp = VsIs → Ip = (250 × 0.5) ÷ 25 = 5 A. Microphone = generator effect (sound → electricity). National Grid: high V, low I → minimal I²R losses.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Every power station on Earth - whether coal, nuclear, wind, or hydro - uses the same principle Michael Faraday discovered in 1831 with a piece of wire, a magnet, and a sensitive galvanometer. He found that moving the magnet near the wire briefly deflected the meter. Every electron powering your home traces back to that discovery.',
+      hookQuestion: 'If you push a bar magnet in and out of a coil of wire connected to a light bulb, what do you think would happen to the bulb - and what would happen if you stopped moving the magnet?',
+      hookEmoji: '⚡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Generator Effect',
+        symbol: '',
+        unit: '',
+        definition: 'The induction of a potential difference (and current, if the circuit is complete) when a conductor moves relative to a magnetic field, or when the magnetic field changes.',
+        everydayNote: 'All power stations use the generator effect. A wind turbine blade pushes a magnet past coils, inducing a current. A microphone uses the same principle.',
+      },
+      {
+        word: 'Induced EMF',
+        symbol: 'EMF',
+        unit: 'volts (V)',
+        definition: 'The potential difference created by electromagnetic induction. It increases with faster movement, stronger field, or more turns.',
+        everydayNote: 'Faraday\'s Law: the faster the change in magnetic flux, the greater the induced EMF. Move a magnet slowly = small voltage; move it fast = large voltage.',
+      },
+      {
+        word: 'Transformer',
+        symbol: '',
+        unit: '',
+        definition: 'A device that uses electromagnetic induction to change the voltage of an AC supply. Uses two coils wound on an iron core.',
+        everydayNote: 'The black box in your phone charger is a transformer stepping 230 V mains down to 5 V. It only works because the mains supply is AC.',
+      },
+      {
+        word: 'Turns Ratio',
+        symbol: 'Np/Ns',
+        unit: '',
+        definition: 'The ratio of primary to secondary coil turns in a transformer. Vp/Vs = Np/Ns.',
+        everydayNote: 'If the secondary has 10 times more turns than the primary, the secondary voltage is 10 times higher (step-up transformer).',
+      },
+      {
+        word: 'National Grid',
+        symbol: '',
+        unit: '',
+        definition: 'The network of cables and transformers that distributes electrical power from power stations to homes. Step-up transformers increase voltage to ~400 kV for transmission; step-down reduces it to 230 V for homes.',
+        everydayNote: 'High voltage means low current (P = VI). Low current means less P = I^2R heating in the cables. This is why the Grid uses 400,000 V, not 230 V, for transmission.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What must change to induce an EMF in a coil of wire?',
+          answers: ['The number of turns must increase', 'The magnetic field must be changing or the conductor must be moving', 'The resistance must decrease', 'The temperature must increase'],
+          correct: 1,
+          feedback: 'EM induction requires a changing magnetic flux - either the field changes (as in a transformer with AC) or the conductor moves through a field. A static field next to a stationary conductor induces nothing.',
+        },
+        {
+          question: 'A transformer steps voltage from 12 V up to 60 V. The primary has 100 turns. How many turns does the secondary have?',
+          answers: ['20', '500', '100', '600'],
+          correct: 1,
+          feedback: 'Vp/Vs = Np/Ns. Rearrange: Ns = Np x (Vs/Vp) = 100 x (60/12) = 100 x 5 = 500 turns.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Electromagnetism (solenoids)', 'Motor Effect (F = BIL)'],
+      current: 'EM Induction and Transformers',
+      after: ['AC Generators', 'Transformers (dedicated topic)', 'National Grid'],
+    },
+
+    workedExample: {
+      title: 'Transformer voltage and current calculation',
+      equation: 'Vp/Vs = Np/Ns and VpIp = VsIs (100% efficient)',
+      context: 'A transformer has Np = 100 turns, Ns = 500 turns, Vp = 12 V. Find Vs. Then find Is if Ip = 5 A.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'Np = 100, Ns = 500, Vp = 12 V, Ip = 5 A', annotation: 'Identify whether this is step-up or step-down. Ns > Np means step-up (voltage increases).' },
+        { step: 2, action: 'Find secondary voltage', content: 'Vs = Vp x (Ns/Np) = 12 x (500/100) = 12 x 5 = 60 V', annotation: 'Vs/Vp = Ns/Np. Rearrange: Vs = Vp x (Ns/Np). This is the turns ratio applied to voltage.' },
+        { step: 3, action: 'Use power conservation', content: 'VpIp = VsIs. So Is = (VpIp) / Vs = (12 x 5) / 60 = 60/60 = 1 A', annotation: 'Power in = power out for ideal transformer. Higher voltage on secondary means lower current.' },
+        { step: 4, action: 'Check power balance', content: 'Primary: 12 x 5 = 60 W. Secondary: 60 x 1 = 60 W. Power conserved.', annotation: 'Always check: P_primary = P_secondary for an ideal transformer. If they differ, you have made an error.' },
+      ],
+      misconceptionAfter: {
+        claim: 'A transformer increases both voltage and current, giving more power.',
+        reality: 'A transformer does not create energy. It trades voltage for current. If voltage doubles, current halves - total power stays the same (for ideal 100% efficient transformer). VpIp = VsIs always.',
+        visual: 'A step-up transformer is like a gearbox: it trades speed for torque. More voltage means less current; less voltage means more current. The power stays the same.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Np = 200, Ns = 1000, Vp = 10 V. Calculate the secondary voltage Vs.',
+        allSteps: [
+          'Write what you know: Np = 200, Ns = 1000, Vp = 10 V',
+          'Write the equation: Vp/Vs = Np/Ns, rearranged: Vs = Vp x (Ns/Np)',
+          'Substitute: Vs = 10 x (1000/200) = 10 x 5',
+          '??? - calculate Vs',
+        ],
+        missingStep: 3,
+        missingHint: '10 x 5 = ?',
+        answer: 50,
+        answerUnit: 'V',
+      },
+      tier2: {
+        question: 'Np = 400, Ns = 100, Vp = 240 V. Calculate Vs.',
+        shownEquation: 'Vs = Vp x (Ns/Np)',
+        shownStep1: 'Write what you know: Np = 400, Ns = 100, Vp = 240 V',
+        hint: 'Find Ns/Np first: 100/400 = 0.25. Then multiply by Vp.',
+        answer: 60,
+        answerUnit: 'V',
+      },
+      tier3: {
+        question: 'Vp = 25 V, Ip = 8 A, Vs = 100 V. Assuming 100% efficiency, find Is.',
+        hint: 'Use VpIp = VsIs. Rearrange to Is = (VpIp) / Vs.',
+        methodHint: 'Is = (25 x 8) / 100 = 200 / 100.',
+        answer: 2,
+        answerUnit: 'A',
+      },
+    },
+
+    summary: {
+      equation: 'Vp/Vs = Np/Ns and VpIp = VsIs (ideal transformer)',
+      sentence: 'A changing magnetic field induces an EMF; transformers use this to change AC voltage, with power conserved - higher voltage means lower current.',
+      promptText: 'Explain in two sentences why the National Grid transmits electricity at 400 kV rather than 230 V, using P = I^2R in your answer.',
+    },
+
+    sessionRecap: [
+      'Generator effect: a conductor moving in a magnetic field (or a changing field near a conductor) induces a potential difference.',
+      'Transformer equations: Vp/Vs = Np/Ns (turns ratio) and VpIp = VsIs (power conservation for ideal transformer).',
+      'National Grid: step-up to 400 kV reduces current, minimising P = I^2R losses in cables; step-down to 230 V for safe domestic use.',
+    ],
   },
   ac_generators: {
     id: 'ac_generators', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
@@ -2237,6 +3527,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Slip rings do NOT reverse the current — they just maintain contact. It is the split-ring commutator in a dynamo that rectifies the output to DC by reversing connections each half-turn.',
     concept: 'Alternator (AC): slip rings → output alternates naturally with coil rotation. Dynamo (DC): split-ring commutator → reverses connections each half-turn → DC output. Both increase output with speed, field strength, or turns.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Modern wind turbines rotate at only 10-20 rpm - far too slow to generate 50 Hz AC directly. The raw electrical output varies in frequency and voltage with wind speed. Electronic inverters convert this into stable 50 Hz AC before it enters the National Grid. The generator physics is still Faraday\'s 1831 discovery, but controlled by 21st-century electronics.',
+      hookQuestion: 'When a coil spins inside a magnetic field, the current reverses every half-turn. How do you think engineers convert this alternating current into direct current for devices that need a steady, one-direction supply?',
+      hookEmoji: '🌬️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'AC Generator (Alternator)',
+        symbol: '',
+        unit: '',
+        definition: 'A device that converts kinetic energy to electrical energy. A coil rotates in a magnetic field, inducing an EMF that reverses every half-turn. Slip rings maintain contact and preserve the AC output.',
+        everydayNote: 'All mains electricity is generated by alternators. The output is AC at 50 Hz in the UK, meaning the current reverses direction 100 times per second.',
+      },
+      {
+        word: 'Slip Rings',
+        symbol: '',
+        unit: '',
+        definition: 'Continuous rings in an AC generator that maintain electrical contact with the rotating coil without reversing the current. They preserve the naturally alternating output.',
+        everydayNote: 'Slip rings do NOT reverse the current - they just keep the circuit connected as the coil spins. The alternating nature comes from the coil reversing direction of cutting through field lines.',
+      },
+      {
+        word: 'Dynamo',
+        symbol: '',
+        unit: '',
+        definition: 'A DC generator. Uses a split-ring commutator to reverse the external circuit connections every half-turn, so current in the external circuit always flows in the same direction.',
+        everydayNote: 'Bicycle dynamos are DC generators. They power lights without a battery by using a wheel-driven dynamo.',
+      },
+      {
+        word: 'Split-Ring Commutator',
+        symbol: '',
+        unit: '',
+        definition: 'A device in a DC generator (dynamo) that swaps connections every half-turn, converting the naturally AC output into DC for the external circuit.',
+        everydayNote: 'The split-ring commutator is also used in DC electric motors to keep the rotation going in one direction.',
+      },
+      {
+        word: 'Peak EMF',
+        symbol: '',
+        unit: 'volts (V)',
+        definition: 'The maximum voltage in one AC cycle. It increases if rotation speed increases, magnetic field strength increases, or more turns are added.',
+        everydayNote: 'Mains voltage in the UK is 230 V RMS (root mean square) - the equivalent DC value. The peak EMF is actually about 325 V.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'In an AC generator, what happens to the induced EMF when the coil is parallel to the magnetic field (coil sides moving perpendicular to field)?',
+          answers: ['EMF is zero', 'EMF is at maximum', 'EMF is constant', 'EMF reverses direction'],
+          correct: 1,
+          feedback: 'EMF is maximum when the coil sides move perpendicular to the field (cutting field lines at the fastest rate). EMF is zero when the coil is perpendicular to the field (coil sides moving parallel to field lines, not cutting them).',
+        },
+        {
+          question: 'What is the key difference between slip rings (alternator) and a split-ring commutator (dynamo)?',
+          answers: ['Slip rings increase voltage; commutator decreases it', 'Slip rings maintain AC output; commutator reverses connections to produce DC', 'Slip rings only work with permanent magnets', 'There is no difference'],
+          correct: 1,
+          feedback: 'Slip rings just maintain contact without changing the current direction - output stays AC. The split-ring commutator reverses connections every half-turn, so the external circuit always gets current in the same direction - DC output.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['EM Induction (generator effect)', 'Electromagnetism (solenoids)'],
+      current: 'AC Generators and Dynamos',
+      after: ['Transformers', 'National Grid', 'Motor Effect (reverse process)'],
+    },
+
+    workedExample: {
+      title: 'Predicting the effect of doubling rotation speed on generator output',
+      equation: 'Output frequency = rotation frequency. Peak EMF proportional to rotation speed.',
+      context: 'An AC generator produces 12 V peak at 25 Hz (coil rotating 25 times per second). The rotation speed doubles to 50 Hz. Find the new peak voltage and output frequency.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'Original: peak V = 12 V, f = 25 Hz. New: rotation speed doubled to 50 Hz.', annotation: 'Output frequency = rotation frequency. This is a direct relationship.' },
+        { step: 2, action: 'Find new frequency', content: 'New output frequency = 50 Hz (same as rotation frequency).', annotation: 'Frequency and rotation speed are directly proportional. Double speed = double frequency.' },
+        { step: 3, action: 'Find new peak EMF', content: 'Peak EMF is proportional to rotation speed. New peak V = 12 x 2 = 24 V.', annotation: 'Faster rotation = faster cutting of field lines = greater rate of change of flux = greater induced EMF.' },
+        { step: 4, action: 'State the results', content: 'New output: 24 V peak, 50 Hz.', annotation: 'Sense check: both frequency and voltage doubled - consistent with doubled rotation speed.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Slip rings in an alternator reverse the current to produce DC.',
+        reality: 'Slip rings do NOT reverse the current - they are continuous rings that just maintain electrical contact. The output from an alternator with slip rings is naturally AC because the coil itself reverses which side cuts which direction of field line every half-turn. The split-ring commutator in a dynamo is what produces DC.',
+        visual: 'Slip rings: like a rotating wheel always touching two fixed contacts - no interruption, no reversal. Commutator: split into two halves that swap contacts each half-turn, flipping the circuit connections.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A coil rotates at 25 Hz in an alternator. What is the output frequency? If the rotation speed doubles, what is the new frequency?',
+        allSteps: [
+          'Output frequency = rotation frequency = 25 Hz',
+          'Rotation speed doubles: new rotation frequency = 25 x 2 = 50 Hz',
+          'Output frequency = rotation frequency',
+          '??? - state the new output frequency',
+        ],
+        missingStep: 3,
+        missingHint: 'Output frequency = new rotation frequency = ?',
+        answer: 50,
+        answerUnit: 'Hz',
+      },
+      tier2: {
+        question: 'An alternator produces 12 V peak at 50 Hz. The rotation speed doubles. What is the new peak voltage?',
+        shownEquation: 'Peak EMF is proportional to rotation speed',
+        shownStep1: 'Original peak V = 12 V, rotation speed doubles',
+        hint: 'Double the speed = double the peak voltage.',
+        answer: 24,
+        answerUnit: 'V',
+      },
+      tier3: {
+        question: 'An AC generator produces 6 V peak. The number of turns is increased so that the output rises to 18 V. By what factor did the turns increase?',
+        hint: 'Peak voltage is proportional to number of turns. Find the ratio of new voltage to old voltage.',
+        methodHint: 'Turns ratio = new V / old V = 18 / 6.',
+        answer: 3,
+        answerUnit: 'times',
+      },
+    },
+
+    summary: {
+      equation: 'Output frequency = rotation frequency. Peak EMF increases with speed, field strength, or turns.',
+      sentence: 'AC generators use slip rings to produce alternating current; dynamos use a split-ring commutator to produce direct current - both convert kinetic energy to electrical energy.',
+      promptText: 'Describe in three steps how an AC generator produces electricity, starting with the rotating coil.',
+    },
+
+    sessionRecap: [
+      'AC generator (alternator): coil rotates in magnetic field, slip rings maintain contact, output is AC. Frequency = rotation frequency.',
+      'Dynamo (DC generator): split-ring commutator reverses connections every half-turn, so external circuit always gets current in one direction - DC.',
+      'Increase output (both types): rotate faster (also increases frequency for AC), use stronger magnet, add more turns.',
+    ],
   },
   transformers: {
     id: 'transformers', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
@@ -2260,6 +3679,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Transformers do NOT work with DC — they require AC to create a changing magnetic field. A transformer does not create or destroy energy — it only converts between high-voltage/low-current and low-voltage/high-current.',
     concept: 'Vp/Vs = Np/Ns. For ideal transformer: VpIp = VsIs (power conserved). Step-up: Ns > Np → Vs > Vp, Is < Ip. National Grid: step-up to 400 kV → low I → low I²R losses → step-down to 230 V for homes. AC only — DC gives static field, no induction.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The black box in your phone charger steps 230 V mains down to 5 V. Because the voltage ratio equals the turns ratio, the secondary coil has only about 1/46 as many turns as the primary. Transformers are why we can have both 230 V national transmission and 5 V device charging from the same electricity supply.',
+      hookQuestion: 'If a transformer increases voltage from 25 V to 100 V, what do you predict happens to the current - and why does it have to change?',
+      hookEmoji: '🔌',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Step-Up Transformer',
+        symbol: '',
+        unit: '',
+        definition: 'A transformer where Ns > Np. Secondary voltage is greater than primary voltage; secondary current is smaller than primary current.',
+        everydayNote: 'Power stations use step-up transformers to raise voltage to 400 kV for national transmission. High voltage = low current = less P = I^2R heating in cables.',
+      },
+      {
+        word: 'Step-Down Transformer',
+        symbol: '',
+        unit: '',
+        definition: 'A transformer where Ns < Np. Secondary voltage is less than primary voltage; secondary current is greater than primary current.',
+        everydayNote: 'Substations and phone chargers use step-down transformers. Your charger steps 230 V down to 5 V for your phone.',
+      },
+      {
+        word: 'Turns Ratio',
+        symbol: 'Np/Ns',
+        unit: '',
+        definition: 'The ratio of primary to secondary turns. Vp/Vs = Np/Ns. The voltage ratio equals the turns ratio.',
+        everydayNote: 'A turns ratio of 1:10 (Np:Ns) gives a voltage ratio of 1:10 - a step-up transformer increasing voltage tenfold.',
+      },
+      {
+        word: 'Power Conservation',
+        symbol: '',
+        unit: '',
+        definition: 'For an ideal (100% efficient) transformer, power in = power out. VpIp = VsIs.',
+        everydayNote: 'A transformer cannot create energy. If voltage doubles, current must halve to keep power constant. VpIp = VsIs always holds for an ideal transformer.',
+      },
+      {
+        word: 'AC Requirement',
+        symbol: '',
+        unit: '',
+        definition: 'Transformers only work with alternating current (AC). DC creates a static magnetic field that cannot induce an EMF in the secondary coil.',
+        everydayNote: 'This is why the National Grid uses AC - and why early DC power networks (like Edison\'s) could not use transformers and were replaced by AC systems.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A transformer has Np = 500 and Ns = 2000. Vp = 25 V. Calculate Vs.',
+          answers: ['6.25 V', '100 V', '50 V', '12.5 V'],
+          correct: 1,
+          feedback: 'Vs = Vp x (Ns/Np) = 25 x (2000/500) = 25 x 4 = 100 V. This is a step-up transformer - Ns > Np, so Vs > Vp.',
+        },
+        {
+          question: 'Why do transformers NOT work with DC (direct current)?',
+          answers: ['DC has too high a voltage', 'DC creates a static (unchanging) magnetic field that cannot induce an EMF', 'DC damages the iron core', 'DC has no frequency'],
+          correct: 1,
+          feedback: 'Transformers work by electromagnetic induction. Induction requires a CHANGING magnetic field. DC creates a static field - so once the current is steady, there is no change and no induction in the secondary coil.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['EM Induction (generator effect)', 'AC Generators'],
+      current: 'Transformers',
+      after: ['National Grid (application)', 'Power Transmission and Energy Losses'],
+    },
+
+    workedExample: {
+      title: 'Step-up transformer - voltage and current calculation',
+      equation: 'Vp/Vs = Np/Ns and VpIp = VsIs',
+      context: 'A transformer has Np = 500, Ns = 2000, Vp = 25 V, Ip = 4 A. Find Vs and Is. Confirm power is conserved.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'Np = 500, Ns = 2000, Vp = 25 V, Ip = 4 A', annotation: 'Ns > Np so this is step-up. Voltage will increase; current will decrease.' },
+        { step: 2, action: 'Calculate Vs', content: 'Vs = Vp x (Ns/Np) = 25 x (2000/500) = 25 x 4 = 100 V', annotation: 'Turns ratio = 2000/500 = 4. Voltage multiplied by same factor.' },
+        { step: 3, action: 'Calculate Is', content: 'Is = (VpIp) / Vs = (25 x 4) / 100 = 100 / 100 = 1 A', annotation: 'From VpIp = VsIs. Rearrange: Is = VpIp / Vs.' },
+        { step: 4, action: 'Confirm power conserved', content: 'Primary: 25 x 4 = 100 W. Secondary: 100 x 1 = 100 W. Power conserved.', annotation: 'Always check: input power = output power for ideal transformer. If not equal, you have made an error.' },
+      ],
+      misconceptionAfter: {
+        claim: 'A step-up transformer increases both voltage and current, delivering more power.',
+        reality: 'Power is conserved. Increasing voltage decreases current by the same ratio. A step-up transformer trading 25 V at 4 A for 100 V at 1 A delivers the same 100 W - it does not create energy.',
+        visual: 'Think of a water pipe: narrow high-pressure pipe (high voltage, low current) versus wide low-pressure pipe (low voltage, high current). Same flow rate (same power), different pressure-flow balance.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Np = 100, Ns = 400, Vp = 50 V. Calculate the secondary voltage Vs.',
+        allSteps: [
+          'Write what you know: Np = 100, Ns = 400, Vp = 50 V',
+          'Write the equation: Vs = Vp x (Ns/Np)',
+          'Substitute: Vs = 50 x (400/100) = 50 x 4',
+          '??? - calculate Vs',
+        ],
+        missingStep: 3,
+        missingHint: '50 x 4 = ?',
+        answer: 200,
+        answerUnit: 'V',
+      },
+      tier2: {
+        question: 'Np = 600, Ns = 150, Vp = 120 V. Calculate Vs.',
+        shownEquation: 'Vs = Vp x (Ns/Np)',
+        shownStep1: 'Write what you know: Np = 600, Ns = 150, Vp = 120 V',
+        hint: 'Find Ns/Np: 150/600 = 0.25. Then multiply by Vp.',
+        answer: 30,
+        answerUnit: 'V',
+      },
+      tier3: {
+        question: 'Vp = 20 V, Ip = 5 A, Vs = 100 V. Assume 100% efficiency. Find Is.',
+        hint: 'Use VpIp = VsIs. Rearrange to Is = (VpIp) / Vs.',
+        methodHint: 'Is = (20 x 5) / 100 = 100 / 100.',
+        answer: 1,
+        answerUnit: 'A',
+      },
+    },
+
+    summary: {
+      equation: 'Vp/Vs = Np/Ns and VpIp = VsIs',
+      sentence: 'Transformers change AC voltage using the turns ratio; power is conserved, so higher voltage means lower current; they require AC because DC cannot create a changing magnetic field.',
+      promptText: 'Explain in two sentences why the National Grid steps voltage up to 400 kV before transmission, using both P = I^2R and VpIp = VsIs in your answer.',
+    },
+
+    sessionRecap: [
+      'Vp/Vs = Np/Ns: voltage ratio equals turns ratio. More secondary turns = higher secondary voltage (step-up).',
+      'VpIp = VsIs: power is conserved. Higher voltage on secondary means lower current - a transformer cannot create energy.',
+      'Transformers only work with AC. The National Grid steps up to 400 kV (reducing current) to minimise I^2R cable losses, then steps back down to 230 V for homes.',
+    ],
   },
   solar_system: {
     id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics-only',
@@ -2458,6 +4006,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'The Sun will NOT become a supernova — only stars much more massive than the Sun do. Main sequence stability requires both fusion AND gravity to be present.',
     concept: 'Main sequence stability: gravity in = radiation pressure out. When fuel runs out, this balance breaks. Sun-like: red giant → white dwarf → black dwarf. Massive: red supergiant → supernova → neutron star/black hole. Supernovae make all elements heavier than iron.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The iron in your blood was forged inside a star that died in a supernova before our solar system existed. Every atom of gold, silver, platinum, and uranium on Earth was made in a stellar explosion and scattered across space. You are, quite literally, made of star stuff.',
+      hookQuestion: 'The Sun has been burning for 4.6 billion years and has enough fuel for another 5 billion. What do you think keeps it stable - why doesn\'t it either explode outward or collapse inward?',
+      hookEmoji: '⭐',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Protostar',
+        symbol: '',
+        unit: '',
+        definition: 'The early stage of a star\'s formation. A nebula (cloud of gas and dust) collapses under gravity, heating up until nuclear fusion begins.',
+        everydayNote: 'A protostar is not yet a proper star - fusion has not started. The core temperature must reach about 10 million K before hydrogen fusion ignites.',
+      },
+      {
+        word: 'Main Sequence',
+        symbol: '',
+        unit: '',
+        definition: 'The stable stage of a star\'s life when inward gravitational force is balanced by outward radiation pressure from hydrogen fusion. Our Sun has been in this stage for 4.6 billion years.',
+        everydayNote: 'The Sun will remain on the main sequence for about 5 more billion years. Main sequence lifetime depends on mass - more massive stars burn much faster.',
+      },
+      {
+        word: 'Red Giant / Red Supergiant',
+        symbol: '',
+        unit: '',
+        definition: 'The stage after the main sequence when hydrogen fuel runs out. The core contracts and heats up while the outer layers expand. Sun-like stars become red giants; massive stars become red supergiants.',
+        everydayNote: 'When the Sun becomes a red giant in about 5 billion years, it will expand far enough to swallow the orbits of Mercury and Venus - possibly reaching Earth.',
+      },
+      {
+        word: 'Supernova',
+        symbol: '',
+        unit: '',
+        definition: 'The explosive death of a massive star. When fusion stops, gravity causes rapid collapse then rebound. The explosion releases more energy than the Sun will emit in its entire lifetime.',
+        everydayNote: 'Supernovae scatter heavy elements across space. Every heavy element heavier than iron - including gold and uranium - was forged in a supernova explosion.',
+      },
+      {
+        word: 'Neutron Star / Black Hole',
+        symbol: '',
+        unit: '',
+        definition: 'The remnants of a massive star after a supernova. Very massive stars leave black holes (gravity so strong light cannot escape); less massive ones leave neutron stars (incredibly dense - one teaspoon would weigh a billion tonnes).',
+        everydayNote: 'Neutron stars rotate up to 700 times per second and emit regular radio pulses (pulsars). Black holes cannot be seen directly but are detected by the orbits of nearby stars.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What keeps a main sequence star stable?',
+          answers: ['The star is too hot to collapse', 'Inward gravity is balanced by outward radiation pressure from fusion', 'The star is rotating too fast to collapse', 'Magnetic fields prevent collapse'],
+          correct: 1,
+          feedback: 'Main sequence stability: inward gravitational force = outward radiation pressure from nuclear fusion. This balance can last billions of years. When fuel runs out, the balance breaks.',
+        },
+        {
+          question: 'What is the final stage for a Sun-like star (not a massive star)?',
+          answers: ['Supernova then black hole', 'Red giant then white dwarf then black dwarf', 'Neutron star', 'Red supergiant then supernova'],
+          correct: 1,
+          feedback: 'Sun-like stars: main sequence - red giant - white dwarf - black dwarf (cools over billions of years). Massive stars: main sequence - red supergiant - supernova - neutron star or black hole.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Nuclear Fusion (energy source)', 'Solar System and Orbital Motion'],
+      current: 'Stellar Evolution',
+      after: ['Red-shift and Big Bang', 'Dark Matter and Dark Energy'],
+    },
+
+    workedExample: {
+      title: 'Main sequence stability - the self-regulating mechanism',
+      equation: 'Equilibrium: gravitational force in = radiation pressure out',
+      context: 'Explain why a main sequence star is self-regulating. What happens if the fusion rate temporarily increases?',
+      steps: [
+        { step: 1, action: 'State the equilibrium', content: 'On the main sequence: inward gravity = outward radiation pressure from fusion. Star is in stable equilibrium.', annotation: 'This balance keeps the star at a steady size and temperature. It is what defines the main sequence stage.' },
+        { step: 2, action: 'Apply the perturbation', content: 'If fusion rate increases: more outward radiation pressure. Net outward force causes star to expand.', annotation: 'Any increase in fusion makes the star expand slightly - like a balloon being inflated.' },
+        { step: 3, action: 'Describe the feedback', content: 'As star expands: core cools (lower pressure), fusion rate decreases back to equilibrium.', annotation: 'This is negative feedback - the expansion counteracts the cause. The star is self-regulating.' },
+        { step: 4, action: 'State what happens when fuel runs out', content: 'When hydrogen fuel runs low: fusion rate drops, radiation pressure falls, gravity wins, core contracts, outer layers expand - red giant stage begins.', annotation: 'The equilibrium breaks permanently when fuel runs out. This marks the end of the main sequence.' },
+      ],
+      misconceptionAfter: {
+        claim: 'The Sun will eventually explode in a supernova.',
+        reality: 'The Sun is not massive enough to undergo a supernova. Only stars with mass greater than about 8 times the Sun\'s mass have enough gravity to cause the core collapse needed for a supernova. The Sun will become a red giant, eject its outer layers as a planetary nebula, then cool to a white dwarf.',
+        visual: 'The Sun\'s fate: Red giant (in 5 billion years) - planetary nebula (outer layers drifting away) - white dwarf (core remains, slowly cooling). No explosion.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'The Sun has been on the main sequence for 4.6 billion years and has about 5 billion years left. What is the Sun\'s total estimated main sequence lifetime in billion years?',
+        allSteps: [
+          'Time already spent on main sequence: 4.6 billion years',
+          'Time remaining on main sequence: 5 billion years',
+          'Total main sequence lifetime = time spent + time remaining',
+          '??? - calculate total',
+        ],
+        missingStep: 3,
+        missingHint: '4.6 + 5 = ?',
+        answer: 9.6,
+        answerUnit: 'billion years',
+      },
+      tier2: {
+        question: 'A star has 10 times the mass of the Sun. It uses fuel approximately 1000 times faster than the Sun. If the Sun lasts 10 billion years, how long does this star last (in millions of years)?',
+        shownEquation: 'Star lifetime = Sun lifetime / fuel use rate ratio',
+        shownStep1: 'Sun lifetime = 10 billion years = 10,000 million years',
+        hint: 'Divide 10,000 million years by 1000.',
+        answer: 10,
+        answerUnit: 'million years',
+      },
+      tier3: {
+        question: 'The Sun has been on the main sequence for 4.6 billion out of a total 9.6 billion year main sequence lifetime. What percentage of its main sequence life has the Sun already used?',
+        hint: 'Percentage = (time used / total time) x 100.',
+        methodHint: '(4.6 / 9.6) x 100. Round to one decimal place.',
+        answer: 47.9,
+        answerUnit: '%',
+      },
+    },
+
+    summary: {
+      equation: 'Main sequence equilibrium: gravity in = radiation pressure out.',
+      sentence: 'Stars form from nebulae, spend most of their lives on the main sequence fusing hydrogen, then evolve into red giants or supergiants - Sun-like stars end as white dwarfs; massive stars end as neutron stars or black holes after a supernova.',
+      promptText: 'Without notes, write the full life cycle of (a) a Sun-like star and (b) a massive star, naming every stage.',
+    },
+
+    sessionRecap: [
+      'Main sequence stability: inward gravity balanced by outward radiation pressure from fusion. Self-regulating mechanism keeps star stable for billions of years.',
+      'Sun-like star life cycle: nebula - protostar - main sequence - red giant - white dwarf - black dwarf.',
+      'Massive star life cycle: nebula - protostar - main sequence - red supergiant - supernova - neutron star or black hole. Supernovae create all elements heavier than iron.',
+    ],
   },
   visible_light: {
     id: 'visible_light', module: 'Waves', moduleColor: WC, course: 'physics-only',
@@ -2479,6 +4156,135 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'An object cannot create colour — it can only reflect wavelengths that are already in the incident light. If the matching wavelength is absent, the object appears black.',
     concept: 'Specular (smooth): one reflection direction. Diffuse (rough): scattered. Filter: absorbs other wavelengths, transmits its colour. Object colour = reflected wavelengths. White = reflects all. Black = absorbs all. Blue object + red light → absorbs red, no blue to reflect → looks black.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'A ripe tomato looks red under white light because it absorbs every colour except red. But take that same tomato into a room lit only by pure green light, and it appears black - there is no red light present for it to reflect. An object cannot create colour, it can only reflect wavelengths already in the incident light.',
+      hookQuestion: 'Your school uniform is a certain colour. Under a sodium street lamp (which emits only yellow-orange light), what colour do you think it would appear - and why?',
+      hookEmoji: '🎨',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Specular Reflection',
+        symbol: '',
+        unit: '',
+        definition: 'Reflection from a smooth surface where all incident rays reflect in the same direction (angle of incidence = angle of reflection). Produces a clear, mirror-like image.',
+        everydayNote: 'A calm lake gives specular reflection - you see a clear upside-down image. A choppy lake gives diffuse reflection - no image.',
+      },
+      {
+        word: 'Diffuse Reflection',
+        symbol: '',
+        unit: '',
+        definition: 'Reflection from a rough surface where rays scatter in many different directions because different parts of the surface face different ways.',
+        everydayNote: 'Most everyday objects reflect diffusely - that is why you can see a white piece of paper from any angle, but cannot see your reflection in it.',
+      },
+      {
+        word: 'Colour Filter',
+        symbol: '',
+        unit: '',
+        definition: 'A transparent material that absorbs all wavelengths except its own colour, which it transmits.',
+        everydayNote: 'A red filter absorbs all colours except red. Stage lighting uses colour filters to create dramatic effects. If no red light enters, a red filter transmits nothing.',
+      },
+      {
+        word: 'Object Colour',
+        symbol: '',
+        unit: '',
+        definition: 'The colour of an opaque object is determined by the wavelengths it reflects. White objects reflect all wavelengths; black objects absorb all.',
+        everydayNote: 'A blue book reflects blue wavelengths and absorbs all others. Under red light only, the blue book appears black because it absorbs red and has no blue wavelengths to reflect.',
+      },
+      {
+        word: 'Incident Light',
+        symbol: '',
+        unit: '',
+        definition: 'The light that falls on an object or surface. An object can only reflect wavelengths that are present in the incident light.',
+        everydayNote: 'This is why colour perception changes under different light sources. Fluorescent lighting, LED, and sunlight each have different spectra.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A white light source shines through a blue filter onto a red object. What colour does the object appear?',
+          answers: ['Blue', 'Red', 'Purple', 'Black'],
+          correct: 3,
+          feedback: 'The blue filter only transmits blue light. The red object can only reflect red wavelengths. No red light is present (filtered out), and the red object absorbs blue. Nothing is reflected, so it appears black.',
+        },
+        {
+          question: 'What is the difference between specular and diffuse reflection?',
+          answers: ['Specular is from coloured surfaces; diffuse is from white surfaces', 'Specular is from smooth surfaces (rays all reflect same direction); diffuse is from rough surfaces (rays scatter)', 'Specular reflects all wavelengths; diffuse absorbs some', 'There is no difference - both obey angle of incidence = angle of reflection'],
+          correct: 1,
+          feedback: 'Specular: smooth surface, all rays reflect in one direction - produces a mirror image. Diffuse: rough surface, rays scatter in many directions - no image formed, object visible from all angles.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Wave Reflection', 'EM Spectrum (visible light section)'],
+      current: 'Visible Light and Colour',
+      after: ['Lenses and Optics', 'Colour and Sight (applied)'],
+    },
+
+    workedExample: {
+      title: 'Predicting the colour of an object under different light sources',
+      equation: 'Object colour = wavelengths reflected. Can only reflect wavelengths present in incident light.',
+      context: 'White light passes through a green filter. The transmitted light then falls on a blue object. What colour does the blue object appear?',
+      steps: [
+        { step: 1, action: 'Identify what light the filter transmits', content: 'Green filter transmits only green wavelengths. All other colours are absorbed by the filter.', annotation: 'A filter named after a colour transmits only that colour. All others are absorbed.' },
+        { step: 2, action: 'Identify what the object can reflect', content: 'Blue object reflects only blue wavelengths, absorbs all others (including green).', annotation: 'An object\'s colour is fixed by its surface - it can only reflect its own colour.' },
+        { step: 3, action: 'Determine what wavelengths reach the object', content: 'Only green light reaches the blue object (everything else was blocked by filter).', annotation: 'No blue light is present - the filter removed it.' },
+        { step: 4, action: 'Determine what the object reflects', content: 'Object absorbs the green light. No blue light is present to reflect. Object appears black.', annotation: 'When an object cannot reflect any of the available wavelengths, it appears black - no light is reflected to your eyes.' },
+      ],
+      misconceptionAfter: {
+        claim: 'An object creates its own colour.',
+        reality: 'An object cannot create colour - it only reflects certain wavelengths from the incident light. If those wavelengths are absent, the object appears black. Colour is a property of reflected light, not of the object itself.',
+        visual: 'A red apple in a red-lit room looks red. In a blue-lit room, the same apple looks black - the apple has not changed, only the available wavelengths have.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A ray hits a flat mirror at an angle of incidence of 55 degrees (from the normal). What is the angle of reflection?',
+        allSteps: [
+          'Write what you know: angle of incidence = 55 degrees',
+          'State the law: angle of incidence = angle of reflection',
+          'Apply: angle of reflection = 55 degrees',
+          '??? - state the answer with units',
+        ],
+        missingStep: 3,
+        missingHint: 'Angle of reflection = angle of incidence = ?',
+        answer: 55,
+        answerUnit: 'degrees',
+      },
+      tier2: {
+        question: 'A ray hits a mirror at 30 degrees to the SURFACE (not the normal). What is the angle of reflection from the normal?',
+        shownEquation: 'Angle from normal = 90 - angle from surface',
+        shownStep1: 'Angle from surface = 30 degrees',
+        hint: 'First find the angle of incidence from the normal: 90 - 30 = 60 degrees. Then apply the law of reflection.',
+        answer: 60,
+        answerUnit: 'degrees',
+      },
+      tier3: {
+        question: 'Two mirrors are placed at 90 degrees to each other. A ray hits the first mirror at 40 degrees to the normal. After reflecting, it hits the second mirror. What is the angle of incidence on the second mirror?',
+        hint: 'After the first reflection, find the angle the ray makes with the second mirror using geometry.',
+        methodHint: 'After first reflection at 40 degrees: the reflected ray makes 40 degrees with the first mirror\'s normal. The two mirrors are at 90 degrees, so the angle on the second mirror = 90 - 40 = 50 degrees.',
+        answer: 50,
+        answerUnit: 'degrees',
+      },
+    },
+
+    summary: {
+      equation: 'Angle of incidence = angle of reflection (specular). Object colour = reflected wavelengths only.',
+      sentence: 'Specular reflection (smooth) gives mirror images; diffuse reflection (rough) scatters light; objects only reflect wavelengths present in the incident light - if those wavelengths are absent, the object appears black.',
+      promptText: 'Predict what colour a yellow object would appear under (a) white light, (b) blue light only, and (c) yellow light only. Explain each.',
+    },
+
+    sessionRecap: [
+      'Specular reflection (smooth surface): all rays reflect in one direction, angle of incidence = angle of reflection. Diffuse reflection (rough surface): rays scatter in many directions.',
+      'A colour filter transmits only its own colour and absorbs all others.',
+      'Object colour = reflected wavelengths. A object can only reflect wavelengths that are in the incident light - if its colour is absent from the light, it appears black.',
+    ],
   },
   redshift: {
     id: 'redshift', module: 'Space', moduleColor: SC, course: 'physics-only',
@@ -2500,5 +4306,134 @@ export const WAVES_TOPICS = {
     ],
     misconception: 'Red-shift means the galaxy is moving AWAY - not towards us. Dark matter is NOT dark energy — dark matter provides extra gravity; dark energy drives expansion.',
     concept: 'Red-shift → galaxies receding → universe expanding → Big Bang. Hubble\'s Law: further = faster recession. Since 1998: expansion accelerating (supernovae evidence). Dark matter: provides gravity, no EM emission; dark energy: drives accelerating expansion. Together ~95% of universe.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The most distant galaxy ever observed has its light red-shifted so severely that its original ultraviolet emission has been stretched all the way into the infrared by the time it reaches us. That light left the galaxy 13.4 billion years ago, when the universe was only about 300 million years old.',
+      hookQuestion: 'You have probably heard the Doppler effect with an ambulance siren - the pitch drops as it passes you. How do you think the same principle might apply to light from a distant galaxy moving away from us?',
+      hookEmoji: '🌌',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Red-shift',
+        symbol: 'z',
+        unit: '',
+        definition: 'The increase in wavelength (shift towards the red end of the spectrum) of light from objects moving away from the observer. z = (observed - rest wavelength) / rest wavelength.',
+        everydayNote: 'All distant galaxies show red-shift, meaning all galaxies are moving away from us - evidence that the universe is expanding.',
+      },
+      {
+        word: 'Expanding Universe',
+        symbol: '',
+        unit: '',
+        definition: 'The observation that galaxies are moving away from each other - the universe is getting larger. More distant galaxies recede faster.',
+        everydayNote: 'The universe expanding does not mean galaxies are flying through space away from us - space itself is stretching, like dots drawn on an inflating balloon.',
+      },
+      {
+        word: 'Big Bang',
+        symbol: '',
+        unit: '',
+        definition: 'The cosmological model in which the universe began from an extremely hot, dense single point approximately 13.8 billion years ago and has been expanding ever since.',
+        everydayNote: 'The cosmic microwave background radiation - faint thermal radiation filling all of space at 2.7 K - is the afterglow of the Big Bang and is the strongest evidence for it.',
+      },
+      {
+        word: 'Dark Matter',
+        symbol: '',
+        unit: '',
+        definition: 'Matter that does not emit or absorb electromagnetic radiation but exerts gravitational force. It accounts for most of the matter in galaxies and holds them together.',
+        everydayNote: 'Galaxies rotate faster than they should based on visible matter alone. Dark matter provides the extra gravity needed. About 27% of the universe is dark matter.',
+      },
+      {
+        word: 'Dark Energy',
+        symbol: '',
+        unit: '',
+        definition: 'The unknown cause of the accelerating expansion of the universe. It acts against gravity on the largest scales and accounts for about 68% of the universe\'s total energy content.',
+        everydayNote: 'Since 1998, observations of distant supernovae have shown the expansion of the universe is speeding up, not slowing down. Dark energy is the name given to whatever is causing this.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What does red-shift in light from a distant galaxy tell us?',
+          answers: ['The galaxy contains many red stars', 'The galaxy is moving towards us', 'The galaxy is moving away from us', 'The galaxy is very hot'],
+          correct: 2,
+          feedback: 'Red-shift means the wavelength of light has increased - stretched towards the red end. This happens when the source moves away from the observer (Doppler effect). All distant galaxies show red-shift, indicating they are all moving away.',
+        },
+        {
+          question: 'A galaxy is further away than another galaxy. How does its red-shift compare?',
+          answers: ['It has less red-shift', 'It has the same red-shift', 'It has greater red-shift', 'It shows blue-shift'],
+          correct: 2,
+          feedback: 'Further galaxies have greater red-shift because they are receding faster. This relationship (further = faster recession) is Hubble\'s Law and is key evidence that the universe began with a Big Bang.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Wave Properties (wavelength)', 'Stellar Evolution', 'Solar System'],
+      current: 'Red-shift and the Big Bang',
+      after: ['Dark Matter and Dark Energy', 'Cosmic Microwave Background'],
+    },
+
+    workedExample: {
+      title: 'Calculating red-shift from observed and rest wavelengths',
+      equation: 'z = (observed wavelength - rest wavelength) / rest wavelength',
+      context: 'A galaxy\'s hydrogen spectral line has a rest wavelength of 656 nm. The observed wavelength is 700 nm. Calculate the red-shift z.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'Rest wavelength = 656 nm, observed wavelength = 700 nm, z = ?', annotation: 'Make sure both wavelengths are in the same units (both nm here). The observed wavelength is longer than rest because the galaxy moves away.' },
+        { step: 2, action: 'Write the equation', content: 'z = (observed - rest) / rest', annotation: 'This formula gives a dimensionless number. z > 0 means red-shift (recession). z < 0 would mean blue-shift (approaching - rare for distant galaxies).' },
+        { step: 3, action: 'Substitute', content: 'z = (700 - 656) / 656 = 44 / 656', annotation: 'Subtract rest from observed first: 700 - 656 = 44 nm. Then divide by rest wavelength.' },
+        { step: 4, action: 'Calculate and interpret', content: 'z = 44/656 ≈ 0.067. Galaxy is receding.', annotation: 'z = 0.067 means the galaxy is moving away at about 6.7% of the speed of light. A nearby galaxy might have z = 0.001; the most distant have z > 10.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Red-shift means the galaxy is actually red-coloured or contains only red stars.',
+        reality: 'Red-shift is nothing to do with the colour of the stars. It refers to ALL the wavelengths in the spectrum being shifted towards longer (redder) wavelengths. Even blue and green spectral lines are red-shifted - they shift towards longer wavelengths, but may not become visibly red.',
+        visual: 'A galaxy\'s spectrum is like a barcode of dark lines. Red-shift slides the whole barcode towards longer wavelengths. Compare the barcode positions to a lab reference to measure z.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Rest wavelength = 500 nm. Observed wavelength = 520 nm. Calculate z.',
+        allSteps: [
+          'Write what you know: rest = 500 nm, observed = 520 nm',
+          'Write the equation: z = (observed - rest) / rest',
+          'Substitute: z = (520 - 500) / 500 = 20 / 500',
+          '??? - calculate z',
+        ],
+        missingStep: 3,
+        missingHint: '20 / 500 = ?',
+        answer: 0.04,
+        answerUnit: '',
+      },
+      tier2: {
+        question: 'Rest wavelength = 400 nm. Observed wavelength = 440 nm. Calculate z.',
+        shownEquation: 'z = (observed - rest) / rest',
+        shownStep1: 'Write what you know: rest = 400 nm, observed = 440 nm',
+        hint: 'Subtract rest from observed, then divide by rest.',
+        answer: 0.1,
+        answerUnit: '',
+      },
+      tier3: {
+        question: 'A galaxy has z = 0.05. The rest wavelength of a spectral line is 600 nm. What is the observed wavelength?',
+        hint: 'Rearrange z = (observed - rest) / rest to find observed wavelength. observed = rest x (1 + z).',
+        methodHint: 'observed = 600 x (1 + 0.05) = 600 x 1.05.',
+        answer: 630,
+        answerUnit: 'nm',
+      },
+    },
+
+    summary: {
+      equation: 'z = (observed wavelength - rest wavelength) / rest wavelength',
+      sentence: 'Red-shift shows galaxies are moving away; further galaxies have greater red-shift; the universe is expanding from a Big Bang 13.8 billion years ago.',
+      promptText: 'Explain in two sentences how red-shift observations support the Big Bang theory.',
+    },
+
+    sessionRecap: [
+      'Red-shift: observed wavelength is longer than rest wavelength. z = (observed - rest) / rest. Positive z means the galaxy is receding.',
+      'Further galaxies have greater red-shift and faster recession (Hubble\'s Law). All galaxies show red-shift - the universe is expanding.',
+      'Big Bang theory: universe began 13.8 billion years ago from a hot dense point. Dark matter provides extra gravity; dark energy drives accelerating expansion. Together they make up ~95% of the universe.',
+    ],
   },
 }

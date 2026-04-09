@@ -1532,6 +1532,153 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Temperature and internal energy are not the same quantity.',
     concept: 'ΔE = 2 × 4200 × 5 = 42000 J. Water at 100°C and steam at 100°C have the same temperature but different internal energy - the difference is the latent heat of vaporisation.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'It takes 4200 J to raise 1 kg of water by 1°C, but only 385 J to raise 1 kg of copper by the same amount. This is why oceans store enormous amounts of heat and keep coastal towns warmer in winter than inland areas.',
+      hookQuestion: 'Why does the sea stay warm long after summer ends, while a metal bench in the sun cools down in minutes?',
+      hookEmoji: '🌊',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Internal Energy',
+        symbol: 'U',
+        unit: 'J',
+        definition: 'The total kinetic and potential energy of all the particles in a substance.',
+        everydayNote: 'When you heat a pan of water, you are increasing the internal energy of all those water molecules.',
+      },
+      {
+        word: 'Specific Heat Capacity',
+        symbol: 'c',
+        unit: 'J/kg°C',
+        definition: 'The energy needed to raise the temperature of 1 kg of a substance by 1°C.',
+        everydayNote: 'Water has c = 4200 J/kg°C. Copper has c = 385 J/kg°C. Copper heats up about 11 times faster than water for the same energy input.',
+      },
+      {
+        word: 'Temperature Change',
+        symbol: 'ΔT',
+        unit: '°C',
+        definition: 'The difference between the final and initial temperature of a substance.',
+        everydayNote: 'If water goes from 20°C to 45°C, ΔT = 25°C - this is what you substitute into E = mcΔT.',
+      },
+      {
+        word: 'Thermal Energy',
+        symbol: 'E',
+        unit: 'J',
+        definition: 'The energy transferred to or from a substance by heating or cooling.',
+        everydayNote: 'A kettle rated at 2000 W transfers 2000 J of energy per second into the water.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What is the difference between temperature and thermal energy?',
+          answers: [
+            'They are the same thing',
+            'Temperature measures hotness; thermal energy is the total energy of all particles',
+            'Thermal energy measures hotness; temperature is the total energy',
+            'Temperature depends on mass; thermal energy does not',
+          ],
+          correct: 1,
+          feedback: 'Temperature is a measure of average kinetic energy per particle. Thermal (internal) energy is the total energy of all particles - it depends on both temperature and the number of particles.',
+        },
+        {
+          question: 'Which state of matter has particles with the highest kinetic energy on average?',
+          answers: ['Solid', 'Liquid', 'Gas', 'All states have equal kinetic energy'],
+          correct: 2,
+          feedback: 'Gas particles move fastest and have the highest average kinetic energy. This is why gases expand rapidly when heated.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['States of Matter and Density', 'Energy Stores and Transfers'],
+      current: 'Internal Energy and Specific Heat Capacity',
+      after: ['Specific Latent Heat', 'Gas Pressure'],
+    },
+
+    workedExample: {
+      title: 'Calculating energy using E = mcΔT',
+      equation: 'E = mcΔT | rearranges to ΔT = E/(mc) or m = E/(cΔT)',
+      context: 'A kettle heats 3 kg of water from 20°C to 45°C. The specific heat capacity of water is 4200 J/kg°C. How much energy is transferred?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'm = 3 kg, c = 4200 J/kg°C, ΔT = 45 - 20 = 25°C',
+          annotation: 'Always calculate ΔT first. It is final temperature minus initial temperature.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'E = mcΔT',
+          annotation: 'This equation is given on the formula sheet. You do not need to memorise it.',
+        },
+        {
+          step: 3,
+          action: 'Substitute',
+          content: 'E = 3 × 4200 × 25',
+          annotation: 'Common error: forgetting to calculate ΔT and just using the final temperature (45) instead of the change (25).',
+        },
+        {
+          step: 4,
+          action: 'Calculate and state with unit',
+          content: 'E = 315,000 J',
+          annotation: 'Sense check: 3 kg of water, heated 25°C - 315 kJ is a reasonable answer for a kettle.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'A higher temperature always means more thermal energy.',
+        reality: 'A large cold lake can have more total thermal (internal) energy than a small hot cup of tea - because internal energy depends on both temperature and the number of particles.',
+        visual: 'Think of it as: temperature = energy per particle. Internal energy = energy per particle × number of particles. More particles can mean more total energy even at lower temperature.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'How much energy is needed to heat 2 kg of water by 10°C? (c = 4200 J/kg°C)',
+        allSteps: [
+          'Write what you know: m = 2 kg, c = 4200 J/kg°C, ΔT = 10°C',
+          'Write the equation: E = mcΔT',
+          'Substitute: E = 2 × 4200 × 10',
+          '??? - calculate E',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 2 × 4200 × 10 = ?',
+        answer: 84000,
+        answerUnit: 'J',
+      },
+      tier2: {
+        question: 'A 0.5 kg block of aluminium (c = 900 J/kg°C) is heated by 40°C. How much energy was transferred?',
+        shownEquation: 'E = mcΔT',
+        shownStep1: 'Write what you know: m = 0.5 kg, c = 900 J/kg°C, ΔT = 40°C',
+        hint: 'Multiply all three values together.',
+        answer: 18000,
+        answerUnit: 'J',
+      },
+      tier3: {
+        question: '63,000 J of energy raises the temperature of 1.5 kg of water. Find the temperature rise. (c = 4200 J/kg°C)',
+        hint: 'Rearrange E = mcΔT to find ΔT.',
+        methodHint: 'Start with E = mcΔT. Rearrange to ΔT = E / (mc). Then substitute E = 63,000, m = 1.5, c = 4200.',
+        answer: 10,
+        answerUnit: '°C',
+      },
+    },
+
+    summary: {
+      equation: 'E = mcΔT',
+      sentence: 'The energy needed to heat a substance depends on its mass, its specific heat capacity, and the temperature change.',
+      promptText: 'Without looking at notes: write out E = mcΔT and explain what each letter stands for.',
+    },
+
+    sessionRecap: [
+      'Internal energy = total KE + PE of all particles. Heating raises internal energy.',
+      'E = mcΔT links energy transferred, mass, specific heat capacity, and temperature change.',
+      'Water has a high specific heat capacity (4200 J/kg°C) - it takes a lot of energy to heat up or cool down.',
+    ],
   },
   specific_latent_heat: {
     id: 'specific_latent_heat',
@@ -1567,6 +1714,158 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Temperature does not rise during a state change — energy goes into breaking bonds, not heating the substance.',
     concept: 'Specific latent heat (Q = mL) is the energy needed to change state without temperature change. The flat sections on a heating/cooling curve represent state changes. Lv > Lf because more bonds are broken going from liquid to gas.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'To boil away 1 kg of water already at 100°C takes 2,260,000 J - the same energy needed to raise that same kilogram of ice from -269°C all the way to 100°C. Most of a kettle\'s energy goes into vaporisation, not heating.',
+      hookQuestion: 'When you boil a kettle, why does it take so long to boil the water off completely once it has reached 100°C?',
+      hookEmoji: '💧',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Specific Latent Heat',
+        symbol: 'L',
+        unit: 'J/kg',
+        definition: 'The energy needed to change the state of 1 kg of a substance without changing its temperature.',
+        everydayNote: 'For water: L of fusion = 334,000 J/kg (melting ice); L of vaporisation = 2,260,000 J/kg (boiling water).',
+      },
+      {
+        word: 'Latent Heat of Fusion',
+        symbol: 'Lf',
+        unit: 'J/kg',
+        definition: 'The energy needed to change 1 kg of solid to liquid (or liquid to solid) at constant temperature.',
+        everydayNote: 'When you melt 1 kg of ice at 0°C, it absorbs 334,000 J without changing temperature.',
+      },
+      {
+        word: 'Latent Heat of Vaporisation',
+        symbol: 'Lv',
+        unit: 'J/kg',
+        definition: 'The energy needed to change 1 kg of liquid to gas (or gas to liquid) at constant temperature.',
+        everydayNote: 'Lv for water (2,260,000 J/kg) is about 6.8 times bigger than Lf - more bonds must be broken to go from liquid to gas.',
+      },
+      {
+        word: 'State Change',
+        symbol: '',
+        unit: '',
+        definition: 'A transition between solid, liquid, and gas phases. Temperature stays constant during any state change.',
+        everydayNote: 'On a heating curve, the flat sections (plateau regions) are where state changes happen - energy in, no temperature rise.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'During a state change (e.g. melting), what happens to the temperature of a substance?',
+          answers: [
+            'It rises steadily',
+            'It stays constant',
+            'It falls',
+            'It rises then falls',
+          ],
+          correct: 1,
+          feedback: 'Temperature stays constant during a state change. All the energy goes into breaking intermolecular bonds, not into increasing the kinetic energy of particles.',
+        },
+        {
+          question: 'What does the equation E = mcΔT calculate?',
+          answers: [
+            'Energy to change state',
+            'Energy to change temperature',
+            'Energy stored in bonds',
+            'Energy released during decay',
+          ],
+          correct: 1,
+          feedback: 'E = mcΔT gives the energy needed when temperature changes. For state changes (no temperature change), you use E = mL instead.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['States of Matter and Density', 'Internal Energy and SHC'],
+      current: 'Specific Latent Heat',
+      after: ['Gas Pressure', 'Thermal Energy Transfers'],
+    },
+
+    workedExample: {
+      title: 'Calculating energy to evaporate water using E = mL',
+      equation: 'E = mL | rearranges to m = E/L or L = E/m',
+      context: 'How much energy is needed to completely evaporate 0.3 kg of water already at 100°C? (Lv = 2,260,000 J/kg)',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'm = 0.3 kg, Lv = 2,260,000 J/kg',
+          annotation: 'The water is already at 100°C so you only need latent heat - no E = mcΔT needed here.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'E = mL',
+          annotation: 'This equation is given on the formula sheet. Use Lv for boiling/condensing, Lf for melting/freezing.',
+        },
+        {
+          step: 3,
+          action: 'Substitute',
+          content: 'E = 0.3 × 2,260,000',
+          annotation: 'Common error: using Lf (334,000) instead of Lv (2,260,000) for boiling. Check which state change is described.',
+        },
+        {
+          step: 4,
+          action: 'Calculate and state with unit',
+          content: 'E = 678,000 J',
+          annotation: 'Sense check: 678 kJ to evaporate just 300 g of water - this is why steam burns are so dangerous. Steam carries huge latent heat.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Boiling just means the water reaches 100°C.',
+        reality: 'Reaching 100°C is only the start. You then need an additional 2,260,000 J per kilogram to actually convert the liquid water to steam. Most of the energy used in boiling goes into this latent heat, not the temperature rise.',
+        visual: 'Heating curve: rising slope = E = mcΔT. Flat plateau at 100°C = E = mLv. The plateau is the expensive part.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'How much energy is needed to melt 2 kg of ice? (Lf = 334,000 J/kg)',
+        allSteps: [
+          'Write what you know: m = 2 kg, Lf = 334,000 J/kg',
+          'Write the equation: E = mL',
+          'Substitute: E = 2 × 334,000',
+          '??? - calculate E',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 2 × 334,000 = ?',
+        answer: 668000,
+        answerUnit: 'J',
+      },
+      tier2: {
+        question: 'How much energy is needed to evaporate 0.5 kg of water at 100°C? (Lv = 2,260,000 J/kg)',
+        shownEquation: 'E = mL',
+        shownStep1: 'Write what you know: m = 0.5 kg, Lv = 2,260,000 J/kg',
+        hint: 'Multiply mass by Lv.',
+        answer: 1130000,
+        answerUnit: 'J',
+      },
+      tier3: {
+        question: '167,000 J of energy melts some ice. (Lf = 334,000 J/kg). What mass of ice was melted?',
+        hint: 'Rearrange E = mL to find m.',
+        methodHint: 'Start with E = mL. Rearrange to m = E/L. Substitute E = 167,000 and L = 334,000.',
+        answer: 0.5,
+        answerUnit: 'kg',
+      },
+    },
+
+    summary: {
+      equation: 'E = mL',
+      sentence: 'During a state change, temperature stays constant - all the energy goes into breaking or forming bonds between particles.',
+      promptText: 'Without looking at notes: explain why the temperature stays constant during melting, even though energy is being added.',
+    },
+
+    sessionRecap: [
+      'E = mL gives the energy for a state change. L is the specific latent heat in J/kg.',
+      'Lv (vaporisation) is always bigger than Lf (fusion) - going from liquid to gas breaks more bonds.',
+      'On a heating curve, flat sections = state changes. Rising sections = temperature increasing (use E = mcΔT).',
+    ],
   },
   gas_pressure: {
     id: 'gas_pressure', module: 'Particle Model', moduleColor: PART_C, course: 'physics-only',
@@ -1589,6 +1888,153 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Gas pressure is caused by particle collisions, not particle weight. Temperature must be in Kelvin (not °C) in the combined gas law — 0°C = 273 K, not 0 K.',
     concept: 'Boyle: p₁V₁ = p₂V₂ = 12. Combined gas law (HT): p₁V₁/T₁ = p₂V₂/T₂ with T in Kelvin. At constant V: p₁/T₁ = p₂/T₂. Always convert °C → K before substituting.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Aerosol cans warn: do not expose to temperatures above 50°C. At 50°C (323 K) versus 20°C (293 K), pressure rises by about 10% - enough to rupture the can. Boyle\'s and Charles\' Laws predict this exactly.',
+      hookQuestion: 'Why do tyres feel harder in cold weather and why should you never put an aerosol can on a radiator?',
+      hookEmoji: '🎈',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Gas Pressure',
+        symbol: 'p',
+        unit: 'Pa',
+        definition: 'The force per unit area exerted by gas particles colliding with the walls of their container.',
+        everydayNote: 'More collisions or harder collisions = higher pressure. Squashing a gas into a smaller volume means more collisions per second.',
+      },
+      {
+        word: "Boyle's Law",
+        symbol: 'p₁V₁ = p₂V₂',
+        unit: '',
+        definition: 'At constant temperature, pressure and volume are inversely proportional - doubling one halves the other.',
+        everydayNote: 'Squeeze a sealed syringe to half its volume and the pressure doubles. The gas particles hit the walls twice as often.',
+      },
+      {
+        word: 'Kelvin Temperature',
+        symbol: 'T',
+        unit: 'K',
+        definition: 'Absolute temperature scale starting at absolute zero (0 K = -273°C). Always use Kelvin in gas law calculations.',
+        everydayNote: 'Convert: T(K) = T(°C) + 273. So 20°C = 293 K. Using °C in gas law equations gives wrong answers.',
+      },
+      {
+        word: 'Combined Gas Law',
+        symbol: 'p₁V₁/T₁ = p₂V₂/T₂',
+        unit: '',
+        definition: 'Higher tier: links pressure, volume, and absolute temperature for a fixed mass of gas.',
+        everydayNote: 'This combines Boyle\'s Law and Charles\' Law into one equation. T must always be in Kelvin.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What causes gas pressure on the walls of a container?',
+          answers: [
+            'The weight of the gas pushing down',
+            'Gas particles colliding with the container walls',
+            'The temperature of the gas',
+            'Chemical reactions between gas molecules',
+          ],
+          correct: 1,
+          feedback: 'Gas pressure is caused by particles colliding with the container walls. More collisions, or faster-moving particles, means higher pressure.',
+        },
+        {
+          question: 'What is 27°C converted to Kelvin?',
+          answers: ['246 K', '300 K', '27 K', '327 K'],
+          correct: 1,
+          feedback: 'T(K) = T(°C) + 273. So 27 + 273 = 300 K. This conversion is essential - never use °C in gas law equations.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['States of Matter and Density', 'Internal Energy and SHC'],
+      current: 'Gas Pressure',
+      after: ['Thermal Energy Transfers', 'Atomic Structure'],
+    },
+
+    workedExample: {
+      title: "Applying Boyle's Law to find new pressure",
+      equation: 'p₁V₁ = p₂V₂ | rearranges to p₂ = p₁V₁/V₂',
+      context: 'A gas at 100,000 Pa occupies 0.5 m³. It is compressed at constant temperature to 0.25 m³. Find the new pressure.',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'p₁ = 100,000 Pa, V₁ = 0.5 m³, V₂ = 0.25 m³',
+          annotation: 'Temperature is constant, so Boyle\'s Law applies. No need for Kelvin conversion here.',
+        },
+        {
+          step: 2,
+          action: 'Write the equation',
+          content: 'p₁V₁ = p₂V₂',
+          annotation: 'This is Boyle\'s Law. It is given on the formula sheet.',
+        },
+        {
+          step: 3,
+          action: 'Substitute and rearrange',
+          content: 'p₂ = p₁V₁ / V₂ = (100,000 × 0.5) / 0.25 = 50,000 / 0.25',
+          annotation: 'Common error: dividing by V₁ instead of V₂. Rearrange first, then substitute.',
+        },
+        {
+          step: 4,
+          action: 'Calculate and state with unit',
+          content: 'p₂ = 200,000 Pa',
+          annotation: 'Sense check: volume halved, so pressure doubled. This is exactly what Boyle\'s Law predicts.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'You can use temperature in °C in gas law equations.',
+        reality: 'You must use Kelvin. At 0°C (273 K) a gas has significant pressure and kinetic energy. If you used 0°C directly in p/T = constant, you would get division by zero at -273°C, which is physically nonsensical.',
+        visual: 'Think of Kelvin as starting the temperature scale at true zero movement. Celsius starts at the freezing point of water - an arbitrary choice that breaks the maths in gas laws.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A gas at 200,000 Pa has a volume of 2 L. Volume expands to 4 L at constant temperature. Find the new pressure.',
+        allSteps: [
+          'Write what you know: p₁ = 200,000 Pa, V₁ = 2 L, V₂ = 4 L',
+          'Write the equation: p₁V₁ = p₂V₂',
+          'Rearrange: p₂ = p₁V₁ / V₂ = (200,000 × 2) / 4',
+          '??? - calculate p₂',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: (200,000 × 2) / 4 = ?',
+        answer: 100000,
+        answerUnit: 'Pa',
+      },
+      tier2: {
+        question: 'A gas at 100 kPa has volume 6 m³. It is compressed until pressure reaches 300 kPa at constant temperature. What is the new volume?',
+        shownEquation: 'p₁V₁ = p₂V₂ -> V₂ = p₁V₁ / p₂',
+        shownStep1: 'Write what you know: p₁ = 100 kPa, V₁ = 6 m³, p₂ = 300 kPa',
+        hint: 'V₂ = (100 × 6) / 300',
+        answer: 2,
+        answerUnit: 'm³',
+      },
+      tier3: {
+        question: 'At constant volume, a gas at 150,000 Pa and 300 K is heated to 450 K. Find the new pressure.',
+        hint: 'At constant volume, use p₁/T₁ = p₂/T₂. T must be in Kelvin - it already is here.',
+        methodHint: 'Start with p₁/T₁ = p₂/T₂. Rearrange to p₂ = p₁ × T₂/T₁ = 150,000 × 450/300.',
+        answer: 225000,
+        answerUnit: 'Pa',
+      },
+    },
+
+    summary: {
+      equation: 'p₁V₁ = p₂V₂ (Boyle\'s Law) | p₁V₁/T₁ = p₂V₂/T₂ (HT: combined gas law)',
+      sentence: 'Gas pressure is caused by particle collisions with walls. Compressing a gas or heating it at constant volume both increase pressure.',
+      promptText: 'Without looking at notes: explain in one sentence why squashing a gas into a smaller volume increases its pressure.',
+    },
+
+    sessionRecap: [
+      'Gas pressure = particle collisions with walls. More/faster collisions = higher pressure.',
+      "Boyle's Law: p₁V₁ = p₂V₂. At constant temperature, doubling volume halves pressure.",
+      'Always convert °C to Kelvin (add 273) before using the combined gas law.',
+    ],
   },
   atomic_structure: {
     id: 'atomic_structure', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
@@ -1780,6 +2226,153 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Scientific models are not replaced without direct experimental evidence.',
     concept: 'Most α particles passed straight through (atom is mostly empty space), but a few bounced back - proving a tiny, dense, positive nucleus. This could not be explained by the plum pudding model.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Rutherford expected alpha particles to pass straight through the gold foil. He described the few that bounced back as like firing artillery shells at tissue paper and having them return. That single surprise changed our entire picture of the atom.',
+      hookQuestion: 'Before 1911, scientists thought the atom was a positive sphere with electrons dotted through it. What experiment could prove that wrong?',
+      hookEmoji: '🔬',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Plum Pudding Model',
+        symbol: '',
+        unit: '',
+        definition: 'Thomson\'s 1904 model: electrons embedded in a diffuse positive sphere, like raisins in a pudding.',
+        everydayNote: 'This model predicted alpha particles should pass straight through with tiny deflections - the gold foil experiment proved it wrong.',
+      },
+      {
+        word: 'Alpha Scattering',
+        symbol: '',
+        unit: '',
+        definition: 'Rutherford\'s 1911 experiment: firing alpha particles at thin gold foil. Most passed through; a few were deflected or bounced back.',
+        everydayNote: 'The back-scattered alphas were the clue - only a tiny, dense, positive nucleus could repel them so strongly.',
+      },
+      {
+        word: 'Nuclear Model',
+        symbol: '',
+        unit: '',
+        definition: 'Rutherford\'s 1911 model: a tiny, dense, positively charged nucleus at the centre, with electrons in the surrounding space.',
+        everydayNote: 'The atom is mostly empty space. The nucleus is about 10,000 times smaller than the whole atom.',
+      },
+      {
+        word: 'Bohr Model',
+        symbol: '',
+        unit: '',
+        definition: 'Bohr\'s 1913 refinement: electrons occupy fixed shells at specific energy levels around the nucleus.',
+        everydayNote: 'This model explains emission spectra - electrons jumping between shells release photons of specific energies.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What is an alpha particle?',
+          answers: [
+            'A fast-moving electron',
+            'A helium nucleus (2 protons + 2 neutrons)',
+            'An electromagnetic wave',
+            'A single proton',
+          ],
+          correct: 1,
+          feedback: 'An alpha particle is a helium-4 nucleus: 2 protons and 2 neutrons, charge +2. This makes it positively charged, so a positive nucleus repels it.',
+        },
+        {
+          question: 'What charge does the nucleus of an atom carry?',
+          answers: ['Negative', 'Neutral', 'Positive', 'It varies'],
+          correct: 2,
+          feedback: 'The nucleus is always positively charged - it contains protons (+1 each) and neutrons (0 charge). Electrons (negative) are outside the nucleus.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Structure of the Atom', 'Atomic Number and Mass Number'],
+      current: 'History of the Atomic Model',
+      after: ['Radioactive Decay', 'Nuclear Equations', 'Half-Life'],
+    },
+
+    workedExample: {
+      title: 'Interpreting alpha scattering results as evidence',
+      equation: 'Atomic radius / Nuclear radius = ~10,000',
+      context: 'In the Rutherford experiment, most alpha particles passed through, a small fraction deflected at small angles, and a very small fraction bounced back (deflected > 90°). Explain what each observation tells us.',
+      steps: [
+        {
+          step: 1,
+          action: 'Observation 1 - most pass straight through',
+          content: 'The atom is mostly empty space - particles miss the nucleus entirely',
+          annotation: 'This rules out the plum pudding model, where positive charge was spread throughout.',
+        },
+        {
+          step: 2,
+          action: 'Observation 2 - small deflections',
+          content: 'Some alphas pass near the nucleus and are deflected by electrostatic repulsion',
+          annotation: 'Positive alpha repelled by positive nucleus - the closer the pass, the bigger the deflection.',
+        },
+        {
+          step: 3,
+          action: 'Observation 3 - a very few bounce straight back',
+          content: 'A head-on collision with the nucleus - the nucleus must be very dense and very small',
+          annotation: 'Only a concentrated mass and charge could repel an alpha particle back the way it came.',
+        },
+        {
+          step: 4,
+          action: 'Conclusion',
+          content: 'Nucleus is tiny, dense, positively charged. Most of the atom is empty space.',
+          annotation: 'The nuclear radius is about 10,000 times smaller than the atom\'s radius.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Rutherford\'s result confirmed the plum pudding model.',
+        reality: 'The opposite - the bouncing-back of some alphas directly contradicted the plum pudding model. Rutherford\'s own expectation was that all alphas would pass through. The surprising result forced a new model.',
+        visual: 'Plum pudding predicts: all pass through (charge spread out, nothing dense to stop them). Rutherford found: some bounce back - so charge and mass must be concentrated in a tiny nucleus.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Atomic radius = 1×10⁻¹⁰ m. Nuclear radius = 1×10⁻¹⁴ m. How many times wider is the atom than the nucleus?',
+        allSteps: [
+          'Write what you know: atom radius = 1×10⁻¹⁰ m, nucleus radius = 1×10⁻¹⁴ m',
+          'Write the calculation: ratio = atom radius / nucleus radius',
+          'Substitute: ratio = 1×10⁻¹⁰ / 1×10⁻¹⁴',
+          '??? - calculate the ratio',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 10⁻¹⁰ / 10⁻¹⁴ = 10^(−10−(−14)) = 10⁴ = ?',
+        answer: 10000,
+        answerUnit: 'times wider',
+      },
+      tier2: {
+        question: 'If the atom were scaled up to 1 m diameter, what would the nucleus diameter be in mm?',
+        shownEquation: 'Scale factor = 1 / 10,000',
+        shownStep1: 'Write what you know: atom = 1 m, nucleus is 10,000 times smaller',
+        hint: 'Nucleus size = 1 m / 10,000 = 0.0001 m. Convert to mm.',
+        answer: 0.1,
+        answerUnit: 'mm',
+      },
+      tier3: {
+        question: 'If the radius ratio is 10,000, what is the volume ratio of atom to nucleus? (Volume scales as radius cubed.)',
+        hint: 'Volume ratio = (radius ratio)³',
+        methodHint: 'Start with radius ratio = 10,000. Volume ratio = 10,000³ = 10^12.',
+        answer: 1000000000000,
+        answerUnit: '(atom volume is 10¹² times larger)',
+      },
+    },
+
+    summary: {
+      equation: 'Dalton (1803) -> Thomson (1904) -> Rutherford (1911) -> Bohr (1913)',
+      sentence: 'Each atomic model replaced the last when new experimental evidence could not be explained by the existing model.',
+      promptText: 'Without looking at notes: describe the Rutherford experiment and state two conclusions he drew from the results.',
+    },
+
+    sessionRecap: [
+      'Plum pudding model (Thomson, 1904): electrons in a positive sphere. Replaced when it could not explain back-scattering.',
+      'Rutherford (1911): most of atom is empty space. Tiny, dense, positive nucleus proven by alpha scattering.',
+      'Bohr (1913): electrons in fixed shells at set energy levels around the nucleus.',
+    ],
   },
   radioactive_decay: {
     id: 'radioactive_decay', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
@@ -1801,6 +2394,158 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'High ionising power and high penetrating power do not go together - they are inversely related.',
     concept: 'Alpha is the most ionising (removes electrons from atoms easily) because it is large and slow. But this also means it loses energy quickly, giving it the shortest range and stopping at a sheet of paper.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Smoke detectors use a tiny amount of Americium-241, an alpha emitter, to ionise the air between two electrodes and create a small current. When smoke enters, it absorbs the alpha particles, the current drops, and the alarm triggers. The source is completely safe because a sheet of paper stops alpha radiation.',
+      hookQuestion: 'Three types of radiation exist: alpha, beta, and gamma. What do you think determines whether radiation is dangerous?',
+      hookEmoji: '☢️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Alpha Radiation',
+        symbol: 'α',
+        unit: '',
+        definition: 'A helium nucleus (2 protons + 2 neutrons) emitted from an unstable nucleus. Highly ionising, stopped by a sheet of paper or 5 cm of air.',
+        everydayNote: 'Alpha\'s large size and +2 charge means it interacts strongly with air molecules, losing energy quickly. High ionising power, very short range.',
+      },
+      {
+        word: 'Beta Radiation',
+        symbol: 'β',
+        unit: '',
+        definition: 'A fast electron emitted from the nucleus when a neutron converts to a proton. Medium ionising power, stopped by 3-5 mm of aluminium.',
+        everydayNote: 'Beta particles are fast and small - they travel further than alpha but are stopped by a few millimetres of metal.',
+      },
+      {
+        word: 'Gamma Radiation',
+        symbol: 'γ',
+        unit: '',
+        definition: 'High-energy electromagnetic radiation emitted from an excited nucleus. Least ionising, only significantly reduced by thick lead or concrete.',
+        everydayNote: 'Gamma has no mass or charge - it passes straight through most materials without interacting. This gives it very high penetrating power.',
+      },
+      {
+        word: 'Activity',
+        symbol: 'A',
+        unit: 'Bq (Becquerels)',
+        definition: 'The number of nuclear decays per second in a radioactive sample.',
+        everydayNote: '1 Bq = 1 decay per second. A typical smoke detector source has activity of around 30,000 Bq.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which particle makes up an alpha particle?',
+          answers: [
+            '2 protons and 2 electrons',
+            '2 protons and 2 neutrons',
+            '1 proton and 1 neutron',
+            '4 protons',
+          ],
+          correct: 1,
+          feedback: 'An alpha particle is identical to a helium-4 nucleus: 2 protons and 2 neutrons, giving it a mass number of 4 and atomic number of 2.',
+        },
+        {
+          question: 'What does unstable mean for a nucleus?',
+          answers: [
+            'It has too many electrons',
+            'It will explode immediately',
+            'It may spontaneously emit radiation to become more stable',
+            'It has equal protons and neutrons',
+          ],
+          correct: 2,
+          feedback: 'An unstable nucleus has an unfavourable proton-to-neutron ratio. It emits radiation randomly to reach a more stable configuration - this is radioactive decay.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Structure of the Atom', 'History of the Atomic Model'],
+      current: 'Radioactive Decay',
+      after: ['Nuclear Equations', 'Half-Life', 'Radiation Hazards'],
+    },
+
+    workedExample: {
+      title: 'Comparing alpha, beta, and gamma properties',
+      equation: 'Ionising power is inversely related to penetrating power',
+      context: 'A source emits alpha particles. Explain why it is dangerous if inhaled but safe to handle with tongs at arm\'s length.',
+      steps: [
+        {
+          step: 1,
+          action: 'State what alpha radiation is',
+          content: 'Alpha = helium nucleus (2p + 2n), charge +2, relatively large and slow',
+          annotation: 'The +2 charge and large size cause strong interactions with any matter it passes through.',
+        },
+        {
+          step: 2,
+          action: 'Explain external safety',
+          content: 'Alpha is stopped by a few cm of air or a sheet of paper - skin easily stops it',
+          annotation: 'Holding it at arm\'s length means the alpha loses all energy before reaching your skin.',
+        },
+        {
+          step: 3,
+          action: 'Explain internal danger',
+          content: 'Inside the body, alpha has no skin barrier. All its energy is deposited directly into lung or gut tissue.',
+          annotation: 'High ionising power + direct tissue contact = high cancer risk. Radon gas at home is a concern for this reason.',
+        },
+        {
+          step: 4,
+          action: 'Contrast with gamma',
+          content: 'Gamma is most dangerous externally - it penetrates through the body. Alpha is most dangerous internally.',
+          annotation: 'This is why the choice of radiation type matters for both uses and hazards.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'The most ionising radiation is always the most dangerous.',
+        reality: 'It depends on how you are exposed. Alpha is most ionising but stopped by skin (safe externally). If ingested or inhaled, it is extremely dangerous. Gamma is least ionising but penetrates the body from outside - more dangerous externally.',
+        visual: 'External source: gamma most dangerous. Internal contamination: alpha most dangerous. This is why context always matters in radiation hazard questions.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'An alpha source has activity 5000 Bq. Activity halves with each half-life. What is the activity after 3 half-lives?',
+        allSteps: [
+          'Start: activity = 5000 Bq',
+          'After 1 half-life: 5000 / 2 = 2500 Bq',
+          'After 2 half-lives: 2500 / 2 = 1250 Bq',
+          '??? - what is activity after 3 half-lives?',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 1250 / 2 = ?',
+        answer: 625,
+        answerUnit: 'Bq',
+      },
+      tier2: {
+        question: 'A source starts at 8000 Bq with a half-life of 2 days. What is the activity after 8 days?',
+        shownEquation: 'Activity = initial / 2^n, where n = number of half-lives',
+        shownStep1: 'Write what you know: initial = 8000 Bq, t½ = 2 days, time = 8 days, so n = 8/2 = 4 half-lives',
+        hint: 'Calculate: 8000 / 2⁴ = 8000 / 16',
+        answer: 500,
+        answerUnit: 'Bq',
+      },
+      tier3: {
+        question: 'Activity falls from 1600 Bq to 100 Bq in 20 years. What is the half-life?',
+        hint: 'Count how many halvings get from 1600 to 100. Then divide total time by that number.',
+        methodHint: 'Start: 1600 -> 800 -> 400 -> 200 -> 100. Count the steps. Then half-life = 20 years / number of steps.',
+        answer: 5,
+        answerUnit: 'years',
+      },
+    },
+
+    summary: {
+      equation: 'Alpha (α): stopped by paper. Beta (β): stopped by aluminium. Gamma (γ): reduced by lead/concrete.',
+      sentence: 'Ionising power and penetrating power are inversely related - the radiation that ionises most strongly loses energy fastest and travels the shortest distance.',
+      promptText: 'Without looking at notes: list alpha, beta, and gamma in order of ionising power (most to least) and state what stops each one.',
+    },
+
+    sessionRecap: [
+      'Alpha (2p + 2n): most ionising, stopped by paper. Beta (fast electron): medium, stopped by aluminium. Gamma (EM wave): least ionising, needs lead to reduce.',
+      'Activity (Bq) = number of decays per second. Short half-life = high activity.',
+      'Ionising power and penetrating power are inversely related. High ionising power = short range.',
+    ],
   },
   nuclear_equations: {
     id: 'nuclear_equations', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
@@ -1822,6 +2567,148 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Both mass number and atomic number must balance - not just one of them.',
     concept: 'An alpha particle has mass number 4 and atomic number 2. So the parent nucleus loses 4 from mass number and 2 from atomic number. Both sides of the equation must balance for each quantity.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'When uranium-238 decays, it turns into thorium-234 - a completely different element. That thorium then beta decays into protactinium-234, another new element. Each step in the decay chain converts one element into another - exactly what alchemists spent centuries trying to achieve by hand.',
+      hookQuestion: 'Can one element change into a completely different element naturally? What would have to happen inside the nucleus?',
+      hookEmoji: '⚗️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Mass Number',
+        symbol: 'A',
+        unit: '',
+        definition: 'The total number of protons and neutrons in a nucleus. Written as the top number in nuclear notation.',
+        everydayNote: 'In alpha decay, mass number drops by 4. In beta decay, mass number stays the same.',
+      },
+      {
+        word: 'Atomic Number',
+        symbol: 'Z',
+        unit: '',
+        definition: 'The number of protons in a nucleus. Written as the bottom number in nuclear notation. Determines which element it is.',
+        everydayNote: 'In alpha decay, atomic number drops by 2. In beta decay, atomic number rises by 1 (a neutron becomes a proton).',
+      },
+      {
+        word: 'Alpha Decay',
+        symbol: 'α',
+        unit: '',
+        definition: 'A nucleus emits an alpha particle (⁴₂He), losing 4 from its mass number and 2 from its atomic number.',
+        everydayNote: 'U-238 (Z=92) -> Th-234 (Z=90): atomic number drops by 2, mass number drops by 4.',
+      },
+      {
+        word: 'Beta Decay',
+        symbol: 'β',
+        unit: '',
+        definition: 'A neutron in the nucleus converts to a proton and emits a fast electron. Mass number stays the same; atomic number increases by 1.',
+        everydayNote: 'C-14 (Z=6) -> N-14 (Z=7): same mass number, atomic number rises by 1. The element changes.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'In nuclear notation ²³⁸₉₂U, what does 92 represent?',
+          answers: ['Mass number', 'Neutron number', 'Atomic number (proton number)', 'Electron number'],
+          correct: 2,
+          feedback: 'The bottom number is always the atomic number - the number of protons. The top number (238) is the mass number. Neutrons = 238 - 92 = 146.',
+        },
+        {
+          question: 'An alpha particle has atomic number 2 and mass number 4. If a nucleus with atomic number 88 and mass number 226 emits an alpha, what is the new atomic number?',
+          answers: ['86', '90', '84', '88'],
+          correct: 0,
+          feedback: 'Alpha decay: atomic number decreases by 2. 88 - 2 = 86. Mass number would decrease by 4: 226 - 4 = 222.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Structure of the Atom', 'Radioactive Decay'],
+      current: 'Nuclear Equations',
+      after: ['Half-Life', 'Radiation Hazards', 'Nuclear Fission'],
+    },
+
+    workedExample: {
+      title: 'Writing a balanced nuclear equation for alpha decay',
+      equation: 'Mass numbers balance. Atomic numbers balance.',
+      context: 'Uranium-238 (atomic number 92) undergoes alpha decay. Write the full nuclear equation and identify the daughter nucleus.',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'Parent: ²³⁸₉₂U. Alpha particle: ⁴₂He',
+          annotation: 'Always write the alpha particle as ⁴₂He - it has mass number 4 and atomic number 2.',
+        },
+        {
+          step: 2,
+          action: 'Calculate the daughter mass number',
+          content: '238 - 4 = 234',
+          annotation: 'Mass numbers must balance: 238 = 234 + 4.',
+        },
+        {
+          step: 3,
+          action: 'Calculate the daughter atomic number',
+          content: '92 - 2 = 90. Element 90 is Thorium (Th).',
+          annotation: 'Atomic numbers must balance: 92 = 90 + 2. Use a periodic table to identify the element from atomic number.',
+        },
+        {
+          step: 4,
+          action: 'Write the full equation',
+          content: '²³⁸₉₂U -> ²³⁴₉₀Th + ⁴₂He',
+          annotation: 'Check: top numbers 238 = 234 + 4. Bottom numbers 92 = 90 + 2. Both sides balance.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'In beta decay, the mass number increases because an electron is added.',
+        reality: 'The mass number stays the same in beta decay. A neutron converts to a proton - the total number of particles in the nucleus is unchanged. Only atomic number increases by 1.',
+        visual: 'Neutron (mass 1, charge 0) -> Proton (mass 1, charge +1) + Beta particle (mass ~0, charge -1). Mass number: 1 stays as 1. Atomic number: adds 1 proton, loses 0 - net gain of +1.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Radium-226 (atomic number 88) undergoes alpha decay. What is the mass number of the daughter nucleus?',
+        allSteps: [
+          'Write what you know: Radium: mass number = 226, atomic number = 88',
+          'Alpha particle: mass number = 4, atomic number = 2',
+          'Daughter mass number = 226 - 4',
+          '??? - calculate the daughter mass number',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 226 - 4 = ?',
+        answer: 222,
+        answerUnit: '(mass number of daughter nucleus)',
+      },
+      tier2: {
+        question: 'Carbon-14 (atomic number 6) undergoes beta decay. What is the atomic number of the daughter nucleus?',
+        shownEquation: 'Beta decay: atomic number increases by 1, mass number unchanged',
+        shownStep1: 'Write what you know: Carbon-14, atomic number = 6, mass number = 14',
+        hint: 'Atomic number after beta decay = 6 + 1 = ?',
+        answer: 7,
+        answerUnit: '(which is nitrogen)',
+      },
+      tier3: {
+        question: 'Thorium-234 (atomic number 90) undergoes beta decay. Write the atomic number of the daughter nucleus.',
+        hint: 'Beta decay: atomic number increases by 1. Mass number stays the same.',
+        methodHint: 'Start with atomic number = 90. Beta decay adds 1 to atomic number. What is 90 + 1?',
+        answer: 91,
+        answerUnit: '(which is protactinium)',
+      },
+    },
+
+    summary: {
+      equation: 'Alpha: A-4, Z-2. Beta: A unchanged, Z+1. Gamma: A and Z unchanged.',
+      sentence: 'In any nuclear equation, the mass numbers must balance and the atomic numbers must balance on both sides.',
+      promptText: 'Without looking at notes: write the rules for how mass number and atomic number change in alpha decay and in beta decay.',
+    },
+
+    sessionRecap: [
+      'Both mass number (top) and atomic number (bottom) must balance on each side of a nuclear equation.',
+      'Alpha decay: mass number -4, atomic number -2. Emits ⁴₂He.',
+      'Beta decay: mass number unchanged, atomic number +1. A neutron becomes a proton inside the nucleus.',
+    ],
   },
   half_life: {
     id: 'half_life', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
@@ -1843,6 +2730,153 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'After a number of half-lives the activity never reaches exactly zero — it approaches zero asymptotically. Exponential decay means halving in equal time steps, not decreasing by equal amounts.',
     concept: '800 → 400 → 200 → 100 Bq. Graph method: pick any activity value, halve it, find the time difference → that is t½. The curve is exponential: equal time intervals give equal fractional decreases.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Carbon-14 has a half-life of 5,730 years. Archaeologists can use this to date organic objects up to about 50,000 years old - around 9 half-lives. Beyond that, less than 0.2% of the original Carbon-14 remains, too little to measure reliably.',
+      hookQuestion: 'How could you figure out the age of a piece of ancient wood using radioactivity? What would you need to know?',
+      hookEmoji: '🦴',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Half-Life',
+        symbol: 't½',
+        unit: 's, min, hours, years',
+        definition: 'The time for the activity of a radioactive source (or the number of undecayed nuclei) to halve.',
+        everydayNote: 'Carbon-14: t½ = 5,730 years. Iodine-131 (used in medical imaging): t½ = 8 days. Shorter half-life = faster decay = more active.',
+      },
+      {
+        word: 'Activity',
+        symbol: 'A',
+        unit: 'Bq',
+        definition: 'The number of nuclear decays per second. Activity falls exponentially over time.',
+        everydayNote: 'After one half-life, activity halves. After two half-lives, it is a quarter. It never truly reaches zero.',
+      },
+      {
+        word: 'Exponential Decay',
+        symbol: '',
+        unit: '',
+        definition: 'A pattern where quantity halves in equal time steps - not by equal amounts each time.',
+        everydayNote: 'After 1 half-life: 50% remains. After 2: 25%. After 3: 12.5%. The decrease slows down as less material is left.',
+      },
+      {
+        word: 'Random Decay',
+        symbol: '',
+        unit: '',
+        definition: 'Individual nuclear decays cannot be predicted - each nucleus has the same probability of decaying per unit time, regardless of how long it has existed.',
+        everydayNote: 'Like rolling dice: you cannot know when a specific nucleus will decay, but large samples follow predictable statistics.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'A source has activity 800 Bq. After two half-lives, what is the activity?',
+          answers: ['400 Bq', '200 Bq', '100 Bq', '600 Bq'],
+          correct: 1,
+          feedback: 'After one half-life: 800 / 2 = 400 Bq. After two half-lives: 400 / 2 = 200 Bq. Each half-life halves the activity.',
+        },
+        {
+          question: 'Can you predict exactly when a specific nucleus will decay?',
+          answers: [
+            'Yes, using the half-life formula',
+            'Yes, if you know the activity',
+            'No, radioactive decay is random and cannot be predicted for individual nuclei',
+            'Only if the half-life is very short',
+          ],
+          correct: 2,
+          feedback: 'Radioactive decay is fundamentally random. You cannot predict when any individual nucleus will decay. The half-life only tells you the statistical behaviour of a large number of nuclei.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Radioactive Decay', 'Nuclear Equations'],
+      current: 'Half-Life',
+      after: ['Radiation Hazards', 'Nuclear Fission', 'Nuclear Fusion'],
+    },
+
+    workedExample: {
+      title: 'Calculating activity after multiple half-lives',
+      equation: 'Activity after n half-lives = initial activity / 2ⁿ',
+      context: 'A radioactive source has initial activity 6400 Bq and a half-life of 3 hours. What is the activity after 12 hours?',
+      steps: [
+        {
+          step: 1,
+          action: 'Write what you know',
+          content: 'Initial activity = 6400 Bq, t½ = 3 hours, total time = 12 hours',
+          annotation: 'Work out the number of half-lives first: n = total time / half-life.',
+        },
+        {
+          step: 2,
+          action: 'Calculate number of half-lives',
+          content: 'n = 12 / 3 = 4 half-lives',
+          annotation: 'Always divide total time by half-life. Do not just count to 12.',
+        },
+        {
+          step: 3,
+          action: 'Halve the activity 4 times',
+          content: '6400 -> 3200 -> 1600 -> 800 -> 400 Bq',
+          annotation: 'Or use: activity = 6400 / 2⁴ = 6400 / 16 = 400 Bq.',
+        },
+        {
+          step: 4,
+          action: 'State the answer with unit',
+          content: 'Activity after 12 hours = 400 Bq',
+          annotation: 'Sense check: 4 halvings of 6400 gives 400. Each step: ÷2.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'After enough half-lives, the activity reaches exactly zero.',
+        reality: 'The activity gets smaller and smaller but never reaches exactly zero. This is the mathematical property of exponential decay - it is asymptotic to zero. In practice, at some point the count rate is indistinguishable from background radiation.',
+        visual: 'Graph: activity-time curve keeps halving but the curve never actually touches the x-axis. It gets flatter and flatter, approaching zero.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A source has activity 4800 Bq. What is the activity after 2 half-lives?',
+        allSteps: [
+          'Start: activity = 4800 Bq',
+          'After 1 half-life: 4800 / 2 = 2400 Bq',
+          'After 2 half-lives: 2400 / 2 = ???',
+          '??? - state the final answer',
+        ],
+        missingStep: 2,
+        missingHint: 'Calculate: 2400 / 2 = ?',
+        answer: 1200,
+        answerUnit: 'Bq',
+      },
+      tier2: {
+        question: 'A source starts at 2560 Bq. After 4 half-lives, what is the activity?',
+        shownEquation: 'Activity = initial / 2ⁿ',
+        shownStep1: 'Write what you know: initial = 2560 Bq, n = 4 half-lives',
+        hint: 'Calculate: 2560 / 2⁴ = 2560 / 16',
+        answer: 160,
+        answerUnit: 'Bq',
+      },
+      tier3: {
+        question: 'Activity falls from 3200 Bq to 400 Bq in 6 minutes. What is the half-life?',
+        hint: 'Count how many halvings get from 3200 to 400. Then divide total time by that number.',
+        methodHint: 'Start: 3200 -> 1600 -> 800 -> 400. Count the steps = 3 half-lives. Half-life = 6 / 3.',
+        answer: 2,
+        answerUnit: 'minutes',
+      },
+    },
+
+    summary: {
+      equation: 'Activity after n half-lives = A₀ / 2ⁿ',
+      sentence: 'Half-life is the time for activity to halve. Decay is random for individual nuclei but predictable for large samples. The graph is an exponential curve that never reaches zero.',
+      promptText: 'Without looking at notes: explain how you would find the half-life of a source from an activity-time graph.',
+    },
+
+    sessionRecap: [
+      'Half-life = time for activity (or undecayed nuclei) to halve. Each half-life gives another factor of 2 reduction.',
+      'Decay is random - cannot predict individual nuclei. Large samples follow exponential decay curves.',
+      'Graph method: pick an activity, halve it, read off the time difference. That time difference is the half-life.',
+    ],
   },
   radiation_hazards: {
     id: 'radiation_hazards', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
@@ -1864,6 +2898,153 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'External irradiation from alpha is not very dangerous — skin stops it. Alpha is only dangerous when ingested or inhaled (contamination). Gamma is most dangerous externally because it penetrates deeply.',
     concept: 'Alpha: smoke detectors. Beta: thickness gauges, tracers. Gamma: sterilisation, radiotherapy, imaging. Contamination (source inside body) is more dangerous than irradiation (source outside) because you cannot move away from internal sources.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'Every year the average UK person receives about 2.7 millisieverts (mSv) of background radiation. Living next to a nuclear power station contributes less than 0.0001 mSv - far less than a single chest X-ray (0.02 mSv) or a transatlantic flight (0.08 mSv).',
+      hookQuestion: 'Where do you think most of the radiation you are exposed to every year comes from?',
+      hookEmoji: '🏥',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Background Radiation',
+        symbol: '',
+        unit: 'mSv/year',
+        definition: 'Low-level radiation present everywhere from natural sources (radon gas, cosmic rays, rocks) and man-made sources (medical, nuclear industry).',
+        everydayNote: 'Average UK background dose: 2.7 mSv/year. Most (about 50%) comes from radon gas in the ground.',
+      },
+      {
+        word: 'Irradiation',
+        symbol: '',
+        unit: '',
+        definition: 'Exposure to radiation from a source outside the body. Risk stops when you move away from the source.',
+        everydayNote: 'A dental X-ray irradiates you briefly - when the machine switches off, the exposure ends completely.',
+      },
+      {
+        word: 'Contamination',
+        symbol: '',
+        unit: '',
+        definition: 'Radioactive material is deposited on or inside the body. Exposure continues even after removing the source from the environment.',
+        everydayNote: 'Swallowing a radioactive particle is contamination - the source remains inside you, continuously irradiating nearby tissue.',
+      },
+      {
+        word: 'Sievert',
+        symbol: 'Sv',
+        unit: 'Sv or mSv',
+        definition: 'The unit of radiation dose that accounts for the biological effect on human tissue. Different radiations cause different amounts of damage per joule absorbed.',
+        everydayNote: 'Annual dose limit for radiation workers: 20 mSv. UK public average: 2.7 mSv. Radiation therapy doses can reach thousands of mSv locally.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which type of radiation is most dangerous if a source is inhaled or ingested?',
+          answers: ['Gamma, because it is most penetrating', 'Beta, because it moves fast', 'Alpha, because it is highly ionising with no tissue barrier to stop it', 'All are equally dangerous'],
+          correct: 2,
+          feedback: 'Alpha is most dangerous internally because it is highly ionising and, once inside the body, there is no skin or tissue barrier to stop it. All its energy is deposited in nearby cells.',
+        },
+        {
+          question: 'Why is gamma radiation most dangerous from an external source?',
+          answers: [
+            'It is most ionising',
+            'It penetrates deeply through the body and cannot be easily blocked',
+            'It travels fastest',
+            'It has the most mass',
+          ],
+          correct: 1,
+          feedback: 'Gamma can penetrate through the body from outside, reaching internal organs. Alpha and beta are stopped by skin or clothing, so external exposure to them is less dangerous.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Radioactive Decay', 'Half-Life'],
+      current: 'Background Radiation, Uses and Hazards',
+      after: ['Nuclear Fission', 'Nuclear Fusion'],
+    },
+
+    workedExample: {
+      title: 'Comparing contamination and irradiation risk',
+      equation: 'Risk depends on: type of radiation + whether source is internal or external',
+      context: 'A worker is near an alpha source. In Scenario A, they stand 1 m away holding tongs. In Scenario B, they inhale dust from the alpha source. Compare the risk.',
+      steps: [
+        {
+          step: 1,
+          action: 'Scenario A - external irradiation from alpha',
+          content: 'Alpha is stopped by a few cm of air and by skin. At 1 m, barely any alpha reaches the worker.',
+          annotation: 'This is why alpha sources in smoke detectors are safe to have in your home. The short range of alpha protects you.',
+        },
+        {
+          step: 2,
+          action: 'Scenario B - internal contamination from alpha',
+          content: 'Inhaled alpha particles land directly on lung tissue. No skin barrier. All ionising energy deposited into cells.',
+          annotation: 'This is why radon gas (an alpha emitter) in homes is a real cancer risk - it decays inside lung tissue.',
+        },
+        {
+          step: 3,
+          action: 'Compare the risks',
+          content: 'Scenario A: very low risk. Scenario B: high cancer risk despite using the same source.',
+          annotation: 'Same radiation type, completely different risk level. The key factor is irradiation (external) vs contamination (internal).',
+        },
+        {
+          step: 4,
+          action: 'Apply to gamma',
+          content: 'Gamma from external source: high risk (penetrates body). Gamma if ingested: less extra risk than alpha (poor ioniser).',
+          annotation: 'Gamma is most dangerous externally. Alpha is most dangerous internally. This is the key exam distinction.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Radiation from nuclear power stations is the biggest source of background radiation.',
+        reality: 'The nuclear industry contributes less than 1% of the average person\'s radiation dose. Natural sources dominate: radon gas from the ground accounts for about 50%, with cosmic rays, food, and building materials making up most of the rest.',
+        visual: 'UK background radiation sources: Radon (50%), Medical (15%), Cosmic rays (12%), Gamma from ground/buildings (14%), Food (12%), Nuclear industry (<1%).',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A person receives 0.5 mSv from background radiation and 0.08 mSv from a transatlantic flight. What is their total dose?',
+        allSteps: [
+          'Write what you know: background = 0.5 mSv, flight = 0.08 mSv',
+          'Total dose = background + flight',
+          'Total = 0.5 + 0.08',
+          '??? - calculate total dose',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: 0.5 + 0.08 = ?',
+        answer: 0.58,
+        answerUnit: 'mSv',
+      },
+      tier2: {
+        question: 'Annual dose limit for radiation workers = 20 mSv. Background dose = 2.7 mSv/year. What additional dose is allowed from work?',
+        shownEquation: 'Remaining allowance = limit - background dose',
+        shownStep1: 'Write what you know: limit = 20 mSv, background = 2.7 mSv',
+        hint: 'Calculate: 20 - 2.7 = ?',
+        answer: 17.3,
+        answerUnit: 'mSv',
+      },
+      tier3: {
+        question: 'A radiation worker is exposed to a dose rate of 0.4 mSv/hour for 30 minutes. What is the total dose received?',
+        hint: 'Total dose = dose rate × time. Convert 30 minutes to hours first.',
+        methodHint: 'Start: time = 30 min = 0.5 hours. Total dose = 0.4 mSv/h × 0.5 h.',
+        answer: 0.2,
+        answerUnit: 'mSv',
+      },
+    },
+
+    summary: {
+      equation: 'Risk = type of radiation + internal (contamination) or external (irradiation)',
+      sentence: 'Background radiation is always present from natural and man-made sources. Alpha is most dangerous internally; gamma is most dangerous externally. Contamination is harder to control than irradiation.',
+      promptText: 'Without looking at notes: explain the difference between contamination and irradiation and which is more difficult to protect against.',
+    },
+
+    sessionRecap: [
+      'Background radiation comes from radon (largest source), cosmic rays, rocks, food, and man-made sources. Nuclear industry contributes very little.',
+      'Irradiation: external exposure, stops when you move away. Contamination: source inside/on body, continuous exposure - much harder to remove.',
+      'Alpha most dangerous internally (highly ionising, no barrier). Gamma most dangerous externally (penetrates deeply through tissue).',
+    ],
   },
   nuclear_fission: {
     id: 'nuclear_fission', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
@@ -1885,6 +3066,158 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Nuclear fission does not simply split the nucleus into two equal halves.',
     concept: 'Control rods (boron or cadmium) absorb neutrons. Inserting them more deeply reduces the number of available neutrons, slowing the chain reaction. Withdrawing them allows the reaction to speed up.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The bomb dropped on Hiroshima used 64 kg of uranium-235, but only about 1 kg actually underwent fission before the explosion. That 1 kg, via E = mc², released the same energy as about 15,000 tonnes of TNT.',
+      hookQuestion: 'How could splitting the nucleus of a single atom release millions of times more energy than burning a molecule of fuel?',
+      hookEmoji: '⚡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Nuclear Fission',
+        symbol: '',
+        unit: '',
+        definition: 'A large unstable nucleus (e.g. U-235) absorbs a neutron and splits into two smaller nuclei, releasing 2-3 neutrons and a large amount of energy.',
+        everydayNote: 'Each U-235 fission releases about 200 MeV of energy - around 50 million times more than burning one carbon atom.',
+      },
+      {
+        word: 'Chain Reaction',
+        symbol: '',
+        unit: '',
+        definition: 'The neutrons released by one fission trigger further fissions in other nuclei, creating a self-sustaining cascade of reactions.',
+        everydayNote: 'Uncontrolled chain reaction = nuclear weapon. Controlled chain reaction (1 neutron per fission on average) = nuclear reactor.',
+      },
+      {
+        word: 'Moderator',
+        symbol: '',
+        unit: '',
+        definition: 'A material (water or graphite) that slows fast neutrons to thermal speeds, at which U-235 can absorb them efficiently.',
+        everydayNote: 'Fast neutrons tend to pass through U-235 without being absorbed. The moderator slows them down enough for absorption to occur.',
+      },
+      {
+        word: 'Control Rods',
+        symbol: '',
+        unit: '',
+        definition: 'Rods of boron or cadmium inserted into the reactor core to absorb neutrons and control the reaction rate.',
+        everydayNote: 'Inserting rods further absorbs more neutrons - reaction slows. Withdrawing rods allows more neutrons to cause fission - reaction speeds up.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What triggers a fission event in U-235?',
+          answers: [
+            'A proton hitting the nucleus',
+            'A neutron being absorbed by the nucleus',
+            'An electron being removed',
+            'A gamma ray hitting the nucleus',
+          ],
+          correct: 1,
+          feedback: 'U-235 absorbs a neutron, becomes U-236 (unstable), and immediately splits. The incoming neutron triggers the fission.',
+        },
+        {
+          question: 'What is the role of the moderator in a nuclear reactor?',
+          answers: [
+            'To absorb excess neutrons',
+            'To cool the reactor',
+            'To slow fast neutrons to thermal speeds for efficient absorption by U-235',
+            'To generate electricity',
+          ],
+          correct: 2,
+          feedback: 'The moderator (water or graphite) slows fast neutrons so they can be absorbed by U-235 nuclei. Without the moderator, most neutrons would pass straight through.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Nuclear Equations', 'Radiation Hazards'],
+      current: 'Nuclear Fission',
+      after: ['Nuclear Fusion'],
+    },
+
+    workedExample: {
+      title: 'Understanding chain reaction control in a reactor',
+      equation: 'Controlled reaction: exactly 1 neutron per fission causes the next fission',
+      context: 'A fission releases 2.5 neutrons on average. Explain what happens if the chain reaction is uncontrolled versus controlled.',
+      steps: [
+        {
+          step: 1,
+          action: 'Uncontrolled: each fission releases 2.5 neutrons, all cause further fissions',
+          content: 'Generation 1: 1 fission. Generation 2: ~2.5. Generation 10: 2.5¹⁰ ≈ 9,500.',
+          annotation: 'Exponential growth: each generation is 2.5 times bigger. Within 80 generations, energy release becomes explosive.',
+        },
+        {
+          step: 2,
+          action: 'Controlled: exactly 1 neutron per fission reaches another nucleus',
+          content: 'Each fission causes exactly 1 more fission. Rate stays constant.',
+          annotation: 'Control rods absorb the excess 1.5 neutrons (on average), leaving only 1 free to cause the next fission.',
+        },
+        {
+          step: 3,
+          action: 'Role of control rods',
+          content: 'Boron or cadmium rods absorb neutrons. Insert deeper = absorb more = reaction slows. Withdraw = fewer absorbed = reaction speeds up.',
+          annotation: 'Emergency shutdown: push all control rods fully in. Reaction stops within seconds.',
+        },
+        {
+          step: 4,
+          action: 'Energy output',
+          content: 'Heat from fission heats water to produce steam. Steam drives a turbine connected to a generator.',
+          annotation: 'The physics is the same as a coal plant - the only difference is the heat source.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'A nuclear reactor could explode like a nuclear bomb.',
+        reality: 'Impossible in a power reactor. A nuclear weapon requires weapons-grade uranium (>90% U-235) assembled precisely. A reactor uses only 3-5% enriched uranium and is deliberately designed so that the reaction self-limits if temperature rises too far.',
+        visual: 'Bomb: almost all U-235, extremely fast uncontrolled chain reaction in microseconds. Reactor: low enrichment, controlled to exactly 1 neutron per fission, reaction takes seconds to change.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Each fission releases 2 neutrons and both cause further fissions. How many fissions occur in generation 3?',
+        allSteps: [
+          'Generation 1: 1 fission, releases 2 neutrons',
+          'Generation 2: 2 fissions, each releases 2 neutrons = 4 neutrons total',
+          'Generation 3: each of the 4 neutrons causes a fission = ???',
+          '??? - how many fissions in generation 3?',
+        ],
+        missingStep: 2,
+        missingHint: 'Calculate: 2² = 4 in generation 2, so generation 3 = 2³ = ?',
+        answer: 8,
+        answerUnit: 'fissions',
+      },
+      tier2: {
+        question: 'Each fission releases 2 neutrons, both cause fissions. How many fissions in generation 4?',
+        shownEquation: 'Fissions in generation n = 2ⁿ',
+        shownStep1: 'Write what you know: 2 neutrons per fission, each causes a fission, generation n = 4',
+        hint: 'Calculate: 2⁴ = ?',
+        answer: 16,
+        answerUnit: 'fissions',
+      },
+      tier3: {
+        question: 'In a controlled reactor, exactly 1 neutron per fission causes the next fission. Starting with 1 fission, how many fissions occur per generation after 5 generations?',
+        hint: 'If exactly 1 neutron per fission reaches another nucleus, the rate stays constant.',
+        methodHint: 'Start: 1 fission generates 1 neutron that causes 1 more fission. This repeats every generation: 1^5 = 1. Steady state.',
+        answer: 1,
+        answerUnit: 'fissions per generation (steady state)',
+      },
+    },
+
+    summary: {
+      equation: 'U-235 + n -> fission products + 2-3 n + energy',
+      sentence: 'Fission releases energy and neutrons. Control rods absorb neutrons to keep exactly one neutron per fission causing the next - a steady, controlled chain reaction.',
+      promptText: 'Without looking at notes: explain the difference between the role of the moderator and the role of the control rods in a nuclear reactor.',
+    },
+
+    sessionRecap: [
+      'Fission: U-235 absorbs a neutron, splits into two smaller nuclei + 2-3 neutrons + large energy release.',
+      'Chain reaction: released neutrons trigger more fissions. Controlled (1 neutron per fission) in a reactor; uncontrolled in a weapon.',
+      'Moderator (water/graphite) slows neutrons. Control rods (boron/cadmium) absorb neutrons to set reaction rate.',
+    ],
   },
   nuclear_fusion: {
     id: 'nuclear_fusion', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
@@ -1906,5 +3239,157 @@ export const MATTER_TOPICS = {
     ],
     misconception: 'Fusion and fission are opposite processes - fusion joins, fission splits.',
     concept: 'Nuclei are positively charged, so they repel each other (electrostatic repulsion). Extremely high temperatures give particles enough kinetic energy to get close enough for the strong nuclear force to take over and fuse them.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'The Sun fuses about 600 million tonnes of hydrogen into helium every second. Around 4 million tonnes of that is converted directly into energy via E = mc². Despite losing 4 million tonnes per second, the Sun has enough hydrogen fuel for another 5 billion years.',
+      hookQuestion: 'Stars like the Sun have been burning for billions of years without any fuel being added. What kind of process could possibly sustain that?',
+      hookEmoji: '☀️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Nuclear Fusion',
+        symbol: '',
+        unit: '',
+        definition: 'Two light nuclei combine to form a heavier nucleus, releasing energy. The product nucleus has slightly less mass than the two inputs combined - this mass difference is converted to energy.',
+        everydayNote: 'Fusion powers every star. The Sun fuses hydrogen (H-1 and H-2) into helium-4, releasing enormous energy in the process.',
+      },
+      {
+        word: 'Electrostatic Repulsion',
+        symbol: '',
+        unit: '',
+        definition: 'The repulsive force between two positively charged nuclei. Fusion can only occur if the nuclei can get close enough to overcome this force.',
+        everydayNote: 'Like trying to push two north poles of magnets together. At extreme temperatures, particles have enough kinetic energy to overcome the repulsion.',
+      },
+      {
+        word: 'Plasma',
+        symbol: '',
+        unit: '',
+        definition: 'A state of matter at extreme temperatures where electrons are stripped from nuclei, leaving a gas of free charged particles.',
+        everydayNote: 'Fusion reactors on Earth (e.g. JET, ITER) contain hydrogen plasma at over 100 million °C - hotter than the Sun\'s core.',
+      },
+      {
+        word: 'Mass-Energy Equivalence',
+        symbol: 'E = mc²',
+        unit: 'J',
+        definition: 'Mass and energy are interchangeable. A small mass converts to a very large amount of energy because c² (9×10¹⁶) is enormous.',
+        everydayNote: '1 gram of mass fully converted = 9×10¹³ J = enough energy to run a 1 kW heater for about 2,850 years.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What is the main difference between nuclear fission and nuclear fusion?',
+          answers: [
+            'Fission uses hydrogen; fusion uses uranium',
+            'Fission joins nuclei; fusion splits them',
+            'Fission splits heavy nuclei; fusion joins light nuclei',
+            'They are the same process at different scales',
+          ],
+          correct: 2,
+          feedback: 'Fission: a heavy nucleus (like U-235) splits into smaller pieces. Fusion: light nuclei (like hydrogen isotopes) join together. Both release energy via E = mc².',
+        },
+        {
+          question: 'Why do fusion nuclei need extremely high temperatures to fuse?',
+          answers: [
+            'High temperature makes the nuclei larger',
+            'Nuclei need enough kinetic energy to overcome electrostatic repulsion and get close enough to fuse',
+            'High temperature creates the neutrons needed',
+            'Temperature determines the mass of the nuclei',
+          ],
+          correct: 1,
+          feedback: 'Nuclei are positively charged and repel each other strongly. Very high temperatures give particles enough kinetic energy to get close enough for the strong nuclear force to overcome the electrostatic repulsion.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Nuclear Fission', 'Radiation Hazards'],
+      current: 'Nuclear Fusion',
+      after: ['Energy Resources (revisit)', 'Particle Physics (further study)'],
+    },
+
+    workedExample: {
+      title: 'Comparing fission and fusion: energy and conditions',
+      equation: 'E = mc² (applies to both fission and fusion)',
+      context: 'Explain why fusion releases more energy per kilogram of fuel than fission, and why achieving fusion on Earth is so difficult.',
+      steps: [
+        {
+          step: 1,
+          action: 'Energy comparison',
+          content: 'Fusion of 1 kg of hydrogen fuel releases roughly 4 times more energy than fission of 1 kg of uranium.',
+          annotation: 'Per kilogram, fusion wins on energy output. This is why fusion is seen as the holy grail of energy research.',
+        },
+        {
+          step: 2,
+          action: 'Temperature requirement for fusion',
+          content: 'Fusion requires temperatures above 10⁷ K (10 million °C) to overcome electrostatic repulsion.',
+          annotation: 'The Sun achieves this through gravitational compression. On Earth, we need magnetic confinement (tokamak reactors) or inertial confinement (lasers).',
+        },
+        {
+          step: 3,
+          action: 'Mass converted to energy',
+          content: 'In fusion, the product nucleus has less mass than the sum of the inputs. This "missing" mass is converted to energy via E = mc².',
+          annotation: 'The same principle applies in fission. Mass difference × c² gives the energy released.',
+        },
+        {
+          step: 4,
+          action: 'Why fusion is difficult to achieve on Earth',
+          content: 'Containing plasma at 100 million °C without it touching the reactor walls is an enormous engineering challenge.',
+          annotation: 'No material can withstand that temperature - fusion reactors use powerful magnetic fields to keep the plasma away from the walls.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Fusion is dangerous like fission because it produces radioactive waste.',
+        reality: 'Fusion produces far less long-lived radioactive waste than fission. The main product of hydrogen fusion is helium - a safe, non-radioactive gas. Some reactor materials become mildly radioactive, but for much shorter periods than fission waste.',
+        visual: 'Fission waste: some isotopes remain dangerously radioactive for thousands of years. Fusion waste: reactor components activated for decades, but the fuel product (helium) is completely safe.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'The Sun converts 4×10⁻³ kg of mass to energy per second. Using E = mc², find the energy released. (c = 3×10⁸ m/s)',
+        allSteps: [
+          'Write what you know: m = 4×10⁻³ kg, c = 3×10⁸ m/s',
+          'Write the equation: E = mc²',
+          'Substitute: E = 4×10⁻³ × (3×10⁸)²',
+          '??? - calculate E',
+        ],
+        missingStep: 3,
+        missingHint: 'Calculate: c² = (3×10⁸)² = 9×10¹⁶. Then E = 4×10⁻³ × 9×10¹⁶ = ?',
+        answer: 3.6,
+        answerUnit: 'x 10^14 J',
+      },
+      tier2: {
+        question: 'A fusion reaction converts m = 1×10⁻³ kg of mass to energy. Find E. (c = 3×10⁸ m/s)',
+        shownEquation: 'E = mc²',
+        shownStep1: 'Write what you know: m = 1×10⁻³ kg, c² = 9×10¹⁶ m²/s²',
+        hint: 'E = 1×10⁻³ × 9×10¹⁶ = ?',
+        answer: 9,
+        answerUnit: 'x 10^13 J',
+      },
+      tier3: {
+        question: 'A fusion reaction releases E = 4.5×10¹⁴ J. Find the mass converted. (c = 3×10⁸ m/s)',
+        hint: 'Rearrange E = mc² to m = E/c².',
+        methodHint: 'Start with E = mc². Rearrange: m = E/c² = 4.5×10¹⁴ / (9×10¹⁶). Calculate the result.',
+        answer: 0.005,
+        answerUnit: 'kg',
+      },
+    },
+
+    summary: {
+      equation: 'E = mc² | Fusion: light nuclei + extreme temperature -> heavier nucleus + energy',
+      sentence: 'Fusion joins light nuclei at temperatures above 10 million °C, converting a tiny amount of mass into a very large amount of energy. It powers every star in the universe.',
+      promptText: 'Without looking at notes: explain why fusion requires such high temperatures and why it releases more energy per kg of fuel than fission.',
+    },
+
+    sessionRecap: [
+      'Fusion: two light nuclei join to form a heavier nucleus + energy. Requires temperatures above 10⁷ K to overcome electrostatic repulsion.',
+      'Mass is converted to energy via E = mc². The tiny mass difference between reactants and products becomes a huge energy release.',
+      'Fusion releases more energy per kg of fuel than fission. Stars sustain fusion by gravity; Earth-based reactors use magnetic confinement.',
+    ],
   },
 }

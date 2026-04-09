@@ -71,6 +71,7 @@ export default function HookCard({ hook, moduleColor, onReady }) {
 
         {/* Hook fact */}
         <p
+          className="font-display"
           style={{
             fontSize: 18,
             fontWeight: 700,
@@ -101,7 +102,7 @@ export default function HookCard({ hook, moduleColor, onReady }) {
           }}
         >
           <p
-            className="leading-relaxed"
+            className="font-display leading-relaxed"
             style={{ fontSize: 15, fontWeight: 600, color: '#cad5e2' }}
           >
             {hookQuestion}
@@ -133,16 +134,17 @@ export default function HookCard({ hook, moduleColor, onReady }) {
         />
 
         <motion.button
-          className="w-full py-4 rounded-[16px] font-bold flex items-center justify-center gap-2"
+          className="font-display w-full py-4 rounded-[16px] font-bold flex items-center justify-center gap-2"
           style={{
             fontSize: 15,
+            minHeight: 56,
             background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-            boxShadow: `0 8px 28px ${moduleColor}40`,
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
             position: 'relative',
           }}
           onClick={onReady}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}

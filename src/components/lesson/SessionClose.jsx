@@ -118,7 +118,7 @@ export default function SessionClose({
 
         <div className="text-center">
           <h2
-            className="font-bold"
+            className="font-display font-bold"
             style={{ color: '#f8fafc', fontSize: 22, letterSpacing: '-0.03em' }}
           >
             Lesson complete
@@ -194,17 +194,18 @@ export default function SessionClose({
 
       {/* CTAs */}
       <div className="flex flex-col gap-3">
+        {/* Primary CTA — 3D button */}
         <motion.button
-          className="w-full rounded-[16px] font-bold flex items-center justify-center gap-2"
+          className="font-display w-full rounded-[16px] font-bold flex items-center justify-center gap-2"
           style={{
             height: 56,
             fontSize: 16,
             background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
-            boxShadow: `0 10px 32px ${topic.moduleColor}45`,
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${topic.moduleColor}35`,
             color: '#fff',
           }}
           onClick={onStartQuiz}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${topic.moduleColor}20` }}
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.33 }}
@@ -213,9 +214,10 @@ export default function SessionClose({
           <ChevronRight size={20} strokeWidth={2.5} />
         </motion.button>
 
+        {/* Secondary outline CTA */}
         {examCount > 0 && (
           <motion.button
-            className="w-full rounded-[16px] font-bold flex items-center justify-center gap-2 relative overflow-hidden"
+            className="font-display w-full rounded-[16px] font-bold flex items-center justify-center gap-2 relative overflow-hidden"
             style={{
               height: 56,
               fontSize: 15,

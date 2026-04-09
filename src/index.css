@@ -42,6 +42,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Display font for headings — Nunito gives rounded, friendly letterforms */
+  .font-display {
+    font-family: 'Nunito', 'Inter', sans-serif;
+  }
+
   ::-webkit-scrollbar {
     display: none;
   }

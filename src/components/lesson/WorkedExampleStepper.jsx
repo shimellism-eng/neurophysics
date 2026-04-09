@@ -45,6 +45,10 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
     }
   }
 
+  // Primary button state: gradient when active (revealing steps or misconception), outline when done
+  const isPrimary = !allStepsRevealed || (misconceptionAfter && !showMisconception)
+  const isOutline = allStepsRevealed && (!misconceptionAfter || showMisconception)
+
   return (
     <div className="px-5 py-5 flex flex-col gap-4">
 
@@ -61,7 +65,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
           <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: moduleColor }}>
             Worked Example
           </div>
-          <div className="text-base font-bold" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+          <div className="font-display text-base font-bold" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
             {title}
           </div>
           {context && (
@@ -102,7 +106,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
                 style={{ background: `${moduleColor}14` }}
               >
                 <StepBubble number={step.step} color={moduleColor} />
-                <span className="text-sm font-semibold" style={{ color: moduleColor }}>
+                <span className="font-display text-sm font-semibold" style={{ color: moduleColor }}>
                   {step.action}
                 </span>
               </div>
@@ -202,16 +206,19 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
       {/* Action button */}
       {!misconceptionDone && (
         <motion.button
-          className="w-full rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
+          className="font-display w-full rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
           style={{
             paddingTop: 18,
             paddingBottom: 18,
-            background: !allStepsRevealed || (misconceptionAfter && !showMisconception)
+            minHeight: 56,
+            background: isPrimary
               ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`
               : 'rgba(255,255,255,0.06)',
-            boxShadow: !allStepsRevealed ? `0 8px 28px ${moduleColor}35` : 'none',
+            boxShadow: isPrimary
+              ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`
+              : 'none',
             color: '#fff',
-            border: allStepsRevealed && (!misconceptionAfter || showMisconception)
+            border: isOutline
               ? '1px solid rgba(255,255,255,0.15)'
               : 'none',
           }}
@@ -225,7 +232,10 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
               onComplete()
             }
           }}
-          whileTap={{ scale: 0.97 }}
+          whileTap={isPrimary
+            ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }
+            : { scale: 0.97 }
+          }
         >
           {!allStepsRevealed
             ? `Reveal step ${revealed + 1}`

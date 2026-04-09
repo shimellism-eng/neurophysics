@@ -193,6 +193,7 @@ function Tier1({ data, moduleColor, onComplete }) {
 
   const numAnswer = parseFloat(input)
   const isCorrect = submitted && Math.abs(numAnswer - answer) < Math.abs(answer * 0.03 + 0.01)
+  const hasInput = input.trim().length > 0
 
   return (
     <div className="flex flex-col gap-4">
@@ -200,7 +201,7 @@ function Tier1({ data, moduleColor, onComplete }) {
         className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <p className="text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
+        <p className="font-display text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
       </div>
 
       {/* All steps shown, last one is missing */}
@@ -237,15 +238,17 @@ function Tier1({ data, moduleColor, onComplete }) {
 
       {!submitted ? (
         <motion.button
-          className="w-full py-3.5 rounded-[14px] font-bold text-sm"
+          className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
           style={{
-            background: input.trim()
+            minHeight: 44,
+            background: hasInput
               ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
               : 'rgba(255,255,255,0.05)',
-            color: input.trim() ? '#fff' : 'rgba(255,255,255,0.3)',
+            boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
+            color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
           }}
-          onClick={() => input.trim() && setSubmitted(true)}
-          whileTap={input.trim() ? { scale: 0.97 } : {}}
+          onClick={() => hasInput && setSubmitted(true)}
+          whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
         >
           Check
         </motion.button>
@@ -258,13 +261,15 @@ function Tier1({ data, moduleColor, onComplete }) {
             moduleColor={moduleColor}
           />
           <motion.button
-            className="w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
+            className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
+              minHeight: 56,
               background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+              boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
               color: '#fff',
             }}
             onClick={() => onComplete(isCorrect)}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -286,6 +291,7 @@ function Tier2({ data, moduleColor, onComplete }) {
 
   const numAnswer = parseFloat(input)
   const isCorrect = submitted && Math.abs(numAnswer - answer) < Math.abs(answer * 0.03 + 0.01)
+  const hasInput = input.trim().length > 0
 
   return (
     <div className="flex flex-col gap-4">
@@ -293,7 +299,7 @@ function Tier2({ data, moduleColor, onComplete }) {
         className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <p className="text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
+        <p className="font-display text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
       </div>
 
       {/* Partial scaffold */}
@@ -329,8 +335,9 @@ function Tier2({ data, moduleColor, onComplete }) {
       {/* Hint button - no penalty */}
       {!submitted && !hintShown && (
         <button
-          className="flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
+          className="font-display flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
           style={{
+            minHeight: 44,
             background: 'rgba(253,199,0,0.07)',
             border: '1px solid rgba(253,199,0,0.25)',
             color: '#fdc700',
@@ -357,15 +364,17 @@ function Tier2({ data, moduleColor, onComplete }) {
 
       {!submitted ? (
         <motion.button
-          className="w-full py-3.5 rounded-[14px] font-bold text-sm"
+          className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
           style={{
-            background: input.trim()
+            minHeight: 44,
+            background: hasInput
               ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
               : 'rgba(255,255,255,0.05)',
-            color: input.trim() ? '#fff' : 'rgba(255,255,255,0.3)',
+            boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
+            color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
           }}
-          onClick={() => input.trim() && setSubmitted(true)}
-          whileTap={input.trim() ? { scale: 0.97 } : {}}
+          onClick={() => hasInput && setSubmitted(true)}
+          whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
         >
           Check
         </motion.button>
@@ -378,13 +387,15 @@ function Tier2({ data, moduleColor, onComplete }) {
             moduleColor={moduleColor}
           />
           <motion.button
-            className="w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
+            className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
+              minHeight: 56,
               background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+              boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
               color: '#fff',
             }}
             onClick={() => onComplete(isCorrect)}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -411,6 +422,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
 
   const numAnswer = parseFloat(input)
   const isCorrect = submitted && Math.abs(numAnswer - answer) < Math.abs(answer * 0.03 + 0.01)
+  const hasInput = input.trim().length > 0
 
   if (submitted && confidence > 0) {
     return (
@@ -432,7 +444,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
           }
         </div>
         <div className="text-center">
-          <p className="text-base font-bold" style={{ color: '#f8fafc' }}>
+          <p className="font-display text-base font-bold" style={{ color: '#f8fafc' }}>
             {isCorrect ? 'Nailed it!' : 'Good effort - keep going'}
           </p>
           <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>
@@ -440,14 +452,15 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
           </p>
         </div>
         <motion.button
-          className="w-full py-4 rounded-[16px] font-bold text-sm"
+          className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
+            minHeight: 56,
             background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-            boxShadow: `0 8px 24px ${moduleColor}30`,
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
           }}
           onClick={onComplete}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
         >
           Continue
         </motion.button>
@@ -461,7 +474,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
         className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <p className="text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
+        <p className="font-display text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
       </div>
 
       <NumericInput
@@ -477,8 +490,9 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
           {/* Method hint - process feedback, not answer */}
           {methodHint && !methodShown && (
             <button
-              className="flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
+              className="font-display flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
               style={{
+                minHeight: 44,
                 background: 'rgba(99,102,241,0.08)',
                 border: '1px solid rgba(99,102,241,0.25)',
                 color: '#818cf8',
@@ -503,15 +517,17 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
           </AnimatePresence>
 
           <motion.button
-            className="w-full py-3.5 rounded-[14px] font-bold text-sm"
+            className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
             style={{
-              background: input.trim()
+              minHeight: 44,
+              background: hasInput
                 ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
                 : 'rgba(255,255,255,0.05)',
-              color: input.trim() ? '#fff' : 'rgba(255,255,255,0.3)',
+              boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
+              color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
             }}
-            onClick={() => input.trim() && setSubmitted(true)}
-            whileTap={input.trim() ? { scale: 0.97 } : {}}
+            onClick={() => hasInput && setSubmitted(true)}
+            whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
           >
             Check answer
           </motion.button>
@@ -551,7 +567,7 @@ function Tier3({ data, moduleColor, keywords, onComplete }) {
                       onMouseEnter={() => setHoveredStar(n)}
                       onMouseLeave={() => setHoveredStar(0)}
                       className="flex flex-col items-center gap-1.5"
-                      style={{ flex: 1 }}
+                      style={{ flex: 1, minHeight: 44 }}
                     >
                       <motion.div
                         animate={{ scale: active ? 1.12 : 1 }}

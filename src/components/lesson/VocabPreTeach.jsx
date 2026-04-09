@@ -100,7 +100,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         </div>
 
         <div className="text-center">
-          <p className="text-lg font-bold mb-1.5" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+          <p className="font-display text-lg font-bold mb-1.5" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
             Words unlocked -- you're ready
           </p>
           <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.4)', maxWidth: 280 }}>
@@ -109,16 +109,16 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         </div>
 
         <motion.button
-          className="w-full rounded-[18px] font-bold text-sm flex items-center justify-center gap-2"
+          className="font-display w-full rounded-[18px] font-bold text-sm flex items-center justify-center gap-2"
           style={{
             background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-            boxShadow: `0 8px 28px ${moduleColor}40`,
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
             minHeight: 56,
             padding: '0 24px',
           }}
           onClick={onPass}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
         >
           Continue to the lesson
           <ChevronRight size={16} strokeWidth={2.5} />
@@ -156,7 +156,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
           exit={{ opacity: 0, x: -16 }}
           transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-base font-bold mb-5" style={{ color: '#f8fafc' }}>
+          <p className="font-display text-base font-bold mb-5" style={{ color: '#f8fafc' }}>
             What does{' '}
             <span style={{ color: moduleColor }}>{current.word}</span>{' '}
             mean?
@@ -191,11 +191,12 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
               return (
                 <motion.button
                   key={i}
-                  className="w-full text-left px-4 py-3.5 rounded-[14px] text-sm font-medium"
+                  className="font-display w-full text-left px-4 py-3.5 rounded-[14px] text-sm font-medium"
                   style={{
                     background: bg,
                     border,
                     color: textColor,
+                    minHeight: 44,
                     transition: 'background 0.25s, border 0.25s, color 0.25s',
                   }}
                   onClick={() => handleAnswer(opt)}
@@ -238,15 +239,15 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
           <AnimatePresence>
             {isAnswered && (
               <motion.button
-                className="w-full rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
+                className="font-display w-full rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
                 style={{
                   background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-                  boxShadow: `0 8px 24px ${moduleColor}35`,
+                  boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
                   color: '#fff',
-                  minHeight: 52,
+                  minHeight: 56,
                 }}
                 onClick={handleNext}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
@@ -358,7 +359,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
 
                 {/* Word */}
                 <div
-                  className="text-3xl font-black mb-3"
+                  className="font-display text-3xl font-black mb-3"
                   style={{ color: '#f8fafc', letterSpacing: '-0.03em', lineHeight: 1.1 }}
                 >
                   {current.word}
@@ -455,15 +456,15 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
       {/* Next button */}
       <div className="px-5 pb-7">
         <motion.button
-          className="w-full rounded-[18px] font-bold text-sm flex flex-col items-center justify-center gap-0.5"
+          className="font-display w-full rounded-[18px] font-bold text-sm flex flex-col items-center justify-center gap-0.5"
           style={{
             background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-            boxShadow: `0 8px 28px ${moduleColor}40`,
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
             minHeight: 56,
           }}
           onClick={handleNext}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
         >
           <div className="flex items-center gap-2">
             {isLast ? (

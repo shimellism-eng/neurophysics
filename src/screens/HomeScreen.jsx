@@ -154,6 +154,7 @@ export default function HomeScreen() {
       style={{
         background: '#080f1e',
         paddingTop: 'env(safe-area-inset-top, 16px)',
+        paddingBottom: 96,
       }}
     >
 
@@ -194,7 +195,7 @@ export default function HomeScreen() {
               {greeting}
             </p>
             <h1
-              className="font-bold leading-tight truncate"
+              className="font-bold leading-tight truncate font-display"
               style={{ color: '#f8fafc', fontSize: 26, letterSpacing: '-0.03em' }}
             >
               {displayName}
@@ -264,9 +265,9 @@ export default function HomeScreen() {
       </div>
 
       {/* ── STREAK ────────────────────────────────────────────── */}
-      <div className="px-5 mb-3">
+      <div className="px-5 mb-5">
         <motion.div
-          className="w-full rounded-[22px] px-5 py-4"
+          className="w-full rounded-[22px] px-5 py-5"
           style={{
             background: streak > 0
               ? 'linear-gradient(135deg, rgba(249,115,22,0.2) 0%, rgba(15,22,41,0.97) 60%)'
@@ -294,7 +295,7 @@ export default function HomeScreen() {
             <div className="flex-1 min-w-0">
               {streak > 0 ? (
                 <>
-                  <div className="font-bold" style={{ color: '#f97316', fontSize: 22, letterSpacing: '-0.02em' }}>
+                  <div className="font-bold font-display" style={{ color: '#f97316', fontSize: 22, letterSpacing: '-0.02em' }}>
                     {streak} day streak
                   </div>
                   <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
@@ -304,7 +305,7 @@ export default function HomeScreen() {
                 </>
               ) : (
                 <>
-                  <div className="text-base font-bold" style={{ color: '#f8fafc' }}>
+                  <div className="text-base font-bold font-display" style={{ color: '#f8fafc' }}>
                     Start your streak
                   </div>
                   <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -320,9 +321,9 @@ export default function HomeScreen() {
 
       {/* ── REVIEW DUE ────────────────────────────────────────── */}
       {reviewDue.length > 0 ? (
-        <div className="px-5 mb-3">
+        <div className="px-5 mb-5">
           <motion.div
-            className="w-full rounded-[22px] px-5 py-4"
+            className="w-full rounded-[22px] px-5 py-5"
             style={{
               background: 'rgba(99,102,241,0.07)',
               border: '1px solid rgba(99,102,241,0.22)',
@@ -350,11 +351,12 @@ export default function HomeScreen() {
               {reviewDue.slice(0, 3).map(({ id, topic }) => (
                 <motion.button
                   key={id}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+                  className="flex items-center gap-1.5 px-4 py-3 rounded-full text-xs font-semibold"
                   style={{
                     background: topic.moduleColor ? `${topic.moduleColor}18` : 'rgba(99,102,241,0.15)',
                     border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}35` : 'rgba(99,102,241,0.3)'}`,
                     color: topic.moduleColor || '#818cf8',
+                    minHeight: 44,
                   }}
                   onClick={() => navigate(`/lesson/${id}`)}
                   whileTap={{ scale: 0.95 }}
@@ -367,7 +369,7 @@ export default function HomeScreen() {
           </motion.div>
         </div>
       ) : masteredCount >= 5 ? (
-        <div className="px-5 mb-3">
+        <div className="px-5 mb-5">
           <motion.div
             className="w-full rounded-[22px] px-5 py-3 flex items-center gap-3"
             style={{ background: 'rgba(99,102,241,0.05)', border: '1px solid rgba(99,102,241,0.15)' }}
@@ -384,17 +386,18 @@ export default function HomeScreen() {
 
       {/* ── DAILY SPARK ───────────────────────────────────────── */}
       {sparkTopic && (
-        <div className="px-5 mb-3">
+        <div className="px-5 mb-5">
           <motion.button
-            className="w-full rounded-[22px] px-5 py-4 text-left flex items-center gap-4"
+            className="w-full rounded-[22px] px-5 py-5 text-left flex items-center gap-4"
             style={{
               background: sparkTopic.moduleColor
                 ? `linear-gradient(135deg, ${sparkTopic.moduleColor}20, rgba(15,22,41,0.97))`
                 : 'linear-gradient(135deg, rgba(99,102,241,0.20), rgba(15,22,41,0.97))',
               border: `1px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}40` : 'rgba(99,102,241,0.4)'}`,
+              minHeight: 44,
             }}
             onClick={() => navigate(sparkIsWeak ? `/diagnostic/${sparkId}` : `/lesson/${sparkId}`)}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ y: 3, scale: 0.99 }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.22, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
@@ -443,7 +446,7 @@ export default function HomeScreen() {
       )}
 
       {/* ── CONTINUE LEARNING ─────────────────────────────────── */}
-      <div className="px-5 mb-3 space-y-2.5">
+      <div className="px-5 mb-5 space-y-2.5">
         {/* Primary CTA */}
         <motion.button
           className="w-full rounded-[22px] flex items-center justify-between px-5"
@@ -453,13 +456,11 @@ export default function HomeScreen() {
             background: resumeModule
               ? `linear-gradient(135deg, ${resumeModule.color}e0, ${resumeModule.color}90)`
               : 'linear-gradient(135deg, #6366f1, #4f46e5)',
-            boxShadow: resumeModule
-              ? `0 8px 40px ${resumeModule.color}40, 0 2px 0 rgba(255,255,255,0.08) inset`
-              : '0 8px 40px rgba(99,102,241,0.35), 0 2px 0 rgba(255,255,255,0.08) inset',
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 14px 32px ${moduleColor || '#6366f1'}40`,
             color: '#fff',
           }}
           onClick={() => navigate(`/lesson/${firstUnmastered}`)}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 12px ${moduleColor || '#6366f1'}25` }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -474,10 +475,10 @@ export default function HomeScreen() {
               </div>
             )}
             <div className="text-left">
-              <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5">
+              <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5 font-display">
                 {masteredCount === 0 ? 'Start here' : 'Continue learning'}
               </div>
-              <div className="font-bold" style={{ fontSize: 15, letterSpacing: '-0.01em' }}>
+              <div className="font-bold font-display" style={{ fontSize: 15, letterSpacing: '-0.01em' }}>
                 {resumeTopic?.title || 'Energy Stores'}
               </div>
               {resumeModule && (
@@ -499,9 +500,10 @@ export default function HomeScreen() {
               border: '1px solid rgba(99,102,241,0.28)',
               color: '#a5b4fc',
               borderLeft: `3px solid ${moduleColor || '#6366f1'}`,
+              minHeight: 52,
             }}
             onClick={() => navigate('/mastery')}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ y: 2, scale: 0.98 }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
@@ -518,9 +520,10 @@ export default function HomeScreen() {
               background: 'rgba(255,255,255,0.04)',
               border: '1px solid rgba(255,255,255,0.1)',
               color: 'rgba(255,255,255,0.5)',
+              minHeight: 52,
             }}
             onClick={() => navigate('/topics')}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ y: 2, scale: 0.98 }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.38 }}
@@ -587,6 +590,7 @@ export default function HomeScreen() {
                       style={{
                         background: 'rgba(249,115,22,0.06)',
                         border: '1px solid rgba(249,115,22,0.2)',
+                        minHeight: 44,
                       }}
                       onClick={() => navigate(`/diagnostic/${x.id}`)}
                       whileTap={{ scale: 0.97 }}
@@ -608,7 +612,7 @@ export default function HomeScreen() {
                         <div className="text-sm font-bold truncate" style={{ color: '#f8fafc' }}>{x.topic.title}</div>
                         <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>Tap to practise again</div>
                       </div>
-                      <ChevronRight size={13} color="#f97316" />
+                      <span style={{ color: x.topic.moduleColor, fontWeight: 700, fontSize: 13 }}>→</span>
                     </motion.button>
                   ))}
                 </div>
@@ -630,6 +634,7 @@ export default function HomeScreen() {
                       style={{
                         background: `${x.topic.moduleColor}0d`,
                         border: `1px solid ${x.topic.moduleColor}30`,
+                        minHeight: 44,
                       }}
                       onClick={() => navigate(x.reason === 'needs work' ? `/diagnostic/${x.id}` : `/lesson/${x.id}`)}
                       whileTap={{ scale: 0.96 }}
@@ -664,7 +669,6 @@ export default function HomeScreen() {
         )}
       </AnimatePresence>
 
-      <div style={{ height: 16 }} />
     </div>
   )
 }

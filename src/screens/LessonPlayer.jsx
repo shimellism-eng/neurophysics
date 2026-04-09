@@ -21,7 +21,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import {
   ArrowLeft, ChevronRight, BookOpen, FlaskConical,
   GraduationCap, Zap, Globe, Lightbulb, Volume2,
-  Layers, Target, Star, CheckCircle2, Map,
+  Layers, Target, Star, CheckCircle2, Map, Clock,
 } from 'lucide-react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -206,6 +206,9 @@ export default function LessonPlayer() {
   const { markStarted } = useProgress()
   const [step, setStep]           = useState(0)
   const [direction, setDirection] = useState(1)
+  const [showIntro, setShowIntro] = useState(true)
+  const [xpPop, setXpPop]         = useState(false)
+  const [xpKey, setXpKey]         = useState(0)
 
   const topic = TOPICS[id]
   if (!topic) return (
@@ -224,6 +227,9 @@ export default function LessonPlayer() {
 
   const goNext = useCallback(() => {
     if (step < totalSteps - 1) {
+      setXpKey(k => k + 1)
+      setXpPop(true)
+      setTimeout(() => setXpPop(false), 1000)
       setDirection(1)
       setStep(s => s + 1)
     }
@@ -364,10 +370,10 @@ export default function LessonPlayer() {
           }}
         />
 
-        {/* Back button */}
+        {/* Back button — 44×44 touch target */}
         <button
           onClick={goBack}
-          className="w-9 h-9 flex items-center justify-center shrink-0"
+          className="w-11 h-11 flex items-center justify-center shrink-0"
           style={{
             borderRadius: '50%',
             background: 'rgba(255,255,255,0.06)',
@@ -382,7 +388,7 @@ export default function LessonPlayer() {
         <div className="flex-1 min-w-0" style={{ position: 'relative' }}>
           <div className="text-xs font-bold" style={{ color: topic.moduleColor }}>{topic.module}</div>
           <h1
-            className="font-bold leading-tight truncate"
+            className="font-display font-bold leading-tight truncate"
             style={{ color: '#f8fafc', fontSize: 17, letterSpacing: '-0.02em' }}
           >
             {topic.title}
@@ -559,6 +565,183 @@ export default function LessonPlayer() {
           </motion.button>
         </motion.div>
       )}
+
+      {/* ── XP pop animation ── */}
+      <AnimatePresence>
+        {xpPop && (
+          <motion.div
+            key={xpKey}
+            className="fixed left-1/2 font-display font-bold text-base pointer-events-none"
+            style={{
+              color: topic.moduleColor,
+              textShadow: `0 0 20px ${topic.moduleColor}80`,
+              x: '-50%',
+              bottom: 100,
+              zIndex: 100,
+            }}
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 0, y: -48 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
+          >
+            +10 XP
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Pre-lesson intro bottom sheet ── */}
+      <AnimatePresence>
+        {showIntro && (
+          <div
+            className="fixed inset-0 z-50 flex flex-col justify-end"
+            style={{
+              background: 'rgba(8,15,30,0.7)',
+              backdropFilter: 'blur(6px)',
+              WebkitBackdropFilter: 'blur(6px)',
+            }}
+          >
+            <motion.div
+              className="rounded-t-[28px] px-6 pt-6 pb-8"
+              style={{ background: '#0d1629', position: 'relative', overflow: 'hidden' }}
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+            >
+              {/* Radial gradient bloom */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: 180,
+                  background: `radial-gradient(ellipse 80% 100% at 50% 0%, ${topic.moduleColor}22 0%, transparent 70%)`,
+                  pointerEvents: 'none',
+                }}
+              />
+
+              {/* Drag handle */}
+              <div className="flex justify-center mb-5" style={{ position: 'relative' }}>
+                <div
+                  style={{
+                    width: 40,
+                    height: 4,
+                    borderRadius: 999,
+                    background: 'rgba(255,255,255,0.15)',
+                  }}
+                />
+              </div>
+
+              {/* Module name */}
+              <div
+                className="uppercase tracking-widest mb-2"
+                style={{ color: topic.moduleColor, fontSize: 11, fontWeight: 700, position: 'relative' }}
+              >
+                {topic.module}
+              </div>
+
+              {/* Topic title */}
+              <h2
+                className="font-display"
+                style={{
+                  color: '#f8fafc',
+                  fontSize: 22,
+                  fontWeight: 800,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.2,
+                  marginBottom: 12,
+                  position: 'relative',
+                }}
+              >
+                {topic.title}
+              </h2>
+
+              {/* Course badge + time estimate row */}
+              <div className="flex items-center gap-2 mb-5" style={{ position: 'relative' }}>
+                <span
+                  className="px-3 py-1 text-xs font-semibold"
+                  style={{
+                    borderRadius: 999,
+                    ...(topic.course === 'physics-only'
+                      ? { background: 'rgba(139,92,246,0.12)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.28)' }
+                      : { background: 'rgba(34,197,94,0.10)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.25)' }
+                    ),
+                  }}
+                >
+                  {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
+                </span>
+                <span
+                  className="flex items-center gap-1 px-3 py-1 text-xs font-semibold"
+                  style={{
+                    borderRadius: 999,
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.09)',
+                    color: 'rgba(255,255,255,0.45)',
+                  }}
+                >
+                  <Clock size={11} />
+                  About 15 min
+                </span>
+              </div>
+
+              {/* Step dots — 9 dots showing lesson structure */}
+              <div className="flex items-center gap-1.5 mb-5" style={{ position: 'relative' }}>
+                {(isNewFlow ? NEW_STEPS : LEGACY_STEPS).map((s, i) => (
+                  <div
+                    key={s.id}
+                    style={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: '50%',
+                      background: i === 0 ? topic.moduleColor : 'rgba(255,255,255,0.12)',
+                      transition: 'background 0.2s',
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Hook fact preview */}
+              {topic.hook?.hookFact && (
+                <p
+                  className="text-sm italic mb-5"
+                  style={{
+                    color: 'rgba(255,255,255,0.38)',
+                    lineHeight: 1.55,
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    position: 'relative',
+                  }}
+                >
+                  {topic.hook.hookFact}
+                </p>
+              )}
+
+              {/* Start lesson button */}
+              <motion.button
+                className="w-full font-display font-bold text-base flex items-center justify-center"
+                style={{
+                  height: 56,
+                  borderRadius: 16,
+                  background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}bb)`,
+                  color: '#fff',
+                  boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${topic.moduleColor}35`,
+                  position: 'relative',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15)` }}
+                onClick={() => setShowIntro(false)}
+              >
+                Start lesson
+              </motion.button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

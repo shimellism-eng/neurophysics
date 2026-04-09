@@ -96,14 +96,15 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
         </p>
 
         <motion.button
-          className="w-full py-4 rounded-[16px] font-bold text-sm"
+          className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
+            minHeight: 56,
             background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-            boxShadow: `0 8px 24px ${moduleColor}35`,
+            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
           }}
           onClick={onComplete}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
         >
           See it in action
           <span className="ml-2">→</span>
@@ -131,7 +132,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
           exit={{ opacity: 0, x: -16 }}
           transition={{ duration: 0.2 }}
         >
-          <p className="text-base font-semibold mb-5 leading-snug" style={{ color: '#f8fafc' }}>
+          <p className="font-display text-base font-semibold mb-5 leading-snug" style={{ color: '#f8fafc' }}>
             {current.question}
           </p>
 
@@ -157,8 +158,8 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
               return (
                 <button
                   key={i}
-                  className="w-full text-left px-4 py-3.5 rounded-[14px] text-sm"
-                  style={{ background: bg, border, color: '#cad5e2', transition: 'background 0.2s, border 0.2s' }}
+                  className="font-display w-full text-left px-4 py-3.5 rounded-[14px] text-sm"
+                  style={{ background: bg, border, color: '#cad5e2', minHeight: 44, transition: 'background 0.2s, border 0.2s' }}
                   onClick={() => handleSelect(i)}
                 >
                   {ans}
@@ -212,14 +213,15 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
 
           {showFeedback && (
             <motion.button
-              className="w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2 sticky bottom-4"
+              className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2 sticky bottom-4"
               style={{
+                minHeight: 56,
                 background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
-                boxShadow: `0 8px 24px ${moduleColor}40`,
+                boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
                 color: '#fff',
               }}
               onClick={handleNext}
-              whileTap={{ scale: 0.97 }}
+              whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
             >

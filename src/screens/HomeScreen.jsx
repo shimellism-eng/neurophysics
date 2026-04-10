@@ -1,9 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronRight, Zap, Flame, Target, TrendingUp,
-  BookOpen, ArrowRight, Calendar, CheckCircle,
+  ArrowRight, Calendar, CheckCircle,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -24,39 +23,28 @@ function loadProfile() {
 
 // ── 7-day streak calendar ─────────────────────────────────────────────────────
 function StreakCalendar({ streak }) {
-  const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  const today = new Date().getDay()
+  const labels  = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  const today   = new Date().getDay()
   const todayIdx = today === 0 ? 6 : today - 1
 
   return (
     <div className="flex items-end gap-1.5 mt-4">
       {labels.map((label, i) => {
-        const daysAgo  = todayIdx >= i ? todayIdx - i : todayIdx - i + 7
-        const filled   = daysAgo < streak
-        const isToday  = i === todayIdx
-        const isFuture = daysAgo > todayIdx && !filled
+        const daysAgo = todayIdx >= i ? todayIdx - i : todayIdx - i + 7
+        const filled  = daysAgo < streak
+        const isToday = i === todayIdx
 
         return (
           <div key={i} className="flex flex-col items-center gap-1.5 flex-1">
-            {/* Bar */}
             <div
               style={{
-                width: '100%',
-                height: 28,
-                borderRadius: 6,
+                width: '100%', height: 28, borderRadius: 6,
                 background: filled
-                  ? isToday
-                    ? '#f97316'
-                    : 'rgba(249,115,22,0.45)'
-                  : isFuture
-                    ? 'rgba(255,255,255,0.04)'
-                    : 'rgba(255,255,255,0.07)',
-                border: isToday && !filled
-                  ? '1.5px solid rgba(249,115,22,0.5)'
-                  : 'none',
+                  ? isToday ? '#f97316' : 'rgba(249,115,22,0.45)'
+                  : 'rgba(255,255,255,0.07)',
+                border: isToday && !filled ? '1.5px solid rgba(249,115,22,0.5)' : 'none',
                 boxShadow: filled && isToday ? '0 0 10px rgba(249,115,22,0.5)' : 'none',
-                position: 'relative',
-                overflow: 'hidden',
+                position: 'relative', overflow: 'hidden',
               }}
             >
               {filled && isToday && (
@@ -66,10 +54,8 @@ function StreakCalendar({ streak }) {
                 }} />
               )}
             </div>
-            {/* Label */}
             <span style={{
-              fontSize: 9,
-              fontWeight: isToday ? 700 : 500,
+              fontSize: 9, fontWeight: isToday ? 700 : 500,
               color: filled
                 ? isToday ? '#f97316' : 'rgba(249,115,22,0.55)'
                 : 'rgba(255,255,255,0.2)',
@@ -84,74 +70,13 @@ function StreakCalendar({ streak }) {
   )
 }
 
-// ── Module progress rings (only shown when there's data) ──────────────────────
-function ModuleRings({ progress }) {
-  const navigate = useNavigate()
-  return (
-    <div className="flex gap-2.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
-      {MODULES.map((mod, index) => {
-        const masteredCount = mod.topics.filter(id => progress[id]?.mastered).length
-        const total = mod.topics.length
-        const pct   = total > 0 ? masteredCount / total : 0
-        const R = 20
-        const C = 2 * Math.PI * R
-        const gradId = `ring-${index}`
-
-        return (
-          <motion.button
-            key={mod.name}
-            className="flex-shrink-0 flex flex-col items-center py-3 px-2 rounded-2xl"
-            style={{
-              width: 68,
-              background: `${mod.color}0d`,
-              border: `1px solid ${mod.color}22`,
-            }}
-            onClick={() => navigate('/learn')}
-            whileTap={{ scale: 0.94 }}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08 + index * 0.04 }}
-          >
-            <div className="relative" style={{ width: 50, height: 50 }}>
-              <svg width="50" height="50" viewBox="0 0 50 50">
-                <circle cx="25" cy="25" r={R} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="4.5" />
-                <motion.circle
-                  cx="25" cy="25" r={R}
-                  fill="none" stroke={`url(#${gradId})`} strokeWidth="4.5"
-                  strokeLinecap="round" strokeDasharray={C} strokeDashoffset={C}
-                  transform="rotate(-90 25 25)"
-                  animate={{ strokeDashoffset: C * (1 - pct) }}
-                  transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 + index * 0.04 }}
-                />
-                <defs>
-                  <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor={mod.color} />
-                    <stop offset="100%" stopColor={mod.color} stopOpacity="0.55" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="font-bold" style={{ fontSize: 11, color: '#f8fafc' }}>{masteredCount}</span>
-                <span style={{ fontSize: 8, color: 'rgba(255,255,255,0.35)' }}>/{total}</span>
-              </div>
-            </div>
-            <span className="mt-1.5 text-center leading-tight font-semibold"
-              style={{ fontSize: 9, color: 'rgba(255,255,255,0.5)', maxWidth: 60 }}>
-              {mod.name}
-            </span>
-          </motion.button>
-        )
-      })}
-    </div>
-  )
-}
-
+// ─── Screen ───────────────────────────────────────────────────────────────────
 export default function HomeScreen() {
-  const navigate  = useNavigate()
+  const navigate = useNavigate()
   const { progress, stats } = useProgress()
   const { weakTopics, suggestions, overallAccuracy, hasData, reviewDue } = useInsights()
-  const { user }  = useAuth()
-  const profile   = loadProfile()
+  const { user } = useAuth()
+  const profile  = loadProfile()
 
   const rawName = profile.name || user?.user_metadata?.full_name || user?.user_metadata?.name
     || user?.email?.split('@')[0] || 'Learner'
@@ -171,8 +96,6 @@ export default function HomeScreen() {
   const resumeModule    = MODULES.find(m => m.topics.includes(firstUnmastered))
   const moduleColor     = resumeModule?.color || '#6366f1'
 
-  const isNewUser = masteredCount === 0 && xp < 5
-
   // Exam countdown
   const examDaysLeft = (() => {
     if (!profile.examDate) return null
@@ -180,10 +103,14 @@ export default function HomeScreen() {
     return d > 0 && d <= 365 ? d : null
   })()
 
-  // Filter suggestions that aren't the same as the primary CTA
-  const filteredSuggestions = suggestions.filter(s => s.id !== firstUnmastered)
-  // Only show weak topics that have actual data and aren't the primary CTA
-  const filteredWeak = weakTopics.filter(w => w.id !== firstUnmastered && w.accuracy < 0.65)
+  // Deduplicate: weak topics first, then suggestions that aren't already shown
+  const filteredWeak = weakTopics.filter(
+    w => w.id !== firstUnmastered && w.accuracy < 0.65
+  )
+  const weakIds = new Set(filteredWeak.map(w => w.id))
+  const filteredSuggestions = suggestions.filter(
+    s => s.id !== firstUnmastered && !weakIds.has(s.id)
+  )
 
   return (
     <div
@@ -223,7 +150,6 @@ export default function HomeScreen() {
               {displayName}
             </h1>
 
-            {/* Stat pills — only show XP once earned */}
             <div className="flex items-center gap-2 mt-2 flex-wrap">
               {xp >= 5 ? (
                 <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
@@ -328,35 +254,6 @@ export default function HomeScreen() {
         </motion.button>
       </div>
 
-      {/* ── SECONDARY ACTIONS ────────────────────────────────────────────────── */}
-      <div className="px-5 mb-5 grid grid-cols-2 gap-2.5">
-        <motion.button
-          className="rounded-[18px] flex items-center justify-center gap-2"
-          style={{ height: 52, background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.22)', color: '#a5b4fc' }}
-          onClick={() => navigate('/learn')}
-          whileTap={{ y: 2, scale: 0.97 }}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.22 }}
-        >
-          <Target size={15} color="#818cf8" />
-          <span className="text-xs font-bold">My Progress</span>
-        </motion.button>
-
-        <motion.button
-          className="rounded-[18px] flex items-center justify-center gap-2"
-          style={{ height: 52, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', color: 'rgba(255,255,255,0.45)' }}
-          onClick={() => navigate('/learn')}
-          whileTap={{ y: 2, scale: 0.97 }}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
-        >
-          <BookOpen size={15} color="rgba(255,255,255,0.38)" />
-          <span className="text-xs font-bold">All Topics</span>
-        </motion.button>
-      </div>
-
       {/* ── STREAK ───────────────────────────────────────────────────────────── */}
       <div className="px-5 mb-5">
         <motion.div
@@ -370,7 +267,7 @@ export default function HomeScreen() {
           }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.28, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: 0.22, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-start gap-3.5">
             <motion.div
@@ -378,7 +275,11 @@ export default function HomeScreen() {
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
               style={{ paddingTop: 2 }}
             >
-              <Flame size={streak > 0 ? 34 : 22} color={streak > 0 ? '#f97316' : 'rgba(255,255,255,0.18)'} strokeWidth={1.5} />
+              <Flame
+                size={streak > 0 ? 34 : 22}
+                color={streak > 0 ? '#f97316' : 'rgba(255,255,255,0.18)'}
+                strokeWidth={1.5}
+              />
             </motion.div>
 
             <div className="flex-1 min-w-0">
@@ -407,27 +308,6 @@ export default function HomeScreen() {
         </motion.div>
       </div>
 
-      {/* ── MODULE RINGS — only shown once progress exists ────────────────────── */}
-      <AnimatePresence>
-        {masteredCount > 0 && (
-          <motion.div
-            className="px-5 mb-5"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <div style={{ width: 5, height: 5, borderRadius: '50%', background: moduleColor }} />
-              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                Your modules
-              </span>
-            </div>
-            <ModuleRings progress={progress} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* ── REVIEW DUE ───────────────────────────────────────────────────────── */}
       <AnimatePresence>
         {reviewDue.length > 0 && (
@@ -436,7 +316,7 @@ export default function HomeScreen() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ delay: 0.32 }}
+            transition={{ delay: 0.28 }}
           >
             <div className="rounded-[22px] px-5 py-5"
               style={{ background: 'rgba(99,102,241,0.07)', border: '1px solid rgba(99,102,241,0.2)' }}>
@@ -476,16 +356,15 @@ export default function HomeScreen() {
         )}
       </AnimatePresence>
 
-      {/* ── INSIGHTS — only shown once there's real data ─────────────────────── */}
+      {/* ── INSIGHTS — gated: real data + non-empty after dedup ──────────────── */}
       <AnimatePresence>
         {hasData && (filteredWeak.length > 0 || filteredSuggestions.length > 0) && (
           <motion.div
             className="px-5 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.38 }}
+            transition={{ delay: 0.32 }}
           >
-            {/* Header */}
             <div className="flex items-center gap-2 mb-3">
               <TrendingUp size={13} color="#6366f1" />
               <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
@@ -502,7 +381,7 @@ export default function HomeScreen() {
               )}
             </div>
 
-            {/* Needs practice — positive reframe */}
+            {/* Ready to practise */}
             {filteredWeak.length > 0 && (
               <div className="mb-4">
                 <p className="text-xs font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -518,7 +397,7 @@ export default function HomeScreen() {
                       whileTap={{ scale: 0.97 }}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 + i * 0.05 }}
+                      transition={{ delay: 0.35 + i * 0.05 }}
                     >
                       <div className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 text-xs font-bold"
                         style={{ background: `${x.topic.moduleColor}18`, color: x.topic.moduleColor, border: `1px solid ${x.topic.moduleColor}30` }}>
@@ -535,7 +414,7 @@ export default function HomeScreen() {
               </div>
             )}
 
-            {/* Suggestions — only topics different from primary CTA */}
+            {/* Up next — deduplicated from weak list */}
             {filteredSuggestions.length > 0 && (
               <div>
                 <p className="text-xs font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -551,7 +430,7 @@ export default function HomeScreen() {
                       whileTap={{ scale: 0.96 }}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.44 + i * 0.06 }}
+                      transition={{ delay: 0.38 + i * 0.06 }}
                     >
                       <div className="w-7 h-7 rounded-[8px] flex items-center justify-center"
                         style={{ background: `${x.topic.moduleColor}20` }}>

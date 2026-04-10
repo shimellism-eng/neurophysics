@@ -1,7 +1,6 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, lazy, Suspense } from 'react'
-import { Minus } from 'lucide-react'
 import AtomIcon from './components/AtomIcon'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { MamoProvider, useMamoState } from './context/MamoContext'
@@ -67,15 +66,12 @@ function FloatingMamo() {
   const navigate = useNavigate()
   const reaction = useMamoState()
   const hiddenByRoute = location.pathname === '/mamo'
-  // F9: respect "Hide Mamo Button" setting
   const hiddenByPref = (() => {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').hideMamo } catch { return false }
   })()
   const hide = hiddenByRoute || hiddenByPref
-  const [minimized, setMinimized] = useState(false)
 
-  // Extract topic context from lesson/exam/practical routes
-  // e.g. /lesson/waves → topic=waves, /exam/forces → topic=forces
+  // Topic context from lesson/exam/practical routes
   const topicMatch = location.pathname.match(/^\/(?:lesson|exam|practical)\/(.+)/)
   const topicSlug  = topicMatch ? topicMatch[1] : ''
 
@@ -83,7 +79,16 @@ function FloatingMamo() {
     ? `/mamo?topic=${encodeURIComponent(topicSlug)}&label=${encodeURIComponent(topicSlug.replace(/-/g, ' '))}`
     : '/mamo'
 
-  // reaction animations
+  // Badge: show pulsing dot when a saved conversation exists for this topic
+  const hasHistory = (() => {
+    try {
+      const key = `mamo_thread_${topicSlug || 'general'}`
+      const stored = JSON.parse(localStorage.getItem(key) || 'null')
+      return Array.isArray(stored) && stored.length > 1
+    } catch { return false }
+  })()
+
+  // Reaction animations
   const reactionAnimate = reaction === 'correct'
     ? { scale: [1, 1.35, 0.9, 1.15, 1], y: [0, -10, 2, -5, 0] }
     : reaction === 'wrong'
@@ -100,79 +105,62 @@ function FloatingMamo() {
     <AnimatePresence>
       {!hide && (
         <motion.div
-          drag
-          dragMomentum={false}
-          dragElastic={0}
           className="fixed z-40"
-          style={{ bottom: 84, right: 18, touchAction: 'none' }}
-          initial={{ scale: 0, opacity: 0 }}
+          style={{
+            bottom: 'calc(64px + env(safe-area-inset-bottom) + 16px)',
+            right: 20,
+          }}
+          initial={{ scale: 0.6, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0, opacity: 0 }}
+          exit={{ scale: 0.6, opacity: 0, transition: { duration: 0.18, ease: 'easeIn' } }}
+          transition={{ type: 'spring', stiffness: 380, damping: 22, mass: 0.8, delay: 0.15 }}
         >
-          <AnimatePresence mode="wait">
-            {minimized ? (
-              <motion.button
-                key="mini"
-                className="flex items-center gap-2 px-3 h-9 rounded-full"
-                style={{
-                  background: 'linear-gradient(135deg, #6366f1, #818cf8)',
-                  boxShadow: '0 2px 14px rgba(99,102,241,0.45)',
-                }}
-                onClick={() => setMinimized(false)}
-                whileTap={{ scale: 0.94 }}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-              >
-                <AtomIcon size={14} color="#fff" />
-                <span className="text-xs font-semibold" style={{ color: '#fff' }}>Mamo</span>
-              </motion.button>
-            ) : (
+          <motion.button
+            className="relative flex items-center justify-center rounded-full"
+            style={{
+              width: 60,
+              height: 60,
+              background: 'linear-gradient(135deg, #6366f1, #818cf8)',
+              boxShadow: '0 4px 24px rgba(99,102,241,0.55)',
+            }}
+            onClick={() => navigate(mamoPath)}
+            whileTap={{ scale: 0.9 }}
+            animate={reactionAnimate}
+            transition={reactionTransition}
+          >
+            {reaction && (
               <motion.div
-                key="fab"
-                className="relative"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-              >
-                <motion.button
-                  className="w-14 h-14 rounded-full flex items-center justify-center relative"
-                  style={{
-                    background: 'linear-gradient(135deg, #6366f1, #818cf8)',
-                    boxShadow: '0 4px 20px rgba(99,102,241,0.5)',
-                  }}
-                  onClick={() => navigate(mamoPath)}
-                  whileTap={{ scale: 0.9 }}
-                  animate={reactionAnimate}
-                  transition={reactionTransition}
-                >
-                  {reaction && (
-                    <motion.div
-                      className="absolute inset-0 rounded-full"
-                      style={{
-                        background: reaction === 'correct' ? 'rgba(34,197,94,0.35)'
-                          : reaction === 'wrong' ? 'rgba(239,68,68,0.35)'
-                          : 'rgba(253,199,0,0.45)',
-                      }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: [0, 1, 0], scale: [0.8, 1.4, 1.8] }}
-                      transition={{ duration: reaction === 'complete' ? 0.7 : 0.5 }}
-                    />
-                  )}
-                  <AtomIcon size={22} color="#fff" />
-                  <PulseRing />
-                </motion.button>
-                <button
-                  className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center"
-                  style={{ background: '#0b1121', border: '1.5px solid rgba(99,102,241,0.5)', zIndex: 1 }}
-                  onPointerDown={e => e.stopPropagation()}
-                  onClick={e => { e.stopPropagation(); setMinimized(true) }}
-                >
-                  <Minus size={8} color="#a5b4fc" />
-                </button>
-              </motion.div>
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background: reaction === 'correct' ? 'rgba(34,197,94,0.35)'
+                    : reaction === 'wrong' ? 'rgba(239,68,68,0.35)'
+                    : 'rgba(253,199,0,0.45)',
+                }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.4, 1.8] }}
+                transition={{ duration: reaction === 'complete' ? 0.7 : 0.5 }}
+              />
             )}
-          </AnimatePresence>
+            <AtomIcon size={24} color="#fff" />
+            <PulseRing />
+
+            {/* Conversation-presence badge */}
+            {hasHistory && (
+              <motion.div
+                className="absolute rounded-full"
+                style={{
+                  width: 12,
+                  height: 12,
+                  top: 2,
+                  right: 2,
+                  background: '#a5b4fc',
+                  border: '2px solid #0b1121',
+                }}
+                animate={{ scale: [1, 1.3, 1] }}
+                transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+              />
+            )}
+          </motion.button>
         </motion.div>
       )}
     </AnimatePresence>

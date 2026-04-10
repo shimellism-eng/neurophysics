@@ -637,7 +637,7 @@ export default function SettingsScreen() {
             <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Mamo AI Key</div>
           </div>
           <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>
-            Your Anthropic API key powers Mamo. Stored locally on your device only.
+            Your Gemini API key powers Mamo. Stored locally on your device only.
           </p>
           <div className="flex gap-2">
             <input

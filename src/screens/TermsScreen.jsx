@@ -12,7 +12,7 @@ const SECTIONS = [
   },
   {
     title: '3. AI tutor (Mamo)',
-    body: `The Mamo chat feature is powered by Claude, an AI model made by Anthropic. Responses are generated automatically and may occasionally be inaccurate. You should:\n\n• Verify important information with a teacher or textbook.\n• Not rely solely on Mamo for exam preparation.\n• Not share personal, sensitive, or confidential information in the chat.\n\nWe are not responsible for any decisions made based on AI-generated content.`,
+    body: `The Mamo chat feature is powered by Gemini, an AI model made by Google. Responses are generated automatically and may occasionally be inaccurate. You should:\n\n• Verify important information with a teacher or textbook.\n• Not rely solely on Mamo for exam preparation.\n• Not share personal, sensitive, or confidential information in the chat.\n\nWe are not responsible for any decisions made based on AI-generated content.`,
   },
   {
     title: '4. Acceptable use',

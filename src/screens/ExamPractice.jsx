@@ -25,6 +25,192 @@ import {
   DiagramQuestion,
 } from '../components/questions'
 
+// ── Novel Context Question ───────────────────────────────────────────────────
+function NovelContextQuestion({ data, moduleColor, onComplete }) {
+  const [open, setOpen] = useState(false)
+  const [selfScore, setSelfScore] = useState(null)
+
+  const handleScore = (pts) => {
+    setSelfScore(pts)
+    onComplete(pts >= Math.ceil(data.marks / 2))
+  }
+
+  return (
+    <div className="space-y-3">
+      {/* Scenario card */}
+      <div className="px-4 py-3 rounded-[14px]"
+        style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+        <div className="text-xs font-semibold mb-1.5" style={{ color: '#818cf8' }}>Context</div>
+        <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{data.scenario}</p>
+      </div>
+
+      {/* Mark scheme reveal */}
+      <motion.button
+        className="w-full text-left px-4 py-3 rounded-[14px] flex items-center justify-between"
+        style={{ background: open ? 'rgba(0,188,125,0.08)' : 'rgba(18,26,47,0.9)',
+          border: open ? '0.75px solid rgba(0,188,125,0.3)' : '0.75px solid #1d293d' }}
+        onClick={() => setOpen(v => !v)}
+        whileTap={{ scale: 0.98 }}
+      >
+        <span className="text-sm font-semibold" style={{ color: open ? '#00bc7d' : '#a8b8cc' }}>
+          {open ? 'Mark scheme' : 'Reveal mark scheme'}
+        </span>
+        <motion.span animate={{ rotate: open ? 90 : 0 }} style={{ color: '#a8b8cc' }}>›</motion.span>
+      </motion.button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div className="space-y-2 px-1"
+            initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
+            {data.markScheme.map((m, i) => (
+              <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[10px]"
+                style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
+                <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                  style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>{i + 1}</span>
+                <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{m}</span>
+              </div>
+            ))}
+            <div className="mt-2 px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+              <div className="text-xs font-semibold mb-1" style={{ color: '#818cf8' }}>Model answer</div>
+              <p className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>{data.modelAnswer}</p>
+            </div>
+
+            {/* Self-assessment */}
+            {selfScore === null && (
+              <div className="pt-2">
+                <div className="text-xs font-semibold mb-2 text-center" style={{ color: '#a8b8cc' }}>
+                  How many marks did you earn?
+                </div>
+                <div className="flex gap-2 justify-center">
+                  {[0, Math.floor(data.marks / 2), data.marks].map(pts => (
+                    <motion.button key={pts}
+                      className="px-4 py-2 rounded-[10px] text-sm font-bold"
+                      style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+                      onClick={() => handleScore(pts)}
+                      whileTap={{ scale: 0.92 }}>
+                      {pts}
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+            )}
+            {selfScore !== null && (
+              <div className="text-center text-sm font-semibold py-2"
+                style={{ color: selfScore >= Math.ceil(data.marks / 2) ? '#00bc7d' : '#f59e0b' }}>
+                {selfScore >= data.marks ? '★ Full marks!' : selfScore > 0 ? `${selfScore}/${data.marks} — keep practising` : `0/${data.marks} — review the mark scheme`}
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {data.senNote && (
+        <div className="px-3 py-2 rounded-[10px]"
+          style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+          <span className="text-xs" style={{ color: '#fdc700' }}>{data.senNote}</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── RPA Error Direction Question ─────────────────────────────────────────────
+function RPAErrorQuestion({ data, moduleColor, onComplete }) {
+  const [selected, setSelected] = useState(null)
+  const [submitted, setSubmitted] = useState(false)
+
+  const options = [
+    { value: 'high', label: 'Too high', color: '#ef4444' },
+    { value: 'low',  label: 'Too low',  color: '#3b82f6' },
+    { value: 'no effect', label: 'No effect', color: '#6b7280' },
+  ]
+
+  const handleSubmit = () => {
+    if (!selected || submitted) return
+    setSubmitted(true)
+    onComplete(selected === data.direction)
+  }
+
+  return (
+    <div className="space-y-3">
+      {/* RPA badge */}
+      <div className="flex items-center gap-2">
+        <span className="px-2 py-0.5 rounded-full text-xs font-bold"
+          style={{ background: 'rgba(99,102,241,0.15)', color: '#818cf8', border: '0.75px solid rgba(99,102,241,0.3)' }}>
+          {data.rpaRef}
+        </span>
+        <span className="text-xs" style={{ color: '#64748b' }}>{data.rpaName}</span>
+      </div>
+
+      {/* Experiment context */}
+      <div className="px-3 py-2.5 rounded-[12px]"
+        style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+        <div className="text-xs font-semibold mb-1" style={{ color: '#a8b8cc' }}>The experiment</div>
+        <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{data.experiment}</p>
+      </div>
+
+      {/* Direction selector */}
+      <div>
+        <div className="text-xs font-semibold mb-2" style={{ color: '#a8b8cc' }}>
+          The calculated value is:
+        </div>
+        <div className="flex gap-2">
+          {options.map(opt => {
+            const isCorrect = submitted && opt.value === data.direction
+            const isWrong   = submitted && opt.value === selected && selected !== data.direction
+            return (
+              <motion.button key={opt.value}
+                className="flex-1 py-3 rounded-[12px] text-sm font-bold"
+                style={{
+                  background: isCorrect ? 'rgba(0,188,125,0.15)' : isWrong ? 'rgba(239,68,68,0.15)' : selected === opt.value ? 'rgba(99,102,241,0.15)' : 'rgba(18,26,47,0.9)',
+                  border: isCorrect ? '1.5px solid #00bc7d' : isWrong ? '1.5px solid #ef4444' : selected === opt.value ? `1.5px solid ${moduleColor}` : '0.75px solid #1d293d',
+                  color: isCorrect ? '#00bc7d' : isWrong ? '#ef4444' : '#f8fafc',
+                }}
+                onClick={() => { if (!submitted) setSelected(opt.value) }}
+                whileTap={submitted ? {} : { scale: 0.96 }}>
+                {opt.label}
+              </motion.button>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Submit */}
+      {!submitted && (
+        <motion.button
+          className="w-full py-3 rounded-[14px] text-sm font-bold"
+          style={{ background: selected ? moduleColor : '#1d293d', color: selected ? '#fff' : '#64748b' }}
+          onClick={handleSubmit}
+          disabled={!selected}
+          whileTap={{ scale: 0.97 }}>
+          Check answer
+        </motion.button>
+      )}
+
+      {/* Mark scheme reveal */}
+      {submitted && (
+        <motion.div className="space-y-2" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
+          {data.markScheme.map((m, i) => (
+            <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
+              <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>{i + 1}</span>
+              <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{m}</span>
+            </div>
+          ))}
+          {data.senNote && (
+            <div className="px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+              <span className="text-xs" style={{ color: '#fdc700' }}>{data.senNote}</span>
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  )
+}
+
 // ── Command word decoder ─────────────────────────────────────────────────────
 
 const COMMAND_WORDS = {
@@ -181,6 +367,10 @@ export default function ExamPractice() {
       case 'confidence':     return <ConfidenceQuestion {...props} />
       case 'extended-answer': return <ExtendedAnswerQuestion {...props} />
       case 'diagram-question': return <DiagramQuestion {...props} />
+      // Grade 9 types
+      case 'calculation-chained': return <CalculationQuestion {...props} />
+      case 'novel-context': return <NovelContextQuestion {...props} />
+      case 'rpa-error': return <RPAErrorQuestion {...props} />
       case 'equation-recall':
         // Render as MCQ
         return (

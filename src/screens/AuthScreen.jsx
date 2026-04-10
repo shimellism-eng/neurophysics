@@ -388,7 +388,7 @@ function BackHeader({ onBack }) {
 
 // ─── Landing ──────────────────────────────────────────────────────────────────
 function Landing({ onEmail, onSignIn }) {
-  const { signInWithOAuth } = useAuth()
+  const { signInWithOAuth, continueAsGuest } = useAuth()
   const [oauthLoading, setOauthLoading] = useState(null)
   const [oauthError, setOauthError] = useState('')
   const reduceMotion = useReduceMotion()
@@ -542,6 +542,15 @@ function Landing({ onEmail, onSignIn }) {
               Privacy Policy
             </a>
           </p>
+
+          {/* Guest access */}
+          <button
+            onClick={continueAsGuest}
+            className="w-full text-center text-xs pt-1 pb-1"
+            style={{ color: '#4a3a6a', background: 'none', border: 'none', cursor: 'pointer' }}
+          >
+            Continue without an account
+          </button>
         </motion.div>
       </div>
     </div>

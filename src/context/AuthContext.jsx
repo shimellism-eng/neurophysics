@@ -198,8 +198,14 @@ export function AuthProvider({ children }) {
     })
   }
 
+  const continueAsGuest = () => {
+    // Mark as guest locally — no Supabase account needed.
+    // AppShell reads this sentinel object as "authenticated" so all screens render.
+    setUser({ id: 'guest', isGuest: true, email: null })
+  }
+
   return (
-    <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut, signInWithOAuth, resetPassword, supabaseConfigured }}>
+    <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut, signInWithOAuth, resetPassword, supabaseConfigured, continueAsGuest }}>
       {children}
     </AuthContext.Provider>
   )

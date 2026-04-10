@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, Share2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
-import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
+import { secureRemove } from '../utils/secureStorage'
 import { useAuth } from '../context/AuthContext'
 import { supabase } from '../lib/supabase'
 import { requestNotificationPermission, scheduleDailyReminder, cancelDailyReminder, checkNotificationPermission } from '../utils/notifications'
@@ -152,7 +152,6 @@ export default function SettingsScreen() {
     // Fire-and-forget: don't await so a slow/offline Supabase call never blocks.
     signOut().catch(console.error)
   }
-  const [apiKey, setApiKey] = useState('')
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
 
   // Profile
@@ -177,11 +176,6 @@ export default function SettingsScreen() {
     showToast('Profile updated ✓', '#10b981')
   }
 
-  // Load API key from secure storage on mount
-  useEffect(() => {
-    secureGet('mamo_api_key').then(v => { if (v) setApiKey(v) })
-  }, [])
-  const [saved, setSaved] = useState(false)
   const [toast, setToast] = useState(null)
 
   // All toggles live in one prefs object
@@ -360,12 +354,7 @@ export default function SettingsScreen() {
     setShowTimePicker(false)
   }
 
-  const handleSaveKey = () => {
-    secureSet('mamo_api_key', apiKey)
-    setSaved(true)
-    showToast('API key saved ✓', '#10b981')
-    setTimeout(() => setSaved(false), 2000)
-  }
+
 
   const handleDeleteData = async () => {
     // Attempt server-side Supabase account deletion (best-effort)
@@ -628,47 +617,6 @@ export default function SettingsScreen() {
         </motion.div>
       </div>
 
-      {/* Mamo API key */}
-      <div className="px-5 mb-6">
-        <motion.div
-          className="rounded-[16px] p-4"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid rgba(99,102,241,0.3)' }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          <div className="flex items-center gap-2 mb-3">
-            <AtomIcon size={16} color="#6366f1" />
-            <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Mamo AI Key</div>
-          </div>
-          <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>
-            Your Gemini API key powers Mamo. Stored locally on your device only.
-          </p>
-          <div className="flex gap-2">
-            <input
-              type="password"
-              placeholder="sk-ant-..."
-              value={apiKey}
-              onChange={e => setApiKey(e.target.value)}
-              className="flex-1 px-3 py-2.5 rounded-[10px] text-sm font-mono outline-none"
-              style={{ background: '#1d293d', color: '#f8fafc', border: '0.75px solid #2d3e55' }}
-            />
-            <button
-              className="px-4 py-2.5 rounded-[10px] text-xs font-bold"
-              style={{
-                background: saved ? 'rgba(0,188,125,0.2)' : '#6366f1',
-                color: saved ? '#00bc7d' : '#fff',
-                border: saved ? '1px solid #00bc7d40' : 'none',
-                transition: 'all 0.2s',
-              }}
-              onClick={handleSaveKey}
-            >
-              {saved ? 'Saved ✓' : 'Save'}
-            </button>
-          </div>
-        </motion.div>
-      </div>
-
       {/* Sections */}
       <div className="px-5 pb-8 space-y-5">
         {sections.map((section, si) => (
@@ -834,8 +782,13 @@ export default function SettingsScreen() {
           </div>
           <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
             <div className="flex items-center gap-3 px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)', borderBottom: '0.75px solid #1d293d' }}>
-              <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
-              <div className="text-xs" style={{ color: '#a8b8cc' }}>Signed in as <strong style={{ color: '#f8fafc' }}>{user?.email}</strong></div>
+              <div className="w-2 h-2 rounded-full" style={{ background: user?.isGuest ? '#f59e0b' : '#00bc7d' }} />
+              <div className="text-xs" style={{ color: '#a8b8cc' }}>
+                {user?.isGuest
+                  ? <span>Browsing as <strong style={{ color: '#f8fafc' }}>Guest</strong> — progress saved locally</span>
+                  : <>Signed in as <strong style={{ color: '#f8fafc' }}>{user?.email}</strong></>
+                }
+              </div>
             </div>
             <button
               className="w-full flex items-center gap-3 px-4 py-4 text-left"
@@ -864,8 +817,8 @@ export default function SettingsScreen() {
           </div>
         </motion.div>
 
-        {/* Delete all data */}
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
+        {/* Delete all data — hidden for guest users (no Supabase account) */}
+        {!user?.isGuest && <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
           <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
             Data
           </div>
@@ -909,7 +862,7 @@ export default function SettingsScreen() {
               </div>
             )}
           </div>
-        </motion.div>
+        </motion.div>}
       </div>
 
       {/* Toast */}

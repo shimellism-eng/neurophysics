@@ -404,23 +404,28 @@ export default function TimedPaper() {
     if (correct) setScore(newScore)
     setCompleted(true)
     setAnswers(prev => {
-      const updated = { ...prev, [qIndex]: correct }
+      const updated = { ...prev, [qIndex]: { correct } }
       persist({ answers: updated, score: newScore })
       return updated
     })
   }, [score, qIndex, persist])
 
-  const handleNext = () => {
-    if (isLast || timesUp) {
-      saveQuizResult('timed_paper', score, total)
-      localStorage.removeItem(STORAGE_KEY)
-      setShowResults(true)
-    } else {
-      const next = qIndex + 1
-      setQIndex(next)
-      setCompleted(answers[next] !== undefined)
-    }
-  }
+  // Use functional update so rapid taps never read stale qIndex
+  const handleNext = useCallback(() => {
+    setQIndex(prev => {
+      if (prev >= total - 1) {
+        // Last question — go to results (defer to next tick to avoid setState-in-render)
+        setTimeout(() => {
+          saveQuizResult('timed_paper', score, total)
+          localStorage.removeItem(STORAGE_KEY)
+          setShowResults(true)
+        }, 0)
+        return prev
+      }
+      return prev + 1
+    })
+    setCompleted(false)
+  }, [total, score])
 
   const toggleFlag = () => {
     setFlags(prev => ({ ...prev, [qIndex]: !prev[qIndex] }))
@@ -435,9 +440,11 @@ export default function TimedPaper() {
   const answeredCount = Object.keys(answers).length
 
   const renderQuestion = () => {
-    const props = { data: q, moduleColor: '#6366f1', onComplete: handleComplete }
+    // key={qIndex} on every component forces a fresh mount when navigating,
+    // preventing state bleed between same-type questions
+    const props = { key: qIndex, data: q, moduleColor: '#6366f1', onComplete: handleComplete }
     switch (q.type) {
-      case 'equation-recall':      return <EquationRecallQuestion data={q} onComplete={handleComplete} />
+      case 'equation-recall':      return <EquationRecallQuestion key={qIndex} data={q} onComplete={handleComplete} />
       case 'calculation':
       case 'calculation-chained':  return <CalculationQuestion {...props} />
       case 'extended-answer':      return <ExtendedAnswerQuestion {...props} />
@@ -445,7 +452,7 @@ export default function TimedPaper() {
       case 'rpa-error':            return <RPAErrorQuestion {...props} onComplete={handleComplete} />
       case 'sequence':             return <SequenceSortQuestion {...props} />
       default: return (
-        <div className="py-8 text-center text-sm" style={{ color: '#64748b' }}>
+        <div key={qIndex} className="py-8 text-center text-sm" style={{ color: '#64748b' }}>
           Question type: {q.type}
         </div>
       )
@@ -600,16 +607,28 @@ export default function TimedPaper() {
             </div>
           )}
 
+          {/* Skip — always available, no score recorded */}
+          {!completed && !isLast && (
+            <motion.button
+              className="px-4 py-3 rounded-[13px] text-sm font-semibold"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#64748b' }}
+              onClick={handleNext}
+              whileTap={{ scale: 0.97 }}>
+              Skip
+            </motion.button>
+          )}
+
+          {/* Next / Submit — active only after answering */}
           <motion.button
             className="flex-1 py-3 rounded-[13px] text-sm font-bold"
             style={{
-              background: '#6366f1',
-              color: '#fff',
-              boxShadow: '0 4px 16px rgba(99,102,241,0.35)',
+              background: completed ? '#6366f1' : '#1d293d',
+              color: completed ? '#fff' : '#475569',
+              boxShadow: completed ? '0 4px 16px rgba(99,102,241,0.35)' : 'none',
             }}
-            onClick={handleNext}
-            whileTap={{ scale: 0.97 }}>
-            {isLast ? 'Submit paper' : 'Next →'}
+            onClick={completed ? handleNext : undefined}
+            whileTap={completed ? { scale: 0.97 } : {}}>
+            {isLast ? (completed ? 'Submit paper' : 'Answer to submit') : (completed ? 'Next →' : 'Answer to continue')}
           </motion.button>
         </div>
       </div>

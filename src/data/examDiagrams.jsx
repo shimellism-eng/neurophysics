@@ -274,7 +274,7 @@ export function TransformerStepUp() {
   return (
     <div className="w-full">
       <svg viewBox="0 0 300 200" className="w-full h-auto">
-        <text x="150" y="14" fontSize={9} fill="#94a3b8" textAnchor="middle">Step-Down Transformer</text>
+        <text x="150" y="14" fontSize={9} fill="#94a3b8" textAnchor="middle">Transformer — Turns Ratio</text>
         {/* Iron core */}
         <rect x={115} y={50} width={70} height={110} rx={4} fill="#1e293b" stroke="#475569" strokeWidth={1.5} />
         <text x={150} y={110} fontSize={7} fill="#64748b" textAnchor="middle">Iron</text>
@@ -346,38 +346,106 @@ export function DomesticPlugWires() {
 }
 
 export function NationalGridFlow() {
-  const items = [
-    { x: 10,  w: 50, label1: "Power",    label2: "Station",   color: "#3b82f6" },
-    { x: 75,  w: 50, label1: "Step-up",  label2: "Transformer", color: "#60a5fa" },
-    { x: 145, w: 50, label1: "400 kV",   label2: "Cables",    color: "#94a3b8" },
-    { x: 210, w: 50, label1: "Step-down",label2: "Transformer", color: "#60a5fa" },
-    { x: 275, w: 50, label1: "230 V",    label2: "Homes",     color: "#3b82f6" },
-  ];
   return (
     <div className="w-full">
       <svg viewBox="0 0 340 200" className="w-full h-auto">
         <text x="170" y="14" fontSize={9} fill="#94a3b8" textAnchor="middle">The National Grid</text>
-        {items.map((item, i) => (
-          <g key={i}>
-            <rect x={item.x} y={70} width={item.w} height={50} rx={5} fill="#1e293b" stroke={item.color} strokeWidth={1.5} />
-            <text x={item.x + item.w / 2} y={90} fontSize={6.5} fill={item.color} textAnchor="middle" fontWeight="600">{item.label1}</text>
-            <text x={item.x + item.w / 2} y={101} fontSize={6.5} fill={item.color} textAnchor="middle" fontWeight="600">{item.label2}</text>
-          </g>
-        ))}
-        {/* Wavy line for cables section */}
-        <path d="M170,95 Q177,88 184,95 Q191,102 198,95" fill="none" stroke="#94a3b8" strokeWidth={1} />
-        {/* Arrows between boxes */}
-        {[60, 125, 195, 260].map((ax, i) => (
-          <g key={i}>
-            <line x1={ax} y1={95} x2={ax + 12} y2={95} stroke="#3b82f6" strokeWidth={1.5} />
-            <polygon points={`${ax + 12},95 ${ax + 7},92 ${ax + 7},98`} fill="#3b82f6" />
-          </g>
-        ))}
-        <text x="170" y="148" fontSize={7} fill="#64748b" textAnchor="middle">High voltage reduces energy loss (P = I^2 R)</text>
-        <text x="170" y="160" fontSize={7} fill="#64748b" textAnchor="middle">Transformers use electromagnetic induction (AC only)</text>
+
+        {/* 1. Power Station */}
+        <g>
+          <rect x={10} y={80} width={50} height={40} rx={3} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5}/>
+          {/* Chimney */}
+          <rect x={22} y={65} width={10} height={18} rx={2} fill="#1e293b" stroke="#3b82f6" strokeWidth={1}/>
+          <rect x={38} y={70} width={8} height={13} rx={2} fill="#1e293b" stroke="#3b82f6" strokeWidth={1}/>
+          {/* Smoke puffs */}
+          <circle cx={27} cy={62} r={4} fill="#475569" opacity={0.5}/>
+          <circle cx={42} cy={67} r={3} fill="#475569" opacity={0.4}/>
+          <text x={35} y={132} fontSize={6.5} fill="#3b82f6" textAnchor="middle">Power</text>
+          <text x={35} y={141} fontSize={6.5} fill="#3b82f6" textAnchor="middle">Station</text>
+          <text x={35} y={150} fontSize={6} fill="#64748b" textAnchor="middle">25 kV</text>
+        </g>
+
+        {/* Arrow 1 */}
+        <line x1={60} y1={100} x2={73} y2={100} stroke="#3b82f6" strokeWidth={1.5}/>
+        <polygon points="75,100 68,97 68,103" fill="#3b82f6"/>
+
+        {/* 2. Step-up Transformer */}
+        <g>
+          <rect x={75} y={80} width={50} height={40} rx={3} fill="#1e293b" stroke="#60a5fa" strokeWidth={1.5}/>
+          {/* Coil bumps on top */}
+          {[82,92,102,112].map(x => (
+            <path key={x} d={`M${x},80 A5,5 0 0,1 ${x+10},80`} fill="none" stroke="#60a5fa" strokeWidth={1.2}/>
+          ))}
+          <text x={100} y={102} fontSize={6.5} fill="#60a5fa" textAnchor="middle">Step-up</text>
+          <text x={100} y={110} fontSize={6.5} fill="#60a5fa" textAnchor="middle">Transformer</text>
+          <text x={100} y={132} fontSize={6.5} fill="#60a5fa" textAnchor="middle">↑ 400 kV</text>
+          <text x={100} y={141} fontSize={6} fill="#64748b" textAnchor="middle">(∝ turns ratio)</text>
+        </g>
+
+        {/* Arrow 2 */}
+        <line x1={125} y1={100} x2={138} y2={100} stroke="#60a5fa" strokeWidth={1.5}/>
+        <polygon points="140,100 133,97 133,103" fill="#60a5fa"/>
+
+        {/* 3. Pylons / High-voltage cables */}
+        <g>
+          {/* Left pylon */}
+          <line x1={150} y1={80} x2={155} y2={118} stroke="#94a3b8" strokeWidth={1.2}/>
+          <line x1={160} y1={80} x2={155} y2={118} stroke="#94a3b8" strokeWidth={1.2}/>
+          <line x1={145} y1={90} x2={165} y2={90} stroke="#94a3b8" strokeWidth={1}/>
+          <line x1={147} y1={82} x2={163} y2={82} stroke="#94a3b8" strokeWidth={0.8}/>
+          {/* Right pylon */}
+          <line x1={180} y1={80} x2={185} y2={118} stroke="#94a3b8" strokeWidth={1.2}/>
+          <line x1={190} y1={80} x2={185} y2={118} stroke="#94a3b8" strokeWidth={1.2}/>
+          <line x1={175} y1={90} x2={195} y2={90} stroke="#94a3b8" strokeWidth={1}/>
+          <line x1={177} y1={82} x2={193} y2={82} stroke="#94a3b8" strokeWidth={0.8}/>
+          {/* Cables between */}
+          <path d="M147,82 Q170,87 177,82" fill="none" stroke="#94a3b8" strokeWidth={1}/>
+          <path d="M145,90 Q170,95 175,90" fill="none" stroke="#94a3b8" strokeWidth={1}/>
+          <text x={170} y={132} fontSize={6.5} fill="#94a3b8" textAnchor="middle">400 kV</text>
+          <text x={170} y={141} fontSize={6.5} fill="#94a3b8" textAnchor="middle">Cables</text>
+          <text x={170} y={150} fontSize={6} fill="#64748b" textAnchor="middle">low I, low P loss</text>
+        </g>
+
+        {/* Arrow 3 */}
+        <line x1={200} y1={100} x2={213} y2={100} stroke="#94a3b8" strokeWidth={1.5}/>
+        <polygon points="215,100 208,97 208,103" fill="#94a3b8"/>
+
+        {/* 4. Step-down Transformer */}
+        <g>
+          <rect x={215} y={80} width={50} height={40} rx={3} fill="#1e293b" stroke="#60a5fa" strokeWidth={1.5}/>
+          {[222,232,242,252].map(x => (
+            <path key={x} d={`M${x},80 A5,5 0 0,1 ${x+10},80`} fill="none" stroke="#60a5fa" strokeWidth={1.2}/>
+          ))}
+          <text x={240} y={102} fontSize={6.5} fill="#60a5fa" textAnchor="middle">Step-down</text>
+          <text x={240} y={110} fontSize={6.5} fill="#60a5fa" textAnchor="middle">Transformer</text>
+          <text x={240} y={132} fontSize={6.5} fill="#60a5fa" textAnchor="middle">↓ 230 V</text>
+          <text x={240} y={141} fontSize={6} fill="#64748b" textAnchor="middle">(fewer turns)</text>
+        </g>
+
+        {/* Arrow 4 */}
+        <line x1={265} y1={100} x2={278} y2={100} stroke="#3b82f6" strokeWidth={1.5}/>
+        <polygon points="280,100 273,97 273,103" fill="#3b82f6"/>
+
+        {/* 5. Homes */}
+        <g>
+          {/* House shape */}
+          <rect x={282} y={95} width={46} height={25} rx={2} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5}/>
+          {/* Roof (triangle) */}
+          <polygon points="280,95 305,75 330,95" fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5}/>
+          {/* Door */}
+          <rect x={300} y={107} width={10} height={13} rx={1} fill="#3b82f630"/>
+          {/* Window */}
+          <rect x={287} y={100} width={8} height={7} rx={1} fill="#3b82f630"/>
+          <text x={305} y={143} fontSize={6.5} fill="#3b82f6" textAnchor="middle">230 V</text>
+          <text x={305} y={152} fontSize={6.5} fill="#3b82f6" textAnchor="middle">Homes</text>
+        </g>
+
+        {/* Physics note */}
+        <text x="170" y="170" fontSize={7} fill="#64748b" textAnchor="middle">High voltage → low current → less energy lost (P = I²R)</text>
+        <text x="170" y="180" fontSize={7} fill="#64748b" textAnchor="middle">Transformers only work with AC (alternating current)</text>
       </svg>
     </div>
-  );
+  )
 }
 
 export function StaticChargeDiagram() {
@@ -401,6 +469,8 @@ export function StaticChargeDiagram() {
         ))}
         {/* Arrow showing electron transfer */}
         <text x={60} y={55} fontSize={7} fill="#94a3b8" textAnchor="middle">e- transferred to cloth</text>
+        <line x1={60} y1={84} x2={60} y2={88} stroke="#60a5fa" strokeWidth={1.5}/>
+        <polygon points="60,89 57,85 63,85" fill="#60a5fa"/>
         {/* Right: charged rod near neutral sphere */}
         <rect x={175} y={60} width={40} height={20} rx={4} fill="#dbeafe" stroke="#3b82f6" strokeWidth={1.2} opacity="0.7" />
         {[180,190,200,210].map(cx => (
@@ -512,7 +582,7 @@ export function MomentArmSpanner() {
         <polygon points="240,74 232,70 232,78" fill="#00a8e8" />
         <text x={160} y={70} fontSize={7} fill="#00a8e8" textAnchor="middle">d (perpendicular distance)</text>
         {/* Formula */}
-        <text x={150} y={180} fontSize={8} fill="#94a3b8" textAnchor="middle">Moment (N m) = F x d</text>
+        <text x={150} y={180} fontSize={8} fill="#94a3b8" textAnchor="middle">Moment (N·m) = F × d</text>
         <text x={150} y={192} fontSize={7} fill="#64748b" textAnchor="middle">Larger d means larger turning effect</text>
       </svg>
     </div>
@@ -546,7 +616,7 @@ export function HookesLawGraph() {
         <text x={100} y={139} fontSize={7} fill="#00a8e8">(Hooke's Law)</text>
         <text x={230} y={60} fontSize={7} fill="#ef4444">Plastic</text>
         <text x={230} y={69} fontSize={7} fill="#ef4444">region</text>
-        <text x={155} y={185} fontSize={7} fill="#64748b" textAnchor="middle">F = ke (spring constant x extension)</text>
+        <text x={155} y={185} fontSize={7} fill="#64748b" textAnchor="middle">F = ke (k = spring constant)</text>
       </svg>
     </div>
   );
@@ -747,7 +817,7 @@ export function FluidPressureDepth() {
         <line x1={244} y1={180} x2={252} y2={180} stroke="#00a8e8" strokeWidth={1} />
         <text x={260} y={100} fontSize={7} fill="#00a8e8" transform="rotate(90,260,100)">Depth h</text>
         {/* Formula */}
-        <text x={150} y={193} fontSize={8} fill="#3b82f6" textAnchor="middle">P = rho * g * h</text>
+        <text x={150} y={193} fontSize={8} fill="#3b82f6" textAnchor="middle">P = ρgh</text>
       </svg>
     </div>
   );
@@ -779,7 +849,7 @@ export function TransverseWaveLabelled() {
         <line x1={60} y1={44} x2={180} y2={44} stroke="#fdc700" strokeWidth={1.2} />
         <polygon points="60,44 68,40 68,48" fill="#fdc700" />
         <polygon points="180,44 172,40 172,48" fill="#fdc700" />
-        <text x={120} y={40} fontSize={7} fill="#fdc700" textAnchor="middle">Wavelength lambda</text>
+        <text x={120} y={40} fontSize={7} fill="#fdc700" textAnchor="middle">Wavelength (λ)</text>
         {/* Crest label */}
         <text x={60} y={50} fontSize={7} fill="#94a3b8" textAnchor="middle">Crest</text>
         {/* Trough label */}
@@ -821,7 +891,7 @@ export function LongitudinalWaveLabelled() {
         <line x1={55} y1={170} x2={155} y2={170} stroke="#fdc700" strokeWidth={1.2} />
         <polygon points="55,170 63,166 63,174" fill="#fdc700" />
         <polygon points="155,170 147,166 147,174" fill="#fdc700" />
-        <text x={105} y={183} fontSize={7} fill="#fdc700" textAnchor="middle">Wavelength lambda</text>
+        <text x={105} y={183} fontSize={7} fill="#fdc700" textAnchor="middle">Wavelength (λ)</text>
         <text x={150} y={195} fontSize={7} fill="#64748b" textAnchor="middle">Direction of oscillation = direction of energy</text>
       </svg>
     </div>

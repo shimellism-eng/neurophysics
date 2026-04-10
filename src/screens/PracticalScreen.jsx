@@ -35,8 +35,12 @@ const V  = ({ cx, cy }) => (
 )
 const PSU = ({ x, y, label = '12V' }) => (
   <g>
-    <rect x={x} y={y} width={36} height={24} rx={4} fill="#1e293b" stroke="#6366f1" strokeWidth={1.2}/>
-    <text x={x+18} y={y+16} textAnchor="middle" fontSize={9} fill="#a5b4fc">{label}</text>
+    <rect x={x} y={y} width={40} height={26} rx={3} fill="#1e293b" stroke="#6366f1" strokeWidth={1.5}/>
+    <text x={x+20} y={y+15} textAnchor="middle" fontSize={8} fill="#a5b4fc" fontWeight="600">{label}</text>
+    <text x={x+20} y={y+24} textAnchor="middle" fontSize={7} fill="#6366f1">PSU</text>
+    {/* + terminal top-left, - terminal top-right */}
+    <text x={x+4} y={y-2} fontSize={9} fill="#10b981" fontWeight="bold">+</text>
+    <text x={x+30} y={y-2} fontSize={9} fill="#ef4444" fontWeight="bold">−</text>
   </g>
 )
 const Lbl = ({ x, y, t, c = '#94a3b8', a = 'middle', s = 9 }) =>
@@ -71,19 +75,26 @@ function SetupSHC() {
         <Lbl x={135} y={172} t="Insulating jacket" c="#fbbf24" s={8}/>
 
         {/* Metal block */}
-        <rect x={78} y={60} width={114} height={90} rx={4} fill="#1e293b" stroke="#475569" strokeWidth={1.5}/>
-        <Lbl x={135} y={108} t="Copper block" c="#64748b" s={8}/>
+        <rect x={78} y={60} width={114} height={90} rx={4} fill="#1e2d1f" stroke="#7c9a88" strokeWidth={1.5}/>
+        <text x={135} y={100} textAnchor="middle" fontSize={9} fill="#4a7a5a" fontWeight="600">Cu</text>
+        <text x={135} y={112} textAnchor="middle" fontSize={7} fill="#4a7a5a">Copper block</text>
+        <text x={135} y={122} textAnchor="middle" fontSize={6.5} fill="#3a5a3a">m = 1 kg</text>
 
         {/* Immersion heater hole + element */}
         <rect x={98} y={60} width={20} height={38} rx={2} fill="#0b1121" stroke="#f97316" strokeWidth={1}/>
         <rect x={103} y={63} width={10} height={32} rx={2} fill="#f97316" fillOpacity={0.5}/>
-        <Lbl x={108} y={50} t="Heater" c="#f97316" s={8}/>
+        <Lbl x={108} y={50} t="Heater (30W)" c="#f97316" s={8}/>
 
-        {/* Thermometer hole */}
-        <rect x={153} y={60} width={10} height={44} rx={3} fill="#0b1121" stroke="#94a3b8" strokeWidth={1}/>
-        {/* mercury */}
-        <rect x={155} y={62 + (54 - fill)} width={6} height={fill} rx={1} fill="#ef4444" fillOpacity={0.85}/>
-        <circle cx={158} cy={108} r={5} fill="#ef4444" fillOpacity={0.85}/>
+        {/* Thermometer glass tube */}
+        <rect x={153} y={58} width={10} height={46} rx={5} fill="#0b1121" stroke="#94a3b8" strokeWidth={1}/>
+        {/* Scale marks on thermometer */}
+        {[0,1,2,3,4].map(i => (
+          <line key={i} x1={153} y1={66 + i*9} x2={157} y2={66 + i*9} stroke="#475569" strokeWidth={0.6}/>
+        ))}
+        {/* Mercury column */}
+        <rect x={155.5} y={62 + (44 - fill)} width={5} height={fill} rx={2} fill="#ef4444" fillOpacity={0.9}/>
+        {/* Bulb */}
+        <ellipse cx={158} cy={108} rx={6} ry={5} fill="#ef4444" fillOpacity={0.9}/>
         <Lbl x={175} y={85} t={`${temp}°C`} c="#ef4444" s={10}/>
         <Lbl x={175} y={97} t="Thermometer" c="#64748b" s={8}/>
 
@@ -204,9 +215,14 @@ function SetupInsulation() {
         {/* ── Thermometer glass tubes ── */}
         <rect x={99} y={32} width={6} height={52} rx={3} fill="#e2e8f015" stroke="#94a3b8" strokeWidth={0.8}/>
         <rect x={99} y={94} width={6} height={52} rx={3} fill="#e2e8f010" stroke="#7dd3fc" strokeWidth={0.8}/>
-        {/* Scale marks */}
-        {[0,1,2,3,4,5,6].map(i => (
-          <line key={i} x1={99} y1={38 + i*8} x2={103} y2={38 + i*8} stroke="#94a3b8" strokeWidth={0.5}/>
+        {/* Scale marks with labels */}
+        {[80, 70, 60, 50, 40, 30, 20].map((temp, i) => (
+          <g key={i}>
+            <line x1={99} y1={38 + i*8} x2={104} y2={38 + i*8} stroke="#94a3b8" strokeWidth={0.8}/>
+            {i % 2 === 0 && (
+              <text x={88} y={38 + i*8 + 3} fontSize={5.5} fill="#64748b" textAnchor="end">{temp}</text>
+            )}
+          </g>
         ))}
         {/* Animated mercury (CSS transition) */}
         <rect x={100.5} y={mercuryTop} width={3} height={mercuryH} rx={1.5}
@@ -473,7 +489,7 @@ function SetupResistance() {
         {/* Crocodile clips - two arrow lines, one shared label */}
         <Tag lx={leftX} ly={rulerY}  tx={2}   ty={155} label="CROCODILE CLIPS"/>
         <line x1={clipX} y1={rulerY} x2={2}   y2={155+4} stroke="#475569" strokeWidth={0.7}/>
-        <Tag lx={130}   ly={rulerY+5}  tx={232} ty={172} label="THIN RESISTANCE WIRE"/>
+        <Tag lx={130}   ly={rulerY+5}  tx={232} ty={172} label="RESISTANCE WIRE (Nichrome)"/>
         <Tag lx={160}   ly={rulerY+16} tx={232} ty={188} label="METRE RULER"/>
 
       </svg>
@@ -946,9 +962,18 @@ function SetupWaves() {
         <Lbl x={140} y={36} t="Motor" c="#64748b" s={8} a="start"/>
 
         {/* Lamp above */}
-        <circle cx={50} cy={25} r={10} fill="#fde04730" stroke="#fde047" strokeWidth={1.2}/>
-        <Lbl x={50} y={29} t="☀" c="#fde047" s={10}/>
-        <Lbl x={50} y={15} t="Lamp" c="#64748b" s={8}/>
+        <circle cx={50} cy={25} r={8} fill="#fde04730" stroke="#fde047" strokeWidth={1.2}/>
+        {/* Lamp filament cross */}
+        <line x1={46} y1={21} x2={54} y2={29} stroke="#fde047" strokeWidth={1.2} strokeLinecap="round"/>
+        <line x1={54} y1={21} x2={46} y2={29} stroke="#fde047" strokeWidth={1.2} strokeLinecap="round"/>
+        {/* Ray spikes */}
+        {[0,45,90,135,180,225,270,315].map((deg, i) => {
+          const rad = deg * Math.PI / 180
+          return <line key={i} x1={50 + Math.cos(rad)*9} y1={25 + Math.sin(rad)*9}
+                   x2={50 + Math.cos(rad)*13} y2={25 + Math.sin(rad)*13}
+                   stroke="#fde04790" strokeWidth={0.8}/>
+        })}
+        <Lbl x={50} y={12} t="Lamp" c="#64748b" s={8}/>
 
         {/* White card below (projection) */}
         <rect x={15} y={158} width={210} height={18} rx={2}
@@ -969,9 +994,9 @@ function SetupWaves() {
           </marker>
         </defs>
 
-        <Lbl x={240} y={80} t={`f = ${freq}Hz`} c="#94a3b8" s={9}/>
-        <Lbl x={240} y={94} t={`v = ${speed}`} c="#94a3b8" s={9}/>
-        <Lbl x={240} y={108} t="m/s" c="#94a3b8" s={9}/>
+        <Lbl x={240} y={80} t={`f = ${freq} Hz`} c="#94a3b8" s={9}/>
+        <Lbl x={240} y={94} t={`v = ${speed} m/s`} c="#94a3b8" s={9}/>
+        <Lbl x={240} y={108} t={`λ = v/f`} c="#6366f1" s={9}/>
       </svg>
 
       <div className="px-1">
@@ -1036,7 +1061,8 @@ function SetupRadiation() {
 
         {/* IR detector / thermometer */}
         <rect x={16} y={85} width={40} height={30} rx={4} fill="#1e293b" stroke="#10b981" strokeWidth={1.5}/>
-        <Lbl x={36} y={104} t={`${s.value}`} c="#10b981" s={11}/>
+        <Lbl x={36} y={101} t={`${s.value}`} c="#10b981" s={11}/>
+        <Lbl x={36} y={111} t="mV" c="#6ee7b7" s={7}/>
         <Lbl x={36} y={75} t="IR detector" c="#10b981" s={8}/>
 
         {/* Ruler showing distance */}

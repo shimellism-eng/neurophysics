@@ -1739,7 +1739,7 @@ export const WAVES_TOPICS = {
           question: 'Which type of wave can travel through a vacuum?',
           answers: ['Sound waves', 'Seismic S-waves', 'Light waves', 'P-waves'],
           correct: 2,
-          feedback: 'Light is a transverse electromagnetic wave and needs no medium - it travels at 3x10^8 m/s through a vacuum. Sound cannot travel through a vacuum.',
+          feedback: 'Light is a transverse electromagnetic wave and needs no medium - it travels at 3×10⁸ m/s through a vacuum. Sound cannot travel through a vacuum.',
         },
         {
           question: 'In a transverse wave, how do particles move relative to the direction of wave travel?',
@@ -1751,7 +1751,7 @@ export const WAVES_TOPICS = {
     },
 
     topicMapHint: {
-      before: ['Energy Transfer', 'Properties of Waves (v = f x lambda)'],
+      before: ['Energy Transfer', 'Properties of Waves (v = fλ)'],
       current: 'Transverse and Longitudinal Waves',
       after: ['Sound and Ultrasound', 'Seismic Waves', 'EM Spectrum'],
     },
@@ -1777,10 +1777,10 @@ export const WAVES_TOPICS = {
       tier1: {
         question: 'A longitudinal sound wave has frequency 250 Hz and travels at 340 m/s in air. Find its wavelength.',
         allSteps: [
-          'Write what you know: f = 250 Hz, v = 340 m/s, lambda = ?',
-          'Write the equation: v = f x lambda',
-          'Rearrange: lambda = v / f',
-          '??? - calculate lambda = 340 / 250',
+          'Write what you know: f = 250 Hz, v = 340 m/s, λ = ?',
+          'Write the equation: v = fλ',
+          'Rearrange: λ = v / f',
+          '??? - calculate λ = 340 / 250',
         ],
         missingStep: 3,
         missingHint: 'Divide: 340 / 250 = ?',
@@ -1789,23 +1789,23 @@ export const WAVES_TOPICS = {
       },
       tier2: {
         question: 'A transverse wave on a string has frequency 5 Hz and wavelength 0.4 m. Calculate the wave speed.',
-        shownEquation: 'v = f x lambda',
-        shownStep1: 'Write what you know: f = 5 Hz, lambda = 0.4 m',
-        hint: 'Multiply f x lambda directly. No rearrangement needed.',
+        shownEquation: 'v = fλ',
+        shownStep1: 'Write what you know: f = 5 Hz, λ = 0.4 m',
+        hint: 'Multiply f × λ directly. No rearrangement needed.',
         answer: 2,
         answerUnit: 'm/s',
       },
       tier3: {
         question: 'Sound travels at 1500 m/s in water. The wavelength of a particular sound in water is 0.3 m. Calculate the frequency.',
-        hint: 'Use v = f x lambda. Rearrange to find f = v / lambda.',
-        methodHint: 'Start with v = f x lambda. Rearrange to f = v / lambda. Substitute v = 1500 and lambda = 0.3.',
+        hint: 'Use v = fλ. Rearrange to find f = v / λ.',
+        methodHint: 'Start with v = fλ. Rearrange to f = v / λ. Substitute v = 1500 and λ = 0.3.',
         answer: 5000,
         answerUnit: 'Hz',
       },
     },
 
     summary: {
-      equation: 'v = f x lambda (applies to all wave types)',
+      equation: 'v = fλ (applies to all wave types)',
       sentence: 'Transverse waves vibrate at 90 degrees to travel direction (light, S-waves); longitudinal waves vibrate parallel (sound, P-waves).',
       promptText: 'Without looking at your notes, explain one piece of evidence that proves Earth has a liquid outer core.',
     },
@@ -2029,7 +2029,7 @@ export const WAVES_TOPICS = {
         symbol: '',
         unit: '',
         definition: 'When a wave changes speed at a boundary between two media, causing it to change direction.',
-        everydayNote: 'Light slows from 3x10^8 m/s in air to about 2x10^8 m/s in glass - this speed change bends the ray.',
+        everydayNote: 'Light slows from 3×10⁸ m/s in air to about 2×10⁸ m/s in glass - this speed change bends the ray.',
       },
       {
         word: 'Normal',
@@ -2372,7 +2372,7 @@ export const WAVES_TOPICS = {
     },
 
     topicMapHint: {
-      before: ['Wave Types (longitudinal vs transverse)', 'Wave Properties (v = f x lambda)'],
+      before: ['Wave Types (longitudinal vs transverse)', 'Wave Properties (v = fλ)'],
       current: 'Sound Waves and Ultrasound',
       after: ['EM Spectrum', 'Echo Sounding and Sonar (applied)'],
     },
@@ -2471,7 +2471,7 @@ export const WAVES_TOPICS = {
         word: 'Electromagnetic Spectrum',
         symbol: '',
         unit: '',
-        definition: 'The family of all transverse EM waves, ordered by frequency (or wavelength). All travel at 3x10^8 m/s in a vacuum.',
+        definition: 'The family of all transverse EM waves, ordered by frequency (or wavelength). All travel at 3×10⁸ m/s in a vacuum.',
         everydayNote: 'From low to high frequency: radio, microwave, infrared, visible, UV, X-ray, gamma. A useful mnemonic: "Raging Martians Invaded Venus Using X-ray Guns".',
       },
       {
@@ -2493,13 +2493,13 @@ export const WAVES_TOPICS = {
         symbol: 'f',
         unit: 'hertz (Hz)',
         definition: 'The number of wave oscillations per second. Higher frequency means shorter wavelength and more energy per photon.',
-        everydayNote: 'Radio waves: ~10^6 Hz. Visible light: ~5x10^14 Hz. Gamma rays: above 10^19 Hz.',
+        everydayNote: 'Radio waves: ~10⁶ Hz. Visible light: ~5×10¹⁴ Hz. Gamma rays: above 10¹⁹ Hz.',
       },
       {
         word: 'Wavelength',
-        symbol: 'lambda',
+        symbol: 'λ',
         unit: 'metres (m)',
-        definition: 'The distance between two successive identical points on a wave. As frequency increases, wavelength decreases (v = f x lambda).',
+        definition: 'The distance between two successive identical points on a wave. As frequency increases, wavelength decreases (v = fλ).',
         everydayNote: 'Radio waves: metres to km long. Visible light: ~500 nm (0.0000005 m). Gamma rays: smaller than an atomic nucleus.',
       },
     ],
@@ -2508,9 +2508,9 @@ export const WAVES_TOPICS = {
       questions: [
         {
           question: 'All EM waves travel at the same speed in a vacuum. What is that speed?',
-          answers: ['340 m/s', '3x10^6 m/s', '3x10^8 m/s', '1500 m/s'],
+          answers: ['340 m/s', '3×10⁶ m/s', '3×10⁸ m/s', '1500 m/s'],
           correct: 2,
-          feedback: 'All EM waves travel at 3x10^8 m/s (300,000,000 m/s or 300,000 km/s) in a vacuum. This is the speed of light.',
+          feedback: 'All EM waves travel at 3×10⁸ m/s (300,000,000 m/s or 300,000 km/s) in a vacuum. This is the speed of light.',
         },
         {
           question: 'Which EM wave has the highest frequency?',
@@ -2522,67 +2522,67 @@ export const WAVES_TOPICS = {
     },
 
     topicMapHint: {
-      before: ['Wave Properties (v = f x lambda)', 'Wave Types (transverse)'],
+      before: ['Wave Properties (v = fλ)', 'Wave Types (transverse)'],
       current: 'The Electromagnetic Spectrum',
       after: ['Lenses', 'Visible Light and Colour', 'Black Body Radiation'],
     },
 
     workedExample: {
       title: 'Calculating wavelength of a radio wave',
-      equation: 'v = f x lambda, rearranged: lambda = v / f',
-      context: 'A radio station broadcasts at 100 MHz (1x10^8 Hz). Calculate the wavelength of the radio waves. (Speed of light = 3x10^8 m/s)',
+      equation: 'v = fλ, rearranged: λ = v / f',
+      context: 'A radio station broadcasts at 100 MHz (1×10⁸ Hz). Calculate the wavelength of the radio waves. (Speed of light = 3×10⁸ m/s)',
       steps: [
-        { step: 1, action: 'Write what you know', content: 'v = 3x10^8 m/s, f = 1x10^8 Hz (100 MHz), lambda = ?', annotation: 'Convert MHz to Hz: 100 MHz = 100x10^6 = 1x10^8 Hz. Always convert to base units.' },
-        { step: 2, action: 'Write the equation', content: 'v = f x lambda, so lambda = v / f', annotation: 'This equation is on the formula sheet. Rearrange by dividing both sides by f.' },
-        { step: 3, action: 'Substitute', content: 'lambda = (3x10^8) / (1x10^8)', annotation: 'Divide the coefficients: 3/1 = 3. Subtract the powers: 10^8 / 10^8 = 10^0 = 1.' },
-        { step: 4, action: 'Calculate and state with unit', content: 'lambda = 3 m', annotation: 'Sense check: radio waves should have wavelengths of metres. 3 m is correct for 100 MHz FM radio.' },
+        { step: 1, action: 'Write what you know', content: 'v = 3×10⁸ m/s, f = 1×10⁸ Hz (100 MHz), λ = ?', annotation: 'Convert MHz to Hz: 100 MHz = 100×10⁶ = 1×10⁸ Hz. Always convert to base units.' },
+        { step: 2, action: 'Write the equation', content: 'v = fλ, so λ = v / f', annotation: 'This equation is on the formula sheet. Rearrange by dividing both sides by f.' },
+        { step: 3, action: 'Substitute', content: 'λ = (3×10⁸) / (1×10⁸)', annotation: 'Divide the coefficients: 3/1 = 3. Subtract the powers: 10⁸ / 10⁸ = 10⁰ = 1.' },
+        { step: 4, action: 'Calculate and state with unit', content: 'λ = 3 m', annotation: 'Sense check: radio waves should have wavelengths of metres. 3 m is correct for 100 MHz FM radio.' },
       ],
       misconceptionAfter: {
         claim: 'Higher frequency EM waves travel faster.',
-        reality: 'All EM waves travel at the same speed in a vacuum (3x10^8 m/s). Higher frequency means shorter wavelength - not higher speed. v = f x lambda stays constant because as f increases, lambda decreases proportionally.',
+        reality: 'All EM waves travel at the same speed in a vacuum (3×10⁸ m/s). Higher frequency means shorter wavelength - not higher speed. v = fλ stays constant because as f increases, λ decreases proportionally.',
         visual: 'Think of 10 waves passing a point per second versus 5 waves per second at the same speed - the 10 Hz waves must be shorter (half the wavelength) to all fit past at the same speed.',
       },
     },
 
     guidedPractice: {
       tier1: {
-        question: 'Visible light has frequency 6x10^14 Hz. Speed = 3x10^8 m/s. Calculate the wavelength.',
+        question: 'Visible light has frequency 6×10¹⁴ Hz. Speed = 3×10⁸ m/s. Calculate the wavelength.',
         allSteps: [
-          'Write what you know: f = 6x10^14 Hz, v = 3x10^8 m/s',
-          'Write the equation: lambda = v / f',
-          'Substitute: lambda = (3x10^8) / (6x10^14)',
-          '??? - divide to find lambda',
+          'Write what you know: f = 6×10¹⁴ Hz, v = 3×10⁸ m/s',
+          'Write the equation: λ = v / f',
+          'Substitute: λ = (3×10⁸) / (6×10¹⁴)',
+          '??? - divide to find λ',
         ],
         missingStep: 3,
-        missingHint: 'Divide 3 by 6 = 0.5. Subtract powers: 10^8 / 10^14 = 10^-6. So lambda = 0.5x10^-6 = 5x10^-7 m.',
+        missingHint: 'Divide 3 by 6 = 0.5. Subtract powers: 10⁸ / 10¹⁴ = 10⁻⁶. So λ = 0.5×10⁻⁶ = 5×10⁻⁷ m.',
         answer: 5e-7,
         answerUnit: 'm',
       },
       tier2: {
-        question: 'A microwave has wavelength 0.12 m. Speed = 3x10^8 m/s. Calculate the frequency.',
-        shownEquation: 'v = f x lambda -> f = v / lambda',
-        shownStep1: 'Write what you know: lambda = 0.12 m, v = 3x10^8 m/s',
-        hint: 'Divide: f = 3x10^8 / 0.12. Calculate 3/0.12 = 25, then multiply by 10^8.',
+        question: 'A microwave has wavelength 0.12 m. Speed = 3×10⁸ m/s. Calculate the frequency.',
+        shownEquation: 'v = fλ → f = v / λ',
+        shownStep1: 'Write what you know: λ = 0.12 m, v = 3×10⁸ m/s',
+        hint: 'Divide: f = 3×10⁸ / 0.12. Calculate 3/0.12 = 25, then multiply by 10⁸.',
         answer: 2.5e9,
         answerUnit: 'Hz',
       },
       tier3: {
-        question: 'An EM wave has frequency 1.5x10^9 Hz. Speed = 3x10^8 m/s. Calculate the wavelength.',
-        hint: 'Use lambda = v / f. Divide 3x10^8 by 1.5x10^9.',
-        methodHint: 'Divide coefficients: 3 / 1.5 = 2. Subtract powers: 10^8 / 10^9 = 10^-1 = 0.1. So lambda = 2 x 0.1 = 0.2 m.',
+        question: 'An EM wave has frequency 1.5×10⁹ Hz. Speed = 3×10⁸ m/s. Calculate the wavelength.',
+        hint: 'Use λ = v / f. Divide 3×10⁸ by 1.5×10⁹.',
+        methodHint: 'Divide coefficients: 3 / 1.5 = 2. Subtract powers: 10⁸ / 10⁹ = 10⁻¹ = 0.1. So λ = 2 × 0.1 = 0.2 m.',
         answer: 0.2,
         answerUnit: 'm',
       },
     },
 
     summary: {
-      equation: 'v = f x lambda (v = 3x10^8 m/s for all EM waves in vacuum)',
-      sentence: 'All EM waves are transverse and travel at 3x10^8 m/s; higher frequency means shorter wavelength and more energy - ionising above UV.',
+      equation: 'v = fλ (v = 3×10⁸ m/s for all EM waves in vacuum)',
+      sentence: 'All EM waves are transverse and travel at 3×10⁸ m/s; higher frequency means shorter wavelength and more energy - ionising above UV.',
       promptText: 'List the 7 types of EM radiation in order of increasing frequency and name one use and one hazard.',
     },
 
     sessionRecap: [
-      'EM spectrum order (low to high frequency): radio, microwave, infrared, visible, UV, X-ray, gamma - all travel at 3x10^8 m/s in vacuum.',
+      'EM spectrum order (low to high frequency): radio, microwave, infrared, visible, UV, X-ray, gamma - all travel at 3×10⁸ m/s in vacuum.',
       'Higher frequency = shorter wavelength = more energy. UV, X-rays and gamma rays are ionising and can damage DNA.',
       'Radiation dose is measured in sieverts (Sv). Radio waves are produced by oscillating currents and induce AC in a receiving conductor.',
     ],
@@ -2798,9 +2798,9 @@ export const WAVES_TOPICS = {
       {
         word: 'Intensity of Radiation',
         symbol: '',
-        unit: 'W/m^2',
-        definition: 'The power of emitted radiation per unit area. Doubles rapidly with temperature - proportional to T^4 (Stefan-Boltzmann law, not required at GCSE).',
-        everydayNote: 'An object at 600 K emits 16 times more radiation than the same object at 300 K (2^4 = 16), not just twice as much.',
+        unit: 'W/m²',
+        definition: 'The power of emitted radiation per unit area. Rises steeply with temperature - proportional to T⁴ (Stefan-Boltzmann law, not required at GCSE).',
+        everydayNote: 'An object at 600 K emits 16 times more radiation than the same object at 300 K (2⁴ = 16), not just twice as much.',
       },
     ],
 
@@ -2829,54 +2829,54 @@ export const WAVES_TOPICS = {
 
     workedExample: {
       title: 'Comparing radiation emission from objects at different temperatures',
-      equation: 'Emission rate is proportional to T^4 (Stefan-Boltzmann). If temperature doubles: emission x 2^4 = 16.',
+      equation: 'Emission rate is proportional to T⁴ (Stefan-Boltzmann). If temperature doubles: emission × 2⁴ = 16.',
       context: 'Object A is at 300 K. Object B is at 600 K (twice as hot). How many times more radiation does object B emit per second compared to object A?',
       steps: [
-        { step: 1, action: 'Write what you know', content: 'T_A = 300 K, T_B = 600 K. Temperature ratio = 600/300 = 2.', annotation: 'Temperatures must be in Kelvin, not Celsius. K = degrees C + 273.' },
-        { step: 2, action: 'State the relationship', content: 'Emission is proportional to T^4 (Stefan-Boltzmann law).', annotation: 'At GCSE you need to know that hotter objects emit much more - the T^4 relationship explains why small temperature increases have big effects.' },
-        { step: 3, action: 'Calculate the ratio', content: 'Emission ratio = (T_B / T_A)^4 = 2^4 = 16.', annotation: 'Doubling temperature gives 16 times more emission, not 2 times. This is why the Sun is so much more intense than Earth despite being only 20 times hotter.' },
+        { step: 1, action: 'Write what you know', content: 'T_A = 300 K, T_B = 600 K. Temperature ratio = 600/300 = 2.', annotation: 'Temperatures must be in Kelvin, not Celsius. K = °C + 273.' },
+        { step: 2, action: 'State the relationship', content: 'Emission is proportional to T⁴ (Stefan-Boltzmann law).', annotation: 'At GCSE you need to know that hotter objects emit much more - the T⁴ relationship explains why small temperature increases have big effects.' },
+        { step: 3, action: 'Calculate the ratio', content: 'Emission ratio = (T_B / T_A)⁴ = 2⁴ = 16.', annotation: 'Doubling temperature gives 16 times more emission, not 2 times. This is why the Sun is so much more intense than Earth despite being only 20 times hotter.' },
         { step: 4, action: 'State the answer', content: 'Object B emits 16 times more radiation than object A.', annotation: 'Sense check: a small change in temperature can make a large difference in emission rate - this is why Earth\'s temperature is so sensitive to changes in atmospheric absorption.' },
       ],
       misconceptionAfter: {
         claim: 'If an object is twice as hot, it emits twice as much radiation.',
-        reality: 'Emission scales with T^4. Double the temperature gives 16 times (2^4) more emission. This is why the Sun, at only about 20 times Earth\'s absolute temperature, emits about 20^4 = 160,000 times more radiation per unit area.',
+        reality: 'Emission scales with T⁴. Double the temperature gives 16 times (2⁴) more emission. This is why the Sun, at only about 20 times Earth\'s absolute temperature, emits about 20⁴ = 160,000 times more radiation per unit area.',
         visual: 'A stovetop burner going from 400 K to 800 K doubles in temperature but emits 16 times more radiation - that is why it glows visibly red-hot at the higher temperature.',
       },
     },
 
     guidedPractice: {
       tier1: {
-        question: 'Object X is at 300 K. Object Y is at 600 K. Using the T^4 rule, how many times more radiation does Y emit than X?',
+        question: 'Object X is at 300 K. Object Y is at 600 K. Using the T⁴ rule, how many times more radiation does Y emit than X?',
         allSteps: [
           'Write the temperatures: T_X = 300 K, T_Y = 600 K',
           'Find the temperature ratio: 600 / 300 = 2',
-          'Apply T^4: emission ratio = 2^4',
-          '??? - calculate 2^4',
+          'Apply T⁴: emission ratio = 2⁴',
+          '??? - calculate 2⁴',
         ],
         missingStep: 3,
-        missingHint: '2^4 = 2 x 2 x 2 x 2 = ?',
+        missingHint: '2⁴ = 2 × 2 × 2 × 2 = ?',
         answer: 16,
         answerUnit: 'times more',
       },
       tier2: {
-        question: 'Object P is at 200 K. Object Q is at 400 K. Using the T^4 rule, how many times more radiation does Q emit than P?',
-        shownEquation: 'emission ratio = (T_Q / T_P)^4',
+        question: 'Object P is at 200 K. Object Q is at 400 K. Using the T⁴ rule, how many times more radiation does Q emit than P?',
+        shownEquation: 'emission ratio = (T_Q / T_P)⁴',
         shownStep1: 'Temperature ratio = 400 / 200 = 2',
-        hint: 'Calculate 2^4.',
+        hint: 'Calculate 2⁴.',
         answer: 16,
         answerUnit: 'times more',
       },
       tier3: {
-        question: 'Object A is at 250 K. Object B is at 500 K. How many times more radiation does B emit than A? Use the T^4 rule.',
+        question: 'Object A is at 250 K. Object B is at 500 K. How many times more radiation does B emit than A? Use the T⁴ rule.',
         hint: 'Find the temperature ratio first. Then raise to the power 4.',
-        methodHint: 'Ratio = 500/250 = 2. Emission ratio = 2^4 = 16.',
+        methodHint: 'Ratio = 500/250 = 2. Emission ratio = 2⁴ = 16.',
         answer: 16,
         answerUnit: 'times more',
       },
     },
 
     summary: {
-      equation: 'Emission proportional to T^4. Hotter = more emission + shorter wavelength peak.',
+      equation: 'Emission proportional to T⁴. Hotter = more emission + shorter wavelength peak.',
       sentence: 'All objects above absolute zero emit infrared radiation - hotter objects emit far more and at shorter wavelengths; a perfect black body absorbs all radiation and emits the maximum possible.',
       promptText: 'Explain in two sentences why Earth\'s temperature stays roughly constant despite constant energy input from the Sun.',
     },
@@ -2884,7 +2884,7 @@ export const WAVES_TOPICS = {
     sessionRecap: [
       'All objects above 0 K (-273 degrees C) emit infrared radiation - the hotter the object, the more it emits and the shorter the peak wavelength.',
       'At thermal equilibrium, absorption rate = emission rate. Earth\'s temperature is governed by this balance with solar radiation.',
-      'Doubling an object\'s absolute temperature increases its emission by a factor of 2^4 = 16 - small temperature changes have a large effect on radiation output.',
+      'Doubling an object\'s absolute temperature increases its emission by a factor of 2⁴ = 16 - small temperature changes have a large effect on radiation output.',
     ],
   },
   magnetism_fields: {
@@ -3420,7 +3420,7 @@ export const WAVES_TOPICS = {
         symbol: '',
         unit: '',
         definition: 'The network of cables and transformers that distributes electrical power from power stations to homes. Step-up transformers increase voltage to ~400 kV for transmission; step-down reduces it to 230 V for homes.',
-        everydayNote: 'High voltage means low current (P = VI). Low current means less P = I^2R heating in the cables. This is why the Grid uses 400,000 V, not 230 V, for transmission.',
+        everydayNote: 'High voltage means low current (P = VI). Low current means less P = I²R heating in the cables. This is why the Grid uses 400,000 V, not 230 V, for transmission.',
       },
     ],
 
@@ -3498,13 +3498,13 @@ export const WAVES_TOPICS = {
     summary: {
       equation: 'Vp/Vs = Np/Ns and VpIp = VsIs (ideal transformer)',
       sentence: 'A changing magnetic field induces an EMF; transformers use this to change AC voltage, with power conserved - higher voltage means lower current.',
-      promptText: 'Explain in two sentences why the National Grid transmits electricity at 400 kV rather than 230 V, using P = I^2R in your answer.',
+      promptText: 'Explain in two sentences why the National Grid transmits electricity at 400 kV rather than 230 V, using P = I²R in your answer.',
     },
 
     sessionRecap: [
       'Generator effect: a conductor moving in a magnetic field (or a changing field near a conductor) induces a potential difference.',
       'Transformer equations: Vp/Vs = Np/Ns (turns ratio) and VpIp = VsIs (power conservation for ideal transformer).',
-      'National Grid: step-up to 400 kV reduces current, minimising P = I^2R losses in cables; step-down to 230 V for safe domestic use.',
+      'National Grid: step-up to 400 kV reduces current, minimising P = I²R losses in cables; step-down to 230 V for safe domestic use.',
     ],
   },
   ac_generators: {
@@ -3694,7 +3694,7 @@ export const WAVES_TOPICS = {
         symbol: '',
         unit: '',
         definition: 'A transformer where Ns > Np. Secondary voltage is greater than primary voltage; secondary current is smaller than primary current.',
-        everydayNote: 'Power stations use step-up transformers to raise voltage to 400 kV for national transmission. High voltage = low current = less P = I^2R heating in cables.',
+        everydayNote: 'Power stations use step-up transformers to raise voltage to 400 kV for national transmission. High voltage = low current = less P = I²R heating in cables.',
       },
       {
         word: 'Step-Down Transformer',
@@ -3800,13 +3800,13 @@ export const WAVES_TOPICS = {
     summary: {
       equation: 'Vp/Vs = Np/Ns and VpIp = VsIs',
       sentence: 'Transformers change AC voltage using the turns ratio; power is conserved, so higher voltage means lower current; they require AC because DC cannot create a changing magnetic field.',
-      promptText: 'Explain in two sentences why the National Grid steps voltage up to 400 kV before transmission, using both P = I^2R and VpIp = VsIs in your answer.',
+      promptText: 'Explain in two sentences why the National Grid steps voltage up to 400 kV before transmission, using both P = I²R and VpIp = VsIs in your answer.',
     },
 
     sessionRecap: [
       'Vp/Vs = Np/Ns: voltage ratio equals turns ratio. More secondary turns = higher secondary voltage (step-up).',
       'VpIp = VsIs: power is conserved. Higher voltage on secondary means lower current - a transformer cannot create energy.',
-      'Transformers only work with AC. The National Grid steps up to 400 kV (reducing current) to minimise I^2R cable losses, then steps back down to 230 V for homes.',
+      'Transformers only work with AC. The National Grid steps up to 400 kV (reducing current) to minimise I²R cable losses, then steps back down to 230 V for homes.',
     ],
   },
   solar_system: {
@@ -4117,8 +4117,8 @@ export const WAVES_TOPICS = {
       },
       tier3: {
         question: 'The Sun has been on the main sequence for 4.6 billion out of a total 9.6 billion year main sequence lifetime. What percentage of its main sequence life has the Sun already used?',
-        hint: 'Percentage = (time used / total time) x 100.',
-        methodHint: '(4.6 / 9.6) x 100. Round to one decimal place.',
+        hint: 'Percentage = (time used / total time) × 100.',
+        methodHint: '(4.6 / 9.6) × 100. Round to one decimal place.',
         answer: 47.9,
         answerUnit: '%',
       },

@@ -2356,7 +2356,7 @@ export const MATTER_TOPICS = {
       tier3: {
         question: 'If the radius ratio is 10,000, what is the volume ratio of atom to nucleus? (Volume scales as radius cubed.)',
         hint: 'Volume ratio = (radius ratio)³',
-        methodHint: 'Start with radius ratio = 10,000. Volume ratio = 10,000³ = 10^12.',
+        methodHint: 'Start with radius ratio = 10,000. Volume ratio = 10,000³ = 10¹².',
         answer: 1000000000000,
         answerUnit: '(atom volume is 10¹² times larger)',
       },
@@ -3201,7 +3201,7 @@ export const MATTER_TOPICS = {
       tier3: {
         question: 'In a controlled reactor, exactly 1 neutron per fission causes the next fission. Starting with 1 fission, how many fissions occur per generation after 5 generations?',
         hint: 'If exactly 1 neutron per fission reaches another nucleus, the rate stays constant.',
-        methodHint: 'Start: 1 fission generates 1 neutron that causes 1 more fission. This repeats every generation: 1^5 = 1. Steady state.',
+        methodHint: 'Start: 1 fission generates 1 neutron that causes 1 more fission. This repeats every generation: 1⁵ = 1. Steady state.',
         answer: 1,
         answerUnit: 'fissions per generation (steady state)',
       },
@@ -3361,7 +3361,7 @@ export const MATTER_TOPICS = {
         missingStep: 3,
         missingHint: 'Calculate: c² = (3×10⁸)² = 9×10¹⁶. Then E = 4×10⁻³ × 9×10¹⁶ = ?',
         answer: 3.6,
-        answerUnit: 'x 10^14 J',
+        answerUnit: '×10¹⁴ J',
       },
       tier2: {
         question: 'A fusion reaction converts m = 1×10⁻³ kg of mass to energy. Find E. (c = 3×10⁸ m/s)',
@@ -3369,7 +3369,7 @@ export const MATTER_TOPICS = {
         shownStep1: 'Write what you know: m = 1×10⁻³ kg, c² = 9×10¹⁶ m²/s²',
         hint: 'E = 1×10⁻³ × 9×10¹⁶ = ?',
         answer: 9,
-        answerUnit: 'x 10^13 J',
+        answerUnit: '×10¹³ J',
       },
       tier3: {
         question: 'A fusion reaction releases E = 4.5×10¹⁴ J. Find the mass converted. (c = 3×10⁸ m/s)',

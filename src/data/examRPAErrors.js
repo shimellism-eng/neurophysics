@@ -1,5 +1,5 @@
 /**
- * examRPAErrors.js — Grade 9 discriminator: "Too high / too low" error direction questions
+ * examRPAErrors.js - Grade 9 discriminator: "Too high / too low" error direction questions
  *
  * These appear in every AQA Physics paper. The student must:
  *   [1 mark] identify the source of error
@@ -31,12 +31,12 @@ const examRPAErrors = [
     rpaName: 'Resistance of a wire',
     experiment: 'A student connects a nichrome wire in a circuit and measures the voltage across it and the current through it to calculate resistance (R = V/I). The student takes readings quickly without waiting between readings.',
     question: 'The wire gets hot during the experiment. Explain why this causes the student\'s value of resistance to be too high or too low.',
-    questionSubtitle: '[2 marks] — identify the source of error and state the direction',
+    questionSubtitle: '[2 marks] - identify the source of error and state the direction',
     errorSource: 'The wire heats up, which increases the resistance of the wire above its room-temperature value.',
     direction: 'high',
     markScheme: [
       '[1 mark] The resistance of the wire increases as the wire heats up / temperature causes increased resistance',
-      '[1 mark] The measured resistance is too HIGH — the hot wire has higher resistance than at room temperature',
+      '[1 mark] The measured resistance is too HIGH - the hot wire has higher resistance than at room temperature',
     ],
     tier: 3,
     marks: 2,
@@ -50,11 +50,11 @@ const examRPAErrors = [
     experiment: 'A student uses crocodile clips to connect to a nichrome wire. The clips are positioned at 0 cm and 100 cm to measure a 100 cm length. However, the clips are placed on the wire 2 cm inside each end.',
     question: 'Explain why placing the crocodile clips 2 cm inside each end means the student\'s calculated resistance per metre is too high or too low.',
     questionSubtitle: '[2 marks]',
-    errorSource: 'The effective length of wire being measured is shorter than intended — 96 cm instead of 100 cm.',
+    errorSource: 'The effective length of wire being measured is shorter than intended - 96 cm instead of 100 cm.',
     direction: 'high',
     markScheme: [
       '[1 mark] The actual length of wire between the clips is shorter than recorded / the student measures a shorter length than intended',
-      '[1 mark] The resistance per metre calculated is too HIGH — dividing the same resistance by a smaller length gives a larger value',
+      '[1 mark] The resistance per metre calculated is too HIGH - dividing the same resistance by a smaller length gives a larger value',
     ],
     tier: 3,
     marks: 2,
@@ -69,11 +69,11 @@ const examRPAErrors = [
     experiment: 'A student measures the volume of an irregular solid using a displacement measuring cylinder. The measuring cylinder has a resolution of 2 cm³ (graduations every 2 cm³). The student reads the volume to the nearest 2 cm³.',
     question: 'Explain how the resolution of the measuring cylinder affects the student\'s calculated value of density.',
     questionSubtitle: '[2 marks]',
-    errorSource: 'The coarse resolution means the volume reading has a significant uncertainty — it could be up to 1 cm³ too high or too low.',
+    errorSource: 'The coarse resolution means the volume reading has a significant uncertainty - it could be up to 1 cm³ too high or too low.',
     direction: 'high',
     markScheme: [
       '[1 mark] The volume measurement has a large uncertainty / the resolution (2 cm³) is large relative to the object\'s volume / random error in reading',
-      '[1 mark] If the volume is read as too LOW, the calculated density is too HIGH (ρ = m/V — smaller V gives larger ρ) / could be too high or too low depending on reading error',
+      '[1 mark] If the volume is read as too LOW, the calculated density is too HIGH (ρ = m/V - smaller V gives larger ρ) / could be too high or too low depending on reading error',
     ],
     tier: 3,
     marks: 2,
@@ -91,7 +91,7 @@ const examRPAErrors = [
     direction: 'high',
     markScheme: [
       '[1 mark] The recorded mass includes the string, so the mass value used is greater than the actual mass of the stone alone',
-      '[1 mark] Density = m/V — with mass too high and correct volume, the calculated density is too HIGH',
+      '[1 mark] Density = m/V - with mass too high and correct volume, the calculated density is too HIGH',
     ],
     tier: 3,
     marks: 2,
@@ -106,11 +106,11 @@ const examRPAErrors = [
     experiment: 'A student investigates the I-V characteristic of a filament lamp. They only take readings with current flowing in one direction (positive values only) and do not reverse the connections.',
     question: 'Explain why not reversing the connections means the student\'s graph cannot fully represent the I-V characteristic of the lamp. State the effect on the conclusion.',
     questionSubtitle: '[2 marks]',
-    errorSource: 'Without reversing connections, the student only plots the positive half of the I-V characteristic — the graph is incomplete.',
+    errorSource: 'Without reversing connections, the student only plots the positive half of the I-V characteristic - the graph is incomplete.',
     direction: 'no effect',
     markScheme: [
       '[1 mark] The characteristic curve should be plotted for both positive and negative values of current and voltage / the student only has data for one direction',
-      '[1 mark] The characteristic shows the lamp is a non-ohmic component only with positive values — the result is incomplete / the student cannot confirm the curve is symmetric',
+      '[1 mark] The characteristic shows the lamp is a non-ohmic component only with positive values - the result is incomplete / the student cannot confirm the curve is symmetric',
     ],
     tier: 3,
     marks: 2,
@@ -129,7 +129,7 @@ const examRPAErrors = [
     direction: 'low',
     markScheme: [
       '[1 mark] The angle of refraction measured from the surface is the complement of the true angle / angles from surface = 90° − angle from normal, so the recorded angle is too large',
-      '[1 mark] n = sin(i)/sin(r) — if r is recorded as too large, sin(r) is larger, so n is too LOW',
+      '[1 mark] n = sin(i)/sin(r) - if r is recorded as too large, sin(r) is larger, so n is too LOW',
     ],
     tier: 3,
     marks: 2,
@@ -146,7 +146,7 @@ const examRPAErrors = [
     errorSource: 'Parallax error occurs when the eye is not directly above the scale being read, causing the reading to be consistently shifted in one direction.',
     direction: 'high',
     markScheme: [
-      '[1 mark] Viewing from an angle causes parallax error — the angle appears different from its true value / the angle reading is systematically shifted',
+      '[1 mark] Viewing from an angle causes parallax error - the angle appears different from its true value / the angle reading is systematically shifted',
       '[1 mark] This is a systematic error that affects all readings consistently / the calculated refractive index will be consistently too high or too low depending on the direction of the parallax',
     ],
     tier: 3,
@@ -166,7 +166,7 @@ const examRPAErrors = [
     direction: 'high',
     markScheme: [
       '[1 mark] Not all the energy from the heater is transferred to the metal block / some energy is lost to the surroundings / the temperature rise is smaller than it would be if all energy went into the block',
-      '[1 mark] c = E/(mΔθ) — the temperature rise is smaller, so c is calculated as larger than its true value / too HIGH',
+      '[1 mark] c = E/(mΔθ) - the temperature rise is smaller, so c is calculated as larger than its true value / too HIGH',
     ],
     tier: 3,
     marks: 2,
@@ -204,7 +204,7 @@ const examRPAErrors = [
     direction: 'low',
     markScheme: [
       '[1 mark] Some ice melts due to energy from the room (not just the heater), so more water is collected than expected from the heater energy alone',
-      '[1 mark] L = E/(m) — the mass of water (m) is larger than it should be for the energy supplied, so L is calculated as too LOW',
+      '[1 mark] L = E/(m) - the mass of water (m) is larger than it should be for the energy supplied, so L is calculated as too LOW',
     ],
     tier: 3,
     marks: 2,
@@ -223,7 +223,7 @@ const examRPAErrors = [
     direction: 'low',
     markScheme: [
       '[1 mark] Reading at the top of the meniscus gives a volume that is too large / the true volume is at the bottom of the meniscus',
-      '[1 mark] ρ = m/V — if V is too large and m is correct, density is calculated as too LOW',
+      '[1 mark] ρ = m/V - if V is too large and m is correct, density is calculated as too LOW',
     ],
     tier: 3,
     marks: 2,
@@ -242,7 +242,7 @@ const examRPAErrors = [
     direction: 'high',
     markScheme: [
       '[1 mark] The student times only 9 complete oscillations instead of 10 / they start counting at "1" rather than "0"',
-      '[1 mark] f = n/t — the number n appears as 10 but only 9 periods elapsed, so t is smaller than for 10 oscillations → f is calculated too HIGH',
+      '[1 mark] f = n/t - the number n appears as 10 but only 9 periods elapsed, so t is smaller than for 10 oscillations → f is calculated too HIGH',
     ],
     tier: 3,
     marks: 2,
@@ -257,10 +257,10 @@ const examRPAErrors = [
     experiment: 'A student uses a liquid-in-glass thermometer with a resolution of 1 °C to measure a temperature change of 4 °C. A classmate suggests using a digital thermometer with a resolution of 0.1 °C.',
     question: 'Explain why using a digital thermometer with smaller resolution would improve the reliability of the specific heat capacity result.',
     questionSubtitle: '[2 marks]',
-    errorSource: 'A 1 °C resolution thermometer has an uncertainty of ±0.5 °C on each reading, giving a potential uncertainty of ±1 °C in the temperature change — a 25% error on a 4 °C rise.',
+    errorSource: 'A 1 °C resolution thermometer has an uncertainty of ±0.5 °C on each reading, giving a potential uncertainty of ±1 °C in the temperature change - a 25% error on a 4 °C rise.',
     direction: 'high',
     markScheme: [
-      '[1 mark] The uncertainty in temperature change is ±1 °C with a 1 °C resolution thermometer (±0.5 on each reading) — this is a large % of a small temperature change (25%)',
+      '[1 mark] The uncertainty in temperature change is ±1 °C with a 1 °C resolution thermometer (±0.5 on each reading) - this is a large % of a small temperature change (25%)',
       '[1 mark] A 0.1 °C resolution thermometer has much smaller uncertainty (±0.1 °C total), so c = E/(mΔθ) is more accurate / the percentage uncertainty is greatly reduced',
     ],
     tier: 3,

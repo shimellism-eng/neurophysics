@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback } from 'react'
 import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff, Volume2 } from 'lucide-react'
+import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
@@ -321,11 +322,7 @@ export default function DiagnosticQuestion() {
   // F6: TTS — read question aloud
   const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
   const speakQuestion = () => {
-    if (!('speechSynthesis' in window)) return
-    window.speechSynthesis.cancel()
-    const utt = new SpeechSynthesisUtterance(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))
-    utt.rate = 0.9
-    window.speechSynthesis.speak(utt)
+    speak(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))
   }
 
   // MCQ handlers

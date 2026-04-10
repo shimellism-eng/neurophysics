@@ -1,8 +1,8 @@
 /**
- * examChained.js — Grade 9 discriminator: multi-step chained-equation calculations
+ * examChained.js - Grade 9 discriminator: multi-step chained-equation calculations
  *
  * These questions require the student to identify WHICH two (or three) equations
- * to link, without being told — the primary Grade 9 filter in AQA Physics papers.
+ * to link, without being told - the primary Grade 9 filter in AQA Physics papers.
  *
  * Schema matches examCalculations.js but type = "calculation-chained" and tier = 3.
  */
@@ -15,7 +15,7 @@ const examChained = {
     {
       type: 'calculation-chained',
       question: 'A spring (spring constant 735 N/m) is compressed by 0.40 m and used to launch a 0.060 kg ball vertically. Assuming all elastic potential energy converts to gravitational potential energy, calculate the maximum height reached by the ball. (g = 10 N/kg)',
-      questionSubtitle: 'Chain Ee = ½ke² then GPE = mgh — show both equations [5 marks]',
+      questionSubtitle: 'Chain Ee = ½ke² then GPE = mgh - show both equations [5 marks]',
       equation: 'Ee = ½ke²  →  GPE = mgh',
       steps: [
         { label: 'Calculate elastic PE stored in the spring', value: '58.8', unit: 'J', hint: 'Ee = ½ × 735 × 0.40² = ½ × 735 × 0.16 = 58.8 J' },
@@ -33,7 +33,7 @@ const examChained = {
     {
       type: 'calculation-chained',
       question: 'A 1200 kg car travels at 30 m/s. The driver brakes and the car decelerates uniformly to rest. The braking force is 9000 N. Calculate the braking distance.',
-      questionSubtitle: 'Chain KE = ½mv² then work done W = Fs — show both equations [4 marks]',
+      questionSubtitle: 'Chain KE = ½mv² then work done W = Fs - show both equations [4 marks]',
       equation: 'KE = ½mv²  →  W = Fs',
       steps: [
         { label: 'Calculate kinetic energy of the car', value: '540000', unit: 'J', hint: 'KE = ½ × 1200 × 30² = ½ × 1200 × 900 = 540 000 J' },
@@ -44,14 +44,14 @@ const examChained = {
       answer: 60,
       answerUnit: 'm',
       acceptRange: [59, 61],
-      commonMistake: 'The braking force removes the kinetic energy. Set W = KE, then rearrange W = Fs for s. Don\'t use v² = u² + 2as here — the work-energy route is more direct.',
+      commonMistake: 'The braking force removes the kinetic energy. Set W = KE, then rearrange W = Fs for s. Don\'t use v² = u² + 2as here - the work-energy route is more direct.',
       tier: 3,
       senNote: 'Kinetic energy → work done by brakes. KE = ½mv², W = Fs. The energy is "used up" stopping the car.',
     },
     {
       type: 'calculation-chained',
       question: 'A kettle heats 0.80 kg of water from 20 °C to 100 °C. The specific heat capacity of water is 4200 J/kg°C. The kettle has a power rating of 2800 W. Calculate the time taken to boil the water.',
-      questionSubtitle: 'Chain E = mcΔθ then P = E/t — show both equations [4 marks]',
+      questionSubtitle: 'Chain E = mcΔθ then P = E/t - show both equations [4 marks]',
       equation: 'E = mcΔθ  →  P = E/t',
       steps: [
         { label: 'Calculate temperature change', value: '80', unit: '°C', hint: 'Δθ = 100 − 20 = 80 °C' },
@@ -77,7 +77,7 @@ const examChained = {
       questionSubtitle: 'Two valid routes: (A) F = ma then v² = u² + 2as  OR  (B) KE = ½mv² then W = Fs [6 marks]',
       equation: 'F = ma  →  v² = u² + 2as   OR   KE = ½mv²  →  W = Fs',
       steps: [
-        { label: 'Route A — Calculate deceleration using F = ma', value: '1.125', unit: 'm/s²', hint: 'a = F ÷ m = 270 000 ÷ 240 000 = 1.125 m/s²' },
+        { label: 'Route A - Calculate deceleration using F = ma', value: '1.125', unit: 'm/s²', hint: 'a = F ÷ m = 270 000 ÷ 240 000 = 1.125 m/s²' },
         { label: 'Apply v² = u² + 2as with v = 0, u = 60', value: '0 = 3600 − 2.25s', unit: '', hint: 'v² = u² + 2as → 0 = 60² − 2 × 1.125 × s' },
         { label: 'Rearrange for s', value: '1600', unit: 'm', hint: 's = 3600 ÷ 2.25 = 1600 m' },
       ],
@@ -120,7 +120,7 @@ const examChained = {
       answer: 800,
       answerUnit: 'N',
       acceptRange: [790, 810],
-      commonMistake: 'The ball changes direction — so v is negative if u is positive. Change in velocity = v − u = −8 − 12 = −20 m/s, not −8 − (−12).',
+      commonMistake: 'The ball changes direction - so v is negative if u is positive. Change in velocity = v − u = −8 − 12 = −20 m/s, not −8 − (−12).',
       tier: 3,
       senNote: 'Key: the ball bounces back, so its velocity changes sign. Δv = final − initial = −8 − (+12) = −20 m/s.',
     },
@@ -236,7 +236,7 @@ const examChained = {
     {
       type: 'calculation-chained',
       question: 'A sound wave has a frequency of 680 Hz and travels through air at 340 m/s. The wave then enters water where its speed increases to 1500 m/s. Calculate the wavelength of the sound in water.',
-      questionSubtitle: 'Frequency is constant across boundaries — use v = fλ twice [4 marks]',
+      questionSubtitle: 'Frequency is constant across boundaries - use v = fλ twice [4 marks]',
       equation: 'v = fλ  (frequency unchanged at boundary)',
       steps: [
         { label: 'State: frequency is unchanged when wave crosses a boundary', value: '680', unit: 'Hz', hint: 'Frequency always stays the same when a wave crosses a boundary' },
@@ -246,7 +246,7 @@ const examChained = {
       answer: 2.21,
       answerUnit: 'm',
       acceptRange: [2.18, 2.24],
-      commonMistake: 'Frequency does NOT change when a wave crosses a boundary — only speed and wavelength change. Use the new speed (1500 m/s) with the same frequency.',
+      commonMistake: 'Frequency does NOT change when a wave crosses a boundary - only speed and wavelength change. Use the new speed (1500 m/s) with the same frequency.',
       tier: 3,
       senNote: 'Key rule: when a wave crosses a boundary, frequency stays the same. Only speed and wavelength change.',
     },

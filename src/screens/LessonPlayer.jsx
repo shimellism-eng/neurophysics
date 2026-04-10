@@ -28,6 +28,7 @@ import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
 import HeartsDisplay from '../components/HeartsDisplay'
 import { getExamQuestionCount } from '../data/examIndex'
+import { speak } from '../utils/tts'
 
 // New lesson step components
 import HookCard from '../components/lesson/HookCard'
@@ -41,7 +42,7 @@ import SessionClose from '../components/lesson/SessionClose'
 // ─── NEW 9-step flow ─────────────────────────────────────────────────────────
 
 const NEW_STEPS = [
-  { id: 'hook',      label: 'Hook',        icon: Zap,          hint: 'Why this matters' },
+  { id: 'hook',      label: 'Spark',       icon: Zap,          hint: 'Why this matters' },
   { id: 'vocab',     label: 'Key Words',   icon: BookOpen,     hint: 'Learn the language first' },
   { id: 'connect',   label: 'Connect',     icon: Map,          hint: 'What you already know' },
   { id: 'explore',   label: 'Explore',     icon: FlaskConical, hint: 'See it in action' },
@@ -142,13 +143,7 @@ function LegacyConceptStep({ topic }) {
         <button
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold w-fit"
           style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-          onClick={() => {
-            if (!('speechSynthesis' in window)) return
-            window.speechSynthesis.cancel()
-            const utt = new SpeechSynthesisUtterance(topic.concept + '. ' + topic.description)
-            utt.rate = 0.9
-            window.speechSynthesis.speak(utt)
-          }}
+          onClick={() => speak(topic.concept + '. ' + topic.description)}
         >
           <Volume2 size={12} />
           Read aloud

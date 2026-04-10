@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
 import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2 } from 'lucide-react'
+import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
@@ -601,13 +602,7 @@ export default function ExamPractice() {
                   <button
                     className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 mt-0.5"
                     style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)' }}
-                    onClick={() => {
-                      if (!('speechSynthesis' in window)) return
-                      window.speechSynthesis.cancel()
-                      const utt = new SpeechSynthesisUtterance(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))
-                      utt.rate = 0.9
-                      window.speechSynthesis.speak(utt)
-                    }}
+                    onClick={() => speak(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))}
                     aria-label="Read question aloud"
                   >
                     <Volume2 size={14} color="#818cf8" />

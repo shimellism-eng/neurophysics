@@ -197,7 +197,7 @@ export default function MasteryScreen() {
     })
   }
 
-  // Celebration banner — show when mastered count hits a multiple of 5
+  // Celebration banner - show when mastered count hits a multiple of 5
   const [bannerVisible, setBannerVisible] = useState(false)
   const [bannerCount, setBannerCount] = useState(0)
 

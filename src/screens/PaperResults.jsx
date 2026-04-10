@@ -1,8 +1,8 @@
 /**
- * PaperResults — 3-stage results flow for TimedPaper
- * Stage 1: The Number  — grade range, confetti, time used
- * Stage 2: The Breakdown — section scores, marks heatmap
- * Stage 3: The Plan — weakest topics → lesson links
+ * PaperResults - 3-stage results flow for TimedPaper
+ * Stage 1: The Number  - grade range, confetti, time used
+ * Stage 2: The Breakdown - section scores, marks heatmap
+ * Stage 3: The Plan - weakest topics → lesson links
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef } from 'react'
@@ -16,13 +16,13 @@ import {
 // Expressed as percentage of total marks (35 marks paper)
 // These are RANGES, not exact numbers, to avoid false precision
 const GRADE_RANGES = [
-  { grade: '9', min: 0.85, label: 'Grade 9', color: '#a855f7', bg: 'rgba(168,85,247,0.15)', desc: 'Outstanding — top tier nationally' },
-  { grade: '8', min: 0.75, label: 'Grade 8', color: '#6366f1', bg: 'rgba(99,102,241,0.15)', desc: 'Excellent — well above national average' },
-  { grade: '7', min: 0.65, label: 'Grade 7', color: '#3b82f6', bg: 'rgba(59,130,246,0.15)', desc: 'Strong — above national average' },
-  { grade: '6', min: 0.55, label: 'Grade 6', color: '#10b981', bg: 'rgba(16,185,129,0.15)', desc: 'Good — at or above national average' },
+  { grade: '9', min: 0.85, label: 'Grade 9', color: '#a855f7', bg: 'rgba(168,85,247,0.15)', desc: 'Outstanding - top tier nationally' },
+  { grade: '8', min: 0.75, label: 'Grade 8', color: '#6366f1', bg: 'rgba(99,102,241,0.15)', desc: 'Excellent - well above national average' },
+  { grade: '7', min: 0.65, label: 'Grade 7', color: '#3b82f6', bg: 'rgba(59,130,246,0.15)', desc: 'Strong - above national average' },
+  { grade: '6', min: 0.55, label: 'Grade 6', color: '#10b981', bg: 'rgba(16,185,129,0.15)', desc: 'Good - at or above national average' },
   { grade: '5', min: 0.44, label: 'Grade 5', color: '#f59e0b', bg: 'rgba(245,158,11,0.15)', desc: 'Standard pass' },
-  { grade: '4', min: 0.33, label: 'Grade 4', color: '#f97316', bg: 'rgba(249,115,22,0.15)', desc: 'Pass — meets minimum standard' },
-  { grade: '3', min: 0.20, label: 'Grade 3', color: '#ef4444', bg: 'rgba(239,68,68,0.15)', desc: 'Below pass — more revision needed' },
+  { grade: '4', min: 0.33, label: 'Grade 4', color: '#f97316', bg: 'rgba(249,115,22,0.15)', desc: 'Pass - meets minimum standard' },
+  { grade: '3', min: 0.20, label: 'Grade 3', color: '#ef4444', bg: 'rgba(239,68,68,0.15)', desc: 'Below pass - more revision needed' },
   { grade: 'U', min: 0,    label: 'Ungraded', color: '#64748b', bg: 'rgba(100,116,139,0.12)', desc: 'Ungraded' },
 ]
 
@@ -43,10 +43,10 @@ function sectionOf(q) {
 }
 
 const SECTION_META = {
-  A: { label: 'Section A — MCQ & Equation Recall', color: '#6366f1' },
-  B: { label: 'Section B — Short Answer & RPA',    color: '#3b82f6' },
-  C: { label: 'Section C — Calculations & Graphs', color: '#10b981' },
-  D: { label: 'Section D — Extended Writing',      color: '#a855f7' },
+  A: { label: 'Section A - MCQ & Equation Recall', color: '#6366f1' },
+  B: { label: 'Section B - Short Answer & RPA',    color: '#3b82f6' },
+  C: { label: 'Section C - Calculations & Graphs', color: '#10b981' },
+  D: { label: 'Section D - Extended Writing',      color: '#a855f7' },
 }
 
 // ── Confetti ──────────────────────────────────────────────────────────────────
@@ -169,7 +169,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
             <span className="text-5xl font-black tabular-nums" style={{ color: '#f8fafc' }}>{displayed}</span>
             <span className="text-2xl font-bold mb-1" style={{ color: '#475569' }}>/{total}</span>
           </motion.div>
-          <p className="text-sm mt-1" style={{ color: '#64748b' }}>{pct}% — {timeStr} used</p>
+          <p className="text-sm mt-1" style={{ color: '#64748b' }}>{pct}% - {timeStr} used</p>
         </motion.div>
       </div>
 
@@ -213,7 +213,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
           })}
         </div>
         <p className="text-xs text-center mt-3" style={{ color: '#334155' }}>
-          Boundaries based on 3-year AQA averages — actual boundaries vary each year
+          Boundaries based on 3-year AQA averages - actual boundaries vary each year
         </p>
       </div>
 
@@ -346,12 +346,12 @@ function StageBreakdown({ questions, answers, timeUsed, onNext, onBack }) {
           </div>
           {avgTime < 45 && (
             <p className="text-xs mt-2" style={{ color: '#f59e0b' }}>
-              ⚡ Pacing: fast — make sure you checked your working
+              ⚡ Pacing: fast - make sure you checked your working
             </p>
           )}
           {avgTime > 180 && (
             <p className="text-xs mt-2" style={{ color: '#f59e0b' }}>
-              ⏱ Pacing: slow — under exam conditions, aim for ~90s per mark
+              ⏱ Pacing: slow - under exam conditions, aim for ~90s per mark
             </p>
           )}
         </motion.div>
@@ -392,7 +392,7 @@ const TOPIC_SLUGS = {
 function StageThePlan({ questions, answers, onDone }) {
   const navigate = useNavigate()
 
-  // Find weakest question topics — group by q.topic or q.rpaRef or fall back to type
+  // Find weakest question topics - group by q.topic or q.rpaRef or fall back to type
   const topicStats = {}
   questions.forEach((q, i) => {
     const slug = q.topic || q.rpaRef || q.type || 'general'
@@ -517,7 +517,7 @@ function StageThePlan({ questions, answers, onDone }) {
           <ul className="space-y-2">
             {[
               'Redo weakest topics using Exam Practice before your next paper',
-              'Time yourself on 6-mark questions — aim for 1 mark per minute',
+              'Time yourself on 6-mark questions - aim for 1 mark per minute',
               'Review RPA method cards in Practicals for error-direction questions',
               'Try the Grade 9 Challenge to target top-tier discriminator questions',
             ].map((tip, i) => (

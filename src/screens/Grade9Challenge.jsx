@@ -1,5 +1,5 @@
 /**
- * Grade9Challenge — curated Grade 9 discriminator questions.
+ * Grade9Challenge - curated Grade 9 discriminator questions.
  * Mixes chained calculations, RPA error-direction, and novel-context questions.
  */
 import { motion, AnimatePresence } from 'motion/react'
@@ -85,9 +85,9 @@ function NovelContextQuestion({ data, onComplete }) {
             {selfScore !== null && (
               <div className="text-center text-sm font-semibold py-2"
                 style={{ color: selfScore >= Math.ceil(data.marks / 2) ? '#00bc7d' : '#f59e0b' }}>
-                {selfScore >= data.marks ? '★ Full marks — Grade 9 standard!'
-                  : selfScore > 0 ? `${selfScore}/${data.marks} — almost there`
-                  : `0/${data.marks} — study the mark scheme carefully`}
+                {selfScore >= data.marks ? '★ Full marks - Grade 9 standard!'
+                  : selfScore > 0 ? `${selfScore}/${data.marks} - almost there`
+                  : `0/${data.marks} - study the mark scheme carefully`}
               </div>
             )}
           </motion.div>
@@ -274,7 +274,7 @@ export default function Grade9Challenge() {
                 ? 'You\'re answering at the top 3% level. These are the questions that separate Grade 8 from Grade 9.'
                 : grade8
                 ? 'Solid performance. Review the mark schemes for any questions you missed.'
-                : 'Grade 9 discriminators are designed to be hard. Study the mark schemes — the pattern becomes clear.'}
+                : 'Grade 9 discriminators are designed to be hard. Study the mark schemes - the pattern becomes clear.'}
             </div>
           </motion.div>
 

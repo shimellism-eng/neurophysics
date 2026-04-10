@@ -1,5 +1,5 @@
 /**
- * TimedPaper — AQA-mirror 35-mark mini-paper with:
+ * TimedPaper - AQA-mirror 35-mark mini-paper with:
  * - Global countdown timer (55 min) with amber/red urgency
  * - Question palette (numbered circles, answered/flagged states)
  * - Full state persistence (survives app backgrounding)
@@ -168,7 +168,7 @@ function NovelContextQuestion({ data, onComplete }) {
             {selfScore !== null && (
               <div className="text-center text-sm font-semibold py-2"
                 style={{ color: selfScore >= Math.ceil(data.marks / 2) ? '#00bc7d' : '#f59e0b' }}>
-                {selfScore >= data.marks ? '★ Full marks!' : selfScore > 0 ? `${selfScore}/${data.marks}` : `0/${data.marks} — review the mark scheme`}
+                {selfScore >= data.marks ? '★ Full marks!' : selfScore > 0 ? `${selfScore}/${data.marks}` : `0/${data.marks} - review the mark scheme`}
               </div>
             )}
           </motion.div>
@@ -415,7 +415,7 @@ export default function TimedPaper() {
   const handleNext = useCallback(() => {
     setQIndex(prev => {
       if (prev >= total - 1) {
-        // Last question — go to results (defer to next tick to avoid setState-in-render)
+        // Last question - go to results (defer to next tick to avoid setState-in-render)
         setTimeout(() => {
           saveQuizResult('timed_paper', score, total)
           localStorage.removeItem(STORAGE_KEY)
@@ -480,7 +480,7 @@ export default function TimedPaper() {
     )
   }
 
-  // ── Results (inline — full 3-stage flow in PaperResults) ──────────────────
+  // ── Results (inline - full 3-stage flow in PaperResults) ──────────────────
   if (showResults) {
     navigate('/paper-results', { state: { score, total, questions, answers, timeUsed: PAPER_DURATION - remaining } })
     return null
@@ -548,7 +548,7 @@ export default function TimedPaper() {
         <div className="flex items-center justify-between mb-3">
           <span className="px-2 py-0.5 rounded-full text-xs font-bold"
             style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}>
-            Section {sectionInfo.section} — {sectionInfo.label}
+            Section {sectionInfo.section} - {sectionInfo.label}
           </span>
           <button
             className="flex items-center gap-1 px-3 py-1.5 rounded-[8px] text-xs font-semibold"
@@ -609,7 +609,7 @@ export default function TimedPaper() {
             </div>
           )}
 
-          {/* Skip — always available, no score recorded */}
+          {/* Skip - always available, no score recorded */}
           {!completed && !isLast && (
             <motion.button
               className="px-4 py-3 rounded-[13px] text-sm font-semibold"
@@ -620,7 +620,7 @@ export default function TimedPaper() {
             </motion.button>
           )}
 
-          {/* Next / Submit — active only after answering */}
+          {/* Next / Submit - active only after answering */}
           <motion.button
             className="flex-1 py-3 rounded-[13px] text-sm font-bold"
             style={{

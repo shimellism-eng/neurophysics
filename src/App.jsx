@@ -74,6 +74,15 @@ function FloatingMamo() {
   const hide = hiddenByRoute || hiddenByPref
   const [minimized, setMinimized] = useState(false)
 
+  // Extract topic context from lesson/exam/practical routes
+  // e.g. /lesson/waves → topic=waves, /exam/forces → topic=forces
+  const topicMatch = location.pathname.match(/^\/(?:lesson|exam|practical)\/(.+)/)
+  const topicSlug  = topicMatch ? topicMatch[1] : ''
+
+  const mamoPath = topicSlug
+    ? `/mamo?topic=${encodeURIComponent(topicSlug)}&label=${encodeURIComponent(topicSlug.replace(/-/g, ' '))}`
+    : '/mamo'
+
   // reaction animations
   const reactionAnimate = reaction === 'correct'
     ? { scale: [1, 1.35, 0.9, 1.15, 1], y: [0, -10, 2, -5, 0] }
@@ -127,12 +136,12 @@ function FloatingMamo() {
                 exit={{ scale: 0.8, opacity: 0 }}
               >
                 <motion.button
-                  className="w-12 h-12 rounded-full flex items-center justify-center relative"
+                  className="w-14 h-14 rounded-full flex items-center justify-center relative"
                   style={{
                     background: 'linear-gradient(135deg, #6366f1, #818cf8)',
                     boxShadow: '0 4px 20px rgba(99,102,241,0.5)',
                   }}
-                  onClick={() => navigate('/mamo')}
+                  onClick={() => navigate(mamoPath)}
                   whileTap={{ scale: 0.9 }}
                   animate={reactionAnimate}
                   transition={reactionTransition}
@@ -150,7 +159,7 @@ function FloatingMamo() {
                       transition={{ duration: reaction === 'complete' ? 0.7 : 0.5 }}
                     />
                   )}
-                  <AtomIcon size={20} color="#fff" />
+                  <AtomIcon size={22} color="#fff" />
                   <PulseRing />
                 </motion.button>
                 <button

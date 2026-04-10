@@ -1,9 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useRef, useEffect } from 'react'
-import { Send, Sparkles, Key, ArrowLeft, RotateCcw } from 'lucide-react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+import { Send, Sparkles, ArrowLeft, RotateCcw, Trash2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
-import { useNavigate } from 'react-router-dom'
-import { secureGet, secureSet } from '../utils/secureStorage'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 const SUGGESTED = [
   'What is the difference between speed and velocity?',
@@ -12,8 +11,24 @@ const SUGGESTED = [
   'What is the conservation of energy?',
 ]
 
+const INITIAL_MSG = {
+  role: 'assistant',
+  content: "Hi! I'm **Mamo**, your physics tutor 🔬\n\nAsk me anything about GCSE Physics — I'll break it down step by step.",
+}
+
+// ── Friendly error messages ───────────────────────────────────────────────────
+function friendlyError(code) {
+  switch (code) {
+    case 'TOO_MANY_REQUESTS': return "You're sending messages too fast! Wait a moment and try again."
+    case 'SERVICE_UNAVAILABLE': return "Mamo is taking a quick break. Try again in a moment."
+    case 'MISCONFIGURED': return "There's a setup issue — let your teacher know."
+    case 'NETWORK_ERROR': return "No internet connection. Check your Wi-Fi and try again."
+    default: return "Mamo couldn't respond. Tap retry to try again."
+  }
+}
+
+// ── Typing dots animation ─────────────────────────────────────────────────────
 function TypingDots() {
-  // F4: stop infinite animation when reduce-motion is on
   const reduceMotion = (() => {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
   })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
@@ -40,107 +55,195 @@ function TypingDots() {
   )
 }
 
+// ── Simple markdown renderer (bold + line breaks) ─────────────────────────────
+function renderContent(text) {
+  return text.split('\n').map((line, i) => {
+    const parts = line.split(/\*\*(.+?)\*\*/g)
+    return (
+      <p key={i} className={line === '' ? 'mb-2' : 'mb-0.5'}>
+        {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : part)}
+      </p>
+    )
+  })
+}
+
+// ── Main component ─────────────────────────────────────────────────────────────
 export default function MamoChat() {
   const navigate = useNavigate()
-  const [messages, setMessages] = useState([
-    {
-      role: 'assistant',
-      content: "Hi! I'm **Mamo**, your physics tutor 🔬\n\nAsk me anything about GCSE Physics - I'll break it down step by step. You can also use the buttons below to get started.",
-    },
-  ])
-  const [input, setInput] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [apiKey, setApiKey] = useState('')
-  const [showKeyInput, setShowKeyInput] = useState(false)
-  const [lastUserMessage, setLastUserMessage] = useState('')
+  const [searchParams] = useSearchParams()
+
+  // Topic context from URL: /mamo?topic=waves&label=Waves
+  const topicSlug  = searchParams.get('topic') || ''
+  const topicLabel = searchParams.get('label') || topicSlug
+
+  // Per-topic localStorage key (falls back to 'general')
+  const storageKey = `mamo_thread_${topicSlug || 'general'}`
+
+  const [messages, setMessages] = useState(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem(storageKey) || 'null')
+      if (stored && Array.isArray(stored) && stored.length > 0) return stored
+    } catch {}
+    return [INITIAL_MSG]
+  })
+
+  const [input, setInput]               = useState('')
+  const [streaming, setStreaming]       = useState(false)
+  const [lastUserMsg, setLastUserMsg]   = useState('')
   const bottomRef = useRef(null)
-  const inputRef = useRef(null)
+  const inputRef  = useRef(null)
+  const abortRef  = useRef(null)
 
-  // Load API key from secure storage on mount
+  // Persist messages to localStorage (skip the initial welcome msg)
   useEffect(() => {
-    secureGet('mamo_api_key').then(v => { if (v) setApiKey(v) })
-  }, [])
+    try {
+      if (messages.length > 1) {
+        localStorage.setItem(storageKey, JSON.stringify(messages.slice(-50)))
+      }
+    } catch {}
+  }, [messages, storageKey])
 
+  // Auto-scroll to bottom on new messages
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages, loading])
+  }, [messages, streaming])
 
-  const saveKey = (k) => {
-    setApiKey(k)
-    secureSet('mamo_api_key', k)
+  const clearThread = () => {
+    localStorage.removeItem(storageKey)
+    setMessages([INITIAL_MSG])
   }
 
-  const sendMessage = async (text) => {
+  // ── Send message with SSE streaming ─────────────────────────────────────────
+  const sendMessage = useCallback(async (text) => {
     const raw = (text || input).trim()
-    if (!raw || loading) return
-    // No client key needed — server uses ANTHROPIC_API_KEY env var.
-    // If a user has entered their own key in Settings it will be used instead.
+    if (!raw || streaming) return
 
-    // Sanitise: hard cap at 1000 chars and strip any injected role/system markers
+    // Sanitise: cap at 1000 chars, strip injected role markers
     const userMsg = raw
       .slice(0, 1000)
       .replace(/\bsystem\s*:/gi, '')
       .replace(/\bassistant\s*:/gi, '')
 
-    setLastUserMessage(userMsg)
+    setLastUserMsg(userMsg)
     setInput('')
-    const newMessages = [...messages, { role: 'user', content: userMsg }]
-    setMessages(newMessages)
-    setLoading(true)
+
+    const history = [...messages, { role: 'user', content: userMsg }]
+    setMessages(history)
+    setStreaming(true)
+
+    // Filter out welcome msg from history sent to API
+    const apiMessages = history
+      .filter(m => !(m.role === 'assistant' && m.content === INITIAL_MSG.content))
+      .map(m => ({ role: m.role, content: m.content }))
+
+    const apiBase = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
+    const controller = new AbortController()
+    abortRef.current = controller
+
+    // Append a streaming placeholder
+    setMessages(prev => [...prev, { role: 'assistant', content: '', streaming: true }])
+
+    let accumulated = ''
+    let errorCode = null
 
     try {
-      const body = {
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 600,
-        // System prompt is enforced server-side in api/anthropic.js
-        messages: newMessages
-          .filter(m => m.role !== 'assistant' || !m.content.startsWith("Hi! I'm **Mamo**"))
-          .map(m => ({ role: m.role, content: m.content })),
-      }
-      const apiBase = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
-      const res = await fetch(`${apiBase}/api/anthropic`, {
+      const res = await fetch(`${apiBase}/api/gemini`, {
         method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-          ...(apiKey ? { 'x-api-key': apiKey } : {}),
-          'anthropic-version': '2023-06-01',
-        },
-        body: JSON.stringify(body),
+        headers: { 'content-type': 'application/json' },
+        signal: controller.signal,
+        body: JSON.stringify({
+          messages: apiMessages,
+          topicContext: topicLabel || undefined,
+        }),
       })
 
       if (!res.ok) {
         const err = await res.json().catch(() => ({}))
-        throw new Error(err?.error?.message || `HTTP ${res.status}`)
+        errorCode = err.error || `HTTP_${res.status}`
+        throw new Error(errorCode)
       }
 
-      const data = await res.json()
-      const reply = data.content?.[0]?.text || 'Sorry, I couldn\'t generate a response.'
-      setMessages(prev => [...prev, { role: 'assistant', content: reply }])
-    } catch (e) {
-      setMessages(prev => [...prev, {
-        role: 'assistant',
-        content: `Couldn't reach Mamo right now.\n\n**Error:** ${e.message}`,
-        isError: true,
-      }])
-    } finally {
-      setLoading(false)
-    }
-  }
+      const reader = res.body.getReader()
+      const decoder = new TextDecoder()
 
-  const renderContent = (text) => {
-    return text.split('\n').map((line, i) => {
-      const parts = line.split(/\*\*(.+?)\*\*/g)
-      return (
-        <p key={i} className={line === '' ? 'mb-2' : 'mb-0.5'}>
-          {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : part)}
-        </p>
-      )
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        const chunk = decoder.decode(value, { stream: true })
+        const lines = chunk.split('\n')
+
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue
+          const data = line.slice(6).trim()
+          if (data === '[DONE]') break
+
+          try {
+            const parsed = JSON.parse(data)
+
+            // Check for error payload from our proxy
+            if (parsed.error) {
+              errorCode = parsed.error
+              throw new Error(errorCode)
+            }
+
+            // Extract text delta from Gemini SSE
+            const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text || ''
+            if (text) {
+              accumulated += text
+              setMessages(prev => {
+                const updated = [...prev]
+                updated[updated.length - 1] = { role: 'assistant', content: accumulated, streaming: true }
+                return updated
+              })
+            }
+          } catch (parseErr) {
+            if (parseErr.message !== data) throw parseErr // re-throw real errors
+          }
+        }
+      }
+    } catch (e) {
+      if (e.name === 'AbortError') {
+        // User cancelled — keep partial text if any
+        setMessages(prev => {
+          const updated = [...prev]
+          if (accumulated) {
+            updated[updated.length - 1] = { role: 'assistant', content: accumulated }
+          } else {
+            updated.splice(-1, 1) // remove empty placeholder
+          }
+          return updated
+        })
+        setStreaming(false)
+        return
+      }
+
+      // Error state
+      const msg = errorCode ? friendlyError(errorCode) : friendlyError(null)
+      setMessages(prev => {
+        const updated = [...prev]
+        updated[updated.length - 1] = { role: 'assistant', content: msg, isError: true }
+        return updated
+      })
+      setStreaming(false)
+      return
+    }
+
+    // Finalise streaming message
+    setMessages(prev => {
+      const updated = [...prev]
+      updated[updated.length - 1] = {
+        role: 'assistant',
+        content: accumulated || "Sorry, I couldn't generate a response.",
+      }
+      return updated
     })
-  }
+    setStreaming(false)
+  }, [input, streaming, messages, topicLabel])
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
-      {/* Header */}
+      {/* ── Header ─────────────────────────────────────────────────────────── */}
       <div
         className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3"
         style={{ borderBottom: '0.75px solid #1d293d' }}
@@ -159,20 +262,27 @@ export default function MamoChat() {
         >
           <AtomIcon size={20} color="#6366f1" />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>
-          <div className="text-xs" style={{ color: '#00bc7d' }}>● Physics Tutor · Always here</div>
+          {topicLabel ? (
+            <div className="text-xs truncate" style={{ color: '#6366f1' }}>
+              Studying: {topicLabel}
+            </div>
+          ) : (
+            <div className="text-xs" style={{ color: '#00bc7d' }}>● Physics Tutor · Always here</div>
+          )}
         </div>
         <button
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
-          onClick={() => setShowKeyInput(v => !v)}
+          onClick={clearThread}
+          title="Clear conversation"
         >
-          <Key size={15} color={apiKey ? '#00bc7d' : '#a8b8cc'} />
+          <Trash2 size={15} color="#a8b8cc" />
         </button>
       </div>
 
-      {/* AI disclosure banner — required by App Store guideline 2.5.18 */}
+      {/* ── AI disclosure banner ────────────────────────────────────────────── */}
       <div
         className="px-4 py-2 shrink-0 flex items-center gap-2"
         style={{ background: 'rgba(99,102,241,0.07)', borderBottom: '0.75px solid rgba(99,102,241,0.15)' }}
@@ -181,45 +291,11 @@ export default function MamoChat() {
       >
         <Sparkles size={11} color="#818cf8" />
         <span className="text-xs" style={{ color: '#818cf8' }}>
-          Mamo's responses are <strong>AI-generated</strong> by Claude (Anthropic). Always verify with your teacher.
+          Mamo's responses are <strong>AI-generated</strong> by Gemini (Google). Always verify with your teacher.
         </span>
       </div>
 
-      {/* API key input (collapsible) */}
-      <AnimatePresence>
-        {showKeyInput && (
-          <motion.div
-            className="px-5 py-3 shrink-0"
-            style={{ background: 'rgba(18,26,47,0.9)', borderBottom: '0.75px solid #1d293d' }}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-          >
-            <div className="text-xs mb-2" style={{ color: '#a8b8cc' }}>
-              Anthropic API key - stored locally, never sent anywhere except to Anthropic.
-            </div>
-            <div className="flex gap-2">
-              <input
-                type="password"
-                placeholder="sk-ant-..."
-                value={apiKey}
-                onChange={e => saveKey(e.target.value)}
-                className="flex-1 px-3 py-2 rounded-[10px] text-sm font-mono outline-none"
-                style={{ background: '#1d293d', color: '#f8fafc', border: '0.75px solid #2d3e55' }}
-              />
-              <button
-                className="px-3 py-2 rounded-[10px] text-xs font-semibold"
-                style={{ background: '#6366f1', color: '#fff' }}
-                onClick={() => setShowKeyInput(false)}
-              >
-                Save
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Messages */}
+      {/* ── Messages ─────────────────────────────────────────────────────────── */}
       <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
         {messages.map((msg, i) => (
           <motion.div
@@ -227,7 +303,7 @@ export default function MamoChat() {
             className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} gap-2`}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 }}
+            transition={{ delay: 0.04 }}
           >
             {msg.role === 'assistant' && (
               <div
@@ -244,14 +320,33 @@ export default function MamoChat() {
                   background: msg.role === 'user'
                     ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
                     : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(18,26,47,0.9)',
-                  border: msg.role === 'user' ? 'none' : msg.isError ? '0.75px solid rgba(239,68,68,0.3)' : '0.75px solid #1d293d',
+                  border: msg.role === 'user' ? 'none'
+                    : msg.isError ? '0.75px solid rgba(239,68,68,0.3)'
+                    : '0.75px solid #1d293d',
                   color: '#f8fafc',
                   boxShadow: msg.role === 'user' ? '0 4px 16px rgba(99,102,241,0.3)' : 'none',
                 }}
               >
                 {renderContent(msg.content)}
+                {msg.streaming && msg.content && (
+                  <span
+                    className="inline-block w-0.5 h-4 ml-0.5 align-middle rounded-full"
+                    style={{ background: '#6366f1', animation: 'blink 0.8s step-end infinite' }}
+                  />
+                )}
               </div>
-              {msg.isError && lastUserMessage && (
+
+              {/* Streaming loading dots (empty placeholder) */}
+              {msg.streaming && !msg.content && (
+                <div
+                  className="rounded-[16px] px-4 py-3 mt-1"
+                  style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+                >
+                  <TypingDots />
+                </div>
+              )}
+
+              {msg.isError && lastUserMsg && (
                 <button
                   className="mt-2 px-4 py-2.5 rounded-[12px] text-xs font-semibold min-h-[44px] flex items-center gap-2"
                   style={{
@@ -261,7 +356,7 @@ export default function MamoChat() {
                   }}
                   onClick={() => {
                     setMessages(prev => prev.slice(0, -1))
-                    sendMessage(lastUserMessage)
+                    sendMessage(lastUserMsg)
                   }}
                 >
                   <RotateCcw size={13} />
@@ -272,25 +367,8 @@ export default function MamoChat() {
           </motion.div>
         ))}
 
-        {loading && (
-          <motion.div className="flex justify-start gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <div
-              className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center mt-1"
-              style={{ background: '#6366f120', border: '1px solid #6366f140' }}
-            >
-              <Sparkles size={12} color="#6366f1" />
-            </div>
-            <div
-              className="rounded-[16px] px-4 py-3"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
-            >
-              <TypingDots />
-            </div>
-          </motion.div>
-        )}
-
-        {/* Suggested questions (shown at start, collapsed to chips after first message) */}
-        {messages.length === 1 ? (
+        {/* Suggested questions (only at start) */}
+        {messages.length === 1 && (
           <motion.div
             className="space-y-2 mt-2"
             initial={{ opacity: 0, y: 10 }}
@@ -317,12 +395,12 @@ export default function MamoChat() {
               </motion.button>
             ))}
           </motion.div>
-        ) : null}
+        )}
 
         <div ref={bottomRef} />
       </div>
 
-      {/* F13: Persistent quick-starters chip rail — always visible */}
+      {/* ── Quick-starter chip rail ──────────────────────────────────────────── */}
       {messages.length > 1 && (
         <div
           className="px-4 py-2 shrink-0 flex gap-2 overflow-x-auto"
@@ -332,7 +410,11 @@ export default function MamoChat() {
             <button
               key={i}
               className="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
-              style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}
+              style={{
+                background: 'rgba(99,102,241,0.10)',
+                border: '0.75px solid rgba(99,102,241,0.25)',
+                color: '#818cf8',
+              }}
               onClick={() => sendMessage(q)}
             >
               {q.slice(0, 28)}{q.length > 28 ? '…' : ''}
@@ -341,7 +423,7 @@ export default function MamoChat() {
         </div>
       )}
 
-      {/* Input bar */}
+      {/* ── Input bar ────────────────────────────────────────────────────────── */}
       <div
         className="px-4 py-3 shrink-0 flex gap-2 items-end"
         style={{ borderTop: '0.75px solid #1d293d', background: 'rgba(11,17,33,0.95)' }}
@@ -367,23 +449,27 @@ export default function MamoChat() {
               sendMessage()
             }
           }}
+          enterKeyHint="send"
           rows={1}
         />
         <motion.button
           className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
           style={{
-            background: input.trim() && !loading
+            background: input.trim() && !streaming
               ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
               : '#1d293d',
-            boxShadow: input.trim() && !loading ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
+            boxShadow: input.trim() && !streaming ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
           }}
           onClick={() => sendMessage()}
           whileTap={{ scale: 0.92 }}
-          disabled={!input.trim() || loading}
+          disabled={!input.trim() || streaming}
         >
-          <Send size={18} color={input.trim() && !loading ? '#fff' : '#a8b8cc'} />
+          <Send size={18} color={input.trim() && !streaming ? '#fff' : '#a8b8cc'} />
         </motion.button>
       </div>
+
+      {/* Cursor blink keyframe */}
+      <style>{`@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }`}</style>
     </div>
   )
 }

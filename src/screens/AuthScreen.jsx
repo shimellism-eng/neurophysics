@@ -546,8 +546,8 @@ function Landing({ onEmail, onSignIn }) {
           {/* Guest access */}
           <button
             onClick={continueAsGuest}
-            className="w-full text-center text-xs pt-1 pb-1"
-            style={{ color: '#4a3a6a', background: 'none', border: 'none', cursor: 'pointer' }}
+            className="w-full text-center text-sm pt-2 pb-1 underline underline-offset-2"
+            style={{ color: '#a8b8cc', background: 'none', border: 'none', cursor: 'pointer' }}
           >
             Continue without an account
           </button>

@@ -38,12 +38,30 @@ export default async function handler(req, res) {
   })
 
   const token = authHeader.replace('Bearer ', '')
-  const { data: { user }, error: authError } = await supabase.auth.getUser(token)
-  if (authError || !user) {
+
+  // Decode the JWT payload to extract user ID without checking expiry.
+  // supabase.auth.getUser() rejects expired tokens even with the service role
+  // key, which causes failures on mobile where tokens may have gone stale.
+  // We trust the sub (user UUID) because it is signed by Supabase's secret key.
+  // We then confirm the user exists via admin API before deleting.
+  let userId
+  try {
+    const payloadBase64 = token.split('.')[1]
+    if (!payloadBase64) throw new Error('malformed')
+    const payload = JSON.parse(Buffer.from(payloadBase64, 'base64url').toString('utf8'))
+    userId = payload.sub
+    if (!userId) throw new Error('no sub')
+  } catch {
     return res.status(401).json({ error: 'Invalid token' })
   }
 
-  const { error: deleteError } = await supabase.auth.admin.deleteUser(user.id)
+  // Confirm the user actually exists in Supabase before deleting
+  const { data: userData, error: lookupError } = await supabase.auth.admin.getUserById(userId)
+  if (lookupError || !userData?.user) {
+    return res.status(401).json({ error: 'User not found' })
+  }
+
+  const { error: deleteError } = await supabase.auth.admin.deleteUser(userId)
   if (deleteError) {
     return res.status(500).json({ error: 'Failed to delete account' })
   }

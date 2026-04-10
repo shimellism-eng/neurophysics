@@ -249,6 +249,49 @@ function RPAErrorQuestion({ data, onComplete }) {
   )
 }
 
+// ── Inline MCQ for equation-recall ───────────────────────────────────────────
+function EquationRecallQuestion({ data, onComplete }) {
+  const [sel, setSel] = useState(null)
+  const [sub, setSub] = useState(false)
+  const submit = () => {
+    if (sel === null || sub) return
+    setSub(true)
+    onComplete(sel === data.correctAnswer)
+  }
+  return (
+    <div className="space-y-2">
+      {(data.options || []).map((opt, idx) => {
+        const correct = sub && idx === data.correctAnswer
+        const wrong   = sub && idx === sel && sel !== data.correctAnswer
+        return (
+          <motion.button key={idx}
+            className="w-full text-left rounded-[14px] p-4 flex items-center gap-3"
+            style={{
+              background: correct ? 'rgba(0,188,125,0.12)' : wrong ? 'rgba(239,68,68,0.12)' : sel === idx ? 'rgba(99,102,241,0.12)' : 'rgba(18,26,47,0.9)',
+              border: correct ? '1.5px solid #00bc7d' : wrong ? '1.5px solid #ef4444' : sel === idx ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
+              color: '#f8fafc',
+            }}
+            onClick={() => { if (!sub) setSel(idx) }}
+            whileTap={sub ? {} : { scale: 0.98 }}>
+            <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
+              style={{ background: sel === idx && !sub ? '#6366f1' : sub && idx === data.correctAnswer ? '#00bc7d' : sub && idx === sel ? '#ef4444' : '#1d293d', color: '#fff' }}>
+              {['A','B','C','D'][idx]}
+            </div>
+            <span className="text-sm">{opt}</span>
+          </motion.button>
+        )
+      })}
+      {!sub && (
+        <motion.button className="w-full mt-2 py-3 rounded-[14px] text-sm font-bold"
+          style={{ background: sel !== null ? '#6366f1' : '#1d293d', color: sel !== null ? '#fff' : '#64748b' }}
+          onClick={submit} disabled={sel === null} whileTap={{ scale: 0.97 }}>
+          Confirm
+        </motion.button>
+      )}
+    </div>
+  )
+}
+
 // ── Section labels ────────────────────────────────────────────────────────────
 function getSectionLabel(idx, questions) {
   const types = questions.slice(0, idx + 1).map(q => q.type)
@@ -394,54 +437,13 @@ export default function TimedPaper() {
   const renderQuestion = () => {
     const props = { data: q, moduleColor: '#6366f1', onComplete: handleComplete }
     switch (q.type) {
-      case 'equation-recall': {
-        // Inline MCQ
-        const [sel, setSel] = useState(null)
-        const [sub, setSub] = useState(false)
-        const submit = () => {
-          if (sel === null || sub) return
-          setSub(true)
-          handleComplete(sel === q.correctAnswer)
-        }
-        return (
-          <div className="space-y-2">
-            {(q.options || []).map((opt, idx) => {
-              const correct = sub && idx === q.correctAnswer
-              const wrong   = sub && idx === sel && sel !== q.correctAnswer
-              return (
-                <motion.button key={idx}
-                  className="w-full text-left rounded-[14px] p-4 flex items-center gap-3"
-                  style={{
-                    background: correct ? 'rgba(0,188,125,0.12)' : wrong ? 'rgba(239,68,68,0.12)' : sel === idx ? 'rgba(99,102,241,0.12)' : 'rgba(18,26,47,0.9)',
-                    border: correct ? '1.5px solid #00bc7d' : wrong ? '1.5px solid #ef4444' : sel === idx ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
-                    color: '#f8fafc',
-                  }}
-                  onClick={() => { if (!sub) setSel(idx) }}
-                  whileTap={sub ? {} : { scale: 0.98 }}>
-                  <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
-                    style={{ background: sel === idx && !sub ? '#6366f1' : sub && idx === q.correctAnswer ? '#00bc7d' : sub && idx === sel ? '#ef4444' : '#1d293d', color: '#fff' }}>
-                    {['A','B','C','D'][idx]}
-                  </div>
-                  <span className="text-sm">{opt}</span>
-                </motion.button>
-              )
-            })}
-            {!sub && (
-              <motion.button className="w-full mt-2 py-3 rounded-[14px] text-sm font-bold"
-                style={{ background: sel !== null ? '#6366f1' : '#1d293d', color: sel !== null ? '#fff' : '#64748b' }}
-                onClick={submit} disabled={sel === null} whileTap={{ scale: 0.97 }}>
-                Confirm
-              </motion.button>
-            )}
-          </div>
-        )
-      }
+      case 'equation-recall':      return <EquationRecallQuestion data={q} onComplete={handleComplete} />
       case 'calculation':
-      case 'calculation-chained': return <CalculationQuestion {...props} />
-      case 'extended-answer':     return <ExtendedAnswerQuestion {...props} />
-      case 'novel-context':       return <NovelContextQuestion {...props} onComplete={handleComplete} />
-      case 'rpa-error':           return <RPAErrorQuestion {...props} onComplete={handleComplete} />
-      case 'sequence':            return <SequenceSortQuestion {...props} />
+      case 'calculation-chained':  return <CalculationQuestion {...props} />
+      case 'extended-answer':      return <ExtendedAnswerQuestion {...props} />
+      case 'novel-context':        return <NovelContextQuestion {...props} onComplete={handleComplete} />
+      case 'rpa-error':            return <RPAErrorQuestion {...props} onComplete={handleComplete} />
+      case 'sequence':             return <SequenceSortQuestion {...props} />
       default: return (
         <div className="py-8 text-center text-sm" style={{ color: '#64748b' }}>
           Question type: {q.type}

@@ -18,6 +18,7 @@ import {
   CalculationQuestion,
   ExtendedAnswerQuestion,
   SequenceSortQuestion,
+  GraphQuestion,
 } from '../components/questions'
 
 const PAPER_DURATION = 55 * 60 // 55 minutes in seconds
@@ -447,6 +448,7 @@ export default function TimedPaper() {
       case 'equation-recall':      return <EquationRecallQuestion key={qIndex} data={q} onComplete={handleComplete} />
       case 'calculation':
       case 'calculation-chained':  return <CalculationQuestion {...props} />
+      case 'graph-read':           return <GraphQuestion {...props} />
       case 'extended-answer':      return <ExtendedAnswerQuestion {...props} />
       case 'novel-context':        return <NovelContextQuestion {...props} onComplete={handleComplete} />
       case 'rpa-error':            return <RPAErrorQuestion {...props} onComplete={handleComplete} />

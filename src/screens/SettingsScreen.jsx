@@ -368,26 +368,31 @@ export default function SettingsScreen() {
   }
 
   const handleDeleteData = async () => {
-    // Delete Supabase account server-side
+    // Attempt server-side Supabase account deletion (best-effort)
     try {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (session?.access_token) {
+      // Refresh session first so the token isn't stale
+      const { data: refreshData } = await supabase.auth.refreshSession()
+      const token = refreshData?.session?.access_token
+        ?? (await supabase.auth.getSession()).data?.session?.access_token
+
+      if (token) {
         const apiBase = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
         const res = await fetch(`${apiBase}/api/delete-account`, {
           method: 'POST',
-          headers: { 'Authorization': `Bearer ${session.access_token}` },
+          headers: { 'Authorization': `Bearer ${token}` },
         })
         if (!res.ok) {
+          // Log but don't block — still wipe local data below
           const err = await res.json().catch(() => ({}))
-          showToast(`Deletion failed: ${err.error || 'Unknown error'}`, '#ef4444')
-          return
+          console.warn('Server-side account deletion failed:', err.error)
         }
       }
     } catch (e) {
-      showToast(`Deletion failed: ${e.message}`, '#ef4444')
-      return
+      // Network error etc. — still proceed with local wipe
+      console.warn('Delete-account request failed:', e.message)
     }
-    // Clear local data
+
+    // Always clear all local data and sign out regardless of server result
     localStorage.removeItem('neurophysics_prefs')
     localStorage.removeItem('neurophysics_onboarded')
     localStorage.removeItem('neurophysics_profile')

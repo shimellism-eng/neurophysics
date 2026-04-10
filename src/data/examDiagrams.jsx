@@ -139,10 +139,12 @@ export function SeriesCircuitAV() {
         <polyline points="30,40 270,40 270,160 30,160 30,40" fill="none" stroke="#cbd5e1" strokeWidth={1.5} />
         {/* Cell symbol at left side (top segment) */}
         <line x1={30} y1={40} x2={70} y2={40} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Cell: two vertical lines */}
+        {/* Cell: long thick line = +ve terminal, short thin line = −ve terminal */}
         <line x1={55} y1={33} x2={55} y2={47} stroke="#cbd5e1" strokeWidth={2.5} />
         <line x1={62} y1={35} x2={62} y2={45} stroke="#cbd5e1" strokeWidth={1} />
-        <text x={58} y={28} fontSize={7} fill="#94a3b8" textAnchor="middle">1.5 V cell</text>
+        <text x={48} y={28} fontSize={6} fill="#94a3b8">+</text>
+        <text x={64} y={28} fontSize={6} fill="#94a3b8">−</text>
+        <text x={58} y={22} fontSize={7} fill="#94a3b8" textAnchor="middle">1.5 V cell</text>
         {/* Resistor R1 on top wire */}
         <rect x={100} y={32} width={36} height={16} rx={2} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5} />
         <text x={118} y={43} fontSize={8} fill="#93c5fd" textAnchor="middle">R₁</text>
@@ -1854,6 +1856,157 @@ export function ColourFilter() {
   );
 }
 
+// ─── CIRCUIT SYMBOLS REFERENCE ───────────────────────────────────────────────
+
+export function CircuitSymbolsReference() {
+  const symbols = [
+    {
+      name: 'Cell',
+      draw: (cx, cy) => (
+        <g>
+          <line x1={cx - 3} y1={cy - 8} x2={cx - 3} y2={cy + 8} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1={cx + 3} y1={cy - 5} x2={cx + 3} y2={cy + 5} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+          <text x={cx - 10} y={cy - 9} fontSize="6" fill="#94a3b8">+</text>
+          <text x={cx + 6} y={cy - 9} fontSize="6" fill="#94a3b8">−</text>
+        </g>
+      ),
+    },
+    {
+      name: 'Battery',
+      draw: (cx, cy) => (
+        <g>
+          <line x1={cx - 14} y1={cy - 8} x2={cx - 14} y2={cy + 8} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1={cx - 8} y1={cy - 5} x2={cx - 8} y2={cy + 5} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1={cx + 2} y1={cy - 8} x2={cx + 2} y2={cy + 8} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1={cx + 8} y1={cy - 5} x2={cx + 8} y2={cy + 5} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+          <text x={cx - 20} y={cy - 9} fontSize="6" fill="#94a3b8">+</text>
+          <text x={cx + 10} y={cy - 9} fontSize="6" fill="#94a3b8">−</text>
+        </g>
+      ),
+    },
+    {
+      name: 'Switch',
+      draw: (cx, cy) => (
+        <g>
+          <circle cx={cx - 10} cy={cy} r="2.5" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <circle cx={cx + 10} cy={cy} r="2.5" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <line x1={cx - 7.5} y1={cy} x2={cx + 8} y2={cy - 7} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+        </g>
+      ),
+    },
+    {
+      name: 'Resistor',
+      draw: (cx, cy) => (
+        <g>
+          <rect x={cx - 12} y={cy - 5} width="24" height="10" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+        </g>
+      ),
+    },
+    {
+      name: 'Variable Resistor',
+      draw: (cx, cy) => (
+        <g>
+          <rect x={cx - 12} y={cy - 5} width="24" height="10" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <line x1={cx - 8} y1={cy + 9} x2={cx + 8} y2={cy - 9} stroke="#cad5e2" strokeWidth="1.2" />
+          <polygon points={`${cx + 8},${cy - 9} ${cx + 3},${cy - 7} ${cx + 6},${cy - 3}`} fill="#cad5e2" />
+        </g>
+      ),
+    },
+    {
+      name: 'Lamp',
+      draw: (cx, cy) => (
+        <g>
+          <circle cx={cx} cy={cy} r="11" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <line x1={cx - 7} y1={cy - 7} x2={cx + 7} y2={cy + 7} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+          <line x1={cx + 7} y1={cy - 7} x2={cx - 7} y2={cy + 7} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+        </g>
+      ),
+    },
+    {
+      name: 'Ammeter',
+      draw: (cx, cy) => (
+        <g>
+          <circle cx={cx} cy={cy} r="11" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <text x={cx} y={cy + 4} fontSize="9" fill="#cad5e2" textAnchor="middle" fontWeight="700">A</text>
+        </g>
+      ),
+    },
+    {
+      name: 'Voltmeter',
+      draw: (cx, cy) => (
+        <g>
+          <circle cx={cx} cy={cy} r="11" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <text x={cx} y={cy + 4} fontSize="9" fill="#cad5e2" textAnchor="middle" fontWeight="700">V</text>
+        </g>
+      ),
+    },
+    {
+      name: 'Diode',
+      draw: (cx, cy) => (
+        <g>
+          <polygon points={`${cx - 10},${cy + 8} ${cx - 10},${cy - 8} ${cx + 10},${cy}`} fill="none" stroke="#cad5e2" strokeWidth="1.5" strokeLinejoin="round" />
+          <line x1={cx + 10} y1={cy - 9} x2={cx + 10} y2={cy + 9} stroke="#cad5e2" strokeWidth="2" strokeLinecap="round" />
+        </g>
+      ),
+    },
+    {
+      name: 'LDR',
+      draw: (cx, cy) => (
+        <g>
+          <rect x={cx - 12} y={cy - 5} width="24" height="10" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <line x1={cx - 4} y1={cy - 14} x2={cx - 4} y2={cy - 7} stroke="#cad5e2" strokeWidth="1.2" />
+          <polygon points={`${cx - 4},${cy - 7} ${cx - 7},${cy - 12} ${cx - 1},${cy - 12}`} fill="#cad5e2" />
+          <line x1={cx + 4} y1={cy - 14} x2={cx + 4} y2={cy - 7} stroke="#cad5e2" strokeWidth="1.2" />
+          <polygon points={`${cx + 4},${cy - 7} ${cx + 1},${cy - 12} ${cx + 7},${cy - 12}`} fill="#cad5e2" />
+        </g>
+      ),
+    },
+    {
+      name: 'Thermistor',
+      draw: (cx, cy) => (
+        <g>
+          <rect x={cx - 12} y={cy - 5} width="24" height="10" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          <line x1={cx - 12} y1={cy + 5} x2={cx + 12} y2={cy - 5} stroke="#cad5e2" strokeWidth="1.5" strokeLinecap="round" />
+        </g>
+      ),
+    },
+    {
+      name: 'Fuse',
+      draw: (cx, cy) => (
+        <g>
+          <rect x={cx - 14} y={cy - 3} width="28" height="7" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+        </g>
+      ),
+    },
+  ];
+
+  const cols = 3;
+  const cellW = 90;
+  const cellH = 80;
+  const width = cols * cellW;
+  const rows = Math.ceil(symbols.length / cols);
+  const height = rows * cellH;
+
+  return (
+    <div className="w-full">
+      <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto">
+        {symbols.map((sym, i) => {
+          const col = i % cols;
+          const row = Math.floor(i / cols);
+          const cx = cellW / 2 + col * cellW;
+          const cy = cellH / 2 - 8 + row * cellH;
+          return (
+            <g key={i}>
+              {sym.draw(cx, cy)}
+              <text x={cx} y={cy + 26} textAnchor="middle" fontSize={8} fill="#64748b">{sym.name}</text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+}
+
 // ─── DEFAULT EXPORT MAP ───────────────────────────────────────────────────────
 
 export const EXAM_DIAGRAMS = {
@@ -1905,6 +2058,7 @@ export const EXAM_DIAGRAMS = {
   solar_system_orbits: SolarSystemOrbits,
   diverging_lens_image: DivertingLensImage,
   colour_filter: ColourFilter,
+  circuit_symbols_reference: CircuitSymbolsReference,
 };
 
 export default EXAM_DIAGRAMS;

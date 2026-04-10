@@ -176,22 +176,25 @@ function CircuitComponentsLesson() {
         <text x={0} y={4} textAnchor="middle" fontSize={10} fontWeight="bold" fill="#f59e0b">V</text>
       </g>
     ),
-    // LDR
+    // LDR — resistor with arrows pointing INTO it (light shines in)
     () => (
       <g>
         <line x1={-14} y1={0} x2={14} y2={0} stroke="#cad5e2" strokeWidth="1.5" />
-        <rect x={-10} y={-5} width={20} height={10} fill="none" stroke="#a855f7" strokeWidth="1.5" rx={2} />
-        <line x1={-4} y1={-9} x2={-2} y2={-14} stroke="#fdc700" strokeWidth="1" />
-        <line x1={1} y1={-9} x2={3} y2={-14} stroke="#fdc700" strokeWidth="1" />
-        <line x1={6} y1={-9} x2={8} y2={-14} stroke="#fdc700" strokeWidth="1" />
+        <rect x={-10} y={-5} width={20} height={10} fill="none" stroke="#a855f7" strokeWidth="1.5" />
+        {/* Arrows pointing DOWN into the component */}
+        <line x1={-4} y1={-14} x2={-4} y2={-8} stroke="#fdc700" strokeWidth="1.2" strokeLinecap="round" />
+        <polygon points="-4,-8 -7,-13 -1,-13" fill="#fdc700" />
+        <line x1={4} y1={-14} x2={4} y2={-8} stroke="#fdc700" strokeWidth="1.2" strokeLinecap="round" />
+        <polygon points="4,-8 1,-13 7,-13" fill="#fdc700" />
       </g>
     ),
-    // Thermistor
+    // Thermistor — rectangle with diagonal line (IEC standard)
     () => (
       <g>
         <line x1={-14} y1={0} x2={14} y2={0} stroke="#cad5e2" strokeWidth="1.5" />
-        <rect x={-10} y={-5} width={20} height={10} fill="none" stroke="#ef4444" strokeWidth="1.5" rx={2} />
-        <text x={0} y={3.5} textAnchor="middle" fontSize={8} fill="#ef4444">t°</text>
+        <rect x={-10} y={-5} width={20} height={10} fill="none" stroke="#ef4444" strokeWidth="1.5" />
+        {/* Diagonal line through rectangle: bottom-left to top-right */}
+        <line x1={-10} y1={5} x2={10} y2={-5} stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" />
       </g>
     ),
   ]

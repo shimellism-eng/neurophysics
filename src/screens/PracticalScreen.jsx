@@ -557,12 +557,31 @@ function SetupIV() {
 
         {/* Variable resistor (rheostat) */}
         <rect x={75} y={68} width={36} height={18} rx={3} fill="#1e293b" stroke="#94a3b8" strokeWidth={1.2}/>
-        <line x1={93} y1={64} x2={100} y2={72} stroke="#94a3b8" strokeWidth={1} markerEnd="url(#arr)"/>
+        <line x1={93} y1={64} x2={100} y2={75} stroke="#94a3b8" strokeWidth={1} markerEnd="url(#arr)"/>
         <Lbl x={93} y={60} t="Rheostat" c="#94a3b8" s={8}/>
 
-        {/* Component box */}
-        <rect x={148} y={68} width={50} height={18} rx={3} fill="#1e293b" stroke={c} strokeWidth={1.5}/>
-        <Lbl x={173} y={80} t={comp === 'lamp' ? '☀' : comp === 'diode' ? '▷' : 'R'} c={c} s={10}/>
+        {/* Component: proper IEC symbol */}
+        <g transform={`translate(173, 77)`}>
+          {comp === 'resistor' && (
+            <g>
+              <rect x={-18} y={-7} width={36} height={14} fill="none" stroke={c} strokeWidth={1.5} />
+            </g>
+          )}
+          {comp === 'lamp' && (
+            <g>
+              <circle cx={0} cy={0} r={11} fill="none" stroke={c} strokeWidth={1.5} />
+              <line x1={-7} y1={-7} x2={7} y2={7} stroke={c} strokeWidth={1.5} strokeLinecap="round" />
+              <line x1={7} y1={-7} x2={-7} y2={7} stroke={c} strokeWidth={1.5} strokeLinecap="round" />
+            </g>
+          )}
+          {comp === 'diode' && (
+            <g>
+              <polygon points="-14,0 0,-10 0,10" fill="none" stroke={c} strokeWidth={1.5} strokeLinejoin="round" />
+              <line x1={0} y1={-11} x2={0} y2={11} stroke={c} strokeWidth={2} strokeLinecap="round" />
+            </g>
+          )}
+        </g>
+        {/* Component label below */}
         <Lbl x={173} y={99} t={compLabels[comp]} c={c} s={7}/>
 
         {/* Ammeter */}
@@ -572,19 +591,19 @@ function SetupIV() {
         <V cx={173} cy={130}/>
 
         {/* Circuit wires - series loop */}
-        <W x1={44} y1={72} x2={75} y2={72}/>
-        <W x1={111} y1={72} x2={148} y2={72}/>
-        <W x1={198} y1={72} x2={220} y2={72}/>
+        <W x1={44} y1={77} x2={75} y2={77}/>
+        <W x1={111} y1={77} x2={155} y2={77}/>
+        <W x1={191} y1={77} x2={220} y2={77}/>
         <W x1={244} y1={77} x2={260} y2={77}/>
         <W x1={260} y1={77} x2={260} y2={108}/>
         <W x1={260} y1={108} x2={44} y2={108}/>
         <W x1={44} y1={108} x2={44} y2={86}/>
 
         {/* Voltmeter wires */}
-        <W x1={173} y1={118} x2={173} y2={86}/>
-        <W x1={148} y1={130} x2={100} y2={130}/>
+        <W x1={173} y1={118} x2={173} y2={88}/>
+        <W x1={161} y1={130} x2={100} y2={130}/>
         <W x1={100} y1={130} x2={100} y2={108}/>
-        <W x1={198} y1={130} x2={220} y2={130}/>
+        <W x1={185} y1={130} x2={220} y2={130}/>
         <W x1={220} y1={130} x2={220} y2={108}/>
 
         {/* Result panel */}

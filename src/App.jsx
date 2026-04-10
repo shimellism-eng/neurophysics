@@ -21,6 +21,9 @@ const SettingsScreen    = lazy(() => import('./screens/SettingsScreen'))
 const MamoChat          = lazy(() => import('./screens/MamoChat'))
 const PracticalScreen   = lazy(() => import('./screens/PracticalScreen'))
 const ExamPractice      = lazy(() => import('./screens/ExamPractice'))
+const Grade9Challenge   = lazy(() => import('./screens/Grade9Challenge'))
+const TimedPaper        = lazy(() => import('./screens/TimedPaper'))
+const PaperResults      = lazy(() => import('./screens/PaperResults'))
 const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
 
@@ -236,6 +239,9 @@ function AppShell() {
             <Route path="/mamo" element={<MamoChat />} />
             <Route path="/practical/:id" element={<PracticalScreen />} />
             <Route path="/exam/:id" element={<ExamPractice />} />
+            <Route path="/grade9" element={<Grade9Challenge />} />
+            <Route path="/timed-paper" element={<TimedPaper />} />
+            <Route path="/paper-results" element={<PaperResults />} />
             <Route path="/settings" element={<SettingsScreen />} />
             <Route path="/privacy" element={<PrivacyPolicyScreen />} />
             <Route path="/terms" element={<TermsScreen />} />

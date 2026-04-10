@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Circle, Zap, Trophy, Star, Award, Copy } from 'lucide-react'
+import { CheckCircle, Circle, Zap, Trophy, Star, Award, Copy, Clock, ChevronRight } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 
@@ -309,6 +309,46 @@ export default function MasteryScreen() {
             return <BadgeCard key={badge.id} badge={badge} unlocked={unlocked} />
           })}
         </div>
+      </div>
+
+      {/* Exam modes */}
+      <div className="px-5 pb-3 space-y-3">
+        <motion.button
+          className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
+          style={{ background: 'linear-gradient(135deg, rgba(168,85,247,0.18), rgba(99,102,241,0.18))', border: '1px solid rgba(168,85,247,0.45)' }}
+          onClick={() => navigate('/grade9')}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className="flex items-center gap-3">
+            <Trophy size={20} color="#a855f7" />
+            <div className="text-left">
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
+              <p className="text-xs" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
+            </div>
+          </div>
+          <ChevronRight size={18} color="#a855f7" />
+        </motion.button>
+
+        <motion.button
+          className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
+          style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)' }}
+          onClick={() => navigate('/timed-paper')}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+        >
+          <div className="flex items-center gap-3">
+            <Clock size={20} color="#6366f1" />
+            <div className="text-left">
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
+              <p className="text-xs" style={{ color: '#818cf8' }}>AQA-style 35 marks · 55 minutes</p>
+            </div>
+          </div>
+          <ChevronRight size={18} color="#6366f1" />
+        </motion.button>
       </div>
 
       {/* Share Progress button */}

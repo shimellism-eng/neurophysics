@@ -1,0 +1,616 @@
+/**
+ * TimedPaper — AQA-mirror 35-mark mini-paper with:
+ * - Global countdown timer (55 min) with amber/red urgency
+ * - Question palette (numbered circles, answered/flagged states)
+ * - Full state persistence (survives app backgrounding)
+ * - 3-stage results: The Number → The Breakdown → The Plan
+ */
+import { motion, AnimatePresence } from 'motion/react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
+import {
+  ArrowLeft, Flag, ChevronUp, ChevronDown, Trophy,
+  Clock, CheckCircle, AlertCircle, BarChart3, BookOpen,
+} from 'lucide-react'
+import { getTimedPaperQuestions } from '../data/examIndex'
+import { saveQuizResult } from '../hooks/useInsights'
+import {
+  CalculationQuestion,
+  ExtendedAnswerQuestion,
+  SequenceSortQuestion,
+} from '../components/questions'
+
+const PAPER_DURATION = 55 * 60 // 55 minutes in seconds
+const STORAGE_KEY = 'neurophysics_timed_paper'
+
+// ── Timer arc component ───────────────────────────────────────────────────────
+function TimerArc({ remaining, total }) {
+  const pct = remaining / total
+  const urgent = remaining < 120
+  const warning = remaining < 300
+  const color = urgent ? '#ef4444' : warning ? '#f59e0b' : '#6366f1'
+  const size = 44
+  const r = 18
+  const circ = 2 * Math.PI * r
+  const dash = circ * pct
+
+  const mins = Math.floor(remaining / 60)
+  const secs = remaining % 60
+  const label = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`
+
+  return (
+    <motion.div className="relative flex items-center justify-center"
+      style={{ width: size, height: size }}
+      animate={urgent ? { scale: [1, 1.06, 1] } : { scale: 1 }}
+      transition={urgent ? { repeat: Infinity, duration: 1.2, ease: 'easeInOut' } : {}}>
+      <svg width={size} height={size} style={{ transform: 'rotate(-90deg)', position: 'absolute' }}>
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#1d293d" strokeWidth={3} />
+        <motion.circle
+          cx={size / 2} cy={size / 2} r={r} fill="none"
+          stroke={color} strokeWidth={3} strokeLinecap="round"
+          strokeDasharray={circ}
+          animate={{ strokeDashoffset: circ - dash }}
+          transition={{ duration: 0.5 }}
+        />
+      </svg>
+      <span className="text-xs font-bold tabular-nums" style={{ color, zIndex: 1 }}>{label}</span>
+    </motion.div>
+  )
+}
+
+// ── Question palette ──────────────────────────────────────────────────────────
+function QuestionPalette({ questions, answers, flags, currentIdx, onJump, open, onToggle }) {
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          className="absolute bottom-full left-0 right-0 px-4 pb-3 pt-4 z-50"
+          style={{ background: 'rgba(11,17,33,0.98)', borderTop: '0.75px solid #1d293d', backdropFilter: 'blur(12px)' }}
+          initial={{ y: '100%', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: '100%', opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 380, damping: 30 }}>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-xs font-bold" style={{ color: '#f8fafc' }}>Question Palette</span>
+            <div className="flex items-center gap-3 text-xs" style={{ color: '#64748b' }}>
+              <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full border border-current inline-block" /> Unanswered</span>
+              <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-indigo-500 inline-block" /> Answered</span>
+              <span className="flex items-center gap-1"><Flag size={10} color="#f59e0b" /> Flagged</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {questions.map((_, i) => {
+              const answered = answers[i] !== undefined
+              const flagged  = flags[i]
+              const current  = i === currentIdx
+              return (
+                <motion.button key={i}
+                  className="relative w-10 h-10 rounded-[10px] text-sm font-bold flex items-center justify-center"
+                  style={{
+                    background: current ? '#6366f1' : answered ? 'rgba(99,102,241,0.2)' : 'rgba(18,26,47,0.9)',
+                    border: current ? '2px solid #6366f1' : answered ? '1.5px solid #6366f1' : '0.75px solid #2d3e55',
+                    color: current ? '#fff' : answered ? '#818cf8' : '#a8b8cc',
+                  }}
+                  onClick={() => { onJump(i); onToggle() }}
+                  whileTap={{ scale: 0.9 }}>
+                  {i + 1}
+                  {flagged && (
+                    <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full flex items-center justify-center"
+                      style={{ background: '#f59e0b' }}>
+                      <Flag size={7} color="#fff" />
+                    </span>
+                  )}
+                </motion.button>
+              )
+            })}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
+// ── Novel context question ────────────────────────────────────────────────────
+function NovelContextQuestion({ data, onComplete }) {
+  const [open, setOpen]         = useState(false)
+  const [selfScore, setSelfScore] = useState(null)
+
+  const handleScore = (pts) => {
+    setSelfScore(pts)
+    onComplete(pts >= Math.ceil(data.marks / 2))
+  }
+  return (
+    <div className="space-y-3">
+      <div className="px-4 py-3 rounded-[14px]"
+        style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+        <div className="text-xs font-semibold mb-1.5" style={{ color: '#818cf8' }}>Context</div>
+        <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{data.scenario}</p>
+      </div>
+      <motion.button className="w-full text-left px-4 py-3 rounded-[14px] flex items-center justify-between"
+        style={{ background: open ? 'rgba(0,188,125,0.08)' : 'rgba(18,26,47,0.9)', border: open ? '0.75px solid rgba(0,188,125,0.3)' : '0.75px solid #1d293d' }}
+        onClick={() => setOpen(v => !v)} whileTap={{ scale: 0.98 }}>
+        <span className="text-sm font-semibold" style={{ color: open ? '#00bc7d' : '#a8b8cc' }}>
+          {open ? 'Mark scheme' : 'Reveal mark scheme'}
+        </span>
+        <motion.span animate={{ rotate: open ? 90 : 0 }} style={{ color: '#a8b8cc' }}>›</motion.span>
+      </motion.button>
+      <AnimatePresence>
+        {open && (
+          <motion.div className="space-y-2 px-1"
+            initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
+            {data.markScheme.map((m, i) => (
+              <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[10px]"
+                style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
+                <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                  style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>{i + 1}</span>
+                <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{m}</span>
+              </div>
+            ))}
+            <div className="px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+              <div className="text-xs font-semibold mb-1" style={{ color: '#818cf8' }}>Model answer</div>
+              <p className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>{data.modelAnswer}</p>
+            </div>
+            {selfScore === null && (
+              <div className="pt-2">
+                <div className="text-xs font-semibold mb-2 text-center" style={{ color: '#a8b8cc' }}>How many marks did you earn?</div>
+                <div className="flex gap-2 justify-center">
+                  {[0, Math.floor(data.marks / 2), data.marks].map(pts => (
+                    <motion.button key={pts}
+                      className="px-5 py-2 rounded-[10px] text-sm font-bold"
+                      style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+                      onClick={() => handleScore(pts)} whileTap={{ scale: 0.92 }}>{pts}</motion.button>
+                  ))}
+                </div>
+              </div>
+            )}
+            {selfScore !== null && (
+              <div className="text-center text-sm font-semibold py-2"
+                style={{ color: selfScore >= Math.ceil(data.marks / 2) ? '#00bc7d' : '#f59e0b' }}>
+                {selfScore >= data.marks ? '★ Full marks!' : selfScore > 0 ? `${selfScore}/${data.marks}` : `0/${data.marks} — review the mark scheme`}
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+// ── RPA Error Question ────────────────────────────────────────────────────────
+function RPAErrorQuestion({ data, onComplete }) {
+  const [selected, setSelected] = useState(null)
+  const [submitted, setSubmitted] = useState(false)
+  const options = [
+    { value: 'high', label: 'Too high' },
+    { value: 'low',  label: 'Too low' },
+    { value: 'no effect', label: 'No effect' },
+  ]
+  const handleSubmit = () => {
+    if (!selected || submitted) return
+    setSubmitted(true)
+    onComplete(selected === data.direction)
+  }
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center gap-2">
+        <span className="px-2 py-0.5 rounded-full text-xs font-bold"
+          style={{ background: 'rgba(99,102,241,0.15)', color: '#818cf8', border: '0.75px solid rgba(99,102,241,0.3)' }}>
+          {data.rpaRef}
+        </span>
+        <span className="text-xs" style={{ color: '#64748b' }}>{data.rpaName}</span>
+      </div>
+      <div className="px-3 py-2.5 rounded-[12px]"
+        style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+        <div className="text-xs font-semibold mb-1" style={{ color: '#a8b8cc' }}>The experiment</div>
+        <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{data.experiment}</p>
+      </div>
+      <div>
+        <div className="text-xs font-semibold mb-2" style={{ color: '#a8b8cc' }}>The calculated value is:</div>
+        <div className="flex gap-2">
+          {options.map(opt => {
+            const isCorrect = submitted && opt.value === data.direction
+            const isWrong   = submitted && opt.value === selected && selected !== data.direction
+            return (
+              <motion.button key={opt.value} className="flex-1 py-3 rounded-[12px] text-sm font-bold"
+                style={{
+                  background: isCorrect ? 'rgba(0,188,125,0.15)' : isWrong ? 'rgba(239,68,68,0.15)' : selected === opt.value ? 'rgba(99,102,241,0.15)' : 'rgba(18,26,47,0.9)',
+                  border: isCorrect ? '1.5px solid #00bc7d' : isWrong ? '1.5px solid #ef4444' : selected === opt.value ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
+                  color: isCorrect ? '#00bc7d' : isWrong ? '#ef4444' : '#f8fafc',
+                }}
+                onClick={() => { if (!submitted) setSelected(opt.value) }}
+                whileTap={submitted ? {} : { scale: 0.96 }}>
+                {opt.label}
+              </motion.button>
+            )
+          })}
+        </div>
+      </div>
+      {!submitted && (
+        <motion.button className="w-full py-3 rounded-[14px] text-sm font-bold"
+          style={{ background: selected ? '#6366f1' : '#1d293d', color: selected ? '#fff' : '#64748b' }}
+          onClick={handleSubmit} disabled={!selected} whileTap={{ scale: 0.97 }}>
+          Check answer
+        </motion.button>
+      )}
+      {submitted && (
+        <motion.div className="space-y-2" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}>
+          {data.markScheme.map((m, i) => (
+            <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
+              <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>{i + 1}</span>
+              <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{m}</span>
+            </div>
+          ))}
+        </motion.div>
+      )}
+    </div>
+  )
+}
+
+// ── Section labels ────────────────────────────────────────────────────────────
+function getSectionLabel(idx, questions) {
+  const types = questions.slice(0, idx + 1).map(q => q.type)
+  const mcqCount = questions.filter(q => q.type === 'equation-recall').length
+  const mcqEnd = mcqCount - 1
+  if (idx <= mcqEnd) return { section: 'A', label: 'Multiple Choice' }
+  if (idx <= mcqEnd + 3) return { section: 'B', label: 'Short Answer' }
+  if (idx <= mcqEnd + 5) return { section: 'C', label: 'Calculations' }
+  return { section: 'D', label: 'Extended Response' }
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────────
+export default function TimedPaper() {
+  const navigate = useNavigate()
+
+  // Load or generate paper
+  const questions = useMemo(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')
+      if (saved?.questions && saved.timeRemaining > 0) return saved.questions
+    } catch {}
+    return getTimedPaperQuestions()
+  }, [])
+
+  const total = questions.length
+
+  // Restore state if available
+  const loadState = () => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')
+      if (saved?.questions) {
+        return {
+          qIndex:    saved.qIndex || 0,
+          answers:   saved.answers || {},
+          flags:     saved.flags || {},
+          remaining: saved.timeRemaining || PAPER_DURATION,
+          score:     saved.score || 0,
+        }
+      }
+    } catch {}
+    return { qIndex: 0, answers: {}, flags: {}, remaining: PAPER_DURATION, score: 0 }
+  }
+
+  const init = loadState()
+  const [qIndex, setQIndex]         = useState(init.qIndex)
+  const [answers, setAnswers]       = useState(init.answers)
+  const [flags, setFlags]           = useState(init.flags)
+  const [remaining, setRemaining]   = useState(init.remaining)
+  const [score, setScore]           = useState(init.score)
+  const [completed, setCompleted]   = useState(false)
+  const [paletteOpen, setPaletteOpen] = useState(false)
+  const [showResults, setShowResults] = useState(false)
+  const [timesUp, setTimesUp]       = useState(false)
+  const [resumeBanner, setResumeBanner] = useState(false)
+
+  const timerRef = useRef(null)
+  const backgroundedAt = useRef(null)
+
+  // Persist state after each answer
+  const persist = useCallback((extra = {}) => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        questions, qIndex, answers, flags, timeRemaining: remaining, score, ...extra,
+      }))
+    } catch {}
+  }, [questions, qIndex, answers, flags, remaining, score])
+
+  // Timer tick
+  useEffect(() => {
+    if (showResults || timesUp) return
+    timerRef.current = setInterval(() => {
+      setRemaining(r => {
+        if (r <= 1) {
+          clearInterval(timerRef.current)
+          setTimesUp(true)
+          return 0
+        }
+        return r - 1
+      })
+    }, 1000)
+    return () => clearInterval(timerRef.current)
+  }, [showResults, timesUp])
+
+  // Pause timer on background
+  useEffect(() => {
+    const handleHide = () => {
+      clearInterval(timerRef.current)
+      backgroundedAt.current = Date.now()
+      persist()
+    }
+    const handleShow = () => {
+      if (backgroundedAt.current) {
+        const away = Math.floor((Date.now() - backgroundedAt.current) / 1000)
+        if (away > 30) setResumeBanner(true)
+        backgroundedAt.current = null
+      }
+    }
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? handleHide() : handleShow()
+    })
+    return () => document.removeEventListener('visibilitychange', () => {})
+  }, [persist])
+
+  const q = questions[qIndex] || {}
+  const isLast = qIndex === total - 1
+  const sectionInfo = getSectionLabel(qIndex, questions)
+
+  const handleComplete = useCallback((correct) => {
+    const newScore = correct ? score + 1 : score
+    if (correct) setScore(newScore)
+    setCompleted(true)
+    setAnswers(prev => {
+      const updated = { ...prev, [qIndex]: correct }
+      persist({ answers: updated, score: newScore })
+      return updated
+    })
+  }, [score, qIndex, persist])
+
+  const handleNext = () => {
+    if (isLast || timesUp) {
+      saveQuizResult('timed_paper', score, total)
+      localStorage.removeItem(STORAGE_KEY)
+      setShowResults(true)
+    } else {
+      const next = qIndex + 1
+      setQIndex(next)
+      setCompleted(answers[next] !== undefined)
+    }
+  }
+
+  const toggleFlag = () => {
+    setFlags(prev => ({ ...prev, [qIndex]: !prev[qIndex] }))
+  }
+
+  const jumpTo = (idx) => {
+    setQIndex(idx)
+    setCompleted(answers[idx] !== undefined)
+  }
+
+  const flaggedCount = Object.values(flags).filter(Boolean).length
+  const answeredCount = Object.keys(answers).length
+
+  const renderQuestion = () => {
+    const props = { data: q, moduleColor: '#6366f1', onComplete: handleComplete }
+    switch (q.type) {
+      case 'equation-recall': {
+        // Inline MCQ
+        const [sel, setSel] = useState(null)
+        const [sub, setSub] = useState(false)
+        const submit = () => {
+          if (sel === null || sub) return
+          setSub(true)
+          handleComplete(sel === q.correctAnswer)
+        }
+        return (
+          <div className="space-y-2">
+            {(q.options || []).map((opt, idx) => {
+              const correct = sub && idx === q.correctAnswer
+              const wrong   = sub && idx === sel && sel !== q.correctAnswer
+              return (
+                <motion.button key={idx}
+                  className="w-full text-left rounded-[14px] p-4 flex items-center gap-3"
+                  style={{
+                    background: correct ? 'rgba(0,188,125,0.12)' : wrong ? 'rgba(239,68,68,0.12)' : sel === idx ? 'rgba(99,102,241,0.12)' : 'rgba(18,26,47,0.9)',
+                    border: correct ? '1.5px solid #00bc7d' : wrong ? '1.5px solid #ef4444' : sel === idx ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
+                    color: '#f8fafc',
+                  }}
+                  onClick={() => { if (!sub) setSel(idx) }}
+                  whileTap={sub ? {} : { scale: 0.98 }}>
+                  <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
+                    style={{ background: sel === idx && !sub ? '#6366f1' : sub && idx === q.correctAnswer ? '#00bc7d' : sub && idx === sel ? '#ef4444' : '#1d293d', color: '#fff' }}>
+                    {['A','B','C','D'][idx]}
+                  </div>
+                  <span className="text-sm">{opt}</span>
+                </motion.button>
+              )
+            })}
+            {!sub && (
+              <motion.button className="w-full mt-2 py-3 rounded-[14px] text-sm font-bold"
+                style={{ background: sel !== null ? '#6366f1' : '#1d293d', color: sel !== null ? '#fff' : '#64748b' }}
+                onClick={submit} disabled={sel === null} whileTap={{ scale: 0.97 }}>
+                Confirm
+              </motion.button>
+            )}
+          </div>
+        )
+      }
+      case 'calculation':
+      case 'calculation-chained': return <CalculationQuestion {...props} />
+      case 'extended-answer':     return <ExtendedAnswerQuestion {...props} />
+      case 'novel-context':       return <NovelContextQuestion {...props} onComplete={handleComplete} />
+      case 'rpa-error':           return <RPAErrorQuestion {...props} onComplete={handleComplete} />
+      case 'sequence':            return <SequenceSortQuestion {...props} />
+      default: return (
+        <div className="py-8 text-center text-sm" style={{ color: '#64748b' }}>
+          Question type: {q.type}
+        </div>
+      )
+    }
+  }
+
+  // ── Time's up modal ────────────────────────────────────────────────────────
+  if (timesUp && !showResults) {
+    return (
+      <div className="flex flex-col h-full items-center justify-center gap-5 px-8" style={{ background: '#0b1121' }}>
+        <Clock size={64} color="#ef4444" strokeWidth={1.2} />
+        <div className="text-2xl font-black text-center" style={{ color: '#f8fafc' }}>Time's up!</div>
+        <div className="text-sm text-center" style={{ color: '#a8b8cc' }}>
+          You answered {answeredCount} of {total} questions.
+        </div>
+        <motion.button className="w-full py-4 rounded-[16px] font-bold"
+          style={{ background: '#6366f1', color: '#fff' }}
+          onClick={() => { saveQuizResult('timed_paper', score, total); localStorage.removeItem(STORAGE_KEY); setShowResults(true) }}
+          whileTap={{ scale: 0.97 }}>
+          See results
+        </motion.button>
+      </div>
+    )
+  }
+
+  // ── Results (inline — full 3-stage flow in PaperResults) ──────────────────
+  if (showResults) {
+    navigate('/paper-results', { state: { score, total, questions, answers, timeUsed: PAPER_DURATION - remaining } })
+    return null
+  }
+
+  // ── Question screen ────────────────────────────────────────────────────────
+  return (
+    <div className="flex flex-col h-full overflow-hidden relative" style={{ background: '#0b1121' }}>
+      {/* Resume banner */}
+      <AnimatePresence>
+        {resumeBanner && (
+          <motion.div
+            className="absolute top-0 left-0 right-0 z-50 px-5 py-3 flex items-center justify-between"
+            style={{ background: 'rgba(245,158,11,0.15)', borderBottom: '0.75px solid rgba(245,158,11,0.4)' }}
+            initial={{ y: -60 }} animate={{ y: 0 }} exit={{ y: -60 }}>
+            <div>
+              <div className="text-xs font-bold" style={{ color: '#fbbf24' }}>You were away for a while</div>
+              <div className="text-xs" style={{ color: '#a8b8cc' }}>Timer was paused. Continue or abandon?</div>
+            </div>
+            <div className="flex gap-2">
+              <button className="px-3 py-1.5 rounded-[8px] text-xs font-bold"
+                style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444' }}
+                onClick={() => { localStorage.removeItem(STORAGE_KEY); navigate(-1) }}>
+                Abandon
+              </button>
+              <button className="px-3 py-1.5 rounded-[8px] text-xs font-bold"
+                style={{ background: '#6366f1', color: '#fff' }}
+                onClick={() => setResumeBanner(false)}>
+                Resume
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Header */}
+      <div className="px-4 pt-5 pb-3 shrink-0 flex items-center gap-3"
+        style={{ borderBottom: '0.75px solid #1d293d' }}>
+        <button onClick={() => navigate(-1)}
+          className="w-10 h-10 rounded-[11px] flex items-center justify-center shrink-0"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+          <ArrowLeft size={17} color="#a8b8cc" />
+        </button>
+        <div className="flex-1 min-w-0">
+          <div className="text-xs font-bold" style={{ color: '#f8fafc' }}>
+            AQA Physics Mini-Paper
+          </div>
+          <div className="text-xs" style={{ color: '#64748b' }}>
+            Q{qIndex + 1}/{total} · {answeredCount} answered · Section {sectionInfo.section}
+          </div>
+        </div>
+        <TimerArc remaining={remaining} total={PAPER_DURATION} />
+      </div>
+
+      {/* Progress bar */}
+      <div className="h-0.5 shrink-0" style={{ background: '#1d293d' }}>
+        <motion.div className="h-full"
+          style={{ background: '#6366f1' }}
+          animate={{ width: `${(answeredCount / total) * 100}%` }} />
+      </div>
+
+      {/* Question content */}
+      <div className="flex-1 overflow-y-auto px-5 pb-4 pt-4">
+        {/* Section label */}
+        <div className="flex items-center justify-between mb-3">
+          <span className="px-2 py-0.5 rounded-full text-xs font-bold"
+            style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}>
+            Section {sectionInfo.section} — {sectionInfo.label}
+          </span>
+          <button
+            className="flex items-center gap-1 px-3 py-1.5 rounded-[8px] text-xs font-semibold"
+            style={{
+              background: flags[qIndex] ? 'rgba(245,158,11,0.12)' : 'rgba(18,26,47,0.9)',
+              border: flags[qIndex] ? '0.75px solid rgba(245,158,11,0.4)' : '0.75px solid #1d293d',
+              color: flags[qIndex] ? '#f59e0b' : '#64748b',
+            }}
+            onClick={toggleFlag}>
+            <Flag size={11} /> {flags[qIndex] ? 'Flagged' : 'Flag'}
+          </button>
+        </div>
+
+        {/* Question text */}
+        <div className="mb-4">
+          <p className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>{q.question}</p>
+          {q.questionSubtitle && (
+            <p className="text-xs mt-1" style={{ color: '#64748b' }}>{q.questionSubtitle}</p>
+          )}
+          {(q.marks || q.steps?.length) && (
+            <p className="text-xs mt-0.5 text-right font-semibold" style={{ color: '#a8b8cc' }}>
+              [{q.marks || q.steps?.length} marks]
+            </p>
+          )}
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div key={qIndex}
+            initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -16 }} transition={{ duration: 0.18 }}>
+            {renderQuestion()}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Bottom bar: palette toggle + next */}
+      <div className="relative shrink-0" style={{ borderTop: '0.75px solid #1d293d' }}>
+        <QuestionPalette
+          questions={questions} answers={answers} flags={flags}
+          currentIdx={qIndex} onJump={jumpTo}
+          open={paletteOpen} onToggle={() => setPaletteOpen(v => !v)}
+        />
+        <div className="px-4 py-3 flex items-center gap-3"
+          style={{ background: 'rgba(11,17,33,0.98)' }}>
+          <button
+            className="flex items-center gap-2 px-4 py-3 rounded-[13px] text-sm font-semibold"
+            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#a8b8cc' }}
+            onClick={() => setPaletteOpen(v => !v)}>
+            <span className="text-xs font-bold">{answeredCount}/{total}</span>
+            {paletteOpen ? <ChevronDown size={15} /> : <ChevronUp size={15} />}
+          </button>
+
+          {flaggedCount > 0 && (
+            <div className="flex items-center gap-1 px-2 py-1 rounded-[8px]"
+              style={{ background: 'rgba(245,158,11,0.1)', border: '0.75px solid rgba(245,158,11,0.25)' }}>
+              <Flag size={11} color="#f59e0b" />
+              <span className="text-xs font-bold" style={{ color: '#f59e0b' }}>{flaggedCount}</span>
+            </div>
+          )}
+
+          <motion.button
+            className="flex-1 py-3 rounded-[13px] text-sm font-bold"
+            style={{
+              background: '#6366f1',
+              color: '#fff',
+              boxShadow: '0 4px 16px rgba(99,102,241,0.35)',
+            }}
+            onClick={handleNext}
+            whileTap={{ scale: 0.97 }}>
+            {isLast ? 'Submit paper' : 'Next →'}
+          </motion.button>
+        </div>
+      </div>
+    </div>
+  )
+}

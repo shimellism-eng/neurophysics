@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Circle, Zap, Trophy, Star, Award, Copy, Clock, ChevronRight } from 'lucide-react'
+import { CheckCircle, Circle, Zap, Trophy, Star, Copy, Clock, ChevronRight } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 
@@ -14,13 +14,15 @@ const BADGES = [
     emoji: '🔬',
     label: 'First Step',
     color: '#00bc7d',
-    check: (mastered, progress, modules) => mastered.length >= 1,
+    hint: 'Complete 1 topic',
+    check: (mastered) => mastered.length >= 1,
   },
   {
     id: 'momentum',
     emoji: '⚡',
     label: 'Momentum',
     color: '#fdc700',
+    hint: 'Master 5 topics',
     check: (mastered) => mastered.length >= 5,
   },
   {
@@ -28,6 +30,7 @@ const BADGES = [
     emoji: '🧲',
     label: 'Force Field',
     color: '#00a8e8',
+    hint: 'Master 10 topics',
     check: (mastered) => mastered.length >= 10,
   },
   {
@@ -35,6 +38,7 @@ const BADGES = [
     emoji: '🌊',
     label: 'Wave Rider',
     color: '#fdc700',
+    hint: 'Complete all Waves topics',
     check: (mastered, progress, modules) => {
       const waveMod = modules.find(m => m.name === 'Waves')
       if (!waveMod) return false
@@ -46,6 +50,7 @@ const BADGES = [
     emoji: '⚛️',
     label: 'Nuclear',
     color: '#e879f9',
+    hint: 'Complete all Atomic Structure topics',
     check: (mastered, progress, modules) => {
       const atomMod = modules.find(m => m.name === 'Atomic Structure')
       if (!atomMod) return false
@@ -57,49 +62,10 @@ const BADGES = [
     emoji: '🏆',
     label: 'Grade 9',
     color: '#f97316',
+    hint: 'Master all 55 topics',
     check: (mastered, progress, modules, allTopics) => mastered.length >= allTopics.length,
   },
 ]
-
-// ---------------------------------------------------------------------------
-// Burst dots around the progress ring
-// ---------------------------------------------------------------------------
-const BURST_COUNT = 8
-const BURST_RADIUS = 58 // distance from ring centre (px)
-
-function BurstDots({ percent }) {
-  if (percent <= 0) return null
-  return (
-    <div className="absolute inset-0 pointer-events-none" style={{ width: 96, height: 96 }}>
-      {Array.from({ length: BURST_COUNT }).map((_, i) => {
-        const angle = (i / BURST_COUNT) * 2 * Math.PI - Math.PI / 2
-        const x = 48 + BURST_RADIUS * Math.cos(angle) - 1 // centre on 1px dot
-        const y = 48 + BURST_RADIUS * Math.sin(angle) - 1
-        return (
-          <motion.div
-            key={i}
-            style={{
-              position: 'absolute',
-              left: x,
-              top: y,
-              width: 2,
-              height: 2,
-              borderRadius: '50%',
-              background: '#155dfc',
-            }}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: [0, 1.4, 1], opacity: [0, 1, 0.6] }}
-            transition={{
-              duration: 1.2,
-              delay: 0.6 + i * 0.08,
-              ease: 'easeOut',
-            }}
-          />
-        )
-      })}
-    </div>
-  )
-}
 
 // ---------------------------------------------------------------------------
 // Badge card
@@ -108,7 +74,7 @@ function BadgeCard({ badge, unlocked }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.85 }}
-      animate={{ opacity: unlocked ? 1 : 0.4, scale: 1 }}
+      animate={{ opacity: unlocked ? 1 : 0.42, scale: 1 }}
       transition={{ duration: 0.4 }}
       style={{
         width: 72,
@@ -138,16 +104,62 @@ function BadgeCard({ badge, unlocked }) {
 }
 
 // ---------------------------------------------------------------------------
+// Next milestone card (shown when nothing earned yet)
+// ---------------------------------------------------------------------------
+function NextMilestoneCard({ badge }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="rounded-[18px] px-5 py-4 flex items-center gap-4"
+      style={{
+        background: `${badge.color}0d`,
+        border: `1px solid ${badge.color}28`,
+      }}
+    >
+      <div
+        className="flex items-center justify-center shrink-0"
+        style={{
+          width: 52, height: 52, borderRadius: 14,
+          background: `${badge.color}14`,
+          border: `1.5px solid ${badge.color}35`,
+          fontSize: 24,
+        }}
+      >
+        {badge.emoji}
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="text-xs font-bold uppercase tracking-wider mb-0.5" style={{ color: badge.color }}>
+          Next milestone
+        </div>
+        <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{badge.label}</div>
+        <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>{badge.hint}</div>
+      </div>
+      <Star size={16} color={badge.color} strokeWidth={1.5} />
+    </motion.div>
+  )
+}
+
+// ---------------------------------------------------------------------------
 // Main screen
 // ---------------------------------------------------------------------------
 export default function MasteryScreen() {
   const navigate = useNavigate()
-  const { progress } = useProgress()
+  const { progress, stats } = useProgress()
 
   const allTopics = Object.values(TOPICS)
   const mastered = allTopics.filter(t => progress[t.id]?.mastered)
-  const started = allTopics.filter(t => progress[t.id]?.started && !progress[t.id]?.mastered)
-  const percent = Math.round((mastered.length / allTopics.length) * 100)
+  const started  = allTopics.filter(t => progress[t.id]?.started && !progress[t.id]?.mastered)
+  const percent  = Math.round((mastered.length / allTopics.length) * 100)
+  const hasProgress = mastered.length > 0
+
+  // Badge logic
+  const unlockedBadgeIds = BADGES
+    .filter(b => b.check(mastered, progress, MODULES, allTopics))
+    .map(b => b.id)
+  const earnedBadges = BADGES.filter(b => unlockedBadgeIds.includes(b.id))
+  const nextBadge    = BADGES.find(b => !unlockedBadgeIds.includes(b.id))
 
   // Share modal
   const [showShareModal, setShowShareModal] = useState(false)
@@ -177,13 +189,13 @@ export default function MasteryScreen() {
       'Per module:',
       ...MODULES.map(mod => {
         const count = mod.topics.filter(t => progress[t]?.mastered).length
-        const icon = moduleEmoji[mod.name] || '📘'
+        const icon  = moduleEmoji[mod.name] || '📘'
         return `${icon} ${mod.name}: ${count}/${mod.topics.length} mastered`
       }),
       '',
-      `Badges earned: ${BADGES.filter(b => b.check(mastered, progress, MODULES, allTopics)).map(b => b.label).join(', ') || 'None yet'}`,
-      `Current streak: ${stats.streak ?? 0} day${(stats.streak ?? 0) === 1 ? '' : 's'}`,
-      `Total XP: ${stats.xp ?? 0}`,
+      `Badges earned: ${earnedBadges.map(b => b.label).join(', ') || 'None yet'}`,
+      `Current streak: ${stats?.streak ?? 0} day${(stats?.streak ?? 0) === 1 ? '' : 's'}`,
+      `Total XP: ${stats?.xp ?? 0}`,
       sep,
       'Generated by NeuroPhysics',
     ]
@@ -197,7 +209,7 @@ export default function MasteryScreen() {
     })
   }
 
-  // Celebration banner - show when mastered count hits a multiple of 5
+  // Celebration banner
   const [bannerVisible, setBannerVisible] = useState(false)
   const [bannerCount, setBannerCount] = useState(0)
 
@@ -211,7 +223,7 @@ export default function MasteryScreen() {
   }, [mastered.length])
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#080f1e' }}>
 
       {/* Celebration banner */}
       <AnimatePresence>
@@ -223,12 +235,8 @@ export default function MasteryScreen() {
             exit={{ y: -60, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 380, damping: 30 }}
             style={{
-              position: 'sticky',
-              top: 0,
-              zIndex: 50,
-              background: '#00bc7d',
-              padding: '10px 20px',
-              textAlign: 'center',
+              position: 'sticky', top: 0, zIndex: 50,
+              background: '#00bc7d', padding: '10px 20px', textAlign: 'center',
             }}
           >
             <span className="text-sm font-semibold" style={{ color: '#0b1121' }}>
@@ -238,203 +246,230 @@ export default function MasteryScreen() {
         )}
       </AnimatePresence>
 
-      {/* Header */}
+      {/* ── Header ── */}
       <div className="px-5 pt-6 pb-4">
         <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>Mastery</h1>
-        <p className="text-sm leading-relaxed mt-1" style={{ color: '#cad5e2' }}>Track your physics knowledge</p>
+        <p className="text-sm leading-relaxed mt-1" style={{ color: 'rgba(255,255,255,0.38)' }}>
+          Track your physics knowledge
+        </p>
       </div>
 
-      {/* Overall progress ring */}
-      <div className="px-5 mb-4">
-        <div
-          className="rounded-[24px] p-6 flex items-center gap-6"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+      {/* ── Overall progress hero ── */}
+      <div className="px-5 mb-5">
+        <motion.div
+          className="rounded-[24px] p-6"
+          style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="relative shrink-0" style={{ width: 96, height: 96 }}>
-            <svg width="96" height="96" viewBox="0 0 96 96">
-              <circle cx="48" cy="48" r="40" fill="none" stroke="#1d293d" strokeWidth="8" />
-              <motion.circle
-                cx="48" cy="48" r="40"
-                fill="none"
-                stroke="#155dfc"
-                strokeWidth="8"
-                strokeLinecap="round"
-                strokeDasharray={`${2 * Math.PI * 40}`}
-                initial={{ strokeDashoffset: 2 * Math.PI * 40 }}
-                animate={{ strokeDashoffset: 2 * Math.PI * 40 * (1 - percent / 100) }}
-                transition={{ duration: 1.1, ease: 'easeOut' }}
-                transform="rotate(-90 48 48)"
-              />
-            </svg>
-            {/* Burst dots */}
-            <BurstDots percent={percent} />
-            {/* Centre label */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-xl font-bold" style={{ color: '#f8fafc' }}>{percent}%</span>
+          {hasProgress ? (
+            /* ── Active state: ring + stats ── */
+            <div className="flex items-center gap-6">
+              <div className="relative shrink-0" style={{ width: 96, height: 96 }}>
+                <svg width="96" height="96" viewBox="0 0 96 96">
+                  <circle cx="48" cy="48" r="40" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="8" />
+                  <motion.circle
+                    cx="48" cy="48" r="40"
+                    fill="none" stroke="#155dfc" strokeWidth="8"
+                    strokeLinecap="round"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    initial={{ strokeDashoffset: 2 * Math.PI * 40 }}
+                    animate={{ strokeDashoffset: 2 * Math.PI * 40 * (1 - percent / 100) }}
+                    transition={{ duration: 1.1, ease: 'easeOut' }}
+                    transform="rotate(-90 48 48)"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="text-xl font-bold" style={{ color: '#f8fafc' }}>{percent}%</span>
+                </div>
+              </div>
+              <div>
+                <div className="text-xl font-bold" style={{ color: '#f8fafc' }}>
+                  {mastered.length}/{allTopics.length}
+                </div>
+                <div className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>Topics mastered</div>
+                <div className="flex gap-3 mt-3">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle size={12} color="#00bc7d" />
+                    <span className="text-xs font-semibold" style={{ color: '#64748b' }}>{mastered.length} done</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Zap size={12} color="#fdc700" />
+                    <span className="text-xs font-semibold" style={{ color: '#64748b' }}>{started.length} active</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          ) : (
+            /* ── Zero state: welcoming, no percentage ── */
+            <div className="flex flex-col items-center text-center py-2">
+              <div
+                className="flex items-center justify-center mb-4"
+                style={{
+                  width: 72, height: 72, borderRadius: 20,
+                  background: 'linear-gradient(135deg, rgba(21,93,252,0.2), rgba(99,102,241,0.12))',
+                  border: '1.5px solid rgba(99,102,241,0.3)',
+                  fontSize: 32,
+                }}
+              >
+                🧬
+              </div>
+              <h2 className="text-lg font-bold mb-1" style={{ color: '#f8fafc' }}>Your journey begins here</h2>
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.38)', maxWidth: 240, lineHeight: 1.5 }}>
+                Complete your first topic to start building mastery
+              </p>
+              <motion.button
+                className="mt-4 px-6 py-3 rounded-[14px] text-sm font-bold"
+                style={{
+                  background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
+                  color: '#fff',
+                  boxShadow: '0 4px 0 rgba(0,0,0,0.18)',
+                }}
+                onClick={() => navigate('/topics')}
+                whileTap={{ y: 2, boxShadow: '0 1px 0 rgba(0,0,0,0.1)' }}
+              >
+                Browse topics
+              </motion.button>
+            </div>
+          )}
+        </motion.div>
+      </div>
 
+      {/* ── Milestones ── */}
+      <div className="px-5 mb-5">
+        {earnedBadges.length === 0 ? (
+          /* Show only the next milestone card */
+          nextBadge && <NextMilestoneCard badge={nextBadge} />
+        ) : (
+          /* Show earned badges + next unlockable */
           <div>
-            <div className="text-xl font-bold" style={{ color: '#f8fafc' }}>
-              {mastered.length}/{allTopics.length}
+            <div className="mb-3">
+              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                Badges earned
+              </span>
             </div>
-            <div className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>Topics mastered</div>
-            <div className="flex gap-3 mt-3">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle size={12} color="#00bc7d" />
-                <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#64748b' }}>{mastered.length} done</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Zap size={12} color="#fdc700" />
-                <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#64748b' }}>{started.length} active</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Milestone badges strip */}
-      <div className="mb-6">
-        <div className="px-5 mb-3">
-          <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#64748b' }}>
-            Milestones
-          </span>
-        </div>
-        <div
-          className="flex gap-3 overflow-x-auto"
-          style={{ paddingLeft: 20, paddingRight: 20, scrollbarWidth: 'none' }}
-        >
-          {BADGES.map(badge => {
-            const unlocked = badge.check(mastered, progress, MODULES, allTopics)
-            return <BadgeCard key={badge.id} badge={badge} unlocked={unlocked} />
-          })}
-        </div>
-      </div>
-
-      {/* Exam modes */}
-      <div className="px-5 pb-3 space-y-3">
-        <motion.button
-          className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
-          style={{ background: 'linear-gradient(135deg, rgba(168,85,247,0.18), rgba(99,102,241,0.18))', border: '1px solid rgba(168,85,247,0.45)' }}
-          onClick={() => navigate('/grade9')}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <div className="flex items-center gap-3">
-            <Trophy size={20} color="#a855f7" />
-            <div className="text-left">
-              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
-              <p className="text-xs" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
+            <div
+              className="flex gap-3 overflow-x-auto pb-1"
+              style={{ scrollbarWidth: 'none' }}
+            >
+              {earnedBadges.map(badge => (
+                <BadgeCard key={badge.id} badge={badge} unlocked={true} />
+              ))}
+              {nextBadge && (
+                <div className="relative shrink-0">
+                  <BadgeCard badge={nextBadge} unlocked={false} />
+                  <div
+                    className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-bold px-2 py-0.5 rounded-full"
+                    style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.35)' }}
+                  >
+                    Next
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-          <ChevronRight size={18} color="#a855f7" />
-        </motion.button>
-
-        <motion.button
-          className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
-          style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)' }}
-          onClick={() => navigate('/timed-paper')}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.05 }}
-        >
-          <div className="flex items-center gap-3">
-            <Clock size={20} color="#6366f1" />
-            <div className="text-left">
-              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
-              <p className="text-xs" style={{ color: '#818cf8' }}>AQA-style 35 marks · 55 minutes</p>
-            </div>
-          </div>
-          <ChevronRight size={18} color="#6366f1" />
-        </motion.button>
+        )}
       </div>
 
-      {/* Share Progress button */}
-      <div className="px-5 pb-4">
-        <motion.button
-          className="w-full py-4 rounded-[16px] flex items-center justify-center gap-2 font-semibold text-base"
-          style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)', color: '#818cf8' }}
-          onClick={() => setShowShareModal(true)}
-          whileTap={{ scale: 0.98 }}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <Copy size={16} />
-          📋 Share Progress Report
-        </motion.button>
-      </div>
-
-      {/* Per-module breakdown */}
-      <div className="px-5 pb-8 space-y-3">
+      {/* ── Per-module breakdown ── */}
+      <div className="px-5 pb-4 space-y-3">
         {MODULES.map((mod, i) => {
           const masteredCount = mod.topics.filter(t => progress[t]?.mastered).length
           const pct = Math.round((masteredCount / mod.topics.length) * 100)
           const isComplete = masteredCount === mod.topics.length
+          const hasAny = masteredCount > 0
 
           return (
             <motion.div
               key={mod.name}
-              className="rounded-[16px] p-4"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+              className="rounded-[18px] p-4"
+              style={{
+                background: 'rgba(15,22,41,0.95)',
+                border: `0.75px solid ${hasAny ? mod.color + '30' : 'rgba(255,255,255,0.07)'}`,
+              }}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.07 }}
+              transition={{ delay: i * 0.05 }}
             >
               {/* Module header */}
               <div className="flex items-center gap-3 mb-3">
-                <mod.icon size={20} color={mod.color} strokeWidth={2} />
-                <div className="flex-1">
-                  <div className="flex items-center gap-1.5">
+                <div
+                  className="flex items-center justify-center shrink-0"
+                  style={{
+                    width: 36, height: 36, borderRadius: 10,
+                    background: `${mod.color}18`,
+                    border: `1.5px solid ${mod.color}35`,
+                  }}
+                >
+                  <mod.icon size={18} color={mod.color} strokeWidth={2} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1.5 flex-wrap">
                     <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{mod.name}</span>
                     {isComplete && <span style={{ fontSize: 14 }}>🎉</span>}
                   </div>
-                  <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#64748b' }}>
-                    {masteredCount}/{mod.topics.length} mastered
+                  <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.32)' }}>
+                    {hasAny
+                      ? `${masteredCount} of ${mod.topics.length} mastered`
+                      : `${mod.topics.length} to explore`}
                   </div>
                 </div>
-                <span className="text-xs font-bold" style={{ color: mod.color }}>{pct}%</span>
+                {hasAny && (
+                  <span className="text-xs font-bold shrink-0" style={{ color: mod.color }}>{pct}%</span>
+                )}
               </div>
 
               {/* Progress bar */}
-              <div className="h-2 rounded-full" style={{ background: '#1d293d' }}>
+              <div className="h-1.5 rounded-full mb-3" style={{ background: 'rgba(255,255,255,0.06)' }}>
                 <motion.div
                   className="h-full rounded-full"
                   style={{ background: mod.color }}
                   initial={{ width: 0 }}
                   animate={{ width: `${pct}%` }}
-                  transition={{ duration: 0.8, delay: i * 0.07 }}
+                  transition={{ duration: 0.8, delay: i * 0.05 }}
                 />
               </div>
 
-              {/* Topic pills */}
-              <div className="flex flex-wrap gap-2 mt-3">
+              {/* Topic pills — 44px min touch target */}
+              <div className="flex flex-wrap gap-2">
                 {mod.topics.map(topicId => {
                   const t = TOPICS[topicId]
                   const isMastered = progress[topicId]?.mastered
-                  const isStarted = progress[topicId]?.started
-                  const isIdle = !isMastered && !isStarted
+                  const isStarted  = progress[topicId]?.started
+                  const isIdle     = !isMastered && !isStarted
 
                   return (
-                    <button
+                    <motion.button
                       key={topicId}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
+                      className="flex items-center gap-1.5 px-3 rounded-full text-xs font-medium"
                       style={{
-                        background: isMastered ? `${mod.color}20` : isIdle ? 'rgba(18,26,47,0.7)' : 'rgba(29,41,61,0.6)',
-                        border: `0.75px solid ${isMastered ? mod.color : isIdle ? '#1d293d' : '#2d3e55'}`,
-                        color: isMastered ? mod.color : isIdle ? '#4a5a6e' : '#cad5e2',
-                        opacity: isIdle ? 0.65 : 1,
+                        height: 44,
+                        background: isMastered
+                          ? `${mod.color}20`
+                          : isStarted
+                            ? 'rgba(251,191,36,0.1)'
+                            : 'rgba(255,255,255,0.04)',
+                        border: `0.75px solid ${
+                          isMastered ? mod.color + '60'
+                          : isStarted ? 'rgba(251,191,36,0.3)'
+                          : 'rgba(255,255,255,0.1)'}`,
+                        color: isMastered
+                          ? mod.color
+                          : isStarted
+                            ? '#fbbf24'
+                            : 'rgba(255,255,255,0.45)',
                       }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => navigate(`/lesson/${topicId}`)}
                     >
                       {isMastered
                         ? <CheckCircle size={11} />
                         : isStarted
                           ? <Zap size={11} />
-                          : <Circle size={11} />}
-                      {t.title}
-                    </button>
+                          : <Circle size={11} strokeWidth={1.5} />}
+                      {t?.title}
+                    </motion.button>
                   )
                 })}
               </div>
@@ -443,7 +478,95 @@ export default function MasteryScreen() {
         })}
       </div>
 
-      {/* Share modal */}
+      {/* ── Exam modes — advanced features, below module list ── */}
+      <div className="px-5 pb-3 space-y-3">
+        <div className="mb-2">
+          <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.28)' }}>
+            Exam practice
+          </span>
+        </div>
+
+        <motion.button
+          className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
+          style={{
+            background: 'linear-gradient(135deg, rgba(168,85,247,0.18), rgba(99,102,241,0.18))',
+            border: '1px solid rgba(168,85,247,0.35)',
+            minHeight: 64,
+          }}
+          onClick={() => navigate('/grade9')}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center shrink-0"
+              style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(168,85,247,0.15)', border: '1px solid rgba(168,85,247,0.3)' }}>
+              <Trophy size={18} color="#a855f7" />
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
+              <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
+            </div>
+          </div>
+          <ChevronRight size={18} color="rgba(168,85,247,0.6)" />
+        </motion.button>
+
+        <motion.button
+          className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
+          style={{
+            background: 'rgba(99,102,241,0.1)',
+            border: '0.75px solid rgba(99,102,241,0.28)',
+            minHeight: 64,
+          }}
+          onClick={() => navigate('/timed-paper')}
+          whileTap={{ scale: 0.98 }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center shrink-0"
+              style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.3)' }}>
+              <Clock size={18} color="#6366f1" />
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
+              <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>AQA-style 35 marks · 55 minutes</p>
+            </div>
+          </div>
+          <ChevronRight size={18} color="rgba(99,102,241,0.5)" />
+        </motion.button>
+      </div>
+
+      {/* ── Share progress — only shown once there's something to share ── */}
+      <AnimatePresence>
+        {hasProgress && (
+          <motion.div
+            className="px-5 pb-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <motion.button
+              className="w-full py-4 rounded-[16px] flex items-center justify-center gap-2 font-semibold text-sm"
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '0.75px solid rgba(255,255,255,0.1)',
+                color: 'rgba(255,255,255,0.4)',
+                marginTop: 12,
+              }}
+              onClick={() => setShowShareModal(true)}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Copy size={15} />
+              Share Progress Report
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Share modal ── */}
       <AnimatePresence>
         {showShareModal && (
           <motion.div
@@ -451,7 +574,11 @@ export default function MasteryScreen() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            style={{ position: 'fixed', inset: 0, zIndex: 50, background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            style={{
+              position: 'fixed', inset: 0, zIndex: 50,
+              background: 'rgba(0,0,0,0.7)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
             onClick={(e) => { if (e.target === e.currentTarget) setShowShareModal(false) }}
           >
             <motion.div
@@ -459,35 +586,48 @@ export default function MasteryScreen() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.93, y: 12 }}
               transition={{ type: 'spring', stiffness: 360, damping: 28 }}
-              style={{ background: '#0f1829', border: '0.75px solid #1d293d', borderRadius: 20, marginLeft: 20, marginRight: 20, width: '100%', maxWidth: 480, overflow: 'hidden' }}
+              style={{
+                background: '#0f1829',
+                border: '0.75px solid rgba(255,255,255,0.1)',
+                borderRadius: 20,
+                marginLeft: 20, marginRight: 20,
+                width: '100%', maxWidth: 480,
+                overflow: 'hidden',
+              }}
             >
-              {/* Modal header */}
-              <div className="flex items-center justify-between px-5 py-4" style={{ borderBottom: '0.75px solid #1d293d' }}>
+              <div className="flex items-center justify-between px-5 py-4"
+                style={{ borderBottom: '0.75px solid rgba(255,255,255,0.07)' }}>
                 <span className="text-base font-semibold" style={{ color: '#f8fafc' }}>Progress Report</span>
                 <button
                   onClick={() => setShowShareModal(false)}
                   className="flex items-center justify-center w-8 h-8 rounded-full text-lg font-bold"
                   style={{ background: 'rgba(255,255,255,0.07)', color: '#94a3b8' }}
                 >
-                  ×
+                  x
                 </button>
               </div>
-
-              {/* Report body */}
               <div className="px-5 py-4">
                 <pre
                   className="text-xs leading-relaxed overflow-y-auto"
-                  style={{ fontFamily: 'ui-monospace, monospace', color: '#cad5e2', maxHeight: 256, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
+                  style={{
+                    fontFamily: 'ui-monospace, monospace',
+                    color: '#cad5e2',
+                    maxHeight: 256,
+                    whiteSpace: 'pre-wrap',
+                    wordBreak: 'break-word',
+                  }}
                 >
                   {generateReport()}
                 </pre>
               </div>
-
-              {/* Action buttons */}
               <div className="flex gap-3 px-5 pb-5">
                 <motion.button
                   className="flex-1 py-3 rounded-[12px] flex items-center justify-center gap-2 text-sm font-semibold"
-                  style={{ background: copied ? 'rgba(0,188,125,0.15)' : 'rgba(99,102,241,0.15)', border: `0.75px solid ${copied ? 'rgba(0,188,125,0.5)' : 'rgba(99,102,241,0.4)'}`, color: copied ? '#00bc7d' : '#818cf8' }}
+                  style={{
+                    background: copied ? 'rgba(0,188,125,0.15)' : 'rgba(99,102,241,0.15)',
+                    border: `0.75px solid ${copied ? 'rgba(0,188,125,0.5)' : 'rgba(99,102,241,0.4)'}`,
+                    color: copied ? '#00bc7d' : '#818cf8',
+                  }}
                   onClick={handleCopy}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -495,7 +635,11 @@ export default function MasteryScreen() {
                 </motion.button>
                 <motion.button
                   className="px-5 py-3 rounded-[12px] text-sm font-semibold"
-                  style={{ background: 'rgba(255,255,255,0.06)', border: '0.75px solid #1d293d', color: '#94a3b8' }}
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '0.75px solid rgba(255,255,255,0.1)',
+                    color: '#94a3b8',
+                  }}
                   onClick={() => setShowShareModal(false)}
                   whileTap={{ scale: 0.97 }}
                 >

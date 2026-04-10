@@ -12,6 +12,7 @@ import AuthScreen from './screens/AuthScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
 
 // ── Lazily loaded (deferred until first navigation) ───────────────────────────
+const LearnScreen       = lazy(() => import('./screens/LearnScreen'))
 const TopicMap          = lazy(() => import('./screens/TopicMap'))
 const LessonPlayer      = lazy(() => import('./screens/LessonPlayer'))
 const DiagnosticQuestion = lazy(() => import('./screens/DiagnosticQuestion'))
@@ -68,7 +69,7 @@ function FloatingMamo() {
   const location = useLocation()
   const navigate = useNavigate()
   const reaction = useMamoState()
-  const hiddenByRoute = location.pathname === '/mamo'
+  const hiddenByRoute = SHELL_ROUTES.includes(location.pathname)
   const hiddenByPref = (() => {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').hideMamo } catch { return false }
   })()
@@ -170,8 +171,8 @@ function FloatingMamo() {
   )
 }
 
-// Routes that show the bottom nav + floating Mamo
-const SHELL_ROUTES = ['/', '/topics', '/mastery', '/settings']
+// Routes that show the bottom nav
+const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
 const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms']
 
@@ -231,11 +232,12 @@ function AppShell() {
             <Route path="/auth" element={<AuthScreen />} />
             <Route path="/onboarding" element={<OnboardingScreen />} />
             <Route path="/" element={<HomeScreen />} />
-            <Route path="/topics" element={<TopicMap />} />
+            <Route path="/learn" element={<LearnScreen />} />
+            <Route path="/topics" element={<Navigate to="/learn" replace />} />
+            <Route path="/mastery" element={<Navigate to="/learn" replace />} />
             <Route path="/lesson/:id" element={<LessonPlayer />} />
             <Route path="/diagnostic/:id" element={<DiagnosticQuestion />} />
             <Route path="/feedback/:id" element={<MisconceptionFeedback />} />
-            <Route path="/mastery" element={<MasteryScreen />} />
             <Route path="/mamo" element={<MamoChat />} />
             <Route path="/practical/:id" element={<PracticalScreen />} />
             <Route path="/exam/:id" element={<ExamPractice />} />

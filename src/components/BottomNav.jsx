@@ -1,12 +1,12 @@
 import { motion } from 'motion/react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { Home, Map, Star, Settings } from 'lucide-react'
+import { Home, BookOpen, MessageCircle, Settings } from 'lucide-react'
 
 const NAV_ITEMS = [
-  { label: 'Home',     icon: Home,     path: '/' },
-  { label: 'Topics',   icon: Map,      path: '/topics' },
-  { label: 'Mastery',  icon: Star,     path: '/mastery' },
-  { label: 'Settings', icon: Settings, path: '/settings' },
+  { label: 'Home',     icon: Home,          path: '/' },
+  { label: 'Learn',    icon: BookOpen,       path: '/learn' },
+  { label: 'Chat',     icon: MessageCircle,  path: '/mamo' },
+  { label: 'Settings', icon: Settings,       path: '/settings' },
 ]
 
 const ACTIVE_COLOR = '#6366f1'
@@ -45,16 +45,14 @@ export default function BottomNav() {
               className="flex flex-col items-center gap-1 px-5 py-2 rounded-[16px] relative"
               onClick={() => navigate(item.path)}
             >
-              {/* Active pill background - more visible filled pill, no dot */}
               {active && (
                 <motion.div
                   className="absolute inset-0 rounded-[16px]"
-                  style={{ background: `rgba(99,102,241,0.20)` }}
+                  style={{ background: 'rgba(99,102,241,0.20)' }}
                   layoutId="nav-active"
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 />
               )}
-
               <item.icon
                 size={22}
                 color={active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)'}

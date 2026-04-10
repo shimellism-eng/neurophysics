@@ -106,7 +106,7 @@ function ModuleRings({ progress }) {
               background: `${mod.color}0d`,
               border: `1px solid ${mod.color}22`,
             }}
-            onClick={() => navigate('/topics')}
+            onClick={() => navigate('/learn')}
             whileTap={{ scale: 0.94 }}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -333,7 +333,7 @@ export default function HomeScreen() {
         <motion.button
           className="rounded-[18px] flex items-center justify-center gap-2"
           style={{ height: 52, background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.22)', color: '#a5b4fc' }}
-          onClick={() => navigate('/mastery')}
+          onClick={() => navigate('/learn')}
           whileTap={{ y: 2, scale: 0.97 }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -346,7 +346,7 @@ export default function HomeScreen() {
         <motion.button
           className="rounded-[18px] flex items-center justify-center gap-2"
           style={{ height: 52, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', color: 'rgba(255,255,255,0.45)' }}
-          onClick={() => navigate('/topics')}
+          onClick={() => navigate('/learn')}
           whileTap={{ y: 2, scale: 0.97 }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}

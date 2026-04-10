@@ -3,6 +3,7 @@ import { supabase, supabaseConfigured } from '../lib/supabase'
 import { Capacitor } from '@capacitor/core'
 import { Browser } from '@capacitor/browser'
 import { App as CapApp } from '@capacitor/app'
+import { SignInWithApple } from '@capacitor-community/apple-sign-in'
 
 const AuthContext = createContext(null)
 
@@ -142,15 +143,39 @@ export function AuthProvider({ children }) {
   const signInWithOAuth = async (provider) => {
     if (!supabase) return { error: { message: 'Supabase not configured.' } }
 
+    // Native Apple Sign In — use the native framework (biometric popup, no browser)
+    if (isNative && provider === 'apple') {
+      try {
+        const result = await SignInWithApple.authorize({
+          clientId: 'com.mamo.neurophysics',
+          redirectURI: 'https://zqaibksrvpzeqtqpjwgf.supabase.co/auth/v1/callback',
+          scopes: 'email name',
+        })
+        const { identityToken, givenName, familyName } = result.response
+        if (!identityToken) return { error: { message: 'No identity token from Apple' } }
+
+        const { data, error } = await supabase.auth.signInWithIdToken({
+          provider: 'apple',
+          token: identityToken,
+          options: {
+            data: {
+              full_name: [givenName, familyName].filter(Boolean).join(' ') || undefined,
+            },
+          },
+        })
+        return { data, error }
+      } catch (e) {
+        // User cancelled or error
+        return { error: { message: e?.message || 'Apple Sign In cancelled' } }
+      }
+    }
+
     if (isNative) {
-      // Native: get the OAuth URL without auto-redirecting, then open in system browser
+      // Native Google (and any future providers): open OAuth in system browser
       const redirectTo = 'com.mamo.neurophysics://callback'
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
-        options: {
-          redirectTo,
-          skipBrowserRedirect: true,
-        },
+        options: { redirectTo, skipBrowserRedirect: true },
       })
       if (error) return { error }
       if (data?.url) {

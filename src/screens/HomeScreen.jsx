@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronRight, Zap, Flame, Target, TrendingUp,
-  ArrowRight, Calendar, CheckCircle,
+  ArrowRight, Calendar, CheckCircle, Clock,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -454,6 +454,41 @@ export default function HomeScreen() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* ── TIMED PAPER PROMO — unlocked at 10+ topics mastered ─────────────── */}
+      {masteredCount >= 10 && (
+        <motion.div className="px-5 mb-5" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.38 }}>
+          <motion.button
+            className="w-full rounded-[22px] flex items-center justify-between px-5 py-4"
+            style={{
+              background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(99,102,241,0.08) 100%)',
+              border: '1px solid rgba(99,102,241,0.35)',
+              boxShadow: '0 4px 24px rgba(99,102,241,0.12)',
+            }}
+            onClick={() => navigate('/timed-paper')}
+            whileTap={{ scale: 0.97 }}
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
+                style={{ background: 'rgba(99,102,241,0.18)', border: '1px solid rgba(99,102,241,0.35)' }}>
+                <Clock size={22} color="#818cf8" strokeWidth={1.8} />
+              </div>
+              <div className="text-left">
+                <div className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: '#6366f1' }}>
+                  You've mastered {masteredCount} topics
+                </div>
+                <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16, letterSpacing: '-0.02em' }}>
+                  Try a Timed Paper
+                </div>
+                <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                  Exam-style · 35 marks · 55 min
+                </div>
+              </div>
+            </div>
+            <ChevronRight size={20} color="rgba(99,102,241,0.6)" strokeWidth={2.5} />
+          </motion.button>
+        </motion.div>
+      )}
 
     </div>
   )

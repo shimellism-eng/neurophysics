@@ -326,7 +326,7 @@ export default function MasteryScreen() {
                   color: '#fff',
                   boxShadow: '0 4px 0 rgba(0,0,0,0.18)',
                 }}
-                onClick={() => navigate('/topics')}
+                onClick={() => navigate('/learn')}
                 whileTap={{ y: 2, boxShadow: '0 1px 0 rgba(0,0,0,0.1)' }}
               >
                 Browse topics
@@ -531,7 +531,7 @@ export default function MasteryScreen() {
             </div>
             <div className="text-left">
               <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
-              <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>AQA-style 35 marks · 55 minutes</p>
+              <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
             </div>
           </div>
           <ChevronRight size={18} color="rgba(99,102,241,0.5)" />

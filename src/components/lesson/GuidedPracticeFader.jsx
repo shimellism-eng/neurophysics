@@ -17,7 +17,7 @@ import { ChevronRight, Lightbulb, CheckCircle2, XCircle, Star } from 'lucide-rea
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 
-const TIER_LABELS = ['Completion', 'Partial scaffold', 'Independent']
+const TIER_LABELS = ['Fill the gap', 'With a hint', 'On your own']
 
 // ─── Tier progress indicator ─────────────────────────────────────────────────
 function TierProgress({ tier, moduleColor }) {

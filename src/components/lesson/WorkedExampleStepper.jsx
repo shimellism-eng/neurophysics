@@ -63,7 +63,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
       >
         <div className="px-4 pt-4 pb-3" style={{ minHeight: 100 }}>
           <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: moduleColor }}>
-            Worked Example
+            Let's solve it
           </div>
           <div className="font-display text-base font-bold" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
             {title}

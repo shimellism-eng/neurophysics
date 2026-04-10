@@ -4,12 +4,25 @@ import { Send, Sparkles, ArrowLeft, RotateCcw, Trash2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
-const SUGGESTED = [
+const GENERAL_STARTERS = [
   'What is the difference between speed and velocity?',
   'How does radioactive decay work?',
   'Can you explain waves in simple steps?',
   'What is the conservation of energy?',
+  'How do I rearrange physics equations?',
 ]
+
+function getStarters(topicLabel) {
+  if (!topicLabel) return GENERAL_STARTERS
+  const t = topicLabel.replace(/-/g, ' ')
+  return [
+    `Explain ${t} in simple terms`,
+    `What equations do I need for ${t}?`,
+    `Give me a typical exam question on ${t}`,
+    `What mistakes do students make with ${t}?`,
+    `Create a quick revision checklist for ${t}`,
+  ]
+}
 
 const INITIAL_MSG = {
   role: 'assistant',
@@ -93,7 +106,6 @@ export default function MamoChat() {
   const bottomRef = useRef(null)
   const inputRef  = useRef(null)
   const abortRef  = useRef(null)
-
   // Persist messages to localStorage (skip the initial welcome msg)
   useEffect(() => {
     try {
@@ -239,6 +251,7 @@ export default function MamoChat() {
       return updated
     })
     setStreaming(false)
+
   }, [input, streaming, messages, topicLabel])
 
   return (
@@ -376,7 +389,7 @@ export default function MamoChat() {
             transition={{ delay: 0.3 }}
           >
             <div className="text-xs px-1 mb-1" style={{ color: '#a8b8cc' }}>Try asking:</div>
-            {SUGGESTED.map((q, i) => (
+            {getStarters(topicLabel).map((q, i) => (
               <motion.button
                 key={i}
                 className="w-full text-left px-4 py-3 rounded-[14px] text-sm"
@@ -406,7 +419,7 @@ export default function MamoChat() {
           className="px-4 py-2 shrink-0 flex gap-2 overflow-x-auto"
           style={{ borderTop: '0.75px solid #1d293d', background: 'rgba(11,17,33,0.9)' }}
         >
-          {SUGGESTED.map((q, i) => (
+          {getStarters(topicLabel).map((q, i) => (
             <button
               key={i}
               className="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
@@ -417,7 +430,7 @@ export default function MamoChat() {
               }}
               onClick={() => sendMessage(q)}
             >
-              {q.slice(0, 28)}{q.length > 28 ? '…' : ''}
+              {q.slice(0, 32)}{q.length > 32 ? '…' : ''}
             </button>
           ))}
         </div>

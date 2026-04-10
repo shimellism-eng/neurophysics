@@ -119,16 +119,19 @@ export function LEDSym({ color = D }) {
   )
 }
 
-// LDR — resistor rectangle with TWO arrows pointing INTO it (light absorbed)
+// LDR — resistor rectangle INSIDE an oval, with two diagonal arrows pointing into it (AQA standard)
 export function LDRSym({ color = D }) {
   return (
     <g>
-      <rect x={-12} y={-5} width={24} height={10} fill="none" stroke={color} strokeWidth={1.5} />
-      {/* Arrows pointing DOWN into the component */}
-      <line x1={-5} y1={-15} x2={-5} y2={-7} stroke={color} strokeWidth={1.2} strokeLinecap="round" />
-      <polygon points="-5,-7 -8,-12 -2,-12" fill={color} />
-      <line x1={4} y1={-15} x2={4} y2={-7} stroke={color} strokeWidth={1.2} strokeLinecap="round" />
-      <polygon points="4,-7 1,-12 7,-12" fill={color} />
+      {/* Oval enclosure (AQA textbook: rectangle inside circle/oval) */}
+      <ellipse cx={0} cy={0} rx={16} ry={11} fill="none" stroke={color} strokeWidth={1.5} />
+      {/* Resistor rectangle inside the oval */}
+      <rect x={-10} y={-4} width={20} height={8} fill="none" stroke={color} strokeWidth={1.2} />
+      {/* Diagonal arrows pointing DOWN-LEFT into the component (incoming light) */}
+      <line x1={-14} y1={-20} x2={-7} y2={-12} stroke={color} strokeWidth={1.2} strokeLinecap="round" />
+      <polygon points="-7,-12 -14,-14 -11,-7" fill={color} />
+      <line x1={-6} y1={-20} x2={1} y2={-12} stroke={color} strokeWidth={1.2} strokeLinecap="round" />
+      <polygon points="1,-12 -6,-14 -3,-7" fill={color} />
     </g>
   )
 }

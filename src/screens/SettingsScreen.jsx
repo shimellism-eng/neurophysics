@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2 } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, Share2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureGet, secureSet, secureRemove } from '../utils/secureStorage'
@@ -263,11 +263,46 @@ export default function SettingsScreen() {
     showToast(next ? 'Mamo button hidden' : 'Mamo button restored', next ? '#10b981' : '#a8b8cc')
   }
 
+  // ── Explore Mode (hearts off)
+  const toggleExploreMode = () => {
+    const next = prefs.exploreMode === false ? true : false // default is true (explore on = no hearts)
+    setPref('exploreMode', next)
+    showToast(next ? 'Explore Mode on — learn without hearts' : 'Hearts mode on — challenge yourself!', next ? '#10b981' : '#f59e0b')
+  }
+
   // ── Sound Effects
   const toggleSounds = () => {
     const next = prefs.sounds !== false ? false : true // default on
     setPref('sounds', next)
     showToast(next ? 'Sound effects on' : 'Sound effects off', next ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Share Progress
+  const handleShareProgress = () => {
+    try {
+      const progress = JSON.parse(localStorage.getItem('np_progress') || '{}')
+      const stats = JSON.parse(localStorage.getItem('np_stats') || '{}')
+      const masteredIds = Object.entries(progress)
+        .filter(([, p]) => p.mastered)
+        .map(([id]) => id)
+      const payload = {
+        name: profile.name || user?.user_metadata?.full_name || 'Physics Learner',
+        avatar: profile.avatar || '🧠',
+        masteredIds,
+        streak: stats.streak || 0,
+        xp: stats.xp || 0,
+      }
+      const encoded = btoa(JSON.stringify(payload))
+      const url = `${window.location.origin}${window.location.pathname}#/share?d=${encoded}`
+      if (navigator.share) {
+        navigator.share({ title: 'My GCSE Physics Progress', url })
+      } else {
+        navigator.clipboard.writeText(url).then(() => showToast('Progress link copied! ✓', '#10b981'))
+          .catch(() => showToast('Copy failed — try again', '#ef4444'))
+      }
+    } catch {
+      showToast('Could not generate link', '#ef4444')
+    }
   }
 
   // ── Daily Reminders
@@ -368,6 +403,13 @@ export default function SettingsScreen() {
       title: 'Accessibility',
       items: [
         {
+          icon: BookOpen,
+          label: 'Explore Mode',
+          hint: 'Learn without hearts — no pressure, no game-over overlays',
+          on: prefs.exploreMode !== false, // default: on
+          onToggle: toggleExploreMode,
+        },
+        {
           icon: Accessibility,
           label: 'Reduce Motion',
           hint: 'Minimises animations — good for focus and sensory sensitivity',
@@ -437,6 +479,18 @@ export default function SettingsScreen() {
           chevron: true,
           onPress: () => setShowTimePicker(v => !v),
         }] : []),
+      ],
+    },
+    {
+      title: 'Share',
+      items: [
+        {
+          icon: Share2,
+          label: 'Share My Progress',
+          hint: 'Copy a link to your progress — send to a teacher or parent',
+          chevron: true,
+          onPress: handleShareProgress,
+        },
       ],
     },
     {

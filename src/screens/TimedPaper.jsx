@@ -10,7 +10,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   ArrowLeft, Flag, ChevronUp, ChevronDown, Trophy,
-  Clock, CheckCircle, AlertCircle, BarChart3, BookOpen,
+  Clock, CheckCircle, AlertCircle, BarChart3, BookOpen, Eye, EyeOff,
 } from 'lucide-react'
 import { getTimedPaperQuestions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
@@ -21,7 +21,9 @@ import {
   GraphQuestion,
 } from '../components/questions'
 
-const PAPER_DURATION = 55 * 60 // 55 minutes in seconds
+const PAPER_DURATION_STD  = 55 * 60 // 55 minutes — standard
+const PAPER_DURATION_EHCP = 69 * 60 // 69 minutes — 25% extra time (EHCP)
+const PAPER_DURATION = PAPER_DURATION_STD   // default (used where needed)
 const STORAGE_KEY = 'neurophysics_timed_paper'
 
 // ── Timer arc component ───────────────────────────────────────────────────────
@@ -337,6 +339,13 @@ export default function TimedPaper() {
   }
 
   const init = loadState()
+  const isResuming = (() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')
+      return !!(saved?.questions && Object.keys(saved?.answers || {}).length > 0)
+    } catch { return false }
+  })()
+
   const [qIndex, setQIndex]         = useState(init.qIndex)
   const [answers, setAnswers]       = useState(init.answers)
   const [flags, setFlags]           = useState(init.flags)
@@ -347,6 +356,10 @@ export default function TimedPaper() {
   const [showResults, setShowResults] = useState(false)
   const [timesUp, setTimesUp]       = useState(false)
   const [resumeBanner, setResumeBanner] = useState(false)
+  const [hideTimer, setHideTimer]   = useState(false)
+  // EHCP start screen: show only on fresh paper (not resuming)
+  const [showTimeChoice, setShowTimeChoice] = useState(!isResuming)
+  const [paperDuration, setPaperDuration]   = useState(init.remaining || PAPER_DURATION_STD)
 
   const timerRef = useRef(null)
   const backgroundedAt = useRef(null)
@@ -362,7 +375,7 @@ export default function TimedPaper() {
 
   // Timer tick
   useEffect(() => {
-    if (showResults || timesUp) return
+    if (showResults || timesUp || showTimeChoice) return
     timerRef.current = setInterval(() => {
       setRemaining(r => {
         if (r <= 1) {
@@ -423,7 +436,7 @@ export default function TimedPaper() {
         }, 0)
         return prev
       }
-      return prev + 1
+      return Math.min(prev + 1, total - 1) // BUG-05: bounds guard
     })
     setCompleted(false)
   }, [total, score])
@@ -459,6 +472,73 @@ export default function TimedPaper() {
         </div>
       )
     }
+  }
+
+  // ── EHCP / time choice screen (fresh paper only) ──────────────────────────
+  if (showTimeChoice) {
+    return (
+      <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
+        <div className="px-4 pt-5 pb-3 shrink-0 flex items-center gap-3">
+          <button onClick={() => navigate(-1)}
+            className="w-10 h-10 rounded-[11px] flex items-center justify-center shrink-0"
+            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+            <ArrowLeft size={17} color="#a8b8cc" />
+          </button>
+          <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Exam-style Physics Paper</h1>
+        </div>
+
+        <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <div style={{ fontSize: 56 }} className="mb-3">⏱</div>
+            <h2 className="text-2xl font-black mb-2" style={{ color: '#f8fafc' }}>Ready to start?</h2>
+            <p className="text-sm" style={{ color: '#a8b8cc' }}>
+              35 marks · choose your time allowance
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="w-full flex flex-col gap-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+          >
+            <motion.button
+              className="w-full py-5 rounded-[16px] flex items-center justify-between px-5"
+              style={{ background: 'rgba(99,102,241,0.12)', border: '1.5px solid rgba(99,102,241,0.45)', color: '#f8fafc' }}
+              onClick={() => { setPaperDuration(PAPER_DURATION_STD); setRemaining(PAPER_DURATION_STD); setShowTimeChoice(false) }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <div className="text-left">
+                <div className="text-base font-bold">Standard time</div>
+                <div className="text-xs mt-0.5" style={{ color: '#818cf8' }}>55 minutes</div>
+              </div>
+              <Clock size={22} color="#818cf8" />
+            </motion.button>
+
+            <motion.button
+              className="w-full py-5 rounded-[16px] flex items-center justify-between px-5"
+              style={{ background: 'rgba(253,199,0,0.08)', border: '1.5px solid rgba(253,199,0,0.3)', color: '#f8fafc' }}
+              onClick={() => { setPaperDuration(PAPER_DURATION_EHCP); setRemaining(PAPER_DURATION_EHCP); setShowTimeChoice(false) }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <div className="text-left">
+                <div className="text-base font-bold">EHCP — 25% extra time</div>
+                <div className="text-xs mt-0.5" style={{ color: '#fdc700' }}>69 minutes</div>
+              </div>
+              <Clock size={22} color="#fdc700" />
+            </motion.button>
+          </motion.div>
+
+          <p className="text-xs text-center" style={{ color: '#475569' }}>
+            EHCP stands for Education, Health and Care Plan. Select if you have an exam access arrangement.
+          </p>
+        </div>
+      </div>
+    )
   }
 
   // ── Time's up modal ────────────────────────────────────────────────────────
@@ -526,13 +606,31 @@ export default function TimedPaper() {
         </button>
         <div className="flex-1 min-w-0">
           <div className="text-xs font-bold" style={{ color: '#f8fafc' }}>
-            AQA Physics Mini-Paper
+            Exam-style Physics Paper
           </div>
           <div className="text-xs" style={{ color: '#64748b' }}>
             Q{qIndex + 1}/{total} · {answeredCount} answered · Section {sectionInfo.section}
           </div>
         </div>
-        <TimerArc remaining={remaining} total={PAPER_DURATION} />
+        {/* Timer hide toggle */}
+        <button
+          onClick={() => setHideTimer(v => !v)}
+          className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          aria-label={hideTimer ? 'Show timer' : 'Hide timer'}
+        >
+          {hideTimer
+            ? <EyeOff size={15} color="#64748b" />
+            : <Eye size={15} color="#64748b" />
+          }
+        </button>
+        {!hideTimer && <TimerArc remaining={remaining} total={paperDuration} />}
+        {hideTimer && (
+          <div className="w-11 h-11 flex items-center justify-center rounded-full"
+            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+            <span className="text-xs font-bold" style={{ color: '#475569' }}>—</span>
+          </div>
+        )}
       </div>
 
       {/* Progress bar */}

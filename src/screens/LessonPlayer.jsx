@@ -23,7 +23,7 @@ import {
   GraduationCap, Zap, Globe, Lightbulb, Volume2,
   Layers, Target, Star, CheckCircle2, Map, Clock,
 } from 'lucide-react'
-import { TOPICS } from '../data/topics'
+import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
 import HeartsDisplay from '../components/HeartsDisplay'
@@ -200,13 +200,23 @@ function LegacyConceptStep({ topic }) {
 export default function LessonPlayer() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const { markStarted } = useProgress()
+  const { markStarted, progress } = useProgress()
   const { hearts, maxHearts, lost, loseHeart, resetHearts } = useHearts()
   const [step, setStep]           = useState(0)
   const [direction, setDirection] = useState(1)
   const [showIntro, setShowIntro] = useState(true)
   const [xpPop, setXpPop]         = useState(false)
   const [xpKey, setXpKey]         = useState(0)
+
+  // Explore mode: hearts are off by default — learners can enable hearts in Settings
+  const exploreMode = (() => {
+    try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').exploreMode !== false } catch { return true }
+  })()
+
+  // Compute next unmastered topic (for "Next topic" CTA at lesson end)
+  const allTopicIds = MODULES.flatMap(m => m.topics)
+  const currentTopicIdx = allTopicIds.indexOf(id)
+  const nextTopicId = allTopicIds.slice(currentTopicIdx + 1).find(tid => !progress[tid]?.mastered) ?? null
 
   const topic = TOPICS[id]
   if (!topic) return (
@@ -216,7 +226,13 @@ export default function LessonPlayer() {
   )
 
   const isNewFlow  = !!(topic.hook && topic.lessonKeywords)
-  const STEPS      = isNewFlow ? NEW_STEPS : LEGACY_STEPS
+  const STEPS      = isNewFlow
+    ? NEW_STEPS.filter(s => {
+        if (s.id === 'explore'   && !topic.lessonVisual)   return false
+        if (s.id === 'realworld' && !topic.realityVisual)  return false
+        return true
+      })
+    : LEGACY_STEPS
   const totalSteps = STEPS.length
   const currentStep = STEPS[step]
   const StepIcon   = currentStep.icon
@@ -238,7 +254,7 @@ export default function LessonPlayer() {
       setDirection(-1)
       setStep(s => s - 1)
     } else {
-      navigate('/topics')
+      navigate('/learn')
     }
   }
 
@@ -273,7 +289,7 @@ export default function LessonPlayer() {
             moduleColor={topic.moduleColor}
             topicMapHint={topic.topicMapHint}
             onComplete={goNext}
-            onWrongAnswer={loseHeart}
+            onWrongAnswer={exploreMode ? undefined : loseHeart}
           />
         )
       case 'explore':
@@ -297,7 +313,7 @@ export default function LessonPlayer() {
             moduleColor={topic.moduleColor}
             keywords={topic.lessonKeywords}
             onComplete={goNext}
-            onWrongAnswer={loseHeart}
+            onWrongAnswer={exploreMode ? undefined : loseHeart}
           />
         ) : null
       case 'lockin':
@@ -313,17 +329,55 @@ export default function LessonPlayer() {
         return topic.realityVisual ? <topic.realityVisual /> : null
       case 'done':
         return (
-          <SessionClose
-            topic={topic}
-            topicId={id}
-            examCount={examCount}
-            onStartQuiz={handleStartQuiz}
-            recap={topic.sessionRecap || [
-              topic.concept || topic.description.split('.')[0] + '.',
-              `Key equation: ${topic.equations?.[0]?.expr || 'see notes'}`,
-              'Use spaced repetition to lock this in.',
-            ]}
-          />
+          <div>
+            <SessionClose
+              topic={topic}
+              topicId={id}
+              examCount={examCount}
+              onStartQuiz={handleStartQuiz}
+              recap={topic.sessionRecap || [
+                topic.concept || topic.description.split('.')[0] + '.',
+                `Key equation: ${topic.equations?.[0]?.expr || 'see notes'}`,
+                'Use spaced repetition to lock this in.',
+              ]}
+            />
+            {/* Next topic / back to topics CTAs */}
+            <div className="px-5 flex flex-col gap-3 pb-10">
+              {nextTopicId && (
+                <motion.button
+                  className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
+                  style={{
+                    background: 'linear-gradient(135deg, #6366f1, #818cf8)',
+                    color: '#fff',
+                    boxShadow: '0 8px 24px rgba(99,102,241,0.4)',
+                  }}
+                  onClick={() => navigate(`/lesson/${nextTopicId}`)}
+                  whileTap={{ scale: 0.97 }}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  Next topic
+                  <ChevronRight size={18} strokeWidth={2.5} />
+                </motion.button>
+              )}
+              <motion.button
+                className="w-full py-3 rounded-[14px] text-sm font-semibold"
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '0.75px solid rgba(255,255,255,0.08)',
+                  color: 'rgba(255,255,255,0.4)',
+                }}
+                onClick={() => navigate('/learn')}
+                whileTap={{ scale: 0.97 }}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                Back to topics
+              </motion.button>
+            </div>
+          </div>
         )
       default:
         return null
@@ -410,10 +464,12 @@ export default function LessonPlayer() {
           {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
         </span>
 
-        {/* Hearts display */}
-        <div style={{ position: 'relative' }}>
-          <HeartsDisplay hearts={hearts} maxHearts={maxHearts} />
-        </div>
+        {/* Hearts display — hidden in explore mode */}
+        {!exploreMode && (
+          <div style={{ position: 'relative' }}>
+            <HeartsDisplay hearts={hearts} maxHearts={maxHearts} />
+          </div>
+        )}
       </div>
 
       {/* ── Step progress bar ── */}
@@ -594,9 +650,9 @@ export default function LessonPlayer() {
         )}
       </AnimatePresence>
 
-      {/* ── No hearts overlay ── */}
+      {/* ── No hearts overlay — only when hearts mode is active ── */}
       <AnimatePresence>
-        {lost && (
+        {lost && !exploreMode && (
           <motion.div
             className="absolute inset-0 z-50 flex flex-col items-center justify-center px-8 text-center"
             style={{ background: 'rgba(8,15,30,0.95)', backdropFilter: 'blur(12px)' }}

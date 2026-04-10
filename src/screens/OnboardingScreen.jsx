@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User } from 'lucide-react'
+import { Check, ArrowRight, User, Zap, Brain, Trophy } from 'lucide-react'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
 
@@ -69,16 +69,146 @@ function OptionCard({ option, enabled, onToggle, index }) {
   )
 }
 
+// ─── Step 0: Value Proposition ───────────────────────────────────────────────
+function StepValueProp({ onNext }) {
+  const features = [
+    {
+      icon: Brain,
+      color: '#6366f1',
+      title: 'Built for every brain',
+      desc: 'Dyslexia-friendly fonts, TTS, focus mode, and spaced repetition — all built in.',
+    },
+    {
+      icon: Zap,
+      color: '#f97316',
+      title: 'AI tutor on tap',
+      desc: 'Mamo explains concepts in plain English, 24/7 — no judgement, no rush.',
+    },
+    {
+      icon: Trophy,
+      color: '#fdc700',
+      title: 'Exam-ready',
+      desc: 'Every topic mapped to AQA GCSE Physics. Practice papers. Grade 9 challenge.',
+    },
+  ]
+
+  return (
+    <motion.div
+      className="flex flex-col h-full"
+      key="step-value"
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -40 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="flex-1 overflow-y-auto px-6">
+        <div className="pt-12 pb-6">
+          {/* Step indicator */}
+          <div className="flex items-center gap-2 mb-8">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+          </div>
+
+          {/* Atom icon */}
+          <motion.div
+            className="w-20 h-20 rounded-[24px] flex items-center justify-center mb-6"
+            style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.2), rgba(129,140,248,0.1))', border: '1px solid rgba(99,102,241,0.3)' }}
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.15, type: 'spring', stiffness: 300, damping: 22 }}
+          >
+            <span style={{ fontSize: 40 }}>⚛️</span>
+          </motion.div>
+
+          <motion.h1
+            className="text-4xl font-extrabold leading-tight mb-3"
+            style={{ color: '#f8fafc', letterSpacing: '-0.025em' }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            Physics that fits{'\n'}
+            <span style={{ color: '#6366f1' }}>your brain.</span>
+          </motion.h1>
+          <motion.p
+            className="text-base leading-relaxed mb-8"
+            style={{ color: '#a8b8cc' }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.28 }}
+          >
+            GCSE Physics — adapted for neurodivergent learners, built by people who get it.
+          </motion.p>
+        </div>
+
+        {/* Feature cards */}
+        <div className="flex flex-col gap-3 pb-6">
+          {features.map((f, i) => (
+            <motion.div
+              key={f.title}
+              className="flex items-start gap-4 rounded-[18px] px-5 py-4"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+              initial={{ opacity: 0, x: -16 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.35 + i * 0.08 }}
+            >
+              <div
+                className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0"
+                style={{ background: `${f.color}18`, border: `1px solid ${f.color}30` }}
+              >
+                <f.icon size={18} color={f.color} />
+              </div>
+              <div>
+                <div className="text-sm font-bold mb-0.5" style={{ color: '#f8fafc' }}>{f.title}</div>
+                <div className="text-xs leading-snug" style={{ color: '#a8b8cc' }}>{f.desc}</div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <motion.div
+        className="px-6 pt-3 pb-10 shrink-0"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6 }}
+      >
+        <motion.button
+          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+          style={{
+            background: 'linear-gradient(135deg, #4f6ef7, #6366f1)',
+            color: '#fff',
+            boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
+          }}
+          onClick={onNext}
+          whileTap={{ scale: 0.97 }}
+          aria-label="Get started"
+        >
+          Get started
+          <ArrowRight size={18} />
+        </motion.button>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 // ─── Step 1: Profile ──────────────────────────────────────────────────────────
 function StepProfile({ onNext }) {
   const [name, setName] = useState('')
   const [avatar, setAvatar] = useState('🧠')
   const [error, setError] = useState(false)
+  const [ageGroup, setAgeGroup] = useState('')
+  const canContinue = name.trim() && ageGroup
 
   const handleNext = () => {
     const trimmed = name.trim()
     if (!trimmed) { setError(true); return }
-    onNext({ name: trimmed, avatar })
+    if (!ageGroup) return
+    onNext({ name: trimmed, avatar, ageGroup })
   }
 
   return (
@@ -99,6 +229,7 @@ function StepProfile({ onNext }) {
         >
           {/* Step indicator */}
           <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
@@ -193,6 +324,46 @@ function StepProfile({ onNext }) {
             </motion.p>
           )}
         </motion.div>
+
+        {/* Age group */}
+        <motion.div
+          className="mb-6"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.4 }}
+        >
+          <p className="text-sm font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.55)' }}>How old are you?</p>
+          <div className="grid grid-cols-2 gap-2">
+            {['13–15', '16–17', '18+'].map(ag => (
+              <button
+                key={ag}
+                onClick={() => setAgeGroup(ag)}
+                className="py-3 rounded-[14px] text-sm font-semibold transition-all"
+                style={{
+                  background: ageGroup === ag ? 'rgba(99,102,241,0.2)' : 'rgba(18,26,47,0.9)',
+                  border: ageGroup === ag ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
+                  color: ageGroup === ag ? '#818cf8' : '#a8b8cc',
+                }}
+              >
+                {ag}
+              </button>
+            ))}
+          </div>
+
+          {/* 13–17: GDPR notice */}
+          {(ageGroup === '13–15' || ageGroup === '16–17') && (
+            <motion.div
+              className="mt-4 rounded-[16px] p-3"
+              style={{ background: 'rgba(99,102,241,0.06)', border: '0.75px solid rgba(99,102,241,0.2)' }}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                🔒 Your data is protected under <strong style={{ color: '#818cf8' }}>UK GDPR</strong>. We never sell your data. You can delete your account at any time in Settings.
+              </p>
+            </motion.div>
+          )}
+        </motion.div>
       </div>
 
       {/* Next button */}
@@ -206,9 +377,9 @@ function StepProfile({ onNext }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: name.trim() ? 'linear-gradient(135deg, #4f6ef7, #6366f1)' : 'rgba(99,102,241,0.3)',
+            background: canContinue ? 'linear-gradient(135deg, #4f6ef7, #6366f1)' : 'rgba(99,102,241,0.3)',
             color: '#fff',
-            boxShadow: name.trim() ? '0 8px 28px rgba(99,102,241,0.4)' : 'none',
+            boxShadow: canContinue ? '0 8px 28px rgba(99,102,241,0.4)' : 'none',
             transition: 'all 0.2s',
           }}
           onClick={handleNext}
@@ -249,6 +420,7 @@ function StepPrefs({ profileData, onFinish }) {
         >
           {/* Step indicator */}
           <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -334,8 +506,9 @@ function StepGoal({ profileData, onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* 3-dot step indicator */}
+          {/* 4-dot step indicator */}
           <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
@@ -474,12 +647,12 @@ export default function OnboardingScreen() {
 
   const handleProfileNext = (data) => {
     setProfileData(data)
-    setStep(1)
+    setStep(2)
   }
 
   const handleGoalNext = (data) => {
     setGoalData(data)
-    setStep(2)
+    setStep(3)
   }
 
   const handleFinish = (prefs) => {
@@ -492,9 +665,10 @@ export default function OnboardingScreen() {
   return (
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
-        {step === 0 && <StepProfile key="profile" onNext={handleProfileNext} />}
-        {step === 1 && <StepGoal key="goal" profileData={profileData} onNext={handleGoalNext} />}
-        {step === 2 && <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />}
+        {step === 0 && <StepValueProp key="value" onNext={() => setStep(1)} />}
+        {step === 1 && <StepProfile key="profile" onNext={handleProfileNext} />}
+        {step === 2 && <StepGoal key="goal" profileData={profileData} onNext={handleGoalNext} />}
+        {step === 3 && <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />}
       </AnimatePresence>
     </div>
   )

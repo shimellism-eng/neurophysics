@@ -27,6 +27,7 @@ const TimedPaper        = lazy(() => import('./screens/TimedPaper'))
 const PaperResults      = lazy(() => import('./screens/PaperResults'))
 const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
+const ShareProgressScreen = lazy(() => import('./screens/ShareProgressScreen'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
@@ -174,7 +175,7 @@ function FloatingMamo() {
 // Routes that show the bottom nav
 const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
-const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms']
+const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms', '/share']
 
 function AppShell() {
   const location = useLocation()
@@ -247,6 +248,7 @@ function AppShell() {
             <Route path="/settings" element={<SettingsScreen />} />
             <Route path="/privacy" element={<PrivacyPolicyScreen />} />
             <Route path="/terms" element={<TermsScreen />} />
+            <Route path="/share" element={<ShareProgressScreen />} />
             <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
           </Routes>
         </Suspense>

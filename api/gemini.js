@@ -67,6 +67,9 @@ export default async function handler(req, res) {
     return res.status(429).json({ error: 'TOO_MANY_REQUESTS' })
   }
 
+  // Log incoming request
+  console.log('[mamo:request]', { ts: new Date().toISOString(), ip_prefix: ip.split('.').slice(0, 2).join('.'), method: req.method })
+
   // ── API key ───────────────────────────────────────────────────────────────
   const apiKey = (process.env.GOOGLE_AI_API_KEY || '').trim()
   if (!apiKey) {
@@ -156,5 +159,32 @@ export default async function handler(req, res) {
   }
 
   res.write('data: [DONE]\n\n')
+
+  // ── Usage instrumentation ─────────────────────────────────────────────────
+  const usageLog = {
+    ts: new Date().toISOString(),
+    ip_prefix: ip.split('.').slice(0, 2).join('.'), // partial IP only, privacy-safe
+    topic: (body.topicContext || '').slice(0, 80) || null,
+    message_count: contents.length,
+    model,
+  }
+  console.log('[mamo:usage]', JSON.stringify(usageLog))
+
+  // Optional Supabase insert — fire-and-forget, never throws
+  const sbUrl = process.env.SUPABASE_URL
+  const sbKey = process.env.SUPABASE_SERVICE_KEY
+  if (sbUrl && sbKey) {
+    fetch(`${sbUrl}/rest/v1/mamo_usage`, {
+      method: 'POST',
+      headers: {
+        'apikey': sbKey,
+        'Authorization': `Bearer ${sbKey}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal',
+      },
+      body: JSON.stringify(usageLog),
+    }).catch(() => {}) // silently ignore errors
+  }
+
   res.end()
 }

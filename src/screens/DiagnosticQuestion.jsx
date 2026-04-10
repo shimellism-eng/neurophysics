@@ -304,7 +304,7 @@ export default function DiagnosticQuestion() {
       <button
         className="mt-4 px-6 py-3 rounded-[14px] text-sm font-semibold"
         style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55', color: '#a8b8cc' }}
-        onClick={() => navigate(`/lesson/${id}`)}
+        onClick={() => navigate(-1)}
       >
         Go Back
       </button>
@@ -403,7 +403,7 @@ export default function DiagnosticQuestion() {
       {/* ── Header ── */}
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
         <button
-          onClick={() => navigate(`/lesson/${id}`)}
+          onClick={() => navigate(-1)}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
         >

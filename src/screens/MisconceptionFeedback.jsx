@@ -79,7 +79,7 @@ export default function MisconceptionFeedback() {
   const IdeaVisual = topic.ideaVisual
   const RealityVisual = topic.realityVisual
 
-  const handleContinue = () => navigate('/topics')
+  const handleContinue = () => navigate('/learn')
   const handleRetry = () => navigate(`/diagnostic/${id}`)
 
   return (
@@ -89,7 +89,7 @@ export default function MisconceptionFeedback() {
       {/* Header */}
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3">
         <button
-          onClick={() => navigate('/topics')}
+          onClick={() => navigate('/learn')}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
         >
@@ -185,7 +185,7 @@ export default function MisconceptionFeedback() {
               <XCircle size={11} color="#ef4444" />
               <span className="text-xs font-semibold" style={{ color: '#ef4444' }}>Common Idea</span>
             </div>
-            <IdeaVisual />
+            {IdeaVisual ? <IdeaVisual /> : null}
           </motion.div>
 
           <motion.div
@@ -203,7 +203,7 @@ export default function MisconceptionFeedback() {
               <CheckCircle size={11} color="#00bc7d" />
               <span className="text-xs font-semibold" style={{ color: '#00bc7d' }}>Physics Reality</span>
             </div>
-            <RealityVisual />
+            {RealityVisual ? <RealityVisual /> : null}
           </motion.div>
         </div>
 

@@ -487,7 +487,7 @@ export default function ExamPractice() {
             <button
               className="px-5 py-3 rounded-[14px] text-sm font-semibold"
               style={{ background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`, color: '#fff', boxShadow: `0 6px 20px ${topic.moduleColor}40` }}
-              onClick={() => navigate(`/topics`)}
+              onClick={() => navigate('/learn')}
             >
               All Topics
             </button>

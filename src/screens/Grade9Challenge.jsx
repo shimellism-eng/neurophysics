@@ -322,7 +322,15 @@ export default function Grade9Challenge() {
       {/* Header */}
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3"
         style={{ borderBottom: '0.75px solid #1d293d' }}>
-        <button onClick={() => navigate(-1)}
+        <button
+          onClick={() => {
+            if (qIndex > 0) {
+              setQIndex(i => i - 1)
+              setCompleted(false)
+            } else {
+              navigate(-1)
+            }
+          }}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
           <ArrowLeft size={18} color="#a8b8cc" />

@@ -34,7 +34,7 @@
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
     background-color: #0b1121;
     color: #cad5e2;
     margin: 0;
@@ -42,9 +42,14 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Display font for headings — Nunito gives rounded, friendly letterforms */
+  /* Display font for headings — Space Grotesk: geometric, technical, premium */
   .font-display {
-    font-family: 'Nunito', 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Equation/formula font — IBM Plex Mono: scientific clarity, distinct from prose */
+  .font-mono {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
   }
 
   ::-webkit-scrollbar {

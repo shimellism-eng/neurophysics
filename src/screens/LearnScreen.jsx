@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CheckCircle2, Zap, ChevronDown, ChevronUp,
-  ArrowRight, Trophy, Clock, ChevronRight, Star,
+  ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -200,7 +200,11 @@ function ModuleCard({ module, moduleIndex, progress }) {
                     moduleColor={module.color}
                     masteryState={getState(topicId)}
                     index={i}
-                    onTap={() => navigate(`/lesson/${topicId}`)}
+                    onTap={() => navigate(
+                      progress[topicId]?.mastered
+                        ? `/diagnostic/${topicId}`
+                        : `/lesson/${topicId}`
+                    )}
                   />
                 )
               })}
@@ -226,6 +230,7 @@ export default function LearnScreen() {
   const navigate     = useNavigate()
   const { progress } = useProgress()
   const [paperFilter, setPaperFilter] = useState('all')
+  const [searchQuery, setSearchQuery] = useState('')
 
   const totalTopics   = Object.keys(TOPICS).length
   const masteredTotal = Object.values(progress).filter(p => p?.mastered).length
@@ -246,6 +251,19 @@ export default function LearnScreen() {
     if (paperFilter === 'paper2') return PAPER2_MODULES.includes(m.name)
     return true
   })
+
+  // Search: flat results across all topics
+  const searchResults = searchQuery.trim().length > 1
+    ? MODULES.flatMap(m =>
+        m.topics
+          .filter(id => {
+            const t = TOPICS[id]
+            return t && t.title.toLowerCase().includes(searchQuery.toLowerCase())
+          })
+          .map(id => ({ id, topic: TOPICS[id], module: m }))
+      )
+    : []
+  const isSearching = searchQuery.trim().length > 1
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
@@ -274,8 +292,32 @@ export default function LearnScreen() {
           />
         </div>
 
-        {/* Filter tabs */}
-        <div className="flex gap-2">
+        {/* Search bar */}
+        <div className="relative mb-3">
+          <Search size={14} color="rgba(255,255,255,0.25)"
+            style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
+          <input
+            type="search"
+            placeholder="Search topics…"
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className="w-full pl-9 pr-9 py-2.5 rounded-[14px] text-sm outline-none"
+            style={{
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.09)',
+              color: '#f8fafc',
+            }}
+          />
+          {searchQuery.length > 0 && (
+            <button onClick={() => setSearchQuery('')}
+              style={{ position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)' }}>
+              <X size={14} color="rgba(255,255,255,0.3)" />
+            </button>
+          )}
+        </div>
+
+        {/* Filter tabs + exam quick access */}
+        <div className="flex items-center gap-2">
           {FILTERS.map(f => {
             const isActive = paperFilter === f.id
             return (
@@ -297,11 +339,88 @@ export default function LearnScreen() {
               </motion.button>
             )
           })}
+
+          {/* Pinned exam shortcuts */}
+          <div className="flex gap-1.5 ml-auto shrink-0">
+            <motion.button
+              onClick={() => navigate('/grade9')}
+              className="flex items-center gap-1 px-3 rounded-full text-xs font-bold"
+              style={{ height: 36, background: 'rgba(168,85,247,0.12)', border: '1px solid rgba(168,85,247,0.3)', color: '#c084fc' }}
+              whileTap={{ scale: 0.95 }}
+              title="Grade 9 Challenge"
+            >
+              <Trophy size={12} /> G9
+            </motion.button>
+            <motion.button
+              onClick={() => navigate('/timed-paper')}
+              className="flex items-center gap-1 px-3 rounded-full text-xs font-bold"
+              style={{ height: 36, background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+              whileTap={{ scale: 0.95 }}
+              title="Timed Paper"
+            >
+              <Clock size={12} /> Paper
+            </motion.button>
+          </div>
         </div>
       </div>
 
       {/* ── Scrollable body ── */}
       <div className="flex-1 overflow-y-auto px-4 pb-10 space-y-3">
+
+        {/* ── Search results ── */}
+        {isSearching && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-2">
+            {searchResults.length === 0 ? (
+              <div className="py-10 text-center">
+                <div className="text-2xl mb-2">🔍</div>
+                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>No topics match "{searchQuery}"</p>
+              </div>
+            ) : (
+              <>
+                <p className="text-xs font-semibold px-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                  {searchResults.length} topic{searchResults.length !== 1 ? 's' : ''} found
+                </p>
+                {searchResults.map(({ id, topic, module: mod }, i) => {
+                  const state = progress[id]?.mastered ? 'mastered' : progress[id]?.started ? 'started' : 'untouched'
+                  return (
+                    <motion.button
+                      key={id}
+                      className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[16px] text-left"
+                      style={{
+                        background: 'rgba(15,22,41,0.95)',
+                        border: `1px solid ${state === 'mastered' ? mod.color + '45' : 'rgba(255,255,255,0.08)'}`,
+                        minHeight: 56,
+                      }}
+                      onClick={() => navigate(`/lesson/${id}`)}
+                      whileTap={{ scale: 0.97 }}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.04 }}
+                    >
+                      <div className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
+                        style={{ background: `${mod.color}20`, border: `1px solid ${mod.color}35` }}>
+                        <mod.icon size={17} color={mod.color} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>{mod.name}</div>
+                      </div>
+                      {state === 'mastered' && (
+                        <CheckCircle2 size={16} color={mod.color} />
+                      )}
+                      {state === 'started' && (
+                        <Zap size={14} color="#fbbf24" />
+                      )}
+                    </motion.button>
+                  )
+                })}
+              </>
+            )}
+          </motion.div>
+        )}
+
+        {/* ── Normal content (hidden while searching) ── */}
+        {!isSearching && <>
 
         {/* ── Next milestone (inline, compact) ── */}
         {nextBadge && (
@@ -439,13 +558,15 @@ export default function LearnScreen() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>AQA-style 35 marks · 55 minutes</p>
+                  <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
                 </div>
               </div>
               <ChevronRight size={18} color="rgba(99,102,241,0.5)" />
             </motion.button>
           </motion.div>
         )}
+
+        </> /* end !isSearching */}
 
       </div>
     </div>

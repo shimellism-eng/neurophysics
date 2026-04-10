@@ -7,11 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "postinstall": "patch-package || true",
     "cap:sync": "vite build && npx cap sync ios",
     "cap:open": "npx cap open ios",
     "cap:run": "vite build && npx cap sync ios && npx cap open ios"
   },
   "dependencies": {
+    "@capacitor-community/apple-sign-in": "^7.1.0",
     "@capacitor/app": "^8.1.0",
     "@capacitor/browser": "^8.0.3",
     "@capacitor/core": "^8.3.0",

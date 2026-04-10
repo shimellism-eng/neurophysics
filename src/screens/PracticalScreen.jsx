@@ -1196,7 +1196,7 @@ function TabSetup({ p, color }) {
         Lab Setup
       </div>
       <div className="p-3">
-        {Diagram ? <Diagram/> : <div className="text-center py-6 text-sm" style={{ color: '#64748b' }}>Diagram coming soon</div>}
+        {Diagram ? <Diagram/> : null}
       </div>
     </div>
   )

@@ -1,6 +1,10 @@
 import { motion, AnimatePresence } from 'motion/react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ChevronRight, Zap, Star, Flame, Target, TrendingUp, AlertCircle, Sparkles, Calendar, BookOpen, ArrowRight } from 'lucide-react'
+import {
+  ChevronRight, Zap, Flame, Target, TrendingUp,
+  BookOpen, ArrowRight, Calendar, CheckCircle,
+} from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
@@ -14,52 +18,64 @@ function getGreeting() {
 }
 
 function loadProfile() {
-  try {
-    return JSON.parse(localStorage.getItem('neurophysics_profile') || '{}')
-  } catch {
-    return {}
-  }
+  try { return JSON.parse(localStorage.getItem('neurophysics_profile') || '{}') }
+  catch { return {} }
 }
 
-// Day-dot streak indicators: Mon-Sun
-function StreakDots({ streak }) {
-  const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
-  const today = new Date().getDay() // 0=Sun
-  // Convert JS day (0=Sun) to index where Mon=0
+// ── 7-day streak calendar ─────────────────────────────────────────────────────
+function StreakCalendar({ streak }) {
+  const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  const today = new Date().getDay()
   const todayIdx = today === 0 ? 6 : today - 1
-  // Fill dots going backwards from today based on streak count
+
   return (
-    <div className="flex items-end gap-2 mt-3">
-      {days.map((label, i) => {
-        // How many days ago is index i relative to today?
-        const daysAgo = todayIdx >= i ? todayIdx - i : todayIdx - i + 7
-        const filled = daysAgo < streak
-        const isToday = i === todayIdx
+    <div className="flex items-end gap-1.5 mt-4">
+      {labels.map((label, i) => {
+        const daysAgo  = todayIdx >= i ? todayIdx - i : todayIdx - i + 7
+        const filled   = daysAgo < streak
+        const isToday  = i === todayIdx
+        const isFuture = daysAgo > todayIdx && !filled
+
         return (
-          <div key={i} className="flex flex-col items-center gap-1">
+          <div key={i} className="flex flex-col items-center gap-1.5 flex-1">
+            {/* Bar */}
             <div
               style={{
-                width: 8,
-                height: 8,
-                borderRadius: '50%',
+                width: '100%',
+                height: 28,
+                borderRadius: 6,
                 background: filled
                   ? isToday
                     ? '#f97316'
-                    : 'rgba(249,115,22,0.55)'
-                  : 'rgba(255,255,255,0.1)',
-                boxShadow: filled && isToday ? '0 0 6px rgba(249,115,22,0.7)' : 'none',
-                border: isToday && !filled ? '1px solid rgba(249,115,22,0.4)' : 'none',
-              }}
-            />
-            <span
-              style={{
-                fontSize: 9,
-                color: filled ? (isToday ? '#f97316' : 'rgba(249,115,22,0.5)') : 'rgba(255,255,255,0.2)',
-                fontWeight: isToday ? 700 : 500,
-                lineHeight: 1,
+                    : 'rgba(249,115,22,0.45)'
+                  : isFuture
+                    ? 'rgba(255,255,255,0.04)'
+                    : 'rgba(255,255,255,0.07)',
+                border: isToday && !filled
+                  ? '1.5px solid rgba(249,115,22,0.5)'
+                  : 'none',
+                boxShadow: filled && isToday ? '0 0 10px rgba(249,115,22,0.5)' : 'none',
+                position: 'relative',
+                overflow: 'hidden',
               }}
             >
-              {label}
+              {filled && isToday && (
+                <div style={{
+                  position: 'absolute', inset: 0,
+                  background: 'linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%)',
+                }} />
+              )}
+            </div>
+            {/* Label */}
+            <span style={{
+              fontSize: 9,
+              fontWeight: isToday ? 700 : 500,
+              color: filled
+                ? isToday ? '#f97316' : 'rgba(249,115,22,0.55)'
+                : 'rgba(255,255,255,0.2)',
+              letterSpacing: '0.02em',
+            }}>
+              {isToday ? 'Today' : label}
             </span>
           </div>
         )
@@ -68,71 +84,59 @@ function StreakDots({ streak }) {
   )
 }
 
+// ── Module progress rings (only shown when there's data) ──────────────────────
 function ModuleRings({ progress }) {
   const navigate = useNavigate()
   return (
-    <div
-      className="flex gap-3 overflow-x-auto pb-1"
-      style={{ scrollbarWidth: 'none' }}
-    >
+    <div className="flex gap-2.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
       {MODULES.map((mod, index) => {
         const masteredCount = mod.topics.filter(id => progress[id]?.mastered).length
         const total = mod.topics.length
-        const pct = total > 0 ? masteredCount / total : 0
-        const R = 22
+        const pct   = total > 0 ? masteredCount / total : 0
+        const R = 20
         const C = 2 * Math.PI * R
-        const offset = C * (1 - pct)
-        const gradId = `moduleRingGrad-${index}`
+        const gradId = `ring-${index}`
+
         return (
           <motion.button
             key={mod.name}
-            className="flex-shrink-0 flex flex-col items-center py-3 px-2 rounded-[16px]"
+            className="flex-shrink-0 flex flex-col items-center py-3 px-2 rounded-2xl"
             style={{
-              width: 72,
+              width: 68,
               background: `${mod.color}0d`,
-              border: `1px solid ${mod.color}25`,
+              border: `1px solid ${mod.color}22`,
             }}
             onClick={() => navigate('/topics')}
             whileTap={{ scale: 0.94 }}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 + index * 0.05, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.08 + index * 0.04 }}
           >
-            <div className="relative" style={{ width: 56, height: 56 }}>
-              <svg width="56" height="56" viewBox="0 0 56 56">
-                <circle cx="28" cy="28" r={R} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="5" />
+            <div className="relative" style={{ width: 50, height: 50 }}>
+              <svg width="50" height="50" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r={R} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="4.5" />
                 <motion.circle
-                  cx="28" cy="28" r={R}
-                  fill="none"
-                  stroke={`url(#${gradId})`}
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                  strokeDasharray={C}
-                  strokeDashoffset={C}
-                  transform="rotate(-90 28 28)"
-                  animate={{ strokeDashoffset: offset }}
-                  transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 + index * 0.05 }}
+                  cx="25" cy="25" r={R}
+                  fill="none" stroke={`url(#${gradId})`} strokeWidth="4.5"
+                  strokeLinecap="round" strokeDasharray={C} strokeDashoffset={C}
+                  transform="rotate(-90 25 25)"
+                  animate={{ strokeDashoffset: C * (1 - pct) }}
+                  transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 + index * 0.04 }}
                 />
                 <defs>
                   <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor={mod.color} />
-                    <stop offset="100%" stopColor={mod.color} stopOpacity="0.6" />
+                    <stop offset="100%" stopColor={mod.color} stopOpacity="0.55" />
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <span className="font-bold leading-none" style={{ fontSize: 11, color: '#f8fafc' }}>
-                  {masteredCount}
-                </span>
-                <span className="leading-none mt-0.5" style={{ fontSize: 9, color: 'rgba(255,255,255,0.38)' }}>
-                  /{total}
-                </span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <span className="font-bold" style={{ fontSize: 11, color: '#f8fafc' }}>{masteredCount}</span>
+                <span style={{ fontSize: 8, color: 'rgba(255,255,255,0.35)' }}>/{total}</span>
               </div>
             </div>
-            <span
-              className="mt-1.5 text-center leading-tight font-semibold"
-              style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', maxWidth: 64 }}
-            >
+            <span className="mt-1.5 text-center leading-tight font-semibold"
+              style={{ fontSize: 9, color: 'rgba(255,255,255,0.5)', maxWidth: 60 }}>
               {mod.name}
             </span>
           </motion.button>
@@ -142,106 +146,59 @@ function ModuleRings({ progress }) {
   )
 }
 
-// Progress ring -- animated, sits in hero
-function ProgressRing({ masteredCount, totalTopics }) {
-  const pct = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
-  const R = 32
-  const C = 2 * Math.PI * R
-  const offset = C * (1 - pct / 100)
-
-  return (
-    <div className="relative shrink-0" style={{ width: 80, height: 80 }}>
-      <svg width="80" height="80" viewBox="0 0 80 80">
-        {/* Track */}
-        <circle cx="40" cy="40" r={R} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="7" />
-        {/* Fill */}
-        <motion.circle
-          cx="40" cy="40" r={R}
-          fill="none"
-          stroke="url(#homeRingGrad)"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeDasharray={C}
-          strokeDashoffset={C}
-          transform="rotate(-90 40 40)"
-          animate={{ strokeDashoffset: offset }}
-          transition={{ duration: 1.2, ease: 'easeOut', delay: 0.4 }}
-        />
-        <defs>
-          <linearGradient id="homeRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#6366f1" />
-            <stop offset="100%" stopColor="#22c55e" />
-          </linearGradient>
-        </defs>
-      </svg>
-      {/* Label */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-        <span className="text-sm font-bold leading-none" style={{ color: '#f8fafc' }}>
-          {masteredCount}
-        </span>
-        <span className="leading-none mt-0.5" style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)' }}>
-          /{totalTopics}
-        </span>
-      </div>
-    </div>
-  )
-}
-
 export default function HomeScreen() {
-  const navigate = useNavigate()
+  const navigate  = useNavigate()
   const { progress, stats } = useProgress()
   const { weakTopics, suggestions, overallAccuracy, hasData, reviewDue } = useInsights()
-  const { user } = useAuth()
-  const profile = loadProfile()
+  const { user }  = useAuth()
+  const profile   = loadProfile()
 
-  const rawName =
-    profile.name ||
-    user?.user_metadata?.full_name ||
-    user?.user_metadata?.name ||
-    user?.email?.split('@')[0] ||
-    'Learner'
+  const rawName = profile.name || user?.user_metadata?.full_name || user?.user_metadata?.name
+    || user?.email?.split('@')[0] || 'Learner'
   const displayName = rawName.split(' ')[0]
-  const avatar = profile.avatar || '🧠'
+  const avatar   = profile.avatar || '🧠'
   const greeting = getGreeting()
 
   const masteredCount = Object.values(progress).filter(p => p.mastered).length
-  const totalTopics = Object.keys(TOPICS).length
-  const progressPct = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
+  const totalTopics   = Object.keys(TOPICS).length
+  const progressPct   = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
+  const streak        = stats.streak || 0
+  const xp            = stats.xp || 0
 
-  const streak = stats.streak || 0
-  const xp = stats.xp || 0
-
-  const allTopicIds = MODULES.flatMap(m => m.topics)
+  const allTopicIds     = MODULES.flatMap(m => m.topics)
   const firstUnmastered = allTopicIds.find(id => !progress[id]?.mastered) || allTopicIds[0]
-  const resumeTopic = TOPICS[firstUnmastered]
-  const resumeModule = MODULES.find(m => m.topics.includes(firstUnmastered))
-  const moduleColor = resumeModule?.color || null
+  const resumeTopic     = TOPICS[firstUnmastered]
+  const resumeModule    = MODULES.find(m => m.topics.includes(firstUnmastered))
+  const moduleColor     = resumeModule?.color || '#6366f1'
 
-  const sparkEntry = weakTopics[0] || suggestions[0] || null
-  const sparkTopic = sparkEntry ? sparkEntry.topic : resumeTopic
-  const sparkId = sparkEntry ? sparkEntry.id : firstUnmastered
-  const sparkIsWeak = sparkEntry?.reason === 'needs work' || (weakTopics.length > 0 && sparkEntry === weakTopics[0])
+  const isNewUser = masteredCount === 0 && xp < 5
+
+  // Exam countdown
+  const examDaysLeft = (() => {
+    if (!profile.examDate) return null
+    const d = Math.ceil((new Date(profile.examDate) - new Date()) / 86400000)
+    return d > 0 && d <= 365 ? d : null
+  })()
+
+  // Filter suggestions that aren't the same as the primary CTA
+  const filteredSuggestions = suggestions.filter(s => s.id !== firstUnmastered)
+  // Only show weak topics that have actual data and aren't the primary CTA
+  const filteredWeak = weakTopics.filter(w => w.id !== firstUnmastered && w.accuracy < 0.65)
 
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{
-        background: '#080f1e',
-        paddingTop: 'env(safe-area-inset-top, 16px)',
-        paddingBottom: 96,
-      }}
+      style={{ background: '#080f1e', paddingTop: 'env(safe-area-inset-top, 16px)', paddingBottom: 96 }}
     >
 
-      {/* ── HERO ─────────────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div
-        className="px-5 pt-6 pb-5 relative"
-        style={{
-          background: `radial-gradient(ellipse 120% 80% at 50% -20%, ${moduleColor || '#6366f1'}18 0%, transparent 70%)`,
-        }}
+        className="px-5 pt-6 pb-6"
+        style={{ background: `radial-gradient(ellipse 130% 90% at 50% -10%, ${moduleColor}16 0%, transparent 65%)` }}
       >
         <motion.div
           className="flex items-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
@@ -249,105 +206,75 @@ export default function HomeScreen() {
           <div
             className="flex items-center justify-center text-3xl shrink-0"
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 20,
-              background: 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(21,93,252,0.18))',
-              border: '2px solid rgba(99,102,241,0.45)',
-              boxShadow: '0 0 0 4px rgba(99,102,241,0.08), 0 8px 24px rgba(99,102,241,0.2)',
+              width: 60, height: 60, borderRadius: 18,
+              background: 'linear-gradient(135deg, rgba(99,102,241,0.28), rgba(21,93,252,0.15))',
+              border: '1.5px solid rgba(99,102,241,0.38)',
+              boxShadow: '0 0 0 4px rgba(99,102,241,0.07), 0 8px 20px rgba(99,102,241,0.18)',
             }}
           >
             {avatar}
           </div>
 
-          {/* Greeting */}
           <div className="flex-1 min-w-0">
-            <p
-              className="text-[10px] font-bold uppercase tracking-widest mb-0.5"
-              style={{ color: '#6366f1' }}
-            >
+            <p className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: '#6366f1' }}>
               {greeting}
             </p>
-            <h1
-              className="font-bold leading-tight truncate font-display"
-              style={{ color: '#f8fafc', fontSize: 26, letterSpacing: '-0.03em' }}
-            >
+            <h1 className="font-bold leading-tight truncate" style={{ color: '#f8fafc', fontSize: 24, letterSpacing: '-0.03em' }}>
               {displayName}
             </h1>
-            {/* Stat pills */}
+
+            {/* Stat pills — only show XP once earned */}
             <div className="flex items-center gap-2 mt-2 flex-wrap">
-              <span
-                className="font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5"
-                style={{
-                  fontSize: 12,
-                  background: 'rgba(253,199,0,0.12)',
-                  color: '#fdc700',
-                  border: '1px solid rgba(253,199,0,0.25)',
-                }}
-              >
-                <Zap size={12} />
-                {xp} XP
-              </span>
-              {masteredCount > 0 && (
-                <span
-                  className="font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5"
-                  style={{
-                    fontSize: 12,
-                    background: 'rgba(34,197,94,0.12)',
-                    color: '#22c55e',
-                    border: '1px solid rgba(34,197,94,0.25)',
-                  }}
-                >
-                  <Star size={12} />
-                  {masteredCount} mastered
+              {xp >= 5 ? (
+                <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
+                  style={{ fontSize: 11, background: 'rgba(253,199,0,0.12)', color: '#fdc700', border: '1px solid rgba(253,199,0,0.22)' }}>
+                  <Zap size={11} /> {xp} XP
+                </span>
+              ) : (
+                <span className="font-semibold px-2.5 py-1 rounded-full"
+                  style={{ fontSize: 11, background: 'rgba(99,102,241,0.1)', color: '#818cf8' }}>
+                  First XP incoming
                 </span>
               )}
-              {profile.examDate && (() => {
-                const daysLeft = Math.ceil((new Date(profile.examDate) - new Date()) / (1000 * 60 * 60 * 24))
-                if (daysLeft <= 0 || daysLeft > 365) return null
-                return (
-                  <span
-                    className="font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5"
-                    style={{
-                      fontSize: 12,
-                      background: daysLeft <= 30 ? 'rgba(239,68,68,0.12)' : 'rgba(99,102,241,0.12)',
-                      color: daysLeft <= 30 ? '#f87171' : '#818cf8',
-                      border: `1px solid ${daysLeft <= 30 ? 'rgba(239,68,68,0.25)' : 'rgba(99,102,241,0.25)'}`,
-                    }}
-                  >
-                    📅 {daysLeft}d to exam
-                  </span>
-                )
-              })()}
+
+              {masteredCount > 0 && (
+                <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
+                  style={{ fontSize: 11, background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}>
+                  <CheckCircle size={11} /> {masteredCount} mastered
+                </span>
+              )}
+
+              {examDaysLeft && (
+                <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
+                  style={{
+                    fontSize: 11,
+                    background: examDaysLeft <= 30 ? 'rgba(239,68,68,0.1)' : 'rgba(99,102,241,0.1)',
+                    color: examDaysLeft <= 30 ? '#f87171' : '#818cf8',
+                    border: `1px solid ${examDaysLeft <= 30 ? 'rgba(239,68,68,0.2)' : 'rgba(99,102,241,0.2)'}`,
+                  }}>
+                  {examDaysLeft <= 30 ? '🔥' : '📅'} {examDaysLeft}d to exam
+                </span>
+              )}
             </div>
           </div>
-
-          {/* Progress ring */}
-          <ProgressRing masteredCount={masteredCount} totalTopics={totalTopics} />
         </motion.div>
 
-        {/* Overall progress bar */}
+        {/* Progress bar — only once started */}
         {progressPct > 0 && (
-          <motion.div
-            className="mt-5"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            <div className="w-full rounded-full overflow-hidden" style={{ height: 8, background: 'rgba(255,255,255,0.06)' }}>
-              <motion.div
-                className="h-full rounded-full"
-                style={{ background: 'linear-gradient(90deg, #6366f1, #22c55e)' }}
+          <motion.div className="mt-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+            <div className="w-full rounded-full overflow-hidden" style={{ height: 6, background: 'rgba(255,255,255,0.06)' }}>
+              <motion.div className="h-full rounded-full"
+                style={{ background: `linear-gradient(90deg, #6366f1, ${moduleColor})` }}
                 initial={{ width: 0 }}
                 animate={{ width: `${progressPct}%` }}
                 transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
               />
             </div>
             <div className="flex items-center justify-between mt-1.5">
-              <p className="text-[11px] font-semibold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.3)' }}>
-                GCSE Physics - {progressPct}% complete
+              <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', fontWeight: 600, letterSpacing: '0.05em' }}>
+                GCSE Physics
               </p>
-              <p className="text-[11px] font-bold" style={{ color: moduleColor || '#6366f1' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, color: moduleColor }}>
                 {masteredCount}/{totalTopics} topics
               </p>
             </div>
@@ -355,406 +282,290 @@ export default function HomeScreen() {
         )}
       </div>
 
-      {/* ── MODULE RINGS ──────────────────────────────────────────── */}
-      <div className="px-5 mb-4">
-        <ModuleRings progress={progress} />
-      </div>
-
-      {/* ── STREAK ────────────────────────────────────────────── */}
+      {/* ── PRIMARY CTA ──────────────────────────────────────────────────────── */}
       <div className="px-5 mb-5">
-        <motion.div
-          className="w-full rounded-[22px] px-5 py-5"
+        <motion.button
+          className="w-full rounded-[22px] flex items-center justify-between"
           style={{
-            background: streak > 0
-              ? 'linear-gradient(135deg, rgba(249,115,22,0.2) 0%, rgba(15,22,41,0.97) 60%)'
-              : 'rgba(255,255,255,0.03)',
-            border: streak > 0 ? '1px solid rgba(249,115,22,0.4)' : '1px solid rgba(255,255,255,0.07)',
-            boxShadow: streak > 0 ? '0 4px 40px rgba(249,115,22,0.12), inset 0 1px 0 rgba(249,115,22,0.15)' : 'none',
+            padding: '20px 20px',
+            background: resumeModule
+              ? `linear-gradient(135deg, ${resumeModule.color}e8, ${resumeModule.color}88)`
+              : 'linear-gradient(135deg, #6366f1, #4f46e5)',
+            boxShadow: `0 6px 0 rgba(0,0,0,0.22), 0 16px 36px ${moduleColor}38`,
+            color: '#fff',
           }}
-          initial={{ opacity: 0, y: 16 }}
+          onClick={() => navigate(`/lesson/${firstUnmastered}`)}
+          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 12px ${moduleColor}22` }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-start gap-4">
+          <div className="flex items-center gap-3.5">
+            {resumeModule && (
+              <div className="rounded-[14px] flex items-center justify-center shrink-0"
+                style={{ width: 48, height: 48, background: 'rgba(255,255,255,0.18)' }}>
+                <resumeModule.icon size={24} color="#fff" strokeWidth={1.8} />
+              </div>
+            )}
+            <div className="text-left">
+              <div className="font-bold uppercase tracking-wider opacity-75 mb-0.5" style={{ fontSize: 10 }}>
+                {masteredCount === 0 ? 'Start here' : 'Continue learning'}
+              </div>
+              <div className="font-bold" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
+                {resumeTopic?.title || 'Energy Stores'}
+              </div>
+              {resumeModule && (
+                <div className="opacity-65 mt-0.5" style={{ fontSize: 12 }}>{resumeModule.name}</div>
+              )}
+            </div>
+          </div>
+          <motion.div
+            animate={{ x: [0, 4, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <ChevronRight size={24} strokeWidth={2.5} />
+          </motion.div>
+        </motion.button>
+      </div>
+
+      {/* ── SECONDARY ACTIONS ────────────────────────────────────────────────── */}
+      <div className="px-5 mb-5 grid grid-cols-2 gap-2.5">
+        <motion.button
+          className="rounded-[18px] flex items-center justify-center gap-2"
+          style={{ height: 52, background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.22)', color: '#a5b4fc' }}
+          onClick={() => navigate('/mastery')}
+          whileTap={{ y: 2, scale: 0.97 }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.22 }}
+        >
+          <Target size={15} color="#818cf8" />
+          <span className="text-xs font-bold">My Progress</span>
+        </motion.button>
+
+        <motion.button
+          className="rounded-[18px] flex items-center justify-center gap-2"
+          style={{ height: 52, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', color: 'rgba(255,255,255,0.45)' }}
+          onClick={() => navigate('/topics')}
+          whileTap={{ y: 2, scale: 0.97 }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+        >
+          <BookOpen size={15} color="rgba(255,255,255,0.38)" />
+          <span className="text-xs font-bold">All Topics</span>
+        </motion.button>
+      </div>
+
+      {/* ── STREAK ───────────────────────────────────────────────────────────── */}
+      <div className="px-5 mb-5">
+        <motion.div
+          className="rounded-[22px] px-5 py-5"
+          style={{
+            background: streak > 0
+              ? 'linear-gradient(135deg, rgba(249,115,22,0.18) 0%, rgba(15,22,41,0.97) 60%)'
+              : 'rgba(255,255,255,0.03)',
+            border: streak > 0 ? '1px solid rgba(249,115,22,0.35)' : '1px solid rgba(255,255,255,0.07)',
+            boxShadow: streak > 0 ? '0 4px 32px rgba(249,115,22,0.1)' : 'none',
+          }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="flex items-start gap-3.5">
             <motion.div
-              animate={streak > 0 ? { scale: [1, 1.12, 1] } : {}}
+              animate={streak > 0 ? { scale: [1, 1.1, 1] } : {}}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-              style={{ lineHeight: 1, paddingTop: 2 }}
+              style={{ paddingTop: 2 }}
             >
-              <Flame
-                size={streak > 0 ? 38 : 24}
-                color={streak > 0 ? '#f97316' : 'rgba(255,255,255,0.2)'}
-                strokeWidth={1.6}
-              />
+              <Flame size={streak > 0 ? 34 : 22} color={streak > 0 ? '#f97316' : 'rgba(255,255,255,0.18)'} strokeWidth={1.5} />
             </motion.div>
 
             <div className="flex-1 min-w-0">
               {streak > 0 ? (
                 <>
-                  <div className="font-bold font-display" style={{ color: '#f97316', fontSize: 22, letterSpacing: '-0.02em' }}>
+                  <div className="font-bold" style={{ color: '#f97316', fontSize: 20, letterSpacing: '-0.02em' }}>
                     {streak} day streak
                   </div>
-                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                    Keep going - study something today
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                    Study today to keep it going
                   </p>
-                  <StreakDots streak={streak} />
                 </>
               ) : (
                 <>
-                  <div className="text-base font-bold font-display" style={{ color: '#f8fafc' }}>
-                    Start your streak
+                  <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16 }}>
+                    Start your streak today
                   </div>
-                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                    Complete a topic to light it up
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.32)' }}>
+                    Complete one topic to light it up
                   </p>
-                  <StreakDots streak={0} />
                 </>
               )}
+              <StreakCalendar streak={streak} />
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* ── REVIEW DUE ────────────────────────────────────────── */}
-      {reviewDue.length > 0 ? (
-        <div className="px-5 mb-5">
+      {/* ── MODULE RINGS — only shown once progress exists ────────────────────── */}
+      <AnimatePresence>
+        {masteredCount > 0 && (
           <motion.div
-            className="w-full rounded-[22px] px-5 py-5"
-            style={{
-              background: 'rgba(99,102,241,0.07)',
-              border: '1px solid rgba(99,102,241,0.22)',
-            }}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.18, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="flex items-center gap-2 mb-2">
-              <Calendar size={13} color="#818cf8" />
-              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#818cf8' }}>
-                Review Due
-              </span>
-              <span
-                className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
-                style={{ background: 'rgba(99,102,241,0.2)', color: '#a5b4fc' }}
-              >
-                {reviewDue.length}
-              </span>
-            </div>
-            <p className="text-xs mb-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
-              Spaced practice locks it into long-term memory
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {reviewDue.slice(0, 3).map(({ id, topic }) => (
-                <motion.button
-                  key={id}
-                  className="flex items-center gap-1.5 px-4 py-3 rounded-full text-xs font-semibold"
-                  style={{
-                    background: topic.moduleColor ? `${topic.moduleColor}18` : 'rgba(99,102,241,0.15)',
-                    border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}35` : 'rgba(99,102,241,0.3)'}`,
-                    color: topic.moduleColor || '#818cf8',
-                    minHeight: 44,
-                  }}
-                  onClick={() => navigate(`/lesson/${id}`)}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {topic.title}
-                  <ChevronRight size={10} strokeWidth={2.5} />
-                </motion.button>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      ) : masteredCount >= 5 ? (
-        <div className="px-5 mb-5">
-          <motion.div
-            className="w-full rounded-[22px] px-5 py-3 flex items-center gap-3"
-            style={{ background: 'rgba(99,102,241,0.05)', border: '1px solid rgba(99,102,241,0.15)' }}
+            className="px-5 mb-5"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.18 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.3 }}
           >
-            <Calendar size={13} color="#6366f1" />
-            <span className="text-xs font-semibold" style={{ color: '#818cf8' }}>All caught up</span>
-            <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>No reviews due today</span>
+            <div className="flex items-center gap-2 mb-3">
+              <div style={{ width: 5, height: 5, borderRadius: '50%', background: moduleColor }} />
+              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                Your modules
+              </span>
+            </div>
+            <ModuleRings progress={progress} />
           </motion.div>
-        </div>
-      ) : null}
+        )}
+      </AnimatePresence>
 
-      {/* ── DAILY SPARK ───────────────────────────────────────── */}
-      {sparkTopic && (
-        <div className="px-5 mb-5">
-          <motion.button
-            className="w-full rounded-[22px] px-5 py-5 text-left flex items-center gap-4"
-            style={{
-              background: sparkTopic.moduleColor
-                ? `linear-gradient(135deg, ${sparkTopic.moduleColor}20, rgba(15,22,41,0.97))`
-                : 'linear-gradient(135deg, rgba(99,102,241,0.20), rgba(15,22,41,0.97))',
-              border: `1px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}40` : 'rgba(99,102,241,0.4)'}`,
-              minHeight: 44,
-            }}
-            onClick={() => navigate(sparkIsWeak ? `/diagnostic/${sparkId}` : `/lesson/${sparkId}`)}
-            whileTap={{ y: 3, scale: 0.99 }}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.22, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {/* Icon area - 48x48 */}
-            <div
-              className="rounded-[16px] flex items-center justify-center shrink-0"
-              style={{
-                width: 48,
-                height: 48,
-                background: sparkTopic.moduleColor ? `${sparkTopic.moduleColor}22` : 'rgba(99,102,241,0.2)',
-                border: `1.5px solid ${sparkTopic.moduleColor ? `${sparkTopic.moduleColor}45` : 'rgba(99,102,241,0.38)'}`,
-              }}
-            >
-              <Sparkles size={22} color={sparkTopic.moduleColor || '#818cf8'} />
-            </div>
-
-            <div className="flex-1 min-w-0">
-              <p className="text-[10px] font-bold uppercase tracking-widest mb-0.5"
-                style={{ color: sparkTopic.moduleColor || '#818cf8' }}>
-                Daily Spark
-              </p>
-              <p className="text-sm font-bold truncate" style={{ color: '#f8fafc' }}>
-                {sparkTopic.title}
-              </p>
-              <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                {sparkIsWeak ? 'Needs more practice' : "Today's recommended topic"}
-              </p>
-            </div>
-
-            {/* Pulsing right arrow */}
-            <motion.div
-              className="shrink-0"
-              animate={{ x: [0, 3, 0] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <ArrowRight
-                size={20}
-                color={sparkTopic.moduleColor || '#818cf8'}
-                strokeWidth={2}
-                style={{ opacity: 0.8 }}
-              />
-            </motion.div>
-          </motion.button>
-        </div>
-      )}
-
-      {/* ── CONTINUE LEARNING ─────────────────────────────────── */}
-      <div className="px-5 mb-5 space-y-2.5">
-        {/* Primary CTA */}
-        <motion.button
-          className="w-full rounded-[22px] flex items-center justify-between px-5"
-          style={{
-            paddingTop: 20,
-            paddingBottom: 20,
-            background: resumeModule
-              ? `linear-gradient(135deg, ${resumeModule.color}e0, ${resumeModule.color}90)`
-              : 'linear-gradient(135deg, #6366f1, #4f46e5)',
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 14px 32px ${moduleColor || '#6366f1'}40`,
-            color: '#fff',
-          }}
-          onClick={() => navigate(`/lesson/${firstUnmastered}`)}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 12px ${moduleColor || '#6366f1'}25` }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <div className="flex items-center gap-3">
-            {resumeModule && (
-              <div
-                className="rounded-[14px] flex items-center justify-center"
-                style={{ width: 44, height: 44, background: 'rgba(255,255,255,0.18)' }}
-              >
-                <resumeModule.icon size={22} color="#fff" strokeWidth={2} />
-              </div>
-            )}
-            <div className="text-left">
-              <div className="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-0.5 font-display">
-                {masteredCount === 0 ? 'Start here' : 'Continue learning'}
-              </div>
-              <div className="font-bold font-display" style={{ fontSize: 15, letterSpacing: '-0.01em' }}>
-                {resumeTopic?.title || 'Energy Stores'}
-              </div>
-              {resumeModule && (
-                <div className="text-xs opacity-60 mt-0.5">{resumeModule.name}</div>
-              )}
-            </div>
-          </div>
-          <ChevronRight size={22} strokeWidth={2.5} />
-        </motion.button>
-
-        {/* Secondary actions row */}
-        <div className="grid grid-cols-2 gap-2">
-          <motion.button
-            className="rounded-[18px] flex items-center justify-center gap-2"
-            style={{
-              paddingTop: 16,
-              paddingBottom: 16,
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(99,102,241,0.28)',
-              color: '#a5b4fc',
-              borderLeft: `3px solid ${moduleColor || '#6366f1'}`,
-              minHeight: 52,
-            }}
-            onClick={() => navigate('/mastery')}
-            whileTap={{ y: 2, scale: 0.98 }}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-          >
-            <Target size={15} color={moduleColor || '#6366f1'} />
-            <span className="text-xs font-bold">My Progress</span>
-          </motion.button>
-
-          <motion.button
-            className="rounded-[18px] flex items-center justify-center gap-2"
-            style={{
-              paddingTop: 16,
-              paddingBottom: 16,
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              color: 'rgba(255,255,255,0.5)',
-              minHeight: 52,
-            }}
-            onClick={() => navigate('/topics')}
-            whileTap={{ y: 2, scale: 0.98 }}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.38 }}
-          >
-            <BookOpen size={15} color="rgba(255,255,255,0.4)" />
-            <span className="text-xs font-bold">All Topics</span>
-          </motion.button>
-        </div>
-      </div>
-
-      {/* ── INSIGHTS ──────────────────────────────────────────── */}
+      {/* ── REVIEW DUE ───────────────────────────────────────────────────────── */}
       <AnimatePresence>
-        {hasData && (
+        {reviewDue.length > 0 && (
+          <motion.div
+            className="px-5 mb-5"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.32 }}
+          >
+            <div className="rounded-[22px] px-5 py-5"
+              style={{ background: 'rgba(99,102,241,0.07)', border: '1px solid rgba(99,102,241,0.2)' }}>
+              <div className="flex items-center gap-2 mb-1">
+                <Calendar size={13} color="#818cf8" />
+                <span style={{ fontSize: 11, fontWeight: 700, color: '#818cf8', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Time to revisit
+                </span>
+                <span className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
+                  style={{ background: 'rgba(99,102,241,0.18)', color: '#a5b4fc' }}>
+                  {reviewDue.length}
+                </span>
+              </div>
+              <p className="text-xs mb-3.5" style={{ color: 'rgba(255,255,255,0.32)' }}>
+                Spaced practice locks it into long-term memory
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {reviewDue.slice(0, 3).map(({ id, topic }) => (
+                  <motion.button
+                    key={id}
+                    className="flex items-center gap-1.5 px-4 rounded-full text-xs font-semibold"
+                    style={{
+                      height: 44,
+                      background: topic.moduleColor ? `${topic.moduleColor}18` : 'rgba(99,102,241,0.15)',
+                      border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}32` : 'rgba(99,102,241,0.28)'}`,
+                      color: topic.moduleColor || '#818cf8',
+                    }}
+                    onClick={() => navigate(`/lesson/${id}`)}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {topic.title} <ChevronRight size={10} strokeWidth={2.5} />
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── INSIGHTS — only shown once there's real data ─────────────────────── */}
+      <AnimatePresence>
+        {hasData && (filteredWeak.length > 0 || filteredSuggestions.length > 0) && (
           <motion.div
             className="px-5 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.38 }}
           >
+            {/* Header */}
             <div className="flex items-center gap-2 mb-3">
-              <TrendingUp size={14} color="#6366f1" />
-              {/* Colored dot before heading */}
-              <div
-                style={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: '50%',
-                  background: moduleColor || '#6366f1',
-                  boxShadow: `0 0 6px ${moduleColor || '#6366f1'}`,
-                  flexShrink: 0,
-                }}
-              />
-              <span
-                className="font-bold uppercase tracking-widest"
-                style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)' }}
-              >
+              <TrendingUp size={13} color="#6366f1" />
+              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                 Insights
               </span>
-              {overallAccuracy !== null && (
-                <span
-                  className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
+              {overallAccuracy !== null && overallAccuracy > 0 && (
+                <span className="ml-auto text-xs font-bold px-2.5 py-0.5 rounded-full"
                   style={{
-                    background: overallAccuracy >= 0.7 ? 'rgba(34,197,94,0.12)' : 'rgba(249,115,22,0.12)',
+                    background: overallAccuracy >= 0.7 ? 'rgba(34,197,94,0.1)' : 'rgba(249,115,22,0.1)',
                     color: overallAccuracy >= 0.7 ? '#22c55e' : '#f97316',
-                  }}
-                >
+                  }}>
                   {Math.round(overallAccuracy * 100)}% accuracy
                 </span>
               )}
             </div>
 
-            {/* Needs Work */}
-            {weakTopics.length > 0 && (
+            {/* Needs practice — positive reframe */}
+            {filteredWeak.length > 0 && (
               <div className="mb-4">
-                <div className="flex items-center gap-1.5 mb-2">
-                  <AlertCircle size={11} color="#f97316" />
-                  <span className="text-xs font-semibold" style={{ color: '#f97316' }}>Needs work</span>
-                </div>
+                <p className="text-xs font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  Ready to practise
+                </p>
                 <div className="space-y-2">
-                  {weakTopics.map((x, i) => (
+                  {filteredWeak.map((x, i) => (
                     <motion.button
                       key={x.id}
                       className="w-full flex items-center gap-3 px-4 py-3 rounded-[16px] text-left"
-                      style={{
-                        background: 'rgba(249,115,22,0.06)',
-                        border: '1px solid rgba(249,115,22,0.2)',
-                        minHeight: 44,
-                      }}
+                      style={{ background: 'rgba(249,115,22,0.05)', border: '1px solid rgba(249,115,22,0.18)', minHeight: 56 }}
                       onClick={() => navigate(`/diagnostic/${x.id}`)}
                       whileTap={{ scale: 0.97 }}
-                      initial={{ opacity: 0, x: -12 }}
+                      initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.42 + i * 0.06 }}
+                      transition={{ delay: 0.4 + i * 0.05 }}
                     >
-                      <div
-                        className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 text-xs font-bold"
-                        style={{
-                          background: `${x.topic.moduleColor}18`,
-                          color: x.topic.moduleColor,
-                          border: `1px solid ${x.topic.moduleColor}35`,
-                        }}
-                      >
+                      <div className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 text-xs font-bold"
+                        style={{ background: `${x.topic.moduleColor}18`, color: x.topic.moduleColor, border: `1px solid ${x.topic.moduleColor}30` }}>
                         {Math.round(x.accuracy * 100)}%
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-sm font-bold truncate" style={{ color: '#f8fafc' }}>{x.topic.title}</div>
-                        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>Tap to practise again</div>
+                        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.32)' }}>Tap to practise</div>
                       </div>
-                      <span style={{ color: x.topic.moduleColor, fontWeight: 700, fontSize: 13 }}>→</span>
+                      <ArrowRight size={15} color={x.topic.moduleColor} />
                     </motion.button>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Suggested */}
-            {suggestions.length > 0 && (
+            {/* Suggestions — only topics different from primary CTA */}
+            {filteredSuggestions.length > 0 && (
               <div>
-                <div className="flex items-center gap-1.5 mb-2">
-                  <Sparkles size={11} color="#6366f1" />
-                  <span className="text-xs font-semibold" style={{ color: '#6366f1' }}>Suggested for you</span>
-                </div>
-                <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
-                  {suggestions.map((x, i) => (
+                <p className="text-xs font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  Up next
+                </p>
+                <div className="flex gap-2.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
+                  {filteredSuggestions.slice(0, 4).map((x, i) => (
                     <motion.button
                       key={x.id}
-                      className="flex-shrink-0 w-36 flex flex-col gap-1.5 px-3 py-3 rounded-[16px] text-left"
-                      style={{
-                        background: `${x.topic.moduleColor}0d`,
-                        border: `1px solid ${x.topic.moduleColor}30`,
-                        minHeight: 44,
-                      }}
+                      className="flex-shrink-0 w-36 flex flex-col gap-2 px-3 py-3 rounded-[16px] text-left"
+                      style={{ background: `${x.topic.moduleColor}0d`, border: `1px solid ${x.topic.moduleColor}28`, minHeight: 44 }}
                       onClick={() => navigate(x.reason === 'needs work' ? `/diagnostic/${x.id}` : `/lesson/${x.id}`)}
                       whileTap={{ scale: 0.96 }}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.46 + i * 0.07 }}
+                      transition={{ delay: 0.44 + i * 0.06 }}
                     >
-                      <div
-                        className="w-7 h-7 rounded-[8px] flex items-center justify-center"
-                        style={{ background: `${x.topic.moduleColor}20` }}
-                      >
+                      <div className="w-7 h-7 rounded-[8px] flex items-center justify-center"
+                        style={{ background: `${x.topic.moduleColor}20` }}>
                         <Target size={13} color={x.topic.moduleColor} />
                       </div>
                       <div className="text-xs font-semibold leading-snug" style={{ color: '#f8fafc' }}>
                         {x.topic.title}
                       </div>
-                      <div
-                        className="text-[10px] px-1.5 py-0.5 rounded-full self-start font-semibold"
+                      <div className="text-[10px] px-1.5 py-0.5 rounded-full self-start font-semibold"
                         style={{
-                          background: x.reason === 'needs work' ? 'rgba(249,115,22,0.15)' : 'rgba(99,102,241,0.15)',
+                          background: x.reason === 'needs work' ? 'rgba(249,115,22,0.14)' : 'rgba(99,102,241,0.14)',
                           color: x.reason === 'needs work' ? '#f97316' : '#818cf8',
-                        }}
-                      >
-                        {x.reason === 'needs work' ? 'Review' : 'Try it'}
+                        }}>
+                        {x.reason === 'needs work' ? 'Review' : 'Continue'}
                       </div>
                     </motion.button>
                   ))}

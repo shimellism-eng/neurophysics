@@ -176,16 +176,19 @@ function CircuitComponentsLesson() {
         <text x={0} y={4} textAnchor="middle" fontSize={10} fontWeight="bold" fill="#f59e0b">V</text>
       </g>
     ),
-    // LDR — resistor with arrows pointing INTO it (light shines in)
+    // LDR — oval enclosure (AQA standard) with resistor inside + diagonal arrows into it
     () => (
       <g>
-        <line x1={-14} y1={0} x2={14} y2={0} stroke="#cad5e2" strokeWidth="1.5" />
-        <rect x={-10} y={-5} width={20} height={10} fill="none" stroke="#a855f7" strokeWidth="1.5" />
-        {/* Arrows pointing DOWN into the component */}
-        <line x1={-4} y1={-14} x2={-4} y2={-8} stroke="#fdc700" strokeWidth="1.2" strokeLinecap="round" />
-        <polygon points="-4,-8 -7,-13 -1,-13" fill="#fdc700" />
-        <line x1={4} y1={-14} x2={4} y2={-8} stroke="#fdc700" strokeWidth="1.2" strokeLinecap="round" />
-        <polygon points="4,-8 1,-13 7,-13" fill="#fdc700" />
+        <line x1={-18} y1={0} x2={18} y2={0} stroke="#cad5e2" strokeWidth="1.5" />
+        {/* Oval enclosure */}
+        <ellipse cx={0} cy={0} rx={16} ry={11} fill="none" stroke="#a855f7" strokeWidth="1.5" />
+        {/* Resistor rectangle inside oval */}
+        <rect x={-10} y={-4} width={20} height={8} fill="none" stroke="#a855f7" strokeWidth="1.2" />
+        {/* Diagonal arrows pointing into component (incoming light) */}
+        <line x1={-14} y1={-20} x2={-7} y2={-12} stroke="#fdc700" strokeWidth="1.2" strokeLinecap="round" />
+        <polygon points="-7,-12 -14,-14 -11,-7" fill="#fdc700" />
+        <line x1={-6} y1={-20} x2={1} y2={-12} stroke="#fdc700" strokeWidth="1.2" strokeLinecap="round" />
+        <polygon points="1,-12 -6,-14 -3,-7" fill="#fdc700" />
       </g>
     ),
     // Thermistor — rectangle with diagonal line (IEC standard)

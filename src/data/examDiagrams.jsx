@@ -131,85 +131,105 @@ export function HeatingCurveWater() {
 // ─── ELECTRICITY GROUP (accent: #3b82f6 / blue) ───────────────────────────────
 
 export function SeriesCircuitAV() {
+  const W = '#cbd5e1'   // wire colour
+  const S = '#cad5e2'  // symbol colour (IEC style)
   return (
     <div className="w-full">
       <svg viewBox="0 0 300 200" className="w-full h-auto">
-        <text x="150" y="14" fontSize={9} fill="#94a3b8" textAnchor="middle">Series Circuit with Ammeter &amp; Voltmeter</text>
-        {/* Outer wire rectangle */}
-        <polyline points="30,40 270,40 270,160 30,160 30,40" fill="none" stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Cell symbol at left side (top segment) */}
-        <line x1={30} y1={40} x2={70} y2={40} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Cell: long thick line = +ve terminal, short thin line = −ve terminal */}
-        <line x1={55} y1={33} x2={55} y2={47} stroke="#cbd5e1" strokeWidth={2.5} />
-        <line x1={62} y1={35} x2={62} y2={45} stroke="#cbd5e1" strokeWidth={1} />
-        <text x={48} y={28} fontSize={6} fill="#94a3b8">+</text>
-        <text x={64} y={28} fontSize={6} fill="#94a3b8">−</text>
-        <text x={58} y={22} fontSize={7} fill="#94a3b8" textAnchor="middle">1.5 V cell</text>
-        {/* Resistor R1 on top wire */}
-        <rect x={100} y={32} width={36} height={16} rx={2} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5} />
-        <text x={118} y={43} fontSize={8} fill="#93c5fd" textAnchor="middle">R₁</text>
-        {/* Resistor R2 on top wire */}
-        <rect x={160} y={32} width={36} height={16} rx={2} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5} />
-        <text x={178} y={43} fontSize={8} fill="#93c5fd" textAnchor="middle">R₂</text>
-        {/* Ammeter on right vertical wire */}
-        <circle cx={270} cy={100} r={12} fill="#0b1121" stroke="#10b981" strokeWidth={1.5} />
-        <text x={270} y={104} fontSize={9} fill="#10b981" textAnchor="middle" fontWeight="700">A</text>
-        {/* Voltmeter in parallel across both resistors */}
-        <line x1={100} y1={40} x2={100} y2={70} stroke="#cbd5e1" strokeWidth={1.2} strokeDasharray="4,2" />
-        <line x1={196} y1={40} x2={196} y2={70} stroke="#cbd5e1" strokeWidth={1.2} strokeDasharray="4,2" />
-        <line x1={100} y1={70} x2={140} y2={70} stroke="#cbd5e1" strokeWidth={1.2} strokeDasharray="4,2" />
-        <line x1={156} y1={70} x2={196} y2={70} stroke="#cbd5e1" strokeWidth={1.2} strokeDasharray="4,2" />
-        <circle cx={148} cy={70} r={12} fill="#0b1121" stroke="#f59e0b" strokeWidth={1.5} />
-        <text x={148} y={74} fontSize={9} fill="#f59e0b" textAnchor="middle" fontWeight="700">V</text>
-        <text x={148} y={58} fontSize={7} fill="#f59e0b" textAnchor="middle">(parallel)</text>
+        <text x="150" y="14" fontSize={9} fill="#94a3b8" textAnchor="middle">Series Circuit — Ammeter &amp; Voltmeter</text>
+
+        {/* Outer wire loop */}
+        <polyline points="30,50 270,50 270,160 30,160 30,50" fill="none" stroke={W} strokeWidth={1.5} />
+
+        {/* Cell at top-left — IEC: long thick (+) then short thin (−) */}
+        <line x1={30} y1={50} x2={52} y2={50} stroke={W} strokeWidth={1.5} />
+        <line x1={52} y1={40} x2={52} y2={60} stroke={S} strokeWidth={2.5} strokeLinecap="round" />
+        <line x1={58} y1={43} x2={58} y2={57} stroke={S} strokeWidth={1.5} strokeLinecap="round" />
+        <text x={45} y={34} fontSize={6} fill="#94a3b8">+</text>
+        <text x={59} y={34} fontSize={6} fill="#94a3b8">−</text>
+        <text x={55} y={26} fontSize={7} fill="#94a3b8" textAnchor="middle">1.5 V</text>
+        <line x1={58} y1={50} x2={88} y2={50} stroke={W} strokeWidth={1.5} />
+
+        {/* Resistor R₁ — IEC plain rectangle */}
+        <rect x={88} y={41} width={36} height={18} fill="none" stroke={S} strokeWidth={1.5} />
+        <text x={106} y={63} fontSize={7} fill="#94a3b8" textAnchor="middle">R₁</text>
+        <line x1={124} y1={50} x2={152} y2={50} stroke={W} strokeWidth={1.5} />
+
+        {/* Resistor R₂ — IEC plain rectangle */}
+        <rect x={152} y={41} width={36} height={18} fill="none" stroke={S} strokeWidth={1.5} />
+        <text x={170} y={63} fontSize={7} fill="#94a3b8" textAnchor="middle">R₂</text>
+        <line x1={188} y1={50} x2={270} y2={50} stroke={W} strokeWidth={1.5} />
+
+        {/* Ammeter — circle with A, on right vertical wire */}
+        <line x1={270} y1={50} x2={270} y2={93} stroke={W} strokeWidth={1.5} />
+        <circle cx={270} cy={105} r={12} fill="none" stroke="#10b981" strokeWidth={1.5} />
+        <text x={270} y={109} fontSize={9} fill="#10b981" textAnchor="middle" fontWeight="700">A</text>
+        <line x1={270} y1={117} x2={270} y2={160} stroke={W} strokeWidth={1.5} />
+
+        {/* Voltmeter in parallel across R₁ and R₂ */}
+        <line x1={88} y1={50} x2={88} y2={82} stroke={W} strokeWidth={1.2} strokeDasharray="4,2" />
+        <line x1={188} y1={50} x2={188} y2={82} stroke={W} strokeWidth={1.2} strokeDasharray="4,2" />
+        <line x1={88} y1={82} x2={126} y2={82} stroke={W} strokeWidth={1.2} strokeDasharray="4,2" />
+        <line x1={150} y1={82} x2={188} y2={82} stroke={W} strokeWidth={1.2} strokeDasharray="4,2" />
+        <circle cx={138} cy={82} r={12} fill="none" stroke="#f59e0b" strokeWidth={1.5} />
+        <text x={138} y={86} fontSize={9} fill="#f59e0b" textAnchor="middle" fontWeight="700">V</text>
+        <text x={138} y={70} fontSize={6.5} fill="#f59e0b" textAnchor="middle">parallel</text>
       </svg>
     </div>
   );
 }
 
 export function ParallelCircuitLamps() {
+  const W = '#cbd5e1'  // wire colour
+  const S = '#cad5e2' // symbol colour (IEC style)
   return (
     <div className="w-full">
       <svg viewBox="0 0 300 200" className="w-full h-auto">
         <text x="150" y="14" fontSize={9} fill="#94a3b8" textAnchor="middle">Parallel Circuit — Two Lamps</text>
-        {/* Main wires: left and right bus */}
-        <line x1={40} y1={30} x2={40} y2={170} stroke="#cbd5e1" strokeWidth={1.5} />
-        <line x1={260} y1={30} x2={260} y2={170} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Top and bottom connections */}
-        <line x1={40} y1={30} x2={260} y2={30} stroke="#cbd5e1" strokeWidth={1.5} />
-        <line x1={40} y1={170} x2={260} y2={170} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Cell on left wire */}
-        <line x1={33} y1={95} x2={47} y2={95} stroke="#cbd5e1" strokeWidth={2.5} />
-        <line x1={33} y1={102} x2={47} y2={102} stroke="#cbd5e1" strokeWidth={1} />
-        <text x={22} y={100} fontSize={7} fill="#94a3b8" textAnchor="middle">Cell</text>
-        {/* Branch 1 (top): switch S1 and lamp L1 */}
-        <line x1={40} y1={70} x2={100} y2={70} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Switch S1 */}
-        <circle cx={110} cy={70} r={3} fill="#3b82f6" />
-        <line x1={113} y1={68} x2={135} y2={60} stroke="#cbd5e1" strokeWidth={1.2} />
-        <circle cx={138} cy={70} r={3} fill="#3b82f6" />
-        <text x={120} y={58} fontSize={7} fill="#93c5fd" textAnchor="middle">S₁</text>
-        <line x1={138} y1={70} x2={175} y2={70} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Lamp L1: circle with cross */}
-        <circle cx={190} cy={70} r={14} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5} />
-        <line x1={180} y1={60} x2={200} y2={80} stroke="#3b82f6" strokeWidth={1.2} />
-        <line x1={200} y1={60} x2={180} y2={80} stroke="#3b82f6" strokeWidth={1.2} />
-        <text x={190} y={52} fontSize={7} fill="#93c5fd" textAnchor="middle">L₁</text>
-        <line x1={204} y1={70} x2={260} y2={70} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Branch 2 (bottom): switch S2 and lamp L2 */}
-        <line x1={40} y1={130} x2={100} y2={130} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Switch S2 */}
-        <circle cx={110} cy={130} r={3} fill="#3b82f6" />
-        <line x1={113} y1={128} x2={135} y2={120} stroke="#cbd5e1" strokeWidth={1.2} />
-        <circle cx={138} cy={130} r={3} fill="#3b82f6" />
-        <text x={120} y={118} fontSize={7} fill="#93c5fd" textAnchor="middle">S₂</text>
-        <line x1={138} y1={130} x2={175} y2={130} stroke="#cbd5e1" strokeWidth={1.5} />
-        {/* Lamp L2 */}
-        <circle cx={190} cy={130} r={14} fill="#1e293b" stroke="#3b82f6" strokeWidth={1.5} />
-        <line x1={180} y1={120} x2={200} y2={140} stroke="#3b82f6" strokeWidth={1.2} />
-        <line x1={200} y1={120} x2={180} y2={140} stroke="#3b82f6" strokeWidth={1.2} />
-        <text x={190} y={112} fontSize={7} fill="#93c5fd" textAnchor="middle">L₂</text>
-        <line x1={204} y1={130} x2={260} y2={130} stroke="#cbd5e1" strokeWidth={1.5} />
+
+        {/* Left and right bus bars */}
+        <line x1={40} y1={30} x2={40} y2={170} stroke={W} strokeWidth={1.5} />
+        <line x1={260} y1={30} x2={260} y2={170} stroke={W} strokeWidth={1.5} />
+
+        {/* Top and bottom rails */}
+        <line x1={40} y1={30} x2={260} y2={30} stroke={W} strokeWidth={1.5} />
+        <line x1={40} y1={170} x2={260} y2={170} stroke={W} strokeWidth={1.5} />
+
+        {/* Cell on left bus — IEC: long thick (+) / short thin (−), horizontal */}
+        <line x1={33} y1={100} x2={47} y2={100} stroke={S} strokeWidth={2.5} strokeLinecap="round" />
+        <line x1={33} y1={107} x2={47} y2={107} stroke={S} strokeWidth={1.5} strokeLinecap="round" />
+        <text x={50} y={101} fontSize={6} fill="#94a3b8">+</text>
+        <text x={50} y={112} fontSize={6} fill="#94a3b8">−</text>
+
+        {/* Branch 1 (top): switch S₁ and lamp L₁ */}
+        <line x1={40} y1={70} x2={90} y2={70} stroke={W} strokeWidth={1.5} />
+        {/* Switch S₁ — IEC: two open circles + angled blade */}
+        <circle cx={100} cy={70} r={3} fill="none" stroke={S} strokeWidth={1.5} />
+        <line x1={103} y1={70} x2={124} y2={62} stroke={S} strokeWidth={1.5} strokeLinecap="round" />
+        <circle cx={127} cy={70} r={3} fill="none" stroke={S} strokeWidth={1.5} />
+        <text x={112} y={57} fontSize={7} fill="#94a3b8" textAnchor="middle">S₁</text>
+        <line x1={130} y1={70} x2={170} y2={70} stroke={W} strokeWidth={1.5} />
+        {/* Lamp L₁ — IEC: circle with X */}
+        <circle cx={184} cy={70} r={13} fill="none" stroke={S} strokeWidth={1.5} />
+        <line x1={175} y1={61} x2={193} y2={79} stroke={S} strokeWidth={1.4} strokeLinecap="round" />
+        <line x1={193} y1={61} x2={175} y2={79} stroke={S} strokeWidth={1.4} strokeLinecap="round" />
+        <text x={184} y={52} fontSize={7} fill="#94a3b8" textAnchor="middle">L₁</text>
+        <line x1={197} y1={70} x2={260} y2={70} stroke={W} strokeWidth={1.5} />
+
+        {/* Branch 2 (bottom): switch S₂ and lamp L₂ */}
+        <line x1={40} y1={130} x2={90} y2={130} stroke={W} strokeWidth={1.5} />
+        {/* Switch S₂ */}
+        <circle cx={100} cy={130} r={3} fill="none" stroke={S} strokeWidth={1.5} />
+        <line x1={103} y1={130} x2={124} y2={122} stroke={S} strokeWidth={1.5} strokeLinecap="round" />
+        <circle cx={127} cy={130} r={3} fill="none" stroke={S} strokeWidth={1.5} />
+        <text x={112} y={117} fontSize={7} fill="#94a3b8" textAnchor="middle">S₂</text>
+        <line x1={130} y1={130} x2={170} y2={130} stroke={W} strokeWidth={1.5} />
+        {/* Lamp L₂ */}
+        <circle cx={184} cy={130} r={13} fill="none" stroke={S} strokeWidth={1.5} />
+        <line x1={175} y1={121} x2={193} y2={139} stroke={S} strokeWidth={1.4} strokeLinecap="round" />
+        <line x1={193} y1={121} x2={175} y2={139} stroke={S} strokeWidth={1.4} strokeLinecap="round" />
+        <text x={184} y={112} fontSize={7} fill="#94a3b8" textAnchor="middle">L₂</text>
+        <line x1={197} y1={130} x2={260} y2={130} stroke={W} strokeWidth={1.5} />
       </svg>
     </div>
   );
@@ -2023,11 +2043,15 @@ export function CircuitSymbolsReference() {
       name: 'LDR',
       draw: (cx, cy) => (
         <g>
-          <rect x={cx - 12} y={cy - 5} width="24" height="10" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
-          <line x1={cx - 4} y1={cy - 14} x2={cx - 4} y2={cy - 7} stroke="#cad5e2" strokeWidth="1.2" />
-          <polygon points={`${cx - 4},${cy - 7} ${cx - 7},${cy - 12} ${cx - 1},${cy - 12}`} fill="#cad5e2" />
-          <line x1={cx + 4} y1={cy - 14} x2={cx + 4} y2={cy - 7} stroke="#cad5e2" strokeWidth="1.2" />
-          <polygon points={`${cx + 4},${cy - 7} ${cx + 1},${cy - 12} ${cx + 7},${cy - 12}`} fill="#cad5e2" />
+          {/* Oval enclosure (AQA standard) */}
+          <ellipse cx={cx} cy={cy} rx="16" ry="11" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
+          {/* Resistor rectangle inside oval */}
+          <rect x={cx - 10} y={cy - 4} width="20" height="8" fill="none" stroke="#cad5e2" strokeWidth="1.2" />
+          {/* Diagonal arrows pointing into component (incoming light) */}
+          <line x1={cx - 14} y1={cy - 20} x2={cx - 7} y2={cy - 12} stroke="#cad5e2" strokeWidth="1.2" strokeLinecap="round" />
+          <polygon points={`${cx - 7},${cy - 12} ${cx - 14},${cy - 14} ${cx - 11},${cy - 7}`} fill="#cad5e2" />
+          <line x1={cx - 6} y1={cy - 20} x2={cx + 1} y2={cy - 12} stroke="#cad5e2" strokeWidth="1.2" strokeLinecap="round" />
+          <polygon points={`${cx + 1},${cy - 12} ${cx - 6},${cy - 14} ${cx - 3},${cy - 7}`} fill="#cad5e2" />
         </g>
       ),
     },

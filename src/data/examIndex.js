@@ -10,6 +10,9 @@ import examSpace from './examSpace'
 import examEquations from './examEquations'
 import examExtended from './examExtended'
 import examDiagramQs from './examDiagramQs'
+import examChained from './examChained'
+import examRPAErrors from './examRPAErrors'
+import examNovelContext from './examNovelContext'
 
 /**
  * Return all exam practice questions for a given subtopic ID.
@@ -62,6 +65,11 @@ export function getExamQuestions(subtopicId) {
     questions.push(...examDiagramQs[subtopicId])
   }
 
+  // Grade 9 chained-equation calculations
+  if (examChained[subtopicId]) {
+    questions.push(...examChained[subtopicId])
+  }
+
   return questions
 }
 
@@ -76,7 +84,10 @@ export function getExamQuestionCount(subtopicId) {
  * Get all topic IDs that have exam questions.
  */
 export function getExamTopicIds() {
-  const allSources = [examCalculations, examPracticals, examParticleModel, examGraphs, examSpace, examEquations, examExtended, examDiagramQs]
+  const allSources = [
+    examCalculations, examPracticals, examParticleModel, examGraphs,
+    examSpace, examEquations, examExtended, examDiagramQs, examChained,
+  ]
   const ids = new Set()
   allSources.forEach(source => {
     Object.keys(source).forEach(id => {
@@ -85,4 +96,73 @@ export function getExamTopicIds() {
     })
   })
   return [...ids]
+}
+
+/**
+ * Get all Grade 9 discriminator questions (tier 3, mixed types).
+ * Used by Grade9Challenge screen. Shuffled on each call.
+ */
+export function getGrade9Questions() {
+  const questions = []
+
+  // Chained-equation multi-step calculations from all topics
+  Object.values(examChained).forEach(qs => questions.push(...qs))
+
+  // RPA "too high / too low" error direction questions
+  questions.push(...examRPAErrors)
+
+  // Novel-context 6-mark questions
+  questions.push(...examNovelContext)
+
+  // Shuffle for variety
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[questions[i], questions[j]] = [questions[j], questions[i]]
+  }
+
+  return questions
+}
+
+/**
+ * Get a balanced mini-paper for timed practice (35 marks).
+ * Structure mirrors AQA: MCQ → short answer → calculation → extended.
+ */
+export function getTimedPaperQuestions() {
+  const paper = []
+
+  // Section A — 5 × MCQ / equation-recall (1 mark each)
+  const mcqPool = []
+  Object.values(examEquations).forEach(qs => mcqPool.push(...qs))
+  const shuffledMCQ = mcqPool.sort(() => Math.random() - 0.5).slice(0, 5)
+  paper.push(...shuffledMCQ)
+
+  // Section B — Short answer: 2 × calculation (tier 1–2) + 1 × RPA error
+  const calcPool = []
+  Object.values(examCalculations).forEach(qs =>
+    calcPool.push(...qs.filter(q => q.tier <= 2))
+  )
+  const shuffledCalc = calcPool.sort(() => Math.random() - 0.5).slice(0, 2)
+  paper.push(...shuffledCalc)
+
+  // 1 × RPA error direction question
+  const rpaQ = examRPAErrors[Math.floor(Math.random() * examRPAErrors.length)]
+  paper.push(rpaQ)
+
+  // Section C — Chained calculation (tier 3) + graph/diagram
+  const chainPool = []
+  Object.values(examChained).forEach(qs => chainPool.push(...qs))
+  const chainQ = chainPool[Math.floor(Math.random() * chainPool.length)]
+  paper.push(chainQ)
+
+  const graphPool = []
+  Object.values(examGraphs).forEach(qs => graphPool.push(...qs))
+  if (graphPool.length > 0) {
+    paper.push(graphPool[Math.floor(Math.random() * graphPool.length)])
+  }
+
+  // Section D — Novel context OR extended 6-mark
+  const novelQ = examNovelContext[Math.floor(Math.random() * examNovelContext.length)]
+  paper.push(novelQ)
+
+  return paper
 }

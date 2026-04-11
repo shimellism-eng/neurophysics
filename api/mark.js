@@ -70,7 +70,7 @@ export default async function handler(req, res) {
 
   // ── Auth — require valid Supabase session ─────────────────────────────────
   try {
-    verifySupabaseJWT(req.headers.authorization)
+    await verifySupabaseJWT(req.headers.authorization)
   } catch {
     return res.status(401).json({ error: 'UNAUTHORIZED' })
   }

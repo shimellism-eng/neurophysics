@@ -43,7 +43,7 @@ export default async function handler(req, res) {
   // Verify JWT signature and expiry using shared helper
   let userId
   try {
-    const { userId: uid } = verifySupabaseJWT(authHeader)
+    const { userId: uid } = await verifySupabaseJWT(authHeader)
     userId = uid
   } catch {
     return res.status(401).json({ error: 'Invalid or expired token' })

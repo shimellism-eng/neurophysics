@@ -30,15 +30,23 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
   const handleSubmit = async () => {
     if (answer.trim().length < MIN_CHARS) return
     setStatus('marking')
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 30000)
     try {
       // Pass scenario + question together so the AI has full context
       const fullQuestion = scenario ? `Context: ${scenario}\n\n${question}` : question
       const session = supabase ? (await supabase.auth.getSession()).data?.session : null
+      if (!session?.access_token) {
+        clearTimeout(timeout)
+        setStatus('error')
+        return
+      }
       const res = await fetch(`${API_BASE}/api/mark`, {
         method: 'POST',
+        signal: controller.signal,
         headers: {
           'content-type': 'application/json',
-          ...(session?.access_token ? { 'Authorization': `Bearer ${session.access_token}` } : {}),
+          'Authorization': `Bearer ${session.access_token}`,
         },
         body: JSON.stringify({
           question: fullQuestion,
@@ -47,11 +55,13 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
           marks,
         }),
       })
+      clearTimeout(timeout)
       const d = await res.json()
       if (d.error || !d.breakdown) { setStatus('error'); return }
       setResult(d)
       setStatus('marked')
     } catch {
+      clearTimeout(timeout)
       setStatus('error')
     }
   }

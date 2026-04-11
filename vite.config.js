@@ -68,6 +68,7 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-motion': ['motion/react'],
           'vendor-ui': ['lucide-react'],
+          'vendor-sentry': ['@sentry/react'],
           // Exam question data — only loaded when ExamPractice is first visited
           'data-exam': [
             './src/data/examCalculations.js',
@@ -77,6 +78,12 @@ export default defineConfig({
             './src/data/examParticleModel.js',
             './src/data/examSpace.js',
             './src/data/examIndex.js',
+            './src/data/examChained.js',
+            './src/data/examDiagramQs.js',
+            './src/data/examDiagrams.jsx',
+            './src/data/examExtended.js',
+            './src/data/examNovelContext.js',
+            './src/data/examRPAErrors.js',
           ],
           // Diagnostic question data — only loaded when DiagnosticQuestion is first visited
           'data-questions': [

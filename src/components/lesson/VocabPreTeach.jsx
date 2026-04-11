@@ -9,14 +9,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { ChevronRight, Volume2, CheckCircle2, Zap, Link } from 'lucide-react'
-
-function speak(text) {
-  if (!('speechSynthesis' in window)) return
-  window.speechSynthesis.cancel()
-  const utt = new SpeechSynthesisUtterance(text)
-  utt.rate = 0.85
-  window.speechSynthesis.speak(utt)
-}
+import { speak } from '../../utils/tts'
 
 // Micro-check: 2 matching questions at the end
 function MicroCheck({ keywords, moduleColor, onPass }) {

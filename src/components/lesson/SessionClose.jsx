@@ -119,6 +119,27 @@ export default function SessionClose({
           </AnimatePresence>
         </div>
 
+        {/* XP earned */}
+        <motion.div
+          className="flex flex-col items-center gap-1"
+          initial={{ opacity: 0, scale: 0.5, y: -20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 22, delay: 0.15 }}
+        >
+          <div
+            className="font-display font-bold"
+            style={{ fontSize: 28, color: '#fdc700', letterSpacing: '-0.02em', lineHeight: 1 }}
+          >
+            ✨ +50 XP
+          </div>
+          <div
+            className="text-sm font-semibold"
+            style={{ color: '#fb923c' }}
+          >
+            🔥 Keep it up!
+          </div>
+        </motion.div>
+
         <div className="text-center">
           <h2
             className="font-display font-bold"

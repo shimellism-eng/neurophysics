@@ -198,8 +198,8 @@ function StepValueProp({ onNext }) {
   )
 }
 
-// ─── Step 1: Profile ──────────────────────────────────────────────────────────
-function StepProfile({ onNext }) {
+// ─── Step 3 (last, optional): Profile / Avatar ────────────────────────────────
+function StepProfile({ onNext, onSkip }) {
   const [name, setName] = useState('')
   const [avatar, setAvatar] = useState('🧠')
   const [error, setError] = useState(false)
@@ -229,13 +229,11 @@ function StepProfile({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Step indicator (2/5) */}
+          {/* No numbered dots — this is a bonus optional step */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
           </div>
 
           <div className="flex items-center gap-3 mb-3">
@@ -245,17 +243,17 @@ function StepProfile({ onNext }) {
             >
               <User size={18} color="#6366f1" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Create Profile</span>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Almost done!</span>
           </div>
 
           <h1
             className="text-4xl font-extrabold leading-tight mb-3"
             style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}
           >
-            Who's{'\n'}studying today?
+            Personalise{'\n'}your profile
           </h1>
           <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
-            Your progress is saved locally on this device, private and secure.
+            Optional — you can always update this in Settings later.
           </p>
         </motion.div>
 
@@ -369,9 +367,9 @@ function StepProfile({ onNext }) {
         </motion.div>
       </div>
 
-      {/* Next button */}
+      {/* Next + Skip buttons */}
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0"
+        className="px-6 pt-3 pb-10 shrink-0 flex flex-col gap-3"
         style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -387,23 +385,34 @@ function StepProfile({ onNext }) {
           }}
           onClick={handleNext}
           whileTap={{ scale: 0.97 }}
-          aria-label="Continue to learning preferences"
+          aria-label="Save profile and enter app"
         >
-          Continue
+          Let's go
           <ArrowRight size={18} />
+        </motion.button>
+        <motion.button
+          className="w-full py-3 rounded-[18px] text-sm font-semibold"
+          style={{ color: 'rgba(255,255,255,0.35)', background: 'transparent' }}
+          onClick={onSkip}
+          whileTap={{ scale: 0.97 }}
+          aria-label="Skip profile setup"
+        >
+          Skip for now
         </motion.button>
       </motion.div>
     </motion.div>
   )
 }
 
-// ─── Step 2: Learning Prefs ───────────────────────────────────────────────────
-function StepPrefs({ profileData, onFinish }) {
+// ─── Step 2 (new): Learning Prefs — skippable ────────────────────────────────
+function StepPrefs({ onNext, onSkip }) {
   const [prefs, setPrefs] = useState(() =>
     Object.fromEntries(OPTIONS.map(o => [o.id, o.defaultOn ?? false]))
   )
 
   const toggle = id => setPrefs(p => ({ ...p, [id]: !p[id] }))
+
+  const defaultPrefs = Object.fromEntries(OPTIONS.map(o => [o.id, o.defaultOn ?? false]))
 
   return (
     <motion.div
@@ -421,28 +430,19 @@ function StepPrefs({ profileData, onFinish }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (5/5) */}
+          {/* Step indicator (3/3) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-          </div>
-
-          <div
-            className="w-14 h-14 rounded-[18px] flex items-center justify-center text-3xl mb-4"
-            style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)' }}
-          >
-            {profileData.avatar}
           </div>
 
           <h1
             className="text-4xl font-extrabold leading-tight mb-3"
             style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}
           >
-            Hey {profileData.name}!{'\n'}
-            <span style={{ color: '#6366f1' }}>How do you learn?</span>
+            How do{'\n'}
+            <span style={{ color: '#6366f1' }}>you learn best?</span>
           </h1>
           <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
             Customise NeuroPhysics to match your needs. Change these anytime in Settings.
@@ -463,24 +463,34 @@ function StepPrefs({ profileData, onFinish }) {
       </div>
 
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0"
+        className="px-6 pt-3 pb-10 shrink-0 flex flex-col gap-3"
         style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
         <motion.button
-          className="w-full py-4 rounded-[18px] text-base font-bold"
+          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
             background: 'linear-gradient(135deg, #4f6ef7, #6366f1)',
             color: '#fff',
             boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
           }}
-          onClick={() => onFinish(prefs)}
+          onClick={() => onNext(prefs)}
           whileTap={{ scale: 0.97 }}
-          aria-label="Start learning"
+          aria-label="Save preferences and continue"
         >
-          Start Learning 🚀
+          Save &amp; Continue
+          <ArrowRight size={18} />
+        </motion.button>
+        <motion.button
+          className="w-full py-3 rounded-[18px] text-sm font-semibold"
+          style={{ color: 'rgba(255,255,255,0.35)', background: 'transparent' }}
+          onClick={() => onSkip(defaultPrefs)}
+          whileTap={{ scale: 0.97 }}
+          aria-label="Skip preferences"
+        >
+          Skip for now
         </motion.button>
       </motion.div>
     </motion.div>
@@ -514,10 +524,8 @@ function StepBoard({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (3/5) */}
+          {/* Step indicator (1/3) */}
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
@@ -635,7 +643,7 @@ function StepBoard({ onNext }) {
 }
 
 // ─── Step 4: Goal ────────────────────────────────────────────────────────────
-function StepGoal({ profileData, boardId, onNext }) {
+function StepGoal({ boardId, onNext }) {
   const isCCEA = boardId === 'ccea'
   const GRADES_91   = ['4', '5', '6', '7', '8', '9']
   const GRADES_CCEA = ['C', 'C*', 'B', 'A', 'A*']  // ascending: C < C* < B < A < A*
@@ -661,16 +669,12 @@ function StepGoal({ profileData, boardId, onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (4/5) */}
+          {/* Step indicator (2/3) */}
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
-
-          <div className="text-4xl mb-4">{profileData.avatar}</div>
 
           <h1 className="text-4xl font-extrabold leading-tight mb-3" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
             What's your{'\n'}<span style={{ color: '#6366f1' }}>target grade?</span>
@@ -795,7 +799,8 @@ function StepGoal({ profileData, boardId, onNext }) {
 }
 
 // ─── Main Onboarding ──────────────────────────────────────────────────────────
-// Steps: 0 Value → 1 Profile → 2 Board → 3 Goal → 4 Prefs
+// New steps: 0 Board → 1 Goal → 2 Prefs (skippable) → 3 Profile/Avatar (skippable)
+// StepValueProp kept above but removed from active flow (LandingScreen handles it)
 export default function OnboardingScreen() {
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
@@ -803,38 +808,52 @@ export default function OnboardingScreen() {
   const [boardId, setBoardId] = useState('aqa')
   const [goalData, setGoalData] = useState(null)
 
-  const handleProfileNext = (data) => {
-    setProfileData(data)
-    setStep(2)
-  }
-
   const handleBoardNext = (id) => {
     setBoardId(id)
-    setStep(3)
+    setStep(1)
   }
 
   const handleGoalNext = (data) => {
     setGoalData(data)
-    setStep(4)
+    setStep(2)
   }
 
-  const handleFinish = (prefs) => {
-    localStorage.setItem('neurophysics_onboarded', '1')
+  const handlePrefsNext = (prefs) => {
+    savePrefsAndContinue(prefs)
+  }
+
+  const handlePrefsSkip = (defaultPrefs) => {
+    savePrefsAndContinue(defaultPrefs)
+  }
+
+  const savePrefsAndContinue = (prefs) => {
     localStorage.setItem('neurophysics_prefs', JSON.stringify(prefs))
-    localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profileData, ...goalData }))
-    // Board was already saved to localStorage in StepBoard — ensure it's recorded in profile too
-    localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profileData, ...goalData, boardId }))
+    setStep(3)
+  }
+
+  const handleProfileNext = (data) => {
+    setProfileData(data)
+    finishOnboarding(data)
+  }
+
+  const handleProfileSkip = () => {
+    finishOnboarding({ name: '', avatar: '🧠', ageGroup: '' })
+  }
+
+  const finishOnboarding = (profile) => {
+    const finalGoal = goalData || { grade: boardId === 'ccea' ? 'B' : '7', examDate: null }
+    localStorage.setItem('neurophysics_onboarded', '1')
+    localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profile, ...finalGoal, boardId }))
     navigate('/', { replace: true })
   }
 
   return (
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
-        {step === 0 && <StepValueProp key="value" onNext={() => setStep(1)} />}
-        {step === 1 && <StepProfile key="profile" onNext={handleProfileNext} />}
-        {step === 2 && <StepBoard key="board" onNext={handleBoardNext} />}
-        {step === 3 && <StepGoal key="goal" profileData={profileData} boardId={boardId} onNext={handleGoalNext} />}
-        {step === 4 && <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />}
+        {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
+        {step === 1 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
+        {step === 2 && <StepPrefs key="prefs" onNext={handlePrefsNext} onSkip={handlePrefsSkip} />}
+        {step === 3 && <StepProfile key="profile" onNext={handleProfileNext} onSkip={handleProfileSkip} />}
       </AnimatePresence>
     </div>
   )

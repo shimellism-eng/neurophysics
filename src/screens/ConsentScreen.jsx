@@ -4,22 +4,40 @@
  * Sets neurophysics_consent in localStorage on acceptance.
  */
 import { useState } from 'react'
-import { motion } from 'motion/react'
+import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Shield, Check, ChevronRight } from 'lucide-react'
+import { Shield, Check, ChevronRight, AlertTriangle } from 'lucide-react'
+
+const CURRENT_YEAR = new Date().getFullYear()
+
+function calcAge(year, month) {
+  if (!year || !month) return null
+  const now = new Date()
+  let age = now.getFullYear() - parseInt(year)
+  if (now.getMonth() + 1 < parseInt(month)) age--
+  return age
+}
 
 export default function ConsentScreen() {
   const navigate = useNavigate()
+  const [birthYear, setBirthYear] = useState('')
+  const [birthMonth, setBirthMonth] = useState('')
   const [ageConfirmed, setAgeConfirmed] = useState(false)
   const [termsRead, setTermsRead] = useState(false)
 
-  const canContinue = ageConfirmed && termsRead
+  const age = calcAge(birthYear, birthMonth)
+  const ageEntered = birthYear.length === 4 && birthMonth !== ''
+  const isUnder13 = ageEntered && age !== null && age < 13
+  const isOldEnough = ageEntered && age !== null && age >= 13
+
+  const canContinue = isOldEnough && ageConfirmed && termsRead
 
   const handleContinue = () => {
     try {
       localStorage.setItem('neurophysics_consent', JSON.stringify({
         ts: Date.now(),
         version: '2026-04',
+        ageVerified: age,
       }))
     } catch {}
     navigate('/auth', { replace: true })
@@ -81,6 +99,69 @@ export default function ConsentScreen() {
           </p>
         </motion.div>
 
+        {/* Age verification */}
+        <motion.div
+          className="rounded-[18px] px-4 py-4"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.4 }}
+        >
+          <p className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: '#556677' }}>Your date of birth</p>
+          <div className="flex gap-3">
+            <select
+              value={birthMonth}
+              onChange={e => setBirthMonth(e.target.value)}
+              className="flex-1 rounded-[10px] px-3 py-2.5 text-sm font-semibold"
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '0.75px solid #2d3e55',
+                color: birthMonth ? '#f8fafc' : '#556677',
+                outline: 'none',
+              }}
+            >
+              <option value="">Month</option>
+              {['January','February','March','April','May','June','July','August','September','October','November','December'].map((m, i) => (
+                <option key={i} value={i + 1}>{m}</option>
+              ))}
+            </select>
+            <input
+              type="number"
+              placeholder="Year"
+              value={birthYear}
+              onChange={e => setBirthYear(e.target.value.slice(0, 4))}
+              min={CURRENT_YEAR - 100}
+              max={CURRENT_YEAR}
+              className="w-24 rounded-[10px] px-3 py-2.5 text-sm font-semibold"
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '0.75px solid #2d3e55',
+                color: '#f8fafc',
+                outline: 'none',
+              }}
+            />
+          </div>
+
+          {/* Under-13 warning */}
+          <AnimatePresence>
+            {isUnder13 && (
+              <motion.div
+                className="flex items-start gap-2 mt-3 px-3 py-3 rounded-[10px]"
+                style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)' }}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+              >
+                <AlertTriangle size={14} color="#f87171" style={{ flexShrink: 0, marginTop: 1 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#fca5a5' }}>
+                  NeuroPhysics requires users to be 13 or older. If you are under 13,
+                  please ask a parent or guardian to create an account on your behalf.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+
         {/* Checkboxes */}
         <motion.div
           className="space-y-3"
@@ -88,35 +169,44 @@ export default function ConsentScreen() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.4 }}
         >
-          {/* Age confirmation */}
-          <button
-            className="w-full flex items-start gap-3 rounded-[14px] px-4 py-4 text-left"
-            style={{
-              background: ageConfirmed ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
-              border: ageConfirmed ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
-              transition: 'all 0.2s',
-            }}
-            onClick={() => setAgeConfirmed(p => !p)}
-          >
-            <div
-              className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
-              style={{
-                background: ageConfirmed ? '#6366f1' : 'rgba(255,255,255,0.07)',
-                border: ageConfirmed ? 'none' : '0.75px solid #2d3e55',
-                transition: 'all 0.2s',
-              }}
-            >
-              {ageConfirmed && <Check size={14} color="#fff" strokeWidth={2.5} />}
-            </div>
-            <div className="flex-1">
-              <p className="text-sm font-semibold" style={{ color: ageConfirmed ? '#818cf8' : '#f8fafc' }}>
-                I am 13 or older
-              </p>
-              <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
-                If you are under 16, a parent or guardian should agree on your behalf.
-              </p>
-            </div>
-          </button>
+          {/* Age confirmation — only shown if old enough */}
+          <AnimatePresence>
+            {isOldEnough && (
+              <motion.button
+                className="w-full flex items-start gap-3 rounded-[14px] px-4 py-4 text-left"
+                style={{
+                  background: ageConfirmed ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
+                  border: ageConfirmed ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
+                  transition: 'all 0.2s',
+                }}
+                onClick={() => setAgeConfirmed(p => !p)}
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+              >
+                <div
+                  className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
+                  style={{
+                    background: ageConfirmed ? '#6366f1' : 'rgba(255,255,255,0.07)',
+                    border: ageConfirmed ? 'none' : '0.75px solid #2d3e55',
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  {ageConfirmed && <Check size={14} color="#fff" strokeWidth={2.5} />}
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-semibold" style={{ color: ageConfirmed ? '#818cf8' : '#f8fafc' }}>
+                    I confirm I am {age} years old
+                  </p>
+                  <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
+                    {age < 16
+                      ? 'As you are under 16, a parent or guardian should confirm this on your behalf.'
+                      : 'I understand how my data is used and my rights under UK GDPR.'}
+                  </p>
+                </div>
+              </motion.button>
+            )}
+          </AnimatePresence>
 
           {/* Terms + Privacy confirmation */}
           <button

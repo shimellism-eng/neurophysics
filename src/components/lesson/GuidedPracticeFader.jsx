@@ -13,9 +13,30 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, Lightbulb, CheckCircle2, XCircle, Star } from 'lucide-react'
+import { ChevronRight, Lightbulb, CheckCircle2, XCircle, Star, Volume2 } from 'lucide-react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
+import { speak } from '../../utils/tts'
+
+function ttsEnabled() {
+  try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false }
+}
+
+// Small TTS button placed top-right of a question card
+function TTSButton({ text, moduleColor }) {
+  if (!ttsEnabled()) return null
+  return (
+    <button
+      className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold shrink-0"
+      style={{ background: `${moduleColor}20`, color: moduleColor }}
+      onClick={() => speak(text)}
+      aria-label="Read question aloud"
+    >
+      <Volume2 size={10} />
+      Read
+    </button>
+  )
+}
 
 const TIER_LABELS = ['Fill the gap', 'With a hint', 'On your own']
 
@@ -203,7 +224,10 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
         className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <p className="font-display text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
+        <div className="flex items-start gap-2">
+          <p className="font-display text-[15px] leading-relaxed font-medium flex-1" style={{ color: '#f0f4f8' }}>{question}</p>
+          <TTSButton text={question} moduleColor={moduleColor} />
+        </div>
       </div>
 
       {/* All steps shown, last one is missing */}
@@ -307,7 +331,10 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
         className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <p className="font-display text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
+        <div className="flex items-start gap-2">
+          <p className="font-display text-[15px] leading-relaxed font-medium flex-1" style={{ color: '#f0f4f8' }}>{question}</p>
+          <TTSButton text={question} moduleColor={moduleColor} />
+        </div>
       </div>
 
       {/* Partial scaffold */}
@@ -488,7 +515,10 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
         className="rounded-[16px] px-4 py-4"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
       >
-        <p className="font-display text-[15px] leading-relaxed font-medium" style={{ color: '#f0f4f8' }}>{question}</p>
+        <div className="flex items-start gap-2">
+          <p className="font-display text-[15px] leading-relaxed font-medium flex-1" style={{ color: '#f0f4f8' }}>{question}</p>
+          <TTSButton text={question} moduleColor={moduleColor} />
+        </div>
       </div>
 
       <NumericInput

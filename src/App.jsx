@@ -30,6 +30,8 @@ const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
 const ShareProgressScreen = lazy(() => import('./screens/ShareProgressScreen'))
 const AdaptivePractice   = lazy(() => import('./screens/AdaptivePractice'))
 const ConsentScreen     = lazy(() => import('./screens/ConsentScreen'))
+const LandingScreen     = lazy(() => import('./screens/LandingScreen'))
+const SpecChecklist     = lazy(() => import('./screens/SpecChecklist'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
@@ -177,7 +179,7 @@ function FloatingMamo() {
 // Routes that show the bottom nav
 const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
-const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms', '/share', '/consent']
+const PUBLIC_ROUTES = ['/', '/auth', '/privacy', '/terms', '/share', '/consent']
 
 function AppShell() {
   const location = useLocation()
@@ -188,7 +190,7 @@ function AppShell() {
     window.scrollTo(0, 0)
   }, [location.pathname])
   const isPublic = PUBLIC_ROUTES.includes(location.pathname)
-  const showShell = SHELL_ROUTES.includes(location.pathname)
+  const showShell = !!user && SHELL_ROUTES.includes(location.pathname)
 
   // Show nothing while auth state loads
   if (loading) {
@@ -240,7 +242,7 @@ function AppShell() {
           <Routes>
             <Route path="/auth" element={<AuthScreen />} />
             <Route path="/onboarding" element={<OnboardingScreen />} />
-            <Route path="/" element={<HomeScreen />} />
+            <Route path="/" element={user ? <HomeScreen /> : <LandingScreen />} />
             <Route path="/learn" element={<LearnScreen />} />
             <Route path="/topics" element={<Navigate to="/learn" replace />} />
             <Route path="/mastery" element={<Navigate to="/learn" replace />} />
@@ -259,6 +261,7 @@ function AppShell() {
             <Route path="/terms" element={<TermsScreen />} />
             <Route path="/share" element={<ShareProgressScreen />} />
             <Route path="/practice/:topicId" element={<AdaptivePractice />} />
+            <Route path="/spec-checklist" element={<SpecChecklist />} />
             <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
           </Routes>
         </Suspense>

@@ -55,6 +55,9 @@ export default async function handler(req, res) {
   // ── Rate limiting (persistent — Upstash Redis) ───────────────────────────
   if (await rateLimitCheck(req, res)) return
 
+  // Log incoming request (declared here so it's in scope for the usage log below)
+  const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.socket?.remoteAddress || 'unknown'
+
   // ── API key ───────────────────────────────────────────────────────────────
   const apiKey = (process.env.GOOGLE_AI_API_KEY || '').trim()
   if (!apiKey) {

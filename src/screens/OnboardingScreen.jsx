@@ -638,7 +638,7 @@ function StepBoard({ onNext }) {
 function StepGoal({ profileData, boardId, onNext }) {
   const isCCEA = boardId === 'ccea'
   const GRADES_91   = ['4', '5', '6', '7', '8', '9']
-  const GRADES_CCEA = ['C', 'B', 'A', 'C*', 'A*']  // ascending aspirational order
+  const GRADES_CCEA = ['C', 'C*', 'B', 'A', 'A*']  // ascending: C < C* < B < A < A*
 
   const [grade, setGrade] = useState(isCCEA ? 'B' : '7')
   const [examDate, setExamDate] = useState('')

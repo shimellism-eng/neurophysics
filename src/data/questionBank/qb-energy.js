@@ -857,6 +857,7 @@ const energyQuestions = [
     senNote: 'E = Pt: energy (J) = power (W) × time (s).',
   },
   {
+    // Edexcel & CCEA use g = 10 N/kg
     id: 'ee_t1_09',
     topicId: 'energy_equations',
     course: 'combined',
@@ -864,10 +865,26 @@ const energyQuestions = [
     type: 'mcq',
     marks: 1,
     timeExpected: 30,
-    question: 'The value of g on Earth used in GCSE Physics calculations is:',
+    boards: ['edexcel', 'ccea'],
+    question: 'The value of g on Earth used in calculations for your specification is:',
     options: ['9.8 N/kg', '9.81 N/kg', '10 N/kg', '10.8 N/kg'],
     correctIndex: 2,
-    senNote: 'GCSE Physics uses g = 10 N/kg unless the question states otherwise.',
+    senNote: 'Edexcel and CCEA use g = 10 N/kg throughout. AQA and OCR use g = 9.8 N/kg — always check which value your exam board requires.',
+  },
+  {
+    // AQA, OCR-A, OCR-B, WJEC use g = 9.8 N/kg
+    id: 'ee_t1_09b',
+    topicId: 'energy_equations',
+    course: 'combined',
+    tier: 1,
+    type: 'mcq',
+    marks: 1,
+    timeExpected: 30,
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
+    question: 'The value of g on Earth used in calculations for your specification is:',
+    options: ['10 N/kg', '9.81 N/kg', '9.8 N/kg', '10.8 N/kg'],
+    correctIndex: 2,
+    senNote: 'AQA, OCR and WJEC all use g = 9.8 N/kg. Edexcel and CCEA use g = 10 N/kg — always check which value your exam board requires.',
   },
   {
     id: 'ee_t1_10',

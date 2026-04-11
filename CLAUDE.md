@@ -266,7 +266,10 @@
 - [x] LearnScreen 'Start here' CTA checks lessonSteps before routing to /lesson/ vs /practice/
 - [x] Full lesson content for 8 board-specific topics: topics-keyconcepts.jsx (Edexcel — SI Units, Scalars, Equations), topics-globalchallenges.jsx (OCR-A — Transport Safety, Electricity Costs), topics-universe.jsx (OCR-B — Telescope Optics, HR Diagram, History of Astronomy)
 - [x] All 8 topics have full 9-step lesson schema + interactive React/SVG visual components (lessonVisual, ideaVisual, realityVisual)
-- [ ] PWA manifest + service worker confirmed working
+- [x] PWA service worker live — vite-plugin-pwa, Workbox, 45 entries precached, offline support
+- [x] App experience audit (5-agent) + Phase 1 fixes: TimedPaper memory leak, BottomNav Learn-tab active state on lesson/exam/practical routes, LessonPlayer STEPS filter (no null screens), resume step validation, break nudges + elapsed timer in lesson, AI marking 30s timeout + auth guard (ExtendedAnswerQuestion), Cache-Control headers for static assets, CSP updated for cdnfonts.com, TTS buttons in HookCard + WorkedExampleStepper
+- [x] App experience audit Phase 2 fixes: PriorKnowledgeProbe state preserved on back navigation, AdaptivePractice AI marking auth token + timeout, board name badge on HomeScreen
+- [x] useSessionTimer: sessionStorage persistence so refresh doesn't reset ADHD break timer (fixed crash from bad useRef init pattern)
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 
 ---
@@ -278,6 +281,8 @@
 - Component files: PascalCase. Utility/hook files: camelCase
 - Screens go in src/screens/. Reusable UI goes in src/components/
 - Data files go in src/data/. Follow existing naming pattern
+- **NEVER delete any code, file, or content without explicit user permission — always add/edit only**
+- **ALWAYS end every session with the full checklist: Vercel deploy + GitHub push + cap sync ios + CLAUDE.md update**
 
 ## API / Security Conventions
 

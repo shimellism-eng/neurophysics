@@ -271,6 +271,8 @@
 - [x] App experience audit Phase 2 fixes: PriorKnowledgeProbe state preserved on back navigation, AdaptivePractice AI marking auth token + timeout, board name badge on HomeScreen
 - [x] useSessionTimer: sessionStorage persistence so refresh doesn't reset ADHD break timer (fixed crash from bad useRef init pattern)
 - [x] LearnScreen routing fix: new 9-step topics (topic.hook) now correctly route to /lesson/:id — was incorrectly routing to /practice/:id because check only tested legacy topic.lessonSteps field
+- [x] Examiner audit of all 11 Required Practicals across all 6 boards (AQA/Edexcel/OCR-A/OCR-B/WJEC/CCEA) — 3 agents deployed in parallel
+- [x] All critical examiner-identified errors fixed in practicals.js and qb-practicals.js: voltmeter placement (RP1), energy table typo (RP1), IV definitions (RP1/RP5/RP6), liquid density method (RP5), latent heat sample data (RP6), hazard format (RP6), RP7 axes + units, RP8 air track→trolley, RP9 frequency/stroboscope/longitudinal, RP10 4th Leslie face + radiator error, RP11 plane mirror Part A + r notation
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 
 ---

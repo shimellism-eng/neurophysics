@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CheckCircle2, Zap, ChevronDown, ChevronUp,
@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
+import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
 
 // ─── Badge definitions (for next milestone) ──────────────────────────────────
 
@@ -188,6 +189,12 @@ function ModuleCard({ module, moduleIndex, progress }) {
                   Physics only
                 </span>
               )}
+              {module.boardLabel && (
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full shrink-0"
+                  style={{ background: `${module.color}15`, color: module.color, border: `1px solid ${module.color}35` }}>
+                  {module.boardLabel}
+                </span>
+              )}
             </div>
             <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
               {masteredCount > 0
@@ -277,8 +284,22 @@ export default function LearnScreen() {
   const { progress } = useProgress()
   const [paperFilter, setPaperFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [selectedBoard, setSelectedBoard] = useState(() => getSelectedBoard())
 
-  const totalTopics   = Object.keys(TOPICS).length
+  // Re-read board if settings change while component is mounted
+  useEffect(() => {
+    const onStorage = () => setSelectedBoard(getSelectedBoard())
+    window.addEventListener('storage', onStorage)
+    // Also check on focus (iOS doesn't fire storage events reliably)
+    const onFocus = () => setSelectedBoard(getSelectedBoard())
+    window.addEventListener('focus', onFocus)
+    return () => { window.removeEventListener('storage', onStorage); window.removeEventListener('focus', onFocus) }
+  }, [])
+
+  // Board-filtered modules (board-specific modules only show for their board)
+  const boardModules = MODULES.filter(m => isAvailableForBoard(m.boards, selectedBoard.id))
+
+  const totalTopics   = boardModules.flatMap(m => m.topics).filter(id => TOPICS[id]).length
   const masteredTotal = Object.values(progress).filter(p => p?.mastered).length
   const overallPct    = totalTopics > 0 ? (masteredTotal / totalTopics) * 100 : 0
   const isNewUser     = masteredTotal === 0
@@ -287,20 +308,20 @@ export default function LearnScreen() {
   const nextBadge = BADGES.find(b => !b.check(masteredTotal, totalTopics))
 
   // First unmastered topic for "Start here" banner
-  const allModuleTopics  = MODULES.flatMap(m => m.topics)
+  const allModuleTopics  = boardModules.flatMap(m => m.topics)
   const firstUnmastered  = allModuleTopics.find(id => !progress[id]?.mastered)
   const firstTopic       = firstUnmastered ? TOPICS[firstUnmastered] : null
-  const firstModule      = firstUnmastered ? MODULES.find(m => m.topics.includes(firstUnmastered)) : null
+  const firstModule      = firstUnmastered ? boardModules.find(m => m.topics.includes(firstUnmastered)) : null
 
-  const filteredModules = MODULES.filter(m => {
+  const filteredModules = boardModules.filter(m => {
     if (paperFilter === 'paper1') return PAPER1_MODULES.includes(m.name)
     if (paperFilter === 'paper2') return PAPER2_MODULES.includes(m.name)
     return true
   })
 
-  // Search: flat results across all topics
+  // Search: flat results across board-filtered modules
   const searchResults = searchQuery.trim().length > 1
-    ? MODULES.flatMap(m =>
+    ? boardModules.flatMap(m =>
         m.topics
           .filter(id => {
             const t = TOPICS[id]
@@ -317,9 +338,22 @@ export default function LearnScreen() {
       {/* ── Header: compact progress ── */}
       <div className="px-5 pt-6 pb-4 shrink-0">
         <div className="flex items-center justify-between mb-1">
-          <h1 className="text-[22px] font-bold tracking-tight" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
-            GCSE Physics
-          </h1>
+          <div>
+            <h1 className="text-[22px] font-bold tracking-tight" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+              GCSE Physics
+            </h1>
+            <button
+              onClick={() => navigate('/settings')}
+              className="inline-flex items-center gap-1 mt-0.5 px-2 py-0.5 rounded-full text-[10px] font-bold"
+              style={{
+                background: `${selectedBoard.color}18`,
+                border: `1px solid ${selectedBoard.color}40`,
+                color: selectedBoard.color,
+              }}
+            >
+              {selectedBoard.flag} {selectedBoard.name}
+            </button>
+          </div>
           {masteredTotal > 0 && (
             <span className="text-xs font-bold" style={{ color: '#6366f1' }}>
               {masteredTotal}/{totalTopics} mastered

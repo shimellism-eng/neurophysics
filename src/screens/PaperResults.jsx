@@ -12,9 +12,9 @@ import {
   BarChart3, Lightbulb, Clock, Target, Star,
 } from 'lucide-react'
 
-// ── Approximate grade boundary ranges ──────────────────────────────────────
-// Expressed as percentage of total marks (35 marks paper)
-// These are RANGES, not exact numbers, to avoid false precision
+import { getSelectedBoard, CCEA_BOUNDARIES } from '../utils/boardConfig'
+
+// ── Approximate grade boundary ranges (9-1 system) ───────────────────────────
 const GRADE_RANGES = [
   { grade: '9', min: 0.85, label: 'Grade 9', color: '#a855f7', bg: 'rgba(168,85,247,0.15)', desc: 'Outstanding - top tier nationally' },
   { grade: '8', min: 0.75, label: 'Grade 8', color: '#6366f1', bg: 'rgba(99,102,241,0.15)', desc: 'Excellent - well above national average' },
@@ -27,8 +27,26 @@ const GRADE_RANGES = [
 ]
 
 function getGrade(score, total) {
+  const board = getSelectedBoard()
   const pct = score / total
+  if (board.id === 'ccea') {
+    const match = CCEA_BOUNDARIES.find(g => pct >= g.min)
+    return match
+      ? { grade: match.grade, label: `Grade ${match.grade}`, color: match.color, bg: match.bg, desc: match.desc }
+      : { grade: 'U', label: 'Ungraded', color: '#64748b', bg: 'rgba(100,116,139,0.12)', desc: 'Ungraded' }
+  }
   return GRADE_RANGES.find(g => pct >= g.min) || GRADE_RANGES[GRADE_RANGES.length - 1]
+}
+
+function getGradeScale() {
+  const board = getSelectedBoard()
+  if (board.id === 'ccea') {
+    return CCEA_BOUNDARIES.slice(0, 7).map(g => ({
+      grade: g.grade, min: g.min, label: `Grade ${g.grade}`,
+      color: g.color, bg: g.bg, desc: g.desc,
+    }))
+  }
+  return GRADE_RANGES.slice(0, 6)
 }
 
 // ── Section labels from question type ────────────────────────────────────────
@@ -176,7 +194,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
       {/* Grade scale */}
       <div className="px-6 pb-4">
         <div className="rounded-2xl overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
-          {GRADE_RANGES.slice(0, 6).map((g, i) => {
+          {getGradeScale().map((g, i) => {
             const isMe = g.grade === grade.grade
             return (
               <motion.div

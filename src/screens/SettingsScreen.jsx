@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, Share2 } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, Share2, GraduationCap } from 'lucide-react'
+import { BOARDS, BOARD_ORDER, getSelectedBoard, saveSelectedBoard } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureRemove } from '../utils/secureStorage'
@@ -142,6 +143,17 @@ export default function SettingsScreen() {
   const { user, signOut } = useAuth()
 
   const [signingOut, setSigningOut] = useState(false)
+  const [selectedBoardId, setSelectedBoardId] = useState(() => {
+    try { return localStorage.getItem('np_board') || 'aqa' } catch { return 'aqa' }
+  })
+
+  const handleSelectBoard = (boardId) => {
+    saveSelectedBoard(boardId)
+    setSelectedBoardId(boardId)
+    showToast(`Switched to ${BOARDS[boardId]?.name} ✓`, BOARDS[boardId]?.color || '#6366f1')
+    // Fire a storage event so LearnScreen updates without a full reload
+    try { window.dispatchEvent(new Event('storage')) } catch {}
+  }
 
   const handleSignOut = () => {
     setSigningOut(true)
@@ -615,6 +627,54 @@ export default function SettingsScreen() {
             </div>
           )}
         </motion.div>
+      </div>
+
+      {/* ── Exam Board Picker ── */}
+      <div className="px-5 mb-5">
+        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
+          Exam Board
+        </div>
+        <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+          <div className="flex items-center gap-2 mb-3">
+            <GraduationCap size={15} color="#6366f1" />
+            <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Your exam board</span>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            {BOARD_ORDER.map(boardId => {
+              const board = BOARDS[boardId]
+              const isSelected = selectedBoardId === boardId
+              return (
+                <motion.button
+                  key={boardId}
+                  onClick={() => handleSelectBoard(boardId)}
+                  className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
+                  style={{
+                    background: isSelected ? `${board.color}18` : 'rgba(255,255,255,0.03)',
+                    border: isSelected ? `1.5px solid ${board.color}60` : '1px solid rgba(255,255,255,0.08)',
+                    transition: 'all 0.15s ease',
+                  }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <div className="flex items-center gap-1.5 mb-0.5">
+                    <span style={{ fontSize: 13 }}>{board.flag}</span>
+                    <span className="text-xs font-bold" style={{ color: isSelected ? board.color : '#f8fafc' }}>
+                      {board.name}
+                    </span>
+                    {isSelected && (
+                      <div className="w-1.5 h-1.5 rounded-full ml-auto" style={{ background: board.color }} />
+                    )}
+                  </div>
+                  <span className="text-[10px] leading-tight" style={{ color: '#556677' }}>
+                    {board.description}
+                  </span>
+                </motion.button>
+              )
+            })}
+          </div>
+          <p className="text-[10px] text-center pt-1" style={{ color: '#3a4a5a' }}>
+            This filters topics to match your exam board's specification
+          </p>
+        </div>
       </div>
 
       {/* Sections */}

@@ -6,7 +6,8 @@ import { WAVES_TOPICS } from './topics-waves'
 import { PRACTICALS_TOPICS } from './topics-practicals'
 import {
   Zap, Battery, Flame, Wind, Activity,
-  Waves, Radio, Magnet, Globe2, FlaskConical
+  Waves, Radio, Magnet, Globe2, FlaskConical,
+  BookOpen, Globe, Telescope,
 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 
@@ -17,6 +18,60 @@ export const TOPICS = {
   ...FORCES_TOPICS,
   ...WAVES_TOPICS,
   ...PRACTICALS_TOPICS,
+
+  // ── Edexcel: Key Concepts of Physics (Topic 1) ────────────────────────────
+  key_concepts_units: {
+    id: 'key_concepts_units',
+    title: 'SI Units & Standard Form',
+    boards: ['edexcel'],
+    lessonSteps: [],
+  },
+  key_concepts_scalars: {
+    id: 'key_concepts_scalars',
+    title: 'Scalars and Vectors',
+    boards: ['edexcel'],
+    lessonSteps: [],
+  },
+  key_concepts_equations: {
+    id: 'key_concepts_equations',
+    title: 'Rearranging Equations',
+    boards: ['edexcel'],
+    lessonSteps: [],
+  },
+
+  // ── OCR Gateway A: Global Challenges (P8) ────────────────────────────────
+  transport_safety: {
+    id: 'transport_safety',
+    title: 'Transport Safety',
+    boards: ['ocr-a'],
+    lessonSteps: [],
+  },
+  electricity_costs: {
+    id: 'electricity_costs',
+    title: 'Electricity Costs',
+    boards: ['ocr-a'],
+    lessonSteps: [],
+  },
+
+  // ── OCR 21st Century B: Studying the Universe (P7) ───────────────────────
+  telescope_optics: {
+    id: 'telescope_optics',
+    title: 'Telescope Optics',
+    boards: ['ocr-b'],
+    lessonSteps: [],
+  },
+  stellar_classification: {
+    id: 'stellar_classification',
+    title: 'HR Diagram & Stellar Types',
+    boards: ['ocr-b'],
+    lessonSteps: [],
+  },
+  history_astronomy: {
+    id: 'history_astronomy',
+    title: 'History of Astronomy',
+    boards: ['ocr-b'],
+    lessonSteps: [],
+  },
 }
 
 // Topics that are GCSE Physics only (NOT in Combined Science Trilogy)
@@ -161,6 +216,46 @@ export const MODULES = [
       'radiation',
       'latent_heat',
       'light',
+    ],
+  },
+
+  // ── Board-specific modules ─────────────────────────────────────────────────
+  // boards: [] restricts the module to those boards only.
+  // When not set, a module shows for all boards.
+
+  {
+    name: 'Key Concepts',
+    color: '#f97316',
+    icon: BookOpen,
+    boards: ['edexcel'],
+    boardLabel: 'Edexcel Topic 1',
+    topics: [
+      'key_concepts_units',
+      'key_concepts_scalars',
+      'key_concepts_equations',
+    ],
+  },
+  {
+    name: 'Global Challenges',
+    color: '#10b981',
+    icon: Globe,
+    boards: ['ocr-a'],
+    boardLabel: 'OCR Gateway A — P8',
+    topics: [
+      'transport_safety',
+      'electricity_costs',
+    ],
+  },
+  {
+    name: 'Studying the Universe',
+    color: '#06b6d4',
+    icon: Telescope,
+    boards: ['ocr-b'],
+    boardLabel: 'OCR 21st Century — P7',
+    topics: [
+      'telescope_optics',
+      'stellar_classification',
+      'history_astronomy',
     ],
   },
 ]

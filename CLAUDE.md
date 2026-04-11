@@ -129,6 +129,9 @@
 │   ├── topics-matter.jsx
 │   ├── topics-waves.jsx
 │   ├── topics-practicals.jsx       # Required Practicals topic metadata
+│   ├── topics-keyconcepts.jsx      # Edexcel Key Concepts: SI units, scalars, equations
+│   ├── topics-globalchallenges.jsx # OCR Gateway A P8: transport safety, electricity costs
+│   ├── topics-universe.jsx         # OCR 21C P7: telescope optics, HR diagram, astronomy history
 │   ├── examIndex.js
 │   ├── examCalculations.js
 │   ├── examChained.js
@@ -261,6 +264,8 @@
 - [x] PracticalScreen: header badge translates RP→CP/PAG/SP/PP per board (practicalShort from boardConfig)
 - [x] All 'Grade 9' labels/buttons now compute from getSelectedBoard().gradeSystem — shows 'Grade A*' for CCEA
 - [x] LearnScreen 'Start here' CTA checks lessonSteps before routing to /lesson/ vs /practice/
+- [x] Full lesson content for 8 board-specific topics: topics-keyconcepts.jsx (Edexcel — SI Units, Scalars, Equations), topics-globalchallenges.jsx (OCR-A — Transport Safety, Electricity Costs), topics-universe.jsx (OCR-B — Telescope Optics, HR Diagram, History of Astronomy)
+- [x] All 8 topics have full 9-step lesson schema + interactive React/SVG visual components (lessonVisual, ideaVisual, realityVisual)
 - [ ] PWA manifest + service worker confirmed working
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 

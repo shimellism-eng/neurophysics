@@ -5,6 +5,7 @@ import { createClient } from '@supabase/supabase-js'
 
 const ALLOWED_ORIGINS = [
   'https://neurophysics.vercel.app',
+  'https://neurophysics.co.uk',
   'https://www.neurophysics.co.uk',
   'capacitor://localhost',
   'http://localhost',

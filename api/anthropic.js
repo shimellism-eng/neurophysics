@@ -30,6 +30,7 @@ export default async function handler(req, res) {
   // ── CORS ──────────────────────────────────────────────────────────────────
   const ALLOWED_ORIGINS = [
     'https://neurophysics.vercel.app',
+    'https://neurophysics.co.uk',
     'https://www.neurophysics.co.uk',
     'capacitor://localhost',
     'http://localhost',

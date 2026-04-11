@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { PRACTICALS } from '../data/practicals'
 import { useProgress } from '../hooks/useProgress'
+import { getSelectedBoard } from '../utils/boardConfig'
 
 // ─── Tabs ──────────────────────────────────────────────────────────────────────
 const TABS = [
@@ -1637,6 +1638,11 @@ export default function PracticalScreen() {
   const { progress, markStarted, markMastered } = useProgress()
 
   const p = PRACTICALS[id]
+  const board = getSelectedBoard()
+  // Translate "RP1" → board-appropriate label, e.g. "CP1" for Edexcel, "PAG1" for OCR
+  const boardPracticalId = p
+    ? p.number.replace('RP', board.practicalShort)
+    : board.practicalShort
 
   // Mark as started when practical is first opened
   useEffect(() => {
@@ -1685,7 +1691,7 @@ export default function PracticalScreen() {
         <div className="flex items-center gap-2 min-w-0 flex-1">
           <div className="px-2 py-0.5 rounded-[6px] text-xs font-bold shrink-0"
             style={{ background: `${color}20`, border: `0.75px solid ${color}60`, color }}>
-            {p.number}
+            {boardPracticalId}
           </div>
           <h1 className="text-base font-bold truncate" style={{ color: '#f8fafc' }}>{p.title}</h1>
         </div>

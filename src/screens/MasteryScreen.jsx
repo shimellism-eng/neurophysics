@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { CheckCircle, Circle, Zap, Trophy, Star, Copy, Clock, ChevronRight } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
+import { getSelectedBoard } from '../utils/boardConfig'
 
 // ---------------------------------------------------------------------------
 // Badge definitions
@@ -154,12 +155,14 @@ export default function MasteryScreen() {
   const percent  = Math.round((mastered.length / allTopics.length) * 100)
   const hasProgress = mastered.length > 0
 
-  // Badge logic
+  // Badge logic — board-aware grade label
+  const topGradeLabel = getSelectedBoard().gradeSystem === 'A*-G' ? 'Grade A*' : 'Grade 9'
+  const labelBadge = (b) => b.id === 'grade9' ? { ...b, label: topGradeLabel } : b
   const unlockedBadgeIds = BADGES
     .filter(b => b.check(mastered, progress, MODULES, allTopics))
     .map(b => b.id)
-  const earnedBadges = BADGES.filter(b => unlockedBadgeIds.includes(b.id))
-  const nextBadge    = BADGES.find(b => !unlockedBadgeIds.includes(b.id))
+  const earnedBadges = BADGES.filter(b => unlockedBadgeIds.includes(b.id)).map(labelBadge)
+  const nextBadge    = (() => { const b = BADGES.find(b => !unlockedBadgeIds.includes(b.id)); return b ? labelBadge(b) : null })()
 
   // Share modal
   const [showShareModal, setShowShareModal] = useState(false)
@@ -504,7 +507,7 @@ export default function MasteryScreen() {
               <Trophy size={18} color="#a855f7" />
             </div>
             <div className="text-left">
-              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topGradeLabel} Challenge</p>
               <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
             </div>
           </div>

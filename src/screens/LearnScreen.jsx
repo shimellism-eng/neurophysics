@@ -306,8 +306,13 @@ export default function LearnScreen() {
   const overallPct    = totalTopics > 0 ? (masteredTotal / totalTopics) * 100 : 0
   const isNewUser     = masteredTotal === 0
 
-  // Next milestone
-  const nextBadge = BADGES.find(b => !b.check(masteredTotal, totalTopics))
+  // Next milestone — compute badge with board-aware grade label
+  const topGradeLabel = selectedBoard.gradeSystem === 'A*-G' ? 'Grade A*' : 'Grade 9'
+  const nextBadge = (() => {
+    const b = BADGES.find(b => !b.check(masteredTotal, totalTopics))
+    if (!b) return null
+    return b.id === 'grade9' ? { ...b, label: topGradeLabel } : b
+  })()
 
   // First unmastered topic for "Start here" banner
   const allModuleTopics  = boardModules.flatMap(m => m.topics)
@@ -522,7 +527,11 @@ export default function LearnScreen() {
                 background: `linear-gradient(135deg, ${firstModule.color}d0, ${firstModule.color}70)`,
                 boxShadow: `0 6px 0 rgba(0,0,0,0.2), 0 12px 32px ${firstModule.color}28`,
               }}
-              onClick={() => navigate(`/lesson/${firstUnmastered}`)}
+              onClick={() => {
+                const t = TOPICS[firstUnmastered]
+                if (!t?.lessonSteps || t.lessonSteps.length === 0) navigate(`/practice/${firstUnmastered}`)
+                else navigate(`/lesson/${firstUnmastered}`)
+              }}
               whileTap={{ y: 3, boxShadow: 'none' }}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -602,7 +611,7 @@ export default function LearnScreen() {
                   <Trophy size={18} color="#a855f7" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
+                  <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topGradeLabel} Challenge</p>
                   <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Hard exam questions · Unusual scenarios</p>
                 </div>
               </div>

@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, Trophy, Star, ChevronRight, RotateCcw } from 'lucide-react'
 import { getGrade9Questions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
+import { getSelectedBoard } from '../utils/boardConfig'
 
 const MODULE_COLOR = '#a855f7' // purple for Grade 9
 
@@ -127,9 +128,16 @@ export default function Grade9Challenge() {
   const [completed, setCompleted] = useState(false)
   const [showResults, setShowResults] = useState(false)
 
+  const board = getSelectedBoard()
+  const isCCEA = board.gradeSystem === 'A*-G'
+  const topLabel    = isCCEA ? 'Grade A*' : 'Grade 9'
+  const midLabel    = isCCEA ? 'Grade A'  : 'Grade 8'
+  const challengeTitle = isCCEA ? 'Grade A* Challenge' : 'Grade 9 Challenge'
+  const challengeHeader = isCCEA ? 'GRADE A* CHALLENGE' : 'GRADE 9 CHALLENGE'
+
   const q = questions[qIndex] || {}
   const isLast = qIndex === total - 1
-  const typeInfo = TYPE_LABELS[q.type] || { label: 'Grade 9', emoji: '⭐' }
+  const typeInfo = TYPE_LABELS[q.type] || { label: topLabel, emoji: '⭐' }
 
   const handleComplete = useCallback((correct) => {
     if (correct) setScore(s => s + 1)
@@ -169,8 +177,8 @@ export default function Grade9Challenge() {
   // ── Results ────────────────────────────────────────────────────────────────
   if (showResults) {
     const pct = Math.round((score / total) * 100)
-    const grade9 = pct >= 75
-    const grade8 = pct >= 55
+    const isTop = pct >= 75
+    const isMid = pct >= 55
     return (
       <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
         <div className="px-5 pt-5 pb-3 shrink-0">
@@ -182,20 +190,20 @@ export default function Grade9Challenge() {
         </div>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', delay: 0.1 }}>
-            <Trophy size={72} color={grade9 ? '#fdc700' : grade8 ? '#a855f7' : '#64748b'} strokeWidth={1.2} />
+            <Trophy size={72} color={isTop ? '#fdc700' : isMid ? '#a855f7' : '#64748b'} strokeWidth={1.2} />
           </motion.div>
 
           <motion.div className="text-center" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}>
             <div className="text-4xl font-black mb-1" style={{ color: '#f8fafc' }}>{score}/{total}</div>
-            <div className="text-lg font-semibold mb-2" style={{ color: grade9 ? '#fdc700' : grade8 ? '#c084fc' : '#64748b' }}>
-              {grade9 ? '🏆 Grade 9 standard!' : grade8 ? '★ Grade 8 territory' : 'Keep practising'}
+            <div className="text-lg font-semibold mb-2" style={{ color: isTop ? '#fdc700' : isMid ? '#c084fc' : '#64748b' }}>
+              {isTop ? `🏆 ${topLabel} standard!` : isMid ? `★ ${midLabel} territory` : 'Keep practising'}
             </div>
             <div className="text-sm" style={{ color: '#a8b8cc' }}>
-              {grade9
-                ? 'You\'re answering at the top 3% level. These are the questions that separate Grade 8 from Grade 9.'
-                : grade8
+              {isTop
+                ? `You're answering at the top 3% level. These are the questions that separate ${midLabel} from ${topLabel}.`
+                : isMid
                 ? 'Solid performance. Review the mark schemes for any questions you missed.'
-                : 'Grade 9 discriminators are designed to be hard. Study the mark schemes - the pattern becomes clear.'}
+                : 'These discriminator questions are designed to be hard. Study the mark schemes — the pattern becomes clear.'}
             </div>
           </motion.div>
 
@@ -251,7 +259,7 @@ export default function Grade9Challenge() {
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-6">
           <Trophy size={56} color="#a855f7" strokeWidth={1.3} />
           <div className="text-center">
-            <div className="text-2xl font-black mb-1" style={{ color: '#f8fafc' }}>Grade 9 Challenge</div>
+            <div className="text-2xl font-black mb-1" style={{ color: '#f8fafc' }}>{challengeTitle}</div>
             <div className="text-sm" style={{ color: '#64748b' }}>Chained calcs · RPA errors · Novel context</div>
           </div>
           <div className="w-full space-y-2">
@@ -317,7 +325,7 @@ export default function Grade9Challenge() {
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
-          <div className="text-xs font-bold" style={{ color: '#c084fc' }}>GRADE 9 CHALLENGE</div>
+          <div className="text-xs font-bold" style={{ color: '#c084fc' }}>{challengeHeader}</div>
           <div className="text-xs" style={{ color: '#64748b' }}>Q{qIndex + 1} of {total}</div>
         </div>
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"

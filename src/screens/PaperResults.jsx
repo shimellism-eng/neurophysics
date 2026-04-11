@@ -409,6 +409,7 @@ const TOPIC_SLUGS = {
 
 function StageThePlan({ questions, answers, onDone }) {
   const navigate = useNavigate()
+  const topGradeLabel = getSelectedBoard().gradeSystem === 'A*-G' ? 'Grade A*' : 'Grade 9'
 
   // Find weakest question topics - group by q.topic or q.rpaRef or fall back to type
   const topicStats = {}
@@ -537,7 +538,7 @@ function StageThePlan({ questions, answers, onDone }) {
               'Redo weakest topics using Exam Practice before your next paper',
               'Time yourself on 6-mark questions - aim for 1 mark per minute',
               'Review RPA method cards in Practicals for error-direction questions',
-              'Try the Grade 9 Challenge to target top-tier discriminator questions',
+              `Try the ${topGradeLabel} Challenge to target top-tier discriminator questions`,
             ].map((tip, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="text-xs mt-0.5 font-bold" style={{ color: '#6366f1' }}>{i + 1}.</span>
@@ -560,7 +561,7 @@ function StageThePlan({ questions, answers, onDone }) {
           <div className="flex items-center gap-3">
             <Trophy size={22} color="#a855f7" />
             <div className="text-left">
-              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topGradeLabel} Challenge</p>
               <p className="text-xs" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
             </div>
           </div>

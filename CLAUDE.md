@@ -254,6 +254,9 @@
 - [x] Board filtering in getNextQuestion/getQuestionsForTopic — questions with boards:[] only shown for matching board
 - [x] AdaptivePractice passes selected board to getNextQuestion
 - [x] LearnScreen: topics with empty lessonSteps route to /practice/:topicId (board-specific practice topics)
+- [x] Phase 3: Board selector as step 3/5 in onboarding flow (right after sign-in)
+- [x] Phase 3: StepGoal shows CCEA A*–G grade options vs 9-1 based on selected board
+- [x] Phase 3: HomeScreen "🏆 Target: Grade X" chip — shows "Target: A*" for CCEA (board-coloured)
 - [ ] PWA manifest + service worker confirmed working
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 

@@ -1,0 +1,202 @@
+/**
+ * ConsentScreen — shown once on first launch.
+ * UK GDPR / ICO Children's Code compliant age gate + data consent.
+ * Sets neurophysics_consent in localStorage on acceptance.
+ */
+import { useState } from 'react'
+import { motion } from 'motion/react'
+import { useNavigate } from 'react-router-dom'
+import { Shield, Check, ChevronRight } from 'lucide-react'
+
+export default function ConsentScreen() {
+  const navigate = useNavigate()
+  const [ageConfirmed, setAgeConfirmed] = useState(false)
+  const [termsRead, setTermsRead] = useState(false)
+
+  const canContinue = ageConfirmed && termsRead
+
+  const handleContinue = () => {
+    try {
+      localStorage.setItem('neurophysics_consent', JSON.stringify({
+        ts: Date.now(),
+        version: '2026-04',
+      }))
+    } catch {}
+    navigate('/auth', { replace: true })
+  }
+
+  return (
+    <div
+      className="flex flex-col h-full overflow-hidden"
+      style={{ background: '#0b1121' }}
+    >
+      {/* Top spacer */}
+      <div style={{ height: 'env(safe-area-inset-top)' }} />
+
+      <div className="flex-1 overflow-y-auto px-5 pt-10 pb-8 flex flex-col gap-6">
+
+        {/* Icon + title */}
+        <motion.div
+          className="flex flex-col items-center text-center gap-3"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="w-16 h-16 rounded-[22px] flex items-center justify-center"
+            style={{ background: 'rgba(99,102,241,0.15)', border: '1.5px solid rgba(99,102,241,0.35)' }}>
+            <Shield size={30} color="#818cf8" />
+          </div>
+          <h1 className="text-2xl font-bold" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+            Before you start
+          </h1>
+          <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc', maxWidth: 300 }}>
+            NeuroPhysics is a GCSE revision app for students aged 13+. Please take a moment to confirm the following.
+          </p>
+        </motion.div>
+
+        {/* What we collect — plain English summary */}
+        <motion.div
+          className="rounded-[18px] px-4 py-4 space-y-3"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
+        >
+          <p className="text-xs font-bold uppercase tracking-wide" style={{ color: '#556677' }}>What we use your data for</p>
+          {[
+            { emoji: '📧', label: 'Your email address', detail: 'To create your account' },
+            { emoji: '📊', label: 'Your revision progress', detail: 'Stored on your device only' },
+            { emoji: '💬', label: 'AI chat & marking', detail: 'Sent to Google, not stored by us' },
+          ].map(item => (
+            <div key={item.label} className="flex items-start gap-3">
+              <span style={{ fontSize: 18, lineHeight: 1.4 }}>{item.emoji}</span>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{item.label}</p>
+                <p className="text-xs" style={{ color: '#a8b8cc' }}>{item.detail}</p>
+              </div>
+            </div>
+          ))}
+          <p className="text-xs pt-1" style={{ color: '#556677' }}>
+            We never sell your data or use it for advertising.
+          </p>
+        </motion.div>
+
+        {/* Checkboxes */}
+        <motion.div
+          className="space-y-3"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.18, duration: 0.4 }}
+        >
+          {/* Age confirmation */}
+          <button
+            className="w-full flex items-start gap-3 rounded-[14px] px-4 py-4 text-left"
+            style={{
+              background: ageConfirmed ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
+              border: ageConfirmed ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
+              transition: 'all 0.2s',
+            }}
+            onClick={() => setAgeConfirmed(p => !p)}
+          >
+            <div
+              className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
+              style={{
+                background: ageConfirmed ? '#6366f1' : 'rgba(255,255,255,0.07)',
+                border: ageConfirmed ? 'none' : '0.75px solid #2d3e55',
+                transition: 'all 0.2s',
+              }}
+            >
+              {ageConfirmed && <Check size={14} color="#fff" strokeWidth={2.5} />}
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-semibold" style={{ color: ageConfirmed ? '#818cf8' : '#f8fafc' }}>
+                I am 13 or older
+              </p>
+              <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
+                If you are under 16, a parent or guardian should agree on your behalf.
+              </p>
+            </div>
+          </button>
+
+          {/* Terms + Privacy confirmation */}
+          <button
+            className="w-full flex items-start gap-3 rounded-[14px] px-4 py-4 text-left"
+            style={{
+              background: termsRead ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
+              border: termsRead ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
+              transition: 'all 0.2s',
+            }}
+            onClick={() => setTermsRead(p => !p)}
+          >
+            <div
+              className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
+              style={{
+                background: termsRead ? '#6366f1' : 'rgba(255,255,255,0.07)',
+                border: termsRead ? 'none' : '0.75px solid #2d3e55',
+                transition: 'all 0.2s',
+              }}
+            >
+              {termsRead && <Check size={14} color="#fff" strokeWidth={2.5} />}
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-semibold" style={{ color: termsRead ? '#818cf8' : '#f8fafc' }}>
+                I agree to the Terms and Privacy Policy
+              </p>
+              <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
+                I understand how my data is used and my rights under UK law.
+              </p>
+            </div>
+          </button>
+        </motion.div>
+
+        {/* Links to full documents */}
+        <motion.div
+          className="flex items-center justify-center gap-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.25, duration: 0.4 }}
+        >
+          <button
+            className="text-xs underline"
+            style={{ color: '#6366f1' }}
+            onClick={() => navigate('/privacy')}
+          >
+            Privacy Policy
+          </button>
+          <span style={{ color: '#2d3e55' }}>·</span>
+          <button
+            className="text-xs underline"
+            style={{ color: '#6366f1' }}
+            onClick={() => navigate('/terms')}
+          >
+            Terms of Service
+          </button>
+        </motion.div>
+
+        {/* Continue button */}
+        <motion.button
+          onClick={handleContinue}
+          disabled={!canContinue}
+          className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
+          style={{
+            background: canContinue
+              ? 'linear-gradient(135deg, #6366f1, #818cf8)'
+              : 'rgba(255,255,255,0.05)',
+            color: canContinue ? '#fff' : '#3a4a5a',
+            boxShadow: canContinue ? '0 8px 24px rgba(99,102,241,0.35)' : 'none',
+            cursor: canContinue ? 'pointer' : 'not-allowed',
+            transition: 'all 0.25s',
+          }}
+          whileTap={canContinue ? { scale: 0.97 } : {}}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.4 }}
+        >
+          Get Started
+          <ChevronRight size={18} strokeWidth={2.5} />
+        </motion.button>
+
+      </div>
+    </div>
+  )
+}

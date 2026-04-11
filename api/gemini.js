@@ -172,10 +172,10 @@ export default async function handler(req, res) {
   res.write('data: [DONE]\n\n')
 
   // ── Usage instrumentation ─────────────────────────────────────────────────
+  // Note: topic context is intentionally excluded from logs — it is
+  // behavioural data about a child's study habits (ICO Children's Code, data minimisation).
   const usageLog = {
     ts: new Date().toISOString(),
-    ip_prefix: ip.split('.').slice(0, 2).join('.'), // partial IP only, privacy-safe
-    topic: (body.topicContext || '').slice(0, 80) || null,
     message_count: contents.length,
     model,
   }

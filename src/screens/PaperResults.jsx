@@ -213,7 +213,8 @@ function StageNumber({ score, total, timeUsed, onNext }) {
           })}
         </div>
         <p className="text-xs text-center mt-3" style={{ color: '#334155' }}>
-          Boundaries based on 3-year AQA averages - actual boundaries vary each year
+          Approximate boundaries based on historical AQA averages — actual boundaries vary each year.
+          NeuroPhysics is not affiliated with or endorsed by AQA.
         </p>
       </div>
 

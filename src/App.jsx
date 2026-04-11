@@ -29,6 +29,7 @@ const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
 const ShareProgressScreen = lazy(() => import('./screens/ShareProgressScreen'))
 const AdaptivePractice   = lazy(() => import('./screens/AdaptivePractice'))
+const ConsentScreen     = lazy(() => import('./screens/ConsentScreen'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
@@ -176,7 +177,7 @@ function FloatingMamo() {
 // Routes that show the bottom nav
 const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
-const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms', '/share']
+const PUBLIC_ROUTES = ['/auth', '/privacy', '/terms', '/share', '/consent']
 
 function AppShell() {
   const location = useLocation()
@@ -201,6 +202,12 @@ function AppShell() {
         />
       </div>
     )
+  }
+
+  // First-time user — show consent/age gate before anything else
+  const hasConsented = !!localStorage.getItem('neurophysics_consent')
+  if (!hasConsented && location.pathname !== '/consent' && location.pathname !== '/privacy' && location.pathname !== '/terms') {
+    return <Navigate to="/consent" replace />
   }
 
   // Not logged in → force to auth (except public routes)
@@ -247,6 +254,7 @@ function AppShell() {
             <Route path="/timed-paper" element={<TimedPaper />} />
             <Route path="/paper-results" element={<PaperResults />} />
             <Route path="/settings" element={<SettingsScreen />} />
+            <Route path="/consent" element={<ConsentScreen />} />
             <Route path="/privacy" element={<PrivacyPolicyScreen />} />
             <Route path="/terms" element={<TermsScreen />} />
             <Route path="/share" element={<ShareProgressScreen />} />

@@ -1,46 +1,108 @@
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, FileText } from 'lucide-react'
 
 const SECTIONS = [
   {
-    title: '1. Acceptance of terms',
-    body: `By downloading or using NeuroPhysics you agree to these Terms of Service. If you do not agree, please do not use the app.\n\nUsers under 13 must have parental or guardian consent before using the app.`,
+    title: '1. Who these terms apply to',
+    body: `These Terms of Service ("Terms") govern your use of NeuroPhysics, a GCSE Physics revision app operated by an independent UK-based developer ("we", "us", "our").
+
+By creating an account or using the app, you agree to these Terms. If you do not agree, please do not use the app.
+
+Minimum age: You must be 13 or older to use NeuroPhysics. If you are under 16, a parent or guardian should read and agree to these Terms on your behalf before you use the app.`,
   },
   {
     title: '2. What NeuroPhysics provides',
-    body: `NeuroPhysics provides interactive GCSE Physics revision materials, including lessons, knowledge checks, practical simulations, and an AI-powered tutoring chat (Mamo).\n\nThe app is for educational purposes only and is not a substitute for qualified teacher instruction.`,
+    body: `NeuroPhysics provides:
+• GCSE Physics revision lessons, interactive diagrams, and knowledge checks
+• Practice exam questions in the style of major UK exam boards
+• An AI-powered tutoring chat (Mamo)
+• AI-assisted marking of written exam answers
+• Practical lab simulations
+
+The app is for personal, non-commercial educational use only. It is not a substitute for qualified teacher instruction, official exam board guidance, or professional academic advice.
+
+Exam-style questions in NeuroPhysics are original content created for revision practice. NeuroPhysics is not affiliated with, endorsed by, or authorised by AQA, OCR, Edexcel, or any other exam board.`,
   },
   {
-    title: '3. AI tutor (Mamo)',
-    body: `The Mamo chat feature is powered by Gemini, an AI model made by Google. Responses are generated automatically and may occasionally be inaccurate. You should:\n\n• Verify important information with a teacher or textbook.\n• Not rely solely on Mamo for exam preparation.\n• Not share personal, sensitive, or confidential information in the chat.\n\nWe are not responsible for any decisions made based on AI-generated content.`,
+    title: '3. AI tutor (Mamo) and AI marking',
+    body: `The Mamo chat feature and AI marking system are powered by Google's Gemini AI model. These services are automated.
+
+Important limitations — please read carefully:
+
+• AI responses and marks may be inaccurate, incomplete, or out of date.
+• AI marking is for practice and self-assessment only. It does not reflect official AQA or exam board marking standards.
+• You should always verify important information with a qualified teacher or official revision materials.
+• Do not rely solely on AI-generated content for exam preparation.
+• Do not share personal, sensitive, or confidential information in the chat.
+• We are not responsible for any consequences of relying on AI-generated content, including any effect on your exam results.
+
+By using Mamo or submitting answers for AI marking, you accept these limitations.`,
   },
   {
-    title: '4. Acceptable use',
-    body: `You agree not to:\n\n• Use the app for any unlawful purpose.\n• Attempt to reverse-engineer, modify, or distribute the app.\n• Use the app to harass, harm, or mislead others.\n• Attempt to bypass or exploit the AI system prompt.`,
+    title: '4. Your account',
+    body: `You are responsible for:
+• Keeping your login details secure and confidential.
+• All activity that takes place under your account.
+• Notifying us immediately if you suspect unauthorised use of your account.
+
+We reserve the right to suspend or delete accounts that breach these Terms.`,
   },
   {
-    title: '5. Intellectual property',
-    body: `All app content — including lesson text, diagrams, animations, and code — is owned by the developer and protected by copyright law. You may use the content for personal, non-commercial study only.`,
+    title: '5. Acceptable use',
+    body: `You agree not to:
+• Use the app for any unlawful purpose under the laws of England and Wales.
+• Attempt to reverse-engineer, decompile, or copy the app or its content.
+• Share your account with others or create multiple accounts.
+• Attempt to manipulate, bypass, or exploit the AI systems.
+• Use the app to bully, harass, or harm others.
+• Submit content that is offensive, illegal, or infringes third-party rights.`,
   },
   {
-    title: '6. Disclaimer of warranties',
-    body: `NeuroPhysics is provided "as is" without warranties of any kind. We do not guarantee that the app will be error-free, always available, or that revision materials are 100% accurate or up to date with the latest specification.`,
+    title: '6. Intellectual property',
+    body: `All content in NeuroPhysics — including lesson text, diagrams, animations, code, and original exam-style questions — is owned by the developer and is protected by UK copyright law (Copyright, Designs and Patents Act 1988).
+
+You may use the content for your own personal, non-commercial study only. You may not copy, distribute, sell, or publish any content from the app without our written permission.`,
   },
   {
-    title: '7. Limitation of liability',
-    body: `To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the app, including exam results.`,
+    title: '7. Disclaimers',
+    body: `NeuroPhysics is provided "as is" and "as available". We do not guarantee that:
+• The app will be error-free or always available.
+• Revision content is 100% accurate or reflects the very latest specification.
+• AI-generated marking will meet official exam board standards.
+
+Nothing in these Terms affects your rights as a consumer under the Consumer Rights Act 2015.`,
   },
   {
-    title: '8. Changes to these terms',
-    body: `We may update these Terms from time to time. The latest version will always be available in the app. Continued use after changes means you accept the updated terms.`,
+    title: '8. Limitation of liability',
+    body: `To the fullest extent permitted by the laws of England and Wales, we shall not be liable for:
+• Any indirect, incidental, or consequential loss or damage.
+• Loss of data or device damage arising from use of the app.
+• Any impact on your exam results, grades, or academic performance.
+• Inaccuracies in AI-generated content or marking.
+
+Our total liability to you for any claim shall not exceed the amount you have paid us in the 12 months preceding the claim. If you have not paid anything, our liability is limited to £50.
+
+These limitations do not apply to liability for death or personal injury caused by our negligence, fraud, or any other liability that cannot be excluded by law.`,
   },
   {
-    title: '9. Governing law',
-    body: `These Terms are governed by the laws of England and Wales.`,
+    title: '9. Privacy and data',
+    body: `Your use of NeuroPhysics is also governed by our Privacy Policy, which explains how we collect and use your data in compliance with UK GDPR and the Data Protection Act 2018. You can read it in Settings → Privacy Policy.`,
   },
   {
-    title: '10. Contact',
-    body: `For questions about these Terms, contact:\nsupport@neurophysics.app`,
+    title: '10. Changes to these terms',
+    body: `We may update these Terms from time to time. We will notify you of significant changes within the app. Continued use of the app after notification of changes means you accept the updated Terms.
+
+If you do not accept the new Terms, you should stop using the app and delete your account.`,
+  },
+  {
+    title: '11. Governing law and disputes',
+    body: `These Terms are governed by the laws of England and Wales. Any disputes arising from these Terms or your use of the app shall be subject to the exclusive jurisdiction of the courts of England and Wales.
+
+If you have a complaint or dispute, please contact us first at support@neurophysics.app and we will try to resolve it informally.`,
+  },
+  {
+    title: '12. Contact',
+    body: `For questions about these Terms:\nEmail: support@neurophysics.app`,
   },
 ]
 
@@ -59,12 +121,18 @@ export default function TermsScreen() {
         >
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
-        <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Terms of Service</h1>
+        <div className="flex items-center gap-2">
+          <FileText size={16} color="#6366f1" />
+          <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Terms of Service</h1>
+        </div>
       </div>
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6">
-        <p className="text-xs" style={{ color: '#a8b8cc' }}>Last updated: April 2026</p>
+        <div className="rounded-[14px] px-4 py-3" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+          <p className="text-xs font-semibold" style={{ color: '#818cf8' }}>Last updated: April 2026 · England and Wales</p>
+          <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>Please read these terms before using NeuroPhysics. They explain your rights and responsibilities as a user.</p>
+        </div>
 
         {SECTIONS.map(s => (
           <div key={s.title}>

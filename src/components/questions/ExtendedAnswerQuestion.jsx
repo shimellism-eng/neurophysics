@@ -254,6 +254,11 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
               </div>
             )}
 
+            {/* AI marking disclaimer */}
+            <p className="text-[10px] text-center" style={{ color: '#3a4a5a' }}>
+              AI marking is for practice only — not official AQA marking. Verify with your teacher.
+            </p>
+
             {/* Continue button */}
             <motion.button
               onClick={handleContinue}

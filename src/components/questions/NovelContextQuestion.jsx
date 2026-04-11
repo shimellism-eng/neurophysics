@@ -207,6 +207,11 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
               </div>
             )}
 
+            {/* AI marking disclaimer */}
+            <p className="text-[10px] text-center" style={{ color: '#3a4a5a' }}>
+              AI marking is for practice only — not official AQA marking. Verify with your teacher.
+            </p>
+
             <motion.button onClick={handleContinue}
               className="w-full flex items-center justify-center py-3.5 rounded-[14px] font-semibold text-sm"
               style={{

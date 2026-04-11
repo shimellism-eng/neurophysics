@@ -259,6 +259,16 @@ export default function LessonPlayer() {
     }
   }, [step, totalSteps])
 
+  // Exit lesson — save position so user can resume, then go home
+  const exitLesson = () => {
+    if (step > 0) {
+      try {
+        localStorage.setItem(`np_lesson_progress_${id}`, JSON.stringify({ step, ts: Date.now() }))
+      } catch {}
+    }
+    navigate('/learn')
+  }
+
   const goBack = () => {
     if (step > 0) {
       setDirection(-1)
@@ -274,10 +284,11 @@ export default function LessonPlayer() {
     try {
       localStorage.setItem(`np_lesson_progress_${id}`, JSON.stringify({ step, ts: Date.now() }))
     } catch {}
+    // Mark topic as started as soon as the user moves past the hook
+    markStarted(id)
   }, [step, id])
 
   const handleStartQuiz = () => {
-    markStarted(id)
     try { localStorage.removeItem(`np_lesson_progress_${id}`) } catch {}
     navigate(`/diagnostic/${id}`)
   }
@@ -488,9 +499,9 @@ export default function LessonPlayer() {
           }}
         />
 
-        {/* Back button — 44×44 touch target */}
+        {/* Back button — always exits lesson and saves progress */}
         <button
-          onClick={goBack}
+          onClick={exitLesson}
           className="w-11 h-11 flex items-center justify-center shrink-0"
           style={{
             borderRadius: '50%',

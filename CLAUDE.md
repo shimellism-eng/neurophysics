@@ -225,6 +225,11 @@
 - [x] Topic map built
 - [x] Required Practicals module on Learn screen (11 practicals, teal, FlaskConical)
 - [x] 154 AQA exam questions for all 11 required practicals (qb-practicals.js)
+- [x] AI marking for extended/short answer questions (api/mark.js → Gemini, per-point breakdown)
+- [x] Course filtering for Grade9Challenge and TimedPaper
+- [x] Lesson progress resume (localStorage)
+- [x] HomeScreen InsightsPanel (accuracy, strong/weak topics)
+- [x] AdaptivePractice screen + useAdaptive hook
 - [x] Deployed to neurophysics.co.uk
 - [ ] PWA manifest + service worker confirmed working
 - [ ] All exam boards wired in (currently AQA focus)
@@ -245,8 +250,17 @@
 
 1. `npx vercel --prod` — deploy to neurophysics.co.uk
 2. `git add [changed files] && git commit -m "..."` — commit to main
-3. `npx cap sync ios` — sync to Xcode for TestFlight
-4. Update this CLAUDE.md — Current Status and any new conventions
+3. `git push origin main` — push to GitHub
+4. `npx cap sync ios` — sync to Xcode for TestFlight
+5. Update this CLAUDE.md — Current Status and any new conventions
+
+**Always end every session by printing this exact checklist with tick/cross status:**
+```
+✅ Deployed to neurophysics.co.uk
+✅ Pushed to GitHub
+✅ cap sync ios done
+✅ CLAUDE.md updated
+```
 
 ---
 

@@ -1203,38 +1203,38 @@ function TabSetup({ p, color }) {
   )
 }
 
+// Add RP numbers here as infographic images are generated
+const INFOGRAPHIC_READY = new Set(['RP1', 'RP2'])
+
 function TabMethod({ p, color }) {
-  const [hasImage, setHasImage] = useState(true)
-  const imgSrc = `/practicals/${p.number}.png`
+  const showInfographic = INFOGRAPHIC_READY.has(p.number)
+
+  if (showInfographic) {
+    return (
+      <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+        <img
+          src={`/practicals/${p.number}.png`}
+          alt={`${p.title} — method infographic`}
+          style={{ width: '100%', borderRadius: 16, display: 'block' }}
+        />
+      </motion.div>
+    )
+  }
 
   return (
-    <div>
-      {hasImage ? (
-        <motion.img
-          src={imgSrc}
-          alt={`${p.title} — method infographic`}
-          onError={() => setHasImage(false)}
-          style={{ width: '100%', borderRadius: 16, display: 'block' }}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-        />
-      ) : (
-        <div className="flex flex-col gap-2">
-          {p.method.map((step, i) => (
-            <motion.div key={i} className="flex items-start gap-3 rounded-[12px] p-3"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
-              initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.04 }}>
-              <div className="w-6 h-6 rounded-full shrink-0 flex items-center justify-center text-xs font-bold"
-                style={{ background: `${color}20`, border: `0.75px solid ${color}60`, color }}>
-                {i + 1}
-              </div>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#cad5e2' }}>{step}</p>
-            </motion.div>
-          ))}
-        </div>
-      )}
+    <div className="flex flex-col gap-2">
+      {p.method.map((step, i) => (
+        <motion.div key={i} className="flex items-start gap-3 rounded-[12px] p-3"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: i * 0.04 }}>
+          <div className="w-6 h-6 rounded-full shrink-0 flex items-center justify-center text-xs font-bold"
+            style={{ background: `${color}20`, border: `0.75px solid ${color}60`, color }}>
+            {i + 1}
+          </div>
+          <p className="text-sm leading-relaxed flex-1" style={{ color: '#cad5e2' }}>{step}</p>
+        </motion.div>
+      ))}
     </div>
   )
 }

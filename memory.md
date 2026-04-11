@@ -3,21 +3,17 @@
 ## Last Updated
 April 2026
 
-## What Was Just Done
+## What Was Just Done (this session)
 - memory.md created as permanent session log
 - Session Memory section added to CLAUDE.md Project Overview
 - All 4 security fixes verified as already complete (done in a previous session)
-- 10 market penetration + user love improvements implemented and deployed:
-  1. Public landing page (LandingScreen.jsx + PublicHeader.jsx)
-  2. Fixed ip ReferenceError in api/mark.js
-  3. App Store screenshots (design task, pending — Figma needed)
-  4. Onboarding reduced to 3 core steps with skip options
-  5. +50 XP celebration badge added to SessionClose.jsx
-  6. SpecChecklist.jsx screen at /spec-checklist
-  7. TTS consistency fixes (GuidedPracticeFader, VocabPreTeach)
-  8. Sentry error monitoring wired (awaiting VITE_SENTRY_DSN in Vercel)
-  9. Exam data chunk splitting improved in vite.config.js
-  10. Age verification (DOB picker) added to ConsentScreen.jsx
+- Sentry activated: VITE_SENTRY_DSN added to Vercel, redeployed, now live
+- 10 market penetration + user love improvements implemented and deployed
+- From agent findings, items 1-4 implemented:
+  1. Spec Checklist linked from Settings screen (new 'Study Tools' section)
+  2. OpenGraph + Twitter Card meta tags added to index.html
+  3. Privacy Policy section 4 (Children) + Terms section 3 (AI) confirmed already present
+  4. App Store screenshots captured via preview tool (landing hero, lower sections, auth screen)
 
 ## Current State
 - Build: passing (48 entries precached)
@@ -31,15 +27,17 @@ April 2026
 - Sentry: installed and wired, VITE_SENTRY_DSN env var NOT YET added to Vercel
 
 ## Known Broken / At Risk
-- Sentry inactive until VITE_SENTRY_DSN added to Vercel dashboard env vars
-  (create free account at sentry.io → React project → copy DSN → add to Vercel)
+- /public/og-image.png does not exist — OG meta tags reference it but file not yet created.
+  WhatsApp/Twitter link previews will show no image until this is made.
+  Needed: 1200×630px dark-background PNG with NeuroPhysics branding.
 
 ## Next Tasks (in order)
-1. Create Sentry account + add VITE_SENTRY_DSN to Vercel env vars
-2. Create App Store screenshots in Figma (5 screens: hook card, worked example,
-   adaptive practice, progress/mastery, MamoChat)
+1. Create og-image.png (1200×630) and add to /public/ — needed for link previews
+2. Create App Store screenshots in Figma — 5 screens from a logged-in session:
+   hook card, worked example stepper, adaptive practice, mastery/progress, MamoChat
 3. RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
-4. Add /spec-checklist link somewhere in the app UI (e.g. Settings screen or HomeScreen)
+4. Remaining agent findings: soft sign-up wall, hearts rename, touch target fixes,
+   usage analytics event log, Stripe webhook stub, GitHub Actions CI, TestFlight beta
 
 ## Decisions Made
 - Upstash Redis chosen for rate limiting (better free tier than Vercel KV)

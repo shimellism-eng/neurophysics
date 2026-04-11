@@ -90,11 +90,14 @@
 │   ├── ShareProgressScreen.jsx
 │   ├── SettingsScreen.jsx
 │   ├── PrivacyPolicyScreen.jsx
-│   └── TermsScreen.jsx
+│   ├── TermsScreen.jsx
+│   ├── LandingScreen.jsx           # Public homepage (unauthenticated /  route)
+│   └── SpecChecklist.jsx           # Specification checklist at /spec-checklist
 │
 ├── components/
 │   ├── AtomIcon.jsx
 │   ├── BottomNav.jsx
+│   ├── PublicHeader.jsx             # Website nav header (landing page only)
 │   ├── BreakNudge.jsx              # ADHD break reminders
 │   ├── CircuitSymbols.jsx
 │   ├── HeartsDisplay.jsx           # Lives/hearts system
@@ -280,7 +283,18 @@
 - [x] Security Fix 2: unsafe-inline removed from script-src CSP (Vite builds only external script tags — safe)
 - [x] Security Fix 3: in-memory rate limiters replaced with Upstash Redis persistent sliding window (api/mark.js + api/gemini.js); api/anthropic.js deleted (dead code); ANTHROPIC_API_KEY removed from Vercel
 - [x] Security Fix 4: getValidatedBoard() added to boardConfig.js — whitelists np_board against Object.keys(BOARDS) before use; SettingsScreen.jsx + getSelectedBoard() both use it; no raw localStorage.getItem('np_board') calls remain outside boardConfig.js
+- [x] Public landing page (LandingScreen.jsx) — shown to unauthenticated visitors at /; hero, stats, how-it-works, module pills, footer; PublicHeader.jsx; BottomNav/FloatingMamo hidden when not logged in
+- [x] ip variable bug fixed in api/mark.js (was ReferenceError on usage log line)
+- [x] Onboarding reduced to 3 steps: Board → Goal → Prefs (skippable) → Profile (skippable); StepValueProp removed from flow (landing page covers it)
+- [x] +50 XP celebration badge added to SessionClose.jsx (animated amber badge + 🔥 line)
+- [x] SpecChecklist.jsx — spec checklist screen at /spec-checklist; all 58 topics, mastered/in-progress/not-started, board-filtered, collapsible module sections
+- [x] TTS consistency: GuidedPracticeFader.jsx now has TTS buttons on all tiers; VocabPreTeach uses shared speak() from tts.js
+- [x] Sentry error monitoring: @sentry/react installed; initialised in main.jsx behind VITE_SENTRY_DSN env guard; PII stripped before send (ICO Children's Code); vendor-sentry chunk added
+- [x] Chunk splitting: 6 missing exam data files added to data-exam manual chunk in vite.config.js (examChained, examDiagramQs, examDiagrams, examExtended, examNovelContext, examRPAErrors)
+- [x] Age verification on consent screen: DOB (month + year) input; under-13 blocked with red warning (COPPA/ICO); age confirmation checkbox shows confirmed age; under-16 parent/guardian reminder
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
+- [ ] Sentry DSN: create account at sentry.io, add VITE_SENTRY_DSN to .env.local + Vercel env vars to activate error monitoring
+- [ ] App Store screenshots: create 5 screens in Figma (hook card, worked example, adaptive practice, progress, MamoChat)
 
 ---
 

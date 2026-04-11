@@ -251,12 +251,15 @@ function ModuleCard({ module, moduleIndex, progress }) {
                     onTap={() => {
                       if (topic.practicalId) {
                         navigate(`/practical/${topic.practicalId}`)
-                      } else if (!topic.lessonSteps || topic.lessonSteps.length === 0) {
-                        navigate(`/practice/${topicId}`)
-                      } else if (progress[topicId]?.mastered) {
-                        navigate(`/diagnostic/${topicId}`)
+                      } else if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) {
+                        // Has lesson content (new 9-step flow OR legacy steps)
+                        if (progress[topicId]?.mastered) {
+                          navigate(`/diagnostic/${topicId}`)
+                        } else {
+                          navigate(`/lesson/${topicId}`)
+                        }
                       } else {
-                        navigate(`/lesson/${topicId}`)
+                        navigate(`/practice/${topicId}`)
                       }
                     }}
                     onPractice={() => navigate(`/practice/${topicId}`)}
@@ -449,8 +452,8 @@ export default function LearnScreen() {
                       }}
                       onClick={() => {
                         if (topic.practicalId) navigate(`/practical/${topic.practicalId}`)
-                        else if (!topic.lessonSteps || topic.lessonSteps.length === 0) navigate(`/practice/${id}`)
-                        else navigate(`/lesson/${id}`)
+                        else if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) navigate(`/lesson/${id}`)
+                        else navigate(`/practice/${id}`)
                       }}
                       whileTap={{ scale: 0.97 }}
                       initial={{ opacity: 0, y: 8 }}
@@ -529,8 +532,8 @@ export default function LearnScreen() {
               }}
               onClick={() => {
                 const t = TOPICS[firstUnmastered]
-                if (!t?.lessonSteps || t.lessonSteps.length === 0) navigate(`/practice/${firstUnmastered}`)
-                else navigate(`/lesson/${firstUnmastered}`)
+                if (t?.hook || (t?.lessonSteps && t.lessonSteps.length > 0)) navigate(`/lesson/${firstUnmastered}`)
+                else navigate(`/practice/${firstUnmastered}`)
               }}
               whileTap={{ y: 3, boxShadow: 'none' }}
               initial={{ opacity: 0, y: 12 }}

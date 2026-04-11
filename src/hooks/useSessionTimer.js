@@ -12,15 +12,16 @@ export function useSessionTimer(enabled = true) {
   const [dismissed, setDismissed] = useState(false)
   // Persist start time in sessionStorage so a page refresh within the same
   // browser session doesn't reset the clock (fixes ADHD break-nudge reliability)
-  const startRef = useRef(() => {
+  const startRef = useRef(null)
+  if (startRef.current === null) {
     try {
       const stored = sessionStorage.getItem('_np_session_start')
-      if (stored) return parseInt(stored, 10)
-    } catch {}
-    const now = Date.now()
-    try { sessionStorage.setItem('_np_session_start', String(now)) } catch {}
-    return now
-  })()
+      startRef.current = stored ? parseInt(stored, 10) : Date.now()
+      if (!stored) sessionStorage.setItem('_np_session_start', String(startRef.current))
+    } catch {
+      startRef.current = Date.now()
+    }
+  }
 
   useEffect(() => {
     if (!enabled) return

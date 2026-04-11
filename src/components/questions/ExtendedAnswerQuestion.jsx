@@ -7,6 +7,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Lightbulb, CheckCircle, XCircle, Loader2, AlertCircle } from 'lucide-react'
+import { supabase } from '../../lib/supabase'
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
 const MAX_CHARS = 600
@@ -20,9 +21,13 @@ function useAIMarking() {
   const mark = async ({ question, studentAnswer, markScheme, marks }) => {
     setStatus('marking')
     try {
+      const session = supabase ? (await supabase.auth.getSession()).data?.session : null
       const res = await fetch(`${API_BASE}/api/mark`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: {
+          'content-type': 'application/json',
+          ...(session?.access_token ? { 'Authorization': `Bearer ${session.access_token}` } : {}),
+        },
         body: JSON.stringify({ question, studentAnswer, markScheme, marks }),
       })
       const data = await res.json()

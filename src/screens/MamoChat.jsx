@@ -3,6 +3,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { Send, Sparkles, ArrowLeft, RotateCcw, Trash2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { supabase } from '../lib/supabase'
 
 const GENERAL_STARTERS = [
   'What is the difference between speed and velocity?',
@@ -159,9 +160,13 @@ export default function MamoChat() {
     let errorCode = null
 
     try {
+      const session = supabase ? (await supabase.auth.getSession()).data?.session : null
       const res = await fetch(`${apiBase}/api/gemini`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: {
+          'content-type': 'application/json',
+          ...(session?.access_token ? { 'Authorization': `Bearer ${session.access_token}` } : {}),
+        },
         signal: controller.signal,
         body: JSON.stringify({
           messages: apiMessages,

@@ -1,6 +1,8 @@
 // Vercel serverless function — proxies requests to Anthropic API
 // Keeps the API endpoint consistent for both web and iOS native builds
 
+import { verifySupabaseJWT } from './_verifyAuth.js'
+
 // ── Simple in-memory rate limiter (per-IP, resets every minute) ──────────────
 const rateMap = new Map()          // ip → { count, resetAt }
 const RATE_LIMIT = 20              // requests per window
@@ -37,14 +39,22 @@ export default async function handler(req, res) {
     'http://localhost:5173',
   ]
   const origin = req.headers.origin || ''
-  const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0]
+  if (origin && !ALLOWED_ORIGINS.includes(origin)) return res.status(403).end()
+  const allowedOrigin = origin || ALLOWED_ORIGINS[0]
   res.setHeader('Access-Control-Allow-Origin', allowedOrigin)
   res.setHeader('Vary', 'Origin')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-api-key, anthropic-version')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
 
   if (req.method === 'OPTIONS') return res.status(200).end()
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+
+  // ── Auth — require valid Supabase session ─────────────────────────────────
+  try {
+    verifySupabaseJWT(req.headers.authorization)
+  } catch {
+    return res.status(401).json({ error: 'UNAUTHORIZED' })
+  }
 
   // ── Rate limiting ─────────────────────────────────────────────────────────
   const ip =
@@ -56,14 +66,9 @@ export default async function handler(req, res) {
     return res.status(429).json({ error: 'Too many requests — try again in a minute.' })
   }
 
-  // ── API key — prefer server-side env var; fall back to client header ───────
-  // Set ANTHROPIC_API_KEY in your Vercel project environment variables.
-  // If set, the key is NEVER exposed to clients or network traffic.
-  const rawKey = process.env.ANTHROPIC_API_KEY || req.headers['x-api-key'] || ''
+  // ── API key — server-side env var only, never from client ────────────────
+  const rawKey = process.env.ANTHROPIC_API_KEY || ''
   const apiKey = rawKey.trim()
-
-  // Debug: log key status (never logs the actual key)
-  console.log('[anthropic] key source:', process.env.ANTHROPIC_API_KEY ? 'env' : 'header', '| present:', !!apiKey, '| starts correctly:', apiKey.startsWith('sk-ant-'))
 
   if (!apiKey) {
     return res.status(401).json({ error: 'No API key configured. Set ANTHROPIC_API_KEY in Vercel env vars.' })

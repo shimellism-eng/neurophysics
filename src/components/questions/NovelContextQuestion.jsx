@@ -11,6 +11,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Lightbulb, CheckCircle, XCircle, Loader2, AlertCircle } from 'lucide-react'
+import { supabase } from '../../lib/supabase'
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
 const MAX_CHARS = 700
@@ -32,9 +33,13 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
     try {
       // Pass scenario + question together so the AI has full context
       const fullQuestion = scenario ? `Context: ${scenario}\n\n${question}` : question
+      const session = supabase ? (await supabase.auth.getSession()).data?.session : null
       const res = await fetch(`${API_BASE}/api/mark`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: {
+          'content-type': 'application/json',
+          ...(session?.access_token ? { 'Authorization': `Bearer ${session.access_token}` } : {}),
+        },
         body: JSON.stringify({
           question: fullQuestion,
           studentAnswer: answer,

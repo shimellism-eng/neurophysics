@@ -2,6 +2,7 @@
 // Requires SUPABASE_SERVICE_ROLE_KEY env var in Vercel
 
 import { createClient } from '@supabase/supabase-js'
+import { verifySupabaseJWT } from './_verifyAuth.js'
 
 const ALLOWED_ORIGINS = [
   'https://neurophysics.vercel.app',
@@ -14,7 +15,8 @@ const ALLOWED_ORIGINS = [
 
 export default async function handler(req, res) {
   const origin = req.headers.origin || ''
-  const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0]
+  if (origin && !ALLOWED_ORIGINS.includes(origin)) return res.status(403).end()
+  const allowedOrigin = origin || ALLOWED_ORIGINS[0]
   res.setHeader('Access-Control-Allow-Origin', allowedOrigin)
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
@@ -38,22 +40,13 @@ export default async function handler(req, res) {
     auth: { autoRefreshToken: false, persistSession: false },
   })
 
-  const token = authHeader.replace('Bearer ', '')
-
-  // Decode the JWT payload to extract user ID without checking expiry.
-  // supabase.auth.getUser() rejects expired tokens even with the service role
-  // key, which causes failures on mobile where tokens may have gone stale.
-  // We trust the sub (user UUID) because it is signed by Supabase's secret key.
-  // We then confirm the user exists via admin API before deleting.
+  // Verify JWT signature and expiry using shared helper
   let userId
   try {
-    const payloadBase64 = token.split('.')[1]
-    if (!payloadBase64) throw new Error('malformed')
-    const payload = JSON.parse(Buffer.from(payloadBase64, 'base64url').toString('utf8'))
-    userId = payload.sub
-    if (!userId) throw new Error('no sub')
+    const { userId: uid } = verifySupabaseJWT(authHeader)
+    userId = uid
   } catch {
-    return res.status(401).json({ error: 'Invalid token' })
+    return res.status(401).json({ error: 'Invalid or expired token' })
   }
 
   // Confirm the user actually exists in Supabase before deleting

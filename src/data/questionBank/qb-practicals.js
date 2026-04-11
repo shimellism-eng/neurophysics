@@ -385,12 +385,12 @@ const practicalsQuestions = [
     senNote: 'Compare means state one point about each. A similarity = something both share. A difference = something that distinguishes them.' },
 
   { id: 'iv_t2_04', topicId: 'iv_characteristics', course: 'combined', tier: 2, type: 'calculation', marks: 2, timeExpected: 60,
-    question: 'From an I-V graph, a student reads that when V = 6 V, I = 0.3 A for a filament bulb. Calculate the resistance at this point.',
-    answer: 20,
+    question: 'From an I-V graph for a filament bulb, a student reads that when V = 4 V, I = 0.029 A. Calculate the resistance of the lamp at this operating point.',
+    answer: 138,
     unit: 'Ω',
-    acceptableRange: [19, 21],
-    markScheme: ['R = V/I = 6.0 / 0.3 (1)', 'R = 20 Ω (1)'],
-    senNote: 'Even on a curved I-V graph, you can calculate resistance at any single point using R = V/I.' },
+    acceptableRange: [130, 145],
+    markScheme: ['R = V/I = 4.0 / 0.029 (1)', 'R ≈ 138 Ω (accept 130–145) (1)'],
+    senNote: 'Even on a curved I-V graph, you can calculate resistance at any single point using R = V/I. The lamp has higher resistance at higher voltages because it gets hotter.' },
 
   { id: 'iv_t3_01', topicId: 'iv_characteristics', course: 'combined', tier: 3, type: 'extended', marks: 6, timeExpected: 120,
     question: 'Describe how you would obtain the I-V characteristics for a filament bulb. Include circuit setup, measurements, and how you would present your results.',

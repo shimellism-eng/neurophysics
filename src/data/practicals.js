@@ -142,7 +142,7 @@ export const PRACTICALS = {
     topicId: 'circuit_components',
     aim: 'To investigate the I-V characteristics of a resistor, filament lamp, and diode by measuring current at different potential differences.',
     specRef: '4.2.1.4',
-    equipment: ['Power supply (variable)','Ammeter / milliammeter','Voltmeter','100Ω resistor','12V, 24W filament lamp','Diode + protective 10Ω resistor','Variable resistor (rheostat)','Component holders','Connecting leads'],
+    equipment: ['Power supply (variable, 0–6V)','Ammeter / milliammeter','Voltmeter','100Ω resistor','Filament lamp (6V or 12V)','Diode + protective 100Ω resistor (minimum — 10Ω is insufficient and will destroy the diode)','Variable resistor (rheostat)','Component holders','Connecting leads'],
     variables: {
       independent: 'Potential difference V (V)',
       dependent: 'Current I (A or mA)',
@@ -161,9 +161,9 @@ export const PRACTICALS = {
     ],
     resultsTable: {
       headers: ['Voltage V (V)', 'Current (Resistor) (A)', 'Current (Lamp) (A)', 'Current (Diode) (mA)'],
-      sampleData: [[-6,-0.06,-0.055,0],[-4,-0.04,-0.042,0],[-2,-0.02,-0.026,0],[0,0,0,0],[1,0.01,0.009,0],[2,0.02,0.017,0.1],[3,0.03,0.024,1],[4,0.04,0.029,10],[5,0.05,0.032,50],[6,0.06,0.035,100]]
+      sampleData: [[-6,-0.06,-0.035,0],[-4,-0.04,-0.029,0],[-2,-0.02,-0.017,0],[0,0,0,0],[1,0.01,0.009,0],[2,0.02,0.017,0.1],[3,0.03,0.024,1],[4,0.04,0.029,10],[5,0.05,0.032,50],[6,0.06,0.035,100]]
     },
-    analysis: 'Resistor: straight line through origin (I ∝ V, constant resistance, Ohmic). Filament lamp: curved line that levels off (R increases as temperature increases, non-Ohmic). Diode: no current for negative V; rapid increase past ~0.6V (threshold voltage)  -  only conducts one way.',
+    analysis: 'Resistor: straight line through origin in both directions (I ∝ V, constant resistance, Ohmic — symmetric graph). Filament lamp: curved line that levels off with increasing V (R increases as temperature increases, non-Ohmic) — graph is also symmetric (same shape for negative V). Diode: no current for negative V; rapid increase past ~0.6–0.7V (threshold voltage for silicon diode) — only conducts one way; highly asymmetric graph. For the diode, a potential divider circuit (rather than a simple rheostat) gives better control of voltage down to 0V, which is essential to see the turn-on region clearly.',
     errors: [
       'Lamp gets hot → resistance changes with temperature; take readings quickly',
       'Ammeter resistance affects results → use voltmeter in correct position',

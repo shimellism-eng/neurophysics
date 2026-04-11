@@ -241,8 +241,14 @@
 - [x] Security hardening: CORS rejects unknown origins with 403
 - [x] Security hardening: HSTS + tightened CSP in vercel.json
 - [x] SUPABASE_JWT_SECRET added to Vercel — auth fully enforced
+- [x] All AQA mentions removed from user-facing text (board-agnostic language throughout)
+- [x] Multi-board infrastructure: boardConfig.js, board picker in Settings, LearnScreen board filtering
+- [x] Multi-board Phase 1: 6 boards supported (AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA)
+- [x] CCEA A*-G grade system in PaperResults (with C* grade)
+- [x] Board-specific module stubs: Key Concepts (Edexcel), Global Challenges (OCR-A), Studying the Universe (OCR-B)
+- [ ] Multi-board Phase 2: question banks for board-specific modules (qb-keyconcepts, qb-globalchallenges, qb-universe-ocr)
+- [ ] Multi-board Phase 2d/2e: Boyle's Law, circular motion, seismic waves, diverging lenses, hydraulics question additions
 - [ ] PWA manifest + service worker confirmed working
-- [ ] All exam boards wired in (currently AQA focus)
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 
 ---
@@ -263,6 +269,16 @@
 - CORS: unknown origins return 403 — never default to first allowed origin
 - Never accept API keys from request headers — server env vars only
 - Rate limiting is per-IP in-memory (resets on cold start) — auth is the real protection
+
+## Multi-Board Conventions
+
+- Board selection stored in `localStorage` key `np_board` — default `'aqa'`
+- Board metadata lives in `src/utils/boardConfig.js` — single source of truth
+- Module `boards: ['edexcel']` array restricts a module to specific boards; no field = universal
+- Topic `boards: []` field restricts a topic; used in board-specific question bank questions
+- CCEA uses A*-G grade system — always check `board.gradeSystem === 'A*-G'` before showing 9-1 UI
+- Edexcel uses g = 10 N/kg; AQA/OCR/WJEC use 9.8 — read from `BOARDS[boardId].g`
+- New board-specific question bank files: `qb-keyconcepts.js`, `qb-globalchallenges.js`, `qb-universe-ocr.js`
 
 ---
 

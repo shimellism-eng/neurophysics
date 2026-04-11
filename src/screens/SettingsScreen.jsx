@@ -486,6 +486,18 @@ export default function SettingsScreen() {
       ],
     },
     {
+      title: 'Study Tools',
+      items: [
+        {
+          icon: BookOpen,
+          label: 'Spec Checklist',
+          hint: "See all 58 topics — track what you've mastered",
+          chevron: true,
+          onPress: () => navigate('/spec-checklist'),
+        },
+      ],
+    },
+    {
       title: 'Share',
       items: [
         {

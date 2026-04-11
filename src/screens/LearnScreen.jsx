@@ -178,8 +178,16 @@ function ModuleCard({ module, moduleIndex, progress }) {
             <module.icon size={22} color={module.color} strokeWidth={2} />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-sm font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>
-              {module.name}
+            <div className="flex items-center gap-2 flex-wrap">
+              <div className="text-sm font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>
+                {module.name}
+              </div>
+              {module.topics.every(t => PHYSICS_ONLY_TOPICS.has(t)) && (
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full shrink-0"
+                  style={{ background: 'rgba(232,121,249,0.12)', color: '#e879f9', border: '1px solid rgba(232,121,249,0.3)' }}>
+                  Physics only
+                </span>
+              )}
             </div>
             <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
               {masteredCount > 0

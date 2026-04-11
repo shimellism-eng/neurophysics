@@ -276,6 +276,10 @@
 - [x] RP4 fixes: protective resistor 10Ω→100Ω, lamp I-V data symmetry corrected, iv_t2_04 question values made consistent with sample data, diode threshold unified to 0.6–0.7V
 - [x] Fix "AI marking unavailable": replaced manual HS256 JWT crypto in _verifyAuth.js with Supabase admin getUser() — works with any JWT algorithm; all callers updated to await async function; NovelContextQuestion auth guard hardened + 30s timeout added
 - [x] Practical simulation diagram audit + fixes: RP1 label colours, RP3 label overflow, RP4 diode value, RP5 overlapping labels, RP7 extension label, RP8 air track→dynamics trolley+wheels, RP9 wavelength scale, RP10 contrast bug, RP11 glass block + ray box labels
+- [x] Security Fix 1: .env.production removed from git tracking; .env + .env.production added to .gitignore
+- [x] Security Fix 2: unsafe-inline removed from script-src CSP (Vite builds only external script tags — safe)
+- [x] Security Fix 3: in-memory rate limiters replaced with Upstash Redis persistent sliding window (api/mark.js + api/gemini.js); api/anthropic.js deleted (dead code); ANTHROPIC_API_KEY removed from Vercel
+- [x] Security Fix 4: getValidatedBoard() added to boardConfig.js — whitelists np_board against Object.keys(BOARDS) before use; SettingsScreen.jsx + getSelectedBoard() both use it; no raw localStorage.getItem('np_board') calls remain outside boardConfig.js
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 
 ---
@@ -298,7 +302,7 @@
 - Client-side: always pass `Authorization: Bearer <session.access_token>` to AI endpoints
 - CORS: unknown origins return 403 — never default to first allowed origin
 - Never accept API keys from request headers — server env vars only
-- Rate limiting is per-IP in-memory (resets on cold start) — auth is the real protection
+- Rate limiting is per-IP via Upstash Redis (persistent, survives cold starts) — 20 req/60s sliding window; shared helper in api/_rateLimit.js; fails open if UPSTASH env vars not set
 
 ## Multi-Board Conventions
 

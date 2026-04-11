@@ -209,7 +209,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
 
             {/* AI marking disclaimer */}
             <p className="text-[10px] text-center" style={{ color: '#3a4a5a' }}>
-              AI marking is for practice only — not official AQA marking. Verify with your teacher.
+              AI marking is for practice only — not official exam board marking. Verify with your teacher.
             </p>
 
             <motion.button onClick={handleContinue}

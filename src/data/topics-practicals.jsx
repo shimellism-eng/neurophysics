@@ -1,6 +1,6 @@
 /**
  * topics-practicals.jsx
- * Slim topic metadata for all 11 AQA Required Practicals.
+ * Slim topic metadata for all 11 Required Practicals.
  * These topics navigate to PracticalScreen (/practical/:id) rather than LessonPlayer.
  * The `practicalId` field is the key that LearnScreen uses to route correctly.
  */

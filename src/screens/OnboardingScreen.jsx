@@ -88,7 +88,7 @@ function StepValueProp({ onNext }) {
       icon: Trophy,
       color: '#fdc700',
       title: 'Exam-ready',
-      desc: 'Every topic mapped to AQA GCSE Physics. Practice papers. Grade 9 challenge.',
+      desc: 'Every topic mapped to GCSE Physics. Practice papers. Grade 9 challenge.',
     },
   ]
 

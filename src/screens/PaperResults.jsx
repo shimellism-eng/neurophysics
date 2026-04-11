@@ -12,7 +12,7 @@ import {
   BarChart3, Lightbulb, Clock, Target, Star,
 } from 'lucide-react'
 
-// ── AQA 3-year average grade boundary ranges ─────────────────────────────────
+// ── Approximate grade boundary ranges ──────────────────────────────────────
 // Expressed as percentage of total marks (35 marks paper)
 // These are RANGES, not exact numbers, to avoid false precision
 const GRADE_RANGES = [
@@ -213,8 +213,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
           })}
         </div>
         <p className="text-xs text-center mt-3" style={{ color: '#334155' }}>
-          Approximate boundaries based on historical AQA averages — actual boundaries vary each year.
-          NeuroPhysics is not affiliated with or endorsed by AQA.
+          Approximate grade boundaries for practice purposes — actual boundaries vary each year and by exam board.
         </p>
       </div>
 

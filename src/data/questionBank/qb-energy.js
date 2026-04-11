@@ -1,6 +1,6 @@
 /**
  * qb-energy.js — Adaptive question bank: Energy module
- * AQA GCSE Physics / Combined Science
+ * GCSE Physics / Combined Science
  * Topics: energy_stores, energy_pathways, energy_equations, efficiency, power_calc, energy_resources
  * Total questions: 150 (25 per topic × 6 topics)
  * Schema: tier 1 = MCQ recall (30s), tier 2 = application (60s), tier 3 = mastery (120s)
@@ -864,10 +864,10 @@ const energyQuestions = [
     type: 'mcq',
     marks: 1,
     timeExpected: 30,
-    question: 'The value of g on Earth used in AQA GCSE calculations is:',
+    question: 'The value of g on Earth used in GCSE Physics calculations is:',
     options: ['9.8 N/kg', '9.81 N/kg', '10 N/kg', '10.8 N/kg'],
     correctIndex: 2,
-    senNote: 'AQA GCSE uses g = 10 N/kg unless the question states otherwise.',
+    senNote: 'GCSE Physics uses g = 10 N/kg unless the question states otherwise.',
   },
   {
     id: 'ee_t1_10',
@@ -1974,7 +1974,7 @@ const energyQuestions = [
     type: 'mcq',
     marks: 1,
     timeExpected: 30,
-    question: 'How many fossil fuels does AQA GCSE require you to know?',
+    question: 'How many fossil fuels does GCSE Physics require you to know?',
     options: ['1', '2', '3', '4'],
     correctIndex: 2,
     senNote: 'The three fossil fuels are coal, oil, and natural gas.',

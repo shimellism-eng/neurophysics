@@ -1,14 +1,14 @@
 /**
  * examNovelContext.js - Grade 9 discriminator: unfamiliar context 6-mark questions
  *
- * AQA constructs these by presenting a scenario the student has never seen,
+ * These questions present a scenario the student has never seen,
  * then asking them to apply standard GCSE equations to it. The physics is
  * always within the spec - only the context is unfamiliar.
  *
  * Schema:
  * {
  *   type: 'novel-context',
- *   topic: string,           // AQA topic area for filtering
+ *   topic: string,           // topic area for filtering
  *   scenario: string,        // 2–4 sentence context paragraph
  *   question: string,        // the question stem
  *   questionSubtitle: string,

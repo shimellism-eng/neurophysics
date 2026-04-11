@@ -1,6 +1,6 @@
 /**
  * qb-particle.js — Adaptive question bank: Particle Model of Matter
- * AQA GCSE Physics / Combined Science
+ * GCSE Physics / Combined Science
  * Topics: states_density, internal_energy, specific_latent_heat, gas_pressure
  * Total questions: 100 (25 per topic)
  * Schema: tier 1 = MCQ recall (30 s), tier 2 = application (60 s), tier 3 = mastery (120 s)

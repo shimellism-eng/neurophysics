@@ -1,6 +1,6 @@
 /**
  * qb-electricity.js — Adaptive question bank: Electricity module
- * AQA GCSE Physics / Combined Science
+ * GCSE Physics / Combined Science
  * Topics: circuit_basics, circuit_components, series_parallel,
  *         domestic_electricity, electrical_power, national_grid, static_electricity
  * Total questions: 175 (25 per topic × 7 topics)

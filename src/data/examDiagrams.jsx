@@ -2043,7 +2043,7 @@ export function CircuitSymbolsReference() {
       name: 'LDR',
       draw: (cx, cy) => (
         <g>
-          {/* Oval enclosure (AQA standard) */}
+          {/* Oval enclosure */}
           <ellipse cx={cx} cy={cy} rx="16" ry="11" fill="none" stroke="#cad5e2" strokeWidth="1.5" />
           {/* Resistor rectangle inside oval */}
           <rect x={cx - 10} y={cy - 4} width="20" height="8" fill="none" stroke="#cad5e2" strokeWidth="1.2" />

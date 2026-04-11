@@ -1,6 +1,6 @@
 /**
  * ExtendedAnswerQuestion — open-ended exam question with AI marking.
- * Student types their answer, Gemini marks it against the AQA mark scheme,
+ * Student types their answer, Gemini marks it against the mark scheme,
  * and returns a per-point breakdown with feedback.
  * Falls back to self-rating if AI is unavailable.
  */
@@ -256,7 +256,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
 
             {/* AI marking disclaimer */}
             <p className="text-[10px] text-center" style={{ color: '#3a4a5a' }}>
-              AI marking is for practice only — not official AQA marking. Verify with your teacher.
+              AI marking is for practice only — not official exam board marking. Verify with your teacher.
             </p>
 
             {/* Continue button */}

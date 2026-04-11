@@ -119,11 +119,11 @@ export function LEDSym({ color = D }) {
   )
 }
 
-// LDR — resistor rectangle INSIDE an oval, with two diagonal arrows pointing into it (AQA standard)
+// LDR — resistor rectangle INSIDE an oval, with two diagonal arrows pointing into it
 export function LDRSym({ color = D }) {
   return (
     <g>
-      {/* Oval enclosure (AQA textbook: rectangle inside circle/oval) */}
+      {/* Oval enclosure (rectangle inside circle/oval) */}
       <ellipse cx={0} cy={0} rx={16} ry={11} fill="none" stroke={color} strokeWidth={1.5} />
       {/* Resistor rectangle inside the oval */}
       <rect x={-10} y={-4} width={20} height={8} fill="none" stroke={color} strokeWidth={1.2} />

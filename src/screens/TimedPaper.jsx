@@ -1,5 +1,5 @@
 /**
- * TimedPaper - AQA-mirror 35-mark mini-paper with:
+ * TimedPaper - 35-mark mini-paper with:
  * - Global countdown timer (55 min) with amber/red urgency
  * - Question palette (numbered circles, answered/flagged states)
  * - Full state persistence (survives app backgrounding)

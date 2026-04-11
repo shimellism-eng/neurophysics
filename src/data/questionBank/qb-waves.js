@@ -1,6 +1,6 @@
 /**
  * qb-waves.js — Adaptive question bank: Waves module
- * AQA GCSE Physics / Combined Science
+ * GCSE Physics / Combined Science
  * Topics: wave_types, wave_properties, wave_reflection, total_internal_reflection,
  *         sound_ultrasound, em_spectrum, visible_light, lenses (physics_only), black_body
  * Total questions: 200 (25 per topic × 4 + 20 per topic × 5)
@@ -136,7 +136,7 @@ const wavesQuestions = [
     question: 'Water waves at the surface of the sea are an example of which type of wave?',
     options: ['Purely longitudinal', 'Purely transverse', 'Transverse (with some longitudinal component)', 'Stationary waves'],
     correctIndex: 2,
-    senNote: 'Water waves are transverse for AQA GCSE purposes — surface particles move up and down as the wave passes horizontally.',
+    senNote: 'Water waves are transverse for GCSE Physics purposes — surface particles move up and down as the wave passes horizontally.',
   },
 
   {
@@ -1633,7 +1633,7 @@ const wavesQuestions = [
     markScheme: [
       'Any two from: endoscopes (medical imaging) (1); broadband/internet communication (carrying data as light pulses) (1); telephone/cable TV data transmission (1); decorative lighting / fibre optic lamps (1)',
     ],
-    senNote: 'Main AQA examples: medical endoscopes and communications (broadband). Learn both.',
+    senNote: 'Main GCSE examples: medical endoscopes and communications (broadband). Learn both.',
   },
 
   // T3 — total internal reflection

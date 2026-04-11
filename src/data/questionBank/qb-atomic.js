@@ -1,6 +1,6 @@
 /**
  * qb-atomic.js — Adaptive question bank: Atomic Structure module
- * AQA GCSE Physics / Combined Science
+ * GCSE Physics / Combined Science
  * Topics: atomic_structure, atomic_model_history, radioactive_decay, nuclear_equations (combined)
  *         half_life, radiation_hazards (combined), nuclear_fission, nuclear_fusion (physics_only)
  * Total questions: 200 (25 per topic × 8 topics)

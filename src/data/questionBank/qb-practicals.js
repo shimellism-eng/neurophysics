@@ -1,6 +1,6 @@
 /**
  * qb-practicals.js
- * AQA-style exam practice questions for all 11 Required Practicals.
+ * Exam practice questions for all 11 Required Practicals.
  * topicId matches the practical id (e.g. 'shc', 'resistance').
  * Tier 1: recall (MCQ) | Tier 2: application | Tier 3: extended method/evaluation
  */

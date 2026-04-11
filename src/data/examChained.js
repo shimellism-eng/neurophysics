@@ -2,7 +2,7 @@
  * examChained.js - Grade 9 discriminator: multi-step chained-equation calculations
  *
  * These questions require the student to identify WHICH two (or three) equations
- * to link, without being told - the primary Grade 9 filter in AQA Physics papers.
+ * to link, without being told - the primary Grade 9 filter in GCSE Physics papers.
  *
  * Schema matches examCalculations.js but type = "calculation-chained" and tier = 3.
  */

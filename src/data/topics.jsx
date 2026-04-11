@@ -19,7 +19,7 @@ export const TOPICS = {
   ...PRACTICALS_TOPICS,
 }
 
-// Topics that are AQA GCSE Physics only (NOT in Combined Science Trilogy)
+// Topics that are GCSE Physics only (NOT in Combined Science Trilogy)
 export const PHYSICS_ONLY_TOPICS = new Set([
   'moments',
   'fluid_pressure',

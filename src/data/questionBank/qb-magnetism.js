@@ -1,6 +1,6 @@
 /**
  * qb-magnetism.js — Adaptive question bank: Magnetism & Electromagnetism
- * AQA GCSE Physics / Combined Science (partly Physics Only)
+ * GCSE Physics / Combined Science (partly Physics Only)
  * Topics: magnetism_fields, electromagnetism, motor_effect, em_induction (combined)
  *         ac_generators, transformers (physics_only)
  * Total questions: 150 (25 per topic × 6 topics)

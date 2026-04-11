@@ -1,6 +1,6 @@
 /**
  * qb-space.js — Adaptive question bank: Space Physics
- * AQA GCSE Physics ONLY (not Combined Science)
+ * GCSE Physics ONLY (not Combined Science)
  * Topics: solar_system, stellar_evolution, redshift
  * Total questions: 75 (25 per topic)
  */

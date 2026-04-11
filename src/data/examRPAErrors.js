@@ -1,7 +1,7 @@
 /**
  * examRPAErrors.js - Grade 9 discriminator: "Too high / too low" error direction questions
  *
- * These appear in every AQA Physics paper. The student must:
+ * These appear in every GCSE Physics paper. The student must:
  *   [1 mark] identify the source of error
  *   [1 mark] state the direction it affects the calculated value (too high / too low / no effect)
  *

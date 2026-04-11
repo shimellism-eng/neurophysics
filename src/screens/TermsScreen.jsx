@@ -21,7 +21,7 @@ Minimum age: You must be 13 or older to use NeuroPhysics. If you are under 16, a
 
 The app is for personal, non-commercial educational use only. It is not a substitute for qualified teacher instruction, official exam board guidance, or professional academic advice.
 
-Exam-style questions in NeuroPhysics are original content created for revision practice. NeuroPhysics is not affiliated with, endorsed by, or authorised by AQA, OCR, Edexcel, or any other exam board.`,
+Exam-style questions in NeuroPhysics are original content created for revision practice. NeuroPhysics is not affiliated with, endorsed by, or authorised by any exam board.`,
   },
   {
     title: '3. AI tutor (Mamo) and AI marking',
@@ -30,7 +30,7 @@ Exam-style questions in NeuroPhysics are original content created for revision p
 Important limitations — please read carefully:
 
 • AI responses and marks may be inaccurate, incomplete, or out of date.
-• AI marking is for practice and self-assessment only. It does not reflect official AQA or exam board marking standards.
+• AI marking is for practice and self-assessment only. It does not reflect official exam board marking standards.
 • You should always verify important information with a qualified teacher or official revision materials.
 • Do not rely solely on AI-generated content for exam preparation.
 • Do not share personal, sensitive, or confidential information in the chat.

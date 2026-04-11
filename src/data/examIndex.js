@@ -137,7 +137,7 @@ export function getGrade9Questions(course) {
 
 /**
  * Get a balanced mini-paper for timed practice (35 marks).
- * Structure mirrors AQA: MCQ → short answer → calculation → extended.
+ * Structure: MCQ → short answer → calculation → extended.
  * @param {string} [course] - 'combined' | 'physics_only' | undefined
  */
 export function getTimedPaperQuestions(course) {

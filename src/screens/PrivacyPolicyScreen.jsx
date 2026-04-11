@@ -98,7 +98,7 @@ You also have the right to complain to the Information Commissioner's Office (IC
 
 • Vercel — hosts our API. Vercel may log anonymous request metadata (e.g. timestamps). See: vercel.com/legal/privacy-policy
 
-NeuroPhysics is not affiliated with, endorsed by, or associated with AQA or any other exam board. Exam-style questions are original content created for revision practice.`,
+Exam-style questions are original content created for revision practice. NeuroPhysics is not affiliated with, endorsed by, or associated with any exam board.`,
   },
   {
     title: '9. Cookies and local storage',

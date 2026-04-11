@@ -176,7 +176,7 @@ function CircuitComponentsLesson() {
         <text x={0} y={4} textAnchor="middle" fontSize={10} fontWeight="bold" fill="#f59e0b">V</text>
       </g>
     ),
-    // LDR — oval enclosure (AQA standard) with resistor inside + diagonal arrows into it
+    // LDR — oval enclosure with resistor inside + diagonal arrows into it
     () => (
       <g>
         <line x1={-18} y1={0} x2={18} y2={0} stroke="#cad5e2" strokeWidth="1.5" />

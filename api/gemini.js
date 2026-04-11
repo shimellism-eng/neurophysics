@@ -2,30 +2,7 @@
 // Streams SSE back to the client for real-time word-by-word display
 
 import { verifySupabaseJWT } from './_verifyAuth.js'
-
-// ── Simple in-memory rate limiter (per-IP, resets every minute) ──────────────
-const rateMap = new Map()
-const RATE_LIMIT = 20
-const WINDOW_MS  = 60_000
-
-function isRateLimited(ip) {
-  const now = Date.now()
-  const entry = rateMap.get(ip)
-  if (!entry || now > entry.resetAt) {
-    rateMap.set(ip, { count: 1, resetAt: now + WINDOW_MS })
-    return false
-  }
-  if (entry.count >= RATE_LIMIT) return true
-  entry.count++
-  return false
-}
-
-setInterval(() => {
-  const now = Date.now()
-  for (const [key, val] of rateMap) {
-    if (now > val.resetAt) rateMap.delete(key)
-  }
-}, 300_000)
+import { rateLimitCheck }   from './_rateLimit.js'
 
 const BASE_SYSTEM_PROMPT = `You are Mamo, a friendly and encouraging AI physics tutor for GCSE students, specialising in supporting neurodivergent learners including those with ADHD, dyslexia, autism, and anxiety.
 
@@ -68,17 +45,11 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'UNAUTHORIZED' })
   }
 
-  // ── Rate limiting ─────────────────────────────────────────────────────────
-  const ip =
-    (req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||
-    req.socket?.remoteAddress ||
-    'unknown'
-
-  if (isRateLimited(ip)) {
-    return res.status(429).json({ error: 'TOO_MANY_REQUESTS' })
-  }
+  // ── Rate limiting (persistent — Upstash Redis) ───────────────────────────
+  if (await rateLimitCheck(req, res)) return
 
   // Log incoming request
+  const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.socket?.remoteAddress || 'unknown'
   console.log('[mamo:request]', { ts: new Date().toISOString(), ip_prefix: ip.split('.').slice(0, 2).join('.'), method: req.method })
 
   // ── API key ───────────────────────────────────────────────────────────────

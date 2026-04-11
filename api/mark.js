@@ -2,30 +2,7 @@
 // Uses Gemini 2.5 Flash-Lite in non-streaming mode, returns structured JSON
 
 import { verifySupabaseJWT } from './_verifyAuth.js'
-
-// ── Simple in-memory rate limiter (per-IP, resets every minute) ──────────────
-const rateMap = new Map()
-const RATE_LIMIT = 10  // marking is more expensive than chat
-const WINDOW_MS  = 60_000
-
-function isRateLimited(ip) {
-  const now = Date.now()
-  const entry = rateMap.get(ip)
-  if (!entry || now > entry.resetAt) {
-    rateMap.set(ip, { count: 1, resetAt: now + WINDOW_MS })
-    return false
-  }
-  if (entry.count >= RATE_LIMIT) return true
-  entry.count++
-  return false
-}
-
-setInterval(() => {
-  const now = Date.now()
-  for (const [key, val] of rateMap) {
-    if (now > val.resetAt) rateMap.delete(key)
-  }
-}, 300_000)
+import { rateLimitCheck }   from './_rateLimit.js'
 
 const MARKING_SYSTEM_PROMPT = `You are an AQA GCSE Physics examiner marking a student's written answer.
 
@@ -75,15 +52,8 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'UNAUTHORIZED' })
   }
 
-  // ── Rate limiting ─────────────────────────────────────────────────────────
-  const ip =
-    (req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||
-    req.socket?.remoteAddress ||
-    'unknown'
-
-  if (isRateLimited(ip)) {
-    return res.status(429).json({ error: 'TOO_MANY_REQUESTS' })
-  }
+  // ── Rate limiting (persistent — Upstash Redis) ───────────────────────────
+  if (await rateLimitCheck(req, res)) return
 
   // ── API key ───────────────────────────────────────────────────────────────
   const apiKey = (process.env.GOOGLE_AI_API_KEY || '').trim()

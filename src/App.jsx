@@ -28,6 +28,7 @@ const PaperResults      = lazy(() => import('./screens/PaperResults'))
 const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
 const ShareProgressScreen = lazy(() => import('./screens/ShareProgressScreen'))
+const AdaptivePractice   = lazy(() => import('./screens/AdaptivePractice'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
@@ -249,6 +250,7 @@ function AppShell() {
             <Route path="/privacy" element={<PrivacyPolicyScreen />} />
             <Route path="/terms" element={<TermsScreen />} />
             <Route path="/share" element={<ShareProgressScreen />} />
+            <Route path="/practice/:topicId" element={<AdaptivePractice />} />
             <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
           </Routes>
         </Suspense>

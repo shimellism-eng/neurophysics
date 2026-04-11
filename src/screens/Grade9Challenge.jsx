@@ -199,7 +199,12 @@ const TYPE_LABELS = {
 // ── Main Screen ───────────────────────────────────────────────────────────────
 export default function Grade9Challenge() {
   const navigate = useNavigate()
-  const questions = useMemo(() => getGrade9Questions(), [])
+
+  const [course, setCourse] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').course || 'combined' } catch { return 'combined' }
+  })
+  const [started, setStarted] = useState(false)
+  const questions = useMemo(() => getGrade9Questions(course), [course])
   const total = questions.length
 
   const [qIndex, setQIndex]       = useState(0)
@@ -232,6 +237,7 @@ export default function Grade9Challenge() {
     setScore(0)
     setCompleted(false)
     setShowResults(false)
+    setStarted(false)
   }
 
   const renderQuestion = () => {
@@ -311,6 +317,66 @@ export default function Grade9Challenge() {
               Done
             </motion.button>
           </div>
+        </div>
+      </div>
+    )
+  }
+
+  // ── Intro / course picker screen ──────────────────────────────────────────
+  if (!started && !showResults) {
+    return (
+      <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+        <div className="px-5 pt-5 pb-3 shrink-0">
+          <button onClick={() => navigate(-1)}
+            className="w-11 h-11 rounded-[12px] flex items-center justify-center"
+            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+            <ArrowLeft size={18} color="#a8b8cc" />
+          </button>
+        </div>
+        <div className="flex-1 flex flex-col items-center justify-center px-6 gap-6">
+          <Trophy size={56} color="#a855f7" strokeWidth={1.3} />
+          <div className="text-center">
+            <div className="text-2xl font-black mb-1" style={{ color: '#f8fafc' }}>Grade 9 Challenge</div>
+            <div className="text-sm" style={{ color: '#64748b' }}>Chained calcs · RPA errors · Novel context</div>
+          </div>
+          <div className="w-full space-y-2">
+            <div className="text-xs font-bold uppercase tracking-wider mb-2 text-center" style={{ color: '#64748b' }}>Your course</div>
+            {[
+              { id: 'combined', label: 'Combined Science', sub: 'Excludes Physics-only topics', color: '#818cf8' },
+              { id: 'physics_only', label: 'Physics Only', sub: 'All topics including Physics-only', color: '#e879f9' },
+            ].map(opt => (
+              <motion.button key={opt.id}
+                className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[16px] text-left"
+                style={{
+                  background: course === opt.id ? `${opt.color}15` : 'rgba(18,26,47,0.9)',
+                  border: course === opt.id ? `1.5px solid ${opt.color}50` : '0.75px solid #1d293d',
+                }}
+                onClick={() => {
+                  setCourse(opt.id)
+                  try {
+                    const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
+                    localStorage.setItem('neurophysics_prefs', JSON.stringify({ ...prefs, course: opt.id }))
+                  } catch {}
+                }}
+                whileTap={{ scale: 0.98 }}>
+                <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center"
+                  style={{ borderColor: course === opt.id ? opt.color : '#1d293d' }}>
+                  {course === opt.id && <div className="w-2 h-2 rounded-full" style={{ background: opt.color }} />}
+                </div>
+                <div>
+                  <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{opt.label}</div>
+                  <div className="text-xs" style={{ color: '#64748b' }}>{opt.sub}</div>
+                </div>
+              </motion.button>
+            ))}
+          </div>
+          <motion.button
+            className="w-full py-4 rounded-[16px] text-base font-bold"
+            style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', color: '#fff' }}
+            onClick={() => setStarted(true)}
+            whileTap={{ scale: 0.97 }}>
+            Start Challenge
+          </motion.button>
         </div>
       </div>
     )

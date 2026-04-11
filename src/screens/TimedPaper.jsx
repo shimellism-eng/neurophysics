@@ -310,14 +310,18 @@ function getSectionLabel(idx, questions) {
 export default function TimedPaper() {
   const navigate = useNavigate()
 
+  const [course, setCourse] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').course || 'combined' } catch { return 'combined' }
+  })
+
   // Load or generate paper
   const questions = useMemo(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')
       if (saved?.questions && saved.timeRemaining > 0) return saved.questions
     } catch {}
-    return getTimedPaperQuestions()
-  }, [])
+    return getTimedPaperQuestions(course)
+  }, [course])
 
   const total = questions.length
 
@@ -487,7 +491,7 @@ export default function TimedPaper() {
           <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Exam-style Physics Paper</h1>
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
+        <div className="flex-1 overflow-y-auto flex flex-col items-center justify-center px-6 gap-5">
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 16 }}
@@ -496,16 +500,55 @@ export default function TimedPaper() {
             <div style={{ fontSize: 56 }} className="mb-3">⏱</div>
             <h2 className="text-2xl font-black mb-2" style={{ color: '#f8fafc' }}>Ready to start?</h2>
             <p className="text-sm" style={{ color: '#a8b8cc' }}>
-              35 marks · choose your time allowance
+              35 marks · choose your course and time allowance
             </p>
+          </motion.div>
+
+          {/* Course picker */}
+          <motion.div
+            className="w-full space-y-2"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <div className="text-xs font-bold uppercase tracking-wider mb-2 text-center" style={{ color: '#64748b' }}>Your course</div>
+            {[
+              { id: 'combined', label: 'Combined Science', sub: 'Excludes Physics-only topics', color: '#818cf8' },
+              { id: 'physics_only', label: 'Physics Only', sub: 'All topics including Physics-only', color: '#e879f9' },
+            ].map(opt => (
+              <motion.button key={opt.id}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-[14px] text-left"
+                style={{
+                  background: course === opt.id ? `${opt.color}15` : 'rgba(18,26,47,0.9)',
+                  border: course === opt.id ? `1.5px solid ${opt.color}50` : '0.75px solid #1d293d',
+                }}
+                onClick={() => {
+                  setCourse(opt.id)
+                  try {
+                    const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
+                    localStorage.setItem('neurophysics_prefs', JSON.stringify({ ...prefs, course: opt.id }))
+                  } catch {}
+                }}
+                whileTap={{ scale: 0.98 }}>
+                <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center"
+                  style={{ borderColor: course === opt.id ? opt.color : '#1d293d' }}>
+                  {course === opt.id && <div className="w-2 h-2 rounded-full" style={{ background: opt.color }} />}
+                </div>
+                <div>
+                  <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{opt.label}</div>
+                  <div className="text-xs" style={{ color: '#64748b' }}>{opt.sub}</div>
+                </div>
+              </motion.button>
+            ))}
           </motion.div>
 
           <motion.div
             className="w-full flex flex-col gap-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
+            transition={{ delay: 0.2 }}
           >
+            <div className="text-xs font-bold uppercase tracking-wider mb-1 text-center" style={{ color: '#64748b' }}>Time allowance</div>
             <motion.button
               className="w-full py-5 rounded-[16px] flex items-center justify-between px-5"
               style={{ background: 'rgba(99,102,241,0.12)', border: '1.5px solid rgba(99,102,241,0.45)', color: '#f8fafc' }}

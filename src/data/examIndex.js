@@ -2,6 +2,7 @@
  * examIndex.js — merges all exam-style question data files
  * and exposes a single lookup function.
  */
+import { PHYSICS_ONLY_TOPICS } from './topics'
 import examCalculations from './examCalculations'
 import examPracticals from './examPracticals'
 import examParticleModel from './examParticleModel'
@@ -101,20 +102,31 @@ export function getExamTopicIds() {
 /**
  * Get all Grade 9 discriminator questions (tier 3, mixed types).
  * Used by Grade9Challenge screen. Shuffled on each call.
+ * @param {string} [course] - 'combined' | 'physics_only' | undefined
  */
-export function getGrade9Questions() {
+export function getGrade9Questions(course) {
   const questions = []
+  const physicsOnly = course === 'combined'  // if combined, exclude physics-only topics
 
   // Chained-equation multi-step calculations from all topics
-  Object.values(examChained).forEach(qs => questions.push(...qs))
+  Object.entries(examChained).forEach(([topicId, qs]) => {
+    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
+    questions.push(...qs)
+  })
 
   // RPA "too high / too low" error direction questions
-  questions.push(...examRPAErrors)
+  examRPAErrors.forEach(q => {
+    if (physicsOnly && q.topicId && PHYSICS_ONLY_TOPICS.has(q.topicId)) return
+    questions.push(q)
+  })
 
   // Novel-context 6-mark questions
-  questions.push(...examNovelContext)
+  examNovelContext.forEach(q => {
+    if (physicsOnly && q.topic && PHYSICS_ONLY_TOPICS.has(q.topic)) return
+    questions.push(q)
+  })
 
-  // Shuffle for variety
+  // Shuffle
   for (let i = questions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
     ;[questions[i], questions[j]] = [questions[j], questions[i]]
@@ -126,43 +138,49 @@ export function getGrade9Questions() {
 /**
  * Get a balanced mini-paper for timed practice (35 marks).
  * Structure mirrors AQA: MCQ → short answer → calculation → extended.
+ * @param {string} [course] - 'combined' | 'physics_only' | undefined
  */
-export function getTimedPaperQuestions() {
+export function getTimedPaperQuestions(course) {
   const paper = []
+  const physicsOnly = course === 'combined'
 
   // Section A — 5 × MCQ / equation-recall (1 mark each)
   const mcqPool = []
-  Object.values(examEquations).forEach(qs => mcqPool.push(...qs))
-  const shuffledMCQ = mcqPool.sort(() => Math.random() - 0.5).slice(0, 5)
-  paper.push(...shuffledMCQ)
+  Object.entries(examEquations).forEach(([topicId, qs]) => {
+    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
+    mcqPool.push(...qs)
+  })
+  paper.push(...mcqPool.sort(() => Math.random() - 0.5).slice(0, 5))
 
   // Section B — Short answer: 2 × calculation (tier 1–2) + 1 × RPA error
   const calcPool = []
-  Object.values(examCalculations).forEach(qs =>
+  Object.entries(examCalculations).forEach(([topicId, qs]) => {
+    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
     calcPool.push(...qs.filter(q => q.tier <= 2))
-  )
-  const shuffledCalc = calcPool.sort(() => Math.random() - 0.5).slice(0, 2)
-  paper.push(...shuffledCalc)
+  })
+  paper.push(...calcPool.sort(() => Math.random() - 0.5).slice(0, 2))
 
-  // 1 × RPA error direction question
-  const rpaQ = examRPAErrors[Math.floor(Math.random() * examRPAErrors.length)]
-  paper.push(rpaQ)
+  const rpaPool = examRPAErrors.filter(q => !physicsOnly || !q.topicId || !PHYSICS_ONLY_TOPICS.has(q.topicId))
+  if (rpaPool.length > 0) paper.push(rpaPool[Math.floor(Math.random() * rpaPool.length)])
 
   // Section C — Chained calculation (tier 3) + graph/diagram
   const chainPool = []
-  Object.values(examChained).forEach(qs => chainPool.push(...qs))
-  const chainQ = chainPool[Math.floor(Math.random() * chainPool.length)]
-  paper.push(chainQ)
+  Object.entries(examChained).forEach(([topicId, qs]) => {
+    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
+    chainPool.push(...qs)
+  })
+  if (chainPool.length > 0) paper.push(chainPool[Math.floor(Math.random() * chainPool.length)])
 
   const graphPool = []
-  Object.values(examGraphs).forEach(qs => graphPool.push(...qs))
-  if (graphPool.length > 0) {
-    paper.push(graphPool[Math.floor(Math.random() * graphPool.length)])
-  }
+  Object.entries(examGraphs).forEach(([topicId, qs]) => {
+    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
+    graphPool.push(...qs)
+  })
+  if (graphPool.length > 0) paper.push(graphPool[Math.floor(Math.random() * graphPool.length)])
 
   // Section D — Novel context OR extended 6-mark
-  const novelQ = examNovelContext[Math.floor(Math.random() * examNovelContext.length)]
-  paper.push(novelQ)
+  const novelPool = examNovelContext.filter(q => !physicsOnly || !q.topic || !PHYSICS_ONLY_TOPICS.has(q.topic))
+  if (novelPool.length > 0) paper.push(novelPool[Math.floor(Math.random() * novelPool.length)])
 
   return paper
 }

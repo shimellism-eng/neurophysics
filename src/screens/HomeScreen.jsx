@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import {
-  ChevronRight, Zap, Flame, Target, TrendingUp,
-  ArrowRight, Calendar, CheckCircle, Clock,
+  ChevronRight, Zap, Flame, TrendingUp,
+  Calendar, CheckCircle, Clock,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -55,7 +55,7 @@ function StreakCalendar({ streak }) {
               )}
             </div>
             <span style={{
-              fontSize: 9, fontWeight: isToday ? 700 : 500,
+              fontSize: 11, fontWeight: isToday ? 700 : 500,
               color: filled
                 ? isToday ? '#f97316' : 'rgba(249,115,22,0.55)'
                 : 'rgba(255,255,255,0.2)',
@@ -70,11 +70,120 @@ function StreakCalendar({ streak }) {
   )
 }
 
+// ─── InsightsPanel ────────────────────────────────────────────────────────────
+function InsightsPanel({ insights }) {
+  if (!insights.hasData) return null
+
+  return (
+    <div className="space-y-3">
+      {/* Overall accuracy */}
+      {insights.overallAccuracy !== null && (
+        <div className="rounded-[22px] px-4 py-4"
+          style={{ background: 'rgba(15,22,41,0.95)', border: '1px solid rgba(255,255,255,0.08)' }}>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-bold" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              Overall accuracy
+            </span>
+            <span className="text-sm font-black" style={{ color: insights.overallAccuracy >= 0.7 ? '#22c55e' : insights.overallAccuracy >= 0.5 ? '#fbbf24' : '#fbbf24' }}>
+              {Math.round(insights.overallAccuracy * 100)}%
+            </span>
+          </div>
+          <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+            <motion.div className="h-full rounded-full"
+              style={{ background: insights.overallAccuracy >= 0.7 ? '#22c55e' : '#fbbf24' }}
+              initial={{ width: 0 }}
+              animate={{ width: `${insights.overallAccuracy * 100}%` }}
+              transition={{ duration: 1, ease: 'easeOut' }} />
+          </div>
+          <div className="text-xs mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
+            {insights.attempted} topic{insights.attempted !== 1 ? 's' : ''} practised so far
+          </div>
+        </div>
+      )}
+
+      {/* Strong topics — wins first */}
+      {insights.strongTopics.length > 0 && (
+        <div className="rounded-[22px] px-4 py-4"
+          style={{ background: 'rgba(34,197,94,0.06)', border: '1px solid rgba(34,197,94,0.15)' }}>
+          <div className="text-sm font-bold mb-3" style={{ color: '#4ade80' }}>
+            Strong areas
+          </div>
+          <div className="space-y-2">
+            {insights.strongTopics.map(({ id, topic, accuracy }) => (
+              <div key={id} className="flex items-center gap-3">
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                  <div className="w-full h-1.5 rounded-full mt-1 overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
+                    <div className="h-full rounded-full" style={{ width: `${accuracy * 100}%`, background: '#22c55e' }} />
+                  </div>
+                </div>
+                <span className="text-xs font-bold shrink-0" style={{ color: '#4ade80' }}>
+                  {Math.round(accuracy * 100)}%
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Keep practising — amber not red */}
+      {insights.weakTopics.length > 0 && (
+        <div className="rounded-[22px] px-4 py-4"
+          style={{ background: 'rgba(251,191,36,0.06)', border: '1px solid rgba(251,191,36,0.2)' }}>
+          <div className="text-sm font-bold mb-3" style={{ color: '#fbbf24' }}>
+            Keep practising
+          </div>
+          <div className="space-y-2">
+            {insights.weakTopics.map(({ id, topic, accuracy }) => (
+              <div key={id} className="flex items-center gap-3">
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                  <div className="w-full h-1.5 rounded-full mt-1 overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
+                    <div className="h-full rounded-full" style={{ width: `${accuracy * 100}%`, background: '#fbbf24' }} />
+                  </div>
+                </div>
+                <span className="text-xs font-bold shrink-0" style={{ color: '#fbbf24' }}>
+                  {Math.round(accuracy * 100)}%
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Suggestions */}
+      {insights.suggestions.length > 0 && (
+        <div className="rounded-[22px] px-4 py-4"
+          style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}>
+          <div className="text-sm font-bold mb-3" style={{ color: '#818cf8' }}>
+            Recommended next
+          </div>
+          <div className="space-y-2">
+            {insights.suggestions.map(({ id, topic, reason, accuracy }) => (
+              <div key={id} className="flex items-center gap-3 py-1">
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                  <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                    {reason === 'needs work'
+                      ? `${Math.round(accuracy * 100)}% — practise again to boost this`
+                      : 'Not tried yet — give it a go'}
+                  </div>
+                </div>
+                <ChevronRight size={16} color="#818cf8" />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ─── Screen ───────────────────────────────────────────────────────────────────
 export default function HomeScreen() {
   const navigate = useNavigate()
   const { progress, stats } = useProgress()
-  const { weakTopics, suggestions, overallAccuracy, hasData, reviewDue } = useInsights()
+  const { weakTopics, strongTopics, suggestions, overallAccuracy, hasData, reviewDue, attempted } = useInsights()
   const { user } = useAuth()
   const profile  = loadProfile()
 
@@ -102,15 +211,6 @@ export default function HomeScreen() {
     const d = Math.ceil((new Date(profile.examDate) - new Date()) / 86400000)
     return d > 0 && d <= 365 ? d : null
   })()
-
-  // Deduplicate: weak topics first, then suggestions that aren't already shown
-  const filteredWeak = weakTopics.filter(
-    w => w.id !== firstUnmastered && w.accuracy < 0.65
-  )
-  const weakIds = new Set(filteredWeak.map(w => w.id))
-  const filteredSuggestions = suggestions.filter(
-    s => s.id !== firstUnmastered && !weakIds.has(s.id)
-  )
 
   return (
     <div
@@ -143,7 +243,7 @@ export default function HomeScreen() {
           </div>
 
           <div className="flex-1 min-w-0">
-            <p className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: '#6366f1' }}>
+            <p className="text-[12px] font-semibold mb-0.5" style={{ color: '#6366f1' }}>
               {greeting}
             </p>
             <h1 className="font-bold leading-tight truncate" style={{ color: '#f8fafc', fontSize: 24, letterSpacing: '-0.03em' }}>
@@ -153,19 +253,19 @@ export default function HomeScreen() {
             <div className="flex items-center gap-2 mt-2 flex-wrap">
               {xp >= 5 ? (
                 <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
-                  style={{ fontSize: 11, background: 'rgba(253,199,0,0.12)', color: '#fdc700', border: '1px solid rgba(253,199,0,0.22)' }}>
+                  style={{ fontSize: 12, background: 'rgba(253,199,0,0.12)', color: '#fdc700', border: '1px solid rgba(253,199,0,0.22)' }}>
                   <Zap size={11} /> {xp} XP
                 </span>
               ) : (
                 <span className="font-semibold px-2.5 py-1 rounded-full"
-                  style={{ fontSize: 11, background: 'rgba(99,102,241,0.1)', color: '#818cf8' }}>
+                  style={{ fontSize: 12, background: 'rgba(99,102,241,0.1)', color: '#818cf8' }}>
                   First XP incoming
                 </span>
               )}
 
               {masteredCount > 0 && (
                 <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
-                  style={{ fontSize: 11, background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}>
+                  style={{ fontSize: 12, background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}>
                   <CheckCircle size={11} /> {masteredCount} mastered
                 </span>
               )}
@@ -173,12 +273,12 @@ export default function HomeScreen() {
               {examDaysLeft && (
                 <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
                   style={{
-                    fontSize: 11,
-                    background: examDaysLeft <= 30 ? 'rgba(239,68,68,0.1)' : 'rgba(99,102,241,0.1)',
-                    color: examDaysLeft <= 30 ? '#f87171' : '#818cf8',
-                    border: `1px solid ${examDaysLeft <= 30 ? 'rgba(239,68,68,0.2)' : 'rgba(99,102,241,0.2)'}`,
+                    fontSize: 12,
+                    background: 'rgba(99,102,241,0.1)',
+                    color: '#818cf8',
+                    border: '1px solid rgba(99,102,241,0.2)',
                   }}>
-                  {examDaysLeft <= 30 ? '🔥' : '📅'} {examDaysLeft}d to exam
+                  {examDaysLeft <= 30 ? '🎯' : '📅'} {examDaysLeft}d to exam
                 </span>
               )}
             </div>
@@ -234,7 +334,7 @@ export default function HomeScreen() {
               </div>
             )}
             <div className="text-left">
-              <div className="font-bold uppercase tracking-wider opacity-75 mb-0.5" style={{ fontSize: 10 }}>
+              <div className="font-semibold opacity-75 mb-0.5" style={{ fontSize: 12 }}>
                 {masteredCount === 0 ? 'Start here' : 'Continue learning'}
               </div>
               <div className="font-bold" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
@@ -302,7 +402,7 @@ export default function HomeScreen() {
                   </p>
                 </>
               )}
-              <StreakCalendar streak={streak} />
+              {streak > 0 && <StreakCalendar streak={streak} />}
             </div>
           </div>
         </motion.div>
@@ -322,7 +422,7 @@ export default function HomeScreen() {
               style={{ background: 'rgba(99,102,241,0.07)', border: '1px solid rgba(99,102,241,0.2)' }}>
               <div className="flex items-center gap-2 mb-1">
                 <Calendar size={13} color="#818cf8" />
-                <span style={{ fontSize: 11, fontWeight: 700, color: '#818cf8', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <span style={{ fontSize: 13, fontWeight: 700, color: '#818cf8' }}>
                   Time to revisit
                 </span>
                 <span className="ml-auto text-xs font-bold px-2 py-0.5 rounded-full"
@@ -356,9 +456,9 @@ export default function HomeScreen() {
         )}
       </AnimatePresence>
 
-      {/* ── INSIGHTS — gated: real data + non-empty after dedup ──────────────── */}
+      {/* ── INSIGHTS — enhanced panel ─────────────────────────────────────────── */}
       <AnimatePresence>
-        {hasData && (filteredWeak.length > 0 || filteredSuggestions.length > 0) && (
+        {hasData && (
           <motion.div
             className="px-5 mb-6"
             initial={{ opacity: 0 }}
@@ -367,90 +467,11 @@ export default function HomeScreen() {
           >
             <div className="flex items-center gap-2 mb-3">
               <TrendingUp size={13} color="#6366f1" />
-              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              <span style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.5)' }}>
                 Insights
               </span>
-              {overallAccuracy !== null && overallAccuracy > 0 && (
-                <span className="ml-auto text-xs font-bold px-2.5 py-0.5 rounded-full"
-                  style={{
-                    background: overallAccuracy >= 0.7 ? 'rgba(34,197,94,0.1)' : 'rgba(249,115,22,0.1)',
-                    color: overallAccuracy >= 0.7 ? '#22c55e' : '#f97316',
-                  }}>
-                  {Math.round(overallAccuracy * 100)}% accuracy
-                </span>
-              )}
             </div>
-
-            {/* Ready to practise */}
-            {filteredWeak.length > 0 && (
-              <div className="mb-4">
-                <p className="text-xs font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                  Ready to practise
-                </p>
-                <div className="space-y-2">
-                  {filteredWeak.map((x, i) => (
-                    <motion.button
-                      key={x.id}
-                      className="w-full flex items-center gap-3 px-4 py-3 rounded-[16px] text-left"
-                      style={{ background: 'rgba(249,115,22,0.05)', border: '1px solid rgba(249,115,22,0.18)', minHeight: 56 }}
-                      onClick={() => navigate(`/diagnostic/${x.id}`)}
-                      whileTap={{ scale: 0.97 }}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.35 + i * 0.05 }}
-                    >
-                      <div className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 text-xs font-bold"
-                        style={{ background: `${x.topic.moduleColor}18`, color: x.topic.moduleColor, border: `1px solid ${x.topic.moduleColor}30` }}>
-                        {Math.round(x.accuracy * 100)}%
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-bold truncate" style={{ color: '#f8fafc' }}>{x.topic.title}</div>
-                        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.32)' }}>Tap to practise</div>
-                      </div>
-                      <ArrowRight size={15} color={x.topic.moduleColor} />
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Up next — deduplicated from weak list */}
-            {filteredSuggestions.length > 0 && (
-              <div>
-                <p className="text-xs font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                  Up next
-                </p>
-                <div className="flex gap-2.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
-                  {filteredSuggestions.slice(0, 4).map((x, i) => (
-                    <motion.button
-                      key={x.id}
-                      className="flex-shrink-0 w-36 flex flex-col gap-2 px-3 py-3 rounded-[16px] text-left"
-                      style={{ background: `${x.topic.moduleColor}0d`, border: `1px solid ${x.topic.moduleColor}28`, minHeight: 44 }}
-                      onClick={() => navigate(x.reason === 'needs work' ? `/diagnostic/${x.id}` : `/lesson/${x.id}`)}
-                      whileTap={{ scale: 0.96 }}
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.38 + i * 0.06 }}
-                    >
-                      <div className="w-7 h-7 rounded-[8px] flex items-center justify-center"
-                        style={{ background: `${x.topic.moduleColor}20` }}>
-                        <Target size={13} color={x.topic.moduleColor} />
-                      </div>
-                      <div className="text-xs font-semibold leading-snug" style={{ color: '#f8fafc' }}>
-                        {x.topic.title}
-                      </div>
-                      <div className="text-[10px] px-1.5 py-0.5 rounded-full self-start font-semibold"
-                        style={{
-                          background: x.reason === 'needs work' ? 'rgba(249,115,22,0.14)' : 'rgba(99,102,241,0.14)',
-                          color: x.reason === 'needs work' ? '#f97316' : '#818cf8',
-                        }}>
-                        {x.reason === 'needs work' ? 'Review' : 'Continue'}
-                      </div>
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
-            )}
+            <InsightsPanel insights={{ weakTopics, strongTopics, suggestions, overallAccuracy, hasData, attempted }} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -474,7 +495,7 @@ export default function HomeScreen() {
                 <Clock size={22} color="#818cf8" strokeWidth={1.8} />
               </div>
               <div className="text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: '#6366f1' }}>
+                <div className="text-[12px] font-semibold mb-0.5" style={{ color: '#6366f1' }}>
                   You've mastered {masteredCount} topics
                 </div>
                 <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16, letterSpacing: '-0.02em' }}>

@@ -16,7 +16,7 @@
  *   0  Explore / 1  Big Idea / 2  Real World / 3  Key Concept
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
   ArrowLeft, ChevronRight, BookOpen, FlaskConical,
@@ -202,9 +202,19 @@ export default function LessonPlayer() {
   const navigate = useNavigate()
   const { markStarted, progress } = useProgress()
   const { hearts, maxHearts, lost, loseHeart, resetHearts } = useHearts()
+
+  const savedProgress = (() => {
+    try {
+      const s = JSON.parse(localStorage.getItem(`np_lesson_progress_${id}`) || 'null')
+      if (s && s.step > 0) return s
+      return null
+    } catch { return null }
+  })()
+
   const [step, setStep]           = useState(0)
   const [direction, setDirection] = useState(1)
   const [showIntro, setShowIntro] = useState(true)
+  const [showResume, setShowResume] = useState(!!savedProgress)
   const [xpPop, setXpPop]         = useState(false)
   const [xpKey, setXpKey]         = useState(0)
 
@@ -258,8 +268,17 @@ export default function LessonPlayer() {
     }
   }
 
+  // Save lesson progress whenever step changes
+  useEffect(() => {
+    if (step === 0) return // don't save step 0 (fresh start)
+    try {
+      localStorage.setItem(`np_lesson_progress_${id}`, JSON.stringify({ step, ts: Date.now() }))
+    } catch {}
+  }, [step, id])
+
   const handleStartQuiz = () => {
     markStarted(id)
+    try { localStorage.removeItem(`np_lesson_progress_${id}`) } catch {}
     navigate(`/diagnostic/${id}`)
   }
 
@@ -407,6 +426,51 @@ export default function LessonPlayer() {
 
   return (
     <div className="relative flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+
+      {/* ── Resume overlay ── */}
+      {showResume && savedProgress && (
+        <motion.div
+          className="fixed inset-0 z-50 flex items-end justify-center"
+          style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div
+            className="w-full max-w-[480px] rounded-t-[28px] px-5 pt-6 pb-8"
+            style={{ background: '#0f1629', border: '1px solid rgba(255,255,255,0.1)' }}
+            initial={{ y: 80 }} animate={{ y: 0 }} transition={{ type: 'spring', damping: 25 }}>
+            <div className="text-center mb-5">
+              <div className="text-2xl mb-2">📍</div>
+              <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>Continue where you left off?</div>
+              <div className="text-sm mt-1" style={{ color: '#64748b' }}>
+                You were on step {savedProgress.step + 1} of {totalSteps} in this lesson
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <motion.button
+                className="flex-1 py-3.5 rounded-[14px] text-sm font-semibold"
+                style={{ background: 'rgba(255,255,255,0.06)', border: '0.75px solid rgba(255,255,255,0.12)', color: '#a8b8cc' }}
+                onClick={() => {
+                  try { localStorage.removeItem(`np_lesson_progress_${id}`) } catch {}
+                  setShowResume(false)
+                  setStep(0)
+                }}
+                whileTap={{ scale: 0.97 }}>
+                Start over
+              </motion.button>
+              <motion.button
+                className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
+                style={{ background: topic.moduleColor, color: '#fff' }}
+                onClick={() => {
+                  setStep(savedProgress.step)
+                  setShowResume(false)
+                  setShowIntro(false)
+                }}
+                whileTap={{ scale: 0.97 }}>
+                Resume →
+              </motion.button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
 
       {/* ── Header ── */}
       <div

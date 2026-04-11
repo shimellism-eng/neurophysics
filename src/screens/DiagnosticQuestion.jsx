@@ -332,10 +332,6 @@ export default function DiagnosticQuestion() {
     setSubmitted(true)
     if (selected === q.correctAnswer) {
       setScore(s => s + 1)
-    } else {
-      // F5: auto-open SEN panel to sentence starters on first wrong answer
-      setShowSEN(true)
-      setSenTab('starters')
     }
   }
 

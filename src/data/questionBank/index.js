@@ -33,6 +33,9 @@ import atomicQuestions from './qb-atomic'
 import magnetismQuestions from './qb-magnetism'
 import spaceQuestions from './qb-space'
 import practicalsQuestions from './qb-practicals'
+import keyConceptsQuestions from './qb-keyconcepts'
+import globalChallengesQuestions from './qb-globalchallenges'
+import universeOCRQuestions from './qb-universe-ocr'
 
 export const ALL_QUESTIONS = [
   ...energyQuestions,
@@ -44,35 +47,47 @@ export const ALL_QUESTIONS = [
   ...magnetismQuestions,
   ...spaceQuestions,
   ...practicalsQuestions,
+  ...keyConceptsQuestions,
+  ...globalChallengesQuestions,
+  ...universeOCRQuestions,
 ]
 
 /**
- * Get questions for a specific topic, optionally filtered by tier.
+ * Get questions for a specific topic, optionally filtered by tier and board.
+ * Questions with no boards field are shown for all boards.
  */
-export function getQuestionsForTopic(topicId, tier = null) {
+export function getQuestionsForTopic(topicId, tier = null, board = null) {
   return ALL_QUESTIONS.filter(q =>
-    q.topicId === topicId && (tier === null || q.tier === tier)
+    q.topicId === topicId &&
+    (tier === null || q.tier === tier) &&
+    (!q.boards || !board || q.boards.includes(board))
   )
 }
 
 /**
  * Get next adaptive question for a topic at a given tier.
  * Excludes recently seen question IDs to avoid repetition.
+ * board: board id string (e.g. 'aqa', 'wjec') — questions with a boards array
+ *        are only shown if the current board is in that array.
+ *        Questions with no boards field are shown for every board.
  */
-export function getNextQuestion(topicId, tier, excludeIds = [], course = 'all') {
+export function getNextQuestion(topicId, tier, excludeIds = [], course = 'all', board = null) {
   const matchesCourse = (q) => course === 'all' || q.course === 'combined'
+  const matchesBoard  = (q) => !q.boards || !board || q.boards.includes(board)
   const pool = ALL_QUESTIONS.filter(q =>
     q.topicId === topicId &&
     q.tier === tier &&
     !excludeIds.includes(q.id) &&
-    matchesCourse(q)
+    matchesCourse(q) &&
+    matchesBoard(q)
   )
   if (pool.length === 0) {
-    // Fall back to any unseen question at this tier (respecting course filter)
+    // Fall back to any unseen question at this tier (respecting course/board filters)
     const fallback = ALL_QUESTIONS.filter(q =>
       q.topicId === topicId &&
       q.tier === tier &&
-      matchesCourse(q)
+      matchesCourse(q) &&
+      matchesBoard(q)
     )
     if (fallback.length === 0) return null
     return fallback[Math.floor(Math.random() * fallback.length)]

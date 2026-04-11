@@ -251,6 +251,8 @@ function ModuleCard({ module, moduleIndex, progress }) {
                     onTap={() => {
                       if (topic.practicalId) {
                         navigate(`/practical/${topic.practicalId}`)
+                      } else if (!topic.lessonSteps || topic.lessonSteps.length === 0) {
+                        navigate(`/practice/${topicId}`)
                       } else if (progress[topicId]?.mastered) {
                         navigate(`/diagnostic/${topicId}`)
                       } else {
@@ -440,7 +442,11 @@ export default function LearnScreen() {
                         borderRadius: 18,
                         minHeight: 56,
                       }}
-                      onClick={() => navigate(`/lesson/${id}`)}
+                      onClick={() => {
+                        if (topic.practicalId) navigate(`/practical/${topic.practicalId}`)
+                        else if (!topic.lessonSteps || topic.lessonSteps.length === 0) navigate(`/practice/${id}`)
+                        else navigate(`/lesson/${id}`)
+                      }}
                       whileTap={{ scale: 0.97 }}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}

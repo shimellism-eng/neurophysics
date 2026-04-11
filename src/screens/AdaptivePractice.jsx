@@ -9,6 +9,7 @@ import { ArrowLeft, Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCc
 import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
 import { getNextQuestion } from '../data/questionBank/index'
+import { getSelectedBoard } from '../utils/boardConfig'
 
 const TIER_CONFIG = {
   1: { label: 'Tier 1', sub: 'Recall & MCQ', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)' },
@@ -444,7 +445,8 @@ export default function AdaptivePractice() {
 
   // ── Internal question loader (accepts explicit values to avoid stale closures)
   function loadQuestion(ids, course, currentTier) {
-    const q = getNextQuestion(topicId, currentTier, ids, course)
+    const board = getSelectedBoard().id
+    const q = getNextQuestion(topicId, currentTier, ids, course, board)
     if (!q) { setShowDone(true); return }
     setCurrentQ(q)
     setAnswered(false)

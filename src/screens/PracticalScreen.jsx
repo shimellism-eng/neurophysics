@@ -78,9 +78,9 @@ function SetupSHC() {
 
         {/* Metal block */}
         <rect x={78} y={60} width={114} height={90} rx={4} fill="#1e2d1f" stroke="#7c9a88" strokeWidth={1.5}/>
-        <text x={135} y={100} textAnchor="middle" fontSize={9} fill="#4a7a5a" fontWeight="600">Cu</text>
-        <text x={135} y={112} textAnchor="middle" fontSize={7} fill="#4a7a5a">Copper block</text>
-        <text x={135} y={122} textAnchor="middle" fontSize={6.5} fill="#3a5a3a">m = 1 kg</text>
+        <text x={135} y={100} textAnchor="middle" fontSize={9} fill="#6ee7b7" fontWeight="600">Cu</text>
+        <text x={135} y={112} textAnchor="middle" fontSize={7} fill="#a7f3d0">Copper block</text>
+        <text x={135} y={122} textAnchor="middle" fontSize={6.5} fill="#6ee7b7">m = 1 kg</text>
 
         {/* Immersion heater hole + element */}
         <rect x={98} y={60} width={20} height={38} rx={2} fill="#0b1121" stroke="#f97316" strokeWidth={1}/>
@@ -127,8 +127,6 @@ function SetupSHC() {
         <W x1={240} y1={76} x2={240} y2={30}/>
 
         <Lbl x={26} y={62} t="PSU" c="#a5b4fc" s={8}/>
-        <Lbl x={210} y={18} t="A" c="#10b981" s={8}/>
-        <Lbl x={240} y={112} t="V" c="#f59e0b" s={8}/>
       </svg>
 
       <div className="px-1">
@@ -491,8 +489,8 @@ function SetupResistance() {
         {/* Crocodile clips - two arrow lines, one shared label */}
         <Tag lx={leftX} ly={rulerY}  tx={2}   ty={155} label="CROCODILE CLIPS"/>
         <line x1={clipX} y1={rulerY} x2={2}   y2={155+4} stroke="#475569" strokeWidth={0.7}/>
-        <Tag lx={130}   ly={rulerY+5}  tx={232} ty={172} label="RESISTANCE WIRE (Nichrome)"/>
-        <Tag lx={160}   ly={rulerY+16} tx={232} ty={188} label="METRE RULER"/>
+        <Tag lx={130}   ly={rulerY+5}  tx={220} ty={172} label="Nichrome wire"/>
+        <Tag lx={160}   ly={rulerY+16} tx={220} ty={188} label="Metre ruler"/>
 
       </svg>
 
@@ -546,7 +544,7 @@ function SetupIV() {
     ? (volts / (100 + volts * 8)).toFixed(4)
     : volts < 0.6 ? '≈0' : ((volts - 0.6) * 0.02).toFixed(4)
 
-  const compLabels = { resistor: '100 Ω resistor', lamp: 'Filament lamp', diode: 'Diode + 10 Ω' }
+  const compLabels = { resistor: '100 Ω resistor', lamp: 'Filament lamp', diode: 'Diode + 100 Ω' }
   const compColor =  { resistor: '#6366f1',         lamp: '#f59e0b',        diode: '#10b981' }
   const c = compColor[comp]
 
@@ -679,12 +677,12 @@ function SetupDensity() {
         {/* Water level */}
         <path d="M 41,85 L 41,149 L 139,149 L 139,85 Z" fill="#3b82f615" stroke="none"/>
         <line x1={41} y1={85} x2={139} y2={85} stroke="#3b82f670" strokeWidth={1} strokeDasharray="3 2"/>
-        <Lbl x={90} y={80} t="Water" c="#3b82f6" s={8}/>
+        <Lbl x={90} y={125} t="Water" c="#3b82f6" s={8}/>
 
         {/* Object on string */}
         <line x1={90} y1={10} x2={90} y2={55} stroke="#94a3b8" strokeWidth={1} strokeDasharray="2 2"/>
         <rect x={70} y={55} width={40} height={30} rx={2} fill={o.color} fillOpacity={0.4} stroke={o.color} strokeWidth={1.5}/>
-        <Lbl x={90} y={75} t={o.label} c={o.color} s={8}/>
+        <Lbl x={90} y={50} t={o.label} c={o.color} s={8}/>
 
         {/* Measuring cylinder catching overflow */}
         <path d="M 175,90 L 172,155 L 208,155 L 205,90" fill="none" stroke="#94a3b8" strokeWidth={1.5}/>
@@ -722,7 +720,8 @@ function SetupLight() {
         {/* Glass block */}
         <rect x={cx - blockW / 2} y={cy} width={blockW} height={blockH} rx={2}
           fill="rgba(148,163,184,0.12)" stroke="#94a3b8" strokeWidth={1.5}/>
-        <Lbl x={cx} y={cy + blockH / 2 + 5} t="Glass block (n = 1.5)" c="#94a3b8" s={8}/>
+        {/* Label below block, above formula box */}
+        <Lbl x={cx} y={cy + blockH + 13} t="Glass block (n = 1.5)" c="#94a3b8" s={8}/>
 
         {/* Normal line */}
         <line x1={cx} y1={cy - 60} x2={cx} y2={cy + blockH + 50}
@@ -767,12 +766,12 @@ function SetupLight() {
 
         {/* Ray box */}
         <path d="M 30,40 L 50,55 L 50,75 L 30,90 Z" fill="#1e293b" stroke="#f59e0b" strokeWidth={1.5}/>
-        <Lbl x={40} y={100} t="Ray box" c="#f59e0b" s={8}/>
+        <Lbl x={54} y={65} t="Ray box" c="#f59e0b" s={8} a="start"/>
 
         {/* Formula */}
-        <rect x={5} y={168} width={270} height={26} rx={4} fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)" strokeWidth={0.75}/>
-        <Lbl x={140} y={179} t={`n = sin(${angle}°)/sin(${r}°) = ${(Math.sin(incRad)/Math.sin(refRad)).toFixed(2)}`} c="#7dd3fc" s={9}/>
-        <Lbl x={140} y={190} t="Angle of incidence = angle of reflection" c="#64748b" s={8}/>
+        <rect x={5} y={170} width={270} height={26} rx={4} fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)" strokeWidth={0.75}/>
+        <Lbl x={140} y={181} t={`n = sin(${angle}°) / sin(${r}°) = ${(Math.sin(incRad)/Math.sin(refRad)).toFixed(2)}`} c="#7dd3fc" s={9}/>
+        <Lbl x={140} y={192} t="Angle of incidence = angle of reflection" c="#64748b" s={7.5}/>
       </svg>
 
       <div className="px-1">
@@ -834,9 +833,9 @@ function SetupSpring() {
         <line x1={163} y1={45 + springLen} x2={205} y2={45 + springLen} stroke="#6366f1" strokeWidth={1} strokeDasharray="3 2"/>
         <circle cx={205} cy={45 + springLen} r={3} fill="#6366f1"/>
 
-        {/* Extension label */}
+        {/* Extension label — placed right of ruler to avoid tick-label clash */}
         <line x1={175} y1={45} x2={175} y2={45 + springLen} stroke="#10b981" strokeWidth={1} markerEnd="url(#ar)"/>
-        <Lbl x={185} y={45 + springLen / 2} t={`e=${ext}cm`} c="#10b981" s={9} a="start"/>
+        <Lbl x={220} y={45 + springLen / 2} t={`e = ${ext} cm`} c="#10b981" s={9} a="start"/>
 
         {beyondLimit && (
           <text x={70} y={25} fontSize={9} fill="#ef4444">⚠ Beyond elastic limit</text>
@@ -876,17 +875,21 @@ function SetupAcceleration() {
   return (
     <div className="flex flex-col gap-3">
       <svg viewBox="0 0 280 170" width="100%" style={{ display: 'block' }}>
-        {/* Air track */}
+        {/* Runway (slightly tilted to compensate for friction) */}
         <rect x={15} y={98} width={230} height={10} rx={3} fill="#1e293b" stroke="#334155" strokeWidth={1.5}/>
-        <Lbl x={130} y={120} t="Air track" c="#64748b" s={8}/>
+        <Lbl x={130} y={122} t="Runway (tilted to compensate friction)" c="#64748b" s={7}/>
 
-        {/* Glider */}
+        {/* Dynamics trolley */}
         <motion.g animate={{ x: gliderOffset }} transition={{ duration: 0.35 }}>
           <rect x={25} y={80} width={55} height={18} rx={3} fill="#1e3a5f" stroke="#3b82f6" strokeWidth={1.5}/>
-          <Lbl x={52} y={93} t={`${mass}kg`} c="#93c5fd" s={8}/>
-          {/* Card on top */}
-          <rect x={35} y={74} width={35} height={6} rx={1} fill="#6366f1" fillOpacity={0.8}/>
-          <Lbl x={52} y={72} t="card" c="#a5b4fc" s={7}/>
+          <Lbl x={52} y={88} t="Trolley" c="#60a5fa" s={7}/>
+          <Lbl x={52} y={96} t={`${mass} kg`} c="#93c5fd" s={7}/>
+          {/* Interrupt card on top */}
+          <rect x={33} y={74} width={35} height={6} rx={1} fill="#6366f1" fillOpacity={0.8}/>
+          <Lbl x={50} y={71} t="interrupt card" c="#a5b4fc" s={6}/>
+          {/* Wheels */}
+          <circle cx={34} cy={98} r={4} fill="#334155" stroke="#475569" strokeWidth={1}/>
+          <circle cx={68} cy={98} r={4} fill="#334155" stroke="#475569" strokeWidth={1}/>
         </motion.g>
 
         {/* Light gates */}
@@ -903,7 +906,9 @@ function SetupAcceleration() {
 
         {/* Hanging weights */}
         <rect x={236} y={140} width={24} height={16} rx={2} fill="#1e3a5f" stroke="#3b82f6" strokeWidth={1}/>
-        <Lbl x={248} y={152} t={`${force}N`} c="#93c5fd" s={8}/>
+        <Lbl x={248} y={148} t={`${force} N`} c="#93c5fd" s={8}/>
+        <Lbl x={248} y={168} t="Slotted" c="#64748b" s={7}/>
+        <Lbl x={248} y={176} t="masses" c="#64748b" s={7}/>
 
         {/* Computer */}
         <rect x={5} y={130} width={55} height={32} rx={4} fill="#1e293b" stroke="#6366f1" strokeWidth={1}/>
@@ -937,11 +942,20 @@ function SetupWaves() {
   const [freq, setFreq] = useState(5)
   const speed = 0.28
   const lambda = (speed / freq).toFixed(3)
-  const wl = Math.max(10, Math.round(200 * parseFloat(lambda) / 0.2))
+  // Scale: tank is 0.3 m wide = 210 px → 700 px/m. Caps at 200 px so arrow stays inside viewBox.
+  const wl = Math.min(200, Math.max(10, Math.round(parseFloat(lambda) * 700)))
 
   return (
     <div className="flex flex-col gap-3">
       <svg viewBox="0 0 280 185" width="100%" style={{ display: 'block' }}>
+        <defs>
+          <marker id="ar" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#6366f1"/>
+          </marker>
+          <marker id="al" markerWidth="7" markerHeight="6" refX="0" refY="3" orient="auto-start-reverse">
+            <path d="M0,0 L7,3 L0,6 Z" fill="#6366f1"/>
+          </marker>
+        </defs>
         {/* Ripple tank outline */}
         <rect x={15} y={55} width={210} height={100} rx={4}
           fill="rgba(56,189,248,0.04)" stroke="#3b82f680" strokeWidth={1.5}/>
@@ -986,15 +1000,6 @@ function SetupWaves() {
         <line x1={15} y1={145} x2={15 + wl} y2={145} stroke="#6366f1" strokeWidth={1.2}
           markerEnd="url(#ar)" markerStart="url(#al)"/>
         <Lbl x={15 + wl / 2} y={155} t={`λ = ${lambda} m`} c="#a5b4fc" s={9}/>
-
-        <defs>
-          <marker id="ar" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L7,3 L0,6 Z" fill="#6366f1"/>
-          </marker>
-          <marker id="al" markerWidth="7" markerHeight="6" refX="0" refY="3" orient="auto-start-reverse">
-            <path d="M0,0 L7,3 L0,6 Z" fill="#6366f1"/>
-          </marker>
-        </defs>
 
         <Lbl x={240} y={80} t={`f = ${freq} Hz`} c="#94a3b8" s={9}/>
         <Lbl x={240} y={94} t={`v = ${speed} m/s`} c="#94a3b8" s={9}/>
@@ -1047,19 +1052,19 @@ function SetupRadiation() {
         {/* Front face */}
         <rect x={80} y={60} width={80} height={80} rx={2}
           fill={s.color} fillOpacity={0.9} stroke={s.stroke} strokeWidth={2}/>
-        <Lbl x={120} y={105} t={s.label} c={s.stroke === '#e2e8f0' ? '#1e293b' : '#f8fafc'} s={8}/>
+        <Lbl x={120} y={105} t={s.label} c={s.color === '#f1f5f9' ? '#1e293b' : '#f8fafc'} s={8}/>
         {/* Top face */}
         <path d="M 80,60 L 105,38 L 185,38 L 160,60 Z"
           fill={s.color} fillOpacity={0.6} stroke={s.stroke} strokeWidth={1.2}/>
-        {/* Right face (shiny silver on back) */}
+        {/* Right face (silver — other surfaces) */}
         <path d="M 160,60 L 185,38 L 185,118 L 160,140 Z"
           fill="#94a3b840" stroke="#94a3b8" strokeWidth={1.2}/>
         <Lbl x={175} y={90} t="other" c="#64748b" s={7}/>
         <Lbl x={175} y={100} t="faces" c="#64748b" s={7}/>
 
         {/* Water inside label */}
-        <Lbl x={120} y={90} t="Hot" c={s.stroke === '#e2e8f0' ? '#1e293b' : '#7dd3fc'} s={8}/>
-        <Lbl x={120} y={100} t="water" c={s.stroke === '#e2e8f0' ? '#1e293b' : '#7dd3fc'} s={8}/>
+        <Lbl x={120} y={90} t="Hot" c={s.color === '#f1f5f9' ? '#1e293b' : '#7dd3fc'} s={8}/>
+        <Lbl x={120} y={100} t="water" c={s.color === '#f1f5f9' ? '#1e293b' : '#7dd3fc'} s={8}/>
 
         {/* IR detector / thermometer */}
         <rect x={16} y={85} width={40} height={30} rx={4} fill="#1e293b" stroke="#10b981" strokeWidth={1.5}/>

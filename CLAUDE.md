@@ -225,7 +225,7 @@
 - [x] Topic map built
 - [x] Required Practicals module on Learn screen (11 practicals, teal, FlaskConical)
 - [x] 154 AQA exam questions for all 11 required practicals (qb-practicals.js)
-- [x] AI marking for extended/short answer questions (api/mark.js → Gemini, per-point breakdown)
+- [x] AI marking for all extended writing (extended, short_answer, novel-context types — api/mark.js)
 - [x] Course filtering for Grade9Challenge and TimedPaper
 - [x] Lesson progress resume (localStorage)
 - [x] HomeScreen InsightsPanel (accuracy, strong/weak topics)

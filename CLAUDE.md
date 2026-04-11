@@ -257,6 +257,10 @@
 - [x] Phase 3: Board selector as step 3/5 in onboarding flow (right after sign-in)
 - [x] Phase 3: StepGoal shows CCEA A*–G grade options vs 9-1 based on selected board
 - [x] Phase 3: HomeScreen "🏆 Target: Grade X" chip — shows "Target: A*" for CCEA (board-coloured)
+- [x] Multi-board consistency audit + fixes: Grade9Challenge, LearnScreen, MasteryScreen, PaperResults, PracticalScreen, OnboardingScreen all board-aware
+- [x] PracticalScreen: header badge translates RP→CP/PAG/SP/PP per board (practicalShort from boardConfig)
+- [x] All 'Grade 9' labels/buttons now compute from getSelectedBoard().gradeSystem — shows 'Grade A*' for CCEA
+- [x] LearnScreen 'Start here' CTA checks lessonSteps before routing to /lesson/ vs /practice/
 - [ ] PWA manifest + service worker confirmed working
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 

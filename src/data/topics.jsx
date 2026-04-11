@@ -4,6 +4,9 @@ import { MATTER_TOPICS } from './topics-matter'
 import { FORCES_TOPICS } from './topics-forces'
 import { WAVES_TOPICS } from './topics-waves'
 import { PRACTICALS_TOPICS } from './topics-practicals'
+import { KEY_CONCEPTS_TOPICS } from './topics-keyconcepts'
+import { GLOBAL_CHALLENGES_TOPICS } from './topics-globalchallenges'
+import { UNIVERSE_TOPICS } from './topics-universe'
 import {
   Zap, Battery, Flame, Wind, Activity,
   Waves, Radio, Magnet, Globe2, FlaskConical,
@@ -18,60 +21,9 @@ export const TOPICS = {
   ...FORCES_TOPICS,
   ...WAVES_TOPICS,
   ...PRACTICALS_TOPICS,
-
-  // ── Edexcel: Key Concepts of Physics (Topic 1) ────────────────────────────
-  key_concepts_units: {
-    id: 'key_concepts_units',
-    title: 'SI Units & Standard Form',
-    boards: ['edexcel'],
-    lessonSteps: [],
-  },
-  key_concepts_scalars: {
-    id: 'key_concepts_scalars',
-    title: 'Scalars and Vectors',
-    boards: ['edexcel'],
-    lessonSteps: [],
-  },
-  key_concepts_equations: {
-    id: 'key_concepts_equations',
-    title: 'Rearranging Equations',
-    boards: ['edexcel'],
-    lessonSteps: [],
-  },
-
-  // ── OCR Gateway A: Global Challenges (P8) ────────────────────────────────
-  transport_safety: {
-    id: 'transport_safety',
-    title: 'Transport Safety',
-    boards: ['ocr-a'],
-    lessonSteps: [],
-  },
-  electricity_costs: {
-    id: 'electricity_costs',
-    title: 'Electricity Costs',
-    boards: ['ocr-a'],
-    lessonSteps: [],
-  },
-
-  // ── OCR 21st Century B: Studying the Universe (P7) ───────────────────────
-  telescope_optics: {
-    id: 'telescope_optics',
-    title: 'Telescope Optics',
-    boards: ['ocr-b'],
-    lessonSteps: [],
-  },
-  stellar_classification: {
-    id: 'stellar_classification',
-    title: 'HR Diagram & Stellar Types',
-    boards: ['ocr-b'],
-    lessonSteps: [],
-  },
-  history_astronomy: {
-    id: 'history_astronomy',
-    title: 'History of Astronomy',
-    boards: ['ocr-b'],
-    lessonSteps: [],
-  },
+  ...KEY_CONCEPTS_TOPICS,
+  ...GLOBAL_CHALLENGES_TOPICS,
+  ...UNIVERSE_TOPICS,
 }
 
 // Topics that are GCSE Physics only (NOT in Combined Science Trilogy)

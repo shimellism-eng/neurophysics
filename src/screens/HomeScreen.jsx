@@ -8,6 +8,7 @@ import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
 import { useAuth } from '../context/AuthContext'
+import { getSelectedBoard } from '../utils/boardConfig'
 
 function getGreeting() {
   const h = new Date().getHours()
@@ -193,6 +194,12 @@ export default function HomeScreen() {
   const avatar   = profile.avatar || '🧠'
   const greeting = getGreeting()
 
+  const selectedBoard  = getSelectedBoard()
+  const targetGrade    = profile.grade || null
+  const targetLabel    = targetGrade
+    ? `Target: ${selectedBoard.gradeSystem === 'A*-G' ? targetGrade : `Grade ${targetGrade}`}`
+    : null
+
   const masteredCount = Object.values(progress).filter(p => p.mastered).length
   const totalTopics   = Object.keys(TOPICS).length
   const progressPct   = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
@@ -279,6 +286,18 @@ export default function HomeScreen() {
                     border: '1px solid rgba(99,102,241,0.2)',
                   }}>
                   {examDaysLeft <= 30 ? '🎯' : '📅'} {examDaysLeft}d to exam
+                </span>
+              )}
+
+              {targetLabel && (
+                <span className="font-bold px-2.5 py-1 rounded-full"
+                  style={{
+                    fontSize: 12,
+                    background: `${selectedBoard.color}12`,
+                    color: selectedBoard.color,
+                    border: `1px solid ${selectedBoard.color}28`,
+                  }}>
+                  🏆 {targetLabel}
                 </span>
               )}
             </div>

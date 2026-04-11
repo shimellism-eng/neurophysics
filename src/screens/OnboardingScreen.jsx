@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User, Zap, Brain, Trophy } from 'lucide-react'
+import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap } from 'lucide-react'
+import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
 
@@ -103,9 +104,10 @@ function StepValueProp({ onNext }) {
     >
       <div className="flex-1 overflow-y-auto px-6">
         <div className="pt-12 pb-6">
-          {/* Step indicator */}
+          {/* Step indicator (1/5) */}
           <div className="flex items-center gap-2 mb-8">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
@@ -227,10 +229,11 @@ function StepProfile({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Step indicator */}
+          {/* Step indicator (2/5) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
@@ -418,8 +421,9 @@ function StepPrefs({ profileData, onFinish }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator */}
+          {/* Step indicator (5/5) */}
           <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -483,12 +487,163 @@ function StepPrefs({ profileData, onFinish }) {
   )
 }
 
-// ─── Step 2: Goal ────────────────────────────────────────────────────────────
-function StepGoal({ profileData, onNext }) {
-  const [grade, setGrade] = useState('7')
+// ─── Step 3: Exam Board ───────────────────────────────────────────────────────
+function StepBoard({ onNext }) {
+  const [selected, setSelected] = useState('aqa')
+
+  const handleNext = () => {
+    saveSelectedBoard(selected)
+    // Notify any already-mounted screens (e.g. LearnScreen listener)
+    window.dispatchEvent(new Event('storage'))
+    onNext(selected)
+  }
+
+  return (
+    <motion.div
+      className="flex flex-col h-full"
+      key="step-board"
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -40 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="flex-1 overflow-y-auto px-6">
+        <motion.div
+          className="pt-10 pb-5"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Step indicator (3/5) */}
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+          </div>
+
+          <div className="flex items-center gap-3 mb-3">
+            <div
+              className="w-10 h-10 rounded-[14px] flex items-center justify-center"
+              style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)' }}
+            >
+              <GraduationCap size={18} color="#6366f1" />
+            </div>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Exam Board</span>
+          </div>
+
+          <h1 className="text-4xl font-extrabold leading-tight mb-3" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+            Which board{'\n'}<span style={{ color: '#6366f1' }}>are you sitting?</span>
+          </h1>
+          <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
+            NeuroPhysics will show only the topics and content relevant to your spec.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="flex flex-col gap-3 pb-6"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          {BOARD_ORDER.map((boardId, i) => {
+            const board = BOARDS[boardId]
+            const isSelected = selected === boardId
+            return (
+              <motion.button
+                key={boardId}
+                className="w-full text-left rounded-[18px] px-4 py-4 flex items-center gap-4"
+                style={{
+                  background: isSelected ? `${board.color}12` : 'rgba(18,26,47,0.9)',
+                  border: isSelected ? `1.5px solid ${board.color}60` : '0.75px solid #1d293d',
+                  transition: 'background 0.18s, border-color 0.18s',
+                }}
+                onClick={() => setSelected(boardId)}
+                initial={{ opacity: 0, x: -14 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 + i * 0.06, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {/* Colour dot */}
+                <div
+                  className="w-4 h-4 rounded-full shrink-0"
+                  style={{
+                    background: isSelected ? board.color : 'rgba(255,255,255,0.1)',
+                    border: isSelected ? `2px solid ${board.color}` : '1.5px solid rgba(255,255,255,0.18)',
+                    transition: 'all 0.15s',
+                    boxShadow: isSelected ? `0 0 8px ${board.color}60` : 'none',
+                  }}
+                />
+
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-base font-bold" style={{ color: isSelected ? '#f8fafc' : '#c8d4e3' }}>
+                      {board.flag} {board.name}
+                    </span>
+                    {board.gradeSystem === 'A*-G' && (
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+                        style={{ background: 'rgba(232,121,249,0.12)', color: '#e879f9', border: '1px solid rgba(232,121,249,0.3)' }}>
+                        A*–G
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                    {board.description}
+                  </div>
+                </div>
+
+                {isSelected && (
+                  <div
+                    className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
+                    style={{ background: board.color }}
+                  >
+                    <Check size={13} color="#fff" strokeWidth={2.5} />
+                  </div>
+                )}
+              </motion.button>
+            )
+          })}
+        </motion.div>
+      </div>
+
+      {/* Next button */}
+      <motion.div
+        className="px-6 pt-3 pb-10 shrink-0"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.button
+          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+          style={{
+            background: `linear-gradient(135deg, ${BOARDS[selected].color}cc, ${BOARDS[selected].color})`,
+            color: '#fff',
+            boxShadow: `0 8px 28px ${BOARDS[selected].color}40`,
+            transition: 'all 0.2s',
+          }}
+          onClick={handleNext}
+          whileTap={{ scale: 0.97 }}
+        >
+          {BOARDS[selected].flag} {BOARDS[selected].name} — that's me
+          <ArrowRight size={18} />
+        </motion.button>
+      </motion.div>
+    </motion.div>
+  )
+}
+
+// ─── Step 4: Goal ────────────────────────────────────────────────────────────
+function StepGoal({ profileData, boardId, onNext }) {
+  const isCCEA = boardId === 'ccea'
+  const GRADES_91   = ['4', '5', '6', '7', '8', '9']
+  const GRADES_CCEA = ['C', 'B', 'A', 'C*', 'A*']  // ascending aspirational order
+
+  const [grade, setGrade] = useState(isCCEA ? 'B' : '7')
   const [examDate, setExamDate] = useState('')
 
-  const GRADES = ['4', '5', '6', '7', '8', '9']
+  const gradeOptions = isCCEA ? GRADES_CCEA : GRADES_91
 
   return (
     <motion.div
@@ -506,8 +661,9 @@ function StepGoal({ profileData, onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* 4-dot step indicator */}
+          {/* Step indicator (4/5) */}
           <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -534,14 +690,14 @@ function StepGoal({ profileData, onNext }) {
           <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
             Target grade
           </div>
-          <div className="grid grid-cols-6 gap-2">
-            {GRADES.map(g => {
+          <div className={`grid gap-2 ${isCCEA ? 'grid-cols-5' : 'grid-cols-6'}`}>
+            {gradeOptions.map(g => {
               const selected = grade === g
-              const isAspirational = g === '8' || g === '9'
+              const isAspirational = isCCEA ? (g === 'A*' || g === 'A') : (g === '8' || g === '9')
               return (
                 <motion.button
                   key={g}
-                  className="aspect-square rounded-[14px] flex flex-col items-center justify-center text-lg font-bold"
+                  className="aspect-square rounded-[14px] flex flex-col items-center justify-center text-base font-bold"
                   style={{
                     background: selected
                       ? 'linear-gradient(135deg, #4f6ef7, #6366f1)'
@@ -639,10 +795,12 @@ function StepGoal({ profileData, onNext }) {
 }
 
 // ─── Main Onboarding ──────────────────────────────────────────────────────────
+// Steps: 0 Value → 1 Profile → 2 Board → 3 Goal → 4 Prefs
 export default function OnboardingScreen() {
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
   const [profileData, setProfileData] = useState(null)
+  const [boardId, setBoardId] = useState('aqa')
   const [goalData, setGoalData] = useState(null)
 
   const handleProfileNext = (data) => {
@@ -650,15 +808,22 @@ export default function OnboardingScreen() {
     setStep(2)
   }
 
+  const handleBoardNext = (id) => {
+    setBoardId(id)
+    setStep(3)
+  }
+
   const handleGoalNext = (data) => {
     setGoalData(data)
-    setStep(3)
+    setStep(4)
   }
 
   const handleFinish = (prefs) => {
     localStorage.setItem('neurophysics_onboarded', '1')
     localStorage.setItem('neurophysics_prefs', JSON.stringify(prefs))
     localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profileData, ...goalData }))
+    // Board was already saved to localStorage in StepBoard — ensure it's recorded in profile too
+    localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profileData, ...goalData, boardId }))
     navigate('/', { replace: true })
   }
 
@@ -667,8 +832,9 @@ export default function OnboardingScreen() {
       <AnimatePresence mode="wait">
         {step === 0 && <StepValueProp key="value" onNext={() => setStep(1)} />}
         {step === 1 && <StepProfile key="profile" onNext={handleProfileNext} />}
-        {step === 2 && <StepGoal key="goal" profileData={profileData} onNext={handleGoalNext} />}
-        {step === 3 && <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />}
+        {step === 2 && <StepBoard key="board" onNext={handleBoardNext} />}
+        {step === 3 && <StepGoal key="goal" profileData={profileData} boardId={boardId} onNext={handleGoalNext} />}
+        {step === 4 && <StepPrefs key="prefs" profileData={profileData} onFinish={handleFinish} />}
       </AnimatePresence>
     </div>
   )

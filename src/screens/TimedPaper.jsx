@@ -19,6 +19,7 @@ import {
   ExtendedAnswerQuestion,
   SequenceSortQuestion,
   GraphQuestion,
+  NovelContextQuestion,
 } from '../components/questions'
 
 const PAPER_DURATION_STD  = 55 * 60 // 55 minutes — standard
@@ -113,72 +114,6 @@ function QuestionPalette({ questions, answers, flags, currentIdx, onJump, open, 
   )
 }
 
-// ── Novel context question ────────────────────────────────────────────────────
-function NovelContextQuestion({ data, onComplete }) {
-  const [open, setOpen]         = useState(false)
-  const [selfScore, setSelfScore] = useState(null)
-
-  const handleScore = (pts) => {
-    setSelfScore(pts)
-    onComplete(pts >= Math.ceil(data.marks / 2))
-  }
-  return (
-    <div className="space-y-3">
-      <div className="px-4 py-3 rounded-[14px]"
-        style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
-        <div className="text-xs font-semibold mb-1.5" style={{ color: '#818cf8' }}>Context</div>
-        <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{data.scenario}</p>
-      </div>
-      <motion.button className="w-full text-left px-4 py-3 rounded-[14px] flex items-center justify-between"
-        style={{ background: open ? 'rgba(0,188,125,0.08)' : 'rgba(18,26,47,0.9)', border: open ? '0.75px solid rgba(0,188,125,0.3)' : '0.75px solid #1d293d' }}
-        onClick={() => setOpen(v => !v)} whileTap={{ scale: 0.98 }}>
-        <span className="text-sm font-semibold" style={{ color: open ? '#00bc7d' : '#a8b8cc' }}>
-          {open ? 'Mark scheme' : 'Reveal mark scheme'}
-        </span>
-        <motion.span animate={{ rotate: open ? 90 : 0 }} style={{ color: '#a8b8cc' }}>›</motion.span>
-      </motion.button>
-      <AnimatePresence>
-        {open && (
-          <motion.div className="space-y-2 px-1"
-            initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
-            {data.markScheme.map((m, i) => (
-              <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[10px]"
-                style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
-                <span className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
-                  style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>{i + 1}</span>
-                <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{m}</span>
-              </div>
-            ))}
-            <div className="px-3 py-2 rounded-[10px]"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-              <div className="text-xs font-semibold mb-1" style={{ color: '#818cf8' }}>Model answer</div>
-              <p className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>{data.modelAnswer}</p>
-            </div>
-            {selfScore === null && (
-              <div className="pt-2">
-                <div className="text-xs font-semibold mb-2 text-center" style={{ color: '#a8b8cc' }}>How many marks did you earn?</div>
-                <div className="flex gap-2 justify-center">
-                  {[0, Math.floor(data.marks / 2), data.marks].map(pts => (
-                    <motion.button key={pts}
-                      className="px-5 py-2 rounded-[10px] text-sm font-bold"
-                      style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-                      onClick={() => handleScore(pts)} whileTap={{ scale: 0.92 }}>{pts}</motion.button>
-                  ))}
-                </div>
-              </div>
-            )}
-            {selfScore !== null && (
-              <div className="text-center text-sm font-semibold py-2"
-                style={{ color: selfScore >= Math.ceil(data.marks / 2) ? '#00bc7d' : '#f59e0b' }}>
-                {selfScore >= data.marks ? '★ Full marks!' : selfScore > 0 ? `${selfScore}/${data.marks}` : `0/${data.marks} - review the mark scheme`}
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
 
 // ── RPA Error Question ────────────────────────────────────────────────────────
 function RPAErrorQuestion({ data, onComplete }) {

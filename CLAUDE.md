@@ -153,12 +153,15 @@
 │       ├── qb-atomic.js + part1/part2
 │       ├── qb-electricity.js + part1/part2
 │       ├── qb-energy.js
-│       ├── qb-forces.js
+│       ├── qb-forces.js            # + WJEC circular motion + CCEA hydraulics
 │       ├── qb-magnetism.js
 │       ├── qb-particle.js
 │       ├── qb-space.js
-│       ├── qb-waves.js + part1/part2
-│       └── qb-practicals.js        # 154 AQA questions for 11 required practicals
+│       ├── qb-waves.js + part1/part2  # + WJEC seismic waves + CCEA diverging lenses
+│       ├── qb-practicals.js        # 154 questions for 11 required practicals
+│       ├── qb-keyconcepts.js       # Edexcel Topic 1 — SI units, scalars, equation rearranging
+│       ├── qb-globalchallenges.js  # OCR Gateway A P8 — transport safety, electricity costs
+│       └── qb-universe-ocr.js      # OCR 21C P7 — telescope optics, HR diagram, astronomy history
 │
 ├── hooks/
 │   ├── useAdaptive.js
@@ -246,8 +249,11 @@
 - [x] Multi-board Phase 1: 6 boards supported (AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA)
 - [x] CCEA A*-G grade system in PaperResults (with C* grade)
 - [x] Board-specific module stubs: Key Concepts (Edexcel), Global Challenges (OCR-A), Studying the Universe (OCR-B)
-- [ ] Multi-board Phase 2: question banks for board-specific modules (qb-keyconcepts, qb-globalchallenges, qb-universe-ocr)
-- [ ] Multi-board Phase 2d/2e: Boyle's Law, circular motion, seismic waves, diverging lenses, hydraulics question additions
+- [x] Multi-board Phase 2: question banks wired in (qb-keyconcepts, qb-globalchallenges, qb-universe-ocr imported in index.js)
+- [x] Multi-board Phase 2d/2e: WJEC circular motion (8q) + seismic waves (5q); CCEA hydraulics (5q) + diverging lenses (6q)
+- [x] Board filtering in getNextQuestion/getQuestionsForTopic — questions with boards:[] only shown for matching board
+- [x] AdaptivePractice passes selected board to getNextQuestion
+- [x] LearnScreen: topics with empty lessonSteps route to /practice/:topicId (board-specific practice topics)
 - [ ] PWA manifest + service worker confirmed working
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 

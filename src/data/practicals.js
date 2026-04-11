@@ -8,31 +8,32 @@ export const PRACTICALS = {
     specRef: '4.1.1.3',
     equipment: ['Metal block (copper/aluminium) with two holes','Immersion heater (30W)','Thermometer','12V power supply','Ammeter','Voltmeter','Stopwatch','Insulating material','Connecting leads','Balance'],
     variables: {
-      independent: 'Energy supplied (J) = Power × time',
+      independent: 'Time (s) — energy derived from E = P × t',
       dependent: 'Temperature rise (°C)',
-      control: ['Mass of block (kg)','Power supply voltage','Starting temperature','Type of metal block']
+      control: ['Mass of block (kg)','Power supply voltage','Starting temperature','Type of metal block','Immersion heater used']
     },
     method: [
       'Measure and record the mass of the metal block in kg',
       'Insert the immersion heater into the larger hole',
-      'Connect ammeter, power supply and heater in series; voltmeter across power supply',
+      'Connect ammeter, power supply and heater in series; voltmeter across the heater (not the power supply)',
       'Add a drop of water to the thermometer hole for good thermal contact',
-      'Wrap the block in insulating material to reduce heat loss',
+      'Wrap the block tightly in insulating material (e.g. foam/cotton wool) to reduce heat loss',
       'Record the initial temperature, then switch on the power supply',
-      'Record current (A) and voltage (V)  -  calculate power P = IV',
-      'Record temperature every 60 seconds for 10 minutes',
+      'Record current (A) and voltage (V) at each time step  -  calculate power P = IV',
+      'Record temperature every 60 seconds for 10 minutes; switch off at end',
       'Calculate energy E = P × t for each reading',
       'Plot temperature (°C) vs energy (J)  -  gradient = 1/(m × c)',
       'Rearrange: c = 1 / (mass × gradient) to find SHC'
     ],
     resultsTable: {
       headers: ['Time (s)', 'Voltage V (V)', 'Current I (A)', 'Power P=IV (W)', 'Energy E=Pt (J)', 'Temperature θ (°C)'],
-      sampleData: [[0,12,2.5,30,0,20],[60,12,2.5,30,1800,22.2],[120,12,2.5,30,3600,24.4],[180,12,2.5,30,5400,26.6],[240,12,2.5,30,7200,28.8],[300,12,2.5,30,9000,31.0],[360,12,2.5,30,10800,33.2],[420,12,2.5,30,12600,35.4],[480,12,2.5,30,14400,37.6],[540,12,2.5,30,19800,39.8],[600,12,2.5,30,18000,42.0]]
+      sampleData: [[0,12,2.5,30,0,20],[60,12,2.5,30,1800,22.2],[120,12,2.5,30,3600,24.4],[180,12,2.5,30,5400,26.6],[240,12,2.5,30,7200,28.8],[300,12,2.5,30,9000,31.0],[360,12,2.5,30,10800,33.2],[420,12,2.5,30,12600,35.4],[480,12,2.5,30,14400,37.6],[540,12,2.5,30,16200,39.8],[600,12,2.5,30,18000,42.0]]
     },
     analysis: 'Plot temperature (y-axis) vs energy supplied (x-axis). Draw line of best fit (ignore curved start due to thermal lag). Gradient = ΔT/ΔE. SHC: c = 1 / (m × gradient). Compare to accepted values: Al = 900 J/kg°C, Cu = 385 J/kg°C, Fe = 450 J/kg°C.',
     errors: [
       'Heat loss to surroundings → insulate block, wrap in foam/cotton wool',
-      'Thermal lag: thermometer reading lags behind block temperature → add water droplet to thermometer hole',
+      'Thermal lag: thermometer reading lags behind block temperature → add water droplet to thermometer hole; draw line of best fit through linear middle section, ignoring initial curve',
+      'Energy lost to heater itself (heater has own mass and heat capacity) → systematic error that makes calculated c larger than true value',
       'Contact resistance in circuit → check all connections are tight',
       'Heater may not be fully embedded → ensure snug fit',
       'Parallax error when reading thermometer → eye level with scale'
@@ -56,16 +57,17 @@ export const PRACTICALS = {
     variables: {
       independent: 'Type of insulating material (or number of layers)',
       dependent: 'Temperature of water over time (°C)',
-      control: ['Volume of water (80 ml)','Starting temperature','Room temperature','Beaker size']
+      control: ['Volume of water (80 ml)','Starting temperature','Room temperature','Beaker size','Thickness/amount of insulating material (must be equal for fair comparison)','Whether a lid is used']
     },
     method: [
       'Place small beaker inside larger beaker',
       'Fill the gap between beakers with the insulating material being tested',
-      'Boil water in kettle, add 80 ml to the small beaker',
+      'Boil water in kettle; allow to cool to a fixed starting temperature (e.g. 80°C), then add 80 ml to the small beaker',
       'Place cardboard lid with thermometer through hole',
       'Record starting temperature and start stopwatch',
       'Record temperature every 3 minutes for 20 minutes',
-      'Repeat with different insulating materials',
+      'Repeat with different insulating materials (same thickness each time)',
+      'Include a control trial with no insulating material between the beakers',
       'Plot cooling curves (temperature vs time) for each material',
       'The material with the slowest cooling rate is the best insulator'
     ],
@@ -78,10 +80,12 @@ export const PRACTICALS = {
       'Starting temperature not the same for each trial → boil fresh water each time, check thermometer at start',
       'Volume of water not exactly the same → use measuring cylinder precisely',
       'Room temperature changes between trials → do all trials in same session',
-      'Thermometer not in centre of water → position carefully'
+      'Thermometer not in centre of water → position carefully',
+      'Heat loss from the top of the beaker through the lid hole → evaporation and convection reduce accuracy; use a well-fitting lid',
+      'Removing thermometer to read it causes heat loss → use a temperature probe/data logger for continuous readings without disturbance'
     ],
     hazards: [
-      { hazard: 'Near-boiling water (100°C)', risk: 'Scalds/burns', precaution: 'Use tongs to carry hot water; pour carefully; immediately wash burns with cold water' },
+      { hazard: 'Near-boiling water (100°C)', risk: 'Scalds/burns', precaution: 'Use oven gloves or a cloth when handling hot beakers; pour carefully; immediately cool burns with cold water' },
       { hazard: 'Hot glassware', risk: 'Burns', precaution: 'Allow to cool before handling; use heatproof mat' }
     ],
     sim: { type: 'insulation', materials: ['none','bubble_wrap','newspaper','polystyrene'] }
@@ -106,8 +110,9 @@ export const PRACTICALS = {
       'Connect the other crocodile clip to the wire (this is the movable one)',
       'Connect ammeter in series with the wire and power supply',
       'Connect voltmeter across (in parallel with) the wire',
-      'Set to a low voltage (e.g. 2V) to prevent wire heating up',
+      'Set to a low voltage (e.g. 2V) BEFORE closing the circuit to prevent wire heating',
       'Record wire length, voltage, and current',
+      'Switch off the power supply between readings to prevent the wire heating up',
       'Move the crocodile clip to a new length and repeat',
       'Calculate resistance: R = V/I for each length',
       'Plot resistance (y-axis) vs length (x-axis)  -  should be straight line through origin'
@@ -183,7 +188,7 @@ export const PRACTICALS = {
     equipment: ['Digital balance','30cm ruler (mm graduations)','Vernier callipers (optional)','Displacement can','Measuring cylinders (10, 50, 100 ml)','String/cotton','Regular shaped objects (aluminium, copper, iron blocks)','Irregular shaped objects','250ml beaker','Water'],
     variables: {
       independent: 'Object/material being measured',
-      dependent: 'Density (g/cm³ or kg/m³)',
+      dependent: 'Dimensions (length/width/height in cm) for regular solids; volume of water displaced (cm³) for irregular solids',
       control: ['Temperature (density varies with T)','Technique used (ruler vs displacement)']
     },
     method: [
@@ -196,16 +201,16 @@ export const PRACTICALS = {
       'Place measuring cylinder under spout',
       'Lower object into can on string  -  collect displaced water',
       'Volume of water = volume of object',
-      'Activity 3 – Liquid: measure mass of empty beaker',
-      'Pour 100ml liquid into measuring cylinder, then into beaker',
-      'Measure mass of beaker + liquid; subtract beaker mass for liquid mass',
-      'Calculate density: ρ = mass / volume'
+      'Activity 3 – Liquid: measure mass of empty measuring cylinder on balance; tare/record mass',
+      'Add approximately 100 ml of liquid directly to the measuring cylinder; read the volume accurately at eye level (meniscus)',
+      'Measure mass of measuring cylinder + liquid; subtract empty mass to find mass of liquid (do not transfer liquid — this loses material on the walls)',
+      'Calculate density: ρ = mass / volume. Note: 1 g/cm³ = 1000 kg/m³'
     ],
     resultsTable: {
       headers: ['Object', 'Length (cm)', 'Width (cm)', 'Height (cm)', 'Volume (cm³)', 'Mass (g)', 'Density (g/cm³)'],
       sampleData: [['Block A',5.0,3.0,2.0,30.0,81.0,2.70],['Block B',4.0,2.5,2.5,25.0,222.5,8.90],['Block C',4.5,3.0,2.0,27.0,213.3,7.90]]
     },
-    analysis: 'Compare calculated density with known values: Al = 2.7 g/cm³, Cu = 8.9 g/cm³, Fe = 7.9 g/cm³, Zn = 7.1 g/cm³, Au = 19.3 g/cm³. Density = mass/volume. Use units carefully (g/cm³ or kg/m³). Percentage error = |calculated - accepted| / accepted × 100%.',
+    analysis: 'Compare calculated density with known values: Al = 2.7 g/cm³, Cu = 8.9 g/cm³, Fe = 7.9 g/cm³. Density = mass/volume. Unit conversion: 1 g/cm³ = 1000 kg/m³ (e.g. Al = 2700 kg/m³). Percentage error = |calculated − accepted| / accepted × 100%. For irregular solids, measure dimensions of regular part if possible to cross-check displacement method.',
     errors: [
       'Parallax error reading ruler → align eye with measurement edge-on',
       'Air bubbles trapped on irregular object → tap object to release bubbles',
@@ -230,9 +235,9 @@ export const PRACTICALS = {
     specRef: '4.3.2.3',
     equipment: ['Crushed ice in a funnel or beaker','Immersion heater','12V power supply','Ammeter','Voltmeter','Stopwatch','Mass balance','Beaker to collect meltwater','Insulating jacket'],
     variables: {
-      independent: 'Energy supplied (J) = P × t = IV × t',
-      dependent: 'Mass of water collected (kg)',
-      control: ['Power of heater (measure V and I)', 'Starting temperature of ice (0°C)', 'Same equipment setup']
+      independent: 'Time (s) — energy derived from E = P × t',
+      dependent: 'Mass of water melted by heater (kg) — after subtracting control',
+      control: ['Power of heater (keep V and I constant)', 'Starting temperature of ice (0°C)', 'Same equipment setup', 'Same duration for heater and control experiment']
     },
     method: [
       'Set up funnel with crushed ice; place beaker underneath to collect meltwater',
@@ -247,9 +252,9 @@ export const PRACTICALS = {
     ],
     resultsTable: {
       headers: ['Voltage V (V)', 'Current I (A)', 'Power P=IV (W)', 'Time t (s)', 'Energy E=Pt (J)', 'Mass of water m (kg)', 'L = E/m (J/kg)'],
-      sampleData: [[12, 2.5, 30, 300, 9000, 0.025, 360000]]
+      sampleData: [[12, 2.5, 30, 300, 9000, 0.032, 281000]]
     },
-    analysis: 'Calculate L = E ÷ m. Compare to 334,000 J/kg. Likely higher due to heat losses — subtract control experiment mass. Plot energy (x) vs mass melted (y); gradient = 1/L.',
+    analysis: 'Calculate L = E ÷ m (using mass melted by heater only, after subtracting control). Compare to 334,000 J/kg. Results are typically LOWER than 334,000 J/kg because heat losses from surroundings melt additional ice not accounted for, increasing m and reducing calculated L. The graph method (energy on x, mass on y; gradient = 1/L) is an A-level extension; at GCSE calculate L directly from a single set of readings.',
     errors: [
       'Heat loss from surroundings also melts ice → run a control experiment without the heater and subtract background melt',
       'Water clinging to heater or funnel → dry apparatus and weigh carefully',
@@ -257,12 +262,16 @@ export const PRACTICALS = {
       'Heater not fully in ice → ensure heater is surrounded by ice throughout',
       'Parallax error reading ammeter/voltmeter → read at eye level'
     ],
-    hazards: ['Immersion heater gets very hot — do not touch', 'Electrical equipment near water — check all connections are secure before switching on'],
+    hazards: [
+      { hazard: 'Immersion heater gets very hot', risk: 'Burns', precaution: 'Do not touch heater directly; switch off after use; allow to cool before handling' },
+      { hazard: 'Electrical equipment near water (melting ice)', risk: 'Electric shock', precaution: 'Check all connections are secure before switching on; keep power supply away from water' },
+      { hazard: 'Wet bench surface', risk: 'Slip/electrical hazard', precaution: 'Keep meltwater beaker secure; mop up spills immediately' }
+    ],
     examTips: [
-      'Always explain WHY you run a control: background melting would make your L value too small',
-      'The flat section on a heating curve is where latent heat is being absorbed',
-      'L = E/m, not E/ΔT — there is no temperature change during melting',
-      'Lv (2,260,000 J/kg) >> Lf (334,000 J/kg) — vaporisation needs much more energy'
+      'Always explain WHY you run a control: without it, background melting (from warm air/bench) would add extra water, making m too large and L appear too small',
+      'There is NO temperature change during melting — L = E/m, not E/ΔT. The "flat section on a heating curve" is a separate heating-curve experiment, not this practical',
+      'Lv (2,260,000 J/kg) >> Lf (334,000 J/kg) — vaporisation needs about 7× more energy than melting',
+      'Typical results give L slightly below 334,000 J/kg — this is expected and explained by heat losses'
     ]
   },
 
@@ -280,25 +289,29 @@ export const PRACTICALS = {
       control: ['Material of block','Colour/wavelength of light','Distance of ray box from block']
     },
     method: [
-      'Draw a straight line on A3 paper (this will be the boundary)',
-      'Draw a normal line perpendicular to the boundary',
-      'Place the transparent block with one face along the boundary line',
+      'Part A – Plane mirror (reflection):',
+      'Place a plane mirror vertically on A3 paper; draw a line along the mirror base',
+      'Draw a normal line perpendicular to the mirror at the point of incidence',
+      'Place two object pins in front of the mirror at an angle to the normal',
+      'Look from the other side; align two image pins to appear coincident with the virtual image of the object pins',
+      'Remove mirror; join pin marks to trace incident and reflected rays; measure angles from normal',
+      'Verify: angle of incidence = angle of reflection. Measure image distance behind mirror = object distance in front',
+      'Part B – Glass block (refraction):',
+      'Draw a straight line on A3 paper (boundary); draw a normal perpendicular to it',
+      'Place the glass block with one face along the boundary line; draw around it before starting',
       'Darken the room; set up ray box to produce a narrow ray',
       'Direct the ray at the point where normal meets the block',
-      'Mark the incident ray path with ×',
-      'Mark the reflected ray path with ×',
-      'Mark the transmitted/refracted ray path with two × (one near block, one further)',
-      'Remove block; draw incident, reflected and refracted rays',
-      'Measure angle of incidence (i) and angle of reflection (r) from normal',
-      'Measure angle of refraction within/exiting block',
-      'Repeat for 3 different angles of incidence',
-      'Compare i and r for reflection; compare i and refraction angle'
+      'Mark the incident ray path with × marks (one far, one near block)',
+      'Mark the emergent ray on the far side of the block with × marks',
+      'Remove block; join marks to draw incident and emergent rays; draw line through block between exit/entry points',
+      'Measure angle of incidence (i) from normal (in air, at entry face) and angle of refraction (θᵣ) from normal inside the glass at entry face',
+      'Repeat for 5 different angles of incidence; calculate n = sin(i)/sin(θᵣ) for each'
     ],
     resultsTable: {
-      headers: ['Angle of incidence i (°)', 'Angle of reflection r (°)', 'Angle of refraction (°)', 'sin(i)', 'sin(refraction)', 'n = sin(i)/sin(r)'],
+      headers: ['Angle of incidence i (°)', 'Angle of reflection (°)', 'Angle of refraction θᵣ (°)', 'sin(i)', 'sin(θᵣ)', 'n = sin(i)/sin(θᵣ)'],
       sampleData: [[20,20,13,0.34,0.22,1.52],[30,30,19,0.50,0.33,1.52],[40,40,25,0.64,0.42,1.52],[50,50,31,0.77,0.51,1.51],[60,60,35,0.87,0.57,1.52]]
     },
-    analysis: "Reflection: angle of incidence = angle of reflection (always). Refraction: when entering denser medium (glass), ray bends TOWARD normal (r < i). Plot sin(i) vs sin(refraction angle)  -  gradient = refractive index n ≈ 1.5 for glass. Snell's law: n = sin(i)/sin(r).",
+    analysis: "Part A — Reflection: angle of incidence = angle of reflection (law of reflection verified). Image is the same distance behind the mirror as the object is in front. Part B — Refraction: when entering denser medium (glass), ray bends TOWARD normal (θᵣ < i). Plot sin(i) vs sin(θᵣ) — gradient = refractive index n ≈ 1.5 for glass. Snell's law: n = sin(i)/sin(θᵣ). Note: θᵣ is measured inside the glass at the point of entry — not the exit angle (which equals i for parallel-sided block).",
     errors: [
       'Wide ray from ray box → difficult to mark path precisely; use single slit collimator',
       'Block moves during experiment → draw around block before starting',
@@ -332,18 +345,19 @@ export const PRACTICALS = {
       'Hang spring from top clamp; attach metre ruler to lower clamp (zero at top)',
       'Attach pointer (splint) to bottom of spring  -  reads against ruler',
       'Record natural (unstretched) length of spring',
-      'Add 1N weight and record new length; calculate extension = new length − original length',
-      'Add another 1N; record length and extension',
-      'Continue up to 10N (or until spring deforms permanently)',
-      'Note the point where the graph stops being linear (elastic limit)',
-      'Plot extension (y) vs force (x)  -  straight line through origin up to elastic limit',
-      'Use graph to find the weight of the unknown object'
+      'Add one 100g mass (≈1N) and record new length; calculate extension = new length − original length',
+      'Add another 100g mass; record length and extension',
+      'Continue adding masses; also take readings whilst unloading (removing masses) to check for hysteresis',
+      'Continue up to ~10N (or until spring deforms permanently — required to find elastic limit)',
+      'Note the point where the graph stops being linear (limit of proportionality / elastic limit)',
+      'Plot force (y-axis) vs extension (x-axis)  -  straight line through origin up to elastic limit; gradient = k (in N/m if SI units used)',
+      'Use graph to find the weight of the unknown object (read extension, find force from graph)'
     ],
     resultsTable: {
-      headers: ['Force F (N)', 'Length (cm)', 'Extension e (cm)', 'F/e (N/cm) = k'],
-      sampleData: [[0,10.0,0,'-'],[1,11.8,1.8,0.56],[2,13.6,3.6,0.56],[3,15.4,5.4,0.56],[4,17.2,7.2,0.56],[5,19.0,9.0,0.56],[6,20.8,10.8,0.56],[7,22.6,12.6,0.56],[8,25.0,15.0,0.53],[9,27.8,17.8,0.51],[10,31.2,21.2,0.47]]
+      headers: ['Force F (N)', 'Length (cm)', 'Extension e (m)', 'k = F/e (N/m)'],
+      sampleData: [[0,10.0,0,'-'],[1,11.8,0.018,56],[2,13.6,0.036,56],[3,15.4,0.054,56],[4,17.2,0.072,56],[5,19.0,0.090,56],[6,20.8,0.108,56],[7,22.6,0.126,56],[8,25.0,0.150,53],[9,27.8,0.178,51],[10,31.2,0.212,47]]
     },
-    analysis: "Plot extension (y) vs force (x). Straight line through origin confirms Hooke's Law: F = ke. Gradient = 1/k (spring constant k = 1/gradient in N/cm). Beyond elastic limit, line curves upward (spring permanently deformed). To find unknown weight: read extension off ruler and use graph or F = ke.",
+    analysis: "Plot force F (y-axis) vs extension e (x-axis). Straight line through origin confirms Hooke's Law: F = ke. Gradient = k (spring constant, in N/m when extension in metres). Beyond elastic limit, the line curves upward — spring permanently deformed. When unloading, if readings differ from loading, the elastic limit has been exceeded. To find unknown weight: measure extension, read force from graph or use F = ke.",
     errors: [
       'Spring oscillates when weight added → wait for spring to stop moving before reading',
       'Parallax error reading ruler → read pointer at eye level',
@@ -366,22 +380,22 @@ export const PRACTICALS = {
     topicId: 'newtons_laws',
     aim: 'To investigate the effect of varying force on the acceleration of a constant mass, and the effect of varying mass at constant force.',
     specRef: '4.5.6.2.2',
-    equipment: ['Linear air track and gliders','Vacuum cleaner (blow)','Bench pulley + string','Weight stack (1N in 0.2N steps)','Card (5×10cm)','2× light gates + interface + computer','2× clamp stands','Blu-Tack','Metre ruler'],
+    equipment: ['Dynamics trolley','Flat dynamics runway (≥1m)','Bench pulley + string','Weight stack (100g masses)','Card (10cm width, attached to trolley)','2× light gates + data logger/computer','2× clamp stands','G-clamp to secure runway','Metre ruler','Protractor (for runway tilt)'],
     variables: {
       independent: 'Force (N) [or mass (kg) for second part]',
       dependent: 'Acceleration (m/s²)',
       control: ['Total mass of system (add unused weights to glider)','Air track level','Card length (10cm)']
     },
     method: [
-      'Set up air track; level by adjusting legs until stationary glider does not drift',
-      'Attach 10cm card to glider horizontally',
-      'Set up two light gates connected to computer; input card length 10cm',
-      'Attach pulley at far end; thread string from glider over pulley to weight stack',
-      'Ensure total mass of system = glider + all weights (move "unused" weights onto glider)',
-      'Switch on vacuum cleaner; release glider; record acceleration from computer',
+      'Set up runway; compensate for friction by tilting slightly (raise one end slightly until trolley moves at constant speed with no hanging mass — verified by equal light-gate readings)',
+      'Attach 10cm card to trolley; set up two light gates connected to data logger; input card length 10cm',
+      'Attach pulley at far end of runway; thread string from trolley, parallel to runway, over pulley to weight stack',
+      'Place all masses on the trolley at the start (total system mass = trolley + all masses)',
+      'Transfer one 100g mass (≈1N) from trolley to the hanging stack',
+      'Release trolley; record acceleration from data logger',
       'Repeat 3 times; calculate mean acceleration',
-      'Transfer one weight (0.2N) from stack to glider; repeat for 0.8N, 0.6N, 0.4N, 0.2N',
-      'For Part 2 (mass): keep force constant at 0.5N; add mass to glider',
+      'Transfer another mass from trolley to stack; repeat (keep total system mass constant)',
+      'For Part 2 (mass): return to starting mass; keep hanging force constant; add extra mass to trolley',
       'Plot acceleration vs force (straight line through origin expected)',
       'Plot acceleration vs 1/mass (straight line through origin expected)'
     ],
@@ -391,16 +405,16 @@ export const PRACTICALS = {
     },
     analysis: 'Plot a (y) vs F (x)  -  straight line through origin confirms F = ma. Gradient = 1/mass. Plot a (y) vs 1/m (x)  -  straight line confirms a ∝ 1/m at constant force. Calculate F/a for each row  -  should give same constant value (= total mass of system).',
     errors: [
-      'Air track not level → glider accelerates without force; level carefully',
-      'Friction (if track damaged) → use air track; reduce any kinks in string',
-      'Weight hits ground before passing second gate → adjust gate position',
-      'Total system mass not kept constant → always move "unused" weights to glider',
-      'Card tilted → ensure card is horizontal on glider'
+      'Friction not fully compensated → tilt runway more carefully; re-check with zero hanging mass',
+      'String not parallel to runway → angle means tension is less than hanging weight; keep string horizontal from trolley to pulley',
+      'Weight hits ground before passing second gate → adjust gate position or reduce drop distance',
+      'Total system mass not kept constant → always move "unused" masses to trolley, not removed from system',
+      'Card tilted → ensure card is horizontal on trolley so it cuts light gate cleanly'
     ],
     hazards: [
-      { hazard: 'Glider hitting end of track at speed', risk: 'Equipment damage / injury', precaution: 'Do not use large weights; keep hands clear of track' },
-      { hazard: 'Vacuum cleaner cable', risk: 'Trip hazard', precaution: 'Secure cable away from walkways' },
-      { hazard: 'Falling weight stack', risk: 'Crush injury', precaution: 'Keep feet away from below the pulley' }
+      { hazard: 'Trolley hitting end of runway at speed', risk: 'Equipment damage / injury', precaution: 'Use a soft stop/buffer at end of runway; do not use large hanging masses' },
+      { hazard: 'Falling weight stack', risk: 'Crush injury to feet', precaution: 'Keep feet away from below the pulley; use a catch tray' },
+      { hazard: 'Runway falling from bench', risk: 'Injury', precaution: 'Secure runway to bench with G-clamp' }
     ],
     sim: { type: 'acceleration', mass: 1.0, maxForce: 1.0 }
   },
@@ -412,10 +426,10 @@ export const PRACTICALS = {
     topicId: 'wave_properties',
     aim: 'To measure the frequency, wavelength, and speed of waves in a ripple tank and on a stretched string.',
     specRef: '4.6.1.2',
-    equipment: ['Ripple tank + accessories (wooden rod, motor, lamp)','Low voltage power supply','Metre ruler','White card (for floor)','Vibration generator','Variable frequency power supply','String or elasticated cord','Set of 100g masses + hanger','Wooden bridge','Pulley on clamp'],
+    equipment: ['Ripple tank + accessories (wooden rod, motor, lamp)','Low voltage power supply','Metre ruler','White card (for floor)','Vibration generator','Variable frequency power supply (signal generator)','String or elasticated cord','Set of 100g masses + hanger','Wooden bridge','Pulley on clamp','Slinky spring (for longitudinal wave demonstration)'],
     variables: {
       independent: 'Frequency of vibration (Hz)',
-      dependent: 'Wavelength (m) and wave speed (m/s)',
+      dependent: 'Wavelength (m) — wave speed is derived from v = fλ',
       control: ['Depth of water in ripple tank (5mm)','Tension in string','Length of string between bridge and end']
     },
     method: [
@@ -424,15 +438,19 @@ export const PRACTICALS = {
       'Place white card on floor below tank',
       'Set wooden rod to just touch water surface; switch on motor',
       'Adjust lamp height for clear wave pattern on card',
-      'Measure wavelength: ruler at right angles to waves; measure across 5 waves; divide by 5',
-      'Measure frequency: count waves passing a point in 10 seconds; divide by 10',
+      'Measure wavelength: ruler at right angles to waves; measure across 5 waves; divide by 5 for mean λ',
+      'Read frequency directly from the signal generator/power supply display (more accurate than counting by eye)',
       'Calculate wave speed: v = f × λ',
-      'Part 2 – String:',
+      'Part 2 – String (transverse waves):',
       'Set up vibration generator with string over pulley to hanging masses',
       'Switch on at low frequency; adjust frequency or tension until standing wave forms',
       'Count loops; measure total length; calculate λ = 2L/n (n = number of loops)',
       'Read frequency from power supply display',
-      'Calculate wave speed: v = f × λ'
+      'Calculate wave speed: v = f × λ',
+      'Part 3 – Slinky (longitudinal waves):',
+      'Stretch slinky along the floor between two people (or one end fixed)',
+      'Push and pull one end back and forth along the slinky axis to create compressions and rarefactions',
+      'Observe that energy travels along the spring direction — this is a longitudinal wave (unlike string/water = transverse)'
     ],
     resultsTable: {
       headers: ['Measurement', 'Trial 1', 'Trial 2', 'Trial 3', 'Mean'],
@@ -440,15 +458,15 @@ export const PRACTICALS = {
     },
     analysis: 'Wave speed v = f × λ. In ripple tank, measuring across more waves gives a more accurate wavelength. In string: λ = 2L/n where L is length between supports and n is number of loops. Wave speed depends on the medium, not frequency.',
     errors: [
-      'Stroboscopic effect → never use a stroboscope (can trigger epileptic fits)',
-      'Wavelength difficult to measure accurately → measure across as many waves as possible',
+      'Wavelength difficult to measure accurately → measure across as many waves as possible and divide',
       'Standing wave not stable → adjust tension (hanging mass) and/or frequency carefully',
       'Water ripples not clear → adjust lamp height; darken room',
-      'Counting frequency by eye → use lower frequency setting; count over longer time'
+      'Frequency measured by counting waves by eye → always read directly from the signal generator display; eye-counting introduces large errors',
+      'Wave speed appears to vary with frequency → check that λ measurement is accurate; v = fλ should be constant for a given medium'
     ],
     hazards: [
       { hazard: 'Water spillage', risk: 'Slip / electrical hazard', precaution: 'Mop up spills immediately; power supplies on bench, not floor' },
-      { hazard: 'Stroboscope (if suggested)', risk: 'Epileptic fit (7-15Hz)', precaution: 'Do NOT use stroboscope; count waves manually' },
+      { hazard: 'Stroboscope (if used)', risk: 'Epileptic fit (7-15Hz)', precaution: 'Do NOT use stroboscopes in school practical — safe to describe in exam answers as a technique, but never used in lab due to photosensitive epilepsy risk' },
       { hazard: 'Vibrating string', risk: 'Eye injury', precaution: 'Wear goggles; sit behind safety screen if close to string' }
     ],
     sim: { type: 'waves', defaultFreq: 5, defaultDepth: 5 }
@@ -461,17 +479,18 @@ export const PRACTICALS = {
     topicId: 'black_body',
     aim: 'To investigate how the amount of infrared radiation emitted (and absorbed) by a surface depends on the nature of that surface.',
     specRef: '4.6.2.2',
-    equipment: ['Leslie cube (metal cube with different surfaces)','Kettle / boiling water','Infrared detector (or thermometer with blackened bulb)','Heatproof mat','Ruler (to measure equal distances)','Stopwatch'],
+    equipment: ['Leslie cube (4-sided metal cube: matt black, matt white, shiny silver, polished/dull metal)','Kettle / boiling water','Infrared detector (thermopile or IR thermometer)','Heatproof mat','Ruler (to measure equal distances)','Stopwatch'],
     variables: {
-      independent: 'Type of surface (matt black, matt white, shiny silver)',
-      dependent: 'Infrared radiation detected / temperature reading',
-      control: ['Distance from cube to detector (equal for each face)','Temperature of water in cube','Same detector used throughout']
+      independent: 'Type of surface (matt black, matt white, shiny silver, shiny/polished metal)',
+      dependent: 'Infrared radiation detected (detector reading)',
+      control: ['Distance from cube to detector (equal for each face)','Temperature of water in cube','Same detector used throughout','Do all readings quickly before cube cools significantly']
     },
     method: [
       'Place Leslie cube on heatproof mat',
       'Fill with near-boiling water from kettle',
       'Place infrared detector at a fixed distance (e.g. 10cm) from each face',
-      'Record detector reading for: matt black face, matt white face, shiny silver face',
+      'Wait ~20–30 seconds for detector reading to stabilise before recording',
+      'Record detector reading for all four faces: matt black, matt white, shiny silver, and the fourth (polished/dull) face',
       'Repeat and take mean readings',
       'For absorption: place two metal sheets equidistant from IR source',
       'One sheet has black paint facing source, other is shiny silver',
@@ -481,9 +500,9 @@ export const PRACTICALS = {
     ],
     resultsTable: {
       headers: ['Surface', 'Reading 1', 'Reading 2', 'Reading 3', 'Mean', 'Relative emission'],
-      sampleData: [['Matt black','87','88','86','87','Highest'],['Matt white','72','71','73','72','High'],['Shiny silver','41','40','42','41','Lowest']]
+      sampleData: [['Matt black','87','88','86','87','Highest'],['Matt white','72','71','73','72','High'],['Polished/dull metal','55','54','56','55','Intermediate'],['Shiny silver','41','40','42','41','Lowest']]
     },
-    analysis: 'Matt black surfaces are the best emitters AND best absorbers of infrared radiation. Shiny silver surfaces are the worst emitters and poorest absorbers (best reflectors). Matt white is intermediate. This explains why: radiators are painted white (some emission), teapots are silver (keeps heat in), solar panels are black (maximum absorption).',
+    analysis: 'Matt black surfaces are the best emitters AND best absorbers of infrared radiation. Shiny silver surfaces are the worst emitters and poorest absorbers (best reflectors). Matt white and polished surfaces are intermediate. Real-world examples: solar panels are black (maximum absorption); survival blankets are silver (reflects IR back to body, minimising heat loss); teapots are silver/shiny (minimises emission, keeps tea hot). Note: domestic radiators are white for aesthetic reasons and work mainly by convection — white is NOT chosen for its radiation properties.',
     errors: [
       'Distance to detector not equal for all faces → measure carefully with ruler each time',
       'Water cools during experiment → do all readings quickly; refill with hot water if needed',

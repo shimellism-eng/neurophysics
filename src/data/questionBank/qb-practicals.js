@@ -13,9 +13,9 @@ const practicalsQuestions = [
 
   { id: 'shc_t1_01', topicId: 'shc', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
     question: 'In the specific heat capacity experiment, what is the independent variable?',
-    options: ['Temperature rise of the block', 'Energy supplied to the block', 'Mass of the block', 'Type of metal used'],
+    options: ['Temperature rise of the block', 'Time (from which energy supplied is calculated)', 'Mass of the block', 'Type of metal used'],
     correctIndex: 1,
-    senNote: 'The independent variable is the one you deliberately change — you control how much energy you supply.' },
+    senNote: 'The independent variable is what you directly control — you set the time using a stopwatch. Energy is then calculated from E = P × t. Either "time" or "energy supplied" may be accepted, as energy is derived from time.' },
 
   { id: 'shc_t1_02', topicId: 'shc', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
     question: 'In the specific heat capacity experiment, what is the dependent variable?',
@@ -183,13 +183,10 @@ const practicalsQuestions = [
     ],
     senNote: 'A good improvement: say what you change AND say why it makes the results better.' },
 
-  { id: 'ins_t2_04', topicId: 'insulation', course: 'combined', tier: 2, type: 'calculation', marks: 2, timeExpected: 60,
-    question: 'Water starts at 80°C and cools to 50°C in 20 minutes with no insulation. With bubble wrap, it cools to 63°C in the same time. Calculate the temperature drop for each case.',
-    answer: 17,
-    unit: '°C difference',
-    acceptableRange: [16, 18],
-    markScheme: ['No insulation: 80 − 50 = 30°C drop (1)', 'Bubble wrap: 80 − 63 = 17°C drop; difference = 30 − 17 = 13°C (1)'],
-    senNote: 'Temperature drop = starting temperature − final temperature. The smaller the drop, the better the insulation.' },
+  { id: 'ins_t2_04', topicId: 'insulation', course: 'combined', tier: 2, type: 'short_answer', marks: 2, timeExpected: 60,
+    question: 'Water starts at 80°C and cools to 50°C in 20 minutes with no insulation. With bubble wrap, it cools to 63°C in the same time. Calculate the temperature drop for (a) no insulation and (b) bubble wrap.',
+    markScheme: ['(a) No insulation: 80 − 50 = 30°C drop (1)', '(b) Bubble wrap: 80 − 63 = 17°C drop (1)'],
+    senNote: 'Temperature drop = starting temperature − final temperature. The smaller the drop, the better the insulator. Bubble wrap kept more heat in — it only lost 17°C compared to 30°C with no insulation.' },
 
   { id: 'ins_t3_01', topicId: 'insulation', course: 'combined', tier: 3, type: 'extended', marks: 6, timeExpected: 120,
     question: 'Describe how you would investigate the effectiveness of three different insulating materials. Include how you would make the test fair and how you would present your results.',
@@ -231,9 +228,9 @@ const practicalsQuestions = [
 
   { id: 'res_t1_03', topicId: 'resistance', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
     question: 'Why is constantan wire used in the resistance experiment rather than copper?',
-    options: ['Constantan is cheaper', 'Constantan has much higher resistance, making changes measurable', 'Copper is too long', 'Constantan is safer to handle'],
+    options: ['Constantan is cheaper', 'Constantan\'s resistance does not change significantly with temperature', 'Copper is too long', 'Constantan is safer to handle'],
     correctIndex: 1,
-    senNote: 'Constantan is a high-resistance alloy — its resistance changes noticeably with length, making the experiment work.' },
+    senNote: 'Constantan is chosen because its resistance is almost unchanged by temperature. Copper\'s resistance rises a lot when it warms up, which would give inaccurate results. Constantan also has higher resistance than copper, which helps too.' },
 
   { id: 'res_t1_04', topicId: 'resistance', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
     question: 'Why should a low voltage be used in the resistance of a wire experiment?',
@@ -1020,7 +1017,7 @@ const practicalsQuestions = [
     senNote: 'The control experiment is the key feature — subtract the background melting from the total.' },
 
   { id: 'lh_t3_02', topicId: 'latent_heat', course: 'physics_only', tier: 3, type: 'extended', marks: 4, timeExpected: 120,
-    question: "A student calculates the latent heat of vaporisation of water as 1.9 × 10⁶ J/kg. The accepted value is 2.26 × 10⁶ J/kg. Suggest two reasons why the student's value is lower, and suggest one improvement.",
+    question: "Extension — Latent heat of vaporisation: A student measures the latent heat of vaporisation of water (Lv) by heating water with a 50 W heater until it boils and collecting the steam. They calculate Lv = 1.9 × 10⁶ J/kg. The accepted value is 2.26 × 10⁶ J/kg. Suggest two reasons why the student's value is lower, and suggest one improvement.",
     markScheme: [
       'Heat loss to surroundings — some energy heats the air rather than boiling the water, so less steam is produced per joule than expected → L appears too small (1)',
       'Steam condensing in the collection vessel before being weighed — mass of water appears larger than mass vaporised, so L = E/m is underestimated (1)',

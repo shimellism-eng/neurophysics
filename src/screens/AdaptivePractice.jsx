@@ -10,6 +10,7 @@ import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
 import { getNextQuestion } from '../data/questionBank/index'
 import { getSelectedBoard } from '../utils/boardConfig'
+import { supabase } from '../lib/supabase'
 
 const TIER_CONFIG = {
   1: { label: 'Tier 1', sub: 'Recall & MCQ', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)' },
@@ -165,10 +166,18 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
   const handleSubmit = async () => {
     if (answer.trim().length < 10) return
     setStatus('marking')
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 30000)
     try {
+      const session = supabase ? (await supabase.auth.getSession()).data?.session : null
+      if (!session?.access_token) { clearTimeout(timeout); setStatus('error'); return }
       const res = await fetch(`${API_BASE}/api/mark`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        signal: controller.signal,
+        headers: {
+          'content-type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`,
+        },
         body: JSON.stringify({
           question: q.question,
           studentAnswer: answer,
@@ -176,11 +185,13 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
           marks: q.marks,
         }),
       })
+      clearTimeout(timeout)
       const data = await res.json()
       if (data.error || !data.breakdown) { setStatus('error'); return }
       setResult(data)
       setStatus('marked')
     } catch {
+      clearTimeout(timeout)
       setStatus('error')
     }
   }

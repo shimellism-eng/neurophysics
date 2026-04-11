@@ -289,6 +289,17 @@ export default function HomeScreen() {
                 </span>
               )}
 
+              {/* Board badge — always shown */}
+              <span className="font-bold px-2.5 py-1 rounded-full"
+                style={{
+                  fontSize: 12,
+                  background: `${selectedBoard.color}12`,
+                  color: selectedBoard.color,
+                  border: `1px solid ${selectedBoard.color}28`,
+                }}>
+                {selectedBoard.name}
+              </span>
+
               {targetLabel && (
                 <span className="font-bold px-2.5 py-1 rounded-full"
                   style={{

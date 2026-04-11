@@ -11,12 +11,13 @@ import { ChevronRight, Map } from 'lucide-react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 
-export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, onComplete, onWrongAnswer }) {
+export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, onComplete, onWrongAnswer, alreadyCompleted = false }) {
   const { questions } = probe
   const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState(null)
   const [showFeedback, setShowFeedback] = useState(false)
-  const [done, setDone] = useState(false)
+  // If coming back to this step after completing it, skip straight to done view
+  const [done, setDone] = useState(alreadyCompleted)
   const triggerReaction = useMamoReaction()
   const { playCorrect, playWrong } = useSound()
 

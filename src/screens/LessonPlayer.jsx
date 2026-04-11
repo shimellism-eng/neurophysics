@@ -219,6 +219,8 @@ export default function LessonPlayer() {
   const [showResume, setShowResume] = useState(!!savedProgress)
   const [xpPop, setXpPop]         = useState(false)
   const [xpKey, setXpKey]         = useState(0)
+  // Persist PriorKnowledgeProbe completion so going back doesn't reset it
+  const [probeCompleted, setProbeCompleted] = useState(false)
 
   // ADHD pacing: session timer + break nudges
   const { elapsedMinutes, showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
@@ -327,7 +329,8 @@ export default function LessonPlayer() {
             probe={topic.prerequisiteCheck}
             moduleColor={topic.moduleColor}
             topicMapHint={topic.topicMapHint}
-            onComplete={goNext}
+            alreadyCompleted={probeCompleted}
+            onComplete={() => { setProbeCompleted(true); goNext() }}
             onWrongAnswer={exploreMode ? undefined : loseHeart}
           />
         )

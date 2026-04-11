@@ -231,8 +231,19 @@
 - [x] HomeScreen InsightsPanel (accuracy, strong/weak topics)
 - [x] AdaptivePractice screen + useAdaptive hook
 - [x] Deployed to neurophysics.co.uk
+- [x] NotebookLM infographics in Method tab (RP1, RP2 live — RP3–RP11 pending)
+- [x] NovelContextQuestion extracted to shared component with AI marking
+- [x] Back button exits lesson to home + saves progress mid-lesson
+- [x] markStarted fires when user advances past hook (not only at quiz)
+- [x] Space Physics module shows "Physics only" badge on Learn screen
+- [x] Security hardening: JWT auth on all AI endpoints (api/mark, api/gemini, api/anthropic)
+- [x] Security hardening: JWT signature verified in delete-account
+- [x] Security hardening: CORS rejects unknown origins with 403
+- [x] Security hardening: HSTS + tightened CSP in vercel.json
+- [x] SUPABASE_JWT_SECRET added to Vercel — auth fully enforced
 - [ ] PWA manifest + service worker confirmed working
 - [ ] All exam boards wired in (currently AQA focus)
+- [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 
 ---
 
@@ -243,6 +254,15 @@
 - Component files: PascalCase. Utility/hook files: camelCase
 - Screens go in src/screens/. Reusable UI goes in src/components/
 - Data files go in src/data/. Follow existing naming pattern
+
+## API / Security Conventions
+
+- All serverless functions in `api/` require a valid Supabase Bearer token
+- Auth is verified via `api/_verifyAuth.js` — uses `SUPABASE_JWT_SECRET` env var (HS256)
+- Client-side: always pass `Authorization: Bearer <session.access_token>` to AI endpoints
+- CORS: unknown origins return 403 — never default to first allowed origin
+- Never accept API keys from request headers — server env vars only
+- Rate limiting is per-IP in-memory (resets on cold start) — auth is the real protection
 
 ---
 

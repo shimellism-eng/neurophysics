@@ -5,7 +5,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, BookmarkPlus, Check } from 'lucide-react'
+import { ArrowLeft, Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, BookmarkPlus, Check, Loader2, CheckCircle, XCircle, Lightbulb, AlertCircle } from 'lucide-react'
 import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
 import { getNextQuestion } from '../data/questionBank/index'
@@ -152,26 +152,169 @@ function CalcQuestion({ q, onAnswer }) {
 }
 
 // ── Extended/Short Answer Question ────────────────────────────────────────────
-function ExtendedQuestion({ q, onAnswer }) {
-  const [open, setOpen] = useState(false)
-  const [selfScore, setSelfScore] = useState(null)
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
+
+function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
   const half = Math.ceil(q.marks / 2)
+  const [answer, setAnswer] = useState('')
+  const [status, setStatus] = useState('idle')   // idle | marking | marked | error
+  const [result, setResult] = useState(null)
+  const [selfScore, setSelfScore] = useState(null)
+
+  const handleSubmit = async () => {
+    if (answer.trim().length < 10) return
+    setStatus('marking')
+    try {
+      const res = await fetch(`${API_BASE}/api/mark`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          question: q.question,
+          studentAnswer: answer,
+          markScheme: q.markScheme,
+          marks: q.marks,
+        }),
+      })
+      const data = await res.json()
+      if (data.error || !data.breakdown) { setStatus('error'); return }
+      setResult(data)
+      setStatus('marked')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  const handleContinue = () => onAnswer(result.marksAwarded >= half)
+  const handleSelfScore = (pts) => { setSelfScore(pts); onAnswer(pts >= half) }
+
+  const pct = result ? result.marksAwarded / q.marks : 0
+  const scoreColor = pct >= 0.8 ? '#00bc7d' : pct >= 0.5 ? '#fbbf24' : '#ef4444'
 
   return (
     <div className="space-y-3">
-      <motion.button
-        className="w-full text-left px-4 py-3 rounded-[14px] flex items-center justify-between"
-        style={{ background: open ? 'rgba(0,188,125,0.08)' : 'rgba(18,26,47,0.9)',
-          border: open ? '0.75px solid rgba(0,188,125,0.3)' : '0.75px solid #1d293d' }}
-        onClick={() => setOpen(v => !v)} whileTap={{ scale: 0.98 }}>
-        <span className="text-sm font-semibold" style={{ color: open ? '#00bc7d' : '#a8b8cc' }}>
-          {open ? 'Mark scheme' : 'Reveal mark scheme'}
-        </span>
-        <motion.span animate={{ rotate: open ? 90 : 0 }} style={{ color: '#a8b8cc' }}>›</motion.span>
-      </motion.button>
-      <AnimatePresence>
-        {open && (
-          <motion.div className="space-y-2" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
+      <AnimatePresence mode="wait">
+
+        {/* Typing */}
+        {status === 'idle' && (
+          <motion.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-3">
+            <textarea
+              value={answer}
+              onChange={e => setAnswer(e.target.value.slice(0, 600))}
+              placeholder="Write your answer here… use key physics terms."
+              rows={4}
+              style={{
+                width: '100%', background: 'rgba(18,26,47,0.9)',
+                border: `1px solid ${answer.length >= 10 ? moduleColor + '60' : '#2d3e55'}`,
+                borderRadius: 12, padding: '10px 12px', color: '#f8fafc',
+                fontSize: 13, lineHeight: 1.6, resize: 'none', outline: 'none',
+                fontFamily: 'inherit', transition: 'border-color 0.2s',
+              }}
+            />
+            <div style={{ color: '#556677', fontSize: 10, textAlign: 'right', marginTop: -8 }}>
+              {answer.length} / 600
+            </div>
+            <motion.button
+              onClick={handleSubmit}
+              disabled={answer.trim().length < 10}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-[12px] font-semibold text-sm"
+              style={{
+                background: answer.trim().length >= 10 ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(255,255,255,0.05)',
+                color: answer.trim().length >= 10 ? '#fff' : '#556677',
+                cursor: answer.trim().length >= 10 ? 'pointer' : 'not-allowed',
+              }}
+              whileTap={answer.trim().length >= 10 ? { scale: 0.97 } : {}}>
+              Submit for AI marking
+            </motion.button>
+          </motion.div>
+        )}
+
+        {/* Marking */}
+        {status === 'marking' && (
+          <motion.div key="marking" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="flex flex-col items-center gap-3 py-6">
+            <Loader2 size={28} color={moduleColor} className="animate-spin" />
+            <p className="text-sm" style={{ color: '#a8b8cc' }}>Mamo is marking your answer…</p>
+          </motion.div>
+        )}
+
+        {/* Marked */}
+        {status === 'marked' && result && (
+          <motion.div key="marked" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
+            {/* Score */}
+            <motion.div className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-[14px]"
+              style={{ background: `${scoreColor}12`, border: `1.5px solid ${scoreColor}40` }}
+              initial={{ scale: 0.85 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
+              <span className="text-xl font-black" style={{ color: scoreColor }}>{result.marksAwarded}</span>
+              <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>/ {q.marks} marks</span>
+            </motion.div>
+
+            {/* Breakdown */}
+            <div className="rounded-[12px] overflow-hidden"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+              <div className="px-3 pt-3 pb-1">
+                <p className="text-[10px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>Breakdown</p>
+              </div>
+              <div className="px-3 pb-3 space-y-2.5 mt-1">
+                {q.markScheme.map((point, i) => {
+                  const item = result.breakdown[i] || { awarded: false, reason: '' }
+                  return (
+                    <motion.div key={i} className="flex items-start gap-2"
+                      initial={{ opacity: 0, x: -4 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.06 }}>
+                      {item.awarded
+                        ? <CheckCircle size={15} color="#00bc7d" style={{ flexShrink: 0, marginTop: 1 }} />
+                        : <XCircle size={15} color="#ef4444" style={{ flexShrink: 0, marginTop: 1 }} />
+                      }
+                      <div>
+                        <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                          {point.replace(/\s*\(1\)\s*$/, '')}
+                        </p>
+                        {item.reason && (
+                          <p className="text-[11px] mt-0.5" style={{ color: item.awarded ? '#00bc7d' : '#ef4444' }}>
+                            {item.reason}
+                          </p>
+                        )}
+                      </div>
+                    </motion.div>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* Feedback */}
+            {result.feedback && (
+              <div className="flex items-start gap-2 px-3 py-2.5 rounded-[10px]"
+                style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+                <Lightbulb size={13} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{result.feedback}</p>
+              </div>
+            )}
+
+            {q.senNote && (
+              <div className="px-3 py-2 rounded-[10px]"
+                style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+                <span className="text-xs" style={{ color: '#fdc700' }}>💡 {q.senNote}</span>
+              </div>
+            )}
+
+            <motion.button onClick={handleContinue}
+              className="w-full flex items-center justify-center py-3 rounded-[12px] font-semibold text-sm"
+              style={{ background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`, color: '#fff' }}
+              whileTap={{ scale: 0.97 }}
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}>
+              Continue
+            </motion.button>
+          </motion.div>
+        )}
+
+        {/* Error fallback — self-mark */}
+        {status === 'error' && (
+          <motion.div key="error" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(239,68,68,0.08)', border: '0.75px solid rgba(239,68,68,0.25)' }}>
+              <AlertCircle size={13} color="#ef4444" style={{ flexShrink: 0 }} />
+              <p className="text-xs" style={{ color: '#ef4444' }}>AI marking unavailable — self-rate instead.</p>
+            </div>
+            {/* Show mark scheme */}
             {q.markScheme.map((m, i) => (
               <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[10px]"
                 style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
@@ -180,37 +323,36 @@ function ExtendedQuestion({ q, onAnswer }) {
                 <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{m}</span>
               </div>
             ))}
-            {selfScore === null && (
-              <div className="pt-1">
+            {selfScore === null ? (
+              <div>
                 <div className="text-xs font-semibold mb-2 text-center" style={{ color: '#a8b8cc' }}>How many marks did you earn?</div>
                 <div className="flex gap-2 justify-center flex-wrap">
                   {Array.from({ length: q.marks + 1 }, (_, i) => i).map(pts => (
                     <motion.button key={pts}
                       className="px-4 py-2 rounded-[10px] text-sm font-bold"
                       style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-                      onClick={() => { setSelfScore(pts); onAnswer(pts >= half) }}
-                      whileTap={{ scale: 0.92 }}>
+                      onClick={() => handleSelfScore(pts)} whileTap={{ scale: 0.92 }}>
                       {pts}
                     </motion.button>
                   ))}
                 </div>
               </div>
-            )}
-            {selfScore !== null && (
+            ) : (
               <div className="text-center text-sm font-semibold py-2"
                 style={{ color: selfScore >= q.marks ? '#00bc7d' : selfScore >= half ? '#fbbf24' : '#ef4444' }}>
                 {selfScore}/{q.marks} marks
               </div>
             )}
+            {q.senNote && (
+              <div className="px-3 py-2 rounded-[10px]"
+                style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+                <span className="text-xs" style={{ color: '#fdc700' }}>💡 {q.senNote}</span>
+              </div>
+            )}
           </motion.div>
         )}
+
       </AnimatePresence>
-      {q.senNote && (
-        <div className="px-3 py-2 rounded-[10px]"
-          style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
-          <span className="text-xs" style={{ color: '#fdc700' }}>💡 {q.senNote}</span>
-        </div>
-      )}
     </div>
   )
 }
@@ -479,7 +621,7 @@ export default function AdaptivePractice() {
               {/* Question component */}
               {currentQ.type === 'mcq' && <MCQQuestion q={currentQ} onAnswer={handleAnswer} />}
               {currentQ.type === 'calculation' && <CalcQuestion q={currentQ} onAnswer={handleAnswer} />}
-              {(currentQ.type === 'short_answer' || currentQ.type === 'extended') && <ExtendedQuestion q={currentQ} onAnswer={handleAnswer} />}
+              {(currentQ.type === 'short_answer' || currentQ.type === 'extended') && <ExtendedQuestion q={currentQ} onAnswer={handleAnswer} moduleColor={moduleColor} />}
 
               {/* Next button — shown after answering, no tier change indicator */}
               {answered && (

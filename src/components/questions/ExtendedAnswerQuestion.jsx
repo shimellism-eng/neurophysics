@@ -1,33 +1,86 @@
 /**
- * ExtendedAnswerQuestion — 6-mark open-ended exam question.
- * Student reads the question, optionally views the mark scheme points,
- * then reveals a model answer and self-rates their response.
+ * ExtendedAnswerQuestion — open-ended exam question with AI marking.
+ * Student types their answer, Gemini marks it against the AQA mark scheme,
+ * and returns a per-point breakdown with feedback.
+ * Falls back to self-rating if AI is unavailable.
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronDown, ChevronUp, Lightbulb, Eye, CheckCircle } from 'lucide-react'
+import { Lightbulb, CheckCircle, XCircle, Loader2, AlertCircle } from 'lucide-react'
 
-function renderMarkdown(text) {
-  // Convert **bold** to <strong>
-  const parts = text.split(/\*\*(.*?)\*\*/g)
-  return parts.map((part, i) =>
-    i % 2 === 1
-      ? <strong key={i} style={{ color: '#f8fafc' }}>{part}</strong>
-      : part
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
+const MAX_CHARS = 600
+const MIN_CHARS = 10
+
+// idle → marking → marked | error
+function useAIMarking() {
+  const [status, setStatus] = useState('idle')   // 'idle' | 'marking' | 'marked' | 'error'
+  const [result, setResult] = useState(null)
+
+  const mark = async ({ question, studentAnswer, markScheme, marks }) => {
+    setStatus('marking')
+    try {
+      const res = await fetch(`${API_BASE}/api/mark`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ question, studentAnswer, markScheme, marks }),
+      })
+      const data = await res.json()
+      if (data.error || !data.breakdown) {
+        setStatus('error')
+        return null
+      }
+      setResult(data)
+      setStatus('marked')
+      return data
+    } catch {
+      setStatus('error')
+      return null
+    }
+  }
+
+  const reset = () => { setStatus('idle'); setResult(null) }
+
+  return { status, result, mark, reset }
+}
+
+function ScoreBadge({ awarded, total, moduleColor }) {
+  const pct = awarded / total
+  const color = pct >= 0.8 ? '#00bc7d' : pct >= 0.5 ? '#fbbf24' : '#ef4444'
+  return (
+    <motion.div
+      className="flex items-center justify-center gap-2 px-5 py-3 rounded-[16px]"
+      style={{ background: `${color}12`, border: `1.5px solid ${color}40` }}
+      initial={{ scale: 0.85, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+    >
+      <span className="text-2xl font-black" style={{ color }}>{awarded}</span>
+      <span className="text-sm font-semibold" style={{ color: 'rgba(255,255,255,0.35)' }}>/ {total} marks</span>
+    </motion.div>
   )
 }
 
 export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }) {
-  const { question, questionSubtitle, markScheme, modelAnswer, senNote } = data
-  const [showMarkScheme, setShowMarkScheme] = useState(false)
-  const [revealed, setRevealed] = useState(false)
-  const [selfScore, setSelfScore] = useState(null)
+  const { question, questionSubtitle, markScheme, senNote, marks = 6 } = data
+  const [answer, setAnswer] = useState('')
+  const [showFallback, setShowFallback] = useState(false)
+  const [fallbackScore, setFallbackScore] = useState(null)
+  const { status, result, mark } = useAIMarking()
 
-  const scores = [0, 2, 4, 6]
+  const handleSubmit = async () => {
+    if (answer.trim().length < MIN_CHARS) return
+    const res = await mark({ question, studentAnswer: answer, markScheme, marks })
+    if (!res) setShowFallback(true)
+  }
 
-  const handleScore = (score) => {
-    setSelfScore(score)
-    onComplete(score >= 4) // 4+ marks = pass
+  const handleFallbackScore = (score) => {
+    setFallbackScore(score)
+    onComplete(score >= Math.ceil(marks / 2))
+  }
+
+  const handleContinue = () => {
+    onComplete(result.marksAwarded >= Math.ceil(marks / 2))
   }
 
   return (
@@ -44,178 +97,268 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
         </motion.div>
       )}
 
-      {/* Mark scheme toggle */}
-      <motion.button
-        className="w-full flex items-center justify-between px-4 py-3 rounded-[14px] mb-4 text-sm font-semibold"
-        style={{
-          background: showMarkScheme ? `${moduleColor}12` : 'rgba(18,26,47,0.6)',
-          border: `1px solid ${showMarkScheme ? moduleColor + '40' : '#2d3e55'}`,
-          color: showMarkScheme ? moduleColor : '#8899aa',
-        }}
-        onClick={() => setShowMarkScheme(s => !s)}
-        whileTap={{ scale: 0.98 }}
-        initial={{ opacity: 0, y: 6 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.05 }}
-      >
-        <span className="flex items-center gap-2">
-          <Lightbulb size={15} />
-          Marking points (6 marks)
-        </span>
-        {showMarkScheme ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
-      </motion.button>
+      <AnimatePresence mode="wait">
 
-      <AnimatePresence>
-        {showMarkScheme && (
+        {/* ── IDLE / TYPING STATE ─────────────────────────────────────────── */}
+        {status === 'idle' && (
           <motion.div
-            className="mb-4 rounded-[14px] overflow-hidden"
-            style={{ background: 'rgba(18,26,47,0.85)', border: '1px solid #2d3e55' }}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
+            key="idle"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            className="space-y-3"
           >
-            <div className="px-4 pt-3 pb-1">
-              <p className="text-[11px] uppercase tracking-wide font-semibold mb-2" style={{ color: '#556677' }}>
-                Award 1 mark for each of the following:
-              </p>
+            <textarea
+              value={answer}
+              onChange={e => setAnswer(e.target.value.slice(0, MAX_CHARS))}
+              placeholder="Write your answer here... Use key physics terms and units where needed."
+              rows={6}
+              style={{
+                width: '100%',
+                background: 'rgba(18,26,47,0.9)',
+                border: `1px solid ${answer.length >= MIN_CHARS ? moduleColor + '60' : '#2d3e55'}`,
+                borderRadius: 14,
+                padding: '12px 14px',
+                color: '#f8fafc',
+                fontSize: 14,
+                lineHeight: 1.6,
+                resize: 'none',
+                outline: 'none',
+                transition: 'border-color 0.2s',
+                fontFamily: 'inherit',
+              }}
+            />
+            <div style={{ color: '#556677', fontSize: 11, textAlign: 'right', marginTop: -4 }}>
+              {answer.length} / {MAX_CHARS}
             </div>
-            <div className="px-4 pb-4 space-y-2">
-              {markScheme.map((point, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-2 px-3 py-2.5 rounded-[10px]"
-                  style={{ background: `${moduleColor}08`, border: `0.75px solid ${moduleColor}20` }}
-                >
-                  <span
-                    className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5"
-                    style={{ background: moduleColor, color: '#fff' }}
-                  >
-                    {i + 1}
-                  </span>
-                  <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
-                    {point.replace(/^Award 1 mark:\s*/i, '')}
-                  </p>
-                </div>
-              ))}
-            </div>
+
+            <motion.button
+              onClick={handleSubmit}
+              disabled={answer.trim().length < MIN_CHARS}
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-[14px] font-semibold text-sm"
+              style={{
+                background: answer.trim().length >= MIN_CHARS
+                  ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+                  : 'rgba(255,255,255,0.05)',
+                color: answer.trim().length >= MIN_CHARS ? '#fff' : '#556677',
+                boxShadow: answer.trim().length >= MIN_CHARS ? `0 6px 20px ${moduleColor}40` : 'none',
+                cursor: answer.trim().length >= MIN_CHARS ? 'pointer' : 'not-allowed',
+              }}
+              whileTap={answer.trim().length >= MIN_CHARS ? { scale: 0.97 } : {}}
+            >
+              Submit for AI marking
+            </motion.button>
+
+            {/* SEN note visible from the start */}
+            {senNote && (
+              <div className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
+                style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}>
+                <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{senNote}</p>
+              </div>
+            )}
           </motion.div>
         )}
-      </AnimatePresence>
 
-      {/* Reveal model answer */}
-      {!revealed && (
-        <motion.button
-          className="w-full flex items-center justify-center gap-2 py-3.5 rounded-[14px] font-semibold text-sm mb-4"
-          style={{
-            background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`,
-            color: '#fff',
-            boxShadow: `0 6px 20px ${moduleColor}40`,
-          }}
-          onClick={() => setRevealed(true)}
-          whileTap={{ scale: 0.97 }}
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          <Eye size={16} />
-          Reveal Model Answer
-        </motion.button>
-      )}
-
-      <AnimatePresence>
-        {revealed && (
+        {/* ── MARKING STATE ───────────────────────────────────────────────── */}
+        {status === 'marking' && (
           <motion.div
+            key="marking"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="flex flex-col items-center gap-4 py-8"
+          >
+            <Loader2 size={32} color={moduleColor} className="animate-spin" />
+            <p className="text-sm font-semibold" style={{ color: '#a8b8cc' }}>
+              Mamo is marking your answer…
+            </p>
+          </motion.div>
+        )}
+
+        {/* ── MARKED STATE ────────────────────────────────────────────────── */}
+        {status === 'marked' && result && (
+          <motion.div
+            key="marked"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            {/* Model answer */}
-            <div
-              className="rounded-[14px] p-4"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: moduleColor }}>
-                Model Answer
-              </p>
-              <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>
-                {renderMarkdown(modelAnswer)}
-              </p>
+            {/* Score badge */}
+            <ScoreBadge awarded={result.marksAwarded} total={marks} moduleColor={moduleColor} />
+
+            {/* Per-point breakdown */}
+            <div className="rounded-[14px] overflow-hidden"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}>
+              <div className="px-4 pt-3 pb-1">
+                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>
+                  Mark scheme breakdown
+                </p>
+              </div>
+              <div className="px-4 pb-4 space-y-3 mt-2">
+                {markScheme.map((point, i) => {
+                  const item = result.breakdown[i] || { awarded: false, reason: '' }
+                  return (
+                    <motion.div
+                      key={i}
+                      className="flex items-start gap-3"
+                      initial={{ opacity: 0, x: -6 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.07 }}
+                    >
+                      {item.awarded
+                        ? <CheckCircle size={18} color="#00bc7d" style={{ flexShrink: 0, marginTop: 1 }} />
+                        : <XCircle size={18} color="#ef4444" style={{ flexShrink: 0, marginTop: 1 }} />
+                      }
+                      <div>
+                        <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                          {point.replace(/\s*\(1\)\s*$/, '')}
+                        </p>
+                        {item.reason && (
+                          <p className="text-[11px] mt-1" style={{ color: item.awarded ? '#00bc7d' : '#ef4444' }}>
+                            {item.reason}
+                          </p>
+                        )}
+                      </div>
+                    </motion.div>
+                  )
+                })}
+              </div>
             </div>
 
-            {/* SEN note */}
-            {senNote && (
+            {/* AI feedback */}
+            {result.feedback && (
               <motion.div
                 className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
                 style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.15 }}
+                transition={{ delay: 0.3 }}
               >
                 <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
-                <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{senNote}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{result.feedback}</p>
               </motion.div>
             )}
 
-            {/* Self-rating */}
-            {selfScore === null ? (
-              <motion.div
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-              >
+            {/* SEN note */}
+            {senNote && (
+              <div className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
+                style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
+                <Lightbulb size={14} color="#a8b8cc" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>{senNote}</p>
+              </div>
+            )}
+
+            {/* Continue button */}
+            <motion.button
+              onClick={handleContinue}
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-[14px] font-semibold text-sm"
+              style={{
+                background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`,
+                color: '#fff',
+                boxShadow: `0 6px 20px ${moduleColor}40`,
+              }}
+              whileTap={{ scale: 0.97 }}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              Continue
+            </motion.button>
+          </motion.div>
+        )}
+
+        {/* ── ERROR / FALLBACK STATE ───────────────────────────────────────── */}
+        {(status === 'error' || showFallback) && (
+          <motion.div
+            key="error"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-4"
+          >
+            <div className="flex items-center gap-2 px-4 py-3 rounded-[12px]"
+              style={{ background: 'rgba(239,68,68,0.08)', border: '0.75px solid rgba(239,68,68,0.25)' }}>
+              <AlertCircle size={15} color="#ef4444" style={{ flexShrink: 0 }} />
+              <p className="text-xs" style={{ color: '#ef4444' }}>
+                AI marking unavailable — self-rate your answer instead.
+              </p>
+            </div>
+
+            {/* Show the mark scheme for self-rating */}
+            <div className="rounded-[14px] overflow-hidden"
+              style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}>
+              <div className="px-4 pt-3 pb-1">
+                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>
+                  Mark scheme
+                </p>
+              </div>
+              <div className="px-4 pb-4 space-y-2 mt-2">
+                {markScheme.map((point, i) => (
+                  <div key={i} className="flex items-start gap-2 px-3 py-2.5 rounded-[10px]"
+                    style={{ background: `${moduleColor}08`, border: `0.75px solid ${moduleColor}20` }}>
+                    <span className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5"
+                      style={{ background: moduleColor, color: '#fff' }}>{i + 1}</span>
+                    <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                      {point.replace(/^Award 1 mark:\s*/i, '')}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {fallbackScore === null ? (
+              <div>
                 <p className="text-sm font-semibold text-center mb-3" style={{ color: '#a8b8cc' }}>
                   How many marks would you award yourself?
                 </p>
-                <div className="grid grid-cols-4 gap-2">
-                  {scores.map(score => (
+                <div className="flex gap-2 flex-wrap justify-center">
+                  {Array.from({ length: marks + 1 }, (_, i) => i).map(score => (
                     <motion.button
                       key={score}
-                      className="py-3 rounded-[12px] font-bold text-base"
+                      className="px-4 py-2.5 rounded-[12px] font-bold text-sm"
                       style={{
-                        background: score >= 4
-                          ? `${moduleColor}20`
-                          : score >= 2
-                            ? 'rgba(253,199,0,0.12)'
-                            : 'rgba(239,68,68,0.10)',
-                        border: score >= 4
-                          ? `1.5px solid ${moduleColor}50`
-                          : score >= 2
-                            ? '1.5px solid rgba(253,199,0,0.35)'
-                            : '1.5px solid rgba(239,68,68,0.3)',
-                        color: score >= 4 ? moduleColor : score >= 2 ? '#fdc700' : '#ef4444',
+                        background: score >= Math.ceil(marks * 0.8) ? `${moduleColor}20`
+                          : score >= Math.ceil(marks * 0.5) ? 'rgba(251,191,36,0.12)'
+                          : 'rgba(239,68,68,0.10)',
+                        border: score >= Math.ceil(marks * 0.8) ? `1.5px solid ${moduleColor}50`
+                          : score >= Math.ceil(marks * 0.5) ? '1.5px solid rgba(251,191,36,0.35)'
+                          : '1.5px solid rgba(239,68,68,0.3)',
+                        color: score >= Math.ceil(marks * 0.8) ? moduleColor
+                          : score >= Math.ceil(marks * 0.5) ? '#fbbf24'
+                          : '#ef4444',
                       }}
-                      onClick={() => handleScore(score)}
-                      whileTap={{ scale: 0.93 }}
+                      onClick={() => handleFallbackScore(score)}
+                      whileTap={{ scale: 0.92 }}
                     >
-                      {score}/6
+                      {score}/{marks}
                     </motion.button>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ) : (
-              <motion.div
-                className="flex items-center gap-3 px-4 py-3 rounded-[12px]"
+              <div className="flex items-center gap-3 px-4 py-3 rounded-[12px]"
                 style={{
-                  background: selfScore >= 4 ? 'rgba(0,188,125,0.10)' : 'rgba(253,199,0,0.08)',
-                  border: selfScore >= 4 ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(253,199,0,0.3)',
-                }}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                <CheckCircle size={18} color={selfScore >= 4 ? '#00bc7d' : '#fdc700'} />
-                <div>
-                  <p className="text-sm font-semibold" style={{ color: selfScore >= 4 ? '#00bc7d' : '#fdc700' }}>
-                    You marked yourself {selfScore}/6
-                  </p>
-                  <p className="text-xs mt-0.5" style={{ color: '#8899aa' }}>
-                    {selfScore >= 4 ? 'Great work — aim for all 6 mark points next time.' : 'Keep practising — use the mark scheme to improve.'}
-                  </p>
-                </div>
-              </motion.div>
+                  background: fallbackScore >= Math.ceil(marks / 2) ? 'rgba(0,188,125,0.10)' : 'rgba(253,199,0,0.08)',
+                  border: fallbackScore >= Math.ceil(marks / 2) ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(253,199,0,0.3)',
+                }}>
+                <CheckCircle size={18} color={fallbackScore >= Math.ceil(marks / 2) ? '#00bc7d' : '#fbbf24'} />
+                <p className="text-sm font-semibold"
+                  style={{ color: fallbackScore >= Math.ceil(marks / 2) ? '#00bc7d' : '#fbbf24' }}>
+                  You marked yourself {fallbackScore}/{marks}
+                </p>
+              </div>
+            )}
+
+            {senNote && (
+              <div className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
+                style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)' }}>
+                <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{senNote}</p>
+              </div>
             )}
           </motion.div>
         )}
+
       </AnimatePresence>
     </div>
   )

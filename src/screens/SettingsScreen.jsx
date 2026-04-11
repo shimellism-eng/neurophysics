@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, Share2, GraduationCap } from 'lucide-react'
-import { BOARDS, BOARD_ORDER, getSelectedBoard, saveSelectedBoard } from '../utils/boardConfig'
+import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureRemove } from '../utils/secureStorage'
@@ -143,9 +143,7 @@ export default function SettingsScreen() {
   const { user, signOut } = useAuth()
 
   const [signingOut, setSigningOut] = useState(false)
-  const [selectedBoardId, setSelectedBoardId] = useState(() => {
-    try { return localStorage.getItem('np_board') || 'aqa' } catch { return 'aqa' }
-  })
+  const [selectedBoardId, setSelectedBoardId] = useState(() => getValidatedBoard())
 
   const handleSelectBoard = (boardId) => {
     saveSelectedBoard(boardId)

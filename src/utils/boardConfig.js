@@ -105,14 +105,24 @@ export function getBoard(boardId) {
   return BOARDS[boardId] || BOARDS['aqa']
 }
 
-/** Read the currently selected board from localStorage */
-export function getSelectedBoard() {
+/**
+ * Read np_board from localStorage and validate it against known board IDs.
+ * Returns the validated ID string, falling back to 'aqa' if missing or tampered.
+ * This prevents an injected localStorage value from reaching the rest of the app.
+ */
+export function getValidatedBoard() {
   try {
-    const id = localStorage.getItem('np_board') || 'aqa'
-    return BOARDS[id] || BOARDS['aqa']
+    const stored = localStorage.getItem('np_board')
+    const validIds = Object.keys(BOARDS)
+    return validIds.includes(stored) ? stored : 'aqa'
   } catch {
-    return BOARDS['aqa']
+    return 'aqa'
   }
+}
+
+/** Read the currently selected board config from localStorage (validated) */
+export function getSelectedBoard() {
+  return BOARDS[getValidatedBoard()]
 }
 
 /** Save a board selection to localStorage */

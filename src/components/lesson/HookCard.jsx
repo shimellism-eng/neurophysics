@@ -5,10 +5,12 @@
  * autistic learners need the "why" before investing attention.
  */
 import { motion } from 'motion/react'
-import { Zap } from 'lucide-react'
+import { Zap, Volume2 } from 'lucide-react'
+import { speak } from '../../utils/tts'
 
 export default function HookCard({ hook, moduleColor, onReady }) {
   const { hookFact, hookQuestion, hookEmoji = '⚡' } = hook
+  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
 
   return (
     <motion.div
@@ -54,19 +56,32 @@ export default function HookCard({ hook, moduleColor, onReady }) {
           {hookEmoji}
         </div>
 
-        {/* "Did you know?" label */}
-        <div
-          className="flex items-center gap-2 mb-4"
-          style={{
-            fontSize: 11,
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            letterSpacing: '0.1em',
-            color: moduleColor,
-          }}
-        >
-          <Zap size={12} />
-          Did you know?
+        {/* "Did you know?" label + TTS */}
+        <div className="flex items-center gap-2 mb-4">
+          <div
+            className="flex items-center gap-2 flex-1"
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              color: moduleColor,
+            }}
+          >
+            <Zap size={12} />
+            Did you know?
+          </div>
+          {ttsEnabled && (
+            <button
+              className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold"
+              style={{ background: `${moduleColor}20`, color: moduleColor }}
+              onClick={() => speak(hookFact + '. ' + hookQuestion)}
+              aria-label="Read aloud"
+            >
+              <Volume2 size={10} />
+              Read
+            </button>
+          )}
         </div>
 
         {/* Hook fact */}

@@ -10,7 +10,17 @@ export function useSessionTimer(enabled = true) {
   const [breakDue, setBreakDue] = useState(false) // first nudge at 15 min
   const [longBreakDue, setLongBreakDue] = useState(false) // second nudge at 25 min
   const [dismissed, setDismissed] = useState(false)
-  const startRef = useRef(Date.now())
+  // Persist start time in sessionStorage so a page refresh within the same
+  // browser session doesn't reset the clock (fixes ADHD break-nudge reliability)
+  const startRef = useRef(() => {
+    try {
+      const stored = sessionStorage.getItem('_np_session_start')
+      if (stored) return parseInt(stored, 10)
+    } catch {}
+    const now = Date.now()
+    try { sessionStorage.setItem('_np_session_start', String(now)) } catch {}
+    return now
+  })()
 
   useEffect(() => {
     if (!enabled) return
@@ -27,7 +37,10 @@ export function useSessionTimer(enabled = true) {
     setBreakDue(false)
     setLongBreakDue(false)
     setDismissed(true)
-    startRef.current = Date.now() // reset clock after dismiss
+    // Reset clock after dismiss so next nudge fires fresh from now
+    const now = Date.now()
+    startRef.current = now
+    try { sessionStorage.setItem('_np_session_start', String(now)) } catch {}
   }
 
   const showNudge = !dismissed && (breakDue || longBreakDue)

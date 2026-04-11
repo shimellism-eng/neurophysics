@@ -17,6 +17,16 @@ export default function BottomNav() {
 
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/'
+    if (path === '/learn') {
+      // Highlight Learn for lesson, exam, practical, diagnostic, and feedback routes too
+      return location.pathname.startsWith('/learn')
+        || location.pathname.startsWith('/lesson/')
+        || location.pathname.startsWith('/exam/')
+        || location.pathname.startsWith('/practical/')
+        || location.pathname.startsWith('/diagnostic/')
+        || location.pathname.startsWith('/feedback/')
+        || location.pathname.startsWith('/practice/')
+    }
     return location.pathname.startsWith(path)
   }
 

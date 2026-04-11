@@ -29,6 +29,8 @@ import { useHearts } from '../hooks/useHearts'
 import HeartsDisplay from '../components/HeartsDisplay'
 import { getExamQuestionCount } from '../data/examIndex'
 import { speak } from '../utils/tts'
+import { useSessionTimer } from '../hooks/useSessionTimer'
+import BreakNudge from '../components/BreakNudge'
 
 // New lesson step components
 import HookCard from '../components/lesson/HookCard'
@@ -218,6 +220,9 @@ export default function LessonPlayer() {
   const [xpPop, setXpPop]         = useState(false)
   const [xpKey, setXpKey]         = useState(0)
 
+  // ADHD pacing: session timer + break nudges
+  const { elapsedMinutes, showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
+
   // Explore mode: hearts are off by default — learners can enable hearts in Settings
   const exploreMode = (() => {
     try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').exploreMode !== false } catch { return true }
@@ -238,8 +243,12 @@ export default function LessonPlayer() {
   const isNewFlow  = !!(topic.hook && topic.lessonKeywords)
   const STEPS      = isNewFlow
     ? NEW_STEPS.filter(s => {
-        if (s.id === 'explore'   && !topic.lessonVisual)   return false
-        if (s.id === 'realworld' && !topic.realityVisual)  return false
+        if (s.id === 'explore'    && !topic.lessonVisual)                          return false
+        if (s.id === 'realworld'  && !topic.realityVisual)                         return false
+        if (s.id === 'understand' && !topic.workedExample && !topic.ideaVisual)    return false
+        if (s.id === 'practise'   && !topic.guidedPractice)                        return false
+        if (s.id === 'lockin'     && !topic.summary)                               return false
+        if (s.id === 'connect'    && !topic.prerequisiteCheck)                     return false
         return true
       })
     : LEGACY_STEPS
@@ -438,6 +447,9 @@ export default function LessonPlayer() {
   return (
     <div className="relative flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
 
+      {/* ADHD break nudge */}
+      {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
+
       {/* ── Resume overlay ── */}
       {showResume && savedProgress && (
         <motion.div
@@ -471,7 +483,8 @@ export default function LessonPlayer() {
                 className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
                 style={{ background: topic.moduleColor, color: '#fff' }}
                 onClick={() => {
-                  setStep(savedProgress.step)
+                  // Clamp saved step to valid range in case topic steps changed
+                  setStep(Math.min(savedProgress.step, totalSteps - 1))
                   setShowResume(false)
                   setShowIntro(false)
                 }}
@@ -592,6 +605,20 @@ export default function LessonPlayer() {
           <span className="ml-auto text-xs font-semibold tabular-nums" style={{ color: 'rgba(255,255,255,0.25)' }}>
             {step + 1}/{totalSteps}
           </span>
+          {/* Elapsed time — ADHD self-regulation cue */}
+          {elapsedMinutes > 0 && (
+            <span
+              className="flex items-center gap-1 text-[10px] font-semibold tabular-nums px-2 py-0.5 rounded-full"
+              style={{
+                background: elapsedMinutes >= 20 ? 'rgba(249,115,22,0.12)' : 'rgba(255,255,255,0.06)',
+                color: elapsedMinutes >= 20 ? '#f97316' : 'rgba(255,255,255,0.25)',
+                border: elapsedMinutes >= 20 ? '1px solid rgba(249,115,22,0.3)' : '1px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              <Clock size={9} />
+              {elapsedMinutes}m
+            </span>
+          )}
         </div>
       </div>
 

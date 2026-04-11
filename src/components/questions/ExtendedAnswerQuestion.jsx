@@ -20,16 +20,25 @@ function useAIMarking() {
 
   const mark = async ({ question, studentAnswer, markScheme, marks }) => {
     setStatus('marking')
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 30000) // 30s timeout
     try {
       const session = supabase ? (await supabase.auth.getSession()).data?.session : null
+      if (!session?.access_token) {
+        // No auth token — fall back gracefully rather than sending unauth request
+        setStatus('error')
+        return null
+      }
       const res = await fetch(`${API_BASE}/api/mark`, {
         method: 'POST',
+        signal: controller.signal,
         headers: {
           'content-type': 'application/json',
-          ...(session?.access_token ? { 'Authorization': `Bearer ${session.access_token}` } : {}),
+          'Authorization': `Bearer ${session.access_token}`,
         },
         body: JSON.stringify({ question, studentAnswer, markScheme, marks }),
       })
+      clearTimeout(timeout)
       const data = await res.json()
       if (data.error || !data.breakdown) {
         setStatus('error')
@@ -38,7 +47,8 @@ function useAIMarking() {
       setResult(data)
       setStatus('marked')
       return data
-    } catch {
+    } catch (err) {
+      clearTimeout(timeout)
       setStatus('error')
       return null
     }

@@ -342,10 +342,11 @@ export default function TimedPaper() {
         backgroundedAt.current = null
       }
     }
-    document.addEventListener('visibilitychange', () => {
+    const handleVisibility = () => {
       document.hidden ? handleHide() : handleShow()
-    })
-    return () => document.removeEventListener('visibilitychange', () => {})
+    }
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => document.removeEventListener('visibilitychange', handleVisibility)
   }, [persist])
 
   const q = questions[qIndex] || {}

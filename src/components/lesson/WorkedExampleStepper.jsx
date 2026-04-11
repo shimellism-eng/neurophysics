@@ -12,7 +12,8 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, AlertTriangle, CheckCircle2 } from 'lucide-react'
+import { ChevronRight, AlertTriangle, CheckCircle2, Volume2 } from 'lucide-react'
+import { speak } from '../../utils/tts'
 
 function StepBubble({ number, color }) {
   return (
@@ -34,6 +35,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
   const [revealed, setRevealed] = useState(0)
   const [showMisconception, setShowMisconception] = useState(false)
   const [misconceptionDone, setMisconceptionDone] = useState(false)
+  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
 
   const allStepsRevealed = revealed >= steps.length
 
@@ -62,8 +64,21 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
         }}
       >
         <div className="px-4 pt-4 pb-3" style={{ minHeight: 100 }}>
-          <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: moduleColor }}>
-            Let's solve it
+          <div className="flex items-center gap-2 mb-2">
+            <div className="text-[10px] font-bold uppercase tracking-widest flex-1" style={{ color: moduleColor }}>
+              Let's solve it
+            </div>
+            {ttsEnabled && (
+              <button
+                className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold"
+                style={{ background: `${moduleColor}20`, color: moduleColor }}
+                onClick={() => speak(`${title}. ${context || ''} Equation: ${equation}. ${steps.slice(0, revealed).map(s => s.action + ': ' + s.result).join('. ')}`)}
+                aria-label="Read worked example aloud"
+              >
+                <Volume2 size={10} />
+                Read
+              </button>
+            )}
           </div>
           <div className="font-display text-base font-bold" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
             {title}

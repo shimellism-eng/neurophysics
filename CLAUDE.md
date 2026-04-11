@@ -14,6 +14,11 @@
 - **Owner:** Mamo — GCSE & A-Level Physics teacher, SEN specialist, ADHD
 - **Related site:** physicalm.co.uk (tutoring business)
 
+## Session Memory
+- Read **memory.md** at the start of every session before touching any file
+- Update **memory.md** at the end of every session before running the end-of-session checklist
+- memory.md is the live session log — CLAUDE.md is the permanent architecture bible
+
 ---
 
 ## Tech Stack

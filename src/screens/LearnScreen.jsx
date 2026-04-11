@@ -5,7 +5,7 @@ import {
   CheckCircle2, Zap, ChevronDown, ChevronUp,
   ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X,
 } from 'lucide-react'
-import { MODULES, TOPICS } from '../data/topics'
+import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 
 // ─── Badge definitions (for next milestone) ──────────────────────────────────
@@ -51,60 +51,92 @@ function ProgressRing({ pct, color, size = 50 }) {
 
 // ─── Topic tile ───────────────────────────────────────────────────────────────
 
-function TopicTile({ topic, moduleColor, masteryState, index, onTap }) {
-  const isMastered  = masteryState === 'mastered'
-  const isStarted   = masteryState === 'started'
+function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, onPractice }) {
+  const isMastered = masteryState === 'mastered'
+  const isStarted  = masteryState === 'started'
+
+  const barColor   = isMastered ? moduleColor : isStarted ? '#fbbf24' : 'rgba(255,255,255,0.1)'
+  const ctaLabel   = isMastered ? 'Review' : isStarted ? 'Continue' : 'Start'
+  const ctaColor   = isMastered ? moduleColor : isStarted ? '#fbbf24' : 'rgba(255,255,255,0.38)'
+  const ctaBg      = isMastered ? `${moduleColor}14` : isStarted ? 'rgba(251,191,36,0.1)' : 'rgba(255,255,255,0.05)'
+  const ctaBorder  = isMastered ? `1px solid ${moduleColor}30` : isStarted ? '1px solid rgba(251,191,36,0.25)' : '1px solid rgba(255,255,255,0.1)'
+  const titleColor = isMastered ? '#f8fafc' : isStarted ? '#e2e8f0' : 'rgba(255,255,255,0.72)'
 
   return (
-    <motion.button
-      className="w-full text-left rounded-[16px] overflow-hidden"
+    <motion.div
+      className="w-full rounded-[18px] overflow-hidden flex items-stretch"
       style={{
+        minHeight: 68,
         background: isMastered
-          ? `linear-gradient(135deg, ${moduleColor}22, ${moduleColor}10)`
-          : isStarted ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.03)',
+          ? `${moduleColor}0c`
+          : isStarted ? 'rgba(251,191,36,0.04)' : 'rgba(255,255,255,0.03)',
         border: isMastered
-          ? `1px solid ${moduleColor}45`
-          : isStarted ? '1px solid rgba(251,191,36,0.3)' : '1px solid rgba(255,255,255,0.09)',
-        minHeight: 44,
+          ? `1px solid ${moduleColor}28`
+          : isStarted ? '1px solid rgba(251,191,36,0.18)' : '1px solid rgba(255,255,255,0.08)',
       }}
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03, duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-      whileTap={{ scale: 0.96 }}
-      onClick={onTap}
     >
-      <div style={{ height: 3, background: isMastered ? moduleColor : isStarted ? '#fbbf24' : 'transparent', opacity: 0.65 }} />
-      <div className="px-3 py-3 flex flex-col gap-2">
-        <div className="flex items-center justify-between">
+      {/* Left state bar */}
+      <div style={{ width: 3, background: barColor, flexShrink: 0 }} />
+
+      {/* Main tap area — Learn / Continue / Review */}
+      <button
+        type="button"
+        className="flex-1 min-w-0 flex items-center py-3 pl-3 text-left"
+        onClick={onTap}
+      >
+        {/* State icon */}
+        <div
+          className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
+          style={{
+            background: isMastered ? `${moduleColor}20` : isStarted ? 'rgba(251,191,36,0.12)' : 'rgba(255,255,255,0.06)',
+            border: isMastered ? `1.5px solid ${moduleColor}45` : isStarted ? '1.5px solid rgba(251,191,36,0.38)' : '1.5px solid rgba(255,255,255,0.14)',
+          }}
+        >
           {isMastered ? (
-            <div className="w-6 h-6 rounded-full flex items-center justify-center"
-              style={{ background: `${moduleColor}25`, border: `1.5px solid ${moduleColor}60` }}>
-              <CheckCircle2 size={13} color={moduleColor} strokeWidth={2.5} />
-            </div>
+            <CheckCircle2 size={14} color={moduleColor} strokeWidth={2.5} />
           ) : isStarted ? (
-            <div className="w-6 h-6 rounded-full flex items-center justify-center"
-              style={{ background: 'rgba(251,191,36,0.15)', border: '1.5px solid rgba(251,191,36,0.5)' }}>
-              <Zap size={11} color="#fbbf24" strokeWidth={2.5} />
-            </div>
+            <Zap size={12} color="#fbbf24" strokeWidth={2.5} />
           ) : (
-            <div className="w-6 h-6 rounded-full"
-              style={{ background: 'rgba(255,255,255,0.04)', border: '1.5px solid rgba(255,255,255,0.14)' }} />
-          )}
-          {isMastered && (
-            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full"
-              style={{ background: `${moduleColor}20`, color: moduleColor }}>Done</span>
-          )}
-          {isStarted && (
-            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full"
-              style={{ background: 'rgba(251,191,36,0.15)', color: '#fbbf24' }}>In progress</span>
+            <div className="w-2 h-2 rounded-full" style={{ background: 'rgba(255,255,255,0.3)' }} />
           )}
         </div>
-        <span className="text-xs font-semibold leading-snug"
-          style={{ color: isMastered ? '#f8fafc' : isStarted ? '#cad5e2' : 'rgba(255,255,255,0.5)' }}>
-          {topic.title}
-        </span>
-      </div>
-    </motion.button>
+
+        {/* Title — flex-1 + min-w-0 guarantees truncation, never wraps */}
+        <div className="flex-1 min-w-0 px-3">
+          <p className="text-[15px] font-semibold truncate" style={{ color: titleColor }}>
+            {topic.title}
+          </p>
+        </div>
+
+        {/* CTA label */}
+        <div className="mr-3 shrink-0 px-3 py-1.5 rounded-full" style={{ background: ctaBg, border: ctaBorder }}>
+          <span className="text-[12px] font-semibold whitespace-nowrap" style={{ color: ctaColor }}>
+            {ctaLabel}
+          </span>
+        </div>
+      </button>
+
+      {/* Vertical divider */}
+      <div style={{ width: '0.75px', background: 'rgba(255,255,255,0.07)', margin: '12px 0' }} />
+
+      {/* Practice button — ⚡ icon zone */}
+      <button
+        type="button"
+        className="flex items-center justify-center shrink-0"
+        style={{ width: 52 }}
+        onClick={e => { e.stopPropagation(); onPractice() }}
+      >
+        <div
+          className="w-8 h-8 rounded-full flex items-center justify-center"
+          style={{ background: 'rgba(168,85,247,0.1)', border: '1px solid rgba(168,85,247,0.22)' }}
+        >
+          <Zap size={14} color="#a855f7" strokeWidth={2.5} />
+        </div>
+      </button>
+    </motion.div>
   )
 }
 
@@ -189,7 +221,7 @@ function ModuleCard({ module, moduleIndex, progress }) {
             style={{ overflow: 'hidden' }}
           >
             <div className="mx-4 h-px mb-3" style={{ background: `${module.color}20` }} />
-            <div className="px-3 pb-4 grid grid-cols-2 gap-2">
+            <div className="px-3 pb-4 flex flex-col gap-2">
               {module.topics.map((topicId, i) => {
                 const topic = TOPICS[topicId]
                 if (!topic) return null
@@ -197,14 +229,20 @@ function ModuleCard({ module, moduleIndex, progress }) {
                   <TopicTile
                     key={topicId}
                     topic={topic}
+                    topicId={topicId}
                     moduleColor={module.color}
                     masteryState={getState(topicId)}
                     index={i}
-                    onTap={() => navigate(
-                      progress[topicId]?.mastered
-                        ? `/diagnostic/${topicId}`
-                        : `/lesson/${topicId}`
-                    )}
+                    onTap={() => {
+                      if (topic.practicalId) {
+                        navigate(`/practical/${topic.practicalId}`)
+                      } else if (progress[topicId]?.mastered) {
+                        navigate(`/diagnostic/${topicId}`)
+                      } else {
+                        navigate(`/lesson/${topicId}`)
+                      }
+                    }}
+                    onPractice={() => navigate(`/practice/${topicId}`)}
                   />
                 )
               })}
@@ -281,17 +319,6 @@ export default function LearnScreen() {
           )}
         </div>
 
-        {/* Overall progress bar */}
-        <div className="w-full rounded-full overflow-hidden mb-4" style={{ height: 5, background: 'rgba(255,255,255,0.06)' }}>
-          <motion.div
-            className="h-full rounded-full"
-            style={{ background: 'linear-gradient(90deg, #6366f1, #818cf8)' }}
-            initial={{ width: 0 }}
-            animate={{ width: `${overallPct}%` }}
-            transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
-          />
-        </div>
-
         {/* Search bar */}
         <div className="relative mb-3">
           <Search size={14} color="rgba(255,255,255,0.25)"
@@ -340,27 +367,6 @@ export default function LearnScreen() {
             )
           })}
 
-          {/* Pinned exam shortcuts */}
-          <div className="flex gap-1.5 ml-auto shrink-0">
-            <motion.button
-              onClick={() => navigate('/grade9')}
-              className="flex items-center gap-1 px-3 rounded-full text-xs font-bold"
-              style={{ height: 36, background: 'rgba(168,85,247,0.12)', border: '1px solid rgba(168,85,247,0.3)', color: '#c084fc' }}
-              whileTap={{ scale: 0.95 }}
-              title="Grade 9 Challenge"
-            >
-              <Trophy size={12} /> G9
-            </motion.button>
-            <motion.button
-              onClick={() => navigate('/timed-paper')}
-              className="flex items-center gap-1 px-3 rounded-full text-xs font-bold"
-              style={{ height: 36, background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-              whileTap={{ scale: 0.95 }}
-              title="Timed Paper"
-            >
-              <Clock size={12} /> Paper
-            </motion.button>
-          </div>
         </div>
       </div>
 
@@ -388,7 +394,8 @@ export default function LearnScreen() {
                       className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[16px] text-left"
                       style={{
                         background: 'rgba(15,22,41,0.95)',
-                        border: `1px solid ${state === 'mastered' ? mod.color + '45' : 'rgba(255,255,255,0.08)'}`,
+                        border: `1px solid ${state === 'mastered' ? mod.color + '45' : 'rgba(255,255,255,0.13)'}`,
+                        borderRadius: 18,
                         minHeight: 56,
                       }}
                       onClick={() => navigate(`/lesson/${id}`)}
@@ -403,7 +410,20 @@ export default function LearnScreen() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topic.title}</div>
-                        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>{mod.name}</div>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>{mod.name}</div>
+                          {PHYSICS_ONLY_TOPICS.has(id) ? (
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+                              style={{ background: 'rgba(232,121,249,0.12)', color: '#e879f9', border: '1px solid rgba(232,121,249,0.3)' }}>
+                              Physics
+                            </span>
+                          ) : (
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+                              style={{ background: 'rgba(99,102,241,0.10)', color: '#818cf8', border: '1px solid rgba(99,102,241,0.25)' }}>
+                              Combined
+                            </span>
+                          )}
+                        </div>
                       </div>
                       {state === 'mastered' && (
                         <CheckCircle2 size={16} color={mod.color} />
@@ -425,7 +445,7 @@ export default function LearnScreen() {
         {/* ── Next milestone (inline, compact) ── */}
         {nextBadge && (
           <motion.div
-            className="rounded-[18px] px-4 py-3.5 flex items-center gap-3"
+            className="rounded-[22px] px-4 py-3.5 flex items-center gap-3"
             style={{ background: `${nextBadge.color}0d`, border: `1px solid ${nextBadge.color}25` }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -433,7 +453,7 @@ export default function LearnScreen() {
           >
             <span style={{ fontSize: 22 }}>{nextBadge.emoji}</span>
             <div className="flex-1 min-w-0">
-              <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: nextBadge.color }}>
+              <span className="text-[12px] font-semibold" style={{ color: nextBadge.color }}>
                 Next milestone
               </span>
               <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{nextBadge.label}</div>
@@ -467,7 +487,7 @@ export default function LearnScreen() {
                   <firstModule.icon size={22} color="#fff" strokeWidth={1.8} />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-white opacity-75 uppercase tracking-wider mb-0.5" style={{ fontSize: 10 }}>
+                  <div className="font-semibold text-white opacity-75 mb-0.5" style={{ fontSize: 12 }}>
                     Start here
                   </div>
                   <div className="font-bold text-white" style={{ fontSize: 16, letterSpacing: '-0.02em' }}>
@@ -512,8 +532,8 @@ export default function LearnScreen() {
             className="pt-2 space-y-2.5"
           >
             <div className="px-1 mb-1">
-              <span className="text-xs font-bold uppercase tracking-wider"
-                style={{ color: 'rgba(255,255,255,0.28)' }}>
+              <span className="text-sm font-bold"
+                style={{ color: 'rgba(255,255,255,0.4)' }}>
                 Exam practice
               </span>
             </div>
@@ -535,7 +555,7 @@ export default function LearnScreen() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Grade 9 Challenge</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
+                  <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Hard exam questions · Unusual scenarios</p>
                 </div>
               </div>
               <ChevronRight size={18} color="rgba(168,85,247,0.6)" />

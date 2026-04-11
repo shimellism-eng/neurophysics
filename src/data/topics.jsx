@@ -3,9 +3,10 @@ import { ELECTRICITY_TOPICS } from './topics-electricity'
 import { MATTER_TOPICS } from './topics-matter'
 import { FORCES_TOPICS } from './topics-forces'
 import { WAVES_TOPICS } from './topics-waves'
+import { PRACTICALS_TOPICS } from './topics-practicals'
 import {
   Zap, Battery, Flame, Wind, Activity,
-  Waves, Radio, Magnet, Globe2
+  Waves, Radio, Magnet, Globe2, FlaskConical
 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 
@@ -15,7 +16,22 @@ export const TOPICS = {
   ...MATTER_TOPICS,
   ...FORCES_TOPICS,
   ...WAVES_TOPICS,
+  ...PRACTICALS_TOPICS,
 }
+
+// Topics that are AQA GCSE Physics only (NOT in Combined Science Trilogy)
+export const PHYSICS_ONLY_TOPICS = new Set([
+  'moments',
+  'fluid_pressure',
+  'nuclear_fission',
+  'nuclear_fusion',
+  'lenses',
+  'ac_generators',
+  'transformers',
+  'solar_system',
+  'stellar_evolution',
+  'redshift',
+])
 
 export const MODULES = [
   {
@@ -127,6 +143,24 @@ export const MODULES = [
       'solar_system',
       'stellar_evolution',
       'redshift',
+    ],
+  },
+  {
+    name: 'Required Practicals',
+    color: '#14b8a6',
+    icon: FlaskConical,
+    topics: [
+      'shc',
+      'insulation',
+      'resistance',
+      'iv_characteristics',
+      'density',
+      'spring',
+      'acceleration',
+      'waves',
+      'radiation',
+      'latent_heat',
+      'light',
     ],
   },
 ]

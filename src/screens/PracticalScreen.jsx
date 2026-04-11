@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'motion/react'
 import {
   ChevronLeft, ChevronDown, ChevronUp, Beaker, FlaskConical, BarChart2,
   SlidersHorizontal, ListOrdered, Table2, BookOpen,
-  ShieldAlert, CheckCircle2, AlertTriangle,
+  ShieldAlert, CheckCircle2, AlertTriangle, Zap,
 } from 'lucide-react'
 import { PRACTICALS } from '../data/practicals'
+import { useProgress } from '../hooks/useProgress'
 
 // ─── Tabs ──────────────────────────────────────────────────────────────────────
 const TABS = [
@@ -1615,8 +1616,25 @@ export default function PracticalScreen() {
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('overview')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [markedComplete, setMarkedComplete] = useState(false)
+  const { progress, markStarted, markMastered } = useProgress()
 
   const p = PRACTICALS[id]
+
+  // Mark as started when practical is first opened
+  useEffect(() => {
+    if (p && id) markStarted(id)
+  }, [id]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Reflect already-mastered state on mount
+  useEffect(() => {
+    if (progress[id]?.mastered) setMarkedComplete(true)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleMarkComplete = () => {
+    markMastered(id)
+    setMarkedComplete(true)
+  }
   if (!p) return (
     <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc' }}>
       Practical not found
@@ -1718,7 +1736,7 @@ export default function PracticalScreen() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 pb-8" onClick={() => dropdownOpen && setDropdownOpen(false)}>
+      <div className="flex-1 overflow-y-auto px-4 py-4 pb-4" onClick={() => dropdownOpen && setDropdownOpen(false)}>
         <AnimatePresence mode="wait">
           <motion.div key={activeTab}
             initial={{ opacity: 0, y: 8 }}
@@ -1728,6 +1746,40 @@ export default function PracticalScreen() {
             {tabContent[activeTab]}
           </motion.div>
         </AnimatePresence>
+      </div>
+
+      {/* Footer — mark complete + practice shortcut */}
+      <div className="shrink-0 px-4 py-3 flex items-center gap-3"
+        style={{ borderTop: '0.75px solid #1d293d' }}>
+        <motion.button
+          type="button"
+          onClick={handleMarkComplete}
+          disabled={markedComplete}
+          whileTap={markedComplete ? {} : { scale: 0.97 }}
+          className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-[14px]"
+          style={{
+            background: markedComplete ? 'rgba(20,184,166,0.12)' : 'rgba(20,184,166,0.08)',
+            border: `0.75px solid ${markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.25)'}`,
+          }}>
+          <CheckCircle2 size={15} color={markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.5)'} strokeWidth={2.5}/>
+          <span className="text-sm font-semibold"
+            style={{ color: markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.6)' }}>
+            {markedComplete ? 'Completed' : 'Mark as complete'}
+          </span>
+        </motion.button>
+
+        <motion.button
+          type="button"
+          onClick={() => navigate(`/practice/${id}`)}
+          whileTap={{ scale: 0.97 }}
+          className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-[14px]"
+          style={{
+            background: 'rgba(168,85,247,0.08)',
+            border: '0.75px solid rgba(168,85,247,0.22)',
+          }}>
+          <Zap size={14} color="#a855f7" strokeWidth={2.5}/>
+          <span className="text-sm font-semibold" style={{ color: '#a855f7' }}>Practice</span>
+        </motion.button>
       </div>
     </div>
   )

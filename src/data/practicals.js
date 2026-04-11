@@ -268,7 +268,7 @@ export const PRACTICALS = {
 
   light: {
     id: 'light',
-    number: 'RP6',
+    number: 'RP11',
     title: 'Reflection & Refraction of Light',
     topicId: 'wave_reflection',
     aim: 'To investigate the reflection of light from a plane mirror and the refraction of light through a rectangular glass/Perspex block.',

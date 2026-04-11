@@ -275,6 +275,7 @@
 - [x] All critical examiner-identified errors fixed in practicals.js and qb-practicals.js: voltmeter placement (RP1), energy table typo (RP1), IV definitions (RP1/RP5/RP6), liquid density method (RP5), latent heat sample data (RP6), hazard format (RP6), RP7 axes + units, RP8 air track→trolley, RP9 frequency/stroboscope/longitudinal, RP10 4th Leslie face + radiator error, RP11 plane mirror Part A + r notation
 - [x] RP4 fixes: protective resistor 10Ω→100Ω, lamp I-V data symmetry corrected, iv_t2_04 question values made consistent with sample data, diode threshold unified to 0.6–0.7V
 - [x] Fix "AI marking unavailable": replaced manual HS256 JWT crypto in _verifyAuth.js with Supabase admin getUser() — works with any JWT algorithm; all callers updated to await async function; NovelContextQuestion auth guard hardened + 30s timeout added
+- [x] Practical simulation diagram audit + fixes: RP1 label colours, RP3 label overflow, RP4 diode value, RP5 overlapping labels, RP7 extension label, RP8 air track→dynamics trolley+wheels, RP9 wavelength scale, RP10 contrast bug, RP11 glass block + ray box labels
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 
 ---

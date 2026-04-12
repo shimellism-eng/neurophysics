@@ -2,11 +2,12 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronRight, Zap, Flame, TrendingUp,
-  Calendar, CheckCircle, Clock,
+  Calendar, CheckCircle, Clock, Target,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
+import { useStudyPlan } from '../hooks/useStudyPlan'
 import { useAuth } from '../context/AuthContext'
 import { getSelectedBoard } from '../utils/boardConfig'
 
@@ -67,6 +68,112 @@ function StreakCalendar({ streak }) {
           </div>
         )
       })}
+    </div>
+  )
+}
+
+// ── Exam Countdown Widget ─────────────────────────────────────────────────────
+const STATUS_THEME = {
+  green:   { color: '#22c55e', bg: 'rgba(34,197,94,0.07)',   border: 'rgba(34,197,94,0.2)'  },
+  amber:   { color: '#f59e0b', bg: 'rgba(245,158,11,0.07)',  border: 'rgba(245,158,11,0.22)' },
+  red:     { color: '#ef4444', bg: 'rgba(239,68,68,0.07)',   border: 'rgba(239,68,68,0.22)' },
+  no_date: { color: '#6366f1', bg: 'rgba(99,102,241,0.07)',  border: 'rgba(99,102,241,0.2)' },
+  passed:  { color: '#94a3b8', bg: 'rgba(148,163,184,0.06)', border: 'rgba(148,163,184,0.15)' },
+}
+
+function ExamWidget({ plan, navigate }) {
+  const s = STATUS_THEME[plan.examStatus] || STATUS_THEME.no_date
+
+  // No exam date set — prompt user
+  if (plan.examStatus === 'no_date') {
+    return (
+      <div className="rounded-[22px] px-5 py-4 flex items-center justify-between"
+        style={{ background: s.bg, border: `1px solid ${s.border}` }}>
+        <div>
+          <div className="font-bold" style={{ color: s.color, fontSize: 14 }}>Set your exam date</div>
+          <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.32)' }}>
+            Get a personalised revision plan
+          </div>
+        </div>
+        <button onClick={() => navigate('/settings')}
+          className="px-3 py-1.5 rounded-full text-xs font-bold"
+          style={{ background: `${s.color}22`, color: s.color, border: `1px solid ${s.color}44` }}>
+          Set date →
+        </button>
+      </div>
+    )
+  }
+
+  if (plan.examStatus === 'passed') {
+    return (
+      <div className="rounded-[22px] px-5 py-3 flex items-center gap-3"
+        style={{ background: s.bg, border: `1px solid ${s.border}` }}>
+        <CheckCircle size={18} color={s.color} />
+        <span style={{ fontSize: 13, color: s.color, fontWeight: 600 }}>Exam date passed — keep practising!</span>
+      </div>
+    )
+  }
+
+  // Donut: fraction of an 8-week window (56 days)
+  const r = 20, cxy = 26, circ = 2 * Math.PI * r
+  const donutPct = Math.min(1, (plan.daysLeft || 0) / 56)
+  const dashOffset = circ * (1 - donutPct)
+
+  return (
+    <motion.div className="rounded-[22px] px-5 py-4"
+      style={{ background: s.bg, border: `1px solid ${s.border}` }}
+      initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18 }}>
+      <div className="flex items-center gap-4">
+        {/* Donut countdown */}
+        <svg width={52} height={52} style={{ flexShrink: 0 }}>
+          <circle cx={cxy} cy={cxy} r={r} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={5}/>
+          <circle cx={cxy} cy={cxy} r={r} fill="none" stroke={s.color} strokeWidth={5}
+            strokeDasharray={circ} strokeDashoffset={dashOffset}
+            strokeLinecap="round" transform={`rotate(-90 ${cxy} ${cxy})`}/>
+          <text x={cxy} y={cxy + 4} textAnchor="middle" fontSize={10} fontWeight="800" fill={s.color}>
+            {plan.weeksLeft}w
+          </text>
+        </svg>
+
+        <div className="flex-1 min-w-0">
+          <div className="font-bold" style={{ color: s.color, fontSize: 15, letterSpacing: '-0.02em' }}>
+            {plan.weeksLeft} week{plan.weeksLeft !== 1 ? 's' : ''} to exam
+          </div>
+          <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            {plan.remainingCount} topics left · {plan.neededPerDay}/day needed
+          </div>
+          <div className="mt-2 flex items-center gap-1.5">
+            <span style={{ fontSize: 11, fontWeight: 700, color: plan.onTrack ? '#22c55e' : '#f59e0b' }}>
+              {plan.onTrack ? '✅ On track' : '⚠️ Pick up the pace'}
+            </span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
+// ── Weekly Progress Dots ──────────────────────────────────────────────────────
+function WeeklyDots({ plan }) {
+  return (
+    <div className="flex items-center gap-2 mt-3">
+      <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontWeight: 600 }}>THIS WEEK</span>
+      <div className="flex items-center gap-1.5 flex-1">
+        {plan.weeklyDots.map((filled, i) => (
+          <motion.div key={i}
+            style={{
+              width: 10, height: 10, borderRadius: 5,
+              background: filled ? '#22c55e' : 'rgba(255,255,255,0.1)',
+              border: filled ? 'none' : '1px solid rgba(255,255,255,0.15)',
+            }}
+            initial={{ scale: 0 }} animate={{ scale: 1 }}
+            transition={{ delay: 0.05 * i, type: 'spring', stiffness: 300 }}
+          />
+        ))}
+      </div>
+      <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontWeight: 600 }}>
+        {plan.masteredThisWeek}/{plan.weeklyTarget}
+      </span>
     </div>
   )
 }
@@ -200,24 +307,18 @@ export default function HomeScreen() {
     ? `Target: ${selectedBoard.gradeSystem === 'A*-G' ? targetGrade : `Grade ${targetGrade}`}`
     : null
 
-  const masteredCount = Object.values(progress).filter(p => p.mastered).length
-  const totalTopics   = Object.keys(TOPICS).length
+  const plan          = useStudyPlan(progress)
+  const masteredCount = plan.masteredCount
+  const totalTopics   = plan.totalTopics
   const progressPct   = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
   const streak        = stats.streak || 0
   const xp            = stats.xp || 0
 
-  const allTopicIds     = MODULES.flatMap(m => m.topics)
-  const firstUnmastered = allTopicIds.find(id => !progress[id]?.mastered) || allTopicIds[0]
-  const resumeTopic     = TOPICS[firstUnmastered]
-  const resumeModule    = MODULES.find(m => m.topics.includes(firstUnmastered))
+  // Use study plan's smart priority topic for the CTA
+  const firstUnmastered = plan.todayTopicId || MODULES.flatMap(m => m.topics)[0]
+  const resumeTopic     = plan.todayTopic || TOPICS[firstUnmastered]
+  const resumeModule    = plan.todayModule || MODULES.find(m => m.topics.includes(firstUnmastered))
   const moduleColor     = resumeModule?.color || '#6366f1'
-
-  // Exam countdown
-  const examDaysLeft = (() => {
-    if (!profile.examDate) return null
-    const d = Math.ceil((new Date(profile.examDate) - new Date()) / 86400000)
-    return d > 0 && d <= 365 ? d : null
-  })()
 
   return (
     <div
@@ -277,17 +378,15 @@ export default function HomeScreen() {
                 </span>
               )}
 
-              {examDaysLeft && (
-                <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
-                  style={{
-                    fontSize: 12,
-                    background: 'rgba(99,102,241,0.1)',
-                    color: '#818cf8',
-                    border: '1px solid rgba(99,102,241,0.2)',
-                  }}>
-                  {examDaysLeft <= 30 ? '🎯' : '📅'} {examDaysLeft}d to exam
-                </span>
-              )}
+              {plan.daysLeft > 0 && plan.examStatus !== 'no_date' && plan.examStatus !== 'passed' && (() => {
+                const s = STATUS_THEME[plan.examStatus]
+                return (
+                  <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
+                    style={{ fontSize: 12, background: `${s.color}18`, color: s.color, border: `1px solid ${s.color}35` }}>
+                    <Target size={10} /> {plan.daysLeft}d
+                  </span>
+                )
+              })()}
 
               {/* Board badge — always shown */}
               <span className="font-bold px-2.5 py-1 rounded-full"
@@ -365,7 +464,7 @@ export default function HomeScreen() {
             )}
             <div className="text-left">
               <div className="font-semibold opacity-75 mb-0.5" style={{ fontSize: 12 }}>
-                {masteredCount === 0 ? 'Start here' : 'Continue learning'}
+                {plan.isReview ? '🔁 Review due' : masteredCount === 0 ? 'Start here' : "Today's topic"}
               </div>
               <div className="font-bold" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
                 {resumeTopic?.title || 'Energy Stores'}
@@ -382,6 +481,14 @@ export default function HomeScreen() {
             <ChevronRight size={24} strokeWidth={2.5} />
           </motion.div>
         </motion.button>
+      </div>
+
+      {/* ── EXAM PLAN WIDGET ─────────────────────────────────────────────────── */}
+      <div className="px-5 mb-5">
+        <ExamWidget plan={plan} navigate={navigate} />
+        {plan.examStatus !== 'no_date' && plan.examStatus !== 'passed' && (
+          <WeeklyDots plan={plan} />
+        )}
       </div>
 
       {/* ── STREAK ───────────────────────────────────────────────────────────── */}

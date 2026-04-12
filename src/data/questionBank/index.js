@@ -60,7 +60,7 @@ export function getQuestionsForTopic(topicId, tier = null, board = null) {
   return ALL_QUESTIONS.filter(q =>
     q.topicId === topicId &&
     (tier === null || q.tier === tier) &&
-    (!q.boards || !board || q.boards.includes(board))
+    (q.boards == null || q.boards.length === 0 || !board || q.boards.includes(board))
   )
 }
 
@@ -73,7 +73,7 @@ export function getQuestionsForTopic(topicId, tier = null, board = null) {
  */
 export function getNextQuestion(topicId, tier, excludeIds = [], course = 'all', board = null) {
   const matchesCourse = (q) => course === 'all' || q.course === 'combined'
-  const matchesBoard  = (q) => !q.boards || !board || q.boards.includes(board)
+  const matchesBoard  = (q) => q.boards == null || q.boards.length === 0 || !board || q.boards.includes(board)
   const pool = ALL_QUESTIONS.filter(q =>
     q.topicId === topicId &&
     q.tier === tier &&

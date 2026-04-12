@@ -55,6 +55,18 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'User not found' })
   }
 
+  // Cascade delete user data from all tables before removing the auth account
+  // mamo_usage — AI usage logs
+  await supabase.from('mamo_usage').delete().eq('user_id', userId)
+  // Don't throw on errors — table may not exist or row may already be absent; continue
+
+  // user_progress — any server-side progress rows (soft fail)
+  await supabase.from('user_progress').delete().eq('user_id', userId)
+
+  // user_sessions — any stored session/timer data (soft fail)
+  await supabase.from('user_sessions').delete().eq('user_id', userId)
+
+  // Now delete the Supabase auth account — this is the authoritative deletion
   const { error: deleteError } = await supabase.auth.admin.deleteUser(userId)
   if (deleteError) {
     return res.status(500).json({ error: 'Failed to delete account' })

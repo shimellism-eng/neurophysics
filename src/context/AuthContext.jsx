@@ -75,6 +75,12 @@ export function AuthProvider({ children }) {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null)
 
+      // When the JWT silently auto-refreshes, update user state so API calls
+      // always use a valid token rather than silently failing with an expired one.
+      if (_event === 'TOKEN_REFRESHED' && session?.user) {
+        setUser(session.user)
+      }
+
       // On every sign-in, sync the display name from OAuth metadata into the
       // local profile so HomeScreen always has a name even if the profile was
       // previously cleared.

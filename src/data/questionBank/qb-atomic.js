@@ -3803,7 +3803,7 @@ const atomicQuestions = [
     question: 'A nuclear fission reaction releases 3.2 × 10⁻¹¹ J of energy per fission event. A nuclear reactor contains 2.0 kg of fissile material. If 5% of nuclei undergo fission and each U-235 nucleus has mass 3.90 × 10⁻²⁵ kg, calculate the total energy released.',
     answer: 8.21e12,
     unit: 'J',
-    acceptRange: [8.0e12, 8.4e12],
+    acceptableRange: [8.0e12, 8.4e12],
     explanation: 'Number of nuclei = 2.0 / 3.90×10⁻²⁵ = 5.13×10²⁴\nNuclei undergoing fission = 5% × 5.13×10²⁴ = 2.56×10²³\nTotal energy = 2.56×10²³ × 3.2×10⁻¹¹ = 8.2×10¹² J',
     markScheme: [
       'Calculate number of nuclei: N = m/m_nucleus (1)',

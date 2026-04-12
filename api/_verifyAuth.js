@@ -38,10 +38,10 @@ export async function verifySupabaseJWT(authHeader) {
   const admin = getAdminClient()
 
   if (!admin) {
-    // ⚠️  Admin client not configured — auth is DISABLED.
+    // ⚠️  Admin client not configured — fail closed, never allow unauthenticated access.
     // Ensure VITE_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel.
-    console.error('[security] Supabase admin client not configured — endpoints are UNPROTECTED')
-    return { userId: 'unauthenticated', email: undefined }
+    console.error('[security] Supabase admin client not configured — rejecting request')
+    throw new Error('Auth service unavailable')
   }
 
   const { data: { user }, error } = await admin.auth.getUser(token)

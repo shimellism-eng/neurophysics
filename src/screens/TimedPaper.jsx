@@ -305,6 +305,9 @@ export default function TimedPaper() {
 
   const timerRef = useRef(null)
   const backgroundedAt = useRef(null)
+  // Wall-clock anchors — set when the timer starts (or resumes after pause)
+  const startTimeRef       = useRef(null) // Date.now() when the current run began
+  const initialRemainingRef = useRef(null) // remaining seconds at that moment
 
   // Persist state after each answer
   const persist = useCallback((extra = {}) => {
@@ -320,24 +323,29 @@ export default function TimedPaper() {
     try { sessionStorage.setItem('neurophysics_paper_paused', String(paused)) } catch {}
   }, [paused])
 
-  // Timer tick
+  // Timer tick — wall-clock based so backgrounding / interval drift cannot steal time
   useEffect(() => {
-    if (showResults || timesUp || showTimeChoice) return
-    timerRef.current = setInterval(() => {
-      if (paused) return
-      setRemaining(r => {
-        if (r <= 1) {
-          clearInterval(timerRef.current)
-          setTimesUp(true)
-          return 0
-        }
-        return r - 1
-      })
-    }, 1000)
-    return () => clearInterval(timerRef.current)
-  }, [showResults, timesUp, paused])
+    if (showResults || timesUp || showTimeChoice || paused) return
 
-  // Pause timer on background
+    // Anchor the wall clock whenever the timer (re)starts
+    startTimeRef.current        = Date.now()
+    initialRemainingRef.current = remaining
+
+    timerRef.current = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTimeRef.current) / 1000)
+      const next    = Math.max(0, initialRemainingRef.current - elapsed)
+      setRemaining(next)
+      if (next === 0) {
+        clearInterval(timerRef.current)
+        setTimesUp(true)
+      }
+    }, 500) // 500 ms tick so display updates smoothly while still using wall-clock truth
+
+    return () => clearInterval(timerRef.current)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showResults, timesUp, showTimeChoice, paused])
+
+  // Background / foreground handling — wall-clock correction on return
   useEffect(() => {
     const handleHide = () => {
       clearInterval(timerRef.current)
@@ -347,8 +355,19 @@ export default function TimedPaper() {
     const handleShow = () => {
       if (backgroundedAt.current) {
         const away = Math.floor((Date.now() - backgroundedAt.current) / 1000)
-        if (away > 30) setResumeBanner(true)
         backgroundedAt.current = null
+        if (away > 30) setResumeBanner(true)
+
+        // If not paused, correct remaining from wall clock immediately
+        if (!paused && startTimeRef.current !== null && initialRemainingRef.current !== null) {
+          const elapsed = Math.floor((Date.now() - startTimeRef.current) / 1000)
+          const corrected = Math.max(0, initialRemainingRef.current - elapsed)
+          setRemaining(corrected)
+          if (corrected === 0) {
+            clearInterval(timerRef.current)
+            setTimesUp(true)
+          }
+        }
       }
     }
     const handleVisibility = () => {
@@ -356,7 +375,7 @@ export default function TimedPaper() {
     }
     document.addEventListener('visibilitychange', handleVisibility)
     return () => document.removeEventListener('visibilitychange', handleVisibility)
-  }, [persist])
+  }, [persist, paused])
 
   const q = questions[qIndex] || {}
   const isLast = qIndex === total - 1

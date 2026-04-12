@@ -67,8 +67,8 @@ export default async function handler(req, res) {
   // Build system prompt with optional topic context
   let systemPrompt = BASE_SYSTEM_PROMPT
   if (body.topicContext && typeof body.topicContext === 'string') {
-    const safe = body.topicContext.slice(0, 200)
-    systemPrompt += `\n\nThe student is currently studying "${safe}". Prioritise explanations relevant to this topic when possible.`
+    const safeTopicContext = (body.topicContext || '').replace(/[`<>]/g, '').replace(/\bignore\b/gi, '').slice(0, 200)
+    systemPrompt += `\n\nThe student is currently studying "${safeTopicContext}". Prioritise explanations relevant to this topic when possible.`
   }
 
   // Board-aware context
@@ -103,11 +103,15 @@ export default async function handler(req, res) {
   const model = 'gemini-2.5-flash-lite'
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${apiKey}`
 
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 30000)
+
   let upstream
   try {
     upstream = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      signal: controller.signal,
       body: JSON.stringify({
         contents,
         system_instruction: { parts: [{ text: systemPrompt }] },
@@ -117,7 +121,9 @@ export default async function handler(req, res) {
         },
       }),
     })
+    clearTimeout(timeoutId)
   } catch (err) {
+    clearTimeout(timeoutId)
     console.error('[gemini] fetch error:', err)
     res.write(`data: ${JSON.stringify({ error: 'NETWORK_ERROR' })}\n\n`)
     return res.end()
@@ -163,7 +169,7 @@ export default async function handler(req, res) {
 
   // Optional Supabase insert — fire-and-forget, never throws
   const sbUrl = process.env.SUPABASE_URL
-  const sbKey = process.env.SUPABASE_SERVICE_KEY
+  const sbKey = process.env.SUPABASE_SERVICE_ROLE_KEY
   if (sbUrl && sbKey) {
     fetch(`${sbUrl}/rest/v1/mamo_usage`, {
       method: 'POST',

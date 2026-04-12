@@ -113,11 +113,27 @@ Exam-style questions are original content created for revision practice. NeuroPh
 We do not use advertising cookies, tracking cookies, or analytics that identify you personally.`,
   },
   {
-    title: '10. Changes to this policy',
+    title: '10. AI data processing (Google Gemini)',
+    body: `When you use the AI Tutor (Mamo Chat) feature, your questions are sent to Google Gemini (Google LLC) for processing. Google processes this data in accordance with their AI data usage policies. We do not send your name or email address to Google — only the physics question text. You can disable AI features in Settings.
+
+The same applies to AI-marked exam answers: only the text of your written answer and the relevant mark scheme are sent to Google Gemini. No personally identifying information accompanies these requests.
+
+For more detail on how Google handles data sent to the Gemini API, see: ai.google.dev/gemini-api/terms`,
+  },
+  {
+    title: '11. COPPA / US users',
+    body: `If you are located in the United States and under 13 years old, you should not use this app. NeuroPhysics does not knowingly collect personal information from children under 13 in the United States.
+
+For users aged 13–17 in the US, your parent or guardian should review this privacy policy before you create an account.
+
+We collect minimal data as described above. If you believe a child under 13 in the US has created an account, please contact us immediately at support@neurophysics.app and we will delete the account and all associated data promptly.`,
+  },
+  {
+    title: '12. Changes to this policy',
     body: `We may update this Privacy Policy to reflect changes in the law or how the app works. The latest version is always available in Settings → Privacy Policy. For significant changes affecting children's data, we will notify you within the app.`,
   },
   {
-    title: '11. Contact and complaints',
+    title: '13. Contact and complaints',
     body: `For any privacy questions, data requests, or concerns:
 
 Email: support@neurophysics.app

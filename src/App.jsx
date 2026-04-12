@@ -36,7 +36,7 @@ const StudyPlanScreen   = lazy(() => import('./screens/StudyPlanScreen'))
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
   return (
-    <div className="flex items-center justify-center h-full" style={{ background: '#0b1121' }}>
+    <div className="flex items-center justify-center h-full" style={{ background: '#080f1e' }}>
       <motion.div
         className="w-8 h-8 rounded-full border-2"
         style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
@@ -166,7 +166,7 @@ function FloatingMamo() {
                   top: 2,
                   right: 2,
                   background: '#a5b4fc',
-                  border: '2px solid #0b1121',
+                  border: '2px solid #080f1e',
                 }}
                 animate={{ scale: [1, 1.3, 1] }}
                 transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
@@ -202,7 +202,7 @@ function AppShell() {
   // Show nothing while auth state loads
   if (loading) {
     return (
-      <div className="flex flex-col h-full items-center justify-center" style={{ background: '#0b1121' }}>
+      <div className="flex flex-col h-full items-center justify-center" style={{ background: '#080f1e' }}>
         <motion.div
           className="w-8 h-8 rounded-full border-2"
           style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
@@ -243,12 +243,12 @@ function AppShell() {
         width: '100%',
         maxWidth: 480,
         margin: '0 auto',
-        background: '#0b1121',
+        background: '#080f1e',
         overflow: 'hidden',
       }}
     >
       {/* Top safe-area spacer */}
-      <div style={{ height: 'env(safe-area-inset-top)', background: '#0b1121', flexShrink: 0 }} />
+      <div style={{ height: 'env(safe-area-inset-top)', background: '#080f1e', flexShrink: 0 }} />
       <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'calc(64px + env(safe-area-inset-bottom))' : 0 }}>
         <Suspense fallback={<RouteLoader />}>
           <Routes>

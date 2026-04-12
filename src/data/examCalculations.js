@@ -13,7 +13,7 @@ const examCalculations = {
       ],
       answer: 0.3,
       answerUnit: "",
-      acceptRange: [0.29, 0.31],
+      acceptableRange: [0.29, 0.31],
       commonMistake: "Did you divide the wrong way? Efficiency = useful ÷ total, not total ÷ useful.",
       tier: 2,
       senNote: "Efficiency is always between 0 and 1 (or 0% and 100%). A bigger number is not more efficient."
@@ -30,7 +30,7 @@ const examCalculations = {
       ],
       answer: 50,
       answerUnit: "kJ",
-      acceptRange: [49, 51],
+      acceptableRange: [49, 51],
       commonMistake: "Did you divide instead of multiply? Useful output = efficiency × total input.",
       tier: 2,
       senNote: "Rearranging: useful output = efficiency × total input. Here: 0.25 × 200 = 50 kJ."
@@ -46,7 +46,7 @@ const examCalculations = {
       ],
       answer: 0.1,
       answerUnit: "",
-      acceptRange: [0.09, 0.11],
+      acceptableRange: [0.09, 0.11],
       commonMistake: "Don't forget: total energy = useful + wasted. Sankey diagrams show ALL energy, including wasted.",
       tier: 2,
       senNote: "In a Sankey diagram the wide arrow is the total. Thin arrows are the useful and wasted outputs."
@@ -68,7 +68,7 @@ const examCalculations = {
       ],
       answer: 20,
       answerUnit: "m/s",
-      acceptRange: [19.5, 20.5],
+      acceptableRange: [19.5, 20.5],
       commonMistake: "Did you forget that starting from rest means u = 0? Substituting u = 0 simplifies to v = at.",
       tier: 2,
       senNote: "Starting from rest always means u = 0. Use v = u + at when you know u, a and t."
@@ -86,7 +86,7 @@ const examCalculations = {
       ],
       answer: 300,
       answerUnit: "m",
-      acceptRange: [298, 302],
+      acceptableRange: [298, 302],
       commonMistake: "Did you forget to make a negative for deceleration? The negative signs cancel, giving a positive displacement.",
       tier: 2,
       senNote: "When the object stops, v = 0. Rearrange: s = (v² − u²) ÷ 2a"
@@ -104,7 +104,7 @@ const examCalculations = {
       ],
       answer: 44.1,
       answerUnit: "m",
-      acceptRange: [43.5, 44.7],
+      acceptableRange: [43.5, 44.7],
       commonMistake: "Remember t² means t squared: 3² = 9, not 3 × 2.",
       tier: 2,
       senNote: "Dropped from rest: u = 0. Equation simplifies to s = ½at². Always square t first."
@@ -122,7 +122,7 @@ const examCalculations = {
       ],
       answer: 150,
       answerUnit: "m",
-      acceptRange: [148, 152],
+      acceptableRange: [148, 152],
       commonMistake: "Add u and v FIRST, then multiply by ½ and t. Don't forget the ½.",
       tier: 2,
       senNote: "This is the average velocity method: average = (u+v)/2, then multiply by time."
@@ -143,7 +143,7 @@ const examCalculations = {
       ],
       answer: 10,
       answerUnit: "N",
-      acceptRange: [9.9, 10.1],
+      acceptableRange: [9.9, 10.1],
       commonMistake: "You must square each force first, then add, then square root — not add first then square.",
       tier: 2,
       senNote: "Pythagoras: R² = a² + b². For perpendicular forces only."
@@ -160,7 +160,7 @@ const examCalculations = {
       ],
       answer: 13,
       answerUnit: "N",
-      acceptRange: [12.9, 13.1],
+      acceptableRange: [12.9, 13.1],
       commonMistake: "Check your squares: 12² = 144, not 24.",
       tier: 2,
       senNote: "5-12-13 is a Pythagorean triple — worth remembering!"
@@ -181,7 +181,7 @@ const examCalculations = {
       ],
       answer: 450000,
       answerUnit: "J",
-      acceptRange: [449000, 451000],
+      acceptableRange: [449000, 451000],
       commonMistake: "Did you forget to convert kW to W? Using 2.5 instead of 2500 gives an answer 1000× too small.",
       tier: 2,
       senNote: "Always convert units first: kW → W (×1000) and minutes → seconds (×60)"
@@ -198,7 +198,7 @@ const examCalculations = {
       ],
       answer: 540000,
       answerUnit: "J",
-      acceptRange: [539000, 541000],
+      acceptableRange: [539000, 541000],
       commonMistake: "Did you forget to convert minutes to seconds? 5 minutes = 300 seconds, not 5.",
       tier: 2,
       senNote: "Convert both units before substituting into the equation"
@@ -215,7 +215,7 @@ const examCalculations = {
       ],
       answer: 112500,
       answerUnit: "J",
-      acceptRange: [112000, 113000],
+      acceptableRange: [112000, 113000],
       commonMistake: "Did you convert 2 minutes 30 seconds correctly? It is 150 s, not 230 s or 2.5 s.",
       tier: 3,
       senNote: "Break compound times into parts: convert minutes to seconds first, then add remaining seconds"
@@ -232,7 +232,7 @@ const examCalculations = {
       ],
       answer: 30000,
       answerUnit: "W",
-      acceptRange: [29500, 30500],
+      acceptableRange: [29500, 30500],
       commonMistake: "P = Fv is for constant velocity. If the car is accelerating, you need to account for resultant force.",
       tier: 2,
       senNote: "P = Fv is a second power equation alongside P = E/t. Both give the same answer for the same situation."
@@ -249,7 +249,7 @@ const examCalculations = {
       ],
       answer: 480,
       answerUnit: "W",
-      acceptRange: [478, 482],
+      acceptableRange: [478, 482],
       commonMistake: "At constant speed the net force is zero, so the driving force equals the resistive force.",
       tier: 2,
       senNote: "P = Fv: constant speed → driving force = resistive force → use that force in the equation."
@@ -269,7 +269,7 @@ const examCalculations = {
       ],
       answer: 23.52,
       answerUnit: "J",
-      acceptRange: [23.17, 23.87],
+      acceptableRange: [23.17, 23.87],
       commonMistake: "Did you convert grams to kilograms? 200 g = 0.2 kg, not 200 kg.",
       tier: 2,
       senNote: "Always convert g → kg by dividing by 1000"
@@ -285,7 +285,7 @@ const examCalculations = {
       ],
       answer: 540000,
       answerUnit: "J",
-      acceptRange: [539000, 541000],
+      acceptableRange: [539000, 541000],
       commonMistake: "Did you remember to square the velocity? And did you remember the ½?",
       tier: 2,
       senNote: "Square the speed first, then multiply by ½ × m"
@@ -302,7 +302,7 @@ const examCalculations = {
       ],
       answer: 3.92,
       answerUnit: "J",
-      acceptRange: [3.86, 3.98],
+      acceptableRange: [3.86, 3.98],
       commonMistake: "Did you convert both g → kg AND cm → m? Two unit traps in one question!",
       tier: 3,
       senNote: "Check every quantity for unit conversions before substituting"
@@ -323,7 +323,7 @@ const examCalculations = {
       ],
       answer: 270000,
       answerUnit: "J",
-      acceptRange: [269000, 271000],
+      acceptableRange: [269000, 271000],
       commonMistake: "Did you use the temperature CHANGE (150°C), not the final temperature (170°C)?",
       tier: 2,
       senNote: "Δθ means temperature change — always subtract: final − initial"
@@ -340,7 +340,7 @@ const examCalculations = {
       ],
       answer: 105000,
       answerUnit: "J",
-      acceptRange: [104000, 106000],
+      acceptableRange: [104000, 106000],
       commonMistake: "Did you convert grams to kilograms? 500 g = 0.5 kg.",
       tier: 2,
       senNote: "Convert g → kg AND use temperature change, not total temperature"
@@ -357,7 +357,7 @@ const examCalculations = {
       ],
       answer: 20,
       answerUnit: "°C",
-      acceptRange: [19.5, 20.5],
+      acceptableRange: [19.5, 20.5],
       commonMistake: "Did you convert kJ to J? 6.16 kJ = 6160 J, not 6.16.",
       tier: 3,
       senNote: "When energy is given in kJ, multiply by 1000 to convert to J before using the equation"
@@ -374,7 +374,7 @@ const examCalculations = {
       ],
       answer: 83500,
       answerUnit: "J",
-      acceptRange: [83000, 84000],
+      acceptableRange: [83000, 84000],
       commonMistake: "Did you convert grams to kilograms? Using 250 instead of 0.25 gives an answer 1000× too large.",
       tier: 2,
       senNote: "Latent heat uses kg — always convert g → kg first"
@@ -391,7 +391,7 @@ const examCalculations = {
       ],
       answer: 339000,
       answerUnit: "J",
-      acceptRange: [338000, 340000],
+      acceptableRange: [338000, 340000],
       commonMistake: "Did you convert g → kg? And is your standard form correct? 339 000 = 3.39 × 10⁵, not 10⁶.",
       tier: 3,
       senNote: "For standard form: count decimal places carefully. 339 000 has 5 digits after the first."
@@ -408,7 +408,7 @@ const examCalculations = {
       ],
       answer: 334000,
       answerUnit: "J/kg",
-      acceptRange: [333000, 335000],
+      acceptableRange: [333000, 335000],
       commonMistake: "Two conversions needed: kJ → J AND g → kg. Missing either gives the wrong answer.",
       tier: 3,
       senNote: "Rearrange the equation first, then convert both values before dividing"
@@ -429,7 +429,7 @@ const examCalculations = {
       ],
       answer: 0.8,
       answerUnit: "",
-      acceptRange: [0.79, 0.81],
+      acceptableRange: [0.79, 0.81],
       commonMistake: "Both values are in kJ so the ratio works either way — but watch out if they use different units!",
       tier: 2,
       senNote: "Efficiency has no unit. It is a decimal between 0 and 1, or a percentage between 0% and 100%."
@@ -445,7 +445,7 @@ const examCalculations = {
       ],
       answer: -1,
       answerUnit: "",
-      acceptRange: [-2, -0.5],
+      acceptableRange: [-2, -0.5],
       commonMistake: "Wait — the useful output (4500 J) is MORE than the total input (3600 J)? This is impossible. Check the question carefully!",
       tier: 3,
       senNote: "This is a trick — if useful > total, the answer is impossible. Real exam questions test this."
@@ -461,7 +461,7 @@ const examCalculations = {
       ],
       answer: 168000,
       answerUnit: "J",
-      acceptRange: [165480, 170520],
+      acceptableRange: [165480, 170520],
       commonMistake: "Did you divide by the efficiency, not multiply? Total input = useful output ÷ efficiency.",
       tier: 3,
       senNote: "Rearrange: to find total input, divide the useful output by efficiency (not multiply)"
@@ -482,7 +482,7 @@ const examCalculations = {
       ],
       answer: 9.4,
       answerUnit: "V",
-      acceptRange: [9.3, 9.5],
+      acceptableRange: [9.3, 9.5],
       commonMistake: "Did you convert BOTH mA → A and kΩ → Ω? Two conversions are needed here.",
       tier: 3,
       senNote: "mA → A: divide by 1000. kΩ → Ω: multiply by 1000."
@@ -498,7 +498,7 @@ const examCalculations = {
       ],
       answer: 40,
       answerUnit: "Ω",
-      acceptRange: [39, 41],
+      acceptableRange: [39, 41],
       commonMistake: "Did you convert mA to A? Using 150 instead of 0.15 gives R = 0.04 Ω — far too small for a lamp.",
       tier: 2,
       senNote: "Convert mA → A first. Then divide V by I."
@@ -514,7 +514,7 @@ const examCalculations = {
       ],
       answer: 5.45,
       answerUnit: "mA",
-      acceptRange: [5.3, 5.6],
+      acceptableRange: [5.3, 5.6],
       commonMistake: "The answer is asked for in mA, not A. Multiply your answer in amps by 1000.",
       tier: 2,
       senNote: "Check the unit the question asks for — convert your final answer if needed"
@@ -535,7 +535,7 @@ const examCalculations = {
       ],
       answer: 2,
       answerUnit: "W",
-      acceptRange: [1.9, 2.1],
+      acceptableRange: [1.9, 2.1],
       commonMistake: "Did you SQUARE the current (0.2² = 0.04) and not just double it (0.2 × 2 = 0.4)?",
       tier: 2,
       senNote: "I² means I × I, not I × 2. Convert mA to A first."
@@ -553,7 +553,7 @@ const examCalculations = {
       ],
       answer: 0.495,
       answerUnit: "W",
-      acceptRange: [0.49, 0.50],
+      acceptableRange: [0.49, 0.50],
       commonMistake: "Did you convert mA → A AND kΩ → Ω? Both conversions are essential.",
       tier: 3,
       senNote: "Two unit conversions needed. Square the current AFTER converting to amps."
@@ -569,7 +569,7 @@ const examCalculations = {
       ],
       answer: 4.2,
       answerUnit: "J",
-      acceptRange: [4.1, 4.3],
+      acceptableRange: [4.1, 4.3],
       commonMistake: "Did you convert mC to C? 350 mC = 0.35 C, not 350 C.",
       tier: 2,
       senNote: "mC → C: divide by 1000. μC → C: divide by 1 000 000."
@@ -589,7 +589,7 @@ const examCalculations = {
       ],
       answer: 330,
       answerUnit: "m/s",
-      acceptRange: [329, 331],
+      acceptableRange: [329, 331],
       commonMistake: "Did you convert cm to m? 75 cm = 0.75 m, not 75 m.",
       tier: 2,
       senNote: "Wavelength must be in metres for the speed to come out in m/s"
@@ -605,7 +605,7 @@ const examCalculations = {
       ],
       answer: 3.05,
       answerUnit: "m",
-      acceptRange: [3.0, 3.1],
+      acceptableRange: [3.0, 3.1],
       commonMistake: "Did you convert MHz to Hz? 1 MHz = 1 000 000 Hz = 10⁶ Hz.",
       tier: 3,
       senNote: "MHz → Hz: multiply by 10⁶. Use standard form to avoid errors with large numbers."
@@ -621,7 +621,7 @@ const examCalculations = {
       ],
       answer: 4.62e14,
       answerUnit: "Hz",
-      acceptRange: [4.6e14, 4.65e14],
+      acceptableRange: [4.6e14, 4.65e14],
       commonMistake: "Did you convert nm to m? 1 nm = 10⁻⁹ m. 650 nm = 6.5 × 10⁻⁷ m.",
       tier: 3,
       senNote: "nm → m: multiply by 10⁻⁹. Handle powers of 10 carefully when dividing."
@@ -643,7 +643,7 @@ const examCalculations = {
       ],
       answer: 3000,
       answerUnit: "Pa",
-      acceptRange: [2900, 3100],
+      acceptableRange: [2900, 3100],
       commonMistake: "Did you convert cm to m BEFORE calculating area? 30 cm × 50 cm ≠ 1500 m². Convert each side first.",
       tier: 2,
       senNote: "Convert each dimension to metres first, then find the area. Never convert cm² directly."
@@ -659,7 +659,7 @@ const examCalculations = {
       ],
       answer: 5000000,
       answerUnit: "Pa",
-      acceptRange: [4900000, 5100000],
+      acceptableRange: [4900000, 5100000],
       commonMistake: "cm² → m²: divide by 10 000 (not 100!). 1 m² = 10 000 cm².",
       tier: 3,
       senNote: "Area conversion is different from length: cm² → m² means divide by 10 000, not 100"
@@ -675,7 +675,7 @@ const examCalculations = {
       ],
       answer: 251.125,
       answerUnit: "kPa",
-      acceptRange: [249.4, 252.8],
+      acceptableRange: [249.4, 252.8],
       commonMistake: "The answer is asked for in kPa. Divide your Pa answer by 1000.",
       tier: 2,
       senNote: "Pa → kPa: divide by 1000. Check what unit the question asks for."
@@ -695,7 +695,7 @@ const examCalculations = {
       ],
       answer: 11.5,
       answerUnit: "V",
-      acceptRange: [11, 12],
+      acceptableRange: [11, 12],
       commonMistake: "Make sure you divide Vp by the turns ratio for a step-down transformer, not multiply.",
       tier: 2,
       senNote: "Step-down: more primary turns, so output voltage is smaller. Check your answer makes sense."
@@ -712,7 +712,7 @@ const examCalculations = {
       ],
       answer: 0.1,
       answerUnit: "A",
-      acceptRange: [0.09, 0.11],
+      acceptableRange: [0.09, 0.11],
       commonMistake: "Did you convert kV to V? 11.5 kV = 11 500 V, not 11.5 V.",
       tier: 3,
       senNote: "kV → V: multiply by 1000. Higher voltage means lower current for the same power."
@@ -730,7 +730,7 @@ const examCalculations = {
       ],
       answer: 1004.3,
       answerUnit: "A",
-      acceptRange: [1000, 1010],
+      acceptableRange: [1000, 1010],
       commonMistake: "This is a multi-step problem. Convert kV to V first, then use both transformer equations.",
       tier: 3,
       senNote: "Work through step by step. Convert kV → V at the start to avoid errors later."
@@ -751,7 +751,7 @@ const examCalculations = {
       ],
       answer: 0.035,
       answerUnit: "N",
-      acceptRange: [0.034, 0.036],
+      acceptableRange: [0.034, 0.036],
       commonMistake: "Did you convert mT → T (÷1000) AND cm → m (÷100)? Two conversions needed.",
       tier: 2,
       senNote: "mT → T: divide by 1000. cm → m: divide by 100."
@@ -768,7 +768,7 @@ const examCalculations = {
       ],
       answer: 0.012,
       answerUnit: "N",
-      acceptRange: [0.011, 0.013],
+      acceptableRange: [0.011, 0.013],
       commonMistake: "Did you convert mA → A and cm → m? Both are needed here.",
       tier: 2,
       senNote: "Convert all values to SI units (A, m, T) before multiplying"
@@ -786,7 +786,7 @@ const examCalculations = {
       ],
       answer: 3,
       answerUnit: "A",
-      acceptRange: [2.9, 3.1],
+      acceptableRange: [2.9, 3.1],
       commonMistake: "Rearrange the equation first: I = F ÷ (B × l). Convert mT and cm before substituting.",
       tier: 3,
       senNote: "Rearrange, convert, then substitute. Check: 0.15 × 3 × 0.12 = 0.054 N ✓"
@@ -807,7 +807,7 @@ const examCalculations = {
       ],
       answer: 0.45,
       answerUnit: "J",
-      acceptRange: [0.44, 0.46],
+      acceptableRange: [0.44, 0.46],
       commonMistake: "Did you convert cm to m BEFORE squaring? 15 cm = 0.15 m, then square it.",
       tier: 2,
       senNote: "Convert cm → m first, then square. If you square 15 and then convert, you get the wrong answer."
@@ -824,7 +824,7 @@ const examCalculations = {
       ],
       answer: 9.49,
       answerUnit: "cm",
-      acceptRange: [9.4, 9.6],
+      acceptableRange: [9.4, 9.6],
       commonMistake: "The answer is asked for in cm. Calculate in metres first, then multiply by 100.",
       tier: 3,
       senNote: "Work in SI units (metres) throughout, then convert the final answer to cm"
@@ -842,7 +842,7 @@ const examCalculations = {
       ],
       answer: 0.405,
       answerUnit: "J",
-      acceptRange: [0.40, 0.41],
+      acceptableRange: [0.40, 0.41],
       commonMistake: "Extension = stretched length − natural length = 18 cm. NOT the total length of 28 cm!",
       tier: 3,
       senNote: "Extension is how much EXTRA the spring is stretched, not its total length"
@@ -862,7 +862,7 @@ const examCalculations = {
       ],
       answer: 21,
       answerUnit: "m",
-      acceptRange: [20.5, 21.5],
+      acceptableRange: [20.5, 21.5],
       commonMistake: "Did you convert km/h to m/s? Divide by 3.6 (or multiply by 1000 and divide by 3600).",
       tier: 2,
       senNote: "km/h → m/s: divide by 3.6. This is because 1 km = 1000 m and 1 h = 3600 s."
@@ -879,7 +879,7 @@ const examCalculations = {
       ],
       answer: 40,
       answerUnit: "m",
-      acceptRange: [39, 41],
+      acceptableRange: [39, 41],
       commonMistake: "Did you convert km/h to m/s first? And did you use the average speed, not the initial speed?",
       tier: 2,
       senNote: "For uniform deceleration: average speed = (initial + final) ÷ 2. Final speed = 0 (it stops)."
@@ -896,7 +896,7 @@ const examCalculations = {
       ],
       answer: 52.5,
       answerUnit: "m",
-      acceptRange: [52, 53],
+      acceptableRange: [52, 53],
       commonMistake: "Did you convert km/h to m/s before calculating thinking distance? 90 km/h ≠ 90 m/s.",
       tier: 2,
       senNote: "Stopping distance has two parts: thinking + braking. Convert speed units first."
@@ -916,7 +916,7 @@ const examCalculations = {
       ],
       answer: 1002000,
       answerUnit: "J",
-      acceptRange: [1001000, 1003000],
+      acceptableRange: [1001000, 1003000],
       commonMistake: "Did you use L_fusion (334 000 J/kg) not L_vaporisation? Make sure you use the right value.",
       tier: 2,
       senNote: "Q = mL. Multiply mass by specific latent heat."
@@ -932,7 +932,7 @@ const examCalculations = {
       ],
       answer: 904000,
       answerUnit: "J",
-      acceptRange: [903000, 905000],
+      acceptableRange: [903000, 905000],
       commonMistake: "Did you use L_vaporisation (2 260 000 J/kg)? Vaporisation requires much more energy than melting.",
       tier: 2,
       senNote: "Q = mL. Vaporisation L is about 7× larger than fusion L."
@@ -948,7 +948,7 @@ const examCalculations = {
       ],
       answer: 200000,
       answerUnit: "J/kg",
-      acceptRange: [199000, 201000],
+      acceptableRange: [199000, 201000],
       commonMistake: "Did you divide Q by m? Not multiply. L = Q ÷ m.",
       tier: 3,
       senNote: "Rearrange Q = mL → L = Q/m. Divide energy by mass."
@@ -968,7 +968,7 @@ const examCalculations = {
       ],
       answer: 160000,
       answerUnit: "W",
-      acceptRange: [159000, 161000],
+      acceptableRange: [159000, 161000],
       commonMistake: "Did you SQUARE the current first? P = I² × R, not I × R.",
       tier: 2,
       senNote: "Square the current first, then multiply by resistance."
@@ -984,7 +984,7 @@ const examCalculations = {
       ],
       answer: 1250,
       answerUnit: "V",
-      acceptRange: [1249, 1251],
+      acceptableRange: [1249, 1251],
       commonMistake: "Did you multiply Vp by the turn ratio (Ns/Np)? Vs = Vp × (Ns/Np).",
       tier: 3,
       senNote: "Turn ratio = Ns/Np. Multiply input voltage by this ratio."
@@ -1003,7 +1003,7 @@ const examCalculations = {
       ],
       answer: 20,
       answerUnit: "Ω",
-      acceptRange: [19.5, 20.5],
+      acceptableRange: [19.5, 20.5],
       commonMistake: "In series, simply add all resistances. Do not use the reciprocal formula.",
       tier: 1,
       senNote: "Series: R_total = R1 + R2. The total is always bigger than each individual resistor."
@@ -1019,7 +1019,7 @@ const examCalculations = {
       ],
       answer: 4,
       answerUnit: "Ω",
-      acceptRange: [3.9, 4.1],
+      acceptableRange: [3.9, 4.1],
       commonMistake: "Don't forget to take the reciprocal at the end. The answer must be less than the smallest resistor (6 Ω).",
       tier: 2,
       senNote: "Parallel: 1/R_total = 1/R1 + 1/R2 — then flip (reciprocal) to find R_total."
@@ -1035,7 +1035,7 @@ const examCalculations = {
       ],
       answer: 2,
       answerUnit: "Ω",
-      acceptRange: [1.9, 2.1],
+      acceptableRange: [1.9, 2.1],
       commonMistake: "The total must be less than the smallest resistor (4 Ω). If your answer is bigger, you've added instead of using reciprocals.",
       tier: 3,
       senNote: "Sum all reciprocals first, then flip the total. Result must be smaller than the smallest branch."
@@ -1055,7 +1055,7 @@ const examCalculations = {
       ],
       answer: 138000,
       answerUnit: "J",
-      acceptRange: [137000, 139000],
+      acceptableRange: [137000, 139000],
       commonMistake: "Make sure you use the charge in coulombs (C), not milliamps or amps.",
       tier: 2,
       senNote: "E = QV. Charge in coulombs, voltage in volts → energy in joules."
@@ -1071,7 +1071,7 @@ const examCalculations = {
       ],
       answer: 140,
       answerUnit: "p",
-      acceptRange: [138, 142],
+      acceptableRange: [138, 142],
       commonMistake: "Power must be in kW (not W) and time in hours for the answer to come out in kWh.",
       tier: 2,
       senNote: "kWh = kW × hours. Multiply by cost per unit to get the price."
@@ -1089,7 +1089,7 @@ const examCalculations = {
       ],
       answer: 2160,
       answerUnit: "p",
-      acceptRange: [2140, 2180],
+      acceptableRange: [2140, 2180],
       commonMistake: "Convert minutes to hours FIRST. 45 min = 0.75 h, not 45 h.",
       tier: 3,
       senNote: "Convert minutes to hours before calculating kWh. Then multiply by days, then by cost per unit."
@@ -1108,7 +1108,7 @@ const examCalculations = {
       ],
       answer: 1800,
       answerUnit: "J",
-      acceptRange: [1790, 1810],
+      acceptableRange: [1790, 1810],
       commonMistake: "Work is measured in joules (J). Make sure force is in newtons and distance in metres.",
       tier: 1,
       senNote: "W = F × d. Force × distance = work done. Units: N × m = J."
@@ -1124,7 +1124,7 @@ const examCalculations = {
       ],
       answer: 29400,
       answerUnit: "J",
-      acceptRange: [28959, 29841],
+      acceptableRange: [28959, 29841],
       commonMistake: "The force needed to lift is equal to the weight (mg), not the mass alone.",
       tier: 2,
       senNote: "Force for lifting = weight = mg. Then W = F × d."
@@ -1140,7 +1140,7 @@ const examCalculations = {
       ],
       answer: 300,
       answerUnit: "N",
-      acceptRange: [298, 302],
+      acceptableRange: [298, 302],
       commonMistake: "Did you convert kJ to J? 180 kJ = 180 000 J.",
       tier: 2,
       senNote: "Rearrange W = Fd → F = W/d. Convert kJ to J first."
@@ -1159,7 +1159,7 @@ const examCalculations = {
       ],
       answer: 12,
       answerUnit: "N m",
-      acceptRange: [11.5, 12.5],
+      acceptableRange: [11.5, 12.5],
       commonMistake: "Moment is measured in newton metres (N m), not newtons or metres alone.",
       tier: 1,
       senNote: "Moment = force × perpendicular distance from pivot."
@@ -1175,7 +1175,7 @@ const examCalculations = {
       ],
       answer: 80,
       answerUnit: "N",
-      acceptRange: [79, 81],
+      acceptableRange: [79, 81],
       commonMistake: "Did you use the principle of moments? Clockwise moment = anticlockwise moment when balanced.",
       tier: 2,
       senNote: "Balanced lever: moment on left = moment on right. Rearrange to find the unknown."
@@ -1191,7 +1191,7 @@ const examCalculations = {
       ],
       answer: 6,
       answerUnit: "N m",
-      acceptRange: [5.9, 6.1],
+      acceptableRange: [5.9, 6.1],
       commonMistake: "Convert cm to m before substituting. 75 cm = 0.75 m, not 75 m.",
       tier: 2,
       senNote: "Always convert distance to metres before calculating the moment."
@@ -1211,7 +1211,7 @@ const examCalculations = {
       ],
       answer: 45,
       answerUnit: "m",
-      acceptRange: [44, 46],
+      acceptableRange: [44, 46],
       commonMistake: "Did you halve the time? The echo takes twice as long because it travels there AND back.",
       tier: 2,
       senNote: "Halve the total time first. The pulse only goes ONE WAY to the bottom."
@@ -1228,7 +1228,7 @@ const examCalculations = {
       ],
       answer: 0.0616,
       answerUnit: "m",
-      acceptRange: [0.06, 0.064],
+      acceptableRange: [0.06, 0.064],
       commonMistake: "Did you convert μs to seconds? 1 μs = 10⁻⁶ s. Then halve the time before multiplying.",
       tier: 3,
       senNote: "μs → s: multiply by 10⁻⁶. Halve the time before calculating distance."
@@ -1248,7 +1248,7 @@ const examCalculations = {
       ],
       answer: 0.122,
       answerUnit: "m",
-      acceptRange: [0.12, 0.125],
+      acceptableRange: [0.12, 0.125],
       commonMistake: "Did you convert GHz to Hz? 1 GHz = 10⁹ Hz.",
       tier: 3,
       senNote: "GHz → Hz: multiply by 10⁹. Then λ = c/f."
@@ -1264,7 +1264,7 @@ const examCalculations = {
       ],
       answer: 3.0e18,
       answerUnit: "Hz",
-      acceptRange: [2.9e18, 3.1e18],
+      acceptableRange: [2.9e18, 3.1e18],
       commonMistake: "When dividing powers of 10, subtract the exponents: 10⁸ ÷ 10⁻¹⁰ = 10⁸⁻⁽⁻¹⁰⁾ = 10¹⁸.",
       tier: 3,
       senNote: "Dividing powers: subtract exponents. 10⁸ ÷ 10⁻¹⁰ = 10¹⁸ (minus a negative = add)."
@@ -1283,7 +1283,7 @@ const examCalculations = {
       ],
       answer: 3,
       answerUnit: "",
-      acceptRange: [2.9, 3.1],
+      acceptableRange: [2.9, 3.1],
       commonMistake: "Magnification = image ÷ object (not object ÷ image). If >1, the image is bigger than the object.",
       tier: 1,
       senNote: "Magnification = image height / object height. No unit."
@@ -1298,7 +1298,7 @@ const examCalculations = {
       ],
       answer: 10,
       answerUnit: "cm",
-      acceptRange: [9.8, 10.2],
+      acceptableRange: [9.8, 10.2],
       commonMistake: "Rearrange: image height = magnification × object height. Multiply, don't divide.",
       tier: 1,
       senNote: "Image height = magnification × object height."
@@ -1314,7 +1314,7 @@ const examCalculations = {
       ],
       answer: 2,
       answerUnit: "mm",
-      acceptRange: [1.9, 2.1],
+      acceptableRange: [1.9, 2.1],
       commonMistake: "Divide image by magnification (not multiply). Then convert cm to mm (×10).",
       tier: 2,
       senNote: "Rearrange for object height, then convert cm → mm by multiplying by 10."
@@ -1334,7 +1334,7 @@ const examCalculations = {
       ],
       answer: 1050000,
       answerUnit: "W",
-      acceptRange: [1040000, 1060000],
+      acceptableRange: [1040000, 1060000],
       commonMistake: "Convert MW to W first. Efficiency as a decimal: 35% = 0.35, not 35.",
       tier: 2,
       senNote: "Efficiency as a decimal × input power = useful power out. MW → W: multiply by 1 000 000."
@@ -1350,7 +1350,7 @@ const examCalculations = {
       ],
       answer: 310,
       answerUnit: "MW",
-      acceptRange: [308, 312],
+      acceptableRange: [308, 312],
       commonMistake: "Useful = 38% of input. Wasted = the remaining 62%. Don't confuse useful and wasted.",
       tier: 3,
       senNote: "Wasted = total − useful. If 38% useful, then 62% wasted."
@@ -1370,7 +1370,7 @@ const examCalculations = {
       ],
       answer: 1000000,
       answerUnit: "Hz",
-      acceptRange: [990000, 1010000],
+      acceptableRange: [990000, 1010000],
       commonMistake: "Divide c by λ (not multiply). Speed of light = 3 × 10⁸ m/s.",
       tier: 2,
       senNote: "f = c ÷ λ. All EM waves travel at 3 × 10⁸ m/s in a vacuum."
@@ -1386,7 +1386,7 @@ const examCalculations = {
       ],
       answer: 1e-12,
       answerUnit: "m",
-      acceptRange: [0.9e-12, 1.1e-12],
+      acceptableRange: [0.9e-12, 1.1e-12],
       commonMistake: "Use the indices: 10⁸ ÷ 10²⁰ = 10⁻¹². Very short wavelength because gamma is very high frequency.",
       tier: 3,
       senNote: "λ = c ÷ f. Gamma: very high frequency → very short wavelength. Use index arithmetic."
@@ -1402,7 +1402,7 @@ const examCalculations = {
       ],
       answer: 2.5e9,
       answerUnit: "Hz",
-      acceptRange: [2.4e9, 2.6e9],
+      acceptableRange: [2.4e9, 2.6e9],
       commonMistake: "Divide c by λ. Be careful dividing by a decimal: 3×10⁸ ÷ 0.12 = 2.5 × 10⁹.",
       tier: 2,
       senNote: "f = c ÷ λ. Microwave ovens use ~2.45 GHz — the frequency that water molecules absorb most efficiently."
@@ -1422,7 +1422,7 @@ const examCalculations = {
       ],
       answer: 41.8,
       answerUnit: "°",
-      acceptRange: [41, 42.5],
+      acceptableRange: [41, 42.5],
       commonMistake: "Did you use sin(c) = 1/n, not n itself? Then find the inverse sine.",
       tier: 2,
       senNote: "sin(c) = 1/n → c = sin⁻¹(1/n). Use your calculator's inverse sine button."
@@ -1439,7 +1439,7 @@ const examCalculations = {
       ],
       answer: 1.5,
       answerUnit: "",
-      acceptRange: [1.45, 1.55],
+      acceptableRange: [1.45, 1.55],
       commonMistake: "When light exits glass into air, use n = sin(air angle)/sin(glass angle).",
       tier: 3,
       senNote: "Snell's law: n₁ sin θ₁ = n₂ sin θ₂. For air n=1, so n_glass = sin(θ_air)/sin(θ_glass)."
@@ -1461,7 +1461,7 @@ const examCalculations = {
       ],
       answer: 1,
       answerUnit: "m/s",
-      acceptRange: [0.98, 1.02],
+      acceptableRange: [0.98, 1.02],
       commonMistake: "Did you add the masses after the collision? They stick together, so use total mass (m₁ + m₂).",
       tier: 2,
       senNote: "Inelastic collision (stick together): use (m₁+m₂)v after. Momentum before = momentum after."
@@ -1478,7 +1478,7 @@ const examCalculations = {
       ],
       answer: 1.33,
       answerUnit: "m/s",
-      acceptRange: [1.3, 1.36],
+      acceptableRange: [1.3, 1.36],
       commonMistake: "Check that total momentum before = total momentum after. If one ball stops, all momentum transfers to the other.",
       tier: 3,
       senNote: "When the first ball stops: all the momentum transfers to the second ball. v₂ = m₁u₁ ÷ m₂."
@@ -1499,7 +1499,7 @@ const examCalculations = {
       ],
       answer: 400,
       answerUnit: "kPa",
-      acceptRange: [398, 402],
+      acceptableRange: [398, 402],
       commonMistake: "Did you remember that p × V must be the same before and after? If volume halves, pressure doubles.",
       tier: 2,
       senNote: "Boyle's Law: p₁V₁ = p₂V₂. Constant temperature. Halving volume doubles pressure."
@@ -1516,7 +1516,7 @@ const examCalculations = {
       ],
       answer: 100,
       answerUnit: "kPa",
-      acceptRange: [99, 101],
+      acceptableRange: [99, 101],
       commonMistake: "Volume increased so pressure must decrease — check your answer makes sense.",
       tier: 2,
       senNote: "Volume increases → pressure decreases. Always check the direction makes physical sense."
@@ -1536,7 +1536,7 @@ const examCalculations = {
       ],
       answer: 29900,
       answerUnit: "m/s",
-      acceptRange: [29000, 31000],
+      acceptableRange: [29000, 31000],
       commonMistake: "Don't forget to multiply r by 2π — the circumference is the full circular path, not just the radius.",
       tier: 3,
       senNote: "Orbital speed = distance of one orbit ÷ time for one orbit. Distance = 2πr (circumference of circle)."
@@ -1552,7 +1552,7 @@ const examCalculations = {
       ],
       answer: 5545,
       answerUnit: "s",
-      acceptRange: [5300, 5800],
+      acceptableRange: [5300, 5800],
       commonMistake: "Rearranging: T = 2πr ÷ v (not v ÷ 2πr).",
       tier: 3,
       senNote: "Rearrange v = 2πr/T → T = 2πr/v. Substitute carefully."
@@ -1570,7 +1570,7 @@ const examCalculations = {
       ],
       answer: 100,
       answerUnit: "V",
-      acceptRange: [99, 101],
+      acceptableRange: [99, 101],
       commonMistake: "Make sure you multiply by Ns/Np, not Np/Ns. Secondary is the output.",
       tier: 2,
       senNote: "Turns ratio = Ns/Np. Multiply primary voltage by this ratio to find secondary voltage."
@@ -1586,7 +1586,7 @@ const examCalculations = {
       ],
       answer: 1,
       answerUnit: "A",
-      acceptRange: [0.9, 1.1],
+      acceptableRange: [0.9, 1.1],
       commonMistake: "For an ideal transformer, power is conserved: VpIp = VsIs. Do not just divide voltages.",
       tier: 3,
       senNote: "Ideal transformer: power in = power out. VpIp = VsIs. Rearrange to find Is."
@@ -1602,7 +1602,7 @@ const examCalculations = {
       ],
       answer: 200000,
       answerUnit: "turns",
-      acceptRange: [195000, 205000],
+      acceptableRange: [195000, 205000],
       commonMistake: "Make sure you multiply by Vp/Vs not Vs/Vp. The high-voltage side always has more turns.",
       tier: 3,
       senNote: "Primary is the high-voltage side (400 kV). Np = Ns × (Vp/Vs)."

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
 
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
-  const { equation, steps, answer, answerUnit, acceptRange, commonMistake, senNote } = data
+  const { equation, steps, answer, answerUnit, acceptableRange, commonMistake, senNote } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [revealStep, setRevealStep] = useState(0)
@@ -16,16 +16,16 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
 
   const numericAnswer = parseFloat(input)
   const isCorrect = submitted && (
-    acceptRange
-      ? numericAnswer >= acceptRange[0] && numericAnswer <= acceptRange[1]
+    acceptableRange
+      ? numericAnswer >= acceptableRange[0] && numericAnswer <= acceptableRange[1]
       : Math.abs(numericAnswer - answer) < Math.abs(answer * 0.02) || numericAnswer === answer
   )
 
   const handleSubmit = () => {
     if (input.trim() === '' || submitted) return
     setSubmitted(true)
-    const correct = acceptRange
-      ? numericAnswer >= acceptRange[0] && numericAnswer <= acceptRange[1]
+    const correct = acceptableRange
+      ? numericAnswer >= acceptableRange[0] && numericAnswer <= acceptableRange[1]
       : Math.abs(numericAnswer - answer) < Math.abs(answer * 0.02) || numericAnswer === answer
     onComplete(correct)
   }

@@ -24,13 +24,15 @@ export default function ConsentScreen() {
   const [birthMonth, setBirthMonth] = useState('')
   const [ageConfirmed, setAgeConfirmed] = useState(false)
   const [termsRead, setTermsRead] = useState(false)
+  const [parentalConsent, setParentalConsent] = useState(false)
 
   const age = calcAge(birthYear, birthMonth)
   const ageEntered = birthYear.length === 4 && birthMonth !== ''
   const isUnder13 = ageEntered && age !== null && age < 13
   const isOldEnough = ageEntered && age !== null && age >= 13
+  const needs13to15Notice = isOldEnough && age !== null && age <= 15
 
-  const canContinue = isOldEnough && ageConfirmed && termsRead
+  const canContinue = isOldEnough && ageConfirmed && termsRead && (!needs13to15Notice || parentalConsent)
 
   const handleContinue = () => {
     try {
@@ -157,6 +159,51 @@ export default function ConsentScreen() {
                   NeuroPhysics requires users to be 13 or older. If you are under 13,
                   please ask a parent or guardian to create an account on your behalf.
                 </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* 13–15 parental consent notice */}
+          <AnimatePresence>
+            {needs13to15Notice && (
+              <motion.div
+                className="mt-3 rounded-[10px] px-3 py-3 space-y-3"
+                style={{ background: 'rgba(243,156,18,0.08)', border: '1px solid rgba(243,156,18,0.3)' }}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+              >
+                <div className="flex items-start gap-2">
+                  <AlertTriangle size={14} color="#f39c12" style={{ flexShrink: 0, marginTop: 1 }} />
+                  <p className="text-xs leading-relaxed" style={{ color: '#fde68a' }}>
+                    You're under 16. A parent or guardian should review our{' '}
+                    <span style={{ color: '#f39c12', textDecoration: 'underline' }}>Privacy Policy</span>{' '}
+                    before you continue. By ticking the box below, you confirm a parent or guardian has agreed to you using NeuroPhysics.
+                  </p>
+                </div>
+                <button
+                  className="w-full flex items-start gap-3 rounded-[10px] px-3 py-3 text-left"
+                  style={{
+                    background: parentalConsent ? 'rgba(243,156,18,0.12)' : 'rgba(255,255,255,0.03)',
+                    border: parentalConsent ? '1px solid rgba(243,156,18,0.5)' : '0.75px solid rgba(243,156,18,0.2)',
+                    transition: 'all 0.2s',
+                  }}
+                  onClick={() => setParentalConsent(p => !p)}
+                >
+                  <div
+                    className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
+                    style={{
+                      background: parentalConsent ? '#f39c12' : 'rgba(255,255,255,0.07)',
+                      border: parentalConsent ? 'none' : '0.75px solid rgba(243,156,18,0.4)',
+                      transition: 'all 0.2s',
+                    }}
+                  >
+                    {parentalConsent && <Check size={14} color="#fff" strokeWidth={2.5} />}
+                  </div>
+                  <p className="text-xs font-semibold leading-relaxed" style={{ color: parentalConsent ? '#fde68a' : '#a8b8cc' }}>
+                    My parent or guardian has agreed to me using this app
+                  </p>
+                </button>
               </motion.div>
             )}
           </AnimatePresence>

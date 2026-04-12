@@ -137,8 +137,8 @@ export function saveSelectedBoard(boardId) {
 }
 
 /** Is the given module/topic available for the current board?
- *  boards param: string[] | undefined — if undefined, available for all */
+ *  boards param: string[] | null | undefined — null/undefined means available for all */
 export function isAvailableForBoard(boards, boardId) {
-  if (!boards || !Array.isArray(boards)) return true // no restriction = universal
+  if (boards == null || !Array.isArray(boards) || boards.length === 0) return true // no restriction = universal
   return boards.includes(boardId)
 }

@@ -142,10 +142,14 @@ function ExamWidget({ plan, navigate }) {
           <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
             {plan.remainingCount} topics left · {plan.neededPerDay}/day needed
           </div>
-          <div className="mt-2 flex items-center gap-1.5">
+          <div className="mt-2 flex items-center justify-between">
             <span style={{ fontSize: 11, fontWeight: 700, color: plan.onTrack ? '#22c55e' : '#f59e0b' }}>
               {plan.onTrack ? '✅ On track' : '⚠️ Pick up the pace'}
             </span>
+            <button onClick={() => navigate('/study-plan')}
+              style={{ fontSize: 11, fontWeight: 700, color: s.color, opacity: 0.8 }}>
+              Full plan →
+            </button>
           </div>
         </div>
       </div>

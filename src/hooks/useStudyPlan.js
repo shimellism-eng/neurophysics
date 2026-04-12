@@ -5,12 +5,8 @@ import { getSelectedBoard } from '../utils/boardConfig'
 /**
  * useStudyPlan — exam-aware smart study planner
  *
- * Returns:
- *   examDate, daysLeft, weeksLeft, examStatus ('no_date'|'green'|'amber'|'red'|'passed')
- *   neededPerDay, onTrack
- *   totalTopics, masteredCount, remainingCount
- *   todayTopicId, todayTopic, todayModule, isReview
- *   masteredThisWeek, weeklyTarget, weeklyDots
+ * Returns all data needed for both the HomeScreen widgets and the full
+ * StudyPlanScreen week-by-week breakdown.
  */
 export function useStudyPlan(progress) {
   return useMemo(() => {
@@ -25,16 +21,17 @@ export function useStudyPlan(progress) {
 
     const board = getSelectedBoard()
 
-    // ── all topics for the selected board ────────────────────────────────────
+    // ── all topics for the selected board (module order) ─────────────────────
     const allTopicIds = MODULES
       .filter(m => !m.boards || m.boards.includes(board.id))
       .flatMap(m => m.topics)
       .filter(id => TOPICS[id])
 
-    const totalTopics   = allTopicIds.length
-    const masteredIds   = allTopicIds.filter(id => progress[id]?.mastered)
-    const masteredCount = masteredIds.length
-    const remainingCount = totalTopics - masteredCount
+    const totalTopics    = allTopicIds.length
+    const masteredIds    = allTopicIds.filter(id => progress[id]?.mastered)
+    const masteredCount  = masteredIds.length
+    const unmasteredIds  = allTopicIds.filter(id => !progress[id]?.mastered)
+    const remainingCount = unmasteredIds.length
 
     // ── exam countdown ────────────────────────────────────────────────────────
     let examDate     = null
@@ -58,7 +55,7 @@ export function useStudyPlan(progress) {
 
         neededPerDay = remainingCount > 0 ? (remainingCount / daysLeft).toFixed(1) : '0'
 
-        // Pace check: use earliest masteredAt as proxy start date
+        // Pace: use earliest masteredAt as proxy start
         const earliestMastery = masteredIds
           .map(id => progress[id]?.masteredAt)
           .filter(Boolean)
@@ -69,7 +66,7 @@ export function useStudyPlan(progress) {
           const actualRate  = masteredCount / daysElapsed
           onTrack = actualRate >= parseFloat(neededPerDay)
         } else {
-          onTrack = true // optimistic default before any mastery
+          onTrack = true
         }
       } else if (daysLeft <= 0) {
         examStatus = 'passed'
@@ -77,15 +74,10 @@ export function useStudyPlan(progress) {
     }
 
     // ── today's priority topic ────────────────────────────────────────────────
-    // 1) SR review due today
     const reviewDueIds = allTopicIds.filter(id => {
       const p = progress[id]
       return p?.mastered && p.nextReviewAt && p.nextReviewAt <= Date.now()
     })
-
-    // 2) Next unmastered in module order
-    const unmasteredIds = allTopicIds.filter(id => !progress[id]?.mastered)
-
     const todayTopicId = reviewDueIds[0] || unmasteredIds[0] || allTopicIds[0]
     const todayTopic   = TOPICS[todayTopicId]
     const todayModule  = todayTopicId
@@ -93,7 +85,7 @@ export function useStudyPlan(progress) {
       : null
     const isReview     = reviewDueIds.includes(todayTopicId)
 
-    // ── weekly progress (topics mastered in last 7 days) ─────────────────────
+    // ── weekly progress dots (topics mastered last 7 days) ────────────────────
     const oneWeekAgo       = Date.now() - 7 * 86400000
     const masteredThisWeek = masteredIds.filter(id => {
       const p = progress[id]
@@ -101,6 +93,71 @@ export function useStudyPlan(progress) {
     }).length
     const weeklyTarget = 5
     const weeklyDots   = Array.from({ length: weeklyTarget }, (_, i) => i < masteredThisWeek)
+
+    // ── full weekly plan ──────────────────────────────────────────────────────
+    let weeklyPlan = []
+
+    if (examDate && daysLeft > 0) {
+      // Find this Monday
+      const monday = new Date(today)
+      const dow = today.getDay() === 0 ? 6 : today.getDay() - 1 // 0=Mon
+      monday.setDate(today.getDate() - dow)
+
+      // How many topics per non-exam week
+      const studyWeeks    = Math.max(weeksLeft - 1, 1)
+      const topicsPerWeek = Math.max(1, Math.ceil(remainingCount / studyWeeks))
+
+      const topicPool = [...unmasteredIds] // consumed week by week
+      let weekStart   = new Date(monday)
+      let weekIndex   = 0
+      let currentWeekIndex = 0
+
+      while (weekStart < examDate && weekIndex < 52) {
+        const weekEnd = new Date(weekStart)
+        weekEnd.setDate(weekStart.getDate() + 6)
+
+        const isCurrent = today >= weekStart && today <= weekEnd
+        if (isCurrent) currentWeekIndex = weekIndex
+
+        // Last week before exam = exam week (review only)
+        const isExamWeek = weekEnd >= examDate
+
+        if (isExamWeek) {
+          weeklyPlan.push({
+            weekIndex,
+            weekStart: new Date(weekStart),
+            weekEnd:   new Date(weekEnd),
+            type:      'exam_week',
+            topicIds:  [],
+            status:    isCurrent ? 'current' : weekStart < today ? 'complete' : 'upcoming',
+            masteredInBatch: 0,
+            isComplete: false,
+          })
+          break
+        }
+
+        const batch = topicPool.splice(0, topicsPerWeek)
+        const masteredInBatch = batch.filter(id => progress[id]?.mastered).length
+        const isPast    = weekEnd < today
+        const isComplete = isPast || (batch.length > 0 && masteredInBatch === batch.length)
+
+        weeklyPlan.push({
+          weekIndex,
+          weekStart: new Date(weekStart),
+          weekEnd:   new Date(weekEnd),
+          type:      'study',
+          topicIds:  batch,
+          status:    isCurrent ? 'current' : isPast ? 'complete' : 'upcoming',
+          masteredInBatch,
+          isComplete,
+        })
+
+        weekStart.setDate(weekStart.getDate() + 7)
+        weekIndex++
+      }
+
+      weeklyPlan._currentWeekIndex = currentWeekIndex
+    }
 
     return {
       examDate,
@@ -119,6 +176,7 @@ export function useStudyPlan(progress) {
       masteredThisWeek,
       weeklyTarget,
       weeklyDots,
+      weeklyPlan,
     }
   }, [progress])
 }

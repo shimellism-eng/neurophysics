@@ -247,12 +247,13 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle }) {
                     masteryState={getState(topicId)}
                     index={i}
                     onTap={() => {
-                      if (topic.practicalId) {
-                        navigate(`/practical/${topic.practicalId}`)
-                      } else if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) {
-                        // Has lesson content (new 9-step flow OR legacy steps)
-                        // Always go to lesson — Knowledge Check is accessible from SessionClose at end
+                      if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) {
+                        // Has lesson content — always go to lesson
+                        // (practicalId on these topics links the RP via the ⚡ button, not the main tap)
                         navigate(`/lesson/${topicId}`)
+                      } else if (topic.practicalId) {
+                        // Practical-only topic (stub in topics-practicals.jsx — no lesson)
+                        navigate(`/practical/${topic.practicalId}`)
                       } else {
                         navigate(`/practice/${topicId}`)
                       }

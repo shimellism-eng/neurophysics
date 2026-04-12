@@ -208,8 +208,10 @@ export default function LessonPlayer() {
   const savedProgress = (() => {
     try {
       const s = JSON.parse(localStorage.getItem(`np_lesson_progress_${id}`) || 'null')
-      if (s && s.step > 0) return s
-      return null
+      if (!s || s.step <= 0) return null
+      // Don't resume to the final done/completion step — start fresh instead
+      // totalSteps isn't known yet here, so we guard in the resume handler
+      return s
     } catch { return null }
   })()
 
@@ -294,6 +296,11 @@ export default function LessonPlayer() {
   // Save lesson progress whenever step changes
   useEffect(() => {
     if (step === 0) return // don't save step 0 (fresh start)
+    if (step >= totalSteps - 1) {
+      // Reached the done/completion step — clear saved progress so next visit starts fresh
+      try { localStorage.removeItem(`np_lesson_progress_${id}`) } catch {}
+      return
+    }
     try {
       localStorage.setItem(`np_lesson_progress_${id}`, JSON.stringify({ step, ts: Date.now() }))
     } catch {}
@@ -502,8 +509,14 @@ export default function LessonPlayer() {
                 className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
                 style={{ background: topic.moduleColor, color: '#fff' }}
                 onClick={() => {
-                  // Clamp saved step to valid range in case topic steps changed
-                  setStep(Math.min(savedProgress.step, totalSteps - 1))
+                  // Clamp saved step; if it's the done step, restart from 0
+                  const resumeStep = Math.min(savedProgress.step, totalSteps - 1)
+                  if (resumeStep >= totalSteps - 1) {
+                    localStorage.removeItem(`np_lesson_progress_${id}`)
+                    setStep(0)
+                  } else {
+                    setStep(resumeStep)
+                  }
                   setShowResume(false)
                   setShowIntro(false)
                 }}

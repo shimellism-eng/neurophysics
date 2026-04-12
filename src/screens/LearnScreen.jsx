@@ -474,8 +474,8 @@ export default function LearnScreen() {
                         minHeight: 56,
                       }}
                       onClick={() => {
-                        if (topic.practicalId) navigate(`/practical/${topic.practicalId}`)
-                        else if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) navigate(`/lesson/${id}`)
+                        if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) navigate(`/lesson/${id}`)
+                        else if (topic.practicalId) navigate(`/practical/${topic.practicalId}`)
                         else navigate(`/practice/${id}`)
                       }}
                       whileTap={{ scale: 0.97 }}

@@ -223,12 +223,12 @@ export default function StudyPlanScreen() {
       style={{ background: '#080f1e', paddingBottom: 32 }}>
 
       {/* Header */}
-      <div className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10"
-        style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+      <div className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10 shrink-0"
+        style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)' }}>
         <button onClick={() => navigate(-1)}
-          className="w-9 h-9 rounded-full flex items-center justify-center"
-          style={{ background: 'rgba(255,255,255,0.06)' }}>
-          <ChevronLeft size={18} color="#94a3b8" />
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
+          <ChevronLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1">
           <h1 className="font-bold" style={{ color: '#f8fafc', fontSize: 18, letterSpacing: '-0.02em' }}>

@@ -128,7 +128,7 @@ function ModuleSection({ module, topics, progress, boardId }) {
                   className="w-full flex items-center gap-3 px-4 py-3 text-left"
                   style={{
                     background: i % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent',
-                    borderTop: '1px solid rgba(255,255,255,0.05)',
+                    borderTop: '0.75px solid rgba(255,255,255,0.05)',
                     minHeight: 52,
                   }}
                   onClick={() => handleTopicTap(topic)}
@@ -204,20 +204,25 @@ export default function SpecChecklist() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#0a0a0f', paddingBottom: 90 }}
+      style={{ background: '#080f1e', paddingBottom: 90 }}
     >
       {/* Header */}
       <div
-        className="flex items-center gap-3 px-4 pt-12 pb-4 sticky top-0 z-10"
-        style={{ background: '#0a0a0f', borderBottom: '1px solid rgba(255,255,255,0.07)' }}
+        className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10 shrink-0"
+        style={{
+          background: 'rgba(8,15,30,0.96)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
+        }}
       >
         <button
-          className="w-10 h-10 flex items-center justify-center rounded-full"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)' }}
+          className="w-11 h-11 flex items-center justify-center rounded-[12px] shrink-0"
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
           onClick={() => navigate(-1)}
           aria-label="Go back"
         >
-          <ChevronLeft size={20} color="#f8fafc" />
+          <ChevronLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1">
           <h1 className="font-display font-bold text-lg" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>

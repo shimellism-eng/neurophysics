@@ -95,7 +95,7 @@ function applyFontSize(size) {
 
 // ── Background theme (SEN: coloured backgrounds) ────────────────────────────
 const BG_THEMES = {
-  dark:  { bg: '#0b1121', card: 'rgba(18,26,47,0.9)', text: '#f8fafc', label: 'Dark (default)' },
+  dark:  { bg: '#080f1e', card: 'rgba(15,22,41,0.95)', text: '#f8fafc', label: 'Dark (default)' },
   cream: { bg: '#f5f0e8', card: 'rgba(245,240,232,0.95)', text: '#1a1a1a', label: 'Cream' },
   blue:  { bg: '#e8f0f8', card: 'rgba(232,240,248,0.95)', text: '#1a1a1a', label: 'Soft Blue' },
 }
@@ -502,7 +502,7 @@ export default function SettingsScreen() {
   ]
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#080f1e' }}>
       <div className="px-5 pt-6 pb-4">
         <h1 className="text-2xl font-bold" style={{ color: '#f8fafc' }}>Settings</h1>
         <p className="text-sm mt-1" style={{ color: '#a8b8cc' }}>Customise your experience</p>
@@ -511,8 +511,8 @@ export default function SettingsScreen() {
       {/* Profile card */}
       <div className="px-5 mb-6">
         <motion.div
-          className="rounded-[24px] p-5"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          className="rounded-[20px] p-5"
+          style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -560,8 +560,8 @@ export default function SettingsScreen() {
                     key={em}
                     className="w-10 h-10 rounded-[12px] text-xl flex items-center justify-center"
                     style={{
-                      background: editAvatar === em ? 'rgba(99,102,241,0.2)' : 'rgba(11,17,33,0.8)',
-                      border: editAvatar === em ? '2px solid #6366f1' : '0.75px solid #1d293d',
+                      background: editAvatar === em ? 'rgba(99,102,241,0.2)' : 'rgba(255,255,255,0.06)',
+                      border: editAvatar === em ? '2px solid #6366f1' : '0.75px solid rgba(255,255,255,0.1)',
                       transform: editAvatar === em ? 'scale(1.1)' : 'scale(1)',
                       transition: 'all 0.15s',
                     }}
@@ -582,7 +582,7 @@ export default function SettingsScreen() {
                   placeholder="Your name"
                   maxLength={30}
                   className="flex-1 px-3 py-2.5 rounded-[10px] text-sm outline-none"
-                  style={{ background: '#1d293d', color: '#f8fafc', border: '0.75px solid #2d3e55' }}
+                  style={{ background: 'rgba(255,255,255,0.06)', color: '#f8fafc', border: '0.75px solid rgba(255,255,255,0.1)' }}
                   aria-label="Enter your name"
                 />
                 <button
@@ -604,7 +604,7 @@ export default function SettingsScreen() {
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
           Exam Date
         </div>
-        <div className="rounded-[16px] px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+        <div className="rounded-[16px] px-4 py-3" style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
           <div className="flex items-center gap-2 mb-2">
             <CalendarDays size={15} color="#6366f1" />
             <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Your exam date</span>
@@ -621,9 +621,9 @@ export default function SettingsScreen() {
             }}
             className="w-full px-3 py-2.5 rounded-[10px] text-sm outline-none"
             style={{
-              background: '#1d293d',
+              background: 'rgba(255,255,255,0.06)',
               color: '#f8fafc',
-              border: '0.75px solid #2d3e55',
+              border: '0.75px solid rgba(255,255,255,0.1)',
               colorScheme: 'dark',
             }}
           />
@@ -645,7 +645,7 @@ export default function SettingsScreen() {
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
           Exam Board
         </div>
-        <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+        <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
           <div className="flex items-center gap-2 mb-3">
             <GraduationCap size={15} color="#6366f1" />
             <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Your exam board</span>
@@ -661,7 +661,7 @@ export default function SettingsScreen() {
                   className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
                   style={{
                     background: isSelected ? `${board.color}18` : 'rgba(255,255,255,0.03)',
-                    border: isSelected ? `1.5px solid ${board.color}60` : '1px solid rgba(255,255,255,0.08)',
+                    border: isSelected ? `1.5px solid ${board.color}60` : '0.75px solid rgba(255,255,255,0.08)',
                     transition: 'all 0.15s ease',
                   }}
                   whileTap={{ scale: 0.97 }}
@@ -700,14 +700,14 @@ export default function SettingsScreen() {
             <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
               {section.title}
             </div>
-            <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
+            <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid rgba(255,255,255,0.08)' }}>
               {section.items.map((item, ii) => (
                 <button
                   key={item.label}
                   className="w-full flex items-center gap-3 px-4 py-4 text-left"
                   style={{
-                    background: 'rgba(18,26,47,0.9)',
-                    borderBottom: ii < section.items.length - 1 || (section.title === 'Notifications' && showTimePicker) ? '0.75px solid #1d293d' : 'none',
+                    background: 'rgba(15,22,41,0.95)',
+                    borderBottom: ii < section.items.length - 1 || (section.title === 'Notifications' && showTimePicker) ? '0.75px solid rgba(255,255,255,0.06)' : 'none',
                   }}
                   onClick={item.onPress || item.onToggle || undefined}
                   aria-label={item.label}
@@ -732,7 +732,7 @@ export default function SettingsScreen() {
               {section.title === 'Accessibility' && (
                 <div
                   className="flex items-center justify-between px-4 py-4"
-                  style={{ background: 'rgba(18,26,47,0.9)', borderTop: '0.75px solid #1d293d' }}
+                  style={{ background: 'rgba(15,22,41,0.95)', borderTop: '0.75px solid rgba(255,255,255,0.06)' }}
                 >
                   <div className="flex-1 min-w-0 pr-4">
                     <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>Background Colour</div>
@@ -750,7 +750,7 @@ export default function SettingsScreen() {
                             background: t.bg,
                             border: (prefs.bgTheme || 'dark') === key
                               ? '2px solid #6366f1'
-                              : '2px solid #2d3e55',
+                              : '2px solid rgba(255,255,255,0.12)',
                             boxShadow: (prefs.bgTheme || 'dark') === key
                               ? '0 0 0 1px #6366f1'
                               : 'none',
@@ -778,7 +778,7 @@ export default function SettingsScreen() {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.22 }}
-                    style={{ overflow: 'hidden', background: 'rgba(11,17,33,0.95)' }}
+                    style={{ overflow: 'hidden', background: 'rgba(8,15,30,0.98)' }}
                   >
                     <div className="px-4 py-4 flex flex-col gap-3">
                       <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#a8b8cc' }}>
@@ -794,7 +794,7 @@ export default function SettingsScreen() {
                             aria-label="Increase hour"
                           >▲</button>
                           <div className="w-14 h-11 rounded-[10px] flex items-center justify-center text-xl font-bold tabular-nums"
-                            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #2d3e55', color: '#f8fafc' }}>
+                            style={{ background: 'rgba(255,255,255,0.06)', border: '0.75px solid rgba(255,255,255,0.1)', color: '#f8fafc' }}>
                             {String(reminderHour).padStart(2, '0')}
                           </div>
                           <button
@@ -814,7 +814,7 @@ export default function SettingsScreen() {
                             aria-label="Increase minute"
                           >▲</button>
                           <div className="w-14 h-11 rounded-[10px] flex items-center justify-center text-xl font-bold tabular-nums"
-                            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #2d3e55', color: '#f8fafc' }}>
+                            style={{ background: 'rgba(255,255,255,0.06)', border: '0.75px solid rgba(255,255,255,0.1)', color: '#f8fafc' }}>
                             {String(reminderMinute).padStart(2, '0')}
                           </div>
                           <button
@@ -851,8 +851,8 @@ export default function SettingsScreen() {
           <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
             Account
           </div>
-          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
-            <div className="flex items-center gap-3 px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)', borderBottom: '0.75px solid #1d293d' }}>
+          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid rgba(255,255,255,0.08)' }}>
+            <div className="flex items-center gap-3 px-4 py-3" style={{ background: 'rgba(15,22,41,0.95)', borderBottom: '0.75px solid rgba(255,255,255,0.06)' }}>
               <div className="w-2 h-2 rounded-full" style={{ background: user?.isGuest ? '#f59e0b' : '#00bc7d' }} />
               <div className="text-xs" style={{ color: '#a8b8cc' }}>
                 {user?.isGuest
@@ -863,7 +863,7 @@ export default function SettingsScreen() {
             </div>
             <button
               className="w-full flex items-center gap-3 px-4 py-4 text-left"
-              style={{ background: 'rgba(18,26,47,0.9)', opacity: signingOut ? 0.6 : 1, transition: 'opacity 0.15s' }}
+              style={{ background: 'rgba(15,22,41,0.95)', opacity: signingOut ? 0.6 : 1, transition: 'opacity 0.15s' }}
               onClick={signingOut ? undefined : handleSignOut}
               disabled={signingOut}
               aria-label="Sign out"
@@ -897,7 +897,7 @@ export default function SettingsScreen() {
             {!showDeleteConfirm ? (
               <button
                 className="w-full flex items-center gap-3 px-4 py-4 text-left"
-                style={{ background: 'rgba(18,26,47,0.9)' }}
+                style={{ background: 'rgba(15,22,41,0.95)' }}
                 onClick={() => setShowDeleteConfirm(true)}
                 aria-label="Clear all my data"
               >
@@ -923,7 +923,7 @@ export default function SettingsScreen() {
                   </button>
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-semibold"
-                    style={{ background: 'rgba(255,255,255,0.07)', color: '#a8b8cc', border: '0.75px solid #1d293d' }}
+                    style={{ background: 'rgba(255,255,255,0.07)', color: '#a8b8cc', border: '0.75px solid rgba(255,255,255,0.08)' }}
                     onClick={() => setShowDeleteConfirm(false)}
                     aria-label="Cancel data deletion"
                   >
@@ -941,7 +941,7 @@ export default function SettingsScreen() {
         <motion.div
           className="fixed bottom-24 left-4 right-4 py-3 px-4 rounded-[14px] text-sm font-medium text-center"
           style={{
-            background: 'rgba(18,26,47,0.97)',
+            background: 'rgba(15,22,41,0.98)',
             border: `0.75px solid ${toast.color}60`,
             color: toast.color,
             boxShadow: '0 4px 24px rgba(0,0,0,0.4)',

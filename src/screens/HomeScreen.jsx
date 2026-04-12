@@ -191,7 +191,7 @@ function InsightsPanel({ insights }) {
       {/* Overall accuracy */}
       {insights.overallAccuracy !== null && (
         <div className="rounded-[22px] px-4 py-4"
-          style={{ background: 'rgba(15,22,41,0.95)', border: '1px solid rgba(255,255,255,0.08)' }}>
+          style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-bold" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Overall accuracy
@@ -216,7 +216,7 @@ function InsightsPanel({ insights }) {
       {/* Strong topics — wins first */}
       {insights.strongTopics.length > 0 && (
         <div className="rounded-[22px] px-4 py-4"
-          style={{ background: 'rgba(34,197,94,0.06)', border: '1px solid rgba(34,197,94,0.15)' }}>
+          style={{ background: 'rgba(34,197,94,0.06)', border: '0.75px solid rgba(34,197,94,0.15)' }}>
           <div className="text-sm font-bold mb-3" style={{ color: '#4ade80' }}>
             Strong areas
           </div>
@@ -241,7 +241,7 @@ function InsightsPanel({ insights }) {
       {/* Keep practising — amber not red */}
       {insights.weakTopics.length > 0 && (
         <div className="rounded-[22px] px-4 py-4"
-          style={{ background: 'rgba(251,191,36,0.06)', border: '1px solid rgba(251,191,36,0.2)' }}>
+          style={{ background: 'rgba(251,191,36,0.06)', border: '0.75px solid rgba(251,191,36,0.2)' }}>
           <div className="text-sm font-bold mb-3" style={{ color: '#fbbf24' }}>
             Keep practising
           </div>
@@ -266,7 +266,7 @@ function InsightsPanel({ insights }) {
       {/* Suggestions */}
       {insights.suggestions.length > 0 && (
         <div className="rounded-[22px] px-4 py-4"
-          style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}>
+          style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.2)' }}>
           <div className="text-sm font-bold mb-3" style={{ color: '#818cf8' }}>
             Recommended next
           </div>
@@ -503,7 +503,7 @@ export default function HomeScreen() {
             background: streak > 0
               ? 'linear-gradient(135deg, rgba(249,115,22,0.18) 0%, rgba(15,22,41,0.97) 60%)'
               : 'rgba(255,255,255,0.03)',
-            border: streak > 0 ? '1px solid rgba(249,115,22,0.35)' : '1px solid rgba(255,255,255,0.07)',
+            border: streak > 0 ? '0.75px solid rgba(249,115,22,0.35)' : '0.75px solid rgba(255,255,255,0.07)',
             boxShadow: streak > 0 ? '0 4px 32px rgba(249,115,22,0.1)' : 'none',
           }}
           initial={{ opacity: 0, y: 16 }}
@@ -560,7 +560,7 @@ export default function HomeScreen() {
             transition={{ delay: 0.28 }}
           >
             <div className="rounded-[22px] px-5 py-5"
-              style={{ background: 'rgba(99,102,241,0.07)', border: '1px solid rgba(99,102,241,0.2)' }}>
+              style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.2)' }}>
               <div className="flex items-center gap-2 mb-1">
                 <Calendar size={13} color="#818cf8" />
                 <span style={{ fontSize: 13, fontWeight: 700, color: '#818cf8' }}>
@@ -624,7 +624,7 @@ export default function HomeScreen() {
             className="w-full rounded-[22px] flex items-center justify-between px-5 py-4"
             style={{
               background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(99,102,241,0.08) 100%)',
-              border: '1px solid rgba(99,102,241,0.35)',
+              border: '0.75px solid rgba(99,102,241,0.35)',
               boxShadow: '0 4px 24px rgba(99,102,241,0.12)',
             }}
             onClick={() => navigate('/timed-paper')}
@@ -632,7 +632,7 @@ export default function HomeScreen() {
           >
             <div className="flex items-center gap-3.5">
               <div className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
-                style={{ background: 'rgba(99,102,241,0.18)', border: '1px solid rgba(99,102,241,0.35)' }}>
+                style={{ background: 'rgba(99,102,241,0.18)', border: '0.75px solid rgba(99,102,241,0.35)' }}>
                 <Clock size={22} color="#818cf8" strokeWidth={1.8} />
               </div>
               <div className="text-left">

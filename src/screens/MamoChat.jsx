@@ -260,15 +260,20 @@ export default function MamoChat() {
   }, [input, streaming, messages, topicLabel])
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
       {/* ── Header ─────────────────────────────────────────────────────────── */}
       <div
-        className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3"
-        style={{ borderBottom: '0.75px solid #1d293d' }}
+        className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3 sticky top-0 z-10"
+        style={{
+          background: 'rgba(8,15,30,0.96)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
+        }}
       >
         <button
           className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
           onClick={() => navigate(-1)}
           aria-label="Go back"
         >
@@ -292,7 +297,7 @@ export default function MamoChat() {
         </div>
         <button
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
           onClick={clearThread}
           title="Clear conversation"
         >
@@ -337,10 +342,10 @@ export default function MamoChat() {
                 style={{
                   background: msg.role === 'user'
                     ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
-                    : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(18,26,47,0.9)',
+                    : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(15,22,41,0.95)',
                   border: msg.role === 'user' ? 'none'
                     : msg.isError ? '0.75px solid rgba(239,68,68,0.3)'
-                    : '0.75px solid #1d293d',
+                    : '0.75px solid rgba(255,255,255,0.08)',
                   color: '#f8fafc',
                   boxShadow: msg.role === 'user' ? '0 4px 16px rgba(99,102,241,0.3)' : 'none',
                 }}
@@ -358,7 +363,7 @@ export default function MamoChat() {
               {msg.streaming && !msg.content && (
                 <div
                   className="rounded-[16px] px-4 py-3 mt-1"
-                  style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+                  style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}
                 >
                   <TypingDots />
                 </div>
@@ -422,7 +427,7 @@ export default function MamoChat() {
       {messages.length > 1 && (
         <div
           className="px-4 py-2 shrink-0 flex gap-2 overflow-x-auto"
-          style={{ borderTop: '0.75px solid #1d293d', background: 'rgba(11,17,33,0.9)' }}
+          style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', background: 'rgba(8,15,30,0.97)' }}
         >
           {getStarters(topicLabel).map((q, i) => (
             <button
@@ -444,14 +449,14 @@ export default function MamoChat() {
       {/* ── Input bar ────────────────────────────────────────────────────────── */}
       <div
         className="px-4 py-3 shrink-0 flex gap-2 items-end"
-        style={{ borderTop: '0.75px solid #1d293d', background: 'rgba(11,17,33,0.95)' }}
+        style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', background: 'rgba(8,15,30,0.98)' }}
       >
         <textarea
           ref={inputRef}
           className="flex-1 px-4 py-3 rounded-[16px] text-sm outline-none resize-none"
           style={{
-            background: 'rgba(18,26,47,0.9)',
-            border: '0.75px solid #1d293d',
+            background: 'rgba(255,255,255,0.06)',
+            border: '0.75px solid rgba(255,255,255,0.1)',
             color: '#f8fafc',
             minHeight: 48,
             maxHeight: 120,
@@ -475,7 +480,7 @@ export default function MamoChat() {
           style={{
             background: input.trim() && !streaming
               ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
-              : '#1d293d',
+              : 'rgba(255,255,255,0.08)',
             boxShadow: input.trim() && !streaming ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
           }}
           onClick={() => sendMessage()}

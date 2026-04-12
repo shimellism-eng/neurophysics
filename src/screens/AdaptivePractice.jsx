@@ -503,7 +503,7 @@ export default function AdaptivePractice() {
   }
 
   if (!topic) return (
-    <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc', background: '#0b1121' }}>
+    <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc', background: '#080f1e' }}>
       Topic not found
     </div>
   )
@@ -512,11 +512,11 @@ export default function AdaptivePractice() {
   if (showDone || sessionCount >= 20) {
     const pct = sessionCount > 0 ? Math.round((sessionCorrect / sessionCount) * 100) : 0
     return (
-      <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+      <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
         <div className="px-5 pt-5">
           <button onClick={() => { clearSession(); navigate(-1) }}
             className="w-11 h-11 rounded-[12px] flex items-center justify-center"
-            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+            style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
             <ArrowLeft size={18} color="#a8b8cc" />
           </button>
         </div>
@@ -556,14 +556,19 @@ export default function AdaptivePractice() {
 
   // ── Practice screen ─────────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
 
       {/* Header */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3"
-        style={{ borderBottom: '0.75px solid #1d293d' }}>
+      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
+        style={{
+          background: 'rgba(8,15,30,0.96)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
+        }}>
         <button onClick={() => navigate(-1)}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">

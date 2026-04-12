@@ -27,7 +27,6 @@ const TimedPaper        = lazy(() => import('./screens/TimedPaper'))
 const PaperResults      = lazy(() => import('./screens/PaperResults'))
 const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
-const ShareProgressScreen = lazy(() => import('./screens/ShareProgressScreen'))
 const AdaptivePractice   = lazy(() => import('./screens/AdaptivePractice'))
 const ConsentScreen     = lazy(() => import('./screens/ConsentScreen'))
 const LandingScreen     = lazy(() => import('./screens/LandingScreen'))
@@ -180,7 +179,7 @@ function FloatingMamo() {
 // Routes that show the bottom nav
 const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
-const PUBLIC_ROUTES = ['/', '/auth', '/privacy', '/terms', '/share', '/consent']
+const PUBLIC_ROUTES = ['/', '/auth', '/privacy', '/terms', '/consent']
 
 // True when running inside the Capacitor native shell (iOS / Android)
 // Web visitors get the landing page; app installs go straight to /auth
@@ -269,7 +268,6 @@ function AppShell() {
             <Route path="/consent" element={<ConsentScreen />} />
             <Route path="/privacy" element={<PrivacyPolicyScreen />} />
             <Route path="/terms" element={<TermsScreen />} />
-            <Route path="/share" element={<ShareProgressScreen />} />
             <Route path="/practice/:topicId" element={<AdaptivePractice />} />
             <Route path="/spec-checklist" element={<SpecChecklist />} />
             <Route path="/study-plan" element={<StudyPlanScreen />} />

@@ -203,7 +203,7 @@ export default function SpecChecklist() {
 
   return (
     <div
-      className="flex flex-col min-h-screen"
+      className="flex flex-col h-full overflow-y-auto"
       style={{ background: '#0a0a0f', paddingBottom: 90 }}
     >
       {/* Header */}

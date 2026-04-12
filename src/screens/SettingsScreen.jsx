@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, Share2, GraduationCap } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap, CalendarDays } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
@@ -281,34 +281,6 @@ export default function SettingsScreen() {
     showToast(next ? 'Sound effects on' : 'Sound effects off', next ? '#10b981' : '#a8b8cc')
   }
 
-  // ── Share Progress
-  const handleShareProgress = () => {
-    try {
-      const progress = JSON.parse(localStorage.getItem('np_progress') || '{}')
-      const stats = JSON.parse(localStorage.getItem('np_stats') || '{}')
-      const masteredIds = Object.entries(progress)
-        .filter(([, p]) => p.mastered)
-        .map(([id]) => id)
-      const payload = {
-        name: profile.name || user?.user_metadata?.full_name || 'Physics Learner',
-        avatar: profile.avatar || '🧠',
-        masteredIds,
-        streak: stats.streak || 0,
-        xp: stats.xp || 0,
-      }
-      const encoded = btoa(JSON.stringify(payload))
-      const url = `${window.location.origin}${window.location.pathname}#/share?d=${encoded}`
-      if (navigator.share) {
-        navigator.share({ title: 'My GCSE Physics Progress', url })
-      } else {
-        navigator.clipboard.writeText(url).then(() => showToast('Progress link copied! ✓', '#10b981'))
-          .catch(() => showToast('Copy failed — try again', '#ef4444'))
-      }
-    } catch {
-      showToast('Could not generate link', '#ef4444')
-    }
-  }
-
   // ── Daily Reminders
   const [showTimePicker, setShowTimePicker] = useState(false)
   const [reminderHour, setReminderHour] = useState(() => prefs.reminderHour ?? 20)
@@ -498,18 +470,6 @@ export default function SettingsScreen() {
       ],
     },
     {
-      title: 'Share',
-      items: [
-        {
-          icon: Share2,
-          label: 'Share My Progress',
-          hint: 'Copy a link to your progress — send to a teacher or parent',
-          chevron: true,
-          onPress: handleShareProgress,
-        },
-      ],
-    },
-    {
       title: 'Legal',
       items: [
         {
@@ -637,6 +597,47 @@ export default function SettingsScreen() {
             </div>
           )}
         </motion.div>
+      </div>
+
+      {/* ── Exam Date ── */}
+      <div className="px-5 mb-5">
+        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
+          Exam Date
+        </div>
+        <div className="rounded-[16px] px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+          <div className="flex items-center gap-2 mb-2">
+            <CalendarDays size={15} color="#6366f1" />
+            <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Your exam date</span>
+          </div>
+          <input
+            type="date"
+            value={profile.examDate || ''}
+            min={new Date().toISOString().split('T')[0]}
+            onChange={e => {
+              const updated = { ...profile, examDate: e.target.value }
+              setProfile(updated)
+              saveProfile(updated)
+              showToast('Exam date saved ✓', '#10b981')
+            }}
+            className="w-full px-3 py-2.5 rounded-[10px] text-sm outline-none"
+            style={{
+              background: '#1d293d',
+              color: '#f8fafc',
+              border: '0.75px solid #2d3e55',
+              colorScheme: 'dark',
+            }}
+          />
+          {profile.examDate && (
+            <p className="text-xs mt-2" style={{ color: '#a8b8cc' }}>
+              {(() => {
+                const d = new Date(profile.examDate)
+                const days = Math.ceil((d - new Date().setHours(0,0,0,0)) / 86400000)
+                if (days <= 0) return 'Exam date has passed'
+                return `${days} day${days === 1 ? '' : 's'} until your exam`
+              })()}
+            </p>
+          )}
+        </div>
       </div>
 
       {/* ── Exam Board Picker ── */}

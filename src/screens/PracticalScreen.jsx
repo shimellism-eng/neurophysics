@@ -66,70 +66,107 @@ const Spring = ({ x, y, length, coils = 7 }) => {
 function SetupSHC() {
   const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [time, setTime] = useState(0)
-  const mass = 1.0, power = 30, shc = 385, t0 = 20
-  const dT = (power * time / (mass * shc)).toFixed(1)
+  // Aluminium block: SHC = 900 J/kg°C, mass = 1 kg, 30W heater
+  const mass = 1.0, power = 30, shc = 900, t0 = 20
+  const dT   = (power * time / (mass * shc)).toFixed(1)
   const temp = (t0 + parseFloat(dT)).toFixed(1)
-  const fill = Math.min(52, parseFloat(dT) * 1.6)
+  // Thermometer fill: 0°C rise → 0px; 20°C rise → 46px
+  const fill = Math.min(46, parseFloat(dT) * 2.3)
+
+  // Heater terminal wire x-positions (both exit from top of heater hole)
+  const tA = 86   // left  heater terminal x
+  const tB = 99   // right heater terminal x
+  const blockTop = 92
 
   return (
     <div className="flex flex-col gap-3">
-      <svg viewBox="0 0 280 195" width="100%" style={{ display: 'block' }}>
-        {/* Insulating jacket (dashed) */}
-        <rect x={68} y={52} width={134} height={108} rx={8} fill="none"
-          stroke="#fbbf24" strokeWidth={1} strokeDasharray="4 3"/>
-        <Lbl x={135} y={172} t="Insulating jacket" c="#fbbf24" s={8}/>
+      <svg viewBox="0 0 300 215" width="100%" style={{ display: 'block' }}>
 
-        {/* Metal block */}
-        <rect x={78} y={60} width={114} height={90} rx={4} fill="#1e2d1f" stroke="#7c9a88" strokeWidth={1.5}/>
-        <text x={135} y={100} textAnchor="middle" fontSize={9} fill="#6ee7b7" fontWeight="600">Cu</text>
-        <text x={135} y={112} textAnchor="middle" fontSize={7} fill="#a7f3d0">Copper block</text>
-        <text x={135} y={122} textAnchor="middle" fontSize={6.5} fill="#6ee7b7">m = 1 kg</text>
+        {/* ── Power Supply (left) ── */}
+        <PSU x={5} y={76} label="12V"/>
+        <Lbl x={25} y={72} t="POWER SUPPLY" c="#a5b4fc" s={7}/>
 
-        {/* Immersion heater hole + element */}
-        <rect x={98} y={60} width={20} height={38} rx={2} fill="#0b1121" stroke="#f97316" strokeWidth={1}/>
-        <rect x={103} y={63} width={10} height={32} rx={2} fill="#f97316" fillOpacity={0.5}/>
-        <Lbl x={108} y={50} t="Heater (30W)" c="#f97316" s={8}/>
+        {/* ── Insulating foam mat (below block) ── */}
+        <rect x={63} y={170} width={128} height={7} rx={2}
+          fill="#fef3c7" stroke="#fbbf24" strokeWidth={1}/>
+        <Lbl x={127} y={185} t="Insulating mat / foam" c="#92400e" s={7}/>
 
-        {/* Thermometer glass tube */}
-        <rect x={153} y={58} width={10} height={46} rx={5} fill="#0b1121" stroke="#94a3b8" strokeWidth={1}/>
-        {/* Scale marks on thermometer */}
+        {/* ── Aluminium block ── */}
+        <rect x={68} y={blockTop} width={120} height={78} rx={3}
+          fill="#4b5563" fillOpacity={0.22} stroke="#9ca3af" strokeWidth={2}/>
+        <Lbl x={138} y={148} t="ALUMINIUM BLOCK" c="#9ca3af" s={9}/>
+        <Lbl x={138} y={161} t="m = 1 kg" c="#6b7280" s={7}/>
+
+        {/* ── Heater hole (drilled into block from top, left side) ── */}
+        <rect x={80} y={blockTop} width={22} height={52} rx={2}
+          fill="#0b1121" stroke="#f97316" strokeWidth={1.5}/>
+        {/* Heater element inside hole */}
+        <rect x={83} y={blockTop + 3} width={16} height={46} rx={2}
+          fill="#f97316" fillOpacity={0.55}/>
+        {/* Wire connector caps protruding above block top */}
+        <rect x={83} y={blockTop - 6} width={6} height={7} rx={1}
+          fill="#334155" stroke="#94a3b8" strokeWidth={1}/>
+        <rect x={96} y={blockTop - 6} width={6} height={7} rx={1}
+          fill="#334155" stroke="#94a3b8" strokeWidth={1}/>
+        {/* Heater label (left side callout) */}
+        <line x1={80} y1={blockTop + 20} x2={62} y2={blockTop + 20}
+          stroke="#f97316" strokeWidth={0.8} strokeDasharray="2 2"/>
+        <Lbl x={60} y={blockTop + 24} t="HEATER" c="#f97316" s={8} a="end"/>
+        <Lbl x={60} y={blockTop + 34} t="30 W" c="#f97316" s={7} a="end"/>
+
+        {/* ── Thermometer (drilled into block from top, right side) ── */}
+        {/* Stem exits above block */}
+        <rect x={152} y={blockTop - 14} width={8} height={16} rx={3}
+          fill="#0b1121" stroke="#94a3b8" strokeWidth={1}/>
+        {/* Main tube inside block */}
+        <rect x={152} y={blockTop} width={8} height={46} rx={3}
+          fill="#0b1121" stroke="#94a3b8" strokeWidth={1}/>
+        {/* Scale marks */}
         {[0,1,2,3,4].map(i => (
-          <line key={i} x1={153} y1={66 + i*9} x2={157} y2={66 + i*9} stroke="#475569" strokeWidth={0.6}/>
+          <line key={i} x1={152} y1={blockTop + 7 + i * 8} x2={155} y2={blockTop + 7 + i * 8}
+            stroke="#475569" strokeWidth={0.6}/>
         ))}
-        {/* Mercury column */}
-        <rect x={155.5} y={62 + (44 - fill)} width={5} height={fill} rx={2} fill="#ef4444" fillOpacity={0.9}/>
-        {/* Bulb */}
-        <ellipse cx={158} cy={108} rx={6} ry={5} fill="#ef4444" fillOpacity={0.9}/>
-        <Lbl x={175} y={85} t={`${temp}°C`} c="#ef4444" s={10}/>
-        <Lbl x={175} y={97} t="Thermometer" c="#64748b" s={8}/>
+        {/* Mercury column (rises from bottom of tube) */}
+        <rect x={153.5} y={blockTop + 3 + (44 - fill)} width={5} height={fill} rx={2}
+          fill="#ef4444" fillOpacity={0.9}/>
+        {/* Bulb at bottom */}
+        <ellipse cx={156} cy={blockTop + 50} rx={6} ry={5} fill="#ef4444" fillOpacity={0.9}/>
+        {/* Temperature readout (right side) */}
+        <Lbl x={170} y={blockTop + 10} t={`${temp} °C`} c="#ef4444" s={10} a="start"/>
+        <Lbl x={170} y={blockTop + 22} t="THERMOMETER" c="#64748b" s={7} a="start"/>
 
-        {/* PSU */}
-        <PSU x={8} y={65}/>
+        {/* ──────────────────────────────────────────── */}
+        {/* CIRCUIT WIRING                               */}
+        {/* Series path: PSU+ → ammeter → terminal B    */}
+        {/* Return path: terminal A → PSU−              */}
+        {/* Voltmeter: in parallel across both terminals */}
+        {/* ──────────────────────────────────────────── */}
 
-        {/* Circuit top rail: PSU+ → top of block (heater) */}
-        <W x1={44} y1={68} x2={68} y2={68}/>
-        <W x1={68} y1={68} x2={68} y2={30}/>
-        <W x1={68} y1={30} x2={188} y2={30}/>
-        {/* Ammeter */}
-        <A cx={210} cy={30}/>
-        <W x1={222} y1={30} x2={258} y2={30}/>
-        <W x1={258} y1={30} x2={258} y2={68}/>
-        <W x1={258} y1={68} x2={192} y2={68}/>
-        <W x1={192} y1={68} x2={192} y2={60}/>
+        {/* PSU+ wire: up left rail → top rail → ammeter → right corner → mid-level → terminal B */}
+        <W x1={9}   y1={76} x2={9}   y2={28}/>   {/* left rail up */}
+        <W x1={9}   y1={28} x2={190} y2={28}/>   {/* top rail to ammeter */}
+        <A cx={205} cy={28}/>
+        <Lbl x={205} y={14} t="AMMETER" c="#10b981" s={8}/>
+        <W x1={220} y1={28} x2={258} y2={28}/>   {/* ammeter → right corner */}
+        <W x1={258} y1={28} x2={258} y2={52}/>   {/* right side down */}
+        <W x1={258} y1={52} x2={tB}  y2={52}/>   {/* across to terminal B level */}
+        <W x1={tB}  y1={52} x2={tB}  y2={blockTop}/> {/* down to terminal B */}
 
-        {/* Bottom rail: heater bottom → PSU- */}
-        <W x1={98} y1={98} x2={58} y2={98}/>
-        <W x1={58} y1={98} x2={58} y2={88}/>
-        <W x1={44} y1={80} x2={58} y2={80}/>
-        {/* Hint: wire goes through block bottom to PSU */}
-        <W x1={98} y1={98} x2={98} y2={60}/> {/* heater bottom connect */}
+        {/* PSU− return: terminal A → mid-level → left rail down */}
+        <W x1={tA} y1={blockTop} x2={tA} y2={52}/>   {/* terminal A up to mid */}
+        <W x1={tA} y1={52}  x2={35}  y2={52}/>        {/* across to PSU− side */}
+        <W x1={35} y1={52}  x2={35}  y2={76}/>        {/* PSU− rail down */}
 
-        {/* Voltmeter */}
-        <V cx={240} cy={88}/>
-        <W x1={228} y1={88} x2={192} y2={88}/>
-        <W x1={240} y1={76} x2={240} y2={30}/>
+        {/* ── Voltmeter — in parallel across heater terminals ── */}
+        {/* Both tA and tB vertical wires pass through y=72 */}
+        <V cx={92} cy={72}/>
+        <W x1={80}  y1={72} x2={tA} y2={72}/>   {/* left lead → terminal A */}
+        <W x1={104} y1={72} x2={tB} y2={72}/>   {/* right lead → terminal B */}
+        {/* Junction dots */}
+        <circle cx={tA} cy={72} r={3} fill="#f59e0b"/>
+        <circle cx={tB} cy={72} r={3} fill="#f59e0b"/>
+        <Lbl x={112} y={76} t="VOLTMETER" c="#f59e0b" s={8} a="start"/>
 
-        <Lbl x={26} y={62} t="PSU" c="#a5b4fc" s={8}/>
       </svg>
 
       {/* ── Readout tiles ── */}

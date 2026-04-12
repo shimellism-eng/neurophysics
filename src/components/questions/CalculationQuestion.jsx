@@ -2,9 +2,10 @@
  * CalculationQuestion — exam-style calculation with step-by-step working.
  * Student enters a numeric answer. If wrong, reveals worked solution.
  */
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, CheckCircle2, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
+import { speak } from '../../utils/tts'
 
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const { equation, steps, answer, answerUnit, acceptableRange, commonMistake, senNote } = data
@@ -13,6 +14,14 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const [revealStep, setRevealStep] = useState(0)
   const [showExample, setShowExample] = useState(false)
   const inputRef = useRef(null)
+
+  // Auto-TTS: read question text on mount if user has opted in
+  useEffect(() => {
+    if (localStorage.getItem('np_auto_tts') === 'true') {
+      const text = data.question || data.text || equation || ''
+      if (text) setTimeout(() => speak(text), 400)
+    }
+  }, []) // eslint-disable-line
 
   const numericAnswer = parseFloat(input)
   const isCorrect = submitted && (

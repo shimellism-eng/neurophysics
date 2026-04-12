@@ -2,8 +2,9 @@
  * ConfidenceQuestion — quick self-reflection after learning.
  * Low pressure, icon-based, stores response. SEN-friendly.
  */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
+import { speak } from '../../utils/tts'
 
 const LEVELS = [
   { value: 'guessed', label: 'I guessed', emoji: '🤔', color: '#ef4444', bg: 'rgba(239,68,68,0.1)', border: 'rgba(239,68,68,0.3)' },
@@ -15,6 +16,14 @@ export default function ConfidenceQuestion({ data, moduleColor, onComplete }) {
   const { senNote } = data
   const [selected, setSelected] = useState(null)
   const [submitted, setSubmitted] = useState(false)
+
+  // Auto-TTS: read question text on mount if user has opted in
+  useEffect(() => {
+    if (localStorage.getItem('np_auto_tts') === 'true') {
+      const text = data.question || data.text || 'How confident did you feel about this question?'
+      setTimeout(() => speak(text), 400)
+    }
+  }, []) // eslint-disable-line
 
   const handleSelect = (value) => {
     if (submitted) return

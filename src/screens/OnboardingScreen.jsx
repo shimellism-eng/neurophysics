@@ -687,6 +687,58 @@ function StepPrefs({ onNext, onSkip }) {
   )
 }
 
+// ─── Step 0: How it Works ─────────────────────────────────────────────────────
+function StepHowItWorks({ onNext }) {
+  return (
+    <motion.div
+      key="howitworks"
+      className="flex flex-col h-full"
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -40 }}
+      transition={{ duration: 0.28 }}
+    >
+      <div className="flex-1 overflow-y-auto px-5 pt-12 pb-6">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: '0 4px' }}>
+          <h2 style={{ fontSize: 22, fontWeight: 800, color: '#f8fafc', margin: 0 }}>
+            How NeuroPhysics works
+          </h2>
+          <p style={{ fontSize: 14, color: '#94a3b8', margin: 0, lineHeight: 1.6 }}>
+            Built for the way <em>your</em> brain learns — not a textbook brain.
+          </p>
+          {[
+            { icon: '🧠', title: 'Spaced repetition', desc: 'Topics come back at the perfect moment — just before you forget. Science-proven to double retention.' },
+            { icon: '⚡', title: 'Bite-sized lessons', desc: '5-minute sessions. One concept at a time. No walls of text. Your working memory will thank you.' },
+            { icon: '🤖', title: 'Mamo, your AI tutor', desc: 'Stuck? Ask Mamo anything, any time. No judgement. No waiting for a teacher.' },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} style={{
+              background: 'rgba(15,22,41,0.95)',
+              border: '0.75px solid rgba(255,255,255,0.08)',
+              borderRadius: 16, padding: '16px 18px',
+              display: 'flex', gap: 14, alignItems: 'flex-start'
+            }}>
+              <span style={{ fontSize: 28, lineHeight: 1 }}>{icon}</span>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: 15, color: '#f8fafc', marginBottom: 4 }}>{title}</div>
+                <div style={{ fontSize: 13, color: '#94a3b8', lineHeight: 1.5 }}>{desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="px-5 pb-10">
+        <motion.button
+          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+          style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', color: '#fff' }}
+          onClick={onNext}
+          whileTap={{ scale: 0.97 }}>
+          Let's get started <ArrowRight size={18} />
+        </motion.button>
+      </div>
+    </motion.div>
+  )
+}
+
 // ─── Step 3: Exam Board ───────────────────────────────────────────────────────
 function StepBoard({ onNext }) {
   const [selected, setSelected] = useState('aqa')
@@ -1000,23 +1052,27 @@ export default function OnboardingScreen() {
   const [boardId, setBoardId] = useState('aqa')
   const [goalData, setGoalData] = useState(null)
 
+  const handleHowItWorksNext = () => {
+    setStep(1)
+  }
+
   const handleBoardNext = (id) => {
     setBoardId(id)
-    setStep(1)
+    setStep(2)
   }
 
   const handleGoalNext = (data) => {
     setGoalData(data)
-    setStep(2)
+    setStep(3)
   }
 
   // Accessibility step: prefs already written to localStorage inside StepAccessibility
   const handleAccessibilityNext = () => {
-    setStep(3)
+    setStep(4)
   }
 
   const handleAccessibilitySkip = () => {
-    setStep(3)
+    setStep(4)
   }
 
   const handlePrefsNext = (prefs) => {
@@ -1033,7 +1089,7 @@ export default function OnboardingScreen() {
       try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} }
     })()
     localStorage.setItem('neurophysics_prefs', JSON.stringify({ ...existing, ...prefs }))
-    setStep(4)
+    setStep(5)
   }
 
   const handleProfileNext = (data) => {
@@ -1055,11 +1111,12 @@ export default function OnboardingScreen() {
   return (
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
-        {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
-        {step === 1 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
-        {step === 2 && <StepAccessibility key="accessibility" onNext={handleAccessibilityNext} onSkip={handleAccessibilitySkip} />}
-        {step === 3 && <StepPrefs key="prefs" onNext={handlePrefsNext} onSkip={handlePrefsSkip} />}
-        {step === 4 && <StepProfile key="profile" onNext={handleProfileNext} onSkip={handleProfileSkip} />}
+        {step === 0 && <StepHowItWorks key="howitworks" onNext={handleHowItWorksNext} />}
+        {step === 1 && <StepBoard key="board" onNext={handleBoardNext} />}
+        {step === 2 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
+        {step === 3 && <StepAccessibility key="accessibility" onNext={handleAccessibilityNext} onSkip={handleAccessibilitySkip} />}
+        {step === 4 && <StepPrefs key="prefs" onNext={handlePrefsNext} onSkip={handlePrefsSkip} />}
+        {step === 5 && <StepProfile key="profile" onNext={handleProfileNext} onSkip={handleProfileSkip} />}
       </AnimatePresence>
     </div>
   )

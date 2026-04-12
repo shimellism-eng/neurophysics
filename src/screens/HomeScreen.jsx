@@ -24,16 +24,23 @@ function loadProfile() {
 }
 
 // ── 7-day streak calendar ─────────────────────────────────────────────────────
-function StreakCalendar({ streak }) {
+function StreakCalendar({ streakDates = [] }) {
   const labels  = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  const today   = new Date().getDay()
-  const todayIdx = today === 0 ? 6 : today - 1
+  const now     = new Date()
+  const todayIdx = now.getDay() === 0 ? 6 : now.getDay() - 1
+
+  // Build a Set of dateStrings the user actually studied
+  const studiedSet = new Set(streakDates)
 
   return (
     <div className="flex items-end gap-1.5 mt-4">
       {labels.map((label, i) => {
+        // How many days ago was this calendar slot (0 = today)
         const daysAgo = todayIdx >= i ? todayIdx - i : todayIdx - i + 7
-        const filled  = daysAgo < streak
+        // Get the actual calendar date for this slot
+        const slotDate = new Date(now)
+        slotDate.setDate(now.getDate() - daysAgo)
+        const filled  = studiedSet.has(slotDate.toDateString())
         const isToday = i === todayIdx
 
         return (
@@ -317,6 +324,7 @@ export default function HomeScreen() {
   const progressPct   = totalTopics > 0 ? Math.round((masteredCount / totalTopics) * 100) : 0
   const streak        = stats.streak || 0
   const xp            = stats.xp || 0
+  const streakDates   = Array.isArray(stats.streakDates) ? stats.streakDates : []
 
   // Use study plan's smart priority topic for the CTA
   const firstUnmastered = plan.todayTopicId || MODULES.flatMap(m => m.topics)[0]
@@ -543,7 +551,7 @@ export default function HomeScreen() {
                   </p>
                 </>
               )}
-              {streak > 0 && <StreakCalendar streak={streak} />}
+              {streak > 0 && <StreakCalendar streakDates={streakDates} />}
             </div>
           </div>
         </motion.div>
@@ -592,7 +600,7 @@ export default function HomeScreen() {
                         background: topic.moduleColor ? `${topic.moduleColor}18` : 'rgba(99,102,241,0.15)',
                         border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}32` : 'rgba(99,102,241,0.28)'}`,
                       }}
-                      onClick={() => navigate(`/lesson/${id}`)}
+                      onClick={() => navigate(`/practice/${id}`, { state: { reviewMode: true, maxQuestions: 5 } })}
                       whileTap={{ scale: 0.98 }}
                     >
                       <div>

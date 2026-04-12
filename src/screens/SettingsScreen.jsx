@@ -198,6 +198,8 @@ export default function SettingsScreen() {
     applyFontSize(prefs.fontSize || 'normal')
     applyDyslexicFont(!!prefs.dyslexicFont)
     applyBgTheme(prefs.bgTheme || 'dark')
+    // Sync flat np_auto_tts key so question components can read it without parsing PREFS_KEY
+    localStorage.setItem('np_auto_tts', prefs.autoTTS ? 'true' : 'false')
   }, []) // eslint-disable-line
 
   const showToast = (msg, color = '#6366f1') => {
@@ -258,6 +260,15 @@ export default function SettingsScreen() {
     const next = !prefs.tts
     setPref('tts', next)
     showToast(next ? 'Read-aloud enabled — tap 🔊 on questions' : 'Read-aloud off', next ? '#10b981' : '#a8b8cc')
+  }
+
+  // ── Auto-TTS (reads question text on mount)
+  const toggleAutoTTS = () => {
+    const next = !prefs.autoTTS
+    setPref('autoTTS', next)
+    // Mirror to the flat np_auto_tts key consumed by question components
+    localStorage.setItem('np_auto_tts', next ? 'true' : 'false')
+    showToast(next ? 'Auto-read on — questions will be read aloud automatically' : 'Auto-read off', next ? '#10b981' : '#a8b8cc')
   }
 
   // ── Hide floating Mamo (F9)
@@ -419,6 +430,13 @@ export default function SettingsScreen() {
           hint: 'Shows a 🔊 button on questions — tap to hear them read out',
           on: !!prefs.tts,
           onToggle: toggleTTS,
+        },
+        {
+          icon: Volume2,
+          label: 'Auto-read questions aloud',
+          hint: 'Automatically reads question text when it appears',
+          on: !!prefs.autoTTS,
+          onToggle: toggleAutoTTS,
         },
         {
           icon: AtomIcon,

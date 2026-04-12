@@ -13,7 +13,7 @@ function save(key, val) {
 }
 
 let progressStore = load('np_progress', {})
-let statsStore = load('np_stats', { xp: 0, streak: 0, lastActiveDate: null })
+let statsStore = load('np_stats', { xp: 0, streak: 0, lastActiveDate: null, streakDates: [] })
 const listeners = new Set()
 
 function notify() { listeners.forEach(fn => fn()) }
@@ -24,6 +24,11 @@ function updateStreak() {
   const yesterday = new Date(Date.now() - 86400000).toDateString()
   statsStore.streak = statsStore.lastActiveDate === yesterday ? statsStore.streak + 1 : 1
   statsStore.lastActiveDate = today
+  // Keep a rolling 30-day log of actual study dates for the calendar
+  const dates = Array.isArray(statsStore.streakDates) ? statsStore.streakDates : []
+  if (!dates.includes(today)) {
+    statsStore.streakDates = [...dates, today].slice(-30)
+  }
 }
 
 export function useProgress() {

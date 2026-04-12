@@ -12,17 +12,23 @@ const GENERAL_STARTERS = [
   'Can you explain waves in simple steps?',
   'What is the conservation of energy?',
   'How do I rearrange physics equations?',
+  'What is the difference between scalar and vector?',
+  'Explain Newton\'s third law',
+  'How does the transformer equation work?',
 ]
 
-function getStarters(topicLabel) {
-  if (!topicLabel) return GENERAL_STARTERS
-  const t = topicLabel.replace(/-/g, ' ')
+function getStarters(label) {
+  if (!label) return GENERAL_STARTERS
+  const t = label.replace(/-/g, ' ')
   return [
     `Explain ${t} in simple terms`,
     `What equations do I need for ${t}?`,
     `Give me a typical exam question on ${t}`,
     `What mistakes do students make with ${t}?`,
     `Create a quick revision checklist for ${t}`,
+    `What are the key definitions for ${t}?`,
+    `How do I get full marks on a ${t} question?`,
+    `What links ${t} to other topics?`,
   ]
 }
 
@@ -105,9 +111,20 @@ export default function MamoChat() {
   const [input, setInput]               = useState('')
   const [streaming, setStreaming]       = useState(false)
   const [lastUserMsg, setLastUserMsg]   = useState('')
+  const [selectedTopic, setSelectedTopic] = useState(null)
   const bottomRef = useRef(null)
   const inputRef  = useRef(null)
   const abortRef  = useRef(null)
+
+  // Quick-pick topics for the topic selector (hardcoded for speed)
+  const QUICK_TOPICS = [
+    'Energy Stores', 'Forces', 'Waves', 'Electricity',
+    'Atomic Structure', 'Particle Model', 'Magnetism', 'Space Physics',
+    'Motion', 'Radiation', 'Pressure', 'Circuits',
+  ]
+
+  // Effective topic label: URL param takes priority, then manual picker
+  const effectiveTopicLabel = topicLabel || selectedTopic
   // Persist messages to localStorage (skip the initial welcome msg)
   useEffect(() => {
     if (messages.length <= 1) return
@@ -127,6 +144,13 @@ export default function MamoChat() {
       console.warn('localStorage full, skipping save')
     }
   }, [messages, storageKey])
+
+  // Cancel any in-flight stream on unmount to prevent setState-after-unmount
+  useEffect(() => {
+    return () => {
+      abortRef.current?.abort()
+    }
+  }, [])
 
   // Auto-scroll to bottom on new messages
   useEffect(() => {
@@ -182,7 +206,7 @@ export default function MamoChat() {
         signal: controller.signal,
         body: JSON.stringify({
           messages: apiMessages,
-          topicContext: topicLabel || undefined,
+          topicContext: effectiveTopicLabel || undefined,
           boardName: getSelectedBoard().name,
           gValue: getSelectedBoard().g || 9.8,
         }),
@@ -271,7 +295,7 @@ export default function MamoChat() {
     })
     setStreaming(false)
 
-  }, [input, streaming, messages, topicLabel])
+  }, [input, streaming, messages, effectiveTopicLabel])
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
@@ -306,9 +330,9 @@ export default function MamoChat() {
               {getSelectedBoard().name}
             </div>
           </div>
-          {topicLabel ? (
+          {effectiveTopicLabel ? (
             <div className="text-xs truncate" style={{ color: '#6366f1' }}>
-              Studying: {topicLabel}
+              Studying: {effectiveTopicLabel}
             </div>
           ) : (
             <div className="text-xs" style={{ color: '#00bc7d' }}>● Physics Tutor · Always here</div>
@@ -409,46 +433,48 @@ export default function MamoChat() {
           </motion.div>
         ))}
 
-        {/* Suggested questions (only at start) */}
+        {/* Suggested questions (empty state — wrapping chip grid) */}
         {messages.length === 1 && (
           <motion.div
-            className="space-y-2 mt-2"
+            className="mt-2"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="text-xs px-1 mb-1" style={{ color: '#a8b8cc' }}>Try asking:</div>
-            {getStarters(topicLabel).map((q, i) => (
-              <motion.button
-                key={i}
-                className="w-full text-left px-4 py-3 rounded-[14px] text-sm"
-                style={{
-                  background: 'rgba(99,102,241,0.08)',
-                  border: '0.75px solid rgba(99,102,241,0.25)',
-                  color: '#cad5e2',
-                }}
-                onClick={() => sendMessage(q)}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.35 + i * 0.06 }}
-              >
-                {q}
-              </motion.button>
-            ))}
+            <div className="text-xs px-1 mb-2" style={{ color: '#a8b8cc' }}>Try asking:</div>
+            <div className="flex flex-wrap gap-2">
+              {getStarters(effectiveTopicLabel).map((q, i) => (
+                <motion.button
+                  key={i}
+                  className="text-left px-3 py-2 rounded-[12px] text-xs"
+                  style={{
+                    background: 'rgba(99,102,241,0.08)',
+                    border: '0.75px solid rgba(99,102,241,0.25)',
+                    color: '#cad5e2',
+                  }}
+                  onClick={() => sendMessage(q)}
+                  whileTap={{ scale: 0.97 }}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35 + i * 0.05 }}
+                >
+                  {q}
+                </motion.button>
+              ))}
+            </div>
           </motion.div>
         )}
 
         <div ref={bottomRef} />
       </div>
 
-      {/* ── Quick-starter chip rail ──────────────────────────────────────────── */}
+      {/* ── Quick-starter chip rail (always visible, wraps to 2 rows max) ──── */}
       {messages.length > 1 && (
         <div
-          className="px-4 py-2 shrink-0 flex gap-2 overflow-x-auto"
+          className="px-4 py-2 shrink-0 flex flex-wrap gap-2"
           style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', background: 'rgba(8,15,30,0.97)' }}
         >
-          {getStarters(topicLabel).map((q, i) => (
+          {getStarters(effectiveTopicLabel).map((q, i) => (
             <button
               key={i}
               className="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
@@ -465,6 +491,46 @@ export default function MamoChat() {
         </div>
       )}
 
+      {/* ── Topic selector (shown when no URL topic is set) ─────────────────── */}
+      {!topicLabel && (
+        <div
+          className="px-4 pt-2.5 pb-1 shrink-0"
+          style={{ borderTop: '0.75px solid rgba(255,255,255,0.06)', background: 'rgba(8,15,30,0.98)' }}
+        >
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="text-xs" style={{ color: '#a8b8cc' }}>What are you studying?</span>
+            {selectedTopic && (
+              <button
+                className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold"
+                style={{ background: 'rgba(0,212,255,0.12)', border: '0.75px solid rgba(0,212,255,0.35)', color: '#00d4ff' }}
+                onClick={() => setSelectedTopic(null)}
+              >
+                {selectedTopic}
+                <span style={{ fontSize: 10, lineHeight: 1 }}>✕</span>
+              </button>
+            )}
+          </div>
+          {!selectedTopic && (
+            <div className="flex gap-1.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
+              {QUICK_TOPICS.map(t => (
+                <button
+                  key={t}
+                  className="shrink-0 px-2.5 py-1 rounded-full text-xs font-medium whitespace-nowrap"
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '0.75px solid rgba(255,255,255,0.12)',
+                    color: '#a8b8cc',
+                  }}
+                  onClick={() => setSelectedTopic(t)}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* ── Input bar ────────────────────────────────────────────────────────── */}
       <div
         className="px-4 py-3 shrink-0 flex gap-2 items-end"
@@ -472,7 +538,7 @@ export default function MamoChat() {
       >
         <textarea
           ref={inputRef}
-          className="flex-1 px-4 py-3 rounded-[16px] text-sm outline-none resize-none"
+          className="flex-1 px-4 py-3 rounded-[10px] text-sm outline-none resize-none"
           style={{
             background: 'rgba(255,255,255,0.06)',
             border: '0.75px solid rgba(255,255,255,0.1)',

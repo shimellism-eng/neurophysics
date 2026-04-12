@@ -4,7 +4,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import { ArrowLeft, Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, BookmarkPlus, Check, Loader2, CheckCircle, XCircle, Lightbulb, AlertCircle } from 'lucide-react'
 import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
@@ -402,6 +402,8 @@ const sessionKey = (topicId) => `neurophysics_practice_session_${topicId}`
 export default function AdaptivePractice() {
   const { topicId } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
+  const { reviewMode, maxQuestions } = location.state || {}
   const topic = TOPICS[topicId]
   const mod = MODULES.find(m => m.topics.includes(topicId))
   const moduleColor = topic?.moduleColor || mod?.color || '#6366f1'
@@ -477,6 +479,11 @@ export default function AdaptivePractice() {
   }, [stop, submit, currentQ, ms])
 
   const handleNext = () => {
+    const nextCount = sessionCount  // sessionCount already incremented by handleAnswer
+    if (reviewMode && nextCount >= (maxQuestions || 5)) {
+      setShowDone(true)
+      return
+    }
     loadQuestion([...seenIds, currentQ?.id].filter(Boolean), courseFilter, tier)
   }
 
@@ -511,8 +518,10 @@ export default function AdaptivePractice() {
   )
 
   // ── Results screen ──────────────────────────────────────────────────────────
-  if (showDone || sessionCount >= 20) {
+  const reviewCap = reviewMode ? (maxQuestions || 5) : 20
+  if (showDone || sessionCount >= reviewCap) {
     const pct = sessionCount > 0 ? Math.round((sessionCorrect / sessionCount) * 100) : 0
+    const isReviewComplete = reviewMode && sessionCount >= reviewCap
     return (
       <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
         <div className="px-5 pt-5">
@@ -523,6 +532,13 @@ export default function AdaptivePractice() {
           </button>
         </div>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
+          {isReviewComplete ? (
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full"
+              style={{ background: 'rgba(0,188,125,0.12)', border: '1px solid rgba(0,188,125,0.3)' }}>
+              <Check size={14} color="#00bc7d" />
+              <span className="text-sm font-bold" style={{ color: '#00bc7d' }}>Review complete</span>
+            </div>
+          ) : null}
           <div className="text-5xl">{pct >= 80 ? '🏆' : pct >= 60 ? '⭐' : '📚'}</div>
           <div className="text-center">
             <div className="text-3xl font-black" style={{ color: '#f8fafc' }}>{sessionCorrect}/{sessionCount}</div>

@@ -576,7 +576,12 @@ export default function TimedPaper() {
 
   // ── Results (inline - full 3-stage flow in PaperResults) ──────────────────
   if (showResults) {
-    navigate('/paper-results', { state: { score, total, questions, answers, timeUsed: PAPER_DURATION - remaining } })
+    // Normalise: ensure every question index has an entry; unanswered = incorrect
+    const normalisedAnswers = questions.map((_, i) =>
+      answers[i] ?? { answered: false, correct: false, score: 0 }
+    )
+    const normalisedScore = normalisedAnswers.filter(a => a.correct).length
+    navigate('/paper-results', { state: { score: normalisedScore, total, questions, answers: normalisedAnswers, timeUsed: PAPER_DURATION - remaining } })
     return null
   }
 

@@ -4,9 +4,18 @@
 April 2026
 
 ## What Was Just Done (latest)
-- PracticalScreen Explore tab: 8th tab added, EXTERNAL_SIMS map, TabExplore component with PhET/WithDiode links
-- PracticalScreen Data Collection mode: useDataCollector hook + Record/Clear/ScatterGraph UI in 8 Setup functions
-- SetupInsulation + SetupRadiation skipped (no single slider variable)
+- Premium readout tiles added to all 10 practicals (RP3 standard everywhere)
+  - RP1 SHC, RP4 IV, RP5 Density, RP6 Refraction, RP7 Spring, RP8 Acceleration, RP9 Waves, RP10 Radiation
+  - Each gets 3-column colour-coded live readout grid (AMMETER/VOLTMETER/R style)
+  - RP7 Force tile turns red beyond elastic limit; RP4 Component tile is dynamic colour
+  - RP2 (cooling curves) and RP3 (already premium) unchanged
+- Build clean, deployed, pushed, iOS synced
+
+## What Was Done Before
+- Legal fixes for Explore tab external links (ICO Children's Code + UK GDPR):
+  1. Interstitial bottom-sheet warning before any external sim opens (names the domain, Cancel/Open site buttons)
+  2. TabExplore disclaimer strengthened: "not controlled by NeuroPhysics"
+  3. PrivacyPolicy section 5: third-party data disclosure paragraph added
 - Build clean, deployed, pushed, iOS synced
 
 ## What Was Done Before (this session)

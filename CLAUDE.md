@@ -299,6 +299,12 @@
 - [x] Age verification on consent screen: DOB (month + year) input; under-13 blocked with red warning (COPPA/ICO); age confirmation checkbox shows confirmed age; under-16 parent/guardian reminder
 - [x] PracticalScreen Explore tab: 8th tab with PhET + WithDiode external simulation links for all 11 practicals
 - [x] PracticalScreen Data Collection mode: Record button + chip list + live ScatterGraph for 8 practicals (RP1,RP3,RP4,RP5,RP7,RP8,RP9,RP11); useDataCollector hook in src/hooks/useDataCollector.js
+- [x] P0 security hardening (commit d7d873d): prompt injection sanitisation in gemini.js, SUPABASE_SERVICE_ROLE_KEY typo fixed, AbortController 30s timeout on Gemini, _verifyAuth fails closed, TOKEN_REFRESHED handler in AuthContext
+- [x] P0 architecture: React ErrorBoundary in main.jsx (no blank crash screen); acceptableRange standardised across 111 occurrences in CalculationQuestion + examCalculations + examChained + qb-atomic (silent marking bug fixed)
+- [x] P0 visual: #080f1e BG token unified across index.css/App.jsx/index.html; Bricolage Grotesque added to Google Fonts; theme-color meta fixed
+- [x] P0 QA: TimedPaper wall-clock timer (EHCP-safe); boards==null treated as universal in boardConfig + questionBank index
+- [x] P0 legal: PrivacyPolicyScreen Gemini disclosure + COPPA section; ConsentScreen parental consent for age 13–15; delete-account cascades all user data tables
+- [x] P0 marketing: manifest.json board-agnostic; og-image.svg created (1200×630); Plausible analytics added (cookie-free, GDPR compliant)
 - [x] Student experience audit (6 board agents) + 18 fixes: grade band pills in PaperResults, Mamo board-aware (system prompt injection), SpecChecklist board badge legend, StudyPlan adjustable pace, TimedPaper pause/resume, AdaptivePractice ask-Mamo pill + tier label, ExamPractice worked solution card + command word highlight, HomeScreen review due dates, LearnScreen module expand sessionStorage, OnboardingScreen accessibility step, Radiation & Risk topic (OCR-A), Converging/Diverging Lenses topic (CCEA/OCR-B)
 - [x] Teacher experience audit (6 board agents) + P0+P1 fixes:
   - qb-forces.js: g=9.8 explicit in all non-board Qs; 8 WJEC angular velocity Qs; CCEA moments + elastic limit Qs

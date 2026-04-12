@@ -85,6 +85,7 @@ const LandingScreen     = lazy(() => import('./screens/LandingScreen'))
 const SpecChecklist     = lazy(() => import('./screens/SpecChecklist'))
 const StudyPlanScreen   = lazy(() => import('./screens/StudyPlanScreen'))
 const RecallScreen      = lazy(() => import('./screens/RecallScreen'))
+const EquationDrillScreen = lazy(() => import('./screens/EquationDrillScreen'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
@@ -402,6 +403,7 @@ function AppShell() {
                 <Route path="/terms" element={<TermsScreen />} />
                 <Route path="/practice/:topicId" element={<AdaptivePractice />} />
                 <Route path="/recall/:topicId" element={<RecallScreen />} />
+                <Route path="/equation-drill" element={<EquationDrillScreen />} />
                 <Route path="/spec-checklist" element={<SpecChecklist />} />
                 <Route path="/study-plan" element={<StudyPlanScreen />} />
                 <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />

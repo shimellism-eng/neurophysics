@@ -474,6 +474,20 @@ export default function LearnScreen() {
             )
           })}
 
+          {/* Equation Drill chip */}
+          <motion.button
+            onClick={() => navigate('/equation-drill')}
+            className="flex items-center gap-1.5 px-4 rounded-full text-xs font-bold shrink-0"
+            style={{
+              height: 36,
+              background: 'rgba(0,212,255,0.07)',
+              border: '1px solid rgba(0,212,255,0.22)',
+              color: '#00d4ff',
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            ⚡ Equations
+          </motion.button>
         </div>
       </div>
 

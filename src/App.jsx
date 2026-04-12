@@ -348,7 +348,8 @@ function AppShell() {
             <Route path="/" element={user ? <HomeScreen /> : <LandingScreen />} />
             <Route path="/learn" element={<LearnScreen />} />
             <Route path="/topics" element={<Navigate to="/learn" replace />} />
-            <Route path="/mastery" element={<Navigate to="/learn" replace />} />
+            <Route path="/mastery" element={<MasteryScreen />} />
+            <Route path="/topic-map" element={<TopicMap />} />
             <Route path="/lesson/:id" element={<LessonPlayer />} />
             <Route path="/diagnostic/:id" element={<DiagnosticQuestion />} />
             <Route path="/feedback/:id" element={<MisconceptionFeedback />} />

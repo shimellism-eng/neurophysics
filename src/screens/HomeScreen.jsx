@@ -332,6 +332,15 @@ export default function HomeScreen() {
   const resumeModule    = plan.todayModule || MODULES.find(m => m.topics.includes(firstUnmastered))
   const moduleColor     = resumeModule?.color || '#6366f1'
 
+  // Routing guard — same logic as LearnScreen onTap
+  const navigateToTopic = (topicId) => {
+    const t = TOPICS[topicId]
+    if (!t) return
+    if (t.hook || (t.lessonSteps && t.lessonSteps.length > 0)) navigate(`/lesson/${topicId}`)
+    else if (t.practicalId) navigate(`/practical/${t.practicalId}`)
+    else navigate(`/practice/${topicId}`)
+  }
+
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
@@ -384,10 +393,11 @@ export default function HomeScreen() {
               )}
 
               {masteredCount > 0 && (
-                <span className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
+                <button onClick={() => navigate('/mastery')}
+                  className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
                   style={{ fontSize: 12, background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}>
                   <CheckCircle size={11} /> {masteredCount} mastered
-                </span>
+                </button>
               )}
 
               {plan.daysLeft > 0 && plan.examStatus !== 'no_date' && plan.examStatus !== 'passed' && (() => {
@@ -461,7 +471,7 @@ export default function HomeScreen() {
             boxShadow: `0 6px 0 rgba(0,0,0,0.22), 0 16px 36px ${moduleColor}38`,
             color: '#fff',
           }}
-          onClick={() => navigate(`/lesson/${firstUnmastered}`)}
+          onClick={() => navigateToTopic(firstUnmastered)}
           whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 12px ${moduleColor}22` }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

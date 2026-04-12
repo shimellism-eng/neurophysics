@@ -3,12 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import {
   ChevronLeft, ChevronDown, ChevronUp, Beaker, FlaskConical, BarChart2,
-  SlidersHorizontal, ListOrdered, Table2, BookOpen,
+  SlidersHorizontal, ListOrdered, Table2, BookOpen, ExternalLink,
   ShieldAlert, CheckCircle2, AlertTriangle, Zap,
 } from 'lucide-react'
 import { PRACTICALS } from '../data/practicals'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard } from '../utils/boardConfig'
+import { useDataCollector } from '../hooks/useDataCollector'
 
 // ─── Tabs ──────────────────────────────────────────────────────────────────────
 const TABS = [
@@ -19,6 +20,7 @@ const TABS = [
   { id: 'method',     label: 'Method',     icon: ListOrdered },
   { id: 'results',    label: 'Results',    icon: Table2 },
   { id: 'analysis',   label: 'Analysis',   icon: BarChart2 },
+  { id: 'explore',    label: 'Explore',    icon: ExternalLink },
 ]
 
 // ─── SVG helper atoms ─────────────────────────────────────────────────────────
@@ -62,6 +64,7 @@ const Spring = ({ x, y, length, coils = 7 }) => {
 // ─── Setup Diagrams ────────────────────────────────────────────────────────────
 
 function SetupSHC() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [time, setTime] = useState(0)
   const mass = 1.0, power = 30, shc = 385, t0 = 20
   const dT = (power * time / (mass * shc)).toFixed(1)
@@ -140,6 +143,59 @@ function SetupSHC() {
         <div className="flex justify-between text-xs mt-0.5" style={{ color: '#475569' }}>
           <span>0 s</span><span>600 s</span>
         </div>
+      </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: Math.round(power * time), y: parseFloat(dT) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${(power * time).toLocaleString()} J → +${dT}°C`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}J → +${pt.y}°C`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: ΔT vs Energy"
+              xLabel="Energy (J)" yLabel="ΔT (°C)"
+              xMax={18000}
+              yMax={data.length > 0 ? Math.max(...data.map(d => d.y)) * 1.2 || 1 : 1}
+              xTicks={[0,3000,6000,9000,12000,15000,18000]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(...data.map(d => d.y)) * 1.2 * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
       </div>
     </div>
   )
@@ -375,6 +431,7 @@ function SetupInsulation() {
 }
 
 function SetupResistance() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [len, setLen] = useState(50)
   const R_wire = 0.225 * len            // wire resistance (Ω)
   const r_int  = 0.5                    // cell internal resistance (Ω)
@@ -530,11 +587,65 @@ function SetupResistance() {
           <span>10 cm</span><span>100 cm</span>
         </div>
       </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: len, y: parseFloat(R) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${len} cm → ${R} Ω`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}cm→${pt.y}Ω`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: R vs Length"
+              xLabel="Length (cm)" yLabel="Resistance (Ω)"
+              xMax={110}
+              yMax={data.length > 0 ? Math.max(...data.map(d => d.y)) * 1.2 || 1 : 1}
+              xTicks={[0,20,40,60,80,100]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(...data.map(d => d.y)) * 1.2 * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
 
 function SetupIV() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [comp, setComp] = useState('resistor')
   const [volts, setVolts] = useState(3)
 
@@ -635,11 +746,65 @@ function SetupIV() {
           <span>−6 V</span><span>+6 V</span>
         </div>
       </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: volts, y: Math.round(parseFloat(current) * 1000) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${volts} V → ${Math.round(parseFloat(current)*1000)} mA`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}V→${pt.y}mA`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: I vs Voltage"
+              xLabel="Voltage (V)" yLabel="Current (mA)"
+              xMax={7}
+              yMax={data.length > 0 ? Math.max(Math.max(...data.map(d => Math.abs(d.y))) * 1.2, 1) : 1}
+              xTicks={[-6,-3,0,3,6]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(Math.max(...data.map(d => Math.abs(d.y))) * 1.2, 1) * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
 
 function SetupDensity() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [obj, setObj] = useState('aluminium')
   const objs = {
     aluminium: { label: 'Aluminium', l: 5.0, w: 3.0, h: 2.0, density: 2.70, color: '#94a3b8' },
@@ -701,11 +866,65 @@ function SetupDensity() {
         <rect x={5} y={155} width={155} height={20} rx={4} fill={`${o.color}15`} stroke={`${o.color}40`} strokeWidth={0.75}/>
         <Lbl x={82} y={168} t={`ρ = ${mass}÷${vol} = ${o.density} g/cm³`} c={o.color} s={8}/>
       </svg>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: parseFloat(vol), y: parseFloat(mass) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${o.label} — ${vol} cm³, ${mass} g`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}cm³→${pt.y}g`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: Mass vs Volume"
+              xLabel="Volume (cm³)" yLabel="Mass (g)"
+              xMax={35}
+              yMax={data.length > 0 ? Math.max(...data.map(d => d.y)) * 1.2 || 1 : 1}
+              xTicks={[0,10,20,30]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(...data.map(d => d.y)) * 1.2 * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
 
 function SetupLight() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [angle, setAngle] = useState(40)
   const n = 1.50
   const r = Math.round(Math.asin(Math.sin((angle * Math.PI) / 180) / n) * (180 / Math.PI))
@@ -784,11 +1003,65 @@ function SetupLight() {
           <span>10°</span><span>70°</span>
         </div>
       </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: parseFloat(Math.sin(angle * Math.PI / 180).toFixed(3)), y: parseFloat(Math.sin(r * Math.PI / 180).toFixed(3)) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: i=${angle}° → r=${r}°`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}→${pt.y}`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: sin(r) vs sin(i)"
+              xLabel="sin(i)" yLabel="sin(r)"
+              xMax={1}
+              yMax={0.8}
+              xTicks={[0,0.2,0.4,0.6,0.8,1.0]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((0.8 * i / 4).toFixed(2))) : [0,0.2,0.4,0.6,0.8]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
 
 function SetupSpring() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [force, setForce] = useState(3)
   const k = 5.5
   const elasticLimit = 7
@@ -862,11 +1135,65 @@ function SetupSpring() {
           <span>10 N</span>
         </div>
       </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: force, y: parseFloat(ext) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${force} N → ${ext} cm`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}N→${pt.y}cm`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: Extension vs Force"
+              xLabel="Force (N)" yLabel="Extension (cm)"
+              xMax={11}
+              yMax={data.length > 0 ? Math.max(...data.map(d => d.y)) * 1.2 || 1 : 1}
+              xTicks={[0,2,4,6,8,10]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(...data.map(d => d.y)) * 1.2 * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
 
 function SetupAcceleration() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [force, setForce] = useState(0.4)
   const mass = 1.0
   const acc = (force / mass).toFixed(2)
@@ -934,11 +1261,65 @@ function SetupAcceleration() {
           <span>0.2 N</span><span>1.0 N</span>
         </div>
       </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: force, y: parseFloat(acc) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${force} N → ${acc} m/s²`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}N→${pt.y}m/s²`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: a vs Force"
+              xLabel="Force (N)" yLabel="Acceleration (m/s²)"
+              xMax={1.2}
+              yMax={data.length > 0 ? Math.max(...data.map(d => d.y)) * 1.2 || 1 : 1}
+              xTicks={[0,0.2,0.4,0.6,0.8,1.0,1.2]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(...data.map(d => d.y)) * 1.2 * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
 
 function SetupWaves() {
+  const { data, addPoint, reset, canPlot, isFull } = useDataCollector(10)
   const [freq, setFreq] = useState(5)
   const speed = 0.28
   const lambda = (speed / freq).toFixed(3)
@@ -1015,6 +1396,59 @@ function SetupWaves() {
         <div className="flex justify-between text-xs mt-0.5" style={{ color: '#475569' }}>
           <span>1 Hz</span><span>14 Hz</span>
         </div>
+      </div>
+
+      {/* ── Data Collection ── */}
+      <div className="px-1 pt-1">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => addPoint({ x: parseFloat(freq), y: parseFloat((parseFloat(lambda) * 100).toFixed(1)) })}
+            disabled={isFull}
+            className="flex-1 py-2 rounded-[10px] text-xs font-semibold"
+            style={{
+              background: 'rgba(99,102,241,0.15)',
+              border: '0.75px solid rgba(99,102,241,0.4)',
+              color: '#a5b4fc',
+              opacity: isFull ? 0.4 : 1,
+            }}>
+            {`📊 Record: ${freq} Hz → λ=${(parseFloat(lambda)*100).toFixed(0)} cm`}
+          </button>
+          {data.length > 0 && (
+            <button onClick={reset}
+              className="px-3 py-2 rounded-[10px] text-xs"
+              style={{ background: '#1e293b', border: '0.75px solid #334155', color: '#94a3b8' }}>
+              Clear
+            </button>
+          )}
+        </div>
+
+        {data.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {data.map((pt, i) => (
+              <div key={i} className="px-2 py-0.5 rounded-full text-xs"
+                style={{ background: '#6366f120', border: '0.75px solid #6366f140', color: '#a5b4fc' }}>
+                {`${pt.x}Hz→${pt.y}cm`}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {canPlot && (
+          <div className="mt-3">
+            <ScatterGraph
+              title="Your Data: λ vs Frequency"
+              xLabel="Frequency (Hz)" yLabel="λ (cm)"
+              xMax={15}
+              yMax={data.length > 0 ? Math.max(...data.map(d => d.y)) * 1.2 || 1 : 1}
+              xTicks={[0,3,6,9,12,15]}
+              yTicks={data.length > 0 ? [0,1,2,3,4].map(i => parseFloat((Math.max(...data.map(d => d.y)) * 1.2 * i / 4).toFixed(2))) : [0,1]}
+              points={data}
+              lobf={data.length >= 4 ? [data[0], data[data.length-1]] : null}
+              lobfLabel="Line of best fit"
+              color="#6366f1"
+            />
+          </div>
+        )}
       </div>
     </div>
   )
@@ -1098,6 +1532,45 @@ function SetupRadiation() {
       </svg>
     </div>
   )
+}
+
+// ─── External simulation links ────────────────────────────────────────────────
+const EXTERNAL_SIMS = {
+  shc: [
+    { name: 'PhET: Energy Forms and Changes', url: 'https://phet.colorado.edu/en/simulations/energy-forms-and-changes', desc: 'Watch energy transfer between objects — see how heating a metal block changes its thermal energy store.', free: true },
+  ],
+  insulation: [
+    { name: 'PhET: Energy Forms and Changes', url: 'https://phet.colorado.edu/en/simulations/energy-forms-and-changes', desc: 'Explore how insulating materials slow energy transfer from hot to cold objects.', free: true },
+  ],
+  resistance: [
+    { name: 'PhET: Resistance in a Wire', url: 'https://phet.colorado.edu/en/simulations/resistance-in-a-wire', desc: 'Change the length, area and resistivity of a wire — watch resistance update live. Perfect for RP3.', free: true },
+    { name: 'WithDiode: 3D Circuit Builder', url: 'https://www.withdiode.com/', desc: 'Build your own circuit in 3D — add resistors, measure voltage and current. Free browser tool.', free: true },
+  ],
+  iv_characteristics: [
+    { name: 'PhET: Circuit Construction Kit DC', url: 'https://phet.colorado.edu/en/simulations/circuit-construction-kit-dc', desc: 'Build circuits with resistors, bulbs and switches. Measure I-V characteristics with virtual meters.', free: true },
+    { name: 'WithDiode: 3D Circuit Builder', url: 'https://www.withdiode.com/', desc: 'Drag-and-drop resistors, LEDs and diodes in 3D. See current flow and measure I-V characteristics.', free: true },
+  ],
+  density: [
+    { name: 'PhET: Density', url: 'https://phet.colorado.edu/en/simulations/density', desc: 'Compare densities of different objects — see which float or sink. Measure mass and volume interactively.', free: true },
+  ],
+  latent_heat: [
+    { name: "PhET: States of Matter", url: 'https://phet.colorado.edu/en/simulations/states-of-matter', desc: 'Watch particles change state as you add energy. See why temperature stays constant during melting.', free: true },
+  ],
+  spring: [
+    { name: "PhET: Hooke's Law", url: 'https://phet.colorado.edu/en/simulations/hookes-law', desc: "Apply forces to springs — see extension change in real time. Explore the linear region and spring constant.", free: true },
+  ],
+  acceleration: [
+    { name: 'PhET: Forces and Motion: Basics', url: 'https://phet.colorado.edu/en/simulations/forces-and-motion-basics', desc: 'Push objects with different forces — see acceleration change. Explore F=ma with friction controls.', free: true },
+  ],
+  waves: [
+    { name: 'PhET: Wave on a String', url: 'https://phet.colorado.edu/en/simulations/wave-on-a-string', desc: 'Generate transverse waves — change frequency, amplitude and damping. Measure wavelength and speed.', free: true },
+  ],
+  light: [
+    { name: 'PhET: Bending Light', url: 'https://phet.colorado.edu/en/simulations/bending-light', desc: 'Shine light through glass blocks — see refraction in real time. Measure angles and calculate refractive index.', free: true },
+  ],
+  radiation: [
+    { name: 'PhET: Blackbody Spectrum', url: 'https://phet.colorado.edu/en/simulations/blackbody-spectrum', desc: 'See how surface temperature affects infrared radiation emission. Compare black body curves.', free: true },
+  ],
 }
 
 const DIAGRAMS = {
@@ -1554,6 +2027,75 @@ function TabAnalysis({ p, color }) {
   )
 }
 
+function TabExplore({ p, color }) {
+  const sims = EXTERNAL_SIMS[p.id] || []
+
+  if (sims.length === 0) {
+    return (
+      <div className="rounded-[16px] p-6 text-center"
+        style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+        <ExternalLink size={24} color="#475569" style={{ margin: '0 auto 8px' }}/>
+        <p className="text-sm" style={{ color: '#64748b' }}>
+          External simulations coming soon for this practical.
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex items-center gap-2 px-1">
+        <ExternalLink size={14} color={color}/>
+        <span className="text-xs font-semibold uppercase tracking-wide" style={{ color }}>
+          Try these free simulations
+        </span>
+      </div>
+
+      {sims.map((sim, i) => (
+        <motion.a
+          key={i}
+          href={sim.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-[14px] p-4"
+          style={{
+            background: 'rgba(18,26,47,0.9)',
+            border: '0.75px solid #1d293d',
+            textDecoration: 'none',
+          }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.06 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-start justify-between gap-2 mb-2">
+            <span className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>
+              {sim.name}
+            </span>
+            <ExternalLink size={14} color="#475569" style={{ flexShrink: 0, marginTop: 2 }}/>
+          </div>
+          <p className="text-xs leading-relaxed" style={{ color: '#94a3b8' }}>
+            {sim.desc}
+          </p>
+          {sim.free && (
+            <div className="inline-flex items-center gap-1 mt-2 px-2 py-0.5 rounded-full text-xs"
+              style={{ background: 'rgba(16,185,129,0.1)', border: '0.75px solid rgba(16,185,129,0.3)', color: '#34d399' }}>
+              <CheckCircle2 size={10}/> Free
+            </div>
+          )}
+        </motion.a>
+      ))}
+
+      <div className="rounded-[12px] p-3 mt-1"
+        style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+        <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
+          These simulations open in your browser. They supplement — but do not replace — the real practical experience.
+        </p>
+      </div>
+    </div>
+  )
+}
+
 function TabSafety({ p }) {
   return (
     <div className="flex flex-col gap-5">
@@ -1681,6 +2223,7 @@ export default function PracticalScreen() {
     results:   <TabResults   p={p} color={color}/>,
     analysis:  <TabAnalysis  p={p} color={color}/>,
     safety:    <TabSafety    p={p} color={color}/>,
+    explore:   <TabExplore   p={p} color={color}/>,
   }
 
   return (

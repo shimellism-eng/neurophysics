@@ -13,6 +13,14 @@ const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.a
 const MAX_CHARS = 600
 const MIN_CHARS = 10
 
+function renderWithBold(text) {
+  if (!text) return null
+  const parts = text.split(/\*\*(.*?)\*\*/g)
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  )
+}
+
 // idle → marking → marked | error
 function useAIMarking() {
   const [status, setStatus] = useState('idle')   // 'idle' | 'marking' | 'marked' | 'error'
@@ -269,7 +277,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
                   <span style={{ fontSize: 11, color: '#86efac' }}>— see how a top answer is structured</span>
                 </div>
                 <div className="px-4 py-3">
-                  <p style={{ fontSize: 13, color: '#dcfce7', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{data.modelAnswer}</p>
+                  <p style={{ fontSize: 13, color: '#dcfce7', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{renderWithBold(data.modelAnswer)}</p>
                 </div>
               </motion.div>
             )}

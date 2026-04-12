@@ -436,9 +436,14 @@ export default function MasteryScreen() {
                   return (
                     <motion.button
                       key={topicId}
-                      className="flex items-center gap-1.5 px-3 rounded-full text-xs font-medium"
+                      className="flex items-center rounded-full font-medium"
                       style={{
-                        height: 44,
+                        gap: 6,
+                        padding: '8px 14px',
+                        fontSize: 13,
+                        lineHeight: 1.4,
+                        height: 'auto',
+                        minHeight: 44,
                         background: isMastered
                           ? `${mod.color}20`
                           : isStarted

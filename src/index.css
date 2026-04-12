@@ -64,4 +64,15 @@
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
   }
+
+  /* ── Large text mode (accessibility: F1 font size toggle) ────────────────── */
+  body.text-large {
+    font-size: 112.5%; /* 18px base from 16px */
+  }
+  body.text-large p,
+  body.text-large span,
+  body.text-large div,
+  body.text-large button {
+    font-size: 1em; /* inherit the larger base */
+  }
 }

@@ -16,7 +16,10 @@ let progressStore = load('np_progress', {})
 let statsStore = load('np_stats', { xp: 0, streak: 0, lastActiveDate: null, streakDates: [] })
 const listeners = new Set()
 
-function notify() { listeners.forEach(fn => fn()) }
+function notify() {
+  listeners.forEach(fn => fn())
+  window.dispatchEvent(new Event('np_progress_updated'))
+}
 
 function updateStreak() {
   const today = new Date().toDateString()

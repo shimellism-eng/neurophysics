@@ -57,6 +57,9 @@ export default function SessionClose({
   examCount,
   onStartQuiz,
   recap,
+  moduleName,
+  moduleTopicCount,
+  moduleMasteredCount,
 }) {
   const navigate = useNavigate()
   const [mounted, setMounted] = useState(false)
@@ -215,6 +218,33 @@ export default function SessionClose({
           Spaced practice is what moves it from short-term to long-term memory.
         </p>
       </motion.div>
+
+      {/* Module progress card */}
+      {moduleName && moduleTopicCount > 0 && (
+        <motion.div
+          style={{
+            background: 'rgba(15,22,41,0.95)',
+            border: '0.75px solid rgba(255,255,255,0.08)',
+            borderRadius: 16, padding: '14px 18px',
+            display: 'flex', alignItems: 'center', gap: 12,
+          }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.35 }}
+        >
+          <div style={{ fontSize: 28 }}>🏆</div>
+          <div>
+            <div style={{ fontWeight: 700, fontSize: 14, color: '#f8fafc' }}>
+              {moduleMasteredCount} / {moduleTopicCount} {moduleName} topics mastered
+            </div>
+            <div style={{ fontSize: 12, color: '#94a3b8', marginTop: 2 }}>
+              {moduleMasteredCount === moduleTopicCount
+                ? 'Module complete! 🎉'
+                : `${moduleTopicCount - moduleMasteredCount} to go`}
+            </div>
+          </div>
+        </motion.div>
+      )}
 
       {/* CTAs */}
       <div className="flex flex-col gap-3">

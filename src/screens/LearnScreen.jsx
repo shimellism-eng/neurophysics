@@ -55,6 +55,7 @@ function ProgressRing({ pct, color, size = 50 }) {
 function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, onPractice }) {
   const isMastered = masteryState === 'mastered'
   const isStarted  = masteryState === 'started'
+  const [descExpanded, setDescExpanded] = useState(false)
 
   const barColor   = isMastered ? moduleColor : isStarted ? '#fbbf24' : 'rgba(255,255,255,0.1)'
   const ctaLabel   = isMastered ? 'Review' : isStarted ? 'Continue' : 'Start'
@@ -105,11 +106,35 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
           )}
         </div>
 
-        {/* Title — flex-1 + min-w-0 guarantees truncation, never wraps */}
+        {/* Title + optional description */}
         <div className="flex-1 min-w-0 px-3">
           <p className="text-[15px] font-semibold truncate" style={{ color: titleColor }}>
             {topic.title}
           </p>
+          {topic.description && (
+            <div>
+              <p style={{
+                fontSize: 13, color: '#94a3b8', lineHeight: 1.5, marginTop: 2,
+                display: '-webkit-box',
+                WebkitLineClamp: descExpanded ? 'unset' : 2,
+                WebkitBoxOrient: 'vertical',
+                overflow: descExpanded ? 'visible' : 'hidden',
+              }}>
+                {topic.description}
+              </p>
+              {topic.description.length > 100 && (
+                <button
+                  onClick={e => { e.stopPropagation(); setDescExpanded(v => !v) }}
+                  style={{
+                    background: 'none', border: 'none', cursor: 'pointer',
+                    color: '#00d4ff', fontSize: 12, padding: '2px 0', fontWeight: 600,
+                  }}
+                >
+                  {descExpanded ? 'Show less ↑' : 'Read more ↓'}
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         {/* CTA label */}

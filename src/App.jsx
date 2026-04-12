@@ -6,6 +6,18 @@ import { AuthProvider, useAuth } from './context/AuthContext'
 import { MamoProvider, useMamoState } from './context/MamoContext'
 import BottomNav from './components/BottomNav'
 
+// ── Restore accessibility prefs on cold start (before React mounts) ──────────
+;(() => {
+  try {
+    const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
+    const isLarge = prefs.fontSize === 'Large' || prefs.fontSize === 'large'
+    if (isLarge) {
+      document.body.classList.add('text-large')
+      document.documentElement.style.fontSize = '18px'
+    }
+  } catch { /* ignore */ }
+})()
+
 // ── Eagerly loaded (needed at startup / auth flow) ────────────────────────────
 import HomeScreen from './screens/HomeScreen'
 import AuthScreen from './screens/AuthScreen'
@@ -35,13 +47,16 @@ const StudyPlanScreen   = lazy(() => import('./screens/StudyPlanScreen'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
+  const reduceMotion = (() => {
+    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
+  })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   return (
     <div className="flex items-center justify-center h-full" style={{ background: '#080f1e' }}>
       <motion.div
         className="w-8 h-8 rounded-full border-2"
         style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
+        animate={reduceMotion ? {} : { rotate: 360 }}
+        transition={reduceMotion ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
       />
     </div>
   )
@@ -82,6 +97,9 @@ function FloatingMamo() {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').hideMamo } catch { return false }
   })()
   const hide = hiddenByRoute || hiddenByExam || hiddenByPref
+  const reduceMotion = (() => {
+    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
+  })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 
   // Topic context from lesson/exam/practical routes
   const topicMatch = location.pathname.match(/^\/(?:lesson|exam|practical)\/(.+)/)
@@ -149,8 +167,8 @@ function FloatingMamo() {
                     : 'rgba(253,199,0,0.45)',
                 }}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: [0, 1, 0], scale: [0.8, 1.4, 1.8] }}
-                transition={{ duration: reaction === 'complete' ? 0.7 : 0.5 }}
+                animate={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: [0, 1, 0], scale: [0.8, 1.4, 1.8] }}
+                transition={reduceMotion ? { duration: 0 } : { duration: reaction === 'complete' ? 0.7 : 0.5 }}
               />
             )}
             <AtomIcon size={24} color="#fff" />
@@ -168,8 +186,8 @@ function FloatingMamo() {
                   background: '#a5b4fc',
                   border: '2px solid #080f1e',
                 }}
-                animate={{ scale: [1, 1.3, 1] }}
-                transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+                animate={reduceMotion ? {} : { scale: [1, 1.3, 1] }}
+                transition={reduceMotion ? { duration: 0 } : { repeat: Infinity, duration: 2, ease: 'easeInOut' }}
               />
             )}
           </motion.button>
@@ -214,13 +232,16 @@ function AppShell() {
 
   // Show nothing while auth state loads
   if (loading) {
+    const rmLoading = (() => {
+      try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
+    })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     return (
       <div className="flex flex-col h-full items-center justify-center" style={{ background: '#080f1e' }}>
         <motion.div
           className="w-8 h-8 rounded-full border-2"
           style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
+          animate={rmLoading ? {} : { rotate: 360 }}
+          transition={rmLoading ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
         />
       </div>
     )

@@ -7,6 +7,13 @@ import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, CheckCircle2, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
 import { speak } from '../../utils/tts'
 
+const GROWTH_FRAMES = [
+  "Getting it wrong is how the memory forms. 🧠",
+  "Every mistake is a learning moment.",
+  "Physics is hard — you're doing it anyway. 💪",
+  "Wrong answers teach more than right ones.",
+]
+
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const { equation, steps, answer, answerUnit, acceptableRange, commonMistake, senNote } = data
   const [input, setInput] = useState('')
@@ -167,6 +174,13 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
                 )}
               </div>
             </div>
+
+            {/* Growth framing — only if wrong */}
+            {!isCorrect && (
+              <p style={{ fontSize: 12, color: '#94a3b8', fontStyle: 'italic', marginTop: 4 }}>
+                {GROWTH_FRAMES[Math.floor(Math.random() * GROWTH_FRAMES.length)]}
+              </p>
+            )}
 
             {/* Worked solution — only if wrong */}
             {!isCorrect && (

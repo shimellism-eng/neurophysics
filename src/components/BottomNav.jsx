@@ -64,17 +64,16 @@ export default function BottomNav() {
                 />
               )}
               <item.icon
-                size={22}
+                size={20}
                 color={active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)'}
                 strokeWidth={active ? 2.5 : 1.8}
                 fill={active ? `${ACTIVE_COLOR}22` : 'none'}
               />
               <span
-                className="font-semibold"
                 style={{
-                  fontSize: active ? 11 : 10,
-                  fontWeight: active ? 700 : 500,
-                  color: active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)',
+                  fontSize: 10,
+                  fontWeight: active ? 600 : 400,
+                  color: active ? ACTIVE_COLOR : '#475569',
                 }}
               >
                 {item.label}

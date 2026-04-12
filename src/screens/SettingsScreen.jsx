@@ -89,8 +89,10 @@ function applyHighContrast(on) {
 }
 
 function applyFontSize(size) {
-  // size: 'normal' | 'large'
-  document.documentElement.style.fontSize = size === 'large' ? '18px' : ''
+  // size: 'Normal' | 'Large' (capitalised) or legacy 'normal' | 'large'
+  const isLarge = size === 'Large' || size === 'large'
+  document.body.classList.toggle('text-large', isLarge)
+  document.documentElement.style.fontSize = isLarge ? '18px' : ''
 }
 
 // ── Background theme (SEN: coloured backgrounds) ────────────────────────────
@@ -229,12 +231,11 @@ export default function SettingsScreen() {
     showToast(next ? 'High Contrast on' : 'High Contrast off', next ? '#10b981' : '#a8b8cc')
   }
 
-  // ── Font Size
-  const toggleFontSize = () => {
-    const next = prefs.fontSize === 'large' ? 'normal' : 'large'
-    applyFontSize(next)
-    setPref('fontSize', next)
-    showToast(next === 'large' ? 'Large text on' : 'Normal text restored', next === 'large' ? '#10b981' : '#a8b8cc')
+  // ── Font Size (segmented: 'Normal' | 'Large')
+  const setFontSize = (size) => {
+    applyFontSize(size)
+    setPref('fontSize', size)
+    showToast(size === 'Large' ? 'Large text on' : 'Normal text restored', size === 'Large' ? '#10b981' : '#a8b8cc')
   }
 
   // ── Dyslexic Font (F1/F5)
@@ -409,13 +410,6 @@ export default function SettingsScreen() {
           hint: 'Stronger colour contrast',
           on: !!prefs.highContrast,
           onToggle: toggleHighContrast,
-        },
-        {
-          icon: Type,
-          label: 'Large Text',
-          hint: 'Increase font size throughout the app',
-          on: prefs.fontSize === 'large',
-          onToggle: toggleFontSize,
         },
         {
           icon: Type,
@@ -809,6 +803,42 @@ export default function SettingsScreen() {
                   }
                 </button>
               ))}
+              {/* Text Size — segmented pill control, shown inline in Accessibility section */}
+              {section.title === 'Accessibility' && (
+                <div
+                  className="flex items-center justify-between px-4 py-4"
+                  style={{ background: 'rgba(15,22,41,0.95)', borderTop: '0.75px solid rgba(255,255,255,0.06)' }}
+                >
+                  <div className="flex-1 min-w-0 pr-4">
+                    <div className="text-sm font-medium" style={{ color: '#f8fafc' }}>Text size</div>
+                    <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
+                      Larger text helps with low vision and reading fatigue
+                    </div>
+                  </div>
+                  <div className="flex gap-2 shrink-0">
+                    {['Normal', 'Large'].map(size => {
+                      const current = prefs.fontSize === 'Large' || prefs.fontSize === 'large' ? 'Large' : 'Normal'
+                      const active = current === size
+                      return (
+                        <button
+                          key={size}
+                          onClick={() => setFontSize(size)}
+                          style={{
+                            padding: '8px 18px',
+                            borderRadius: 20,
+                            background: active ? 'rgba(0,212,255,0.15)' : 'rgba(255,255,255,0.06)',
+                            border: active ? '0.75px solid rgba(0,212,255,0.4)' : '0.75px solid rgba(255,255,255,0.1)',
+                            color: active ? '#00d4ff' : '#94a3b8',
+                            fontSize: 13,
+                            fontWeight: active ? 700 : 400,
+                            cursor: 'pointer',
+                          }}
+                        >{size}</button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
               {/* Background Colour — shown inline in Accessibility section */}
               {section.title === 'Accessibility' && (
                 <div

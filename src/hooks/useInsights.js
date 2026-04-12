@@ -49,11 +49,17 @@ export function useInsights() {
       setResults(load())
       setProgressSnap(loadProgress())
     }
+    // Cross-tab: storage event fires when another tab writes
     window.addEventListener('storage', onStorage)
+    // Same-tab: custom event dispatched by useProgress after every save
+    window.addEventListener('np_progress_updated', onStorage)
     // Also poll once on mount in case same-tab update happened before this mounted
     setResults(load())
     setProgressSnap(loadProgress())
-    return () => window.removeEventListener('storage', onStorage)
+    return () => {
+      window.removeEventListener('storage', onStorage)
+      window.removeEventListener('np_progress_updated', onStorage)
+    }
   }, [])
 
   const allTopicIds = MODULES.flatMap(m => m.topics)

@@ -374,7 +374,14 @@ export default function LessonPlayer() {
         ) : null
       case 'realworld':
         return topic.realityVisual ? <topic.realityVisual /> : null
-      case 'done':
+      case 'done': {
+        // Compute module progress for the completion card
+        const topicModule = MODULES.find(m => m.topics.includes(id)) || null
+        const moduleTopicCount = topicModule ? topicModule.topics.length : 0
+        const moduleMasteredCount = topicModule
+          ? topicModule.topics.filter(tid => progress[tid]?.mastered).length
+          : 0
+        const moduleName = topicModule ? topicModule.name : ''
         return (
           <div>
             <SessionClose
@@ -382,6 +389,9 @@ export default function LessonPlayer() {
               topicId={id}
               examCount={examCount}
               onStartQuiz={handleStartQuiz}
+              moduleName={moduleName}
+              moduleTopicCount={moduleTopicCount}
+              moduleMasteredCount={moduleMasteredCount}
               recap={topic.sessionRecap || [
                 topic.concept || topic.description.split('.')[0] + '.',
                 `Key equation: ${topic.equations?.[0]?.expr || 'see notes'}`,
@@ -426,6 +436,7 @@ export default function LessonPlayer() {
             </div>
           </div>
         )
+      }
       default:
         return null
     }

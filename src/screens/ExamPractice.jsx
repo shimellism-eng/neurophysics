@@ -28,6 +28,15 @@ import {
   NovelContextQuestion,
 } from '../components/questions'
 
+// ── Inline bold markdown renderer ────────────────────────────────────────────
+function renderWithBold(text) {
+  if (!text) return null
+  const parts = text.split(/\*\*(.*?)\*\*/g)
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  )
+}
+
 // ── RPA Error Direction Question ─────────────────────────────────────────────
 function RPAErrorQuestion({ data, moduleColor, onComplete }) {
   const [selected, setSelected] = useState(null)
@@ -171,7 +180,7 @@ function WorkedSolutionCard({ question, correct }) {
             <div className="px-4 pb-4 space-y-3">
               {/* Explanation prose */}
               {explanation && (
-                <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{explanation}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{renderWithBold(explanation)}</p>
               )}
 
               {/* Worked / steps */}
@@ -186,7 +195,7 @@ function WorkedSolutionCard({ question, correct }) {
                         {i + 1}
                       </span>
                       <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
-                        {typeof step === 'object' ? (step.text || step.label || JSON.stringify(step)) : step}
+                        {typeof step === 'object' ? renderWithBold(step.text || step.label || JSON.stringify(step)) : renderWithBold(step)}
                       </span>
                     </div>
                   ))}
@@ -201,7 +210,7 @@ function WorkedSolutionCard({ question, correct }) {
                       style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
                       <span className="w-4 h-4 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
                         style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>✓</span>
-                      <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{point}</span>
+                      <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{renderWithBold(point)}</span>
                     </div>
                   ))}
                 </div>
@@ -209,7 +218,7 @@ function WorkedSolutionCard({ question, correct }) {
 
               {/* Mark scheme as string */}
               {typeof markScheme === 'string' && markScheme && (
-                <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{markScheme}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{renderWithBold(markScheme)}</p>
               )}
             </div>
           </motion.div>

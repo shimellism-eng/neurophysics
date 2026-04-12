@@ -23,10 +23,37 @@ function _setMamoHidden(hidden) {
 ;(() => {
   try {
     const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
-    const isLarge = prefs.fontSize === 'Large' || prefs.fontSize === 'large'
-    if (isLarge) {
+    // Font size
+    if (prefs.fontSize === 'Large' || prefs.fontSize === 'large') {
       document.body.classList.add('text-large')
       document.documentElement.style.fontSize = '18px'
+    }
+    // Dyslexic font
+    if (prefs.dyslexicFont) {
+      if (!document.getElementById('np-dyslexic-font')) {
+        const link = document.createElement('link')
+        link.id = 'np-dyslexic-font'
+        link.rel = 'stylesheet'
+        link.href = 'https://fonts.cdnfonts.com/css/opendyslexic'
+        document.head.appendChild(link)
+      }
+      if (!document.getElementById('np-dyslexic-style')) {
+        const s = document.createElement('style')
+        s.id = 'np-dyslexic-style'
+        s.textContent = 'body,button,input,textarea,p,h1,h2,h3,span{font-family:"OpenDyslexic",sans-serif!important}'
+        document.head.appendChild(s)
+      }
+    }
+    // Background theme
+    const bgTheme = localStorage.getItem('np_bg_theme')
+    if (bgTheme && bgTheme !== 'dark') {
+      const themes = { cream: { bg: '#f5f0e8', card: 'rgba(245,240,232,0.95)' }, blue: { bg: '#e8f0f8', card: 'rgba(232,240,248,0.95)' } }
+      const t = themes[bgTheme]
+      if (t) {
+        document.documentElement.style.setProperty('--np-bg', t.bg)
+        document.documentElement.style.setProperty('--np-card', t.card)
+        document.body.style.background = t.bg
+      }
     }
   } catch { /* ignore */ }
 })()

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import {
   ChevronRight, Zap, Flame, TrendingUp,
   Calendar, CheckCircle, Clock, Target,
@@ -312,6 +313,12 @@ export default function HomeScreen() {
   const avatar   = profile.avatar || '🧠'
   const greeting = getGreeting()
 
+  const [, setBoardTick] = useState(0)
+  useEffect(() => {
+    const onStorage = () => setBoardTick(t => t + 1)
+    window.addEventListener('storage', onStorage)
+    return () => window.removeEventListener('storage', onStorage)
+  }, [])
   const selectedBoard  = getSelectedBoard()
   const targetGrade    = profile.grade || null
   const targetLabel    = targetGrade

@@ -976,6 +976,8 @@ export default function AuthScreen() {
   const navigate = useNavigate()
 
   const onDone = () => {
+    // Mark consent accepted (gate removed — set here so any code reading it still works)
+    try { localStorage.setItem('neurophysics_consent', JSON.stringify({ ts: Date.now(), version: '2026-04', ageVerified: 'self-cert' })) } catch {}
     const onboarded = !!localStorage.getItem('neurophysics_onboarded')
     navigate(onboarded ? '/' : '/onboarding', { replace: true })
   }

@@ -333,11 +333,8 @@ function AppShell() {
     )
   }
 
-  // First-time user — show consent/age gate before anything else
-  const hasConsented = !!localStorage.getItem('neurophysics_consent')
-  if (!hasConsented && location.pathname !== '/consent' && location.pathname !== '/privacy' && location.pathname !== '/terms') {
-    return <Navigate to="/consent" replace />
-  }
+  // NOTE: Consent gate removed — absorbed into AuthScreen's inline terms/age checkbox.
+  // The /consent route still exists as a privacy reference page but is no longer forced.
 
   // Native app + not logged in at / → skip landing page, go straight to auth
   if (!user && IS_NATIVE && location.pathname === '/') {

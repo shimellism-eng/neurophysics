@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil } from 'lucide-react'
+import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil, Target } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
@@ -758,10 +758,14 @@ function StepBoard({ onNext }) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -40 }}
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      style={{
+        background: `radial-gradient(ellipse 130% 55% at 50% 0%, ${BOARDS[selected].color}10 0%, transparent 55%)`,
+        transition: 'background 0.4s',
+      }}
     >
       <div className="flex-1 overflow-y-auto px-6">
         <motion.div
-          className="pt-10 pb-5"
+          className="pt-7 pb-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -790,70 +794,79 @@ function StepBoard({ onNext }) {
           </p>
         </motion.div>
 
-        <motion.div
-          className="flex flex-col gap-3 pb-6"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          {BOARD_ORDER.map((boardId, i) => {
-            const board = BOARDS[boardId]
-            const isSelected = selected === boardId
-            return (
-              <motion.button
-                key={boardId}
-                className="w-full text-left rounded-[18px] px-4 py-4 flex items-center gap-4"
-                style={{
-                  background: isSelected ? `${board.color}12` : 'rgba(18,26,47,0.9)',
-                  border: isSelected ? `1.5px solid ${board.color}60` : '0.75px solid #1d293d',
-                  transition: 'background 0.18s, border-color 0.18s',
-                }}
-                onClick={() => setSelected(boardId)}
-                initial={{ opacity: 0, x: -14 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 + i * 0.06, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {/* Colour dot */}
-                <div
-                  className="w-4 h-4 rounded-full shrink-0"
+        {/* Board list with scroll-fade */}
+        <div style={{ position: 'relative' }}>
+          <motion.div
+            className="flex flex-col gap-3 pb-6"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {BOARD_ORDER.map((boardId, i) => {
+              const board = BOARDS[boardId]
+              const isSelected = selected === boardId
+              return (
+                <motion.button
+                  key={boardId}
+                  className="w-full text-left rounded-[18px] px-4 py-4 flex items-center gap-4"
                   style={{
-                    background: isSelected ? board.color : 'rgba(255,255,255,0.1)',
-                    border: isSelected ? `2px solid ${board.color}` : '1.5px solid rgba(255,255,255,0.18)',
-                    transition: 'all 0.15s',
-                    boxShadow: isSelected ? `0 0 8px ${board.color}60` : 'none',
+                    background: isSelected ? `${board.color}12` : 'rgba(18,26,47,0.9)',
+                    border: isSelected ? `1.5px solid ${board.color}60` : '0.75px solid #1d293d',
+                    transition: 'background 0.18s, border-color 0.18s',
                   }}
-                />
-
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="text-base font-bold" style={{ color: isSelected ? '#f8fafc' : '#c8d4e3' }}>
-                      {board.flag} {board.name}
-                    </span>
-                    {board.gradeSystem === 'A*-G' && (
-                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-                        style={{ background: 'rgba(232,121,249,0.12)', color: '#e879f9', border: '1px solid rgba(232,121,249,0.3)' }}>
-                        A*–G
-                      </span>
-                    )}
-                  </div>
-                  <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                    {board.description}
-                  </div>
-                </div>
-
-                {isSelected && (
+                  onClick={() => setSelected(boardId)}
+                  initial={{ opacity: 0, x: -14 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 + i * 0.06, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {/* Colour dot */}
                   <div
-                    className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
-                    style={{ background: board.color }}
-                  >
-                    <Check size={13} color="#fff" strokeWidth={2.5} />
+                    className="w-4 h-4 rounded-full shrink-0"
+                    style={{
+                      background: isSelected ? board.color : 'rgba(255,255,255,0.1)',
+                      border: isSelected ? `2px solid ${board.color}` : '1.5px solid rgba(255,255,255,0.18)',
+                      transition: 'all 0.15s',
+                      boxShadow: isSelected ? `0 0 8px ${board.color}60` : 'none',
+                    }}
+                  />
+
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base font-bold" style={{ color: isSelected ? '#f8fafc' : '#c8d4e3' }}>
+                        {board.flag} {board.name}
+                      </span>
+                      {board.gradeSystem === 'A*-G' && (
+                        <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
+                          style={{ background: 'rgba(232,121,249,0.12)', color: '#e879f9', border: '1px solid rgba(232,121,249,0.3)' }}>
+                          A*–G
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.52)' }}>
+                      {board.description}
+                    </div>
                   </div>
-                )}
-              </motion.button>
-            )
-          })}
-        </motion.div>
+
+                  {isSelected && (
+                    <div
+                      className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
+                      style={{ background: board.color }}
+                    >
+                      <Check size={13} color="#fff" strokeWidth={2.5} />
+                    </div>
+                  )}
+                </motion.button>
+              )
+            })}
+          </motion.div>
+          {/* Scroll-fade hint — signals more content below */}
+          <div style={{
+            position: 'absolute', bottom: 0, left: 0, right: 0, height: 40,
+            background: 'linear-gradient(to bottom, transparent, #080f1e)',
+            pointerEvents: 'none',
+          }} />
+        </div>
       </div>
 
       {/* Next button */}
@@ -924,15 +937,24 @@ function StepSetup({ onNext }) {
           transition={{ duration: 0.4 }}
         >
           {/* Step indicator (2/2) */}
-          <div className="flex items-center gap-2 mb-7">
+          <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
           </div>
+          <div className="flex items-center gap-3 mb-3">
+            <div
+              className="w-10 h-10 rounded-[14px] flex items-center justify-center"
+              style={{ background: 'rgba(0,212,255,0.12)', border: '1px solid rgba(0,212,255,0.25)' }}
+            >
+              <Target size={18} color="#00d4ff" />
+            </div>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#00d4ff' }}>Almost there</span>
+          </div>
           <h1 className="font-extrabold leading-tight mb-2" style={{ fontSize: 34, color: '#f8fafc', letterSpacing: '-0.03em' }}>
-            Almost there 🎯
+            Set your details
           </h1>
           <p className="text-sm leading-relaxed" style={{ color: '#7b9ab8' }}>
-            Two quick details and you're in.
+            Two quick things and you're in.
           </p>
         </motion.div>
 
@@ -1020,20 +1042,27 @@ function StepSetup({ onNext }) {
               return (
                 <motion.button
                   key={value}
-                  className="rounded-[18px] px-4 py-4 text-left flex flex-col gap-0.5 relative"
+                  className="rounded-[18px] px-4 py-4 text-left flex flex-col gap-0.5 relative overflow-hidden"
                   style={{
-                    background: sel ? `${color}14` : 'rgba(15,22,41,0.95)',
-                    border: sel ? `1.5px solid ${color}70` : '0.75px solid rgba(255,255,255,0.08)',
-                    boxShadow: sel ? `0 0 18px ${color}20` : 'none',
+                    background: sel ? `${color}18` : `${color}08`,
+                    border: sel ? `1.5px solid ${color}75` : `1px solid ${color}30`,
+                    boxShadow: sel ? `0 0 20px ${color}25` : 'none',
                     transition: 'all 0.18s',
                   }}
                   onClick={() => setAgeGroup(value)}
                   whileTap={{ scale: 0.97 }}
                 >
-                  <span className="text-sm font-extrabold" style={{ color: sel ? color : '#f8fafc', letterSpacing: '-0.01em' }}>
+                  {/* Left accent bar */}
+                  <div style={{
+                    position: 'absolute', left: 0, top: 10, bottom: 10,
+                    width: 3, borderRadius: 2,
+                    background: sel ? color : `${color}50`,
+                    transition: 'background 0.18s',
+                  }} />
+                  <span className="text-sm font-extrabold" style={{ color: sel ? color : `${color}cc`, letterSpacing: '-0.01em' }}>
                     {label}
                   </span>
-                  <span className="text-xs font-medium" style={{ color: sel ? `${color}cc` : '#7b9ab8' }}>
+                  <span className="text-xs font-medium" style={{ color: sel ? `${color}99` : `${color}65` }}>
                     {sub}
                   </span>
                   {sel && (
@@ -1046,6 +1075,11 @@ function StepSetup({ onNext }) {
               )
             })}
           </div>
+          {/* Reassurance — reduces ADHD choice anxiety */}
+          <p className="text-center text-xs mt-3" style={{ color: 'rgba(255,255,255,0.22)' }}>
+            You can update these any time in Settings.
+          </p>
+
           {/* GDPR notice for under-18 */}
           {(ageGroup === '13–15' || ageGroup === '15–16' || ageGroup === '16–17') && (
             <motion.div

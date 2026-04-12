@@ -256,11 +256,8 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle }) {
                         navigate(`/practical/${topic.practicalId}`)
                       } else if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) {
                         // Has lesson content (new 9-step flow OR legacy steps)
-                        if (progress[topicId]?.mastered) {
-                          navigate(`/diagnostic/${topicId}`)
-                        } else {
-                          navigate(`/lesson/${topicId}`)
-                        }
+                        // Always go to lesson — Knowledge Check is accessible from SessionClose at end
+                        navigate(`/lesson/${topicId}`)
                       } else {
                         navigate(`/practice/${topicId}`)
                       }

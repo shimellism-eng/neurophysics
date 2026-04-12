@@ -2029,6 +2029,18 @@ function TabAnalysis({ p, color }) {
 
 function TabExplore({ p, color }) {
   const sims = EXTERNAL_SIMS[p.id] || []
+  const [pending, setPending] = useState(null) // { url, name, domain }
+
+  const handleSimTap = (sim) => {
+    let domain = sim.url
+    try { domain = new URL(sim.url).hostname } catch {}
+    setPending({ url: sim.url, name: sim.name, domain })
+  }
+
+  const confirmOpen = () => {
+    if (pending) window.open(pending.url, '_blank', 'noopener,noreferrer')
+    setPending(null)
+  }
 
   if (sims.length === 0) {
     return (
@@ -2052,16 +2064,13 @@ function TabExplore({ p, color }) {
       </div>
 
       {sims.map((sim, i) => (
-        <motion.a
+        <motion.button
           key={i}
-          href={sim.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block rounded-[14px] p-4"
+          onClick={() => handleSimTap(sim)}
+          className="block w-full text-left rounded-[14px] p-4"
           style={{
             background: 'rgba(18,26,47,0.9)',
             border: '0.75px solid #1d293d',
-            textDecoration: 'none',
           }}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -2083,15 +2092,77 @@ function TabExplore({ p, color }) {
               <CheckCircle2 size={10}/> Free
             </div>
           )}
-        </motion.a>
+        </motion.button>
       ))}
 
       <div className="rounded-[12px] p-3 mt-1"
         style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
         <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
-          These simulations open in your browser. They supplement — but do not replace — the real practical experience.
+          External sites are not controlled by NeuroPhysics. Content and availability may change. Always verify information with your teacher or official revision materials.
         </p>
       </div>
+
+      {/* External link interstitial */}
+      <AnimatePresence>
+        {pending && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-end justify-center"
+            style={{ background: 'rgba(0,0,0,0.6)' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setPending(null)}
+          >
+            <motion.div
+              className="w-full rounded-t-[24px] p-6 pb-10"
+              style={{
+                background: '#12121a',
+                border: '0.75px solid #1e1e2e',
+                maxWidth: 480,
+              }}
+              initial={{ y: 80 }}
+              animate={{ y: 0 }}
+              exit={{ y: 80 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(99,102,241,0.15)', border: '0.75px solid rgba(99,102,241,0.35)' }}>
+                  <ExternalLink size={18} color="#818cf8"/>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>
+                    Leaving NeuroPhysics
+                  </p>
+                  <p className="text-xs" style={{ color: '#64748b' }}>
+                    {pending.domain}
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: '#94a3b8' }}>
+                <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{pending.name}</span> is an external site not controlled by NeuroPhysics. It has its own privacy policy and may collect data independently of us.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setPending(null)}
+                  className="flex-1 py-3 rounded-[12px] text-sm font-semibold"
+                  style={{ background: 'rgba(255,255,255,0.06)', color: '#94a3b8' }}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={confirmOpen}
+                  className="flex-1 py-3 rounded-[12px] text-sm font-semibold"
+                  style={{ background: '#6366f1', color: '#fff' }}
+                >
+                  Open site
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

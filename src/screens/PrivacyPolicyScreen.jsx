@@ -61,7 +61,9 @@ Parents and guardians: contact us at support@neurophysics.app to request account
     title: '5. How your data is stored',
     body: `Your learning progress and settings are stored locally on your device. Your email address is held by Supabase on servers within the EU/EEA.
 
-We take reasonable technical and organisational steps to protect your data, including encrypted connections (HTTPS) and access controls on our systems.`,
+We take reasonable technical and organisational steps to protect your data, including encrypted connections (HTTPS) and access controls on our systems.
+
+If you tap an external simulation link in the Explore tab, you will leave NeuroPhysics and visit a third-party website. Those sites are not controlled by us, have their own privacy policies, and may collect data independently of NeuroPhysics.`,
   },
   {
     title: '6. How long we keep your data',

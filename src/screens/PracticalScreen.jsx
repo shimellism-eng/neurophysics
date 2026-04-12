@@ -84,23 +84,27 @@ function SetupSHC() {
 
   return (
     <div className="flex flex-col gap-3">
-      <svg viewBox="0 0 400 225" width="100%" style={{ display: 'block' }}>
+      <svg viewBox="0 0 400 220" width="100%" style={{ display: 'block' }}>
 
-        {/* ── Power Supply — far left, label above ── */}
+        {/* ── Power Supply — callout line from box to label above-left ── */}
         <PSU x={10} y={128} label="12V"/>
-        <Lbl x={30} y={123} t="POWER SUPPLY" c="#a5b4fc" s={7}/>
+        <line x1={30} y1={128} x2={30} y2={114}
+          stroke="#a5b4fc" strokeWidth={0.8} strokeDasharray="2 2"/>
+        <Lbl x={30} y={111} t="POWER SUPPLY" c="#a5b4fc" s={7}/>
 
         {/* ── Insulating foam mat ── */}
         <rect x={150} y={186} width={140} height={7} rx={2}
           fill="#fef3c7" stroke="#fbbf24" strokeWidth={1}/>
         <Lbl x={220} y={202} t="Insulating mat / foam" c="#92400e" s={7}/>
 
-        {/* ── Aluminium block ── */}
+        {/* ── Aluminium block — callout → right, below thermometer callout ── */}
         <rect x={155} y={blockTop} width={130} height={75} rx={3}
           fill="#4b5563" fillOpacity={0.22} stroke="#9ca3af" strokeWidth={2}/>
-        {/* Block label — low inside block, clear of heater & therm */}
-        <Lbl x={210} y={170} t="ALUMINIUM BLOCK" c="#9ca3af" s={9}/>
-        <Lbl x={210} y={180} t="m = 1 kg"         c="#6b7280" s={7}/>
+        {/* Callout from block right edge at y=155 → outside right */}
+        <line x1={285} y1={blockTop + 55} x2={296} y2={blockTop + 55}
+          stroke="#9ca3af" strokeWidth={0.8} strokeDasharray="2 2"/>
+        <Lbl x={298} y={blockTop + 53} t="ALUMINIUM BLOCK" c="#9ca3af" s={8} a="start"/>
+        <Lbl x={298} y={blockTop + 63} t="m = 1 kg"         c="#6b7280" s={7} a="start"/>
 
         {/* ── Heater hole — left side of block ── */}
         {/* Hole: x=163 to x=203 (40 px wide). tA=170, tB=200 */}

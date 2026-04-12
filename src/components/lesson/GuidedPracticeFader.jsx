@@ -19,7 +19,7 @@ import { useSound } from '../../hooks/useSound'
 import { speak } from '../../utils/tts'
 
 function ttsEnabled() {
-  try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false }
+  return localStorage.getItem('np_auto_tts') === 'true'
 }
 
 // Small TTS button placed top-right of a question card
@@ -658,6 +658,7 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
   const [tier, setTier] = useState(1)
   const triggerReaction = useMamoReaction()
   const { playCorrect, playWrong, playComplete } = useSound()
+  if (!guidedPractice) return null
 
   return (
     <div className="px-5 py-5 flex flex-col gap-5">

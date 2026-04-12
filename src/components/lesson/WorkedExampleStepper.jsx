@@ -35,7 +35,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
   const [revealed, setRevealed] = useState(0)
   const [showMisconception, setShowMisconception] = useState(false)
   const [misconceptionDone, setMisconceptionDone] = useState(false)
-  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
+  const ttsEnabled = localStorage.getItem('np_auto_tts') === 'true'
 
   const allStepsRevealed = revealed >= steps.length
 

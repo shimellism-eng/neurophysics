@@ -10,7 +10,7 @@ import { speak } from '../../utils/tts'
 
 export default function HookCard({ hook, moduleColor, onReady }) {
   const { hookFact, hookQuestion, hookEmoji = '⚡' } = hook
-  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
+  const ttsEnabled = localStorage.getItem('np_auto_tts') === 'true'
 
   return (
     <motion.div

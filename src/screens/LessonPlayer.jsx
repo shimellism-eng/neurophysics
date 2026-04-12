@@ -246,9 +246,10 @@ export default function LessonPlayer() {
     </div>
   )
 
-  const isNewFlow  = !!(topic.hook && topic.lessonKeywords)
+  const isNewFlow  = !!(topic.hook && topic.lessonKeywords && topic.lessonKeywords.length > 0)
   const STEPS      = isNewFlow
     ? NEW_STEPS.filter(s => {
+        if (s.id === 'vocab'      && (!topic.lessonKeywords || topic.lessonKeywords.length === 0)) return false
         if (s.id === 'explore'    && !topic.lessonVisual)                          return false
         if (s.id === 'realworld'  && !topic.realityVisual)                         return false
         if (s.id === 'understand' && !topic.workedExample && !topic.ideaVisual)    return false
@@ -400,7 +401,7 @@ export default function LessonPlayer() {
               moduleTopicCount={moduleTopicCount}
               moduleMasteredCount={moduleMasteredCount}
               recap={topic.sessionRecap || [
-                topic.concept || topic.description.split('.')[0] + '.',
+                topic.concept || (topic.description ? topic.description.split('.')[0] + '.' : `${topic.title} — review your notes.`),
                 `Key equation: ${topic.equations?.[0]?.expr || 'see notes'}`,
                 'Use spaced repetition to lock this in.',
               ]}

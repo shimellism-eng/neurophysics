@@ -16,7 +16,7 @@
  *   0  Explore / 1  Big Idea / 2  Real World / 3  Key Concept
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
   ArrowLeft, ChevronRight, BookOpen, FlaskConical,
@@ -221,6 +221,8 @@ export default function LessonPlayer() {
   const [xpKey, setXpKey]         = useState(0)
   // Persist PriorKnowledgeProbe completion so going back doesn't reset it
   const [probeCompleted, setProbeCompleted] = useState(false)
+  // Idempotency guard: markStarted fires at most once per mount
+  const hasStartedRef = useRef(false)
 
   // ADHD pacing: session timer + break nudges
   const { elapsedMinutes, showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
@@ -295,8 +297,11 @@ export default function LessonPlayer() {
     try {
       localStorage.setItem(`np_lesson_progress_${id}`, JSON.stringify({ step, ts: Date.now() }))
     } catch {}
-    // Mark topic as started as soon as the user moves past the hook
-    markStarted(id)
+    // Mark topic as started as soon as the user moves past the hook (idempotent — once per mount)
+    if (!hasStartedRef.current) {
+      hasStartedRef.current = true
+      markStarted(id)
+    }
   }, [step, id])
 
   const handleStartQuiz = () => {
@@ -539,6 +544,22 @@ export default function LessonPlayer() {
             {topic.title}
           </h1>
         </div>
+
+        {/* Step counter pill */}
+        <span
+          className="shrink-0 tabular-nums"
+          style={{
+            borderRadius: 20,
+            background: 'rgba(255,255,255,0.08)',
+            padding: '4px 10px',
+            fontSize: 12,
+            color: '#94a3b8',
+            fontWeight: 600,
+            position: 'relative',
+          }}
+        >
+          {step + 1} / {totalSteps}
+        </span>
 
         {/* Course badge */}
         <span

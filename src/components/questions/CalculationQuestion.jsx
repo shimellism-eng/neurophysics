@@ -4,7 +4,7 @@
  */
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
+import { CheckCircle, CheckCircle2, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
 
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const { equation, steps, answer, answerUnit, acceptableRange, commonMistake, senNote } = data
@@ -107,7 +107,14 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
             style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield' }}
           />
           {answerUnit && (
-            <span className="pr-4 text-sm font-semibold" style={{ color: '#a8b8cc' }}>{answerUnit}</span>
+            <span className={submitted ? 'text-sm font-semibold' : 'pr-4 text-sm font-semibold'} style={{ color: '#a8b8cc' }}>{answerUnit}</span>
+          )}
+          {submitted && (
+            <span className="pr-3 shrink-0">
+              {isCorrect
+                ? <CheckCircle2 size={18} color="#22c55e" />
+                : <XCircle size={18} color="#ef4444" />}
+            </span>
           )}
         </div>
 
@@ -139,9 +146,9 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
                 border: isCorrect ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)',
               }}
             >
-              {isCorrect ? <CheckCircle size={18} color="#00bc7d" /> : <Lightbulb size={18} color="#818cf8" />}
+              {isCorrect ? <CheckCircle2 size={20} color="#22c55e" /> : <XCircle size={20} color="#ef4444" />}
               <div>
-                <span className="text-sm font-semibold block" style={{ color: isCorrect ? '#00bc7d' : '#818cf8' }}>
+                <span className="text-sm font-semibold block" style={{ color: isCorrect ? '#00bc7d' : '#ef4444' }}>
                   {isCorrect ? 'Spot on! 🌟' : 'Great attempt — here\'s how to work it out:'}
                 </span>
                 {!isCorrect && (

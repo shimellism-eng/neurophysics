@@ -192,6 +192,19 @@ function AppShell() {
   const location = useLocation()
   const { user, loading } = useAuth()
 
+  // Offline detection
+  const [isOffline, setIsOffline] = useState(!navigator.onLine)
+  useEffect(() => {
+    const goOffline = () => setIsOffline(true)
+    const goOnline  = () => setIsOffline(false)
+    window.addEventListener('offline', goOffline)
+    window.addEventListener('online',  goOnline)
+    return () => {
+      window.removeEventListener('offline', goOffline)
+      window.removeEventListener('online',  goOnline)
+    }
+  }, [])
+
   // Reset scroll on route change
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -284,6 +297,30 @@ function AppShell() {
           <FloatingMamo />
           <BottomNav />
         </>
+      )}
+
+      {/* Offline overlay — WCAG 1.4.3, no silent failure */}
+      {isOffline && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 9999,
+          background: '#080f1e',
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'center', justifyContent: 'center',
+          gap: 16, padding: 32, textAlign: 'center',
+          fontFamily: 'Bricolage Grotesque, sans-serif',
+        }}>
+          <div style={{ fontSize: 48 }}>📡</div>
+          <h2 style={{ color: '#f8fafc', fontSize: 20, fontWeight: 700, margin: 0 }}>No connection</h2>
+          <p style={{ color: '#94a3b8', fontSize: 14, margin: 0 }}>
+            Check your internet and try again.<br />Your progress is saved locally.
+          </p>
+          <button onClick={() => window.location.reload()} style={{
+            marginTop: 8, padding: '12px 24px',
+            background: '#00d4ff', color: '#080f1e',
+            border: 'none', borderRadius: 12,
+            fontSize: 14, fontWeight: 700, cursor: 'pointer',
+          }}>Try again</button>
+        </div>
       )}
     </div>
   )

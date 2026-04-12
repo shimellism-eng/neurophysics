@@ -110,11 +110,22 @@ export default function MamoChat() {
   const abortRef  = useRef(null)
   // Persist messages to localStorage (skip the initial welcome msg)
   useEffect(() => {
+    if (messages.length <= 1) return
+    const newData = JSON.stringify(messages.slice(-50))
+    // Evict oldest mamo thread if total localStorage usage is approaching 4MB
     try {
-      if (messages.length > 1) {
-        localStorage.setItem(storageKey, JSON.stringify(messages.slice(-50)))
+      let total = 0
+      for (let k in localStorage) total += (localStorage[k]?.length || 0)
+      if (total > 4 * 1024 * 1024) {
+        const mamoKeys = Object.keys(localStorage).filter(k => k.startsWith('mamo_thread_'))
+        if (mamoKeys.length > 1) {
+          localStorage.removeItem(mamoKeys[0])
+        }
       }
-    } catch {}
+      localStorage.setItem(storageKey, newData)
+    } catch (e) {
+      console.warn('localStorage full, skipping save')
+    }
   }, [messages, storageKey])
 
   // Auto-scroll to bottom on new messages

@@ -295,7 +295,9 @@ export default function TimedPaper() {
   const [showResults, setShowResults] = useState(false)
   const [timesUp, setTimesUp]       = useState(false)
   const [resumeBanner, setResumeBanner] = useState(false)
-  const [hideTimer, setHideTimer]   = useState(false)
+  const [hideTimer, setHideTimer]   = useState(() => {
+    try { return sessionStorage.getItem('neurophysics_paper_hide_timer') === 'true' } catch { return false }
+  })
   const [paused, setPaused]         = useState(() => {
     try { return sessionStorage.getItem('neurophysics_paper_paused') === 'true' } catch { return false }
   })
@@ -322,6 +324,11 @@ export default function TimedPaper() {
   useEffect(() => {
     try { sessionStorage.setItem('neurophysics_paper_paused', String(paused)) } catch {}
   }, [paused])
+
+  // Persist hide-timer preference to sessionStorage
+  useEffect(() => {
+    try { sessionStorage.setItem('neurophysics_paper_hide_timer', String(hideTimer)) } catch {}
+  }, [hideTimer])
 
   // Timer tick — wall-clock based so backgrounding / interval drift cannot steal time
   useEffect(() => {
@@ -396,7 +403,7 @@ export default function TimedPaper() {
   const handleNext = useCallback(() => {
     setQIndex(prev => {
       if (prev >= total - 1) {
-        // Last question - go to results (defer to next tick to avoid setState-in-render)
+        // Last question — go to results (defer to next tick to avoid setState-in-render)
         setTimeout(() => {
           saveQuizResult('timed_paper', score, total)
           localStorage.removeItem(STORAGE_KEY)
@@ -690,6 +697,12 @@ export default function TimedPaper() {
       {/* Question content */}
       <div className="flex-1 overflow-y-auto px-5 pb-4 pt-4"
         style={{ filter: paused ? 'blur(6px)' : 'none', transition: 'filter 0.2s', pointerEvents: paused ? 'none' : 'auto' }}>
+        {/* BUG-05: safe fallback if question is undefined (e.g. empty/corrupt question set) */}
+        {!questions[qIndex] ? (
+          <div className="flex items-center justify-center h-full py-16 text-sm" style={{ color: '#64748b' }}>
+            No question available.
+          </div>
+        ) : <>
         {/* Section label */}
         <div className="flex items-center justify-between mb-3">
           <span className="px-2 py-0.5 rounded-full text-xs font-bold"
@@ -728,6 +741,7 @@ export default function TimedPaper() {
             {renderQuestion()}
           </motion.div>
         </AnimatePresence>
+        </>}
       </div>
 
       {/* Bottom bar: palette toggle + next */}

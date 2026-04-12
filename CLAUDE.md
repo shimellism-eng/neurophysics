@@ -164,15 +164,15 @@
 │       ├── qb-atomic.js + part1/part2
 │       ├── qb-electricity.js + part1/part2
 │       ├── qb-energy.js
-│       ├── qb-forces.js            # + WJEC circular motion + CCEA hydraulics
+│       ├── qb-forces.js            # + WJEC circular motion (8 angular vel Qs) + CCEA hydraulics + moments/elastic
 │       ├── qb-magnetism.js
 │       ├── qb-particle.js
 │       ├── qb-space.js
-│       ├── qb-waves.js + part1/part2  # + WJEC seismic waves + CCEA diverging lenses
-│       ├── qb-practicals.js        # 154 questions for 11 required practicals
-│       ├── qb-keyconcepts.js       # Edexcel Topic 1 — SI units, scalars, equation rearranging
-│       ├── qb-globalchallenges.js  # OCR Gateway A P8 — transport safety, electricity costs
-│       └── qb-universe-ocr.js      # OCR 21C P7 — telescope optics, HR diagram, astronomy history
+│       ├── qb-waves.js + part1/part2  # + WJEC seismic shadow zone + CCEA lens equation (1/f=1/u+1/v) + diffraction
+│       ├── qb-practicals.js        # 162 questions for 11 required practicals (+ 8 density Qs)
+│       ├── qb-keyconcepts.js       # Edexcel Topic 1 — SI units, sig figs, OOM, standard form, prefixes
+│       ├── qb-globalchallenges.js  # OCR Gateway A P8 — transport safety, electricity costs, electric fields
+│       └── qb-universe-ocr.js      # OCR 21C P7 — telescope optics, HR diagram, astronomy, redshift, ISL, spectroscopy
 │
 ├── hooks/
 │   ├── useAdaptive.js
@@ -299,6 +299,21 @@
 - [x] Age verification on consent screen: DOB (month + year) input; under-13 blocked with red warning (COPPA/ICO); age confirmation checkbox shows confirmed age; under-16 parent/guardian reminder
 - [x] PracticalScreen Explore tab: 8th tab with PhET + WithDiode external simulation links for all 11 practicals
 - [x] PracticalScreen Data Collection mode: Record button + chip list + live ScatterGraph for 8 practicals (RP1,RP3,RP4,RP5,RP7,RP8,RP9,RP11); useDataCollector hook in src/hooks/useDataCollector.js
+- [x] Student experience audit (6 board agents) + 18 fixes: grade band pills in PaperResults, Mamo board-aware (system prompt injection), SpecChecklist board badge legend, StudyPlan adjustable pace, TimedPaper pause/resume, AdaptivePractice ask-Mamo pill + tier label, ExamPractice worked solution card + command word highlight, HomeScreen review due dates, LearnScreen module expand sessionStorage, OnboardingScreen accessibility step, Radiation & Risk topic (OCR-A), Converging/Diverging Lenses topic (CCEA/OCR-B)
+- [x] Teacher experience audit (6 board agents) + P0+P1 fixes:
+  - qb-forces.js: g=9.8 explicit in all non-board Qs; 8 WJEC angular velocity Qs; CCEA moments + elastic limit Qs
+  - qb-energy.js: board-split g questions (edexcel/ccea=10, aqa/ocr/wjec=9.8); markScheme arrays + unitMark; acceptRange ±1.5%
+  - examCalculations.js: 6 g corrections (9.8) with recalculated answers
+  - qb-waves.js: 6 CCEA lens equation Qs; 2 WJEC seismic shadow zone; 2 wave diffraction (gap≈λ)
+  - qb-atomic.js: antineutrino beta decay (3 Qs); nuclear fission/fusion (5 Qs); topic keywords updated
+  - qb-universe-ocr.js: redshift Δλ/λ≈v/c (3 Qs), ISL I∝1/d² (2 Qs), spectroscopy (2 Qs); topics-universe.jsx updated
+  - practicals.js: OCR-B PAG telescope magnification + Cepheid data analysis; Edexcel CP4/5/6
+  - ExamPractice.jsx: EXTENDED_GUIDES (all 6 boards, 6-step mark structures + board-specific tips)
+  - ExtendedAnswerQuestion.jsx: model answer card when question.modelAnswer exists
+  - topics-forces.jsx + topics-waves.jsx: OCR-A board tags; wjecUnit metadata; circular_motion topic (WJEC)
+  - qb-keyconcepts.js: 10 Edexcel sig figs/OOM/standard form/prefix Qs; topics-keyconcepts.jsx updated
+  - qb-globalchallenges.js: 16 new Qs (transport safety, electricity costs, electric fields); topics-globalchallenges.jsx: full electric_fields topic with 9-step lesson + SVG interactive (boards: ocr-a)
+  - qb-practicals.js: 8 new density Qs (method selection, error analysis, anomaly, reliability, unit conversion, 6-mark)
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 - [ ] Sentry DSN: create account at sentry.io, add VITE_SENTRY_DSN to .env.local + Vercel env vars to activate error monitoring
 - [ ] App Store screenshots: create 5 screens in Figma (hook card, worked example, adaptive practice, progress, MamoChat)

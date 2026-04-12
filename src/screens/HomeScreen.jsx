@@ -574,23 +574,49 @@ export default function HomeScreen() {
               <p className="text-xs mb-3.5" style={{ color: 'rgba(255,255,255,0.32)' }}>
                 Spaced practice locks it into long-term memory
               </p>
-              <div className="flex flex-wrap gap-2">
-                {reviewDue.slice(0, 3).map(({ id, topic }) => (
-                  <motion.button
-                    key={id}
-                    className="flex items-center gap-1.5 px-4 rounded-full text-xs font-semibold"
-                    style={{
-                      height: 44,
-                      background: topic.moduleColor ? `${topic.moduleColor}18` : 'rgba(99,102,241,0.15)',
-                      border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}32` : 'rgba(99,102,241,0.28)'}`,
-                      color: topic.moduleColor || '#818cf8',
-                    }}
-                    onClick={() => navigate(`/lesson/${id}`)}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {topic.title} <ChevronRight size={10} strokeWidth={2.5} />
-                  </motion.button>
-                ))}
+              <div className="flex flex-col gap-2">
+                {reviewDue.slice(0, 3).map(({ id, topic, masteredAt, nextReviewAt }) => {
+                  const now = Date.now()
+                  const isDueToday = nextReviewAt && nextReviewAt <= now
+                  const daysUntilDue = nextReviewAt && nextReviewAt > now
+                    ? Math.ceil((nextReviewAt - now) / (1000 * 60 * 60 * 24))
+                    : null
+                  const masteredDaysAgo = masteredAt
+                    ? Math.max(0, Math.floor((now - masteredAt) / (1000 * 60 * 60 * 24)))
+                    : null
+                  return (
+                    <motion.button
+                      key={id}
+                      className="flex items-center justify-between px-4 py-3 rounded-2xl text-left w-full"
+                      style={{
+                        background: topic.moduleColor ? `${topic.moduleColor}18` : 'rgba(99,102,241,0.15)',
+                        border: `1px solid ${topic.moduleColor ? `${topic.moduleColor}32` : 'rgba(99,102,241,0.28)'}`,
+                      }}
+                      onClick={() => navigate(`/lesson/${id}`)}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div>
+                        <div className="text-xs font-semibold" style={{ color: topic.moduleColor || '#818cf8' }}>
+                          {topic.title}
+                        </div>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          {isDueToday && (
+                            <span className="text-xs font-bold" style={{ color: '#f59e0b' }}>Due today</span>
+                          )}
+                          {daysUntilDue !== null && (
+                            <span className="text-xs" style={{ color: '#a8b8cc' }}>Due in {daysUntilDue} day{daysUntilDue !== 1 ? 's' : ''}</span>
+                          )}
+                          {masteredDaysAgo !== null && (
+                            <span className="text-xs" style={{ color: '#a8b8cc' }}>
+                              {isDueToday || daysUntilDue !== null ? '·' : ''} Mastered {masteredDaysAgo === 0 ? 'today' : `${masteredDaysAgo} day${masteredDaysAgo !== 1 ? 's' : ''} ago`}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <ChevronRight size={14} strokeWidth={2.5} color={topic.moduleColor || '#818cf8'} style={{ flexShrink: 0 }} />
+                    </motion.button>
+                  )
+                })}
               </div>
             </div>
           </motion.div>

@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Car, Zap, TrendingDown, DollarSign } from 'lucide-react'
 import { MisconceptionCard, RealWorldCard, FormulaBox } from './visuals-helpers'
 
+const GC_RAD = '#f59e0b'  // amber for radiation & risk
+
 const GC = '#10b981'  // green for global challenges
 
 // ─── Transport Safety Visuals ────────────────────────────────────────────────
@@ -237,6 +239,85 @@ function ElectricityCostsReality() {
         title="LED vs filament bulbs"
         desc="A 60 W filament vs 9 W LED: same brightness, same 8 h/day. Old bulb: 60×8=480 Wh = 0.48 kWh/day. LED: 9×8=72 Wh = 0.072 kWh/day — 85% less energy, 85% lower bill."
         color="#3b82f6"
+        delay={0.2}
+      />
+    </div>
+  )
+}
+
+// ─── Radiation and Risk Visuals ─────────────────────────────────────────────
+
+function RadiationRiskLesson() {
+  const sources = [
+    { label: 'Radon gas', pct: 50, color: '#ef4444' },
+    { label: 'Medical', pct: 15, color: '#3b82f6' },
+    { label: 'Ground/buildings', pct: 14, color: '#8b5cf6' },
+    { label: 'Food & drink', pct: 12, color: GC_RAD },
+    { label: 'Cosmic rays', pct: 10, color: '#06b6d4' },
+    { label: 'Nuclear industry', pct: 1, color: '#94a3b8' },
+  ]
+  const barWidth = 200
+  return (
+    <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
+      <div style={{ fontSize: 10, color: GC_RAD, fontWeight: 700, textAlign: 'center', letterSpacing: 1 }}>
+        UK average background dose: ~2.7 mSv/year
+      </div>
+      <svg width="100%" viewBox="0 0 260 148" style={{ borderRadius: 10, border: `1.5px solid #1d293d`, background: '#0f1829' }}>
+        <text x="8" y="14" fill="#a8b8cc" fontSize={7.5} fontWeight="bold">Sources of background radiation in the UK:</text>
+        {sources.map((s, i) => {
+          const barPx = Math.round((s.pct / 50) * barWidth)
+          const y = 22 + i * 20
+          return (
+            <g key={s.label}>
+              <text x="8" y={y + 9} fill="#a8b8cc" fontSize={7.5}>{s.label}</text>
+              <rect x="90" y={y} width={barPx} height="12" rx="3" fill={s.color} opacity={0.85} />
+              <text x={90 + barPx + 4} y={y + 9} fill={s.color} fontSize={7.5} fontWeight="bold">{s.pct}%</text>
+            </g>
+          )
+        })}
+        <text x="130" y="146" textAnchor="middle" fill="#475569" fontSize={6.5}>
+          Source: Public Health England / UKHSA
+        </text>
+      </svg>
+    </div>
+  )
+}
+
+function RadiationRiskIdea() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Contamination and irradiation are the same thing — if you are near a radioactive source, you become radioactive."
+        right="Irradiation: you are exposed to radiation from an external source, but the source is NOT on or in you — you are not radioactive afterwards. Contamination: radioactive material gets onto or inside your body, making you a source of radiation."
+        wrongLabel="Common misconception"
+        rightLabel="Contamination vs Irradiation"
+      />
+    </div>
+  )
+}
+
+function RadiationRiskReality() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard
+        icon="🏥"
+        title="Medical X-rays — justified risk"
+        desc="A chest X-ray gives ~0.02 mSv — about 2.5 days of background radiation. Doctors use ALARA: as low as reasonably achievable. The benefit (detecting disease) almost always outweighs the tiny risk."
+        color={GC_RAD}
+        delay={0}
+      />
+      <RealWorldCard
+        icon="🏠"
+        title="Radon — the invisible indoor risk"
+        desc="Radon seeps from granite rocks. In Cornwall, homes can have 10× the UK average radon level. The fix: underfloor ventilation or a radon sump — simple and cheap, saving lives."
+        color="#ef4444"
+        delay={0.1}
+      />
+      <RealWorldCard
+        icon="☢️"
+        title="Nuclear workers — dose limits"
+        desc="UK nuclear workers are limited to 20 mSv/year (averaged over 5 years). They wear film badges or TLDs (thermoluminescent dosimeters) to track cumulative exposure. Compare: a CT scan gives ~10 mSv."
+        color="#8b5cf6"
         delay={0.2}
       />
     </div>
@@ -640,6 +721,215 @@ export const GLOBAL_CHALLENGES_TOPICS = {
       'E (kWh) = P (kW) × t (h). Always convert watts to kilowatts (÷1000) and minutes to hours (÷60) before using this formula. 1 kWh = 3,600,000 J = 3.6 MJ.',
       'Cost = energy (kWh) × unit rate (p/kWh). To find units used from a meter, subtract previous reading from current reading.',
       'The National Grid transmits at high voltage to keep current low. Power loss = I²R — reducing current 10× reduces I²R losses 100×. This is why step-up transformers are used before long-distance transmission.',
+    ],
+  },
+
+  radiation_risk: {
+    id: 'radiation_risk',
+    module: 'Global Challenges',
+    moduleColor: GC_RAD,
+    course: 'combined',
+    boards: ['ocr-a'],
+    title: 'Radiation and Risk',
+    subtitle: 'Background Radiation, Dose & Contamination',
+    description: 'Ionising radiation has enough energy to remove electrons from atoms, creating ions. Background radiation is always present — in the UK it averages ~2.7 mSv/year from radon gas (50%), medical procedures (15%), ground/buildings (14%), food/drink (12%), cosmic rays (10%), and the nuclear industry (<1%). Risk = probability × consequence. Radiation dose is measured in sieverts (Sv) or millisieverts (mSv). Irradiation is exposure from an external source — you are not radioactive afterwards. Contamination is when radioactive material gets onto or inside the body — the person becomes a source. The ALARA principle (As Low As Reasonably Achievable) governs medical and industrial use of radiation.',
+    lessonVisual: RadiationRiskLesson,
+    ideaVisual: RadiationRiskIdea,
+    realityVisual: RadiationRiskReality,
+    question: 'A patient receives a chest X-ray (0.02 mSv) and a CT scan (7 mSv). How many times greater is the CT scan dose compared to the X-ray?',
+    questionSubtitle: 'Divide the larger dose by the smaller dose',
+    options: ['35×', '350×', '7×', '140×'],
+    correctAnswer: 1,
+    keywords: ['ionising radiation', 'background radiation', 'radon', 'dose', 'millisievert', 'mSv', 'risk', 'contamination', 'irradiation', 'ALARA', 'justification', 'optimisation', 'dose limits'],
+    sentenceStarters: [
+      'Background radiation comes from sources including...',
+      'The difference between contamination and irradiation is...',
+      'Risk is calculated as probability × ...',
+      'The ALARA principle means that radiation dose should be...',
+      'Radon is the largest source of background radiation in the UK because...',
+    ],
+    modelAnswers: [
+      'Background radiation comes from sources including **radon gas (50%), medical procedures (15%), gamma rays from ground and buildings (14%), food and drink (12%), and cosmic rays (10%)**.',
+      'The difference between contamination and irradiation is **that contamination means radioactive material is on or inside the body (making you a source), whereas irradiation is exposure from an external source — you are not radioactive afterwards**.',
+      'Risk is calculated as probability × **consequence (severity of harm)**.',
+      'The ALARA principle means that radiation dose should be **kept as low as reasonably achievable — balancing benefits against risks using shielding, distance, and minimising exposure time**.',
+      'Radon is the largest source of background radiation in the UK because **it seeps naturally from granite and other rocks in the ground, accumulates in buildings, and is inhaled**.',
+    ],
+    misconception: 'Irradiation does NOT make you radioactive. A patient who has an X-ray or radiotherapy is irradiated (exposed to radiation), but the source is external — they do not become radioactive. Contamination is different: that is when radioactive material is physically on or in the body.',
+    concept: 'Average UK dose: ~2.7 mSv/year. Radon = 50% of background. Irradiation ≠ contamination. Risk = probability × consequence. ALARA principle. Dose limits: 20 mSv/year for nuclear workers, 1 mSv/year for public (above background).',
+
+    // ── 9-STEP LESSON DATA ──────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'Every year, the average UK person receives ~2.7 mSv of radiation from natural and artificial sources — mainly radon gas seeping up from the ground. A single CT scan of the chest gives about 7 mSv. Yet CT scans save thousands of lives a year. The same radiation that can cause cancer can also detect it early enough to cure it.',
+      hookQuestion: 'A hospital radiographer performs X-rays every day. Should they be worried about radiation exposure? What factors would you consider when deciding if the risk is acceptable?',
+      hookEmoji: '☢️',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Ionising Radiation',
+        symbol: '',
+        unit: '',
+        definition: 'Radiation with enough energy to remove electrons from atoms, creating ions that can damage living cells.',
+        everydayNote: 'Alpha, beta, and gamma radiation are all ionising. UV light is borderline ionising. Visible light and radio waves are non-ionising.',
+      },
+      {
+        word: 'Background Radiation',
+        symbol: '',
+        unit: 'mSv/year',
+        definition: 'The low-level ionising radiation always present in the environment from natural and artificial sources.',
+        everydayNote: 'UK average is ~2.7 mSv/year. You cannot avoid background radiation — it comes from the ground, air, food, and even space.',
+      },
+      {
+        word: 'Radon',
+        symbol: 'Rn-222',
+        unit: '',
+        definition: 'A naturally occurring radioactive gas produced by the decay of uranium in rocks and soil. It seeps into buildings and is inhaled.',
+        everydayNote: 'Radon is colourless, odourless, and tasteless. It is the largest single source of background radiation exposure in the UK, contributing about 50% of the average annual dose.',
+      },
+      {
+        word: 'Dose',
+        symbol: 'H',
+        unit: 'Sv or mSv',
+        definition: 'The amount of radiation energy absorbed by body tissue, weighted by radiation type and tissue sensitivity. Measured in sieverts (Sv).',
+        everydayNote: '1 mSv = 0.001 Sv. Typical medical doses: X-ray ~0.02 mSv, CT scan ~7–10 mSv. Radiation sickness begins above ~1000 mSv (1 Sv).',
+      },
+      {
+        word: 'Risk',
+        symbol: '',
+        unit: '',
+        definition: 'The probability of harm occurring, multiplied by the severity of that harm.',
+        everydayNote: 'Risk assessment always weighs benefits against risks. A CT scan has a small increased cancer risk, but detecting a tumour early saves life.',
+      },
+      {
+        word: 'Irradiation',
+        symbol: '',
+        unit: '',
+        definition: 'Exposure to radiation from an external source. The exposed person does not become radioactive.',
+        everydayNote: 'A patient receiving an X-ray is irradiated. When they leave the room, there is no ongoing risk to others — they are not a radioactive source.',
+      },
+      {
+        word: 'Contamination',
+        symbol: '',
+        unit: '',
+        definition: 'When radioactive material is deposited on the skin or inside the body, making the person a source of radiation.',
+        everydayNote: 'Contamination is more dangerous than irradiation because the source stays with you, continuing to irradiate your tissues. Nuclear workers wear full protective suits to avoid contamination.',
+      },
+      {
+        word: 'ALARA',
+        symbol: '',
+        unit: '',
+        definition: 'As Low As Reasonably Achievable — the principle that radiation exposure should be minimised as far as practical, balancing cost and benefit.',
+        everydayNote: 'ALARA is used by hospitals, nuclear plants, and radiographers to keep doses as small as possible while still getting the clinical benefit.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Which type of radiation has the highest ionising power?',
+          answers: ['Alpha', 'Beta', 'Gamma', 'X-ray'],
+          correct: 0,
+          feedback: 'Alpha particles are the most strongly ionising — they are large (2 protons + 2 neutrons) and slow-moving, so they interact intensely with matter. They are stopped by a few cm of air or a sheet of paper.',
+        },
+        {
+          question: 'What does "background radiation" mean?',
+          answers: [
+            'Radiation that is always present in the environment',
+            'Radiation produced only in nuclear power stations',
+            'Radiation from medical X-rays',
+            'Radiation absorbed by lead shielding',
+          ],
+          correct: 0,
+          feedback: 'Background radiation is always present — from rocks, air, food, cosmic rays, and some artificial sources. It existed long before nuclear power stations.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Radioactive decay (alpha, beta, gamma)', 'Half-life'],
+      current: 'Radiation and Risk',
+      after: ['Nuclear fission and fusion', 'Uses of radiation (medical, industrial)'],
+    },
+
+    workedExample: {
+      title: 'Compare radiation doses and evaluate risk vs benefit',
+      equation: 'Risk = probability × consequence     Dose comparison: ratio = larger dose / smaller dose',
+      context: 'A 45-year-old patient needs a chest X-ray (0.02 mSv) or a CT chest scan (7 mSv). The CT is better at detecting early-stage lung cancer. Evaluate which should be used.',
+      steps: [
+        {
+          step: 1,
+          action: 'Calculate the dose ratio',
+          content: 'CT dose / X-ray dose = 7 / 0.02 = 350×',
+          annotation: 'The CT gives 350 times more radiation than the X-ray — a significantly higher dose.',
+        },
+        {
+          step: 2,
+          action: 'Identify the risks',
+          content: 'Additional cancer risk from 7 mSv ≈ 1 in 2000',
+          annotation: 'As a rough rule, 10 mSv adds ~1 in 1000 lifetime cancer risk. So 7 mSv ≈ 1 in 1400–2000.',
+        },
+        {
+          step: 3,
+          action: 'Identify the benefits',
+          content: 'CT detects early-stage cancer with ~90% 5-year survival. Missed detection: ~15% 5-year survival.',
+          annotation: 'The benefit (catching cancer early) is enormous compared to the small additional risk from the scan.',
+        },
+        {
+          step: 4,
+          action: 'Apply ALARA and make a justified decision',
+          content: 'Use CT. Justify: benefit greatly outweighs risk. Apply ALARA: use lowest dose CT protocol available.',
+          annotation: 'ALARA does not mean "use as little as possible regardless of benefit" — it means minimise dose while still getting the diagnostic information needed.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'Any exposure to radiation is dangerous and should always be avoided.',
+        reality: 'All radiation exposure carries some risk, but many medical uses of radiation have enormous benefits that far outweigh the risk. Background radiation (which we cannot avoid) is ~2.7 mSv/year. A CT scan is ~7 mSv — equivalent to a few years of background radiation.',
+        visual: 'Think of crossing the road: there is always a risk, but the benefit of getting to the other side justifies taking the (small) risk. Radiation risk is similar — it must be justified and minimised, not simply avoided.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A person receives 0.02 mSv from a chest X-ray. The UK average annual background dose is 2.7 mSv. How many chest X-rays would equal one year of background radiation?',
+        allSteps: [
+          'Write: background = 2.7 mSv, X-ray = 0.02 mSv',
+          'Divide: number = 2.7 ÷ 0.02',
+          '??? — calculate the number of X-rays',
+        ],
+        missingStep: 2,
+        missingHint: '2.7 ÷ 0.02 = ?',
+        answer: 135,
+        answerUnit: 'X-rays',
+      },
+      tier2: {
+        question: 'A nuclear power station worker receives 8 mSv in their first year. The legal limit is 20 mSv/year. By how many mSv are they under the limit? As a percentage of the limit, what is their dose?',
+        shownEquation: 'Margin = limit – dose     Percentage = (dose / limit) × 100',
+        shownStep1: 'Margin = 20 – 8 = 12 mSv under the limit',
+        hint: 'Percentage = (8 / 20) × 100 = ?',
+        answer: 40,
+        answerUnit: '% of the annual limit',
+      },
+      tier3: {
+        question: 'A student claims: "A radiographer who takes X-rays all day must be radioactive." Explain why this is wrong, using the terms irradiation and contamination correctly. Then explain what safety measures a radiographer uses and why.',
+        hint: 'Define irradiation vs contamination. X-rays are external beams — they do not make the person radioactive. Safety measures: lead apron, distance, leaving the room.',
+        methodHint: 'Irradiation = external exposure, does not make you radioactive. Contamination = radioactive material on/in body. A radiographer is irradiated by scattered X-rays, not contaminated.',
+        answer: 0,
+        answerUnit: 'extended answer — see mark scheme',
+      },
+    },
+
+    summary: {
+      equation: 'Risk = probability × consequence     Dose ratio = larger dose ÷ smaller dose',
+      sentence: 'Background radiation is always present. Irradiation (external exposure) does not make you radioactive. Contamination (radioactive material on/in body) does. Dose is measured in mSv. ALARA: minimise dose while achieving the benefit.',
+      promptText: 'Without looking: name 3 sources of background radiation. Explain the difference between contamination and irradiation. State what ALARA stands for.',
+    },
+
+    sessionRecap: [
+      'Background radiation in the UK averages ~2.7 mSv/year. The biggest source is radon gas (50%) — a naturally occurring radioactive gas that seeps from rocks, especially granite. Regional variation is significant.',
+      'Irradiation = exposure from an external source; you do not become radioactive. Contamination = radioactive material on or in the body; you become a source. Contamination is more dangerous because the source stays with you.',
+      'Risk = probability × consequence. ALARA (As Low As Reasonably Achievable) governs all medical and industrial use of radiation. Dose limits: 20 mSv/year for nuclear workers, 1 mSv/year for the public above background.',
     ],
   },
 }

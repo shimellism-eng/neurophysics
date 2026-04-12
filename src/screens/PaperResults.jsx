@@ -188,6 +188,46 @@ function StageNumber({ score, total, timeUsed, onNext }) {
             <span className="text-2xl font-bold mb-1" style={{ color: '#475569' }}>/{total}</span>
           </motion.div>
           <p className="text-sm mt-1" style={{ color: '#64748b' }}>{pct}% - {timeStr} used</p>
+
+          {/* ── Grade band pills row ── */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-1.5 mt-4 px-2"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55 }}
+          >
+            {getGradeScale().map((g) => {
+              const isMe = g.grade === grade.grade
+              return (
+                <div
+                  key={g.grade}
+                  className="flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold"
+                  style={{
+                    background: isMe ? '#00d4ff' : 'rgba(255,255,255,0.06)',
+                    color: isMe ? '#0a0a0f' : '#64748b',
+                    border: isMe ? '1.5px solid #00d4ff' : '1px solid rgba(255,255,255,0.08)',
+                    fontWeight: isMe ? 700 : 500,
+                  }}
+                >
+                  {getSelectedBoard().gradeSystem === 'A*-G' ? g.grade : `Grade ${g.grade}`}
+                  <span style={{ opacity: 0.75 }}>≥{Math.round(g.min * 100)}%</span>
+                </div>
+              )
+            })}
+          </motion.div>
+
+          {/* CCEA C* special note */}
+          {getSelectedBoard().id === 'ccea' && grade.grade === 'C*' && (
+            <motion.div
+              className="mt-3 px-4 py-2 rounded-xl text-xs font-bold text-center"
+              style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.4)', color: '#f59e0b' }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.7 }}
+            >
+              C* — Strong Pass! 🎉
+            </motion.div>
+          )}
         </motion.div>
       </div>
 

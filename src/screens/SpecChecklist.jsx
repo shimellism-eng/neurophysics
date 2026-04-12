@@ -137,11 +137,30 @@ function ModuleSection({ module, topics, progress, boardId }) {
 
                   <div className="flex-1 min-w-0">
                     <div
-                      className="font-display text-sm font-semibold leading-tight truncate"
-                      style={{ color: p.mastered ? 'rgba(255,255,255,0.55)' : '#e2e8f0' }}
+                      className="font-display text-sm font-semibold leading-tight"
+                      style={{ color: p.mastered ? 'rgba(255,255,255,0.55)' : '#e2e8f0', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 4 }}
                     >
-                      {topic.emoji && <span className="mr-1.5">{topic.emoji}</span>}
-                      {topic.title}
+                      <span className="truncate">
+                        {topic.emoji && <span className="mr-1.5">{topic.emoji}</span>}
+                        {topic.title}
+                      </span>
+                      {topic.boards && topic.boards.length > 0 && (() => {
+                        const isCurrentBoard = topic.boards.includes(boardId)
+                        return (
+                          <span style={{
+                            background: isCurrentBoard ? 'rgba(0,212,255,0.15)' : 'rgba(99,102,241,0.15)',
+                            border: `0.75px solid ${isCurrentBoard ? 'rgba(0,212,255,0.3)' : 'rgba(99,102,241,0.3)'}`,
+                            color: isCurrentBoard ? '#00d4ff' : '#818cf8',
+                            fontSize: 10,
+                            fontWeight: 600,
+                            padding: '1px 6px',
+                            borderRadius: 99,
+                            flexShrink: 0,
+                          }}>
+                            {topic.boards.map(b => b.toUpperCase()).join(' · ')}
+                          </span>
+                        )
+                      })()}
                     </div>
                     {p.score !== undefined && !p.mastered && p.started && (
                       <div className="text-[11px] mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -271,6 +290,10 @@ export default function SpecChecklist() {
             <Circle size={13} color="rgba(255,255,255,0.2)" />
             <span className="text-[11px]" style={{ color: 'rgba(255,255,255,0.4)' }}>Not started</span>
           </div>
+        </div>
+        {/* Board badge legend */}
+        <div className="mt-2 text-xs" style={{ color: '#a8b8cc' }}>
+          💡 Coloured badges = board-specific content
         </div>
       </div>
 

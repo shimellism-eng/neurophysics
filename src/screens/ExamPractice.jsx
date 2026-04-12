@@ -6,7 +6,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
-import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2 } from 'lucide-react'
+import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2, ChevronDown } from 'lucide-react'
 import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import BreakNudge from '../components/BreakNudge'
@@ -123,6 +123,101 @@ function RPAErrorQuestion({ data, moduleColor, onComplete }) {
   )
 }
 
+// ── Worked Solution Card ─────────────────────────────────────────────────────
+
+function WorkedSolutionCard({ question, correct }) {
+  const hasContent = !!(question.explanation || question.markScheme || question.worked || question.steps)
+  const [open, setOpen] = useState(!correct) // auto-expand on incorrect
+
+  if (!hasContent) return null
+
+  const steps = question.worked || question.steps || null
+  const markScheme = question.markScheme
+  const explanation = question.explanation
+
+  return (
+    <motion.div
+      className="mt-3 rounded-[12px] overflow-hidden"
+      style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.08)' }}
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.15 }}
+    >
+      {/* Header */}
+      <button
+        className="w-full flex items-center justify-between px-4 py-3"
+        onClick={() => setOpen(o => !o)}
+        style={{ color: open ? '#00d4ff' : '#a8b8cc' }}
+      >
+        <span className="text-xs font-bold flex items-center gap-1.5">
+          <span>📖</span>
+          {markScheme && !explanation ? 'Mark Scheme' : 'Why?'}
+        </span>
+        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
+          <ChevronDown size={14} />
+        </motion.span>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            style={{ overflow: 'hidden' }}
+          >
+            <div className="px-4 pb-4 space-y-3">
+              {/* Explanation prose */}
+              {explanation && (
+                <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{explanation}</p>
+              )}
+
+              {/* Worked / steps */}
+              {Array.isArray(steps) && steps.length > 0 && (
+                <div className="space-y-2">
+                  {steps.map((step, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span
+                        className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                        style={{ background: 'rgba(0,212,255,0.15)', color: '#00d4ff' }}
+                      >
+                        {i + 1}
+                      </span>
+                      <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                        {typeof step === 'object' ? (step.text || step.label || JSON.stringify(step)) : step}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Mark scheme points */}
+              {Array.isArray(markScheme) && markScheme.length > 0 && (
+                <div className="space-y-1.5">
+                  {markScheme.map((point, i) => (
+                    <div key={i} className="flex items-start gap-2 px-3 py-2 rounded-[8px]"
+                      style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
+                      <span className="w-4 h-4 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
+                        style={{ background: 'rgba(0,188,125,0.2)', color: '#00bc7d' }}>✓</span>
+                      <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{point}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Mark scheme as string */}
+              {typeof markScheme === 'string' && markScheme && (
+                <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{markScheme}</p>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  )
+}
+
 // ── Command word decoder ─────────────────────────────────────────────────────
 
 const COMMAND_WORDS = {
@@ -206,6 +301,15 @@ export default function ExamPractice() {
 
   // Command word decoder
   const [showDecoder, setShowDecoder] = useState(false)
+  // Whether user has seen the "tap highlighted word" tooltip this session
+  const cwdTooltipSeen = useRef(
+    typeof sessionStorage !== 'undefined' && sessionStorage.getItem('cwd_seen') === '1'
+  )
+  // Track which question index last triggered auto-expand for extended-answer
+  const extendedAutoExpandedRef = useRef(-1)
+
+  // Last correct state tracking for WorkedSolutionCard
+  const [lastCorrect, setLastCorrect] = useState(null)
 
   // F10/F12: session timer for ADHD pacing
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
@@ -232,6 +336,7 @@ export default function ExamPractice() {
 
   const handleInteractiveComplete = useCallback((correct) => {
     if (correct) setScore(s => s + 1)
+    setLastCorrect(!!correct)
     setCompleted(true)
   }, [])
 
@@ -240,7 +345,9 @@ export default function ExamPractice() {
   const handleMcqSubmit = () => {
     if (selected === null || mcqSubmitted) return
     setMcqSubmitted(true)
-    if (selected === q.correctAnswer) setScore(s => s + 1)
+    const isCorrect = selected === q.correctAnswer
+    if (isCorrect) setScore(s => s + 1)
+    setLastCorrect(isCorrect)
     setCompleted(true)
   }
 
@@ -256,6 +363,7 @@ export default function ExamPractice() {
       setSelected(null)
       setMcqSubmitted(false)
       setShowDecoder(false)
+      setLastCorrect(null)
     }
   }
 
@@ -263,7 +371,21 @@ export default function ExamPractice() {
 
   // Command word decoder
   const questionLower = (q?.question || '').toLowerCase()
-  const detectedWord = Object.keys(COMMAND_WORDS).find(w => questionLower.startsWith(w + ' ') || questionLower.startsWith(w + ','))
+  const detectedWord = Object.keys(COMMAND_WORDS).find(w =>
+    questionLower.startsWith(w + ' ') ||
+    questionLower.startsWith(w + ',') ||
+    questionLower.includes(' ' + w + ' ') ||
+    questionLower.includes('\n' + w + ' ')
+  )
+
+  // Auto-expand decoder for 6-mark / extended-answer questions on first view
+  useEffect(() => {
+    const isExtended = qType === 'extended-answer' || qType === 'extended' || (q.marks ?? 0) >= 6
+    if (isExtended && extendedAutoExpandedRef.current !== qIndex) {
+      extendedAutoExpandedRef.current = qIndex
+      setShowDecoder(true)
+    }
+  }, [qIndex, qType, q.marks])
 
   const renderQuestion = () => {
     const props = { data: q, moduleColor: topic.moduleColor, onComplete: handleInteractiveComplete }
@@ -497,7 +619,27 @@ export default function ExamPractice() {
             <div className="mb-4">
               <div className="flex items-start gap-2">
                 <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
-                  {q.question}
+                  {/* Inline command word highlight */}
+                  {detectedWord ? (() => {
+                    const raw = q.question || ''
+                    // Case-insensitive replace of first occurrence of the command word
+                    const regex = new RegExp(`(${detectedWord})`, 'i')
+                    const parts = raw.split(regex)
+                    return parts.map((part, i) =>
+                      regex.test(part)
+                        ? (
+                          <span
+                            key={i}
+                            style={{ color: '#00d4ff', fontWeight: 700, textDecoration: 'underline dotted', cursor: 'pointer' }}
+                            onClick={() => setShowDecoder(v => !v)}
+                            title="Tap for exam technique help"
+                          >
+                            {part}
+                          </span>
+                        )
+                        : <span key={i}>{part}</span>
+                    )
+                  })() : q.question}
                 </h2>
                 {/* Command word decoder button */}
                 <button
@@ -520,6 +662,25 @@ export default function ExamPractice() {
                   </button>
                 )}
               </div>
+
+              {/* One-time "tap the highlighted word" tooltip (sessionStorage-gated) */}
+              {detectedWord && !cwdTooltipSeen.current && (() => {
+                // Mark as seen immediately so it only renders once this session
+                if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('cwd_seen', '1')
+                cwdTooltipSeen.current = true
+                return (
+                  <motion.p
+                    className="mt-1.5 text-xs"
+                    style={{ color: '#818cf8' }}
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    💡 Tap the highlighted word for exam technique help
+                  </motion.p>
+                )
+              })()}
+
               {showDecoder && (
                 <div className="mt-2 px-3 py-2.5 rounded-[10px]" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
                   <p className="text-xs font-bold mb-1" style={{ color: '#818cf8' }}>
@@ -596,6 +757,11 @@ export default function ExamPractice() {
 
             {/* Question content */}
             {renderQuestion()}
+
+            {/* FIX 1: Worked solution card — shown after answer submitted */}
+            {completed && qType !== 'extended-answer' && qType !== 'novel-context' && (
+              <WorkedSolutionCard question={q} correct={lastCorrect ?? true} />
+            )}
           </motion.div>
         </AnimatePresence>
         <div style={{ height: 24 }} />

@@ -143,9 +143,8 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
 
 // ─── Module card ──────────────────────────────────────────────────────────────
 
-function ModuleCard({ module, moduleIndex, progress }) {
+function ModuleCard({ module, moduleIndex, progress, expanded, onToggle }) {
   const navigate = useNavigate()
-  const [expanded, setExpanded] = useState(moduleIndex === 0)
 
   const masteredCount = module.topics.filter(t => progress[t]?.mastered).length
   const startedCount  = module.topics.filter(t => progress[t]?.started && !progress[t]?.mastered).length
@@ -171,7 +170,7 @@ function ModuleCard({ module, moduleIndex, progress }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: moduleIndex * 0.05, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
-      <button className="w-full" onClick={() => setExpanded(p => !p)} style={{ textAlign: 'left' }}>
+      <button className="w-full" onClick={onToggle} style={{ textAlign: 'left' }}>
         <div className="px-4 pt-4 pb-3 flex items-center gap-3"
           style={{ background: `linear-gradient(135deg, ${module.color}18 0%, ${module.color}06 100%)` }}>
           <div className="w-11 h-11 rounded-[14px] flex items-center justify-center shrink-0"
@@ -278,11 +277,8 @@ function ModuleCard({ module, moduleIndex, progress }) {
 
 const PAPER1_MODULES = ['Energy', 'Electricity', 'Particle Model', 'Atomic Structure']
 const PAPER2_MODULES = ['Forces', 'Waves', 'Magnetism & Electromagnetism', 'Space Physics']
-const FILTERS = [
-  { id: 'all',    label: 'All',     color: '#6366f1' },
-  { id: 'paper1', label: 'Paper 1', color: '#f97316' },
-  { id: 'paper2', label: 'Paper 2', color: '#00a8e8' },
-]
+
+const FILTER_COLORS = ['#6366f1', '#f97316', '#00a8e8', '#10b981']
 
 export default function LearnScreen() {
   const navigate     = useNavigate()
@@ -304,6 +300,34 @@ export default function LearnScreen() {
   // Board-filtered modules (board-specific modules only show for their board)
   const boardModules = MODULES.filter(m => isAvailableForBoard(m.boards, selectedBoard.id))
 
+  // Module expand state — persisted in sessionStorage so back-navigation restores it
+  // Uses module.name as the stable key (modules have no id field)
+  const [openModules, setOpenModules] = useState(() => {
+    try {
+      const saved = sessionStorage.getItem('np_open_modules')
+      return saved ? JSON.parse(saved) : [boardModules[0]?.name].filter(Boolean)
+    } catch { return [] }
+  })
+
+  const toggleModule = (name) => {
+    setOpenModules(prev => {
+      const next = prev.includes(name) ? prev.filter(x => x !== name) : [...prev, name]
+      sessionStorage.setItem('np_open_modules', JSON.stringify(next))
+      return next
+    })
+  }
+
+  // Dynamic filter tabs from board's paperLabels
+  const paperLabels = selectedBoard.paperLabels || ['All', 'Paper 1', 'Paper 2']
+  const FILTERS = [
+    { id: 'all', label: paperLabels[0], color: FILTER_COLORS[0] },
+    ...paperLabels.slice(1).map((label, i) => ({
+      id: `paper${i + 1}`,
+      label,
+      color: FILTER_COLORS[i + 1] || '#6366f1',
+    })),
+  ]
+
   const totalTopics   = boardModules.flatMap(m => m.topics).filter(id => TOPICS[id]).length
   const masteredTotal = Object.values(progress).filter(p => p?.mastered).length
   const overallPct    = totalTopics > 0 ? (masteredTotal / totalTopics) * 100 : 0
@@ -324,8 +348,10 @@ export default function LearnScreen() {
   const firstModule      = firstUnmastered ? boardModules.find(m => m.topics.includes(firstUnmastered)) : null
 
   const filteredModules = boardModules.filter(m => {
+    if (paperFilter === 'all') return true
     if (paperFilter === 'paper1') return PAPER1_MODULES.includes(m.name)
     if (paperFilter === 'paper2') return PAPER2_MODULES.includes(m.name)
+    // paper3+ (e.g. WJEC Unit 3): no module name mapping yet — show all remaining
     return true
   })
 
@@ -578,7 +604,13 @@ export default function LearnScreen() {
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.16 }}
             >
-              <ModuleCard module={module} moduleIndex={i} progress={progress} />
+              <ModuleCard
+                module={module}
+                moduleIndex={i}
+                progress={progress}
+                expanded={openModules.includes(module.name)}
+                onToggle={() => toggleModule(module.name)}
+              />
             </motion.div>
           ))}
         </AnimatePresence>

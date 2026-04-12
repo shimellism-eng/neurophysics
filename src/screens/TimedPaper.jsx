@@ -296,6 +296,9 @@ export default function TimedPaper() {
   const [timesUp, setTimesUp]       = useState(false)
   const [resumeBanner, setResumeBanner] = useState(false)
   const [hideTimer, setHideTimer]   = useState(false)
+  const [paused, setPaused]         = useState(() => {
+    try { return sessionStorage.getItem('neurophysics_paper_paused') === 'true' } catch { return false }
+  })
   // EHCP start screen: show only on fresh paper (not resuming)
   const [showTimeChoice, setShowTimeChoice] = useState(!isResuming)
   const [paperDuration, setPaperDuration]   = useState(init.remaining || PAPER_DURATION_STD)
@@ -312,10 +315,16 @@ export default function TimedPaper() {
     } catch {}
   }, [questions, qIndex, answers, flags, remaining, score])
 
+  // Persist pause state to sessionStorage
+  useEffect(() => {
+    try { sessionStorage.setItem('neurophysics_paper_paused', String(paused)) } catch {}
+  }, [paused])
+
   // Timer tick
   useEffect(() => {
     if (showResults || timesUp || showTimeChoice) return
     timerRef.current = setInterval(() => {
+      if (paused) return
       setRemaining(r => {
         if (r <= 1) {
           clearInterval(timerRef.current)
@@ -326,7 +335,7 @@ export default function TimedPaper() {
       })
     }, 1000)
     return () => clearInterval(timerRef.current)
-  }, [showResults, timesUp])
+  }, [showResults, timesUp, paused])
 
   // Pause timer on background
   useEffect(() => {
@@ -603,6 +612,19 @@ export default function TimedPaper() {
             : <Eye size={15} color="#64748b" />
           }
         </button>
+        {/* Pause / Resume button */}
+        <button
+          onClick={() => setPaused(v => !v)}
+          className="px-2.5 py-1.5 rounded-[10px] flex items-center gap-1 shrink-0 text-xs font-bold"
+          style={{
+            background: paused ? 'rgba(34,197,94,0.15)' : 'rgba(18,26,47,0.9)',
+            border: paused ? '0.75px solid rgba(34,197,94,0.4)' : '0.75px solid #1d293d',
+            color: paused ? '#22c55e' : '#64748b',
+          }}
+          aria-label={paused ? 'Resume paper' : 'Pause paper'}
+        >
+          {paused ? '▶' : '⏸'}
+        </button>
         {!hideTimer && <TimerArc remaining={remaining} total={paperDuration} />}
         {hideTimer && (
           <div className="w-11 h-11 flex items-center justify-center rounded-full"
@@ -619,8 +641,36 @@ export default function TimedPaper() {
           animate={{ width: `${(answeredCount / total) * 100}%` }} />
       </div>
 
+      {/* Pause overlay */}
+      <AnimatePresence>
+        {paused && (
+          <motion.div
+            className="absolute inset-0 z-40 flex items-center justify-center"
+            style={{ background: 'rgba(11,17,33,0.82)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}>
+            <motion.div
+              className="px-8 py-6 rounded-[22px] text-center"
+              style={{ background: 'rgba(18,26,47,0.98)', border: '1px solid #1d293d', maxWidth: 300 }}
+              initial={{ scale: 0.92 }} animate={{ scale: 1 }} exit={{ scale: 0.92 }}>
+              <div style={{ fontSize: 36, marginBottom: 10 }}>⏸</div>
+              <div className="font-bold mb-1" style={{ color: '#f8fafc', fontSize: 16 }}>Paper paused</div>
+              <p className="text-sm mb-4" style={{ color: '#64748b' }}>Tap Resume when you're ready to continue.</p>
+              <motion.button
+                className="w-full py-3 rounded-[14px] font-bold text-sm"
+                style={{ background: '#22c55e', color: '#fff' }}
+                onClick={() => setPaused(false)}
+                whileTap={{ scale: 0.97 }}>
+                ▶ Resume
+              </motion.button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Question content */}
-      <div className="flex-1 overflow-y-auto px-5 pb-4 pt-4">
+      <div className="flex-1 overflow-y-auto px-5 pb-4 pt-4"
+        style={{ filter: paused ? 'blur(6px)' : 'none', transition: 'filter 0.2s', pointerEvents: paused ? 'none' : 'auto' }}>
         {/* Section label */}
         <div className="flex items-center justify-between mb-3">
           <span className="px-2 py-0.5 rounded-full text-xs font-bold"

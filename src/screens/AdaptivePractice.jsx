@@ -416,6 +416,7 @@ export default function AdaptivePractice() {
   const [seenIds, setSeenIds] = useState([])
   const [currentQ, setCurrentQ] = useState(null)
   const [answered, setAnswered] = useState(false)
+  const [lastAnswerCorrect, setLastAnswerCorrect] = useState(null)
   const [prevTier, setPrevTier] = useState(tier)
   const [showDone, setShowDone] = useState(false)
 
@@ -468,6 +469,7 @@ export default function AdaptivePractice() {
   const handleAnswer = useCallback((correct) => {
     stop()
     setAnswered(true)
+    setLastAnswerCorrect(correct)
     setSessionCount(c => c + 1)
     if (correct) setSessionCorrect(c => c + 1)
     submit(correct, ms, currentQ?.timeExpected || 60)
@@ -631,6 +633,11 @@ export default function AdaptivePractice() {
                 </span>
               </div>
 
+              {/* Adaptive reasoning label */}
+              <p className="text-xs italic mb-3" style={{ color: '#a8b8cc' }}>
+                {tier === 1 ? '📚 Revisiting — building foundations' : tier === 2 ? '🎯 Practising — consolidating understanding' : '🚀 Challenging — pushing for mastery'}
+              </p>
+
               {/* Question text */}
               <p className="text-base font-semibold leading-snug mb-4" style={{ color: '#f8fafc' }}>
                 {currentQ.question}
@@ -643,7 +650,24 @@ export default function AdaptivePractice() {
 
               {/* Next button — shown after answering, no tier change indicator */}
               {answered && (
-                <motion.div className="mt-4" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+                <motion.div className="mt-4 space-y-2" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+                  {/* Ask Mamo — only after incorrect answers */}
+                  {lastAnswerCorrect === false && (
+                    <motion.button
+                      className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold"
+                      style={{
+                        background: 'rgba(99,102,241,0.15)',
+                        border: '0.75px solid rgba(99,102,241,0.35)',
+                        color: '#818cf8',
+                      }}
+                      onClick={() => navigate('/mamo', { state: {
+                        questionContext: currentQ?.question || currentQ?.text || '',
+                        topicContext: topic?.title || '',
+                      }})}
+                      whileTap={{ scale: 0.97 }}>
+                      🤖 Ask Mamo
+                    </motion.button>
+                  )}
                   <motion.button
                     className="w-full py-4 rounded-[16px] text-base font-bold flex items-center justify-center gap-2"
                     style={{ background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`, color: '#fff' }}

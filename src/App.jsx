@@ -75,10 +75,13 @@ function FloatingMamo() {
   const navigate = useNavigate()
   const reaction = useMamoState()
   const hiddenByRoute = SHELL_ROUTES.includes(location.pathname)
+  const hiddenByExam = ['/timed-paper', '/exam', '/practice', '/lesson', '/diagnostic', '/grade9'].some(
+    p => location.pathname.startsWith(p)
+  )
   const hiddenByPref = (() => {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').hideMamo } catch { return false }
   })()
-  const hide = hiddenByRoute || hiddenByPref
+  const hide = hiddenByRoute || hiddenByExam || hiddenByPref
 
   // Topic context from lesson/exam/practical routes
   const topicMatch = location.pathname.match(/^\/(?:lesson|exam|practical)\/(.+)/)

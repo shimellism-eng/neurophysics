@@ -4436,4 +4436,210 @@ export const WAVES_TOPICS = {
       'Big Bang theory: universe began 13.8 billion years ago from a hot dense point. Dark matter provides extra gravity; dark energy drives accelerating expansion. Together they make up ~95% of the universe.',
     ],
   },
+
+  converging_diverging_lenses: {
+    id: 'converging_diverging_lenses', module: 'Waves', moduleColor: '#8b5cf6',
+    title: 'Converging & Diverging Lenses', subtitle: 'Ray Diagrams, Power, Vision Correction',
+    description: 'A converging (convex) lens bends parallel rays to a focal point. A diverging (concave) lens spreads rays outward. Lens power P = 1/f in dioptres. Converging lenses correct long sight; diverging lenses correct short sight. Magnification = image height / object height.',
+    lessonVisual: null, ideaVisual: null, realityVisual: null,
+    boards: ['ccea', 'ocr-b', 'aqa', 'ocr-a'],
+    question: 'A converging lens has a focal length of 0.2 m. What is its power?',
+    questionSubtitle: 'Use P = 1/f',
+    options: ['0.2 D', '2 D', '5 D', '20 D'],
+    correctAnswer: 2,
+    keywords: ['converging lens', 'diverging lens', 'focal point', 'focal length', 'power', 'dioptres', 'real image', 'virtual image', 'magnification', 'principal axis', 'myopia', 'hyperopia'],
+    sentenceStarters: ['A converging lens bends parallel rays...', 'The focal length is...', 'Using P = 1/f, the power =...', 'A diverging lens always produces...', 'Short sight is corrected using...'],
+    modelAnswers: [
+      'A converging lens bends parallel rays **towards the principal axis so they meet at the focal point on the far side**.',
+      'The focal length is **the distance from the centre of the lens to the focal point, measured in metres**.',
+      'Using P = 1/f, the power = **1 ÷ 0.2 = 5 D (dioptres)**.',
+      'A diverging lens always produces **a virtual, upright, diminished image — regardless of object position**.',
+      'Short sight (myopia) is corrected using **a diverging lens, which spreads rays out before they enter the eye**.',
+    ],
+    misconception: 'Diverging lenses always form virtual, upright, diminished images — they cannot form real images. A higher power means a shorter focal length, not a longer one.',
+    concept: 'P = 1/f. Converging lens: real, inverted image when object is beyond F; virtual, upright, magnified when object is inside F (magnifying glass). Diverging lens: always virtual, upright, diminished. Vision correction: myopia → diverging lens; hyperopia → converging lens.',
+
+    // -- 9-STEP LESSON DATA ----------------------------------------------------
+
+    hook: {
+      hookFact: 'A camera phone uses a tiny converging lens just millimetres across. When you tap to focus, software adjusts which sensor pixels are sharpest — but the physics of bending light rays to a focal point is identical to a telescope 10 metres long. The human eye does the same thing by changing the shape of its lens 100,000 times a day without you thinking about it.',
+      hookQuestion: 'Hold a finger close to your face and focus on it, then look at the wall behind it — your finger blurs. What must your eye be physically changing to switch focus, and how might a glass lens do the same job?',
+      hookEmoji: '🔭',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Converging Lens',
+        symbol: '',
+        unit: '',
+        definition: 'A lens thicker in the middle (convex shape) that bends parallel rays towards the principal axis so they meet at the focal point on the far side.',
+        everydayNote: 'Magnifying glasses, camera lenses, and the human eye lens are all converging lenses.',
+      },
+      {
+        word: 'Diverging Lens',
+        symbol: '',
+        unit: '',
+        definition: 'A lens thinner in the middle (concave shape) that bends parallel rays away from each other, so they appear to come from a virtual focal point on the same side as the incoming light.',
+        everydayNote: 'Glasses prescribed for short-sightedness (myopia) use diverging lenses to reduce the converging power of the eye.',
+      },
+      {
+        word: 'Focal Point (F)',
+        symbol: 'F',
+        unit: '',
+        definition: 'The point where parallel rays converge after passing through a converging lens, or appear to diverge from after passing through a diverging lens.',
+        everydayNote: 'Hold a magnifying glass in sunlight — the bright dot on the paper is the focal point where parallel sun rays converge.',
+      },
+      {
+        word: 'Focal Length',
+        symbol: 'f',
+        unit: 'metres (m)',
+        definition: 'The distance from the optical centre of the lens to the focal point.',
+        everydayNote: 'A short focal length = tight bending = high power lens. Reading glasses might have f = 0.5 m (power = +2 D).',
+      },
+      {
+        word: 'Power of a Lens',
+        symbol: 'P',
+        unit: 'dioptres (D)',
+        definition: 'How strongly a lens bends light. P = 1/f, where f is in metres. Converging lenses have positive power; diverging lenses have negative power.',
+        everydayNote: 'An eye test prescription of −2 D means a diverging lens with f = 0.5 m. The minus sign tells you it is diverging.',
+      },
+      {
+        word: 'Real Image',
+        symbol: '',
+        unit: '',
+        definition: 'An image formed where rays actually meet. It can be projected onto a screen and is always inverted (upside down).',
+        everydayNote: 'A cinema projector uses a converging lens to throw a real, inverted image onto the screen (the film is loaded upside down).',
+      },
+      {
+        word: 'Virtual Image',
+        symbol: '',
+        unit: '',
+        definition: 'An image formed where rays appear to diverge from — they do not actually meet there. It cannot be projected and is always upright.',
+        everydayNote: 'When you use a magnifying glass close to an object, the enlarged image you see is virtual — you cannot project it onto paper.',
+      },
+      {
+        word: 'Magnification',
+        symbol: 'm',
+        unit: 'no units',
+        definition: 'magnification = image height ÷ object height = image distance ÷ object distance. Values greater than 1 mean the image is larger than the object.',
+        everydayNote: 'A magnification of 0.5 means the image is half the size of the object (diminished). A magnification of 3 means it is three times larger.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'Light bends when it passes from air into glass. What is this called?',
+          answers: ['Reflection', 'Diffraction', 'Refraction', 'Dispersion'],
+          correct: 2,
+          feedback: 'Refraction is the bending of light (or any wave) when it crosses a boundary between two media of different optical density. Lenses work entirely because of refraction.',
+        },
+        {
+          question: 'A lens has focal length 0.5 m. What is its power?',
+          answers: ['0.5 D', '2 D', '5 D', '50 D'],
+          correct: 1,
+          feedback: 'P = 1/f = 1/0.5 = 2 D. Dioptres (D) is the unit. The shorter the focal length, the higher the power.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Refraction', 'Total Internal Reflection', 'Lenses & Optics'],
+      current: 'Converging & Diverging Lenses — ray diagrams and vision correction',
+      after: ['Telescopes & Microscopes', 'The Eye (applied optics)'],
+    },
+
+    workedExample: {
+      title: 'Calculating lens power and identifying image type',
+      equation: 'P = 1/f (dioptres). Magnification = image height / object height.',
+      context: 'A converging lens has focal length f = 0.25 m. An object is placed 0.5 m from the lens. The image formed is 3 cm tall and the object is 6 cm tall. Calculate (a) lens power, (b) magnification, and (c) state whether the image is real or virtual.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'f = 0.25 m, object distance = 0.5 m, image height = 3 cm, object height = 6 cm', annotation: 'Focal length must be in metres for the power equation. The object distance (0.5 m) is beyond the focal point (0.25 m), which matters for image type.' },
+        { step: 2, action: 'Calculate power', content: 'P = 1/f = 1/0.25 = 4 D', annotation: 'Dioptres (D) is equivalent to m⁻¹. Positive power confirms this is a converging lens.' },
+        { step: 3, action: 'Calculate magnification', content: 'magnification = image height / object height = 3 / 6 = 0.5', annotation: 'Magnification has no units. A value less than 1 means the image is smaller than the object (diminished).' },
+        { step: 4, action: 'State image type and interpret', content: 'Object is beyond F, so the image is real and inverted. Magnification = 0.5 — image is diminished.', annotation: 'For a converging lens: object beyond F → real, inverted image. The magnification confirms it is diminished (0.5 < 1). This matches a camera or the eye when viewing a distant object.' },
+      ],
+      misconceptionAfter: {
+        claim: 'A converging lens always magnifies — that is the whole point of a lens.',
+        reality: 'A converging lens only magnifies when the object is inside the focal length (magnifying glass use). When the object is beyond the focal point, the image can be smaller than the object. Cameras and eyes use converging lenses to form diminished real images of distant scenes.',
+        visual: 'Think of a projector: a small film frame (object) placed just beyond F produces a large real image on a distant screen. Reverse this: a large scene (object far beyond F) produces a small real image on the film/sensor inside the camera.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A converging lens has focal length f = 0.4 m. Calculate its power.',
+        allSteps: [
+          'Write what you know: f = 0.4 m',
+          'Write the equation: P = 1/f',
+          'Substitute: P = 1/0.4',
+          '??? - calculate P in dioptres',
+        ],
+        missingStep: 3,
+        missingHint: '1 divided by 0.4 = ? Think: 1/0.4 is the same as 10/4.',
+        answer: 2.5,
+        answerUnit: 'D',
+      },
+      tier2: {
+        question: 'An image is 8 cm tall and the object is 2 cm tall. Calculate the magnification.',
+        shownEquation: 'magnification = image height / object height',
+        shownStep1: 'Image height = 8 cm, object height = 2 cm',
+        hint: 'Divide image height by object height. The answer has no units.',
+        answer: 4,
+        answerUnit: '',
+      },
+      tier3: {
+        question: 'A person with short sight (myopia) needs a diverging lens of focal length −0.5 m. What is the power of the lens, and what sign does it have?',
+        hint: 'Use P = 1/f. Diverging lenses have negative focal lengths and negative powers.',
+        methodHint: 'P = 1/(−0.5) = −2 D. The negative sign confirms it is a diverging lens.',
+        answer: -2,
+        answerUnit: 'D',
+      },
+    },
+
+    summary: {
+      equation: 'P = 1/f (D). Magnification = image height / object height.',
+      sentence: 'Converging lenses bring parallel rays to a focal point and can form real or virtual images; diverging lenses always form virtual, upright, diminished images; vision correction uses converging lenses for long sight and diverging lenses for short sight.',
+      promptText: 'Without notes, state (a) what type of image a diverging lens always produces, (b) how to correct short sight, and (c) what P = 1/f calculates.',
+    },
+
+    sessionRecap: [
+      'Converging (convex) lens: thicker in the middle. Parallel rays refract towards the axis and meet at focal point F. P = 1/f in dioptres (D). Positive power.',
+      'Object beyond F → real, inverted image (camera, eye, projector). Object inside F → virtual, upright, magnified image (magnifying glass). Magnification = image height / object height.',
+      'Diverging (concave) lens: thinner in middle. Always produces virtual, upright, diminished image. Negative power (e.g. −2 D). Used to correct myopia (short sight). Converging lens corrects hyperopia (long sight).',
+    ],
+
+    lessonSteps: [
+      {
+        type: 'concept',
+        title: 'Converging Lenses',
+        content: 'A converging (convex) lens is thicker in the middle. Parallel rays entering the lens are refracted towards the principal axis and meet at the focal point F on the other side. The focal length f is the distance from the lens to F. Stronger lenses (shorter f) have more power: P = 1/f.',
+      },
+      {
+        type: 'concept',
+        title: 'Ray Diagrams — 3 Key Rays',
+        content: 'To draw a ray diagram for a converging lens, use 3 construction rays from the top of the object: 1) A ray parallel to the axis → refracts through F on the far side. 2) A ray through the optical centre → continues straight (undeviated). 3) A ray through F on the near side → exits parallel to the axis. Where these rays meet = the image position.',
+      },
+      {
+        type: 'worked_example',
+        title: 'Object Beyond 2F — Real, Inverted, Diminished',
+        content: 'Object distance = 30 cm, focal length = 10 cm. Using 1/v − 1/u = 1/f (real-is-positive convention): 1/v = 1/10 + 1/(−30) = 3/30 − 1/30 = 2/30, so v = 15 cm. Image is real (positive v), inverted, and diminished (magnification = 15/30 = 0.5×).',
+      },
+      {
+        type: 'concept',
+        title: 'Diverging Lenses',
+        content: 'A diverging (concave) lens is thinner in the middle. Parallel rays entering are refracted away from the axis, appearing to come from a virtual focal point F on the same side as the object. Diverging lenses always form virtual, upright, diminished images — no matter where the object is. Used in glasses for short-sighted (myopic) people.',
+      },
+      {
+        type: 'concept',
+        title: 'Vision Correction',
+        content: 'Short sight (myopia): eyeball too long — image forms in front of retina. Corrected with a diverging lens. Long sight (hyperopia): eyeball too short — image forms behind retina. Corrected with a converging lens. The required lens power P = 1/f is chosen to move the image onto the retina.',
+      },
+      {
+        type: 'concept',
+        title: 'Power and Focal Length',
+        content: 'Power P = 1/f (where f is in metres, P is in dioptres D). A converging lens of f = 0.25 m has P = +4 D (positive = converging). A diverging lens of f = −0.5 m has P = −2 D (negative = diverging). Combining lenses: total power = sum of individual powers.',
+      },
+    ],
+  },
 }

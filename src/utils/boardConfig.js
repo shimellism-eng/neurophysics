@@ -13,6 +13,7 @@ export const BOARDS = {
     color: '#6366f1',
     flag: '🇬🇧',
     description: 'Most popular in England',
+    paperLabels: ['All', 'Paper 1', 'Paper 2'],
   },
   'edexcel': {
     id: 'edexcel',
@@ -25,6 +26,7 @@ export const BOARDS = {
     color: '#f97316',
     flag: '🇬🇧',
     description: 'Pearson · g = 10 N/kg',
+    paperLabels: ['All', 'Paper 1', 'Paper 2'],
   },
   'ocr-a': {
     id: 'ocr-a',
@@ -37,6 +39,7 @@ export const BOARDS = {
     color: '#10b981',
     flag: '🇬🇧',
     description: 'Includes Global Challenges module',
+    paperLabels: ['All', 'Paper 1', 'Paper 2'],
   },
   'ocr-b': {
     id: 'ocr-b',
@@ -49,6 +52,7 @@ export const BOARDS = {
     color: '#06b6d4',
     flag: '🇬🇧',
     description: 'Context-led · Studying the Universe module',
+    paperLabels: ['All', 'Paper 1', 'Paper 2'],
   },
   'wjec': {
     id: 'wjec',
@@ -61,6 +65,7 @@ export const BOARDS = {
     color: '#fbbf24',
     flag: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
     description: 'Wales & England · Unitised assessment',
+    paperLabels: ['All', 'Unit 1', 'Unit 2', 'Unit 3'],
   },
   'ccea': {
     id: 'ccea',
@@ -73,6 +78,7 @@ export const BOARDS = {
     color: '#e879f9',
     flag: '🇬🇧',
     description: 'Northern Ireland · A*–G grading',
+    paperLabels: ['All', 'Unit 1', 'Unit 2'],
   },
 }
 

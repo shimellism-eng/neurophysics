@@ -126,6 +126,7 @@ export const MODULES = [
       'em_spectrum',
       'visible_light',
       'lenses',
+      'converging_diverging_lenses',
       'black_body',
     ],
   },

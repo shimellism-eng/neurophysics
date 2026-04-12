@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { ChevronLeft, ChevronDown, ChevronRight, CheckCircle, Lock, RotateCcw, Target } from 'lucide-react'
@@ -208,12 +208,30 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
 export default function StudyPlanScreen() {
   const navigate  = useNavigate()
   const { progress } = useProgress()
-  const plan      = useStudyPlan(progress)
   const board     = getSelectedBoard()
+
+  const [paceOverride, setPaceOverride] = useState(
+    () => parseInt(localStorage.getItem('np_pace_override') || '0')
+  )
+
+  const plan = useStudyPlan(progress, paceOverride)
 
   // Default open: current week (or 0)
   const currentIdx = plan.weeklyPlan._currentWeekIndex ?? 0
   const [openWeek, setOpenWeek] = useState(currentIdx)
+
+  const activePace = plan.weeklyPlan._topicsPerWeek || 0
+
+  const setPace = useCallback((val) => {
+    const clamped = Math.min(10, Math.max(1, val))
+    setPaceOverride(clamped)
+    localStorage.setItem('np_pace_override', String(clamped))
+  }, [])
+
+  const resetPace = useCallback(() => {
+    setPaceOverride(0)
+    localStorage.removeItem('np_pace_override')
+  }, [])
 
   const s = STATUS_THEME[plan.examStatus] || STATUS_THEME.no_date
 
@@ -295,6 +313,29 @@ export default function StudyPlanScreen() {
                   <div className="mt-2 text-xs font-bold"
                     style={{ color: plan.onTrack ? '#22c55e' : '#f59e0b' }}>
                     {plan.onTrack ? '✅ On track' : '⚠️ Pick up the pace'}
+                  </div>
+
+                  {/* Pace control */}
+                  <div className="mt-3 flex items-center gap-2">
+                    <button
+                      className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
+                      style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.5)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+                      onClick={() => setPace(activePace - 1)}
+                      aria-label="Decrease pace">−</button>
+                    <span className="text-xs font-bold tabular-nums" style={{ color: paceOverride > 0 ? s.color : 'rgba(255,255,255,0.5)', minWidth: 72 }}>
+                      {paceOverride > 0 ? `Custom: ${activePace}/week` : `${activePace} topics/week`}
+                    </span>
+                    <button
+                      className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
+                      style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.5)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+                      onClick={() => setPace(activePace + 1)}
+                      aria-label="Increase pace">+</button>
+                    {paceOverride > 0 && (
+                      <button
+                        className="text-xs underline shrink-0"
+                        style={{ color: 'rgba(255,255,255,0.3)' }}
+                        onClick={resetPace}>Reset</button>
+                    )}
                   </div>
                 </div>
               </div>

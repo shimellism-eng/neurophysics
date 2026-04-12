@@ -71,6 +71,15 @@ export default async function handler(req, res) {
     systemPrompt += `\n\nThe student is currently studying "${safe}". Prioritise explanations relevant to this topic when possible.`
   }
 
+  // Board-aware context
+  const boardName = (typeof body.boardName === 'string' && body.boardName.length <= 60)
+    ? body.boardName
+    : 'AQA'
+  const gValue = (typeof body.gValue === 'number' && body.gValue > 0 && body.gValue <= 20)
+    ? body.gValue
+    : 9.8
+  systemPrompt += `\n\nThe student is studying ${boardName} GCSE Physics in the UK. When explaining concepts, use terminology and exam style consistent with ${boardName}. For calculations involving gravitational field strength, use g = ${gValue} N/kg (the ${boardName} standard). When the student asks about definitions or mark schemes, frame your answer as ${boardName} would expect. Be concise — aim for 2-3 short paragraphs maximum unless the student asks for more detail.`
+
   // Convert messages to Gemini format (user/model roles, no system)
   const contents = body.messages
     .filter(m => m.role === 'user' || m.role === 'assistant')

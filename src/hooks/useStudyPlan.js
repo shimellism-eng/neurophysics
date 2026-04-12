@@ -8,7 +8,7 @@ import { getSelectedBoard } from '../utils/boardConfig'
  * Returns all data needed for both the HomeScreen widgets and the full
  * StudyPlanScreen week-by-week breakdown.
  */
-export function useStudyPlan(progress) {
+export function useStudyPlan(progress, paceOverride = 0) {
   return useMemo(() => {
     // ── profile ──────────────────────────────────────────────────────────────
     const profile = (() => {
@@ -105,7 +105,9 @@ export function useStudyPlan(progress) {
 
       // How many topics per non-exam week
       const studyWeeks    = Math.max(weeksLeft - 1, 1)
-      const topicsPerWeek = Math.max(1, Math.ceil(remainingCount / studyWeeks))
+      const topicsPerWeek = paceOverride > 0
+        ? Math.min(10, Math.max(1, paceOverride))
+        : Math.max(1, Math.ceil(remainingCount / studyWeeks))
 
       const topicPool = [...unmasteredIds] // consumed week by week
       let weekStart   = new Date(monday)
@@ -157,6 +159,7 @@ export function useStudyPlan(progress) {
       }
 
       weeklyPlan._currentWeekIndex = currentWeekIndex
+      weeklyPlan._topicsPerWeek = topicsPerWeek
     }
 
     return {
@@ -178,5 +181,5 @@ export function useStudyPlan(progress) {
       weeklyDots,
       weeklyPlan,
     }
-  }, [progress])
+  }, [progress, paceOverride])
 }

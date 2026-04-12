@@ -111,7 +111,15 @@ export function useInsights() {
       const p = progressSnap[id]
       return p?.mastered && p.nextReviewAt && p.nextReviewAt <= now
     })
-    .map(id => ({ id, topic: TOPICS[id] }))
+    .map(id => {
+      const p = progressSnap[id]
+      return {
+        id,
+        topic: TOPICS[id],
+        masteredAt: p?.masteredAt || null,
+        nextReviewAt: p?.nextReviewAt || null,
+      }
+    })
     .filter(x => x.topic)
 
   return {

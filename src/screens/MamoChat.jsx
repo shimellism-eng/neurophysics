@@ -4,6 +4,7 @@ import { Send, Sparkles, ArrowLeft, RotateCcw, Trash2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import { getSelectedBoard } from '../utils/boardConfig'
 
 const GENERAL_STARTERS = [
   'What is the difference between speed and velocity?',
@@ -171,6 +172,8 @@ export default function MamoChat() {
         body: JSON.stringify({
           messages: apiMessages,
           topicContext: topicLabel || undefined,
+          boardName: getSelectedBoard().name,
+          gValue: getSelectedBoard().g || 9.8,
         }),
       })
 
@@ -286,7 +289,12 @@ export default function MamoChat() {
           <AtomIcon size={20} color="#6366f1" />
         </div>
         <div className="flex-1 min-w-0">
-          <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>
+          <div className="flex items-center gap-2">
+            <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>
+            <div className="text-xs px-1.5 py-0.5 rounded-md" style={{ color: '#a8b8cc', background: 'rgba(168,184,204,0.1)', border: '0.75px solid rgba(168,184,204,0.2)' }}>
+              {getSelectedBoard().name}
+            </div>
+          </div>
           {topicLabel ? (
             <div className="text-xs truncate" style={{ color: '#6366f1' }}>
               Studying: {topicLabel}

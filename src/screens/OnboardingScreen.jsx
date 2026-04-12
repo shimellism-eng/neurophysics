@@ -404,7 +404,196 @@ function StepProfile({ onNext, onSkip }) {
   )
 }
 
-// ─── Step 2 (new): Learning Prefs — skippable ────────────────────────────────
+// ─── Step 2: Accessibility / Neurodivergent Needs — skippable ────────────────
+const ACCESSIBILITY_OPTIONS = [
+  {
+    id: 'adhd',
+    label: 'ADHD',
+    desc: 'Break reminders every 20 min, larger tap targets',
+    icon: '⚡',
+  },
+  {
+    id: 'dyslexia',
+    label: 'Dyslexia',
+    desc: 'OpenDyslexic font, cream background, relaxed line-height',
+    icon: '📖',
+  },
+  {
+    id: 'autism',
+    label: 'Autism / sensory sensitivity',
+    desc: 'Reduce motion, muted animations',
+    icon: '🔇',
+  },
+  {
+    id: 'visual',
+    label: 'Visual sensitivity',
+    desc: 'High contrast, reduce brightness',
+    icon: '👁',
+  },
+  {
+    id: 'none',
+    label: 'None of these',
+    desc: 'No adjustments needed',
+    icon: '✓',
+  },
+]
+
+function StepAccessibility({ onNext, onSkip }) {
+  const [selected, setSelected] = useState([])
+
+  const toggle = (id) => {
+    if (id === 'none') {
+      setSelected(sel => sel.includes('none') ? [] : ['none'])
+    } else {
+      setSelected(sel => {
+        const withoutNone = sel.filter(s => s !== 'none')
+        return withoutNone.includes(id)
+          ? withoutNone.filter(s => s !== id)
+          : [...withoutNone, id]
+      })
+    }
+  }
+
+  const applyAndContinue = () => {
+    const existing = (() => {
+      try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} }
+    })()
+    let updated = { ...existing }
+    if (selected.includes('adhd'))    updated = { ...updated, breakInterval: 20 }
+    if (selected.includes('dyslexia')) updated = { ...updated, dyslexicFont: true, colorTheme: 'cream', lineHeight: 'relaxed' }
+    if (selected.includes('autism'))  updated = { ...updated, reduceMotion: true }
+    if (selected.includes('visual'))  updated = { ...updated, highContrast: true }
+    localStorage.setItem('neurophysics_prefs', JSON.stringify(updated))
+    onNext()
+  }
+
+  return (
+    <motion.div
+      className="flex flex-col h-full"
+      key="step-accessibility"
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -40 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className="flex-1 overflow-y-auto px-6">
+        <motion.div
+          className="pt-10 pb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Step indicator (3/4) */}
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+          </div>
+
+          <div className="flex items-center gap-3 mb-3">
+            <div
+              className="w-10 h-10 rounded-[14px] flex items-center justify-center"
+              style={{ background: 'rgba(0,212,255,0.12)', border: '1px solid rgba(0,212,255,0.25)' }}
+            >
+              <Brain size={18} color="#00d4ff" />
+            </div>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#00d4ff' }}>Accessibility</span>
+          </div>
+
+          <h1
+            className="text-4xl font-extrabold leading-tight mb-3"
+            style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}
+          >
+            How do you{'\n'}
+            <span style={{ color: '#00d4ff' }}>learn best?</span>
+          </h1>
+          <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
+            We'll set up the app to suit you — you can always change this in Settings.
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col gap-3 pb-6">
+          {ACCESSIBILITY_OPTIONS.map((opt, i) => {
+            const isSelected = selected.includes(opt.id)
+            return (
+              <motion.button
+                key={opt.id}
+                className="w-full text-left rounded-[12px] px-5 py-4 flex items-center gap-4"
+                style={{
+                  background: isSelected ? 'rgba(0,212,255,0.08)' : 'rgba(18,26,47,0.9)',
+                  border: isSelected
+                    ? '1.5px solid rgba(0,212,255,0.55)'
+                    : '0.75px solid rgba(255,255,255,0.1)',
+                  transition: 'background 0.2s, border-color 0.2s',
+                }}
+                onClick={() => toggle(opt.id)}
+                initial={{ opacity: 0, x: -14 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15 + i * 0.07, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span style={{ fontSize: 22, lineHeight: 1 }}>{opt.icon}</span>
+                <div className="flex-1 min-w-0">
+                  <div
+                    className="text-base font-semibold mb-0.5"
+                    style={{ color: isSelected ? '#00d4ff' : '#f8fafc' }}
+                  >
+                    {opt.label}
+                  </div>
+                  <div className="text-sm leading-snug" style={{ color: '#a8b8cc' }}>{opt.desc}</div>
+                </div>
+                <div
+                  className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center transition-all"
+                  style={{
+                    background: isSelected ? '#00d4ff' : 'rgba(255,255,255,0.07)',
+                    border: isSelected ? 'none' : '0.75px solid rgba(255,255,255,0.18)',
+                  }}
+                >
+                  {isSelected && <Check size={14} color="#0b1121" strokeWidth={2.5} />}
+                </div>
+              </motion.button>
+            )
+          })}
+        </div>
+      </div>
+
+      <motion.div
+        className="px-6 pt-3 pb-10 shrink-0 flex flex-col gap-3"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.button
+          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+          style={{
+            background: 'linear-gradient(135deg, #00a8cc, #00d4ff)',
+            color: '#0b1121',
+            boxShadow: '0 8px 28px rgba(0,212,255,0.3)',
+          }}
+          onClick={applyAndContinue}
+          whileTap={{ scale: 0.97 }}
+          aria-label="Save accessibility preferences and continue"
+        >
+          Continue
+          <ArrowRight size={18} />
+        </motion.button>
+        <motion.button
+          className="w-full py-3 rounded-[18px] text-sm font-semibold"
+          style={{ color: 'rgba(255,255,255,0.35)', background: 'transparent' }}
+          onClick={onSkip}
+          whileTap={{ scale: 0.97 }}
+          aria-label="Skip accessibility preferences"
+        >
+          Skip for now
+        </motion.button>
+      </motion.div>
+    </motion.div>
+  )
+}
+
+// ─── Step 3 (new): Learning Prefs — skippable ────────────────────────────────
 function StepPrefs({ onNext, onSkip }) {
   const [prefs, setPrefs] = useState(() =>
     Object.fromEntries(OPTIONS.map(o => [o.id, o.defaultOn ?? false]))
@@ -430,8 +619,9 @@ function StepPrefs({ onNext, onSkip }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (3/3) */}
+          {/* Step indicator (4/4) */}
           <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -524,9 +714,10 @@ function StepBoard({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (1/3) */}
+          {/* Step indicator (1/4) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
@@ -669,10 +860,11 @@ function StepGoal({ boardId, onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (2/3) */}
+          {/* Step indicator (2/4) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
 
@@ -799,7 +991,7 @@ function StepGoal({ boardId, onNext }) {
 }
 
 // ─── Main Onboarding ──────────────────────────────────────────────────────────
-// New steps: 0 Board → 1 Goal → 2 Prefs (skippable) → 3 Profile/Avatar (skippable)
+// Steps: 0 Board → 1 Goal → 2 Accessibility (skippable) → 3 Prefs (skippable) → 4 Profile (skippable)
 // StepValueProp kept above but removed from active flow (LandingScreen handles it)
 export default function OnboardingScreen() {
   const navigate = useNavigate()
@@ -818,6 +1010,15 @@ export default function OnboardingScreen() {
     setStep(2)
   }
 
+  // Accessibility step: prefs already written to localStorage inside StepAccessibility
+  const handleAccessibilityNext = () => {
+    setStep(3)
+  }
+
+  const handleAccessibilitySkip = () => {
+    setStep(3)
+  }
+
   const handlePrefsNext = (prefs) => {
     savePrefsAndContinue(prefs)
   }
@@ -827,8 +1028,12 @@ export default function OnboardingScreen() {
   }
 
   const savePrefsAndContinue = (prefs) => {
-    localStorage.setItem('neurophysics_prefs', JSON.stringify(prefs))
-    setStep(3)
+    // Merge with any accessibility prefs already saved
+    const existing = (() => {
+      try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} }
+    })()
+    localStorage.setItem('neurophysics_prefs', JSON.stringify({ ...existing, ...prefs }))
+    setStep(4)
   }
 
   const handleProfileNext = (data) => {
@@ -852,8 +1057,9 @@ export default function OnboardingScreen() {
       <AnimatePresence mode="wait">
         {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
         {step === 1 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
-        {step === 2 && <StepPrefs key="prefs" onNext={handlePrefsNext} onSkip={handlePrefsSkip} />}
-        {step === 3 && <StepProfile key="profile" onNext={handleProfileNext} onSkip={handleProfileSkip} />}
+        {step === 2 && <StepAccessibility key="accessibility" onNext={handleAccessibilityNext} onSkip={handleAccessibilitySkip} />}
+        {step === 3 && <StepPrefs key="prefs" onNext={handlePrefsNext} onSkip={handlePrefsSkip} />}
+        {step === 4 && <StepProfile key="profile" onNext={handleProfileNext} onSkip={handleProfileSkip} />}
       </AnimatePresence>
     </div>
   )

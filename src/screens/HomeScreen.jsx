@@ -319,6 +319,27 @@ export default function HomeScreen() {
     window.addEventListener('storage', onStorage)
     return () => window.removeEventListener('storage', onStorage)
   }, [])
+
+  // ── First-run welcome overlay ──────────────────────────────────────────────
+  const [showWelcome, setShowWelcome] = useState(() => !localStorage.getItem('np_welcome_seen'))
+  const [showNudge, setShowNudge] = useState(false)
+  const reduceMotion = localStorage.getItem('np_reduce_motion') === 'true'
+
+  const dismissWelcome = () => {
+    localStorage.setItem('np_welcome_seen', '1')
+    setShowWelcome(false)
+    // Show settings nudge only if no accessibility prefs have been configured
+    const prefs = (() => { try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} } })()
+    const hasPrefs = Object.keys(prefs).some(k => prefs[k] && prefs[k] !== false && prefs[k] !== 'Normal' && prefs[k] !== 'Dark')
+    if (!hasPrefs && !localStorage.getItem('np_setup_nudge_seen')) {
+      setShowNudge(true)
+    }
+  }
+
+  const dismissNudge = () => {
+    localStorage.setItem('np_setup_nudge_seen', '1')
+    setShowNudge(false)
+  }
   const selectedBoard  = getSelectedBoard()
   const targetGrade    = profile.grade || null
   const targetLabel    = targetGrade
@@ -353,6 +374,105 @@ export default function HomeScreen() {
       className="flex flex-col h-full overflow-y-auto"
       style={{ background: '#080f1e', paddingTop: 'env(safe-area-inset-top, 16px)', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
     >
+
+      {/* ── First-run welcome overlay ─────────────────────────────────────────── */}
+      <AnimatePresence>
+        {showWelcome && (
+          <motion.div
+            className="fixed inset-0 z-50 flex flex-col justify-end"
+            style={{ background: 'rgba(8,15,30,0.85)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: reduceMotion ? 0.1 : 0.3 }}
+          >
+            <motion.div
+              className="mx-3 mb-6 rounded-[28px] overflow-hidden"
+              style={{ background: 'rgba(15,22,41,0.98)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+              initial={{ y: reduceMotion ? 0 : 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: reduceMotion ? 0 : 60, opacity: 0 }}
+              transition={{ duration: reduceMotion ? 0.1 : 0.4, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {/* Header */}
+              <div className="px-6 pt-7 pb-4 text-center">
+                <div className="text-3xl mb-3">⚛️</div>
+                <h2 className="text-xl font-extrabold mb-1" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+                  Welcome to NeuroPhysics
+                </h2>
+                <p className="text-sm" style={{ color: '#a8b8cc' }}>Built for how your brain works — not against it.</p>
+              </div>
+              {/* 3 value props */}
+              <div className="px-5 pb-5 space-y-3">
+                {[
+                  { icon: '🔁', title: 'Spaced repetition', desc: 'Topics reappear at the right moment to lock in memory.' },
+                  { icon: '🧩', title: 'Bite-sized lessons', desc: 'One concept at a time — no walls of text.' },
+                  { icon: '🤖', title: 'Mamo AI tutor', desc: 'Ask anything. Get instant, exam-focused explanations.' },
+                ].map(({ icon, title, desc }) => (
+                  <div
+                    key={title}
+                    className="flex items-start gap-3 px-4 py-3 rounded-[16px]"
+                    style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.07)' }}
+                  >
+                    <span className="text-xl shrink-0 mt-0.5">{icon}</span>
+                    <div>
+                      <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{title}</div>
+                      <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* CTA */}
+              <div className="px-5 pb-7">
+                <button
+                  className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+                  style={{ background: 'linear-gradient(135deg, #4f6ef7, #6366f1)', color: '#fff', boxShadow: '0 8px 28px rgba(99,102,241,0.4)' }}
+                  onClick={dismissWelcome}
+                >
+                  Start learning →
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Settings nudge banner ─────────────────────────────────────────────── */}
+      <AnimatePresence>
+        {showNudge && (
+          <motion.div
+            className="mx-4 mt-3 px-4 py-3 rounded-[16px] flex items-center gap-3"
+            style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: reduceMotion ? 0.1 : 0.3 }}
+          >
+            <span className="text-lg shrink-0">⚡</span>
+            <div className="flex-1 min-w-0">
+              <div className="text-xs font-semibold" style={{ color: '#f8fafc' }}>Personalise your experience</div>
+              <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>Set dyslexia font, reduce motion and more in Settings.</div>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                className="px-3 py-1.5 rounded-full text-xs font-bold"
+                style={{ background: 'rgba(99,102,241,0.2)', color: '#818cf8' }}
+                onClick={() => { dismissNudge(); navigate('/settings') }}
+              >
+                Set up
+              </button>
+              <button
+                className="w-7 h-7 rounded-full flex items-center justify-center"
+                style={{ background: 'rgba(255,255,255,0.07)' }}
+                onClick={dismissNudge}
+                aria-label="Dismiss"
+              >
+                <span style={{ fontSize: 12, color: '#a8b8cc' }}>✕</span>
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div

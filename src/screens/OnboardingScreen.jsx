@@ -766,11 +766,9 @@ function StepBoard({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (1/4) */}
+          {/* Step indicator (1/2) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
 
@@ -912,12 +910,10 @@ function StepGoal({ boardId, onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Step indicator (2/4) */}
+          {/* Step indicator (2/2) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
           </div>
 
           <h1 className="text-4xl font-extrabold leading-tight mb-3" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
@@ -1112,80 +1108,41 @@ function StepGoal({ boardId, onNext }) {
 }
 
 // ─── Main Onboarding ──────────────────────────────────────────────────────────
-// Steps: 0 Board → 1 Goal → 2 Accessibility (skippable) → 3 Prefs (skippable) → 4 Profile (skippable)
-// StepValueProp kept above but removed from active flow (LandingScreen handles it)
+// Streamlined flow: 0 Board → 1 Goal → Home
+// Research shows ADHD/neurodivergent users drop off 10-20% per screen beyond step 3.
+// Steps removed from active flow (kept as components above for potential re-use):
+//   StepHowItWorks → converted to HomeScreen first-run overlay (shows value AFTER entry)
+//   StepAccessibility → 100% duplicated in SettingsScreen; deferred with in-app nudge
+//   StepPrefs → 100% duplicated in SettingsScreen; deferred with in-app nudge
+//   StepProfile → cosmetic; SettingsScreen allows editing name/avatar
 export default function OnboardingScreen() {
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
-  const [profileData, setProfileData] = useState(null)
   const [boardId, setBoardId] = useState('aqa')
-  const [goalData, setGoalData] = useState(null)
-
-  const handleHowItWorksNext = () => {
-    setStep(1)
-  }
 
   const handleBoardNext = (id) => {
     setBoardId(id)
-    setStep(2)
+    setStep(1)
   }
 
   const handleGoalNext = (data) => {
-    setGoalData(data)
-    setStep(3)
-  }
-
-  // Accessibility step: prefs already written to localStorage inside StepAccessibility
-  const handleAccessibilityNext = () => {
-    setStep(4)
-  }
-
-  const handleAccessibilitySkip = () => {
-    setStep(4)
-  }
-
-  const handlePrefsNext = (prefs) => {
-    savePrefsAndContinue(prefs)
-  }
-
-  const handlePrefsSkip = (defaultPrefs) => {
-    savePrefsAndContinue(defaultPrefs)
-  }
-
-  const savePrefsAndContinue = (prefs) => {
-    // Merge with any accessibility prefs already saved
-    const existing = (() => {
-      try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} }
-    })()
-    localStorage.setItem('neurophysics_prefs', JSON.stringify({ ...existing, ...prefs }))
-    setStep(5)
-  }
-
-  const handleProfileNext = (data) => {
-    setProfileData(data)
     finishOnboarding(data)
   }
 
-  const handleProfileSkip = () => {
-    finishOnboarding({ name: '', avatar: '🧠', ageGroup: '' })
-  }
-
-  const finishOnboarding = (profile) => {
-    const finalGoal = goalData || { grade: boardId === 'ccea' ? 'B' : '7', examDate: null }
+  const finishOnboarding = ({ grade, examDate }) => {
     localStorage.setItem('neurophysics_onboarded', '1')
-    localStorage.setItem('neurophysics_profile', JSON.stringify({ ...profile, ...finalGoal, boardId }))
+    localStorage.setItem('neurophysics_profile', JSON.stringify({
+      name: '', avatar: '🧠', ageGroup: '',
+      grade, examDate: examDate || null, boardId,
+    }))
     navigate('/', { replace: true })
   }
 
   return (
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
-        {step === 0 && <StepHowItWorks key="howitworks" onNext={handleHowItWorksNext} />}
-        {step === 1 && <StepBoard key="board" onNext={handleBoardNext} />}
-        {step === 2 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
-        {step === 3 && <StepAccessibility key="accessibility" onNext={handleAccessibilityNext} onSkip={handleAccessibilitySkip} />}
-        {step === 4 && <StepPrefs key="prefs" onNext={handlePrefsNext} onSkip={handlePrefsSkip} />}
-        {step === 5 && <StepProfile key="profile" onNext={handleProfileNext} onSkip={handleProfileSkip} />}
+        {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
+        {step === 1 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
       </AnimatePresence>
     </div>
   )

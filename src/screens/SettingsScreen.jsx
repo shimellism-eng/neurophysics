@@ -748,6 +748,56 @@ export default function SettingsScreen() {
         )
       })()}
 
+      {/* ── Target Grade ── */}
+      {(() => {
+        const isCCEA = selectedBoardId === 'ccea'
+        const gradeOptions = isCCEA
+          ? ['C', 'C*', 'B', 'A', 'A*']
+          : ['4', '5', '6', '7', '8', '9']
+        const currentGrade = profile.grade || (isCCEA ? 'B' : '7')
+        return (
+          <div className="px-5 mb-5">
+            <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
+              Target Grade
+            </div>
+            <div className="rounded-[20px] px-4 py-4" style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
+              <div className="flex gap-2 flex-wrap">
+                {gradeOptions.map(g => {
+                  const isSelected = currentGrade === g
+                  const isAspirational = !isCCEA && parseInt(g) >= 8
+                  return (
+                    <motion.button
+                      key={g}
+                      className="flex flex-col items-center justify-center rounded-[12px] font-bold text-base"
+                      style={{
+                        width: 52, height: 52,
+                        background: isSelected ? 'rgba(99,102,241,0.25)' : 'rgba(255,255,255,0.05)',
+                        border: isSelected ? '1.5px solid #6366f1' : '0.75px solid rgba(255,255,255,0.1)',
+                        color: isSelected ? '#818cf8' : '#a8b8cc',
+                        transform: isSelected ? 'scale(1.06)' : 'scale(1)',
+                        transition: 'all 0.15s',
+                      }}
+                      onClick={() => {
+                        const updated = { ...profile, grade: g }
+                        setProfile(updated)
+                        saveProfile(updated)
+                        showToast('Target grade updated ✓', '#10b981')
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {g}
+                      {isAspirational && !isSelected && (
+                        <span style={{ fontSize: 8, color: '#6366f1', marginTop: 1 }}>★</span>
+                      )}
+                    </motion.button>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        )
+      })()}
+
       {/* ── Exam Board Picker ── */}
       <div className="px-5 mb-5">
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>

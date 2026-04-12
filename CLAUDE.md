@@ -1,388 +1,76 @@
 # CLAUDE.md — NeuroPhysics
 
-> Single source of truth for the NeuroPhysics project.
-> Read this before touching any file. Do not ask clarifying questions covered here.
+> Architecture bible. Read this + memory.md before touching any file.
 
 ---
 
-## Project Overview
-
-**NeuroPhysics** is a GCSE Physics PWA built specifically for neurodivergent learners (ADHD, dyslexia, autism spectrum). It covers AQA GCSE Physics with plans to expand to all five UK exam boards.
-
-- **Live domain:** neurophysics.co.uk
-- **Local path:** `/Users/mamo/neurophysics/`
-- **Owner:** Mamo — GCSE & A-Level Physics teacher, SEN specialist, ADHD
-- **Related site:** physicalm.co.uk (tutoring business)
+## Project
+- **GCSE Physics PWA** for neurodivergent learners (ADHD, dyslexia, autism)
+- **Live:** neurophysics.co.uk | **Local:** `/Users/mamo/neurophysics/`
+- **Owner:** Mamo — Physics teacher, SEN specialist, ADHD
+- **Stack:** React + Vite, JSX only, React Router, Supabase auth, Vite PWA (Workbox), Vercel hosting, Capacitor iOS
 
 ## Session Memory
-- Read **memory.md** at the start of every session before touching any file
-- Update **memory.md** at the end of every session before running the end-of-session checklist
-- memory.md is the live session log — CLAUDE.md is the permanent architecture bible
+Read **memory.md** before every session. Update it after. CLAUDE.md = permanent conventions. memory.md = live session log.
 
 ---
 
-## Tech Stack
+## Design Tokens
+- **BG:** `#080f1e` | **Surface:** `rgba(15,22,41,0.95)` | **Surface deep:** `rgba(8,15,30,0.96)`
+- **Cyan:** `#00d4ff` (primary) | **Purple:** `#9b59b6` (nav) | **Amber:** `#f39c12` (warnings) | **Pink:** `#e91e8c` (achievements)
+- **Font:** Bricolage Grotesque | **Borders:** 0.75px | **Tap targets:** min 44×44px (`w-11 h-11 rounded-[12px]`)
+- High contrast min 4.5:1, one concept per screen, immediate feedback, chunked info
 
-| Layer | Choice |
-|---|---|
-| Framework | React + Vite |
-| Language | JSX (not TypeScript — all files are .jsx/.js) |
-| Routing | React Router (screen-based navigation) |
-| Auth | Supabase (`src/lib/supabase.js`) |
-| State | React Context (AuthContext, MamoContext) |
-| PWA | Vite PWA plugin with Workbox |
-| Hosting | neurophysics.co.uk |
+## File Structure
+- `src/screens/` — route-level pages (27 screens)
+- `src/components/` — reusable UI: `lesson/` (7 step components), `questions/` (10 question types)
+- `src/data/` — topic data (`topics-*.jsx`), question banks (`questionBank/qb-*.js`), exam data (`exam*.js`)
+- `src/hooks/` — useAdaptive, useHearts, useInsights, useProgress, useSessionTimer, useSound
+- `src/utils/` — boardConfig.js (single source of truth for 6 boards), secureStorage, tts
+- `src/context/` — AuthContext (Supabase), MamoContext (app state)
+- `api/` — serverless: mark.js, gemini.js, _verifyAuth.js, _rateLimit.js, delete-account.js
 
----
-
-## Design System
-
-### Theme
-- **Mode:** Dark only
-- **Font:** Bricolage Grotesque (Google Fonts)
-- **Background:** `#0a0a0f`
-- **Surface:** `#12121a`
-- **Border:** `#1e1e2e`
-
-### Accent Colours
-| Token | Hex | Use |
-|---|---|---|
-| `--cyan` | `#00d4ff` | Primary actions, highlights |
-| `--purple` | `#9b59b6` | Secondary, navigation |
-| `--amber` | `#f39c12` | Warnings, equations |
-| `--pink` | `#e91e8c` | Achievements, progress |
-
-### UI Rules
-- High contrast, minimum 4.5:1 ratio
-- Large tap targets (min 48px)
-- One concept per screen — no walls of text
-- Progress always visible
-- Immediate feedback on all interactions
-- ADHD-friendly: chunked info, no cognitive overload
-
----
-
-## Actual File Structure
-
-```
-/neurophysics/src/
-├── App.jsx                          # Root app, routing
-├── main.jsx                         # Entry point
-├── index.css                        # Global styles + design tokens
-│
-├── context/
-│   ├── AuthContext.jsx              # Supabase auth state
-│   └── MamoContext.jsx             # App-wide state (progress, settings)
-│
-├── screens/                         # Route-level pages
-│   ├── SplashScreen.jsx
-│   ├── OnboardingScreen.jsx
-│   ├── AuthScreen.jsx
-│   ├── HomeScreen.jsx
-│   ├── LearnScreen.jsx
-│   ├── LessonPlayer.jsx            # Core lesson loop runner
-│   ├── DiagnosticQuestion.jsx
-│   ├── AdaptivePractice.jsx
-│   ├── ExamPractice.jsx
-│   ├── TimedPaper.jsx
-│   ├── PaperResults.jsx
-│   ├── Grade9Challenge.jsx
-│   ├── MasteryScreen.jsx
-│   ├── TopicMap.jsx
-│   ├── PracticalScreen.jsx
-│   ├── MisconceptionFeedback.jsx
-│   ├── MamoChat.jsx                # AI chat feature
-│   ├── ShareProgressScreen.jsx
-│   ├── SettingsScreen.jsx
-│   ├── PrivacyPolicyScreen.jsx
-│   ├── TermsScreen.jsx
-│   ├── LandingScreen.jsx           # Public homepage (unauthenticated /  route)
-│   └── SpecChecklist.jsx           # Specification checklist at /spec-checklist
-│
-├── components/
-│   ├── AtomIcon.jsx
-│   ├── BottomNav.jsx
-│   ├── PublicHeader.jsx             # Website nav header (landing page only)
-│   ├── BreakNudge.jsx              # ADHD break reminders
-│   ├── CircuitSymbols.jsx
-│   ├── HeartsDisplay.jsx           # Lives/hearts system
-│   │
-│   ├── lesson/                     # Lesson loop steps
-│   │   ├── HookCard.jsx
-│   │   ├── PriorKnowledgeProbe.jsx
-│   │   ├── VocabPreTeach.jsx
-│   │   ├── WorkedExampleStepper.jsx
-│   │   ├── GuidedPracticeFader.jsx
-│   │   ├── DualCodingSummary.jsx
-│   │   └── SessionClose.jsx
-│   │
-│   └── questions/                  # Question type components
-│       ├── CalculationQuestion.jsx
-│       ├── ConfidenceQuestion.jsx
-│       ├── DiagramQuestion.jsx
-│       ├── ExtendedAnswerQuestion.jsx
-│       ├── FillStepsQuestion.jsx
-│       ├── GraphQuestion.jsx
-│       ├── HotspotQuestion.jsx
-│       ├── MisconceptionQuestion.jsx
-│       ├── SequenceSortQuestion.jsx
-│       ├── TapMatchQuestion.jsx
-│       └── index.js
-│
-├── data/
-│   ├── topics.jsx                  # Master topic index
-│   ├── topics-electricity.jsx
-│   ├── topics-energy.jsx
-│   ├── topics-forces.jsx
-│   ├── topics-matter.jsx
-│   ├── topics-waves.jsx
-│   ├── topics-practicals.jsx       # Required Practicals topic metadata
-│   ├── topics-keyconcepts.jsx      # Edexcel Key Concepts: SI units, scalars, equations
-│   ├── topics-globalchallenges.jsx # OCR Gateway A P8: transport safety, electricity costs
-│   ├── topics-universe.jsx         # OCR 21C P7: telescope optics, HR diagram, astronomy history
-│   ├── examIndex.js
-│   ├── examCalculations.js
-│   ├── examChained.js
-│   ├── examDiagramQs.js
-│   ├── examDiagrams.jsx
-│   ├── examEquations.js
-│   ├── examExtended.js
-│   ├── examGraphs.js
-│   ├── examNovelContext.js
-│   ├── examParticleModel.js
-│   ├── examPracticals.js
-│   ├── examRPAErrors.js
-│   ├── examSpace.js
-│   ├── interactiveIndex.js
-│   ├── interactiveQuestions.js
-│   ├── interactiveQuestions2.js
-│   ├── practicals.js
-│   ├── questionBank.js
-│   ├── visuals-helpers.jsx
-│   └── questionBank/
-│       ├── index.js
-│       ├── qb-atomic.js + part1/part2
-│       ├── qb-electricity.js + part1/part2
-│       ├── qb-energy.js
-│       ├── qb-forces.js            # + WJEC circular motion (8 angular vel Qs) + CCEA hydraulics + moments/elastic
-│       ├── qb-magnetism.js
-│       ├── qb-particle.js
-│       ├── qb-space.js
-│       ├── qb-waves.js + part1/part2  # + WJEC seismic shadow zone + CCEA lens equation (1/f=1/u+1/v) + diffraction
-│       ├── qb-practicals.js        # 162 questions for 11 required practicals (+ 8 density Qs)
-│       ├── qb-keyconcepts.js       # Edexcel Topic 1 — SI units, sig figs, OOM, standard form, prefixes
-│       ├── qb-globalchallenges.js  # OCR Gateway A P8 — transport safety, electricity costs, electric fields
-│       └── qb-universe-ocr.js      # OCR 21C P7 — telescope optics, HR diagram, astronomy, redshift, ISL, spectroscopy
-│
-├── hooks/
-│   ├── useAdaptive.js
-│   ├── useHearts.jsx
-│   ├── useInsights.js
-│   ├── useProgress.js
-│   ├── useSessionTimer.js
-│   └── useSound.jsx
-│
-├── lib/
-│   └── supabase.js                 # Supabase client
-│
-└── utils/
-    ├── notifications.js
-    ├── secureStorage.js
-    └── tts.js                      # Text-to-speech
-```
-
----
-
-## Key Features Already Built
-
-- Supabase auth (login/signup)
-- Onboarding flow
-- Hearts/lives system (useHearts, HeartsDisplay)
-- Break nudge system (BreakNudge) — ADHD support
-- Session timer (useSessionTimer)
-- Text-to-speech (tts.js)
-- Adaptive practice engine (useAdaptive, AdaptivePractice)
-- Exam practice screens (timed paper, results, Grade 9 challenge)
-- Full question bank across all major AQA topics
-- 10 question types (calculation, diagram, hotspot, graph, sequence, etc.)
-- Lesson player with multi-step lesson components
-- Topic map
-- Practical screen
-- Misconception feedback screen
-- MamoChat (AI chat feature)
-- Progress sharing screen
-- Settings, Privacy Policy, Terms screens
-
----
-
-## Current Status
-
-- [x] Scaffold complete
-- [x] Routing set up
-- [x] Design tokens applied globally
-- [x] Auth (Supabase) working
-- [x] Onboarding flow built
-- [x] Hearts/lives system built
-- [x] Break nudge (ADHD support) built
-- [x] Session timer built
-- [x] Text-to-speech built
-- [x] Lesson player built
-- [x] All lesson step components built
-- [x] All 10 question type components built
-- [x] Question bank built (energy, forces, waves, electricity, atomic, magnetism, particle, space)
-- [x] Exam practice screens built
-- [x] Adaptive practice built
-- [x] Topic data files built (electricity, energy, forces, matter, waves)
-- [x] Exam data files built (calculations, diagrams, graphs, extended, practicals, etc.)
-- [x] MamoChat built
-- [x] Practical screen built (PracticalScreen.jsx — 7 tabs, progress tracking)
-- [x] Topic map built
-- [x] Required Practicals module on Learn screen (11 practicals, teal, FlaskConical)
-- [x] 154 AQA exam questions for all 11 required practicals (qb-practicals.js)
-- [x] AI marking for all extended writing (extended, short_answer, novel-context types — api/mark.js)
-- [x] Course filtering for Grade9Challenge and TimedPaper
-- [x] Lesson progress resume (localStorage)
-- [x] HomeScreen InsightsPanel (accuracy, strong/weak topics)
-- [x] AdaptivePractice screen + useAdaptive hook
-- [x] Deployed to neurophysics.co.uk
-- [x] NotebookLM infographics in Method tab (RP1, RP2 live — RP3–RP11 pending)
-- [x] NovelContextQuestion extracted to shared component with AI marking
-- [x] Back button exits lesson to home + saves progress mid-lesson
-- [x] markStarted fires when user advances past hook (not only at quiz)
-- [x] Space Physics module shows "Physics only" badge on Learn screen
-- [x] Security hardening: JWT auth on all AI endpoints (api/mark, api/gemini, api/anthropic)
-- [x] Security hardening: JWT signature verified in delete-account
-- [x] Security hardening: CORS rejects unknown origins with 403
-- [x] Security hardening: HSTS + tightened CSP in vercel.json
-- [x] SUPABASE_JWT_SECRET added to Vercel — auth fully enforced
-- [x] All AQA mentions removed from user-facing text (board-agnostic language throughout)
-- [x] Multi-board infrastructure: boardConfig.js, board picker in Settings, LearnScreen board filtering
-- [x] Multi-board Phase 1: 6 boards supported (AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA)
-- [x] CCEA A*-G grade system in PaperResults (with C* grade)
-- [x] Board-specific module stubs: Key Concepts (Edexcel), Global Challenges (OCR-A), Studying the Universe (OCR-B)
-- [x] Multi-board Phase 2: question banks wired in (qb-keyconcepts, qb-globalchallenges, qb-universe-ocr imported in index.js)
-- [x] Multi-board Phase 2d/2e: WJEC circular motion (8q) + seismic waves (5q); CCEA hydraulics (5q) + diverging lenses (6q)
-- [x] Board filtering in getNextQuestion/getQuestionsForTopic — questions with boards:[] only shown for matching board
-- [x] AdaptivePractice passes selected board to getNextQuestion
-- [x] LearnScreen: topics with empty lessonSteps route to /practice/:topicId (board-specific practice topics)
-- [x] Phase 3: Board selector as step 3/5 in onboarding flow (right after sign-in)
-- [x] Phase 3: StepGoal shows CCEA A*–G grade options vs 9-1 based on selected board
-- [x] Phase 3: HomeScreen "🏆 Target: Grade X" chip — shows "Target: A*" for CCEA (board-coloured)
-- [x] Multi-board consistency audit + fixes: Grade9Challenge, LearnScreen, MasteryScreen, PaperResults, PracticalScreen, OnboardingScreen all board-aware
-- [x] PracticalScreen: header badge translates RP→CP/PAG/SP/PP per board (practicalShort from boardConfig)
-- [x] All 'Grade 9' labels/buttons now compute from getSelectedBoard().gradeSystem — shows 'Grade A*' for CCEA
-- [x] LearnScreen 'Start here' CTA checks lessonSteps before routing to /lesson/ vs /practice/
-- [x] Full lesson content for 8 board-specific topics: topics-keyconcepts.jsx (Edexcel — SI Units, Scalars, Equations), topics-globalchallenges.jsx (OCR-A — Transport Safety, Electricity Costs), topics-universe.jsx (OCR-B — Telescope Optics, HR Diagram, History of Astronomy)
-- [x] All 8 topics have full 9-step lesson schema + interactive React/SVG visual components (lessonVisual, ideaVisual, realityVisual)
-- [x] PWA service worker live — vite-plugin-pwa, Workbox, 45 entries precached, offline support
-- [x] App experience audit (5-agent) + Phase 1 fixes: TimedPaper memory leak, BottomNav Learn-tab active state on lesson/exam/practical routes, LessonPlayer STEPS filter (no null screens), resume step validation, break nudges + elapsed timer in lesson, AI marking 30s timeout + auth guard (ExtendedAnswerQuestion), Cache-Control headers for static assets, CSP updated for cdnfonts.com, TTS buttons in HookCard + WorkedExampleStepper
-- [x] App experience audit Phase 2 fixes: PriorKnowledgeProbe state preserved on back navigation, AdaptivePractice AI marking auth token + timeout, board name badge on HomeScreen
-- [x] useSessionTimer: sessionStorage persistence so refresh doesn't reset ADHD break timer (fixed crash from bad useRef init pattern)
-- [x] LearnScreen routing fix: new 9-step topics (topic.hook) now correctly route to /lesson/:id — was incorrectly routing to /practice/:id because check only tested legacy topic.lessonSteps field
-- [x] Examiner audit of all 11 Required Practicals across all 6 boards (AQA/Edexcel/OCR-A/OCR-B/WJEC/CCEA) — 3 agents deployed in parallel
-- [x] All critical examiner-identified errors fixed in practicals.js and qb-practicals.js: voltmeter placement (RP1), energy table typo (RP1), IV definitions (RP1/RP5/RP6), liquid density method (RP5), latent heat sample data (RP6), hazard format (RP6), RP7 axes + units, RP8 air track→trolley, RP9 frequency/stroboscope/longitudinal, RP10 4th Leslie face + radiator error, RP11 plane mirror Part A + r notation
-- [x] RP4 fixes: protective resistor 10Ω→100Ω, lamp I-V data symmetry corrected, iv_t2_04 question values made consistent with sample data, diode threshold unified to 0.6–0.7V
-- [x] Fix "AI marking unavailable": replaced manual HS256 JWT crypto in _verifyAuth.js with Supabase admin getUser() — works with any JWT algorithm; all callers updated to await async function; NovelContextQuestion auth guard hardened + 30s timeout added
-- [x] Practical simulation diagram audit + fixes: RP1 label colours, RP3 label overflow, RP4 diode value, RP5 overlapping labels, RP7 extension label, RP8 air track→dynamics trolley+wheels, RP9 wavelength scale, RP10 contrast bug, RP11 glass block + ray box labels
-- [x] Security Fix 1: .env.production removed from git tracking; .env + .env.production added to .gitignore
-- [x] Security Fix 2: unsafe-inline removed from script-src CSP (Vite builds only external script tags — safe)
-- [x] Security Fix 3: in-memory rate limiters replaced with Upstash Redis persistent sliding window (api/mark.js + api/gemini.js); api/anthropic.js deleted (dead code); ANTHROPIC_API_KEY removed from Vercel
-- [x] Security Fix 4: getValidatedBoard() added to boardConfig.js — whitelists np_board against Object.keys(BOARDS) before use; SettingsScreen.jsx + getSelectedBoard() both use it; no raw localStorage.getItem('np_board') calls remain outside boardConfig.js
-- [x] Public landing page (LandingScreen.jsx) — shown to unauthenticated visitors at /; hero, stats, how-it-works, module pills, footer; PublicHeader.jsx; BottomNav/FloatingMamo hidden when not logged in
-- [x] ip variable bug fixed in api/mark.js (was ReferenceError on usage log line)
-- [x] Onboarding reduced to 3 steps: Board → Goal → Prefs (skippable) → Profile (skippable); StepValueProp removed from flow (landing page covers it)
-- [x] +50 XP celebration badge added to SessionClose.jsx (animated amber badge + 🔥 line)
-- [x] SpecChecklist.jsx — spec checklist screen at /spec-checklist; all 58 topics, mastered/in-progress/not-started, board-filtered, collapsible module sections
-- [x] TTS consistency: GuidedPracticeFader.jsx now has TTS buttons on all tiers; VocabPreTeach uses shared speak() from tts.js
-- [x] Sentry error monitoring: @sentry/react installed; initialised in main.jsx behind VITE_SENTRY_DSN env guard; PII stripped before send (ICO Children's Code); vendor-sentry chunk added
-- [x] Chunk splitting: 6 missing exam data files added to data-exam manual chunk in vite.config.js (examChained, examDiagramQs, examDiagrams, examExtended, examNovelContext, examRPAErrors)
-- [x] Age verification on consent screen: DOB (month + year) input; under-13 blocked with red warning (COPPA/ICO); age confirmation checkbox shows confirmed age; under-16 parent/guardian reminder
-- [x] PracticalScreen Explore tab: 8th tab with PhET + WithDiode external simulation links for all 11 practicals
-- [x] PracticalScreen Data Collection mode: Record button + chip list + live ScatterGraph for 8 practicals (RP1,RP3,RP4,RP5,RP7,RP8,RP9,RP11); useDataCollector hook in src/hooks/useDataCollector.js
-- [x] P0 security hardening (commit d7d873d): prompt injection sanitisation in gemini.js, SUPABASE_SERVICE_ROLE_KEY typo fixed, AbortController 30s timeout on Gemini, _verifyAuth fails closed, TOKEN_REFRESHED handler in AuthContext
-- [x] P0 architecture: React ErrorBoundary in main.jsx (no blank crash screen); acceptableRange standardised across 111 occurrences in CalculationQuestion + examCalculations + examChained + qb-atomic (silent marking bug fixed)
-- [x] P0 visual: #080f1e BG token unified across index.css/App.jsx/index.html; Bricolage Grotesque added to Google Fonts; theme-color meta fixed
-- [x] P0 QA: TimedPaper wall-clock timer (EHCP-safe); boards==null treated as universal in boardConfig + questionBank index
-- [x] P0 legal: PrivacyPolicyScreen Gemini disclosure + COPPA section; ConsentScreen parental consent for age 13–15; delete-account cascades all user data tables
-- [x] P0 marketing: manifest.json board-agnostic; og-image.svg created (1200×630); Plausible analytics added (cookie-free, GDPR compliant)
-- [x] P1 bugs (commit 74ccba9): MamoChat localStorage quota guard (evicts oldest thread >4MB); LessonPlayer XP doubling ref guard; TimedPaper null-safe question render; framer-motion dead dependency removed
-- [x] P1 UX/accessibility: CalculationQuestion ✓/✗ icons (WCAG 1.4.1); App.jsx offline overlay; TimedPaper hide-timer persisted to sessionStorage
-- [x] P2 bugs (commit 068a78e): StreakCalendar real date-array logic (no false-filled gaps); MamoChat AbortController cleanup on unmount; TimedPaper normalised answers array on submit
-- [x] P2 MamoChat: 8 persistent suggestion chips; topic selector on empty state (injects into Gemini context); border-radius token fix
-- [x] P2 accessibility: Auto-TTS toggle in Settings (np_auto_tts, opt-in); auto-reads on mount in CalculationQuestion + ConfidenceQuestion
-- [x] P2 UX flows: "Time to revisit" routes to /practice/:id with reviewMode+maxQuestions:5; AdaptivePractice review cap + completion badge; OnboardingScreen StepHowItWorks added (step 0)
-- [x] P3 bugs (commit a1e9103): useInsights live same-tab updates via np_progress_updated custom event; PaperResults confetti confirmed self-terminating (no fix needed)
-- [x] P3 ND polish: growth framing on wrong answers (CalculationQuestion); **bold** markdown rendered in ExtendedAnswerQuestion + ExamPractice; BottomNav labels always visible; lesson completion module progress summary card; LearnScreen "Read more" collapse; MasteryScreen chip padding/font
-- [x] P3 accessibility: Font size Normal/Large segmented toggle in Settings (body.text-large CSS, cold-start restore); Reduce Motion JS guard on App.jsx spring animations (FAB badge, spinner, reaction flash)
-- [x] SEN UX (commit 4025d7b): DiagnosticQuestion sticky question header + auto-open support panel (first 3 Qs) + "Need help? 💡" label; ExamPractice topic breadcrumb pill; qualitative progress labels in ExamPractice + AdaptivePractice; MasteryScreen first-use ⭐ explainer card; FloatingMamo × persistent dismiss button synced with Settings
-- [x] Student experience audit (6 board agents) + 18 fixes: grade band pills in PaperResults, Mamo board-aware (system prompt injection), SpecChecklist board badge legend, StudyPlan adjustable pace, TimedPaper pause/resume, AdaptivePractice ask-Mamo pill + tier label, ExamPractice worked solution card + command word highlight, HomeScreen review due dates, LearnScreen module expand sessionStorage, OnboardingScreen accessibility step, Radiation & Risk topic (OCR-A), Converging/Diverging Lenses topic (CCEA/OCR-B)
-- [x] Teacher experience audit (6 board agents) + P0+P1 fixes:
-  - qb-forces.js: g=9.8 explicit in all non-board Qs; 8 WJEC angular velocity Qs; CCEA moments + elastic limit Qs
-  - qb-energy.js: board-split g questions (edexcel/ccea=10, aqa/ocr/wjec=9.8); markScheme arrays + unitMark; acceptRange ±1.5%
-  - examCalculations.js: 6 g corrections (9.8) with recalculated answers
-  - qb-waves.js: 6 CCEA lens equation Qs; 2 WJEC seismic shadow zone; 2 wave diffraction (gap≈λ)
-  - qb-atomic.js: antineutrino beta decay (3 Qs); nuclear fission/fusion (5 Qs); topic keywords updated
-  - qb-universe-ocr.js: redshift Δλ/λ≈v/c (3 Qs), ISL I∝1/d² (2 Qs), spectroscopy (2 Qs); topics-universe.jsx updated
-  - practicals.js: OCR-B PAG telescope magnification + Cepheid data analysis; Edexcel CP4/5/6
-  - ExamPractice.jsx: EXTENDED_GUIDES (all 6 boards, 6-step mark structures + board-specific tips)
-  - ExtendedAnswerQuestion.jsx: model answer card when question.modelAnswer exists
-  - topics-forces.jsx + topics-waves.jsx: OCR-A board tags; wjecUnit metadata; circular_motion topic (WJEC)
-  - qb-keyconcepts.js: 10 Edexcel sig figs/OOM/standard form/prefix Qs; topics-keyconcepts.jsx updated
-  - qb-globalchallenges.js: 16 new Qs (transport safety, electricity costs, electric fields); topics-globalchallenges.jsx: full electric_fields topic with 9-step lesson + SVG interactive (boards: ocr-a)
-  - qb-practicals.js: 8 new density Qs (method selection, error analysis, anomaly, reliability, unit conversion, 6-mark)
-- [x] Curriculum audit (commit a39ec1d): all 57 topics confirmed with full 9-step hook lessons — zero legacy lessonSteps remaining; SUVAT (20 Qs) + vectors_scalars (28 Qs) already fully built
-- [x] topics.jsx: radiation_risk + electric_fields added to Global Challenges MODULES array — were built but invisible to OCR-A users in LearnScreen
-- [x] qb-forces.js: 8 new vec_ questions (Pythagoras resultant, component resolution, equilibrium, extended with modelAnswer)
-- [x] LearnScreen routing fix: mastered topics now go to /lesson/:id (not /diagnostic/:id) — Knowledge Check accessible from SessionClose at end of lesson
-- [x] DiagnosticQuestion: keywords/support panel stays collapsed (showSEN=false on init; setShowSEN(false) in handleNext — never auto-opens)
-- [x] LearnScreen TopicTile: description text removed — title only (clean compact rows)
-- [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
-- [ ] Sentry DSN: create account at sentry.io, add VITE_SENTRY_DSN to .env.local + Vercel env vars to activate error monitoring
-- [ ] App Store screenshots: create 5 screens in Figma (hook card, worked example, adaptive practice, progress, MamoChat)
+## Key Screens
+`HomeScreen`, `LearnScreen`, `LessonPlayer` (core lesson loop), `AdaptivePractice`, `ExamPractice`, `TimedPaper`, `DiagnosticQuestion`, `MamoChat` (AI tutor), `PracticalScreen`, `SpecChecklist`, `MasteryScreen`, `SettingsScreen`, `LandingScreen` (public /), `OnboardingScreen`
 
 ---
 
 ## Coding Conventions
+- JSX/JS only — no TypeScript
+- CSS custom properties for colours — never hardcode hex
+- PascalCase components, camelCase hooks/utils
+- **NEVER delete code without explicit permission — add/edit only**
+- **Lesson routing:** check `topic.hook` (new 9-step) OR `topic.lessonSteps?.length > 0` (legacy) — never lessonSteps alone
+- Run `npm run build` after significant changes
 
-- All files are .jsx or .js — NOT TypeScript
-- CSS custom properties for all colours — never hardcode hex values
-- Component files: PascalCase. Utility/hook files: camelCase
-- Screens go in src/screens/. Reusable UI goes in src/components/
-- Data files go in src/data/. Follow existing naming pattern
-- **NEVER delete any code, file, or content without explicit user permission — always add/edit only**
-- **Lesson routing: check `topic.hook` (new 9-step flow) OR `topic.lessonSteps?.length > 0` (legacy) — never check lessonSteps alone**
-- **ALWAYS end every session with the full checklist: Vercel deploy + GitHub push + cap sync ios + CLAUDE.md update**
+## API / Security
+- All `api/` functions require Supabase Bearer token via `_verifyAuth.js`
+- Client: always pass `Authorization: Bearer <session.access_token>` to AI endpoints
+- CORS: unknown origins → 403. Never accept API keys from request headers
+- Rate limiting: Upstash Redis sliding window (20 req/60s) via `_rateLimit.js`
 
-## API / Security Conventions
-
-- All serverless functions in `api/` require a valid Supabase Bearer token
-- Auth is verified via `api/_verifyAuth.js` — uses `SUPABASE_JWT_SECRET` env var (HS256)
-- Client-side: always pass `Authorization: Bearer <session.access_token>` to AI endpoints
-- CORS: unknown origins return 403 — never default to first allowed origin
-- Never accept API keys from request headers — server env vars only
-- Rate limiting is per-IP via Upstash Redis (persistent, survives cold starts) — 20 req/60s sliding window; shared helper in api/_rateLimit.js; fails open if UPSTASH env vars not set
-
-## Multi-Board Conventions
-
-- Board selection stored in `localStorage` key `np_board` — default `'aqa'`
-- Board metadata lives in `src/utils/boardConfig.js` — single source of truth
-- Module `boards: ['edexcel']` array restricts a module to specific boards; no field = universal
-- Topic `boards: []` field restricts a topic; used in board-specific question bank questions
-- CCEA uses A*-G grade system — always check `board.gradeSystem === 'A*-G'` before showing 9-1 UI
-- Edexcel uses g = 10 N/kg; AQA/OCR/WJEC use 9.8 — read from `BOARDS[boardId].g`
-- New board-specific question bank files: `qb-keyconcepts.js`, `qb-globalchallenges.js`, `qb-universe-ocr.js`
+## Multi-Board (6 boards: AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA)
+- Board stored in `localStorage` key `np_board` (default `'aqa'`). Use `getSelectedBoard()` / `getValidatedBoard()` from boardConfig.js — never raw localStorage
+- `boards: ['edexcel']` on module/topic restricts to that board. No field = universal. `boards == null` = universal
+- CCEA: A*-G grades — check `board.gradeSystem === 'A*-G'` before showing 9-1 UI
+- g values: Edexcel/CCEA = 10, AQA/OCR/WJEC = 9.8 — read from `BOARDS[boardId].g`
+- Board-specific question banks: `qb-keyconcepts.js` (Edexcel), `qb-globalchallenges.js` (OCR-A), `qb-universe-ocr.js` (OCR-B)
 
 ---
 
-## After Every Update (mandatory — do not skip)
+## Pending
+- [ ] RP3–RP11 NotebookLM infographics (add to INFOGRAPHIC_READY set in PracticalScreen)
+- [ ] Sentry DSN: create at sentry.io → add VITE_SENTRY_DSN to .env.local + Vercel
+- [ ] App Store screenshots: 5 screens in Figma
 
-1. `npx vercel --prod` — deploy to neurophysics.co.uk
-2. `git add [changed files] && git commit -m "..."` — commit to main
-3. `git push origin main` — push to GitHub
-4. `npx cap sync ios` — sync to Xcode for TestFlight
-5. Update this CLAUDE.md — Current Status and any new conventions
+---
 
-**Always end every session by printing this exact checklist with tick/cross status:**
+## After Every Update (mandatory)
+1. `npx vercel --prod` — deploy
+2. `git add [...] && git commit -m "..."` — commit
+3. `git push origin main` — push
+4. `npx cap sync ios` — sync Xcode
+
 ```
 ✅ Deployed to neurophysics.co.uk
 ✅ Pushed to GitHub
@@ -392,157 +80,34 @@
 
 ---
 
-## Key Behaviours for Claude Code
+## Key Behaviours
+- Never rewrite working components unless asked
+- Check existing files before creating new ones
+- One task at a time — no bundling unrelated changes
+- No new dependencies without asking
+- Prefer small targeted edits over full rewrites
+- Supabase is the backend — never suggest alternatives
 
-- **Never rewrite working components** unless explicitly asked
-- **Always check existing files first** before creating new ones — it probably already exists
-- **One task at a time** — do not bundle unrelated changes
-- **After each change**, confirm what was changed and what to do next
-- **Do not add new dependencies** without asking first
-- **Prefer small targeted edits** over full file rewrites
-- **Check src/data/ before writing new data** — the question bank is extensive
-- **Supabase is the backend** — do not suggest Firebase or other alternatives
-- **If context is getting long**, stop, summarise, and confirm next step before continuing
-- **Run npm run build** after significant changes to catch errors early
-- **Never remove content without explicit user approval**
+---
+
+## Knowledge Graphs (use BEFORE Grep/Glob/Read)
+
+Two MCP graph tools are active. Use them first — they are faster and cheaper than file scanning.
+
+**gitnexus** — 1,070 nodes, 1,908 edges, 84 execution flows
+- `gitnexus_query({query: "concept"})` — find by concept
+- `gitnexus_context({name: "symbolName"})` — callers, callees, flows
+- `gitnexus_impact({target: "X", direction: "upstream"})` — blast radius before editing
+- `gitnexus_detect_changes({scope: "staged"})` — pre-commit scope check
+- Rebuild: `gitnexus analyze`
+
+**code-review-graph** — 1,278 nodes, 6,664 edges, 120 files
+- `semantic_search_nodes` — find functions/classes by name or keyword
+- `get_impact_radius` — blast radius of a change
+- `detect_changes` + `get_review_context` — token-efficient code review
+- `get_architecture_overview` — high-level structure
+- Rebuild: `python3.11 -m code_review_graph build`
 
 <!-- gitnexus:start -->
-# GitNexus — Code Intelligence
-
-This project is indexed by GitNexus as **neurophysics** (1070 symbols, 1908 relationships, 84 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
-
-> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
-
-## Always Do
-
-- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `gitnexus_impact({target: "symbolName", direction: "upstream"})` and report the blast radius (direct callers, affected processes, risk level) to the user.
-- **MUST run `gitnexus_detect_changes()` before committing** to verify your changes only affect expected symbols and execution flows.
-- **MUST warn the user** if impact analysis returns HIGH or CRITICAL risk before proceeding with edits.
-- When exploring unfamiliar code, use `gitnexus_query({query: "concept"})` to find execution flows instead of grepping. It returns process-grouped results ranked by relevance.
-- When you need full context on a specific symbol — callers, callees, which execution flows it participates in — use `gitnexus_context({name: "symbolName"})`.
-
-## When Debugging
-
-1. `gitnexus_query({query: "<error or symptom>"})` — find execution flows related to the issue
-2. `gitnexus_context({name: "<suspect function>"})` — see all callers, callees, and process participation
-3. `READ gitnexus://repo/neurophysics/process/{processName}` — trace the full execution flow step by step
-4. For regressions: `gitnexus_detect_changes({scope: "compare", base_ref: "main"})` — see what your branch changed
-
-## When Refactoring
-
-- **Renaming**: MUST use `gitnexus_rename({symbol_name: "old", new_name: "new", dry_run: true})` first. Review the preview — graph edits are safe, text_search edits need manual review. Then run with `dry_run: false`.
-- **Extracting/Splitting**: MUST run `gitnexus_context({name: "target"})` to see all incoming/outgoing refs, then `gitnexus_impact({target: "target", direction: "upstream"})` to find all external callers before moving code.
-- After any refactor: run `gitnexus_detect_changes({scope: "all"})` to verify only expected files changed.
-
-## Never Do
-
-- NEVER edit a function, class, or method without first running `gitnexus_impact` on it.
-- NEVER ignore HIGH or CRITICAL risk warnings from impact analysis.
-- NEVER rename symbols with find-and-replace — use `gitnexus_rename` which understands the call graph.
-- NEVER commit changes without running `gitnexus_detect_changes()` to check affected scope.
-
-## Tools Quick Reference
-
-| Tool | When to use | Command |
-|------|-------------|---------|
-| `query` | Find code by concept | `gitnexus_query({query: "auth validation"})` |
-| `context` | 360-degree view of one symbol | `gitnexus_context({name: "validateUser"})` |
-| `impact` | Blast radius before editing | `gitnexus_impact({target: "X", direction: "upstream"})` |
-| `detect_changes` | Pre-commit scope check | `gitnexus_detect_changes({scope: "staged"})` |
-| `rename` | Safe multi-file rename | `gitnexus_rename({symbol_name: "old", new_name: "new", dry_run: true})` |
-| `cypher` | Custom graph queries | `gitnexus_cypher({query: "MATCH ..."})` |
-
-## Impact Risk Levels
-
-| Depth | Meaning | Action |
-|-------|---------|--------|
-| d=1 | WILL BREAK — direct callers/importers | MUST update these |
-| d=2 | LIKELY AFFECTED — indirect deps | Should test |
-| d=3 | MAY NEED TESTING — transitive | Test if critical path |
-
-## Resources
-
-| Resource | Use for |
-|----------|---------|
-| `gitnexus://repo/neurophysics/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/neurophysics/clusters` | All functional areas |
-| `gitnexus://repo/neurophysics/processes` | All execution flows |
-| `gitnexus://repo/neurophysics/process/{name}` | Step-by-step execution trace |
-
-## Self-Check Before Finishing
-
-Before completing any code modification task, verify:
-1. `gitnexus_impact` was run for all modified symbols
-2. No HIGH/CRITICAL risk warnings were ignored
-3. `gitnexus_detect_changes()` confirms changes match expected scope
-4. All d=1 (WILL BREAK) dependents were updated
-
-## Keeping the Index Fresh
-
-After committing code changes, the GitNexus index becomes stale. Re-run analyze to update it:
-
-```bash
-npx gitnexus analyze
-```
-
-If the index previously included embeddings, preserve them by adding `--embeddings`:
-
-```bash
-npx gitnexus analyze --embeddings
-```
-
-To check whether embeddings exist, inspect `.gitnexus/meta.json` — the `stats.embeddings` field shows the count (0 means no embeddings). **Running analyze without `--embeddings` will delete any previously generated embeddings.**
-
-> Claude Code users: A PostToolUse hook handles this automatically after `git commit` and `git merge`.
-
-## CLI
-
-| Task | Read this skill file |
-|------|---------------------|
-| Understand architecture / "How does X work?" | `.claude/skills/gitnexus/gitnexus-exploring/SKILL.md` |
-| Blast radius / "What breaks if I change X?" | `.claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
-| Trace bugs / "Why is X failing?" | `.claude/skills/gitnexus/gitnexus-debugging/SKILL.md` |
-| Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
-| Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
-| Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
-
 <!-- gitnexus:end -->
-
 <!-- code-review-graph MCP tools -->
-## MCP Tools: code-review-graph
-
-**IMPORTANT: This project has a knowledge graph. ALWAYS use the
-code-review-graph MCP tools BEFORE using Grep/Glob/Read to explore
-the codebase.** The graph is faster, cheaper (fewer tokens), and gives
-you structural context (callers, dependents, test coverage) that file
-scanning cannot.
-
-### When to use graph tools FIRST
-
-- **Exploring code**: `semantic_search_nodes` or `query_graph` instead of Grep
-- **Understanding impact**: `get_impact_radius` instead of manually tracing imports
-- **Code review**: `detect_changes` + `get_review_context` instead of reading entire files
-- **Finding relationships**: `query_graph` with callers_of/callees_of/imports_of/tests_for
-- **Architecture questions**: `get_architecture_overview` + `list_communities`
-
-Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
-
-### Key Tools
-
-| Tool | Use when |
-|------|----------|
-| `detect_changes` | Reviewing code changes — gives risk-scored analysis |
-| `get_review_context` | Need source snippets for review — token-efficient |
-| `get_impact_radius` | Understanding blast radius of a change |
-| `get_affected_flows` | Finding which execution paths are impacted |
-| `query_graph` | Tracing callers, callees, imports, tests, dependencies |
-| `semantic_search_nodes` | Finding functions/classes by name or keyword |
-| `get_architecture_overview` | Understanding high-level codebase structure |
-| `refactor_tool` | Planning renames, finding dead code |
-
-### Workflow
-
-1. The graph auto-updates on file changes (via hooks).
-2. Use `detect_changes` for code review.
-3. Use `get_affected_flows` to understand impact.
-4. Use `query_graph` pattern="tests_for" to check coverage.

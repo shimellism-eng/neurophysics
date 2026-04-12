@@ -9,6 +9,16 @@
       "command": "gitnexus",
       "args": ["serve"],
       "type": "stdio"
+    },
+    "repomix": {
+      "command": "npx",
+      "args": ["-y", "repomix", "--mcp"],
+      "type": "stdio"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "type": "stdio"
     }
   }
 }

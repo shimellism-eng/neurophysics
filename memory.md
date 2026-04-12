@@ -3,7 +3,13 @@
 ## Last Updated
 April 2026
 
-## What Was Just Done (this session)
+## What Was Just Done (latest)
+- PracticalScreen Explore tab: 8th tab added, EXTERNAL_SIMS map, TabExplore component with PhET/WithDiode links
+- PracticalScreen Data Collection mode: useDataCollector hook + Record/Clear/ScatterGraph UI in 8 Setup functions
+- SetupInsulation + SetupRadiation skipped (no single slider variable)
+- Build clean, deployed, pushed, iOS synced
+
+## What Was Done Before (this session)
 - memory.md created as permanent session log
 - Session Memory section added to CLAUDE.md Project Overview
 - All 4 security fixes verified as already complete (done in a previous session)

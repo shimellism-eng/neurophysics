@@ -297,6 +297,8 @@
 - [x] Sentry error monitoring: @sentry/react installed; initialised in main.jsx behind VITE_SENTRY_DSN env guard; PII stripped before send (ICO Children's Code); vendor-sentry chunk added
 - [x] Chunk splitting: 6 missing exam data files added to data-exam manual chunk in vite.config.js (examChained, examDiagramQs, examDiagrams, examExtended, examNovelContext, examRPAErrors)
 - [x] Age verification on consent screen: DOB (month + year) input; under-13 blocked with red warning (COPPA/ICO); age confirmation checkbox shows confirmed age; under-16 parent/guardian reminder
+- [x] PracticalScreen Explore tab: 8th tab with PhET + WithDiode external simulation links for all 11 practicals
+- [x] PracticalScreen Data Collection mode: Record button + chip list + live ScatterGraph for 8 practicals (RP1,RP3,RP4,RP5,RP7,RP8,RP9,RP11); useDataCollector hook in src/hooks/useDataCollector.js
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 - [ ] Sentry DSN: create account at sentry.io, add VITE_SENTRY_DSN to .env.local + Vercel env vars to activate error monitoring
 - [ ] App Store screenshots: create 5 screens in Figma (hook card, worked example, adaptive practice, progress, MamoChat)

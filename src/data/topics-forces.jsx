@@ -2927,12 +2927,92 @@ export const FORCES_TOPICS = {
         content: 'A 1200 kg car travels at 15 m/s around a roundabout of radius 40 m. Calculate: (a) centripetal acceleration, (b) centripetal force.\na = v²/r = 15²/40 = 225/40 = 5.625 m/s²\nF = ma = 1200 × 5.625 = 6750 N\nThis force is provided by friction between tyres and road.',
       },
     ],
-    topicMapHint: 'Links to: Newton\'s Laws (F=ma), momentum, gravity (for orbits)',
+    topicMapHint: {
+      before: ['Momentum'],
+      current: 'Circular Motion',
+      after: [],
+    },
     description: 'An object moving in a circle at constant speed is still accelerating because its direction continuously changes. Centripetal acceleration a = v²/r always points toward the centre. Centripetal force F = mv²/r (or F = mω²r) is the name for whichever real force provides this inward pull. Angular velocity ω = 2π/T = 2πf (rad/s). Linear speed v = ωr.',
     equations: [{ expr: 'F = mv²/r', given: true }, { expr: 'a = v²/r', given: true }, { expr: 'v = ωr', given: true }],
     question: 'A car travels at constant speed around a circular roundabout. Which statement is correct?',
     options: ['The car has zero acceleration because speed is constant', 'The car accelerates towards the centre of the circle', 'The centripetal force pushes the car outward', 'The car has no resultant force acting on it'],
     correctAnswer: 1,
     keywords: ['centripetal force', 'centripetal acceleration', 'circular motion', 'angular velocity', 'radian', 'period', 'v = ωr', 'F = mv²/r'],
+
+    lessonVisual: null,
+    ideaVisual: null,
+    realityVisual: null,
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'An object is moving in a straight line at constant speed. What must be true about the forces on it?',
+          answers: ['There must be a large force pushing it forward', 'The resultant force is zero', 'There must be a centripetal force', 'Gravity must be acting on it'],
+          correct: 1,
+          feedback: 'Newton\'s 1st Law: if an object moves at constant velocity (constant speed in a straight line), the resultant force is zero. To change direction, a resultant force is needed.',
+        },
+        {
+          question: 'A car drives at constant speed around a roundabout. In which direction does its acceleration point?',
+          answers: ['In the direction of travel', 'Away from the centre (outward)', 'Towards the centre (inward)', 'There is no acceleration'],
+          correct: 2,
+          feedback: 'Even at constant speed, the car\'s direction is changing. Acceleration is the rate of change of velocity (a vector), so changing direction = acceleration. This centripetal acceleration always points towards the centre of the circle.',
+        },
+      ],
+    },
+
+    workedExample: {
+      title: 'Car on a roundabout — centripetal force',
+      equation: 'F = mv²/r  |  a = v²/r',
+      context: 'A 1200 kg car travels at 15 m/s around a roundabout of radius 40 m. Calculate (a) the centripetal acceleration and (b) the centripetal force.',
+      steps: [
+        { step: 1, action: 'Write what you know', content: 'm = 1200 kg, v = 15 m/s, r = 40 m', annotation: 'Always list the known values before substituting. Identify which equation to use — we have v and r, so use a = v²/r.' },
+        { step: 2, action: 'Calculate centripetal acceleration', content: 'a = v²/r = 15² / 40 = 225 / 40 = 5.625 m/s²', annotation: 'Square the speed first: 15² = 225. Then divide by radius. Direction is always toward the centre.' },
+        { step: 3, action: 'Calculate centripetal force', content: 'F = ma = 1200 × 5.625 = 6750 N', annotation: 'Or use F = mv²/r = 1200 × 225 / 40 = 6750 N directly. Both routes give the same answer.' },
+        { step: 4, action: 'Interpret the result', content: 'The 6750 N centripetal force is provided by friction between the tyres and the road surface.', annotation: 'Centripetal force is not a new type of force — it is the label for whatever real force acts inward. On a wet road, if friction cannot supply 6750 N, the car skids outward.' },
+      ],
+      misconceptionAfter: {
+        claim: 'Centrifugal force pushes objects outward in circular motion.',
+        reality: 'There is no outward "centrifugal force" in an inertial frame. Objects feel as if they are pushed outward only because of their inertia (tendency to travel in a straight line). The only real force is centripetal — directed inward toward the centre.',
+        visual: 'Spin a ball on a string: if the string breaks, the ball flies off tangentially (straight line), NOT outward. This shows the inward tension (centripetal force) was what kept it on the circular path.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'A 2 kg ball moves at 4 m/s in a circle of radius 2 m. Calculate the centripetal force.',
+        allSteps: ['Write: m = 2 kg, v = 4 m/s, r = 2 m', 'Equation: F = mv²/r', 'Substitute: F = 2 × 4² / 2 = 2 × 16 / 2', '??? - calculate F'],
+        missingStep: 3,
+        missingHint: 'Calculate: 2 × 16 / 2 = 16 N',
+        answer: 16,
+        answerUnit: 'N',
+      },
+      tier2: {
+        question: 'A 0.5 kg stone on a string moves in a horizontal circle of radius 1.2 m. The centripetal force is 24 N. Find the speed of the stone.',
+        shownEquation: 'F = mv²/r  →  v² = Fr/m',
+        shownStep1: 'Write what you know: F = 24 N, r = 1.2 m, m = 0.5 kg',
+        hint: 'Rearrange F = mv²/r to get v² = Fr/m. Calculate v², then square-root for v.',
+        answer: 7.59,
+        answerUnit: 'm/s',
+      },
+      tier3: {
+        question: 'A wheel of radius 0.3 m completes one revolution every 0.5 s. Calculate (a) the angular velocity ω and (b) the linear speed of a point on the rim.',
+        hint: 'Use ω = 2π/T to find angular velocity, then v = ωr to find linear speed.',
+        methodHint: 'ω = 2π / 0.5 = 4π ≈ 12.57 rad/s. Then v = ωr = 12.57 × 0.3 ≈ 3.77 m/s.',
+        answer: 3.77,
+        answerUnit: 'm/s',
+      },
+    },
+
+    summary: {
+      equation: 'F = mv²/r  |  a = v²/r  |  ω = 2π/T  |  v = ωr',
+      sentence: 'An object in circular motion accelerates toward the centre. Centripetal force F = mv²/r is provided by a real inward force (friction, tension, or gravity). Angular velocity ω = 2π/T links period to rotation rate.',
+      promptText: 'Without looking: write the equation for centripetal force, state what provides it for a car on a bend, and explain why a faster speed requires a larger centripetal force.',
+    },
+
+    sessionRecap: [
+      'Circular motion at constant speed still involves acceleration, because direction changes continuously. Centripetal acceleration a = v²/r always points toward the centre of the circle.',
+      'Centripetal force F = mv²/r (or F = mω²r) is not a new force — it is whichever real force acts inward (friction for cars, tension for strings, gravity for satellites). Doubling speed quadruples the force needed.',
+      'Angular velocity ω = 2π/T = 2πf (rad/s). Linear speed v = ωr — points further from the centre move faster for the same ω.',
+    ],
   },
 }

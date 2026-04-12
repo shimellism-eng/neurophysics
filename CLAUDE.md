@@ -305,6 +305,12 @@
 - [x] P0 QA: TimedPaper wall-clock timer (EHCP-safe); boards==null treated as universal in boardConfig + questionBank index
 - [x] P0 legal: PrivacyPolicyScreen Gemini disclosure + COPPA section; ConsentScreen parental consent for age 13–15; delete-account cascades all user data tables
 - [x] P0 marketing: manifest.json board-agnostic; og-image.svg created (1200×630); Plausible analytics added (cookie-free, GDPR compliant)
+- [x] P1 bugs (commit 74ccba9): MamoChat localStorage quota guard (evicts oldest thread >4MB); LessonPlayer XP doubling ref guard; TimedPaper null-safe question render; framer-motion dead dependency removed
+- [x] P1 UX/accessibility: CalculationQuestion ✓/✗ icons (WCAG 1.4.1); App.jsx offline overlay; TimedPaper hide-timer persisted to sessionStorage
+- [x] P2 bugs (commit 068a78e): StreakCalendar real date-array logic (no false-filled gaps); MamoChat AbortController cleanup on unmount; TimedPaper normalised answers array on submit
+- [x] P2 MamoChat: 8 persistent suggestion chips; topic selector on empty state (injects into Gemini context); border-radius token fix
+- [x] P2 accessibility: Auto-TTS toggle in Settings (np_auto_tts, opt-in); auto-reads on mount in CalculationQuestion + ConfidenceQuestion
+- [x] P2 UX flows: "Time to revisit" routes to /practice/:id with reviewMode+maxQuestions:5; AdaptivePractice review cap + completion badge; OnboardingScreen StepHowItWorks added (step 0)
 - [x] Student experience audit (6 board agents) + 18 fixes: grade band pills in PaperResults, Mamo board-aware (system prompt injection), SpecChecklist board badge legend, StudyPlan adjustable pace, TimedPaper pause/resume, AdaptivePractice ask-Mamo pill + tier label, ExamPractice worked solution card + command word highlight, HomeScreen review due dates, LearnScreen module expand sessionStorage, OnboardingScreen accessibility step, Radiation & Risk topic (OCR-A), Converging/Diverging Lenses topic (CCEA/OCR-B)
 - [x] Teacher experience audit (6 board agents) + P0+P1 fixes:
   - qb-forces.js: g=9.8 explicit in all non-board Qs; 8 WJEC angular velocity Qs; CCEA moments + elastic limit Qs

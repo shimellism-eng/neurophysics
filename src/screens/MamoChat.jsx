@@ -1,10 +1,11 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { Send, Sparkles, ArrowLeft, RotateCcw, Trash2 } from 'lucide-react'
+import { Send, Sparkles, Trash2 } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { getSelectedBoard } from '../utils/boardConfig'
+import PageHeader from '../components/PageHeader'
 
 const GENERAL_STARTERS = [
   'What is the difference between speed and velocity?',
@@ -306,53 +307,44 @@ export default function MamoChat() {
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
       {/* ── Header ─────────────────────────────────────────────────────────── */}
-      <div
-        className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3 sticky top-0 z-10"
-        style={{
-          background: 'rgba(8,15,30,0.96)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
-        }}
-      >
-        <button
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-          onClick={() => navigate(-1)}
-          aria-label="Go back"
-        >
-          <ArrowLeft size={18} color="#a8b8cc" />
-        </button>
-        <div
-          className="w-10 h-10 rounded-[14px] flex items-center justify-center shrink-0"
-          style={{ background: 'linear-gradient(135deg, #6366f120, #c084fc20)', border: '1px solid #6366f150' }}
-        >
-          <AtomIcon size={20} color="#6366f1" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>
-            <div className="text-xs px-1.5 py-0.5 rounded-md" style={{ color: '#a8b8cc', background: 'rgba(168,184,204,0.1)', border: '0.75px solid rgba(168,184,204,0.2)' }}>
-              {getSelectedBoard().name}
+      <PageHeader
+        onBack={() => navigate(-1)}
+        title={
+          <div className="flex items-center gap-2 min-w-0">
+            <div
+              className="w-10 h-10 rounded-[14px] flex items-center justify-center shrink-0"
+              style={{ background: 'linear-gradient(135deg, #6366f120, #c084fc20)', border: '1px solid #6366f150' }}
+            >
+              <AtomIcon size={20} color="#6366f1" />
+            </div>
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>
+              <div className="text-xs px-1.5 py-0.5 rounded-md shrink-0" style={{ color: '#a8b8cc', background: 'rgba(168,184,204,0.1)', border: '0.75px solid rgba(168,184,204,0.2)' }}>
+                {getSelectedBoard().name}
+              </div>
             </div>
           </div>
-          {effectiveTopicLabel ? (
+        }
+        subtitle={
+          effectiveTopicLabel ? (
             <div className="text-xs truncate" style={{ color: '#6366f1' }}>
               Studying: {effectiveTopicLabel}
             </div>
           ) : (
             <div className="text-xs" style={{ color: '#00bc7d' }}>● Physics Tutor · Always here</div>
-          )}
-        </div>
-        <button
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-          onClick={clearThread}
-          aria-label="Clear conversation"
-        >
-          <Trash2 size={15} color="#a8b8cc" />
-        </button>
-      </div>
+          )
+        }
+        rightSlot={
+          <button
+            className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+            style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+            onClick={clearThread}
+            aria-label="Clear conversation"
+          >
+            <Trash2 size={15} color="#a8b8cc" />
+          </button>
+        }
+      />
 
       {/* ── AI disclosure banner ────────────────────────────────────────────── */}
       <div

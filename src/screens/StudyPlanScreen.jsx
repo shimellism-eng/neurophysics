@@ -1,11 +1,12 @@
 import { useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronLeft, ChevronDown, ChevronRight, CheckCircle, Lock, RotateCcw, Target } from 'lucide-react'
+import { ChevronDown, ChevronRight, CheckCircle, Lock, RotateCcw, Target } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useStudyPlan } from '../hooks/useStudyPlan'
 import { getSelectedBoard } from '../utils/boardConfig'
+import PageHeader from '../components/PageHeader'
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 function fmtDate(d) {
@@ -241,20 +242,11 @@ export default function StudyPlanScreen() {
       style={{ background: '#080f1e', paddingBottom: 32 }}>
 
       {/* Header */}
-      <div className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10 shrink-0"
-        style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)' }}>
-        <button onClick={() => navigate(-1)}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
-          <ChevronLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex-1">
-          <h1 className="font-bold" style={{ color: '#f8fafc', fontSize: 18, letterSpacing: '-0.02em' }}>
-            Study Plan
-          </h1>
-          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{board.name}</p>
-        </div>
-      </div>
+      <PageHeader
+        title="Study Plan"
+        subtitle={board.name}
+        onBack={() => navigate(-1)}
+      />
 
       <div className="px-5 pt-5 space-y-4">
 

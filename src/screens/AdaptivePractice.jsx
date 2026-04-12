@@ -5,12 +5,13 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
-import { ArrowLeft, Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, BookmarkPlus, Check, Loader2, CheckCircle, XCircle, Lightbulb, AlertCircle } from 'lucide-react'
+import { Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, BookmarkPlus, Check, Loader2, CheckCircle, XCircle, Lightbulb, AlertCircle } from 'lucide-react'
 import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
 import { getNextQuestion } from '../data/questionBank/index'
 import { getSelectedBoard } from '../utils/boardConfig'
 import { supabase } from '../lib/supabase'
+import PageHeader from '../components/PageHeader'
 
 const TIER_CONFIG = {
   1: { label: 'Tier 1', sub: 'Recall & MCQ', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)' },
@@ -593,30 +594,24 @@ export default function AdaptivePractice() {
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
 
       {/* Header */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
-        style={{
-          background: 'rgba(8,15,30,0.96)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
-        }}>
-        <button onClick={() => navigate(-1)}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
-          <ArrowLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex-1 min-w-0">
+      <PageHeader
+        onBack={() => navigate(-1)}
+        title={
           <div className="text-sm font-bold truncate" style={{ color: moduleColor }}>
             {topic.title}
           </div>
-          <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
-            {sessionCount} answered · {sessionCorrect} correct
-          </div>
-          <span style={{ fontSize: 11, color: '#64748b', fontStyle: 'italic' }}>
-            {getProgressLabel(sessionCount, reviewMode ? (maxQuestions || 5) : 20)}
-          </span>
-        </div>
-      </div>
+        }
+        subtitle={
+          <>
+            <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
+              {sessionCount} answered · {sessionCorrect} correct
+            </div>
+            <span style={{ fontSize: 11, color: '#64748b', fontStyle: 'italic' }}>
+              {getProgressLabel(sessionCount, reviewMode ? (maxQuestions || 5) : 20)}
+            </span>
+          </>
+        }
+      />
 
       {/* Course filter + streak row */}
       <div className="px-5 pt-3 pb-1 shrink-0 flex items-center justify-between gap-3">

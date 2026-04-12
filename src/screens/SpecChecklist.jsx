@@ -5,9 +5,11 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronLeft, ChevronDown, ChevronRight, CheckCircle2, Circle } from 'lucide-react'
+import { ChevronDown, ChevronRight, CheckCircle2, Circle } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { getSelectedBoard } from '../utils/boardConfig'
+import { useProgress } from '../hooks/useProgress'
+import PageHeader from '../components/PageHeader'
 
 // ─── Helper: topic has lesson content ────────────────────────────────────────
 function hasLesson(topic) {
@@ -186,16 +188,7 @@ export default function SpecChecklist() {
   const board = getSelectedBoard()
   const boardId = board.id
 
-  const [progress, setProgress] = useState({})
-
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem('neurophysics_progress')
-      if (raw) setProgress(JSON.parse(raw))
-    } catch {
-      setProgress({})
-    }
-  }, [])
+  const { progress } = useProgress()
 
   // Filter modules by board
   const visibleModules = MODULES.filter(mod => {
@@ -226,32 +219,11 @@ export default function SpecChecklist() {
       style={{ background: '#080f1e', paddingBottom: 90 }}
     >
       {/* Header */}
-      <div
-        className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10 shrink-0"
-        style={{
-          background: 'rgba(8,15,30,0.96)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
-        }}
-      >
-        <button
-          className="w-11 h-11 flex items-center justify-center rounded-[12px] shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-          onClick={() => navigate(-1)}
-          aria-label="Go back"
-        >
-          <ChevronLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex-1">
-          <h1 className="font-display font-bold text-lg" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
-            Spec Checklist
-          </h1>
-          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            {board.name} · {masteredTopics} of {totalTopics} mastered
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        title="Spec Checklist"
+        subtitle={`${board.name} · ${masteredTopics} of ${totalTopics} mastered`}
+        onBack={() => navigate(-1)}
+      />
 
       {/* Overall progress bar */}
       <div className="px-4 py-4">

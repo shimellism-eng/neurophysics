@@ -95,7 +95,11 @@ export default function MamoChat() {
 
   // Topic context from URL: /mamo?topic=waves&label=Waves
   const topicSlug  = searchParams.get('topic') || ''
-  const topicLabel = searchParams.get('label') || topicSlug
+  const rawLabel   = searchParams.get('label') || topicSlug
+  // Humanise underscore slugs: "energy_stores" → "Energy Stores"
+  const topicLabel = rawLabel
+    ? rawLabel.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+    : ''
 
   // Per-topic localStorage key (falls back to 'general')
   const storageKey = `mamo_thread_${topicSlug || 'general'}`

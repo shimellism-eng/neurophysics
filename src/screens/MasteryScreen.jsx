@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { CheckCircle, Circle, Zap, Trophy, Star, Clock, ChevronRight } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
-import { getSelectedBoard } from '../utils/boardConfig'
+import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
 
 // ---------------------------------------------------------------------------
 // Badge definitions
@@ -149,14 +149,15 @@ export default function MasteryScreen() {
   const navigate = useNavigate()
   const { progress, stats } = useProgress()
 
-  const allTopics = Object.values(TOPICS)
+  const board = getSelectedBoard()
+  const allTopics = Object.values(TOPICS).filter(t => isAvailableForBoard(t.boards, board.id))
   const mastered = allTopics.filter(t => progress[t.id]?.mastered)
   const started  = allTopics.filter(t => progress[t.id]?.started && !progress[t.id]?.mastered)
   const percent  = Math.round((mastered.length / allTopics.length) * 100)
   const hasProgress = mastered.length > 0
 
   // Badge logic — board-aware grade label
-  const topGradeLabel = getSelectedBoard().gradeSystem === 'A*-G' ? 'Grade A*' : 'Grade 9'
+  const topGradeLabel = board.gradeSystem === 'A*-G' ? 'Grade A*' : 'Grade 9'
   const labelBadge = (b) => b.id === 'grade9' ? { ...b, label: topGradeLabel } : b
   const unlockedBadgeIds = BADGES
     .filter(b => b.check(mastered, progress, MODULES, allTopics))

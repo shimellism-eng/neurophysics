@@ -455,9 +455,9 @@ export default function TimedPaper() {
       <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
         <div className="px-4 pt-5 pb-3 shrink-0 flex items-center gap-3">
           <button onClick={() => navigate(-1)}
-            className="w-10 h-10 rounded-[11px] flex items-center justify-center shrink-0"
-            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-            <ArrowLeft size={17} color="#a8b8cc" />
+            className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+            style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
+            <ArrowLeft size={18} color="#a8b8cc" />
           </button>
           <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Exam-style Physics Paper</h1>
         </div>
@@ -617,11 +617,11 @@ export default function TimedPaper() {
 
       {/* Header */}
       <div className="px-4 pt-5 pb-3 shrink-0 flex items-center gap-3"
-        style={{ borderBottom: '0.75px solid #1d293d' }}>
+        style={{ borderBottom: '0.75px solid rgba(255,255,255,0.07)' }}>
         <button onClick={() => navigate(-1)}
-          className="w-10 h-10 rounded-[11px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-          <ArrowLeft size={17} color="#a8b8cc" />
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
+          <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
           <div className="text-xs font-bold" style={{ color: '#f8fafc' }}>
@@ -634,8 +634,8 @@ export default function TimedPaper() {
         {/* Timer hide toggle */}
         <button
           onClick={() => setHideTimer(v => !v)}
-          className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
           aria-label={hideTimer ? 'Show timer' : 'Hide timer'}
         >
           {hideTimer

@@ -521,8 +521,15 @@ export default function AdaptivePractice() {
   }
 
   if (!topic) return (
-    <div className="flex items-center justify-center h-full" style={{ color: '#a8b8cc', background: '#080f1e' }}>
-      Topic not found
+    <div className="flex flex-col items-center justify-center h-full gap-4 px-6 text-center" style={{ background: '#080f1e' }}>
+      <div style={{ color: '#a8b8cc', fontSize: 15 }}>Topic not found</div>
+      <button
+        onClick={() => navigate('/learn')}
+        className="w-11 h-11 flex items-center justify-center rounded-[12px]"
+        style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+      >
+        <ArrowLeft size={18} color="#a8b8cc" />
+      </button>
     </div>
   )
 

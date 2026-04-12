@@ -191,7 +191,7 @@ function WeeklyDots({ plan }) {
 }
 
 // ─── InsightsPanel ────────────────────────────────────────────────────────────
-function InsightsPanel({ insights }) {
+function InsightsPanel({ insights, onTopicTap }) {
   if (!insights.hasData) return null
 
   return (
@@ -280,7 +280,7 @@ function InsightsPanel({ insights }) {
           </div>
           <div className="space-y-2">
             {insights.suggestions.map(({ id, topic, reason, accuracy }) => (
-              <div key={id} className="flex items-center gap-3 py-1">
+              <button key={id} className="w-full flex items-center gap-3 py-1 text-left" onClick={() => onTopicTap && onTopicTap(id)}>
                 <div className="flex-1 min-w-0">
                   <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
                   <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
@@ -290,7 +290,7 @@ function InsightsPanel({ insights }) {
                   </div>
                 </div>
                 <ChevronRight size={16} color="#818cf8" />
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function HomeScreen() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e', paddingTop: 'env(safe-area-inset-top, 16px)', paddingBottom: 96 }}
+      style={{ background: '#080f1e', paddingTop: 'env(safe-area-inset-top, 16px)', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
     >
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
@@ -663,7 +663,7 @@ export default function HomeScreen() {
                 Insights
               </span>
             </div>
-            <InsightsPanel insights={{ weakTopics, strongTopics, suggestions, overallAccuracy, hasData, attempted }} />
+            <InsightsPanel insights={{ weakTopics, strongTopics, suggestions, overallAccuracy, hasData, attempted }} onTopicTap={navigateToTopic} />
           </motion.div>
         )}
       </AnimatePresence>

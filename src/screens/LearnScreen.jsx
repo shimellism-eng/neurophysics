@@ -452,7 +452,7 @@ export default function LearnScreen() {
       </div>
 
       {/* ── Scrollable body ── */}
-      <div className="flex-1 overflow-y-auto px-4 pb-10 space-y-3">
+      <div className="flex-1 overflow-y-auto px-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
 
         {/* ── Search results ── */}
         {isSearching && (

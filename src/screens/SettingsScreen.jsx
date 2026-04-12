@@ -784,7 +784,7 @@ export default function SettingsScreen() {
       </div>
 
       {/* Sections */}
-      <div className="px-5 pb-8 space-y-5">
+      <div className="px-5 space-y-5" style={{ paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
         {sections.map((section, si) => (
           <motion.div
             key={section.title}

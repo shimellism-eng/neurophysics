@@ -604,39 +604,42 @@ export default function SettingsScreen() {
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
           Exam Date
         </div>
-        <div className="rounded-[16px] px-4 py-3" style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
-          <div className="flex items-center gap-2 mb-2">
+        <div className="rounded-[16px] overflow-hidden" style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
+          <div className="flex items-center gap-2 px-4 pt-3 pb-2">
             <CalendarDays size={15} color="#6366f1" />
             <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Your exam date</span>
           </div>
-          <input
-            type="date"
-            value={profile.examDate || ''}
-            min={new Date().toISOString().split('T')[0]}
-            onChange={e => {
-              const updated = { ...profile, examDate: e.target.value }
-              setProfile(updated)
-              saveProfile(updated)
-              showToast('Exam date saved ✓', '#10b981')
-            }}
-            className="w-full px-3 py-2.5 rounded-[10px] text-sm outline-none"
-            style={{
-              background: 'rgba(255,255,255,0.06)',
-              color: '#f8fafc',
-              border: '0.75px solid rgba(255,255,255,0.1)',
-              colorScheme: 'dark',
-            }}
-          />
-          {profile.examDate && (
-            <p className="text-xs mt-2" style={{ color: '#a8b8cc' }}>
-              {(() => {
-                const d = new Date(profile.examDate)
-                const days = Math.ceil((d - new Date().setHours(0,0,0,0)) / 86400000)
-                if (days <= 0) return 'Exam date has passed'
-                return `${days} day${days === 1 ? '' : 's'} until your exam`
-              })()}
-            </p>
-          )}
+          <div className="px-4 pb-3">
+            <input
+              type="date"
+              value={profile.examDate || ''}
+              min={new Date().toISOString().split('T')[0]}
+              onChange={e => {
+                const updated = { ...profile, examDate: e.target.value }
+                setProfile(updated)
+                saveProfile(updated)
+                showToast('Exam date saved ✓', '#10b981')
+              }}
+              className="w-full px-3 py-2.5 rounded-[10px] text-sm outline-none"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                color: '#f8fafc',
+                border: '0.75px solid rgba(255,255,255,0.1)',
+                colorScheme: 'dark',
+                boxSizing: 'border-box',
+              }}
+            />
+            {profile.examDate && (
+              <p className="text-xs mt-2" style={{ color: '#a8b8cc' }}>
+                {(() => {
+                  const d = new Date(profile.examDate)
+                  const days = Math.ceil((d - new Date().setHours(0,0,0,0)) / 86400000)
+                  if (days <= 0) return 'Exam date has passed'
+                  return `${days} day${days === 1 ? '' : 's'} until your exam`
+                })()}
+              </p>
+            )}
+          </div>
         </div>
       </div>
 

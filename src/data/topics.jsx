@@ -207,6 +207,8 @@ export const MODULES = [
     topics: [
       'transport_safety',
       'electricity_costs',
+      'radiation_risk',
+      'electric_fields',
     ],
   },
   {

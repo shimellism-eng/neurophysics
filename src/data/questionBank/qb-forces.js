@@ -307,6 +307,163 @@ const forcesQuestions = [
   },
 
   // ─────────────────────────────────────────────
+  // TOPIC 1 EXTRA: vectors_scalars — prefix vec_ (AQA Higher diagram / calculation focus)
+  // ─────────────────────────────────────────────
+
+  // Foundation (2)
+  {
+    id: 'vec_f01',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 1,
+    type: 'mcq',
+    marks: 1,
+    timeExpected: 30,
+    question: 'Which of the following lists contains ONLY scalar quantities?',
+    options: [
+      'Speed, mass, temperature',
+      'Velocity, force, weight',
+      'Speed, displacement, energy',
+      'Momentum, acceleration, distance',
+    ],
+    correctIndex: 0,
+    senNote: 'Scalars have magnitude only. Speed, mass and temperature all have size but no direction.',
+  },
+  {
+    id: 'vec_f02',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 1,
+    type: 'calculation',
+    marks: 2,
+    timeExpected: 60,
+    question: 'A force of 6 N acts east and a force of 6 N acts west on the same object. What is the magnitude of the resultant force?',
+    answer: 0,
+    unit: 'N',
+    acceptableRange: [0, 0],
+    markScheme: [
+      'Forces are equal and opposite so they cancel (1)',
+      'Resultant = 6 − 6 = 0 N (1)',
+    ],
+    senNote: 'Antiparallel (opposite direction) forces of equal size cancel to give zero resultant.',
+  },
+
+  // Higher (3)
+  {
+    id: 'vec_h01',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 2,
+    type: 'calculation',
+    marks: 3,
+    timeExpected: 90,
+    question: 'A 30 N force acts east and a 40 N force acts north. Calculate the magnitude of the resultant force. Give your answer to 2 significant figures.',
+    answer: 50,
+    unit: 'N',
+    acceptableRange: [49, 51],
+    markScheme: [
+      'R² = 30² + 40² = 900 + 1600 = 2500 (1)',
+      'R = √2500 (1)',
+      'R = 50 N (1)',
+    ],
+    senNote: 'Classic 3-4-5 Pythagorean triple scaled by 10. Always square first, then add, then square root.',
+  },
+  {
+    id: 'vec_h02',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 2,
+    type: 'short_answer',
+    marks: 2,
+    timeExpected: 60,
+    question: 'Explain why velocity is a vector quantity but speed is not. Use an example in your answer.',
+    markScheme: [
+      'Velocity has both magnitude AND direction; speed has magnitude only (1)',
+      'Example: 30 m/s is a speed; 30 m/s north is a velocity — the direction makes it a vector (1)',
+    ],
+    senNote: 'The key word is direction. Velocity = speed + direction.',
+  },
+  {
+    id: 'vec_h03',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 2,
+    type: 'calculation',
+    marks: 3,
+    timeExpected: 90,
+    question: 'A force of 20 N acts at 30° to the horizontal. Calculate (a) the horizontal component and (b) the vertical component. (cos 30° = 0.87, sin 30° = 0.50)',
+    answer: 17.4,
+    unit: 'N',
+    acceptableRange: [16.8, 18.0],
+    markScheme: [
+      'Horizontal component: Fx = F cos θ = 20 × 0.87 = 17.4 N (1)',
+      'Vertical component: Fy = F sin θ = 20 × 0.50 = 10 N (1)',
+      'Both components stated with correct units (1)',
+    ],
+    senNote: 'Resolving: horizontal uses cos, vertical uses sin. Remember the angle is from the horizontal.',
+  },
+
+  // Grade 8-9 (2)
+  {
+    id: 'vec_g89_01',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 3,
+    type: 'extended',
+    marks: 4,
+    timeExpected: 120,
+    question: 'Three forces act on a stationary object: 10 N east, 10 N north, and a third force P. The object is in equilibrium. (a) Find the resultant of the 10 N east and 10 N north forces. (b) State the magnitude and direction of P. (c) Explain what equilibrium means in terms of resultant force.',
+    markScheme: [
+      '(a) R = √(10² + 10²) = √200 = 14.1 N at 45° north of east (1)',
+      '(b) P = 14.1 N (1), direction: south of west / bearing 225° / opposite to resultant (1)',
+      '(c) Equilibrium means the resultant force is zero — all forces balance so no acceleration (1)',
+    ],
+    senNote: 'For equilibrium, the unknown force must equal and oppose the resultant of all other forces.',
+  },
+  {
+    id: 'vec_g89_02',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 3,
+    type: 'calculation',
+    marks: 4,
+    timeExpected: 120,
+    question: 'A plane flies at 200 m/s north. A wind blows east at 50 m/s. (a) Calculate the magnitude of the resultant velocity. Give your answer to 3 significant figures. (b) Calculate the angle the resultant makes with north.',
+    answer: 206,
+    unit: 'm/s',
+    acceptableRange: [204, 208],
+    markScheme: [
+      '(a) R = √(200² + 50²) = √(40000 + 2500) = √42500 (1)',
+      'R = 206.2 ≈ 206 m/s (1)',
+      '(b) tan θ = 50/200 → θ = 14.0° east of north (1)',
+      'Bearing = 014° (or angle clearly stated from north) (1)',
+    ],
+    senNote: 'Resultant is always larger than each component alone but smaller than their sum (206 < 250).',
+  },
+
+  // Extended (1)
+  {
+    id: 'vec_ext01',
+    topicId: 'vectors_scalars',
+    course: 'combined',
+    tier: 3,
+    type: 'extended_answer',
+    marks: 4,
+    timeExpected: 300,
+    question: 'Explain the difference between scalar and vector quantities. Give two examples of each and explain why velocity is a vector but speed is not. [4 marks]',
+    markScheme: [
+      'Scalar quantities have magnitude only — no direction is needed to fully describe them (1)',
+      'Two scalar examples from: speed, mass, distance, temperature, energy, time (1)',
+      'Vector quantities have both magnitude and direction (1)',
+      'Two vector examples from: velocity, displacement, force, acceleration, momentum, weight (1)',
+      'Velocity specifies both how fast and which direction; speed only tells you how fast — they share the same magnitude but velocity is a vector (1)',
+      'Example: 30 m/s is a speed; 30 m/s north is a velocity (credit for clear example)',
+    ],
+    modelAnswer: 'Scalar quantities have magnitude only and do not require a direction to fully describe them. Examples include speed (e.g. 30 m/s) and mass (e.g. 5 kg). Vector quantities have both magnitude and direction. Examples include velocity (e.g. 30 m/s north) and force (e.g. 50 N downward). Velocity is a vector because it specifies the direction of travel as well as the speed — a car travelling at 30 m/s north has the same speed as one travelling at 30 m/s south, but their velocities are different because their directions differ. Speed is a scalar because it only tells you how fast an object moves, with no information about direction.',
+    senNote: 'Four clear points: define scalar, two scalar examples, define vector, two vector examples, scalar vs vector distinction.',
+  },
+
+  // ─────────────────────────────────────────────
   // TOPIC 2: force_interactions (combined) — prefix fi_
   // ─────────────────────────────────────────────
 

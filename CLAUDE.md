@@ -333,6 +333,9 @@
 - [x] Curriculum audit (commit a39ec1d): all 57 topics confirmed with full 9-step hook lessons — zero legacy lessonSteps remaining; SUVAT (20 Qs) + vectors_scalars (28 Qs) already fully built
 - [x] topics.jsx: radiation_risk + electric_fields added to Global Challenges MODULES array — were built but invisible to OCR-A users in LearnScreen
 - [x] qb-forces.js: 8 new vec_ questions (Pythagoras resultant, component resolution, equilibrium, extended with modelAnswer)
+- [x] LearnScreen routing fix: mastered topics now go to /lesson/:id (not /diagnostic/:id) — Knowledge Check accessible from SessionClose at end of lesson
+- [x] DiagnosticQuestion: keywords/support panel stays collapsed (showSEN=false on init; setShowSEN(false) in handleNext — never auto-opens)
+- [x] LearnScreen TopicTile: description text removed — title only (clean compact rows)
 - [ ] RP3–RP11 infographics (generate in NotebookLM, add to INFOGRAPHIC_READY set)
 - [ ] Sentry DSN: create account at sentry.io, add VITE_SENTRY_DSN to .env.local + Vercel env vars to activate error monitoring
 - [ ] App Store screenshots: create 5 screens in Figma (hook card, worked example, adaptive practice, progress, MamoChat)

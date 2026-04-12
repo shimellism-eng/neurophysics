@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CheckCircle2, Zap, ChevronDown, ChevronUp,
-  ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X,
+  ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X, BookOpen,
 } from 'lucide-react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
+import { getRecallQuestionCount } from '../data/questionBank/index'
 
 // ─── Badge definitions (for next milestone) ──────────────────────────────────
 
@@ -52,7 +53,7 @@ function ProgressRing({ pct, color, size = 50 }) {
 
 // ─── Topic tile ───────────────────────────────────────────────────────────────
 
-function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, onPractice }) {
+function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, onPractice, onRecall }) {
   const isMastered = masteryState === 'mastered'
   const isStarted  = masteryState === 'started'
   const barColor   = isMastered ? moduleColor : isStarted ? '#fbbf24' : 'rgba(255,255,255,0.1)'
@@ -126,7 +127,7 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
       <button
         type="button"
         className="flex items-center justify-center shrink-0"
-        style={{ width: 52 }}
+        style={{ width: 48 }}
         onClick={e => { e.stopPropagation(); onPractice() }}
       >
         <div
@@ -136,6 +137,27 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
           <Zap size={14} color="#a855f7" strokeWidth={2.5} />
         </div>
       </button>
+
+      {/* Recall button — 📖 icon zone (only shown if recall Qs exist) */}
+      {onRecall && (
+        <>
+          <div style={{ width: '0.75px', background: 'rgba(255,255,255,0.07)', margin: '12px 0' }} />
+          <button
+            type="button"
+            className="flex items-center justify-center shrink-0"
+            style={{ width: 48 }}
+            onClick={e => { e.stopPropagation(); onRecall() }}
+            aria-label="Knowledge recall"
+          >
+            <div
+              className="w-8 h-8 rounded-full flex items-center justify-center"
+              style={{ background: 'rgba(0,188,125,0.1)', border: '1px solid rgba(0,188,125,0.22)' }}
+            >
+              <BookOpen size={13} color="#00bc7d" strokeWidth={2.5} />
+            </div>
+          </button>
+        </>
+      )}
     </motion.div>
   )
 }
@@ -261,6 +283,10 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle }) {
                       }
                     }}
                     onPractice={() => navigate(`/practice/${topicId}`)}
+                    onRecall={getRecallQuestionCount(topicId, selectedBoard.id) > 0
+                      ? () => navigate(`/recall/${topicId}`)
+                      : undefined
+                    }
                   />
                 )
               })}

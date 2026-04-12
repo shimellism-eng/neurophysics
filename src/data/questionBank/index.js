@@ -36,6 +36,15 @@ import practicalsQuestions from './qb-practicals'
 import keyConceptsQuestions from './qb-keyconcepts'
 import globalChallengesQuestions from './qb-globalchallenges'
 import universeOCRQuestions from './qb-universe-ocr'
+// ── Recall question banks (AQA-only, type:'recall') ──────────────────────────
+import recallEnergyQuestions        from './qb-recall-energy'
+import recallElectricityQuestions   from './qb-recall-electricity'
+import recallParticlesQuestions     from './qb-recall-particles'
+import recallAtomicQuestions        from './qb-recall-atomic'
+import recallForcesQuestions        from './qb-recall-forces'
+import recallWavesQuestions         from './qb-recall-waves'
+import recallElectromagnetismQuestions from './qb-recall-electromagnetism'
+import recallSpaceQuestions         from './qb-recall-space'
 
 export const ALL_QUESTIONS = [
   ...energyQuestions,
@@ -50,6 +59,19 @@ export const ALL_QUESTIONS = [
   ...keyConceptsQuestions,
   ...globalChallengesQuestions,
   ...universeOCRQuestions,
+]
+
+// Recall questions are kept separate — they use type:'recall' and are only
+// served by RecallScreen, never by AdaptivePractice.
+export const ALL_RECALL_QUESTIONS = [
+  ...recallEnergyQuestions,
+  ...recallElectricityQuestions,
+  ...recallParticlesQuestions,
+  ...recallAtomicQuestions,
+  ...recallForcesQuestions,
+  ...recallWavesQuestions,
+  ...recallElectromagnetismQuestions,
+  ...recallSpaceQuestions,
 ]
 
 /**
@@ -115,4 +137,31 @@ export function getQuestionCountForTopic(topicId) {
 export function getQuestionsForCourse(course) {
   if (course === 'physics_only') return ALL_QUESTIONS
   return ALL_QUESTIONS.filter(q => q.course === 'combined')
+}
+
+/**
+ * Get recall questions for a specific topic.
+ * Includes both type:'recall' and type:'sequence_sort' from the recall banks.
+ * board: if provided, filters out questions with a boards array that doesn't include this board.
+ * course: 'combined' | 'physics_only' | 'all' (default 'all')
+ */
+export function getRecallQuestions(topicId, board = null, course = 'all') {
+  return ALL_RECALL_QUESTIONS.filter(q => {
+    if (q.topicId !== topicId) return false
+    if (board && q.boards?.length > 0 && !q.boards.includes(board)) return false
+    if (course !== 'all' && course === 'combined' && q.course === 'physics_only') return false
+    return true
+  })
+}
+
+/**
+ * Get all recall questions for a topic area (module-level, not topic-level).
+ * Used when a topic has no recall questions but its sibling topics do.
+ */
+export function getRecallQuestionCount(topicId, board = null) {
+  return ALL_RECALL_QUESTIONS.filter(q => {
+    if (q.topicId !== topicId) return false
+    if (board && q.boards?.length > 0 && !q.boards.includes(board)) return false
+    return true
+  }).length
 }

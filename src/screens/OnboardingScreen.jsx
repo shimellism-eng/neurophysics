@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap } from 'lucide-react'
+import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
@@ -989,30 +989,99 @@ function StepGoal({ boardId, onNext }) {
               optional
             </span>
           </div>
-          <input
-            type="date"
-            value={examDate}
-            onChange={e => setExamDate(e.target.value)}
-            min={new Date().toISOString().split('T')[0]}
-            className="w-full px-4 py-4 rounded-[16px] text-base outline-none"
-            style={{
-              background: 'rgba(18,26,47,0.9)',
-              border: '0.75px solid #2d3e55',
-              color: examDate ? '#f8fafc' : 'rgba(255,255,255,0.25)',
-              colorScheme: 'dark',
-              transition: 'border-color 0.2s',
-            }}
-          />
-          {examDate && (
-            <motion.p
-              className="text-xs mt-2 font-semibold"
-              style={{ color: '#6366f1' }}
-              initial={{ opacity: 0, y: -4 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              📅 {Math.ceil((new Date(examDate) - new Date()) / (1000 * 60 * 60 * 24))} days to go — let's get to work!
-            </motion.p>
-          )}
+          {/* Premium card — same pattern as SettingsScreen */}
+          {(() => {
+            const today = new Date(); today.setHours(0,0,0,0)
+            const examD = examDate ? new Date(examDate) : null
+            const daysLeft = examD ? Math.ceil((examD - today) / 86400000) : null
+            const passed = daysLeft !== null && daysLeft <= 0
+            const urgency = daysLeft === null ? null
+              : passed ? { color: '#94a3b8', bg: 'rgba(148,163,184,0.08)', border: 'rgba(148,163,184,0.18)', label: 'Passed' }
+              : daysLeft <= 14 ? { color: '#ef4444', bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.22)', label: 'Very soon' }
+              : daysLeft <= 42 ? { color: '#f59e0b', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.22)', label: 'Coming up' }
+              : { color: '#22c55e', bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.2)', label: 'On track' }
+            const fmtDate = examD ? examD.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
+            return (
+              <div
+                className="rounded-[20px] relative overflow-hidden"
+                style={{
+                  background: urgency ? urgency.bg : 'rgba(15,22,41,0.95)',
+                  border: `0.75px solid ${urgency ? urgency.border : 'rgba(255,255,255,0.08)'}`,
+                }}
+              >
+                {examDate ? (
+                  /* Date set: rich display */
+                  <div className="px-5 py-4 flex items-center gap-4">
+                    {/* Countdown bubble */}
+                    <div
+                      className="flex flex-col items-center justify-center rounded-[14px] shrink-0"
+                      style={{ width: 64, height: 64, background: `${urgency.color}18`, border: `0.75px solid ${urgency.color}40` }}
+                    >
+                      <span className="font-black leading-none" style={{ fontSize: 22, color: urgency.color }}>
+                        {passed ? '✓' : daysLeft}
+                      </span>
+                      <span className="font-semibold" style={{ fontSize: 10, color: `${urgency.color}cc`, marginTop: 2 }}>
+                        {passed ? 'done' : daysLeft === 1 ? 'day' : 'days'}
+                      </span>
+                    </div>
+                    {/* Date text */}
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold" style={{ fontSize: 17, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+                        {fmtDate}
+                      </div>
+                      <div
+                        className="mt-1 inline-flex items-center gap-1 px-2 py-0.5 rounded-full"
+                        style={{ background: `${urgency.color}18`, fontSize: 11, fontWeight: 600, color: urgency.color }}
+                      >
+                        {urgency.label}
+                      </div>
+                    </div>
+                    {/* Edit icon */}
+                    <div
+                      className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0"
+                      style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+                    >
+                      <Pencil size={13} color="#a8b8cc" />
+                    </div>
+                  </div>
+                ) : (
+                  /* No date: prompt */
+                  <div className="px-5 py-5 flex items-center gap-3">
+                    <div
+                      className="w-12 h-12 rounded-[12px] flex items-center justify-center shrink-0"
+                      style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                    >
+                      <CalendarDays size={20} color="#6366f1" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Set your exam date</div>
+                      <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>We'll build your study plan around it</div>
+                    </div>
+                    <div
+                      className="px-3 py-1.5 rounded-full text-xs font-bold"
+                      style={{ background: 'rgba(99,102,241,0.15)', border: '0.75px solid rgba(99,102,241,0.35)', color: '#818cf8' }}
+                    >
+                      Set date
+                    </div>
+                  </div>
+                )}
+                {/* Invisible native date input stretched over entire card */}
+                <input
+                  type="date"
+                  value={examDate}
+                  min={new Date().toISOString().split('T')[0]}
+                  tabIndex={-1}
+                  onFocus={e => { e.target.style.fontSize = '16px' }}
+                  onChange={e => setExamDate(e.target.value)}
+                  style={{
+                    position: 'absolute', inset: 0, width: '100%', height: '100%',
+                    opacity: 0, cursor: 'pointer', fontSize: '16px',
+                  }}
+                  aria-label="Set exam date"
+                />
+              </div>
+            )
+          })()}
         </motion.div>
       </div>
 

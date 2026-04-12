@@ -104,16 +104,11 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
           )}
         </div>
 
-        {/* Title + optional description */}
+        {/* Title only */}
         <div className="flex-1 min-w-0 px-3">
           <p className="text-[15px] font-semibold truncate" style={{ color: titleColor }}>
             {topic.title}
           </p>
-          {topic.description && (
-            <p style={{ fontSize: 13, color: '#94a3b8', lineHeight: 1.5, marginTop: 2 }}>
-              {topic.description}
-            </p>
-          )}
         </div>
 
         {/* CTA label */}

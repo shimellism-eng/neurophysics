@@ -531,6 +531,196 @@ const keyConcepts = [
     ],
     senNote: 'Two-step problem: first find speed using v² = u² + 2as, then find time using v = u + at.',
   },
+  // ═══════════════════════════════════════════════════════════════════════════
+  // key_concepts_units — Significant Figures & Order of Magnitude (new)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Q1 — Sig figs MCQ tier 1
+  {
+    id: 'kc_sigfig_001',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 1,
+    type: 'mcq',
+    marks: 1,
+    timeExpected: 30,
+    question: 'How many significant figures does the number 0.00403 have?',
+    options: ['2', '3', '5', '6'],
+    correctIndex: 1,
+    explanation: '0.00403 has 3 sig figs: the leading zeros are not significant, but the 4, 0 and 3 are.',
+    senNote: 'Leading zeros (before the first non-zero digit) are never significant.',
+  },
+
+  // Q2 — Sig figs calculation tier 2
+  {
+    id: 'kc_sigfig_002',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 2,
+    type: 'short_answer',
+    marks: 3,
+    timeExpected: 60,
+    question: 'A student measures a force of 12.4 N and a distance of 3.2 m. Calculate the work done and give your answer to an appropriate number of significant figures.',
+    markScheme: [
+      'W = F × d (1)',
+      '= 12.4 × 3.2 (1)',
+      '= 40 J (to 2 sig figs) (1)',
+    ],
+    explanation: 'W = F × d = 12.4 × 3.2 = 39.68 J. The least precise measurement has 2 sig figs (3.2), so round to 2 sig figs: 40 J.',
+    senNote: 'Round to the fewest sig figs in the data — here 3.2 has 2 sig figs.',
+  },
+
+  // Q3 — Sig figs tier 3
+  {
+    id: 'kc_sigfig_003',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'physics_only',
+    tier: 3,
+    type: 'short_answer',
+    marks: 3,
+    timeExpected: 60,
+    question: 'Explain why giving the answer to 2.4 × 3.15 as 7.56 is incorrect in a physics context, and state the correct answer.',
+    markScheme: [
+      'Identifies that 2.4 has 2 sig figs and 3.15 has 3 sig figs (1)',
+      'States answer must be rounded to 2 sig figs (1)',
+      'Correct answer: 7.6 (1)',
+    ],
+    explanation: '2.4 has 2 sig figs; 3.15 has 3 sig figs. The answer must be rounded to 2 sig figs (the least precise). 7.56 rounded to 2 sig figs = 7.6.',
+    senNote: 'The rule: your answer cannot be more precise than your least precise measurement.',
+  },
+
+  // Q4 — Order of magnitude MCQ tier 1
+  {
+    id: 'kc_oom_001',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 1,
+    type: 'mcq',
+    marks: 1,
+    timeExpected: 30,
+    question: 'Which of the following is the correct order of magnitude for the diameter of a hydrogen atom (~1 × 10⁻¹⁰ m)?',
+    options: ['10⁻⁸ m', '10⁻¹⁰ m', '10⁻¹² m', '10⁻⁶ m'],
+    correctIndex: 1,
+    explanation: 'The diameter of a hydrogen atom is approximately 1 × 10⁻¹⁰ m, so its order of magnitude is 10⁻¹⁰ m.',
+    senNote: 'Order of magnitude = the power of 10. 10⁻¹⁰ means the atom is 0.0000000001 m across.',
+  },
+
+  // Q5 — Order of magnitude tier 2
+  {
+    id: 'kc_oom_002',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 2,
+    type: 'short_answer',
+    marks: 2,
+    timeExpected: 60,
+    question: 'A bacterium has a diameter of about 2 μm. Express this in metres in standard form and state its order of magnitude.',
+    markScheme: [
+      '2 × 10⁻⁶ m (1)',
+      'Order of magnitude: 10⁻⁶ m (1)',
+    ],
+    explanation: '1 μm = 10⁻⁶ m, so 2 μm = 2 × 10⁻⁶ m. The order of magnitude is 10⁻⁶ m.',
+    senNote: 'μ (micro) = 10⁻⁶. Remember the prefix chart: n=10⁻⁹, μ=10⁻⁶, m=10⁻³, k=10³, M=10⁶.',
+  },
+
+  // Q6 — Standard form tier 1
+  {
+    id: 'kc_stdform_001',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 1,
+    type: 'mcq',
+    marks: 1,
+    timeExpected: 30,
+    question: 'Which of the following correctly expresses 0.000045 m in standard form?',
+    options: ['45 × 10⁻⁶ m', '4.5 × 10⁻⁵ m', '0.45 × 10⁻⁴ m', '4.5 × 10⁵ m'],
+    correctIndex: 1,
+    explanation: '0.000045 = 4.5 × 10⁻⁵. In standard form, the number before the × must be between 1 and 10.',
+    senNote: 'Standard form: A × 10ⁿ where 1 ≤ A < 10. Move the decimal until you have a single digit before it.',
+  },
+
+  // Q7 — Standard form conversion tier 2
+  {
+    id: 'kc_stdform_002',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 2,
+    type: 'short_answer',
+    marks: 2,
+    timeExpected: 60,
+    question: 'Convert 350 nm to metres. Give your answer in standard form.',
+    markScheme: [
+      '350 × 10⁻⁹ m (1)',
+      '= 3.5 × 10⁻⁷ m (1)',
+    ],
+    explanation: '1 nm = 10⁻⁹ m. 350 nm = 350 × 10⁻⁹ m = 3.5 × 10⁻⁷ m.',
+    senNote: 'Step 1: recall nm = 10⁻⁹. Step 2: 350 × 10⁻⁹ = 3.5 × 10⁻⁷.',
+  },
+
+  // Q8 — Unit prefix MCQ tier 1
+  {
+    id: 'kc_prefix_001',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'combined',
+    tier: 1,
+    type: 'mcq',
+    marks: 1,
+    timeExpected: 30,
+    question: 'A potential difference is measured as 3.2 kV. What is this in volts?',
+    options: ['0.0032 V', '320 V', '3200 V', '3 200 000 V'],
+    correctIndex: 2,
+    explanation: '1 kV = 1000 V. 3.2 kV = 3.2 × 1000 = 3200 V.',
+    senNote: 'k (kilo) = 10³ = 1000. Just multiply by 1000.',
+  },
+
+  // Q9 — Unit conversion extended tier 3
+  {
+    id: 'kc_convert_001',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'physics_only',
+    tier: 3,
+    type: 'extended',
+    marks: 4,
+    timeExpected: 90,
+    question: 'A student calculates a power of 2400 mW. Explain why using this value directly in a calculation involving other SI units would cause an error, and convert it to the correct SI unit.',
+    markScheme: [
+      'States SI unit of power is W (1)',
+      'States mW = 10⁻³ W (1)',
+      '2400 mW = 2.4 W (1)',
+      'Explains error would be factor of 1000 too large (1)',
+    ],
+    explanation: 'SI unit of power is the watt (W). milli (m) = 10⁻³, so 2400 mW = 2400 × 10⁻³ W = 2.4 W. Using 2400 without converting would give an answer 1000× too large.',
+    senNote: 'Always convert to base SI units (m, kg, s, A, W, J, V, Ω) before substituting into equations.',
+  },
+
+  // Q10 — Comparing orders of magnitude tier 2
+  {
+    id: 'kc_oom_003',
+    topicId: 'key_concepts_units',
+    boards: ['edexcel'],
+    course: 'physics_only',
+    tier: 2,
+    type: 'short_answer',
+    marks: 2,
+    timeExpected: 60,
+    question: 'The diameter of an atom is approximately 1 × 10⁻¹⁰ m and the diameter of a nucleus is approximately 1 × 10⁻¹⁵ m. How many orders of magnitude smaller is the nucleus than the atom?',
+    markScheme: [
+      '10⁻¹⁰ / 10⁻¹⁵ = 10⁵ (1)',
+      '5 orders of magnitude (1)',
+    ],
+    explanation: '10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵. So the nucleus is 10⁵ times smaller — 5 orders of magnitude.',
+    senNote: 'Divide the powers: −10 − (−15) = 5. The nucleus is 100,000 times smaller than the atom.',
+  },
+
 ]
 
 export default keyConcepts

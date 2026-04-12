@@ -93,18 +93,18 @@ const examCalculations = {
     },
     {
       type: "calculation",
-      question: "A ball is dropped from rest. Using g = 10 m/s², calculate the distance it falls in 3 seconds.",
+      question: "A ball is dropped from rest. Use g = 9.8 m/s². Calculate the distance it falls in 3 seconds.",
       questionSubtitle: "Use s = ut + ½at² with u = 0",
       equation: "s = ut + ½at²",
       steps: [
         { label: "Initial velocity (dropped from rest)", value: "0", unit: "m/s", hint: "Dropped from rest means u = 0" },
-        { label: "Acceleration due to gravity", value: "10", unit: "m/s²", hint: "g = 10 m/s² downward" },
+        { label: "Acceleration due to gravity", value: "9.8", unit: "m/s²", hint: "g = 9.8 m/s² downward (AQA/OCR/WJEC)" },
         { label: "Time", value: "3", unit: "s", hint: "Given in the question" },
-        { label: "Calculate: s = 0×3 + ½×10×9", value: "45", unit: "m", hint: "s = 0 + ½ × 10 × 9 = 45 m" }
+        { label: "Calculate: s = 0×3 + ½×9.8×9", value: "44.1", unit: "m", hint: "s = 0 + ½ × 9.8 × 9 = 44.1 m" }
       ],
-      answer: 45,
+      answer: 44.1,
       answerUnit: "m",
-      acceptRange: [44, 46],
+      acceptRange: [43.5, 44.7],
       commonMistake: "Remember t² means t squared: 3² = 9, not 3 × 2.",
       tier: 2,
       senNote: "Dropped from rest: u = 0. Equation simplifies to s = ½at². Always square t first."
@@ -260,16 +260,16 @@ const examCalculations = {
   energy_equations: [
     {
       type: "calculation",
-      question: "A ball of mass 200 g is dropped from a height of 12 m. Calculate its gravitational potential energy before it is released. Use g = 10 N/kg.",
+      question: "A ball of mass 200 g is dropped from a height of 12 m. Calculate its gravitational potential energy before it is released. Use g = 9.8 N/kg.",
       questionSubtitle: "Show your working",
       equation: "Ep = m × g × h",
       steps: [
         { label: "Convert mass to kilograms", value: "0.2", unit: "kg", hint: "200 g ÷ 1000 = 0.2 kg" },
-        { label: "Calculate Ep", value: "24", unit: "J", hint: "Ep = 0.2 × 10 × 12 = 24 J" }
+        { label: "Calculate Ep", value: "23.52", unit: "J", hint: "Ep = 0.2 × 9.8 × 12 = 23.52 J" }
       ],
-      answer: 24,
+      answer: 23.52,
       answerUnit: "J",
-      acceptRange: [23.5, 24.5],
+      acceptRange: [23.17, 23.87],
       commonMistake: "Did you convert grams to kilograms? 200 g = 0.2 kg, not 200 kg.",
       tier: 2,
       senNote: "Always convert g → kg by dividing by 1000"
@@ -292,17 +292,17 @@ const examCalculations = {
     },
     {
       type: "calculation",
-      question: "A rock of mass 500 g falls from a cliff 80 cm high onto a ledge. Calculate the gravitational potential energy lost. Use g = 10 N/kg.",
+      question: "A rock of mass 500 g falls from a cliff 80 cm high onto a ledge. Calculate the gravitational potential energy lost. Use g = 9.8 N/kg.",
       questionSubtitle: "Show your working",
       equation: "Ep = m × g × h",
       steps: [
         { label: "Convert mass to kilograms", value: "0.5", unit: "kg", hint: "500 g ÷ 1000 = 0.5 kg" },
         { label: "Convert height to metres", value: "0.8", unit: "m", hint: "80 cm ÷ 100 = 0.8 m" },
-        { label: "Calculate Ep", value: "4", unit: "J", hint: "Ep = 0.5 × 10 × 0.8 = 4 J" }
+        { label: "Calculate Ep", value: "3.92", unit: "J", hint: "Ep = 0.5 × 9.8 × 0.8 = 3.92 J" }
       ],
-      answer: 4,
+      answer: 3.92,
       answerUnit: "J",
-      acceptRange: [3.5, 4.5],
+      acceptRange: [3.86, 3.98],
       commonMistake: "Did you convert both g → kg AND cm → m? Two unit traps in one question!",
       tier: 3,
       senNote: "Check every quantity for unit conversions before substituting"
@@ -452,16 +452,16 @@ const examCalculations = {
     },
     {
       type: "calculation",
-      question: "A crane has an efficiency of 0.35. It lifts a 400 kg load through 15 m. Calculate the total energy input to the crane. Use g = 10 N/kg.",
+      question: "A crane has an efficiency of 0.35. It lifts a 400 kg load through 15 m. Calculate the total energy input to the crane. Use g = 9.8 N/kg.",
       questionSubtitle: "Show your working",
       equation: "total input = useful output ÷ efficiency",
       steps: [
-        { label: "Calculate useful output (Ep)", value: "60000", unit: "J", hint: "Ep = 400 × 10 × 15 = 60 000 J" },
-        { label: "Calculate total input", value: "171429", unit: "J", hint: "Total = 60 000 ÷ 0.35 ≈ 171 429 J" }
+        { label: "Calculate useful output (Ep)", value: "58800", unit: "J", hint: "Ep = 400 × 9.8 × 15 = 58 800 J" },
+        { label: "Calculate total input", value: "168000", unit: "J", hint: "Total = 58 800 ÷ 0.35 = 168 000 J" }
       ],
-      answer: 171429,
+      answer: 168000,
       answerUnit: "J",
-      acceptRange: [171000, 172000],
+      acceptRange: [165480, 170520],
       commonMistake: "Did you divide by the efficiency, not multiply? Total input = useful output ÷ efficiency.",
       tier: 3,
       senNote: "Rearrange: to find total input, divide the useful output by efficiency (not multiply)"
@@ -666,16 +666,16 @@ const examCalculations = {
     },
     {
       type: "calculation",
-      question: "A diver is 25 m below the surface of the sea. The density of seawater is 1025 kg/m³. Use g = 10 N/kg. Calculate the pressure due to the water. Give your answer in kPa.",
+      question: "A diver is 25 m below the surface of the sea. The density of seawater is 1025 kg/m³. Use g = 9.8 N/kg. Calculate the pressure due to the water. Give your answer in kPa.",
       questionSubtitle: "Show your working",
       equation: "p = ρ × g × h",
       steps: [
-        { label: "Calculate pressure in Pa", value: "256250", unit: "Pa", hint: "p = 1025 × 10 × 25 = 256 250 Pa" },
-        { label: "Convert to kPa", value: "256.25", unit: "kPa", hint: "256 250 ÷ 1000 = 256.25 kPa" }
+        { label: "Calculate pressure in Pa", value: "251125", unit: "Pa", hint: "p = 1025 × 9.8 × 25 = 251 125 Pa" },
+        { label: "Convert to kPa", value: "251.125", unit: "kPa", hint: "251 125 ÷ 1000 = 251.125 kPa" }
       ],
-      answer: 256.25,
+      answer: 251.125,
       answerUnit: "kPa",
-      acceptRange: [255, 258],
+      acceptRange: [249.4, 252.8],
       commonMistake: "The answer is asked for in kPa. Divide your Pa answer by 1000.",
       tier: 2,
       senNote: "Pa → kPa: divide by 1000. Check what unit the question asks for."
@@ -1115,16 +1115,16 @@ const examCalculations = {
     },
     {
       type: "calculation",
-      question: "A crane lifts a 250 kg load through a height of 12 m. Use g = 10 N/kg. Calculate the work done against gravity.",
+      question: "A crane lifts a 250 kg load through a height of 12 m. Use g = 9.8 N/kg. Calculate the work done against gravity.",
       questionSubtitle: "Show your working",
       equation: "W = F × d (where F = weight = mg)",
       steps: [
-        { label: "Calculate weight", value: "2500", unit: "N", hint: "W = mg = 250 × 10 = 2500 N" },
-        { label: "Calculate work done", value: "30000", unit: "J", hint: "Work = 2500 × 12 = 30 000 J" }
+        { label: "Calculate weight", value: "2450", unit: "N", hint: "W = mg = 250 × 9.8 = 2450 N" },
+        { label: "Calculate work done", value: "29400", unit: "J", hint: "Work = 2450 × 12 = 29 400 J" }
       ],
-      answer: 30000,
+      answer: 29400,
       answerUnit: "J",
-      acceptRange: [29500, 30500],
+      acceptRange: [28959, 29841],
       commonMistake: "The force needed to lift is equal to the weight (mg), not the mass alone.",
       tier: 2,
       senNote: "Force for lifting = weight = mg. Then W = F × d."

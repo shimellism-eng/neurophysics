@@ -1122,7 +1122,7 @@ function EquationsOfMotionReality() {
 
 export const FORCES_TOPICS = {
   vectors_scalars: {
-    id: 'vectors_scalars', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'vectors_scalars', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Vectors & Scalars', subtitle: 'Magnitude, Direction & Resultant Forces',
     description: 'Scalar quantities have magnitude only (e.g. speed, distance, mass, temperature, energy, time). Vector quantities have both magnitude and direction (e.g. velocity, displacement, force, acceleration, momentum, weight). To find the resultant of two perpendicular forces, use Pythagoras: R² = a² + b². Vectors are represented by arrows — the length shows magnitude, the direction shows the direction of the quantity.',
     lessonVisual: VectorsScalarsLesson, ideaVisual: VectorsScalarsIdea, realityVisual: VectorsScalarsReality,
@@ -1267,7 +1267,7 @@ export const FORCES_TOPICS = {
     ],
   },
   force_interactions: {
-    id: 'force_interactions', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'force_interactions', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Free Body Diagrams & Resultant Forces',
     subtitle: 'Drawing Forces, Finding Resultants & Equilibrium',
     description: 'A free body diagram shows all forces acting on an object as arrows — the length represents magnitude, the direction represents the direction of the force. Contact forces include friction, normal reaction, tension and air resistance. Non-contact forces include gravity (weight), magnetic and electrostatic. Weight = mg. The resultant force is the single force that has the same effect as all the individual forces combined. If forces are in the same line: add or subtract. If two forces are perpendicular: use Pythagoras (R² = F1² + F2²). For HT: use scale drawing (tip-to-tail triangle) to find resultant of non-perpendicular forces. When resultant force = 0, the object is in equilibrium (at rest or constant velocity).',
@@ -1413,7 +1413,7 @@ export const FORCES_TOPICS = {
     ],
   },
   work_done: {
-    id: 'work_done', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'work_done', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Work Done & Energy Transfer', subtitle: 'W = Fd and Energy Pathways',
     description: 'Work is done when a force causes an object to move in the direction of the force. W = Fd (work done = force × distance moved). Work is measured in joules. When work is done against friction, kinetic energy is transferred to thermal energy - the object and surroundings warm up.',
     lessonVisual: WorkDoneLesson, ideaVisual: WorkDoneIdea, realityVisual: WorkDoneReality,
@@ -1552,7 +1552,7 @@ export const FORCES_TOPICS = {
     ],
   },
   hookes_law: {
-    id: 'hookes_law', module: 'Forces', moduleColor: FC, practicalId: 'spring', course: 'combined',
+    id: 'hookes_law', module: 'Forces', moduleColor: FC, practicalId: 'spring', course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Forces & Elasticity (Hooke\'s Law)', subtitle: 'F = ke and Elastic Deformation',
     description: 'A spring obeys Hooke\'s Law: force is directly proportional to extension (F = ke) up to the elastic limit. The spring constant k (N/m) measures stiffness. Beyond the elastic limit, deformation is inelastic - the spring doesn\'t return to its original shape. Elastic PE stored: Ee = ½ke².',
     lessonVisual: HookesLawLesson, ideaVisual: HookesLawIdea, realityVisual: HookesLawReality,
@@ -1723,7 +1723,7 @@ export const FORCES_TOPICS = {
     ],
   },
   moments: {
-    id: 'moments', module: 'Forces', moduleColor: FC, course: 'physics-only',
+    id: 'moments', module: 'Forces', moduleColor: FC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Moments, Levers & Gears', subtitle: 'Moment = F × d from Pivot',
     description: 'A moment (turning effect) = force × perpendicular distance from pivot. For a balanced system: clockwise moments = anticlockwise moments. Levers multiply force (effort × effort arm = load × load arm). Gears transmit rotational force - a larger gear turns more slowly but with more force.',
     lessonVisual: MomentsLesson, ideaVisual: MomentsIdea, realityVisual: MomentsReality,
@@ -1869,7 +1869,7 @@ export const FORCES_TOPICS = {
     ],
   },
   fluid_pressure: {
-    id: 'fluid_pressure', module: 'Forces', moduleColor: FC, course: 'physics-only',
+    id: 'fluid_pressure', module: 'Forces', moduleColor: FC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Pressure & Upthrust', subtitle: 'P = F/A, p = ρgh and Upthrust',
     description: 'Pressure on a solid surface: P = F/A (force ÷ area, in Pascals). A larger contact area spreads the same force over more surface, reducing pressure — this is why snowshoes prevent sinking. Pressure in a fluid acts in all directions. Pressure increases with depth: p = ρgh (density × g × height). The atmosphere is a fluid — atmospheric pressure decreases with altitude as there is less air above. Upthrust occurs because pressure at the bottom of a submerged object is greater than at the top, creating a net upward force equal to the weight of fluid displaced (Archimedes\' principle).',
     lessonVisual: FluidPressureLesson, ideaVisual: FluidPressureIdea, realityVisual: FluidPressureReality,
@@ -2015,7 +2015,7 @@ export const FORCES_TOPICS = {
     ],
   },
   motion_graphs: {
-    id: 'motion_graphs', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'motion_graphs', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Forces & Motion', subtitle: 'Distance-Time & Velocity-Time Graphs',
     description: 'Distance-time graphs: gradient = speed; flat line = stationary; curved line = accelerating. Velocity-time graphs: gradient = acceleration; flat line = constant velocity; area under graph = distance. Deceleration = negative gradient. Terminal velocity: when air resistance equals driving force.',
     lessonVisual: MotionGraphsLesson, ideaVisual: MotionGraphsIdea, realityVisual: MotionGraphsReality,
@@ -2161,7 +2161,7 @@ export const FORCES_TOPICS = {
     ],
   },
   equations_of_motion: {
-    id: 'equations_of_motion', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'equations_of_motion', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Equations of Motion', subtitle: 'SUVAT — Uniform Acceleration',
     description: 'Four equations link the five variables s (displacement), u (initial velocity), v (final velocity), a (acceleration) and t (time) for uniform acceleration: v = u + at; v² = u² + 2as; s = ut + ½at²; s = ½(u+v)t. Choose the equation that contains the three known variables and the one unknown. These equations only work for constant acceleration. Starting from rest means u = 0.',
     lessonVisual: EquationsOfMotionLesson, ideaVisual: EquationsOfMotionIdea, realityVisual: EquationsOfMotionReality,
@@ -2307,7 +2307,7 @@ export const FORCES_TOPICS = {
     ],
   },
   terminal_velocity: {
-    id: 'terminal_velocity', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'terminal_velocity', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Terminal Velocity', subtitle: 'When Drag Equals Weight',
     description: 'A falling object accelerates because weight acts downward. As speed increases, drag (air resistance) increases. When drag equals weight, resultant force is zero and the object reaches terminal velocity — falling at constant speed. On a velocity-time graph, terminal velocity is a horizontal line. A parachute increases drag suddenly, causing deceleration to a new, lower terminal velocity.',
     lessonVisual: TerminalVelocityLesson, ideaVisual: TerminalVelocityIdea, realityVisual: TerminalVelocityReality,
@@ -2445,7 +2445,7 @@ export const FORCES_TOPICS = {
     ],
   },
   newtons_laws: {
-    id: 'newtons_laws', module: 'Forces', moduleColor: FC, practicalId: 'acceleration', course: 'combined',
+    id: 'newtons_laws', module: 'Forces', moduleColor: FC, practicalId: 'acceleration', course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: "Newton's Laws of Motion", subtitle: 'Inertia, F = ma, Inertial Mass & Action-Reaction',
     description: "Newton's 1st: an object remains at rest or at constant velocity unless acted on by a resultant force (inertia). 2nd: F = ma — resultant force = mass × acceleration. Inertial mass measures resistance to acceleration (m = F/a); gravitational mass determines weight (W = mg). Both are equal, so all objects fall at the same rate in a vacuum. 3rd: whenever object A exerts a force on object B, object B exerts an equal and opposite force on object A. N3L pairs ALWAYS: act on different objects; are the same type of force; are equal in magnitude and opposite in direction. Key distinction — N3L pairs are NOT the same as balanced forces on one object (N1L equilibrium). Example: a book on a table — weight of book on table (gravitational) and normal reaction of table on book (contact) are NOT a N3L pair because they are different force types. The true N3L pair of the book's weight is Earth's gravitational pull on the book paired with the book's gravitational pull on the Earth.",
     lessonVisual: NewtonsLawsLesson, ideaVisual: NewtonsLawsIdea, realityVisual: NewtonsLawsReality,
@@ -2591,7 +2591,7 @@ export const FORCES_TOPICS = {
     ],
   },
   stopping_distance: {
-    id: 'stopping_distance', module: 'Forces', moduleColor: FC, course: 'combined',
+    id: 'stopping_distance', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','wjec','ccea'],
     title: 'Stopping Distance', subtitle: 'Thinking Distance + Braking Distance',
     description: 'Total stopping distance = thinking distance + braking distance. Thinking distance = reaction time × speed (affected by: tiredness, alcohol, drugs, distractions). Braking distance depends on speed squared, road/tyre condition, brake condition. When brakes are applied, KE is transferred to thermal energy in brakes.',
     lessonVisual: StoppingDistanceLesson, ideaVisual: StoppingDistanceIdea, realityVisual: StoppingDistanceReality,
@@ -2736,7 +2736,7 @@ export const FORCES_TOPICS = {
     ],
   },
   momentum: {
-    id: 'momentum', module: 'Forces', moduleColor: FC, course: 'physics-only',
+    id: 'momentum', module: 'Forces', moduleColor: FC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Momentum & Impulse', subtitle: 'p = mv, Conservation & Impulse = FΔt',
     description: 'Momentum p = mv (kg·m/s). In a closed system, total momentum is conserved: total before = total after any collision or explosion. Impulse = force × time = change in momentum: FΔt = Δp = Δ(mv). This means a large force for a short time OR a small force for a long time can produce the same change in momentum. The area under a force-time (F-t) graph equals the impulse (change in momentum). Safety features (airbags, crumple zones) increase collision time (Δt), which reduces force for the same change in momentum (F = Δp/Δt).',
     lessonVisual: MomentumLesson, ideaVisual: MomentumIdea, realityVisual: MomentumReality,
@@ -2880,5 +2880,59 @@ export const FORCES_TOPICS = {
       'Conservation of momentum: total momentum before = total momentum after in a closed system. In collisions, momentum is transferred between objects, not destroyed.',
       'Impulse = F × Δt = Δp. Area under F-t graph = impulse. Airbags, crumple zones and bent knees all increase Δt for the same Δp, reducing the average force and injury.',
     ],
+  },
+
+  circular_motion: {
+    id: 'circular_motion',
+    title: 'Circular Motion',
+    emoji: '🔄',
+    color: '#f59e0b',
+    module: 'Forces',
+    moduleColor: FC,
+    paper: 2,
+    boards: ['wjec'],
+    course: 'physics-only',
+    hook: {
+      hookFact: 'A car going round a roundabout at constant speed is still accelerating — because its direction keeps changing.',
+      hookQuestion: 'If speed is constant, how can a circular object be accelerating?',
+      hookEmoji: '🎡',
+    },
+    lessonKeywords: [
+      { word: 'Centripetal force', symbol: 'F', unit: 'N', definition: 'The resultant force directed towards the centre of a circular path, causing circular motion', everydayNote: 'Provided by friction (car on bend), tension (swinging ball), or gravity (satellite orbit).' },
+      { word: 'Centripetal acceleration', symbol: 'a', unit: 'm/s²', definition: 'Acceleration directed towards the centre of circular motion; a = v²/r', everydayNote: 'Even at constant speed, direction change means acceleration always exists.' },
+      { word: 'Angular velocity', symbol: 'ω', unit: 'rad/s', definition: 'Rate of change of angle; ω = 2π/T = 2πf', everydayNote: 'Earth\'s angular velocity ω ≈ 2×10⁻⁷ rad/s — very slow but constant.' },
+      { word: 'Radian', symbol: 'rad', unit: '', definition: 'Unit of angle; 2π radians = 360°; one radian is the angle where arc length equals radius', everydayNote: 'One complete revolution = 2π ≈ 6.28 radians.' },
+      { word: 'Period', symbol: 'T', unit: 's', definition: 'Time for one complete revolution, in seconds', everydayNote: 'Earth\'s orbital period T = 3.15×10⁷ s (one year).' },
+      { word: 'Linear speed', symbol: 'v', unit: 'm/s', definition: 'Speed along the circular path; v = ωr = 2πr/T', everydayNote: 'Points further from the centre move faster for the same angular velocity.' },
+    ],
+    lessonSteps: [
+      {
+        type: 'concept',
+        title: 'What is centripetal force?',
+        content: 'Any object moving in a circle must have a resultant force directed toward the centre. This is centripetal force. It is NOT a new type of force — it is the name for whatever force is pointing inward (gravity for orbits, friction for cars on bends, tension for a swinging ball). Without it, the object would travel in a straight line (Newton\'s 1st Law).',
+      },
+      {
+        type: 'concept',
+        title: 'F = mv²/r and F = mω²r',
+        content: 'Centripetal force F = mv²/r (using linear speed) or F = mω²r (using angular velocity). Both are correct. v = ωr links them. Key insight: doubling speed quadruples F needed (v is squared). Doubling radius halves F needed.',
+      },
+      {
+        type: 'concept',
+        title: 'Angular velocity and radians',
+        content: 'Angular velocity ω (omega) measures how fast the angle changes. ω = 2π/T where T is the period in seconds. ω = 2πf where f is frequency. Units: rad/s. Relationship to linear speed: v = ωr. Example: Earth orbits in T = 3.15×10⁷ s, so ω = 2π/3.15×10⁷ = 2.0×10⁻⁷ rad/s.',
+      },
+      {
+        type: 'worked_example',
+        title: 'Car on a roundabout',
+        content: 'A 1200 kg car travels at 15 m/s around a roundabout of radius 40 m. Calculate: (a) centripetal acceleration, (b) centripetal force.\na = v²/r = 15²/40 = 225/40 = 5.625 m/s²\nF = ma = 1200 × 5.625 = 6750 N\nThis force is provided by friction between tyres and road.',
+      },
+    ],
+    topicMapHint: 'Links to: Newton\'s Laws (F=ma), momentum, gravity (for orbits)',
+    description: 'An object moving in a circle at constant speed is still accelerating because its direction continuously changes. Centripetal acceleration a = v²/r always points toward the centre. Centripetal force F = mv²/r (or F = mω²r) is the name for whichever real force provides this inward pull. Angular velocity ω = 2π/T = 2πf (rad/s). Linear speed v = ωr.',
+    equations: [{ expr: 'F = mv²/r', given: true }, { expr: 'a = v²/r', given: true }, { expr: 'v = ωr', given: true }],
+    question: 'A car travels at constant speed around a circular roundabout. Which statement is correct?',
+    options: ['The car has zero acceleration because speed is constant', 'The car accelerates towards the centre of the circle', 'The centripetal force pushes the car outward', 'The car has no resultant force acting on it'],
+    correctAnswer: 1,
+    keywords: ['centripetal force', 'centripetal acceleration', 'circular motion', 'angular velocity', 'radian', 'period', 'v = ωr', 'F = mv²/r'],
   },
 }

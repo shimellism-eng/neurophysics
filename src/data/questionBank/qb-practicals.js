@@ -516,6 +516,83 @@ const practicalsQuestions = [
     ],
     senNote: 'State reason → explain how it affects the result (too high or too low). Then evaluate the method itself.' },
 
+  { id: 'den_t1_09', topicId: 'density', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
+    question: 'Which method would you use to find the density of an irregularly shaped solid, such as a stone?',
+    options: [
+      'Measure its length, width and height with a ruler',
+      'Use a displacement can to measure its volume',
+      'Weigh it on a balance and divide by its length',
+      'Use a measuring cylinder to measure its mass',
+    ],
+    correctIndex: 1,
+    markScheme: ['Displacement can / submerge in measuring cylinder (1)'],
+    senNote: 'Irregular = can\'t use ruler. Use water displacement instead.' },
+
+  { id: 'den_t1_10', topicId: 'density', course: 'combined', tier: 1, type: 'calculation', marks: 3, timeExpected: 60,
+    question: 'A wooden block has mass 240 g and volume 300 cm³. Calculate its density in g/cm³.',
+    answer: 0.8,
+    unit: 'g/cm³',
+    acceptableRange: [0.78, 0.82],
+    markScheme: ['ρ = m/V (1)', '= 240 / 300 (1)', '= 0.8 g/cm³ (1)'],
+    senNote: 'Density = mass ÷ volume. Units must match: g and cm³ give g/cm³.' },
+
+  { id: 'den_t2_05', topicId: 'density', course: 'combined', tier: 2, type: 'calculation', marks: 3, timeExpected: 60,
+    question: 'A student pours 50 cm³ of oil into a measuring cylinder. The mass of the cylinder is 85 g before pouring and 131 g after. Calculate the density of the oil in g/cm³.',
+    answer: 0.92,
+    unit: 'g/cm³',
+    acceptableRange: [0.90, 0.94],
+    markScheme: ['Mass of oil = 131 − 85 = 46 g (1)', 'ρ = m/V = 46/50 (1)', '= 0.92 g/cm³ (1)'],
+    senNote: 'Remember: mass of liquid = (mass with liquid) − (mass of empty container).' },
+
+  { id: 'den_t2_06', topicId: 'density', course: 'combined', tier: 2, type: 'short_answer', marks: 2, timeExpected: 90,
+    question: 'A student measures the volume of a stone using a displacement can. Suggest one source of error in this method and explain how it would affect the measured density.',
+    markScheme: [
+      'Identifies a valid error source, e.g. water remaining on stone / not waiting for drips to stop / air bubbles on surface / object not fully submerged (1)',
+      'Correctly links to effect on volume and therefore density, e.g. volume overestimated → density too low (1)',
+    ],
+    senNote: 'Think: what could go wrong with the water measurement? More water out = bigger volume reading = smaller density.' },
+
+  { id: 'den_t2_07', topicId: 'density', course: 'combined', tier: 2, type: 'calculation', marks: 3, timeExpected: 90,
+    question: 'A student measures the density of the same metal cylinder three times: 7.8 g/cm³, 8.1 g/cm³, 7.9 g/cm³. Calculate the mean density and explain why repeating improves reliability.',
+    answer: 7.93,
+    unit: 'g/cm³',
+    acceptableRange: [7.9, 8.0],
+    markScheme: [
+      'Mean = (7.8 + 8.1 + 7.9) / 3 (1)',
+      '= 7.93 g/cm³ (1)',
+      'Explains repeating reduces random error / allows anomalies to be spotted (1)',
+    ],
+    senNote: 'Mean = add all values ÷ number of values. More repeats → more reliable mean.' },
+
+  { id: 'den_t2_08', topicId: 'density', course: 'combined', tier: 2, type: 'calculation', marks: 2, timeExpected: 60,
+    question: 'A student calculates a density of 8900 kg/m³. Convert this to g/cm³.',
+    answer: 8.9,
+    unit: 'g/cm³',
+    acceptableRange: [8.85, 8.95],
+    markScheme: ['Correct conversion method stated (1)', '8.9 g/cm³ (1)'],
+    senNote: 'To convert kg/m³ → g/cm³, divide by 1000. This metal is likely copper (~8900 kg/m³).' },
+
+  { id: 'den_t3_03', topicId: 'density', course: 'physics_only', tier: 3, type: 'short_answer', marks: 3, timeExpected: 90,
+    question: 'A student measures the volume of three identical steel balls using water displacement: 16 cm³, 31 cm³, 15 cm³. Identify the anomaly, suggest a reason, and explain how to treat this result when calculating mean volume.',
+    markScheme: [
+      'Identifies 31 cm³ as anomalous (1)',
+      'Gives a valid reason, e.g. bubble trapped / two balls measured simultaneously / reading error (1)',
+      'Excludes it from mean: (16 + 15) / 2 = 15.5 cm³ (1)',
+    ],
+    senNote: 'Anomaly = a result that doesn\'t fit the pattern. Don\'t include it in your mean.' },
+
+  { id: 'den_t3_04', topicId: 'density', course: 'combined', tier: 3, type: 'extended', marks: 6, timeExpected: 300,
+    question: 'Describe a method to determine the density of an irregular solid, such as a rock. Include: equipment, measurements taken, how density is calculated, and one precaution to improve accuracy. [6 marks]',
+    markScheme: [
+      'States use of balance to measure mass (1)',
+      'Describes displacement method (displacement can or measuring cylinder) (1)',
+      'States volume of water displaced = volume of object (1)',
+      'ρ = m ÷ V with correct units (kg/m³ or g/cm³) (1)',
+      'Identifies one precaution, e.g. object fully submerged / repeat readings / dry object before mass (1)',
+      'Correctly links precaution to how it improves accuracy (1)',
+    ],
+    senNote: 'Structure your answer: Equipment → Mass measurement → Volume measurement → Calculate density → Precaution.' },
+
   // ─────────────────────────────────────────────────────────────────────────────
   // RP7: FORCE AND EXTENSION — HOOKE'S LAW (spring)
   // ─────────────────────────────────────────────────────────────────────────────

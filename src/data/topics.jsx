@@ -45,6 +45,7 @@ export const MODULES = [
     name: 'Energy',
     color: '#f97316',
     icon: Zap,
+    wjecUnit: 1,
     topics: [
       'energy_stores',
       'energy_pathways',
@@ -58,6 +59,7 @@ export const MODULES = [
     name: 'Electricity',
     color: '#155dfc',
     icon: Battery,
+    wjecUnit: 1,
     topics: [
       'circuit_basics',
       'circuit_components',
@@ -72,6 +74,7 @@ export const MODULES = [
     name: 'Particle Model',
     color: '#c084fc',
     icon: Flame,
+    wjecUnit: 1,
     topics: [
       'states_density',
       'internal_energy',
@@ -83,6 +86,7 @@ export const MODULES = [
     name: 'Atomic Structure',
     color: '#e879f9',
     icon: AtomIcon,
+    wjecUnit: 2,
     topics: [
       'atomic_structure',
       'atomic_model_history',
@@ -98,6 +102,7 @@ export const MODULES = [
     name: 'Forces',
     color: '#00a8e8',
     icon: Activity,
+    wjecUnit: 2,
     topics: [
       'vectors_scalars',
       'force_interactions',
@@ -111,12 +116,14 @@ export const MODULES = [
       'newtons_laws',
       'stopping_distance',
       'momentum',
+      'circular_motion',
     ],
   },
   {
     name: 'Waves',
     color: '#fdc700',
     icon: Waves,
+    wjecUnit: 1,
     topics: [
       'wave_types',
       'wave_properties',
@@ -134,6 +141,7 @@ export const MODULES = [
     name: 'Magnetism & Electromagnetism',
     color: '#10b981',
     icon: Magnet,
+    wjecUnit: 2,
     topics: [
       'magnetism_fields',
       'electromagnetism',
@@ -147,6 +155,7 @@ export const MODULES = [
     name: 'Space Physics',
     color: '#6366f1',
     icon: Globe2,
+    wjecUnit: 2,
     topics: [
       'solar_system',
       'stellar_evolution',
@@ -157,6 +166,7 @@ export const MODULES = [
     name: 'Required Practicals',
     color: '#14b8a6',
     icon: FlaskConical,
+    wjecUnit: 3,
     topics: [
       'shc',
       'insulation',

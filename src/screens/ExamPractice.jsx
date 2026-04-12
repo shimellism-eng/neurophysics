@@ -13,6 +13,7 @@ import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
 import { getExamQuestions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
+import { getSelectedBoard } from '../utils/boardConfig'
 import {
   TapMatchQuestion,
   HotspotQuestion,
@@ -239,6 +240,83 @@ const COMMAND_WORDS = {
   'plot':     { action: 'Draw data points precisely on the axes given. Then draw a line of best fit.', example: 'Plot the points → use a cross (×) for each data point' },
   'draw':     { action: 'Produce an accurate diagram with labels.', example: 'Draw a circuit diagram → use correct circuit symbols' },
   'show':     { action: 'Provide working that proves the statement. Include every step.', example: 'Show that v = 30 m/s → write all steps to reach 30' },
+}
+
+// ── Board-specific extended response guides ───────────────────────────────────
+
+const EXTENDED_GUIDES = {
+  aqa: {
+    label: 'AQA 6-mark structure',
+    steps: [
+      '① State the physics principle relevant to the question',
+      '② Apply it directly to the scenario given',
+      '③ Use an equation or quantitative comparison',
+      '④ Make a second linked point',
+      '⑤ Connect to the context / draw a conclusion',
+      '⑥ Use precise terminology throughout (no synonyms)',
+    ],
+    tip: 'AQA mark schemes award each point separately — even 2/6 correct earns marks.',
+  },
+  edexcel: {
+    label: 'Edexcel 6-mark structure',
+    steps: [
+      '① Point 1: State a relevant fact',
+      '② Linked reason 1: Explain WHY (because...)',
+      '③ Point 2: State a second relevant fact',
+      '④ Linked reason 2: Explain WHY (because...)',
+      '⑤ Point 3: State a third relevant fact',
+      '⑥ Linked reason 3: Explain WHY / conclusion',
+    ],
+    tip: 'Edexcel expects "Point + Reason" pairs. Each pair earns 2 marks. Unlinked points earn 0.',
+  },
+  'ocr-a': {
+    label: 'OCR Gateway 6-mark structure',
+    steps: [
+      '① Identify the physics concept being tested',
+      "② Apply physics to the NOVEL context given (don't just define terms)",
+      '③ Use evidence from the scenario to support your answer',
+      '④ Make a second application point',
+      '⑤ Quantify using an equation where possible',
+      '⑥ Evaluate / conclude based on the context',
+    ],
+    tip: "OCR often uses unfamiliar scenarios. Apply physics you know — don't panic.",
+  },
+  'ocr-b': {
+    label: 'OCR 21C 6-mark structure',
+    steps: [
+      '① State the core physics principle',
+      '② Apply it to the real-world context',
+      '③ Link to another physics idea (interconnected approach)',
+      '④ Use a relevant equation',
+      '⑤ Evaluate benefits/limitations',
+      '⑥ Conclude with reference to the context',
+    ],
+    tip: 'OCR-B values interconnected thinking — show how one physics idea links to another.',
+  },
+  wjec: {
+    label: 'WJEC 6-mark structure',
+    steps: [
+      '① State the relevant law or principle',
+      '② Define key terms used',
+      '③ Apply the law to the scenario',
+      '④ Include a calculation or numerical comparison',
+      '⑤ Make a second point with explanation',
+      '⑥ Conclusion referencing the question',
+    ],
+    tip: 'WJEC mark schemes are specific — use exact terminology from the specification.',
+  },
+  ccea: {
+    label: 'CCEA 6-mark structure',
+    steps: [
+      '① Name the physics principle',
+      '② State the relevant equation',
+      '③ Apply to the specific scenario',
+      '④ Calculate or compare values',
+      '⑤ Make a second linked point',
+      '⑥ Conclusion / evaluation',
+    ],
+    tip: 'CCEA rewards multi-step reasoning with calculations. Show all working.',
+  },
 }
 
 function shuffle(arr) {
@@ -748,6 +826,27 @@ export default function ExamPractice() {
                           <div>• <span style={{ color: '#c7d2fe' }}>"Evaluate"</span> → pros/cons + conclusion</div>
                           <div>• <span style={{ color: '#c7d2fe' }}>"Calculate"</span> → show working with units</div>
                         </div>
+
+                        {/* Board-specific extended response guide */}
+                        {(() => {
+                          const board = getSelectedBoard()
+                          const guide = EXTENDED_GUIDES[board.id] || EXTENDED_GUIDES.aqa
+                          return (
+                            <div className="mt-3 rounded-[12px] overflow-hidden" style={{ border: '0.75px solid rgba(99,102,241,0.3)', background: 'rgba(99,102,241,0.06)' }}>
+                              <div className="px-4 py-2.5 flex items-center gap-2" style={{ borderBottom: '0.75px solid rgba(99,102,241,0.2)' }}>
+                                <span style={{ fontSize: 13, fontWeight: 700, color: '#818cf8' }}>📝 {guide.label}</span>
+                              </div>
+                              <div className="px-4 py-3 space-y-1.5">
+                                {guide.steps.map((step, i) => (
+                                  <p key={i} style={{ fontSize: 12, color: '#cbd5e1', lineHeight: 1.5 }}>{step}</p>
+                                ))}
+                                <p className="mt-2 pt-2" style={{ fontSize: 11, color: '#818cf8', fontStyle: 'italic', borderTop: '0.75px solid rgba(99,102,241,0.2)' }}>
+                                  💡 {guide.tip}
+                                </p>
+                              </div>
+                            </div>
+                          )
+                        })()}
                       </div>
                     </motion.div>
                   )}

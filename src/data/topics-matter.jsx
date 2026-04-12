@@ -2377,7 +2377,7 @@ export const MATTER_TOPICS = {
   radioactive_decay: {
     id: 'radioactive_decay', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'Radioactive Decay', subtitle: 'α, β, γ - Properties & Penetration',
-    description: 'Unstable nuclei randomly emit radiation to become more stable. Alpha (α): helium nucleus (2p + 2n), highly ionising, stopped by paper. Beta (β): fast electron from nucleus, medium ionising, stopped by aluminium. Gamma (γ): EM radiation from nucleus, least ionising, reduced by lead/concrete. Activity measured in Becquerels (Bq).',
+    description: 'Unstable nuclei randomly emit radiation to become more stable. Alpha (α): helium nucleus (2p + 2n), highly ionising, stopped by paper. Beta-minus (β⁻): fast electron AND antineutrino (ν̄) emitted when a neutron converts to a proton; medium ionising, stopped by aluminium. Gamma (γ): EM radiation from nucleus, least ionising, reduced by lead/concrete. Activity measured in Becquerels (Bq).',
     lessonVisual: RadioactiveDecayLesson, ideaVisual: RadioactiveDecayIdea, realityVisual: RadioactiveDecayReality,
     question: 'Which type of radiation is most ionising but has the shortest range in air?',
     questionSubtitle: 'Consider ionising power vs penetrating power',
@@ -2415,8 +2415,15 @@ export const MATTER_TOPICS = {
         word: 'Beta Radiation',
         symbol: 'β',
         unit: '',
-        definition: 'A fast electron emitted from the nucleus when a neutron converts to a proton. Medium ionising power, stopped by 3-5 mm of aluminium.',
-        everydayNote: 'Beta particles are fast and small - they travel further than alpha but are stopped by a few millimetres of metal.',
+        definition: 'A fast electron emitted from the nucleus when a neutron converts to a proton. An antineutrino (ν̄) is also emitted. Medium ionising power, stopped by 3-5 mm of aluminium.',
+        everydayNote: 'Beta particles are fast and small - they travel further than alpha but are stopped by a few millimetres of metal. The antineutrino that accompanies beta emission carries away energy but has no charge and barely interacts with matter.',
+      },
+      {
+        word: 'Antineutrino',
+        symbol: 'ν̄',
+        unit: '',
+        definition: 'A particle with near-zero mass and no charge emitted alongside an electron in beta-minus decay. Carries away some of the decay energy.',
+        everydayNote: 'Antineutrinos barely interact with matter at all — trillions pass through your body every second from the Sun without doing anything. They were only confirmed to exist because energy seemed to go "missing" in beta decay.',
       },
       {
         word: 'Gamma Radiation',
@@ -2504,6 +2511,13 @@ export const MATTER_TOPICS = {
       },
     },
 
+    misconceptionCards: [
+      {
+        wrong: 'Beta decay emits only an electron.',
+        right: 'Beta-minus decay emits an electron AND an antineutrino (ν̄). The antineutrino carries away energy but has no charge and barely interacts with matter. It was discovered because energy seemed to disappear in beta decay — the antineutrino was carrying it away invisibly.',
+      },
+    ],
+
     guidedPractice: {
       tier1: {
         question: 'An alpha source has activity 5000 Bq. Activity halves with each half-life. What is the activity after 3 half-lives?',
@@ -2542,7 +2556,8 @@ export const MATTER_TOPICS = {
     },
 
     sessionRecap: [
-      'Alpha (2p + 2n): most ionising, stopped by paper. Beta (fast electron): medium, stopped by aluminium. Gamma (EM wave): least ionising, needs lead to reduce.',
+      'Alpha (2p + 2n): most ionising, stopped by paper. Beta-minus (fast electron + antineutrino): medium, stopped by aluminium. Gamma (EM wave): least ionising, needs lead to reduce.',
+      'Beta-minus decay: n → p + e⁻ + ν̄. Two particles are emitted — an electron AND an antineutrino.',
       'Activity (Bq) = number of decays per second. Short half-life = high activity.',
       'Ionising power and penetrating power are inversely related. High ionising power = short range.',
     ],
@@ -2550,7 +2565,7 @@ export const MATTER_TOPICS = {
   nuclear_equations: {
     id: 'nuclear_equations', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'combined',
     title: 'Nuclear Equations', subtitle: 'Balancing Mass & Atomic Numbers',
-    description: 'In nuclear equations, both the mass number (top) and atomic number (bottom) must balance on each side. Alpha decay: mass number decreases by 4, atomic number by 2. Beta decay: mass number unchanged, atomic number increases by 1. Gamma emission: no change to mass or atomic number.',
+    description: 'In nuclear equations, both the mass number (top) and atomic number (bottom) must balance on each side. Alpha decay: mass number decreases by 4, atomic number by 2. Beta-minus decay: neutron → proton + electron + antineutrino (ν̄); mass number unchanged, atomic number increases by 1. Gamma emission: no change to mass or atomic number.',
     lessonVisual: NuclearEquationsLesson, ideaVisual: NuclearEquationsIdea, realityVisual: NuclearEquationsReality,
     question: 'In alpha decay, how does the atomic number of the nucleus change?',
     questionSubtitle: 'An alpha particle contains 2 protons',
@@ -2600,10 +2615,10 @@ export const MATTER_TOPICS = {
       },
       {
         word: 'Beta Decay',
-        symbol: 'β',
+        symbol: 'β⁻',
         unit: '',
-        definition: 'A neutron in the nucleus converts to a proton and emits a fast electron. Mass number stays the same; atomic number increases by 1.',
-        everydayNote: 'C-14 (Z=6) -> N-14 (Z=7): same mass number, atomic number rises by 1. The element changes.',
+        definition: 'A neutron in the nucleus converts to a proton, emitting a fast electron (beta particle) AND an antineutrino (ν̄). Mass number stays the same; atomic number increases by 1.',
+        everydayNote: 'C-14 (Z=6) → N-14 (Z=7): same mass number, atomic number rises by 1. The element changes. The antineutrino carries away energy but has no charge — it passes through matter almost without interacting.',
       },
     ],
 

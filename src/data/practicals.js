@@ -515,7 +515,215 @@ export const PRACTICALS = {
       { hazard: 'Infrared source (for absorption part)', risk: 'Burns', precaution: 'Keep hands away from source; switch off after use' }
     ],
     sim: { type: 'radiation', surfaces: ['matt_black','matt_white','shiny_silver'] }
-  }
+  },
+
+  telescope_magnification: {
+    id: 'telescope_magnification',
+    number: 'PAG-Universe-1',
+    boards: ['ocr-b'],
+    title: 'Measuring Telescope Magnification',
+    aim: 'To determine the magnification of a simple refracting telescope using two converging lenses.',
+    equipment: [
+      'Two converging lenses (different focal lengths)',
+      'Lens holders and optical bench',
+      'Metre ruler',
+      'Distant object (e.g. window, letter chart on wall ≥5m away)',
+      'Screen (optional for measuring image size)',
+    ],
+    variables: {
+      independent: 'Objective lens focal length',
+      dependent: 'Magnification M',
+      control: 'Same eyepiece lens; same object distance',
+    },
+    method: [
+      'Set up the objective lens (longer focal length, f_obj) and eyepiece (shorter focal length, f_eye) on the optical bench.',
+      'Separate them by f_obj + f_eye (this is the tube length for objects at infinity).',
+      'Look through the eyepiece at a distant object and adjust until image is clear.',
+      'Measure the actual separation of the lenses.',
+      'Calculate theoretical magnification: M = f_obj / f_eye.',
+      'Measure image size and object size (or compare visual sizes) to calculate experimental magnification.',
+      'Compare theoretical and experimental values; calculate percentage difference.',
+    ],
+    resultsTable: {
+      headers: ['f_obj (cm)', 'f_eye (cm)', 'M = f_obj/f_eye', 'Observed M', '% difference'],
+      sampleData: [
+        [30, 5, 6.0, 5.8, 3.3],
+        [20, 5, 4.0, 3.9, 2.5],
+      ]
+    },
+    analysis: 'Compare M = f_obj/f_eye with observed magnification. Discuss sources of discrepancy (lens aberrations, not truly parallel light from finite-distance object).',
+    errors: [
+      { source: 'Object not truly at infinity', effect: 'Actual tube length differs from f_obj + f_eye → measured M differs from theoretical', precaution: 'Use object ≥5 m away; adjust lens separation for sharpest image' },
+      { source: 'Measuring image size with screen', effect: 'Parallax error in size measurement', precaution: 'Use a fine ruler at the focal plane; measure at eye level' },
+    ],
+    hazards: [
+      { hazard: 'Never point telescope at the Sun', risk: 'Permanent eye damage', precaution: 'Only view indoor targets or distant outdoor scenes — never solar observation' },
+    ],
+    sim: { type: 'telescope', f_obj_range: [10,50], f_eye_range: [3,10] },
+  },
+
+  cepheid_data_analysis: {
+    id: 'cepheid_data_analysis',
+    number: 'PAG-Universe-2',
+    boards: ['ocr-b'],
+    title: 'Analysing Cepheid Variable Data',
+    aim: 'To use the period-luminosity relationship of Cepheid variables to estimate stellar distances.',
+    equipment: [
+      'Graph paper or spreadsheet',
+      'Provided data table of Cepheid periods and apparent magnitudes',
+      'Calculator',
+    ],
+    variables: {
+      independent: 'Period of pulsation (days)',
+      dependent: 'Absolute luminosity (solar luminosities)',
+      control: 'Same period-luminosity calibration curve',
+    },
+    method: [
+      "Use the provided period-luminosity table (Leavitt's calibration) to find the absolute luminosity of each Cepheid from its observed period.",
+      'Record the apparent brightness (flux) measured by telescope for each Cepheid.',
+      'Use the inverse square law: L = 4πd²F → d = √(L/4πF) to calculate distance d to each Cepheid.',
+      'Express distances in parsecs or light-years.',
+      'Compare your calculated distances to published values; calculate percentage error.',
+      'Plot a graph of log(period) vs log(luminosity) and determine if the relationship is linear.',
+    ],
+    resultsTable: {
+      headers: ['Star', 'Period (days)', 'L (L☉)', 'Apparent flux F', 'Distance (pc)', 'Published d (pc)'],
+      sampleData: [
+        ['Cepheid A', 5, 800, 2.0e-15, 565, 550],
+        ['Cepheid B', 10, 2000, 5.0e-16, 1784, 1800],
+        ['Cepheid C', 30, 8000, 1.2e-16, 3644, 3700],
+      ]
+    },
+    analysis: 'Compare calculated and published distances. Discuss why Cepheids are called "standard candles". Explain how Hubble used this method to prove Andromeda was a separate galaxy.',
+    errors: [
+      { source: 'Atmospheric absorption reducing apparent flux', effect: 'Measured F too low → calculated distance too large', precaution: 'Space telescopes avoid this; ground observations correct for atmospheric extinction' },
+      { source: 'Interstellar dust obscuring light', effect: 'Apparent brightness reduced → distance overestimated', precaution: 'Observe in infrared (less dust absorption) for more accurate distances' },
+    ],
+    hazards: [],
+    sim: null,
+  },
+
+  force_on_conductor: {
+    id: 'force_on_conductor',
+    number: 'CP4',
+    boards: ['edexcel'],
+    title: 'Force on a Current-Carrying Conductor',
+    aim: 'To investigate how the force on a current-carrying conductor in a magnetic field varies with current and length of conductor.',
+    equipment: ['Power supply (0–5A)', 'Ammeter', 'Rheostat', 'Copper wire or aluminium foil strip', 'Strong U-shaped magnet (horseshoe)', 'Electronic balance (top-pan)', 'Connecting wires', 'Ruler'],
+    variables: {
+      independent: 'Current I (A)',
+      dependent: 'Force F (N) — measured as change in balance reading × g',
+      control: 'Same wire length in field, same magnet, same orientation',
+    },
+    method: [
+      'Place the U-shaped magnet on the balance and zero the balance with the magnet in place.',
+      'Thread the copper wire horizontally through the gap between the magnet poles.',
+      'Connect the wire to the power supply via ammeter and rheostat.',
+      'Switch on and record the balance reading at each current setting (0, 0.5, 1.0, 1.5, 2.0, 2.5 A).',
+      'The force on the wire equals the reaction force on the magnet: F = (balance reading change) × g (using g = 9.8 N/kg for AQA/OCR/WJEC or g = 10 N/kg for Edexcel/CCEA).',
+      'Plot F vs I — should be linear (F = BIL).',
+      'Repeat with different lengths of wire in the magnetic field.',
+    ],
+    resultsTable: {
+      headers: ['Current I (A)', 'Balance reading (g)', 'Change (g)', 'Force F (N)'],
+      sampleData: [
+        [0, 200.0, 0, 0],
+        [1.0, 201.8, 1.8, 0.018],
+        [2.0, 203.6, 3.6, 0.036],
+        [3.0, 205.4, 5.4, 0.054],
+      ]
+    },
+    analysis: 'F is proportional to I. Gradient of F vs I = BL. Calculate B from the gradient if L is known.',
+    errors: [
+      { source: 'Wire not perfectly perpendicular to magnetic field', effect: 'Force measured is Fsinθ not F → underestimate', precaution: 'Align wire carefully using a set square' },
+      { source: 'Balance drift between readings', effect: 'Force values inconsistent', precaution: 'Re-zero balance between each reading' },
+    ],
+    hazards: [
+      { hazard: 'High current causes wire to heat', risk: 'Burns', precaution: 'Use short bursts only; include rheostat to limit current; do not exceed 3A' },
+    ],
+    sim: { type: 'force_on_conductor', BField: 0.05, wireLength: 0.05 },
+  },
+
+  i2r_heating: {
+    id: 'i2r_heating',
+    number: 'CP5',
+    boards: ['edexcel'],
+    title: 'I²R Heating',
+    aim: 'To investigate how the rate of heating of a resistor depends on current.',
+    equipment: ['Power supply', 'Ammeter', 'Rheostat', 'Known resistor (e.g. 10 Ω, rated ≥5W)', 'Thermometer or temperature sensor', 'Stopwatch', 'Insulating material (optional)'],
+    variables: {
+      independent: 'Current I (A)',
+      dependent: 'Rate of temperature rise (°C/s)',
+      control: 'Same resistor, same time interval, same starting temperature',
+    },
+    method: [
+      'Set up the resistor in series with the ammeter, rheostat, and power supply.',
+      'Attach thermometer to the resistor using heat-conducting paste or tape.',
+      'Set current to 0.5 A. Record temperature every 30 s for 3 min.',
+      'Allow to cool. Repeat at 1.0 A, 1.5 A, 2.0 A.',
+      'For each current, calculate rate of temperature rise: ΔT/Δt (°C/s).',
+      'Calculate P = I²R for each current.',
+      'Plot P vs I² — should be linear.',
+    ],
+    resultsTable: {
+      headers: ['Current I (A)', 'I² (A²)', 'P = I²R (W)', 'ΔT/Δt (°C/s)'],
+      sampleData: [
+        [0.5, 0.25, 2.5, 0.08],
+        [1.0, 1.0, 10, 0.32],
+        [1.5, 2.25, 22.5, 0.72],
+        [2.0, 4.0, 40, 1.28],
+      ]
+    },
+    analysis: 'ΔT/Δt ∝ I² confirms P = I²R. Gradient of ΔT/Δt vs I² = R/mc (mass × specific heat capacity). Can calculate SHC of resistor material.',
+    errors: [
+      { source: 'Heat loss to surroundings', effect: 'Rate of heating lower than calculated from P = I²R', precaution: 'Insulate resistor; work quickly; account for cooling correction' },
+    ],
+    hazards: [
+      { hazard: 'Resistor gets very hot at high currents', risk: 'Burns', precaution: 'Do not touch resistor during or immediately after experiment; use heatproof mat' },
+    ],
+    sim: { type: 'i2r', resistance: 10 },
+  },
+
+  acceleration_slope: {
+    id: 'acceleration_slope',
+    number: 'CP6',
+    boards: ['edexcel'],
+    title: 'Acceleration Down a Slope',
+    aim: 'To investigate how the acceleration of a trolley on a slope depends on the angle of the slope.',
+    equipment: ['Dynamics trolley', 'Ramp / wooden board (≥1m)', 'Light gates (×2) or ticker timer', 'Protractor', 'Ruler', 'Clamp and stand', 'Metre rule'],
+    variables: {
+      independent: 'Angle of slope θ (°)',
+      dependent: 'Acceleration a (m/s²)',
+      control: 'Same trolley, same ramp surface, same starting position',
+    },
+    method: [
+      'Set up the ramp at a small angle using the clamp stand. Measure angle with protractor.',
+      'Place two light gates at known separation (e.g. 0.5 m) along the ramp.',
+      'Release the trolley from rest at the top of the light gate section.',
+      'Record the time between light gate triggers to calculate average speed at each gate.',
+      'Calculate acceleration: a = (v₂² - v₁²) / 2s.',
+      'Repeat for angles: 5°, 10°, 15°, 20°, 25°.',
+      'Plot a vs sinθ — should be linear (a = gsinθ, so gradient = g = 9.8 N/kg for AQA/OCR/WJEC or g = 10 N/kg for Edexcel/CCEA).',
+    ],
+    resultsTable: {
+      headers: ['Angle θ (°)', 'sinθ', 'a (m/s²)', 'Expected a = 10sinθ'],
+      sampleData: [
+        [5, 0.087, 0.82, 0.87],
+        [10, 0.174, 1.68, 1.74],
+        [15, 0.259, 2.48, 2.59],
+        [20, 0.342, 3.20, 3.42],
+      ]
+    },
+    analysis: 'Plot a vs sinθ. Gradient should equal g (≈9.8 m/s² for AQA/OCR/WJEC; ≈10 m/s² for Edexcel). Discrepancy due to friction. Can calculate coefficient of friction from y-intercept.',
+    errors: [
+      { source: 'Friction between trolley and ramp', effect: 'Measured acceleration less than gsinθ', precaution: 'Compensate friction by tilting ramp slightly before adding slope angle; or note and include in analysis' },
+      { source: 'Trolley not starting from rest', effect: 'Initial velocity ≠ 0 → incorrect a', precaution: 'Hold trolley gently against a stop; release cleanly without push' },
+    ],
+    hazards: [
+      { hazard: 'Trolley rolling off end of ramp', risk: 'Impact injury', precaution: 'Place a cushion or stopper at bottom of ramp' },
+    ],
+    sim: { type: 'slope', mass: 0.5, angles: [5,10,15,20,25] },
+  },
 }
 
 export const PRACTICAL_LIST = Object.values(PRACTICALS)

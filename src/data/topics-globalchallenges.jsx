@@ -324,6 +324,121 @@ function RadiationRiskReality() {
   )
 }
 
+// ─── Electric Fields Visuals ─────────────────────────────────────────────────
+
+const EF = '#3b82f6'  // blue for electric fields
+
+function ElectricFieldsLesson() {
+  const [voltageV, setVoltageV] = useState(200)
+  const [sepMm, setSepMm] = useState(10)
+  const sepM = sepMm / 1000
+  const fieldStrength = Math.round(voltageV / sepM)
+  const numLines = Math.min(8, Math.max(3, Math.round(fieldStrength / 10000)))
+
+  return (
+    <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
+      {/* Formula display */}
+      <div className="rounded-[10px] px-3 py-2 font-mono text-center" style={{ background: '#1d293d', border: `1px solid ${EF}30` }}>
+        <span style={{ fontSize: 10, color: '#a8b8cc' }}>E = V / d = </span>
+        <span style={{ fontSize: 11, fontWeight: 700, color: EF }}>{voltageV} V</span>
+        <span style={{ fontSize: 10, color: '#a8b8cc' }}> / </span>
+        <span style={{ fontSize: 11, fontWeight: 700, color: '#fdc700' }}>{sepMm} mm</span>
+        <span style={{ fontSize: 10, color: '#a8b8cc' }}> = </span>
+        <motion.span key={fieldStrength} style={{ fontSize: 13, fontWeight: 800, color: EF }}
+          initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.2 }}>
+          {fieldStrength.toLocaleString()} V/m
+        </motion.span>
+      </div>
+
+      {/* Sliders */}
+      <div className="rounded-[12px] px-3 py-2 flex flex-col gap-1.5" style={{ background: '#1d293d' }}>
+        <div className="flex justify-between text-xs mb-0.5">
+          <span style={{ color: '#a8b8cc' }}>Voltage (V)</span>
+          <span style={{ color: EF, fontWeight: 700 }}>{voltageV} V</span>
+        </div>
+        <input type="range" min="50" max="500" step="10" value={voltageV}
+          onChange={e => setVoltageV(+e.target.value)} className="w-full" style={{ accentColor: EF }} />
+        <div className="flex justify-between text-xs mb-0.5">
+          <span style={{ color: '#a8b8cc' }}>Plate separation (mm)</span>
+          <span style={{ color: '#fdc700', fontWeight: 700 }}>{sepMm} mm</span>
+        </div>
+        <input type="range" min="2" max="20" step="1" value={sepMm}
+          onChange={e => setSepMm(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
+      </div>
+
+      {/* SVG field diagram */}
+      <svg width="100%" viewBox="0 0 260 80" style={{ borderRadius: 10, border: `1.5px solid #1d293d`, background: '#0f1829' }}>
+        {/* Plates */}
+        <rect x="10" y="10" width="10" height="60" rx="2" fill="#ef4444" opacity="0.9" />
+        <text x="15" y="8" textAnchor="middle" fill="#ef4444" fontSize={7} fontWeight="bold">+</text>
+        <rect x="240" y="10" width="10" height="60" rx="2" fill="#3b82f6" opacity="0.9" />
+        <text x="245" y="8" textAnchor="middle" fill="#3b82f6" fontSize={7} fontWeight="bold">−</text>
+
+        {/* Field lines */}
+        {Array.from({ length: numLines }).map((_, i) => {
+          const y = 14 + i * (60 / (numLines - 1 || 1))
+          return (
+            <g key={i}>
+              <line x1="20" y1={y} x2="240" y2={y} stroke={EF} strokeWidth={1} strokeOpacity={0.7} />
+              {/* Arrow heads at midpoint */}
+              <polygon
+                points={`${130},${y - 4} ${138},${y} ${130},${y + 4}`}
+                fill={EF} opacity={0.8}
+              />
+            </g>
+          )
+        })}
+
+        {/* Labels */}
+        <text x="130" y="78" textAnchor="middle" fill="#a8b8cc" fontSize={6.5}>
+          Uniform field — parallel lines, equally spaced, perpendicular to plates
+        </text>
+      </svg>
+    </div>
+  )
+}
+
+function ElectricFieldsIdea() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-3">
+      <MisconceptionCard
+        wrong="Electric field strength increases if you put a bigger charge in the field."
+        right="E = F/Q — if you double Q, the force F also doubles, so E = F/Q stays the same. The field is a property of the space, not of the test charge placed there. E = V/d: field depends only on voltage and plate separation."
+        wrongLabel="Common misconception"
+        rightLabel="Field strength is independent of test charge"
+      />
+    </div>
+  )
+}
+
+function ElectricFieldsReality() {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
+      <RealWorldCard
+        icon="⚡"
+        title="Inkjet printers — electric field deflection"
+        desc="Inkjet printers fire tiny charged ink droplets between deflector plates. A uniform electric field between the plates exerts a force F = EQ on each droplet, steering it to the exact position needed on the paper."
+        color={EF}
+        delay={0}
+      />
+      <RealWorldCard
+        icon="🔬"
+        title="Cathode ray tubes — electron steering"
+        desc="Old TV screens and oscilloscopes use uniform electric fields between plates to deflect electron beams. The voltage controls the field (E = V/d) and therefore the force on each electron (F = EQ = eV/d)."
+        color="#8b5cf6"
+        delay={0.1}
+      />
+      <RealWorldCard
+        icon="🌩️"
+        title="Lightning — electric field breakdown"
+        desc="Air breaks down (conducts) when E exceeds ~3 × 10⁶ V/m. In a thunderstorm, charge separation creates field strengths high enough to ionise air — creating the conducting plasma channel we see as a lightning bolt."
+        color="#f59e0b"
+        delay={0.2}
+      />
+    </div>
+  )
+}
+
 // ─── Topic Data Export ───────────────────────────────────────────────────────
 
 export const GLOBAL_CHALLENGES_TOPICS = {
@@ -930,6 +1045,197 @@ export const GLOBAL_CHALLENGES_TOPICS = {
       'Background radiation in the UK averages ~2.7 mSv/year. The biggest source is radon gas (50%) — a naturally occurring radioactive gas that seeps from rocks, especially granite. Regional variation is significant.',
       'Irradiation = exposure from an external source; you do not become radioactive. Contamination = radioactive material on or in the body; you become a source. Contamination is more dangerous because the source stays with you.',
       'Risk = probability × consequence. ALARA (As Low As Reasonably Achievable) governs all medical and industrial use of radiation. Dose limits: 20 mSv/year for nuclear workers, 1 mSv/year for the public above background.',
+    ],
+  },
+
+  electric_fields: {
+    id: 'electric_fields',
+    module: 'Global Challenges',
+    moduleColor: EF,
+    course: 'physics_only',
+    boards: ['ocr-a'],
+    title: 'Electric Fields',
+    subtitle: 'E = F/Q, E = V/d & Uniform Fields',
+    description: 'An electric field is a region where a charged object experiences a force. Electric field strength E = F/Q (force per unit charge, N/C). For a uniform field between parallel plates: E = V/d (potential difference ÷ plate separation, V/m). N/C and V/m are equivalent units. Field lines in a uniform field are parallel, equally spaced, and perpendicular to the plates. Doubling V doubles E. Halving d doubles E (for constant V). Force on a charge in a field: F = EQ.',
+    lessonVisual: ElectricFieldsLesson,
+    ideaVisual: ElectricFieldsIdea,
+    realityVisual: ElectricFieldsReality,
+    question: 'Two parallel plates are 4 mm apart with a potential difference of 200 V. What is the electric field strength between them?',
+    questionSubtitle: 'Use E = V/d — remember to convert mm to m',
+    options: ['800 V/m', '50 000 V/m', '0.02 V/m', '5000 V/m'],
+    correctAnswer: 1,
+    keywords: ['electric field', 'field strength', 'E = F/Q', 'E = V/d', 'uniform field', 'field lines', 'parallel plates', 'N/C', 'V/m', 'potential difference', 'force on charge'],
+    sentenceStarters: [
+      'Electric field strength is defined as...',
+      'In a uniform field between parallel plates, E = V/d means...',
+      'Field lines in a uniform field are...',
+      'If the plate separation is halved while V stays constant...',
+      'The force on a charge Q in a field E is...',
+    ],
+    modelAnswers: [
+      'Electric field strength is defined as **the force per unit charge: E = F/Q, measured in N/C (or V/m)**.',
+      'In a uniform field between parallel plates, E = V/d means **the field strength equals the potential difference divided by the plate separation — larger V or smaller d both increase E**.',
+      'Field lines in a uniform field are **parallel, equally spaced, and perpendicular to the surface of the plates — this shows the field is the same strength throughout**.',
+      'If the plate separation is halved while V stays constant, **E = V/(d/2) = 2V/d — the field strength doubles, so the force on any charge in the field also doubles**.',
+      'The force on a charge Q in a field E is **F = EQ (rearranging E = F/Q). Double the charge → double the force; double the field → double the force**.',
+    ],
+    misconception: 'E = V/d: 4 mm = 0.004 m. E = 200 / 0.004 = 50 000 V/m. Common error: forgetting to convert mm → m. The answer in mm would be 200/4 = 50 — off by a factor of 1000.',
+    concept: 'E = V/d = 200/0.004 = 50 000 V/m. N/C ≡ V/m. F = EQ. Uniform field: parallel, equally-spaced field lines perpendicular to the plates. E ∝ V (constant d); E ∝ 1/d (constant V).',
+
+    // ── 9-STEP LESSON DATA ──────────────────────────────────────────────────
+
+    hook: {
+      hookFact: 'An inkjet printer fires ink droplets at 10 metres per second through a tiny uniform electric field. The field — created by just a few hundred volts across a 1 mm gap (E = 300 000 V/m) — deflects each droplet by fractions of a millimetre, building up an image dot by dot at 600 dots per inch. The same physics steered electrons in every TV screen made before 2000.',
+      hookQuestion: 'Two plates are 2 mm apart and connected to a 100 V battery. A charge of 5 × 10⁻⁹ C sits between them. Can you find the field strength and the force on the charge? What two equations do you need?',
+      hookEmoji: '⚡',
+    },
+
+    lessonKeywords: [
+      {
+        word: 'Electric Field',
+        symbol: 'E',
+        unit: 'N/C or V/m',
+        definition: 'A region of space in which a charged particle experiences a force.',
+        everydayNote: 'Any charged object — like a proton or electron — in an electric field experiences a push or pull. The field tells you how strong that push is per unit of charge.',
+      },
+      {
+        word: 'Electric Field Strength',
+        symbol: 'E',
+        unit: 'N/C (= V/m)',
+        definition: 'The force experienced per unit positive charge at a point in a field: E = F/Q.',
+        everydayNote: 'E is a property of the field at a point in space — not of the test charge. Doubling the charge doubles the force, but E stays the same.',
+      },
+      {
+        word: 'Uniform Electric Field',
+        symbol: '',
+        unit: '',
+        definition: 'A field with the same strength and direction at every point — created between two parallel charged plates.',
+        everydayNote: 'Field lines are parallel, equally spaced, perpendicular to the plates. The field is identical anywhere between the plates (ignoring edge effects).',
+      },
+      {
+        word: 'Potential Difference',
+        symbol: 'V',
+        unit: 'V (volts)',
+        definition: 'The work done moving one coulomb of charge between two points. Between parallel plates: V = E × d.',
+        everydayNote: 'A 200 V battery connected to plates maintains 200 V between them. That voltage divided by the separation gives the field strength.',
+      },
+      {
+        word: 'Plate Separation',
+        symbol: 'd',
+        unit: 'm',
+        definition: 'The distance between the two parallel plates in a uniform field arrangement.',
+        everydayNote: 'E = V/d — halve the separation, double the field strength (for the same voltage). Always convert mm to m before calculating.',
+      },
+      {
+        word: 'Field Lines',
+        symbol: '',
+        unit: '',
+        definition: 'Lines drawn to represent the direction and relative strength of an electric field. Arrows point from + to −.',
+        everydayNote: 'In a uniform field, lines are parallel and equally spaced — they never cross. Where lines are closer together, the field is stronger.',
+      },
+    ],
+
+    prerequisiteCheck: {
+      questions: [
+        {
+          question: 'What is the formula for electric field strength?',
+          answers: ['E = F/Q', 'E = mv²', 'E = QV', 'E = P/t'],
+          correct: 0,
+          feedback: 'E = F/Q — force (N) divided by charge (C). The unit is N/C, which is the same as V/m. Electric field strength is the force on each coulomb of charge at that point.',
+        },
+        {
+          question: 'Two plates are 10 mm apart with 500 V across them. What is the electric field strength?',
+          answers: ['50 000 V/m', '5 V/m', '500 V/m', '5000 V/m'],
+          correct: 0,
+          feedback: 'E = V/d = 500 / 0.01 = 50 000 V/m. Convert mm to m first: 10 mm = 0.010 m. This is the most common error in electric field calculations.',
+        },
+      ],
+    },
+
+    topicMapHint: {
+      before: ['Potential difference (V = W/Q)', 'Force (F = ma)'],
+      current: 'Electric Fields',
+      after: ['Particle accelerators', 'Cathode ray tubes', 'Capacitors'],
+    },
+
+    workedExample: {
+      title: 'Find E using E = V/d, then force using F = EQ',
+      equation: 'E = V / d     F = E × Q',
+      context: 'Two parallel plates are separated by 8 mm. The potential difference between them is 400 V. A charge of 3 × 10⁻⁶ C is placed between the plates. Find (a) the electric field strength, (b) the force on the charge.',
+      steps: [
+        {
+          step: 1,
+          action: 'Convert separation to metres',
+          content: 'd = 8 mm = 8 × 10⁻³ m = 0.008 m',
+          annotation: 'Always convert mm → m before substituting. Missing this step gives an answer 1000× too large.',
+        },
+        {
+          step: 2,
+          action: 'Calculate field strength',
+          content: 'E = V / d = 400 / 0.008 = 50 000 V/m',
+          annotation: 'Units: V/m (volts per metre) — identical to N/C. The field is uniform everywhere between the plates.',
+        },
+        {
+          step: 3,
+          action: 'Calculate force on the charge',
+          content: 'F = E × Q = 50 000 × 3 × 10⁻⁶ = 0.15 N',
+          annotation: 'Rearranging E = F/Q gives F = EQ. Units: (V/m) × C = (N/C) × C = N. ✓',
+        },
+        {
+          step: 4,
+          action: 'Sense-check direction',
+          content: 'Force acts from + plate toward − plate (for a positive charge)',
+          annotation: 'Field lines point from + to −. A positive charge feels a force in the direction of the field lines. A negative charge feels a force in the opposite direction.',
+        },
+      ],
+      misconceptionAfter: {
+        claim: 'If I put a larger charge between the plates, the field strength increases.',
+        reality: 'E = V/d — field strength depends only on the voltage and the plate separation, not on the charge placed there. Larger charge → larger force (F = EQ), but E is unchanged. The field is a property of the plates and the voltage, not of the test charge.',
+        visual: 'Think of a river current: doubling the size of a boat does not speed up the river. The current (field) is independent of the object in it. A bigger boat experiences more force — but the current itself is unchanged.',
+      },
+    },
+
+    guidedPractice: {
+      tier1: {
+        question: 'Two plates are 5 mm apart with 100 V across them. Calculate the electric field strength.',
+        allSteps: [
+          'Convert separation: 5 mm = 0.005 m',
+          'Write equation: E = V / d',
+          'Substitute: E = 100 / 0.005',
+          '??? — calculate E',
+        ],
+        missingStep: 3,
+        missingHint: '100 / 0.005 = ?',
+        answer: 20000,
+        answerUnit: 'V/m',
+      },
+      tier2: {
+        question: 'The electric field strength between two plates is 40 000 V/m. A charge of 2 × 10⁻⁶ C is placed between them. (a) Find the force on the charge. (b) If the charge is doubled, what happens to E and F?',
+        shownEquation: 'F = E × Q',
+        shownStep1: 'F = 40 000 × 2 × 10⁻⁶ = 0.08 N',
+        hint: 'For (b): E is unchanged (it depends on V and d, not Q). F = EQ — double Q → double F.',
+        answer: 0.16,
+        answerUnit: 'N (when Q doubled)',
+      },
+      tier3: {
+        question: 'Plates are 6 mm apart at 300 V. (a) Find E. (b) The separation is reduced to 3 mm while V stays at 300 V. Find the new E. (c) A charge of 4 × 10⁻⁶ C is placed between the plates at 3 mm separation. Find the force on it.',
+        hint: '(a) E = V/d = 300/0.006. (b) New d = 0.003 m → E = 300/0.003. (c) F = E × Q.',
+        methodHint: '(a) 50 000 V/m. (b) 100 000 V/m — halving d doubles E. (c) F = 100 000 × 4×10⁻⁶ = 0.4 N.',
+        answer: 0.4,
+        answerUnit: 'N',
+      },
+    },
+
+    summary: {
+      equation: 'E = F/Q = V/d     F = EQ     Units: N/C ≡ V/m',
+      sentence: 'Electric field strength is force per unit charge (E = F/Q). Between parallel plates, E = V/d. Halving separation or doubling voltage both double the field strength.',
+      promptText: 'Without looking: write E = F/Q and E = V/d. State two ways to increase the field strength between parallel plates. Describe what the field lines look like in a uniform field.',
+    },
+
+    sessionRecap: [
+      'E = F/Q: electric field strength = force per unit charge. Units are N/C or V/m (identical). Field strength is a property of the space — not of the test charge. Larger charge → larger force, but same E.',
+      'E = V/d for a uniform field between parallel plates. Always convert mm → m for d. Increase V or decrease d → stronger field. Field lines are parallel, equally spaced, perpendicular to the plates.',
+      'F = EQ: the force on a charge Q in field E. Combining: F = (V/d) × Q. Doubling Q doubles F. Halving d doubles E, so also doubles F. This is how inkjet printers, CRT screens, and particle accelerators steer charged particles.',
     ],
   },
 }

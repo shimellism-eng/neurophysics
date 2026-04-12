@@ -1667,7 +1667,7 @@ function RedshiftReality() {
 
 export const WAVES_TOPICS = {
   wave_types: {
-    id: 'wave_types', module: 'Waves', moduleColor: WC, course: 'combined',
+    id: 'wave_types', module: 'Waves', moduleColor: WC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Transverse & Longitudinal Waves', subtitle: 'Wave Types and What Transfers',
     description: 'Waves transfer energy without transferring matter. Transverse waves: vibration is perpendicular to direction of travel (e.g. light, EM waves, seismic S-waves). Longitudinal waves: vibration is parallel to direction of travel, with compressions and rarefactions (e.g. sound, seismic P-waves).',
     lessonVisual: WaveTypesLesson, ideaVisual: WaveTypesIdea, realityVisual: WaveTypesReality,
@@ -1817,9 +1817,9 @@ export const WAVES_TOPICS = {
     ],
   },
   wave_properties: {
-    id: 'wave_properties', module: 'Waves', moduleColor: WC, practicalId: 'waves', course: 'combined',
+    id: 'wave_properties', module: 'Waves', moduleColor: WC, practicalId: 'waves', course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Properties of Waves', subtitle: 'Amplitude, Wavelength, Frequency & v = fλ',
-    description: 'Key wave properties: amplitude (A) - maximum displacement; wavelength (λ) - distance between two identical points; frequency (f) - oscillations per second (Hz); period (T = 1/f) - time for one complete oscillation. Wave speed: v = fλ. Speed depends on the medium - not the frequency.',
+    description: 'Key wave properties: amplitude (A) - maximum displacement; wavelength (λ) - distance between two identical points; frequency (f) - oscillations per second (Hz); period (T = 1/f) - time for one complete oscillation. Wave speed: v = fλ. Speed depends on the medium - not the frequency. Diffraction: waves spread out as they pass through a gap or around an obstacle. Diffraction is most significant when the gap or obstacle size is similar to the wavelength (λ ≈ gap size). If gap >> λ: almost no diffraction (light through a doorway). If gap ≈ λ: maximum diffraction (sound around a corner, radio waves around hills). Bigger wavelength = more diffraction for the same gap size.',
     lessonVisual: WavePropertiesLesson, ideaVisual: WavePropertiesIdea, realityVisual: WavePropertiesReality,
     equations: [{ expr: 'v = fλ', given: true }, { expr: 'T = 1/f', given: false }],
     question: 'A wave has a frequency of 200 Hz and a wavelength of 1.5 m. What is its speed?',
@@ -1835,8 +1835,8 @@ export const WAVES_TOPICS = {
       'Wavelength is the distance between **two successive crests (or equivalent points) on a wave**.',
       'The wave equation v = fλ connects speed, frequency and wavelength ** -  here v = 200 × 1.5 = 300 m/s**.',
     ],
-    misconception: 'Wave speed does not depend on frequency - it depends on the medium.',
-    concept: 'v = 200 × 1.5 = 300 m/s. In a given medium, all waves of that type travel at the same speed. Changing frequency changes wavelength proportionally (v = fλ), not the speed.',
+    misconception: 'Wave speed does not depend on frequency - it depends on the medium. For diffraction: bigger wavelength = more diffraction for the same gap size. Radio waves (λ ≈ metres) diffract around hills; visible light (λ ≈ 500 nm) barely diffracts through a door because its wavelength is far smaller than the gap.',
+    concept: 'v = 200 × 1.5 = 300 m/s. In a given medium, all waves of that type travel at the same speed. Changing frequency changes wavelength proportionally (v = fλ), not the speed. Diffraction is greatest when gap size ≈ wavelength.',
 
     // ── 9-STEP LESSON DATA ────────────────────────────────────────────────────
 
@@ -1985,10 +1985,11 @@ export const WAVES_TOPICS = {
       'Key wave properties: amplitude, wavelength (λ), frequency (f), period (T = 1/f).',
       'Wave equation: v = fλ — wave speed = frequency × wavelength.',
       'Wave speed depends on the medium, not the frequency — higher f means shorter λ.',
+      'Diffraction: waves spread through a gap most when gap ≈ λ. Bigger wavelength = more diffraction. Radio waves (λ ≈ metres) diffract around hills; visible light (λ ≈ 500 nm) barely diffracts through a door.',
     ],
   },
   wave_reflection: {
-    id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light', course: 'physics-only',
+    id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light', course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Reflection & Refraction', subtitle: 'Boundary Behaviour of Waves',
     description: 'Reflection: angle of incidence = angle of reflection (measured from the normal). Refraction: waves change speed at a boundary between media, causing a change in direction. Entering a denser medium: slows down, bends towards normal. Entering a less dense medium: speeds up, bends away from normal.',
     lessonVisual: WaveReflectionLesson, ideaVisual: WaveReflectionIdea, realityVisual: WaveReflectionReality,
@@ -2138,7 +2139,7 @@ export const WAVES_TOPICS = {
     ],
   },
   total_internal_reflection: {
-    id: 'total_internal_reflection', module: 'Waves', moduleColor: WC, course: 'physics-only',
+    id: 'total_internal_reflection', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Total Internal Reflection', subtitle: 'Critical Angle & Optical Fibres',
     description: 'Total internal reflection (TIR) occurs when light travels from a denser medium (e.g. glass) to a less dense medium (e.g. air) and the angle of incidence exceeds the critical angle. At the critical angle, the refracted ray travels along the boundary. Above it, all light reflects internally. Optical fibres exploit TIR to transmit data as light pulses over long distances with minimal energy loss.',
     lessonVisual: TotalInternalReflectionLesson, ideaVisual: TotalInternalReflectionIdea, realityVisual: TotalInternalReflectionReality,
@@ -2288,7 +2289,7 @@ export const WAVES_TOPICS = {
     ],
   },
   sound_ultrasound: {
-    id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only',
+    id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Sound Waves & Ultrasound', subtitle: 'Hearing Range, Seismic Waves & Medical Imaging',
     description: 'Sound travels as longitudinal waves - faster in denser media (solids > liquids > gases). Human hearing range: 20 Hz to 20 kHz — the ear drum and inner ear structures only vibrate efficiently within this range; very low or very high frequencies do not produce a response. Ultrasound (>20 kHz) is partially reflected at media boundaries — used in medical imaging and flaw detection. Seismic P-waves are longitudinal and travel through both solids and liquids. Seismic S-waves are transverse and cannot travel through liquids — because S-waves do not reach the far side of Earth, this is evidence that Earth has a liquid outer core. Echo sounding uses high-frequency sound to measure water depth: depth = (speed × time) ÷ 2.',
     lessonVisual: SoundWavesLesson, ideaVisual: SoundWavesIdea, realityVisual: SoundWavesReality,
@@ -2438,7 +2439,7 @@ export const WAVES_TOPICS = {
     ],
   },
   em_spectrum: {
-    id: 'em_spectrum', module: 'Waves', moduleColor: WC, course: 'combined',
+    id: 'em_spectrum', module: 'Waves', moduleColor: WC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'The Electromagnetic Spectrum', subtitle: 'Types, Properties, Applications & Hazards',
     description: 'All EM waves are transverse and travel at 3×10⁸ m/s in a vacuum. From low to high frequency: radio, microwave, infrared, visible light, ultraviolet, X-rays, gamma. Higher frequency → shorter wavelength → more energy → more hazardous. Ionising radiation (UV, X-rays, gamma) can damage DNA and cause cancer; radiation dose (measured in sieverts, Sv) quantifies the risk — 1000 mSv = 1 Sv. Radio waves are produced by oscillating currents in electrical circuits; when absorbed by a conductor, they induce an alternating current at the same frequency.',
     lessonVisual: EMSpectrumLesson, ideaVisual: EMSpectrumIdea, realityVisual: EMSpectrumReality,
@@ -2588,7 +2589,7 @@ export const WAVES_TOPICS = {
     ],
   },
   lenses: {
-    id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics-only',
+    id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Lenses & Optics', subtitle: 'Convex, Concave, Magnification & Lens Power',
     description: 'Lenses refract (bend) light. Convex (converging) lenses bring parallel rays to a focal point — can produce real inverted images (object beyond focal point) or virtual upright magnified images (object within focal point, like a magnifying glass). Concave (diverging) lenses always produce virtual, upright, diminished images. Magnification = image height ÷ object height = image distance ÷ object distance (no units). Power of a lens: P = 1/f, where f is the focal length in metres — power is measured in dioptres (D). A shorter focal length = more powerful lens = greater bending of light.',
     lessonVisual: LensesLesson, ideaVisual: LensesIdea, realityVisual: LensesReality,
@@ -2738,7 +2739,7 @@ export const WAVES_TOPICS = {
     ],
   },
   black_body: {
-    id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics-only',
+    id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Black Body Radiation', subtitle: 'Emission, Absorption & Earth\'s Temperature',
     description: 'All objects above absolute zero emit infrared radiation. Hotter objects emit more radiation at shorter wavelengths. A perfect black body absorbs all radiation and is the best possible emitter. At constant temperature, absorption rate = emission rate. Earth\'s temperature depends on absorption and emission of radiation - basis of climate science.',
     lessonVisual: BlackBodyLesson, ideaVisual: BlackBodyIdea, realityVisual: BlackBodyReality,
@@ -4137,7 +4138,7 @@ export const WAVES_TOPICS = {
     ],
   },
   visible_light: {
-    id: 'visible_light', module: 'Waves', moduleColor: WC, course: 'physics-only',
+    id: 'visible_light', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Visible Light & Colour', subtitle: 'Specular vs Diffuse Reflection, Filters & Colour',
     description: 'Specular reflection occurs at smooth surfaces — incident rays reflect in a single direction (angle of incidence = angle of reflection). Diffuse reflection occurs at rough surfaces — rays scatter in many directions, making objects visible from all angles. A colour filter absorbs all wavelengths except its own colour, which it transmits. An opaque object reflects some wavelengths and absorbs others — the reflected wavelengths determine its colour. A white object reflects all wavelengths; a black object absorbs all. An object can only reflect wavelengths present in the incident light — a blue object under red light looks black because it absorbs red and has no blue to reflect.',
     lessonVisual: VisibleLightLesson, ideaVisual: VisibleLightIdea, realityVisual: VisibleLightReality,

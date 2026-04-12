@@ -873,6 +873,27 @@ export const UNIVERSE_TOPICS = {
         definition: 'Thermal radiation left over from ~380 000 years after the Big Bang — detected uniformly from all directions at about 2.7 K.',
         everydayNote: 'Discovered accidentally by Penzias and Wilson in 1965 — a persistent hiss they thought was noise.',
       },
+      {
+        word: 'Redshift formula',
+        symbol: 'Δλ/λ ≈ v/c',
+        unit: 'no unit (ratio)',
+        definition: 'Δλ/λ ≈ v/c — the fractional change in wavelength equals the recession speed divided by the speed of light. Valid for v << c.',
+        everydayNote: 'Rearranged: v = c × (Δλ/λ). If a hydrogen line shifts from 656 nm to 689 nm, Δλ = 33 nm.',
+      },
+      {
+        word: 'Recession speed',
+        symbol: 'v',
+        unit: 'm/s or km/s',
+        definition: 'The speed at which a galaxy moves away from us, calculated from its redshift: v = c × (Δλ/λ)',
+        everydayNote: 'Most galaxies recede at millions of km/s. The further away, the faster they recede (Hubble\'s Law).',
+      },
+      {
+        word: 'Inverse square law (brightness)',
+        symbol: 'I ∝ 1/d²',
+        unit: 'W/m²',
+        definition: 'The apparent brightness of a star decreases with the square of distance: intensity ∝ 1/d². Doubling distance reduces brightness by factor 4.',
+        everydayNote: 'This is why Cepheid variables work as standard candles: known luminosity L + measured brightness I → distance d = √(L/4πI).',
+      },
     ],
 
     prerequisiteCheck: {
@@ -971,6 +992,27 @@ export const UNIVERSE_TOPICS = {
       'Geocentric (Ptolemy) → heliocentric (Copernicus 1543). Galileo confirmed it with Jupiter\'s moons (1610). Newton explained WHY (gravity, 1687). Hubble proved universe is vast and expanding (1924–1929).',
       "Hubble's Law: v = H₀ × d (H₀ ≈ 70 km/s/Mpc). All distant galaxies show redshift — the universe is expanding. More distant galaxies recede faster.",
       'Evidence for the Big Bang: (1) redshift of all distant galaxies, (2) cosmic microwave background radiation at 2.7 K. Dark matter explains fast galactic rotation curves. Dark energy explains the accelerating expansion observed since 1998.',
+      'Redshift formula: Δλ/λ ≈ v/c. Find Δλ = observed λ − rest λ, then v = c × (Δλ/λ). Example: hydrogen at 656 nm observed at 689 nm → Δλ = 33 nm → v = 3×10⁸ × (33/656) ≈ 1.51×10⁷ m/s.',
+      'Inverse square law for stellar brightness: I ∝ 1/d². Tripling distance → brightness drops by factor 9. Cepheid standard candles: known luminosity L, measured intensity I → d = √(L / 4πI).',
+      'Doppler connection: redshift is the light version of the Doppler effect. Receding source → wavelengths stretched → redshift. Approaching source → wavelengths compressed → blueshift. Andromeda shows blueshift — it is moving toward us and will collide with the Milky Way in ~4.5 billion years.',
+    ],
+
+    conceptSteps: [
+      {
+        type: 'concept',
+        title: 'Redshift formula and recession speed',
+        content: 'When a galaxy recedes, its light is redshifted. The fractional wavelength change: Δλ/λ ≈ v/c, where Δλ = observed λ − rest λ, v = recession speed, c = 3×10⁸ m/s.\n\nExample: A galaxy emits hydrogen light at λ₀ = 656 nm. Observed at 689 nm. Δλ = 33 nm.\nv = c × (Δλ/λ) = 3×10⁸ × (33/656) = 1.51×10⁷ m/s ≈ 15,100 km/s',
+      },
+      {
+        type: 'concept',
+        title: 'Inverse square law for stellar brightness',
+        content: 'A star\'s apparent brightness depends on distance. If intensity at distance d₁ is I₁, then at distance d₂: I₂/I₁ = d₁²/d₂².\n\nExample: Star A is twice as far as star B but has the same luminosity. Star A appears 4× dimmer.\n\nThis is why Cepheid variables work as standard candles: we know their true luminosity (from period), so we can calculate d from measured apparent brightness using: d = √(L/4πI)',
+      },
+      {
+        type: 'concept',
+        title: 'Doppler effect — the connection between sound and light',
+        content: 'Redshift is the light version of the Doppler effect you studied in waves. For sound: a moving source compresses wavefronts ahead (higher pitch) and stretches them behind (lower pitch). For light: a receding galaxy stretches wavefronts → longer wavelength → redshift. An approaching galaxy: blueshift. This is why Andromeda (approaching us) shows BLUESHIFT.',
+      },
     ],
   },
 }

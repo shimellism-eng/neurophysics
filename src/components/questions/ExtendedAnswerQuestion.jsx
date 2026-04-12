@@ -255,6 +255,25 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
               </motion.div>
             )}
 
+            {/* Model answer */}
+            {data.modelAnswer && (
+              <motion.div
+                className="mt-3 rounded-[12px]"
+                style={{ background: 'rgba(34,197,94,0.06)', border: '0.75px solid rgba(34,197,94,0.25)' }}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+              >
+                <div className="px-4 py-2.5 flex items-center gap-2" style={{ borderBottom: '0.75px solid rgba(34,197,94,0.15)' }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: '#22c55e' }}>✅ Example Model Answer</span>
+                  <span style={{ fontSize: 11, color: '#86efac' }}>— see how a top answer is structured</span>
+                </div>
+                <div className="px-4 py-3">
+                  <p style={{ fontSize: 13, color: '#dcfce7', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{data.modelAnswer}</p>
+                </div>
+              </motion.div>
+            )}
+
             {/* SEN note */}
             {senNote && (
               <div className="flex items-start gap-2 px-4 py-3 rounded-[12px]"

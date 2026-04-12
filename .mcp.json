@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "code-review-graph": {
+      "command": "/Users/mamo/Library/Python/3.11/bin/code-review-graph",
+      "args": ["serve"],
+      "type": "stdio"
+    },
+    "gitnexus": {
+      "command": "gitnexus",
+      "args": ["serve"],
+      "type": "stdio"
+    }
+  }
+}

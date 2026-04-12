@@ -11,3 +11,6 @@ android/
 .env.local
 .env.production
 .env*.local
+.gitnexus
+# Added by code-review-graph
+.code-review-graph/

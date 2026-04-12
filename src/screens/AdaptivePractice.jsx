@@ -12,6 +12,7 @@ import { getNextQuestion } from '../data/questionBank/index'
 import { getSelectedBoard } from '../utils/boardConfig'
 import { supabase } from '../lib/supabase'
 import PageHeader from '../components/PageHeader'
+import ConfusionBusterQuestion from '../components/questions/ConfusionBusterQuestion'
 
 const TIER_CONFIG = {
   1: { label: 'Tier 1', sub: 'Recall & MCQ', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)' },
@@ -656,7 +657,7 @@ export default function AdaptivePractice() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="px-2.5 py-1 rounded-full text-xs font-bold"
                   style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}>
-                  {currentQ.type === 'mcq' ? '⚡ Multiple choice' : currentQ.type === 'calculation' ? '🔢 Calculation' : currentQ.type === 'extended' ? '✍️ Extended' : '💬 Short answer'}
+                  {currentQ.type === 'mcq' ? '⚡ Multiple choice' : currentQ.type === 'calculation' ? '🔢 Calculation' : currentQ.type === 'extended' ? '✍️ Extended' : currentQ.type === 'confusion_buster' ? '🔀 Confusion buster' : '💬 Short answer'}
                 </span>
                 <span className="text-xs" style={{ color: '#64748b' }}>
                   {currentQ.marks} mark{currentQ.marks !== 1 ? 's' : ''}
@@ -677,6 +678,9 @@ export default function AdaptivePractice() {
               {currentQ.type === 'mcq' && <MCQQuestion q={currentQ} onAnswer={handleAnswer} />}
               {currentQ.type === 'calculation' && <CalcQuestion q={currentQ} onAnswer={handleAnswer} />}
               {(currentQ.type === 'short_answer' || currentQ.type === 'extended') && <ExtendedQuestion q={currentQ} onAnswer={handleAnswer} moduleColor={moduleColor} />}
+              {currentQ.type === 'confusion_buster' && (
+                <ConfusionBusterQuestion data={currentQ} onComplete={handleAnswer} moduleColor={moduleColor} />
+              )}
 
               {/* Next button — shown after answering, no tier change indicator */}
               {answered && (

@@ -87,25 +87,55 @@ Read **memory.md** before every session. Update it after. CLAUDE.md = permanent 
 - No new dependencies without asking
 - Prefer small targeted edits over full rewrites
 - Supabase is the backend — never suggest alternatives
+- **Never touch working scroll/padding** — if a screen scrolls fine, do NOT change its `paddingBottom`, `overflow`, `minHeight`, or safe-area values unless the user reports it broken
+- Bottom nav clearance: `paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))'` on scroll containers — never reduce this
+- iOS flex scroll: `flex-1 overflow-y-auto` inside `flex flex-col h-full` always needs `style={{ minHeight: 0 }}` — never remove
 
 ---
 
-## Knowledge Graphs (use BEFORE Grep/Glob/Read)
+## Tool Auto-Selection Rules
 
-Two MCP graph tools are active. Use them first — they are faster and cheaper than file scanning.
+**Never ask Mamo which tool to use. Auto-select based on the task.**
 
-**gitnexus** — 1,070 nodes, 1,908 edges, 84 execution flows
-- `gitnexus_query({query: "concept"})` — find by concept
-- `gitnexus_context({name: "symbolName"})` — callers, callees, flows
-- `gitnexus_impact({target: "X", direction: "upstream"})` — blast radius before editing
-- `gitnexus_detect_changes({scope: "staged"})` — pre-commit scope check
+### When Mamo says → Use this tool automatically
+
+| Trigger | Tool | Action |
+|---|---|---|
+| "fix [bug]" / "why is X broken" / "not working" | gitnexus | `gitnexus_query` on the symptom first |
+| "change/edit/update [function or component]" | gitnexus | `gitnexus_impact` before touching anything |
+| "rename X to Y" | gitnexus | `gitnexus_rename(dry_run:true)` — never find-and-replace |
+| "how does X work" / "where is X" / "find X" | code-review-graph | `semantic_search_nodes` |
+| "what uses X" / "what calls X" / "what imports X" | code-review-graph | `query_graph` with callers_of/imports_of |
+| "add a question" / "add topic data" | Read existing file first | Check `src/data/` before writing anything new |
+| "how do I use [Supabase/React/Vite/React Router]" | context7 | Auto-call `resolve-library-id` + `get-library-docs` |
+| "pack/summarise the codebase" / large context needed | repomix | `pack_codebase` with `compress:true` |
+| before any commit | gitnexus | `gitnexus_detect_changes` — always |
+| "review these changes" | code-review-graph | `detect_changes` + `get_review_context` |
+
+### Always do without being asked
+- Before editing ANY function/component: run `gitnexus_impact` silently, proceed only if LOW/MEDIUM risk (report HIGH/CRITICAL to Mamo before continuing)
+- When a library API is involved: call context7 in the background, don't ask Mamo for the docs
+- After every session: deploy + git push + cap sync ios (the end-of-session checklist)
+- After fixing a bug: run `npm run build` to confirm no errors introduced
+
+### Never do
+- Never Grep for a function when `semantic_search_nodes` can find it
+- Never read a full file to find one function — use serena `find_symbol` or gitnexus `context`
+- Never paste library docs into the conversation — use context7
+- Never ask "which tool should I use?" — decide silently
+
+---
+
+## Knowledge Graphs
+
+Two MCP graph tools are active — use before Grep/Glob/Read.
+
+**gitnexus** — 1,070 nodes, 1,908 edges, 84 flows
+- `gitnexus_query({query})` · `gitnexus_context({name})` · `gitnexus_impact({target, direction})` · `gitnexus_detect_changes({scope})`
 - Rebuild: `gitnexus analyze`
 
-**code-review-graph** — 1,278 nodes, 6,664 edges, 120 files
-- `semantic_search_nodes` — find functions/classes by name or keyword
-- `get_impact_radius` — blast radius of a change
-- `detect_changes` + `get_review_context` — token-efficient code review
-- `get_architecture_overview` — high-level structure
+**code-review-graph** — 1,278 nodes, 6,664 edges
+- `semantic_search_nodes` · `get_impact_radius` · `detect_changes` · `get_architecture_overview`
 - Rebuild: `python3.11 -m code_review_graph build`
 
 <!-- gitnexus:start -->

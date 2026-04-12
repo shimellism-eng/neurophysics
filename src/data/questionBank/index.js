@@ -7,7 +7,7 @@
  *   topicId: string,         // matches TOPICS key
  *   course: 'combined'|'physics_only',
  *   tier: 1|2|3,
- *   type: 'mcq'|'calculation'|'short_answer'|'extended',
+ *   type: 'mcq'|'calculation'|'short_answer'|'extended'|'confusion_buster',
  *   marks: number,
  *   timeExpected: number,    // seconds (threshold for "confident" answer)
  *   question: string,
@@ -36,6 +36,7 @@ import practicalsQuestions from './qb-practicals'
 import keyConceptsQuestions from './qb-keyconcepts'
 import globalChallengesQuestions from './qb-globalchallenges'
 import universeOCRQuestions from './qb-universe-ocr'
+import confusionQuestions from './qb-confusion'
 // ── Recall question banks (AQA-only, type:'recall') ──────────────────────────
 import recallEnergyQuestions        from './qb-recall-energy'
 import recallElectricityQuestions   from './qb-recall-electricity'
@@ -59,6 +60,7 @@ export const ALL_QUESTIONS = [
   ...keyConceptsQuestions,
   ...globalChallengesQuestions,
   ...universeOCRQuestions,
+  ...confusionQuestions,
 ]
 
 // Recall questions are kept separate — they use type:'recall' and are only

@@ -3032,6 +3032,63 @@ const electricityQuestions = [
     ],
     senNote: 'Same charge on all hairs → repulsion → stand on end. Touch earth → discharge → spark/shock.',
   },
+
+  // --- Tier 3 multi-step chain calculations ---
+  {
+    id: 'elec_t3_chain_01',
+    topicId: 'national_grid',
+    type: 'extended',
+    tier: 3,
+    marks: 5,
+    timeExpected: 200,
+    course: 'physics_only',
+    question: 'A power station transmits 500 kW of power. The resistance of the transmission cables is 4 Ω. Calculate the power lost in the cables when the transmission voltage is (a) 1000 V and (b) 10 000 V. Explain why the National Grid uses high voltages. [5 marks]',
+    markScheme: [
+      '(a) I = P/V = 500 000 ÷ 1000 = 500 A; P_loss = I²R = 500² × 4 = 1 000 000 W = 1 MW',
+      '(b) I = P/V = 500 000 ÷ 10 000 = 50 A; P_loss = I²R = 50² × 4 = 10 000 W = 10 kW',
+      'Higher voltage → lower current for same power (P = IV)',
+      'P_loss = I²R so lower current → much less power wasted as heat',
+      'Correct units throughout',
+    ],
+    senNote: 'Use I = P/V to find the current at each voltage, then P_loss = I²R. Notice how 10× higher voltage gives 100× less power loss.',
+    boards: ['aqa'],
+  },
+  {
+    id: 'elec_t3_chain_02',
+    topicId: 'electrical_power',
+    type: 'extended',
+    tier: 3,
+    marks: 4,
+    timeExpected: 180,
+    course: 'combined',
+    question: 'A 230 V appliance has a power rating of 2.3 kW. Calculate (a) the current drawn and (b) the resistance of the heating element. [4 marks]',
+    markScheme: [
+      'P = 2.3 kW = 2300 W (unit conversion)',
+      '(a) I = P/V = 2300 ÷ 230 = 10 A',
+      '(b) R = V/I = 230 ÷ 10 = 23 Ω',
+      'Correct units (A and Ω)',
+    ],
+    senNote: 'Convert kW to W first. Then use I = P/V for current. Then use R = V/I for resistance.',
+    boards: ['aqa'],
+  },
+  {
+    id: 'elec_t3_chain_03',
+    topicId: 'circuit_basics',
+    type: 'extended',
+    tier: 3,
+    marks: 4,
+    timeExpected: 180,
+    course: 'combined',
+    question: 'A battery of e.m.f. 12 V drives a current of 3 A for 5 minutes. Calculate (a) the charge that flows and (b) the energy transferred by the battery. [4 marks]',
+    markScheme: [
+      '(a) t = 5 × 60 = 300 s (unit conversion)',
+      'Q = I × t = 3 × 300 = 900 C',
+      '(b) E = Q × V = 900 × 12 = 10 800 J',
+      'Correct units (C and J)',
+    ],
+    senNote: 'Convert minutes to seconds first. Then Q = It for charge. Then E = QV for energy.',
+    boards: ['aqa'],
+  },
 ]
 
 export default electricityQuestions

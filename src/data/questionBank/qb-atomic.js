@@ -3814,6 +3814,45 @@ const atomicQuestions = [
     senNote: 'Three steps: total nuclei → fissioning nuclei → total energy.',
   },
 
+  // --- Tier 3 multi-step chain calculations ---
+  {
+    id: 'at_t3_chain_01',
+    topicId: 'half_life',
+    type: 'extended',
+    tier: 3,
+    marks: 4,
+    timeExpected: 180,
+    course: 'physics_only',
+    question: 'A radioactive sample has an initial activity of 3200 Bq and a half-life of 8 days. Calculate the activity after 32 days and find how many half-lives have passed. [4 marks]',
+    markScheme: [
+      'Number of half-lives = 32 ÷ 8 = 4',
+      'After 1st: 1600 Bq; after 2nd: 800 Bq; after 3rd: 400 Bq; after 4th: 200 Bq',
+      'Activity after 32 days = 200 Bq',
+      'Correct unit (Bq)',
+    ],
+    senNote: 'Divide total time by half-life to get number of half-lives. Then halve the activity that many times.',
+    boards: ['aqa'],
+  },
+  {
+    id: 'at_t3_chain_02',
+    topicId: 'nuclear_fission',
+    type: 'extended',
+    tier: 3,
+    marks: 5,
+    timeExpected: 200,
+    course: 'physics_only',
+    question: 'Explain how a chain reaction occurs in a nuclear reactor. Describe two ways the rate of fission is controlled. [5 marks]',
+    markScheme: [
+      'A neutron is absorbed by a uranium-235 nucleus, which becomes unstable and splits (fission)',
+      'Fission releases 2-3 neutrons which can cause further fission reactions',
+      'This leads to a chain reaction (each fission triggers more fissions)',
+      'Control rods (e.g. boron) absorb neutrons to slow/stop the reaction',
+      'Moderator slows neutrons to make them more likely to cause fission / removing fuel rods reduces reaction rate',
+    ],
+    senNote: 'Think: one neutron in → nucleus splits → 2-3 neutrons out → those cause more splits. Control rods absorb extra neutrons.',
+    boards: ['aqa'],
+  },
+
 ]
 
 export default atomicQuestions

@@ -1680,6 +1680,45 @@ const particleQuestions = [
     senNote: 'Use p₂ = p₁T₂/T₁ at constant volume. Compare the result with the rated maximum to assess safety.',
   },
 
+  // --- Tier 3 multi-step chain calculations ---
+  {
+    id: 'pm_t3_chain_01',
+    topicId: 'specific_latent_heat',
+    type: 'extended',
+    tier: 3,
+    marks: 5,
+    timeExpected: 200,
+    course: 'combined',
+    question: 'Calculate the total energy needed to heat 0.5 kg of ice at −10°C to water at 40°C. Specific heat capacity of ice = 2100 J/kg°C, specific latent heat of fusion of ice = 334 000 J/kg, specific heat capacity of water = 4200 J/kg°C. [5 marks]',
+    markScheme: [
+      'Energy to warm ice: E₁ = 0.5 × 2100 × 10 = 10 500 J',
+      'Energy to melt ice: E₂ = 0.5 × 334 000 = 167 000 J',
+      'Energy to warm water: E₃ = 0.5 × 4200 × 40 = 84 000 J',
+      'Total = 10 500 + 167 000 + 84 000 = 261 500 J',
+      'Three-stage process correctly identified',
+    ],
+    senNote: 'Three stages: (1) warm ice to 0°C, (2) melt ice at 0°C (no temp change!), (3) warm water to 40°C. Add all three energies.',
+    boards: ['aqa'],
+  },
+  {
+    id: 'pm_t3_chain_02',
+    topicId: 'gas_pressure',
+    type: 'extended',
+    tier: 3,
+    marks: 4,
+    timeExpected: 180,
+    course: 'physics_only',
+    question: 'A fixed volume of gas is heated from 27°C to 127°C. The initial pressure is 100 kPa. Calculate the new pressure. Explain in terms of particles why the pressure increases. [4 marks]',
+    markScheme: [
+      'Convert to Kelvin: T₁ = 300 K, T₂ = 400 K',
+      'P₁/T₁ = P₂/T₂ → P₂ = 100 × (400/300) = 133 kPa (accept 133.3 kPa)',
+      'Higher temperature → greater kinetic energy of molecules',
+      'Molecules collide with walls more frequently and with greater force → higher pressure',
+    ],
+    senNote: 'Always convert °C to Kelvin (+273). Use P₁/T₁ = P₂/T₂ (constant volume). Then explain using particle kinetic energy.',
+    boards: ['aqa'],
+  },
+
 ]
 
 export default particleQuestions

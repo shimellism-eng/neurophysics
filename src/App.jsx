@@ -181,6 +181,10 @@ const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
 const PUBLIC_ROUTES = ['/', '/auth', '/privacy', '/terms', '/share', '/consent']
 
+// True when running inside the Capacitor native shell (iOS / Android)
+// Web visitors get the landing page; app installs go straight to /auth
+const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativePlatform?.()
+
 function AppShell() {
   const location = useLocation()
   const { user, loading } = useAuth()
@@ -210,6 +214,11 @@ function AppShell() {
   const hasConsented = !!localStorage.getItem('neurophysics_consent')
   if (!hasConsented && location.pathname !== '/consent' && location.pathname !== '/privacy' && location.pathname !== '/terms') {
     return <Navigate to="/consent" replace />
+  }
+
+  // Native app + not logged in at / → skip landing page, go straight to auth
+  if (!user && IS_NATIVE && location.pathname === '/') {
+    return <Navigate to="/auth" replace />
   }
 
   // Not logged in → force to auth (except public routes)

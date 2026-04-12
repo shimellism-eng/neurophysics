@@ -486,7 +486,9 @@ export default function LessonPlayer() {
           <motion.div
             className="w-full max-w-[480px] rounded-t-[28px] px-5 pt-6 pb-8"
             style={{ background: '#0f1629', border: '1px solid rgba(255,255,255,0.1)' }}
-            initial={{ y: 80 }} animate={{ y: 0 }} transition={{ type: 'spring', damping: 25 }}>
+            initial={{ y: 80, pointerEvents: 'none' }}
+            animate={{ y: 0, pointerEvents: 'auto' }}
+            transition={{ type: 'spring', damping: 25 }}>
             <div className="text-center mb-5">
               <div className="text-2xl mb-2">📍</div>
               <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>Continue where you left off?</div>
@@ -531,8 +533,8 @@ export default function LessonPlayer() {
 
       {/* ── Header ── */}
       <div
-        className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3"
-        style={{ position: 'relative', overflow: 'hidden' }}
+        className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
+        style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}
       >
         {/* Radial gradient bloom behind header content */}
         <div
@@ -680,7 +682,7 @@ export default function LessonPlayer() {
       )}
 
       {/* ── Main content area ── */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto" style={{ minHeight: 0 }}>
         <div className="px-0 mb-2">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div

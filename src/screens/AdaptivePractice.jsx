@@ -517,7 +517,7 @@ export default function AdaptivePractice() {
       }))
     } catch {}
     setSavedConfirm(true)
-    setTimeout(() => navigate(-1), 700)
+    setTimeout(() => navigate(-1), 120)
   }
 
   if (!topic) return (
@@ -650,7 +650,7 @@ export default function AdaptivePractice() {
       </div>
 
       {/* Question content */}
-      <div className="flex-1 overflow-y-auto px-5 pt-4 pb-2">
+      <div className="flex-1 overflow-y-auto px-5 pt-4 pb-2" style={{ minHeight: 0 }}>
         {currentQ && (
           <AnimatePresence mode="wait">
             <motion.div key={currentQ.id}

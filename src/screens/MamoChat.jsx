@@ -116,7 +116,7 @@ export default function MamoChat() {
   const [streaming, setStreaming]       = useState(false)
   const [lastUserMsg, setLastUserMsg]   = useState('')
   const [selectedTopic, setSelectedTopic] = useState(null)
-  const bottomRef = useRef(null)
+  const messagesRef = useRef(null)
   const inputRef  = useRef(null)
   const abortRef  = useRef(null)
 
@@ -156,9 +156,11 @@ export default function MamoChat() {
     }
   }, [])
 
-  // Auto-scroll to bottom on new messages
+  // Auto-scroll to bottom on new messages — direct scrollTop avoids iOS scrollIntoView bug
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (messagesRef.current) {
+      messagesRef.current.scrollTop = messagesRef.current.scrollHeight
+    }
   }, [messages, streaming])
 
   const clearThread = () => {
@@ -366,7 +368,7 @@ export default function MamoChat() {
       </div>
 
       {/* ── Messages ─────────────────────────────────────────────────────────── */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+      <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0 }}>
         {messages.map((msg, i) => (
           <motion.div
             key={i}
@@ -469,7 +471,6 @@ export default function MamoChat() {
           </motion.div>
         )}
 
-        <div ref={bottomRef} />
       </div>
 
       {/* ── Quick-starter chip rail (always visible, wraps to 2 rows max) ──── */}

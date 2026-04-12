@@ -254,10 +254,10 @@ function FloatingMamo() {
               aria-label="Hide Mamo button"
               style={{
                 position: 'absolute',
-                top: -4,
-                right: -4,
-                width: 18,
-                height: 18,
+                top: -8,
+                right: -8,
+                width: 28,
+                height: 28,
                 borderRadius: 999,
                 background: 'rgba(8,15,30,0.9)',
                 border: '0.75px solid rgba(255,255,255,0.15)',
@@ -369,32 +369,43 @@ function AppShell() {
       <div style={{ height: 'env(safe-area-inset-top)', background: '#080f1e', flexShrink: 0 }} />
       <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'calc(64px + env(safe-area-inset-bottom))' : 0 }}>
         <Suspense fallback={<RouteLoader />}>
-          <Routes>
-            <Route path="/auth" element={<AuthScreen />} />
-            <Route path="/onboarding" element={<OnboardingScreen />} />
-            <Route path="/" element={user ? <HomeScreen /> : <LandingScreen />} />
-            <Route path="/learn" element={<LearnScreen />} />
-            <Route path="/topics" element={<Navigate to="/learn" replace />} />
-            <Route path="/mastery" element={<MasteryScreen />} />
-            <Route path="/topic-map" element={<TopicMap />} />
-            <Route path="/lesson/:id" element={<LessonPlayer />} />
-            <Route path="/diagnostic/:id" element={<DiagnosticQuestion />} />
-            <Route path="/feedback/:id" element={<MisconceptionFeedback />} />
-            <Route path="/mamo" element={<MamoChat />} />
-            <Route path="/practical/:id" element={<PracticalScreen />} />
-            <Route path="/exam/:id" element={<ExamPractice />} />
-            <Route path="/grade9" element={<Grade9Challenge />} />
-            <Route path="/timed-paper" element={<TimedPaper />} />
-            <Route path="/paper-results" element={<PaperResults />} />
-            <Route path="/settings" element={<SettingsScreen />} />
-            <Route path="/consent" element={<ConsentScreen />} />
-            <Route path="/privacy" element={<PrivacyPolicyScreen />} />
-            <Route path="/terms" element={<TermsScreen />} />
-            <Route path="/practice/:topicId" element={<AdaptivePractice />} />
-            <Route path="/spec-checklist" element={<SpecChecklist />} />
-            <Route path="/study-plan" element={<StudyPlanScreen />} />
-            <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+              style={{ position: 'absolute', inset: 0, overflowY: 'auto', willChange: 'transform, opacity' }}
+            >
+              <Routes location={location}>
+                <Route path="/auth" element={<AuthScreen />} />
+                <Route path="/onboarding" element={<OnboardingScreen />} />
+                <Route path="/" element={user ? <HomeScreen /> : <LandingScreen />} />
+                <Route path="/learn" element={<LearnScreen />} />
+                <Route path="/topics" element={<Navigate to="/learn" replace />} />
+                <Route path="/mastery" element={<MasteryScreen />} />
+                <Route path="/topic-map" element={<TopicMap />} />
+                <Route path="/lesson/:id" element={<LessonPlayer />} />
+                <Route path="/diagnostic/:id" element={<DiagnosticQuestion />} />
+                <Route path="/feedback/:id" element={<MisconceptionFeedback />} />
+                <Route path="/mamo" element={<MamoChat />} />
+                <Route path="/practical/:id" element={<PracticalScreen />} />
+                <Route path="/exam/:id" element={<ExamPractice />} />
+                <Route path="/grade9" element={<Grade9Challenge />} />
+                <Route path="/timed-paper" element={<TimedPaper />} />
+                <Route path="/paper-results" element={<PaperResults />} />
+                <Route path="/settings" element={<SettingsScreen />} />
+                <Route path="/consent" element={<ConsentScreen />} />
+                <Route path="/privacy" element={<PrivacyPolicyScreen />} />
+                <Route path="/terms" element={<TermsScreen />} />
+                <Route path="/practice/:topicId" element={<AdaptivePractice />} />
+                <Route path="/spec-checklist" element={<SpecChecklist />} />
+                <Route path="/study-plan" element={<StudyPlanScreen />} />
+                <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />
+              </Routes>
+            </motion.div>
+          </AnimatePresence>
         </Suspense>
       </div>
 

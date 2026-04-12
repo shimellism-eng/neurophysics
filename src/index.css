@@ -6,6 +6,8 @@
     -webkit-tap-highlight-color: transparent;
     /* Native iOS momentum scrolling on every element that can scroll */
     -webkit-overflow-scrolling: touch;
+    /* Eliminate 300ms iOS tap delay on all interactive elements */
+    touch-action: manipulation;
   }
 
   /* ── Keyboard focus ring (F19) ───────────────────────────────────────────── */

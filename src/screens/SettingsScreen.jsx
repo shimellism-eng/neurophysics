@@ -168,6 +168,7 @@ export default function SettingsScreen() {
     signOut().catch(console.error)
   }
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   // Profile
   const [profile, setProfile] = useState(() => loadProfile())
@@ -356,6 +357,9 @@ export default function SettingsScreen() {
 
 
   const handleDeleteData = async () => {
+    if (isDeleting) return
+    setIsDeleting(true)
+
     // Attempt server-side Supabase account deletion (best-effort)
     try {
       // Refresh session first so the token isn't stale
@@ -364,38 +368,47 @@ export default function SettingsScreen() {
         ?? (await supabase.auth.getSession()).data?.session?.access_token
 
       if (token) {
-        const apiBase = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
+        // Use relative URL so it works from neurophysics.co.uk AND neurophysics.vercel.app
+        const apiBase = window.location.origin.includes('localhost')
+          ? (import.meta.env.VITE_API_BASE || 'http://localhost:3000')
+          : window.location.origin
         const res = await fetch(`${apiBase}/api/delete-account`, {
           method: 'POST',
           headers: { 'Authorization': `Bearer ${token}` },
         })
         if (!res.ok) {
-          // Log but don't block — still wipe local data below
           const err = await res.json().catch(() => ({}))
           console.warn('Server-side account deletion failed:', err.error)
         }
       }
     } catch (e) {
-      // Network error etc. — still proceed with local wipe
       console.warn('Delete-account request failed:', e.message)
     }
 
     // Always clear all local data and sign out regardless of server result
-    localStorage.removeItem('neurophysics_prefs')
-    localStorage.removeItem('neurophysics_onboarded')
-    localStorage.removeItem('neurophysics_profile')
-    localStorage.removeItem('neurophysics_consent')
-    localStorage.removeItem('np_progress')
-    localStorage.removeItem('np_stats')
-    localStorage.removeItem('np_board')
-    localStorage.removeItem('np_auto_tts')
-    localStorage.removeItem('np_bg_theme')
-    localStorage.removeItem('np_pace_override')
-    // Clear all Mamo chat history (may contain personal discussions)
-    Object.keys(localStorage).filter(k => k.startsWith('mamo_thread_') || k.startsWith('np_lesson_progress_')).forEach(k => localStorage.removeItem(k))
-    await secureRemove('mamo_api_key')
-    showToast('Account and all data deleted', '#10b981')
-    await signOut() // setUser(null) → AppShell redirects automatically
+    try {
+      localStorage.removeItem('neurophysics_prefs')
+      localStorage.removeItem('neurophysics_onboarded')
+      localStorage.removeItem('neurophysics_profile')
+      localStorage.removeItem('neurophysics_consent')
+      localStorage.removeItem('np_progress')
+      localStorage.removeItem('np_stats')
+      localStorage.removeItem('np_board')
+      localStorage.removeItem('np_auto_tts')
+      localStorage.removeItem('np_bg_theme')
+      localStorage.removeItem('np_pace_override')
+      Object.keys(localStorage)
+        .filter(k => k.startsWith('mamo_thread_') || k.startsWith('np_lesson_progress_'))
+        .forEach(k => localStorage.removeItem(k))
+      await secureRemove('mamo_api_key')
+    } catch (e) {
+      console.warn('Local data clear failed:', e.message)
+    }
+
+    showToast('Account deleted — goodbye 👋', '#10b981')
+    // Small delay so toast is visible before redirect
+    await new Promise(r => setTimeout(r, 900))
+    await signOut()
   }
 
   const sections = [
@@ -1045,17 +1058,32 @@ export default function SettingsScreen() {
                 <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>This will permanently delete your account, all progress, preferences and API key. This cannot be undone.</p>
                 <div className="flex gap-2">
                   <button
-                    className="flex-1 py-2.5 rounded-[10px] text-xs font-bold"
-                    style={{ background: '#ef4444', color: '#fff' }}
+                    className="flex-1 py-2.5 rounded-[10px] text-xs font-bold flex items-center justify-center gap-1.5"
+                    style={{
+                      background: isDeleting ? 'rgba(239,68,68,0.5)' : '#ef4444',
+                      color: '#fff',
+                      opacity: isDeleting ? 0.8 : 1,
+                    }}
                     onClick={handleDeleteData}
+                    disabled={isDeleting}
                     aria-label="Confirm delete all data"
                   >
-                    Yes, delete everything
+                    {isDeleting ? (
+                      <>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                            <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/>
+                          </path>
+                        </svg>
+                        Deleting…
+                      </>
+                    ) : 'Yes, delete everything'}
                   </button>
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-semibold"
                     style={{ background: 'rgba(255,255,255,0.07)', color: '#a8b8cc', border: '0.75px solid rgba(255,255,255,0.08)' }}
                     onClick={() => setShowDeleteConfirm(false)}
+                    disabled={isDeleting}
                     aria-label="Cancel data deletion"
                   >
                     Cancel

@@ -7,9 +7,10 @@
  *   moduleColor {string}  — hex colour for the topic module
  *   onComplete  {fn}      — called with (correct: boolean) when student self-rates
  */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle2, Circle, Minus, ChevronDown, Lightbulb } from 'lucide-react'
+import { speak } from '../../utils/tts'
 
 // Command word colour coding (research: visual cues help ADHD processing)
 const COMMAND_COLORS = {
@@ -23,6 +24,14 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
   const [answer, setAnswer]       = useState('')
   const [revealed, setRevealed]   = useState(false)
   const [showSenHint, setShowSenHint] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem('np_auto_tts') === 'true' && data?.question) {
+      setTimeout(() => speak(data.question), 400)
+    }
+  }, []) // eslint-disable-line
+
+  if (!data) return null
 
   const cmdStyle = COMMAND_COLORS[data.commandWord] || COMMAND_COLORS.State
   const accent   = moduleColor || '#6366f1'

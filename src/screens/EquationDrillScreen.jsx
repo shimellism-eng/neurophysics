@@ -246,7 +246,7 @@ export default function EquationDrillScreen() {
         <PageHeader
           title="Equation Drill"
           subtitle="Session complete"
-          onBack={() => navigate(-1)}
+          onBack={() => setPhase('pick')}
         />
         <div
           className="flex-1 overflow-y-auto px-5 py-6 flex flex-col gap-5"
@@ -368,7 +368,7 @@ export default function EquationDrillScreen() {
       {/* Question area */}
       <div
         className="flex-1 overflow-y-auto px-5 py-4"
-        style={{ minHeight: 0, paddingBottom: 'calc(40px + env(safe-area-inset-bottom, 0px))' }}
+        style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
       >
         <AnimatePresence mode="wait">
           <motion.div

@@ -36,16 +36,18 @@ export default function RecallScreen() {
   const mod    = topic ? MODULES[topic.module] : null
   const moduleColor = topic?.moduleColor || mod?.color || '#6366f1'
 
-  // ── Load & shuffle questions ───────────────────────────────────────────────
-  const questions = useMemo(() => {
-    const qs = getRecallQuestions(topicId, board.id)
-    return shuffle(qs)
-  }, [topicId, board.id])
-
   // ── Session state ─────────────────────────────────────────────────────────
   const [qIndex,    setQIndex]    = useState(0)
   const [results,   setResults]   = useState([]) // { id, correct: bool }
   const [done,      setDone]      = useState(false)
+  const [missedIds, setMissedIds] = useState(null)
+
+  // ── Load & shuffle questions ───────────────────────────────────────────────
+  const questions = useMemo(() => {
+    const qs = getRecallQuestions(topicId, board.id)
+    const pool = missedIds ? qs.filter(q => missedIds.includes(q.id)) : qs
+    return shuffle(pool.length > 0 ? pool : qs)
+  }, [topicId, board.id, missedIds])
 
   const currentQ = questions[qIndex]
 
@@ -105,7 +107,7 @@ export default function RecallScreen() {
         />
         <div
           className="flex-1 overflow-y-auto px-5 py-6 flex flex-col gap-5"
-          style={{ minHeight: 0, paddingBottom: 'calc(40px + env(safe-area-inset-bottom, 0px))' }}
+          style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
         >
           {/* Score card */}
           <motion.div
@@ -160,13 +162,11 @@ export default function RecallScreen() {
                 className="w-full py-3.5 rounded-[14px] text-sm font-bold"
                 style={{ background: moduleColor, color: '#fff' }}
                 onClick={() => {
-                  // Re-run with only missed questions
+                  const ids = results.filter(r => !r.correct).map(r => r.id)
+                  setMissedIds(ids)
                   setResults([])
                   setQIndex(0)
                   setDone(false)
-                  // Replace questions with missed ones (shuffled)
-                  // We can't mutate useMemo, so navigate to self with state
-                  navigate(0) // refresh — simplest approach
                 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -224,7 +224,7 @@ export default function RecallScreen() {
       {/* Question */}
       <div
         className="flex-1 overflow-y-auto px-5 py-4"
-        style={{ minHeight: 0, paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px))' }}
+        style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
       >
         <AnimatePresence mode="wait">
           <motion.div

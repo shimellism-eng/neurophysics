@@ -9,7 +9,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import {
   Trophy, ChevronRight, ChevronLeft, BookOpen,
-  BarChart3, Lightbulb, Clock, Target, Star,
+  BarChart3, Lightbulb, Clock, Target, Star, ArrowLeft,
 } from 'lucide-react'
 
 import { getSelectedBoard, CCEA_BOUNDARIES } from '../utils/boardConfig'
@@ -132,6 +132,7 @@ function Confetti({ show }) {
 
 // ── Stage 1: The Number ───────────────────────────────────────────────────────
 function StageNumber({ score, total, timeUsed, onNext }) {
+  const navigate = useNavigate()
   const grade    = getGrade(score, total)
   const pct      = Math.round((score / total) * 100)
   const mins     = Math.floor(timeUsed / 60)
@@ -153,6 +154,12 @@ function StageNumber({ score, total, timeUsed, onNext }) {
 
   return (
     <div className="flex flex-col h-full overflow-y-auto">
+      {/* Exit button */}
+      <div className="px-5 pt-5 pb-2 flex">
+        <button onClick={() => navigate('/learn')} className="w-11 h-11 rounded-[12px] flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
+          <ArrowLeft size={18} color="#a8b8cc" />
+        </button>
+      </div>
       {/* Hero */}
       <div className="relative flex flex-col items-center pt-12 pb-8 px-6 overflow-hidden" style={{ minHeight: 280 }}>
         <Confetti show={celebrate} />

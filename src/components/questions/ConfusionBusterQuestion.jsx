@@ -117,7 +117,7 @@ export default function ConfusionBusterQuestion({ data, moduleColor, onComplete 
                 <div className="flex gap-2">
                   {/* A button */}
                   <motion.button
-                    className="flex-1 py-2 rounded-[10px] text-xs font-bold"
+                    className="flex-1 py-3 rounded-[10px] text-xs font-bold"
                     style={{
                       background: isA ? `${moduleColor}28` : 'rgba(255,255,255,0.04)',
                       border: isA ? `1.5px solid ${moduleColor}` : `0.75px solid rgba(255,255,255,0.10)`,
@@ -132,7 +132,7 @@ export default function ConfusionBusterQuestion({ data, moduleColor, onComplete 
 
                   {/* B button */}
                   <motion.button
-                    className="flex-1 py-2 rounded-[10px] text-xs font-bold"
+                    className="flex-1 py-3 rounded-[10px] text-xs font-bold"
                     style={{
                       background: isB ? 'rgba(168,85,247,0.18)' : 'rgba(255,255,255,0.04)',
                       border: isB ? `1.5px solid ${CONCEPT_B_COLOR}` : `0.75px solid rgba(255,255,255,0.10)`,

@@ -132,7 +132,7 @@ function FloatingMamo() {
   const navigate = useNavigate()
   const reaction = useMamoState()
   const hiddenByRoute = SHELL_ROUTES.includes(location.pathname)
-  const hiddenByExam = ['/timed-paper', '/exam', '/practice', '/lesson', '/diagnostic', '/grade9'].some(
+  const hiddenByExam = ['/timed-paper', '/exam', '/practice', '/lesson', '/diagnostic', '/grade9', '/recall', '/equation-drill'].some(
     p => location.pathname.startsWith(p)
   )
   // Reactive dismissed state — reads hideMamo from neurophysics_prefs

@@ -289,8 +289,7 @@ export default function DiagnosticQuestion() {
   const [submitted, setSubmitted] = useState(false)
   const [score, setScore] = useState(0)
   const [interactiveCompleted, setInteractiveCompleted] = useState(false)
-  const questionsAnsweredSession = parseInt(sessionStorage.getItem('np_session_q_count') || '0')
-  const [showSEN, setShowSEN] = useState(questionsAnsweredSession < 3)
+  const [showSEN, setShowSEN] = useState(false)
   const [senTab, setSenTab] = useState('keywords')
   const [showHint, setShowHint] = useState(false)
   const [showDecoder, setShowDecoder] = useState(false)
@@ -346,14 +345,10 @@ export default function DiagnosticQuestion() {
   const handleNext = () => {
     const correctThisQ = !isInteractive ? selected === q.correctAnswer : false
     // Score already updated via handleSubmit or handleInteractiveComplete
-    // Increment session question counter (used by support panel auto-expand logic)
-    const nextCount = questionsAnsweredSession + qIndex + 1
-    sessionStorage.setItem('np_session_q_count', String(nextCount))
     if (isLast) {
       const finalScore = score // already includes this Q if correct
       navigate(`/feedback/${id}?result=${finalScore >= Math.ceil(total * 0.6) ? 'correct' : 'wrong'}&score=${finalScore}&total=${total}`, { replace: true })
     } else {
-      const newCount = nextCount
       setQIndex(i => i + 1)
       setSelected(null)
       setSubmitted(false)

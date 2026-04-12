@@ -132,12 +132,23 @@ function SetupSHC() {
         <Lbl x={26} y={62} t="PSU" c="#a5b4fc" s={8}/>
       </svg>
 
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Heater', value: power, unit: 'W', accent: '#f59e0b', bg: '#251a00' },
+          { label: 'Temperature', value: temp, unit: '°C', accent: '#ef4444', bg: '#250a0a' },
+          { label: 'Energy in', value: (power * time).toLocaleString(), unit: 'J', accent: '#10b981', bg: '#00251a' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
+
       <div className="px-1">
-        <div className="flex justify-between text-xs mb-1" style={{ color: '#a8b8cc' }}>
-          <span>Time: {time}s</span>
-          <span>Energy: {(power * time).toLocaleString()} J</span>
-          <span style={{ color: '#ef4444' }}>ΔT +{dT}°C</span>
-        </div>
+        <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>Time: {time} s</div>
         <input type="range" min={0} max={600} step={60} value={time}
           onChange={e => setTime(+e.target.value)} className="w-full accent-indigo-400"/>
         <div className="flex justify-between text-xs mt-0.5" style={{ color: '#475569' }}>
@@ -733,10 +744,22 @@ function SetupIV() {
         <W x1={185} y1={130} x2={220} y2={130}/>
         <W x1={220} y1={130} x2={220} y2={108}/>
 
-        {/* Result panel */}
-        <rect x={5} y={148} width={270} height={16} rx={4} fill={`${c}15`} stroke={`${c}40`} strokeWidth={0.75}/>
-        <Lbl x={140} y={160} t={`V = ${volts} V   →   I = ${current} A`} c={c} s={9}/>
       </svg>
+
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Ammeter', value: current === '≈0' ? '≈0' : parseFloat(current).toFixed(3), unit: 'A', accent: '#10b981', bg: '#00251a' },
+          { label: 'Voltmeter', value: volts, unit: 'V', accent: '#f59e0b', bg: '#251a00' },
+          { label: 'Component', value: comp.charAt(0).toUpperCase() + comp.slice(1), unit: '—', accent: c, bg: `${c}12` },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 16, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
 
       <div className="px-1">
         <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>Voltage: {volts} V</div>
@@ -862,10 +885,23 @@ function SetupDensity() {
         <Lbl x={28} y={67} t={`${mass}g`} c="#10b981" s={9}/>
         <Lbl x={28} y={46} t="Balance" c="#64748b" s={8}/>
 
-        {/* Formula */}
-        <rect x={5} y={155} width={155} height={20} rx={4} fill={`${o.color}15`} stroke={`${o.color}40`} strokeWidth={0.75}/>
-        <Lbl x={82} y={168} t={`ρ = ${mass}÷${vol} = ${o.density} g/cm³`} c={o.color} s={8}/>
       </svg>
+
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Mass', value: mass, unit: 'g', accent: '#f59e0b', bg: '#251a00' },
+          { label: 'Volume', value: vol, unit: 'cm³', accent: '#06b6d4', bg: '#001a25' },
+          { label: 'Density', value: o.density.toFixed(2), unit: 'g/cm³', accent: '#6366f1', bg: '#0f0a2a' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
+      <p className="text-xs text-center" style={{ color: '#475569' }}>ρ = m ÷ V = {mass} ÷ {vol} = {o.density} g/cm³</p>
 
       {/* ── Data Collection ── */}
       <div className="px-1 pt-1">
@@ -987,15 +1023,27 @@ function SetupLight() {
         <path d="M 30,40 L 50,55 L 50,75 L 30,90 Z" fill="#1e293b" stroke="#f59e0b" strokeWidth={1.5}/>
         <Lbl x={54} y={65} t="Ray box" c="#f59e0b" s={8} a="start"/>
 
-        {/* Formula */}
-        <rect x={5} y={170} width={270} height={26} rx={4} fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)" strokeWidth={0.75}/>
-        <Lbl x={140} y={181} t={`n = sin(${angle}°) / sin(${r}°) = ${(Math.sin(incRad)/Math.sin(refRad)).toFixed(2)}`} c="#7dd3fc" s={9}/>
-        <Lbl x={140} y={192} t="Angle of incidence = angle of reflection" c="#64748b" s={7.5}/>
       </svg>
+
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Angle i', value: angle, unit: '°', accent: '#f59e0b', bg: '#251a00' },
+          { label: 'Angle r', value: r, unit: '°', accent: '#06b6d4', bg: '#001a25' },
+          { label: 'n = sin i / sin r', value: (Math.sin(incRad)/Math.sin(refRad)).toFixed(2), unit: '(unitless)', accent: '#6366f1', bg: '#0f0a2a' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
+      <p className="text-xs text-center" style={{ color: '#475569' }}>Angle of incidence = angle of reflection</p>
 
       <div className="px-1">
         <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>
-          Angle of incidence: {angle}° → refraction: {r}°
+          Angle of incidence: {angle}°
         </div>
         <input type="range" min={10} max={70} step={5} value={angle}
           onChange={e => setAngle(+e.target.value)} className="w-full accent-sky-400"/>
@@ -1118,12 +1166,24 @@ function SetupSpring() {
         <Lbl x={205} y={200} t="Ruler" c="#64748b" s={8} a="start"/>
       </svg>
 
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: beyondLimit ? 'Force ⚠' : 'Force', value: force, unit: 'N', accent: beyondLimit ? '#ef4444' : '#3b82f6', bg: beyondLimit ? '#250505' : '#001025' },
+          { label: 'Extension', value: ext, unit: 'cm', accent: '#10b981', bg: '#00251a' },
+          { label: 'k = F / e', value: force > 0 && parseFloat(ext) > 0 ? (force / parseFloat(ext)).toFixed(1) : '—', unit: 'N/cm', accent: '#6366f1', bg: '#0f0a2a' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
+
       <div className="px-1">
-        <div className="flex justify-between text-xs mb-1" style={{ color: '#a8b8cc' }}>
-          <span>Force: {force} N</span>
-          <span style={{ color: beyondLimit ? '#ef4444' : '#10b981' }}>
-            Extension: {ext} cm {beyondLimit ? '(permanent deform!)' : ''}
-          </span>
+        <div className="text-xs mb-1" style={{ color: beyondLimit ? '#ef4444' : '#a8b8cc' }}>
+          Force: {force} N {beyondLimit ? '— beyond elastic limit (permanent deformation!)' : ''}
         </div>
         <input type="range" min={0} max={10} step={0.5} value={force}
           onChange={e => setForce(+e.target.value)}
@@ -1252,6 +1312,21 @@ function SetupAcceleration() {
           stroke="#10b981" strokeWidth={2} markerEnd="url(#ga)"/>
         <Lbl x={85} y={50} t={`a = F/m = ${force}/${mass} = ${acc} m/s²`} c="#10b981" s={8}/>
       </svg>
+
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Force', value: force, unit: 'N', accent: '#10b981', bg: '#00251a' },
+          { label: 'Mass', value: mass.toFixed(1), unit: 'kg', accent: '#64748b', bg: '#0f1a25' },
+          { label: 'Acceleration', value: acc, unit: 'm/s²', accent: '#6366f1', bg: '#0f0a2a' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
 
       <div className="px-1">
         <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>Force (hanging weights): {force} N</div>
@@ -1387,9 +1462,24 @@ function SetupWaves() {
         <Lbl x={240} y={108} t={`λ = v/f`} c="#6366f1" s={9}/>
       </svg>
 
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Frequency', value: freq, unit: 'Hz', accent: '#6366f1', bg: '#0f0a2a' },
+          { label: 'Wavelength', value: lambda, unit: 'm', accent: '#06b6d4', bg: '#001a25' },
+          { label: 'Wave speed', value: speed.toFixed(2), unit: 'm/s', accent: '#10b981', bg: '#00251a' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 20, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
+
       <div className="px-1">
         <div className="text-xs mb-1" style={{ color: '#a8b8cc' }}>
-          Frequency: {freq} Hz → λ = {lambda} m
+          Frequency: {freq} Hz
         </div>
         <input type="range" min={1} max={14} step={1} value={freq}
           onChange={e => setFreq(+e.target.value)} className="w-full accent-sky-400"/>
@@ -1530,6 +1620,21 @@ function SetupRadiation() {
         })}
         <Lbl x={218} y={168} t="Relative IR emission" c="#64748b" s={8}/>
       </svg>
+
+      {/* ── Readout tiles ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+        {[
+          { label: 'Surface', value: s.label.replace(' ', '\u00A0'), unit: s.emission, accent: s.stroke, bg: `${s.stroke}12` },
+          { label: 'IR Output', value: s.value, unit: 'mV', accent: '#10b981', bg: '#00251a' },
+          { label: 'vs. Matt Black', value: Math.round(s.value / 87 * 100), unit: '%', accent: '#f59e0b', bg: '#251a00' },
+        ].map(({ label, value, unit, accent, bg }) => (
+          <div key={label} style={{ background: bg, border: `1px solid ${accent}50`, borderRadius: 12, padding: '10px 0', textAlign: 'center' }}>
+            <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, color: accent, textTransform: 'uppercase', marginBottom: 4 }}>{label}</div>
+            <div style={{ fontFamily: 'monospace', fontSize: 18, fontWeight: 700, color: accent, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: 9, color: accent, marginTop: 3 }}>{unit}</div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

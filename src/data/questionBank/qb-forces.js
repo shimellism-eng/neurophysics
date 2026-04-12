@@ -887,6 +887,7 @@ const forcesQuestions = [
     acceptableRange: [411.6, 428.4],
     markScheme: ['W = F × d (1)', 'W = 35 × 12 = 420 J (1)'],
     senNote: 'Multiply force by distance.',
+    examinerTip: 'W is used for both weight (in newtons) AND work done (in joules) — check which one the question is asking for.',
   },
   {
     id: 'wd_t2_02',

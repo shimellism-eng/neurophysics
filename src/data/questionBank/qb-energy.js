@@ -162,6 +162,7 @@ const energyQuestions = [
       'Substitute: ½ × 2 × 36 = 36 J (1)',
     ],
     senNote: 'Use Eₖ = ½mv². Square the velocity first, then multiply.',
+    examinerTip: 'Always write the formula first, then substitute. Square the velocity BEFORE multiplying by mass.',
   },
   {
     // Edexcel & CCEA use g = 10 N/kg
@@ -246,6 +247,7 @@ const energyQuestions = [
       'Substitute: √(2 × 50 / 4) = √25 = 5 m/s (1)',
     ],
     senNote: 'Rearrange Eₖ = ½mv² → v = √(2Eₖ/m).',
+    examinerTip: 'Easy to forget the square root at the end — rearranging gives v = √(2Eₖ/m), not just 2Eₖ/m.',
   },
   {
     // Edexcel & CCEA use g = 10 N/kg

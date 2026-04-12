@@ -16,7 +16,7 @@ const GROWTH_FRAMES = [
 
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null
-  const { equation, steps = [], answer, answerUnit, acceptableRange, commonMistake, senNote } = data
+  const { equation, steps = [], answer, answerUnit, acceptableRange, commonMistake, senNote, examinerTip } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [revealStep, setRevealStep] = useState(0)
@@ -65,6 +65,23 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
         <Calculator size={16} color={moduleColor} />
         <span className="text-sm font-bold" style={{ color: moduleColor }}>{equation}</span>
       </motion.div>
+
+      {/* Examiner tip — shown before student submits */}
+      {examinerTip && !submitted && (
+        <motion.div
+          className="flex items-start gap-2 px-4 py-3 rounded-[12px] mb-4"
+          style={{ background: 'rgba(0,212,255,0.06)', border: '0.75px solid rgba(0,212,255,0.2)' }}
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+        >
+          <Lightbulb size={14} color="#00d4ff" style={{ marginTop: 1, flexShrink: 0 }} />
+          <p className="text-xs leading-relaxed" style={{ color: '#7dd3fc' }}>
+            <span className="font-semibold" style={{ color: '#00d4ff' }}>Examiner tip: </span>
+            {examinerTip}
+          </p>
+        </motion.div>
+      )}
 
       {/* SEN: worked example panel */}
       <div className="mb-3">
@@ -241,6 +258,23 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
               >
                 <XCircle size={14} color="#ef4444" style={{ marginTop: 1, flexShrink: 0 }} />
                 <p className="text-xs leading-relaxed" style={{ color: '#ef9a9a' }}>{commonMistake}</p>
+              </motion.div>
+            )}
+
+            {/* Examiner tip — shown again in reveal when wrong */}
+            {!isCorrect && examinerTip && revealStep >= steps.length && (
+              <motion.div
+                className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
+                style={{ background: 'rgba(0,212,255,0.06)', border: '0.75px solid rgba(0,212,255,0.2)' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                <Lightbulb size={14} color="#00d4ff" style={{ marginTop: 1, flexShrink: 0 }} />
+                <p className="text-xs leading-relaxed" style={{ color: '#7dd3fc' }}>
+                  <span className="font-semibold" style={{ color: '#00d4ff' }}>Examiner tip: </span>
+                  {examinerTip}
+                </p>
               </motion.div>
             )}
 

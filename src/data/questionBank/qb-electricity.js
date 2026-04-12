@@ -183,6 +183,7 @@ const electricityQuestions = [
     acceptableRange: [3.92, 4.08],
     markScheme: ['R = V / I = 12 / 3 (1)', 'R = 4 Ω (1)'],
     senNote: 'Use V = IR rearranged to R = V / I.',
+    examinerTip: 'Always write the formula first: V = IR, then rearrange. Students who skip this step lose method marks.',
   },
 
   {
@@ -231,6 +232,7 @@ const electricityQuestions = [
     acceptableRange: [117.6, 122.4],
     markScheme: ['t = 4 × 60 = 240 s (1)', 'Q = I × t = 0.5 × 240 = 120 C (1)'],
     senNote: 'Remember to convert minutes to seconds before using Q = It.',
+    examinerTip: 'Always convert units before calculating — minutes → seconds (×60), kW → W (×1000). This is the most common mark lost.',
   },
 
   {

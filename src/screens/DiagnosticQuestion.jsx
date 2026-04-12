@@ -354,8 +354,7 @@ export default function DiagnosticQuestion() {
       setSubmitted(false)
       setInteractiveCompleted(false)
       setShowHint(false)
-      // Collapse support panel after first 3 questions answered in this session
-      if (newCount >= 3) setShowSEN(false)
+      setShowSEN(false) // always collapse support panel on each new question
     }
   }
 

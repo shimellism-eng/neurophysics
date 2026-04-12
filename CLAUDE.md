@@ -311,6 +311,9 @@
 - [x] P2 MamoChat: 8 persistent suggestion chips; topic selector on empty state (injects into Gemini context); border-radius token fix
 - [x] P2 accessibility: Auto-TTS toggle in Settings (np_auto_tts, opt-in); auto-reads on mount in CalculationQuestion + ConfidenceQuestion
 - [x] P2 UX flows: "Time to revisit" routes to /practice/:id with reviewMode+maxQuestions:5; AdaptivePractice review cap + completion badge; OnboardingScreen StepHowItWorks added (step 0)
+- [x] P3 bugs (commit a1e9103): useInsights live same-tab updates via np_progress_updated custom event; PaperResults confetti confirmed self-terminating (no fix needed)
+- [x] P3 ND polish: growth framing on wrong answers (CalculationQuestion); **bold** markdown rendered in ExtendedAnswerQuestion + ExamPractice; BottomNav labels always visible; lesson completion module progress summary card; LearnScreen "Read more" collapse; MasteryScreen chip padding/font
+- [x] P3 accessibility: Font size Normal/Large segmented toggle in Settings (body.text-large CSS, cold-start restore); Reduce Motion JS guard on App.jsx spring animations (FAB badge, spinner, reaction flash)
 - [x] Student experience audit (6 board agents) + 18 fixes: grade band pills in PaperResults, Mamo board-aware (system prompt injection), SpecChecklist board badge legend, StudyPlan adjustable pace, TimedPaper pause/resume, AdaptivePractice ask-Mamo pill + tier label, ExamPractice worked solution card + command word highlight, HomeScreen review due dates, LearnScreen module expand sessionStorage, OnboardingScreen accessibility step, Radiation & Risk topic (OCR-A), Converging/Diverging Lenses topic (CCEA/OCR-B)
 - [x] Teacher experience audit (6 board agents) + P0+P1 fixes:
   - qb-forces.js: g=9.8 explicit in all non-board Qs; 8 WJEC angular velocity Qs; CCEA moments + elastic limit Qs

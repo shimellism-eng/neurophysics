@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle } from 'lucide-react'
 
 export default function TapMatchQuestion({ data, moduleColor, onComplete }) {
-  const { pairs, senNote } = data
+  if (!data) return null
+  const { pairs = [], senNote } = data
   const [selectedItem, setSelectedItem] = useState(null)
   const [matched, setMatched] = useState({})      // { itemIdx: matchIdx }
   const [wrongFlash, setWrongFlash] = useState(null)

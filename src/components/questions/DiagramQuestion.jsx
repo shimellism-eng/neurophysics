@@ -24,6 +24,7 @@ import { ChevronDown, ChevronUp, Eye, EyeOff, Lightbulb, CheckCircle, ZoomIn } f
 import { EXAM_DIAGRAMS } from '../../data/examDiagrams'
 
 export default function DiagramQuestion({ data, moduleColor, onComplete }) {
+  if (!data) return null
   const {
     marks = 0,
     diagramId,

@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle, RotateCcw } from 'lucide-react'
 
 export default function SequenceSortQuestion({ data, moduleColor, onComplete }) {
-  const { items, correctOrder, senNote } = data
+  if (!data) return null
+  const { items = [], correctOrder = [], senNote } = data
   const [order, setOrder] = useState([])           // indices the user tapped
   const [submitted, setSubmitted] = useState(false)
 

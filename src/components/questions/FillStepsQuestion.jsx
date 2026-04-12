@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle, Lightbulb, RotateCcw } from 'lucide-react'
 
 export default function FillStepsQuestion({ data, moduleColor, onComplete }) {
-  const { template, wordBank, senNote } = data
+  if (!data) return null
+  const { template = [], wordBank = [], senNote } = data
   const blanks = template.filter(t => t.blank)
   const [filled, setFilled] = useState(Array(blanks.length).fill(null))
   const [bankUsed, setBankUsed] = useState([])

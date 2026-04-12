@@ -8,11 +8,14 @@ import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle } from 'lucide-react'
 
 export default function HotspotQuestion({ data, moduleColor, onComplete }) {
-  const { areas, senNote } = data
+  if (!data) return null
+  const { areas = [], senNote } = data
   const [selected, setSelected] = useState(null)
   const [submitted, setSubmitted] = useState(false)
 
   const correctIdx = areas.findIndex(a => a.correct)
+  // Guard: if no area is marked correct, component is misconfigured — bail safely
+  if (correctIdx === -1 && areas.length > 0) console.warn('HotspotQuestion: no area has correct:true')
 
   const handleTap = (idx) => {
     if (submitted) return

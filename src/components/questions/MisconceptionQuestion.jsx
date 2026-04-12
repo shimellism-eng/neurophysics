@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
 
 export default function MisconceptionQuestion({ data, moduleColor, onComplete }) {
+  if (!data) return null
   const { statement, isCorrect, explanation, senNote } = data
   const [answer, setAnswer] = useState(null)    // true or false
   const [submitted, setSubmitted] = useState(false)

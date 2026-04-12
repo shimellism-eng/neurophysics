@@ -15,7 +15,8 @@ const GROWTH_FRAMES = [
 ]
 
 export default function CalculationQuestion({ data, moduleColor, onComplete }) {
-  const { equation, steps, answer, answerUnit, acceptableRange, commonMistake, senNote } = data
+  if (!data) return null
+  const { equation, steps = [], answer, answerUnit, acceptableRange, commonMistake, senNote } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [revealStep, setRevealStep] = useState(0)

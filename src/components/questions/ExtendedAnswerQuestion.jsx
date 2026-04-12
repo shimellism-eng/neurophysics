@@ -85,7 +85,8 @@ function ScoreBadge({ awarded, total, moduleColor }) {
 }
 
 export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }) {
-  const { question, questionSubtitle, markScheme, senNote, marks = 6 } = data
+  if (!data) return null
+  const { question, questionSubtitle, markScheme = [], senNote, marks = 6 } = data
   const [answer, setAnswer] = useState('')
   const [showFallback, setShowFallback] = useState(false)
   const [fallbackScore, setFallbackScore] = useState(null)

@@ -25,7 +25,8 @@ function toSvg(point, xScale, yScale) {
 }
 
 export default function GraphQuestion({ data, moduleColor, onComplete }) {
-  const { points, xLabel, yLabel, answer, answerUnit, steps, commonMistake, senNote, taskType } = data
+  if (!data) return null
+  const { points = [], xLabel, yLabel, answer, answerUnit, steps = [], commonMistake, senNote, taskType } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
 

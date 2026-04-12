@@ -13,6 +13,7 @@ const LEVELS = [
 ]
 
 export default function ConfidenceQuestion({ data, moduleColor, onComplete }) {
+  if (!data) return null
   const { senNote } = data
   const [selected, setSelected] = useState(null)
   const [submitted, setSubmitted] = useState(false)

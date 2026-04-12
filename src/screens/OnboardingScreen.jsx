@@ -883,225 +883,215 @@ function StepBoard({ onNext }) {
   )
 }
 
-// ─── Step 4: Goal ────────────────────────────────────────────────────────────
-function StepGoal({ boardId, onNext }) {
-  const isCCEA = boardId === 'ccea'
-  const GRADES_91   = ['4', '5', '6', '7', '8', '9']
-  const GRADES_CCEA = ['C', 'C*', 'B', 'A', 'A*']  // ascending: C < C* < B < A < A*
+// ─── Step 2: Setup (Exam Date + Age) ─────────────────────────────────────────
+const AGE_OPTIONS = [
+  { label: 'Year 9–10', sub: 'Age 13–15', value: '13–15', color: '#00d4ff' },
+  { label: 'Year 10–11', sub: 'Age 15–16', value: '15–16', color: '#6366f1' },
+  { label: 'Year 11–12', sub: 'Age 16–17', value: '16–17', color: '#9b59b6' },
+  { label: '18 or over', sub: 'Mature learner', value: '18+', color: '#e91e8c' },
+]
 
-  const [grade, setGrade] = useState(isCCEA ? 'B' : '7')
+function StepSetup({ onNext }) {
   const [examDate, setExamDate] = useState('')
+  const [ageGroup, setAgeGroup] = useState('')
 
-  const gradeOptions = isCCEA ? GRADES_CCEA : GRADES_91
+  const today = new Date(); today.setHours(0,0,0,0)
+  const examD = examDate ? new Date(examDate) : null
+  const daysLeft = examD ? Math.ceil((examD - today) / 86400000) : null
+  const passed = daysLeft !== null && daysLeft <= 0
+  const urgency = daysLeft === null ? null
+    : passed    ? { color: '#94a3b8', bg: 'rgba(148,163,184,0.08)', border: 'rgba(148,163,184,0.18)', label: 'Passed' }
+    : daysLeft <= 14 ? { color: '#ef4444', bg: 'rgba(239,68,68,0.08)',  border: 'rgba(239,68,68,0.22)',  label: 'Very soon' }
+    : daysLeft <= 42 ? { color: '#f59e0b', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.22)', label: 'Coming up' }
+    : { color: '#22c55e', bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.2)', label: 'On track' }
+  const fmtDate = examD ? examD.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
 
   return (
     <motion.div
       className="flex flex-col h-full"
-      key="step-goal"
+      key="step-setup"
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -40 }}
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="flex-1 overflow-y-auto px-6">
+      <div className="flex-1 overflow-y-auto px-6" style={{ minHeight: 0 }}>
+        {/* Header */}
         <motion.div
-          className="pt-10 pb-6"
-          initial={{ opacity: 0, y: 20 }}
+          className="pt-10 pb-5"
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
           {/* Step indicator (2/2) */}
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-7">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
           </div>
-
-          <h1 className="text-4xl font-extrabold leading-tight mb-3" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
-            What's your{'\n'}<span style={{ color: '#6366f1' }}>target grade?</span>
+          <h1 className="font-extrabold leading-tight mb-2" style={{ fontSize: 34, color: '#f8fafc', letterSpacing: '-0.03em' }}>
+            Almost there 🎯
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
-            NeuroPhysics will prioritise content to help you hit your goal.
+          <p className="text-sm leading-relaxed" style={{ color: '#7b9ab8' }}>
+            Two quick details and you're in.
           </p>
         </motion.div>
 
-        {/* Grade selector */}
+        {/* ── Exam date card ── */}
         <motion.div
           className="mb-6"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
         >
-          <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
-            Target grade
+          <div className="flex items-center gap-2 mb-2.5">
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#a8b8cc' }}>Exam date</span>
+            <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold"
+              style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.28)' }}>optional</span>
           </div>
-          <div className={`grid gap-2 ${isCCEA ? 'grid-cols-5' : 'grid-cols-6'}`}>
-            {gradeOptions.map(g => {
-              const selected = grade === g
-              const isAspirational = isCCEA ? (g === 'A*' || g === 'A') : (g === '8' || g === '9')
+          <div
+            className="rounded-[20px] relative overflow-hidden"
+            style={{
+              background: urgency ? urgency.bg : 'rgba(15,22,41,0.95)',
+              border: `0.75px solid ${urgency ? urgency.border : 'rgba(255,255,255,0.08)'}`,
+            }}
+          >
+            {examDate ? (
+              <div className="px-5 py-4 flex items-center gap-4">
+                <div
+                  className="flex flex-col items-center justify-center rounded-[14px] shrink-0"
+                  style={{ width: 60, height: 60, background: `${urgency.color}18`, border: `0.75px solid ${urgency.color}40` }}
+                >
+                  <span className="font-black leading-none" style={{ fontSize: 20, color: urgency.color }}>
+                    {passed ? '✓' : daysLeft}
+                  </span>
+                  <span className="font-semibold" style={{ fontSize: 9, color: `${urgency.color}cc`, marginTop: 2 }}>
+                    {passed ? 'done' : daysLeft === 1 ? 'day' : 'days'}
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-bold" style={{ fontSize: 16, color: '#f8fafc', letterSpacing: '-0.02em' }}>{fmtDate}</div>
+                  <div className="mt-1 inline-flex px-2 py-0.5 rounded-full"
+                    style={{ background: `${urgency.color}18`, fontSize: 11, fontWeight: 600, color: urgency.color }}>
+                    {urgency.label}
+                  </div>
+                </div>
+                <div className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
+                  <Pencil size={13} color="#a8b8cc" />
+                </div>
+              </div>
+            ) : (
+              <div className="px-5 py-4 flex items-center gap-3">
+                <div className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+                  style={{ background: 'rgba(0,212,255,0.1)', border: '0.75px solid rgba(0,212,255,0.22)' }}>
+                  <CalendarDays size={18} color="#00d4ff" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>When's your exam?</div>
+                  <div className="text-xs mt-0.5" style={{ color: '#7b9ab8' }}>We'll count down to it on your home screen</div>
+                </div>
+                <div className="px-3 py-1.5 rounded-full text-xs font-bold shrink-0"
+                  style={{ background: 'rgba(0,212,255,0.1)', border: '0.75px solid rgba(0,212,255,0.25)', color: '#00d4ff' }}>
+                  Set
+                </div>
+              </div>
+            )}
+            <input type="date" value={examDate} min={new Date().toISOString().split('T')[0]}
+              tabIndex={-1} onFocus={e => { e.target.style.fontSize = '16px' }}
+              onChange={e => setExamDate(e.target.value)}
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer', fontSize: '16px' }}
+              aria-label="Set exam date" />
+          </div>
+        </motion.div>
+
+        {/* ── Age group ── */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.18, duration: 0.4 }}
+        >
+          <div className="text-xs font-bold uppercase tracking-widest mb-2.5" style={{ color: '#a8b8cc' }}>
+            Year group
+          </div>
+          <div className="grid grid-cols-2 gap-2.5">
+            {AGE_OPTIONS.map(({ label, sub, value, color }) => {
+              const sel = ageGroup === value
               return (
                 <motion.button
-                  key={g}
-                  className="aspect-square rounded-[14px] flex flex-col items-center justify-center text-base font-bold"
+                  key={value}
+                  className="rounded-[18px] px-4 py-4 text-left flex flex-col gap-0.5 relative"
                   style={{
-                    background: selected
-                      ? 'linear-gradient(135deg, #4f6ef7, #6366f1)'
-                      : 'rgba(18,26,47,0.9)',
-                    border: selected
-                      ? '2px solid #6366f1'
-                      : isAspirational
-                        ? '0.75px solid rgba(99,102,241,0.3)'
-                        : '0.75px solid #1d293d',
-                    color: selected ? '#fff' : isAspirational ? '#818cf8' : '#f8fafc',
-                    boxShadow: selected ? '0 4px 20px rgba(99,102,241,0.4)' : 'none',
-                    transform: selected ? 'scale(1.06)' : 'scale(1)',
-                    transition: 'all 0.15s',
+                    background: sel ? `${color}14` : 'rgba(15,22,41,0.95)',
+                    border: sel ? `1.5px solid ${color}70` : '0.75px solid rgba(255,255,255,0.08)',
+                    boxShadow: sel ? `0 0 18px ${color}20` : 'none',
+                    transition: 'all 0.18s',
                   }}
-                  onClick={() => setGrade(g)}
-                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setAgeGroup(value)}
+                  whileTap={{ scale: 0.97 }}
                 >
-                  {g}
-                  {isAspirational && !selected && (
-                    <span style={{ fontSize: 8, color: '#6366f1', marginTop: 1 }}>★</span>
+                  <span className="text-sm font-extrabold" style={{ color: sel ? color : '#f8fafc', letterSpacing: '-0.01em' }}>
+                    {label}
+                  </span>
+                  <span className="text-xs font-medium" style={{ color: sel ? `${color}cc` : '#7b9ab8' }}>
+                    {sub}
+                  </span>
+                  {sel && (
+                    <div className="absolute top-3 right-3 w-5 h-5 rounded-full flex items-center justify-center"
+                      style={{ background: color }}>
+                      <Check size={10} color="#fff" strokeWidth={3} />
+                    </div>
                   )}
                 </motion.button>
               )
             })}
           </div>
-        </motion.div>
-
-        {/* Exam date (optional) */}
-        <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <div className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#a8b8cc' }}>
-              Exam date
-            </div>
-            <span className="text-[10px] px-2 py-0.5 rounded-full font-medium"
-              style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.3)' }}>
-              optional
-            </span>
-          </div>
-          {/* Premium card — same pattern as SettingsScreen */}
-          {(() => {
-            const today = new Date(); today.setHours(0,0,0,0)
-            const examD = examDate ? new Date(examDate) : null
-            const daysLeft = examD ? Math.ceil((examD - today) / 86400000) : null
-            const passed = daysLeft !== null && daysLeft <= 0
-            const urgency = daysLeft === null ? null
-              : passed ? { color: '#94a3b8', bg: 'rgba(148,163,184,0.08)', border: 'rgba(148,163,184,0.18)', label: 'Passed' }
-              : daysLeft <= 14 ? { color: '#ef4444', bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.22)', label: 'Very soon' }
-              : daysLeft <= 42 ? { color: '#f59e0b', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.22)', label: 'Coming up' }
-              : { color: '#22c55e', bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.2)', label: 'On track' }
-            const fmtDate = examD ? examD.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
-            return (
-              <div
-                className="rounded-[20px] relative overflow-hidden"
-                style={{
-                  background: urgency ? urgency.bg : 'rgba(15,22,41,0.95)',
-                  border: `0.75px solid ${urgency ? urgency.border : 'rgba(255,255,255,0.08)'}`,
-                }}
-              >
-                {examDate ? (
-                  /* Date set: rich display */
-                  <div className="px-5 py-4 flex items-center gap-4">
-                    {/* Countdown bubble */}
-                    <div
-                      className="flex flex-col items-center justify-center rounded-[14px] shrink-0"
-                      style={{ width: 64, height: 64, background: `${urgency.color}18`, border: `0.75px solid ${urgency.color}40` }}
-                    >
-                      <span className="font-black leading-none" style={{ fontSize: 22, color: urgency.color }}>
-                        {passed ? '✓' : daysLeft}
-                      </span>
-                      <span className="font-semibold" style={{ fontSize: 10, color: `${urgency.color}cc`, marginTop: 2 }}>
-                        {passed ? 'done' : daysLeft === 1 ? 'day' : 'days'}
-                      </span>
-                    </div>
-                    {/* Date text */}
-                    <div className="flex-1 min-w-0">
-                      <div className="font-bold" style={{ fontSize: 17, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                        {fmtDate}
-                      </div>
-                      <div
-                        className="mt-1 inline-flex items-center gap-1 px-2 py-0.5 rounded-full"
-                        style={{ background: `${urgency.color}18`, fontSize: 11, fontWeight: 600, color: urgency.color }}
-                      >
-                        {urgency.label}
-                      </div>
-                    </div>
-                    {/* Edit icon */}
-                    <div
-                      className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0"
-                      style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-                    >
-                      <Pencil size={13} color="#a8b8cc" />
-                    </div>
-                  </div>
-                ) : (
-                  /* No date: prompt */
-                  <div className="px-5 py-5 flex items-center gap-3">
-                    <div
-                      className="w-12 h-12 rounded-[12px] flex items-center justify-center shrink-0"
-                      style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.25)' }}
-                    >
-                      <CalendarDays size={20} color="#6366f1" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Set your exam date</div>
-                      <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>We'll build your study plan around it</div>
-                    </div>
-                    <div
-                      className="px-3 py-1.5 rounded-full text-xs font-bold"
-                      style={{ background: 'rgba(99,102,241,0.15)', border: '0.75px solid rgba(99,102,241,0.35)', color: '#818cf8' }}
-                    >
-                      Set date
-                    </div>
-                  </div>
-                )}
-                {/* Invisible native date input stretched over entire card */}
-                <input
-                  type="date"
-                  value={examDate}
-                  min={new Date().toISOString().split('T')[0]}
-                  tabIndex={-1}
-                  onFocus={e => { e.target.style.fontSize = '16px' }}
-                  onChange={e => setExamDate(e.target.value)}
-                  style={{
-                    position: 'absolute', inset: 0, width: '100%', height: '100%',
-                    opacity: 0, cursor: 'pointer', fontSize: '16px',
-                  }}
-                  aria-label="Set exam date"
-                />
-              </div>
-            )
-          })()}
+          {/* GDPR notice for under-18 */}
+          {(ageGroup === '13–15' || ageGroup === '15–16' || ageGroup === '16–17') && (
+            <motion.div
+              className="mt-3 rounded-[14px] px-4 py-3 flex gap-2"
+              style={{ background: 'rgba(245,158,11,0.07)', border: '0.75px solid rgba(245,158,11,0.2)' }}
+              initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}
+            >
+              <span style={{ fontSize: 14, marginTop: 1 }}>🔒</span>
+              <p className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>
+                We collect minimal data and never share it. Under-16s may need a parent's permission.{' '}
+                <a href="#/privacy" className="underline" style={{ color: '#f59e0b' }}>Privacy policy</a>
+              </p>
+            </motion.div>
+          )}
         </motion.div>
       </div>
 
-      {/* Next button */}
+      {/* ── CTA ── */}
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
-        initial={{ opacity: 0, y: 20 }}
+        className="px-6 shrink-0"
+        style={{ borderTop: '0.75px solid rgba(255,255,255,0.06)', background: '#080f1e',
+          paddingTop: 14, paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.3 }}
       >
         <motion.button
-          className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
+          className="w-full py-4 rounded-[20px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: 'linear-gradient(135deg, #4f6ef7, #6366f1)',
-            color: '#fff',
-            boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
+            background: ageGroup
+              ? 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)'
+              : 'rgba(255,255,255,0.07)',
+            color: ageGroup ? '#fff' : '#4a5a6a',
+            boxShadow: ageGroup ? '0 6px 28px rgba(0,212,255,0.2), 0 2px 8px rgba(99,102,241,0.25)' : 'none',
+            letterSpacing: '-0.01em',
+            transition: 'all 0.2s',
           }}
-          onClick={() => onNext({ grade, examDate: examDate || null })}
-          whileTap={{ scale: 0.97 }}
+          onClick={() => { if (ageGroup) onNext({ ageGroup, examDate: examDate || null }) }}
+          whileTap={ageGroup ? { scale: 0.97 } : {}}
         >
-          Next
-          <ArrowRight size={18} />
+          Let's go
+          <ArrowRight size={18} strokeWidth={2.5} />
         </motion.button>
+        {!ageGroup && (
+          <p className="text-center text-xs mt-2" style={{ color: '#4a5a6a' }}>Select your year group to continue</p>
+        )}
       </motion.div>
     </motion.div>
   )
@@ -1125,15 +1115,15 @@ export default function OnboardingScreen() {
     setStep(1)
   }
 
-  const handleGoalNext = (data) => {
-    finishOnboarding(data)
+  const handleSetupNext = ({ ageGroup, examDate }) => {
+    finishOnboarding({ ageGroup, examDate })
   }
 
-  const finishOnboarding = ({ grade, examDate }) => {
+  const finishOnboarding = ({ ageGroup, examDate }) => {
     localStorage.setItem('neurophysics_onboarded', '1')
     localStorage.setItem('neurophysics_profile', JSON.stringify({
-      name: '', avatar: '🧠', ageGroup: '',
-      grade, examDate: examDate || null, boardId,
+      name: '', avatar: '🧠', ageGroup,
+      grade: '7', examDate: examDate || null, boardId,
     }))
     navigate('/', { replace: true })
   }
@@ -1142,7 +1132,7 @@ export default function OnboardingScreen() {
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
         {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
-        {step === 1 && <StepGoal key="goal" boardId={boardId} onNext={handleGoalNext} />}
+        {step === 1 && <StepSetup key="setup" onNext={handleSetupNext} />}
       </AnimatePresence>
     </div>
   )

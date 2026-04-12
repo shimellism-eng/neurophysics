@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import {
   ChevronRight, Zap, Flame, TrendingUp,
   Calendar, CheckCircle, Clock, Target,
-  RefreshCw, Layers, BrainCircuit, ArrowRight,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -321,26 +320,6 @@ export default function HomeScreen() {
     return () => window.removeEventListener('storage', onStorage)
   }, [])
 
-  // ── First-run welcome overlay ──────────────────────────────────────────────
-  const [showWelcome, setShowWelcome] = useState(() => !localStorage.getItem('np_welcome_seen'))
-  const [showNudge, setShowNudge] = useState(false)
-  const reduceMotion = localStorage.getItem('np_reduce_motion') === 'true'
-
-  const dismissWelcome = () => {
-    localStorage.setItem('np_welcome_seen', '1')
-    setShowWelcome(false)
-    // Show settings nudge only if no accessibility prefs have been configured
-    const prefs = (() => { try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} } })()
-    const hasPrefs = Object.keys(prefs).some(k => prefs[k] && prefs[k] !== false && prefs[k] !== 'Normal' && prefs[k] !== 'Dark')
-    if (!hasPrefs && !localStorage.getItem('np_setup_nudge_seen')) {
-      setShowNudge(true)
-    }
-  }
-
-  const dismissNudge = () => {
-    localStorage.setItem('np_setup_nudge_seen', '1')
-    setShowNudge(false)
-  }
   const selectedBoard  = getSelectedBoard()
   const targetGrade    = profile.grade || null
   const targetLabel    = targetGrade
@@ -375,163 +354,6 @@ export default function HomeScreen() {
       className="flex flex-col h-full overflow-y-auto"
       style={{ background: '#080f1e', paddingTop: 'env(safe-area-inset-top, 16px)', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
     >
-
-      {/* ── First-run welcome overlay ─────────────────────────────────────────── */}
-      <AnimatePresence>
-        {showWelcome && (
-          <motion.div
-            className="fixed inset-0 z-50 flex flex-col justify-end"
-            style={{ background: 'rgba(4,8,20,0.92)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: reduceMotion ? 0.1 : 0.25 }}
-          >
-            <motion.div
-              className="mx-2 rounded-[32px] overflow-hidden"
-              style={{ background: 'rgba(11,17,33,1)', border: '0.75px solid rgba(255,255,255,0.12)', boxShadow: '0 -8px 60px rgba(0,0,0,0.6)', marginBottom: 'calc(16px + env(safe-area-inset-bottom, 0px))' }}
-              initial={{ y: reduceMotion ? 0 : 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: reduceMotion ? 0 : 80, opacity: 0 }}
-              transition={{ duration: reduceMotion ? 0.1 : 0.45, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {/* Gradient hero band */}
-              <div
-                className="px-6 pt-5 pb-4 text-center relative overflow-hidden"
-                style={{ background: 'linear-gradient(160deg, rgba(0,212,255,0.12) 0%, rgba(99,102,241,0.18) 50%, rgba(155,89,182,0.1) 100%)' }}
-              >
-                {/* Glow orbs */}
-                <div style={{ position: 'absolute', top: -30, left: '50%', transform: 'translateX(-50%)', width: 180, height: 100, background: 'radial-gradient(ellipse, rgba(0,212,255,0.18) 0%, transparent 70%)', pointerEvents: 'none' }} />
-                {/* App icon */}
-                <div
-                  className="mx-auto mb-3 flex items-center justify-center rounded-[22px]"
-                  style={{ width: 56, height: 56, background: 'linear-gradient(135deg, #0d1f3c 0%, #1a2a4a 100%)', border: '0.75px solid rgba(0,212,255,0.3)', boxShadow: '0 0 24px rgba(0,212,255,0.2)' }}
-                >
-                  <svg width="30" height="30" viewBox="0 0 38 38" fill="none">
-                    <circle cx="19" cy="19" r="4" fill="#00d4ff" />
-                    <ellipse cx="19" cy="19" rx="16" ry="6.5" stroke="#00d4ff" strokeWidth="1.5" fill="none" opacity="0.7" />
-                    <ellipse cx="19" cy="19" rx="16" ry="6.5" stroke="#9b59b6" strokeWidth="1.5" fill="none" opacity="0.7" transform="rotate(60 19 19)" />
-                    <ellipse cx="19" cy="19" rx="16" ry="6.5" stroke="#6366f1" strokeWidth="1.5" fill="none" opacity="0.7" transform="rotate(120 19 19)" />
-                  </svg>
-                </div>
-                <h2 className="font-extrabold mb-1" style={{ fontSize: 20, color: '#f8fafc', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                  Welcome to<br />
-                  <span style={{ background: 'linear-gradient(90deg, #00d4ff, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>NeuroPhysics</span>
-                </h2>
-                <p className="text-sm font-medium" style={{ color: '#7b9ab8' }}>
-                  Built for how your brain works — not against it.
-                </p>
-              </div>
-
-              {/* 3 value props */}
-              <div className="px-4 py-3 space-y-2">
-                {[
-                  {
-                    Icon: RefreshCw,
-                    color: '#00d4ff',
-                    bg: 'rgba(0,212,255,0.1)',
-                    border: 'rgba(0,212,255,0.2)',
-                    title: 'Spaced repetition',
-                    desc: 'Topics resurface at exactly the right moment to stick in long-term memory.',
-                  },
-                  {
-                    Icon: Layers,
-                    color: '#818cf8',
-                    bg: 'rgba(99,102,241,0.1)',
-                    border: 'rgba(99,102,241,0.2)',
-                    title: 'Bite-sized lessons',
-                    desc: 'One concept per screen — no cognitive overload, no walls of text.',
-                  },
-                  {
-                    Icon: BrainCircuit,
-                    color: '#e91e8c',
-                    bg: 'rgba(233,30,140,0.1)',
-                    border: 'rgba(233,30,140,0.2)',
-                    title: 'Mamo AI tutor',
-                    desc: 'Ask anything, any time. Instant exam-focused explanations.',
-                  },
-                ].map(({ Icon, color, bg, border, title, desc }, i) => (
-                  <motion.div
-                    key={title}
-                    className="flex items-center gap-4 px-4 py-2.5 rounded-[18px]"
-                    style={{ background: bg, border: `0.75px solid ${border}` }}
-                    initial={{ opacity: 0, x: -12 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: reduceMotion ? 0 : 0.15 + i * 0.07, duration: 0.3 }}
-                  >
-                    <div
-                      className="rounded-[12px] flex items-center justify-center shrink-0"
-                      style={{ width: 38, height: 38, background: `${color}18`, border: `0.75px solid ${color}40` }}
-                    >
-                      <Icon size={16} color={color} strokeWidth={1.8} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{title}</div>
-                      <div className="text-xs leading-relaxed mt-0.5" style={{ color: '#7b9ab8' }}>{desc}</div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <div className="px-4 pt-1 pb-4">
-                <motion.button
-                  className="w-full py-4 rounded-[20px] font-bold flex items-center justify-center gap-2"
-                  style={{
-                    background: 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)',
-                    color: '#fff',
-                    fontSize: 16,
-                    letterSpacing: '-0.01em',
-                    boxShadow: '0 6px 32px rgba(0,212,255,0.25), 0 2px 8px rgba(99,102,241,0.3)',
-                  }}
-                  onClick={dismissWelcome}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  Start learning
-                  <ArrowRight size={18} strokeWidth={2.5} />
-                </motion.button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* ── Settings nudge banner ─────────────────────────────────────────────── */}
-      <AnimatePresence>
-        {showNudge && (
-          <motion.div
-            className="mx-4 mt-3 px-4 py-3 rounded-[16px] flex items-center gap-3"
-            style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)' }}
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: reduceMotion ? 0.1 : 0.3 }}
-          >
-            <span className="text-lg shrink-0">⚡</span>
-            <div className="flex-1 min-w-0">
-              <div className="text-xs font-semibold" style={{ color: '#f8fafc' }}>Personalise your experience</div>
-              <div className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>Set dyslexia font, reduce motion and more in Settings.</div>
-            </div>
-            <div className="flex items-center gap-2 shrink-0">
-              <button
-                className="px-3 py-1.5 rounded-full text-xs font-bold"
-                style={{ background: 'rgba(99,102,241,0.2)', color: '#818cf8' }}
-                onClick={() => { dismissNudge(); navigate('/settings') }}
-              >
-                Set up
-              </button>
-              <button
-                className="w-7 h-7 rounded-full flex items-center justify-center"
-                style={{ background: 'rgba(255,255,255,0.07)' }}
-                onClick={dismissNudge}
-                aria-label="Dismiss"
-              >
-                <span style={{ fontSize: 12, color: '#a8b8cc' }}>✕</span>
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div

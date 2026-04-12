@@ -164,7 +164,7 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
 
 // ─── Module card ──────────────────────────────────────────────────────────────
 
-function ModuleCard({ module, moduleIndex, progress, expanded, onToggle }) {
+function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selectedBoard }) {
   const navigate = useNavigate()
 
   const masteredCount = module.topics.filter(t => progress[t]?.mastered).length
@@ -653,6 +653,7 @@ export default function LearnScreen() {
                 progress={progress}
                 expanded={openModules.includes(module.name)}
                 onToggle={() => toggleModule(module.name)}
+                selectedBoard={selectedBoard}
               />
             </motion.div>
           ))}

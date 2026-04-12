@@ -346,7 +346,7 @@ export default function MamoChat() {
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
           style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
           onClick={clearThread}
-          title="Clear conversation"
+          aria-label="Clear conversation"
         >
           <Trash2 size={15} color="#a8b8cc" />
         </button>

@@ -2591,7 +2591,7 @@ export const FORCES_TOPICS = {
     ],
   },
   stopping_distance: {
-    id: 'stopping_distance', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','wjec','ccea'],
+    id: 'stopping_distance', module: 'Forces', moduleColor: FC, course: 'combined', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Stopping Distance', subtitle: 'Thinking Distance + Braking Distance',
     description: 'Total stopping distance = thinking distance + braking distance. Thinking distance = reaction time × speed (affected by: tiredness, alcohol, drugs, distractions). Braking distance depends on speed squared, road/tyre condition, brake condition. When brakes are applied, KE is transferred to thermal energy in brakes.',
     lessonVisual: StoppingDistanceLesson, ideaVisual: StoppingDistanceIdea, realityVisual: StoppingDistanceReality,

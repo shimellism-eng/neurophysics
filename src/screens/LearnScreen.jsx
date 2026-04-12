@@ -15,7 +15,7 @@ const BADGES = [
   { id: 'first_step', emoji: '🔬', label: 'First Step',  color: '#00bc7d', hint: 'Complete 1 topic',        check: (m)         => m >= 1 },
   { id: 'momentum',   emoji: '⚡', label: 'Momentum',    color: '#fdc700', hint: 'Master 5 topics',         check: (m)         => m >= 5 },
   { id: 'force_field',emoji: '🧲', label: 'Force Field', color: '#00a8e8', hint: 'Master 10 topics',        check: (m)         => m >= 10 },
-  { id: 'grade9',     emoji: '🏆', label: 'Grade 9',     color: '#f97316', hint: 'Master all 55 topics',   check: (m, total)  => m >= total },
+  { id: 'grade9',     emoji: '🏆', label: 'Top Grade',     color: '#f97316', hint: 'Master all 55 topics',   check: (m, total)  => m >= total },
 ]
 
 // ─── Circular ring per module ─────────────────────────────────────────────────
@@ -238,6 +238,8 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle }) {
               {module.topics.map((topicId, i) => {
                 const topic = TOPICS[topicId]
                 if (!topic) return null
+                // Hide topics restricted to other boards
+                if (topic.boards && topic.boards.length > 0 && !topic.boards.includes(selectedBoard.id)) return null
                 return (
                   <TopicTile
                     key={topicId}
@@ -358,7 +360,10 @@ export default function LearnScreen() {
         m.topics
           .filter(id => {
             const t = TOPICS[id]
-            return t && t.title.toLowerCase().includes(searchQuery.toLowerCase())
+            if (!t) return false
+            // Filter by board at topic level too
+            if (t.boards && t.boards.length > 0 && !t.boards.includes(selectedBoard.id)) return false
+            return t.title.toLowerCase().includes(searchQuery.toLowerCase())
           })
           .map(id => ({ id, topic: TOPICS[id], module: m }))
       )
@@ -412,6 +417,7 @@ export default function LearnScreen() {
           />
           {searchQuery.length > 0 && (
             <button onClick={() => setSearchQuery('')}
+              aria-label="Clear search"
               style={{ position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)' }}>
               <X size={14} color="rgba(255,255,255,0.3)" />
             </button>

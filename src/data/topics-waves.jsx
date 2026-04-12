@@ -4443,7 +4443,7 @@ export const WAVES_TOPICS = {
     title: 'Converging & Diverging Lenses', subtitle: 'Ray Diagrams, Power, Vision Correction',
     description: 'A converging (convex) lens bends parallel rays to a focal point. A diverging (concave) lens spreads rays outward. Lens power P = 1/f in dioptres. Converging lenses correct long sight; diverging lenses correct short sight. Magnification = image height / object height.',
     lessonVisual: LensesLesson, ideaVisual: LensesIdea, realityVisual: LensesReality,
-    boards: ['ccea', 'ocr-b', 'aqa', 'ocr-a'],
+    boards: ['ccea', 'ocr-b', 'wjec'],
     question: 'A converging lens has a focal length of 0.2 m. What is its power?',
     questionSubtitle: 'Use P = 1/f',
     options: ['0.2 D', '2 D', '5 D', '20 D'],

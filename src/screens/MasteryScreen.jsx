@@ -61,9 +61,9 @@ const BADGES = [
   {
     id: 'grade9',
     emoji: '🏆',
-    label: 'Grade 9',
+    label: 'Top Grade',
     color: '#f97316',
-    hint: 'Master all 55 topics',
+    hint: 'Master all topics',
     check: (mastered, progress, modules, allTopics) => mastered.length >= allTopics.length,
   },
 ]

@@ -115,9 +115,12 @@ function applyBgTheme(theme) {
 // Notification helpers moved to src/utils/notifications.js
 
 // ─── Toggle component ─────────────────────────────────────────────────────────
-function Toggle({ on, onToggle, disabled = false }) {
+function Toggle({ on, onToggle, disabled = false, label }) {
   return (
     <motion.button
+      role="switch"
+      aria-checked={!!on}
+      aria-label={label}
       onClick={disabled ? undefined : (e) => { e.stopPropagation(); onToggle() }}
       className="w-12 h-6 rounded-full relative shrink-0 outline-none"
       style={{
@@ -484,7 +487,7 @@ export default function SettingsScreen() {
         {
           icon: BookOpen,
           label: 'Spec Checklist',
-          hint: "See all 58 topics — track what you've mastered",
+          hint: "Track all your specification topics",
           chevron: true,
           onPress: () => navigate('/spec-checklist'),
         },
@@ -807,7 +810,7 @@ export default function SettingsScreen() {
                   </div>
                   {item.chevron
                     ? <ChevronRight size={14} color={item.label === 'Reminder time' && showTimePicker ? '#6366f1' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
-                    : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} />
+                    : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} label={item.label} />
                     : null
                   }
                 </button>

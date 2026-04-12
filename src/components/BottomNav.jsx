@@ -54,6 +54,8 @@ export default function BottomNav() {
               key={item.path}
               className="flex flex-col items-center gap-1 px-5 py-2 rounded-[16px] relative"
               onClick={() => navigate(item.path)}
+              aria-label={item.label}
+              aria-current={active ? 'page' : undefined}
             >
               {active && (
                 <motion.div

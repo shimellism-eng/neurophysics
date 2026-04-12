@@ -706,10 +706,17 @@ export default function SettingsScreen() {
                 </div>
               )}
               {/* Invisible native date input stretched over entire card — tapping opens OS picker */}
+              {/* tabIndex={-1} + onFocus blur prevents iOS from scrolling to keep input in view */}
               <input
                 type="date"
                 value={examDateStr}
                 min={new Date().toISOString().split('T')[0]}
+                tabIndex={-1}
+                onFocus={e => {
+                  // Immediately re-blur to stop iOS scrolling to the input,
+                  // but let the click/tap still open the native date picker
+                  e.target.style.fontSize = '16px' // prevent iOS zoom
+                }}
                 onChange={e => {
                   const updated = { ...profile, examDate: e.target.value }
                   setProfile(updated)
@@ -719,6 +726,7 @@ export default function SettingsScreen() {
                 style={{
                   position: 'absolute', inset: 0, width: '100%', height: '100%',
                   opacity: 0, cursor: 'pointer',
+                  fontSize: '16px', // prevent iOS auto-zoom on focus
                 }}
                 aria-label="Set exam date"
               />

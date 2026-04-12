@@ -10,6 +10,11 @@
     touch-action: manipulation;
   }
 
+  /* ── Prevent iOS auto-zoom on input focus (triggers unwanted scroll) ──────── */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
   /* ── Keyboard focus ring (F19) ───────────────────────────────────────────── */
   :focus-visible {
     outline: 2px solid #6366f1;

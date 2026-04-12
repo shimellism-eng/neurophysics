@@ -203,6 +203,15 @@ export default function MasteryScreen() {
     return lines.join('\n')
   }
 
+  // First-use intro card — shows once, dismissed to localStorage
+  const [showIntro, setShowIntro] = useState(() =>
+    localStorage.getItem('np_mastery_intro_seen') !== 'true'
+  )
+  const dismissIntro = () => {
+    localStorage.setItem('np_mastery_intro_seen', 'true')
+    setShowIntro(false)
+  }
+
   // Celebration banner
   const [bannerVisible, setBannerVisible] = useState(false)
   const [bannerCount, setBannerCount] = useState(0)
@@ -365,6 +374,35 @@ export default function MasteryScreen() {
           </div>
         )}
       </div>
+
+      {/* ── First-use intro card ── */}
+      {showIntro && (
+        <div className="px-5 mb-2">
+          <div style={{
+            background: 'rgba(0,212,255,0.08)',
+            border: '0.75px solid rgba(0,212,255,0.2)',
+            borderRadius: 16, padding: '14px 16px',
+            marginBottom: 16, display: 'flex', gap: 12,
+          }}>
+            <span style={{ fontSize: 24 }}>⭐</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 700, fontSize: 14, color: '#f8fafc', marginBottom: 6 }}>
+                How mastery works
+              </div>
+              <div style={{ fontSize: 12, color: '#94a3b8', lineHeight: 1.6 }}>
+                ⭐⭐⭐ = Mastered · ⭐⭐ = Getting there · ⭐ = Just started<br/>
+                Complete lessons and practice questions to earn stars and XP.<br/>
+                Topics you master come back for spaced repetition review.
+              </div>
+              <button onClick={dismissIntro} style={{
+                marginTop: 10, background: 'none', border: 'none',
+                color: '#00d4ff', fontSize: 12, fontWeight: 600,
+                cursor: 'pointer', padding: 0,
+              }}>Got it →</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Per-module breakdown ── */}
       <div className="px-5 pb-4 space-y-3">

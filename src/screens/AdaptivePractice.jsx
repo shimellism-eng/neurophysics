@@ -398,6 +398,15 @@ function TierChange({ from, to }) {
 // ── Session persistence key ───────────────────────────────────────────────────
 const sessionKey = (topicId) => `neurophysics_practice_session_${topicId}`
 
+const getProgressLabel = (current, total) => {
+  const pct = current / total;
+  if (pct === 0) return "Let's go! 🚀";
+  if (pct < 0.35) return 'Good start! ⚡';
+  if (pct < 0.6) return 'Halfway there 💪';
+  if (pct < 0.85) return 'Nearly done! 🔥';
+  return 'Last few! 🏁';
+}
+
 // ── Main Screen ───────────────────────────────────────────────────────────────
 export default function AdaptivePractice() {
   const { topicId } = useParams()
@@ -596,6 +605,9 @@ export default function AdaptivePractice() {
           <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
             {sessionCount} answered · {sessionCorrect} correct
           </div>
+          <span style={{ fontSize: 11, color: '#64748b', fontStyle: 'italic' }}>
+            {getProgressLabel(sessionCount, reviewMode ? (maxQuestions || 5) : 20)}
+          </span>
         </div>
       </div>
 

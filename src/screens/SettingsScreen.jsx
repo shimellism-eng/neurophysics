@@ -276,6 +276,8 @@ export default function SettingsScreen() {
   const toggleHideMamo = () => {
     const next = !prefs.hideMamo
     setPref('hideMamo', next)
+    // Notify FloatingMamo in App.jsx to sync its dismissed state reactively
+    window.dispatchEvent(new Event('np_prefs_changed'))
     showToast(next ? 'Mamo button hidden' : 'Mamo button restored', next ? '#10b981' : '#a8b8cc')
   }
 

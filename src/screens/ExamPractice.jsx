@@ -351,6 +351,15 @@ const TYPE_LABELS = {
   'diagram-question': '📊 Diagram question',
 }
 
+const getProgressLabel = (current, total) => {
+  const pct = current / total;
+  if (pct === 0) return "Let's go! 🚀";
+  if (pct < 0.35) return 'Good start! ⚡';
+  if (pct < 0.6) return 'Halfway there 💪';
+  if (pct < 0.85) return 'Nearly done! 🔥';
+  return 'Last few! 🏁';
+}
+
 export default function ExamPractice() {
   const { id } = useParams()
   const navigate = useNavigate()
@@ -658,8 +667,30 @@ export default function ExamPractice() {
               transition={{ duration: 0.4, ease: 'easeOut' }}
             />
           </div>
-          <span className="text-xs font-semibold shrink-0" style={{ color: '#a8b8cc' }}>
-            {qIndex + 1} / {total}
+          <div className="flex flex-col items-end shrink-0">
+            <span className="text-xs font-semibold" style={{ color: '#a8b8cc' }}>
+              {qIndex + 1} / {total}
+            </span>
+            <span style={{ fontSize: 11, color: '#64748b', fontStyle: 'italic' }}>
+              {getProgressLabel(qIndex, total)}
+            </span>
+          </div>
+          {/* Topic breadcrumb pill — persistent context for ADHD/working-memory support */}
+          <span style={{
+            fontSize: 11,
+            color: '#64748b',
+            background: 'rgba(255,255,255,0.05)',
+            border: '0.75px solid rgba(255,255,255,0.08)',
+            borderRadius: 20,
+            padding: '3px 10px',
+            fontWeight: 500,
+            flexShrink: 0,
+            maxWidth: 120,
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}>
+            {topic.title}
           </span>
           {/* Feature 1: per-question timer badge */}
           {(() => {

@@ -289,7 +289,8 @@ export default function DiagnosticQuestion() {
   const [submitted, setSubmitted] = useState(false)
   const [score, setScore] = useState(0)
   const [interactiveCompleted, setInteractiveCompleted] = useState(false)
-  const [showSEN, setShowSEN] = useState(false)
+  const questionsAnsweredSession = parseInt(sessionStorage.getItem('np_session_q_count') || '0')
+  const [showSEN, setShowSEN] = useState(questionsAnsweredSession < 3)
   const [senTab, setSenTab] = useState('keywords')
   const [showHint, setShowHint] = useState(false)
   const [showDecoder, setShowDecoder] = useState(false)
@@ -345,15 +346,21 @@ export default function DiagnosticQuestion() {
   const handleNext = () => {
     const correctThisQ = !isInteractive ? selected === q.correctAnswer : false
     // Score already updated via handleSubmit or handleInteractiveComplete
+    // Increment session question counter (used by support panel auto-expand logic)
+    const nextCount = questionsAnsweredSession + qIndex + 1
+    sessionStorage.setItem('np_session_q_count', String(nextCount))
     if (isLast) {
       const finalScore = score // already includes this Q if correct
       navigate(`/feedback/${id}?result=${finalScore >= Math.ceil(total * 0.6) ? 'correct' : 'wrong'}&score=${finalScore}&total=${total}`, { replace: true })
     } else {
+      const newCount = nextCount
       setQIndex(i => i + 1)
       setSelected(null)
       setSubmitted(false)
       setInteractiveCompleted(false)
       setShowHint(false)
+      // Collapse support panel after first 3 questions answered in this session
+      if (newCount >= 3) setShowSEN(false)
     }
   }
 
@@ -419,7 +426,7 @@ export default function DiagnosticQuestion() {
           whileTap={{ scale: 0.95 }}
         >
           <HelpCircle size={14} color={showSEN ? '#155dfc' : '#a8b8cc'} />
-          <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#a8b8cc' }}>Support</span>
+          <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#a8b8cc' }}>Need help? 💡</span>
           <motion.div animate={{ rotate: showSEN ? 180 : 0 }}>
             <ChevronDown size={12} color={showSEN ? '#155dfc' : '#a8b8cc'} />
           </motion.div>
@@ -490,6 +497,73 @@ export default function DiagnosticQuestion() {
           </div>
         )}
 
+        {/* Sticky question header — ADHD/working-memory support: question stays visible while options scroll */}
+        <div style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 10,
+          background: '#0b1121',
+          paddingTop: 12,
+          paddingBottom: 12,
+          borderBottom: '0.75px solid rgba(255,255,255,0.07)',
+          marginBottom: 16,
+          marginLeft: -20,
+          marginRight: -20,
+          paddingLeft: 20,
+          paddingRight: 20,
+        }}>
+          {/* Question type badge for interactive */}
+          {isInteractive && TYPE_LABELS[qType] && (
+            <div className="mb-2">
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: `${topic.moduleColor}15`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}30` }}>
+                {TYPE_LABELS[qType]}
+              </span>
+            </div>
+          )}
+
+          <div className="flex items-start gap-2">
+            <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
+              {q.question}
+            </h2>
+            {/* Command word decoder button */}
+            <button
+              className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
+              style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
+              onClick={() => setShowDecoder(v => !v)}
+              aria-label="What is this question asking me?"
+            >
+              ?
+            </button>
+            {/* F6: TTS speak button */}
+            {ttsEnabled && (
+              <button
+                className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 mt-0.5"
+                style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                onClick={speakQuestion}
+                aria-label="Read question aloud"
+              >
+                <Volume2 size={14} color="#818cf8" />
+              </button>
+            )}
+          </div>
+          {showDecoder && (
+            <div className="mt-2 px-3 py-2.5 rounded-[10px]" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
+              <p className="text-xs font-bold mb-1" style={{ color: '#818cf8' }}>
+                {detectedWord ? `"${detectedWord.charAt(0).toUpperCase() + detectedWord.slice(1)}" means:` : 'Reading the question:'}
+              </p>
+              <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                {detectedWord ? COMMAND_WORDS[detectedWord].action : 'Identify the command word at the start of the question to know what type of answer is expected.'}
+              </p>
+              {detectedWord && (
+                <p className="text-xs mt-1 italic" style={{ color: '#64748b' }}>e.g. {COMMAND_WORDS[detectedWord].example}</p>
+              )}
+            </div>
+          )}
+          {q.questionSubtitle && (
+            <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
+          )}
+        </div>
+
         {/* Question content — animated on qIndex change */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -499,60 +573,6 @@ export default function DiagnosticQuestion() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}
           >
-            {/* Question type badge for interactive */}
-            {isInteractive && TYPE_LABELS[qType] && (
-              <div className="mb-2">
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: `${topic.moduleColor}15`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}30` }}>
-                  {TYPE_LABELS[qType]}
-                </span>
-              </div>
-            )}
-
-            {/* Question text */}
-            <div className="mb-4">
-              <div className="flex items-start gap-2">
-                <h2 className="flex-1 text-base font-semibold leading-relaxed" style={{ color: '#f8fafc' }}>
-                  {q.question}
-                </h2>
-                {/* Command word decoder button */}
-                <button
-                  className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
-                  style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-                  onClick={() => setShowDecoder(v => !v)}
-                  aria-label="What is this question asking me?"
-                >
-                  ?
-                </button>
-                {/* F6: TTS speak button */}
-                {ttsEnabled && (
-                  <button
-                    className="w-9 h-9 rounded-[10px] flex items-center justify-center shrink-0 mt-0.5"
-                    style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)' }}
-                    onClick={speakQuestion}
-                    aria-label="Read question aloud"
-                  >
-                    <Volume2 size={14} color="#818cf8" />
-                  </button>
-                )}
-              </div>
-              {showDecoder && (
-                <div className="mt-2 px-3 py-2.5 rounded-[10px]" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
-                  <p className="text-xs font-bold mb-1" style={{ color: '#818cf8' }}>
-                    {detectedWord ? `"${detectedWord.charAt(0).toUpperCase() + detectedWord.slice(1)}" means:` : 'Reading the question:'}
-                  </p>
-                  <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
-                    {detectedWord ? COMMAND_WORDS[detectedWord].action : 'Identify the command word at the start of the question to know what type of answer is expected.'}
-                  </p>
-                  {detectedWord && (
-                    <p className="text-xs mt-1 italic" style={{ color: '#64748b' }}>e.g. {COMMAND_WORDS[detectedWord].example}</p>
-                  )}
-                </div>
-              )}
-              {q.questionSubtitle && (
-                <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>{q.questionSubtitle}</p>
-              )}
-            </div>
-
             {/* MCQ options */}
             {!isInteractive && (
               <>

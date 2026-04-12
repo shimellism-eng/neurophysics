@@ -1,10 +1,23 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useEffect, lazy, Suspense } from 'react'
+import { useState, useEffect, useCallback, lazy, Suspense } from 'react'
 import AtomIcon from './components/AtomIcon'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { MamoProvider, useMamoState } from './context/MamoContext'
 import BottomNav from './components/BottomNav'
+
+// ── Mamo FAB pref helpers ─────────────────────────────────────────────────────
+const PREFS_KEY = 'neurophysics_prefs'
+function _loadPrefs() {
+  try { return JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') } catch { return {} }
+}
+function _setMamoHidden(hidden) {
+  try {
+    const prefs = _loadPrefs()
+    prefs.hideMamo = hidden
+    localStorage.setItem(PREFS_KEY, JSON.stringify(prefs))
+  } catch { /* ignore */ }
+}
 
 // ── Restore accessibility prefs on cold start (before React mounts) ──────────
 ;(() => {
@@ -93,13 +106,28 @@ function FloatingMamo() {
   const hiddenByExam = ['/timed-paper', '/exam', '/practice', '/lesson', '/diagnostic', '/grade9'].some(
     p => location.pathname.startsWith(p)
   )
-  const hiddenByPref = (() => {
-    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').hideMamo } catch { return false }
-  })()
+  // Reactive dismissed state — reads hideMamo from neurophysics_prefs
+  const [dismissed, setDismissed] = useState(() => !!_loadPrefs().hideMamo)
+  const hiddenByPref = dismissed
   const hide = hiddenByRoute || hiddenByExam || hiddenByPref
   const reduceMotion = (() => {
-    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
+    try { return !!_loadPrefs().reduceMotion } catch { return false }
   })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+
+  // Listen for the Settings toggle re-enabling Mamo (storage event from same tab via custom event)
+  useEffect(() => {
+    const onStorage = () => setDismissed(!!_loadPrefs().hideMamo)
+    window.addEventListener('np_prefs_changed', onStorage)
+    return () => window.removeEventListener('np_prefs_changed', onStorage)
+  }, [])
+
+  const dismissMamo = useCallback((e) => {
+    e.stopPropagation()
+    _setMamoHidden(true)
+    setDismissed(true)
+    // Fire custom event so Settings screen can reflect change if open
+    window.dispatchEvent(new Event('np_prefs_changed'))
+  }, [])
 
   // Topic context from lesson/exam/practical routes
   const topicMatch = location.pathname.match(/^\/(?:lesson|exam|practical)\/(.+)/)
@@ -191,6 +219,35 @@ function FloatingMamo() {
               />
             )}
           </motion.button>
+
+          {/* Dismiss × — persistent hide, can re-enable in Settings */}
+          {!reaction && (
+            <button
+              onClick={dismissMamo}
+              aria-label="Hide Mamo button"
+              style={{
+                position: 'absolute',
+                top: -4,
+                right: -4,
+                width: 18,
+                height: 18,
+                borderRadius: 999,
+                background: 'rgba(8,15,30,0.9)',
+                border: '0.75px solid rgba(255,255,255,0.15)',
+                color: '#64748b',
+                fontSize: 10,
+                lineHeight: 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                padding: 0,
+                zIndex: 1,
+              }}
+            >
+              ×
+            </button>
+          )}
         </motion.div>
       )}
     </AnimatePresence>

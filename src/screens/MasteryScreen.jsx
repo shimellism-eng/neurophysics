@@ -227,7 +227,7 @@ export default function MasteryScreen() {
   }, [mastered.length])
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#080f1e' }}>
+    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
 
       {/* Celebration banner */}
       <AnimatePresence>

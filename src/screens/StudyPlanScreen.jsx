@@ -239,7 +239,7 @@ export default function StudyPlanScreen() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e', paddingBottom: 32 }}>
+      style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
 
       {/* Header */}
       <PageHeader
@@ -310,7 +310,7 @@ export default function StudyPlanScreen() {
                   {/* Pace control */}
                   <div className="mt-3 flex items-center gap-2">
                     <button
-                      className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
+                      className="w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
                       style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.5)', border: '0.75px solid rgba(255,255,255,0.1)' }}
                       onClick={() => setPace(activePace - 1)}
                       aria-label="Decrease pace">−</button>
@@ -318,7 +318,7 @@ export default function StudyPlanScreen() {
                       {paceOverride > 0 ? `Custom: ${activePace}/week` : `${activePace} topics/week`}
                     </span>
                     <button
-                      className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
+                      className="w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
                       style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.5)', border: '0.75px solid rgba(255,255,255,0.1)' }}
                       onClick={() => setPace(activePace + 1)}
                       aria-label="Increase pace">+</button>

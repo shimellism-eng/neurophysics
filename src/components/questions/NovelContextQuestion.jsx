@@ -18,7 +18,8 @@ const MAX_CHARS = 700
 const MIN_CHARS = 10
 
 export default function NovelContextQuestion({ data, moduleColor = '#6366f1', onComplete }) {
-  const { scenario, question, markScheme, marks = 6, senNote, questionSubtitle } = data
+  if (!data) return null
+  const { scenario, question, markScheme = [], marks = 6, senNote, questionSubtitle } = data
 
   const [answer, setAnswer]         = useState('')
   const [status, setStatus]         = useState('idle')   // idle | marking | marked | error

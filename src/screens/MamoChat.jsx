@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { Send, Sparkles, Trash2 } from 'lucide-react'
+import { Send, Sparkles, Trash2, RotateCcw } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
@@ -204,6 +204,20 @@ export default function MamoChat() {
 
     try {
       const session = supabase ? (await supabase.auth.getSession()).data?.session : null
+
+      // Guest users have no session — show sign-in prompt instead of a silent 401
+      if (!session?.access_token) {
+        setStreaming(false)
+        setMessages(prev => {
+          const withoutPlaceholder = prev.filter(m => !m.streaming)
+          return [...withoutPlaceholder, {
+            role: 'assistant',
+            content: '🔒 **Sign in to use Mamo.** Create a free account to unlock the AI tutor — it takes 30 seconds and your progress is saved across devices.',
+          }]
+        })
+        return
+      }
+
       const res = await fetch(`${apiBase}/api/gemini`, {
         method: 'POST',
         headers: {

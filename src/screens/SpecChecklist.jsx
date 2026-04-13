@@ -216,7 +216,7 @@ export default function SpecChecklist() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e', paddingBottom: 90 }}
+      style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
     >
       {/* Header */}
       <PageHeader

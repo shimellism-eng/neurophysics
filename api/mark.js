@@ -132,10 +132,14 @@ Mark this answer. Return JSON only.`
   const model = 'gemini-2.5-flash-lite'
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
 
+  const markController = new AbortController()
+  const markTimeout = setTimeout(() => markController.abort(), 25000)
+
   let upstream
   try {
     upstream = await fetch(url, {
       method: 'POST',
+      signal: markController.signal,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
@@ -147,9 +151,11 @@ Mark this answer. Return JSON only.`
       }),
     })
   } catch (err) {
+    clearTimeout(markTimeout)
     console.error('[mark] fetch error:', err)
     return res.status(503).json({ error: 'NETWORK_ERROR' })
   }
+  clearTimeout(markTimeout)
 
   if (!upstream.ok) {
     const errText = await upstream.text().catch(() => '')

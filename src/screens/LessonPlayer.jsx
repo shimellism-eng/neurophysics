@@ -154,7 +154,7 @@ function LegacyConceptStep({ topic }) {
 
       {/* Chunked description */}
       <div className="flex flex-col gap-2 px-1">
-        {topic.description.split('. ').filter(s => s.trim().length > 0).map((sentence, i) => (
+        {(topic.description || '').split('. ').filter(s => s.trim().length > 0).map((sentence, i) => (
           <div key={i} className="flex items-start gap-2">
             <span className="shrink-0 w-1.5 h-1.5 rounded-full" style={{ background: topic.moduleColor, marginTop: 6 }} />
             <p className="text-sm leading-relaxed flex-1" style={{ color: '#cad5e2' }}>

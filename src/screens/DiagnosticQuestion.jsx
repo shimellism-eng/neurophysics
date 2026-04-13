@@ -484,7 +484,7 @@ export default function DiagnosticQuestion() {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <VisualComponent />
+                  {VisualComponent && <VisualComponent />}
                 </motion.div>
               )}
             </AnimatePresence>

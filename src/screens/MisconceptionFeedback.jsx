@@ -53,12 +53,12 @@ export default function MisconceptionFeedback() {
   useEffect(() => {
     // Save quiz result for insights (once per visit)
     if (hasScore && !didMark.current) {
+      didMark.current = true
       saveQuizResult(id, score, total)
       // Trigger storage event so useInsights in other components reacts
       window.dispatchEvent(new Event('storage'))
     }
-    if (isCorrect && !didMark.current) {
-      didMark.current = true
+    if (isCorrect && didMark.current) {
       const xp = markMastered(id)
       if (xp > 0) {
         setXpEarned(xp)

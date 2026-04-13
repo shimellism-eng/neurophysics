@@ -53,6 +53,11 @@ export default defineConfig({
               networkTimeoutSeconds: 10,
             },
           },
+          {
+            // All API endpoints — always network, never cache
+            urlPattern: /\/api\//,
+            handler: 'NetworkOnly',
+          },
         ],
       },
     }),

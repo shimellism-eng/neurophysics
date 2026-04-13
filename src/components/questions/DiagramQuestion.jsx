@@ -107,7 +107,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
         </div>
 
         {/* SVG diagram */}
-        <div className={`p-3 transition-all duration-300 ${zoomed ? 'scale-100' : ''}`}>
+        <div className={`p-3 transition-all duration-300 ${zoomed ? 'scale-125 origin-top' : 'scale-100'}`}>
           {DiagramComponent ? (
             <DiagramComponent />
           ) : (

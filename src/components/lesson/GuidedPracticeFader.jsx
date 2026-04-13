@@ -19,7 +19,7 @@ import { useSound } from '../../hooks/useSound'
 import { speak } from '../../utils/tts'
 
 function ttsEnabled() {
-  return localStorage.getItem('np_auto_tts') === 'true'
+  try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false }
 }
 
 // Small TTS button placed top-right of a question card

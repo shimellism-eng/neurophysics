@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useRef } from 'react'
 import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff, Volume2 } from 'lucide-react'
 import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
@@ -288,6 +288,7 @@ export default function DiagnosticQuestion() {
   const [selected, setSelected] = useState(null)
   const [submitted, setSubmitted] = useState(false)
   const [score, setScore] = useState(0)
+  const scoreRef = useRef(0)
   const [interactiveCompleted, setInteractiveCompleted] = useState(false)
   const [showSEN, setShowSEN] = useState(false)
   const [senTab, setSenTab] = useState('keywords')
@@ -331,13 +332,17 @@ export default function DiagnosticQuestion() {
     if (selected === null) return
     setSubmitted(true)
     if (selected === q.correctAnswer) {
-      setScore(s => s + 1)
+      scoreRef.current += 1
+      setScore(scoreRef.current)
     }
   }
 
   // Interactive question callback
   const handleInteractiveComplete = useCallback((correct) => {
-    if (correct) setScore(s => s + 1)
+    if (correct) {
+      scoreRef.current += 1
+      setScore(scoreRef.current)
+    }
     setInteractiveCompleted(true)
   }, [])
 
@@ -346,7 +351,7 @@ export default function DiagnosticQuestion() {
     const correctThisQ = !isInteractive ? selected === q.correctAnswer : false
     // Score already updated via handleSubmit or handleInteractiveComplete
     if (isLast) {
-      const finalScore = score // already includes this Q if correct
+      const finalScore = isInteractive ? scoreRef.current : score // ref is sync; state can lag on last Q
       navigate(`/feedback/${id}?result=${finalScore >= Math.ceil(total * 0.6) ? 'correct' : 'wrong'}&score=${finalScore}&total=${total}`, { replace: true })
     } else {
       setQIndex(i => i + 1)

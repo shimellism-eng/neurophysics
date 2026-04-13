@@ -24,6 +24,11 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
 
   const handleSave = () => {
     if (!userSummary.trim()) return
+    // Save to sessionStorage so summary is visible if user revisits this step in the same session
+    try {
+      const key = `np_summary_${topicTitle?.replace(/\s+/g, '_') || 'draft'}`
+      sessionStorage.setItem(key, userSummary.trim())
+    } catch { /* storage full — non-critical */ }
     setSaved(true)
   }
 
@@ -171,7 +176,7 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
           >
             <CheckCircle2 size={18} color="#4ade80" />
             <div>
-              <div className="text-xs font-bold" style={{ color: '#4ade80' }}>Saved to your revision cards</div>
+              <div className="text-xs font-bold" style={{ color: '#4ade80' }}>Saved for this session ✓</div>
               <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{userSummary}</p>
             </div>
           </motion.div>

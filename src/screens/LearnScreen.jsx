@@ -167,9 +167,16 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
 function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selectedBoard }) {
   const navigate = useNavigate()
 
-  const masteredCount = module.topics.filter(t => progress[t]?.mastered).length
-  const startedCount  = module.topics.filter(t => progress[t]?.started && !progress[t]?.mastered).length
-  const totalTopics   = module.topics.length
+  // Only count topics visible to this board (matches the per-tile filter below)
+  const visibleTopics = module.topics.filter(id => {
+    const t = TOPICS[id]
+    if (!t) return false
+    if (t.boards && t.boards.length > 0 && !t.boards.includes(selectedBoard.id)) return false
+    return true
+  })
+  const masteredCount = visibleTopics.filter(t => progress[t]?.mastered).length
+  const startedCount  = visibleTopics.filter(t => progress[t]?.started && !progress[t]?.mastered).length
+  const totalTopics   = visibleTopics.length
   const pct           = totalTopics > 0 ? (masteredCount / totalTopics) * 100 : 0
   const isComplete    = masteredCount === totalTopics
 

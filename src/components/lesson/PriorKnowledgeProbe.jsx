@@ -12,6 +12,7 @@ import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 
 export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, onComplete, onWrongAnswer, alreadyCompleted = false }) {
+  if (!probe || !probe.questions?.length) { onComplete?.(); return null }
   const { questions } = probe
   const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState(null)

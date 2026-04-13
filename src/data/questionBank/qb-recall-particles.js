@@ -404,6 +404,326 @@ const recallParticlesQuestions = [
     course: 'combined',
   },
 
+  // ── Q26 — internal_energy ─────────────────────────────────────────────────
+  {
+    id: 'rc_particle_26',
+    topicId: 'internal_energy',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State the equation used to calculate the energy stored or released when a substance changes temperature.',
+    modelAnswer: 'E = m × c × Δθ, where E = energy (J), m = mass (kg), c = specific heat capacity (J/kg°C), Δθ = temperature change (°C).',
+    senNote: 'The equation is E = mcΔθ. You need mass, specific heat capacity, and the temperature change. Δθ means "change in temperature" (final minus initial).',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q27 — internal_energy ─────────────────────────────────────────────────
+  {
+    id: 'rc_particle_27',
+    topicId: 'internal_energy',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain the difference between the kinetic energy and the potential energy of particles in a substance.',
+    modelAnswer: 'Kinetic energy is the energy due to the movement (speed) of the particles. Potential energy is the energy stored due to the positions and interactions (forces) between the particles.',
+    senNote: 'KE = movement energy (faster particles = more KE). PE = stored energy due to forces between particles. Both together make up internal energy.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q28 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_28',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State the equation that links density, mass and volume.',
+    modelAnswer: 'ρ = m / V, where ρ = density (kg/m³), m = mass (kg), V = volume (m³).',
+    senNote: 'Density = mass ÷ volume. The symbol is the Greek letter rho (ρ). High density = lots of mass packed into a small space.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q29 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_29',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Compare',
+    question: 'Compare the arrangement and movement of particles in a solid and a gas.',
+    modelAnswer: 'In a solid, particles are closely packed in a regular pattern and vibrate in fixed positions. In a gas, particles are far apart, randomly arranged, and move in random directions at a range of speeds.',
+    senNote: 'Solid: regular, packed, vibrate only. Gas: spread far apart, random arrangement, move freely in all directions.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q30 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_30',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State what is meant by sublimation.',
+    modelAnswer: 'Sublimation is when a substance changes state directly from solid to gas, without passing through the liquid state.',
+    senNote: 'Sublimation skips the liquid stage — straight from solid to gas. Dry ice (solid CO₂) sublimes at room temperature.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q31 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_31',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State what is meant by deposition in the context of changes of state.',
+    modelAnswer: 'Deposition is when a substance changes state directly from gas to solid, without passing through the liquid state.',
+    senNote: 'Deposition is the reverse of sublimation — gas goes straight to solid. Frost forming on cold surfaces is an example.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q32 — specific_latent_heat ────────────────────────────────────────────
+  {
+    id: 'rc_particle_32',
+    topicId: 'specific_latent_heat',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State the equation linking energy, mass and specific latent heat.',
+    modelAnswer: 'E = m × L, where E = energy (J), m = mass (kg), L = specific latent heat (J/kg).',
+    senNote: 'E = mL. To find the energy for a state change, multiply mass by the specific latent heat. No temperature change is involved.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q33 — specific_latent_heat ────────────────────────────────────────────
+  {
+    id: 'rc_particle_33',
+    topicId: 'specific_latent_heat',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why the specific latent heat of vaporisation is much larger than the specific latent heat of fusion for the same substance.',
+    modelAnswer: 'Vaporisation requires much more energy because particles must overcome much stronger forces to escape from liquid to gas than from solid to liquid, and the particles end up much further apart.',
+    senNote: 'Melting only partially frees particles from their neighbours. Boiling fully separates them — this needs far more energy to overcome the forces.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q34 — specific_latent_heat ────────────────────────────────────────────
+  {
+    id: 'rc_particle_34',
+    topicId: 'specific_latent_heat',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain, in terms of particles, what happens to the potential energy and kinetic energy of water molecules when water boils at 100 °C.',
+    modelAnswer: 'The potential energy of the molecules increases as they break free from intermolecular forces and move further apart. The kinetic energy does not change because the temperature remains constant at 100 °C.',
+    senNote: 'At the boiling point: temperature stays at 100 °C (so KE stays the same), but PE increases as the bonds between molecules are broken.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q35 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_35',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Describe',
+    question: 'Describe how the density of a substance is related to its state. Explain why, using particle theory.',
+    modelAnswer: 'Solids are generally the most dense because particles are closely packed. Gases are least dense because particles are far apart, leaving mostly empty space. Liquids are usually between solids and gases in density.',
+    senNote: 'Density depends on how tightly particles are packed. Close together = high density (solid). Far apart = low density (gas).',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q36 — gas_pressure ────────────────────────────────────────────────────
+  {
+    id: 'rc_particle_36',
+    topicId: 'gas_pressure',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State the equation linking pressure and volume for a gas at constant temperature (Boyle\'s law).',
+    modelAnswer: 'p₁V₁ = p₂V₂, where p = pressure (Pa) and V = volume (m³). The product of pressure and volume is constant at constant temperature.',
+    senNote: 'Boyle\'s law: pressure × volume = constant (at constant temperature). If volume halves, pressure doubles.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q37 — gas_pressure ────────────────────────────────────────────────────
+  {
+    id: 'rc_particle_37',
+    topicId: 'gas_pressure',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State what is meant by absolute zero and give its value in both °C and kelvin.',
+    modelAnswer: 'Absolute zero is the lowest possible temperature, at which particles have minimum internal energy. It is equal to −273 °C or 0 K.',
+    senNote: 'Absolute zero = 0 K = −273 °C. At this temperature, particles have the minimum possible energy. You cannot cool anything below this.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q38 — gas_pressure ────────────────────────────────────────────────────
+  {
+    id: 'rc_particle_38',
+    topicId: 'gas_pressure',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State how to convert a temperature from degrees Celsius (°C) to kelvin (K).',
+    modelAnswer: 'Add 273 to the temperature in °C. K = °C + 273.',
+    senNote: 'To go from °C to kelvin, always add 273. For example, 27 °C = 27 + 273 = 300 K. Always use kelvin in gas pressure calculations.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q39 — internal_energy ─────────────────────────────────────────────────
+  {
+    id: 'rc_particle_39',
+    topicId: 'internal_energy',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain the difference between temperature and internal energy.',
+    modelAnswer: 'Temperature is a measure of the average kinetic energy of the particles in a substance. Internal energy is the total kinetic and potential energy of all the particles in the system.',
+    senNote: 'Temperature = average KE per particle. Internal energy = total energy of ALL particles. A large cold lake has more internal energy than a small hot cup of tea.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q40 — internal_energy ─────────────────────────────────────────────────
+  {
+    id: 'rc_particle_40',
+    topicId: 'internal_energy',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Describe',
+    question: 'Describe what happens to the temperature and internal energy of a substance as it is heated, both while the temperature rises and while it is changing state.',
+    modelAnswer: 'While the temperature rises: both temperature and internal energy increase. While the substance is changing state: the internal energy increases but the temperature stays constant.',
+    senNote: 'Two situations: (1) heating a single state → both temperature and internal energy go up. (2) changing state → only internal energy goes up; temperature stays flat.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q41 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_41',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why a liquid takes the shape of its container but a solid does not.',
+    modelAnswer: 'In a liquid, particles are close together but can move around each other, so they take the shape of the container. In a solid, particles are held in fixed positions in a regular pattern and cannot flow.',
+    senNote: 'Liquids flow because particles can slide past each other. Solids keep their shape because particles are locked in fixed positions.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q42 — states_density ──────────────────────────────────────────────────
+  {
+    id: 'rc_particle_42',
+    topicId: 'states_density',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why gases are easy to compress but solids are very difficult to compress, using particle theory.',
+    modelAnswer: 'In a gas, particles are far apart so there is a lot of empty space between them — they can be pushed closer together easily. In a solid, particles are already packed closely together so there is little space to compress them into.',
+    senNote: 'Gas = lots of empty space between particles → easy to compress. Solid = particles already touching → almost impossible to compress.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q43 — gas_pressure ────────────────────────────────────────────────────
+  {
+    id: 'rc_particle_43',
+    topicId: 'gas_pressure',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain, using particle theory, why a gas fills whatever container it is placed in.',
+    modelAnswer: 'Gas particles move in random directions at a range of speeds and have negligible forces between them. They travel until they hit a wall of the container, so they spread out to fill the entire available volume.',
+    senNote: 'Gas particles move randomly and freely — there are no forces pulling them back together, so they keep spreading until they fill the container.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q44 — specific_latent_heat ────────────────────────────────────────────
+  {
+    id: 'rc_particle_44',
+    topicId: 'specific_latent_heat',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why evaporation causes cooling, using kinetic theory.',
+    modelAnswer: 'During evaporation, the particles with the most kinetic energy escape from the surface of the liquid. This reduces the average kinetic energy of the remaining particles, so the temperature of the liquid decreases.',
+    senNote: 'The fastest (highest KE) particles escape first. The ones left behind have lower average KE — which means lower temperature. That is why sweating cools you down.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q45 — gas_pressure ────────────────────────────────────────────────────
+  {
+    id: 'rc_particle_45',
+    topicId: 'gas_pressure',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why the pressure of a gas would theoretically reach zero at absolute zero.',
+    modelAnswer: 'At absolute zero, particles have minimum kinetic energy and theoretically cease to move. With no particle motion there are no collisions with the container walls, so the force on the walls — and therefore the pressure — would be zero.',
+    senNote: 'No movement = no collisions with walls = no force on walls = no pressure. This is why the p–T graph extrapolates to zero pressure at −273 °C.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
 ]
 
 export default recallParticlesQuestions

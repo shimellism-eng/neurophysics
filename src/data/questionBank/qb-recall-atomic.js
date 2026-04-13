@@ -549,6 +549,326 @@ const recallAtomicQuestions = [
     course: 'physics_only',
   },
 
+  // ── Q35 — atomic_structure ────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_35',
+    topicId: 'atomic_structure',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State the relative mass and relative charge of a proton, neutron and electron.',
+    modelAnswer: 'Proton: relative mass 1, charge +1. Neutron: relative mass 1, charge 0. Electron: relative mass approximately 0 (1/1836), charge −1.',
+    senNote: 'Learn the table: proton (+1, mass 1), neutron (0, mass 1), electron (−1, mass ~0). Electrons are so light their mass is ignored.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q36 — atomic_structure ────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_36',
+    topicId: 'atomic_structure',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State where in an atom the protons and neutrons are found.',
+    modelAnswer: 'Protons and neutrons are found in the nucleus at the centre of the atom.',
+    senNote: 'Protons and neutrons are always in the nucleus. Electrons orbit around the outside. The nucleus contains almost all the mass of the atom.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q37 — atomic_structure ────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_37',
+    topicId: 'atomic_structure',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Calculate',
+    question: 'An atom of iodine-131 has atomic number 53 and mass number 131. Calculate the number of neutrons in its nucleus.',
+    modelAnswer: 'Number of neutrons = mass number − atomic number = 131 − 53 = 78.',
+    senNote: 'Neutrons = mass number − atomic number. Always: mass number = protons + neutrons. Rearrange to find neutrons.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q38 — atomic_structure ────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_38',
+    topicId: 'atomic_structure',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: "State another name for the 'atomic number' of an atom.",
+    modelAnswer: 'The proton number.',
+    senNote: 'Atomic number and proton number mean the same thing — both refer to the number of protons. You may see either term in an exam.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q39 — atomic_model_history ────────────────────────────────────────────
+  {
+    id: 'rc_atomic_39',
+    topicId: 'atomic_model_history',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Describe',
+    question: 'Describe two differences between the plum pudding model and the nuclear model of the atom.',
+    modelAnswer: 'In the nuclear model, the positive charge is concentrated in a small central nucleus, whereas in the plum pudding model the positive charge is spread throughout the atom. In the nuclear model, electrons orbit the nucleus at a distance, whereas in the plum pudding model they are embedded inside the positive charge.',
+    senNote: 'Key differences: (1) where the positive charge is — concentrated nucleus vs spread throughout; (2) where electrons are — orbiting outside vs embedded inside.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q40 — radioactive_decay ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_40',
+    topicId: 'radioactive_decay',
+    type: 'recall',
+    tier: 1,
+    marks: 1,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State what is meant by saying radioactive decay is a random process.',
+    modelAnswer: 'It is impossible to predict exactly when any individual nucleus will decay; each nucleus decays independently.',
+    senNote: 'Random = unpredictable. You can never say exactly when one particular nucleus will decay. However, for a large number of nuclei the overall rate (activity) is predictable.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q41 — radioactive_decay ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_41',
+    topicId: 'radioactive_decay',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why repeated measurements of background radiation taken over short time intervals give different readings.',
+    modelAnswer: 'Radioactive decay is a random process, so the number of decays in any given time interval varies unpredictably, leading to different count readings each time.',
+    senNote: 'Background radiation varies because decay is random. Each measurement counts a different number of random decay events. This is not an error — it is the nature of radioactive decay.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q42 — radiation_hazards ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_42',
+    topicId: 'radiation_hazards',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain the difference between contamination and irradiation, and state which is considered more dangerous and why.',
+    modelAnswer: 'Contamination is when radioactive material is deposited on or inside the body, continuing to irradiate tissues. Irradiation is exposure to radiation from an external source, which stops when you move away. Contamination is generally more dangerous because the source remains close to tissues and may not be removed easily.',
+    senNote: 'Contamination: radioactive stuff IS on/in you (ongoing danger). Irradiation: radiation comes from outside (stops when source removed). Internal contamination is harder to deal with.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q43 — radiation_hazards ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_43',
+    topicId: 'radiation_hazards',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why background radiation must be measured and subtracted when taking readings from a radioactive source in an experiment.',
+    modelAnswer: 'Background radiation is always present in the environment. If it is not subtracted, the count rate measured will include background counts as well as counts from the source, giving a reading that is too high.',
+    senNote: 'Always subtract background: corrected count rate = measured count rate − background count rate. This gives you only the counts from your source.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q44 — radiation_hazards ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_44',
+    topicId: 'radiation_hazards',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Describe',
+    question: 'Describe the properties that make technetium-99m a suitable radioactive tracer for medical imaging.',
+    modelAnswer: 'It emits gamma radiation (which can penetrate the body and be detected externally) and has a short half-life (about 6 hours) so it decays quickly and does not remain in the body long, reducing radiation dose to the patient.',
+    senNote: 'Good medical tracer: emits gamma (can escape body to be detected), short half-life (leaves body quickly, less harm), not alpha or beta (they would be absorbed inside the body).',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q45 — radioactive_decay ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_45',
+    topicId: 'radioactive_decay',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Identify',
+    question: 'An atom decays and its atomic number increases by 1 but its mass number stays the same. Identify the type of decay and explain how you know.',
+    modelAnswer: 'Beta decay. In beta decay a neutron turns into a proton, so the atomic number increases by 1 but the mass number stays the same (total number of nucleons is unchanged).',
+    senNote: 'If atomic number goes up by 1 and mass number stays the same → beta decay. A neutron becomes a proton: same total nucleons, but one more proton.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q46 — radioactive_decay ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_46',
+    topicId: 'radioactive_decay',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Identify',
+    question: 'An atom decays and its mass number decreases by 4 and its atomic number decreases by 2. Identify the type of decay and state what particle is emitted.',
+    modelAnswer: 'Alpha decay. An alpha particle (⁴₂He — two protons and two neutrons) is emitted.',
+    senNote: 'If mass number falls by 4 and atomic number falls by 2 → alpha decay. The emitted particle is ⁴₂He, a helium nucleus.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q47 — radioactive_decay ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_47',
+    topicId: 'radioactive_decay',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Calculate',
+    question: 'A sample of iodine-131 has an initial count rate of 1200 counts per second. The half-life of iodine-131 is 8 days. Calculate how many days it will take for the count rate to fall to 75 counts per second.',
+    modelAnswer: '1200 → 600 → 300 → 150 → 75. Four half-lives have passed. Time = 4 × 8 = 32 days.',
+    senNote: 'Keep halving: 1200 → 600 → 300 → 150 → 75. Count the steps (4 half-lives). Multiply by the half-life: 4 × 8 days = 32 days.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q48 — radiation_hazards ───────────────────────────────────────────────
+  {
+    id: 'rc_atomic_48',
+    topicId: 'radiation_hazards',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State two precautions a scientist should take when handling a radioactive source in a laboratory.',
+    modelAnswer: 'Any two from: use tongs or forceps (never handle directly); keep the source at arm\'s length and pointed away from the body; store in a lead-lined container when not in use; never eat or drink near the source; minimise the time spent near the source.',
+    senNote: 'Reduce dose: increase distance, reduce time, use shielding, and avoid contamination. These three factors (distance, time, shielding) are the key principles of radiation safety.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q49 — atomic_model_history ────────────────────────────────────────────
+  {
+    id: 'rc_atomic_49',
+    topicId: 'atomic_model_history',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain what results Rutherford and Marsden obtained in the alpha scattering experiment and how these led to the nuclear model of the atom.',
+    modelAnswer: 'Most alpha particles passed straight through the gold foil (showing the atom is mostly empty space). A small number were deflected through large angles, and a very few bounced straight back (showing a small, dense, positively charged nucleus at the centre).',
+    senNote: 'Most go straight through = mostly empty space. A few bounce back = tiny, dense, positive nucleus. This disproved the plum pudding model and led to the nuclear model.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q50 — nuclear_fission ─────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_50',
+    topicId: 'nuclear_fission',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain why lowering the control rods further into a nuclear reactor reduces the rate of energy release.',
+    modelAnswer: 'The control rods (made of boron) absorb neutrons. Lowering them further increases neutron absorption, so fewer neutrons are available to cause further fission reactions, reducing the rate of the chain reaction and hence the energy released per second.',
+    senNote: 'Control rods absorb neutrons. More rod in reactor = more neutrons absorbed = fewer fissions per second = less energy. To increase power, raise the rods; to decrease, lower them.',
+    boards: ['aqa'],
+    course: 'physics_only',
+  },
+
+  // ── Q51 — nuclear_fission ─────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_51',
+    topicId: 'nuclear_fission',
+    type: 'recall',
+    tier: 1,
+    marks: 3,
+    timeExpected: 30,
+    commandWord: 'Describe',
+    question: 'Describe how the energy released by nuclear fission in a power station is used to generate electricity.',
+    modelAnswer: 'The energy from fission heats water (or a coolant) to produce high-pressure steam. The steam drives a turbine, which turns a generator, producing electricity.',
+    senNote: 'Fission → heat → steam → turbine → generator → electricity. This chain is the same as in fossil fuel power stations — only the heat source is different.',
+    boards: ['aqa'],
+    course: 'physics_only',
+  },
+
+  // ── Q52 — nuclear_fusion ──────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_52',
+    topicId: 'nuclear_fusion',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'State',
+    question: 'State two advantages of fusion fuel (deuterium and tritium) compared with fission fuel (uranium).',
+    modelAnswer: 'Any two from: fusion fuel is easier to obtain (deuterium from seawater, tritium from lithium in seawater); fusion releases more energy per kg of fuel; fusion produces little or no long-lived radioactive waste.',
+    senNote: 'Fusion advantages: fuel is more available (from seawater), releases more energy per kg, produces less dangerous waste. These are the key selling points of fusion power.',
+    boards: ['aqa'],
+    course: 'physics_only',
+  },
+
+  // ── Q53 — nuclear_fusion ──────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_53',
+    topicId: 'nuclear_fusion',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain how atoms of helium are formed inside a star.',
+    modelAnswer: 'Hydrogen nuclei (protons) are forced together by the extreme temperature and pressure inside a star and undergo nuclear fusion to form helium nuclei. Energy is released in the process.',
+    senNote: 'Stars fuse hydrogen → helium. The Sun converts about 600 million tonnes of hydrogen to helium every second by fusion. The extreme conditions (millions of degrees) provide enough energy to overcome the repulsion between nuclei.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
+  // ── Q54 — nuclear_fusion ──────────────────────────────────────────────────
+  {
+    id: 'rc_atomic_54',
+    topicId: 'nuclear_fusion',
+    type: 'recall',
+    tier: 1,
+    marks: 2,
+    timeExpected: 30,
+    commandWord: 'Explain',
+    question: 'Explain how atoms of heavy elements (such as gold) were formed.',
+    modelAnswer: 'Heavier elements are formed by fusion of lighter nuclei inside large stars. Elements heavier than iron are formed during supernova explosions, when a large star reaches the end of its life and explodes violently.',
+    senNote: 'Light elements (up to iron) form by fusion inside stars. Heavy elements (beyond iron) need a supernova explosion — the enormous energy of the explosion drives nuclei together to form very heavy atoms.',
+    boards: ['aqa'],
+    course: 'combined',
+  },
+
 ]
 
 export default recallAtomicQuestions

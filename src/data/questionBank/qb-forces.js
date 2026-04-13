@@ -760,6 +760,7 @@ const forcesQuestions = [
   {
     id: 'fi_t3_06',
     topicId: 'force_interactions',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -892,6 +893,7 @@ const forcesQuestions = [
   {
     id: 'wd_t2_02',
     topicId: 'work_done',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 2,
     type: 'calculation',
@@ -967,6 +969,7 @@ const forcesQuestions = [
   {
     id: 'wd_t2_07',
     topicId: 'work_done',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 2,
     type: 'short_answer',
@@ -1002,6 +1005,7 @@ const forcesQuestions = [
   {
     id: 'wd_t3_02',
     topicId: 'work_done',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -1019,6 +1023,7 @@ const forcesQuestions = [
   {
     id: 'wd_t3_03',
     topicId: 'work_done',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -1052,6 +1057,7 @@ const forcesQuestions = [
   {
     id: 'wd_t3_05',
     topicId: 'work_done',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -1316,6 +1322,7 @@ const forcesQuestions = [
   {
     id: 'hl_t3_02',
     topicId: 'hookes_law',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -1668,6 +1675,7 @@ const forcesQuestions = [
   {
     id: 'mo_t3_04',
     topicId: 'moments',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 3,
     type: 'extended',
@@ -1833,6 +1841,7 @@ const forcesQuestions = [
   {
     id: 'fp_t2_02',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 2,
     type: 'calculation',
@@ -1848,6 +1857,7 @@ const forcesQuestions = [
   {
     id: 'fp_t2_03',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 2,
     type: 'calculation',
@@ -1927,6 +1937,7 @@ const forcesQuestions = [
   {
     id: 'fp_t3_01',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 3,
     type: 'extended',
@@ -1944,6 +1955,7 @@ const forcesQuestions = [
   {
     id: 'fp_t3_02',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 3,
     type: 'extended',
@@ -1961,6 +1973,7 @@ const forcesQuestions = [
   {
     id: 'fp_t3_03',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 3,
     type: 'extended',
@@ -1978,6 +1991,7 @@ const forcesQuestions = [
   {
     id: 'fp_t3_04',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 3,
     type: 'extended',
@@ -1995,6 +2009,7 @@ const forcesQuestions = [
   {
     id: 'fp_t3_05',
     topicId: 'fluid_pressure',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'physics_only',
     tier: 3,
     type: 'extended',
@@ -2783,6 +2798,7 @@ const forcesQuestions = [
   {
     id: 'tv_t2_02',
     topicId: 'terminal_velocity',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 2,
     type: 'short_answer',
@@ -2844,6 +2860,7 @@ const forcesQuestions = [
   {
     id: 'tv_t2_06',
     topicId: 'terminal_velocity',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 2,
     type: 'short_answer',
@@ -2877,6 +2894,7 @@ const forcesQuestions = [
   {
     id: 'tv_t3_01',
     topicId: 'terminal_velocity',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -2929,6 +2947,7 @@ const forcesQuestions = [
   {
     id: 'tv_t3_04',
     topicId: 'terminal_velocity',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -2962,6 +2981,7 @@ const forcesQuestions = [
   {
     id: 'tv_t3_06',
     topicId: 'terminal_velocity',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',
@@ -3185,6 +3205,7 @@ const forcesQuestions = [
   {
     id: 'nl_t3_01',
     topicId: 'newtons_laws',
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
     course: 'combined',
     tier: 3,
     type: 'extended',

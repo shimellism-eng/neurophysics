@@ -1746,7 +1746,7 @@ const electricityQuestions = [
   // ── ELECTRICAL POWER ─────────────────────────────────────────────────────────
 
   {
-    id: 'ep_t1_01',
+    id: 'elec_ep_t1_01',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1760,7 +1760,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_02',
+    id: 'elec_ep_t1_02',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1774,7 +1774,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_03',
+    id: 'elec_ep_t1_03',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1788,7 +1788,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_04',
+    id: 'elec_ep_t1_04',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1802,7 +1802,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_05',
+    id: 'elec_ep_t1_05',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1816,7 +1816,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_06',
+    id: 'elec_ep_t1_06',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1830,7 +1830,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_07',
+    id: 'elec_ep_t1_07',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1844,7 +1844,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_08',
+    id: 'elec_ep_t1_08',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1858,7 +1858,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_09',
+    id: 'elec_ep_t1_09',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1872,7 +1872,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t1_10',
+    id: 'elec_ep_t1_10',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 1,
@@ -1888,7 +1888,7 @@ const electricityQuestions = [
   // T2 electrical_power
 
   {
-    id: 'ep_t2_01',
+    id: 'elec_ep_t2_01',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -1904,7 +1904,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_02',
+    id: 'elec_ep_t2_02',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -1924,7 +1924,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_03',
+    id: 'elec_ep_t2_03',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -1940,7 +1940,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_04',
+    id: 'elec_ep_t2_04',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -1956,7 +1956,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_05',
+    id: 'elec_ep_t2_05',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -1976,7 +1976,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_06',
+    id: 'elec_ep_t2_06',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -1992,7 +1992,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_07',
+    id: 'elec_ep_t2_07',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -2009,7 +2009,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_08',
+    id: 'elec_ep_t2_08',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -2029,7 +2029,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t2_09',
+    id: 'elec_ep_t2_09',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 2,
@@ -2047,7 +2047,7 @@ const electricityQuestions = [
   // T3 electrical_power
 
   {
-    id: 'ep_t3_01',
+    id: 'elec_ep_t3_01',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 3,
@@ -2065,7 +2065,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t3_02',
+    id: 'elec_ep_t3_02',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 3,
@@ -2084,7 +2084,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t3_03',
+    id: 'elec_ep_t3_03',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 3,
@@ -2102,7 +2102,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t3_04',
+    id: 'elec_ep_t3_04',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 3,
@@ -2120,7 +2120,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t3_05',
+    id: 'elec_ep_t3_05',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 3,
@@ -2138,7 +2138,7 @@ const electricityQuestions = [
   },
 
   {
-    id: 'ep_t3_06',
+    id: 'elec_ep_t3_06',
     topicId: 'electrical_power',
     course: 'combined',
     tier: 3,

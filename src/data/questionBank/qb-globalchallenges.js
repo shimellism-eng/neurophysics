@@ -590,7 +590,7 @@ const globalChallenges = [
 
   // Tier 1
   {
-    id: 'ef_t1_01',
+    id: 'gc_ef_t1_01',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',
@@ -609,7 +609,7 @@ const globalChallenges = [
     senNote: 'E = F/Q: electric field strength is the force (in newtons) experienced by each coulomb of charge. Units are N/C (or equivalently V/m).',
   },
   {
-    id: 'ef_t1_02',
+    id: 'gc_ef_t1_02',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',
@@ -628,7 +628,7 @@ const globalChallenges = [
     senNote: 'A uniform field has equal field strength everywhere. Field lines are parallel, equally spaced, and always perpendicular (at 90°) to the metal plates. This is the definition of a uniform field.',
   },
   {
-    id: 'ef_t1_03',
+    id: 'gc_ef_t1_03',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',
@@ -644,7 +644,7 @@ const globalChallenges = [
 
   // Tier 2
   {
-    id: 'ef_t2_01',
+    id: 'gc_ef_t2_01',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',
@@ -665,7 +665,7 @@ const globalChallenges = [
     senNote: 'E = F/Q. Divide force (N) by charge (C). Make sure Q is in coulombs, not microcoulombs — multiply µC by 10⁻⁶.',
   },
   {
-    id: 'ef_t2_02',
+    id: 'gc_ef_t2_02',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',
@@ -686,7 +686,7 @@ const globalChallenges = [
     senNote: 'E = V/d. Convert mm to metres first (÷1000). Then divide voltage by the plate separation in metres. Units: V/m ≡ N/C.',
   },
   {
-    id: 'ef_t2_03',
+    id: 'gc_ef_t2_03',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',
@@ -705,7 +705,7 @@ const globalChallenges = [
 
   // Tier 3
   {
-    id: 'ef_t3_01',
+    id: 'gc_ef_t3_01',
     topicId: 'electric_fields',
     boards: ['ocr-a'],
     course: 'physics_only',

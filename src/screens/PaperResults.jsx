@@ -29,7 +29,7 @@ const GRADE_RANGES = [
 function getGrade(score, total) {
   const board = getSelectedBoard()
   const pct = score / total
-  if (board.id === 'ccea') {
+  if (board.gradeSystem === 'A*-G') {
     const match = CCEA_BOUNDARIES.find(g => pct >= g.min)
     return match
       ? { grade: match.grade, label: `Grade ${match.grade}`, color: match.color, bg: match.bg, desc: match.desc }
@@ -40,7 +40,7 @@ function getGrade(score, total) {
 
 function getGradeScale() {
   const board = getSelectedBoard()
-  if (board.id === 'ccea') {
+  if (board.gradeSystem === 'A*-G') {
     return CCEA_BOUNDARIES.slice(0, 7).map(g => ({
       grade: g.grade, min: g.min, label: `Grade ${g.grade}`,
       color: g.color, bg: g.bg, desc: g.desc,

@@ -3,6 +3,13 @@
  * and exposes a single lookup function.
  */
 import { PHYSICS_ONLY_TOPICS } from './topics'
+import { getValidatedBoard } from '../utils/boardConfig'
+
+/** Filter a question list by the current board (used for g-value board splits) */
+function filterByBoard(questions) {
+  const boardId = getValidatedBoard()
+  return questions.filter(q => !q.boards || q.boards.includes(boardId))
+}
 import examCalculations from './examCalculations'
 import examPracticals from './examPracticals'
 import examParticleModel from './examParticleModel'
@@ -24,7 +31,7 @@ export function getExamQuestions(subtopicId) {
 
   // Calculations
   if (examCalculations[subtopicId]) {
-    questions.push(...examCalculations[subtopicId])
+    questions.push(...filterByBoard(examCalculations[subtopicId]))
   }
 
   // Required practical sequence sorts + describe-method / error-analysis variants
@@ -156,7 +163,7 @@ export function getTimedPaperQuestions(course) {
   const calcPool = []
   Object.entries(examCalculations).forEach(([topicId, qs]) => {
     if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
-    calcPool.push(...qs.filter(q => q.tier <= 2))
+    calcPool.push(...filterByBoard(qs).filter(q => q.tier <= 2))
   })
   paper.push(...calcPool.sort(() => Math.random() - 0.5).slice(0, 2))
 

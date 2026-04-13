@@ -1802,7 +1802,7 @@ const atomicQuestions = [
 
   // T1 MCQ × 10
   {
-    id: 'hl_t1_01',
+    id: 'at_hl_t1_01',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1820,7 +1820,7 @@ const atomicQuestions = [
     senNote: 'Half-life is the time for ACTIVITY (or number of undecayed nuclei) to halve — not the time to lose half the radiation to shielding.',
   },
   {
-    id: 'hl_t1_02',
+    id: 'at_hl_t1_02',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1833,7 +1833,7 @@ const atomicQuestions = [
     senNote: 'After each half-life, divide by 2. After 2 half-lives: 640 → 320 → 160 Bq.',
   },
   {
-    id: 'hl_t1_03',
+    id: 'at_hl_t1_03',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1851,7 +1851,7 @@ const atomicQuestions = [
     senNote: 'N = N₀ × (½)ⁿ. Each half-life multiplies the amount by ½, so after n half-lives you multiply by (½)ⁿ.',
   },
   {
-    id: 'hl_t1_04',
+    id: 'at_hl_t1_04',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1869,7 +1869,7 @@ const atomicQuestions = [
     senNote: 'A half-life of ~5730 years is ideal for dating objects thousands of years old — enough C-14 activity remains to measure accurately.',
   },
   {
-    id: 'hl_t1_05',
+    id: 'at_hl_t1_05',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1887,7 +1887,7 @@ const atomicQuestions = [
     senNote: 'Medical tracers need a short half-life (hours) to minimise radiation dose to the patient after the procedure is complete.',
   },
   {
-    id: 'hl_t1_06',
+    id: 'at_hl_t1_06',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1905,7 +1905,7 @@ const atomicQuestions = [
     senNote: 'Radioactive decay is exponential — the activity always halves over the same time interval (the half-life), giving a curved graph that gets closer and closer to zero.',
   },
   {
-    id: 'hl_t1_07',
+    id: 'at_hl_t1_07',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1923,7 +1923,7 @@ const atomicQuestions = [
     senNote: '1 Bq = 1 nuclear decay per second. Activity measures how many nuclei are decaying every second.',
   },
   {
-    id: 'hl_t1_08',
+    id: 'at_hl_t1_08',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1941,7 +1941,7 @@ const atomicQuestions = [
     senNote: 'Half-life is a fixed property of a radioactive isotope. It does not change with age, temperature, or chemical state.',
   },
   {
-    id: 'hl_t1_09',
+    id: 'at_hl_t1_09',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1959,7 +1959,7 @@ const atomicQuestions = [
     senNote: 'While alive, organisms continuously take in C-14 from food and air, keeping the ratio constant. After death, no new C-14 enters and existing C-14 decays, so the ratio falls.',
   },
   {
-    id: 'hl_t1_10',
+    id: 'at_hl_t1_10',
     topicId: 'half_life',
     course: 'combined',
     tier: 1,
@@ -1974,7 +1974,7 @@ const atomicQuestions = [
 
   // T2 Calculation × 9
   {
-    id: 'hl_t2_01',
+    id: 'at_hl_t2_01',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -1993,7 +1993,7 @@ const atomicQuestions = [
     senNote: 'Step 1: find n = total time ÷ half-life. Step 2: divide the starting activity by 2 a total of n times.',
   },
   {
-    id: 'hl_t2_02',
+    id: 'at_hl_t2_02',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2012,7 +2012,7 @@ const atomicQuestions = [
     senNote: 'Use N = N₀ × (½)ⁿ = 6400 × (½)⁴ = 6400 ÷ 16 = 400.',
   },
   {
-    id: 'hl_t2_03',
+    id: 'at_hl_t2_03',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2031,7 +2031,7 @@ const atomicQuestions = [
     senNote: 'Count how many times you divide by 2 to get from 3200 to 200 (answer: 4 times). Then divide total time by 4.',
   },
   {
-    id: 'hl_t2_04',
+    id: 'at_hl_t2_04',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2050,7 +2050,7 @@ const atomicQuestions = [
     senNote: 'After 24 hours = 4 half-lives. Use N = N₀ × (½)⁴ = 480 ÷ 16 = 30 Bq.',
   },
   {
-    id: 'hl_t2_05',
+    id: 'at_hl_t2_05',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2070,7 +2070,7 @@ const atomicQuestions = [
     senNote: 'First count the halvings (4), then divide total time in minutes by 4. Remember to convert hours to minutes first.',
   },
   {
-    id: 'hl_t2_06',
+    id: 'at_hl_t2_06',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2089,7 +2089,7 @@ const atomicQuestions = [
     senNote: 'After 5 half-lives, divide the initial activity by 2⁵ = 32. 7200 ÷ 32 = 225 Bq.',
   },
   {
-    id: 'hl_t2_07',
+    id: 'at_hl_t2_07',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2108,7 +2108,7 @@ const atomicQuestions = [
     senNote: '2⁵ = 32. Divide 51 200 by 32 to get 1600.',
   },
   {
-    id: 'hl_t2_08',
+    id: 'at_hl_t2_08',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2127,7 +2127,7 @@ const atomicQuestions = [
     senNote: 'Count the halvings from 200 to 25 (three halvings). Multiply by the half-life: 3 × 5730 = 17 190 years.',
   },
   {
-    id: 'hl_t2_09',
+    id: 'at_hl_t2_09',
     topicId: 'half_life',
     course: 'combined',
     tier: 2,
@@ -2147,7 +2147,7 @@ const atomicQuestions = [
 
   // T3 Extended × 6
   {
-    id: 'hl_t3_01',
+    id: 'at_hl_t3_01',
     topicId: 'half_life',
     course: 'combined',
     tier: 3,
@@ -2166,7 +2166,7 @@ const atomicQuestions = [
     senNote: 'Key sequence: cosmic rays make C-14 in atmosphere → enters organisms via food/CO₂ → ratio fixed while alive → ratio falls after death → compare ratio to living material → calculate age.',
   },
   {
-    id: 'hl_t3_02',
+    id: 'at_hl_t3_02',
     topicId: 'half_life',
     course: 'combined',
     tier: 3,
@@ -2185,7 +2185,7 @@ const atomicQuestions = [
     senNote: 'Tracer properties: gamma emitter (exits body), short half-life (minimises dose), long enough half-life to complete scan, non-toxic.',
   },
   {
-    id: 'hl_t3_03',
+    id: 'at_hl_t3_03',
     topicId: 'half_life',
     course: 'combined',
     tier: 3,
@@ -2204,7 +2204,7 @@ const atomicQuestions = [
     senNote: 'Plot: (0, 1200), (10, 600), (20, 300), (30, 150). The curve is always halving over the same time interval.',
   },
   {
-    id: 'hl_t3_04',
+    id: 'at_hl_t3_04',
     topicId: 'half_life',
     course: 'combined',
     tier: 3,
@@ -2223,7 +2223,7 @@ const atomicQuestions = [
     senNote: 'Always subtract background count rate. Read half-life from the graph at multiple points and average the values.',
   },
   {
-    id: 'hl_t3_05',
+    id: 'at_hl_t3_05',
     topicId: 'half_life',
     course: 'combined',
     tier: 3,
@@ -2242,7 +2242,7 @@ const atomicQuestions = [
     senNote: 'Match half-life to the age range: C-14 works for thousands of years, uranium series for millions of years. After ~10 half-lives activity is too small to measure reliably.',
   },
   {
-    id: 'hl_t3_06',
+    id: 'at_hl_t3_06',
     topicId: 'half_life',
     course: 'combined',
     tier: 3,

@@ -1,16 +1,24 @@
-import { useCallback, useRef } from 'react'
+import { useCallback, useRef, useEffect } from 'react'
 
-// Check if user opted into sounds (we'll add a sounds pref toggle)
-function isSoundEnabled() {
+// Module-level preference cache — avoids JSON.parse on every play call
+let _soundEnabled = (() => {
   try {
-    const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
-    return prefs.sounds !== false // default on, can be turned off
-  } catch {
-    return true
-  }
+    return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').sounds !== false
+  } catch { return true }
+})()
+
+// Keep cache in sync when user changes preference in Settings
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', () => {
+    try {
+      _soundEnabled = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').sounds !== false
+    } catch { _soundEnabled = true }
+  })
 }
 
-function getCtx(ctxRef) {
+// Returns the AudioContext, resuming it if suspended (iOS requires user gesture).
+// Async so we can properly await ctx.resume() — without await, iOS silently no-ops.
+async function getCtx(ctxRef) {
   if (!ctxRef.current) {
     try {
       ctxRef.current = new (window.AudioContext || window.webkitAudioContext)()
@@ -18,9 +26,8 @@ function getCtx(ctxRef) {
       return null
     }
   }
-  // Resume if suspended (iOS requires user gesture first)
   if (ctxRef.current.state === 'suspended') {
-    ctxRef.current.resume()
+    try { await ctxRef.current.resume() } catch { return null }
   }
   return ctxRef.current
 }
@@ -28,10 +35,20 @@ function getCtx(ctxRef) {
 export function useSound() {
   const ctxRef = useRef(null)
 
+  // Close AudioContext on unmount to release system audio resources
+  useEffect(() => {
+    return () => {
+      if (ctxRef.current) {
+        ctxRef.current.close().catch(() => {})
+        ctxRef.current = null
+      }
+    }
+  }, [])
+
   // Pleasant rising two-note "ding" for correct
-  const playCorrect = useCallback(() => {
-    if (!isSoundEnabled()) return
-    const ctx = getCtx(ctxRef)
+  const playCorrect = useCallback(async () => {
+    if (!_soundEnabled) return
+    const ctx = await getCtx(ctxRef)
     if (!ctx) return
 
     const now = ctx.currentTime
@@ -62,9 +79,9 @@ export function useSound() {
   }, [])
 
   // Low soft thud for wrong answer
-  const playWrong = useCallback(() => {
-    if (!isSoundEnabled()) return
-    const ctx = getCtx(ctxRef)
+  const playWrong = useCallback(async () => {
+    if (!_soundEnabled) return
+    const ctx = await getCtx(ctxRef)
     if (!ctx) return
 
     const now = ctx.currentTime
@@ -82,9 +99,9 @@ export function useSound() {
   }, [])
 
   // Triumphant 3-note fanfare for lesson complete
-  const playComplete = useCallback(() => {
-    if (!isSoundEnabled()) return
-    const ctx = getCtx(ctxRef)
+  const playComplete = useCallback(async () => {
+    if (!_soundEnabled) return
+    const ctx = await getCtx(ctxRef)
     if (!ctx) return
 
     const now = ctx.currentTime
@@ -105,9 +122,9 @@ export function useSound() {
   }, [])
 
   // Soft tick for navigation
-  const playTick = useCallback(() => {
-    if (!isSoundEnabled()) return
-    const ctx = getCtx(ctxRef)
+  const playTick = useCallback(async () => {
+    if (!_soundEnabled) return
+    const ctx = await getCtx(ctxRef)
     if (!ctx) return
 
     const now = ctx.currentTime

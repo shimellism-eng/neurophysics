@@ -23,21 +23,34 @@ export function useSessionTimer(enabled = true) {
     }
   }
 
+  // Refs mirror the state values so the interval callback never has stale closures
+  // and the effect dep array stays stable — no interval reset on every nudge fire.
+  const breakDueRef = useRef(false)
+  const longBreakDueRef = useRef(false)
+
   useEffect(() => {
     if (!enabled) return
     const interval = setInterval(() => {
       const mins = Math.floor((Date.now() - startRef.current) / 60000)
       setElapsedMinutes(mins)
-      if (mins >= 25 && !longBreakDue) setLongBreakDue(true)
-      else if (mins >= 15 && !breakDue) setBreakDue(true)
+      if (mins >= 25 && !longBreakDueRef.current) {
+        longBreakDueRef.current = true
+        setLongBreakDue(true)
+      } else if (mins >= 15 && !breakDueRef.current) {
+        breakDueRef.current = true
+        setBreakDue(true)
+      }
     }, 30000) // check every 30s
     return () => clearInterval(interval)
-  }, [enabled, breakDue, longBreakDue])
+  }, [enabled]) // stable dep — no interval reset on nudge state changes
 
   const dismissBreak = () => {
     setBreakDue(false)
     setLongBreakDue(false)
     setDismissed(true)
+    // Reset refs so next nudge cycle can fire again
+    breakDueRef.current = false
+    longBreakDueRef.current = false
     // Reset clock after dismiss so next nudge fires fresh from now
     const now = Date.now()
     startRef.current = now

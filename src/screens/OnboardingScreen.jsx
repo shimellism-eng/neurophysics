@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil, Target } from 'lucide-react'
+import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil, Target, ChevronLeft } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
@@ -740,7 +740,7 @@ function StepHowItWorks({ onNext }) {
 }
 
 // ─── Step 3: Exam Board ───────────────────────────────────────────────────────
-function StepBoard({ onNext }) {
+function StepBoard({ onNext, reducedMotion }) {
   const [selected, setSelected] = useState('aqa')
 
   const handleNext = () => {
@@ -754,10 +754,10 @@ function StepBoard({ onNext }) {
     <motion.div
       className="flex flex-col h-full"
       key="step-board"
-      initial={{ opacity: 0, x: 40 }}
+      initial={reducedMotion ? false : { opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -40 }}
-      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      exit={reducedMotion ? {} : { opacity: 0, x: -40 }}
+      transition={{ duration: reducedMotion ? 0 : 0.35, ease: [0.16, 1, 0.3, 1] }}
       style={{
         background: `radial-gradient(ellipse 130% 55% at 50% 0%, ${BOARDS[selected].color}10 0%, transparent 55%)`,
         transition: 'background 0.4s',
@@ -871,8 +871,9 @@ function StepBoard({ onNext }) {
 
       {/* Next button */}
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        className="px-6 shrink-0"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121',
+          paddingTop: 12, paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
@@ -912,7 +913,7 @@ const GRADE_OPTIONS_CCEA = [
   { value: 'A*', label: 'Grade A*', sub: 'Top Grade',   color: '#e91e8c' },
 ]
 
-function StepSetup({ onNext, boardId }) {
+function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
   const [examDate, setExamDate] = useState('')
   const [grade, setGrade] = useState('')
 
@@ -936,12 +937,12 @@ function StepSetup({ onNext, boardId }) {
     <motion.div
       className="flex flex-col h-full"
       key="step-setup"
-      initial={{ opacity: 0, x: 40 }}
+      initial={reducedMotion ? false : { opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -40 }}
-      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      exit={reducedMotion ? {} : { opacity: 0, x: -40 }}
+      transition={{ duration: reducedMotion ? 0 : 0.35, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="flex-1 overflow-y-auto px-6" style={{ minHeight: 0 }}>
+      <div className="flex-1 overflow-y-auto px-6 pb-4" style={{ minHeight: 0 }}>
         {/* Header */}
         <motion.div
           className="pt-10 pb-5"
@@ -949,6 +950,15 @@ function StepSetup({ onNext, boardId }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
+          {/* Back button — iOS HIG: always provide a clear way back */}
+          <button
+            onClick={onBack}
+            className="w-11 h-11 flex items-center justify-center rounded-[12px] mb-4"
+            style={{ background: 'rgba(255,255,255,0.05)', border: '0.75px solid rgba(255,255,255,0.08)' }}
+            aria-label="Go back to board selection"
+          >
+            <ChevronLeft size={20} color="#a8b8cc" />
+          </button>
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -965,7 +975,7 @@ function StepSetup({ onNext, boardId }) {
           <h1 className="font-extrabold leading-tight mb-2" style={{ fontSize: 34, color: '#f8fafc', letterSpacing: '-0.03em' }}>
             Set your details
           </h1>
-          <p className="text-sm leading-relaxed" style={{ color: '#7b9ab8' }}>
+          <p className="text-sm leading-relaxed" style={{ color: '#8fa8bf' }}>
             Two quick things and you're in.
           </p>
         </motion.div>
@@ -1092,7 +1102,7 @@ function StepSetup({ onNext, boardId }) {
                   <span className="font-black leading-none" style={{ fontSize: 26, color: sel ? color : 'rgba(255,255,255,0.75)', letterSpacing: '-0.03em' }}>
                     {value}
                   </span>
-                  <span className="font-semibold text-center leading-tight" style={{ fontSize: 10, color: sel ? `${color}cc` : 'rgba(255,255,255,0.3)' }}>
+                  <span className="font-semibold text-center leading-tight" style={{ fontSize: 10, color: sel ? `${color}cc` : 'rgba(255,255,255,0.45)' }}>
                     {sub}
                   </span>
                 </motion.button>
@@ -1117,22 +1127,20 @@ function StepSetup({ onNext, boardId }) {
         <motion.button
           className="w-full py-4 rounded-[20px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: grade
-              ? 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)'
-              : 'rgba(255,255,255,0.07)',
-            color: grade ? '#fff' : '#4a5a6a',
-            boxShadow: grade ? '0 6px 28px rgba(0,212,255,0.2), 0 2px 8px rgba(99,102,241,0.25)' : 'none',
+            background: 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)',
+            color: '#fff',
+            boxShadow: '0 6px 28px rgba(0,212,255,0.2), 0 2px 8px rgba(99,102,241,0.25)',
             letterSpacing: '-0.01em',
             transition: 'all 0.2s',
           }}
-          onClick={() => { if (grade) onNext({ grade, examDate: examDate || null }) }}
-          whileTap={grade ? { scale: 0.97 } : {}}
+          onClick={() => onNext({ grade: grade || '7', examDate: examDate || null })}
+          whileTap={{ scale: 0.97 }}
         >
           Let's go
           <ArrowRight size={18} strokeWidth={2.5} />
         </motion.button>
         {!grade && (
-          <p className="text-center text-xs mt-2" style={{ color: '#4a5a6a' }}>Select your target grade to continue</p>
+          <p className="text-center text-xs mt-2" style={{ color: '#6b7d8f' }}>Grade 7 selected by default — tap a tile to change</p>
         )}
       </motion.div>
     </motion.div>
@@ -1151,6 +1159,10 @@ export default function OnboardingScreen() {
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
   const [boardId, setBoardId] = useState('aqa')
+
+  // Respect system accessibility setting — suppress animations if user prefers reduced motion
+  const reducedMotion = typeof window !== 'undefined'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   const handleBoardNext = (id) => {
     setBoardId(id)
@@ -1173,8 +1185,8 @@ export default function OnboardingScreen() {
   return (
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
-        {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
-        {step === 1 && <StepSetup key="setup" onNext={handleSetupNext} boardId={boardId} />}
+        {step === 0 && <StepBoard key="board" onNext={handleBoardNext} reducedMotion={reducedMotion} />}
+        {step === 1 && <StepSetup key="setup" onNext={handleSetupNext} boardId={boardId} onBack={() => setStep(0)} reducedMotion={reducedMotion} />}
       </AnimatePresence>
     </div>
   )

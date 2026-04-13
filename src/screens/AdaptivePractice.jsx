@@ -435,6 +435,7 @@ export default function AdaptivePractice() {
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState(null)
   const [prevTier, setPrevTier] = useState(tier)
   const [showDone, setShowDone] = useState(false)
+  const [sessionRestorePrompt, setSessionRestorePrompt] = useState(null) // { sessionCount, sessionCorrect, seenIds } | null
 
   // ── Save session after every answer ────────────────────────────────────────
   useEffect(() => {
@@ -449,25 +450,23 @@ export default function AdaptivePractice() {
 
   // ── Restore session + load first question on mount ──────────────────────────
   useEffect(() => {
-    let initialIds = []
-    let initialCount = 0
-    let initialCorrect = 0
     try {
       const raw = localStorage.getItem(sessionKey(topicId))
       if (raw) {
         const saved = JSON.parse(raw)
         const age = Date.now() - (saved.savedAt || 0)
-        if (age < 24 * 60 * 60 * 1000) {          // within 24 h
-          initialIds    = saved.seenIds    || []
-          initialCount  = saved.sessionCount  || 0
-          initialCorrect = saved.sessionCorrect || 0
-          setSeenIds(initialIds)
-          setSessionCount(initialCount)
-          setSessionCorrect(initialCorrect)
+        if (age < 24 * 60 * 60 * 1000 && (saved.sessionCount || 0) > 0) {
+          // Show confirmation prompt instead of silently restoring
+          setSessionRestorePrompt({
+            sessionCount:   saved.sessionCount  || 0,
+            sessionCorrect: saved.sessionCorrect || 0,
+            seenIds:        saved.seenIds        || [],
+          })
+          return  // don't load a question yet — wait for user choice
         }
       }
     } catch {}
-    loadQuestion(initialIds, courseFilter, tier)
+    loadQuestion([], courseFilter, tier)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -512,6 +511,22 @@ export default function AdaptivePractice() {
   // ── Clear saved session ─────────────────────────────────────────────────────
   const clearSession = () => {
     try { localStorage.removeItem(sessionKey(topicId)) } catch {}
+  }
+
+  // ── Session restore handlers ────────────────────────────────────────────────
+  const handleRestoreContinue = () => {
+    const { sessionCount: sc, sessionCorrect: sco, seenIds: ids } = sessionRestorePrompt
+    setSeenIds(ids)
+    setSessionCount(sc)
+    setSessionCorrect(sco)
+    setSessionRestorePrompt(null)
+    loadQuestion(ids, courseFilter, tier)
+  }
+
+  const handleRestoreFresh = () => {
+    clearSession()
+    setSessionRestorePrompt(null)
+    loadQuestion([], courseFilter, tier)
   }
 
   // ── Save & exit ─────────────────────────────────────────────────────────────
@@ -595,7 +610,7 @@ export default function AdaptivePractice() {
 
   // ── Practice screen ─────────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+    <div className="flex flex-col h-full overflow-hidden relative" style={{ background: '#080f1e' }}>
 
       {/* Header */}
       <PageHeader
@@ -685,9 +700,13 @@ export default function AdaptivePractice() {
                 <ConfusionBusterQuestion data={currentQ} onComplete={handleAnswer} moduleColor={moduleColor} />
               )}
 
-              {/* Next button — shown after answering, no tier change indicator */}
+              {/* Next button + tier change indicator — shown after answering */}
               {answered && (
                 <motion.div className="mt-4 space-y-2" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+                  {/* Tier change pill */}
+                  <div className="flex justify-center">
+                    <TierChange from={prevTier} to={tier} />
+                  </div>
                   {/* Ask Mamo — only after incorrect answers */}
                   {lastAnswerCorrect === false && (
                     <motion.button
@@ -769,6 +788,54 @@ export default function AdaptivePractice() {
           </AnimatePresence>
         </motion.button>
       </div>
+
+      {/* Session restore confirmation bottom sheet */}
+      <AnimatePresence>
+        {sessionRestorePrompt && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              className="absolute inset-0"
+              style={{ background: 'rgba(8,15,30,0.75)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)', zIndex: 40 }}
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            />
+            {/* Sheet */}
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 px-5 pb-10 pt-6 rounded-t-[24px]"
+              style={{ background: 'rgba(15,22,41,0.98)', border: '0.75px solid rgba(255,255,255,0.1)', zIndex: 50 }}
+              initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 26, stiffness: 300 }}
+            >
+              <div className="w-10 h-1 rounded-full mx-auto mb-5" style={{ background: 'rgba(255,255,255,0.15)' }} />
+              <div className="text-base font-bold mb-1" style={{ color: '#f8fafc' }}>
+                Continue where you left off?
+              </div>
+              <div className="text-sm mb-5" style={{ color: '#64748b' }}>
+                You answered {sessionRestorePrompt.sessionCount} question{sessionRestorePrompt.sessionCount !== 1 ? 's' : ''} in this session
+                ({sessionRestorePrompt.sessionCorrect} correct).
+              </div>
+              <div className="flex flex-col gap-3">
+                <motion.button
+                  className="w-full py-4 rounded-[16px] text-base font-bold"
+                  style={{ background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`, color: '#fff' }}
+                  onClick={handleRestoreContinue}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Continue session
+                </motion.button>
+                <motion.button
+                  className="w-full py-3.5 rounded-[16px] text-sm font-semibold"
+                  style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.1)', color: '#64748b' }}
+                  onClick={handleRestoreFresh}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Start fresh
+                </motion.button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap, Calendar } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
@@ -174,11 +174,21 @@ export default function SettingsScreen() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
 
-  // Profile
+  // Profile + exam date
   const [profile, setProfile] = useState(() => loadProfile())
   const [editingProfile, setEditingProfile] = useState(false)
   const [editName, setEditName] = useState('')
   const [editAvatar, setEditAvatar] = useState('')
+  const [examDate, setExamDate] = useState(() => loadProfile().examDate || '')
+
+  const handleExamDateChange = (e) => {
+    const val = e.target.value
+    setExamDate(val)
+    const updated = { ...loadProfile(), examDate: val || null }
+    saveProfile(updated)
+    setProfile(updated)
+    showToast('Exam date saved ✓', '#10b981')
+  }
 
   const startEditProfile = () => {
     setEditName(profile.name || '')
@@ -685,6 +695,93 @@ export default function SettingsScreen() {
           <p className="text-[10px] text-center pt-1" style={{ color: '#3a4a5a' }}>
             This filters topics to match your exam board's specification
           </p>
+        </div>
+      </div>
+
+      {/* ── Exam Date ── */}
+      <div className="px-5 mb-5">
+        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: '#a8b8cc' }}>
+          Exam Date
+        </div>
+        <div className="rounded-[16px] p-4" style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
+          <div className="flex items-center gap-2 mb-3">
+            <Calendar size={15} color="#6366f1" />
+            <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Your exam date</span>
+          </div>
+          {/* Invisible native date input overlaid on custom display */}
+          <div className="relative">
+            {examDate ? (() => {
+              const d = new Date(examDate)
+              const today = new Date(); today.setHours(0,0,0,0)
+              const daysLeft = Math.ceil((d - today) / 86400000)
+              const urgent = daysLeft <= 14
+              const soon   = daysLeft <= 42
+              const passed = daysLeft < 0
+              const accentColor = passed ? '#64748b' : urgent ? '#ef4444' : soon ? '#f39c12' : '#10b981'
+              const label = passed ? 'Exam passed' : urgent ? 'Very soon!' : soon ? 'Coming up' : 'On track'
+              return (
+                <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
+                  style={{ background: `${accentColor}14`, border: `1px solid ${accentColor}33` }}>
+                  <div className="flex flex-col items-center justify-center w-12 h-12 rounded-[10px] shrink-0"
+                    style={{ background: `${accentColor}22` }}>
+                    <span className="text-lg font-black leading-none" style={{ color: accentColor }}>
+                      {passed ? '✓' : daysLeft}
+                    </span>
+                    {!passed && <span className="text-[9px] font-bold" style={{ color: accentColor }}>days</span>}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>
+                      {d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' })}
+                    </div>
+                    <div className="text-xs mt-0.5 font-semibold" style={{ color: accentColor }}>{label}</div>
+                  </div>
+                  <Pencil size={14} color="#64748b" />
+                </div>
+              )
+            })() : (
+              <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
+                style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}>
+                <div className="w-12 h-12 rounded-[10px] flex items-center justify-center shrink-0"
+                  style={{ background: 'rgba(99,102,241,0.15)' }}>
+                  <Calendar size={22} color="#6366f1" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>Set your exam date</div>
+                  <div className="text-xs mt-0.5" style={{ color: '#6b7d8f' }}>Get a personalised revision plan</div>
+                </div>
+                <div className="px-3 py-1.5 rounded-full text-xs font-bold"
+                  style={{ background: 'rgba(99,102,241,0.2)', color: '#818cf8', border: '1px solid rgba(99,102,241,0.35)' }}>
+                  Set date
+                </div>
+              </div>
+            )}
+            {/* Invisible native date input on top */}
+            <input
+              type="date"
+              value={examDate}
+              min={new Date().toISOString().split('T')[0]}
+              onChange={handleExamDateChange}
+              onFocus={e => { e.target.style.fontSize = '16px' }}
+              style={{
+                position: 'absolute', inset: 0, opacity: 0,
+                width: '100%', height: '100%', cursor: 'pointer',
+              }}
+            />
+          </div>
+          {examDate && (
+            <button
+              onClick={() => {
+                setExamDate('')
+                const updated = { ...loadProfile(), examDate: null }
+                saveProfile(updated)
+                setProfile(updated)
+              }}
+              className="mt-2 w-full text-xs text-center py-1"
+              style={{ color: '#3a4a5a' }}
+            >
+              Clear date
+            </button>
+          )}
         </div>
       </div>
 

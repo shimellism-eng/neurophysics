@@ -134,14 +134,18 @@ export default function MamoChat() {
   useEffect(() => {
     if (messages.length <= 1) return
     const newData = JSON.stringify(messages.slice(-50))
-    // Evict oldest mamo thread if total localStorage usage is approaching 4MB
+    // Evict oldest mamo thread(s) if total localStorage usage is approaching 4MB
     try {
       let total = 0
       for (let k in localStorage) total += (localStorage[k]?.length || 0)
       if (total > 4 * 1024 * 1024) {
-        const mamoKeys = Object.keys(localStorage).filter(k => k.startsWith('mamo_thread_'))
-        if (mamoKeys.length > 1) {
-          localStorage.removeItem(mamoKeys[0])
+        const mamoKeys = Object.keys(localStorage).filter(k => k.startsWith('mamo_thread_') && k !== storageKey)
+        // Remove oldest keys (not the current thread) until under limit
+        for (const key of mamoKeys) {
+          localStorage.removeItem(key)
+          let newTotal = 0
+          for (let k in localStorage) newTotal += (localStorage[k]?.length || 0)
+          if (newTotal <= 3.5 * 1024 * 1024) break
         }
       }
       localStorage.setItem(storageKey, newData)

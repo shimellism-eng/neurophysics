@@ -24,7 +24,9 @@ function notify() {
 function updateStreak() {
   const today = new Date().toDateString()
   if (statsStore.lastActiveDate === today) return
-  const yesterday = new Date(Date.now() - 86400000).toDateString()
+  // DST-safe: subtract 1 calendar day, not 86400000ms (BST/GMT changeover fix)
+  const yesterdayDate = new Date(); yesterdayDate.setDate(yesterdayDate.getDate() - 1)
+  const yesterday = yesterdayDate.toDateString()
   statsStore.streak = statsStore.lastActiveDate === yesterday ? statsStore.streak + 1 : 1
   statsStore.lastActiveDate = today
   // Keep a rolling 30-day log of actual study dates for the calendar

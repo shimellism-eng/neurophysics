@@ -558,7 +558,7 @@ function Landing({ onEmail, onSignIn }) {
 }
 
 // ─── Email Sign Up ────────────────────────────────────────────────────────────
-function SignUpEmail({ onBack, onDone }) {
+function SignUpEmail({ onBack, onSignIn, onDone }) {
   const { signUp } = useAuth()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -623,7 +623,7 @@ function SignUpEmail({ onBack, onDone }) {
           </p>
         </div>
         <button
-          onClick={onBack}
+          onClick={onSignIn || onBack}
           className="text-sm font-semibold"
           style={{ color: '#818cf8', background: 'none', border: 'none', cursor: 'pointer' }}
         >
@@ -995,7 +995,7 @@ export default function AuthScreen() {
         )}
         {view === 'signup-email' && (
           <motion.div key="signup-email" className="flex flex-col h-full">
-            <SignUpEmail onBack={() => setView('landing')} onDone={onDone} />
+            <SignUpEmail onBack={() => setView('landing')} onSignIn={() => setView('signin')} onDone={onDone} />
           </motion.div>
         )}
         {view === 'signin' && (

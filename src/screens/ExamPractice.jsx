@@ -410,6 +410,28 @@ export default function ExamPractice() {
   // F10/F12: session timer for ADHD pacing
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
+  // Derive current question values (safe even before early return guard)
+  const q = questions[qIndex] || {}
+  const qType = q.type || 'mcq'
+  const isLast = qIndex === total - 1
+
+  // All hooks must be declared before any early return (Rules of Hooks)
+  const handleInteractiveComplete = useCallback((correct) => {
+    if (correct) setScore(s => s + 1)
+    setLastCorrect(!!correct)
+    setCompleted(true)
+  }, [])
+
+  // Auto-expand decoder for 6-mark / extended-answer questions on first view
+  useEffect(() => {
+    if (!topic || total === 0) return
+    const isExtended = qType === 'extended-answer' || qType === 'extended' || (q.marks ?? 0) >= 6
+    if (isExtended && extendedAutoExpandedRef.current !== qIndex) {
+      extendedAutoExpandedRef.current = qIndex
+      setShowDecoder(true)
+    }
+  }, [qIndex, qType, q.marks, topic, total])
+
   if (!topic || total === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-full px-6" style={{ background: '#0b1121', color: '#a8b8cc' }}>
@@ -425,16 +447,6 @@ export default function ExamPractice() {
       </div>
     )
   }
-
-  const q = questions[qIndex] || {}
-  const qType = q.type || 'mcq'
-  const isLast = qIndex === total - 1
-
-  const handleInteractiveComplete = useCallback((correct) => {
-    if (correct) setScore(s => s + 1)
-    setLastCorrect(!!correct)
-    setCompleted(true)
-  }, [])
 
   // MCQ handler for equation-recall
   const handleMcqSelect = (idx) => { if (!mcqSubmitted) setSelected(idx) }
@@ -473,15 +485,6 @@ export default function ExamPractice() {
     questionLower.includes(' ' + w + ' ') ||
     questionLower.includes('\n' + w + ' ')
   )
-
-  // Auto-expand decoder for 6-mark / extended-answer questions on first view
-  useEffect(() => {
-    const isExtended = qType === 'extended-answer' || qType === 'extended' || (q.marks ?? 0) >= 6
-    if (isExtended && extendedAutoExpandedRef.current !== qIndex) {
-      extendedAutoExpandedRef.current = qIndex
-      setShowDecoder(true)
-    }
-  }, [qIndex, qType, q.marks])
 
   const renderQuestion = () => {
     const props = { data: q, moduleColor: topic.moduleColor, onComplete: handleInteractiveComplete }

@@ -398,7 +398,8 @@ export default function MasteryScreen() {
               <button onClick={dismissIntro} style={{
                 marginTop: 10, background: 'none', border: 'none',
                 color: '#00d4ff', fontSize: 12, fontWeight: 600,
-                cursor: 'pointer', padding: 0,
+                cursor: 'pointer', padding: '10px 0',
+                minHeight: 44, display: 'block',
               }}>Got it →</button>
             </div>
           </div>

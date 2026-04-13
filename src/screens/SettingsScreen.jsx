@@ -160,8 +160,12 @@ export default function SettingsScreen() {
 
   const handleSignOut = () => {
     setSigningOut(true)
-    // Clear local session data synchronously
-    localStorage.removeItem('neurophysics_profile')
+    // Clear local session data synchronously (board, role, progress, stats, profile)
+    const keysToRemove = [
+      'neurophysics_profile', 'np_board', 'np_role',
+      'np_progress', 'np_stats',
+    ]
+    keysToRemove.forEach(k => localStorage.removeItem(k))
     try { secureRemove('mamo_api_key') } catch {}
     // signOut() calls setUser(null) synchronously → AppShell redirects to /auth.
     // Fire-and-forget: don't await so a slow/offline Supabase call never blocks.

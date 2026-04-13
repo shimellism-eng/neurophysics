@@ -897,16 +897,27 @@ function StepBoard({ onNext }) {
 }
 
 // ─── Step 2: Setup (Exam Date + Age) ─────────────────────────────────────────
-const AGE_OPTIONS = [
-  { label: 'Year 9–10', sub: 'Age 13–15', value: '13–15', color: '#00d4ff' },
-  { label: 'Year 10–11', sub: 'Age 15–16', value: '15–16', color: '#6366f1' },
-  { label: 'Year 11–12', sub: 'Age 16–17', value: '16–17', color: '#9b59b6' },
-  { label: '18 or over', sub: 'Mature learner', value: '18+', color: '#e91e8c' },
+const GRADE_OPTIONS_91 = [
+  { value: '4', label: 'Grade 4', sub: 'Pass',         color: '#f59e0b' },
+  { value: '5', label: 'Grade 5', sub: 'Strong Pass',  color: '#22c55e' },
+  { value: '6', label: 'Grade 6', sub: 'Merit',        color: '#10b981' },
+  { value: '7', label: 'Grade 7', sub: 'Good',         color: '#6366f1' },
+  { value: '8', label: 'Grade 8', sub: 'Distinction',  color: '#8b5cf6' },
+  { value: '9', label: 'Grade 9', sub: 'Top Grade',    color: '#e91e8c' },
+]
+const GRADE_OPTIONS_CCEA = [
+  { value: 'C',  label: 'Grade C',  sub: 'Pass',        color: '#f59e0b' },
+  { value: 'B',  label: 'Grade B',  sub: 'Merit',       color: '#22c55e' },
+  { value: 'A',  label: 'Grade A',  sub: 'Distinction', color: '#6366f1' },
+  { value: 'A*', label: 'Grade A*', sub: 'Top Grade',   color: '#e91e8c' },
 ]
 
-function StepSetup({ onNext }) {
+function StepSetup({ onNext, boardId }) {
   const [examDate, setExamDate] = useState('')
-  const [ageGroup, setAgeGroup] = useState('')
+  const [grade, setGrade] = useState('')
+
+  const isCCEA = boardId === 'ccea'
+  const gradeOptions = isCCEA ? GRADE_OPTIONS_CCEA : GRADE_OPTIONS_91
 
   const today = new Date(); today.setHours(0,0,0,0)
   const examD = examDate ? new Date(examDate) : null
@@ -918,6 +929,8 @@ function StepSetup({ onNext }) {
     : daysLeft <= 42 ? { color: '#f59e0b', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.22)', label: 'Coming up' }
     : { color: '#22c55e', bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.2)', label: 'On track' }
   const fmtDate = examD ? examD.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
+
+  const selectedGradeOption = gradeOptions.find(g => g.value === grade)
 
   return (
     <motion.div
@@ -936,7 +949,6 @@ function StepSetup({ onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* Step indicator (2/2) */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -1026,74 +1038,70 @@ function StepSetup({ onNext }) {
           </div>
         </motion.div>
 
-        {/* ── Age group ── */}
+        {/* ── Target grade ── */}
         <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.4 }}
         >
-          <div className="text-xs font-bold uppercase tracking-widest mb-2.5" style={{ color: '#a8b8cc' }}>
-            Year group
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#a8b8cc' }}>Target grade</span>
+            {selectedGradeOption && (
+              <motion.span
+                key={selectedGradeOption.value}
+                className="text-[10px] px-2 py-0.5 rounded-full font-bold"
+                style={{ background: `${selectedGradeOption.color}18`, color: selectedGradeOption.color, border: `0.75px solid ${selectedGradeOption.color}40` }}
+                initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
+              >
+                {selectedGradeOption.sub}
+              </motion.span>
+            )}
           </div>
-          <div className="grid grid-cols-2 gap-2.5">
-            {AGE_OPTIONS.map(({ label, sub, value, color }) => {
-              const sel = ageGroup === value
+          <div className={`grid gap-2.5 ${isCCEA ? 'grid-cols-2' : 'grid-cols-3'}`}>
+            {gradeOptions.map(({ value, label, sub, color }, idx) => {
+              const sel = grade === value
+              const isTop = !isCCEA && (value === '8' || value === '9')
               return (
                 <motion.button
                   key={value}
-                  className="rounded-[18px] px-4 py-4 text-left flex flex-col gap-0.5 relative overflow-hidden"
+                  className="rounded-[18px] py-4 px-3 flex flex-col items-center justify-center gap-1 relative overflow-hidden"
                   style={{
-                    background: sel ? `${color}18` : `${color}08`,
-                    border: sel ? `1.5px solid ${color}75` : `1px solid ${color}30`,
-                    boxShadow: sel ? `0 0 20px ${color}25` : 'none',
+                    background: sel ? `${color}18` : 'rgba(15,22,41,0.9)',
+                    border: sel ? `1.5px solid ${color}70` : '0.75px solid rgba(255,255,255,0.08)',
+                    boxShadow: sel ? `0 0 24px ${color}30, 0 4px 12px ${color}15` : 'none',
                     transition: 'all 0.18s',
+                    minHeight: 80,
                   }}
-                  onClick={() => setAgeGroup(value)}
-                  whileTap={{ scale: 0.97 }}
+                  onClick={() => setGrade(value)}
+                  whileTap={{ scale: 0.96 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.22 + idx * 0.04 }}
                 >
-                  {/* Left accent bar */}
-                  <div style={{
-                    position: 'absolute', left: 0, top: 10, bottom: 10,
-                    width: 3, borderRadius: 2,
-                    background: sel ? color : `${color}50`,
-                    transition: 'background 0.18s',
-                  }} />
-                  <span className="text-sm font-extrabold" style={{ color: sel ? color : `${color}cc`, letterSpacing: '-0.01em' }}>
-                    {label}
-                  </span>
-                  <span className="text-xs font-medium" style={{ color: sel ? `${color}99` : `${color}65` }}>
-                    {sub}
-                  </span>
+                  {/* Top-grade sparkle */}
+                  {isTop && !sel && (
+                    <span style={{ position: 'absolute', top: 6, right: 8, fontSize: 10, color: `${color}80` }}>★</span>
+                  )}
                   {sel && (
-                    <div className="absolute top-3 right-3 w-5 h-5 rounded-full flex items-center justify-center"
+                    <div className="absolute top-2.5 right-2.5 w-4 h-4 rounded-full flex items-center justify-center"
                       style={{ background: color }}>
-                      <Check size={10} color="#fff" strokeWidth={3} />
+                      <Check size={9} color="#fff" strokeWidth={3} />
                     </div>
                   )}
+                  <span className="font-black leading-none" style={{ fontSize: 26, color: sel ? color : 'rgba(255,255,255,0.75)', letterSpacing: '-0.03em' }}>
+                    {value}
+                  </span>
+                  <span className="font-semibold text-center leading-tight" style={{ fontSize: 10, color: sel ? `${color}cc` : 'rgba(255,255,255,0.3)' }}>
+                    {sub}
+                  </span>
                 </motion.button>
               )
             })}
           </div>
-          {/* Reassurance — reduces ADHD choice anxiety */}
           <p className="text-center text-xs mt-3" style={{ color: 'rgba(255,255,255,0.22)' }}>
-            You can update these any time in Settings.
+            You can update this any time in Settings.
           </p>
-
-          {/* GDPR notice for under-18 */}
-          {(ageGroup === '13–15' || ageGroup === '15–16' || ageGroup === '16–17') && (
-            <motion.div
-              className="mt-3 rounded-[14px] px-4 py-3 flex gap-2"
-              style={{ background: 'rgba(245,158,11,0.07)', border: '0.75px solid rgba(245,158,11,0.2)' }}
-              initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}
-            >
-              <span style={{ fontSize: 14, marginTop: 1 }}>🔒</span>
-              <p className="text-xs leading-relaxed" style={{ color: '#a8b8cc' }}>
-                We collect minimal data and never share it. Under-16s may need a parent's permission.{' '}
-                <a href="#/privacy" className="underline" style={{ color: '#f59e0b' }}>Privacy policy</a>
-              </p>
-            </motion.div>
-          )}
         </motion.div>
       </div>
 
@@ -1109,22 +1117,22 @@ function StepSetup({ onNext }) {
         <motion.button
           className="w-full py-4 rounded-[20px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: ageGroup
+            background: grade
               ? 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)'
               : 'rgba(255,255,255,0.07)',
-            color: ageGroup ? '#fff' : '#4a5a6a',
-            boxShadow: ageGroup ? '0 6px 28px rgba(0,212,255,0.2), 0 2px 8px rgba(99,102,241,0.25)' : 'none',
+            color: grade ? '#fff' : '#4a5a6a',
+            boxShadow: grade ? '0 6px 28px rgba(0,212,255,0.2), 0 2px 8px rgba(99,102,241,0.25)' : 'none',
             letterSpacing: '-0.01em',
             transition: 'all 0.2s',
           }}
-          onClick={() => { if (ageGroup) onNext({ ageGroup, examDate: examDate || null }) }}
-          whileTap={ageGroup ? { scale: 0.97 } : {}}
+          onClick={() => { if (grade) onNext({ grade, examDate: examDate || null }) }}
+          whileTap={grade ? { scale: 0.97 } : {}}
         >
           Let's go
           <ArrowRight size={18} strokeWidth={2.5} />
         </motion.button>
-        {!ageGroup && (
-          <p className="text-center text-xs mt-2" style={{ color: '#4a5a6a' }}>Select your year group to continue</p>
+        {!grade && (
+          <p className="text-center text-xs mt-2" style={{ color: '#4a5a6a' }}>Select your target grade to continue</p>
         )}
       </motion.div>
     </motion.div>
@@ -1149,15 +1157,15 @@ export default function OnboardingScreen() {
     setStep(1)
   }
 
-  const handleSetupNext = ({ ageGroup, examDate }) => {
-    finishOnboarding({ ageGroup, examDate })
+  const handleSetupNext = ({ grade, examDate }) => {
+    finishOnboarding({ grade, examDate })
   }
 
-  const finishOnboarding = ({ ageGroup, examDate }) => {
+  const finishOnboarding = ({ grade, examDate }) => {
     localStorage.setItem('neurophysics_onboarded', '1')
     localStorage.setItem('neurophysics_profile', JSON.stringify({
-      name: '', avatar: '🧠', ageGroup,
-      grade: '7', examDate: examDate || null, boardId,
+      name: '', avatar: '🧠', ageGroup: null,
+      grade: grade || '7', examDate: examDate || null, boardId,
     }))
     navigate('/', { replace: true })
   }
@@ -1166,7 +1174,7 @@ export default function OnboardingScreen() {
     <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
       <AnimatePresence mode="wait">
         {step === 0 && <StepBoard key="board" onNext={handleBoardNext} />}
-        {step === 1 && <StepSetup key="setup" onNext={handleSetupNext} />}
+        {step === 1 && <StepSetup key="setup" onNext={handleSetupNext} boardId={boardId} />}
       </AnimatePresence>
     </div>
   )

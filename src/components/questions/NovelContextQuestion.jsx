@@ -12,6 +12,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Lightbulb, CheckCircle, XCircle, Loader2, AlertCircle } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { getValidatedBoard } from '../../utils/boardConfig'
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
 const MAX_CHARS = 700
@@ -19,7 +20,7 @@ const MIN_CHARS = 10
 
 export default function NovelContextQuestion({ data, moduleColor = '#6366f1', onComplete }) {
   if (!data) return null
-  const { scenario, question, markScheme = [], marks = 6, senNote, questionSubtitle } = data
+  const { scenario, question, markScheme = [], marks = 6, senNote, questionSubtitle, modelAnswer } = data
 
   const [answer, setAnswer]         = useState('')
   const [status, setStatus]         = useState('idle')   // idle | marking | marked | error
@@ -54,6 +55,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
           studentAnswer: answer,
           markScheme,
           marks,
+          boardName: getValidatedBoard(),
         }),
       })
       clearTimeout(timeout)
@@ -207,6 +209,24 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
                 <Lightbulb size={14} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
                 <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{result.feedback}</p>
+              </motion.div>
+            )}
+
+            {/* Model answer — shown when available so students can compare */}
+            {modelAnswer && (
+              <motion.div
+                className="rounded-[14px] overflow-hidden"
+                style={{ border: '0.75px solid rgba(99,102,241,0.3)' }}
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
+              >
+                <div className="px-4 py-2" style={{ background: 'rgba(99,102,241,0.12)' }}>
+                  <p className="text-[11px] uppercase tracking-wide font-bold" style={{ color: '#818cf8' }}>
+                    Model answer
+                  </p>
+                </div>
+                <div className="px-4 py-3" style={{ background: 'rgba(18,26,47,0.9)' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{modelAnswer}</p>
+                </div>
               </motion.div>
             )}
 

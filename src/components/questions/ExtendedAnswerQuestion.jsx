@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Lightbulb, CheckCircle, XCircle, Loader2, AlertCircle } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { getValidatedBoard } from '../../utils/boardConfig'
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'https://neurophysics.vercel.app'
 const MAX_CHARS = 600
@@ -44,7 +45,7 @@ function useAIMarking() {
           'content-type': 'application/json',
           'Authorization': `Bearer ${session.access_token}`,
         },
-        body: JSON.stringify({ question, studentAnswer, markScheme, marks }),
+        body: JSON.stringify({ question, studentAnswer, markScheme, marks, boardName: getValidatedBoard() }),
       })
       clearTimeout(timeout)
       const data = await res.json()

@@ -4,7 +4,12 @@
 import { verifySupabaseJWT } from './_verifyAuth.js'
 import { rateLimitCheck }   from './_rateLimit.js'
 
-const MARKING_SYSTEM_PROMPT = `You are an AQA GCSE Physics examiner marking a student's written answer.
+// Board-aware system prompt — board name injected at call time
+function getMarkingSystemPrompt(boardName) {
+  const board = (typeof boardName === 'string' && boardName.length < 20)
+    ? boardName.replace(/[<>"'`]/g, '').trim()
+    : 'AQA'
+  return `You are a ${board} GCSE Physics examiner marking a student's written answer.
 
 CORE RULES:
 - Award marks strictly per the mark scheme provided
@@ -46,6 +51,7 @@ Required JSON format:
   ],
   "feedback": "<1–2 encouraging sentences. Acknowledge what they got right. Give one specific tip to improve.>"
 }`
+}
 
 export default async function handler(req, res) {
   // ── CORS ──────────────────────────────────────────────────────────────────
@@ -88,7 +94,7 @@ export default async function handler(req, res) {
   }
 
   // ── Body validation ───────────────────────────────────────────────────────
-  const { question, studentAnswer, markScheme, marks } = req.body || {}
+  const { question, studentAnswer, markScheme, marks, boardName } = req.body || {}
 
   if (!question || typeof question !== 'string') {
     return res.status(400).json({ error: 'Missing question' })
@@ -143,7 +149,7 @@ Mark this answer. Return JSON only.`
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        system_instruction: { parts: [{ text: MARKING_SYSTEM_PROMPT }] },
+        system_instruction: { parts: [{ text: getMarkingSystemPrompt(boardName) }] },
         generationConfig: {
           maxOutputTokens: 500,
           temperature: 0.3,  // low temp for consistent marking

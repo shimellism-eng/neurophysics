@@ -35,7 +35,8 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const isCorrect = submitted && (
     acceptableRange
       ? numericAnswer >= acceptableRange[0] && numericAnswer <= acceptableRange[1]
-      : Math.abs(numericAnswer - answer) < Math.abs(answer * 0.02) || numericAnswer === answer
+      // When answer === 0 use a small absolute epsilon (2% of 0 = 0 is meaningless)
+      : Math.abs(numericAnswer - answer) < (answer === 0 ? 0.001 : Math.abs(answer * 0.02)) || numericAnswer === answer
   )
 
   const handleSubmit = () => {
@@ -43,7 +44,8 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
     setSubmitted(true)
     const correct = acceptableRange
       ? numericAnswer >= acceptableRange[0] && numericAnswer <= acceptableRange[1]
-      : Math.abs(numericAnswer - answer) < Math.abs(answer * 0.02) || numericAnswer === answer
+      // When answer === 0 use a small absolute epsilon (2% of 0 = 0 is meaningless)
+      : Math.abs(numericAnswer - answer) < (answer === 0 ? 0.001 : Math.abs(answer * 0.02)) || numericAnswer === answer
     onComplete(correct)
   }
 

@@ -17,11 +17,11 @@ export default function TapMatchQuestion({ data, moduleColor, onComplete }) {
   const items = pairs.map((p, i) => ({ ...p, idx: i }))
   const matches = pairs.map((p, i) => ({ label: p.match, idx: i }))
 
-  // Shuffle matches once (deterministic based on pairs length)
+  // Proper Fisher-Yates shuffle using Math.random() — prevents position memorisation
   const [shuffledMatches] = useState(() => {
     const a = [...matches]
     for (let i = a.length - 1; i > 0; i--) {
-      const j = (i * 7 + 3) % (i + 1)
+      const j = Math.floor(Math.random() * (i + 1))
       ;[a[i], a[j]] = [a[j], a[i]]
     }
     return a

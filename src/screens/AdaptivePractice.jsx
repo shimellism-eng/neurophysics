@@ -50,7 +50,7 @@ function MCQQuestion({ q, onAnswer }) {
   return (
     <div className="space-y-3">
       <div className="space-y-2">
-        {q.options.map((opt, i) => {
+        {(q.options || []).map((opt, i) => {
           const isCorrect = submitted && i === q.correctIndex
           const isWrong   = submitted && i === selected && selected !== q.correctIndex
           return (
@@ -92,8 +92,11 @@ function CalcQuestion({ q, onAnswer }) {
   const handleSubmit = () => {
     if (!value || submitted) return
     const num = parseFloat(value)
-    const [lo, hi] = q.acceptableRange || [q.answer * 0.98, q.answer * 1.02]
-    const isCorrect = !isNaN(num) && num >= lo && num <= hi
+    // Guard: if q.answer is undefined, fall back to exact-match via a tiny range
+    const fallbackLo = q.answer != null ? q.answer * 0.98 : NaN
+    const fallbackHi = q.answer != null ? q.answer * 1.02 : NaN
+    const [lo, hi] = q.acceptableRange || [fallbackLo, fallbackHi]
+    const isCorrect = !isNaN(num) && !isNaN(lo) && !isNaN(hi) && num >= lo && num <= hi
     setCorrect(isCorrect)
     setSubmitted(true)
     onAnswer(isCorrect)

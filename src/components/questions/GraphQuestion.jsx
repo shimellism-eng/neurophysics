@@ -4,7 +4,7 @@
  */
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, XCircle, Lightbulb, Calculator } from 'lucide-react'
+import { CheckCircle, CheckCircle2, XCircle, Lightbulb, Calculator } from 'lucide-react'
 
 const GRAPH_W = 300
 const GRAPH_H = 180
@@ -163,6 +163,11 @@ export default function GraphQuestion({ data, moduleColor, onComplete }) {
             className="flex-1 bg-transparent px-4 py-4 text-base font-semibold outline-none"
             style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield' }}
           />
+          {submitted && (
+            isCorrect
+              ? <CheckCircle2 size={18} color="#00bc7d" style={{ marginRight: 10, flexShrink: 0 }} />
+              : <XCircle size={18} color="#ef4444" style={{ marginRight: 10, flexShrink: 0 }} />
+          )}
           {answerUnit && (
             <span className="pr-4 text-sm font-semibold" style={{ color: '#a8b8cc' }}>{answerUnit}</span>
           )}

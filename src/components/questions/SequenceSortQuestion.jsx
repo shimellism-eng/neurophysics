@@ -12,11 +12,11 @@ export default function SequenceSortQuestion({ data, moduleColor, onComplete }) 
   const [order, setOrder] = useState([])           // indices the user tapped
   const [submitted, setSubmitted] = useState(false)
 
-  // Shuffle the display order on mount
+  // Proper Fisher-Yates shuffle using Math.random() — prevents position memorisation
   const [displayOrder] = useState(() => {
     const indices = items.map((_, i) => i)
     for (let i = indices.length - 1; i > 0; i--) {
-      const j = (i * 13 + 5) % (i + 1)
+      const j = Math.floor(Math.random() * (i + 1))
       ;[indices[i], indices[j]] = [indices[j], indices[i]]
     }
     return indices

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback, useRef } from 'react'
 import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff, Volume2 } from 'lucide-react'
 import { speak } from '../utils/tts'
+import { getSelectedBoard } from '../utils/boardConfig'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
@@ -40,7 +41,7 @@ const PHYSICS_GLOSSARY = {
   'force': 'A push or pull that can cause acceleration. Measured in Newtons (N). F = ma.',
   'frequency': 'The number of complete waves passing a point per second. Measured in Hz. f = 1/T.',
   'friction': 'A contact force that opposes motion between surfaces.',
-  'gravitational field strength': 'The force per unit mass due to gravity. On Earth g ≈ 10 N/kg.',
+  'gravitational field strength': null, // resolved dynamically — see findDefinition
   'half-life': 'The time taken for the activity (or number of undecayed nuclei) to halve.',
   'inertia': 'The tendency of an object to resist changes in its state of motion.',
   'insulator': 'A material that does not allow electric current (or heat) to flow through it easily.',
@@ -81,6 +82,11 @@ const PHYSICS_GLOSSARY = {
 
 function findDefinition(keyword) {
   const lower = keyword.toLowerCase()
+  // Board-aware override for gravitational field strength
+  if (lower.includes('gravitational field strength') || lower === 'g') {
+    const board = getSelectedBoard()
+    return `The force per unit mass due to gravity. On Earth g = ${board.g} N/kg (${board.name}).`
+  }
   if (PHYSICS_GLOSSARY[lower]) return PHYSICS_GLOSSARY[lower]
   const partialKey = Object.keys(PHYSICS_GLOSSARY).find(k => lower.includes(k) || k.includes(lower))
   if (partialKey) return PHYSICS_GLOSSARY[partialKey]

@@ -216,7 +216,7 @@ export default function MamoChat() {
           const withoutPlaceholder = prev.filter(m => !m.streaming)
           return [...withoutPlaceholder, {
             role: 'assistant',
-            content: '🔒 **Sign in to use Mamo.** Create a free account to unlock the AI tutor — it takes 30 seconds and your progress is saved across devices.',
+            content: '🔒 **Sign in to use Mamo.** Create a free account to unlock the AI tutor and your progress will be saved across devices.',
           }]
         })
         return
@@ -349,7 +349,7 @@ export default function MamoChat() {
               Studying: {effectiveTopicLabel}
             </div>
           ) : (
-            <div className="text-xs" style={{ color: '#00bc7d' }}>● Physics Tutor · Always here</div>
+            <div className="text-xs" style={{ color: '#00bc7d' }}>● AI-powered physics tutor</div>
           )
         }
         rightSlot={

@@ -140,7 +140,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
             placeholder="Your answer"
             disabled={submitted}
             className="flex-1 bg-transparent px-4 py-4 text-base font-semibold outline-none"
-            style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield' }}
+            style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield', fontSize: '16px' }}
           />
           {answerUnit && (
             <span className={submitted ? 'text-sm font-semibold' : 'pr-4 text-sm font-semibold'} style={{ color: '#a8b8cc' }}>{answerUnit}</span>

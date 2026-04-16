@@ -89,7 +89,7 @@ function QuestionPalette({ questions, answers, flags, currentIdx, onJump, open, 
               const current  = i === currentIdx
               return (
                 <motion.button key={i}
-                  className="relative w-10 h-10 rounded-[10px] text-sm font-bold flex items-center justify-center"
+                  className="relative w-11 h-11 rounded-[10px] text-sm font-bold flex items-center justify-center"
                   style={{
                     background: current ? '#6366f1' : answered ? 'rgba(99,102,241,0.2)' : 'rgba(18,26,47,0.9)',
                     border: current ? '2px solid #6366f1' : answered ? '1.5px solid #6366f1' : '0.75px solid #2d3e55',
@@ -388,9 +388,15 @@ export default function TimedPaper() {
   const isLast = qIndex === total - 1
   const sectionInfo = getSectionLabel(qIndex, questions)
 
+  // scoreRef keeps a always-current score value so handleNext never reads stale closure state
+  const scoreRef = useRef(init.score)
+
   const handleComplete = useCallback((correct) => {
     const newScore = correct ? score + 1 : score
-    if (correct) setScore(newScore)
+    if (correct) {
+      setScore(newScore)
+      scoreRef.current = newScore
+    }
     setCompleted(true)
     setAnswers(prev => {
       const updated = { ...prev, [qIndex]: { correct } }
@@ -399,13 +405,14 @@ export default function TimedPaper() {
     })
   }, [score, qIndex, persist])
 
-  // Use functional update so rapid taps never read stale qIndex
+  // Use functional update so rapid taps never read stale qIndex.
+  // Reads scoreRef.current instead of score to avoid stale closure on last question.
   const handleNext = useCallback(() => {
     setQIndex(prev => {
       if (prev >= total - 1) {
         // Last question — go to results (defer to next tick to avoid setState-in-render)
         setTimeout(() => {
-          saveQuizResult('timed_paper', score, total)
+          saveQuizResult('timed_paper', scoreRef.current, total)
           localStorage.removeItem(STORAGE_KEY)
           setShowResults(true)
         }, 0)
@@ -414,7 +421,7 @@ export default function TimedPaper() {
       return Math.min(prev + 1, total - 1) // BUG-05: bounds guard
     })
     setCompleted(false)
-  }, [total, score])
+  }, [total])
 
   const toggleFlag = () => {
     setFlags(prev => ({ ...prev, [qIndex]: !prev[qIndex] }))
@@ -646,7 +653,7 @@ export default function TimedPaper() {
         {/* Pause / Resume button */}
         <button
           onClick={() => setPaused(v => !v)}
-          className="px-2.5 py-1.5 rounded-[10px] flex items-center gap-1 shrink-0 text-xs font-bold"
+          className="px-2.5 py-3 rounded-[10px] flex items-center gap-1 shrink-0 text-xs font-bold"
           style={{
             background: paused ? 'rgba(34,197,94,0.15)' : 'rgba(18,26,47,0.9)',
             border: paused ? '0.75px solid rgba(34,197,94,0.4)' : '0.75px solid #1d293d',

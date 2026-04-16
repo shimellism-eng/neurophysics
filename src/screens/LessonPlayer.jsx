@@ -246,7 +246,7 @@ export default function LessonPlayer() {
     </div>
   )
 
-  const isNewFlow  = !!(topic.hook && topic.lessonKeywords && topic.lessonKeywords.length > 0)
+  const isNewFlow  = !!topic.hook
   const STEPS      = isNewFlow
     ? NEW_STEPS.filter(s => {
         if (s.id === 'vocab'      && (!topic.lessonKeywords || topic.lessonKeywords.length === 0)) return false

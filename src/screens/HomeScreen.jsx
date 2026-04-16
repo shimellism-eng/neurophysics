@@ -152,7 +152,7 @@ function ExamWidget({ plan, navigate }) {
           </div>
           <div className="mt-2 flex items-center justify-between">
             <span style={{ fontSize: 11, fontWeight: 700, color: plan.onTrack ? '#22c55e' : '#f59e0b' }}>
-              {plan.onTrack ? '✅ On track' : '⚠️ Pick up the pace'}
+              {plan.onTrack ? '✅ On track' : '💪 Keep going — you\'ve got this!'}
             </span>
             <button onClick={() => navigate('/study-plan')}
               style={{ fontSize: 11, fontWeight: 700, color: s.color, opacity: 0.8 }}>

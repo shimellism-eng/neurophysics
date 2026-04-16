@@ -241,6 +241,7 @@ function Input({ label, type = 'text', value, onChange, placeholder, error, auto
             color: '#f8fafc',
             transition: 'border-color 0.2s',
             paddingRight: rightSlot ? 48 : undefined,
+            fontSize: 16,
           }}
         />
         {rightSlot && (
@@ -976,8 +977,19 @@ export default function AuthScreen() {
   const navigate = useNavigate()
 
   const onDone = () => {
-    // Mark consent accepted (gate removed — set here so any code reading it still works)
-    try { localStorage.setItem('neurophysics_consent', JSON.stringify({ ts: Date.now(), version: '2026-04', ageVerified: 'self-cert' })) } catch {}
+    // Check if age-verified consent has already been completed via ConsentScreen.
+    // ConsentScreen stores ageVerified as a number (the user's actual age).
+    // If consent is missing or only has 'self-cert' (bypassed), route through ConsentScreen first.
+    let consentOk = false
+    try {
+      const consent = JSON.parse(localStorage.getItem('neurophysics_consent') || 'null')
+      consentOk = consent && typeof consent.ageVerified === 'number' && consent.ageVerified >= 13
+    } catch {}
+    if (!consentOk) {
+      // No valid age-verified consent — must go through ConsentScreen before proceeding
+      navigate('/consent', { replace: true })
+      return
+    }
     const onboarded = !!localStorage.getItem('neurophysics_onboarded')
     navigate(onboarded ? '/' : '/onboarding', { replace: true })
   }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Browser } from '@capacitor/browser'
 import { useNavigate, useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import {
@@ -2193,8 +2194,8 @@ function TabExplore({ p, color }) {
     setPending({ url: sim.url, name: sim.name, domain })
   }
 
-  const confirmOpen = () => {
-    if (pending) window.open(pending.url, '_blank', 'noopener,noreferrer')
+  const confirmOpen = async () => {
+    if (pending) await Browser.open({ url: pending.url })
     setPending(null)
   }
 

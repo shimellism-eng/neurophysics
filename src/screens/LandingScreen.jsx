@@ -4,7 +4,7 @@ import PublicHeader from '../components/PublicHeader'
 
 const STATS = [
   { value: '58', label: 'Topics' },
-  { value: '1,375+', label: 'Questions' },
+  { value: '2,900+', label: 'Questions' },
   { value: '6', label: 'Exam Boards' },
   { value: '100%', label: 'Neurodivergent-friendly' },
 ]
@@ -25,7 +25,7 @@ const HOW_IT_WORKS = [
   {
     num: '3',
     emoji: '✏️',
-    title: 'Practice & test',
+    title: 'Practise & test',
     desc: 'Adaptive questions that get harder as you improve.',
   },
   {
@@ -505,7 +505,7 @@ export default function LandingScreen() {
             margin: 0,
           }}
         >
-          © 2025 NeuroPhysics ·{' '}
+          © 2026 NeuroPhysics ·{' '}
           <button
             onClick={() => navigate('/privacy')}
             style={{

@@ -5,6 +5,19 @@
 
 ## What Was Just Done (latest — 2026-04-16)
 
+### ⭐ ROOT CAUSE of safe-area overlap (commit 7310d88)
+- **One-line fix in `index.html:14`** — added `viewport-fit=cover` to viewport meta
+- Without it, iOS WebView resolves `env(safe-area-inset-top)` to **0**
+- That's why Phase 1 (LessonPlayer/ExamPractice/DiagnosticQuestion paddingTop) and PageHeader.jsx fix (commit a4e298f) appeared to do nothing on-device — the `calc(20px + env(...))` was just giving back 20px = same as Tailwind `pt-5`
+- After this fix, ALL prior safe-area work takes effect simultaneously
+- Deployed + cap sync ios complete
+- **Mamo must Cmd+R in Xcode to verify** — MamoChat, LessonPlayer, ExamPractice, DiagnosticQuestion, HomeScreen should all now clear Dynamic Island / return chip
+
+### PageHeader safe-area fix (commit a4e298f)
+- Added `paddingTop: 'calc(20px + env(safe-area-inset-top))'` to shared PageHeader.jsx
+- Cascades to 6 screens: AdaptivePractice, MamoChat, StudyPlanScreen, SpecChecklist, EquationDrillScreen, RecallScreen
+- Was latent until viewport-fit=cover fix above — now live
+
 ### CLAUDE.md tooling overhaul (commit 5ce8d50)
 - Added 5 sections at top of CLAUDE.md: **Tooling Rules** (Serena-first), **Session Memory**, **About This Project**, **Talking to Mamo**, **Do Not**
 - Rules aim to stop context exhaustion from reading whole React screens

@@ -50,10 +50,7 @@ export default function ConsentScreen() {
       className="flex flex-col h-full overflow-hidden"
       style={{ background: '#0b1121' }}
     >
-      {/* Top spacer */}
-      <div style={{ height: 'env(safe-area-inset-top)' }} />
-
-      <div className="flex-1 overflow-y-auto px-5 pt-10 pb-8 flex flex-col gap-6">
+      <div className="flex-1 overflow-y-auto px-5 pt-10 pb-8 flex flex-col gap-6" style={{ minHeight: 0 }}>
 
         {/* Icon + title */}
         <motion.div

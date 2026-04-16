@@ -393,7 +393,7 @@ export default function TopicMap() {
       </div>
 
       {/* ── Module cards ── */}
-      <div className="flex-1 overflow-y-auto px-4 pb-10 space-y-3">
+      <div className="flex-1 overflow-y-auto px-4 pb-10 space-y-3" style={{ minHeight: 0 }}>
 
         {/* ── Start here banner (new users only) ── */}
         <AnimatePresence>

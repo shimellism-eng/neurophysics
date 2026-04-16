@@ -117,7 +117,7 @@ export default function MisconceptionFeedback() {
       </div>
 
       {/* Scrollable */}
-      <div className="flex-1 overflow-y-auto px-5 pb-5">
+      <div className="flex-1 overflow-y-auto px-5 pb-5" style={{ minHeight: 0 }}>
         {/* Result banner */}
         <motion.div
           className="rounded-[16px] p-4 mb-4 flex items-center gap-3"

@@ -409,7 +409,7 @@ export default function DiagnosticQuestion() {
       {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
 
       {/* ── Header ── */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)' }}>
+      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', paddingTop: 'calc(20px + env(safe-area-inset-top))' }}>
         <button
           onClick={() => navigate(-1)}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
@@ -456,7 +456,7 @@ export default function DiagnosticQuestion() {
       </div>
 
       {/* ── Scrollable body ── */}
-      <div className="flex-1 overflow-y-auto px-5">
+      <div className="flex-1 overflow-y-auto px-5" style={{ minHeight: 0 }}>
 
         {/* Support panel */}
         <AnimatePresence>

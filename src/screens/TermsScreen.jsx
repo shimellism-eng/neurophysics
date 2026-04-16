@@ -128,7 +128,7 @@ export default function TermsScreen() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6">
+      <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6" style={{ minHeight: 0 }}>
         <div className="rounded-[14px] px-4 py-3" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
           <p className="text-xs font-semibold" style={{ color: '#818cf8' }}>Last updated: April 2026 · England and Wales</p>
           <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>Please read these terms before using NeuroPhysics. They explain your rights and responsibilities as a user.</p>

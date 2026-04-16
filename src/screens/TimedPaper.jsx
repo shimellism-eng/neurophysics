@@ -708,7 +708,7 @@ export default function TimedPaper() {
 
       {/* Question content */}
       <div className="flex-1 overflow-y-auto px-5 pb-4 pt-4"
-        style={{ filter: paused ? 'blur(6px)' : 'none', transition: 'filter 0.2s', pointerEvents: paused ? 'none' : 'auto' }}>
+        style={{ minHeight: 0, filter: paused ? 'blur(6px)' : 'none', transition: 'filter 0.2s', pointerEvents: paused ? 'none' : 'auto' }}>
         {/* BUG-05: safe fallback if question is undefined (e.g. empty/corrupt question set) */}
         {!questions[qIndex] ? (
           <div className="flex items-center justify-center h-full py-16 text-sm" style={{ color: '#8899b0' }}>

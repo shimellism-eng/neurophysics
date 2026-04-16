@@ -1,15 +1,42 @@
 # NeuroPhysics — Session Memory
 
 ## Last Updated
-April 2026
+2026-04-16
 
-## What Was Just Done (latest)
-- Premium readout tiles added to all 10 practicals (RP3 standard everywhere)
-  - RP1 SHC, RP4 IV, RP5 Density, RP6 Refraction, RP7 Spring, RP8 Acceleration, RP9 Waves, RP10 Radiation
-  - Each gets 3-column colour-coded live readout grid (AMMETER/VOLTMETER/R style)
-  - RP7 Force tile turns red beyond elastic limit; RP4 Component tile is dynamic colour
-  - RP2 (cooling curves) and RP3 (already premium) unchanged
-- Build clean, deployed, pushed, iOS synced
+## What Was Just Done (latest — 2026-04-16)
+
+### CLAUDE.md tooling overhaul (commit 5ce8d50)
+- Added 5 sections at top of CLAUDE.md: **Tooling Rules** (Serena-first), **Session Memory**, **About This Project**, **Talking to Mamo**, **Do Not**
+- Rules aim to stop context exhaustion from reading whole React screens
+- Serena tools to prefer: `get_symbols_overview`, `find_symbol`, `find_referencing_symbols`, `replace_symbol_body`
+- Whole-file reads only allowed for <50 lines OR config/markdown/CSS
+- Existing content (design tokens, file structure, conventions, API security, multi-board, knowledge graphs) preserved verbatim below
+
+### Safe-area audit fixes (commit e495042, 11 files)
+Following a full audit that found 13 P0 + 2 P1 layout issues, fixed in 3 phases:
+
+- **Phase 1 — sticky-header paddingTop (3 files):**
+  - `LessonPlayer.jsx:538`, `ExamPractice.jsx:644`, `DiagnosticQuestion.jsx:412`
+  - Added `paddingTop: 'calc(20px + env(safe-area-inset-top))'` so sticky headers clear iOS status bar / return chip when app opened via universal link
+  - ⚠️ **Needs device verification** — AppShell spacer at `App.jsx:368` already reserves the inset, so this may over-pad on iOS. If header sits too low on 14 Pro, revert this phase.
+
+- **Phase 2 — removed duplicate safe-area padding (2 files):**
+  - `HomeScreen.jsx:357` — dropped `paddingTop: 'env(safe-area-inset-top, 16px)'`
+  - `ConsentScreen.jsx:54` — deleted `<div style={{ height: 'env(safe-area-inset-top)' }} />` spacer
+  - AppShell already handles this globally
+
+- **Phase 3 — iOS flex-scroll `minHeight: 0` on 8 screens:**
+  - `ConsentScreen:56`, `PrivacyPolicyScreen:170`, `TermsScreen:131`, `DiagnosticQuestion:459`, `TimedPaper:710`, `TopicMap:396`, `PracticalScreen:2538`, `MisconceptionFeedback:120`
+  - Each parent chain verified as `flex flex-col h-full overflow-hidden` before editing
+  - Without `minHeight: 0`, WebKit refuses to scroll `flex-1 overflow-y-auto` children
+
+Build passes. Deployed to neurophysics.co.uk, pushed to main (commits 5ce8d50 + e495042), `cap sync ios` complete.
+
+### On-device testing needed (Mamo)
+1. Rebuild from Xcode onto 14 Pro
+2. Verify lesson header (opened via Facebook deep link) no longer overlaps Dynamic Island / return chip
+3. **If header sits too low** on lesson screens → revert commit e495042's Phase 1 changes only (the paddingTop additions). Keep Phase 2 and Phase 3.
+4. Spot-check scroll on: Consent, Privacy, Terms, Diagnostic, TimedPaper, TopicMap, Practical, MisconceptionFeedback
 
 ## What Was Done Before
 - Legal fixes for Explore tab external links (ICO Children's Code + UK GDPR):

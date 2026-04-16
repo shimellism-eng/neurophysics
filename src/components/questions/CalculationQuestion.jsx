@@ -108,7 +108,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
                   <span className="text-xs font-bold shrink-0 mt-0.5" style={{ color: '#fdc700' }}>Step {i+1}.</span>
                   <div>
                     <p className="text-xs font-medium" style={{ color: '#cad5e2' }}>{step.label}</p>
-                    <p className="text-xs" style={{ color: '#64748b' }}>e.g. {step.hint}</p>
+                    <p className="text-xs" style={{ color: '#8899b0' }}>e.g. {step.hint}</p>
                   </div>
                 </div>
               ))}

@@ -115,7 +115,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
               className="flex items-center justify-center rounded-[12px] py-8"
               style={{ background: '#0b1121', border: '0.75px solid #1d293d', color: '#475569', fontSize: 13 }}
             >
-              Diagram: <code className="ml-2 text-xs" style={{ color: '#64748b' }}>{diagramId}</code>
+              Diagram: <code className="ml-2 text-xs" style={{ color: '#8899b0' }}>{diagramId}</code>
             </div>
           )}
         </div>
@@ -141,7 +141,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.12 }}
       >
-        <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#64748b' }}>
+        <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#8899b0' }}>
           Question Parts
         </span>
         <span
@@ -177,7 +177,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
                 className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
                 style={{
                   background: revealed[p.part] ? moduleColor : '#1d293d',
-                  color: revealed[p.part] ? '#fff' : '#64748b',
+                  color: revealed[p.part] ? '#fff' : '#8899b0',
                 }}
               >
                 {p.part}
@@ -195,7 +195,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
                   style={{
                     background: 'rgba(255,255,255,0.05)',
                     border: '0.75px solid #1d293d',
-                    color: '#64748b',
+                    color: '#8899b0',
                   }}
                 >
                   [{p.marks} mark{p.marks !== 1 ? 's' : ''}]
@@ -208,7 +208,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
                 style={{
                   background: revealed[p.part] ? `${moduleColor}20` : 'rgba(18,26,47,0.9)',
                   border: `0.75px solid ${revealed[p.part] ? moduleColor + '60' : '#2d3e55'}`,
-                  color: revealed[p.part] ? moduleColor : '#64748b',
+                  color: revealed[p.part] ? moduleColor : '#8899b0',
                 }}
                 onClick={() => toggleReveal(p.part)}
               >
@@ -260,7 +260,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
             style={{
               background: showHint ? 'rgba(253,199,0,0.07)' : 'rgba(18,26,47,0.7)',
               border: showHint ? '0.75px solid rgba(253,199,0,0.3)' : '0.75px solid #1d293d',
-              color: showHint ? '#fdc700' : '#64748b',
+              color: showHint ? '#fdc700' : '#8899b0',
             }}
             onClick={() => setShowHint(h => !h)}
           >

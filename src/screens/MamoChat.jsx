@@ -492,7 +492,7 @@ export default function MamoChat() {
           {getStarters(effectiveTopicLabel).map((q, i) => (
             <button
               key={i}
-              className="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
+              className="shrink-0 px-3 py-2.5 rounded-full text-xs font-medium whitespace-nowrap"
               style={{
                 background: 'rgba(99,102,241,0.10)',
                 border: '0.75px solid rgba(99,102,241,0.25)',

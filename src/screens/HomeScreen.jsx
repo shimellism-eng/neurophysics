@@ -313,6 +313,8 @@ export default function HomeScreen() {
   const avatar   = profile.avatar || '🧠'
   const greeting = getGreeting()
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
   const [, setBoardTick] = useState(0)
   useEffect(() => {
     const onStorage = () => setBoardTick(t => t + 1)
@@ -505,7 +507,7 @@ export default function HomeScreen() {
             </div>
           </div>
           <motion.div
-            animate={{ x: [0, 4, 0] }}
+            animate={reducedMotion ? {} : { x: [0, 4, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
           >
             <ChevronRight size={24} strokeWidth={2.5} />

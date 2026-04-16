@@ -600,7 +600,7 @@ export default function SettingsScreen() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-semibold" style={{ color: '#f8fafc' }}>Edit Profile</span>
-                <button onClick={() => setEditingProfile(false)} aria-label="Cancel editing">
+                <button onClick={() => setEditingProfile(false)} aria-label="Cancel editing" className="w-11 h-11 flex items-center justify-center">
                   <X size={16} color="#a8b8cc" />
                 </button>
               </div>
@@ -609,7 +609,7 @@ export default function SettingsScreen() {
                 {AVATARS.map(em => (
                   <button
                     key={em}
-                    className="w-10 h-10 rounded-[12px] text-xl flex items-center justify-center"
+                    className="w-11 h-11 rounded-[12px] text-xl flex items-center justify-center"
                     style={{
                       background: editAvatar === em ? 'rgba(99,102,241,0.2)' : 'rgba(255,255,255,0.06)',
                       border: editAvatar === em ? '2px solid #6366f1' : '0.75px solid rgba(255,255,255,0.1)',

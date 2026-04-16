@@ -489,6 +489,7 @@ export default function LessonPlayer() {
             initial={{ y: 80, pointerEvents: 'none' }}
             animate={{ y: 0, pointerEvents: 'auto' }}
             transition={{ type: 'spring', damping: 25 }}>
+            <div style={{ width: 36, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.25)', margin: '0 auto 12px' }} />
             <div className="text-center mb-5">
               <div className="text-2xl mb-2">📍</div>
               <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>Continue where you left off?</div>
@@ -550,9 +551,10 @@ export default function LessonPlayer() {
         {/* Back button — always exits lesson and saves progress */}
         <button
           onClick={exitLesson}
+          aria-label="Exit lesson"
           className="w-11 h-11 flex items-center justify-center shrink-0"
           style={{
-            borderRadius: '50%',
+            borderRadius: 12,
             background: 'rgba(255,255,255,0.06)',
             border: '1px solid rgba(255,255,255,0.09)',
             position: 'relative',

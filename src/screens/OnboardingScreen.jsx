@@ -173,8 +173,8 @@ function StepValueProp({ onNext }) {
 
       {/* CTA */}
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        className="px-6 pt-3 shrink-0"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121', paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
@@ -369,8 +369,8 @@ function StepProfile({ onNext, onSkip }) {
 
       {/* Next + Skip buttons */}
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0 flex flex-col gap-3"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        className="px-6 pt-3 shrink-0 flex flex-col gap-3"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121', paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.4 }}
@@ -559,8 +559,8 @@ function StepAccessibility({ onNext, onSkip }) {
       </div>
 
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0 flex flex-col gap-3"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        className="px-6 pt-3 shrink-0 flex flex-col gap-3"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121', paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
@@ -653,8 +653,8 @@ function StepPrefs({ onNext, onSkip }) {
       </div>
 
       <motion.div
-        className="px-6 pt-3 pb-10 shrink-0 flex flex-col gap-3"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121' }}
+        className="px-6 pt-3 shrink-0 flex flex-col gap-3"
+        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121', paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
@@ -726,7 +726,7 @@ function StepHowItWorks({ onNext }) {
           ))}
         </div>
       </div>
-      <div className="px-5 pb-10">
+      <div className="px-5" style={{ paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}>
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', color: '#fff' }}

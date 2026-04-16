@@ -4,6 +4,66 @@
 
 ---
 
+## Tooling Rules (read first — stops context exhaustion)
+
+**Use Serena MCP semantic tools BEFORE reading any file.** Reading whole React screens (LessonPlayer, App.jsx, HomeScreen, etc.) has repeatedly exhausted context and forced session summaries. Don't.
+
+### Always try first
+- `mcp__serena__get_symbols_overview` — get the shape of a file (classes, functions, exports) before reading any of it
+- `mcp__serena__find_symbol` — jump to a specific function / component / hook by name path (e.g. `LessonPlayer`, `useProgress/markStarted`)
+- `mcp__serena__find_referencing_symbols` — "what uses this?" lookups instead of grep
+- `mcp__serena__replace_symbol_body` — edit a single function/component without rewriting the whole file
+
+### When it's OK to read a whole file
+Only if one of these is true:
+- File is **<50 lines**
+- File is **config, markdown, CSS, or JSON**
+- You already ran `get_symbols_overview` and genuinely need every symbol
+
+### Never
+- Never `Read` a React screen (anything in `src/screens/` or `src/components/`) as your first move — use `get_symbols_overview` first
+- Never grep for a function name when `find_symbol` will find it
+- Never read a 2000-line file to edit one function — use `find_symbol` + `replace_symbol_body`
+
+---
+
+## Session Memory
+
+- **At session start:** read `memory.md` at project root. It's the live session log — the last session's state, what's broken, what's queued.
+- **Before end-of-session commit:** update `memory.md` with what changed, what's still pending, anything Mamo needs to know next time.
+- **CLAUDE.md = permanent conventions** (design tokens, security, board rules). **memory.md = live log** (what just happened).
+
+---
+
+## About This Project
+
+**NeuroPhysics** — GCSE Physics PWA for neurodivergent learners (ADHD, dyslexia, autism).
+
+- **Stack:** React + Vite, **JSX only — no TypeScript**. Supabase auth. Vercel hosting. iOS wrapper via Capacitor.
+- **Boards covered (six):** AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA.
+- **Live:** neurophysics.co.uk
+- **Owner:** Mamo — physics teacher, SEN specialist, ADHD.
+
+---
+
+## Talking to Mamo
+
+- Plain English. Short chunks. No walls of text.
+- **WHY before WHAT** — explain the reason for a change before the diff.
+- **Flag terminal commands explicitly** — if Mamo needs to run something, call it out ("run this in Terminal:") rather than burying it in prose.
+- Assume **zero Xcode knowledge** — walk through Xcode steps, don't assume he knows where Product > Archive lives.
+
+---
+
+## Do Not
+
+- **Don't read whole files** before trying Serena's symbolic tools first.
+- **Don't commit `.env*` files** — ever.
+- **Don't skip the memory.md update** at session end — future sessions rely on it.
+- **Don't change working scroll/padding** without an explicit bug report from Mamo. If a screen already scrolls, leave its `paddingBottom` / `overflow` / `minHeight` / safe-area values alone.
+
+---
+
 ## Project
 - **GCSE Physics PWA** for neurodivergent learners (ADHD, dyslexia, autism)
 - **Live:** neurophysics.co.uk | **Local:** `/Users/mamo/neurophysics/`

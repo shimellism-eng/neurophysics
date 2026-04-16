@@ -139,7 +139,8 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
             onKeyDown={e => e.key === 'Enter' && handleSubmit()}
             placeholder="Your answer"
             disabled={submitted}
-            className="flex-1 bg-transparent px-4 py-4 text-base font-semibold outline-none"
+            aria-label="Your numerical answer"
+            className="flex-1 bg-transparent px-4 py-4 text-base font-semibold"
             style={{ color: '#f8fafc', WebkitAppearance: 'none', MozAppearance: 'textfield', fontSize: '16px' }}
           />
           {answerUnit && (

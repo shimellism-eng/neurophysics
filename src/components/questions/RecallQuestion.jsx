@@ -108,7 +108,8 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
       {!revealed && (
         <div className="flex flex-col gap-3">
           <textarea
-            className="w-full rounded-[12px] px-4 py-3 text-sm resize-none outline-none"
+            className="w-full rounded-[12px] px-4 py-3 text-sm resize-none"
+            aria-label="Your answer"
             style={{
               background: 'rgba(255,255,255,0.05)',
               border: '0.75px solid rgba(255,255,255,0.1)',

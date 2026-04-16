@@ -378,7 +378,7 @@ export default function MamoChat() {
       </div>
 
       {/* ── Messages ─────────────────────────────────────────────────────────── */}
-      <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0 }}>
+      <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0 }} role="log" aria-live="polite" aria-label="Chat messages">
         {messages.map((msg, i) => (
           <motion.div
             key={i}

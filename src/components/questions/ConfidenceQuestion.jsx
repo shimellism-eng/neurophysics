@@ -73,12 +73,13 @@ export default function ConfidenceQuestion({ data, moduleColor, onComplete }) {
                 transition: 'all 0.15s',
               }}
               onClick={() => handleSelect(level.value)}
+              aria-label={level.label}
               whileTap={{ scale: 0.97 }}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.08 }}
             >
-              <span className="text-2xl">{level.emoji}</span>
+              <span className="text-2xl" aria-hidden="true">{level.emoji}</span>
               <span
                 className="text-sm font-semibold flex-1 text-left"
                 style={{ color: isSelected ? level.color : '#cad5e2' }}

@@ -493,7 +493,7 @@ export default function LessonPlayer() {
             <div className="text-center mb-5">
               <div className="text-2xl mb-2">📍</div>
               <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>Continue where you left off?</div>
-              <div className="text-sm mt-1" style={{ color: '#64748b' }}>
+              <div className="text-sm mt-1" style={{ color: '#8899b0' }}>
                 You were on step {savedProgress.step + 1} of {totalSteps} in this lesson
               </div>
             </div>
@@ -652,10 +652,10 @@ export default function LessonPlayer() {
           <span className="text-[13px] font-bold" style={{ color: topic.moduleColor }}>
             {currentStep.label}
           </span>
-          <span className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+          <span className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
             {currentStep.hint}
           </span>
-          <span className="ml-auto text-xs font-semibold tabular-nums" style={{ color: 'rgba(255,255,255,0.25)' }}>
+          <span className="ml-auto text-xs font-semibold tabular-nums" style={{ color: 'rgba(255,255,255,0.45)' }}>
             {step + 1}/{totalSteps}
           </span>
           {/* Elapsed time — ADHD self-regulation cue */}
@@ -664,7 +664,7 @@ export default function LessonPlayer() {
               className="flex items-center gap-1 text-[10px] font-semibold tabular-nums px-2 py-0.5 rounded-full"
               style={{
                 background: elapsedMinutes >= 20 ? 'rgba(249,115,22,0.12)' : 'rgba(255,255,255,0.06)',
-                color: elapsedMinutes >= 20 ? '#f97316' : 'rgba(255,255,255,0.25)',
+                color: elapsedMinutes >= 20 ? '#f97316' : 'rgba(255,255,255,0.45)',
                 border: elapsedMinutes >= 20 ? '1px solid rgba(249,115,22,0.3)' : '1px solid rgba(255,255,255,0.08)',
               }}
             >
@@ -961,7 +961,7 @@ export default function LessonPlayer() {
                 <p
                   className="text-sm italic mb-5"
                   style={{
-                    color: 'rgba(255,255,255,0.38)',
+                    color: 'rgba(255,255,255,0.55)',
                     lineHeight: 1.55,
                     display: '-webkit-box',
                     WebkitLineClamp: 2,

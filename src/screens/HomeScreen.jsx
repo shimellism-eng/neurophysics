@@ -68,7 +68,7 @@ function StreakCalendar({ streakDates = [] }) {
               fontSize: 11, fontWeight: isToday ? 700 : 500,
               color: filled
                 ? isToday ? '#f97316' : 'rgba(249,115,22,0.55)'
-                : 'rgba(255,255,255,0.2)',
+                : 'rgba(255,255,255,0.45)',
               letterSpacing: '0.02em',
             }}>
               {isToday ? 'Today' : label}
@@ -133,7 +133,7 @@ function ExamWidget({ plan, navigate }) {
       initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18 }}>
       <div className="flex items-center gap-4">
         {/* Donut countdown */}
-        <svg width={52} height={52} style={{ flexShrink: 0 }}>
+        <svg width={52} height={52} role="img" aria-label={`${plan.weeksLeft} week${plan.weeksLeft !== 1 ? 's' : ''} until exam`} style={{ flexShrink: 0 }}>
           <circle cx={cxy} cy={cxy} r={r} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={5}/>
           <circle cx={cxy} cy={cxy} r={r} fill="none" stroke={s.color} strokeWidth={5}
             strokeDasharray={circ} strokeDashoffset={dashOffset}
@@ -283,7 +283,7 @@ function InsightsPanel({ insights, onTopicTap }) {
               <button key={id} className="w-full flex items-center gap-3 py-1 text-left" onClick={() => onTopicTap && onTopicTap(id)}>
                 <div className="flex-1 min-w-0">
                   <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
-                  <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                  <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
                     {reason === 'needs work'
                       ? `${Math.round(accuracy * 100)}% — practise again to boost this`
                       : 'Not tried yet — give it a go'}
@@ -557,7 +557,7 @@ export default function HomeScreen() {
                   <div className="font-bold" style={{ color: '#f97316', fontSize: 20, letterSpacing: '-0.02em' }}>
                     {streak} day streak
                   </div>
-                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
                     Study today to keep it going
                   </p>
                 </>
@@ -696,7 +696,7 @@ export default function HomeScreen() {
                 <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16, letterSpacing: '-0.02em' }}>
                   Try a Timed Paper
                 </div>
-                <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>
+                <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   Exam-style · 35 marks · 55 min
                 </div>
               </div>

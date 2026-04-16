@@ -88,12 +88,12 @@ export default function FillStepsQuestion({ data, moduleColor, onComplete }) {
                       ? isCorrectBlank ? '1.5px solid #00bc7d' : '1.5px solid #ef4444'
                       : filled[idx]
                         ? `1.5px solid ${moduleColor}60`
-                        : '1.5px dashed #556',
+                        : '1.5px dashed #8899b0',
                     color: submitted
                       ? isCorrectBlank ? '#00bc7d' : '#ef4444'
                       : filled[idx]
                         ? '#f8fafc'
-                        : '#556',
+                        : '#8899b0',
                     minHeight: 32,
                   }}
                   onClick={() => handleBlankTap(idx)}
@@ -157,7 +157,7 @@ export default function FillStepsQuestion({ data, moduleColor, onComplete }) {
             className="flex-1 py-3 rounded-[12px] font-semibold text-sm"
             style={{
               background: allFilled ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.5)',
-              color: allFilled ? '#fff' : '#556',
+              color: allFilled ? '#fff' : '#8899b0',
               boxShadow: allFilled ? `0 6px 20px ${moduleColor}40` : 'none',
             }}
             onClick={handleSubmit}

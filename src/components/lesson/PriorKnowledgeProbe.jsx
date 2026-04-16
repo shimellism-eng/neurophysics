@@ -7,7 +7,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, Map } from 'lucide-react'
+import { ChevronRight, Map, CheckCircle2, XCircle } from 'lucide-react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 
@@ -170,6 +170,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
                     : '1px solid rgba(255,255,255,0.07)'
                 : '1px solid rgba(255,255,255,0.1)'
 
+              const showIcon = showFeedback && (isCorrect || isSelected)
               return (
                 <button
                   key={i}
@@ -177,7 +178,11 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
                   style={{ background: bg, border, color: '#cad5e2', minHeight: 44, transition: 'background 0.2s, border 0.2s' }}
                   onClick={() => handleSelect(i)}
                 >
-                  {ans}
+                  <span className="flex items-center gap-2">
+                    {showIcon && isCorrect && <CheckCircle2 size={15} color="#4ade80" style={{ flexShrink: 0 }} />}
+                    {showIcon && !isCorrect && isSelected && <XCircle size={15} color="#ef4444" style={{ flexShrink: 0 }} />}
+                    <span>{ans}</span>
+                  </span>
                 </button>
               )
             })}

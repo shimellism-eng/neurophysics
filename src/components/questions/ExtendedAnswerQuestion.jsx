@@ -138,6 +138,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
               onChange={e => setAnswer(e.target.value.slice(0, MAX_CHARS))}
               placeholder="Write your answer here... Use key physics terms and units where needed."
               rows={6}
+              aria-label="Your extended answer"
               style={{
                 width: '100%',
                 background: 'rgba(18,26,47,0.9)',
@@ -148,12 +149,11 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
                 fontSize: 14,
                 lineHeight: 1.6,
                 resize: 'none',
-                outline: 'none',
                 transition: 'border-color 0.2s',
                 fontFamily: 'inherit',
               }}
             />
-            <div style={{ color: '#556677', fontSize: 11, textAlign: 'right', marginTop: -4 }}>
+            <div style={{ color: '#8899b0', fontSize: 11, textAlign: 'right', marginTop: -4 }}>
               {answer.length} / {MAX_CHARS}
             </div>
 
@@ -165,7 +165,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
                 background: answer.trim().length >= MIN_CHARS
                   ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
                   : 'rgba(255,255,255,0.05)',
-                color: answer.trim().length >= MIN_CHARS ? '#fff' : '#556677',
+                color: answer.trim().length >= MIN_CHARS ? '#fff' : '#8899b0',
                 boxShadow: answer.trim().length >= MIN_CHARS ? `0 6px 20px ${moduleColor}40` : 'none',
                 cursor: answer.trim().length >= MIN_CHARS ? 'pointer' : 'not-allowed',
               }}
@@ -216,7 +216,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
             <div className="rounded-[14px] overflow-hidden"
               style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}>
               <div className="px-4 pt-3 pb-1">
-                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>
+                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#8899b0' }}>
                   Mark scheme breakdown
                 </p>
               </div>
@@ -294,7 +294,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
             )}
 
             {/* AI marking disclaimer */}
-            <p className="text-[10px] text-center" style={{ color: '#3a4a5a' }}>
+            <p className="text-[10px] text-center" style={{ color: '#94a3b8' }}>
               AI marking is for practice only — not official exam board marking. Verify with your teacher.
             </p>
 
@@ -337,7 +337,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
             <div className="rounded-[14px] overflow-hidden"
               style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}>
               <div className="px-4 pt-3 pb-1">
-                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>
+                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#8899b0' }}>
                   Mark scheme
                 </p>
               </div>

@@ -74,7 +74,7 @@ function MCQQuestion({ q, onAnswer }) {
       {!submitted && (
         <motion.button
           className="w-full py-3.5 rounded-[14px] text-sm font-bold"
-          style={{ background: selected !== null ? '#6366f1' : '#1d293d', color: selected !== null ? '#fff' : '#64748b' }}
+          style={{ background: selected !== null ? '#6366f1' : '#1d293d', color: selected !== null ? '#fff' : '#8899b0' }}
           onClick={handleSubmit} disabled={selected === null} whileTap={{ scale: 0.97 }}>
           Check answer
         </motion.button>
@@ -121,7 +121,7 @@ function CalcQuestion({ q, onAnswer }) {
         />
         {q.unit && (
           <span className="px-3 py-3 rounded-[12px] text-sm font-semibold shrink-0"
-            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#64748b' }}>
+            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#8899b0' }}>
             {q.unit}
           </span>
         )}
@@ -129,7 +129,7 @@ function CalcQuestion({ q, onAnswer }) {
       {!submitted && (
         <motion.button
           className="w-full py-3.5 rounded-[14px] text-sm font-bold"
-          style={{ background: value ? '#6366f1' : '#1d293d', color: value ? '#fff' : '#64748b' }}
+          style={{ background: value ? '#6366f1' : '#1d293d', color: value ? '#fff' : '#8899b0' }}
           onClick={handleSubmit} disabled={!value} whileTap={{ scale: 0.97 }}>
           Check answer
         </motion.button>
@@ -227,7 +227,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
                 fontFamily: 'inherit', transition: 'border-color 0.2s',
               }}
             />
-            <div style={{ color: '#556677', fontSize: 10, textAlign: 'right', marginTop: -8 }}>
+            <div style={{ color: '#8899b0', fontSize: 10, textAlign: 'right', marginTop: -8 }}>
               {answer.length} / 600
             </div>
             <motion.button
@@ -236,7 +236,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
               className="w-full flex items-center justify-center gap-2 py-3 rounded-[12px] font-semibold text-sm"
               style={{
                 background: answer.trim().length >= 10 ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(255,255,255,0.05)',
-                color: answer.trim().length >= 10 ? '#fff' : '#556677',
+                color: answer.trim().length >= 10 ? '#fff' : '#8899b0',
                 cursor: answer.trim().length >= 10 ? 'pointer' : 'not-allowed',
               }}
               whileTap={answer.trim().length >= 10 ? { scale: 0.97 } : {}}>
@@ -269,7 +269,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
             <div className="rounded-[12px] overflow-hidden"
               style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
               <div className="px-3 pt-3 pb-1">
-                <p className="text-[10px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>Breakdown</p>
+                <p className="text-[10px] uppercase tracking-wide font-semibold" style={{ color: '#8899b0' }}>Breakdown</p>
               </div>
               <div className="px-3 pb-3 space-y-2.5 mt-1">
                 {q.markScheme.map((point, i) => {
@@ -379,8 +379,8 @@ function TierChange({ from, to }) {
   if (from === to) return (
     <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
       style={{ background: 'rgba(255,255,255,0.06)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
-      <Minus size={12} color="#64748b" />
-      <span className="text-xs font-semibold" style={{ color: '#64748b' }}>Same tier</span>
+      <Minus size={12} color="#8899b0" />
+      <span className="text-xs font-semibold" style={{ color: '#8899b0' }}>Same tier</span>
     </div>
   )
   if (to > from) return (
@@ -579,7 +579,7 @@ export default function AdaptivePractice() {
           <div className="text-center">
             <div className="text-3xl font-black" style={{ color: '#f8fafc' }}>{sessionCorrect}/{sessionCount}</div>
             <div className="text-lg font-semibold mt-1" style={{ color: moduleColor }}>{pct}% accuracy</div>
-            <div className="text-sm mt-2" style={{ color: '#64748b' }}>{topic.title}</div>
+            <div className="text-sm mt-2" style={{ color: '#8899b0' }}>{topic.title}</div>
           </div>
           <div className="flex gap-3 w-full">
             <motion.button
@@ -622,10 +622,10 @@ export default function AdaptivePractice() {
         }
         subtitle={
           <>
-            <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
+            <div className="text-xs mt-0.5" style={{ color: '#8899b0' }}>
               {sessionCount} answered · {sessionCorrect} correct
             </div>
-            <span style={{ fontSize: 11, color: '#64748b', fontStyle: 'italic' }}>
+            <span style={{ fontSize: 11, color: '#8899b0', fontStyle: 'italic' }}>
               {getProgressLabel(sessionCount, reviewMode ? (maxQuestions || 5) : 20)}
             </span>
           </>
@@ -657,7 +657,7 @@ export default function AdaptivePractice() {
         {streak > 0 && (
           <div className="flex items-center gap-1.5 shrink-0">
             <span className="text-xs font-semibold" style={{ color: '#00bc7d' }}>
-              🔥 {streak} in a row
+              <span aria-hidden="true">🔥</span> {streak} in a row
             </span>
           </div>
         )}
@@ -675,16 +675,16 @@ export default function AdaptivePractice() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="px-2.5 py-1 rounded-full text-xs font-bold"
                   style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}>
-                  {currentQ.type === 'mcq' ? '⚡ Multiple choice' : currentQ.type === 'calculation' ? '🔢 Calculation' : currentQ.type === 'extended' ? '✍️ Extended' : currentQ.type === 'confusion_buster' ? '🔀 Confusion buster' : '💬 Short answer'}
+                  {currentQ.type === 'mcq' ? <><span aria-hidden="true">⚡</span> Multiple choice</> : currentQ.type === 'calculation' ? <><span aria-hidden="true">🔢</span> Calculation</> : currentQ.type === 'extended' ? <><span aria-hidden="true">✍️</span> Extended</> : currentQ.type === 'confusion_buster' ? <><span aria-hidden="true">🔀</span> Confusion buster</> : <><span aria-hidden="true">💬</span> Short answer</>}
                 </span>
-                <span className="text-xs" style={{ color: '#64748b' }}>
+                <span className="text-xs" style={{ color: '#8899b0' }}>
                   {currentQ.marks} mark{currentQ.marks !== 1 ? 's' : ''}
                 </span>
               </div>
 
               {/* Adaptive reasoning label */}
               <p className="text-xs italic mb-3" style={{ color: '#a8b8cc' }}>
-                {tier === 1 ? '📚 Revisiting — building foundations' : tier === 2 ? '🎯 Practising — consolidating understanding' : '🚀 Challenging — pushing for mastery'}
+                {tier === 1 ? <><span aria-hidden="true">📚</span> Revisiting — building foundations</> : tier === 2 ? <><span aria-hidden="true">🎯</span> Practising — consolidating understanding</> : <><span aria-hidden="true">🚀</span> Challenging — pushing for mastery</>}
               </p>
 
               {/* Question text */}
@@ -742,7 +742,7 @@ export default function AdaptivePractice() {
             <div className="text-4xl">📚</div>
             <div className="text-center">
               <div className="text-base font-bold" style={{ color: '#f8fafc' }}>No questions yet</div>
-              <div className="text-sm mt-1" style={{ color: '#64748b' }}>
+              <div className="text-sm mt-1" style={{ color: '#8899b0' }}>
                 Questions for this topic are coming soon.
               </div>
             </div>
@@ -810,7 +810,7 @@ export default function AdaptivePractice() {
               <div className="text-base font-bold mb-1" style={{ color: '#f8fafc' }}>
                 Continue where you left off?
               </div>
-              <div className="text-sm mb-5" style={{ color: '#64748b' }}>
+              <div className="text-sm mb-5" style={{ color: '#8899b0' }}>
                 You answered {sessionRestorePrompt.sessionCount} question{sessionRestorePrompt.sessionCount !== 1 ? 's' : ''} in this session
                 ({sessionRestorePrompt.sessionCorrect} correct).
               </div>
@@ -825,7 +825,7 @@ export default function AdaptivePractice() {
                 </motion.button>
                 <motion.button
                   className="w-full py-3.5 rounded-[16px] text-sm font-semibold"
-                  style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.1)', color: '#64748b' }}
+                  style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.1)', color: '#8899b0' }}
                   onClick={handleRestoreFresh}
                   whileTap={{ scale: 0.97 }}
                 >

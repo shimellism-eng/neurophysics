@@ -74,7 +74,7 @@ function TierProgress({ tier, moduleColor }) {
                     : isDone
                       ? '1.5px solid rgba(34,197,94,0.5)'
                       : '1.5px solid rgba(255,255,255,0.15)',
-                  color: isActive ? '#fff' : isDone ? '#4ade80' : 'rgba(255,255,255,0.25)',
+                  color: isActive ? '#fff' : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
                   boxShadow: isActive ? `0 0 16px ${moduleColor}50` : 'none',
                   transition: 'all 0.35s ease',
                 }}
@@ -98,7 +98,7 @@ function TierProgress({ tier, moduleColor }) {
             <span
               className="text-[10px] font-semibold text-center leading-tight"
               style={{
-                color: isActive ? moduleColor : isDone ? '#4ade80' : 'rgba(255,255,255,0.22)',
+                color: isActive ? moduleColor : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
                 transition: 'color 0.3s',
               }}
             >
@@ -609,7 +609,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
               <p className="text-xs font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 How confident do you feel solving a problem like this without support?
               </p>
-              <div className="flex gap-1 justify-center">
+              <div className="flex gap-1 justify-center" role="group" aria-label="Rate your confidence">
                 {[1, 2, 3, 4, 5].map(n => {
                   const active = n <= (hoveredStar || confidence)
                   return (
@@ -618,6 +618,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
                       onClick={() => setConfidence(n)}
                       onMouseEnter={() => setHoveredStar(n)}
                       onMouseLeave={() => setHoveredStar(0)}
+                      aria-label={`Confidence: ${n} out of 5`}
                       className="flex flex-col items-center gap-1.5"
                       style={{ flex: 1, minHeight: 44 }}
                     >
@@ -642,7 +643,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
                   )
                 })}
               </div>
-              <p className="text-[10px] text-center mt-3" style={{ color: 'rgba(255,255,255,0.22)' }}>
+              <p className="text-[10px] text-center mt-3" style={{ color: 'rgba(255,255,255,0.45)' }}>
                 This shapes your future practice sessions
               </p>
             </div>

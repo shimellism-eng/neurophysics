@@ -118,7 +118,7 @@ export default function TapMatchQuestion({ data, moduleColor, onComplete }) {
                   : isWrong
                   ? '1.5px solid #ef4444'
                   : `0.75px solid ${moduleColor}40`,
-                color: isTaken ? '#00bc7d' : '#f8fafc',
+                color: isTaken ? '#00bc7d' : isWrong ? '#ef4444' : '#f8fafc',
                 opacity: isTaken ? 0.7 : 1,
               }}
               onClick={() => handleMatchTap(match.idx)}
@@ -128,6 +128,7 @@ export default function TapMatchQuestion({ data, moduleColor, onComplete }) {
             >
               <div className="flex items-center gap-2">
                 {isTaken && <CheckCircle size={14} color="#00bc7d" />}
+                {isWrong && <XCircle size={14} color="#ef4444" />}
                 <span>{match.label}</span>
               </div>
             </motion.button>

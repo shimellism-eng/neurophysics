@@ -103,16 +103,17 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
               onChange={e => setAnswer(e.target.value.slice(0, MAX_CHARS))}
               placeholder="Write your full answer here… include a calculation then evaluate."
               rows={6}
+              aria-label="Your answer"
               style={{
                 width: '100%',
                 background: 'rgba(18,26,47,0.9)',
                 border: `1px solid ${answer.length >= MIN_CHARS ? moduleColor + '60' : '#2d3e55'}`,
                 borderRadius: 14, padding: '12px 14px', color: '#f8fafc',
-                fontSize: 14, lineHeight: 1.6, resize: 'none', outline: 'none',
+                fontSize: 14, lineHeight: 1.6, resize: 'none',
                 fontFamily: 'inherit', transition: 'border-color 0.2s',
               }}
             />
-            <div style={{ color: '#556677', fontSize: 11, textAlign: 'right', marginTop: -8 }}>
+            <div style={{ color: '#8899b0', fontSize: 11, textAlign: 'right', marginTop: -8 }}>
               {answer.length} / {MAX_CHARS}
             </div>
 
@@ -124,7 +125,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
                 background: answer.trim().length >= MIN_CHARS
                   ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
                   : 'rgba(255,255,255,0.05)',
-                color: answer.trim().length >= MIN_CHARS ? '#fff' : '#556677',
+                color: answer.trim().length >= MIN_CHARS ? '#fff' : '#8899b0',
                 boxShadow: answer.trim().length >= MIN_CHARS ? `0 6px 20px ${moduleColor}40` : 'none',
                 cursor: answer.trim().length >= MIN_CHARS ? 'pointer' : 'not-allowed',
               }}
@@ -171,7 +172,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
             <div className="rounded-[14px] overflow-hidden"
               style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55' }}>
               <div className="px-4 pt-3 pb-1">
-                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#556677' }}>
+                <p className="text-[11px] uppercase tracking-wide font-semibold" style={{ color: '#8899b0' }}>
                   Mark scheme breakdown
                 </p>
               </div>
@@ -239,7 +240,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
             )}
 
             {/* AI marking disclaimer */}
-            <p className="text-[10px] text-center" style={{ color: '#3a4a5a' }}>
+            <p className="text-[10px] text-center" style={{ color: '#94a3b8' }}>
               AI marking is for practice only — not official exam board marking. Verify with your teacher.
             </p>
 

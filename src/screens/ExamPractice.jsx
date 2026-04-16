@@ -62,7 +62,7 @@ function RPAErrorQuestion({ data, moduleColor, onComplete }) {
           style={{ background: 'rgba(99,102,241,0.15)', color: '#818cf8', border: '0.75px solid rgba(99,102,241,0.3)' }}>
           {data.rpaRef}
         </span>
-        <span className="text-xs" style={{ color: '#64748b' }}>{data.rpaName}</span>
+        <span className="text-xs" style={{ color: '#8899b0' }}>{data.rpaName}</span>
       </div>
 
       {/* Experiment context */}
@@ -102,7 +102,7 @@ function RPAErrorQuestion({ data, moduleColor, onComplete }) {
       {!submitted && (
         <motion.button
           className="w-full py-3 rounded-[14px] text-sm font-bold"
-          style={{ background: selected ? moduleColor : '#1d293d', color: selected ? '#fff' : '#64748b' }}
+          style={{ background: selected ? moduleColor : '#1d293d', color: selected ? '#fff' : '#8899b0' }}
           onClick={handleSubmit}
           disabled={!selected}
           whileTap={{ scale: 0.97 }}>
@@ -157,6 +157,7 @@ function WorkedSolutionCard({ question, correct }) {
       <button
         className="w-full flex items-center justify-between px-4 py-3"
         onClick={() => setOpen(o => !o)}
+        aria-expanded={open}
         style={{ color: open ? '#00d4ff' : '#a8b8cc' }}
       >
         <span className="text-xs font-bold flex items-center gap-1.5">
@@ -674,14 +675,14 @@ export default function ExamPractice() {
             <span className="text-xs font-semibold" style={{ color: '#a8b8cc' }}>
               {qIndex + 1} / {total}
             </span>
-            <span style={{ fontSize: 11, color: '#64748b', fontStyle: 'italic' }}>
+            <span style={{ fontSize: 11, color: '#8899b0', fontStyle: 'italic' }}>
               {getProgressLabel(qIndex, total)}
             </span>
           </div>
           {/* Topic breadcrumb pill — persistent context for ADHD/working-memory support */}
           <span style={{
             fontSize: 11,
-            color: '#64748b',
+            color: '#8899b0',
             background: 'rgba(255,255,255,0.05)',
             border: '0.75px solid rgba(255,255,255,0.08)',
             borderRadius: 20,
@@ -704,7 +705,7 @@ export default function ExamPractice() {
                 className="text-xs font-mono font-semibold shrink-0 px-2 py-0.5 rounded-full"
                 style={{
                   background: overtime ? 'rgba(249,115,22,0.12)' : 'rgba(100,116,139,0.12)',
-                  color: overtime ? '#f97316' : '#64748b',
+                  color: overtime ? '#f97316' : '#8899b0',
                   border: `1px solid ${overtime ? 'rgba(249,115,22,0.3)' : 'rgba(100,116,139,0.25)'}`,
                   transition: 'color 0.3s, background 0.3s, border-color 0.3s',
                 }}
@@ -811,7 +812,7 @@ export default function ExamPractice() {
                     {detectedWord ? COMMAND_WORDS[detectedWord].action : 'Identify the command word at the start of the question to know what type of answer is expected.'}
                   </p>
                   {detectedWord && (
-                    <p className="text-xs mt-1 italic" style={{ color: '#64748b' }}>e.g. {COMMAND_WORDS[detectedWord].example}</p>
+                    <p className="text-xs mt-1 italic" style={{ color: '#8899b0' }}>e.g. {COMMAND_WORDS[detectedWord].example}</p>
                   )}
                 </div>
               )}

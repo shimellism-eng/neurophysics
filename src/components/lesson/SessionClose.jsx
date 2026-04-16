@@ -153,7 +153,7 @@ export default function SessionClose({
           {topic.emoji && (
             <div className="text-2xl mt-1">{topic.emoji}</div>
           )}
-          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.38)' }}>
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>
             {topic.title}
           </p>
         </div>

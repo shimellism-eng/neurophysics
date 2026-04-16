@@ -76,7 +76,7 @@ function QuestionPalette({ questions, answers, flags, currentIdx, onJump, open, 
           transition={{ type: 'spring', stiffness: 380, damping: 30 }}>
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-bold" style={{ color: '#f8fafc' }}>Question Palette</span>
-            <div className="flex items-center gap-3 text-xs" style={{ color: '#64748b' }}>
+            <div className="flex items-center gap-3 text-xs" style={{ color: '#8899b0' }}>
               <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full border border-current inline-block" /> Unanswered</span>
               <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-indigo-500 inline-block" /> Answered</span>
               <span className="flex items-center gap-1"><Flag size={10} color="#f59e0b" /> Flagged</span>
@@ -136,7 +136,7 @@ function RPAErrorQuestion({ data, onComplete }) {
           style={{ background: 'rgba(99,102,241,0.15)', color: '#818cf8', border: '0.75px solid rgba(99,102,241,0.3)' }}>
           {data.rpaRef}
         </span>
-        <span className="text-xs" style={{ color: '#64748b' }}>{data.rpaName}</span>
+        <span className="text-xs" style={{ color: '#8899b0' }}>{data.rpaName}</span>
       </div>
       <div className="px-3 py-2.5 rounded-[12px]"
         style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
@@ -166,7 +166,7 @@ function RPAErrorQuestion({ data, onComplete }) {
       </div>
       {!submitted && (
         <motion.button className="w-full py-3 rounded-[14px] text-sm font-bold"
-          style={{ background: selected ? '#6366f1' : '#1d293d', color: selected ? '#fff' : '#64748b' }}
+          style={{ background: selected ? '#6366f1' : '#1d293d', color: selected ? '#fff' : '#8899b0' }}
           onClick={handleSubmit} disabled={!selected} whileTap={{ scale: 0.97 }}>
           Check answer
         </motion.button>
@@ -221,7 +221,7 @@ function EquationRecallQuestion({ data, onComplete }) {
       })}
       {!sub && (
         <motion.button className="w-full mt-2 py-3 rounded-[14px] text-sm font-bold"
-          style={{ background: sel !== null ? '#6366f1' : '#1d293d', color: sel !== null ? '#fff' : '#64748b' }}
+          style={{ background: sel !== null ? '#6366f1' : '#1d293d', color: sel !== null ? '#fff' : '#8899b0' }}
           onClick={submit} disabled={sel === null} whileTap={{ scale: 0.97 }}>
           Confirm
         </motion.button>
@@ -449,7 +449,7 @@ export default function TimedPaper() {
       case 'rpa-error':            return <RPAErrorQuestion {...props} onComplete={handleComplete} />
       case 'sequence':             return <SequenceSortQuestion {...props} />
       default: return (
-        <div key={qIndex} className="py-8 text-center text-sm" style={{ color: '#64748b' }}>
+        <div key={qIndex} className="py-8 text-center text-sm" style={{ color: '#8899b0' }}>
           Question type: {q.type}
         </div>
       )
@@ -489,7 +489,7 @@ export default function TimedPaper() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <div className="text-xs font-bold uppercase tracking-wider mb-2 text-center" style={{ color: '#64748b' }}>Your course</div>
+            <div className="text-xs font-bold uppercase tracking-wider mb-2 text-center" style={{ color: '#8899b0' }}>Your course</div>
             {[
               { id: 'combined', label: 'Combined Science', sub: 'Excludes Physics-only topics', color: '#818cf8' },
               { id: 'physics_only', label: 'Physics Only', sub: 'All topics including Physics-only', color: '#e879f9' },
@@ -514,7 +514,7 @@ export default function TimedPaper() {
                 </div>
                 <div>
                   <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{opt.label}</div>
-                  <div className="text-xs" style={{ color: '#64748b' }}>{opt.sub}</div>
+                  <div className="text-xs" style={{ color: '#8899b0' }}>{opt.sub}</div>
                 </div>
               </motion.button>
             ))}
@@ -526,7 +526,7 @@ export default function TimedPaper() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <div className="text-xs font-bold uppercase tracking-wider mb-1 text-center" style={{ color: '#64748b' }}>Time allowance</div>
+            <div className="text-xs font-bold uppercase tracking-wider mb-1 text-center" style={{ color: '#8899b0' }}>Time allowance</div>
             <motion.button
               className="w-full py-5 rounded-[16px] flex items-center justify-between px-5"
               style={{ background: 'rgba(99,102,241,0.12)', border: '1.5px solid rgba(99,102,241,0.45)', color: '#f8fafc' }}
@@ -634,7 +634,7 @@ export default function TimedPaper() {
           <div className="text-xs font-bold" style={{ color: '#f8fafc' }}>
             Exam-style Physics Paper
           </div>
-          <div className="text-xs" style={{ color: '#64748b' }}>
+          <div className="text-xs" style={{ color: '#8899b0' }}>
             Q{qIndex + 1}/{total} · {answeredCount} answered · Section {sectionInfo.section}
           </div>
         </div>
@@ -646,8 +646,8 @@ export default function TimedPaper() {
           aria-label={hideTimer ? 'Show timer' : 'Hide timer'}
         >
           {hideTimer
-            ? <EyeOff size={15} color="#64748b" />
-            : <Eye size={15} color="#64748b" />
+            ? <EyeOff size={15} color="#8899b0" />
+            : <Eye size={15} color="#8899b0" />
           }
         </button>
         {/* Pause / Resume button */}
@@ -657,7 +657,7 @@ export default function TimedPaper() {
           style={{
             background: paused ? 'rgba(34,197,94,0.15)' : 'rgba(18,26,47,0.9)',
             border: paused ? '0.75px solid rgba(34,197,94,0.4)' : '0.75px solid #1d293d',
-            color: paused ? '#22c55e' : '#64748b',
+            color: paused ? '#22c55e' : '#8899b0',
           }}
           aria-label={paused ? 'Resume paper' : 'Pause paper'}
         >
@@ -693,7 +693,7 @@ export default function TimedPaper() {
               initial={{ scale: 0.92 }} animate={{ scale: 1 }} exit={{ scale: 0.92 }}>
               <div style={{ fontSize: 36, marginBottom: 10 }}>⏸</div>
               <div className="font-bold mb-1" style={{ color: '#f8fafc', fontSize: 16 }}>Paper paused</div>
-              <p className="text-sm mb-4" style={{ color: '#64748b' }}>Tap Resume when you're ready to continue.</p>
+              <p className="text-sm mb-4" style={{ color: '#8899b0' }}>Tap Resume when you're ready to continue.</p>
               <motion.button
                 className="w-full py-3 rounded-[14px] font-bold text-sm"
                 style={{ background: '#22c55e', color: '#fff' }}
@@ -711,7 +711,7 @@ export default function TimedPaper() {
         style={{ filter: paused ? 'blur(6px)' : 'none', transition: 'filter 0.2s', pointerEvents: paused ? 'none' : 'auto' }}>
         {/* BUG-05: safe fallback if question is undefined (e.g. empty/corrupt question set) */}
         {!questions[qIndex] ? (
-          <div className="flex items-center justify-center h-full py-16 text-sm" style={{ color: '#64748b' }}>
+          <div className="flex items-center justify-center h-full py-16 text-sm" style={{ color: '#8899b0' }}>
             No question available.
           </div>
         ) : <>
@@ -726,7 +726,7 @@ export default function TimedPaper() {
             style={{
               background: flags[qIndex] ? 'rgba(245,158,11,0.12)' : 'rgba(18,26,47,0.9)',
               border: flags[qIndex] ? '0.75px solid rgba(245,158,11,0.4)' : '0.75px solid #1d293d',
-              color: flags[qIndex] ? '#f59e0b' : '#64748b',
+              color: flags[qIndex] ? '#f59e0b' : '#8899b0',
             }}
             onClick={toggleFlag}>
             <Flag size={11} /> {flags[qIndex] ? 'Flagged' : 'Flag'}
@@ -737,7 +737,7 @@ export default function TimedPaper() {
         <div className="mb-4">
           <p className="text-base font-semibold leading-snug" style={{ color: '#f8fafc' }}>{q.question}</p>
           {q.questionSubtitle && (
-            <p className="text-xs mt-1" style={{ color: '#64748b' }}>{q.questionSubtitle}</p>
+            <p className="text-xs mt-1" style={{ color: '#8899b0' }}>{q.questionSubtitle}</p>
           )}
           {(q.marks || q.steps?.length) && (
             <p className="text-xs mt-0.5 text-right font-semibold" style={{ color: '#a8b8cc' }}>
@@ -785,7 +785,7 @@ export default function TimedPaper() {
           {!completed && !isLast && (
             <motion.button
               className="px-4 py-3 rounded-[13px] text-sm font-semibold"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#64748b' }}
+              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#8899b0' }}
               onClick={handleNext}
               whileTap={{ scale: 0.97 }}>
               Skip

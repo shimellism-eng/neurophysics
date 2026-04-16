@@ -69,7 +69,7 @@ export default function SequenceSortQuestion({ data, moduleColor, onComplete }) 
 
         <div className="flex flex-col gap-2 min-h-[48px]">
           {order.length === 0 ? (
-            <div className="text-xs text-center py-3" style={{ color: '#4a5a72' }}>
+            <div className="text-xs text-center py-3" style={{ color: '#8899b0' }}>
               Tap items below in the correct order
             </div>
           ) : (
@@ -123,7 +123,7 @@ export default function SequenceSortQuestion({ data, moduleColor, onComplete }) 
                   style={{
                     background: used ? 'rgba(18,26,47,0.4)' : 'rgba(18,26,47,0.9)',
                     border: used ? '0.75px solid #1d293d' : `0.75px solid ${moduleColor}40`,
-                    color: used ? '#4a5a72' : '#f8fafc',
+                    color: used ? '#8899b0' : '#f8fafc',
                     textDecoration: used ? 'line-through' : 'none',
                   }}
                   onClick={() => handleTapItem(idx)}

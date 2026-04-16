@@ -640,10 +640,18 @@ const practicalsQuestions = [
     senNote: 'Beyond the elastic limit, the spring is permanently deformed — it will not spring back fully.' },
 
   { id: 'spr_t1_08', topicId: 'spring', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
+    boards: ['edexcel', 'ccea'],
     question: 'To convert mass in grams to force in Newtons, which relationship do you use?',
     options: ['F = mv', 'F = mg (where g = 10 N/kg)', 'F = ma (where a = 9.8)', 'F = kx'],
     correctIndex: 1,
     senNote: 'Weight = mass × gravitational field strength. W = mg. On Earth, g ≈ 10 N/kg.' },
+
+  { id: 'spr_t1_08b', topicId: 'spring', course: 'combined', tier: 1, type: 'mcq', marks: 1, timeExpected: 30,
+    boards: ['aqa', 'ocr-a', 'ocr-b', 'wjec'],
+    question: 'To convert mass in grams to force in Newtons, which relationship do you use?',
+    options: ['F = mv', 'F = mg (where g = 9.8 N/kg)', 'F = ma (where a = 10)', 'F = kx'],
+    correctIndex: 1,
+    senNote: 'Weight = mass × gravitational field strength. W = mg. On Earth, g = 9.8 N/kg for AQA, OCR and WJEC.' },
 
   { id: 'spr_t2_01', topicId: 'spring', course: 'combined', tier: 2, type: 'mcq', marks: 1, timeExpected: 60,
     question: 'A spring has natural length 10 cm. When a 2 N force is applied, the total length is 14 cm. What is the spring constant?',

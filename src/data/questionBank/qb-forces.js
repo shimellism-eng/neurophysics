@@ -4170,11 +4170,11 @@ const forcesQuestions = [
     marks: 5,
     timeExpected: 120,
     boards: ['ccea'],
-    question: 'A hydraulic lift has a small input piston (area = 5 cm²) and a large output piston (area = 200 cm²). The system must lift a 2000 kg car. (a) Calculate the weight of the car. (b) Calculate the minimum input force needed. (c) Explain why using a gas instead of a liquid would make the system ineffective.',
+    question: 'A hydraulic lift has a small input piston (area = 5 cm²) and a large output piston (area = 200 cm²). The output piston must exert an upward force of 20 000 N to lift a car. (a) Calculate the minimum input force needed on the small piston. (b) Explain why using a gas instead of a liquid would make the system ineffective.',
     answer: 500,
     unit: 'N',
     acceptableRange: [490, 510],
-    senNote: '(a) W = mg = 2000 × 10 = 20 000 N. (b) p = F_out/A_out = 20 000/0.02 = 1 000 000 Pa; F_in = p × A_in = 1 000 000 × 0.0005 = 500 N. (c) Gas is compressible — the input work compresses the gas rather than transmitting pressure, so much less force reaches the output.',
+    senNote: '(a) A1 = 5 cm² = 0.0005 m², A2 = 200 cm² = 0.02 m². p = F_out/A_out = 20 000/0.02 = 1 000 000 Pa; F_in = p × A_in = 1 000 000 × 0.0005 = 500 N. (b) Gas is compressible — the input work compresses the gas rather than transmitting pressure, so much less force reaches the output.',
   },
 
   // ── WJEC: Angular Velocity (circular_motion) ─────────────────────────────
@@ -4327,7 +4327,7 @@ const forcesQuestions = [
     type: 'calculation',
     marks: 3,
     timeExpected: 60,
-    boards: ['ccea', 'aqa', 'ocr-a', 'wjec'],
+    boards: ['ccea', 'aqa', 'ocr-a', 'ocr-b', 'wjec', 'edexcel'],
     question: 'A uniform seesaw is 4 m long and pivoted at its centre. A child of weight 300 N sits 1.5 m from the pivot on the left. Where must a 400 N child sit on the right to balance the seesaw?',
     answer: 1.125,
     unit: 'm',
@@ -4344,7 +4344,7 @@ const forcesQuestions = [
     type: 'extended',
     marks: 5,
     timeExpected: 120,
-    boards: ['ccea', 'aqa', 'ocr-a', 'wjec'],
+    boards: ['ccea', 'aqa', 'ocr-a', 'ocr-b', 'wjec', 'edexcel'],
     question: 'Explain, using the concept of moments, why a long spanner is more effective than a short spanner when tightening a bolt. Include a worked example using forces of your choice.',
     markScheme: [
       'Moment = force × distance from pivot (1)',

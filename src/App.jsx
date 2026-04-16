@@ -365,7 +365,7 @@ function AppShell() {
       }}
     >
       {/* Top safe-area spacer */}
-      <div style={{ height: 'max(env(safe-area-inset-top), 44px)', background: '#080f1e', flexShrink: 0 }} />
+      <div style={{ height: 'env(safe-area-inset-top)', background: '#080f1e', flexShrink: 0 }} />
       <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'calc(64px + env(safe-area-inset-bottom))' : 0 }}>
         <Suspense fallback={<RouteLoader />}>
           <AnimatePresence mode="wait">

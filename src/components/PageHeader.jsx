@@ -23,6 +23,7 @@ export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         borderBottom: '0.75px solid rgba(255,255,255,0.07)',
+        paddingTop: 'calc(20px + env(safe-area-inset-top))',
       }}
     >
       {onBack && (

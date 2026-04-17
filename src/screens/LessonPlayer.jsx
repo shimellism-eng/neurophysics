@@ -548,10 +548,10 @@ export default function LessonPlayer() {
           }}
         />
 
-        {/* Back button — always exits lesson and saves progress */}
+        {/* Back button — goes to previous step, or exits when on step 0 */}
         <button
-          onClick={exitLesson}
-          aria-label="Exit lesson"
+          onClick={step > 0 ? goBack : exitLesson}
+          aria-label={step > 0 ? 'Previous step' : 'Exit lesson'}
           className="w-11 h-11 flex items-center justify-center shrink-0"
           style={{
             borderRadius: 12,

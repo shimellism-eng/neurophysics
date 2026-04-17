@@ -465,7 +465,7 @@ export default function LearnScreen() {
               <motion.button
                 key={f.id}
                 onClick={() => setPaperFilter(f.id)}
-                className="flex items-center gap-1.5 px-4 rounded-full text-xs font-bold"
+                className="flex items-center gap-1.5 px-4 rounded-full text-xs font-bold shrink-0 whitespace-nowrap"
                 style={{
                   height: 36,
                   background: isActive ? `${f.color}20` : 'rgba(255,255,255,0.04)',

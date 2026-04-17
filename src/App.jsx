@@ -71,11 +71,35 @@ const DiagnosticQuestion = lazy(() => import('./screens/DiagnosticQuestion'))
 const MisconceptionFeedback = lazy(() => import('./screens/MisconceptionFeedback'))
 const MasteryScreen     = lazy(() => import('./screens/MasteryScreen'))
 const SettingsScreen    = lazy(() => import('./screens/SettingsScreen'))
+const SettingsScreenV2  = lazy(() => import('./screens/SettingsScreenV2'))
+// Feature flag — redesigned Profile/Settings
+// Enable with ?v2=1 (sets localStorage) or set `np_ui_v2 = '1'` manually.
+// Disable from inside V2 ("Use classic Settings" link) or `localStorage.removeItem('np_ui_v2')`.
+function SettingsRoute() {
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('v2') === '1') localStorage.setItem('np_ui_v2', '1')
+    if (params.get('v2') === '0') localStorage.removeItem('np_ui_v2')
+  }
+  const useV2 = typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1'
+  return useV2 ? <SettingsScreenV2 /> : <SettingsScreen />
+}
 const MamoChat          = lazy(() => import('./screens/MamoChat'))
 const PracticalScreen   = lazy(() => import('./screens/PracticalScreen'))
 const ExamPractice      = lazy(() => import('./screens/ExamPractice'))
 const Grade9Challenge   = lazy(() => import('./screens/Grade9Challenge'))
 const TimedPaper        = lazy(() => import('./screens/TimedPaper'))
+const PapersScreenV2    = lazy(() => import('./screens/PapersScreenV2'))
+const TopicsScreenV2    = lazy(() => import('./screens/TopicsScreenV2'))
+const HomeScreenV2      = lazy(() => import('./screens/HomeScreenV2'))
+function PapersRoute() {
+  const useV2 = typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1'
+  return useV2 ? <PapersScreenV2 /> : <Navigate to="/" replace />
+}
+function LearnRoute({ V1 }) {
+  const useV2 = typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1'
+  return useV2 ? <TopicsScreenV2 /> : <V1 />
+}
 const PaperResults      = lazy(() => import('./screens/PaperResults'))
 const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
@@ -380,8 +404,8 @@ function AppShell() {
               <Routes location={location}>
                 <Route path="/auth" element={<AuthScreen />} />
                 <Route path="/onboarding" element={<OnboardingScreen />} />
-                <Route path="/" element={user ? <HomeScreen /> : <LandingScreen />} />
-                <Route path="/learn" element={<LearnScreen />} />
+                <Route path="/" element={user ? (typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1' ? <HomeScreenV2 /> : <HomeScreen />) : <LandingScreen />} />
+                <Route path="/learn" element={<LearnRoute V1={LearnScreen} />} />
                 <Route path="/topics" element={<Navigate to="/learn" replace />} />
                 <Route path="/mastery" element={<MasteryScreen />} />
                 <Route path="/topic-map" element={<TopicMap />} />
@@ -393,8 +417,9 @@ function AppShell() {
                 <Route path="/exam/:id" element={<ExamPractice />} />
                 <Route path="/grade9" element={<Grade9Challenge />} />
                 <Route path="/timed-paper" element={<TimedPaper />} />
+                <Route path="/papers" element={<PapersRoute />} />
                 <Route path="/paper-results" element={<PaperResults />} />
-                <Route path="/settings" element={<SettingsScreen />} />
+                <Route path="/settings" element={<SettingsRoute />} />
                 <Route path="/consent" element={<ConsentScreen />} />
                 <Route path="/privacy" element={<PrivacyPolicyScreen />} />
                 <Route path="/terms" element={<TermsScreen />} />

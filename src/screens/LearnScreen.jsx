@@ -458,7 +458,7 @@ export default function LearnScreen() {
         </div>
 
         {/* Filter tabs + exam quick access */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-0.5 -mx-1 px-1">
+        <div className="flex items-center gap-2 overflow-x-auto pb-0.5 -mx-1 px-1" style={{ scrollbarWidth: 'none' }}>
           {FILTERS.map(f => {
             const isActive = paperFilter === f.id
             return (
@@ -495,6 +495,7 @@ export default function LearnScreen() {
           >
             ⚡ Equations
           </motion.button>
+          <div className="shrink-0 w-4" />
         </div>
       </div>
 

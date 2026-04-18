@@ -5,7 +5,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { X } from 'lucide-react'
 
-export default function BreakNudge({ nudgeLevel, onDismiss }) {
+export default function BreakNudge({ nudgeLevel, onDismiss, onSnooze }) {
   const isLong = nudgeLevel === 'long'
 
   return (
@@ -37,14 +37,30 @@ export default function BreakNudge({ nudgeLevel, onDismiss }) {
                 : 'Good progress! A short 5-minute break now will help you remember more.'}
             </p>
           </div>
-          <button
-            className="w-9 h-9 rounded-full flex items-center justify-center shrink-0"
-            style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.15)' }}
-            onClick={onDismiss}
-            aria-label="Dismiss break reminder"
-          >
-            <X size={14} color="#a8b8cc" />
-          </button>
+          <div className="flex flex-col items-end gap-2 shrink-0">
+            <button
+              className="w-9 h-9 rounded-full flex items-center justify-center"
+              style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.15)' }}
+              onClick={onDismiss}
+              aria-label="Dismiss break reminder"
+            >
+              <X size={14} color="#a8b8cc" />
+            </button>
+            {onSnooze && (
+              <button
+                className="text-[11px] font-medium px-2.5 py-1 rounded-full whitespace-nowrap"
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '0.75px solid rgba(255,255,255,0.12)',
+                  color: 'rgba(255,255,255,0.45)',
+                }}
+                onClick={onSnooze}
+                aria-label="Snooze break reminder for 5 minutes"
+              >
+                Snooze 5 min
+              </button>
+            )}
+          </div>
         </div>
       </motion.div>
     </AnimatePresence>

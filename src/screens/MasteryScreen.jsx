@@ -5,6 +5,7 @@ import { CheckCircle, Circle, Zap, Trophy, Star, Clock, ChevronRight } from 'luc
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
+import { MotionButton } from '../components/ui/Button'
 
 // ---------------------------------------------------------------------------
 // Badge definitions
@@ -227,7 +228,7 @@ export default function MasteryScreen() {
   }, [mastered.length])
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
+    <div className="flex flex-col h-full overflow-y-auto" style={{ background: '#080f1e', paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}>
 
       {/* Celebration banner */}
       <AnimatePresence>
@@ -323,18 +324,15 @@ export default function MasteryScreen() {
               <p className="text-sm" style={{ color: 'rgba(255,255,255,0.38)', maxWidth: 240, lineHeight: 1.5 }}>
                 Complete your first topic to start building mastery
               </p>
-              <motion.button
-                className="mt-4 px-6 py-3 rounded-[14px] text-sm font-bold"
-                style={{
-                  background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
-                  color: '#fff',
-                  boxShadow: '0 4px 0 rgba(0,0,0,0.18)',
-                }}
+              <MotionButton
+                variant="primary"
+                size="md"
+                className="mt-4"
                 onClick={() => navigate('/learn')}
                 whileTap={{ y: 2, boxShadow: '0 1px 0 rgba(0,0,0,0.1)' }}
               >
                 Browse topics
-              </motion.button>
+              </MotionButton>
             </div>
           )}
         </motion.div>
@@ -569,7 +567,7 @@ export default function MasteryScreen() {
               <Clock size={18} color="#6366f1" />
             </div>
             <div className="text-left">
-              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
+              <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed paper</p>
               <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
             </div>
           </div>

@@ -398,12 +398,8 @@ export default function ExamPractice() {
   // Feature 2: 6-mark writing scaffold
   const [scaffoldOpen, setScaffoldOpen] = useState(false)
 
-  // Command word decoder
-  const [showDecoder, setShowDecoder] = useState(false)
-  // Whether user has seen the "tap highlighted word" tooltip this session
-  const cwdTooltipSeen = useRef(
-    typeof sessionStorage !== 'undefined' && sessionStorage.getItem('cwd_seen') === '1'
-  )
+  // Command word decoder — open by default; collapsible but always re-openable
+  const [cmdWordOpen, setCmdWordOpen] = useState(true)
   // Track which question index last triggered auto-expand for extended-answer
   const extendedAutoExpandedRef = useRef(-1)
 
@@ -425,15 +421,22 @@ export default function ExamPractice() {
     setCompleted(true)
   }, [])
 
-  // Auto-expand decoder for 6-mark / extended-answer questions on first view
+  // Per-question reset: re-open decoder whenever question changes and has a command word
   useEffect(() => {
     if (!topic || total === 0) return
-    const isExtended = qType === 'extended-answer' || qType === 'extended' || (q.marks ?? 0) >= 6
+    const qLower = (questions[qIndex]?.question || '').toLowerCase()
+    const hasCommandWord = Object.keys(COMMAND_WORDS).some(w =>
+      qLower.startsWith(w + ' ') || qLower.startsWith(w + ',') ||
+      qLower.includes(' ' + w + ' ') || qLower.includes('\n' + w + ' ')
+    )
+    if (hasCommandWord) setCmdWordOpen(true)
+    // Also auto-expand for extended-answer / 6-mark questions regardless
+    const isExtended = qType === 'extended-answer' || qType === 'extended' || (questions[qIndex]?.marks ?? 0) >= 6
     if (isExtended && extendedAutoExpandedRef.current !== qIndex) {
       extendedAutoExpandedRef.current = qIndex
-      setShowDecoder(true)
+      setCmdWordOpen(true)
     }
-  }, [qIndex, qType, q.marks, topic, total])
+  }, [qIndex, qType, topic, total, questions])
 
   if (!topic || total === 0) {
     return (
@@ -473,7 +476,7 @@ export default function ExamPractice() {
       setCompleted(false)
       setSelected(null)
       setMcqSubmitted(false)
-      setShowDecoder(false)
+      setCmdWordOpen(false)
       setLastCorrect(null)
     }
   }
@@ -755,7 +758,7 @@ export default function ExamPractice() {
                           <span
                             key={i}
                             style={{ color: '#00d4ff', fontWeight: 700, textDecoration: 'underline dotted', cursor: 'pointer' }}
-                            onClick={() => setShowDecoder(v => !v)}
+                            onClick={() => setCmdWordOpen(v => !v)}
                             title="Tap for exam technique help"
                           >
                             {part}
@@ -769,7 +772,7 @@ export default function ExamPractice() {
                 <button
                   className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
                   style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-                  onClick={() => setShowDecoder(v => !v)}
+                  onClick={() => setCmdWordOpen(v => !v)}
                   aria-label="What is this question asking me?"
                 >
                   ?
@@ -787,25 +790,18 @@ export default function ExamPractice() {
                 )}
               </div>
 
-              {/* One-time "tap the highlighted word" tooltip (sessionStorage-gated) */}
-              {detectedWord && !cwdTooltipSeen.current && (() => {
-                // Mark as seen immediately so it only renders once this session
-                if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('cwd_seen', '1')
-                cwdTooltipSeen.current = true
-                return (
-                  <motion.p
-                    className="mt-1.5 text-xs"
-                    style={{ color: '#818cf8' }}
-                    initial={{ opacity: 0, y: -4 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    💡 Tap the highlighted word for exam technique help
-                  </motion.p>
-                )
-              })()}
+              {/* Re-open pill — shown when decoder is collapsed and a command word exists */}
+              {detectedWord && !cmdWordOpen && (
+                <button
+                  className="mt-1.5 text-xs px-2.5 py-1 rounded-full self-start"
+                  style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}
+                  onClick={() => setCmdWordOpen(true)}
+                >
+                  💡 Exam tip
+                </button>
+              )}
 
-              {showDecoder && (
+              {cmdWordOpen && (
                 <div className="mt-2 px-3 py-2.5 rounded-[10px]" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
                   <p className="text-xs font-bold mb-1" style={{ color: '#818cf8' }}>
                     {detectedWord ? `"${detectedWord.charAt(0).toUpperCase() + detectedWord.slice(1)}" means:` : 'Reading the question:'}

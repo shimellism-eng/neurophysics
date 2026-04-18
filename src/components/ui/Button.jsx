@@ -3,13 +3,18 @@
 //
 // Variants: primary | secondary | ghost | danger
 // Sizes:    sm (36px) | md (44px) | lg (52px)
+//
+// Also exports MotionButton = motion(Button) for screens that need whileTap.
+
+import { forwardRef } from 'react'
+import { motion } from 'motion/react'
 
 const VARIANTS = {
   primary: {
-    background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
+    background: 'linear-gradient(135deg, var(--np-indigo), #4f46e5)',
     color: '#fff',
     border: 'none',
-    boxShadow: '0 4px 16px rgba(99,102,241,0.38)',
+    boxShadow: 'var(--shadow-raised)',
   },
   secondary: {
     background: 'rgba(99,102,241,0.12)',
@@ -29,12 +34,12 @@ const VARIANTS = {
 };
 
 const SIZES = {
-  sm: { height: 36,  padding: '0 14px', fontSize: '0.875rem',  borderRadius: '10px' },
-  md: { height: 44,  padding: '0 20px', fontSize: '1rem',      borderRadius: '12px' },
-  lg: { height: 52,  padding: '0 28px', fontSize: '1.0625rem', borderRadius: '14px' },
+  sm: { height: 36,  padding: '0 14px', fontSize: '0.875rem',  borderRadius: 'var(--radius-sm)' },
+  md: { height: 44,  padding: '0 20px', fontSize: '1rem',      borderRadius: 'var(--radius-md)' },
+  lg: { height: 52,  padding: '0 28px', fontSize: '1.0625rem', borderRadius: 'var(--radius-lg)' },
 };
 
-export default function Button({
+const Button = forwardRef(function Button({
   children,
   variant = 'primary',
   size = 'md',
@@ -44,9 +49,10 @@ export default function Button({
   className = '',
   type = 'button',
   fullWidth = false,
-}) {
+}, ref) {
   return (
     <button
+      ref={ref}
       type={type}
       onClick={onClick}
       disabled={disabled}
@@ -67,4 +73,9 @@ export default function Button({
       {children}
     </button>
   );
-}
+});
+
+export default Button;
+
+/** Motion-enhanced Button — supports whileTap, whileHover, animate etc. */
+export const MotionButton = motion(Button);

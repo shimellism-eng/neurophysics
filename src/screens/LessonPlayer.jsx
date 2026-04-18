@@ -231,6 +231,38 @@ export default function LessonPlayer() {
   // ADHD pacing: session timer + break nudges
   const { elapsedMinutes, showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
+  // ADHD pacing: per-step elapsed time (resets when step changes)
+  const [stepStartTime, setStepStartTime] = useState(() => Date.now())
+  const [stepElapsed, setStepElapsed] = useState(0)
+
+  // Reset step timer whenever the user moves to a new step
+  useEffect(() => {
+    setStepStartTime(Date.now())
+    setStepElapsed(0)
+  }, [step])
+
+  // Tick every 10 seconds — low overhead
+  useEffect(() => {
+    const iv = setInterval(() => {
+      setStepElapsed(Math.floor((Date.now() - stepStartTime) / 1000))
+    }, 10000)
+    return () => clearInterval(iv)
+  }, [stepStartTime])
+
+  // Format helper: "2m" under 5 min, "5m 30s" at or over 5 min
+  const fmtStepTime = (s) => s < 300 ? `${Math.floor(s / 60)}m` : `${Math.floor(s / 60)}m ${s % 60}s`
+
+  // Break nudge snooze — hides nudge for 5 minutes then lets it reappear
+  const snoozeUntilRef = useRef(0)
+  const [snoozed, setSnoozed] = useState(false)
+  const snoozeBreak = () => {
+    snoozeUntilRef.current = Date.now() + 5 * 60 * 1000
+    setSnoozed(true)
+    // Re-enable after 5 minutes so the nudge can surface again
+    setTimeout(() => setSnoozed(false), 5 * 60 * 1000)
+  }
+  const nudgeVisible = showNudge && !snoozed
+
   // Explore mode: hearts are off by default — learners can enable hearts in Settings
   const exploreMode = (() => {
     try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').exploreMode !== false } catch { return true }
@@ -477,7 +509,7 @@ export default function LessonPlayer() {
     <div className="relative flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
 
       {/* ADHD break nudge */}
-      {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
+      {nudgeVisible && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} onSnooze={snoozeBreak} />}
 
       {/* ── Resume overlay ── */}
       {showResume && savedProgress && (
@@ -672,6 +704,19 @@ export default function LessonPlayer() {
             >
               <Clock size={9} />
               {elapsedMinutes}m
+            </span>
+          )}
+          {/* Per-step elapsed time — only show after 60s; amber nudge after 3 min */}
+          {stepElapsed >= 60 && (
+            <span
+              className="text-[10px] font-medium tabular-nums px-1.5 py-0.5 rounded-full"
+              style={{
+                background: stepElapsed >= 180 ? 'rgba(243,156,18,0.12)' : 'rgba(255,255,255,0.05)',
+                color: stepElapsed >= 180 ? '#f39c12' : 'rgba(255,255,255,0.3)',
+                border: stepElapsed >= 180 ? '1px solid rgba(243,156,18,0.25)' : '1px solid rgba(255,255,255,0.06)',
+              }}
+            >
+              {fmtStepTime(stepElapsed)}
             </span>
           )}
         </div>

@@ -19,17 +19,17 @@ export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
     <div
       className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10 shrink-0"
       style={{
-        background: 'rgba(8,15,30,0.96)',
+        background: 'var(--np-card-deep)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
-        borderBottom: '0.75px solid rgba(255,255,255,0.07)',
-        paddingTop: 'calc(20px + env(safe-area-inset-top))',
+        borderBottom: '0.75px solid var(--np-border)',
+        paddingTop: 'calc(var(--safe-top) + 12px)',
       }}
     >
       {onBack && (
         <button
           className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid var(--np-border)' }}
           onClick={onBack}
           aria-label="Go back"
         >
@@ -41,7 +41,7 @@ export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
         {typeof title === 'string' ? (
           <div
             className="font-display font-bold"
-            style={{ color: '#f8fafc', fontSize: 18, letterSpacing: '-0.02em' }}
+            style={{ color: 'var(--np-text)', fontSize: 18, letterSpacing: '-0.02em' }}
           >
             {title}
           </div>

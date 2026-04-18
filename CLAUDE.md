@@ -310,12 +310,13 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 
 ### Sprint 3: Instructional Engine
 
-#### 3.1 Spaced Repetition (SM-2)
-- [ ] Supabase table `user_question_progress`: user_id, question_id, ease_factor (default 2.5), interval_days (default 1), repetition_count (default 0), last_reviewed, next_due, correct_streak (default 0), total_attempts (default 0), total_correct (default 0)
-- [ ] SM-2 algorithm: correct increases interval (1/3/7/14/30/60 days), ease up (max 3.0). Incorrect resets interval to 1, ease down (min 1.3)
-- [ ] `useSRS()` hook: fetch due questions, return count per topic, provide updateProgress(), sort overdue first then lowest ease
-- [ ] Dashboard: "Due for Review" badge, per-topic status (green/amber/red), "Start Review" button
-- [ ] Queue SRS updates offline, sync when connected
+#### 3.1 Spaced Repetition (SM-2) ✅ shipped 4b95c87
+- [x] Supabase table `user_question_progress`: user_id, question_id, ease_factor (default 2.5), interval_days (default 1), repetition_count (default 0), last_reviewed, next_due, correct_streak (default 0), total_attempts (default 0), total_correct (default 0)
+- [x] SM-2 algorithm: correct increases interval (1/3/7/14/30/60 days), ease up (max 3.0). Incorrect resets interval to 1, ease down (min 1.3)
+- [x] `useSRS()` hook: fetch due questions, return count per topic, provide updateProgress(), sort overdue first then lowest ease
+- [x] Dashboard: "Due for Review" badge, per-topic status (green/amber/red), "Start Review" button
+- [x] Queue SRS updates offline, sync when connected
+- ⚠️ Supabase table must be created manually — run SQL in memory.md in Supabase dashboard
 
 #### 3.2 Diagnostic Feedback
 - [ ] Incorrect answer shows 3-layer card: correct answer (green) then why correct (1-2 sentences) then why chosen answer wrong (misconception)

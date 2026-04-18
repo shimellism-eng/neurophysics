@@ -5,6 +5,34 @@
 
 ## What Was Just Done (latest — 2026-04-18)
 
+### Sprint 3.1 Spaced Repetition SM-2 ✅ shipped 4b95c87
+- NEW: src/hooks/useSRS.js — SM-2 algorithm, localStorage `np_srs`, non-blocking Supabase sync
+- HomeScreen: "Due for Review" amber card with per-topic pills (green/amber/red), only shown when totalDue > 0
+- QuickWinScreen: now uses getDueQuestions() (specific question IDs, overdue-first) + records each answer via updateProgress()
+- Supabase table NOT yet created — Mamo must run this SQL in Supabase dashboard:
+
+```sql
+create table if not exists public.user_question_progress (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  question_id text not null,
+  ease_factor numeric not null default 2.5,
+  interval_days integer not null default 1,
+  repetition_count integer not null default 0,
+  last_reviewed timestamptz,
+  next_due timestamptz,
+  correct_streak integer not null default 0,
+  total_attempts integer not null default 0,
+  total_correct integer not null default 0,
+  updated_at timestamptz not null default now(),
+  unique(user_id, question_id)
+);
+alter table public.user_question_progress enable row level security;
+create policy "Users can manage their own question progress"
+  on public.user_question_progress for all
+  using (auth.uid() = user_id) with check (auth.uid() = user_id);
+```
+
 ### Sprint 2.5 Screen Reader & Keyboard ✅ shipped 51b6801
 - Focus indicators already present via :focus-visible in index.css (no change needed)
 - No `<img>` tags in codebase — alt text N/A

@@ -26,6 +26,7 @@ import {
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 import HeartsDisplay from '../components/HeartsDisplay'
 import { getExamQuestionCount } from '../data/examIndex'
 import { speak } from '../utils/tts'
@@ -68,6 +69,7 @@ const LEGACY_STEPS = [
 
 function KeywordGlossaryBar({ keywords, moduleColor }) {
   const [active, setActive] = useState(null)
+  const reducedMotion = useReducedMotion()
   if (!keywords || keywords.length === 0) return null
 
   return (
@@ -103,10 +105,10 @@ function KeywordGlossaryBar({ keywords, moduleColor }) {
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
             }}
-            initial={{ opacity: 0, y: -6, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: 'auto' }}
-            exit={{ opacity: 0, y: -6, height: 0 }}
-            transition={{ duration: 0.18 }}
+            initial={reducedMotion ? {} : { opacity: 0, y: -6, height: 0 }}
+            animate={reducedMotion ? {} : { opacity: 1, y: 0, height: 'auto' }}
+            exit={reducedMotion ? {} : { opacity: 0, y: -6, height: 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.18 }}
           >
             <span className="text-xs font-bold" style={{ color: moduleColor }}>
               {keywords[active].word}
@@ -748,7 +750,7 @@ export default function LessonPlayer() {
                 transition={{ delay: 0.38 }}
               >
                 <GraduationCap size={16} />
-                Exam Practice ({examCount} questions)
+                Exam practice ({examCount} questions)
               </motion.button>
             )}
           </div>
@@ -760,8 +762,8 @@ export default function LessonPlayer() {
       {/* ── Next button - only for steps without their own CTA ── */}
       {!stepHasOwnCTA && !isLast && (
         <motion.div
-          className="shrink-0 px-5 pb-8 pt-3"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: '#080f1e' }}
+          className="shrink-0 px-5 pt-3"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: '#080f1e', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}

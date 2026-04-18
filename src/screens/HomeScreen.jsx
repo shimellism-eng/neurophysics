@@ -10,6 +10,7 @@ import { useProgress } from '../hooks/useProgress'
 import { useInsights } from '../hooks/useInsights'
 import { useStudyPlan } from '../hooks/useStudyPlan'
 import { useAuth } from '../context/AuthContext'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 import { getSelectedBoard } from '../utils/boardConfig'
 import SafeAreaPage from '../components/ui/SafeAreaPage.jsx'
 
@@ -314,7 +315,7 @@ export default function HomeScreen() {
   const avatar   = profile.avatar || '🧠'
   const greeting = getGreeting()
 
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const reducedMotion = useReducedMotion()
 
   const [, setBoardTick] = useState(0)
   useEffect(() => {
@@ -362,9 +363,9 @@ export default function HomeScreen() {
       >
         <motion.div
           className="flex items-center gap-4"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          initial={reducedMotion ? {} : { opacity: 0, y: 16 }}
+          animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ duration: reducedMotion ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Avatar */}
           <div
@@ -400,14 +401,6 @@ export default function HomeScreen() {
                 </span>
               )}
 
-              {masteredCount > 0 && (
-                <button onClick={() => navigate('/mastery')}
-                  className="font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
-                  style={{ fontSize: 12, background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}>
-                  <CheckCircle size={11} /> {masteredCount} mastered
-                </button>
-              )}
-
               {plan.daysLeft > 0 && plan.examStatus !== 'no_date' && plan.examStatus !== 'passed' && (() => {
                 const s = STATUS_THEME[plan.examStatus]
                 return (
@@ -429,30 +422,19 @@ export default function HomeScreen() {
                 {selectedBoard.name}
               </span>
 
-              {targetLabel && (
-                <span className="font-bold px-2.5 py-1 rounded-full"
-                  style={{
-                    fontSize: 12,
-                    background: `${selectedBoard.color}12`,
-                    color: selectedBoard.color,
-                    border: `1px solid ${selectedBoard.color}28`,
-                  }}>
-                  🏆 {targetLabel}
-                </span>
-              )}
             </div>
           </div>
         </motion.div>
 
-        {/* Progress bar — only once started */}
-        {progressPct > 0 && (
-          <motion.div className="mt-5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+        {/* Progress bar */}
+        {totalTopics > 0 && (
+          <motion.div className="mt-5" initial={reducedMotion ? {} : { opacity: 0 }} animate={reducedMotion ? {} : { opacity: 1 }} transition={{ delay: reducedMotion ? 0 : 0.3 }}>
             <div className="w-full rounded-full overflow-hidden" style={{ height: 6, background: 'rgba(255,255,255,0.06)' }}>
               <motion.div className="h-full rounded-full"
                 style={{ background: `linear-gradient(90deg, #6366f1, ${moduleColor})` }}
-                initial={{ width: 0 }}
+                initial={reducedMotion ? {} : { width: 0 }}
                 animate={{ width: `${progressPct}%` }}
-                transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
+                transition={{ delay: reducedMotion ? 0 : 0.5, duration: reducedMotion ? 0 : 1, ease: 'easeOut' }}
               />
             </div>
             <div className="flex items-center justify-between mt-1.5">
@@ -460,7 +442,7 @@ export default function HomeScreen() {
                 GCSE Physics
               </p>
               <p style={{ fontSize: 11, fontWeight: 700, color: moduleColor }}>
-                {masteredCount}/{totalTopics} topics
+                {masteredCount}/{totalTopics} topics{targetLabel ? ` · ${targetLabel}` : ''}
               </p>
             </div>
           </motion.div>
@@ -481,9 +463,9 @@ export default function HomeScreen() {
           }}
           onClick={() => navigateToTopic(firstUnmastered)}
           whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 12px ${moduleColor}22` }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          initial={reducedMotion ? {} : { opacity: 0, y: 20 }}
+          animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ delay: reducedMotion ? 0 : 0.15, duration: reducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-center gap-3.5">
             {resumeModule && (
@@ -494,7 +476,7 @@ export default function HomeScreen() {
             )}
             <div className="text-left">
               <div className="font-semibold opacity-75 mb-0.5" style={{ fontSize: 12 }}>
-                {plan.isReview ? '🔁 Review due' : masteredCount === 0 ? 'Start here' : "Today's topic"}
+                {plan.isReview ? 'Review due' : masteredCount === 0 ? 'Start here' : "Today's topic"}
               </div>
               <div className="font-bold" style={{ fontSize: 17, letterSpacing: '-0.02em' }}>
                 {resumeTopic?.title || 'Energy Stores'}
@@ -532,13 +514,13 @@ export default function HomeScreen() {
             border: streak > 0 ? '0.75px solid rgba(249,115,22,0.35)' : '0.75px solid rgba(255,255,255,0.07)',
             boxShadow: streak > 0 ? '0 4px 32px rgba(249,115,22,0.1)' : 'none',
           }}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.22, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          initial={reducedMotion ? {} : { opacity: 0, y: 16 }}
+          animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ delay: reducedMotion ? 0 : 0.22, duration: reducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex items-start gap-3.5">
             <motion.div
-              animate={streak > 0 ? { scale: [1, 1.1, 1] } : {}}
+              animate={reducedMotion ? {} : (streak > 0 ? { scale: [1, 1.1, 1] } : {})}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
               style={{ paddingTop: 2 }}
             >
@@ -580,10 +562,10 @@ export default function HomeScreen() {
         {reviewDue.length > 0 && (
           <motion.div
             className="px-5 mb-5"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 0.28 }}
+            initial={reducedMotion ? {} : { opacity: 0, y: 12 }}
+            animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+            exit={reducedMotion ? {} : { opacity: 0 }}
+            transition={{ delay: reducedMotion ? 0 : 0.28 }}
           >
             <div className="rounded-[22px] px-5 py-5"
               style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.2)' }}>
@@ -654,9 +636,9 @@ export default function HomeScreen() {
         {hasData && (
           <motion.div
             className="px-5 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.32 }}
+            initial={reducedMotion ? {} : { opacity: 0 }}
+            animate={reducedMotion ? {} : { opacity: 1 }}
+            transition={{ delay: reducedMotion ? 0 : 0.32 }}
           >
             <div className="flex items-center gap-2 mb-3">
               <TrendingUp size={13} color="#6366f1" />
@@ -671,7 +653,7 @@ export default function HomeScreen() {
 
       {/* ── TIMED PAPER PROMO — unlocked at 10+ topics mastered ─────────────── */}
       {masteredCount >= 10 && (
-        <motion.div className="px-5 mb-5" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.38 }}>
+        <motion.div className="px-5 mb-5" initial={reducedMotion ? {} : { opacity: 0, y: 16 }} animate={reducedMotion ? {} : { opacity: 1, y: 0 }} transition={{ delay: reducedMotion ? 0 : 0.38 }}>
           <motion.button
             className="w-full rounded-[22px] flex items-center justify-between px-5 py-4"
             style={{
@@ -692,7 +674,7 @@ export default function HomeScreen() {
                   You've mastered {masteredCount} topics
                 </div>
                 <div className="font-bold" style={{ color: 'var(--np-text)', fontSize: 16, letterSpacing: '-0.02em' }}>
-                  Try a Timed Paper
+                  Try a timed paper
                 </div>
                 <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   Exam-style · 35 marks · 55 min

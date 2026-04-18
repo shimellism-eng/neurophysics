@@ -15,6 +15,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import { CheckCircle2, ChevronRight, GraduationCap, CalendarClock } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useReducedMotion } from '../../hooks/useReducedMotion'
 
 const CONFETTI_COLORS = [
   '#f87171', '#fdc700', '#4ade80', '#60a5fa',
@@ -29,7 +30,8 @@ const CONFETTI_PARTICLES = Array.from({ length: 24 }, (_, i) => {
   return { angle, color, distance, isRect }
 })
 
-function ConfettiDots({ moduleColor }) {
+function ConfettiDots({ moduleColor, reducedMotion }) {
+  if (reducedMotion) return null
   return (
     <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
       {CONFETTI_PARTICLES.map((p, i) => {
@@ -63,6 +65,7 @@ export default function SessionClose({
 }) {
   const navigate = useNavigate()
   const [mounted, setMounted] = useState(false)
+  const reducedMotion = useReducedMotion()
 
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), 80)
@@ -75,36 +78,40 @@ export default function SessionClose({
       {/* Completion celebration */}
       <motion.div
         className="flex flex-col items-center gap-3 py-6"
-        initial={{ opacity: 0, scale: 0.93 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+        initial={reducedMotion ? {} : { opacity: 0, scale: 0.93 }}
+        animate={reducedMotion ? {} : { opacity: 1, scale: 1 }}
+        transition={{ duration: reducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
       >
         {/* Checkmark with pulsing ring + confetti */}
         <div className="relative flex items-center justify-center" style={{ width: 120, height: 120 }}>
-          {/* Pulsing ring */}
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 96,
-              height: 96,
-              background: 'transparent',
-              border: `2px solid ${topic.moduleColor}50`,
-            }}
-            animate={{ scale: [1, 1.18, 1], opacity: [0.6, 0, 0.6] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          {/* Outer slow pulse */}
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 96,
-              height: 96,
-              background: 'transparent',
-              border: `1px solid ${topic.moduleColor}30`,
-            }}
-            animate={{ scale: [1, 1.32, 1], opacity: [0.4, 0, 0.4] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
-          />
+          {/* Pulsing ring — suppressed when reduced-motion */}
+          {!reducedMotion && (
+            <motion.div
+              className="absolute rounded-full"
+              style={{
+                width: 96,
+                height: 96,
+                background: 'transparent',
+                border: `2px solid ${topic.moduleColor}50`,
+              }}
+              animate={{ scale: [1, 1.18, 1], opacity: [0.6, 0, 0.6] }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+            />
+          )}
+          {/* Outer slow pulse — suppressed when reduced-motion */}
+          {!reducedMotion && (
+            <motion.div
+              className="absolute rounded-full"
+              style={{
+                width: 96,
+                height: 96,
+                background: 'transparent',
+                border: `1px solid ${topic.moduleColor}30`,
+              }}
+              animate={{ scale: [1, 1.32, 1], opacity: [0.4, 0, 0.4] }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
+            />
+          )}
           {/* Main circle */}
           <div
             className="relative w-24 h-24 rounded-full flex items-center justify-center"
@@ -118,16 +125,16 @@ export default function SessionClose({
           </div>
           {/* Confetti dots */}
           <AnimatePresence>
-            {mounted && <ConfettiDots moduleColor={topic.moduleColor} />}
+            {mounted && <ConfettiDots moduleColor={topic.moduleColor} reducedMotion={reducedMotion} />}
           </AnimatePresence>
         </div>
 
         {/* XP earned */}
         <motion.div
           className="flex flex-col items-center gap-1"
-          initial={{ opacity: 0, scale: 0.5, y: -20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 320, damping: 22, delay: 0.15 }}
+          initial={reducedMotion ? {} : { opacity: 0, scale: 0.5, y: -20 }}
+          animate={reducedMotion ? {} : { opacity: 1, scale: 1, y: 0 }}
+          transition={reducedMotion ? { duration: 0 } : { type: 'spring', stiffness: 320, damping: 22, delay: 0.15 }}
         >
           <div
             className="font-display font-bold"
@@ -167,9 +174,9 @@ export default function SessionClose({
           border: `1px solid ${topic.moduleColor}28`,
           borderLeft: `4px solid ${topic.moduleColor}`,
         }}
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.18, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        initial={reducedMotion ? {} : { opacity: 0, y: 14 }}
+        animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+        transition={{ delay: reducedMotion ? 0 : 0.18, duration: reducedMotion ? 0 : 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="px-4 pt-4 pb-3">
           <div className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: topic.moduleColor }}>
@@ -206,9 +213,9 @@ export default function SessionClose({
       <motion.div
         className="flex items-start gap-3 px-4 py-3.5 rounded-[14px]"
         style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.26, duration: 0.35 }}
+        initial={reducedMotion ? {} : { opacity: 0, y: 10 }}
+        animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+        transition={{ delay: reducedMotion ? 0 : 0.26, duration: reducedMotion ? 0 : 0.35 }}
       >
         <CalendarClock size={16} color="#818cf8" style={{ marginTop: 2, flexShrink: 0 }} />
         <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
@@ -228,9 +235,9 @@ export default function SessionClose({
             borderRadius: 16, padding: '14px 18px',
             display: 'flex', alignItems: 'center', gap: 12,
           }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.35 }}
+          initial={reducedMotion ? {} : { opacity: 0, y: 10 }}
+          animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ delay: reducedMotion ? 0 : 0.3, duration: reducedMotion ? 0 : 0.35 }}
         >
           <div style={{ fontSize: 28 }}>🏆</div>
           <div>
@@ -259,10 +266,10 @@ export default function SessionClose({
             color: '#fff',
           }}
           onClick={onStartQuiz}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${topic.moduleColor}20` }}
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.33 }}
+          whileTap={reducedMotion ? {} : { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${topic.moduleColor}20` }}
+          initial={reducedMotion ? {} : { opacity: 0, y: 18 }}
+          animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+          transition={{ delay: reducedMotion ? 0 : 0.33 }}
         >
           Test Your Knowledge
           <ChevronRight size={20} strokeWidth={2.5} />
@@ -281,10 +288,10 @@ export default function SessionClose({
               boxShadow: 'inset 0 0 0 1px rgba(99,102,241,0.5)',
             }}
             onClick={() => navigate(`/exam/${topicId}`)}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.41 }}
+            whileTap={reducedMotion ? {} : { scale: 0.98 }}
+            initial={reducedMotion ? {} : { opacity: 0, y: 18 }}
+            animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+            transition={{ delay: reducedMotion ? 0 : 0.41 }}
           >
             {/* Gradient border overlay */}
             <div
@@ -298,7 +305,7 @@ export default function SessionClose({
               }}
             />
             <GraduationCap size={17} />
-            Exam Practice ({examCount} questions)
+            Exam practice ({examCount} questions)
           </motion.button>
         )}
       </div>

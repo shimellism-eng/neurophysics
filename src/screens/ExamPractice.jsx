@@ -9,6 +9,7 @@ import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
 import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2, ChevronDown } from 'lucide-react'
 import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 import BreakNudge from '../components/BreakNudge'
 import { TOPICS } from '../data/topics'
 import { getExamQuestions } from '../data/examIndex'
@@ -138,6 +139,7 @@ function RPAErrorQuestion({ data, moduleColor, onComplete }) {
 function WorkedSolutionCard({ question, correct }) {
   const hasContent = !!(question.explanation || question.markScheme || question.worked || question.steps)
   const [open, setOpen] = useState(!correct) // auto-expand on incorrect
+  const reducedMotion = useReducedMotion()
 
   if (!hasContent) return null
 
@@ -149,9 +151,9 @@ function WorkedSolutionCard({ question, correct }) {
     <motion.div
       className="mt-3 rounded-[12px] overflow-hidden"
       style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.08)' }}
-      initial={{ opacity: 0, y: 6 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.15 }}
+      initial={reducedMotion ? {} : { opacity: 0, y: 6 }}
+      animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
+      transition={{ delay: reducedMotion ? 0 : 0.15 }}
     >
       {/* Header */}
       <button
@@ -164,7 +166,7 @@ function WorkedSolutionCard({ question, correct }) {
           <span>📖</span>
           {markScheme && !explanation ? 'Mark Scheme' : 'Why?'}
         </span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
+        <motion.span animate={{ rotate: reducedMotion ? 0 : (open ? 180 : 0) }} transition={{ duration: reducedMotion ? 0 : 0.2 }}>
           <ChevronDown size={14} />
         </motion.span>
       </button>
@@ -172,10 +174,10 @@ function WorkedSolutionCard({ question, correct }) {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
+            initial={reducedMotion ? {} : { opacity: 0, height: 0 }}
+            animate={reducedMotion ? {} : { opacity: 1, height: 'auto' }}
+            exit={reducedMotion ? {} : { opacity: 0, height: 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.2 }}
             style={{ overflow: 'hidden' }}
           >
             <div className="px-4 pb-4 space-y-3">

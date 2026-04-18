@@ -176,6 +176,21 @@ export default function SettingsScreen() {
   }
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [deleteCountdown, setDeleteCountdown] = useState(5)
+
+  // Start countdown when confirm panel opens, reset when it closes
+  useEffect(() => {
+    if (showDeleteConfirm) {
+      setDeleteCountdown(5)
+      const interval = setInterval(() => {
+        setDeleteCountdown(n => {
+          if (n <= 1) { clearInterval(interval); return 0 }
+          return n - 1
+        })
+      }, 1000)
+      return () => clearInterval(interval)
+    }
+  }, [showDeleteConfirm])
 
   // Profile + exam date
   const [profile, setProfile] = useState(() => loadProfile())
@@ -724,7 +739,7 @@ export default function SettingsScreen() {
               const label = passed ? 'Exam passed' : urgent ? 'Very soon!' : soon ? 'Coming up' : 'On track'
               return (
                 <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
-                  style={{ background: `${accentColor}14`, border: `1px solid ${accentColor}33` }}>
+                  style={{ background: `${accentColor}14`, border: `1px solid ${accentColor}33`, pointerEvents: 'none' }}>
                   <div className="flex flex-col items-center justify-center w-12 h-12 rounded-[10px] shrink-0"
                     style={{ background: `${accentColor}22` }}>
                     <span className="text-lg font-black leading-none" style={{ color: accentColor }}>
@@ -743,7 +758,7 @@ export default function SettingsScreen() {
               )
             })() : (
               <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
-                style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}>
+                style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', pointerEvents: 'none' }}>
                 <div className="w-12 h-12 rounded-[10px] flex items-center justify-center shrink-0"
                   style={{ background: 'rgba(99,102,241,0.15)' }}>
                   <Calendar size={22} color="#6366f1" />
@@ -839,6 +854,17 @@ export default function SettingsScreen() {
                     <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
                       Larger text helps with low vision and reading fatigue
                     </div>
+                    <p
+                      className="mt-1.5"
+                      style={{
+                        color: 'var(--np-text-muted)',
+                        fontSize: (prefs.fontSize === 'Large' || prefs.fontSize === 'large') ? '15px' : '12px',
+                        transition: 'font-size 0.2s ease',
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      The quick brown fox
+                    </p>
                   </div>
                   <div className="flex gap-2 shrink-0">
                     {['Normal', 'Large'].map(size => {
@@ -1052,12 +1078,13 @@ export default function SettingsScreen() {
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-bold flex items-center justify-center gap-1.5"
                     style={{
-                      background: isDeleting ? 'rgba(239,68,68,0.5)' : '#ef4444',
+                      background: isDeleting ? 'rgba(239,68,68,0.5)' : deleteCountdown > 0 ? 'rgba(239,68,68,0.35)' : '#ef4444',
                       color: '#fff',
-                      opacity: isDeleting ? 0.8 : 1,
+                      opacity: (isDeleting || deleteCountdown > 0) ? 0.7 : 1,
+                      transition: 'background 0.3s, opacity 0.3s',
                     }}
                     onClick={handleDeleteData}
-                    disabled={isDeleting}
+                    disabled={isDeleting || deleteCountdown > 0}
                     aria-label="Confirm delete all data"
                   >
                     {isDeleting ? (
@@ -1069,7 +1096,7 @@ export default function SettingsScreen() {
                         </svg>
                         Deleting…
                       </>
-                    ) : 'Yes, delete everything'}
+                    ) : deleteCountdown > 0 ? `Wait ${deleteCountdown}s…` : 'Confirm delete'}
                   </button>
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-semibold"

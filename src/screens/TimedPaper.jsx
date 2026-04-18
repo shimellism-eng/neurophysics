@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 import { getTimedPaperQuestions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 import {
   CalculationQuestion,
   ExtendedAnswerQuestion,
@@ -37,6 +38,7 @@ function TimerArc({ remaining, total }) {
   const r = 18
   const circ = 2 * Math.PI * r
   const dash = circ * pct
+  const reducedMotion = useReducedMotion()
 
   const mins = Math.floor(remaining / 60)
   const secs = remaining % 60
@@ -45,8 +47,8 @@ function TimerArc({ remaining, total }) {
   return (
     <motion.div className="relative flex items-center justify-center"
       style={{ width: size, height: size }}
-      animate={urgent ? { scale: [1, 1.06, 1] } : { scale: 1 }}
-      transition={urgent ? { repeat: Infinity, duration: 1.2, ease: 'easeInOut' } : {}}>
+      animate={reducedMotion ? {} : (urgent ? { scale: [1, 1.06, 1] } : { scale: 1 })}
+      transition={reducedMotion ? { duration: 0 } : (urgent ? { repeat: Infinity, duration: 1.2, ease: 'easeInOut' } : {})}>
       <svg width={size} height={size} style={{ transform: 'rotate(-90deg)', position: 'absolute' }}>
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#1d293d" strokeWidth={3} />
         <motion.circle
@@ -54,7 +56,7 @@ function TimerArc({ remaining, total }) {
           stroke={color} strokeWidth={3} strokeLinecap="round"
           strokeDasharray={circ}
           animate={{ strokeDashoffset: circ - dash }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: reducedMotion ? 0 : 0.5 }}
         />
       </svg>
       <span className="text-xs font-bold tabular-nums" style={{ color, zIndex: 1 }}>{label}</span>

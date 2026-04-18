@@ -258,13 +258,13 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Optional Pomodoro timer during session (Comfort Settings controlled, default off)
 - [x] Timer end = gentle break suggestion, never forced stop
 
-#### 1.4 Quick Win Mode
-- [ ] "Quick Win" card on dashboard, prominent position
-- [ ] One tap to start, no setup
-- [ ] 5 questions, ~3 minutes
-- [ ] Pull from SRS due questions if available, otherwise random mix
-- [ ] Results: "4/5 correct! Topics: Forces, Waves, Energy"
-- [ ] Always available, never locked behind progress gates
+#### 1.4 Quick Win Mode ✅ shipped ccec6c2
+- [x] "Quick Win" card on dashboard, prominent position
+- [x] One tap to start, no setup
+- [x] 5 questions, ~3 minutes
+- [x] Pull from SRS due questions if available, otherwise random mix
+- [x] Results: "4/5 correct! Topics: Forces, Waves, Energy"
+- [x] Always available, never locked behind progress gates
 
 ### Sprint 2: Accessibility Foundation
 

@@ -295,11 +295,11 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] All sliders: add + and - step buttons
 - [x] Equation card flip: add visible "Flip card" button
 
-#### 2.4 Reduced Motion
-- [ ] Respect `prefers-reduced-motion: reduce` globally
-- [ ] Disable CSS transitions/transforms/keyframes (except opacity) when active
-- [ ] Wrap all JS animations in motion preference check
-- [ ] Create `useReducedMotion()` hook reading system pref AND Comfort Setting (in-app overrides system)
+#### 2.4 Reduced Motion ✅ shipped 7b0e213
+- [x] Respect `prefers-reduced-motion: reduce` globally
+- [x] Disable CSS transitions/transforms/keyframes (except opacity) when active
+- [x] Wrap all JS animations in motion preference check
+- [x] Create `useReducedMotion()` hook reading system pref AND Comfort Setting (in-app overrides system)
 
 #### 2.5 Screen Reader & Keyboard
 - [ ] All interactive elements focusable (Tab, Enter, Arrows, Escape)

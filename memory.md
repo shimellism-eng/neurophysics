@@ -5,6 +5,12 @@
 
 ## What Was Just Done (latest — 2026-04-18)
 
+### Sprint 2.4 Reduced Motion ✅ shipped 7b0e213
+- CSS @media rule + body.reduce-motion class were already in index.css
+- useReducedMotion hook already existed and was used in 6 major screens
+- Migrated 5 files that had non-reactive inline reads: OnboardingScreen (was OS-pref only, missed app pref), MamoChat/TypingDots (IIFE not reactive), AtomIcon (getReduceMotion() helper → hook), MisconceptionFeedback (inline reads inside useEffect → hoisted), AuthScreen (local duplicate function → hook import)
+- Net: 14 lines added, 42 deleted — all JS animations now react live to both OS and in-app preference changes
+
 ### Sprint 2.3 Touch Targets ✅ shipped ae0dc8a
 - MCQ option padding: py-3.5 (14px) → py-4 (16px) in QuickWinScreen, VocabPreTeach, EquationDrillScreen
 - RecallQuestion: reveal button renamed "Flip card" with RefreshCw icon, padding fixed to py-4

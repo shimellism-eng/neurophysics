@@ -604,6 +604,7 @@ export default function ExamPractice() {
             Exam practice complete
           </motion.h1>
           <motion.div className="mt-3 px-6 py-3 rounded-[16px]"
+            aria-live="polite" aria-atomic="true"
             style={{ background: passed ? 'rgba(0,188,125,0.12)' : 'rgba(239,68,68,0.12)', border: passed ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)' }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
             <span className="text-lg font-bold" style={{ color: passed ? '#00bc7d' : '#ef4444' }}>

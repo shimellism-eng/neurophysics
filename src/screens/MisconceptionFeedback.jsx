@@ -144,6 +144,7 @@ export default function MisconceptionFeedback() {
             {isCorrect && xpEarned > 0 && (
               <motion.div
                 className="flex items-center gap-1.5 px-3 py-2 rounded-[12px]"
+                aria-live="polite" aria-atomic="true"
                 style={{ background: 'rgba(253,199,0,0.15)', border: '1px solid rgba(253,199,0,0.4)' }}
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}

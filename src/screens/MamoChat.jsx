@@ -94,12 +94,16 @@ export default function MamoChat() {
   const [searchParams] = useSearchParams()
 
   // Topic context from URL: /mamo?topic=waves&label=Waves
-  const topicSlug  = searchParams.get('topic') || ''
-  const rawLabel   = searchParams.get('label') || topicSlug
+  const topicSlug    = searchParams.get('topic') || ''
+  const rawLabel     = searchParams.get('label') || topicSlug
   // Humanise underscore slugs: "energy_stores" → "Energy Stores"
-  const topicLabel = rawLabel
+  const topicLabel   = rawLabel
     ? rawLabel.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
     : ''
+  // Diagnostic context when arriving from a wrong answer
+  const questionText  = searchParams.get('question') || ''
+  const wrongAnswer   = searchParams.get('wrong') || ''
+  const correctAnswer = searchParams.get('correct') || ''
 
   // Per-topic localStorage key (falls back to 'general')
   const storageKey = `mamo_thread_${topicSlug || 'general'}`
@@ -112,7 +116,12 @@ export default function MamoChat() {
     return [INITIAL_MSG]
   })
 
-  const [input, setInput]               = useState('')
+  const [input, setInput] = useState(() => {
+    if (questionText) {
+      return `I got this question wrong: "${questionText}" — I chose "${wrongAnswer}" but the correct answer is "${correctAnswer}". Can you explain why?`
+    }
+    return ''
+  })
   const [streaming, setStreaming]       = useState(false)
   const [lastUserMsg, setLastUserMsg]   = useState('')
   const [selectedTopic, setSelectedTopic] = useState(null)

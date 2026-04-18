@@ -5,10 +5,11 @@
 import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle2, XCircle, ChevronRight, Zap } from 'lucide-react'
+import { CheckCircle2, XCircle, ChevronRight, Zap, BookOpen, MessageCircleQuestion } from 'lucide-react'
 import { ALL_QUESTIONS } from '../data/questionBank/index'
 import { useSRS } from '../hooks/useSRS'
 import { TOPICS } from '../data/topics'
+import { trackMisconception } from '../utils/misconceptions'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
 
@@ -156,11 +157,12 @@ export default function QuickWinScreen() {
     return pickQuestions(getDueQuestions())
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const [idx, setIdx]         = useState(0)
+  const [idx, setIdx]           = useState(0)
   const [selected, setSelected] = useState(null)   // chosen option index
   const [revealed, setRevealed] = useState(false)
   const [answers, setAnswers]   = useState([])      // array of chosen indices
   const [done, setDone]         = useState(false)
+  const [sessionStreak, setSessionStreak] = useState(0)
 
   if (!questions.length) {
     return (
@@ -177,9 +179,12 @@ export default function QuickWinScreen() {
 
   function handleSelect(optIdx) {
     if (revealed) return
+    const correct = optIdx === q.correctIndex
     setSelected(optIdx)
     setRevealed(true)
-    updateProgress(q.id, optIdx === q.correctIndex)
+    setSessionStreak(s => correct ? s + 1 : 0)
+    updateProgress(q.id, correct)
+    if (!correct) trackMisconception(q.topicId, q.options[optIdx])
   }
 
   function handleNext() {
@@ -193,6 +198,14 @@ export default function QuickWinScreen() {
       setSelected(null)
       setRevealed(false)
     }
+  }
+
+  function goToTopic(topicId) {
+    const t = TOPICS[topicId]
+    if (!t) return
+    if (t.hook || t.lessonSteps?.length > 0) navigate(`/lesson/${topicId}`)
+    else if (t.practicalId) navigate(`/practical/${t.practicalId}`)
+    else navigate(`/practice/${topicId}`)
   }
 
   if (done) {
@@ -277,26 +290,69 @@ export default function QuickWinScreen() {
               })}
             </div>
 
-            {/* Feedback */}
+            {/* 3-layer diagnostic feedback */}
             <AnimatePresence>
               {revealed && (
                 <motion.div
                   initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
                   aria-live="polite" aria-atomic="true"
-                  className="rounded-[14px] px-4 py-3 mb-6"
+                  className="rounded-[14px] px-4 py-4 mb-4 space-y-3"
                   style={{
                     background: isCorrect ? 'rgba(74,222,128,0.08)' : 'rgba(248,113,113,0.08)',
                     border: `0.75px solid ${isCorrect ? 'rgba(74,222,128,0.25)' : 'rgba(248,113,113,0.25)'}`,
                   }}
                 >
-                  <div className="font-bold mb-1" style={{ fontSize: 13, color: isCorrect ? '#4ade80' : '#f87171' }}>
-                    {isCorrect ? '✓ Correct!' : '✗ Not quite'}
+                  {/* Layer 1 — result + streak */}
+                  <div>
+                    <div className="font-bold" style={{ fontSize: 13, color: isCorrect ? '#4ade80' : '#f87171' }}>
+                      {isCorrect
+                        ? sessionStreak >= 3 ? `✓ Correct! 🔥 ${sessionStreak} in a row!` : '✓ Correct! Got it!'
+                        : '✗ Not quite'}
+                    </div>
+                    {!isCorrect && (
+                      <div className="mt-1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>
+                        The answer is: <span style={{ color: '#4ade80', fontWeight: 600 }}>{q.options[q.correctIndex]}</span>
+                      </div>
+                    )}
                   </div>
-                  {!isCorrect && (
-                    <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>
-                      The answer is: <span style={{ color: '#4ade80', fontWeight: 600 }}>{q.options[q.correctIndex]}</span>
+
+                  {/* Layer 2 — why (senNote as explanation) */}
+                  {q.senNote && (
+                    <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', paddingTop: 8, borderTop: '0.75px solid rgba(255,255,255,0.08)', lineHeight: 1.6 }}>
+                      {q.senNote}
                     </div>
                   )}
+
+                  {/* Layer 3 — action buttons */}
+                  <div className="flex gap-2 pt-1">
+                    <button
+                      className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-[10px] font-semibold"
+                      style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.55)', border: '0.75px solid rgba(255,255,255,0.1)', fontSize: 12, cursor: 'pointer' }}
+                      onClick={() => goToTopic(q.topicId)}
+                    >
+                      <BookOpen size={13} strokeWidth={2} />
+                      Show concept
+                    </button>
+                    {!isCorrect && (
+                      <button
+                        className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-[10px] font-semibold"
+                        style={{ background: 'rgba(0,212,255,0.08)', color: '#00d4ff', border: '0.75px solid rgba(0,212,255,0.2)', fontSize: 12, cursor: 'pointer' }}
+                        onClick={() => {
+                          const params = new URLSearchParams({
+                            topic: q.topicId,
+                            label: topicLabel(q),
+                            question: q.question,
+                            wrong: q.options[selected],
+                            correct: q.options[q.correctIndex],
+                          })
+                          navigate(`/mamo?${params.toString()}`)
+                        }}
+                      >
+                        <MessageCircleQuestion size={13} strokeWidth={2} />
+                        Ask Mamo
+                      </button>
+                    )}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

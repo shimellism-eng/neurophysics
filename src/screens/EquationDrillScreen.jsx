@@ -172,7 +172,7 @@ export default function EquationDrillScreen() {
         />
         <div
           className="flex-1 overflow-y-auto px-5 py-4 flex flex-col gap-3"
-          style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
+          style={{ minHeight: 0, paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}
         >
           {/* All equations option */}
           <motion.button
@@ -250,7 +250,7 @@ export default function EquationDrillScreen() {
         />
         <div
           className="flex-1 overflow-y-auto px-5 py-6 flex flex-col gap-5"
-          style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
+          style={{ minHeight: 0, paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}
         >
           {/* Score card */}
           <motion.div
@@ -368,7 +368,7 @@ export default function EquationDrillScreen() {
       {/* Question area */}
       <div
         className="flex-1 overflow-y-auto px-5 py-4"
-        style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
+        style={{ minHeight: 0, paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -473,7 +473,7 @@ export default function EquationDrillScreen() {
                 return (
                   <motion.button
                     key={idx}
-                    className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[14px] text-left"
+                    className="w-full flex items-center gap-3 px-4 py-4 rounded-[14px] text-left"
                     style={{ background: bg, border: `0.75px solid ${border}` }}
                     onClick={() => handleChoose(idx)}
                     whileTap={!revealed ? { scale: 0.98 } : {}}

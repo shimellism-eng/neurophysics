@@ -9,7 +9,7 @@
  */
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle2, Circle, Minus, ChevronDown, Lightbulb } from 'lucide-react'
+import { CheckCircle2, Circle, Minus, ChevronDown, Lightbulb, RefreshCw } from 'lucide-react'
 import { speak } from '../../utils/tts'
 
 // Command word colour coding (research: visual cues help ADHD processing)
@@ -121,12 +121,13 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
             onChange={e => setAnswer(e.target.value)}
           />
           <motion.button
-            className="w-full py-3.5 rounded-[14px] text-sm font-bold"
+            className="w-full py-4 rounded-[14px] text-sm font-bold flex items-center justify-center gap-2"
             style={{ background: accent, color: '#fff' }}
             onClick={handleReveal}
             whileTap={{ scale: 0.97 }}
           >
-            Show model answer
+            <RefreshCw size={16} />
+            Flip card
           </motion.button>
         </div>
       )}

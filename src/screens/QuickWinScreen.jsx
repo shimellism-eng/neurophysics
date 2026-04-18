@@ -265,7 +265,7 @@ export default function QuickWinScreen() {
                 return (
                   <motion.button
                     key={i}
-                    className="w-full text-left px-4 py-3.5 rounded-[14px]"
+                    className="w-full text-left px-4 py-4 rounded-[14px]"
                     style={{ background: bg, border, color, fontSize: 15, lineHeight: 1.4, cursor: revealed ? 'default' : 'pointer', transition: 'background 0.2s, border 0.2s, color 0.2s' }}
                     whileTap={revealed ? {} : { scale: 0.98 }}
                     onClick={() => handleSelect(i)}

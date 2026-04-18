@@ -184,7 +184,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
               return (
                 <motion.button
                   key={i}
-                  className="font-display w-full text-left px-4 py-3.5 rounded-[14px] text-sm font-medium"
+                  className="font-display w-full text-left px-4 py-4 rounded-[14px] text-sm font-medium"
                   style={{
                     background: bg,
                     border,

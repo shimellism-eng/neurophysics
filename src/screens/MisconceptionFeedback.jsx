@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { saveQuizResult } from '../hooks/useInsights'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 function ConfettiParticle({ color, delay, x, rot }) {
   return (
@@ -39,6 +40,7 @@ export default function MisconceptionFeedback() {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const { markMastered } = useProgress()
+  const reducedMotion = useReducedMotion()
   const topic = TOPICS[id]
   const isCorrect = searchParams.get('result') === 'correct'
   const score = parseInt(searchParams.get('score') ?? '-1', 10)
@@ -62,17 +64,13 @@ export default function MisconceptionFeedback() {
       const xp = markMastered(id)
       if (xp > 0) {
         setXpEarned(xp)
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        const appReduceMotion = (() => {
-          try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
-        })()
-        if (!prefersReducedMotion && !appReduceMotion) {
+        if (!reducedMotion) {
           setShowConfetti(true)
           setTimeout(() => setShowConfetti(false), 2200)
         }
       }
     }
-  }, [])
+  }, [reducedMotion]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!topic) return null
 

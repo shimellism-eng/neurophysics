@@ -11,18 +11,7 @@
  * Respects OS and in-app reduceMotion preference automatically.
  */
 import { useEffect, useRef } from 'react'
-
-// ─── Reduce-motion helper ─────────────────────────────────────────────────────
-function getReduceMotion() {
-  try {
-    if (typeof window === 'undefined') return false
-    const sysPref = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const appPref = !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion
-    return sysPref || appPref
-  } catch {
-    return false
-  }
-}
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 // ─── Single electron travelling along a tilted ellipse ───────────────────────
 function ElectronDot({ cx, cy, rx, ry, tiltDeg, speed, startAngle, dotR, fill }) {
@@ -69,7 +58,8 @@ export default function AtomIcon({
   strokeWidth, // eslint-disable-line
   ...rest
 }) {
-  const rm = reduceMotion !== undefined ? reduceMotion : getReduceMotion()
+  const reducedMotionPref = useReducedMotion()
+  const rm = reduceMotion !== undefined ? reduceMotion : reducedMotionPref
   const animated = !rm && size >= 22
 
   const cx = size / 2

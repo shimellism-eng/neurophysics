@@ -8,21 +8,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import { Eye, EyeOff, AlertCircle, ArrowLeft, CheckCircle2, Mail } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
-
-// ─── Reduce motion helper ─────────────────────────────────────────────────────
-function useReduceMotion() {
-  const sysPref =
-    typeof window !== 'undefined' &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  const appPref = (() => {
-    try {
-      return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion
-    } catch {
-      return false
-    }
-  })()
-  return sysPref || appPref
-}
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 // ─── Brand SVGs ───────────────────────────────────────────────────────────────
 function GoogleIcon() {
@@ -392,7 +378,7 @@ function Landing({ onEmail, onSignIn }) {
   const { signInWithOAuth, continueAsGuest } = useAuth()
   const [oauthLoading, setOauthLoading] = useState(null)
   const [oauthError, setOauthError] = useState('')
-  const reduceMotion = useReduceMotion()
+  const reduceMotion = useReducedMotion()
 
   const handleOAuth = async (provider) => {
     setOauthLoading(provider)

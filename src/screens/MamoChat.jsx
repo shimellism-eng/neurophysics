@@ -6,6 +6,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { getSelectedBoard } from '../utils/boardConfig'
 import PageHeader from '../components/PageHeader'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 const GENERAL_STARTERS = [
   'What is the difference between speed and velocity?',
@@ -51,9 +52,7 @@ function friendlyError(code) {
 
 // ── Typing dots animation ─────────────────────────────────────────────────────
 function TypingDots() {
-  const reduceMotion = (() => {
-    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
-  })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  const reduceMotion = useReducedMotion()
 
   if (reduceMotion) {
     return (
@@ -563,7 +562,7 @@ export default function MamoChat() {
             lineHeight: 1.5,
             overflowY: 'auto',
           }}
-          placeholder="Ask Mamo a physics question..."
+          placeholder="Ask Mamo a physics question"
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => {

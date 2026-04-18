@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil, Target, ChevronLeft } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
+import { useReducedMotion } from '../hooks/useReducedMotion'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
 
@@ -1160,9 +1161,7 @@ export default function OnboardingScreen() {
   const [step, setStep] = useState(0)
   const [boardId, setBoardId] = useState('aqa')
 
-  // Respect system accessibility setting — suppress animations if user prefers reduced motion
-  const reducedMotion = typeof window !== 'undefined'
-    && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const reducedMotion = useReducedMotion()
 
   const handleBoardNext = (id) => {
     setBoardId(id)

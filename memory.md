@@ -5,6 +5,18 @@
 
 ## What Was Just Done (latest — 2026-04-18)
 
+### Sprint 2.5 Screen Reader & Keyboard ✅ shipped 51b6801
+- Focus indicators already present via :focus-visible in index.css (no change needed)
+- No `<img>` tags in codebase — alt text N/A
+- Added aria-label to 3 icon-only back buttons in Grade9Challenge.jsx
+- Added aria-live="polite" aria-atomic="true" to dynamic feedback regions:
+  - AdaptivePractice: calculation feedback + MCQ hint divs
+  - QuickWinScreen: MCQ feedback motion.div (already had aria-live from 2.5 pass)
+  - ExamPractice: score display motion.div
+  - MisconceptionFeedback: XP badge motion.div
+- PracticalScreen "backdrop" at line 2538 is actually the main content scroll div — correctly skipped (aria-hidden would hide all content)
+- Build clean, deployed, pushed, cap sync ios done
+
 ### Sprint 2.4 Reduced Motion ✅ shipped 7b0e213
 - CSS @media rule + body.reduce-motion class were already in index.css
 - useReducedMotion hook already existed and was used in 6 major screens

@@ -83,7 +83,7 @@ function RPAErrorQuestion({ data, moduleColor, onComplete }) {
             const isWrong   = submitted && opt.value === selected && selected !== data.direction
             return (
               <motion.button key={opt.value}
-                className="flex-1 py-3 rounded-[12px] text-sm font-bold"
+                className="flex-1 py-3 rounded-[12px] text-sm font-bold min-h-[44px]"
                 style={{
                   background: isCorrect ? 'rgba(0,188,125,0.15)' : isWrong ? 'rgba(239,68,68,0.15)' : selected === opt.value ? 'rgba(99,102,241,0.15)' : 'rgba(18,26,47,0.9)',
                   border: isCorrect ? '1.5px solid #00bc7d' : isWrong ? '1.5px solid #ef4444' : selected === opt.value ? `1.5px solid ${moduleColor}` : '0.75px solid #1d293d',
@@ -523,7 +523,7 @@ export default function ExamPractice() {
               return (
                 <motion.button
                   key={idx}
-                  className="w-full text-left rounded-[16px] p-4 flex items-center gap-3"
+                  className="w-full text-left rounded-[16px] p-4 flex items-center gap-3 min-h-[44px]"
                   style={getStyle()}
                   onClick={() => handleMcqSelect(idx)}
                   whileTap={mcqSubmitted ? {} : { scale: 0.98 }}
@@ -596,7 +596,7 @@ export default function ExamPractice() {
           </motion.div>
           <motion.h1 className="text-2xl font-bold mt-4" style={{ color: '#f8fafc' }}
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-            Exam Practice Complete
+            Exam practice complete
           </motion.h1>
           <motion.div className="mt-3 px-6 py-3 rounded-[16px]"
             style={{ background: passed ? 'rgba(0,188,125,0.12)' : 'rgba(239,68,68,0.12)', border: passed ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)' }}
@@ -641,7 +641,7 @@ export default function ExamPractice() {
       {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
 
       {/* Header */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', paddingTop: 'calc(20px + env(safe-area-inset-top))' }}>
+      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', paddingTop: '12px' }}>
         <button
           onClick={() => navigate('/learn')}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
@@ -650,7 +650,7 @@ export default function ExamPractice() {
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
-          <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Exam Practice</div>
+          <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Exam practice</div>
           <h1 className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
         </div>
         <div className="px-3 py-1 rounded-full text-xs font-semibold"
@@ -914,8 +914,8 @@ export default function ExamPractice() {
       <AnimatePresence>
         {showFooter && (
           <motion.div
-            className="shrink-0 px-5 pb-8 pt-3"
-            style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d' }}
+            className="shrink-0 px-5 pt-3"
+            style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -931,9 +931,7 @@ export default function ExamPractice() {
                 }}
                 onClick={handleMcqSubmit}
                 whileTap={{ scale: 0.97 }}
-              >
-                Check Answer
-              </motion.button>
+              >Check answer</motion.button>
             ) : (
               completed && (
                 <motion.button

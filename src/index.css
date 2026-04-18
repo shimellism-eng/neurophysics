@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/* ─── Self-hosted OpenDyslexic font ─────────────────────────────────────── */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ─── Design Tokens ──────────────────────────────────────────────────────── */
 /* App.jsx overrides --np-bg and --np-card at runtime for accessibility themes */
 :root {
@@ -26,6 +42,12 @@
   --np-red:     #ef4444;
   --np-gold:    #fdc700;
 
+  /* Semantic status aliases */
+  --np-accent:  var(--np-cyan);
+  --np-success: #22c55e;
+  --np-warning: #f59e0b;
+  --np-danger:  #ef4444;
+
   /* Text */
   --np-text:       #e2e8f0;
   --np-text-mid:   #cbd5e1;
@@ -40,8 +62,38 @@
   /* Layout */
   --safe-top:    env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  --nav-height:  64px;
+  --nav-height:  60px;
+  --bottom-chrome-height: calc(var(--nav-height) + var(--safe-bottom));
   --page-h-pad:  20px;
+  --page-top-gap: 12px;
+  --page-bottom-gap: 24px;
+
+  /* Shape + depth */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --shadow-raised: 0 8px 24px rgba(0,0,0,0.18);
+  --shadow-floating: 0 18px 44px rgba(0,0,0,0.32);
+
+  /* Glass blur — set to 0px in high-contrast mode (BottomNav uses 28px directly) */
+  --np-glass-blur: 28px;
+}
+
+/* ─── High-Contrast mode — solid surfaces for WCAG 4.5:1 compliance ─────── */
+/* body.high-contrast is toggled by applyHighContrast() in SettingsScreen.   */
+/* The CSS filter (contrast+brightness) is kept on <html> as extra polish.   */
+body.high-contrast {
+  /* Replace translucent glass with fully opaque solids */
+  --np-card:      #0f1629;
+  --np-card-deep: #080f1e;
+  --np-card-lift: #141e37;
+  /* Eliminate blur — blurring a solid bg is a no-op but costs GPU */
+  --np-glass-blur: 0px;
+  /* Slightly stronger borders so surfaces are still visually separated */
+  --np-border:        rgba(255,255,255,0.14);
+  --np-border-mid:    rgba(255,255,255,0.20);
+  --np-border-strong: rgba(255,255,255,0.28);
 }
 
 @layer base {
@@ -80,6 +132,7 @@
 
   #root {
     height: 100%;
+    min-height: 100dvh;
     width: 100%;
     overflow: hidden;
   }

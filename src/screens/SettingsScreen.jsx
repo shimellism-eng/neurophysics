@@ -59,18 +59,17 @@ function applyReduceMotion(on) {
 
 // ── Dyslexic font (F1/F5) ─────────────────────────────────────────────────
 function applyDyslexicFont(on) {
+  // Remove any legacy CDN link/style elements that may have been injected previously
   document.getElementById('np-dyslexic-link')?.remove()
   document.getElementById('np-dyslexic-apply')?.remove()
   if (on) {
-    const link = document.createElement('link')
-    link.id = 'np-dyslexic-link'
-    link.rel = 'stylesheet'
-    link.href = 'https://fonts.cdnfonts.com/css/opendyslexic'
-    document.head.appendChild(link)
-    const style = document.createElement('style')
-    style.id = 'np-dyslexic-apply'
-    style.textContent = 'body, button, input, textarea, p, h1, h2, h3, span { font-family: "OpenDyslexic", sans-serif !important; letter-spacing: 0.05em !important; line-height: 1.7 !important; }'
-    document.head.appendChild(style)
+    document.body.style.fontFamily = "'OpenDyslexic', sans-serif"
+    document.body.style.lineHeight = '1.8'
+    document.body.style.letterSpacing = '0.05em'
+  } else {
+    document.body.style.fontFamily = ''
+    document.body.style.lineHeight = ''
+    document.body.style.letterSpacing = ''
   }
 }
 
@@ -86,6 +85,9 @@ function applyHideMamo(on) {
 // This setting just stores the pref so question screens show the speak button
 
 function applyHighContrast(on) {
+  // Toggle CSS class for solid-surface overrides (WCAG contrast fix)
+  document.body.classList.toggle('high-contrast', on)
+  // Keep the filter as an additional visual enhancement on top
   document.documentElement.style.filter = on ? 'contrast(1.2) brightness(1.06)' : ''
 }
 
@@ -787,7 +789,7 @@ export default function SettingsScreen() {
       </div>
 
       {/* Sections */}
-      <div className="px-5 space-y-5" style={{ paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
+      <div className="px-5 space-y-5" style={{ paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}>
         {sections.map((section, si) => (
           <motion.div
             key={section.title}

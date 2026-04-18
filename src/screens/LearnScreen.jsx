@@ -144,7 +144,7 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
           <div style={{ width: '0.75px', background: 'rgba(255,255,255,0.07)', margin: '12px 0' }} />
           <button
             type="button"
-            className="flex items-center justify-center shrink-0"
+            className="flex items-center justify-center shrink-0 min-h-[44px]"
             style={{ width: 48 }}
             onClick={e => { e.stopPropagation(); onRecall() }}
             aria-label="Knowledge recall"
@@ -207,7 +207,7 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <div className="text-sm font-bold leading-tight truncate" style={{ color: 'var(--np-text)' }}>
+              <div className="text-sm font-bold leading-tight" style={{ color: 'var(--np-text)' }}>
                 {module.name}
               </div>
               {module.topics.every(t => PHYSICS_ONLY_TOPICS.has(t)) && (
@@ -458,14 +458,14 @@ export default function LearnScreen() {
         </div>
 
         {/* Filter tabs + exam quick access */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-0.5 -mx-1 px-1" style={{ scrollbarWidth: 'none' }}>
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 -mx-1 px-1" style={{ scrollbarWidth: 'none' }}>
           {FILTERS.map(f => {
             const isActive = paperFilter === f.id
             return (
               <motion.button
                 key={f.id}
                 onClick={() => setPaperFilter(f.id)}
-                className="flex items-center gap-1.5 px-4 rounded-full text-xs font-bold shrink-0 whitespace-nowrap"
+                className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0 whitespace-nowrap"
                 style={{
                   height: 36,
                   background: isActive ? `${f.color}20` : 'rgba(255,255,255,0.04)',
@@ -484,7 +484,7 @@ export default function LearnScreen() {
           {/* Equation Drill chip */}
           <motion.button
             onClick={() => navigate('/equation-drill')}
-            className="flex items-center gap-1.5 px-4 rounded-full text-xs font-bold shrink-0"
+            className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0 whitespace-nowrap"
             style={{
               height: 36,
               background: 'rgba(0,212,255,0.07)',
@@ -495,12 +495,11 @@ export default function LearnScreen() {
           >
             ⚡ Equations
           </motion.button>
-          <div className="shrink-0 w-4" />
         </div>
       </div>
 
       {/* ── Scrollable body ── */}
-      <div className="flex-1 overflow-y-auto px-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'calc(var(--nav-height) + var(--safe-bottom) + 32px)' }}>
+      <div className="flex-1 overflow-y-auto px-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'var(--page-bottom-gap)' }}>
 
         {/* ── Search results ── */}
         {isSearching && (
@@ -721,7 +720,7 @@ export default function LearnScreen() {
                   <Clock size={18} color="#6366f1" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>Timed Paper</p>
+                  <p className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>Timed paper</p>
                   <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
                 </div>
               </div>

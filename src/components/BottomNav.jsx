@@ -40,26 +40,27 @@ export default function BottomNav() {
         maxWidth: 480,
         background: 'var(--np-card-deep)',
         borderTop: '1px solid var(--np-border)',
-        backdropFilter: 'blur(28px)',
-        WebkitBackdropFilter: 'blur(28px)',
+        backdropFilter: 'blur(var(--np-glass-blur))',
+        WebkitBackdropFilter: 'blur(var(--np-glass-blur))',
         paddingBottom: 'var(--safe-bottom)',
         boxShadow: '0 -1px 0 rgba(255,255,255,0.04), 0 -8px 32px rgba(8,15,30,0.8)',
       }}
     >
-      <div className="flex items-center justify-around px-2 py-2">
+      <div className="flex items-center justify-around px-2" style={{ minHeight: 'var(--nav-height)' }}>
         {NAV_ITEMS.map((item) => {
           const active = isActive(item.path)
           return (
             <button
               key={item.path}
-              className="flex flex-col items-center gap-1 px-5 py-2 rounded-[16px] relative"
+              className="flex flex-col items-center justify-center gap-0.5 px-4 rounded-[12px] relative"
+              style={{ minWidth: 72, height: 48 }}
               onClick={() => navigate(item.path)}
               aria-label={item.label}
               aria-current={active ? 'page' : undefined}
             >
               {active && (
                 <motion.div
-                  className="absolute inset-0 rounded-[16px]"
+                  className="absolute inset-0 rounded-[12px]"
                   style={{ background: 'rgba(99,102,241,0.20)' }}
                   layoutId="nav-active"
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}

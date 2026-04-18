@@ -201,3 +201,229 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 <!-- gitnexus:start -->
 <!-- gitnexus:end -->
 <!-- code-review-graph MCP tools -->
+
+---
+
+## Evidence-Based Improvement Roadmap
+
+> Based on cognitive science research (Rosenshine, Dunlosky, Mayer), WCAG 2.2 AA, BDA Style Guide, PhET accessibility research, and neurodivergent UX best practices.
+> Work through items in sprint order. Each numbered item is a standalone commit.
+> Mark items [x] when shipped. Check this section on every session to see what's done and what's next.
+
+### Sprint 1: Core Differentiators
+
+#### 1.1 Comfort Settings Panel
+- [ ] Create `ComfortProvider` React context wrapping the entire app
+- [ ] Create `ComfortSettings` component, accessible from persistent icon in app header (sliders/accessibility icon)
+- [ ] Also accessible from main settings page
+- [ ] First-time-use prompt on first login: "Set up your learning preferences"
+- [ ] Controls to implement:
+  - Font Size: slider 0.8rem to 1.6rem, default 1rem, honour system Dynamic Type
+  - Font Family: toggle Atkinson Hyperlegible | OpenDyslexic | System Default
+  - Line Spacing: slider 1.5 to 2.5, default 1.7
+  - Background: picker Dark (#0F0F1A) | Cream (#FFF8E7) | Light Blue (#E8F4FD) | Light Yellow (#FFF9DB)
+  - Reduced Motion: toggle On | Off | System Default
+  - Sound Effects: toggle On | Off
+  - Celebrations: toggle On | Off (confetti, animations, celebratory sounds)
+  - TTS Speed: slider 0.5x to 2.0x, default 1.0x
+  - TTS Auto-read: toggle Auto-read questions | Manual only
+  - Reading Ruler: toggle On | Off
+  - Colour Overlay: toggle + colour Off | Yellow | Blue | Pink | Green
+  - Challenge Mode: toggle Hearts/Lives On | Off
+  - Session Length: selector 5 min | 10 min | 15 min | 25 min
+- [ ] Apply preferences globally via CSS custom properties set on :root by ComfortProvider
+- [ ] Store in Supabase `user_preferences` table (user_id, preference_key, preference_value, updated_at)
+- [ ] Load on app mount, apply immediately, no reload on changes
+- [ ] Preset profiles:
+  - "Dyslexia-friendly": OpenDyslexic, line spacing 2.0, cream background, overlay yellow, reading ruler on
+  - "ADHD-friendly": reduced celebrations, session length 10 min, font size 1.1rem
+  - "Low sensory": reduced motion on, sound off, celebrations off, dark background
+  - "High contrast": all ratios 7:1+, font size 1.2rem
+- [ ] "Reset to Defaults" button
+- [ ] Cache locally (localStorage) for offline PWA, sync to Supabase when connected
+
+#### 1.2 Hearts/Lives Opt-In
+- [ ] Default mode: unlimited attempts with diagnostic feedback, no penalty
+- [ ] Hearts/lives only when "Challenge Mode" toggled on in Comfort Settings
+- [ ] Replace punitive language: "Wrong!" becomes "Let's revisit that one", "You lost a life!" becomes "Nearly! Here's why..."
+- [ ] Add "Revision Mode": zero stakes, no scoring, practice with immediate feedback
+- [ ] Store mode preference in Supabase, persist across sessions
+
+#### 1.3 Session Framing
+- [ ] Session Preview Screen before every lesson/practice: "This session has [X] parts, about [Y] minutes"
+- [ ] List each part with estimated time
+- [ ] Two buttons: [Start Session] and [Not now]
+- [ ] Calculate estimated time from content length + user's average pace if available
+- [ ] Optional Pomodoro timer during session (Comfort Settings controlled, default off)
+- [ ] Timer end = gentle break suggestion, never forced stop
+
+#### 1.4 Quick Win Mode
+- [ ] "Quick Win" card on dashboard, prominent position
+- [ ] One tap to start, no setup
+- [ ] 5 questions, ~3 minutes
+- [ ] Pull from SRS due questions if available, otherwise random mix
+- [ ] Results: "4/5 correct! Topics: Forces, Waves, Energy"
+- [ ] Always available, never locked behind progress gates
+
+### Sprint 2: Accessibility Foundation
+
+#### 2.1 Typography Overhaul
+- [ ] Import Atkinson Hyperlegible from Google Fonts
+- [ ] Bricolage Grotesque for headings (h1-h3), nav, brand, logo ONLY
+- [ ] All body/label/button/input/feedback/question text to Atkinson Hyperlegible
+- [ ] CSS vars: `--font-body: 'Atkinson Hyperlegible', sans-serif` and `--font-display: 'Bricolage Grotesque', sans-serif`
+- [ ] Global line-height: 1.7 on body text
+- [ ] Letter-spacing: 0.04em on body text
+- [ ] All body text left-aligned (remove center/justify on paragraphs)
+- [ ] No italic for emphasis, use bold or accent colour
+- [ ] Comfort Settings font toggle overrides these defaults
+
+#### 2.2 Contrast Audit
+- [ ] Dark background to #0F0F1A or #1A1A2E, not pure black
+- [ ] All body text: min 4.5:1 contrast
+- [ ] Large text (18px+ or 14px+ bold): min 3:1
+- [ ] UI elements (buttons, toggles, sliders, borders): min 3:1
+- [ ] Check cyan accent on dark. If below 4.5:1, lighten to ~#4AEAFF
+- [ ] Never colour alone for meaning, always pair with label or icon
+
+#### 2.3 Touch Targets
+- [ ] Min 48x48px all interactive elements
+- [ ] Min 8px spacing between adjacent targets
+- [ ] MCQ options: full-width cards, min 16px padding
+- [ ] All drag-and-drop: add tap-to-select, tap-to-place alternative
+- [ ] All sliders: add + and - step buttons
+- [ ] Equation card flip: add visible "Flip card" button
+
+#### 2.4 Reduced Motion
+- [ ] Respect `prefers-reduced-motion: reduce` globally
+- [ ] Disable CSS transitions/transforms/keyframes (except opacity) when active
+- [ ] Wrap all JS animations in motion preference check
+- [ ] Create `useReducedMotion()` hook reading system pref AND Comfort Setting (in-app overrides system)
+
+#### 2.5 Screen Reader & Keyboard
+- [ ] All interactive elements focusable (Tab, Enter, Arrows, Escape)
+- [ ] Visible focus indicators on all focusable elements
+- [ ] ARIA labels on all custom interactive elements
+- [ ] `aria-live="polite"` for dynamic content (scores, feedback, sim values)
+- [ ] Meaningful alt text on all images, `alt=""` on decorative
+
+### Sprint 3: Instructional Engine
+
+#### 3.1 Spaced Repetition (SM-2)
+- [ ] Supabase table `user_question_progress`: user_id, question_id, ease_factor (default 2.5), interval_days (default 1), repetition_count (default 0), last_reviewed, next_due, correct_streak (default 0), total_attempts (default 0), total_correct (default 0)
+- [ ] SM-2 algorithm: correct increases interval (1/3/7/14/30/60 days), ease up (max 3.0). Incorrect resets interval to 1, ease down (min 1.3)
+- [ ] `useSRS()` hook: fetch due questions, return count per topic, provide updateProgress(), sort overdue first then lowest ease
+- [ ] Dashboard: "Due for Review" badge, per-topic status (green/amber/red), "Start Review" button
+- [ ] Queue SRS updates offline, sync when connected
+
+#### 3.2 Diagnostic Feedback
+- [ ] Incorrect answer shows 3-layer card: correct answer (green) then why correct (1-2 sentences) then why chosen answer wrong (misconception)
+- [ ] Add `misconception_tags` array to questions (e.g., "confuses_mass_weight", "thinks_current_used_up")
+- [ ] "I still don't get it" button opens MamoChat with question context
+- [ ] "Show me the concept" button navigates to concept explanation
+- [ ] Track misconception frequency per user and per class in Supabase
+- [ ] Correct answer: brief "Got it!" + confidence indicator ("3 in a row")
+
+#### 3.3 Interleaved Practice
+- [ ] "Mixed Revision" mode: questions from multiple topics, SRS-weighted
+- [ ] Learner chooses: Topic Practice | Mixed Revision | Exam Prep (mixed + optional timer)
+- [ ] Colour-coded topic label on each question card
+
+#### 3.4 Micro-Topic Segmenting
+- [ ] Audit all concept screens for length
+- [ ] Break explanations over ~5 min into sub-steps (one key idea each)
+- [ ] Each sub-step ends with 1-2 retrieval questions before advancing
+- [ ] Step counter: "Step 2 of 4"
+- [ ] Persistent progress bar showing position in full lesson loop
+- [ ] "I need a break" button: save progress to Supabase, return to dashboard, resume exact position on return
+
+### Sprint 4: Neurodivergent UX Polish
+
+#### 4.1 Transition Warnings
+- [ ] Before screen transitions: "Next up: a practice question"
+- [ ] Consistent transition animation (slide/fade, respect reduced motion)
+- [ ] Never auto-advance. Always require user tap
+- [ ] Never auto-play media. Always require user initiation
+- [ ] End of section: "Coming up next: [name]. Ready?"
+
+#### 4.2 Lesson Map View
+- [ ] Lesson outline accessible from any point (persistent icon)
+- [ ] All steps shown, current highlighted
+- [ ] Jump to completed steps only
+- [ ] Estimated time remaining
+
+#### 4.3 Reading Ruler
+- [ ] Semi-transparent horizontal bar (~2 lines tall, user-chosen colour)
+- [ ] Mobile: follows scroll. Desktop: follows mouse Y
+- [ ] Works on concept explanations, feedback cards, question stems
+- [ ] Global overlay component from ComfortProvider, pointer-events: none
+
+#### 4.4 Colour Overlay
+- [ ] Semi-transparent tint over main content (not nav/settings)
+- [ ] Yellow (#FFF9DB 30%) | Blue (#E8F4FD 25%) | Pink (#FFE8F0 25%) | Green (#E8F5E9 25%)
+- [ ] CSS pseudo-element or overlay div, pointer-events: none
+
+### Sprint 5: Physics Content
+
+#### 5.1 Equation Builder
+- [ ] EquationBuilder component: select equation then input known values then step-by-step solve
+- [ ] KaTeX rendering, min 1.2em, generous spacing
+- [ ] Consistent variable colour-coding across entire app: velocity=cyan, force=amber, energy=green, time=pink, mass=purple
+- [ ] Show triangle method alongside algebraic rearrangement
+- [ ] TTS reads steps if enabled
+- [ ] Practice mode: given values, select equation first, then solve
+- [ ] aria-label on equations with spoken form
+
+#### 5.2 Sim Accessibility
+- [ ] Keyboard nav on all sims (Tab, Enter, Arrows, Escape)
+- [ ] ARIA labels on all sim elements
+- [ ] aria-live regions for value changes
+- [ ] + and - step buttons alongside every slider
+- [ ] Tap-to-select, tap-to-place for drag-and-drop
+- [ ] "What's happening" narration toggle: plain English panel updating in real-time
+
+#### 5.3 Sonification (Stretch Goal)
+- [ ] Forces: pitch maps to net force, pulse tempo to acceleration
+- [ ] Waves: play sound wave shown, pitch mapping for EM
+- [ ] Electricity: hum pitch maps to current, clicks for charge carriers
+- [ ] Energy: rising tone for KE increase
+- [ ] Off by default, speaker icon toggle per sim
+- [ ] Respect Sound Effects setting, volume slider per sim
+
+#### 5.4 Abstract Concept Scaffolding (concrete then visual then abstract)
+- [ ] Forces: real photo/video then interactive FBD then body-based language
+- [ ] Energy: "bank account" analogy then consistent colours then animated Sankey
+- [ ] Waves: slinky video then sim with sound output then persistent labels
+- [ ] Electricity: animated charges then water pipe parallel then tap-to-add circuits
+- [ ] Particles: macro zoom-in then temperature slider then state labels
+
+### Sprint 6: Teacher Dashboard
+
+#### 6.1 Misconception Analytics
+- [ ] Teacher dashboard (Supabase role check)
+- [ ] Class overview: progress, completion, time-on-task
+- [ ] Misconception heatmap: topics x misconceptions, colour = frequency
+- [ ] Learner drill-down: SRS progress, errors, comfort settings, session patterns
+- [ ] Stuck learner alerts: 5+ attempts same topic, or 7+ days inactive
+
+#### 6.2 SEND Progress Tracking
+- [ ] Differentiated targets per learner
+- [ ] Optional SEND grouping (teacher-set, never shown to learners)
+- [ ] Track: session length, preferred times, comfort settings, progress velocity
+- [ ] Export PDF/CSV for IEP reviews, EHCP annual reviews, parents evenings
+
+#### 6.3 Class Management
+- [ ] Create classes, invite via code or email
+- [ ] Assign topics/sessions to individuals or groups
+- [ ] Real-time progress during sessions
+- [ ] Nudge messages through the app
+
+### Roadmap Global Rules
+
+- State: React Context for comfort settings. Supabase for persistent data. Local state for ephemeral UI only
+- Performance: Lazy-load ComfortSettings, teacher dashboard, equation builder (React.lazy + Suspense)
+- PWA/Offline: SRS data and comfort settings work offline. Queue Supabase updates, sync when connected
+- Testing after each sprint: screen reader, keyboard-only, 200% zoom, reduced motion, each comfort preset, 375px width
+- Mobile-first: all new components. Test 375px minimum
+- Do not break existing features. Additive or controlled replacement only. Feature flag if unsure
+- Commit format: `type(scope): [item] description` types: feat/fix/refactor/docs/test scopes: comfort/a11y/engine/ndux/physics/dashboard

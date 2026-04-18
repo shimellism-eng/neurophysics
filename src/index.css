@@ -52,7 +52,7 @@
   --np-text:       #e2e8f0;
   --np-text-mid:   #cbd5e1;
   --np-text-muted: #94a3b8;
-  --np-text-dim:   #64748b;
+  --np-text-dim:   #6c7c93;
 
   /* Typography */
   --font-body:    'Atkinson Hyperlegible', sans-serif;
@@ -213,8 +213,8 @@ body[data-theme="cream"] {
   --np-card-lift:     rgba(255,245,215,0.90);
   --np-text:          #1a1a2e;
   --np-text-mid:      #334155;
-  --np-text-muted:    #64748b;
-  --np-text-dim:      #94a3b8;
+  --np-text-muted:    #63738a;
+  --np-text-dim:      #647388;
   --np-border:        rgba(0,0,0,0.10);
   --np-border-mid:    rgba(0,0,0,0.15);
   --np-border-strong: rgba(0,0,0,0.22);
@@ -229,7 +229,7 @@ body[data-theme="lightblue"] {
   --np-text:          #0f172a;
   --np-text-mid:      #1e3a5f;
   --np-text-muted:    #4a6fa5;
-  --np-text-dim:      #7ea7cc;
+  --np-text-dim:      #497297;
   --np-border:        rgba(0,0,0,0.10);
   --np-border-mid:    rgba(0,0,0,0.15);
   --np-border-strong: rgba(0,0,0,0.22);
@@ -244,7 +244,7 @@ body[data-theme="lightyellow"] {
   --np-text:          #1a1a2e;
   --np-text-mid:      #3d3010;
   --np-text-muted:    #7a6030;
-  --np-text-dim:      #a89060;
+  --np-text-dim:      #876f3f;
   --np-border:        rgba(0,0,0,0.10);
   --np-border-mid:    rgba(0,0,0,0.15);
   --np-border-strong: rgba(0,0,0,0.22);

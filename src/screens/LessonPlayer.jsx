@@ -45,6 +45,8 @@ import SessionClose from '../components/lesson/SessionClose'
 
 // ─── NEW 9-step flow ─────────────────────────────────────────────────────────
 
+import SessionPreview from '../components/lesson/SessionPreview'
+
 const NEW_STEPS = [
   { id: 'hook',      label: 'Spark',       icon: Zap,          hint: 'Why this matters' },
   { id: 'vocab',     label: 'Key Words',   icon: BookOpen,     hint: 'Learn the language first' },
@@ -67,6 +69,7 @@ const LEGACY_STEPS = [
 ]
 
 // ─── Keyword chip bar (persistent glossary) ──────────────────────────────────
+
 
 function KeywordGlossaryBar({ keywords, moduleColor }) {
   const [active, setActive] = useState(null)
@@ -264,9 +267,20 @@ export default function LessonPlayer() {
   }
   const nudgeVisible = showNudge && !snoozed
 
-  // Explore mode: live from ComfortContext so toggling in Settings takes effect without reload
+  // Explore mode + Pomodoro: live from ComfortContext
   const { prefs: comfortPrefs } = useComfort()
   const exploreMode = comfortPrefs.exploreMode !== false
+
+  // Pomodoro timer — fires once after sessionLength minutes when enabled
+  const [pomoDone, setPomoDone] = useState(false)
+  const [pomoDismissed, setPomoDismissed] = useState(false)
+  useEffect(() => {
+    if (!comfortPrefs.pomodoroTimer || showIntro || pomoDone) return
+    const ms = (comfortPrefs.sessionLength || 15) * 60 * 1000
+    const t = setTimeout(() => setPomoDone(true), ms)
+    return () => clearTimeout(t)
+  }, [comfortPrefs.pomodoroTimer, comfortPrefs.sessionLength, showIntro, pomoDone])
+  const pomoVisible = pomoDone && !pomoDismissed
 
   // Compute next unmastered topic (for "Next topic" CTA at lesson end)
   const allTopicIds = MODULES.flatMap(m => m.topics)
@@ -510,6 +524,55 @@ export default function LessonPlayer() {
 
       {/* ADHD break nudge */}
       {nudgeVisible && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} onSnooze={snoozeBreak} />}
+
+      {/* Pomodoro break suggestion */}
+      <AnimatePresence>
+        {pomoVisible && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-end justify-center"
+            style={{ background: 'rgba(8,15,30,0.7)', backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)' }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            onClick={() => setPomoDismissed(true)}
+          >
+            <motion.div
+              className="w-full max-w-lg rounded-t-[28px] px-6 pt-5 pb-10"
+              style={{ background: '#0d1629', border: '0.75px solid rgba(255,255,255,0.07)' }}
+              initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="flex justify-center mb-4">
+                <div style={{ width: 40, height: 4, borderRadius: 999, background: 'rgba(255,255,255,0.15)' }} />
+              </div>
+              <div style={{ fontSize: 32, textAlign: 'center', marginBottom: 8 }}>☕</div>
+              <h3 style={{ color: '#f8fafc', fontSize: 20, fontWeight: 800, textAlign: 'center', marginBottom: 6 }}>
+                Great work — time for a break!
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, textAlign: 'center', lineHeight: 1.55, marginBottom: 24 }}>
+                You've been studying for {comfortPrefs.sessionLength} minutes. A short break helps your brain consolidate what you've learned.
+              </p>
+              <div className="flex gap-3">
+                <motion.button
+                  className="flex-1 font-bold"
+                  style={{ height: 52, borderRadius: 14, background: 'transparent', color: 'rgba(255,255,255,0.6)', border: '1.5px solid rgba(255,255,255,0.12)', cursor: 'pointer', fontSize: 15 }}
+                  whileTap={{ y: 2 }}
+                  onClick={() => { setPomoDismissed(true); navigate('/') }}
+                >
+                  Take a break
+                </motion.button>
+                <motion.button
+                  className="flex-1 font-bold"
+                  style={{ height: 52, borderRadius: 14, background: 'linear-gradient(135deg, #00d4ff, #0099bb)', color: '#080f1e', border: 'none', cursor: 'pointer', fontSize: 15 }}
+                  whileTap={{ y: 2 }}
+                  onClick={() => setPomoDismissed(true)}
+                >
+                  Keep going
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ── Resume overlay ── */}
       {showResume && savedProgress && (
@@ -905,158 +968,15 @@ export default function LessonPlayer() {
       </AnimatePresence>
 
       {/* ── Pre-lesson intro bottom sheet ── */}
-      <AnimatePresence>
-        {showIntro && (
-          <div
-            className="fixed inset-0 z-50 flex flex-col justify-end"
-            style={{
-              background: 'rgba(8,15,30,0.7)',
-              backdropFilter: 'blur(6px)',
-              WebkitBackdropFilter: 'blur(6px)',
-            }}
-          >
-            <motion.div
-              className="rounded-t-[28px] px-6 pt-6 pb-8"
-              style={{ background: '#0d1629', position: 'relative', overflow: 'hidden' }}
-              initial={{ y: '100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '100%' }}
-              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
-            >
-              {/* Radial gradient bloom */}
-              <div
-                aria-hidden="true"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: 180,
-                  background: `radial-gradient(ellipse 80% 100% at 50% 0%, ${topic.moduleColor}22 0%, transparent 70%)`,
-                  pointerEvents: 'none',
-                }}
-              />
+      <SessionPreview
+        isOpen={showIntro}
+        topic={topic}
+        stepCount={totalSteps}
+        steps={STEPS}
+        onStart={() => setShowIntro(false)}
+        onDismiss={() => setShowIntro(false)}
+      />
 
-              {/* Drag handle */}
-              <div className="flex justify-center mb-5" style={{ position: 'relative' }}>
-                <div
-                  style={{
-                    width: 40,
-                    height: 4,
-                    borderRadius: 999,
-                    background: 'rgba(255,255,255,0.15)',
-                  }}
-                />
-              </div>
-
-              {/* Module name */}
-              <div
-                className="uppercase tracking-widest mb-2"
-                style={{ color: topic.moduleColor, fontSize: 11, fontWeight: 700, position: 'relative' }}
-              >
-                {topic.module}
-              </div>
-
-              {/* Topic title */}
-              <h2
-                className="font-display"
-                style={{
-                  color: '#f8fafc',
-                  fontSize: 22,
-                  fontWeight: 800,
-                  letterSpacing: '-0.02em',
-                  lineHeight: 1.2,
-                  marginBottom: 12,
-                  position: 'relative',
-                }}
-              >
-                {topic.title}
-              </h2>
-
-              {/* Course badge + time estimate row */}
-              <div className="flex items-center gap-2 mb-5" style={{ position: 'relative' }}>
-                <span
-                  className="px-3 py-1 text-xs font-semibold"
-                  style={{
-                    borderRadius: 999,
-                    ...(topic.course === 'physics-only'
-                      ? { background: 'rgba(139,92,246,0.12)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.28)' }
-                      : { background: 'rgba(34,197,94,0.10)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.25)' }
-                    ),
-                  }}
-                >
-                  {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
-                </span>
-                <span
-                  className="flex items-center gap-1 px-3 py-1 text-xs font-semibold"
-                  style={{
-                    borderRadius: 999,
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '1px solid rgba(255,255,255,0.09)',
-                    color: 'rgba(255,255,255,0.45)',
-                  }}
-                >
-                  <Clock size={11} />
-                  About 15 min
-                </span>
-              </div>
-
-              {/* Step dots — 9 dots showing lesson structure */}
-              <div className="flex items-center gap-1.5 mb-5" style={{ position: 'relative' }}>
-                {(isNewFlow ? NEW_STEPS : LEGACY_STEPS).map((s, i) => (
-                  <div
-                    key={s.id}
-                    style={{
-                      width: 8,
-                      height: 8,
-                      borderRadius: '50%',
-                      background: i === 0 ? topic.moduleColor : 'rgba(255,255,255,0.12)',
-                      transition: 'background 0.2s',
-                    }}
-                  />
-                ))}
-              </div>
-
-              {/* Hook fact preview */}
-              {topic.hook?.hookFact && (
-                <p
-                  className="text-sm italic mb-5"
-                  style={{
-                    color: 'rgba(255,255,255,0.55)',
-                    lineHeight: 1.55,
-                    display: '-webkit-box',
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden',
-                    position: 'relative',
-                  }}
-                >
-                  {topic.hook.hookFact}
-                </p>
-              )}
-
-              {/* Start lesson button */}
-              <motion.button
-                className="w-full font-display font-bold text-base flex items-center justify-center"
-                style={{
-                  height: 56,
-                  borderRadius: 16,
-                  background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}bb)`,
-                  color: '#fff',
-                  boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${topic.moduleColor}35`,
-                  position: 'relative',
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
-                whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15)` }}
-                onClick={() => setShowIntro(false)}
-              >
-                Start lesson
-              </motion.button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
   )
 }

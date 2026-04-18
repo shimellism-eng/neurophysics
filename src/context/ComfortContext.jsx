@@ -49,6 +49,7 @@ export const COMFORT_DEFAULTS = {
   // Learning Mode
   challengeMode: false,        // true = hearts/lives on
   sessionLength: 15,           // 5 | 10 | 15 | 25 minutes
+  pomodoroTimer: false,        // true = optional Pomodoro countdown during sessions
   // Legacy keys kept for backward compat with existing components
   exploreMode:   true,
   autoTTS:       false,

@@ -366,6 +366,10 @@ export default function ComfortSettings() {
                   <ChipGroup options={sessionOptions} value={prefs.sessionLength}
                     onChange={v => setPref('sessionLength', v)} />
                 </Row>
+                <Row label="Pomodoro timer" hint="Gentle break suggestion at end of session">
+                  <Toggle on={prefs.pomodoroTimer} onChange={v => setPref('pomodoroTimer', v)}
+                    label="Pomodoro timer" />
+                </Row>
               </Section>
 
               {/* Reset */}

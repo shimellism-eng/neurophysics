@@ -5,6 +5,28 @@
 
 ## What Was Just Done (latest — 2026-04-18)
 
+### Sprint 2.3 Touch Targets ✅ shipped ae0dc8a
+- MCQ option padding: py-3.5 (14px) → py-4 (16px) in QuickWinScreen, VocabPreTeach, EquationDrillScreen
+- RecallQuestion: reveal button renamed "Flip card" with RefreshCw icon, padding fixed to py-4
+- Already done (no changes): global 48px min + 8px gap in index.css, drag-drop tap-only, ComfortSettings sliders had +/− buttons
+- CLAUDE.md 2.3 marked ✅ shipped
+
+## What Was Just Done (previous — 2026-04-18)
+
+### Sprint 2.2 Contrast Audit ✅ shipped 4536072
+- Audited all 4 themes (dark, cream, lightblue, lightyellow) against WCAG 2.2 AA
+- Fixed exactly 5 failing tokens in `src/index.css`:
+  - Dark `--np-text-dim`: #64748b → #6c7c93 (4.50:1 on #080f1e)
+  - Cream `--np-text-muted`: #64748b → #63738a (4.56:1 on #FFF8E7)
+  - Cream `--np-text-dim`: #94a3b8 → #647388 (4.56:1 on #FFF8E7)
+  - LBlue `--np-text-dim`: #7ea7cc → #497297 (4.54:1 on #E8F4FD)
+  - LYell `--np-text-dim`: #a89060 → #876f3f (4.53:1 on #FFF9DB)
+- Confirmed passing: cyan #00d4ff = 10.81:1, bg #080f1e is navy (not pure black) ✓
+- CLAUDE.md roadmap item 2.2 marked ✅ shipped
+- Build: passing, deployed, pushed, cap sync ios done
+
+## What Was Just Done (previous — 2026-04-18)
+
 ### Sprint 2.1 Typography Overhaul ✅ shipped
 - `index.html`: Google Fonts link updated — added Atkinson Hyperlegible, kept Bricolage Grotesque + Space Grotesk + IBM Plex Mono + Kalam
 - `src/index.css`:

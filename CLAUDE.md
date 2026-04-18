@@ -279,21 +279,21 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] No italic for emphasis, use bold or accent colour
 - [x] Comfort Settings font toggle overrides these defaults
 
-#### 2.2 Contrast Audit
-- [ ] Dark background to #0F0F1A or #1A1A2E, not pure black
-- [ ] All body text: min 4.5:1 contrast
-- [ ] Large text (18px+ or 14px+ bold): min 3:1
-- [ ] UI elements (buttons, toggles, sliders, borders): min 3:1
-- [ ] Check cyan accent on dark. If below 4.5:1, lighten to ~#4AEAFF
-- [ ] Never colour alone for meaning, always pair with label or icon
+#### 2.2 Contrast Audit ✅ shipped 4536072
+- [x] Dark background to #0F0F1A or #1A1A2E, not pure black
+- [x] All body text: min 4.5:1 contrast
+- [x] Large text (18px+ or 14px+ bold): min 3:1
+- [x] UI elements (buttons, toggles, sliders, borders): min 3:1
+- [x] Check cyan accent on dark. If below 4.5:1, lighten to ~#4AEAFF
+- [x] Never colour alone for meaning, always pair with label or icon
 
-#### 2.3 Touch Targets
-- [ ] Min 48x48px all interactive elements
-- [ ] Min 8px spacing between adjacent targets
-- [ ] MCQ options: full-width cards, min 16px padding
-- [ ] All drag-and-drop: add tap-to-select, tap-to-place alternative
-- [ ] All sliders: add + and - step buttons
-- [ ] Equation card flip: add visible "Flip card" button
+#### 2.3 Touch Targets ✅ shipped ae0dc8a
+- [x] Min 48x48px all interactive elements
+- [x] Min 8px spacing between adjacent targets
+- [x] MCQ options: full-width cards, min 16px padding
+- [x] All drag-and-drop: add tap-to-select, tap-to-place alternative
+- [x] All sliders: add + and - step buttons
+- [x] Equation card flip: add visible "Flip card" button
 
 #### 2.4 Reduced Motion
 - [ ] Respect `prefers-reduced-motion: reduce` globally

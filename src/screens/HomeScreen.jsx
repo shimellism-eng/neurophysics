@@ -353,7 +353,7 @@ export default function HomeScreen() {
   }
 
   return (
-    <SafeAreaPage hasNav topPad>
+    <SafeAreaPage hasNav>
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div

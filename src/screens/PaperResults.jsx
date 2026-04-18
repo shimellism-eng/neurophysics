@@ -153,7 +153,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
   }, [countTo])
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
+    <div className="flex flex-col h-full overflow-y-auto" style={{ paddingBottom: 'calc(var(--safe-bottom) + 24px)' }}>
       {/* Exit button */}
       <div className="px-5 pt-5 pb-2 flex">
         <button onClick={() => navigate('/learn')} className="w-11 h-11 rounded-[12px] flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
@@ -325,7 +325,7 @@ function StageBreakdown({ questions, answers, timeUsed, onNext, onBack }) {
   const avgTime = timeUsed / Math.max(1, Object.values(answers).length)
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
+    <div className="flex flex-col h-full overflow-y-auto" style={{ paddingBottom: 'calc(var(--safe-bottom) + 24px)' }}>
       <div className="px-6 pt-8 pb-4">
         <motion.div
           className="flex items-center gap-3 mb-6"
@@ -478,12 +478,11 @@ function StageThePlan({ questions, answers, onDone }) {
   const strongest = sorted.slice(-2).reverse()
 
   const toExamSlug = (slug) => {
-    // Map topic to exam route ID or lesson
     return slug.replace(/_/g, '-')
   }
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto">
+    <div className="flex flex-col h-full overflow-y-auto" style={{ paddingBottom: 'calc(var(--safe-bottom) + 24px)' }}>
       <div className="px-6 pt-8 pb-4">
         <motion.div
           className="flex items-center gap-3 mb-6"
@@ -582,7 +581,7 @@ function StageThePlan({ questions, answers, onDone }) {
           </div>
           <ul className="space-y-2">
             {[
-              'Redo weakest topics using Exam Practice before your next paper',
+              'Redo weakest topics using exam practice before your next paper',
               'Time yourself on 6-mark questions - aim for 1 mark per minute',
               'Review RPA method cards in Practicals for error-direction questions',
               `Try the ${topGradeLabel} Challenge to target top-tier discriminator questions`,

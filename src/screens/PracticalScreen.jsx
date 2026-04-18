@@ -2535,7 +2535,7 @@ export default function PracticalScreen() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 pb-4" style={{ minHeight: 0 }} onClick={() => dropdownOpen && setDropdownOpen(false)}>
+      <div className="flex-1 overflow-y-auto px-4 pt-4" style={{ minHeight: 0, paddingBottom: 'calc(16px + var(--safe-bottom))' }} onClick={() => dropdownOpen && setDropdownOpen(false)}>
         <AnimatePresence mode="wait">
           <motion.div key={activeTab}
             initial={{ opacity: 0, y: 8 }}

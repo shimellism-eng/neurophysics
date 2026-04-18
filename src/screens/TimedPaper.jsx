@@ -763,8 +763,8 @@ export default function TimedPaper() {
           currentIdx={qIndex} onJump={jumpTo}
           open={paletteOpen} onToggle={() => setPaletteOpen(v => !v)}
         />
-        <div className="px-4 py-3 flex items-center gap-3"
-          style={{ background: 'rgba(11,17,33,0.98)' }}>
+        <div className="px-4 pt-3 flex items-center gap-3"
+          style={{ background: 'rgba(11,17,33,0.98)', paddingBottom: 'calc(12px + var(--safe-bottom))' }}>
           <button
             className="flex items-center gap-2 px-4 py-3 rounded-[13px] text-sm font-semibold"
             style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#a8b8cc' }}

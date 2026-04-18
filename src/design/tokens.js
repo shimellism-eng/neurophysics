@@ -19,6 +19,7 @@ export const colors = {
   borderStrong: 'rgba(255,255,255,0.18)',
 
   // Brand
+  accent:      '#00d4ff',
   cyan:        '#00d4ff',
   cyanMuted:   'rgba(0,212,255,0.14)',
   indigo:      '#6366f1',
@@ -27,6 +28,9 @@ export const colors = {
   amber:       '#f39c12',
   pink:        '#e91e8c',
   green:       '#22c55e',
+  success:     '#22c55e',
+  warning:     '#f59e0b',
+  danger:      '#ef4444',
   red:         '#ef4444',
   gold:        '#fdc700',
 
@@ -39,19 +43,27 @@ export const colors = {
 };
 
 export const typography = {
-  fontBody:    "'Bricolage Grotesque', 'Plus Jakarta Sans', sans-serif",
-  fontDisplay: "'Space Grotesk', sans-serif",
+  fontBody:    "'Atkinson Hyperlegible', sans-serif",
+  fontDisplay: "'Bricolage Grotesque', sans-serif",
   fontMono:    "'IBM Plex Mono', monospace",
   fontHand:    "'Kalam', cursive",
 };
 
 export const radii = {
   sm:    '8px',
-  md:    '12px',
-  lg:    '16px',
-  xl:    '20px',
-  '2xl': '24px',
+  md:    '10px',
+  lg:    '12px',
+  xl:    '16px',
+  '2xl': '20px',
   full:  '9999px',
+};
+
+export const layout = {
+  navHeight: '60px',
+  pageHPad: '20px',
+  pageTopGap: '12px',
+  pageBottomGap: '24px',
+  bottomChromeHeight: 'calc(var(--nav-height) + var(--safe-bottom))',
 };
 
 // Module colours — used by lesson components and HomeScreen CTA.

@@ -1,9 +1,23 @@
 # NeuroPhysics — Session Memory
 
 ## Last Updated
-2026-04-16
+2026-04-18
 
-## What Was Just Done (latest — 2026-04-16)
+## What Was Just Done (latest — 2026-04-18)
+
+### Sprint 2.1 Typography Overhaul ✅ shipped
+- `index.html`: Google Fonts link updated — added Atkinson Hyperlegible, kept Bricolage Grotesque + Space Grotesk + IBM Plex Mono + Kalam
+- `src/index.css`:
+  - `--font-body` → `'Atkinson Hyperlegible', sans-serif`
+  - `--font-display` → `'Bricolage Grotesque', sans-serif`
+  - `body` rule: added `line-height: 1.7; letter-spacing: 0.04em`
+  - `.font-display` class: updated from Space Grotesk to Bricolage Grotesque
+  - Added `p { text-align: left; }` inside `@layer base`
+- `src/design/tokens.js`: `fontBody` + `fontDisplay` synced to match
+- CLAUDE.md roadmap item 2.1 marked ✅ shipped
+- Build: passing
+
+## What Was Just Done (previous — 2026-04-16)
 
 ### ⭐ ROOT CAUSE of safe-area overlap (commit 7310d88)
 - **One-line fix in `index.html:14`** — added `viewport-fit=cover` to viewport meta

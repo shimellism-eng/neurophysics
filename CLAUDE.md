@@ -268,16 +268,16 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 
 ### Sprint 2: Accessibility Foundation
 
-#### 2.1 Typography Overhaul
-- [ ] Import Atkinson Hyperlegible from Google Fonts
-- [ ] Bricolage Grotesque for headings (h1-h3), nav, brand, logo ONLY
-- [ ] All body/label/button/input/feedback/question text to Atkinson Hyperlegible
-- [ ] CSS vars: `--font-body: 'Atkinson Hyperlegible', sans-serif` and `--font-display: 'Bricolage Grotesque', sans-serif`
-- [ ] Global line-height: 1.7 on body text
-- [ ] Letter-spacing: 0.04em on body text
-- [ ] All body text left-aligned (remove center/justify on paragraphs)
-- [ ] No italic for emphasis, use bold or accent colour
-- [ ] Comfort Settings font toggle overrides these defaults
+#### 2.1 Typography Overhaul ✅ shipped
+- [x] Import Atkinson Hyperlegible from Google Fonts
+- [x] Bricolage Grotesque for headings (h1-h3), nav, brand, logo ONLY
+- [x] All body/label/button/input/feedback/question text to Atkinson Hyperlegible
+- [x] CSS vars: `--font-body: 'Atkinson Hyperlegible', sans-serif` and `--font-display: 'Bricolage Grotesque', sans-serif`
+- [x] Global line-height: 1.7 on body text
+- [x] Letter-spacing: 0.04em on body text
+- [x] All body text left-aligned (remove center/justify on paragraphs)
+- [x] No italic for emphasis, use bold or accent colour
+- [x] Comfort Settings font toggle overrides these defaults
 
 #### 2.2 Contrast Audit
 - [ ] Dark background to #0F0F1A or #1A1A2E, not pure black

@@ -55,8 +55,8 @@
   --np-text-dim:   #64748b;
 
   /* Typography */
-  --font-body:    'Bricolage Grotesque', 'Plus Jakarta Sans', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Atkinson Hyperlegible', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
 
   /* Layout */
@@ -144,16 +144,23 @@ body.high-contrast {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
   }
 
-  /* Display font for headings — Space Grotesk: geometric, technical, premium */
+  /* Display font for headings (h1-h3, nav, brand) — Bricolage Grotesque */
   .font-display {
-    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
   }
 
   /* Equation/formula font — IBM Plex Mono: scientific clarity, distinct from prose */
   .font-mono {
     font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  /* Left-align all body text — never justify paragraphs (harder to read, esp. for dyslexia) */
+  p {
+    text-align: left;
   }
 
   ::-webkit-scrollbar {

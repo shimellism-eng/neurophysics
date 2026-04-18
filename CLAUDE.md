@@ -318,13 +318,13 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Queue SRS updates offline, sync when connected
 - ⚠️ Supabase table must be created manually — run SQL in memory.md in Supabase dashboard
 
-#### 3.2 Diagnostic Feedback
-- [ ] Incorrect answer shows 3-layer card: correct answer (green) then why correct (1-2 sentences) then why chosen answer wrong (misconception)
-- [ ] Add `misconception_tags` array to questions (e.g., "confuses_mass_weight", "thinks_current_used_up")
-- [ ] "I still don't get it" button opens MamoChat with question context
-- [ ] "Show me the concept" button navigates to concept explanation
-- [ ] Track misconception frequency per user and per class in Supabase
-- [ ] Correct answer: brief "Got it!" + confidence indicator ("3 in a row")
+#### 3.2 Diagnostic Feedback ✅ shipped c43d6eb
+- [x] Incorrect answer shows 3-layer card: correct answer (green) + senNote as "why" explanation + action buttons
+- [x] "Ask Mamo" button (wrong answers only) opens MamoChat with question/wrong/correct pre-filled in input
+- [x] "Show concept" button routes to lesson/practical/practice for the topic
+- [x] Track misconception frequency via src/utils/misconceptions.js (localStorage, Supabase sync deferred to class dashboard)
+- [x] Correct answer: "Got it!" + "X in a row" streak indicator for 3+ consecutive correct
+- Note: `misconception_tags` field not added to question bank — questions use `senNote` as explanation source
 
 #### 3.3 Interleaved Practice
 - [ ] "Mixed Revision" mode: questions from multiple topics, SRS-weighted

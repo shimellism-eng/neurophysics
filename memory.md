@@ -5,6 +5,14 @@
 
 ## What Was Just Done (latest — 2026-04-18)
 
+### Sprint 3.2 Diagnostic Feedback ✅ shipped c43d6eb
+- QuickWinScreen: 3-layer feedback card (result + senNote + action buttons), session streak counter, misconception tracking
+- "Ask Mamo" button on wrong answers → /mamo?topic=&label=&question=&wrong=&correct=
+- "Show concept" button → lesson/practical/practice routing
+- MamoChat: reads question/wrong/correct params, pre-fills input with diagnostic message
+- src/utils/misconceptions.js: localStorage wrong-answer tracker (np_misconceptions key)
+- Note: question bank uses `senNote` (teacher hint) as Layer 2 explanation — works without schema changes
+
 ### Sprint 3.1 Spaced Repetition SM-2 ✅ shipped 4b95c87
 - NEW: src/hooks/useSRS.js — SM-2 algorithm, localStorage `np_srs`, non-blocking Supabase sync
 - HomeScreen: "Due for Review" amber card with per-topic pills (green/amber/red), only shown when totalDue > 0

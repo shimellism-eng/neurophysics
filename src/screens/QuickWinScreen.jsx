@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle2, XCircle, ChevronRight, Zap } from 'lucide-react'
 import { ALL_QUESTIONS } from '../data/questionBank/index'
-import { useProgress } from '../hooks/useProgress'
+import { useSRS } from '../hooks/useSRS'
 import { TOPICS } from '../data/topics'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
@@ -29,12 +29,13 @@ function shuffle(arr) {
   return a
 }
 
-function pickQuestions(dueTopicIds) {
+function pickQuestions(dueQuestionIds) {
   const mcqs = ALL_QUESTIONS.filter(q => q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null)
+  const dueSet = new Set(dueQuestionIds)
 
-  // Prioritise SRS-due topics
-  const due  = dueTopicIds.length > 0 ? shuffle(mcqs.filter(q => dueTopicIds.includes(q.topicId))) : []
-  const rest = shuffle(mcqs.filter(q => !dueTopicIds.includes(q.topicId)))
+  // SRS-due specific questions first (preserve priority order), then random rest
+  const due  = dueQuestionIds.length > 0 ? dueQuestionIds.map(id => mcqs.find(q => q.id === id)).filter(Boolean) : []
+  const rest = shuffle(mcqs.filter(q => !dueSet.has(q.id)))
 
   const combined = [...due, ...rest]
   // Deduplicate by topicId — take at most 2 per topic for variety
@@ -149,11 +150,10 @@ function ResultScreen({ questions, answers, onDone }) {
 
 export default function QuickWinScreen() {
   const navigate = useNavigate()
-  const { getDueForReview } = useProgress()
+  const { getDueQuestions, updateProgress } = useSRS()
 
   const questions = useMemo(() => {
-    const due = getDueForReview()
-    return pickQuestions(due)
+    return pickQuestions(getDueQuestions())
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const [idx, setIdx]         = useState(0)
@@ -179,6 +179,7 @@ export default function QuickWinScreen() {
     if (revealed) return
     setSelected(optIdx)
     setRevealed(true)
+    updateProgress(q.id, optIdx === q.correctIndex)
   }
 
   function handleNext() {
@@ -281,6 +282,7 @@ export default function QuickWinScreen() {
               {revealed && (
                 <motion.div
                   initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+                  aria-live="polite" aria-atomic="true"
                   className="rounded-[14px] px-4 py-3 mb-6"
                   style={{
                     background: isCorrect ? 'rgba(74,222,128,0.08)' : 'rgba(248,113,113,0.08)',

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {
   ChevronRight, Zap, Flame, TrendingUp,
-  Calendar, CheckCircle, Clock, Target,
+  Calendar, CheckCircle, Clock, Target, RotateCcw,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -11,6 +11,7 @@ import { useInsights } from '../hooks/useInsights'
 import { useStudyPlan } from '../hooks/useStudyPlan'
 import { useAuth } from '../context/AuthContext'
 import { useReducedMotion } from '../hooks/useReducedMotion'
+import { useSRS } from '../hooks/useSRS'
 import { getSelectedBoard } from '../utils/boardConfig'
 import SafeAreaPage from '../components/ui/SafeAreaPage.jsx'
 
@@ -316,6 +317,7 @@ export default function HomeScreen() {
   const greeting = getGreeting()
 
   const reducedMotion = useReducedMotion()
+  const { getDueCountByTopic, totalDue } = useSRS()
 
   const [, setBoardTick] = useState(0)
   useEffect(() => {
@@ -524,6 +526,64 @@ export default function HomeScreen() {
           <ChevronRight size={20} color="rgba(255,255,255,0.3)" strokeWidth={2} />
         </motion.button>
       </div>
+
+      {/* ── DUE FOR REVIEW ───────────────────────────────────────────────────── */}
+      {totalDue > 0 && (() => {
+        const byTopic = getDueCountByTopic()
+        const topicEntries = Object.entries(byTopic)
+          .sort(([, a], [, b]) => b - a)
+          .slice(0, 4)
+        return (
+          <div className="px-5 mb-5">
+            <motion.button
+              className="w-full rounded-[22px] text-left"
+              style={{
+                padding: '16px 20px',
+                background: 'rgba(245,158,11,0.07)',
+                border: '1px solid rgba(245,158,11,0.25)',
+                cursor: 'pointer',
+              }}
+              onClick={() => navigate('/quickwin')}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <div className="rounded-[12px] flex items-center justify-center shrink-0"
+                    style={{ width: 40, height: 40, background: 'rgba(245,158,11,0.15)' }}>
+                    <RotateCcw size={20} color="#f59e0b" strokeWidth={2} />
+                  </div>
+                  <div>
+                    <div className="font-bold" style={{ fontSize: 15, color: '#f8fafc', letterSpacing: '-0.01em' }}>
+                      Due for Review
+                    </div>
+                    <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 1 }}>
+                      {totalDue} question{totalDue !== 1 ? 's' : ''} ready
+                    </div>
+                  </div>
+                </div>
+                <ChevronRight size={20} color="rgba(245,158,11,0.6)" strokeWidth={2} />
+              </div>
+
+              {/* Per-topic pills */}
+              <div className="flex flex-wrap gap-2">
+                {topicEntries.map(([topicId, count]) => {
+                  const color = count >= 6 ? '#ef4444' : count >= 3 ? '#f59e0b' : '#22c55e'
+                  const bg    = count >= 6 ? 'rgba(239,68,68,0.1)' : count >= 3 ? 'rgba(245,158,11,0.1)' : 'rgba(34,197,94,0.1)'
+                  const label = TOPICS[topicId]?.title || topicId
+                  return (
+                    <span key={topicId}
+                      className="flex items-center gap-1.5 px-2.5 py-1 rounded-full"
+                      style={{ background: bg, border: `1px solid ${color}33`, fontSize: 11, fontWeight: 700, color }}>
+                      <span style={{ width: 6, height: 6, borderRadius: 3, background: color, display: 'inline-block', flexShrink: 0 }} />
+                      {label} ×{count}
+                    </span>
+                  )
+                })}
+              </div>
+            </motion.button>
+          </div>
+        )
+      })()}
 
       {/* ── EXAM PLAN WIDGET ─────────────────────────────────────────────────── */}
       <div className="px-5 mb-5">

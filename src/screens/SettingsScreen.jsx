@@ -555,7 +555,7 @@ export default function SettingsScreen() {
 
   return (
     <SafeAreaPage hasNav topPad>
-      <div className="px-5 pt-6 pb-4">
+      <div className="px-5 pt-3 pb-4">
         <h1 className="text-2xl font-bold" style={{ color: 'var(--np-text)', fontFamily: 'var(--font-display)', letterSpacing: '-0.02em' }}>Settings</h1>
         <p className="text-sm mt-1" style={{ color: 'var(--np-text-muted)' }}>Customise your experience</p>
       </div>

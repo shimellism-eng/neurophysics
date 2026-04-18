@@ -407,7 +407,7 @@ export default function LearnScreen() {
     <div className="flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
 
       {/* ── Header: compact progress ── */}
-      <div className="px-5 pb-4 shrink-0" style={{ paddingTop: 'calc(var(--safe-top) + 24px)' }}>
+      <div className="px-5 pb-4 shrink-0" style={{ paddingTop: 'calc(var(--safe-top) + 12px)' }}>
         <div className="flex items-center justify-between mb-1">
           <div>
             <h1 className="text-[22px] font-bold tracking-tight" style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}>

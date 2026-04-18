@@ -535,7 +535,7 @@ export default function LessonPlayer() {
       {/* ── Header ── */}
       <div
         className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
-        style={{ background: 'var(--np-card-deep)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid var(--np-border)', overflow: 'hidden', paddingTop: 'calc(20px + var(--safe-top))' }}
+        style={{ background: 'var(--np-card-deep)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid var(--np-border)', overflow: 'hidden', paddingTop: 'calc(var(--safe-top) + 12px)' }}
       >
         {/* Radial gradient bloom behind header content */}
         <div

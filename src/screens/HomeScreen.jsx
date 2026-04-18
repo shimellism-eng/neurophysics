@@ -357,7 +357,7 @@ export default function HomeScreen() {
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div
-        className="px-5 pt-6 pb-6"
+        className="px-5 pt-3 pb-6"
         style={{ background: `radial-gradient(ellipse 130% 90% at 50% -10%, ${moduleColor}16 0%, transparent 65%)` }}
       >
         <motion.div

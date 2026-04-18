@@ -844,33 +844,48 @@ export default function SettingsScreen() {
               {section.title}
             </div>
             <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid var(--np-border)' }}>
-              {section.items.map((item, ii) => (
-                <button
-                  key={item.label}
-                  className="w-full flex items-center gap-3 px-4 py-4 text-left"
-                  style={{
-                    background: 'var(--np-card)',
-                    borderBottom: ii < section.items.length - 1 || (section.title === 'Notifications' && showTimePicker) ? '0.75px solid var(--np-border)' : 'none',
-                  }}
-                  onClick={item.onPress || item.onToggle || undefined}
-                  aria-label={item.label}
-                  aria-pressed={item.onToggle ? !!item.on : undefined}
-                  disabled={!item.onPress && !item.onToggle && !item.chevron}
-                >
-                  <item.icon size={18} color={item.on ? '#6366f1' : '#a8b8cc'} />
-                  <div className="flex-1">
-                    <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>
-                      {item.label}
+              {section.items.map((item, ii) => {
+                const rowStyle = {
+                  background: 'var(--np-card)',
+                  borderBottom: ii < section.items.length - 1 || (section.title === 'Notifications' && showTimePicker) ? '0.75px solid var(--np-border)' : 'none',
+                }
+                const rowInner = (
+                  <>
+                    <item.icon size={18} color={item.on ? '#6366f1' : '#a8b8cc'} />
+                    <div className="flex-1">
+                      <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>
+                        {item.label}
+                      </div>
+                      <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>{item.hint}</div>
                     </div>
-                    <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>{item.hint}</div>
-                  </div>
-                  {item.chevron
-                    ? <ChevronRight size={14} color={item.label === 'Reminder time' && showTimePicker ? '#6366f1' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
-                    : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} label={item.label} />
-                    : null
-                  }
-                </button>
-              ))}
+                    {item.chevron
+                      ? <ChevronRight size={14} color={item.label === 'Reminder time' && showTimePicker ? '#6366f1' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
+                      : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} label={item.label} />
+                      : null
+                    }
+                  </>
+                )
+                // Toggle rows: outer must be a div — Toggle is itself a button, can't nest buttons
+                if (item.onToggle) {
+                  return (
+                    <div key={item.label} className="w-full flex items-center gap-3 px-4 py-4" style={rowStyle}>
+                      {rowInner}
+                    </div>
+                  )
+                }
+                return (
+                  <button
+                    key={item.label}
+                    className="w-full flex items-center gap-3 px-4 py-4 text-left"
+                    style={rowStyle}
+                    onClick={item.onPress || undefined}
+                    aria-label={item.label}
+                    disabled={!item.onPress && !item.chevron}
+                  >
+                    {rowInner}
+                  </button>
+                )
+              })}
               {/* Text Size — segmented pill control, shown inline in Accessibility section */}
               {section.title === 'Accessibility' && (
                 <div

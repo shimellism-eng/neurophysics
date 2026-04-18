@@ -119,6 +119,11 @@ function mergeWithDefaults(stored) {
   // Reconcile legacy fontSize ('normal'/'large' strings) to number
   if (merged.fontSize === 'normal') merged.fontSize = 1.0
   if (merged.fontSize === 'large')  merged.fontSize = 1.15
+  // Coerce all numeric prefs to actual numbers (localStorage can return strings on some WebViews)
+  for (const key of ['fontSize', 'lineSpacing', 'ttsSpeed', 'sessionLength']) {
+    const n = parseFloat(merged[key])
+    merged[key] = isNaN(n) ? COMFORT_DEFAULTS[key] : n
+  }
   // Reconcile legacy dyslexicFont bool → fontFamily
   if (merged.dyslexicFont && merged.fontFamily === 'system') {
     merged.fontFamily = 'opendyslexic'

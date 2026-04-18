@@ -37,6 +37,24 @@ class ErrorBoundary extends React.Component {
           <p style={{ fontSize: '14px', color: '#94a3b8', margin: 0 }}>
             Don't worry — your progress is saved. Try refreshing the page.
           </p>
+          {this.state.error && (
+            <div style={{
+              marginTop: '8px',
+              padding: '12px 16px',
+              background: 'rgba(239,68,68,0.1)',
+              border: '0.75px solid rgba(239,68,68,0.4)',
+              borderRadius: '12px',
+              fontSize: '11px',
+              color: '#fca5a5',
+              textAlign: 'left',
+              wordBreak: 'break-all',
+              maxWidth: '100%',
+              maxHeight: '180px',
+              overflowY: 'auto',
+            }}>
+              {String(this.state.error)}
+            </div>
+          )}
           <button
             onClick={() => window.location.reload()}
             style={{

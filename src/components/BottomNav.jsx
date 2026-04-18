@@ -5,11 +5,11 @@ import { Home, BookOpen, MessageCircle, Settings } from 'lucide-react'
 const NAV_ITEMS = [
   { label: 'Home',     icon: Home,          path: '/' },
   { label: 'Learn',    icon: BookOpen,       path: '/learn' },
-  { label: 'Chat',     icon: MessageCircle,  path: '/mamo' },
+  { label: 'Mamo',     icon: MessageCircle,  path: '/mamo' },
   { label: 'Settings', icon: Settings,       path: '/settings' },
 ]
 
-const ACTIVE_COLOR = '#6366f1'
+const ACTIVE_COLOR = 'var(--np-indigo)'
 
 export default function BottomNav() {
   const navigate = useNavigate()
@@ -38,11 +38,11 @@ export default function BottomNav() {
         transform: 'translateX(-50%)',
         width: '100%',
         maxWidth: 480,
-        background: 'rgba(8,15,30,0.97)',
-        borderTop: '1px solid rgba(255,255,255,0.06)',
+        background: 'var(--np-card-deep)',
+        borderTop: '1px solid var(--np-border)',
         backdropFilter: 'blur(28px)',
         WebkitBackdropFilter: 'blur(28px)',
-        paddingBottom: 'env(safe-area-inset-bottom)',
+        paddingBottom: 'var(--safe-bottom)',
         boxShadow: '0 -1px 0 rgba(255,255,255,0.04), 0 -8px 32px rgba(8,15,30,0.8)',
       }}
     >
@@ -75,7 +75,7 @@ export default function BottomNav() {
                 style={{
                   fontSize: 10,
                   fontWeight: active ? 600 : 400,
-                  color: active ? ACTIVE_COLOR : '#475569',
+                  color: active ? ACTIVE_COLOR : 'var(--np-text-dim)',
                 }}
               >
                 {item.label}

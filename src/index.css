@@ -1,5 +1,49 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ──────────────────────────────────────────────────────── */
+/* App.jsx overrides --np-bg and --np-card at runtime for accessibility themes */
+:root {
+  /* Backgrounds */
+  --np-bg:            #080f1e;
+  --np-bg-mid:        #0d1526;
+  --np-bg-lift:       #111827;
+  --np-card:          rgba(15,22,41,0.95);
+  --np-card-deep:     rgba(8,15,30,0.96);
+  --np-card-lift:     rgba(20,30,55,0.90);
+
+  /* Borders */
+  --np-border:        rgba(255,255,255,0.08);
+  --np-border-mid:    rgba(255,255,255,0.12);
+  --np-border-strong: rgba(255,255,255,0.18);
+
+  /* Brand */
+  --np-cyan:    #00d4ff;
+  --np-indigo:  #6366f1;
+  --np-purple:  #9b59b6;
+  --np-amber:   #f39c12;
+  --np-pink:    #e91e8c;
+  --np-green:   #22c55e;
+  --np-red:     #ef4444;
+  --np-gold:    #fdc700;
+
+  /* Text */
+  --np-text:       #e2e8f0;
+  --np-text-mid:   #cbd5e1;
+  --np-text-muted: #94a3b8;
+  --np-text-dim:   #64748b;
+
+  /* Typography */
+  --font-body:    'Bricolage Grotesque', 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  /* Layout */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --nav-height:  64px;
+  --page-h-pad:  20px;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -17,7 +61,7 @@
 
   /* ── Keyboard focus ring (F19) ───────────────────────────────────────────── */
   :focus-visible {
-    outline: 2px solid #6366f1;
+    outline: 2px solid var(--np-indigo);
     outline-offset: 2px;
     border-radius: 6px;
   }
@@ -41,9 +85,9 @@
   }
 
   body {
-    font-family: 'Bricolage Grotesque', 'Plus Jakarta Sans', 'Inter', sans-serif;
-    background-color: #080f1e;
-    color: #cad5e2;
+    font-family: var(--font-body);
+    background-color: var(--np-bg);
+    color: var(--np-text);
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;

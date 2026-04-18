@@ -11,6 +11,7 @@ import { useInsights } from '../hooks/useInsights'
 import { useStudyPlan } from '../hooks/useStudyPlan'
 import { useAuth } from '../context/AuthContext'
 import { getSelectedBoard } from '../utils/boardConfig'
+import SafeAreaPage from '../components/ui/SafeAreaPage.jsx'
 
 function getGreeting() {
   const h = new Date().getHours()
@@ -199,7 +200,7 @@ function InsightsPanel({ insights, onTopicTap }) {
       {/* Overall accuracy */}
       {insights.overallAccuracy !== null && (
         <div className="rounded-[22px] px-4 py-4"
-          style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}>
+          style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-bold" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Overall accuracy
@@ -232,7 +233,7 @@ function InsightsPanel({ insights, onTopicTap }) {
             {insights.strongTopics.map(({ id, topic, accuracy }) => (
               <div key={id} className="flex items-center gap-3">
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                  <div className="text-sm font-semibold truncate" style={{ color: 'var(--np-text)' }}>{topic.title}</div>
                   <div className="w-full h-1.5 rounded-full mt-1 overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
                     <div className="h-full rounded-full" style={{ width: `${accuracy * 100}%`, background: '#22c55e' }} />
                   </div>
@@ -257,7 +258,7 @@ function InsightsPanel({ insights, onTopicTap }) {
             {insights.weakTopics.map(({ id, topic, accuracy }) => (
               <div key={id} className="flex items-center gap-3">
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                  <div className="text-sm font-semibold truncate" style={{ color: 'var(--np-text)' }}>{topic.title}</div>
                   <div className="w-full h-1.5 rounded-full mt-1 overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
                     <div className="h-full rounded-full" style={{ width: `${accuracy * 100}%`, background: '#fbbf24' }} />
                   </div>
@@ -282,7 +283,7 @@ function InsightsPanel({ insights, onTopicTap }) {
             {insights.suggestions.map(({ id, topic, reason, accuracy }) => (
               <button key={id} className="w-full flex items-center gap-3 py-1 text-left" onClick={() => onTopicTap && onTopicTap(id)}>
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold truncate" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                  <div className="text-sm font-semibold truncate" style={{ color: 'var(--np-text)' }}>{topic.title}</div>
                   <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
                     {reason === 'needs work'
                       ? `${Math.round(accuracy * 100)}% — practise again to boost this`
@@ -352,10 +353,7 @@ export default function HomeScreen() {
   }
 
   return (
-    <div
-      className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
-    >
+    <SafeAreaPage hasNav topPad>
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <div
@@ -385,7 +383,7 @@ export default function HomeScreen() {
             <p className="text-[12px] font-semibold mb-0.5" style={{ color: '#6366f1' }}>
               {greeting}
             </p>
-            <h1 className="font-bold leading-tight truncate" style={{ color: '#f8fafc', fontSize: 24, letterSpacing: '-0.03em' }}>
+            <h1 className="font-bold leading-tight truncate" style={{ color: 'var(--np-text)', fontSize: 24, letterSpacing: '-0.03em' }}>
               {displayName}
             </h1>
 
@@ -563,7 +561,7 @@ export default function HomeScreen() {
                 </>
               ) : (
                 <>
-                  <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16 }}>
+                  <div className="font-bold" style={{ color: 'var(--np-text)', fontSize: 16 }}>
                     Start your streak today
                   </div>
                   <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.32)' }}>
@@ -632,10 +630,10 @@ export default function HomeScreen() {
                             <span className="text-xs font-bold" style={{ color: '#f59e0b' }}>Due today</span>
                           )}
                           {daysUntilDue !== null && (
-                            <span className="text-xs" style={{ color: '#a8b8cc' }}>Due in {daysUntilDue} day{daysUntilDue !== 1 ? 's' : ''}</span>
+                            <span className="text-xs" style={{ color: 'var(--np-text-muted)' }}>Due in {daysUntilDue} day{daysUntilDue !== 1 ? 's' : ''}</span>
                           )}
                           {masteredDaysAgo !== null && (
-                            <span className="text-xs" style={{ color: '#a8b8cc' }}>
+                            <span className="text-xs" style={{ color: 'var(--np-text-muted)' }}>
                               {isDueToday || daysUntilDue !== null ? '·' : ''} Mastered {masteredDaysAgo === 0 ? 'today' : `${masteredDaysAgo} day${masteredDaysAgo !== 1 ? 's' : ''} ago`}
                             </span>
                           )}
@@ -693,7 +691,7 @@ export default function HomeScreen() {
                 <div className="text-[12px] font-semibold mb-0.5" style={{ color: '#6366f1' }}>
                   You've mastered {masteredCount} topics
                 </div>
-                <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16, letterSpacing: '-0.02em' }}>
+                <div className="font-bold" style={{ color: 'var(--np-text)', fontSize: 16, letterSpacing: '-0.02em' }}>
                   Try a Timed Paper
                 </div>
                 <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.55)' }}>
@@ -706,6 +704,6 @@ export default function HomeScreen() {
         </motion.div>
       )}
 
-    </div>
+    </SafeAreaPage>
   )
 }

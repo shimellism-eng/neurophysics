@@ -472,7 +472,7 @@ export default function LessonPlayer() {
   const showLegacyLastCTA = !isNewFlow && isLast
 
   return (
-    <div className="relative flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+    <div className="relative flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
 
       {/* ADHD break nudge */}
       {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
@@ -485,7 +485,7 @@ export default function LessonPlayer() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <motion.div
             className="w-full max-w-[480px] rounded-t-[28px] px-5 pt-6 pb-8"
-            style={{ background: '#0f1629', border: '1px solid rgba(255,255,255,0.1)' }}
+            style={{ background: 'var(--np-bg-mid)', border: '0.75px solid var(--np-border-mid)' }}
             initial={{ y: 80, pointerEvents: 'none' }}
             animate={{ y: 0, pointerEvents: 'auto' }}
             transition={{ type: 'spring', damping: 25 }}>
@@ -535,7 +535,7 @@ export default function LessonPlayer() {
       {/* ── Header ── */}
       <div
         className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
-        style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', overflow: 'hidden', paddingTop: 'calc(20px + env(safe-area-inset-top))' }}
+        style={{ background: 'var(--np-card-deep)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid var(--np-border)', overflow: 'hidden', paddingTop: 'calc(20px + var(--safe-top))' }}
       >
         {/* Radial gradient bloom behind header content */}
         <div
@@ -556,7 +556,7 @@ export default function LessonPlayer() {
           style={{
             borderRadius: 12,
             background: 'rgba(255,255,255,0.06)',
-            border: '1px solid rgba(255,255,255,0.09)',
+            border: '0.75px solid var(--np-border)',
             position: 'relative',
           }}
         >
@@ -568,7 +568,7 @@ export default function LessonPlayer() {
           <div className="text-xs font-bold" style={{ color: topic.moduleColor }}>{topic.module}</div>
           <h1
             className="font-display font-bold leading-tight truncate"
-            style={{ color: '#f8fafc', fontSize: 17, letterSpacing: '-0.02em' }}
+            style={{ color: 'var(--np-text)', fontSize: 17, letterSpacing: '-0.02em' }}
           >
             {topic.title}
           </h1>
@@ -579,10 +579,10 @@ export default function LessonPlayer() {
           className="shrink-0 tabular-nums"
           style={{
             borderRadius: 20,
-            background: 'rgba(255,255,255,0.08)',
+            background: 'var(--np-card)',
             padding: '4px 10px',
             fontSize: 12,
-            color: '#94a3b8',
+            color: 'var(--np-text-muted)',
             fontWeight: 600,
             position: 'relative',
           }}

@@ -73,7 +73,7 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
           : isStarted ? 'rgba(251,191,36,0.04)' : 'rgba(255,255,255,0.03)',
         border: isMastered
           ? `1px solid ${moduleColor}28`
-          : isStarted ? '1px solid rgba(251,191,36,0.18)' : '1px solid rgba(255,255,255,0.08)',
+          : isStarted ? '1px solid rgba(251,191,36,0.18)' : '1px solid var(--np-border)',
       }}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
@@ -190,8 +190,8 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
     <motion.div
       className="rounded-[22px] overflow-hidden"
       style={{
-        background: 'rgba(15,22,41,0.95)',
-        border: `1px solid ${pct > 0 ? module.color + '35' : 'rgba(255,255,255,0.08)'}`,
+        background: 'var(--np-card)',
+        border: `1px solid ${pct > 0 ? module.color + '35' : 'var(--np-border)'}`,
         boxShadow: pct > 0 ? `0 4px 24px ${module.color}10` : 'none',
       }}
       initial={{ opacity: 0, y: 20 }}
@@ -207,7 +207,7 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <div className="text-sm font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>
+              <div className="text-sm font-bold leading-tight truncate" style={{ color: 'var(--np-text)' }}>
                 {module.name}
               </div>
               {module.topics.every(t => PHYSICS_ONLY_TOPICS.has(t)) && (
@@ -404,13 +404,13 @@ export default function LearnScreen() {
   const isSearching = searchQuery.trim().length > 1
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+    <div className="flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
 
       {/* ── Header: compact progress ── */}
-      <div className="px-5 pt-6 pb-4 shrink-0">
+      <div className="px-5 pb-4 shrink-0" style={{ paddingTop: 'calc(var(--safe-top) + 24px)' }}>
         <div className="flex items-center justify-between mb-1">
           <div>
-            <h1 className="text-[22px] font-bold tracking-tight" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+            <h1 className="text-[22px] font-bold tracking-tight" style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}>
               GCSE Physics
             </h1>
             <button
@@ -445,7 +445,7 @@ export default function LearnScreen() {
             style={{
               background: 'rgba(255,255,255,0.05)',
               border: '1px solid rgba(255,255,255,0.09)',
-              color: '#f8fafc',
+              color: 'var(--np-text)',
             }}
           />
           {searchQuery.length > 0 && (
@@ -469,7 +469,7 @@ export default function LearnScreen() {
                 style={{
                   height: 36,
                   background: isActive ? `${f.color}20` : 'rgba(255,255,255,0.04)',
-                  border: isActive ? `1px solid ${f.color}50` : '1px solid rgba(255,255,255,0.08)',
+                  border: isActive ? `1px solid ${f.color}50` : '1px solid var(--np-border)',
                   color: isActive ? f.color : 'rgba(255,255,255,0.32)',
                   transition: 'all 0.18s ease',
                 }}
@@ -500,7 +500,7 @@ export default function LearnScreen() {
       </div>
 
       {/* ── Scrollable body ── */}
-      <div className="flex-1 overflow-y-auto px-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
+      <div className="flex-1 overflow-y-auto px-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'calc(var(--nav-height) + var(--safe-bottom) + 32px)' }}>
 
         {/* ── Search results ── */}
         {isSearching && (
@@ -522,7 +522,7 @@ export default function LearnScreen() {
                       key={id}
                       className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[16px] text-left"
                       style={{
-                        background: 'rgba(15,22,41,0.95)',
+                        background: 'var(--np-card)',
                         border: `1px solid ${state === 'mastered' ? mod.color + '45' : 'rgba(255,255,255,0.13)'}`,
                         borderRadius: 18,
                         minHeight: 56,
@@ -542,7 +542,7 @@ export default function LearnScreen() {
                         <mod.icon size={17} color={mod.color} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topic.title}</div>
+                        <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{topic.title}</div>
                         <div className="flex items-center gap-2 mt-0.5">
                           <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>{mod.name}</div>
                           {PHYSICS_ONLY_TOPICS.has(id) ? (
@@ -589,7 +589,7 @@ export default function LearnScreen() {
               <span className="text-[12px] font-semibold" style={{ color: nextBadge.color }}>
                 Next milestone
               </span>
-              <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{nextBadge.label}</div>
+              <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{nextBadge.label}</div>
               <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{nextBadge.hint}</div>
             </div>
             <Star size={15} color={nextBadge.color} strokeWidth={1.5} />
@@ -698,7 +698,7 @@ export default function LearnScreen() {
                   <Trophy size={18} color="#a855f7" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>{topGradeLabel} Challenge</p>
+                  <p className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{topGradeLabel} Challenge</p>
                   <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Hard exam questions · Unusual scenarios</p>
                 </div>
               </div>
@@ -721,7 +721,7 @@ export default function LearnScreen() {
                   <Clock size={18} color="#6366f1" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed Paper</p>
+                  <p className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>Timed Paper</p>
                   <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
                 </div>
               </div>

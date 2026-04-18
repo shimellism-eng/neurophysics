@@ -27,6 +27,7 @@ import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
 import { useReducedMotion } from '../hooks/useReducedMotion'
+import { useComfort } from '../context/ComfortContext'
 import HeartsDisplay from '../components/HeartsDisplay'
 import { getExamQuestionCount } from '../data/examIndex'
 import { speak } from '../utils/tts'
@@ -263,10 +264,9 @@ export default function LessonPlayer() {
   }
   const nudgeVisible = showNudge && !snoozed
 
-  // Explore mode: hearts are off by default — learners can enable hearts in Settings
-  const exploreMode = (() => {
-    try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').exploreMode !== false } catch { return true }
-  })()
+  // Explore mode: live from ComfortContext so toggling in Settings takes effect without reload
+  const { prefs: comfortPrefs } = useComfort()
+  const exploreMode = comfortPrefs.exploreMode !== false
 
   // Compute next unmastered topic (for "Next topic" CTA at lesson end)
   const allTopicIds = MODULES.flatMap(m => m.topics)
@@ -639,11 +639,22 @@ export default function LessonPlayer() {
           {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
         </span>
 
-        {/* Hearts display — hidden in explore mode */}
-        {!exploreMode && (
+        {/* Hearts display — hidden in explore/revision mode */}
+        {!exploreMode ? (
           <div style={{ position: 'relative' }}>
             <HeartsDisplay hearts={hearts} maxHearts={maxHearts} />
           </div>
+        ) : (
+          <span
+            style={{
+              fontSize: 10, fontWeight: 700, letterSpacing: '0.04em',
+              color: '#22c55e', background: 'rgba(34,197,94,0.12)',
+              border: '1px solid rgba(34,197,94,0.25)',
+              borderRadius: 20, padding: '2px 8px',
+            }}
+          >
+            REVISION
+          </span>
         )}
       </div>
 
@@ -869,10 +880,13 @@ export default function LessonPlayer() {
               💔
             </motion.div>
             <h2 className="font-display text-2xl font-bold mb-2" style={{ color: '#f8fafc' }}>
-              Take a breather
+              Nearly there!
             </h2>
-            <p className="text-sm mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              You've used all your hearts. Review what you've learned before continuing.
+            <p className="text-sm mb-2" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              Those tricky questions are exactly where the learning happens.
+            </p>
+            <p className="text-xs mb-6" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              You can turn off hearts in Comfort Settings for zero-stakes practice.
             </p>
             <motion.button
               className="font-display w-full max-w-xs py-4 rounded-[16px] font-bold text-sm"
@@ -884,7 +898,7 @@ export default function LessonPlayer() {
               onClick={() => { resetHearts() }}
               whileTap={{ y: 4 }}
             >
-              Continue anyway →
+              Keep going →
             </motion.button>
           </motion.div>
         )}

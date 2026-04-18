@@ -212,12 +212,12 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 
 ### Sprint 1: Core Differentiators
 
-#### 1.1 Comfort Settings Panel
-- [ ] Create `ComfortProvider` React context wrapping the entire app
-- [ ] Create `ComfortSettings` component, accessible from persistent icon in app header (sliders/accessibility icon)
-- [ ] Also accessible from main settings page
-- [ ] First-time-use prompt on first login: "Set up your learning preferences"
-- [ ] Controls to implement:
+#### 1.1 Comfort Settings Panel ✅ shipped bea42bc
+- [x] Create `ComfortProvider` React context wrapping the entire app
+- [x] Create `ComfortSettings` component, accessible from persistent icon in app header (sliders/accessibility icon)
+- [x] Also accessible from main settings page
+- [x] First-time-use prompt on first login: "Set up your learning preferences"
+- [x] Controls to implement:
   - Font Size: slider 0.8rem to 1.6rem, default 1rem, honour system Dynamic Type
   - Font Family: toggle Atkinson Hyperlegible | OpenDyslexic | System Default
   - Line Spacing: slider 1.5 to 2.5, default 1.7
@@ -231,23 +231,24 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
   - Colour Overlay: toggle + colour Off | Yellow | Blue | Pink | Green
   - Challenge Mode: toggle Hearts/Lives On | Off
   - Session Length: selector 5 min | 10 min | 15 min | 25 min
-- [ ] Apply preferences globally via CSS custom properties set on :root by ComfortProvider
-- [ ] Store in Supabase `user_preferences` table (user_id, preference_key, preference_value, updated_at)
-- [ ] Load on app mount, apply immediately, no reload on changes
-- [ ] Preset profiles:
+- [x] Apply preferences globally via CSS custom properties set on :root by ComfortProvider
+- [x] Store in Supabase `user_preferences` table (user_id, preference_key, preference_value, updated_at)
+- [x] Load on app mount, apply immediately, no reload on changes
+- [x] Preset profiles:
   - "Dyslexia-friendly": OpenDyslexic, line spacing 2.0, cream background, overlay yellow, reading ruler on
   - "ADHD-friendly": reduced celebrations, session length 10 min, font size 1.1rem
   - "Low sensory": reduced motion on, sound off, celebrations off, dark background
   - "High contrast": all ratios 7:1+, font size 1.2rem
-- [ ] "Reset to Defaults" button
-- [ ] Cache locally (localStorage) for offline PWA, sync to Supabase when connected
+- [x] "Reset to Defaults" button
+- [x] Cache locally (localStorage) for offline PWA, sync to Supabase when connected
 
-#### 1.2 Hearts/Lives Opt-In
-- [ ] Default mode: unlimited attempts with diagnostic feedback, no penalty
-- [ ] Hearts/lives only when "Challenge Mode" toggled on in Comfort Settings
-- [ ] Replace punitive language: "Wrong!" becomes "Let's revisit that one", "You lost a life!" becomes "Nearly! Here's why..."
-- [ ] Add "Revision Mode": zero stakes, no scoring, practice with immediate feedback
-- [ ] Store mode preference in Supabase, persist across sessions
+#### 1.2 Hearts/Lives Opt-In ✅ shipped (see commit after bea42bc)
+- [x] Default mode: unlimited attempts with diagnostic feedback, no penalty (`exploreMode: true` default)
+- [x] Hearts/lives only when "Challenge Mode" toggled on in Comfort Settings
+- [x] Replace punitive language: overlay now reads "Nearly there!" + "Those tricky questions are exactly where the learning happens." + hint to disable hearts
+- [x] Add "Revision Mode" badge: green REVISION pill shown in lesson header when exploreMode is active
+- [x] Live reactivity: LessonPlayer reads `exploreMode` from `useComfort()` — toggling in Settings takes effect without page reload
+- [x] Store mode preference in Supabase, persist across sessions (via ComfortContext sync)
 
 #### 1.3 Session Framing
 - [ ] Session Preview Screen before every lesson/practice: "This session has [X] parts, about [Y] minutes"

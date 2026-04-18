@@ -250,13 +250,13 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Live reactivity: LessonPlayer reads `exploreMode` from `useComfort()` — toggling in Settings takes effect without page reload
 - [x] Store mode preference in Supabase, persist across sessions (via ComfortContext sync)
 
-#### 1.3 Session Framing
-- [ ] Session Preview Screen before every lesson/practice: "This session has [X] parts, about [Y] minutes"
-- [ ] List each part with estimated time
-- [ ] Two buttons: [Start Session] and [Not now]
-- [ ] Calculate estimated time from content length + user's average pace if available
-- [ ] Optional Pomodoro timer during session (Comfort Settings controlled, default off)
-- [ ] Timer end = gentle break suggestion, never forced stop
+#### 1.3 Session Framing ✅ shipped 8ab0727
+- [x] Session Preview Screen before every lesson/practice: "This session has [X] parts, about [Y] minutes"
+- [x] List each part with estimated time
+- [x] Two buttons: [Start Session] and [Not now]
+- [x] Calculate estimated time from content length + user's average pace if available
+- [x] Optional Pomodoro timer during session (Comfort Settings controlled, default off)
+- [x] Timer end = gentle break suggestion, never forced stop
 
 #### 1.4 Quick Win Mode
 - [ ] "Quick Win" card on dashboard, prominent position

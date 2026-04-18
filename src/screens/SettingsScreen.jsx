@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap, Calendar } from 'lucide-react'
+import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap, Calendar, SlidersHorizontal } from 'lucide-react'
 import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureRemove } from '../utils/secureStorage'
 import { useAuth } from '../context/AuthContext'
+import { useComfort } from '../context/ComfortContext'
 import { supabase } from '../lib/supabase'
 import { requestNotificationPermission, scheduleDailyReminder, cancelDailyReminder, checkNotificationPermission } from '../utils/notifications'
 import SafeAreaPage from '../components/ui/SafeAreaPage.jsx'
@@ -149,6 +150,7 @@ function Toggle({ on, onToggle, disabled = false, label }) {
 export default function SettingsScreen() {
   const navigate = useNavigate()
   const { user, signOut } = useAuth()
+  const { setSettingsOpen: openComfortSettings } = useComfort()
 
   const [signingOut, setSigningOut] = useState(false)
   const [selectedBoardId, setSelectedBoardId] = useState(() => getValidatedBoard())
@@ -801,6 +803,32 @@ export default function SettingsScreen() {
             </button>
           )}
         </div>
+      </div>
+
+      {/* Comfort Settings CTA */}
+      <div className="px-5 mb-5">
+        <motion.button
+          className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-left active:opacity-75"
+          style={{
+            background: 'linear-gradient(135deg, rgba(0,212,255,0.12) 0%, rgba(99,102,241,0.12) 100%)',
+            border: '0.75px solid rgba(0,212,255,0.3)',
+          }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          onClick={() => openComfortSettings(true)}
+        >
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+            style={{ background: 'rgba(0,212,255,0.15)' }}>
+            <SlidersHorizontal size={18} style={{ color: 'var(--np-cyan)' }} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>Comfort Settings</div>
+            <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
+              Font, colours, motion, TTS, reading ruler & more
+            </div>
+          </div>
+          <ChevronRight size={16} style={{ color: 'var(--np-text-muted)' }} />
+        </motion.button>
       </div>
 
       {/* Sections */}

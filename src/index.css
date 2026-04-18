@@ -188,3 +188,77 @@ body.high-contrast {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ─── Comfort Settings — in-app reduced motion class ────────────────────── */
+body.reduce-motion *, body.reduce-motion *::before, body.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ─── Comfort Settings — background themes ───────────────────────────────── */
+body[data-theme="cream"] {
+  --np-bg:            #FFF8E7;
+  --np-bg-mid:        #FFF3D6;
+  --np-bg-lift:       #FFEDC0;
+  --np-card:          rgba(255,252,240,0.95);
+  --np-card-deep:     rgba(255,248,231,0.98);
+  --np-card-lift:     rgba(255,245,215,0.90);
+  --np-text:          #1a1a2e;
+  --np-text-mid:      #334155;
+  --np-text-muted:    #64748b;
+  --np-text-dim:      #94a3b8;
+  --np-border:        rgba(0,0,0,0.10);
+  --np-border-mid:    rgba(0,0,0,0.15);
+  --np-border-strong: rgba(0,0,0,0.22);
+}
+body[data-theme="lightblue"] {
+  --np-bg:            #E8F4FD;
+  --np-bg-mid:        #D6EDFB;
+  --np-bg-lift:       #C4E6F9;
+  --np-card:          rgba(232,244,253,0.95);
+  --np-card-deep:     rgba(220,240,252,0.98);
+  --np-card-lift:     rgba(210,235,250,0.90);
+  --np-text:          #0f172a;
+  --np-text-mid:      #1e3a5f;
+  --np-text-muted:    #4a6fa5;
+  --np-text-dim:      #7ea7cc;
+  --np-border:        rgba(0,0,0,0.10);
+  --np-border-mid:    rgba(0,0,0,0.15);
+  --np-border-strong: rgba(0,0,0,0.22);
+}
+body[data-theme="lightyellow"] {
+  --np-bg:            #FFF9DB;
+  --np-bg-mid:        #FFF4C2;
+  --np-bg-lift:       #FFEFAA;
+  --np-card:          rgba(255,249,219,0.95);
+  --np-card-deep:     rgba(255,247,210,0.98);
+  --np-card-lift:     rgba(255,244,195,0.90);
+  --np-text:          #1a1a2e;
+  --np-text-mid:      #3d3010;
+  --np-text-muted:    #7a6030;
+  --np-text-dim:      #a89060;
+  --np-border:        rgba(0,0,0,0.10);
+  --np-border-mid:    rgba(0,0,0,0.15);
+  --np-border-strong: rgba(0,0,0,0.22);
+}
+
+/* ─── Comfort Settings — colour overlay ─────────────────────────────────── */
+/* Applied by ColourOverlay component in App.jsx */
+.np-overlay-yellow  { background: rgba(255,249,219,0.30); }
+.np-overlay-blue    { background: rgba(232,244,253,0.25); }
+.np-overlay-pink    { background: rgba(255,232,240,0.25); }
+.np-overlay-green   { background: rgba(232,245,233,0.25); }
+
+/* ─── Comfort Settings — reading ruler ──────────────────────────────────── */
+.np-reading-ruler {
+  position: fixed;
+  left: 0; right: 0;
+  height: 2.8em;
+  pointer-events: none;
+  z-index: 995;
+  border-top: 1.5px solid rgba(0,212,255,0.25);
+  border-bottom: 1.5px solid rgba(0,212,255,0.25);
+  background: rgba(0,212,255,0.07);
+  transition: top 80ms linear;
+}

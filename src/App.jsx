@@ -1,9 +1,11 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useEffect, useCallback, lazy, Suspense } from 'react'
+import { useState, useEffect, useCallback, useRef, lazy, Suspense } from 'react'
 import AtomIcon from './components/AtomIcon'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { MamoProvider, useMamoState } from './context/MamoContext'
+import { ComfortProvider, useComfort } from './context/ComfortContext'
+import ComfortSettings, { ComfortFirstTimePrompt } from './components/ComfortSettings'
 import BottomNav from './components/BottomNav'
 
 // ── Mamo FAB pref helpers ─────────────────────────────────────────────────────
@@ -20,41 +22,19 @@ function _setMamoHidden(hidden) {
 }
 
 // ── Restore accessibility prefs on cold start (before React mounts) ──────────
+// ComfortContext applies all prefs reactively once mounted.
+// This IIFE only handles the brief pre-mount window to avoid a flash.
 ;(() => {
   try {
     const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
-    // Font size
-    if (prefs.fontSize === 'Large' || prefs.fontSize === 'large') {
-      document.body.classList.add('text-large')
-      document.documentElement.style.fontSize = '18px'
+    if (prefs.background && prefs.background !== 'dark') {
+      document.body.dataset.theme = prefs.background
     }
-    // Dyslexic font
-    if (prefs.dyslexicFont) {
-      if (!document.getElementById('np-dyslexic-font')) {
-        const link = document.createElement('link')
-        link.id = 'np-dyslexic-font'
-        link.rel = 'stylesheet'
-        link.href = 'https://fonts.cdnfonts.com/css/opendyslexic'
-        document.head.appendChild(link)
-      }
-      if (!document.getElementById('np-dyslexic-style')) {
-        const s = document.createElement('style')
-        s.id = 'np-dyslexic-style'
-        s.textContent = 'body,button,input,textarea,p,h1,h2,h3,span{font-family:"OpenDyslexic",sans-serif!important}'
-        document.head.appendChild(s)
-      }
+    if (prefs.fontFamily === 'opendyslexic' || prefs.dyslexicFont) {
+      document.body.style.fontFamily = "'OpenDyslexic', sans-serif"
     }
-    // Background theme
-    const bgTheme = localStorage.getItem('np_bg_theme')
-    if (bgTheme && bgTheme !== 'dark') {
-      const themes = { cream: { bg: '#f5f0e8', card: 'rgba(245,240,232,0.95)' }, blue: { bg: '#e8f0f8', card: 'rgba(232,240,248,0.95)' } }
-      const t = themes[bgTheme]
-      if (t) {
-        document.documentElement.style.setProperty('--np-bg', t.bg)
-        document.documentElement.style.setProperty('--np-card', t.card)
-        document.body.style.background = t.bg
-      }
-    }
+    if (prefs.highContrast) document.body.classList.add('high-contrast')
+    if (prefs.reduceMotion) document.body.classList.add('reduce-motion')
   } catch { /* ignore */ }
 })()
 
@@ -71,35 +51,11 @@ const DiagnosticQuestion = lazy(() => import('./screens/DiagnosticQuestion'))
 const MisconceptionFeedback = lazy(() => import('./screens/MisconceptionFeedback'))
 const MasteryScreen     = lazy(() => import('./screens/MasteryScreen'))
 const SettingsScreen    = lazy(() => import('./screens/SettingsScreen'))
-const SettingsScreenV2  = lazy(() => import('./screens/SettingsScreenV2'))
-// Feature flag — redesigned Profile/Settings
-// Enable with ?v2=1 (sets localStorage) or set `np_ui_v2 = '1'` manually.
-// Disable from inside V2 ("Use classic Settings" link) or `localStorage.removeItem('np_ui_v2')`.
-function SettingsRoute() {
-  if (typeof window !== 'undefined') {
-    const params = new URLSearchParams(window.location.search)
-    if (params.get('v2') === '1') localStorage.setItem('np_ui_v2', '1')
-    if (params.get('v2') === '0') localStorage.removeItem('np_ui_v2')
-  }
-  const useV2 = typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1'
-  return useV2 ? <SettingsScreenV2 /> : <SettingsScreen />
-}
 const MamoChat          = lazy(() => import('./screens/MamoChat'))
 const PracticalScreen   = lazy(() => import('./screens/PracticalScreen'))
 const ExamPractice      = lazy(() => import('./screens/ExamPractice'))
 const Grade9Challenge   = lazy(() => import('./screens/Grade9Challenge'))
 const TimedPaper        = lazy(() => import('./screens/TimedPaper'))
-const PapersScreenV2    = lazy(() => import('./screens/PapersScreenV2'))
-const TopicsScreenV2    = lazy(() => import('./screens/TopicsScreenV2'))
-const HomeScreenV2      = lazy(() => import('./screens/HomeScreenV2'))
-function PapersRoute() {
-  const useV2 = typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1'
-  return useV2 ? <PapersScreenV2 /> : <Navigate to="/" replace />
-}
-function LearnRoute({ V1 }) {
-  const useV2 = typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1'
-  return useV2 ? <TopicsScreenV2 /> : <V1 />
-}
 const PaperResults      = lazy(() => import('./screens/PaperResults'))
 const PrivacyPolicyScreen = lazy(() => import('./screens/PrivacyPolicyScreen'))
 const TermsScreen       = lazy(() => import('./screens/TermsScreen'))
@@ -218,7 +174,7 @@ function FloatingMamo() {
         <motion.div
           className="fixed z-40"
           style={{
-            bottom: 'calc(64px + env(safe-area-inset-bottom) + 16px)',
+            bottom: 'calc(var(--bottom-chrome-height) + 16px)',
             right: 20,
           }}
           initial={{ scale: 0.6, opacity: 0 }}
@@ -312,6 +268,84 @@ const SHELL_ROUTES = ['/', '/learn', '/mamo', '/settings']
 // Routes accessible without auth
 const PUBLIC_ROUTES = ['/', '/auth', '/privacy', '/terms', '/consent']
 
+// ── Colour Overlay ────────────────────────────────────────────────────────────
+function ColourOverlay() {
+  const { prefs } = useComfort()
+  if (!prefs.colourOverlay || prefs.colourOverlay === 'none') return null
+  return (
+    <div
+      aria-hidden="true"
+      className={`np-overlay-${prefs.colourOverlay}`}
+      style={{
+        position: 'fixed', inset: 0,
+        pointerEvents: 'none',
+        zIndex: 990,
+      }}
+    />
+  )
+}
+
+// ── Reading Ruler ─────────────────────────────────────────────────────────────
+function ReadingRuler() {
+  const { prefs } = useComfort()
+  const rulerRef = useRef(null)
+
+  useEffect(() => {
+    if (!prefs.readingRuler) return
+    const onScroll = () => {
+      // Position ruler at 40% of viewport height — a natural reading zone
+      if (rulerRef.current) {
+        rulerRef.current.style.top = `${window.innerHeight * 0.4}px`
+      }
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [prefs.readingRuler])
+
+  if (!prefs.readingRuler) return null
+  return <div ref={rulerRef} className="np-reading-ruler" aria-hidden="true" />
+}
+
+// ── Comfort FAB (floating accessibility button) ────────────────────────────────
+function ComfortFAB() {
+  const { setSettingsOpen } = useComfort()
+  const location = useLocation()
+  const { user } = useAuth()
+
+  // Only show when logged in, hide on auth/onboarding/landing
+  const hidden = !user || ['/auth', '/onboarding', '/'].includes(location.pathname) && !user
+  if (hidden) return null
+
+  return (
+    <button
+      className="fixed z-[994] flex items-center justify-center rounded-full active:opacity-70"
+      style={{
+        right: 16,
+        top: 'calc(var(--safe-top) + 10px)',
+        width: 38, height: 38,
+        background: 'rgba(15,22,41,0.85)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
+        border: '0.75px solid rgba(0,212,255,0.25)',
+        boxShadow: '0 2px 12px rgba(0,0,0,0.25)',
+      }}
+      onClick={() => setSettingsOpen(true)}
+      aria-label="Open comfort settings"
+    >
+      {/* Accessibility icon — sliders */}
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+        <circle cx="9" cy="6" r="2" fill="rgba(0,212,255,0.8)" stroke="none"/>
+        <circle cx="15" cy="12" r="2" fill="rgba(0,212,255,0.8)" stroke="none"/>
+        <circle cx="9" cy="18" r="2" fill="rgba(0,212,255,0.8)" stroke="none"/>
+      </svg>
+    </button>
+  )
+}
+
 // True when running inside the Capacitor native shell (iOS / Android)
 // Web visitors get the landing page; app installs go straight to /auth
 const IS_NATIVE = typeof window !== 'undefined' && !!window.Capacitor?.isNativePlatform?.()
@@ -380,17 +414,18 @@ function AppShell() {
     <div
       className="relative flex flex-col"
       style={{
-        height: '100vh',
+        height: '100dvh',
+        minHeight: '100vh',
         width: '100%',
         maxWidth: 480,
         margin: '0 auto',
-        background: '#080f1e',
+        background: 'var(--np-bg)',
         overflow: 'hidden',
       }}
     >
       {/* Top safe-area spacer */}
-      <div style={{ height: 'env(safe-area-inset-top)', background: '#080f1e', flexShrink: 0 }} />
-      <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'calc(64px + env(safe-area-inset-bottom))' : 0 }}>
+      <div style={{ height: 'var(--safe-top)', background: 'var(--np-bg)', flexShrink: 0 }} />
+      <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'var(--bottom-chrome-height)' : 0 }}>
         <Suspense fallback={<RouteLoader />}>
           <AnimatePresence mode="wait">
             <motion.div
@@ -404,8 +439,8 @@ function AppShell() {
               <Routes location={location}>
                 <Route path="/auth" element={<AuthScreen />} />
                 <Route path="/onboarding" element={<OnboardingScreen />} />
-                <Route path="/" element={user ? (typeof window !== 'undefined' && localStorage.getItem('np_ui_v2') === '1' ? <HomeScreenV2 /> : <HomeScreen />) : <LandingScreen />} />
-                <Route path="/learn" element={<LearnRoute V1={LearnScreen} />} />
+                <Route path="/" element={user ? <HomeScreen /> : <LandingScreen />} />
+                <Route path="/learn" element={<LearnScreen />} />
                 <Route path="/topics" element={<Navigate to="/learn" replace />} />
                 <Route path="/mastery" element={<MasteryScreen />} />
                 <Route path="/topic-map" element={<TopicMap />} />
@@ -417,9 +452,9 @@ function AppShell() {
                 <Route path="/exam/:id" element={<ExamPractice />} />
                 <Route path="/grade9" element={<Grade9Challenge />} />
                 <Route path="/timed-paper" element={<TimedPaper />} />
-                <Route path="/papers" element={<PapersRoute />} />
+                <Route path="/papers" element={<Navigate to="/timed-paper" replace />} />
                 <Route path="/paper-results" element={<PaperResults />} />
-                <Route path="/settings" element={<SettingsRoute />} />
+                <Route path="/settings" element={<SettingsScreen />} />
                 <Route path="/consent" element={<ConsentScreen />} />
                 <Route path="/privacy" element={<PrivacyPolicyScreen />} />
                 <Route path="/terms" element={<TermsScreen />} />
@@ -441,6 +476,13 @@ function AppShell() {
           <BottomNav />
         </>
       )}
+
+      {/* Comfort overlays — always above content, below modals */}
+      <ColourOverlay />
+      <ReadingRuler />
+      <ComfortFAB />
+      <ComfortSettings />
+      <ComfortFirstTimePrompt />
 
       {/* Offline overlay — WCAG 1.4.3, no silent failure */}
       {isOffline && (
@@ -473,9 +515,11 @@ export default function App() {
   return (
     <AuthProvider>
       <MamoProvider>
-        <HashRouter>
-          <AppShell />
-        </HashRouter>
+        <ComfortProvider>
+          <HashRouter>
+            <AppShell />
+          </HashRouter>
+        </ComfortProvider>
       </MamoProvider>
     </AuthProvider>
   )

@@ -450,60 +450,11 @@ export default function SettingsScreen() {
       title: 'Accessibility',
       items: [
         {
-          icon: BookOpen,
-          label: 'Explore Mode',
-          hint: 'Learn without hearts — no pressure, no game-over overlays',
-          on: prefs.exploreMode !== false, // default: on
-          onToggle: toggleExploreMode,
-        },
-        {
-          icon: Accessibility,
-          label: 'Reduce Motion',
-          hint: 'Minimises animations — good for focus and sensory sensitivity',
-          on: !!prefs.reduceMotion,
-          onToggle: toggleReduceMotion,
-        },
-        {
-          icon: Sun,
-          label: 'High Contrast',
-          hint: 'Stronger colour contrast',
-          on: !!prefs.highContrast,
-          onToggle: toggleHighContrast,
-        },
-        {
-          icon: Type,
-          label: 'Dyslexia-Friendly Font',
-          hint: 'Switches to OpenDyslexic — wider letter shapes for easier reading',
-          on: !!prefs.dyslexicFont,
-          onToggle: toggleDyslexicFont,
-        },
-        {
-          icon: Info,
-          label: 'Read Questions Aloud',
-          hint: 'Shows a 🔊 button on questions — tap to hear them read out',
-          on: !!prefs.tts,
-          onToggle: toggleTTS,
-        },
-        {
-          icon: Volume2,
-          label: 'Auto-read questions aloud',
-          hint: 'Automatically reads question text when it appears',
-          on: !!prefs.autoTTS,
-          onToggle: toggleAutoTTS,
-        },
-        {
           icon: AtomIcon,
           label: 'Hide Mamo Button',
           hint: 'Removes the floating AI tutor button if it\'s distracting',
           on: !!prefs.hideMamo,
           onToggle: toggleHideMamo,
-        },
-        {
-          icon: Volume2,
-          label: 'Sound Effects',
-          hint: 'Plays a soft sound for correct and wrong answers',
-          on: prefs.sounds !== false,
-          onToggle: toggleSounds,
         },
       ],
     },
@@ -886,94 +837,6 @@ export default function SettingsScreen() {
                   </button>
                 )
               })}
-              {/* Text Size — segmented pill control, shown inline in Accessibility section */}
-              {section.title === 'Accessibility' && (
-                <div
-                  className="flex items-center justify-between px-4 py-4"
-                  style={{ background: 'var(--np-card)', borderTop: '0.75px solid var(--np-border)' }}
-                >
-                  <div className="flex-1 min-w-0 pr-4">
-                    <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>Text size</div>
-                    <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
-                      Larger text helps with low vision and reading fatigue
-                    </div>
-                    <p
-                      className="mt-1.5"
-                      style={{
-                        color: 'var(--np-text-muted)',
-                        fontSize: (prefs.fontSize === 'Large' || prefs.fontSize === 'large') ? '15px' : '12px',
-                        transition: 'font-size 0.2s ease',
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      The quick brown fox
-                    </p>
-                  </div>
-                  <div className="flex gap-2 shrink-0">
-                    {['Normal', 'Large'].map(size => {
-                      const current = prefs.fontSize === 'Large' || prefs.fontSize === 'large' ? 'Large' : 'Normal'
-                      const active = current === size
-                      return (
-                        <button
-                          key={size}
-                          onClick={() => setFontSize(size)}
-                          style={{
-                            padding: '8px 18px',
-                            borderRadius: 20,
-                            background: active ? 'rgba(0,212,255,0.15)' : 'rgba(255,255,255,0.06)',
-                            border: active ? '0.75px solid rgba(0,212,255,0.4)' : '0.75px solid rgba(255,255,255,0.1)',
-                            color: active ? '#00d4ff' : '#94a3b8',
-                            fontSize: 13,
-                            fontWeight: active ? 700 : 400,
-                            cursor: 'pointer',
-                          }}
-                        >{size}</button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
-              {/* Background Colour — shown inline in Accessibility section */}
-              {section.title === 'Accessibility' && (
-                <div
-                  className="flex items-center justify-between px-4 py-4"
-                  style={{ background: 'var(--np-card)', borderTop: '0.75px solid var(--np-border)' }}
-                >
-                  <div className="flex-1 min-w-0 pr-4">
-                    <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>Background Colour</div>
-                    <div className="text-xs mt-0.5" style={{ color: '#64748b' }}>
-                      Cream and soft blue backgrounds help reduce visual stress
-                    </div>
-                    {/* Colour swatches */}
-                    <div className="flex items-center gap-2 mt-2">
-                      {Object.entries(BG_THEMES).map(([key, t]) => (
-                        <div
-                          key={key}
-                          title={t.label}
-                          className="w-5 h-5 rounded-full shrink-0"
-                          style={{
-                            background: t.bg,
-                            border: (prefs.bgTheme || 'dark') === key
-                              ? '2px solid #6366f1'
-                              : '2px solid rgba(255,255,255,0.12)',
-                            boxShadow: (prefs.bgTheme || 'dark') === key
-                              ? '0 0 0 1px #6366f1'
-                              : 'none',
-                            transition: 'border 0.15s, box-shadow 0.15s',
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  <button
-                    onClick={cycleBgTheme}
-                    className="px-3 py-1.5 rounded-[8px] text-xs font-semibold shrink-0"
-                    style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
-                  >
-                    {BG_THEMES[prefs.bgTheme || 'dark'].label}
-                  </button>
-                </div>
-              )}
               {/* Time picker — shown inline under Notifications when reminders are on */}
               <AnimatePresence>
                 {section.title === 'Notifications' && showTimePicker && (

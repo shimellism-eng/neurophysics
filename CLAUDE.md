@@ -301,12 +301,12 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Wrap all JS animations in motion preference check
 - [x] Create `useReducedMotion()` hook reading system pref AND Comfort Setting (in-app overrides system)
 
-#### 2.5 Screen Reader & Keyboard
-- [ ] All interactive elements focusable (Tab, Enter, Arrows, Escape)
-- [ ] Visible focus indicators on all focusable elements
-- [ ] ARIA labels on all custom interactive elements
-- [ ] `aria-live="polite"` for dynamic content (scores, feedback, sim values)
-- [ ] Meaningful alt text on all images, `alt=""` on decorative
+#### 2.5 Screen Reader & Keyboard ✅ shipped 51b6801
+- [x] All interactive elements focusable (Tab, Enter, Arrows, Escape)
+- [x] Visible focus indicators on all focusable elements
+- [x] ARIA labels on all custom interactive elements
+- [x] `aria-live="polite"` for dynamic content (scores, feedback, sim values)
+- [x] Meaningful alt text on all images, `alt=""` on decorative
 
 ### Sprint 3: Instructional Engine
 

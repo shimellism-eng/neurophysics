@@ -359,10 +359,10 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Works on concept explanations, feedback cards, question stems
 - [x] Global overlay component from ComfortProvider, pointer-events: none
 
-#### 4.4 Colour Overlay
-- [ ] Semi-transparent tint over main content (not nav/settings)
-- [ ] Yellow (#FFF9DB 30%) | Blue (#E8F4FD 25%) | Pink (#FFE8F0 25%) | Green (#E8F5E9 25%)
-- [ ] CSS pseudo-element or overlay div, pointer-events: none
+#### 4.4 Colour Overlay ✅ shipped
+- [x] Semi-transparent tint over main content (not nav/settings)
+- [x] Yellow (#FFF9DB 30%) | Blue (#E8F4FD 25%) | Pink (#FFE8F0 25%) | Green (#E8F5E9 25%)
+- [x] CSS pseudo-element or overlay div, pointer-events: none
 
 ### Sprint 5: Physics Content
 

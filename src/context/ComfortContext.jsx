@@ -309,9 +309,27 @@ export function ComfortProvider({ children }) {
     settingsOpen, firstTimePrompt, dismissFirstTimePrompt,
   ])
 
+  const overlayBg = {
+    yellow: 'rgba(255,249,219,0.30)',
+    blue:   'rgba(232,244,253,0.25)',
+    pink:   'rgba(255,232,240,0.25)',
+    green:  'rgba(232,245,233,0.25)',
+  }[prefs.colourOverlay]
+
   return (
     <ComfortContext.Provider value={value}>
       {children}
+      {overlayBg && (
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'fixed', inset: 0,
+            background: overlayBg,
+            pointerEvents: 'none',
+            zIndex: 8999,
+          }}
+        />
+      )}
       <ReadingRuler />
     </ComfortContext.Provider>
   )

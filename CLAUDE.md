@@ -347,11 +347,11 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Never auto-play media: TTS already requires tap (speak() only on button click)
 - [x] End of section: "Coming up next / [topic title]" on done step's Next Topic CTA
 
-#### 4.2 Lesson Map View
-- [ ] Lesson outline accessible from any point (persistent icon)
-- [ ] All steps shown, current highlighted
-- [ ] Jump to completed steps only
-- [ ] Estimated time remaining
+#### 4.2 Lesson Map View ✅ shipped
+- [x] Lesson outline accessible from any point (persistent icon)
+- [x] All steps shown, current highlighted
+- [x] Jump to completed steps only
+- [x] Estimated time remaining
 
 #### 4.3 Reading Ruler
 - [ ] Semi-transparent horizontal bar (~2 lines tall, user-chosen colour)

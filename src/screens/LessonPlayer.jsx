@@ -21,7 +21,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import {
   ArrowLeft, ChevronRight, BookOpen, FlaskConical,
   GraduationCap, Zap, Globe, Lightbulb, Volume2,
-  Layers, Target, Star, CheckCircle2, Map, Clock, Coffee,
+  Layers, Target, Star, CheckCircle2, Map, Clock, Coffee, LayoutList,
 } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -229,6 +229,7 @@ export default function LessonPlayer() {
   const [xpKey, setXpKey]         = useState(0)
   // Persist PriorKnowledgeProbe completion so going back doesn't reset it
   const [probeCompleted, setProbeCompleted] = useState(false)
+  const [showLessonMap, setShowLessonMap] = useState(false)
   // Idempotency guard: markStarted fires at most once per mount
   const hasStartedRef = useRef(false)
 
@@ -314,6 +315,9 @@ export default function LessonPlayer() {
   const StepIcon   = currentStep.icon
   const isLast     = step === totalSteps - 1
   const examCount  = getExamQuestionCount(id)
+
+  const STEP_TIME_EST = { hook: 1, vocab: 2, connect: 2, explore: 3, understand: 3, practise: 4, lockin: 2, realworld: 2, done: 1, idea: 2, concept: 2 }
+  const remainingMinutes = STEPS.slice(step).reduce((sum, s) => sum + (STEP_TIME_EST[s.id] || 2), 0)
 
   const goNext = useCallback(() => {
     if (step < totalSteps - 1) {
@@ -642,6 +646,80 @@ export default function LessonPlayer() {
         </motion.div>
       )}
 
+      {/* ── Lesson Map overlay ── */}
+      <AnimatePresence>
+        {showLessonMap && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-end justify-center"
+            style={{ background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(4px)' }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            onClick={() => setShowLessonMap(false)}
+          >
+            <motion.div
+              className="w-full max-w-[480px] rounded-t-[28px] px-5 pt-5 pb-10"
+              style={{ background: '#0d1629', border: '0.75px solid rgba(255,255,255,0.07)', maxHeight: '80vh', overflowY: 'auto' }}
+              initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="flex justify-center mb-4">
+                <div style={{ width: 40, height: 4, borderRadius: 999, background: 'rgba(255,255,255,0.15)' }} />
+              </div>
+              <div className="flex items-center gap-2 mb-5">
+                <LayoutList size={16} color={topic.moduleColor} />
+                <h3 style={{ color: '#f8fafc', fontSize: 17, fontWeight: 800, margin: 0 }}>Lesson Outline</h3>
+                <span className="ml-auto text-xs tabular-nums" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  ~{remainingMinutes} min left
+                </span>
+              </div>
+              <div className="flex flex-col gap-1">
+                {STEPS.map((s, i) => {
+                  const isCompleted = i < step
+                  const isCurrent   = i === step
+                  const isUpcoming  = i > step
+                  const Icon = s.icon
+                  const mins = STEP_TIME_EST[s.id] || 2
+                  return (
+                    <button
+                      key={s.id}
+                      disabled={isUpcoming}
+                      onClick={() => {
+                        if (!isUpcoming) {
+                          setDirection(i > step ? 1 : -1)
+                          setStep(i)
+                          setShowLessonMap(false)
+                        }
+                      }}
+                      className="flex items-center gap-3 px-4 py-3 rounded-[14px] text-left w-full"
+                      style={{
+                        background: isCurrent ? `${topic.moduleColor}18` : isCompleted ? 'rgba(255,255,255,0.04)' : 'transparent',
+                        border: isCurrent ? `1px solid ${topic.moduleColor}44` : isCompleted ? '1px solid rgba(255,255,255,0.07)' : '1px solid transparent',
+                        cursor: isUpcoming ? 'default' : 'pointer',
+                        opacity: isUpcoming ? 0.38 : 1,
+                      }}
+                    >
+                      <div style={{ width: 34, height: 34, borderRadius: 10, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: isCurrent ? `${topic.moduleColor}28` : isCompleted ? 'rgba(34,197,94,0.12)' : 'rgba(255,255,255,0.06)' }}>
+                        {isCompleted
+                          ? <CheckCircle2 size={16} color="#22c55e" />
+                          : <Icon size={16} color={isCurrent ? topic.moduleColor : 'rgba(255,255,255,0.3)'} />
+                        }
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-bold" style={{ color: isCurrent ? topic.moduleColor : isCompleted ? '#f8fafc' : 'rgba(255,255,255,0.45)' }}>
+                          {s.label}
+                        </div>
+                        <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{s.hint}</div>
+                      </div>
+                      <span className="text-xs tabular-nums shrink-0" style={{ color: 'rgba(255,255,255,0.28)' }}>~{mins}m</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* ── Header ── */}
       <div
         className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
@@ -699,6 +777,16 @@ export default function LessonPlayer() {
         >
           {step + 1} / {totalSteps}
         </span>
+
+        {/* Lesson map button */}
+        <button
+          onClick={() => setShowLessonMap(true)}
+          aria-label="View lesson outline"
+          className="w-9 h-9 flex items-center justify-center shrink-0"
+          style={{ borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '0.75px solid var(--np-border)', position: 'relative' }}
+        >
+          <LayoutList size={15} color="rgba(255,255,255,0.45)" />
+        </button>
 
         {/* Course badge */}
         <span

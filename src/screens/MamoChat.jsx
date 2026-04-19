@@ -329,9 +329,15 @@ export default function MamoChat() {
         subtitle={`AI-powered physics tutor · ${getSelectedBoard().name}`}
       />
 
-      {/* ── Messages ─────────────────────────────────────────────────────────── */}
-      <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }} role="log" aria-live="polite" aria-label="Chat messages">
-
+      {/* ── Scrollable area: sign-in card + messages + suggestions + disclaimer ── */}
+      <div
+        ref={messagesRef}
+        className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
+        style={{ minHeight: 0, paddingBottom: 120 }}
+        role="log"
+        aria-live="polite"
+        aria-label="Chat messages"
+      >
         {/* Sign-in card — shown once at top when guest */}
         {session === null && (
           <div
@@ -346,6 +352,7 @@ export default function MamoChat() {
           </div>
         )}
 
+        {/* Messages */}
         {messages.map((msg, i) => (
           <motion.div
             key={i}
@@ -385,7 +392,6 @@ export default function MamoChat() {
                 )}
               </div>
 
-              {/* Streaming loading dots (empty placeholder) */}
               {msg.streaming && !msg.content && (
                 <div
                   className="rounded-[16px] px-4 py-3 mt-1"
@@ -416,73 +422,44 @@ export default function MamoChat() {
           </motion.div>
         ))}
 
-        {/* Suggested questions (empty state — 4 full-text stacked) */}
-        {messages.length === 1 && (
-          <motion.div
-            className="mt-2"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <div className="text-xs px-1 mb-2.5" style={{ color: 'rgba(255,255,255,0.38)' }}>Try asking:</div>
-            <div className="flex flex-col gap-2">
-              {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
-                <motion.button
-                  key={i}
-                  className="text-left px-4 py-3 rounded-[12px] text-sm leading-snug"
-                  style={{
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '0.75px solid rgba(255,255,255,0.08)',
-                    color: '#cad5e2',
-                    minHeight: 48,
-                  }}
-                  onClick={() => sendMessage(q)}
-                  whileTap={{ scale: 0.98 }}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.35 + i * 0.06 }}
-                >
-                  {q}
-                </motion.button>
-              ))}
-            </div>
-          </motion.div>
-        )}
+        {/* Suggested questions — always inside scroll, directly after messages */}
+        <div className="flex flex-col gap-2 pt-1">
+          <div className="text-xs px-1 mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Try asking:</div>
+          {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
+            <motion.button
+              key={i}
+              className="text-left px-4 py-3 rounded-[12px] text-sm leading-snug"
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '0.75px solid rgba(255,255,255,0.08)',
+                color: '#cad5e2',
+                minHeight: 48,
+              }}
+              onClick={() => sendMessage(q)}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 + i * 0.05 }}
+            >
+              {q}
+            </motion.button>
+          ))}
+        </div>
 
-        {/* AI disclaimer — subtle, bottom of scroll area */}
+        {/* AI disclaimer */}
         <p className="text-center pt-2 pb-1" style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)' }}>
           AI-generated · Always verify with your teacher
         </p>
       </div>
 
-      {/* ── Quick-starter suggestions (non-empty state — 4 full-text stacked) ── */}
-      {messages.length > 1 && (
-        <div
-          className="px-4 py-2.5 shrink-0 flex flex-col gap-1.5"
-          style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', background: 'rgba(8,15,30,0.97)' }}
-        >
-          {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
-            <button
-              key={i}
-              className="text-left px-3 py-2.5 rounded-[10px] text-sm leading-snug"
-              style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '0.75px solid rgba(255,255,255,0.07)',
-                color: '#a8b8cc',
-                minHeight: 44,
-              }}
-              onClick={() => sendMessage(q)}
-            >
-              {q}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* ── Input bar ────────────────────────────────────────────────────────── */}
+      {/* ── Input bar — always visible, pinned above tab nav ─────────────────── */}
       <div
         className="px-4 py-3 shrink-0 flex gap-2 items-end"
-        style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', background: 'rgba(8,15,30,0.98)' }}
+        style={{
+          borderTop: '0.75px solid rgba(255,255,255,0.07)',
+          background: 'rgba(8,15,30,0.98)',
+          paddingBottom: 'calc(12px + env(safe-area-inset-bottom, 0px))',
+        }}
       >
         <textarea
           ref={inputRef}
@@ -496,7 +473,7 @@ export default function MamoChat() {
             lineHeight: 1.5,
             overflowY: 'auto',
           }}
-          placeholder="Ask Mamo a physics question"
+          placeholder="Ask me anything about physics..."
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => {
@@ -511,9 +488,7 @@ export default function MamoChat() {
         <motion.button
           className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
           style={{
-            background: input.trim() && !streaming
-              ? '#6366f1'
-              : 'rgba(255,255,255,0.08)',
+            background: input.trim() && !streaming ? '#6366f1' : 'rgba(255,255,255,0.08)',
             boxShadow: input.trim() && !streaming ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
           }}
           onClick={() => sendMessage()}

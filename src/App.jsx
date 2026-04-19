@@ -222,8 +222,8 @@ function FloatingMamo() {
                   height: 12,
                   top: 2,
                   right: 2,
-                  background: '#a5b4fc',
-                  border: '2px solid #080f1e',
+                  background: 'var(--np-cyan)',
+                  border: '2px solid var(--np-bg)',
                 }}
                 animate={reduceMotion ? {} : { scale: [1, 1.3, 1] }}
                 transition={reduceMotion ? { duration: 0 } : { repeat: Infinity, duration: 2, ease: 'easeInOut' }}
@@ -344,10 +344,10 @@ function AppShell() {
       try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
     })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     return (
-      <div className="flex flex-col h-full items-center justify-center" style={{ background: '#080f1e' }}>
+      <div className="flex flex-col h-full items-center justify-center" style={{ background: 'var(--np-bg)' }}>
         <motion.div
           className="w-8 h-8 rounded-full border-2"
-          style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
+          style={{ borderColor: 'rgba(0,212,255,0.3)', borderTopColor: 'var(--np-cyan)' }}
           animate={rmLoading ? {} : { rotate: 360 }}
           transition={rmLoading ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
         />
@@ -394,10 +394,10 @@ function AppShell() {
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.22, ease: [0.25, 0.46, 0.45, 0.94] }}
               style={{ position: 'absolute', inset: 0, overflowY: 'auto', willChange: 'transform, opacity' }}
             >
               <Routes location={location}>
@@ -453,20 +453,20 @@ function AppShell() {
       {isOffline && (
         <div style={{
           position: 'fixed', inset: 0, zIndex: 9999,
-          background: '#080f1e',
+          background: 'var(--np-bg)',
           display: 'flex', flexDirection: 'column',
           alignItems: 'center', justifyContent: 'center',
           gap: 16, padding: 32, textAlign: 'center',
           fontFamily: 'Bricolage Grotesque, sans-serif',
         }}>
           <div style={{ fontSize: 48 }}>📡</div>
-          <h2 style={{ color: '#f8fafc', fontSize: 20, fontWeight: 700, margin: 0 }}>No connection</h2>
-          <p style={{ color: '#94a3b8', fontSize: 14, margin: 0 }}>
+          <h2 style={{ color: 'var(--np-text)', fontSize: 20, fontWeight: 700, margin: 0 }}>No connection</h2>
+          <p style={{ color: 'var(--np-text-muted)', fontSize: 14, margin: 0 }}>
             Check your internet and try again.<br />Your progress is saved locally.
           </p>
           <button onClick={() => window.location.reload()} style={{
             marginTop: 8, padding: '12px 24px',
-            background: '#6366f1', color: '#080f1e',
+            background: 'var(--np-cyan)', color: 'var(--np-bg)',
             border: 'none', borderRadius: 12,
             fontSize: 14, fontWeight: 700, cursor: 'pointer',
           }}>Try again</button>

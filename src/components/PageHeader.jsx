@@ -35,9 +35,9 @@ export default function PageHeader({
         className,
       ].filter(Boolean).join(' ')}
       style={{
-        background: 'var(--np-card-deep)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        background: 'rgba(8,15,30,0.72)',
+        backdropFilter: 'blur(12px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(12px) saturate(180%)',
         borderBottom: '0.75px solid var(--np-border)',
         minHeight: 64,
         ...style,

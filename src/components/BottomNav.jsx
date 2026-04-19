@@ -1,15 +1,13 @@
 import { motion } from 'motion/react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { Home, BookOpen, MessageCircle, Settings } from 'lucide-react'
+import { House, BookOpen, ChatCircle, Gear } from '@phosphor-icons/react'
 
 const NAV_ITEMS = [
-  { label: 'Home',     icon: Home,          path: '/' },
-  { label: 'Learn',    icon: BookOpen,       path: '/learn' },
-  { label: 'Mamo',     icon: MessageCircle,  path: '/mamo' },
-  { label: 'Settings', icon: Settings,       path: '/settings' },
+  { label: 'Home',     Icon: House,       path: '/' },
+  { label: 'Learn',    Icon: BookOpen,    path: '/learn' },
+  { label: 'Mamo',     Icon: ChatCircle,  path: '/mamo' },
+  { label: 'Settings', Icon: Gear,        path: '/settings' },
 ]
-
-const ACTIVE_COLOR = 'var(--np-indigo)'
 
 export default function BottomNav() {
   const navigate = useNavigate()
@@ -18,7 +16,6 @@ export default function BottomNav() {
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/'
     if (path === '/learn') {
-      // Highlight Learn for lesson, exam, practical, diagnostic, and feedback routes too
       return location.pathname.startsWith('/learn')
         || location.pathname.startsWith('/lesson/')
         || location.pathname.startsWith('/exam/')
@@ -38,49 +35,63 @@ export default function BottomNav() {
         transform: 'translateX(-50%)',
         width: '100%',
         maxWidth: 480,
-        background: 'var(--np-card-deep)',
-        borderTop: '1px solid var(--np-border)',
-        backdropFilter: 'blur(var(--np-glass-blur))',
-        WebkitBackdropFilter: 'blur(var(--np-glass-blur))',
+        background: 'rgba(8,15,30,0.82)',
+        borderTop: '0.75px solid var(--np-border)',
+        backdropFilter: 'blur(var(--np-glass-blur)) saturate(180%)',
+        WebkitBackdropFilter: 'blur(var(--np-glass-blur)) saturate(180%)',
         paddingBottom: 'var(--safe-bottom)',
         boxShadow: '0 -1px 0 rgba(255,255,255,0.04), 0 -8px 32px rgba(8,15,30,0.8)',
       }}
     >
       <div className="flex items-center justify-around px-2" style={{ minHeight: 'var(--nav-height)' }}>
-        {NAV_ITEMS.map((item) => {
-          const active = isActive(item.path)
+        {NAV_ITEMS.map(({ label, Icon, path }) => {
+          const active = isActive(path)
           return (
             <button
-              key={item.path}
-              className="flex flex-col items-center justify-center gap-0.5 px-4 rounded-[12px] relative"
-              style={{ minWidth: 72, height: 48 }}
-              onClick={() => navigate(item.path)}
-              aria-label={item.label}
+              key={path}
+              className="flex flex-col items-center justify-center relative"
+              style={{ minWidth: 72, height: 52, gap: active ? 4 : 0 }}
+              onClick={() => navigate(path)}
+              aria-label={label}
               aria-current={active ? 'page' : undefined}
             >
+              {/* Cyan underline indicator */}
               {active && (
                 <motion.div
-                  className="absolute inset-0 rounded-[12px]"
-                  style={{ background: 'rgba(99,102,241,0.20)' }}
-                  layoutId="nav-active"
-                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  layoutId="nav-underline"
+                  className="absolute top-0 rounded-b-full"
+                  style={{
+                    height: 3,
+                    width: 24,
+                    background: 'var(--np-cyan)',
+                    boxShadow: '0 0 8px var(--np-cyan)',
+                  }}
+                  transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 />
               )}
-              <item.icon
-                size={20}
-                color={active ? ACTIVE_COLOR : 'rgba(255,255,255,0.25)'}
-                strokeWidth={active ? 2.5 : 1.8}
-                fill={active ? `${ACTIVE_COLOR}22` : 'none'}
+
+              <Icon
+                size={22}
+                weight={active ? 'duotone' : 'regular'}
+                color={active ? 'var(--np-cyan)' : 'rgba(255,255,255,0.3)'}
               />
-              <span
-                style={{
-                  fontSize: 10,
-                  fontWeight: active ? 600 : 400,
-                  color: active ? ACTIVE_COLOR : 'var(--np-text-dim)',
-                }}
-              >
-                {item.label}
-              </span>
+
+              {/* Label only on active */}
+              {active && (
+                <motion.span
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.15 }}
+                  style={{
+                    fontSize: 10,
+                    fontWeight: 600,
+                    color: 'var(--np-cyan)',
+                    fontFamily: 'var(--font-body)',
+                  }}
+                >
+                  {label}
+                </motion.span>
+              )}
             </button>
           )
         })}

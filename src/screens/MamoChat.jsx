@@ -123,6 +123,7 @@ export default function MamoChat() {
   })
   const [streaming, setStreaming]       = useState(false)
   const [lastUserMsg, setLastUserMsg]   = useState('')
+  const [session, setSession]           = useState(undefined) // undefined = loading
   const messagesRef = useRef(null)
   const inputRef  = useRef(null)
   const abortRef  = useRef(null)
@@ -151,6 +152,11 @@ export default function MamoChat() {
       console.warn('localStorage full, skipping save')
     }
   }, [messages, storageKey])
+
+  // Load session once on mount
+  useEffect(() => {
+    supabase?.auth.getSession().then(({ data }) => setSession(data?.session ?? null))
+  }, [])
 
   // Cancel any in-flight stream on unmount to prevent setState-after-unmount
   useEffect(() => {
@@ -207,16 +213,10 @@ export default function MamoChat() {
     try {
       const session = supabase ? (await supabase.auth.getSession()).data?.session : null
 
-      // Guest users have no session — show sign-in prompt instead of a silent 401
+      // Guest users have no session — sign-in card shown above messages, just bail
       if (!session?.access_token) {
         setStreaming(false)
-        setMessages(prev => {
-          const withoutPlaceholder = prev.filter(m => !m.streaming)
-          return [...withoutPlaceholder, {
-            role: 'assistant',
-            content: '🔒 **Sign in to use Mamo.** Create a free account to unlock the AI tutor and your progress will be saved across devices.',
-          }]
-        })
+        setMessages(prev => prev.filter(m => !m.streaming))
         return
       }
 
@@ -326,10 +326,26 @@ export default function MamoChat() {
       <PageHeader
         onBack={() => navigate(-1)}
         title="Mamo"
+        subtitle={`AI-powered physics tutor · ${getSelectedBoard().name}`}
       />
 
       {/* ── Messages ─────────────────────────────────────────────────────────── */}
-      <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0 }} role="log" aria-live="polite" aria-label="Chat messages">
+      <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }} role="log" aria-live="polite" aria-label="Chat messages">
+
+        {/* Sign-in card — shown once at top when guest */}
+        {session === null && (
+          <div
+            className="rounded-[14px] px-4 py-3 flex items-start gap-3"
+            style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.2)' }}
+          >
+            <span style={{ fontSize: 18 }}>🔒</span>
+            <div>
+              <p className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>Sign in to use Mamo</p>
+              <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>Create a free account to unlock the AI tutor. Your progress will be saved across devices.</p>
+            </div>
+          </div>
+        )}
+
         {messages.map((msg, i) => (
           <motion.div
             key={i}

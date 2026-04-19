@@ -17,7 +17,7 @@ const SCAFFOLD_TABS = [
   { id: 'visual',   label: 'Explore',   icon: '🔬' },
   { id: 'abstract', label: 'The Maths', icon: '🔣' },
 ]
-export function ScaffoldTabs({ concrete, visual, abstract, color = '#00d4ff' }) {
+export function ScaffoldTabs({ concrete, visual, abstract, color = '#6366f1' }) {
   const [tab, setTab] = useState('concrete')
   const content = tab === 'concrete' ? concrete : tab === 'visual' ? visual : abstract
   return (

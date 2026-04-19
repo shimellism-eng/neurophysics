@@ -104,7 +104,7 @@ export default function EquationDrillScreen() {
   const [showSen, setShowSen] = useState(false)
   const [results, setResults] = useState([])       // { correct: bool }
 
-  const accent = selectedGroup ? (GROUP_COLORS[selectedGroup] || '#00d4ff') : '#00d4ff'
+  const accent = selectedGroup ? (GROUP_COLORS[selectedGroup] || '#6366f1') : '#6366f1'
 
   // ── Build question list when group is chosen
   const startDrill = useCallback((groupKey) => {
@@ -178,19 +178,19 @@ export default function EquationDrillScreen() {
           <motion.button
             className="w-full flex items-center justify-between px-5 py-4 rounded-[16px] text-left"
             style={{
-              background: 'rgba(0,212,255,0.1)',
-              border: '0.75px solid rgba(0,212,255,0.3)',
+              background: 'rgba(99,102,241,0.1)',
+              border: '0.75px solid rgba(99,102,241,0.3)',
             }}
             onClick={() => startDrill(ALL_KEY)}
             whileTap={{ scale: 0.97 }}
           >
             <div>
-              <div className="font-bold text-sm" style={{ color: '#00d4ff' }}>All Equations</div>
+              <div className="font-bold text-sm" style={{ color: '#6366f1' }}>All Equations</div>
               <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 {Object.values(examEquations).flat().length} questions — mixed shuffle
               </div>
             </div>
-            <ChevronRight size={16} color="rgba(0,212,255,0.6)" />
+            <ChevronRight size={16} color="rgba(99,102,241,0.6)" />
           </motion.button>
 
           {/* Divider */}
@@ -466,8 +466,8 @@ export default function EquationDrillScreen() {
                     textColor = '#f87171'
                   }
                 } else if (isChosen) {
-                  bg = `rgba(0,212,255,0.08)`
-                  border = `rgba(0,212,255,0.3)`
+                  bg = `rgba(99,102,241,0.08)`
+                  border = `rgba(99,102,241,0.3)`
                 }
 
                 return (

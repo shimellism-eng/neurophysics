@@ -176,15 +176,13 @@ export default function GraphQuestion({ data, moduleColor, onComplete }) {
           <motion.button
             className="w-full mt-3 py-3.5 rounded-[14px] font-semibold text-sm"
             style={{
-              background: input.trim() ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.5)',
+              background: input.trim() ? `${moduleColor}` : 'rgba(18,26,47,0.5)',
               color: input.trim() ? '#fff' : '#8899b0',
               boxShadow: input.trim() ? `0 6px 20px ${moduleColor}40` : 'none',
             }}
             onClick={handleSubmit}
             whileTap={input.trim() ? { scale: 0.97 } : {}}
-          >
-            Check Answer
-          </motion.button>
+          >Check answer</motion.button>
         )}
       </div>
 

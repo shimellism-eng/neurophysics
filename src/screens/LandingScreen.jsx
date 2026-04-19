@@ -112,7 +112,7 @@ export default function LandingScreen() {
             width: 480,
             height: 320,
             background:
-              'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.13) 0%, rgba(0,212,255,0.07) 50%, transparent 100%)',
+              'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.13) 0%, rgba(99,102,241,0.07) 50%, transparent 100%)',
             pointerEvents: 'none',
           }}
         />
@@ -130,7 +130,7 @@ export default function LandingScreen() {
         >
           Master GCSE Physics.
           <br />
-          <span style={{ color: '#00d4ff' }}>Your way.</span>
+          <span style={{ color: '#6366f1' }}>Your way.</span>
         </motion.h1>
 
         <motion.p
@@ -156,7 +156,7 @@ export default function LandingScreen() {
             style={{
               flex: 1,
               height: 48,
-              background: '#00d4ff',
+              background: '#6366f1',
               border: 'none',
               borderRadius: 14,
               color: '#0a0a0f',
@@ -216,7 +216,7 @@ export default function LandingScreen() {
                 style={{
                   fontSize: 22,
                   fontWeight: 800,
-                  color: '#00d4ff',
+                  color: '#6366f1',
                   letterSpacing: '-0.02em',
                   lineHeight: 1,
                 }}
@@ -454,7 +454,7 @@ export default function LandingScreen() {
             style={{
               width: '100%',
               height: 56,
-              background: '#00d4ff',
+              background: '#6366f1',
               border: 'none',
               borderRadius: 14,
               color: '#0a0a0f',
@@ -475,7 +475,7 @@ export default function LandingScreen() {
               style={{
                 background: 'none',
                 border: 'none',
-                color: '#00d4ff',
+                color: '#6366f1',
                 fontSize: 14,
                 fontWeight: 600,
                 fontFamily: 'inherit',

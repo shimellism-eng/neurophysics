@@ -156,7 +156,7 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
                 className="flex-1 py-2 rounded-[10px] font-bold text-xs"
                 style={{
                   background: userSummary.trim()
-                    ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+                    ? `${moduleColor}`
                     : 'rgba(255,255,255,0.05)',
                   color: userSummary.trim() ? '#fff' : 'rgba(255,255,255,0.3)',
                 }}
@@ -187,7 +187,7 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
       <motion.button
         className="w-full py-4 rounded-[16px] font-bold text-sm"
         style={{
-          background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+          background: `${moduleColor}`,
           boxShadow: `0 8px 24px ${moduleColor}30`,
           color: '#fff',
         }}

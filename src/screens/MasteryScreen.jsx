@@ -378,8 +378,8 @@ export default function MasteryScreen() {
       {showIntro && (
         <div className="px-5 mb-2">
           <div style={{
-            background: 'rgba(0,212,255,0.08)',
-            border: '0.75px solid rgba(0,212,255,0.2)',
+            background: 'rgba(99,102,241,0.08)',
+            border: '0.75px solid rgba(99,102,241,0.2)',
             borderRadius: 16, padding: '14px 16px',
             marginBottom: 16, display: 'flex', gap: 12,
           }}>
@@ -395,7 +395,7 @@ export default function MasteryScreen() {
               </div>
               <button onClick={dismissIntro} style={{
                 marginTop: 10, background: 'none', border: 'none',
-                color: '#00d4ff', fontSize: 12, fontWeight: 600,
+                color: '#6366f1', fontSize: 12, fontWeight: 600,
                 cursor: 'pointer', padding: '10px 0',
                 minHeight: 44, display: 'block',
               }}>Got it →</button>

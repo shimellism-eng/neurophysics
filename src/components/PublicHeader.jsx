@@ -35,7 +35,7 @@ export default function PublicHeader() {
           padding: 0,
         }}
       >
-        <AtomIcon size={22} color="#00d4ff" />
+        <AtomIcon size={22} color="#6366f1" />
         <span
           style={{
             color: '#fff',
@@ -69,7 +69,7 @@ export default function PublicHeader() {
         <button
           onClick={() => navigate('/auth')}
           style={{
-            background: '#00d4ff',
+            background: '#6366f1',
             border: 'none',
             cursor: 'pointer',
             color: '#0a0a0f',

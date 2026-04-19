@@ -169,7 +169,7 @@ export default function ConfusionBusterQuestion({ data, moduleColor, onComplete 
           <motion.button
             className="w-full py-3.5 rounded-[16px] text-sm font-bold"
             style={{
-              background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`,
+              background: `${moduleColor}`,
               color: '#fff',
             }}
             onClick={handleCheck}

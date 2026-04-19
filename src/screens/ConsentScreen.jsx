@@ -314,7 +314,7 @@ export default function ConsentScreen() {
           className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
           style={{
             background: canContinue
-              ? 'linear-gradient(135deg, #6366f1, #818cf8)'
+              ? '#6366f1'
               : 'rgba(255,255,255,0.05)',
             color: canContinue ? '#fff' : '#3a4a5a',
             boxShadow: canContinue ? '0 8px 24px rgba(99,102,241,0.35)' : 'none',

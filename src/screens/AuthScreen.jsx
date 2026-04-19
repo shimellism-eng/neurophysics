@@ -283,7 +283,7 @@ function PrimaryButton({ children, onClick, loading, disabled, style = {} }) {
       style={{
         background: disabled || loading
           ? 'rgba(99,102,241,0.35)'
-          : 'linear-gradient(135deg, #5b5cf6, #6366f1)',
+          : '#6366f1',
         color: '#fff',
         boxShadow: disabled || loading ? 'none' : '0 8px 28px rgba(99,102,241,0.4)',
         transition: 'all 0.2s',
@@ -477,7 +477,7 @@ function Landing({ onEmail, onSignIn }) {
             label="Continue with Email"
             onClick={onEmail}
             style={{
-              background: 'linear-gradient(135deg, #5b5cf6, #6366f1)',
+              background: '#6366f1',
               color: '#fff',
               border: 'none',
               boxShadow: '0 6px 24px rgba(99,102,241,0.4)',

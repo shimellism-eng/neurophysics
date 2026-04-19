@@ -18,8 +18,8 @@ export default function Card({
   const baseStyle = {
     background: 'var(--np-card)',
     border: `0.75px solid ${accent ? `${accent}28` : 'var(--np-border)'}`,
-    borderRadius: '16px',
-    ...(accent && { boxShadow: `0 4px 24px ${accent}14` }),
+    borderRadius: 'var(--radius-xl)',
+    ...(accent && { boxShadow: `0 8px 24px ${accent}12` }),
     ...style,
   };
 

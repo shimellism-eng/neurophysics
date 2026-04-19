@@ -121,7 +121,7 @@ export default function SplashScreen() {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold"
           style={{
-            background: ageConfirmed ? 'linear-gradient(135deg, #4f6ef7, #6366f1)' : 'rgba(99,102,241,0.3)',
+            background: ageConfirmed ? '#6366f1' : 'rgba(99,102,241,0.3)',
             color: '#fff',
             boxShadow: ageConfirmed ? '0 8px 28px rgba(99,102,241,0.4)' : 'none',
             transition: 'all 0.2s',

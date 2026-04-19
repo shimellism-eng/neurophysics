@@ -496,9 +496,9 @@ export default function LearnScreen() {
             className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0 whitespace-nowrap"
             style={{
               height: 36,
-              background: 'rgba(0,212,255,0.07)',
-              border: '1px solid rgba(0,212,255,0.22)',
-              color: '#00d4ff',
+              background: 'rgba(99,102,241,0.07)',
+              border: '1px solid rgba(99,102,241,0.22)',
+              color: '#6366f1',
             }}
             whileTap={{ scale: 0.95 }}
           >

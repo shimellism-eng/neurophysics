@@ -160,7 +160,7 @@ function WorkedSolutionCard({ question, correct }) {
         className="w-full flex items-center justify-between px-4 py-3"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        style={{ color: open ? '#00d4ff' : '#a8b8cc' }}
+        style={{ color: open ? '#6366f1' : '#a8b8cc' }}
       >
         <span className="text-xs font-bold flex items-center gap-1.5">
           <span>📖</span>
@@ -193,7 +193,7 @@ function WorkedSolutionCard({ question, correct }) {
                     <div key={i} className="flex items-start gap-2">
                       <span
                         className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"
-                        style={{ background: 'rgba(0,212,255,0.15)', color: '#00d4ff' }}
+                        style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
                       >
                         {i + 1}
                       </span>
@@ -625,7 +625,7 @@ export default function ExamPractice() {
             </button>
             <button
               className="px-5 py-3 rounded-[14px] text-sm font-semibold"
-              style={{ background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`, color: '#fff', boxShadow: `0 6px 20px ${topic.moduleColor}40` }}
+              style={{ background: `${topic.moduleColor}`, color: '#fff', boxShadow: `0 6px 20px ${topic.moduleColor}40` }}
               onClick={() => navigate('/learn')}
             >
               All Topics
@@ -758,7 +758,7 @@ export default function ExamPractice() {
                         ? (
                           <span
                             key={i}
-                            style={{ color: '#00d4ff', fontWeight: 700, textDecoration: 'underline dotted', cursor: 'pointer' }}
+                            style={{ color: '#6366f1', fontWeight: 700, textDecoration: 'underline dotted', cursor: 'pointer' }}
                             onClick={() => setCmdWordOpen(v => !v)}
                             title="Tap for exam technique help"
                           >
@@ -924,7 +924,7 @@ export default function ExamPractice() {
               <motion.button
                 className="w-full py-4 rounded-[16px] font-semibold text-base"
                 style={{
-                  background: 'linear-gradient(135deg, #6366f1, #818cf8)',
+                  background: '#6366f1',
                   boxShadow: '0px 8px 24px rgba(99,102,241,0.4)',
                   color: '#fff',
                 }}
@@ -937,8 +937,8 @@ export default function ExamPractice() {
                   className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
                   style={{
                     background: isLast
-                      ? 'linear-gradient(135deg, #6366f1, #818cf8)'
-                      : `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                      ? '#6366f1'
+                      : `${topic.moduleColor}`,
                     boxShadow: isLast
                       ? '0px 8px 24px rgba(99,102,241,0.4)'
                       : `0px 8px 24px ${topic.moduleColor}40`,

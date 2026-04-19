@@ -477,7 +477,7 @@ export default function HomeScreen() {
             padding: '20px 20px',
             background: resumeModule
               ? `linear-gradient(135deg, ${resumeModule.color}e8, ${resumeModule.color}88)`
-              : 'linear-gradient(135deg, #6366f1, #4f46e5)',
+              : '#6366f1',
             boxShadow: `0 6px 0 rgba(0,0,0,0.22), 0 16px 36px ${moduleColor}38`,
             color: '#fff',
           }}
@@ -553,8 +553,8 @@ export default function HomeScreen() {
           className="w-full rounded-[22px] flex items-center gap-4"
           style={{
             padding: '16px 20px',
-            background: 'rgba(0,212,255,0.07)',
-            border: '1px solid rgba(0,212,255,0.2)',
+            background: 'rgba(99,102,241,0.07)',
+            border: '1px solid rgba(99,102,241,0.2)',
             color: '#fff',
             cursor: 'pointer',
           }}
@@ -562,8 +562,8 @@ export default function HomeScreen() {
           whileTap={{ scale: 0.98 }}
         >
           <div className="rounded-[14px] flex items-center justify-center shrink-0"
-            style={{ width: 44, height: 44, background: 'rgba(0,212,255,0.15)' }}>
-            <Zap size={22} color="#00d4ff" strokeWidth={2} />
+            style={{ width: 44, height: 44, background: 'rgba(99,102,241,0.15)' }}>
+            <Zap size={22} color="#6366f1" strokeWidth={2} />
           </div>
           <div className="flex-1 text-left">
             <div className="font-bold" style={{ fontSize: 15, color: '#f8fafc', letterSpacing: '-0.01em' }}>

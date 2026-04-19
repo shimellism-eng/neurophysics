@@ -25,7 +25,7 @@ const _colorCache = {}
 function topicColor(topicId) {
   if (_colorCache[topicId]) return _colorCache[topicId]
   const mod = MODULES.find(m => m.topics.includes(topicId))
-  const color = mod?.color || '#00d4ff'
+  const color = mod?.color || '#6366f1'
   _colorCache[topicId] = color
   return color
 }
@@ -96,8 +96,8 @@ function ResultScreen({ questions, answers, onDone }) {
         className="flex flex-col items-center justify-center rounded-full mb-5"
         style={{
           width: 120, height: 120,
-          background: `conic-gradient(#00d4ff ${pct * 3.6}deg, rgba(255,255,255,0.07) 0deg)`,
-          boxShadow: '0 0 0 4px rgba(0,212,255,0.12)',
+          background: `conic-gradient(#6366f1 ${pct * 3.6}deg, rgba(255,255,255,0.07) 0deg)`,
+          boxShadow: '0 0 0 4px rgba(99,102,241,0.12)',
         }}
       >
         <div className="flex flex-col items-center justify-center rounded-full"
@@ -149,7 +149,7 @@ function ResultScreen({ questions, answers, onDone }) {
         className="w-full font-bold"
         style={{
           height: 56, borderRadius: 16,
-          background: 'linear-gradient(135deg, #00d4ff, #0099bb)',
+          background: '#6366f1',
           color: '#080f1e', fontSize: 16, border: 'none', cursor: 'pointer',
         }}
         whileTap={{ y: 3 }}
@@ -244,8 +244,8 @@ export default function QuickWinScreen() {
         {questions.map((_, i) => (
           <div key={i} className="flex-1 rounded-full" style={{
             height: 4,
-            background: i < idx ? '#00d4ff'
-              : i === idx ? 'rgba(0,212,255,0.4)'
+            background: i < idx ? '#6366f1'
+              : i === idx ? 'rgba(99,102,241,0.4)'
               : 'rgba(255,255,255,0.08)',
             transition: 'background 0.3s',
           }} />
@@ -290,7 +290,7 @@ export default function QuickWinScreen() {
                     color = 'rgba(255,255,255,0.3)'
                   }
                 } else if (selected === i) {
-                  bg = 'rgba(0,212,255,0.12)'; border = '1px solid #00d4ff'
+                  bg = 'rgba(99,102,241,0.12)'; border = '1px solid #6366f1'
                 }
 
                 return (
@@ -353,7 +353,7 @@ export default function QuickWinScreen() {
                     {!isCorrect && (
                       <button
                         className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-[10px] font-semibold"
-                        style={{ background: 'rgba(0,212,255,0.08)', color: '#00d4ff', border: '0.75px solid rgba(0,212,255,0.2)', fontSize: 12, cursor: 'pointer' }}
+                        style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '0.75px solid rgba(99,102,241,0.2)', fontSize: 12, cursor: 'pointer' }}
                         onClick={() => {
                           const params = new URLSearchParams({
                             topic: q.topicId,
@@ -388,7 +388,7 @@ export default function QuickWinScreen() {
               className="w-full flex items-center justify-center gap-2 font-bold"
               style={{
                 height: 56, borderRadius: 16,
-                background: 'linear-gradient(135deg, #00d4ff, #0099bb)',
+                background: '#6366f1',
                 color: '#080f1e', fontSize: 16, border: 'none', cursor: 'pointer',
               }}
               whileTap={{ y: 3 }}

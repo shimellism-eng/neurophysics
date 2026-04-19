@@ -98,8 +98,8 @@ function ResultScreen({ questions, answers, onDone }) {
         <div className="flex flex-col items-center justify-center rounded-full mb-4"
           style={{
             width: 120, height: 120,
-            background: `conic-gradient(#00d4ff ${pct * 3.6}deg, rgba(255,255,255,0.07) 0deg)`,
-            boxShadow: '0 0 0 4px rgba(0,212,255,0.12)',
+            background: `conic-gradient(#6366f1 ${pct * 3.6}deg, rgba(255,255,255,0.07) 0deg)`,
+            boxShadow: '0 0 0 4px rgba(99,102,241,0.12)',
           }}>
           <div className="flex flex-col items-center justify-center rounded-full"
             style={{ width: 100, height: 100, background: '#0d1629' }}>
@@ -147,7 +147,7 @@ function ResultScreen({ questions, answers, onDone }) {
 
       <motion.button
         className="w-full font-bold"
-        style={{ height: 56, borderRadius: 16, background: 'linear-gradient(135deg, #00d4ff, #0099bb)', color: '#080f1e', fontSize: 16, border: 'none', cursor: 'pointer' }}
+        style={{ height: 56, borderRadius: 16, background: '#6366f1', color: '#080f1e', fontSize: 16, border: 'none', cursor: 'pointer' }}
         whileTap={{ y: 3 }}
         onClick={onDone}
       >
@@ -239,7 +239,7 @@ export default function MixedRevisionScreen() {
         <div className="w-full rounded-full overflow-hidden" style={{ height: 4, background: 'rgba(255,255,255,0.07)' }}>
           <div className="h-full rounded-full" style={{
             width: `${(idx / questions.length) * 100}%`,
-            background: 'linear-gradient(90deg, #00d4ff, #0099bb)',
+            background: 'linear-gradient(90deg, #6366f1, #0099bb)',
             transition: 'width 0.3s ease',
           }} />
         </div>
@@ -353,7 +353,7 @@ export default function MixedRevisionScreen() {
                     {!isCorrect && (
                       <button
                         className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-[10px] font-semibold"
-                        style={{ background: 'rgba(0,212,255,0.08)', color: '#00d4ff', border: '0.75px solid rgba(0,212,255,0.2)', fontSize: 12, cursor: 'pointer' }}
+                        style={{ background: 'rgba(99,102,241,0.08)', color: '#6366f1', border: '0.75px solid rgba(99,102,241,0.2)', fontSize: 12, cursor: 'pointer' }}
                         onClick={() => {
                           const params = new URLSearchParams({
                             topic: q.topicId,
@@ -385,7 +385,7 @@ export default function MixedRevisionScreen() {
           >
             <motion.button
               className="w-full flex items-center justify-center gap-2 font-bold"
-              style={{ height: 56, borderRadius: 16, background: 'linear-gradient(135deg, #00d4ff, #0099bb)', color: '#080f1e', fontSize: 16, border: 'none', cursor: 'pointer' }}
+              style={{ height: 56, borderRadius: 16, background: '#6366f1', color: '#080f1e', fontSize: 16, border: 'none', cursor: 'pointer' }}
               whileTap={{ y: 3 }}
               onClick={handleNext}
             >

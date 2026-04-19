@@ -189,8 +189,8 @@ function FloatingMamo() {
             style={{
               width: 60,
               height: 60,
-              background: 'linear-gradient(135deg, #6366f1, #818cf8)',
-              boxShadow: '0 4px 24px rgba(99,102,241,0.55)',
+              background: '#6366f1',
+              boxShadow: '0 2px 16px rgba(99,102,241,0.35)',
             }}
             onClick={() => navigate(mamoPath)}
             whileTap={{ scale: 0.9 }}
@@ -309,44 +309,6 @@ function ReadingRuler() {
   return <div ref={rulerRef} className="np-reading-ruler" aria-hidden="true" />
 }
 
-// ── Comfort FAB (floating accessibility button) ────────────────────────────────
-function ComfortFAB() {
-  const { setSettingsOpen } = useComfort()
-  const location = useLocation()
-  const { user } = useAuth()
-
-  // Hide on auth/onboarding/landing and during all lesson/practice/exam routes
-  const isLessonRoute = /^\/(lesson|diagnostic|practice|adaptive|exam|practical)\//.test(location.pathname)
-  const hidden = !user || isLessonRoute || ['/auth', '/onboarding', '/'].includes(location.pathname)
-  if (hidden) return null
-
-  return (
-    <button
-      className="fixed z-[994] flex items-center justify-center rounded-full active:opacity-70"
-      style={{
-        right: 16,
-        top: 'calc(var(--safe-top) + 10px)',
-        width: 38, height: 38,
-        background: 'rgba(15,22,41,0.85)',
-        backdropFilter: 'blur(8px)',
-        WebkitBackdropFilter: 'blur(8px)',
-        border: '0.75px solid rgba(99,102,241,0.25)',
-        boxShadow: '0 2px 12px rgba(0,0,0,0.25)',
-      }}
-      onClick={() => setSettingsOpen(true)}
-      aria-label="Open comfort settings"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(99,102,241,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="4" y1="6" x2="20" y2="6"/>
-        <line x1="4" y1="12" x2="20" y2="12"/>
-        <line x1="4" y1="18" x2="20" y2="18"/>
-        <circle cx="9" cy="6" r="2" fill="rgba(99,102,241,0.8)" stroke="none"/>
-        <circle cx="15" cy="12" r="2" fill="rgba(99,102,241,0.8)" stroke="none"/>
-        <circle cx="9" cy="18" r="2" fill="rgba(99,102,241,0.8)" stroke="none"/>
-      </svg>
-    </button>
-  )
-}
 
 // True when running inside the Capacitor native shell (iOS / Android)
 // Web visitors get the landing page; app installs go straight to /auth
@@ -484,7 +446,6 @@ function AppShell() {
       {/* Comfort overlays — always above content, below modals */}
       <ColourOverlay />
       <ReadingRuler />
-      <ComfortFAB />
       <ComfortSettings />
       <ComfortFirstTimePrompt />
 
@@ -505,7 +466,7 @@ function AppShell() {
           </p>
           <button onClick={() => window.location.reload()} style={{
             marginTop: 8, padding: '12px 24px',
-            background: '#00d4ff', color: '#080f1e',
+            background: '#6366f1', color: '#080f1e',
             border: 'none', borderRadius: 12,
             fontSize: 14, fontWeight: 700, cursor: 'pointer',
           }}>Try again</button>

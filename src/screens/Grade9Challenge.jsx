@@ -182,7 +182,7 @@ export default function Grade9Challenge() {
     return (
       <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
         <div className="px-5 pt-5 pb-3 shrink-0">
-          <button onClick={() => navigate(-1)}
+          <button onClick={() => navigate(-1)} aria-label="Go back"
             className="w-11 h-11 rounded-[12px] flex items-center justify-center"
             style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
             <ArrowLeft size={18} color="#a8b8cc" />
@@ -250,7 +250,7 @@ export default function Grade9Challenge() {
     return (
       <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
         <div className="px-5 pt-5 pb-3 shrink-0">
-          <button onClick={() => navigate(-1)}
+          <button onClick={() => navigate(-1)} aria-label="Go back"
             className="w-11 h-11 rounded-[12px] flex items-center justify-center"
             style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
             <ArrowLeft size={18} color="#a8b8cc" />
@@ -295,7 +295,7 @@ export default function Grade9Challenge() {
           </div>
           <motion.button
             className="w-full py-4 rounded-[16px] text-base font-bold"
-            style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', color: '#fff' }}
+            style={{ background: '#7c3aed', color: '#fff' }}
             onClick={() => setStarted(true)}
             whileTap={{ scale: 0.97 }}>
             Start Challenge
@@ -312,6 +312,7 @@ export default function Grade9Challenge() {
       <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3"
         style={{ borderBottom: '0.75px solid #1d293d' }}>
         <button
+          aria-label={qIndex > 0 ? 'Previous question' : 'Go back'}
           onClick={() => {
             if (qIndex > 0) {
               setQIndex(i => i - 1)
@@ -338,7 +339,7 @@ export default function Grade9Challenge() {
       {/* Progress bar */}
       <div className="h-1 shrink-0" style={{ background: '#1d293d' }}>
         <motion.div className="h-full rounded-full"
-          style={{ background: 'linear-gradient(90deg, #a855f7, #ec4899)' }}
+          style={{ background: '#7c3aed' }}
           animate={{ width: `${((qIndex + (completed ? 1 : 0)) / total) * 100}%` }}
           transition={{ type: 'spring', stiffness: 120, damping: 20 }} />
       </div>
@@ -382,7 +383,7 @@ export default function Grade9Challenge() {
           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
           <motion.button
             className="w-full py-4 rounded-[16px] text-base font-bold flex items-center justify-center gap-2"
-            style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)', color: '#fff',
+            style={{ background: '#7c3aed', color: '#fff',
               boxShadow: '0 4px 20px rgba(168,85,247,0.4)' }}
             onClick={handleNext} whileTap={{ scale: 0.97 }}>
             {isLast ? 'See results' : 'Next question'} <ChevronRight size={18} />

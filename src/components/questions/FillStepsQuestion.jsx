@@ -156,15 +156,13 @@ export default function FillStepsQuestion({ data, moduleColor, onComplete }) {
           <motion.button
             className="flex-1 py-3 rounded-[12px] font-semibold text-sm"
             style={{
-              background: allFilled ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.5)',
+              background: allFilled ? `${moduleColor}` : 'rgba(18,26,47,0.5)',
               color: allFilled ? '#fff' : '#8899b0',
               boxShadow: allFilled ? `0 6px 20px ${moduleColor}40` : 'none',
             }}
             onClick={handleSubmit}
             whileTap={allFilled ? { scale: 0.97 } : {}}
-          >
-            Check Answer
-          </motion.button>
+          >Check answer</motion.button>
         </div>
       )}
 

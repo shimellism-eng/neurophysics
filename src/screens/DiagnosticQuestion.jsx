@@ -409,7 +409,7 @@ export default function DiagnosticQuestion() {
       {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
 
       {/* ── Header ── */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', paddingTop: 'calc(20px + env(safe-area-inset-top))' }}>
+      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', paddingTop: '12px' }}>
         <button
           onClick={() => navigate(-1)}
           className="w-11 h-11 rounded-[12px] flex items-center justify-center"
@@ -660,26 +660,24 @@ export default function DiagnosticQuestion() {
       <AnimatePresence>
         {showFooter && (
           <motion.div
-            className="shrink-0 px-5 pb-8 pt-3"
-            style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d' }}
+            className="shrink-0 px-5 pt-3"
+            style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
           >
-            {/* MCQ: Check Answer first, then Next */}
+            {/* MCQ: check answer first, then next */}
             {!isInteractive && !submitted ? (
               <motion.button
                 className="w-full py-4 rounded-[16px] font-semibold text-base"
                 style={{
-                  background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                  background: `${topic.moduleColor}`,
                   boxShadow: `0px 8px 24px ${topic.moduleColor}40`,
                   color: '#fff',
                 }}
                 onClick={handleSubmit}
                 whileTap={{ scale: 0.97 }}
-              >
-                Check Answer
-              </motion.button>
+              >Check answer</motion.button>
             ) : (
               /* Next / See Results for both MCQ (after submit) and interactive (after complete) */
               (submitted || interactiveCompleted) && (
@@ -687,8 +685,8 @@ export default function DiagnosticQuestion() {
                   className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
                   style={{
                     background: isLast
-                      ? 'linear-gradient(135deg, #6366f1, #818cf8)'
-                      : `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                      ? '#6366f1'
+                      : `${topic.moduleColor}`,
                     boxShadow: isLast
                       ? '0px 8px 24px rgba(99,102,241,0.4)'
                       : `0px 8px 24px ${topic.moduleColor}40`,

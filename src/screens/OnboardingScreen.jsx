@@ -183,7 +183,7 @@ function StepValueProp({ onNext }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: 'linear-gradient(135deg, #4f6ef7, #6366f1)',
+            background: '#6366f1',
             color: '#fff',
             boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
           }}
@@ -379,7 +379,7 @@ function StepProfile({ onNext, onSkip }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: canContinue ? 'linear-gradient(135deg, #4f6ef7, #6366f1)' : 'rgba(99,102,241,0.3)',
+            background: canContinue ? '#6366f1' : 'rgba(99,102,241,0.3)',
             color: '#fff',
             boxShadow: canContinue ? '0 8px 28px rgba(99,102,241,0.4)' : 'none',
             transition: 'all 0.2s',
@@ -495,11 +495,11 @@ function StepAccessibility({ onNext, onSkip }) {
           <div className="flex items-center gap-3 mb-3">
             <div
               className="w-10 h-10 rounded-[14px] flex items-center justify-center"
-              style={{ background: 'rgba(0,212,255,0.12)', border: '1px solid rgba(0,212,255,0.25)' }}
+              style={{ background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.25)' }}
             >
-              <Brain size={18} color="#00d4ff" />
+              <Brain size={18} color="#6366f1" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#00d4ff' }}>Accessibility</span>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Accessibility</span>
           </div>
 
           <h1
@@ -507,7 +507,7 @@ function StepAccessibility({ onNext, onSkip }) {
             style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}
           >
             How do you{'\n'}
-            <span style={{ color: '#00d4ff' }}>learn best?</span>
+            <span style={{ color: '#6366f1' }}>learn best?</span>
           </h1>
           <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
             We'll set up the app to suit you — you can always change this in Settings.
@@ -522,9 +522,9 @@ function StepAccessibility({ onNext, onSkip }) {
                 key={opt.id}
                 className="w-full text-left rounded-[12px] px-5 py-4 flex items-center gap-4"
                 style={{
-                  background: isSelected ? 'rgba(0,212,255,0.08)' : 'rgba(18,26,47,0.9)',
+                  background: isSelected ? 'rgba(99,102,241,0.08)' : 'rgba(18,26,47,0.9)',
                   border: isSelected
-                    ? '1.5px solid rgba(0,212,255,0.55)'
+                    ? '1.5px solid rgba(99,102,241,0.55)'
                     : '0.75px solid rgba(255,255,255,0.1)',
                   transition: 'background 0.2s, border-color 0.2s',
                 }}
@@ -538,7 +538,7 @@ function StepAccessibility({ onNext, onSkip }) {
                 <div className="flex-1 min-w-0">
                   <div
                     className="text-base font-semibold mb-0.5"
-                    style={{ color: isSelected ? '#00d4ff' : '#f8fafc' }}
+                    style={{ color: isSelected ? '#6366f1' : '#f8fafc' }}
                   >
                     {opt.label}
                   </div>
@@ -547,7 +547,7 @@ function StepAccessibility({ onNext, onSkip }) {
                 <div
                   className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center transition-all"
                   style={{
-                    background: isSelected ? '#00d4ff' : 'rgba(255,255,255,0.07)',
+                    background: isSelected ? '#6366f1' : 'rgba(255,255,255,0.07)',
                     border: isSelected ? 'none' : '0.75px solid rgba(255,255,255,0.18)',
                   }}
                 >
@@ -569,9 +569,9 @@ function StepAccessibility({ onNext, onSkip }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: 'linear-gradient(135deg, #00a8cc, #00d4ff)',
+            background: 'linear-gradient(135deg, #00a8cc, #6366f1)',
             color: '#0b1121',
-            boxShadow: '0 8px 28px rgba(0,212,255,0.3)',
+            boxShadow: '0 8px 28px rgba(99,102,241,0.3)',
           }}
           onClick={applyAndContinue}
           whileTap={{ scale: 0.97 }}
@@ -663,7 +663,7 @@ function StepPrefs({ onNext, onSkip }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: 'linear-gradient(135deg, #4f6ef7, #6366f1)',
+            background: '#6366f1',
             color: '#fff',
             boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
           }}
@@ -730,7 +730,7 @@ function StepHowItWorks({ onNext }) {
       <div className="px-5" style={{ paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}>
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)', color: '#fff' }}
+          style={{ background: '#6366f1', color: '#fff' }}
           onClick={onNext}
           whileTap={{ scale: 0.97 }}>
           Let's get started <ArrowRight size={18} />
@@ -967,11 +967,11 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
           <div className="flex items-center gap-3 mb-3">
             <div
               className="w-10 h-10 rounded-[14px] flex items-center justify-center"
-              style={{ background: 'rgba(0,212,255,0.12)', border: '1px solid rgba(0,212,255,0.25)' }}
+              style={{ background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.25)' }}
             >
-              <Target size={18} color="#00d4ff" />
+              <Target size={18} color="#6366f1" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#00d4ff' }}>Almost there</span>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Almost there</span>
           </div>
           <h1 className="font-extrabold leading-tight mb-2" style={{ fontSize: 34, color: '#f8fafc', letterSpacing: '-0.03em' }}>
             Set your details
@@ -1028,15 +1028,15 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
             ) : (
               <div className="px-5 py-4 flex items-center gap-3">
                 <div className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(0,212,255,0.1)', border: '0.75px solid rgba(0,212,255,0.22)' }}>
-                  <CalendarDays size={18} color="#00d4ff" />
+                  style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.22)' }}>
+                  <CalendarDays size={18} color="#6366f1" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>When's your exam?</div>
                   <div className="text-xs mt-0.5" style={{ color: '#7b9ab8' }}>We'll count down to it on your home screen</div>
                 </div>
                 <div className="px-3 py-1.5 rounded-full text-xs font-bold shrink-0"
-                  style={{ background: 'rgba(0,212,255,0.1)', border: '0.75px solid rgba(0,212,255,0.25)', color: '#00d4ff' }}>
+                  style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#6366f1' }}>
                   Set
                 </div>
               </div>
@@ -1130,7 +1130,7 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
           style={{
             background: 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)',
             color: '#fff',
-            boxShadow: '0 6px 28px rgba(0,212,255,0.2), 0 2px 8px rgba(99,102,241,0.25)',
+            boxShadow: '0 6px 28px rgba(99,102,241,0.2), 0 2px 8px rgba(99,102,241,0.25)',
             letterSpacing: '-0.01em',
             transition: 'all 0.2s',
           }}

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Ruler, Compass, Wrench } from 'lucide-react'
 import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
 
-const KC = '#00d4ff'
+const KC = '#6366f1'
 
 // ─── Topic 1: SI Units & Standard Form ───────────────────────────────────────
 

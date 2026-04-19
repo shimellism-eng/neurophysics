@@ -1,5 +1,5 @@
 /**
- * PageHeader — unified sticky frosted-glass header for secondary screens.
+ * PageHeader — unified compact iPhone header for secondary screens.
  *
  * Research basis:
  *   - Predictable navigation anchor: autism UX requirement (UXPA Designing for Autism)
@@ -14,24 +14,41 @@
  */
 import { ChevronLeft } from 'lucide-react'
 
-export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
+export default function PageHeader({
+  title,
+  subtitle,
+  onBack,
+  backLabel = 'Go back',
+  rightSlot,
+  rightElement,
+  sticky = true,
+  className = '',
+  style,
+}) {
+  const actionSlot = rightSlot ?? rightElement
+
   return (
     <div
-      className="flex items-center gap-3 px-5 pt-5 pb-4 sticky top-0 z-10 shrink-0"
+      className={[
+        'flex items-center gap-3 px-5 py-3 z-10 shrink-0',
+        sticky ? 'sticky top-0' : '',
+        className,
+      ].filter(Boolean).join(' ')}
       style={{
         background: 'var(--np-card-deep)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         borderBottom: '0.75px solid var(--np-border)',
-        paddingTop: '12px',
+        minHeight: 64,
+        ...style,
       }}
     >
       {onBack && (
         <button
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0 active:opacity-75"
           style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid var(--np-border)' }}
           onClick={onBack}
-          aria-label="Go back"
+          aria-label={backLabel}
         >
           <ChevronLeft size={18} color="#a8b8cc" />
         </button>
@@ -40,8 +57,8 @@ export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
       <div className="flex-1 min-w-0">
         {typeof title === 'string' ? (
           <div
-            className="font-display font-bold"
-            style={{ color: 'var(--np-text)', fontSize: 18, letterSpacing: '-0.02em' }}
+            className="font-display font-bold truncate"
+            style={{ color: 'var(--np-text)', fontSize: 18 }}
           >
             {title}
           </div>
@@ -50,7 +67,7 @@ export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
         )}
         {subtitle != null && (
           typeof subtitle === 'string' ? (
-            <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <div className="text-xs mt-0.5 truncate" style={{ color: 'var(--np-text-muted)' }}>
               {subtitle}
             </div>
           ) : (
@@ -59,7 +76,7 @@ export default function PageHeader({ title, subtitle, onBack, rightSlot }) {
         )}
       </div>
 
-      {rightSlot}
+      {actionSlot}
     </div>
   )
 }

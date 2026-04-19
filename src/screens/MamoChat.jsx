@@ -408,7 +408,7 @@ export default function MamoChat() {
                 className="rounded-[16px] px-4 py-3 text-sm leading-relaxed"
                 style={{
                   background: msg.role === 'user'
-                    ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
+                    ? '#6366f1'
                     : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(15,22,41,0.95)',
                   border: msg.role === 'user' ? 'none'
                     : msg.isError ? '0.75px solid rgba(239,68,68,0.3)'
@@ -457,7 +457,7 @@ export default function MamoChat() {
           </motion.div>
         ))}
 
-        {/* Suggested questions (empty state — wrapping chip grid) */}
+        {/* Suggested questions (empty state — 4 full-text stacked) */}
         {messages.length === 1 && (
           <motion.div
             className="mt-2"
@@ -465,22 +465,23 @@ export default function MamoChat() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="text-xs px-1 mb-2" style={{ color: '#a8b8cc' }}>Try asking:</div>
-            <div className="flex flex-wrap gap-2">
-              {getStarters(effectiveTopicLabel).map((q, i) => (
+            <div className="text-xs px-1 mb-2.5" style={{ color: 'rgba(255,255,255,0.38)' }}>Try asking:</div>
+            <div className="flex flex-col gap-2">
+              {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
                 <motion.button
                   key={i}
-                  className="text-left px-3 py-2 rounded-[12px] text-xs"
+                  className="text-left px-4 py-3 rounded-[12px] text-sm leading-snug"
                   style={{
-                    background: 'rgba(99,102,241,0.08)',
-                    border: '0.75px solid rgba(99,102,241,0.25)',
+                    background: 'rgba(255,255,255,0.04)',
+                    border: '0.75px solid rgba(255,255,255,0.08)',
                     color: '#cad5e2',
+                    minHeight: 48,
                   }}
                   onClick={() => sendMessage(q)}
-                  whileTap={{ scale: 0.97 }}
+                  whileTap={{ scale: 0.98 }}
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.35 + i * 0.05 }}
+                  transition={{ delay: 0.35 + i * 0.06 }}
                 >
                   {q}
                 </motion.button>
@@ -491,24 +492,25 @@ export default function MamoChat() {
 
       </div>
 
-      {/* ── Quick-starter chip rail (always visible, wraps to 2 rows max) ──── */}
+      {/* ── Quick-starter suggestions (non-empty state — 4 full-text stacked) ── */}
       {messages.length > 1 && (
         <div
-          className="px-4 py-2 shrink-0 flex flex-wrap gap-2"
+          className="px-4 py-2.5 shrink-0 flex flex-col gap-1.5"
           style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', background: 'rgba(8,15,30,0.97)' }}
         >
-          {getStarters(effectiveTopicLabel).map((q, i) => (
+          {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
             <button
               key={i}
-              className="shrink-0 px-3 py-2.5 rounded-full text-xs font-medium whitespace-nowrap"
+              className="text-left px-3 py-2.5 rounded-[10px] text-sm leading-snug"
               style={{
-                background: 'rgba(99,102,241,0.10)',
-                border: '0.75px solid rgba(99,102,241,0.25)',
-                color: '#818cf8',
+                background: 'rgba(255,255,255,0.04)',
+                border: '0.75px solid rgba(255,255,255,0.07)',
+                color: '#a8b8cc',
+                minHeight: 44,
               }}
               onClick={() => sendMessage(q)}
             >
-              {q.slice(0, 32)}{q.length > 32 ? '…' : ''}
+              {q}
             </button>
           ))}
         </div>
@@ -525,7 +527,7 @@ export default function MamoChat() {
             {selectedTopic && (
               <button
                 className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold"
-                style={{ background: 'rgba(0,212,255,0.12)', border: '0.75px solid rgba(0,212,255,0.35)', color: '#00d4ff' }}
+                style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.35)', color: '#6366f1' }}
                 onClick={() => setSelectedTopic(null)}
               >
                 {selectedTopic}
@@ -587,7 +589,7 @@ export default function MamoChat() {
           className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
           style={{
             background: input.trim() && !streaming
-              ? 'linear-gradient(135deg, #6366f1, #6366f1cc)'
+              ? '#6366f1'
               : 'rgba(255,255,255,0.08)',
             boxShadow: input.trim() && !streaming ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
           }}

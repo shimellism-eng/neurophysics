@@ -104,7 +104,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         <motion.button
           className="font-display w-full rounded-[18px] font-bold text-sm flex items-center justify-center gap-2"
           style={{
-            background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+            background: `${moduleColor}`,
             boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
             minHeight: 56,
@@ -234,7 +234,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
               <motion.button
                 className="font-display w-full rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
                 style={{
-                  background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+                  background: `${moduleColor}`,
                   boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
                   color: '#fff',
                   minHeight: 56,
@@ -426,7 +426,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
         <motion.button
           className="font-display w-full rounded-[18px] font-bold text-sm flex flex-col items-center justify-center gap-0.5"
           style={{
-            background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+            background: `${moduleColor}`,
             boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
             minHeight: 56,

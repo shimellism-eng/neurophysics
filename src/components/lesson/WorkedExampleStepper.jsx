@@ -227,7 +227,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
             paddingBottom: 18,
             minHeight: 56,
             background: isPrimary
-              ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`
+              ? `${moduleColor}`
               : 'rgba(255,255,255,0.06)',
             boxShadow: isPrimary
               ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`

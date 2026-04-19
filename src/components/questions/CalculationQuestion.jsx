@@ -72,14 +72,14 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
       {examinerTip && !submitted && (
         <motion.div
           className="flex items-start gap-2 px-4 py-3 rounded-[12px] mb-4"
-          style={{ background: 'rgba(0,212,255,0.06)', border: '0.75px solid rgba(0,212,255,0.2)' }}
+          style={{ background: 'rgba(99,102,241,0.06)', border: '0.75px solid rgba(99,102,241,0.2)' }}
           initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
         >
-          <Lightbulb size={14} color="#00d4ff" style={{ marginTop: 1, flexShrink: 0 }} />
+          <Lightbulb size={14} color="#6366f1" style={{ marginTop: 1, flexShrink: 0 }} />
           <p className="text-xs leading-relaxed" style={{ color: '#7dd3fc' }}>
-            <span className="font-semibold" style={{ color: '#00d4ff' }}>Examiner tip: </span>
+            <span className="font-semibold" style={{ color: '#6366f1' }}>Examiner tip: </span>
             {examinerTip}
           </p>
         </motion.div>
@@ -159,15 +159,13 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
           <motion.button
             className="w-full mt-3 py-3.5 rounded-[14px] font-semibold text-sm"
             style={{
-              background: input.trim() ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(18,26,47,0.7)',
+              background: input.trim() ? `${moduleColor}` : 'rgba(18,26,47,0.7)',
               color: input.trim() ? '#fff' : '#8899aa',
               boxShadow: input.trim() ? `0 6px 20px ${moduleColor}40` : 'none',
             }}
             onClick={handleSubmit}
             whileTap={input.trim() ? { scale: 0.97 } : {}}
-          >
-            Check Answer
-          </motion.button>
+          >Check answer</motion.button>
         )}
       </div>
 
@@ -268,14 +266,14 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
             {!isCorrect && examinerTip && revealStep >= steps.length && (
               <motion.div
                 className="flex items-start gap-2 px-4 py-3 rounded-[12px]"
-                style={{ background: 'rgba(0,212,255,0.06)', border: '0.75px solid rgba(0,212,255,0.2)' }}
+                style={{ background: 'rgba(99,102,241,0.06)', border: '0.75px solid rgba(99,102,241,0.2)' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <Lightbulb size={14} color="#00d4ff" style={{ marginTop: 1, flexShrink: 0 }} />
+                <Lightbulb size={14} color="#6366f1" style={{ marginTop: 1, flexShrink: 0 }} />
                 <p className="text-xs leading-relaxed" style={{ color: '#7dd3fc' }}>
-                  <span className="font-semibold" style={{ color: '#00d4ff' }}>Examiner tip: </span>
+                  <span className="font-semibold" style={{ color: '#6366f1' }}>Examiner tip: </span>
                   {examinerTip}
                 </p>
               </motion.div>

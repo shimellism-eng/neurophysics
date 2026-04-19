@@ -11,7 +11,7 @@ import { motion } from 'motion/react'
 
 const VARIANTS = {
   primary: {
-    background: 'linear-gradient(135deg, var(--np-indigo), #4f46e5)',
+    background: 'var(--np-indigo)',
     color: '#fff',
     border: 'none',
     boxShadow: 'var(--shadow-raised)',

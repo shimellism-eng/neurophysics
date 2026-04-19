@@ -7,9 +7,9 @@
 // breathing room (no safe-area variable).
 //
 // Usage:
-//   <SafeAreaPage hasNav>      ← adds bottom spacer for fixed BottomNav
-//   <SafeAreaPage hasNav topPad> ← also adds 16px breathing room below the notch spacer
-//   <SafeAreaPage>             ← no nav, no extra top padding
+//   <SafeAreaPage hasNav>        ← app shell reserves nav/home-indicator space
+//   <SafeAreaPage hasNav topPad> ← adds 12px breathing room below the notch spacer
+//   <SafeAreaPage>               ← no nav, no extra top padding
 
 export default function SafeAreaPage({
   children,
@@ -23,19 +23,19 @@ export default function SafeAreaPage({
       className={`flex flex-col h-full overflow-y-auto ${className}`}
       style={{
         background: 'var(--np-bg)',
-        paddingTop: topPad ? '16px' : undefined,
+        paddingTop: topPad ? 'var(--page-top-gap)' : undefined,
         ...style,
       }}
     >
       {children}
 
-      {/* Bottom spacer: nav bar height + home indicator clearance */}
+      {/* The shell owns nav/home-indicator space; pages only keep a little scroll comfort. */}
       {hasNav && (
         <div
           aria-hidden="true"
           style={{
             flexShrink: 0,
-            height: 'calc(var(--nav-height) + var(--safe-bottom) + 32px)',
+            height: 'var(--page-bottom-gap)',
           }}
         />
       )}

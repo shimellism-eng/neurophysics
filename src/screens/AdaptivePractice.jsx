@@ -236,7 +236,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
               disabled={answer.trim().length < 10}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-[12px] font-semibold text-sm"
               style={{
-                background: answer.trim().length >= 10 ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)` : 'rgba(255,255,255,0.05)',
+                background: answer.trim().length >= 10 ? `${moduleColor}` : 'rgba(255,255,255,0.05)',
                 color: answer.trim().length >= 10 ? '#fff' : '#8899b0',
                 cursor: answer.trim().length >= 10 ? 'pointer' : 'not-allowed',
               }}
@@ -317,7 +317,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
 
             <motion.button onClick={handleContinue}
               className="w-full flex items-center justify-center py-3 rounded-[12px] font-semibold text-sm"
-              style={{ background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`, color: '#fff' }}
+              style={{ background: `${moduleColor}`, color: '#fff' }}
               whileTap={{ scale: 0.97 }}
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}>
               Continue
@@ -728,7 +728,7 @@ export default function AdaptivePractice() {
                   )}
                   <motion.button
                     className="w-full py-4 rounded-[16px] text-base font-bold flex items-center justify-center gap-2"
-                    style={{ background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`, color: '#fff' }}
+                    style={{ background: `${moduleColor}`, color: '#fff' }}
                     onClick={handleNext} whileTap={{ scale: 0.97 }}>
                     Next question <ChevronRight size={18} />
                   </motion.button>
@@ -819,7 +819,7 @@ export default function AdaptivePractice() {
               <div className="flex flex-col gap-3">
                 <motion.button
                   className="w-full py-4 rounded-[16px] text-base font-bold"
-                  style={{ background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`, color: '#fff' }}
+                  style={{ background: `${moduleColor}`, color: '#fff' }}
                   onClick={handleRestoreContinue}
                   whileTap={{ scale: 0.97 }}
                 >

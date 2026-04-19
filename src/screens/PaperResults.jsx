@@ -210,9 +210,9 @@ function StageNumber({ score, total, timeUsed, onNext }) {
                   key={g.grade}
                   className="flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold"
                   style={{
-                    background: isMe ? '#00d4ff' : 'rgba(255,255,255,0.06)',
+                    background: isMe ? '#6366f1' : 'rgba(255,255,255,0.06)',
                     color: isMe ? '#0a0a0f' : '#64748b',
-                    border: isMe ? '1.5px solid #00d4ff' : '1px solid rgba(255,255,255,0.08)',
+                    border: isMe ? '1.5px solid #6366f1' : '1px solid rgba(255,255,255,0.08)',
                     fontWeight: isMe ? 700 : 500,
                   }}
                 >
@@ -285,7 +285,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
       <div className="px-6 pb-8">
         <motion.button
           className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl font-bold text-white"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)' }}
+          style={{ background: '#6366f1' }}
           onClick={onNext}
           whileTap={{ scale: 0.97 }}
           initial={{ opacity: 0, y: 12 }}
@@ -432,7 +432,7 @@ function StageBreakdown({ questions, answers, timeUsed, onNext, onBack }) {
         </button>
         <motion.button
           className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-bold text-white"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)' }}
+          style={{ background: '#6366f1' }}
           onClick={onNext}
           whileTap={{ scale: 0.97 }}
         >
@@ -618,7 +618,7 @@ function StageThePlan({ questions, answers, onDone }) {
       <div className="px-6 pb-8">
         <motion.button
           className="w-full py-4 rounded-2xl font-bold text-white"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #818cf8)' }}
+          style={{ background: '#6366f1' }}
           onClick={onDone}
           whileTap={{ scale: 0.97 }}
           initial={{ opacity: 0, y: 12 }}

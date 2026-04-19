@@ -65,7 +65,7 @@ function TierProgress({ tier, moduleColor }) {
                 className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
                 style={{
                   background: isActive
-                    ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+                    ? `${moduleColor}`
                     : isDone
                       ? 'rgba(34,197,94,0.2)'
                       : 'transparent',
@@ -268,7 +268,7 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
           style={{
             minHeight: 44,
             background: hasInput
-              ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+              ? `${moduleColor}`
               : 'rgba(255,255,255,0.05)',
             boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
             color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
@@ -296,7 +296,7 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
               minHeight: 56,
-              background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+              background: `${moduleColor}`,
               boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
               color: '#fff',
             }}
@@ -403,7 +403,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
           style={{
             minHeight: 44,
             background: hasInput
-              ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+              ? `${moduleColor}`
               : 'rgba(255,255,255,0.05)',
             boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
             color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
@@ -431,7 +431,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
               minHeight: 56,
-              background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+              background: `${moduleColor}`,
               boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
               color: '#fff',
             }}
@@ -496,7 +496,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
           className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
             minHeight: 56,
-            background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+            background: `${moduleColor}`,
             boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
           }}
@@ -565,7 +565,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
             style={{
               minHeight: 44,
               background: hasInput
-                ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+                ? `${moduleColor}`
                 : 'rgba(255,255,255,0.05)',
               boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
               color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',

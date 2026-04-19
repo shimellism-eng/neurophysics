@@ -36,17 +36,17 @@ function TelescopeOpticsLesson() {
         <line x1={objLensX} y1={axisY + 22} x2={focalX} y2={axisY} stroke={UC} strokeWidth="1.5" strokeLinecap="round" />
 
         {/* Rays diverge from focal point then re-converge at eyepiece */}
-        <line x1={focalX} y1={axisY} x2={eyeLensX} y2={axisY - 18} stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1={focalX} y1={axisY} x2={eyeLensX} y2={axisY} stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1={focalX} y1={axisY} x2={eyeLensX} y2={axisY + 18} stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1={focalX} y1={axisY} x2={eyeLensX} y2={axisY - 18} stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1={focalX} y1={axisY} x2={eyeLensX} y2={axisY} stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1={focalX} y1={axisY} x2={eyeLensX} y2={axisY + 18} stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
 
         {/* Eye */}
-        <line x1={eyeLensX} y1={axisY - 18} x2={W - 18} y2={axisY - 6} stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1={eyeLensX} y1={axisY} x2={W - 18} y2={axisY} stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1={eyeLensX} y1={axisY + 18} x2={W - 18} y2={axisY + 6} stroke="#00d4ff" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1={eyeLensX} y1={axisY - 18} x2={W - 18} y2={axisY - 6} stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1={eyeLensX} y1={axisY} x2={W - 18} y2={axisY} stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1={eyeLensX} y1={axisY + 18} x2={W - 18} y2={axisY + 6} stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" />
         {/* Eye icon */}
-        <ellipse cx={W - 12} cy={axisY} rx="8" ry="6" fill="#1d293d" stroke="#00d4ff" strokeWidth="1.2" />
-        <circle cx={W - 12} cy={axisY} r="3" fill="#00d4ff" />
+        <ellipse cx={W - 12} cy={axisY} rx="8" ry="6" fill="#1d293d" stroke="#6366f1" strokeWidth="1.2" />
+        <circle cx={W - 12} cy={axisY} r="3" fill="#6366f1" />
 
         {/* Objective lens (large) */}
         <line x1={objLensX} y1={axisY - 32} x2={objLensX} y2={axisY + 32} stroke={UC} strokeWidth="3" strokeLinecap="round" />
@@ -54,9 +54,9 @@ function TelescopeOpticsLesson() {
         <text x={objLensX} y={axisY - 27} textAnchor="middle" fill={UC} fontSize={7}>(large, long f)</text>
 
         {/* Eyepiece lens (small) */}
-        <line x1={eyeLensX} y1={axisY - 22} x2={eyeLensX} y2={axisY + 22} stroke="#00d4ff" strokeWidth="2.5" strokeLinecap="round" />
-        <text x={eyeLensX} y={axisY - 26} textAnchor="middle" fill="#00d4ff" fontSize={8} fontWeight="bold">Eyepiece</text>
-        <text x={eyeLensX} y={axisY - 17} textAnchor="middle" fill="#00d4ff" fontSize={7}>(small, short f)</text>
+        <line x1={eyeLensX} y1={axisY - 22} x2={eyeLensX} y2={axisY + 22} stroke="#6366f1" strokeWidth="2.5" strokeLinecap="round" />
+        <text x={eyeLensX} y={axisY - 26} textAnchor="middle" fill="#6366f1" fontSize={8} fontWeight="bold">Eyepiece</text>
+        <text x={eyeLensX} y={axisY - 17} textAnchor="middle" fill="#6366f1" fontSize={7}>(small, short f)</text>
 
         {/* Focal point dot */}
         <circle cx={focalX} cy={axisY} r="4" fill="#fdc700" />
@@ -73,7 +73,7 @@ function TelescopeOpticsLesson() {
       {/* Sliders */}
       <div className="w-full rounded-[12px] px-3 py-2" style={{ background: '#1d293d' }}>
         <SimSlider label="Objective focal length" min={200} max={2000} step={100} value={fObj} onChange={setFObj} unit="mm" color={UC} />
-        <SimSlider label="Eyepiece focal length" min={5} max={50} step={5} value={fEye} onChange={setFEye} unit="mm" color="#00d4ff" />
+        <SimSlider label="Eyepiece focal length" min={5} max={50} step={5} value={fEye} onChange={setFEye} unit="mm" color="#6366f1" />
         <div className="flex justify-between mt-1.5 pt-1.5 text-xs font-bold font-mono"
           style={{ borderTop: '1px solid #0b1121' }}>
           <span style={{ color: '#a8b8cc' }}>M = {fObj} ÷ {fEye} =</span>
@@ -102,7 +102,7 @@ function TelescopeOpticsReality() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
       <RealWorldCard icon="🌌" title="James Webb Space Telescope" desc="Infrared space telescope — avoids atmosphere absorbing IR wavelengths. 6.5 m mirror collects 100× more light than Hubble." color={UC} delay={0} />
-      <RealWorldCard icon="🔭" title="Hubble Space Telescope" desc="Optical space-based telescope — placed above the atmosphere to avoid blurring. Produced the deepest images of the universe ever taken." color="#00d4ff" delay={0.1} />
+      <RealWorldCard icon="🔭" title="Hubble Space Telescope" desc="Optical space-based telescope — placed above the atmosphere to avoid blurring. Produced the deepest images of the universe ever taken." color="#6366f1" delay={0.1} />
       <RealWorldCard icon="📡" title="Jodrell Bank Radio Telescope" desc="76 m dish needed because radio wavelengths are huge — resolution ∝ λ/D, so a very large D is needed to compensate for large λ." color="#f39c12" delay={0.2} />
       <RealWorldCard icon="🛸" title="Chandra X-ray Observatory" desc="X-rays absorbed by Earth's atmosphere, so this space-based telescope detects high-energy events like black hole jets and supernovae remnants." color="#e91e8c" delay={0.3} />
     </div>
@@ -251,7 +251,7 @@ function StellarClassificationReality() {
 const TIMELINE_EVENTS = [
   { year: '~350 BC', label: 'Aristotle/Ptolemy', short: 'Geocentric', desc: 'Earth at the centre of the universe — geocentric model. Ptolemy refined it with epicycles to predict planetary motion. Used for 1500 years.', color: '#f39c12' },
   { year: '1543', label: 'Copernicus', short: 'Heliocentric', desc: 'Published heliocentric model — Sun at the centre. Controversial because it contradicted the Church and ancient authority.', color: UC },
-  { year: '1610', label: 'Galileo', short: "Jupiter's moons", desc: "Galileo observed Jupiter's four largest moons orbiting Jupiter — proof that not everything orbits Earth. Also observed phases of Venus.", color: '#00d4ff' },
+  { year: '1610', label: 'Galileo', short: "Jupiter's moons", desc: "Galileo observed Jupiter's four largest moons orbiting Jupiter — proof that not everything orbits Earth. Also observed phases of Venus.", color: '#6366f1' },
   { year: '1687', label: 'Newton', short: 'Gravity', desc: "Newton's Law of Universal Gravitation explained WHY planets orbit the Sun — gravity as a universal force acting at a distance.", color: '#00bc7d' },
   { year: '1781', label: 'Herschel', short: 'Uranus', desc: "William Herschel discovered Uranus using a telescope — first planet found in recorded history. Also mapped the Milky Way's structure.", color: '#e91e8c' },
   { year: '1920', label: 'Great Debate', short: 'Island universes?', desc: "Shapley vs Curtis: is the Milky Way the entire universe, or are spiral nebulae separate 'island universes'? Curtis was correct.", color: '#ff6b4a' },
@@ -361,7 +361,7 @@ function HistoryAstronomyIdea() {
 function HistoryAstronomyReality() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-4 py-3">
-      <RealWorldCard icon="🌌" title="Hubble Deep Field" desc="In 1995, Hubble pointed at a tiny dark patch of sky for 10 days — it contained over 3 000 galaxies. One image changed our understanding of the universe's scale." color="#00d4ff" delay={0} />
+      <RealWorldCard icon="🌌" title="Hubble Deep Field" desc="In 1995, Hubble pointed at a tiny dark patch of sky for 10 days — it contained over 3 000 galaxies. One image changed our understanding of the universe's scale." color="#6366f1" delay={0} />
       <RealWorldCard icon="📡" title="CMB — accidental discovery" desc="Penzias and Wilson (1965) detected a persistent hiss in their radio antenna they couldn't explain. It was the thermal afterglow of the Big Bang — 2.7 K radiation from all directions." color="#fdc700" delay={0.1} />
       <RealWorldCard icon="⭐" title="Cepheid variables as rulers" desc="Cepheid stars pulsate with a period directly related to their true luminosity. Compare true vs apparent brightness to find distance — Hubble used this to measure Andromeda." color={UC} delay={0.2} />
       <RealWorldCard icon="🔬" title="Dark energy — biggest mystery" desc="In 1998, supernovae data showed the universe expanding faster over time. Something — 'dark energy' — makes up ~68% of the universe and drives accelerating expansion. We still don't know what it is." color="#ef4444" delay={0.3} />

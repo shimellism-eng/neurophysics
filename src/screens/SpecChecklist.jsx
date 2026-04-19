@@ -150,9 +150,9 @@ function ModuleSection({ module, topics, progress, boardId }) {
                         const isCurrentBoard = topic.boards.includes(boardId)
                         return (
                           <span style={{
-                            background: isCurrentBoard ? 'rgba(0,212,255,0.15)' : 'rgba(99,102,241,0.15)',
-                            border: `0.75px solid ${isCurrentBoard ? 'rgba(0,212,255,0.3)' : 'rgba(99,102,241,0.3)'}`,
-                            color: isCurrentBoard ? '#00d4ff' : '#818cf8',
+                            background: isCurrentBoard ? 'rgba(99,102,241,0.15)' : 'rgba(99,102,241,0.15)',
+                            border: `0.75px solid ${isCurrentBoard ? 'rgba(99,102,241,0.3)' : 'rgba(99,102,241,0.3)'}`,
+                            color: isCurrentBoard ? '#6366f1' : '#818cf8',
                             fontSize: 10,
                             fontWeight: 600,
                             padding: '1px 6px',
@@ -216,7 +216,7 @@ export default function SpecChecklist() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
+      style={{ background: '#080f1e', paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}
     >
       {/* Header */}
       <PageHeader
@@ -231,7 +231,7 @@ export default function SpecChecklist() {
           <span className="text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.5)' }}>
             Overall progress
           </span>
-          <span className="text-xs font-bold" style={{ color: '#00d4ff' }}>
+          <span className="text-xs font-bold" style={{ color: '#6366f1' }}>
             {Math.round(progressPct)}%
           </span>
         </div>
@@ -241,7 +241,7 @@ export default function SpecChecklist() {
         >
           <motion.div
             className="absolute left-0 top-0 h-full rounded-full"
-            style={{ background: 'linear-gradient(90deg, #00d4ff, #9b59b6)' }}
+            style={{ background: '#6366f1' }}
             initial={{ width: 0 }}
             animate={{ width: `${progressPct}%` }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}

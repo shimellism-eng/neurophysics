@@ -309,7 +309,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
           <motion.button
             className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
             style={{
-              background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`,
+              background: `${moduleColor}`,
               boxShadow: `0 8px 24px ${moduleColor}40`,
               color: '#fff',
             }}

@@ -217,7 +217,7 @@ export default function SessionPreview({
                 className="flex-1 font-display font-bold text-base"
                 style={{
                   height: 56, borderRadius: 16,
-                  background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}bb)`,
+                  background: `${topic.moduleColor}`,
                   color: '#fff',
                   boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${topic.moduleColor}35`,
                   border: 'none', cursor: 'pointer',

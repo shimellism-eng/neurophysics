@@ -163,7 +163,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
               className="w-full flex items-center justify-center gap-2 py-3.5 rounded-[14px] font-semibold text-sm"
               style={{
                 background: answer.trim().length >= MIN_CHARS
-                  ? `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`
+                  ? `${moduleColor}`
                   : 'rgba(255,255,255,0.05)',
                 color: answer.trim().length >= MIN_CHARS ? '#fff' : '#8899b0',
                 boxShadow: answer.trim().length >= MIN_CHARS ? `0 6px 20px ${moduleColor}40` : 'none',
@@ -303,7 +303,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
               onClick={handleContinue}
               className="w-full flex items-center justify-center gap-2 py-3.5 rounded-[14px] font-semibold text-sm"
               style={{
-                background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`,
+                background: `${moduleColor}`,
                 color: '#fff',
                 boxShadow: `0 6px 20px ${moduleColor}40`,
               }}

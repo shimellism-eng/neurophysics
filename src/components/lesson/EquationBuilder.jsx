@@ -6,13 +6,13 @@ import { speak } from '../../utils/tts'
 const VAR_COLOR = {
   F: '#f39c12', W: '#f39c12', N: '#f39c12',           // force / weight
   m: '#9b59b6',                                         // mass
-  v: '#00d4ff', u: '#00d4ff', s: '#00d4ff', d: '#00d4ff', // velocity / speed / displacement / distance
+  v: '#6366f1', u: '#6366f1', s: '#6366f1', d: '#6366f1', // velocity / speed / displacement / distance
   a: '#e67e22',                                         // acceleration
   t: '#e91e8c',                                         // time
   E: '#27ae60', KE: '#27ae60', PE: '#27ae60', Ek: '#27ae60', Ep: '#27ae60', // energy
   P: '#f1c40f',                                         // power
   I: '#3498db',                                         // current
-  V: '#00d4ff', R: '#e74c3c',                          // voltage / resistance
+  V: '#6366f1', R: '#e74c3c',                          // voltage / resistance
   g: '#9b59b6', h: '#27ae60',                          // gravity / height
   k: '#e67e22', e: '#e91e8c',                          // spring constant / extension
 }

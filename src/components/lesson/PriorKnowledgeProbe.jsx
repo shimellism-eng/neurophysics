@@ -114,7 +114,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
           className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
             minHeight: 56,
-            background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+            background: `${moduleColor}`,
             boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
             color: '#fff',
           }}
@@ -236,7 +236,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
               className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2 sticky bottom-4"
               style={{
                 minHeight: 56,
-                background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}bb)`,
+                background: `${moduleColor}`,
                 boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
                 color: '#fff',
               }}

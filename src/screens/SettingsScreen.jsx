@@ -816,15 +816,15 @@ export default function SettingsScreen() {
         <motion.button
           className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-left active:opacity-75"
           style={{
-            background: 'linear-gradient(135deg, rgba(0,212,255,0.12) 0%, rgba(99,102,241,0.12) 100%)',
-            border: '0.75px solid rgba(0,212,255,0.3)',
+            background: 'linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0.12) 100%)',
+            border: '0.75px solid rgba(99,102,241,0.3)',
           }}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           onClick={() => openComfortSettings(true)}
         >
           <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-            style={{ background: 'rgba(0,212,255,0.15)' }}>
+            style={{ background: 'rgba(99,102,241,0.15)' }}>
             <SlidersHorizontal size={18} style={{ color: 'var(--np-cyan)' }} />
           </div>
           <div className="flex-1 min-w-0">
@@ -956,7 +956,7 @@ export default function SettingsScreen() {
                       </div>
                       <button
                         className="w-full py-3 rounded-[12px] text-sm font-bold mt-1"
-                        style={{ background: 'linear-gradient(135deg, #4f6ef7, #6366f1)', color: '#fff', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}
+                        style={{ background: '#6366f1', color: '#fff', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}
                         onClick={handleSaveReminderTime}
                       >
                         Save time

@@ -107,7 +107,7 @@ export default function RecallScreen() {
         />
         <div
           className="flex-1 overflow-y-auto px-5 py-6 flex flex-col gap-5"
-          style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
+          style={{ minHeight: 0, paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}
         >
           {/* Score card */}
           <motion.div
@@ -224,7 +224,7 @@ export default function RecallScreen() {
       {/* Question */}
       <div
         className="flex-1 overflow-y-auto px-5 py-4"
-        style={{ minHeight: 0, paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}
+        style={{ minHeight: 0, paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}
       >
         <AnimatePresence mode="wait">
           <motion.div

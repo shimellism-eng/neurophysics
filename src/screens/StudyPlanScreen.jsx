@@ -82,8 +82,8 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
   // Study week card
   const isCurrent  = week.status === 'current'
   const isComplete = week.isComplete
-  const borderColor = isCurrent ? '#00d4ff' : isComplete ? 'rgba(34,197,94,0.3)' : 'rgba(255,255,255,0.07)'
-  const bgColor     = isCurrent ? 'rgba(0,212,255,0.05)' : isComplete ? 'rgba(34,197,94,0.04)' : 'rgba(255,255,255,0.02)'
+  const borderColor = isCurrent ? '#6366f1' : isComplete ? 'rgba(34,197,94,0.3)' : 'rgba(255,255,255,0.07)'
+  const bgColor     = isCurrent ? 'rgba(99,102,241,0.05)' : isComplete ? 'rgba(34,197,94,0.04)' : 'rgba(255,255,255,0.02)'
 
   return (
     <motion.div
@@ -100,12 +100,12 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
         {/* Status dot / check */}
         <div className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center"
           style={{
-            background: isComplete ? 'rgba(34,197,94,0.15)' : isCurrent ? 'rgba(0,212,255,0.12)' : 'rgba(255,255,255,0.05)',
+            background: isComplete ? 'rgba(34,197,94,0.15)' : isCurrent ? 'rgba(99,102,241,0.12)' : 'rgba(255,255,255,0.05)',
           }}>
           {isComplete
             ? <CheckCircle size={16} color="#22c55e" />
             : isCurrent
-              ? <Target size={16} color="#00d4ff" />
+              ? <Target size={16} color="#6366f1" />
               : <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)' }}>
                   {week.weekIndex + 1}
                 </span>}
@@ -113,12 +113,12 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
 
         <div className="flex-1 min-w-0 text-left">
           <div className="flex items-center gap-2">
-            <span className="font-bold" style={{ color: isCurrent ? '#00d4ff' : '#f8fafc', fontSize: 14 }}>
+            <span className="font-bold" style={{ color: isCurrent ? '#6366f1' : '#f8fafc', fontSize: 14 }}>
               {weekLabel}
             </span>
             {isCurrent && (
               <span className="px-2 py-0.5 rounded-full text-[10px] font-bold"
-                style={{ background: 'rgba(0,212,255,0.15)', color: '#00d4ff' }}>NOW</span>
+                style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}>NOW</span>
             )}
           </div>
           <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.3)' }}>
@@ -134,7 +134,7 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
               <div className="h-full rounded-full"
                 style={{
                   width: `${Math.round((week.masteredInBatch / week.topicIds.length) * 100)}%`,
-                  background: isComplete ? '#22c55e' : isCurrent ? '#00d4ff' : '#6366f1',
+                  background: isComplete ? '#22c55e' : isCurrent ? '#6366f1' : '#6366f1',
                 }}/>
             </div>
           )}
@@ -239,7 +239,7 @@ export default function StudyPlanScreen() {
   return (
     <div
       className="flex flex-col h-full overflow-y-auto"
-      style={{ background: '#080f1e', paddingBottom: 'calc(96px + env(safe-area-inset-bottom, 0px))' }}>
+      style={{ background: '#080f1e', paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}>
 
       {/* Header */}
       <PageHeader

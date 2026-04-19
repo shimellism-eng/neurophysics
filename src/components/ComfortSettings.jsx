@@ -70,7 +70,7 @@ function Slider({ value, min, max, step = 0.1, onChange, label, format }) {
     <div className="flex items-center gap-2" style={{ minWidth: 160 }}>
       <button
         aria-label={`Decrease ${label}`}
-        className="w-8 h-8 rounded-lg flex items-center justify-center text-lg font-bold active:opacity-70"
+        className="w-12 h-12 rounded-lg flex items-center justify-center text-lg font-bold active:opacity-70"
         style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--np-text)', flexShrink: 0 }}
         onClick={() => onChange(Math.max(min, Math.round((value - step) * 100) / 100))}
       >−</button>
@@ -89,7 +89,7 @@ function Slider({ value, min, max, step = 0.1, onChange, label, format }) {
       </div>
       <button
         aria-label={`Increase ${label}`}
-        className="w-8 h-8 rounded-lg flex items-center justify-center text-lg font-bold active:opacity-70"
+        className="w-12 h-12 rounded-lg flex items-center justify-center text-lg font-bold active:opacity-70"
         style={{ background: 'rgba(255,255,255,0.08)', color: 'var(--np-text)', flexShrink: 0 }}
         onClick={() => onChange(Math.min(max, Math.round((value + step) * 100) / 100))}
       >+</button>
@@ -414,7 +414,7 @@ export function ComfortFirstTimePrompt() {
           bottom: 'calc(96px + env(safe-area-inset-bottom, 0px) + 12px)',
           background: 'var(--np-card)',
           border: '0.75px solid var(--np-cyan)',
-          boxShadow: '0 0 24px rgba(0,212,255,0.15)',
+          boxShadow: '0 0 24px rgba(99,102,241,0.15)',
         }}
         initial={reduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
         animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0 }}

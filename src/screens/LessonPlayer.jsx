@@ -464,7 +464,7 @@ export default function LessonPlayer() {
                 <motion.button
                   className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
                   style={{
-                    background: 'linear-gradient(135deg, #6366f1, #818cf8)',
+                    background: '#6366f1',
                     color: '#fff',
                     boxShadow: '0 8px 24px rgba(99,102,241,0.4)',
                   }}
@@ -569,7 +569,7 @@ export default function LessonPlayer() {
                 </motion.button>
                 <motion.button
                   className="flex-1 font-bold"
-                  style={{ height: 52, borderRadius: 14, background: 'linear-gradient(135deg, #00d4ff, #0099bb)', color: '#080f1e', border: 'none', cursor: 'pointer', fontSize: 15 }}
+                  style={{ height: 52, borderRadius: 14, background: '#6366f1', color: '#080f1e', border: 'none', cursor: 'pointer', fontSize: 15 }}
                   whileTap={{ y: 2 }}
                   onClick={() => setPomoDismissed(true)}
                 >
@@ -762,7 +762,7 @@ export default function LessonPlayer() {
             <motion.button
               className="w-full py-4 rounded-[16px] flex items-center justify-center gap-2 font-semibold text-base"
               style={{
-                background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
+                background: `${topic.moduleColor}`,
                 boxShadow: `0 8px 24px ${topic.moduleColor}40`,
                 color: '#fff',
               }}
@@ -829,7 +829,7 @@ export default function LessonPlayer() {
             <motion.button
               className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
               style={{
-                background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}bb)`,
+                background: `${topic.moduleColor}`,
                 boxShadow: `0 8px 24px ${topic.moduleColor}30`,
                 color: '#fff',
               }}
@@ -894,7 +894,7 @@ export default function LessonPlayer() {
             <motion.button
               className="font-display w-full max-w-xs py-4 rounded-[16px] font-bold text-sm"
               style={{
-                background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
+                background: '#6366f1',
                 boxShadow: '0 6px 0 rgba(0,0,0,0.25), 0 12px 28px rgba(99,102,241,0.35)',
                 color: '#fff',
               }}

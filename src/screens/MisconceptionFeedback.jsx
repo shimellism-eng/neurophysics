@@ -302,7 +302,7 @@ export default function MisconceptionFeedback() {
             className="flex-1 py-4 rounded-[16px] flex items-center justify-center gap-2 font-semibold text-sm"
             style={{
               background: isCorrect
-                ? `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`
+                ? `${topic.moduleColor}`
                 : `${topic.moduleColor}20`,
               boxShadow: isCorrect ? `0px 8px 24px ${topic.moduleColor}40` : 'none',
               color: isCorrect ? '#fff' : topic.moduleColor,

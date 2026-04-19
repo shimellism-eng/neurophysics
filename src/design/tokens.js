@@ -19,9 +19,9 @@ export const colors = {
   borderStrong: 'rgba(255,255,255,0.18)',
 
   // Brand
-  accent:      '#00d4ff',
-  cyan:        '#00d4ff',
-  cyanMuted:   'rgba(0,212,255,0.14)',
+  accent:      '#6366f1',
+  cyan:        '#6366f1',
+  cyanMuted:   'rgba(99,102,241,0.14)',
   indigo:      '#6366f1',
   indigoMuted: 'rgba(99,102,241,0.14)',
   purple:      '#9b59b6',

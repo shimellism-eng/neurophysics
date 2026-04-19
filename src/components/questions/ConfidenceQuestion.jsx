@@ -108,7 +108,7 @@ export default function ConfidenceQuestion({ data, moduleColor, onComplete }) {
         <motion.button
           className="w-full py-3.5 rounded-[14px] font-semibold text-sm"
           style={{
-            background: `linear-gradient(135deg, ${moduleColor}, ${moduleColor}cc)`,
+            background: `${moduleColor}`,
             boxShadow: `0px 6px 20px ${moduleColor}40`,
             color: '#fff',
           }}

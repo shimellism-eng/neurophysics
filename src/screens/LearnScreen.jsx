@@ -236,6 +236,45 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
                 )
               })}
             </div>
+
+            {/* Module-level action buttons */}
+            <div className="px-3 pb-4 flex flex-col gap-2 mt-1">
+              <button
+                type="button"
+                className="w-full py-3 rounded-[12px] text-sm font-semibold"
+                style={{
+                  background: 'transparent',
+                  border: '0.75px solid rgba(255,255,255,0.12)',
+                  color: '#a8b8cc',
+                  minHeight: 44,
+                }}
+                onClick={() => {
+                  const firstTopic = module.topics.find(id => {
+                    const t = TOPICS[id]
+                    if (!t) return false
+                    if (t.boards && t.boards.length > 0 && !t.boards.includes(selectedBoard.id)) return false
+                    if (selectedCourse === 'combined' && PHYSICS_ONLY_TOPICS.has(id)) return false
+                    return true
+                  })
+                  if (firstTopic) navigate(`/practice/${firstTopic}`)
+                }}
+              >
+                Practice questions
+              </button>
+              <button
+                type="button"
+                className="w-full py-3 rounded-[12px] text-sm font-semibold"
+                style={{
+                  background: 'transparent',
+                  border: '0.75px solid rgba(255,255,255,0.12)',
+                  color: '#a8b8cc',
+                  minHeight: 44,
+                }}
+                onClick={() => navigate('/timed-paper')}
+              >
+                Exam practice
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

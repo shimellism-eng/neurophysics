@@ -27,19 +27,27 @@
   --np-card-deep:     rgba(8,15,30,0.96);
   --np-card-lift:     rgba(20,30,55,0.90);
 
+  /* Surface aliases (spec names used in phases 1-4) */
+  --surface-1:        rgba(15,22,41,0.95);
+  --surface-2:        rgba(255,255,255,0.04);
+
   /* Borders */
   --np-border:        rgba(255,255,255,0.08);
   --np-border-mid:    rgba(255,255,255,0.12);
   --np-border-strong: rgba(255,255,255,0.18);
 
   /* Brand */
-  --np-cyan:    #6366f1;
+  --np-cyan:    #00d4ff;
+  --cyan:       #00d4ff;
+  --cyan-dim:   rgba(0,212,255,0.12);
   --np-indigo:  #6366f1;
   --np-purple:  #9b59b6;
   --np-amber:   #f39c12;
   --np-pink:    #e91e8c;
   --np-green:   #22c55e;
+  --green:      #22c55e;
   --np-red:     #ef4444;
+  --red:        #ef4444;
   --np-gold:    #fdc700;
 
   /* Semantic status aliases */
@@ -51,13 +59,16 @@
   /* Text */
   --np-text:       #e2e8f0;
   --np-text-mid:   #cbd5e1;
-  --np-text-muted: #94a3b8;
+  --np-text-muted: #a8b8cc;
   --np-text-dim:   #6c7c93;
 
   /* Typography */
   --font-body:    'Atkinson Hyperlegible', sans-serif;
   --font-display: 'Bricolage Grotesque', sans-serif;
-  --font-mono:    'IBM Plex Mono', monospace;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Spacing base unit */
+  --space: 8px;
 
   /* Layout */
   --safe-top:    env(safe-area-inset-top, 0px);
@@ -68,15 +79,18 @@
   --page-top-gap: 12px;
   --page-bottom-gap: 24px;
 
-  /* Shape + depth */
-  --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
+  /* Shape */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
   --radius-xl: 16px;
-  --shadow-raised: 0 8px 24px rgba(0,0,0,0.18);
+
+  /* Depth */
+  --shadow-card:     0 2px 0 rgba(0,0,0,0.4), 0 8px 32px rgba(0,212,255,0.06);
+  --shadow-raised:   0 8px 24px rgba(0,0,0,0.18);
   --shadow-floating: 0 18px 44px rgba(0,0,0,0.32);
 
-  /* Glass blur — set to 0px in high-contrast mode (BottomNav uses 28px directly) */
+  /* Glass blur — set to 0px in high-contrast mode */
   --np-glass-blur: 28px;
 }
 
@@ -175,9 +189,9 @@ body.high-contrast {
     font-family: 'Bricolage Grotesque', sans-serif;
   }
 
-  /* Equation/formula font — IBM Plex Mono: scientific clarity, distinct from prose */
+  /* Equation/formula font — JetBrains Mono: scientific clarity, distinct from prose */
   .font-mono {
-    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-family: var(--font-mono);
   }
 
   /* Left-align all body text — never justify paragraphs (harder to read, esp. for dyslexia) */

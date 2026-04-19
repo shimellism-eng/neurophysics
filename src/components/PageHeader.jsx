@@ -12,7 +12,7 @@
  *   onBack    {function}            — back button handler; omit to hide back button
  *   rightSlot {ReactNode}           — optional element(s) pinned to the right
  */
-import { ChevronLeft } from 'lucide-react'
+import { CaretLeft } from '@phosphor-icons/react'
 
 export default function PageHeader({
   title,
@@ -50,7 +50,7 @@ export default function PageHeader({
           onClick={onBack}
           aria-label={backLabel}
         >
-          <ChevronLeft size={18} color="#a8b8cc" />
+          <CaretLeft size={18} color="var(--np-text-muted)" weight="bold" />
         </button>
       )}
 

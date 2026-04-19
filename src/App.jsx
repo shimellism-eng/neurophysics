@@ -75,10 +75,10 @@ function RouteLoader() {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').reduceMotion } catch { return false }
   })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   return (
-    <div className="flex items-center justify-center h-full" style={{ background: '#080f1e' }}>
+    <div className="flex items-center justify-center h-full" style={{ background: 'var(--np-bg)' }}>
       <motion.div
         className="w-8 h-8 rounded-full border-2"
-        style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
+        style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: 'var(--np-indigo)' }}
         animate={reduceMotion ? {} : { rotate: 360 }}
         transition={reduceMotion ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
       />

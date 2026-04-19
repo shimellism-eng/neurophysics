@@ -232,6 +232,8 @@ export default function LessonPlayer() {
   // Idempotency guard: markStarted fires at most once per mount
   const hasStartedRef = useRef(false)
 
+  const reducedMotion = useReducedMotion()
+
   // ADHD pacing: session timer + break nudges
   const { elapsedMinutes, showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
@@ -478,7 +480,10 @@ export default function LessonPlayer() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Next topic
+                  <div className="flex flex-col items-center">
+                    <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 500 }}>Coming up next</span>
+                    <span>{TOPICS[nextTopicId]?.title || 'Next topic'}</span>
+                  </div>
                   <ChevronRight size={18} strokeWidth={2.5} />
                 </motion.button>
               )}
@@ -831,10 +836,10 @@ export default function LessonPlayer() {
             <motion.div
               key={step}
               custom={direction}
-              initial={{ opacity: 0, x: direction * 40 }}
+              initial={reducedMotion ? { opacity: 0 } : { opacity: 0, x: direction * 40 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: direction * -40 }}
-              transition={{ duration: 0.22, ease: 'easeOut' }}
+              exit={reducedMotion ? { opacity: 0 } : { opacity: 0, x: direction * -40 }}
+              transition={{ duration: reducedMotion ? 0.12 : 0.22, ease: 'easeOut' }}
             >
               {renderContent()}
             </motion.div>
@@ -899,29 +904,42 @@ export default function LessonPlayer() {
       </div>
 
       {/* ── Next button - only for steps without their own CTA ── */}
-      {!stepHasOwnCTA && !isLast && (
-        <motion.div
-          className="shrink-0 px-5 pt-3"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: '#080f1e', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <motion.button
-            className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
-            style={{
-              background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}bb)`,
-              boxShadow: `0 8px 24px ${topic.moduleColor}30`,
-              color: '#fff',
-            }}
-            onClick={goNext}
-            whileTap={{ scale: 0.97 }}
+      {!stepHasOwnCTA && !isLast && (() => {
+        const nextStep = STEPS[step + 1]
+        const NextIcon = nextStep?.icon
+        return (
+          <motion.div
+            className="shrink-0 px-5 pt-3"
+            style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: '#080f1e', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
           >
-            {STEPS[step + 1]?.label}
-            <ChevronRight size={18} strokeWidth={2.5} />
-          </motion.button>
-        </motion.div>
-      )}
+            {/* Transition warning — "Coming up next" preview */}
+            {nextStep && (
+              <div className="flex items-center gap-1.5 mb-3 px-1">
+                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Coming up:</span>
+                {NextIcon && <NextIcon size={11} color={topic.moduleColor} />}
+                <span style={{ fontSize: 12, fontWeight: 700, color: topic.moduleColor }}>{nextStep.label}</span>
+                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>· {nextStep.hint}</span>
+              </div>
+            )}
+            <motion.button
+              className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
+              style={{
+                background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}bb)`,
+                boxShadow: `0 8px 24px ${topic.moduleColor}30`,
+                color: '#fff',
+              }}
+              onClick={goNext}
+              whileTap={{ scale: 0.97 }}
+            >
+              Ready
+              <ChevronRight size={18} strokeWidth={2.5} />
+            </motion.button>
+          </motion.div>
+        )
+      })()}
 
       {/* ── XP pop animation ── */}
       <AnimatePresence>

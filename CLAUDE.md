@@ -340,12 +340,12 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 
 ### Sprint 4: Neurodivergent UX Polish
 
-#### 4.1 Transition Warnings
-- [ ] Before screen transitions: "Next up: a practice question"
-- [ ] Consistent transition animation (slide/fade, respect reduced motion)
-- [ ] Never auto-advance. Always require user tap
-- [ ] Never auto-play media. Always require user initiation
-- [ ] End of section: "Coming up next: [name]. Ready?"
+#### 4.1 Transition Warnings ✅ shipped
+- [x] Before screen transitions: "Coming up: [label] · [hint]" strip above Next button
+- [x] Consistent transition animation: slide respects reducedMotion (opacity-only fade when on)
+- [x] Never auto-advance: already true — all advances require explicit tap
+- [x] Never auto-play media: TTS already requires tap (speak() only on button click)
+- [x] End of section: "Coming up next / [topic title]" on done step's Next Topic CTA
 
 #### 4.2 Lesson Map View
 - [ ] Lesson outline accessible from any point (persistent icon)

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {
   ChevronRight, Zap, Flame, TrendingUp,
-  Calendar, CheckCircle, Clock, Target, RotateCcw,
+  Calendar, CheckCircle, Clock, Target, RotateCcw, Shuffle,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -521,6 +521,36 @@ export default function HomeScreen() {
             </div>
             <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>
               5 questions · ~3 minutes
+            </div>
+          </div>
+          <ChevronRight size={20} color="rgba(255,255,255,0.3)" strokeWidth={2} />
+        </motion.button>
+      </div>
+
+      {/* ── MIXED REVISION ───────────────────────────────────────────────────── */}
+      <div className="px-5 mb-5">
+        <motion.button
+          className="w-full rounded-[22px] flex items-center gap-4"
+          style={{
+            padding: '16px 20px',
+            background: 'rgba(155,89,182,0.07)',
+            border: '1px solid rgba(155,89,182,0.2)',
+            color: '#fff',
+            cursor: 'pointer',
+          }}
+          onClick={() => navigate('/mixed-revision')}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="rounded-[14px] flex items-center justify-center shrink-0"
+            style={{ width: 44, height: 44, background: 'rgba(155,89,182,0.15)' }}>
+            <Shuffle size={22} color="#9b59b6" strokeWidth={2} />
+          </div>
+          <div className="flex-1 text-left">
+            <div className="font-bold" style={{ fontSize: 15, color: '#f8fafc', letterSpacing: '-0.01em' }}>
+              Mixed Revision
+            </div>
+            <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>
+              15 questions · cross-topic mix
             </div>
           </div>
           <ChevronRight size={20} color="rgba(255,255,255,0.3)" strokeWidth={2} />

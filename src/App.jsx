@@ -463,6 +463,7 @@ function AppShell() {
                 <Route path="/recall/:topicId" element={<RecallScreen />} />
                 <Route path="/equation-drill" element={<EquationDrillScreen />} />
                 <Route path="/quickwin" element={<QuickWinScreen />} />
+                <Route path="/mixed-revision" element={<MixedRevisionScreen />} />
                 <Route path="/spec-checklist" element={<SpecChecklist />} />
                 <Route path="/study-plan" element={<StudyPlanScreen />} />
                 <Route path="*" element={<Navigate to={user ? '/' : '/auth'} replace />} />

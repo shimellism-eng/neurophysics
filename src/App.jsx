@@ -66,7 +66,8 @@ const SpecChecklist     = lazy(() => import('./screens/SpecChecklist'))
 const StudyPlanScreen   = lazy(() => import('./screens/StudyPlanScreen'))
 const RecallScreen      = lazy(() => import('./screens/RecallScreen'))
 const EquationDrillScreen = lazy(() => import('./screens/EquationDrillScreen'))
-const QuickWinScreen    = lazy(() => import('./screens/QuickWinScreen'))
+const QuickWinScreen      = lazy(() => import('./screens/QuickWinScreen'))
+const MixedRevisionScreen = lazy(() => import('./screens/MixedRevisionScreen'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {

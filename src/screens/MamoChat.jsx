@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { Send, Sparkles, Trash2, RotateCcw } from 'lucide-react'
-import AtomIcon from '../components/AtomIcon'
+import { Send, Sparkles, RotateCcw } from 'lucide-react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { getSelectedBoard } from '../utils/boardConfig'
@@ -124,20 +123,11 @@ export default function MamoChat() {
   })
   const [streaming, setStreaming]       = useState(false)
   const [lastUserMsg, setLastUserMsg]   = useState('')
-  const [selectedTopic, setSelectedTopic] = useState(null)
   const messagesRef = useRef(null)
   const inputRef  = useRef(null)
   const abortRef  = useRef(null)
 
-  // Quick-pick topics for the topic selector (hardcoded for speed)
-  const QUICK_TOPICS = [
-    'Energy Stores', 'Forces', 'Waves', 'Electricity',
-    'Atomic Structure', 'Particle Model', 'Magnetism', 'Space Physics',
-    'Motion', 'Radiation', 'Pressure', 'Circuits',
-  ]
-
-  // Effective topic label: URL param takes priority, then manual picker
-  const effectiveTopicLabel = topicLabel || selectedTopic
+  const effectiveTopicLabel = topicLabel
   // Persist messages to localStorage (skip the initial welcome msg)
   useEffect(() => {
     if (messages.length <= 1) return
@@ -335,55 +325,8 @@ export default function MamoChat() {
       {/* ── Header ─────────────────────────────────────────────────────────── */}
       <PageHeader
         onBack={() => navigate(-1)}
-        title={
-          <div className="flex items-center gap-2 min-w-0">
-            <div
-              className="w-10 h-10 rounded-[14px] flex items-center justify-center shrink-0"
-              style={{ background: 'linear-gradient(135deg, #6366f120, #c084fc20)', border: '1px solid #6366f150' }}
-            >
-              <AtomIcon size={20} color="#6366f1" />
-            </div>
-            <div className="flex items-center gap-2 min-w-0">
-              <div className="text-base font-bold" style={{ color: '#f8fafc' }}>Mamo</div>
-              <div className="text-xs px-1.5 py-0.5 rounded-md shrink-0" style={{ color: '#a8b8cc', background: 'rgba(168,184,204,0.1)', border: '0.75px solid rgba(168,184,204,0.2)' }}>
-                {getSelectedBoard().name}
-              </div>
-            </div>
-          </div>
-        }
-        subtitle={
-          effectiveTopicLabel ? (
-            <div className="text-xs truncate" style={{ color: '#6366f1' }}>
-              Studying: {effectiveTopicLabel}
-            </div>
-          ) : (
-            <div className="text-xs" style={{ color: '#00bc7d' }}>● AI-powered physics tutor</div>
-          )
-        }
-        rightSlot={
-          <button
-            className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-            style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-            onClick={clearThread}
-            aria-label="Clear conversation"
-          >
-            <Trash2 size={15} color="#a8b8cc" />
-          </button>
-        }
+        title="Mamo"
       />
-
-      {/* ── AI disclosure banner ────────────────────────────────────────────── */}
-      <div
-        className="px-4 py-2 shrink-0 flex items-center gap-2"
-        style={{ background: 'rgba(99,102,241,0.07)', borderBottom: '0.75px solid rgba(99,102,241,0.15)' }}
-        role="note"
-        aria-label="AI-generated content disclosure"
-      >
-        <Sparkles size={11} color="#818cf8" />
-        <span className="text-xs" style={{ color: '#818cf8' }}>
-          Mamo's responses are <strong>AI-generated</strong> by Gemini (Google). Always verify with your teacher.
-        </span>
-      </div>
 
       {/* ── Messages ─────────────────────────────────────────────────────────── */}
       <div ref={messagesRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3" style={{ minHeight: 0 }} role="log" aria-live="polite" aria-label="Chat messages">
@@ -490,6 +433,10 @@ export default function MamoChat() {
           </motion.div>
         )}
 
+        {/* AI disclaimer — subtle, bottom of scroll area */}
+        <p className="text-center pt-2 pb-1" style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)' }}>
+          AI-generated · Always verify with your teacher
+        </p>
       </div>
 
       {/* ── Quick-starter suggestions (non-empty state — 4 full-text stacked) ── */}
@@ -513,46 +460,6 @@ export default function MamoChat() {
               {q}
             </button>
           ))}
-        </div>
-      )}
-
-      {/* ── Topic selector (shown when no URL topic is set) ─────────────────── */}
-      {!topicLabel && (
-        <div
-          className="px-4 pt-2.5 pb-1 shrink-0"
-          style={{ borderTop: '0.75px solid rgba(255,255,255,0.06)', background: 'rgba(8,15,30,0.98)' }}
-        >
-          <div className="flex items-center gap-2 mb-1.5">
-            <span className="text-xs" style={{ color: '#a8b8cc' }}>What are you studying?</span>
-            {selectedTopic && (
-              <button
-                className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold"
-                style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.35)', color: '#6366f1' }}
-                onClick={() => setSelectedTopic(null)}
-              >
-                {selectedTopic}
-                <span style={{ fontSize: 10, lineHeight: 1 }}>✕</span>
-              </button>
-            )}
-          </div>
-          {!selectedTopic && (
-            <div className="flex gap-1.5 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
-              {QUICK_TOPICS.map(t => (
-                <button
-                  key={t}
-                  className="shrink-0 px-2.5 py-1 rounded-full text-xs font-medium whitespace-nowrap"
-                  style={{
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '0.75px solid rgba(255,255,255,0.12)',
-                    color: '#a8b8cc',
-                  }}
-                  onClick={() => setSelectedTopic(t)}
-                >
-                  {t}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
       )}
 

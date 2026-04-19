@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import {
   ChevronRight, Zap, Flame, TrendingUp,
-  Calendar, CheckCircle, Clock, Target, RotateCcw, Shuffle,
+  Calendar, CheckCircle, Clock, Target, RotateCcw, Shuffle, BookMarked,
 } from 'lucide-react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -346,6 +346,24 @@ export default function HomeScreen() {
   const resumeModule    = plan.todayModule || MODULES.find(m => m.topics.includes(firstUnmastered))
   const moduleColor     = resumeModule?.color || '#6366f1'
 
+  // Check for a saved lesson break to show a resume card
+  const breakResume = (() => {
+    try {
+      let best = null
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i)
+        if (!key?.startsWith('np_lesson_progress_')) continue
+        const val = JSON.parse(localStorage.getItem(key) || 'null')
+        if (!val || val.step == null) continue
+        if (!best || val.ts > best.ts) best = { topicId: key.replace('np_lesson_progress_', ''), ...val }
+      }
+      if (!best) return null
+      const topic = TOPICS[best.topicId]
+      if (!topic) return null
+      return { topicId: best.topicId, step: best.step, title: topic.title }
+    } catch { return null }
+  })()
+
   // Routing guard — same logic as LearnScreen onTap
   const navigateToTopic = (topicId) => {
     const t = TOPICS[topicId]
@@ -496,6 +514,38 @@ export default function HomeScreen() {
           </motion.div>
         </motion.button>
       </div>
+
+      {/* ── RESUME LESSON ───────────────────────────────────────────────────── */}
+      {breakResume && (
+        <div className="px-5 mb-5">
+          <motion.button
+            className="w-full rounded-[22px] flex items-center gap-4"
+            style={{
+              padding: '14px 20px',
+              background: 'rgba(0,188,125,0.07)',
+              border: '1px solid rgba(0,188,125,0.25)',
+              color: '#fff',
+              cursor: 'pointer',
+            }}
+            onClick={() => navigate(`/lesson/${breakResume.topicId}`)}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="rounded-[14px] flex items-center justify-center shrink-0"
+              style={{ width: 44, height: 44, background: 'rgba(0,188,125,0.15)' }}>
+              <BookMarked size={22} color="#00bc7d" strokeWidth={2} />
+            </div>
+            <div className="flex-1 text-left">
+              <div className="font-bold" style={{ fontSize: 15, color: '#f8fafc', letterSpacing: '-0.01em' }}>
+                Resume: {breakResume.title}
+              </div>
+              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>
+                Step {breakResume.step + 1} — pick up where you left off
+              </div>
+            </div>
+            <ChevronRight size={20} color="rgba(0,188,125,0.6)" strokeWidth={2} />
+          </motion.button>
+        </div>
+      )}
 
       {/* ── QUICK WIN ────────────────────────────────────────────────────────── */}
       <div className="px-5 mb-5">

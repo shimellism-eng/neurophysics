@@ -21,7 +21,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import {
   ArrowLeft, ChevronRight, BookOpen, FlaskConical,
   GraduationCap, Zap, Globe, Lightbulb, Volume2,
-  Layers, Target, Star, CheckCircle2, Map, Clock,
+  Layers, Target, Star, CheckCircle2, Map, Clock, Coffee,
 } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -331,6 +331,14 @@ export default function LessonPlayer() {
       } catch {}
     }
     navigate('/learn')
+  }
+
+  // "I need a break" — saves step position so user can resume from HomeScreen
+  const handleBreak = () => {
+    try {
+      localStorage.setItem(`np_lesson_progress_${id}`, JSON.stringify({ step, ts: Date.now() }))
+    } catch {}
+    navigate('/')
   }
 
   const goBack = () => {
@@ -764,7 +772,7 @@ export default function LessonPlayer() {
             {currentStep.hint}
           </span>
           <span className="ml-auto text-xs font-semibold tabular-nums" style={{ color: 'rgba(255,255,255,0.45)' }}>
-            {step + 1}/{totalSteps}
+            Step {step + 1} of {totalSteps}
           </span>
           {/* Elapsed time — ADHD self-regulation cue */}
           {elapsedMinutes > 0 && (
@@ -794,6 +802,18 @@ export default function LessonPlayer() {
             </span>
           )}
         </div>
+
+        {/* "I need a break" — only shown mid-lesson (step > 0, not the last step) */}
+        {step > 0 && step < totalSteps - 1 && (
+          <button
+            onClick={handleBreak}
+            className="flex items-center gap-1.5 mx-auto mt-2"
+            style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px 8px' }}
+          >
+            <Coffee size={11} />
+            I need a break — save &amp; resume later
+          </button>
+        )}
       </div>
 
       {/* ── Persistent keyword glossary (new flow only, steps 2+) ── */}

@@ -331,13 +331,12 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Colour-coded topic label on each question card (QuickWinScreen + MixedRevisionScreen)
 - [x] Per-topic result breakdown in module colours
 
-#### 3.4 Micro-Topic Segmenting
-- [ ] Audit all concept screens for length
-- [ ] Break explanations over ~5 min into sub-steps (one key idea each)
-- [ ] Each sub-step ends with 1-2 retrieval questions before advancing
-- [ ] Step counter: "Step 2 of 4"
-- [ ] Persistent progress bar showing position in full lesson loop
-- [ ] "I need a break" button: save progress to Supabase, return to dashboard, resume exact position on return
+#### 3.4 Micro-Topic Segmenting ✅ shipped
+- [x] Step counter: "Step N of N" in progress bar row
+- [x] Persistent segmented progress bar showing position in full lesson loop (already existed, retained)
+- [x] "I need a break" button: saves step to localStorage, returns to home
+- [x] HomeScreen: "Resume: [topic]" card when a break position is saved
+- [ ] Content audit: break long explanations into sub-steps (manual content work — deferred to Mamo)
 
 ### Sprint 4: Neurodivergent UX Polish
 

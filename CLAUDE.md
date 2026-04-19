@@ -353,11 +353,11 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Jump to completed steps only
 - [x] Estimated time remaining
 
-#### 4.3 Reading Ruler
-- [ ] Semi-transparent horizontal bar (~2 lines tall, user-chosen colour)
-- [ ] Mobile: follows scroll. Desktop: follows mouse Y
-- [ ] Works on concept explanations, feedback cards, question stems
-- [ ] Global overlay component from ComfortProvider, pointer-events: none
+#### 4.3 Reading Ruler ✅ shipped
+- [x] Semi-transparent horizontal bar (~2 lines tall, user-chosen colour)
+- [x] Mobile: follows scroll. Desktop: follows mouse Y
+- [x] Works on concept explanations, feedback cards, question stems
+- [x] Global overlay component from ComfortProvider, pointer-events: none
 
 #### 4.4 Colour Overlay
 - [ ] Semi-transparent tint over main content (not nav/settings)

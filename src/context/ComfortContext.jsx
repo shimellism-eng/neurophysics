@@ -22,6 +22,7 @@ import {
   createContext, useContext, useEffect, useState,
   useCallback, useRef, useMemo,
 } from 'react'
+import ReadingRuler from '../components/ReadingRuler'
 import { supabase } from '../lib/supabase'
 import { useAuth } from './AuthContext'
 
@@ -311,6 +312,7 @@ export function ComfortProvider({ children }) {
   return (
     <ComfortContext.Provider value={value}>
       {children}
+      <ReadingRuler />
     </ComfortContext.Provider>
   )
 }

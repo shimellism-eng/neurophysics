@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
-  ArrowLeft, ChevronRight, BookOpen, FlaskConical,
+  ArrowLeft, X, ChevronRight, BookOpen, FlaskConical,
   GraduationCap, Zap, Globe, Lightbulb, Volume2,
   Layers, Target, Star, CheckCircle2, Map, Clock, Coffee, LayoutList,
 } from 'lucide-react'
@@ -737,18 +737,7 @@ export default function LessonPlayer() {
         className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
         style={{ background: 'var(--np-card-deep)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid var(--np-border)', overflow: 'hidden', paddingTop: '12px' }}
       >
-        {/* Radial gradient bloom behind header content */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: `radial-gradient(ellipse 100% 120% at 50% -10%, ${topic.moduleColor}15 0%, transparent 60%)`,
-            pointerEvents: 'none',
-          }}
-        />
-
-        {/* Back button — goes to previous step, or exits when on step 0 */}
+        {/* Back button — ArrowLeft within lesson, X to exit on step 0 */}
         <button
           onClick={step > 0 ? goBack : exitLesson}
           aria-label={step > 0 ? 'Previous step' : 'Exit lesson'}
@@ -760,35 +749,22 @@ export default function LessonPlayer() {
             position: 'relative',
           }}
         >
-          <ArrowLeft size={16} color="rgba(255,255,255,0.45)" />
+          {step > 0
+            ? <ArrowLeft size={16} color="rgba(255,255,255,0.45)" />
+            : <X size={16} color="rgba(255,255,255,0.45)" />
+          }
         </button>
 
         {/* Title block */}
         <div className="flex-1 min-w-0" style={{ position: 'relative' }}>
           <div className="text-xs font-bold" style={{ color: topic.moduleColor }}>{topic.module}</div>
           <h1
-            className="font-display font-bold leading-tight truncate"
-            style={{ color: 'var(--np-text)', fontSize: 17, letterSpacing: '-0.02em' }}
+            className="font-display font-bold"
+            style={{ color: 'var(--np-text)', fontSize: 15, letterSpacing: '-0.02em', lineHeight: 1.2, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
           >
             {topic.title}
           </h1>
         </div>
-
-        {/* Step counter pill */}
-        <span
-          className="shrink-0 tabular-nums"
-          style={{
-            borderRadius: 20,
-            background: 'var(--np-card)',
-            padding: '4px 10px',
-            fontSize: 12,
-            color: 'var(--np-text-muted)',
-            fontWeight: 600,
-            position: 'relative',
-          }}
-        >
-          {step + 1} / {totalSteps}
-        </span>
 
         {/* Lesson map button */}
         <button
@@ -799,21 +775,6 @@ export default function LessonPlayer() {
         >
           <LayoutList size={15} color="rgba(255,255,255,0.45)" />
         </button>
-
-        {/* Course badge */}
-        <span
-          className="shrink-0 px-3 py-1 text-xs font-semibold"
-          style={{
-            borderRadius: 999,
-            ...(topic.course === 'physics-only'
-              ? { background: 'rgba(139,92,246,0.12)', color: '#a78bfa', border: '1px solid rgba(139,92,246,0.28)' }
-              : { background: 'rgba(34,197,94,0.10)', color: '#4ade80', border: '1px solid rgba(34,197,94,0.25)' }
-            ),
-            position: 'relative',
-          }}
-        >
-          {topic.course === 'physics-only' ? 'Physics Only' : 'Combined'}
-        </span>
 
         {/* Hearts display — hidden in explore/revision mode */}
         {!exploreMode ? (
@@ -869,18 +830,18 @@ export default function LessonPlayer() {
 
         {/* Step label row */}
         <div className="flex items-center gap-1.5">
-          <StepIcon size={12} color={topic.moduleColor} />
-          <span className="text-[13px] font-bold" style={{ color: topic.moduleColor }}>
+          <StepIcon size={13} color={topic.moduleColor} />
+          <span className="text-sm font-bold" style={{ color: topic.moduleColor }}>
             {currentStep.label}
           </span>
-          <span className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
+          <span className="text-[11px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
             {currentStep.hint}
           </span>
-          <span className="ml-auto text-xs font-semibold tabular-nums" style={{ color: 'rgba(255,255,255,0.45)' }}>
-            Step {step + 1} of {totalSteps}
+          <span className="ml-auto text-[11px] font-medium tabular-nums" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            {step + 1} / {totalSteps}
           </span>
-          {/* Elapsed time — ADHD self-regulation cue */}
-          {elapsedMinutes > 0 && (
+          {/* Session timer — only shown when user has opted in via Pomodoro Timer setting */}
+          {comfortPrefs.pomodoroTimer && elapsedMinutes > 0 && (
             <span
               className="flex items-center gap-1 text-[10px] font-semibold tabular-nums px-2 py-0.5 rounded-full"
               style={{
@@ -891,19 +852,6 @@ export default function LessonPlayer() {
             >
               <Clock size={9} />
               {elapsedMinutes}m
-            </span>
-          )}
-          {/* Per-step elapsed time — only show after 60s; amber nudge after 3 min */}
-          {stepElapsed >= 60 && (
-            <span
-              className="text-[10px] font-medium tabular-nums px-1.5 py-0.5 rounded-full"
-              style={{
-                background: stepElapsed >= 180 ? 'rgba(243,156,18,0.12)' : 'rgba(255,255,255,0.05)',
-                color: stepElapsed >= 180 ? '#f39c12' : 'rgba(255,255,255,0.3)',
-                border: stepElapsed >= 180 ? '1px solid rgba(243,156,18,0.25)' : '1px solid rgba(255,255,255,0.06)',
-              }}
-            >
-              {fmtStepTime(stepElapsed)}
             </span>
           )}
         </div>

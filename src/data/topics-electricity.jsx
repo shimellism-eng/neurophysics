@@ -1430,6 +1430,23 @@ export const ELECTRICITY_TOPICS = {
     description: 'Power (P) is the rate of energy transfer in watts (W). P = IV (power = current × voltage). P = I²R (useful when voltage is unknown). Energy transferred: E = Pt (joules = watts × seconds). A 60 W bulb transfers 60 J every second. Doubling the current quadruples the power (P = I²R).',
     lessonVisual: ElectricalPowerLesson, ideaVisual: ElectricalPowerIdea, realityVisual: ElectricalPowerReality,
     equations: [{ expr: 'P = IV', given: true }, { expr: 'P = I²R', given: true }, { expr: 'P = V²/R', given: true }, { expr: 'E = Pt', given: true }],
+    equationData: {
+      name: 'Electrical Power  P = IV',
+      triangle: {
+        top:   { sym: 'P', name: 'Power',   unit: 'W', },
+        left:  { sym: 'I', name: 'Current', unit: 'A', },
+        right: { sym: 'V', name: 'Voltage', unit: 'V', },
+      },
+      rearrangements: [
+        { unknown: 'P', formula: 'P = I × V', unit: 'W', calc: ({ I, V }) => I * V },
+        { unknown: 'I', formula: 'I = P ÷ V', unit: 'A', calc: ({ P, V }) => P / V },
+        { unknown: 'V', formula: 'V = P ÷ I', unit: 'V', calc: ({ P, I }) => P / I },
+      ],
+      practice: [
+        { label: 'A current of 3 A flows through a 12 V supply. What is the power?', find: 'P', given: { I: { value: 3, unit: 'A' }, V: { value: 12, unit: 'V' } } },
+        { label: 'A 60 W bulb runs on 230 V mains. What current flows?',             find: 'I', given: { P: { value: 60, unit: 'W' }, V: { value: 230, unit: 'V' } } },
+      ],
+    },
     question: 'A current of 3 A flows through a 12 V supply. What is the power?',
     questionSubtitle: 'Use P = I × V',
     options: ['4 W', '15 W', '36 W', '9 W'],

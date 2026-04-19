@@ -1418,6 +1418,23 @@ export const FORCES_TOPICS = {
     description: 'Work is done when a force causes an object to move in the direction of the force. W = Fd (work done = force × distance moved). Work is measured in joules. When work is done against friction, kinetic energy is transferred to thermal energy - the object and surroundings warm up.',
     lessonVisual: WorkDoneLesson, ideaVisual: WorkDoneIdea, realityVisual: WorkDoneReality,
     equations: [{ expr: 'W = Fd', given: true }, { expr: 'P = Fv', given: false }],
+    equationData: {
+      name: 'Work Done',
+      triangle: {
+        top:   { sym: 'W', name: 'Work Done', unit: 'J',  },
+        left:  { sym: 'F', name: 'Force',     unit: 'N',  },
+        right: { sym: 'd', name: 'Distance',  unit: 'm',  },
+      },
+      rearrangements: [
+        { unknown: 'W', formula: 'W = F × d', unit: 'J', calc: ({ F, d }) => F * d },
+        { unknown: 'F', formula: 'F = W ÷ d', unit: 'N', calc: ({ W, d }) => W / d },
+        { unknown: 'd', formula: 'd = W ÷ F', unit: 'm', calc: ({ W, F }) => W / F },
+      ],
+      practice: [
+        { label: 'A 200 N force moves a crate 5 m. How much work is done?', find: 'W', given: { F: { value: 200, unit: 'N' }, d: { value: 5, unit: 'm' } } },
+        { label: '600 J of work is done over 12 m. What was the force?',    find: 'F', given: { W: { value: 600, unit: 'J' }, d: { value: 12, unit: 'm' } } },
+      ],
+    },
     question: 'A 50 N force moves an object 3 m. How much work is done?',
     questionSubtitle: 'Use W = F × d',
     options: ['53 J', '150 J', '16.7 J', '300 J'],
@@ -2450,6 +2467,23 @@ export const FORCES_TOPICS = {
     description: "Newton's 1st: an object remains at rest or at constant velocity unless acted on by a resultant force (inertia). 2nd: F = ma — resultant force = mass × acceleration. Inertial mass measures resistance to acceleration (m = F/a); gravitational mass determines weight (W = mg). Both are equal, so all objects fall at the same rate in a vacuum. 3rd: whenever object A exerts a force on object B, object B exerts an equal and opposite force on object A. N3L pairs ALWAYS: act on different objects; are the same type of force; are equal in magnitude and opposite in direction. Key distinction — N3L pairs are NOT the same as balanced forces on one object (N1L equilibrium). Example: a book on a table — weight of book on table (gravitational) and normal reaction of table on book (contact) are NOT a N3L pair because they are different force types. The true N3L pair of the book's weight is Earth's gravitational pull on the book paired with the book's gravitational pull on the Earth.",
     lessonVisual: NewtonsLawsLesson, ideaVisual: NewtonsLawsIdea, realityVisual: NewtonsLawsReality,
     equations: [{ expr: 'F = ma', given: true }, { expr: 'W = mg', given: false }],
+    equationData: {
+      name: "Newton's Second Law",
+      triangle: {
+        top:   { sym: 'F', name: 'Force',        unit: 'N',    },
+        left:  { sym: 'm', name: 'Mass',          unit: 'kg',   },
+        right: { sym: 'a', name: 'Acceleration',  unit: 'm/s²', },
+      },
+      rearrangements: [
+        { unknown: 'F', formula: 'F = m × a', unit: 'N',    calc: ({ m, a }) => m * a },
+        { unknown: 'm', formula: 'm = F ÷ a', unit: 'kg',   calc: ({ F, a }) => F / a },
+        { unknown: 'a', formula: 'a = F ÷ m', unit: 'm/s²', calc: ({ F, m }) => F / m },
+      ],
+      practice: [
+        { label: 'A 5 kg trolley accelerates at 3 m/s². What is the resultant force?', find: 'F', given: { m: { value: 5, unit: 'kg' }, a: { value: 3, unit: 'm/s²' } } },
+        { label: 'A 24 N force causes an acceleration of 4 m/s². What is the mass?',   find: 'm', given: { F: { value: 24, unit: 'N'  }, a: { value: 4, unit: 'm/s²' } } },
+      ],
+    },
     question: 'A 1200 kg car accelerates at 3 m/s². What is the resultant force?',
     questionSubtitle: 'Use F = ma',
     options: ['400 N', '3600 N', '1203 N', '0.0025 N'],

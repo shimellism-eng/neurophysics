@@ -39,6 +39,7 @@ import HookCard from '../components/lesson/HookCard'
 import VocabPreTeach from '../components/lesson/VocabPreTeach'
 import PriorKnowledgeProbe from '../components/lesson/PriorKnowledgeProbe'
 import WorkedExampleStepper from '../components/lesson/WorkedExampleStepper'
+import EquationBuilder from '../components/lesson/EquationBuilder'
 import GuidedPracticeFader from '../components/lesson/GuidedPracticeFader'
 import DualCodingSummary from '../components/lesson/DualCodingSummary'
 import SessionClose from '../components/lesson/SessionClose'
@@ -416,13 +417,24 @@ export default function LessonPlayer() {
           </div>
         )
       case 'understand':
-        return topic.workedExample ? (
-          <WorkedExampleStepper
-            workedExample={topic.workedExample}
-            moduleColor={topic.moduleColor}
-            onComplete={goNext}
-          />
-        ) : topic.ideaVisual ? <topic.ideaVisual /> : null
+        return (
+          <div>
+            {topic.equationData && (
+              <EquationBuilder
+                equationData={topic.equationData}
+                moduleColor={topic.moduleColor}
+                onComplete={!topic.workedExample && !topic.ideaVisual ? goNext : undefined}
+              />
+            )}
+            {topic.workedExample ? (
+              <WorkedExampleStepper
+                workedExample={topic.workedExample}
+                moduleColor={topic.moduleColor}
+                onComplete={goNext}
+              />
+            ) : topic.ideaVisual ? <topic.ideaVisual /> : null}
+          </div>
+        )
       case 'practise':
         return topic.guidedPractice ? (
           <GuidedPracticeFader

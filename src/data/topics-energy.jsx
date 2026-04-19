@@ -1250,6 +1250,23 @@ export const ENERGY_TOPICS = {
     description: 'Power is the rate of energy transfer. P = E/t (power = energy ÷ time) or P = W/t (power = work done ÷ time). Also P = Fv (power = force × velocity) — useful when a force acts on a moving object (e.g. a car engine). The unit of power is the watt (W), where 1 W = 1 J/s. A 100 W bulb transfers 100 joules every second.',
     lessonVisual: PowerLesson, ideaVisual: PowerIdea, realityVisual: PowerReality,
     equations: [{ expr: 'P = W/t', given: true }, { expr: 'P = Fv', given: false }],
+    equationData: {
+      name: 'Power  P = E ÷ t',
+      triangle: {
+        top:   { sym: 'P', name: 'Power',  unit: 'W', },
+        left:  { sym: 'E', name: 'Energy', unit: 'J', },
+        right: { sym: 't', name: 'Time',   unit: 's', },
+      },
+      rearrangements: [
+        { unknown: 'P', formula: 'P = E ÷ t', unit: 'W', calc: ({ E, t }) => E / t },
+        { unknown: 'E', formula: 'E = P × t', unit: 'J', calc: ({ P, t }) => P * t },
+        { unknown: 't', formula: 't = E ÷ P', unit: 's', calc: ({ E, P }) => E / P },
+      ],
+      practice: [
+        { label: 'A motor transfers 600 J of energy in 30 s. What is its power output?', find: 'P', given: { E: { value: 600, unit: 'J' }, t: { value: 30, unit: 's' } } },
+        { label: 'A 50 W heater runs for 120 s. How much energy is transferred?',        find: 'E', given: { P: { value: 50, unit: 'W' }, t: { value: 120, unit: 's' } } },
+      ],
+    },
     question: 'A car engine exerts a driving force of 4000 N while the car travels at 20 m/s. What is the engine\'s power output?',
     questionSubtitle: 'Use P = F × v',
     options: ['200 W', '80 000 W', '4020 W', '200 000 W'],

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ArrowRight, ArrowLeft, ArrowUp, ArrowDown, Scale, Gauge, Activity, TrendingDown } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow, MisconceptionCard, RealWorldCard, SimSlider, SimNarration, ScaffoldTabs } from './visuals-helpers'
 import { useSimAudio } from '../utils/simAudio'
 
 const FC = '#00a8e8'
@@ -618,8 +618,8 @@ function NewtonsLawsLesson() {
     if (sonOn && law === 2) setFreq(110 + fN * 4.4)
   }, [fN, sonOn, law])
 
-  return (
-    <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
+  const simContent = (
+    <div className="w-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121', borderRadius: 10 }}>
       {/* Law toggle */}
       <div className="flex gap-1.5 justify-center">
         {[1, 2, 3].map(n => (
@@ -723,6 +723,54 @@ function NewtonsLawsLesson() {
           <text x="130" y="20" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>e.g. rocket: thrust down → rocket moves up</text>
         </svg>
       )}
+    </div>
+  )
+
+  const concreteContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(0,168,232,0.08)', border: '1px solid rgba(0,168,232,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: FC, marginBottom: 6 }}>🛒 Push a shopping trolley</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Imagine pushing an empty trolley vs. a full one. The full trolley needs more force to reach the same speed — that's <strong>mass</strong> resisting the change. The push is <strong>force</strong>. The speed gained is <strong>acceleration</strong>.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(155,89,182,0.08)', border: '1px solid rgba(155,89,182,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#c084fc', marginBottom: 6 }}>🤸 Feel it in your body</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Push against a wall — you feel the wall push <em>back</em> just as hard (Law 3). Stand on a skateboard and push off the ground — the ground pushes you forward. Forces always come in pairs.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(253,199,0,0.08)', border: '1px solid rgba(253,199,0,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#fdc700', marginBottom: 6 }}>🎳 Constant speed = zero net force</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          A bowling ball rolling on ice keeps going at the same speed — nothing slows it. No net force → no acceleration (Law 1). Friction is what normally slows things down on Earth.
+        </div>
+      </div>
+    </div>
+  )
+
+  const abstractContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3 text-center" style={{ background: 'rgba(0,168,232,0.08)', border: '1px solid rgba(0,168,232,0.2)' }}>
+        <div style={{ fontSize: 22, fontWeight: 900, color: FC, letterSpacing: '0.04em', marginBottom: 8 }}>F = m × a</div>
+        <div className="flex justify-center gap-6" style={{ fontSize: 11 }}>
+          <div className="flex flex-col items-center gap-1"><span style={{ fontSize: 20 }}>F</span><span style={{ color: FC }}>Force (N)</span></div>
+          <div className="flex flex-col items-center gap-1"><span style={{ fontSize: 20 }}>m</span><span style={{ color: '#c084fc' }}>Mass (kg)</span></div>
+          <div className="flex flex-col items-center gap-1"><span style={{ fontSize: 20 }}>a</span><span style={{ color: '#fdc700' }}>Acceleration (m/s²)</span></div>
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3 flex flex-col gap-2" style={{ background: '#1d293d' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: '#a8b8cc', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Newton's Three Laws</div>
+        <div style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.6 }}><strong style={{ color: FC }}>1st:</strong> An object stays at rest or constant velocity unless a net force acts on it.</div>
+        <div style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.6 }}><strong style={{ color: FC }}>2nd:</strong> Net force = mass × acceleration. Larger F or smaller m → greater a.</div>
+        <div style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.6 }}><strong style={{ color: FC }}>3rd:</strong> Every action has an equal and opposite reaction force on a different object.</div>
+      </div>
+    </div>
+  )
+
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 py-2">
+      <ScaffoldTabs concrete={concreteContent} visual={simContent} abstract={abstractContent} color={FC} />
     </div>
   )
 }

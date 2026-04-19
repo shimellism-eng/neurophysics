@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration, ScaffoldTabs } from './visuals-helpers'
 import { useSimAudio } from '../utils/simAudio'
 
 const EC = '#155dfc'
@@ -30,8 +30,8 @@ function VoltSym({ cx, cy }) {
 function CircuitBasicsLesson() {
   const [on, setOn] = useState(true)
 
-  return (
-    <div className="w-full flex flex-col items-center gap-2 px-3 pt-3 pb-3">
+  const simContent = (
+    <div className="w-full flex flex-col items-center gap-2 px-1 py-1">
       <button
         onClick={() => setOn(v => !v)}
         className="px-4 py-1.5 rounded-[8px] text-xs font-semibold"
@@ -41,9 +41,7 @@ function CircuitBasicsLesson() {
       </button>
 
       <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }} role="img" aria-label="Simple circuit diagram with switch, battery and bulb">
-        {/* Top rail */}
         <W x1={20} y1={15} x2={90} y2={15} />
-        {/* Switch at top centre */}
         <circle cx={98} cy={15} r={3} fill="#4a5a72" />
         {on
           ? <line x1={98} y1={15} x2={142} y2={15} stroke={EC} strokeWidth="1.5" />
@@ -51,24 +49,19 @@ function CircuitBasicsLesson() {
         }
         <circle cx={142} cy={15} r={3} fill="#4a5a72" />
         <W x1={142} y1={15} x2={240} y2={15} />
-        {/* Right side → bulb */}
         <W x1={240} y1={15} x2={240} y2={48} />
         <circle cx={240} cy={60} r={12} fill={on ? '#fdc70015' : 'none'} stroke={on ? '#fdc700' : '#4a5a72'} strokeWidth="1.5" />
         <line x1={233} y1={53} x2={247} y2={67} stroke={on ? '#fdc700' : '#4a5a72'} strokeWidth="1.5" />
         <line x1={247} y1={53} x2={233} y2={67} stroke={on ? '#fdc700' : '#4a5a72'} strokeWidth="1.5" />
         {on && <circle cx={240} cy={60} r={18} fill="#fdc700" fillOpacity="0.08" />}
         <W x1={240} y1={72} x2={240} y2={105} />
-        {/* Bottom rail */}
         <W x1={240} y1={105} x2={20} y2={105} />
-        {/* Left side → battery */}
         <W x1={20} y1={105} x2={20} y2={74} />
-        {/* Battery symbol (4 lines) */}
         <line x1={12} y1={72} x2={28} y2={72} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
         <line x1={15} y1={66} x2={25} y2={66} stroke="#cad5e2" strokeWidth="1.5" />
         <line x1={12} y1={60} x2={28} y2={60} stroke="#cad5e2" strokeWidth="2.5" strokeLinecap="round" />
         <line x1={15} y1={54} x2={25} y2={54} stroke="#cad5e2" strokeWidth="1.5" />
         <W x1={20} y1={52} x2={20} y2={15} />
-        {/* Animated current arrows */}
         {on && (
           <>
             <motion.polygon points="125,10 125,20 135,15" fill={EC}
@@ -79,7 +72,6 @@ function CircuitBasicsLesson() {
               animate={{ opacity: [0.2, 1, 0.2] }} transition={{ repeat: Infinity, duration: 1.4, delay: 0.8 }} />
           </>
         )}
-        {/* Labels */}
         <text x={120} y={10} textAnchor="middle" fill="#a8b8cc" fontSize={7}>switch</text>
         <text x={255} y={63} fill={on ? '#fdc700' : '#4a5a72'} fontSize={7}>lamp</text>
         <text x={6} y={65} textAnchor="end" fill="#a8b8cc" fontSize={7}>6V</text>
@@ -88,6 +80,57 @@ function CircuitBasicsLesson() {
       <p className="text-xs text-center" style={{ color: on ? EC : '#a8b8cc' }}>
         {on ? '⚡ Complete circuit — current flows' : '✕ Open circuit — no current'}
       </p>
+    </div>
+  )
+
+  const concreteContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(21,93,252,0.08)', border: '1px solid rgba(21,93,252,0.25)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: EC, marginBottom: 6 }}>🚰 Water pipe analogy</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Think of a circuit as a water pipe loop. The <strong>battery</strong> is a pump — it gives the water pressure (voltage). The <strong>current</strong> is the flow of water. The <strong>resistance</strong> is a narrow section that slows flow. Close the tap (switch) and water flows; open it and flow stops.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(253,199,0,0.08)', border: '1px solid rgba(253,199,0,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#fdc700', marginBottom: 6 }}>⚡ Electrons as charge carriers</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          In a metal wire, electrons are free to move. The battery pushes them around the circuit. They carry energy from the battery to components. The bulb filament resists their flow — that resistance converts electrical energy to light and heat.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#10b981', marginBottom: 6 }}>🏠 Your house lights</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Each light in your house is in a parallel circuit — switching one off doesn't cut power to others. The mains supply acts like a very powerful battery at 230 V. The circuit breaker is a safety switch that opens when current is too high.
+        </div>
+      </div>
+    </div>
+  )
+
+  const abstractContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3 text-center" style={{ background: 'rgba(21,93,252,0.08)', border: '1px solid rgba(21,93,252,0.25)' }}>
+        <div style={{ fontSize: 22, fontWeight: 900, color: EC, letterSpacing: '0.04em', marginBottom: 8 }}>V = I × R</div>
+        <div className="flex justify-center gap-4 flex-wrap" style={{ fontSize: 11, color: '#a8b8cc' }}>
+          <span><strong style={{ color: '#fdc700' }}>V</strong> — voltage (V)</span>
+          <span><strong style={{ color: EC }}>I</strong> — current (A)</span>
+          <span><strong style={{ color: '#ef4444' }}>R</strong> — resistance (Ω)</span>
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: '#1d293d' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: '#a8b8cc', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>Series vs Parallel</div>
+        <div style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.7 }}>
+          <strong style={{ color: EC }}>Series:</strong> same current through all components; voltages add up.<br />
+          <strong style={{ color: '#22c55e' }}>Parallel:</strong> same voltage across all branches; currents split.<br />
+          <strong style={{ color: '#fdc700' }}>Charge Q = I × t</strong> — more current, more charge per second.<br />
+          <strong style={{ color: '#a855f7' }}>Power P = I × V</strong> — energy transferred per second.
+        </div>
+      </div>
+    </div>
+  )
+
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 py-2">
+      <ScaffoldTabs concrete={concreteContent} visual={simContent} abstract={abstractContent} color={EC} />
     </div>
   )
 }

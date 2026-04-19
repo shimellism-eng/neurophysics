@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Zap, Flame, Battery, Wind, Sun, Waves, AlertTriangle, Lightbulb, FlaskConical, ArrowDown, Maximize2, Magnet } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
-import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot, MisconceptionCard, RealWorldCard, CompareRow, SimSlider, SimNarration } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot, MisconceptionCard, RealWorldCard, CompareRow, SimSlider, SimNarration, ScaffoldTabs } from './visuals-helpers'
 import { useSimAudio } from '../utils/simAudio'
 
 const C = '#f97316'
@@ -318,8 +318,8 @@ function EnergyEquationsLesson() {
     if (sonOn && tab === 0) setFreq(kePitch())
   }, [keVal, sonOn, tab])
 
-  return (
-    <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
+  const simContent = (
+    <div className="w-full flex flex-col justify-center gap-2 px-1 py-1">
       <div className="flex gap-1.5 justify-center">
         {tabs.map((t, i) => (
           <button key={i} onClick={() => setTab(i)}
@@ -383,6 +383,64 @@ function EnergyEquationsLesson() {
           ? `Gravitational PE: ${mGPE} kg × 10 × ${hGPE} m = ${gpeVal} J. ${+gpeVal > 10000 ? 'Large GPE — a heavy object at significant height.' : 'Moderate GPE.'}`
           : `Elastic PE: ½ × ${kEl} N/m × (${eEl} m)² = ${eelVal} J. ${+eelVal > 50 ? 'Large elastic store — stiff spring or large extension.' : 'Moderate elastic store.'}`
       } />
+    </div>
+  )
+
+  const concreteContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.25)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#f59e0b', marginBottom: 6 }}>🏦 Energy is like a bank account</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          You can't create energy from nothing — you can only transfer it. A moving car has energy in a "kinetic account." Braking transfers it to heat. Lifting stores it in a "gravitational account." The total never changes — just the account it's in.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#22c55e', marginBottom: 6 }}>🎢 Rollercoaster — see all three stores</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          At the top: maximum gravitational PE, minimum KE. At the bottom: all converted to KE. On a spring bumper: KE → elastic PE. Energy just moves between stores — conservation of energy.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(168,85,247,0.08)', border: '1px solid rgba(168,85,247,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#a855f7', marginBottom: 6 }}>🌡️ "Wasted" energy isn't destroyed</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Friction "wastes" energy — but it really just transfers KE to thermal energy. The total is unchanged. Conservation of energy is one of the most tested ideas in GCSE Physics.
+        </div>
+      </div>
+    </div>
+  )
+
+  const abstractContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)' }}>
+        <div className="text-center" style={{ fontSize: 20, fontWeight: 900, color: '#f59e0b', marginBottom: 8 }}>Eₖ = ½mv²</div>
+        <div className="flex justify-center gap-4" style={{ fontSize: 11, color: '#a8b8cc' }}>
+          <span><strong style={{ color: '#f59e0b' }}>Eₖ</strong> — kinetic energy (J)</span>
+          <span><strong style={{ color: '#c084fc' }}>m</strong> — mass (kg)</span>
+          <span><strong style={{ color: '#3b82f6' }}>v</strong> — speed (m/s)</span>
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)' }}>
+        <div className="text-center" style={{ fontSize: 20, fontWeight: 900, color: '#22c55e', marginBottom: 8 }}>Eₚ = mgh</div>
+        <div className="flex justify-center gap-4" style={{ fontSize: 11, color: '#a8b8cc' }}>
+          <span><strong style={{ color: '#22c55e' }}>Eₚ</strong> — grav. PE (J)</span>
+          <span><strong style={{ color: '#c084fc' }}>m</strong> — mass (kg)</span>
+          <span><strong style={{ color: '#3b82f6' }}>h</strong> — height (m)</span>
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(168,85,247,0.08)', border: '1px solid rgba(168,85,247,0.2)' }}>
+        <div className="text-center" style={{ fontSize: 20, fontWeight: 900, color: '#a855f7', marginBottom: 8 }}>Eₑ = ½ke²</div>
+        <div className="flex justify-center gap-4" style={{ fontSize: 11, color: '#a8b8cc' }}>
+          <span><strong style={{ color: '#a855f7' }}>Eₑ</strong> — elastic PE (J)</span>
+          <span><strong style={{ color: '#f59e0b' }}>k</strong> — spring const (N/m)</span>
+          <span><strong style={{ color: '#3b82f6' }}>e</strong> — extension (m)</span>
+        </div>
+      </div>
+    </div>
+  )
+
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 py-2">
+      <ScaffoldTabs concrete={concreteContent} visual={simContent} abstract={abstractContent} color={C} />
     </div>
   )
 }

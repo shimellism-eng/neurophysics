@@ -11,6 +11,47 @@ export function IdeaCaption({ children }) {
   )
 }
 
+// ─── ScaffoldTabs — concrete → visual → abstract 3-step wrapper ──────────────
+const SCAFFOLD_TABS = [
+  { id: 'concrete', label: 'Real World', icon: '🌍' },
+  { id: 'visual',   label: 'Explore',   icon: '🔬' },
+  { id: 'abstract', label: 'The Maths', icon: '🔣' },
+]
+export function ScaffoldTabs({ concrete, visual, abstract, color = '#00d4ff' }) {
+  const [tab, setTab] = useState('concrete')
+  const content = tab === 'concrete' ? concrete : tab === 'visual' ? visual : abstract
+  return (
+    <div className="w-full flex flex-col gap-3">
+      <div className="flex gap-1.5" role="tablist" aria-label="Learning scaffold">
+        {SCAFFOLD_TABS.map(t => {
+          const active = tab === t.id
+          return (
+            <button
+              key={t.id}
+              role="tab"
+              aria-selected={active}
+              onClick={() => setTab(t.id)}
+              style={{
+                flex: 1, minHeight: 44, borderRadius: 10, border: active ? `1.5px solid ${color}` : '1px solid rgba(168,184,204,0.2)',
+                background: active ? `${color}18` : 'rgba(15,22,41,0.6)',
+                color: active ? color : '#a8b8cc', fontSize: 11, fontWeight: active ? 700 : 500,
+                display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                gap: 1, cursor: 'pointer', transition: 'all 0.18s',
+              }}
+            >
+              <span style={{ fontSize: 16 }}>{t.icon}</span>
+              <span>{t.label}</span>
+            </button>
+          )
+        })}
+      </div>
+      <div role="tabpanel" aria-label={SCAFFOLD_TABS.find(t => t.id === tab)?.label}>
+        {content}
+      </div>
+    </div>
+  )
+}
+
 // ─── MisconceptionCard — premium ✗/✓ split card ──────────────────────────────
 export function MisconceptionCard({ wrong, right, wrongLabel = 'Common mistake', rightLabel = 'Correct thinking' }) {
   return (

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Atom, AlertTriangle, Zap, Shield } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration, ScaffoldTabs } from './visuals-helpers'
 
 const PART_C = '#c084fc'
 const ATOM_C = '#e879f9'
@@ -38,9 +38,8 @@ function StatesDensityLesson() {
     'Gas: low ρ · expands to fill container',
   ]
 
-  return (
-    <div className="w-full h-full flex flex-col items-center gap-2 pt-3 px-3" style={{ maxWidth: 480 }}>
-      {/* Toggle */}
+  const simContent = (
+    <div className="w-full flex flex-col items-center gap-2 py-1 px-1">
       <div className="flex gap-2">
         {states.map((s, i) => (
           <button key={i} onClick={() => setState(i)}
@@ -50,10 +49,7 @@ function StatesDensityLesson() {
           </button>
         ))}
       </div>
-
-      {/* SVG diagram */}
       <svg width="200" height="110" viewBox="0 0 200 110" style={{ display: 'block', background: '#0f1829', borderRadius: 12, border: `1.5px solid ${cols[state]}` }} role="img" aria-label="Particle model diagram showing arrangement of particles in solid, liquid or gas state">
-        {/* container walls */}
         <rect x="4" y="4" width="192" height="102" rx="8" fill="none" stroke={cols[state]} strokeWidth="1.2" strokeOpacity="0.4" />
         {particles.map((p, i) => (
           <motion.circle key={`${state}-${i}`}
@@ -69,18 +65,66 @@ function StatesDensityLesson() {
             transition={{ repeat: Infinity, repeatType: 'loop', duration: state === 0 ? 0.8 + i * 0.08 : state === 1 ? 1.2 + i * 0.12 : 2.5 + i * 0.3, ease: 'easeInOut' }}
           />
         ))}
-        {/* State badge */}
         <rect x="132" y="88" width="62" height="16" rx="4" fill={cols[state]} fillOpacity="0.18" />
         <text x="163" y="99" textAnchor="middle" fill={cols[state]} fontSize={9} fontWeight="bold">{states[state]}</text>
       </svg>
-
-      {/* Formula + info row */}
       <div className="flex items-center gap-3 w-full justify-center">
         <div className="px-3 py-1 rounded-[10px] font-mono font-bold text-sm" style={{ background: `${PART_C}18`, border: `1px solid ${PART_C}44`, color: PART_C }}>
           ρ = m/V
         </div>
         <div className="text-xs text-center" style={{ color: '#a8b8cc' }}>{stateInfo[state]}</div>
       </div>
+    </div>
+  )
+
+  const concreteContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(192,132,252,0.08)', border: '1px solid rgba(192,132,252,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: PART_C, marginBottom: 6 }}>🧊→💧→💨 Water in three states</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Ice, water, and steam are all H₂O — just with different amounts of energy. Add heat to ice: particles vibrate faster until bonds break (melting). Add more heat to water: particles escape the surface (evaporating). Same atoms, different arrangement.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(43,127,255,0.08)', border: '1px solid rgba(43,127,255,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#2b7fff', marginBottom: 6 }}>🔬 Zoom in on a solid</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          If you could zoom into a metal, you'd see particles in a regular grid, vibrating in place. They can't move around — that's why metals are rigid. The more energy (heat) you add, the more they vibrate, until the grid breaks down and it melts.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(0,168,232,0.08)', border: '1px solid rgba(0,168,232,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#00a8e8', marginBottom: 6 }}>☁️ Gas fills all available space</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Open a bottle of perfume — gas particles spread to fill the room. They move fast and randomly with large gaps between them. That's why gases are easily compressed: there's mostly empty space between the particles.
+        </div>
+      </div>
+    </div>
+  )
+
+  const abstractContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3 text-center" style={{ background: `rgba(192,132,252,0.08)`, border: `1px solid rgba(192,132,252,0.2)` }}>
+        <div style={{ fontSize: 22, fontWeight: 900, color: PART_C, letterSpacing: '0.04em', marginBottom: 8 }}>ρ = m ÷ V</div>
+        <div className="flex justify-center gap-6 flex-wrap" style={{ fontSize: 11, color: '#a8b8cc' }}>
+          <span><strong style={{ color: PART_C }}>ρ</strong> — density (kg/m³)</span>
+          <span><strong style={{ color: '#c084fc' }}>m</strong> — mass (kg)</span>
+          <span><strong style={{ color: '#3b82f6' }}>V</strong> — volume (m³)</span>
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: '#1d293d' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: '#a8b8cc', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>States of Matter Summary</div>
+        <div style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.7 }}>
+          <strong style={{ color: PART_C }}>Solid:</strong> fixed shape, high ρ, particles vibrate in lattice.<br />
+          <strong style={{ color: '#2b7fff' }}>Liquid:</strong> fixed volume, high ρ, particles flow past each other.<br />
+          <strong style={{ color: '#00a8e8' }}>Gas:</strong> fills container, very low ρ, particles move fast and randomly.<br />
+          <strong style={{ color: '#fdc700' }}>Melting/Boiling point</strong> — temperature at which state change occurs (energy in = energy out, temp stays flat).
+        </div>
+      </div>
+    </div>
+  )
+
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 py-2">
+      <ScaffoldTabs concrete={concreteContent} visual={simContent} abstract={abstractContent} color={PART_C} />
     </div>
   )
 }

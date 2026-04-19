@@ -391,12 +391,12 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Off by default, 🔊 speaker toggle per sim
 - [x] useSimAudio hook (src/utils/simAudio.js) — Web Audio API, fade in/out, cleanup on unmount
 
-#### 5.4 Abstract Concept Scaffolding (concrete then visual then abstract)
-- [ ] Forces: real photo/video then interactive FBD then body-based language
-- [ ] Energy: "bank account" analogy then consistent colours then animated Sankey
-- [ ] Waves: slinky video then sim with sound output then persistent labels
-- [ ] Electricity: animated charges then water pipe parallel then tap-to-add circuits
-- [ ] Particles: macro zoom-in then temperature slider then state labels
+#### 5.4 Abstract Concept Scaffolding ✅ shipped
+- [x] Forces: real photo/video then interactive FBD then body-based language
+- [x] Energy: "bank account" analogy then consistent colours then animated Sankey
+- [x] Waves: slinky video then sim with sound output then persistent labels
+- [x] Electricity: animated charges then water pipe parallel then tap-to-add circuits
+- [x] Particles: macro zoom-in then temperature slider then state labels
 
 ### Sprint 6: Teacher Dashboard
 

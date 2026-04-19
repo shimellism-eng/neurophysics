@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Waves, Radio, Eye, Sun } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration, ScaffoldTabs } from './visuals-helpers'
 import { useSimAudio } from '../utils/simAudio'
 
 const WC = '#fdc700'
@@ -158,8 +158,8 @@ function WavePropertiesLesson() {
   const peak2X = xStart + cycleW + cycleW / 4
   const showFull = cycleW >= 70   // enough room for labels
 
-  return (
-    <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
+  const simContent = (
+    <div className="w-full flex flex-col justify-center gap-2 px-1 py-1">
       <svg width="260" height="108" viewBox="0 0 260 108" role="img" aria-label="Wave diagram showing wavelength and amplitude with labelled peaks and troughs">
         {/* Wavelength bracket  -  above wave, peak1 to peak2 */}
         {showFull && peak2X <= xEnd && <>
@@ -214,6 +214,58 @@ function WavePropertiesLesson() {
         <div className="p-2 rounded-[8px] text-center" style={{ background: '#1d293d', color: '#a8b8cc' }}>T = 1/f = {period} s</div>
       </div>
       <SimNarration text={`Frequency ${freq} Hz, wavelength ${wavelength} m. Wave speed = ${speed} m/s (constant). Period = ${period} s per complete cycle.`} />
+    </div>
+  )
+
+  const concreteContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(0,188,212,0.08)', border: '1px solid rgba(0,188,212,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#00bcd4', marginBottom: 6 }}>🌊 Stretch a slinky</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Lay a slinky on the floor and shake one end side to side — you see a transverse wave travel along it. Faster shaking = higher frequency = shorter wavelength. The slinky material doesn't travel with the wave; the <em>disturbance</em> does.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(168,85,247,0.08)', border: '1px solid rgba(168,85,247,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#a855f7', marginBottom: 6 }}>🎵 Sound — a longitudinal wave</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Push the slinky along its length to make compressions and rarefactions — that's a longitudinal wave, like sound. The particles vibrate parallel to the direction of travel. You can <em>hear</em> the difference when you change frequency: pitch changes.
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: 'rgba(253,199,0,0.08)', border: '1px solid rgba(253,199,0,0.2)' }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#fdc700', marginBottom: 6 }}>🏊 Waves in water</div>
+        <div style={{ fontSize: 12, color: '#cad5e2', lineHeight: 1.6 }}>
+          Drop a stone in a pond — ripples spread outward. A floating duck bobs up and down; it doesn't travel outward. Energy spreads, not matter. Amplitude = how high the duck bobs. Frequency = how many times per second.
+        </div>
+      </div>
+    </div>
+  )
+
+  const abstractContent = (
+    <div className="flex flex-col gap-3 px-1 py-1">
+      <div className="rounded-[12px] px-4 py-3 text-center" style={{ background: `rgba(0,188,212,0.08)`, border: `1px solid rgba(0,188,212,0.2)` }}>
+        <div style={{ fontSize: 22, fontWeight: 900, color: '#00bcd4', letterSpacing: '0.04em', marginBottom: 8 }}>v = f × λ</div>
+        <div className="flex justify-center gap-4 flex-wrap" style={{ fontSize: 11, color: '#a8b8cc' }}>
+          <span><strong style={{ color: '#00bcd4' }}>v</strong> — wave speed (m/s)</span>
+          <span><strong style={{ color: '#fdc700' }}>f</strong> — frequency (Hz)</span>
+          <span><strong style={{ color: '#a855f7' }}>λ</strong> — wavelength (m)</span>
+        </div>
+      </div>
+      <div className="rounded-[12px] px-4 py-3" style={{ background: '#1d293d' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: '#a8b8cc', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>Key Quantities</div>
+        <div style={{ fontSize: 11, color: '#cad5e2', lineHeight: 1.7 }}>
+          <strong style={{ color: '#fdc700' }}>Frequency f</strong> — waves per second (Hz)<br />
+          <strong style={{ color: '#a855f7' }}>Wavelength λ</strong> — distance between peaks (m)<br />
+          <strong style={{ color: '#c084fc' }}>Amplitude A</strong> — max displacement from rest (m)<br />
+          <strong style={{ color: '#22c55e' }}>Period T</strong> — time for one full cycle: T = 1/f (s)<br />
+          <strong style={{ color: '#00bcd4' }}>Wave speed v</strong> — fixed by the medium, not f or λ
+        </div>
+      </div>
+    </div>
+  )
+
+  return (
+    <div className="w-full flex flex-col gap-2 px-3 py-2">
+      <ScaffoldTabs concrete={concreteContent} visual={simContent} abstract={abstractContent} color={WC} />
     </div>
   )
 }

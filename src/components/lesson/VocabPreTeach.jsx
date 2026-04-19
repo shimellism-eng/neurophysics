@@ -325,7 +325,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
             className="rounded-[22px] px-5 py-5 mb-4"
             style={{
               background: `linear-gradient(135deg, ${moduleColor}1c 0%, ${moduleColor}08 100%)`,
-              border: `1.5px solid ${moduleColor}45`,
+              border: '1px solid rgba(255,255,255,0.1)',
               minHeight: 120,
             }}
           >
@@ -388,8 +388,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                   width: 48,
                   height: 48,
                   background: `${moduleColor}22`,
-                  border: `1.5px solid ${moduleColor}45`,
-                  boxShadow: `0 0 16px ${moduleColor}30`,
+                  border: '1px solid rgba(255,255,255,0.12)',
                 }}
                 onClick={() => speak(current.word + '. ' + current.definition)}
                 aria-label={`Hear ${current.word} pronounced`}
@@ -426,8 +425,8 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
             <div
               className="rounded-[18px] px-5 mb-5"
               style={{
-                background: 'rgba(253,199,0,0.07)',
-                border: '1.5px solid rgba(253,199,0,0.22)',
+                background: 'rgba(253,199,0,0.06)',
+                border: '1px solid rgba(255,255,255,0.09)',
                 paddingTop: 16,
                 paddingBottom: 16,
               }}

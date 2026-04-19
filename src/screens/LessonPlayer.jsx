@@ -19,16 +19,15 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
-  ArrowLeft, X, ChevronRight, BookOpen, FlaskConical,
+  ChevronRight, BookOpen, FlaskConical,
   GraduationCap, Zap, Globe, Lightbulb, Volume2,
-  Layers, Target, Star, CheckCircle2, Map, Clock, Coffee, LayoutList,
+  Layers, Target, Star, CheckCircle2, Map, Coffee,
 } from 'lucide-react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useComfort } from '../context/ComfortContext'
-import HeartsDisplay from '../components/HeartsDisplay'
 import { getExamQuestionCount } from '../data/examIndex'
 import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
@@ -47,6 +46,7 @@ import SessionClose from '../components/lesson/SessionClose'
 // ─── NEW 9-step flow ─────────────────────────────────────────────────────────
 
 import SessionPreview from '../components/lesson/SessionPreview'
+import LessonHeader from '../components/lesson/LessonHeader'
 
 const NEW_STEPS = [
   { id: 'hook',      label: 'Spark',       icon: Zap,          hint: 'Why this matters' },
@@ -237,28 +237,7 @@ export default function LessonPlayer() {
   const reducedMotion = useReducedMotion()
 
   // ADHD pacing: session timer + break nudges
-  const { elapsedMinutes, showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
-
-  // ADHD pacing: per-step elapsed time (resets when step changes)
-  const [stepStartTime, setStepStartTime] = useState(() => Date.now())
-  const [stepElapsed, setStepElapsed] = useState(0)
-
-  // Reset step timer whenever the user moves to a new step
-  useEffect(() => {
-    setStepStartTime(Date.now())
-    setStepElapsed(0)
-  }, [step])
-
-  // Tick every 10 seconds — low overhead
-  useEffect(() => {
-    const iv = setInterval(() => {
-      setStepElapsed(Math.floor((Date.now() - stepStartTime) / 1000))
-    }, 10000)
-    return () => clearInterval(iv)
-  }, [stepStartTime])
-
-  // Format helper: "2m" under 5 min, "5m 30s" at or over 5 min
-  const fmtStepTime = (s) => s < 300 ? `${Math.floor(s / 60)}m` : `${Math.floor(s / 60)}m ${s % 60}s`
+  const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
   // Break nudge snooze — hides nudge for 5 minutes then lets it reappear
   const snoozeUntilRef = useRef(0)
@@ -272,7 +251,7 @@ export default function LessonPlayer() {
   const nudgeVisible = showNudge && !snoozed
 
   // Explore mode + Pomodoro: live from ComfortContext
-  const { prefs: comfortPrefs } = useComfort()
+  const { prefs: comfortPrefs, setSettingsOpen } = useComfort()
   const exploreMode = comfortPrefs.exploreMode !== false
 
   // Pomodoro timer — fires once after sessionLength minutes when enabled
@@ -313,7 +292,6 @@ export default function LessonPlayer() {
     : LEGACY_STEPS
   const totalSteps = STEPS.length
   const currentStep = STEPS[step]
-  const StepIcon   = currentStep.icon
   const isLast     = step === totalSteps - 1
   const examCount  = getExamQuestionCount(id)
 
@@ -733,141 +711,15 @@ export default function LessonPlayer() {
       </AnimatePresence>
 
       {/* ── Header ── */}
-      <div
-        className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10"
-        style={{ background: 'var(--np-card-deep)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid var(--np-border)', overflow: 'hidden', paddingTop: '12px' }}
-      >
-        {/* Back button — ArrowLeft within lesson, X to exit on step 0 */}
-        <button
-          onClick={step > 0 ? goBack : exitLesson}
-          aria-label={step > 0 ? 'Previous step' : 'Exit lesson'}
-          className="w-11 h-11 flex items-center justify-center shrink-0"
-          style={{
-            borderRadius: 12,
-            background: 'rgba(255,255,255,0.06)',
-            border: '0.75px solid var(--np-border)',
-            position: 'relative',
-          }}
-        >
-          {step > 0
-            ? <ArrowLeft size={16} color="rgba(255,255,255,0.45)" />
-            : <X size={16} color="rgba(255,255,255,0.45)" />
-          }
-        </button>
-
-        {/* Title block */}
-        <div className="flex-1 min-w-0" style={{ position: 'relative' }}>
-          <div className="text-xs font-bold" style={{ color: topic.moduleColor }}>{topic.module}</div>
-          <h1
-            className="font-display font-bold"
-            style={{ color: 'var(--np-text)', fontSize: 15, letterSpacing: '-0.02em', lineHeight: 1.2, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
-          >
-            {topic.title}
-          </h1>
-        </div>
-
-        {/* Lesson map button */}
-        <button
-          onClick={() => setShowLessonMap(true)}
-          aria-label="View lesson outline"
-          className="w-9 h-9 flex items-center justify-center shrink-0"
-          style={{ borderRadius: 10, background: 'rgba(255,255,255,0.06)', border: '0.75px solid var(--np-border)', position: 'relative' }}
-        >
-          <LayoutList size={15} color="rgba(255,255,255,0.45)" />
-        </button>
-
-        {/* Hearts display — hidden in explore/revision mode */}
-        {!exploreMode ? (
-          <div style={{ position: 'relative' }}>
-            <HeartsDisplay hearts={hearts} maxHearts={maxHearts} />
-          </div>
-        ) : (
-          <span
-            style={{
-              fontSize: 10, fontWeight: 700, letterSpacing: '0.04em',
-              color: '#22c55e', background: 'rgba(34,197,94,0.12)',
-              border: '1px solid rgba(34,197,94,0.25)',
-              borderRadius: 20, padding: '2px 8px',
-            }}
-          >
-            REVISION
-          </span>
-        )}
-      </div>
-
-      {/* ── Step progress bar ── */}
-      <div className="px-5 pb-4 shrink-0">
-        {/* Segment track */}
-        <div className="flex items-center gap-1 mb-2.5">
-          {STEPS.map((s, i) => {
-            const isFilled  = i < step
-            const isActive  = i === step
-            return (
-              <div
-                key={s.id}
-                className="flex-1 overflow-hidden"
-                style={{
-                  height: 10,
-                  borderRadius: 999,
-                  background: 'rgba(255,255,255,0.07)',
-                }}
-              >
-                <motion.div
-                  style={{
-                    height: '100%',
-                    borderRadius: 999,
-                    background: isActive
-                      ? `linear-gradient(90deg, ${topic.moduleColor}dd, ${topic.moduleColor}ff)`
-                      : `linear-gradient(90deg, ${topic.moduleColor}cc, ${topic.moduleColor})`,
-                  }}
-                  animate={{ width: (isFilled || isActive) ? '100%' : '0%' }}
-                  transition={{ duration: 0.35, ease: 'easeOut' }}
-                />
-              </div>
-            )
-          })}
-        </div>
-
-        {/* Step label row */}
-        <div className="flex items-center gap-1.5">
-          <StepIcon size={13} color={topic.moduleColor} />
-          <span className="text-sm font-bold" style={{ color: topic.moduleColor }}>
-            {currentStep.label}
-          </span>
-          <span className="text-[11px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            {currentStep.hint}
-          </span>
-          <span className="ml-auto text-[11px] font-medium tabular-nums" style={{ color: 'rgba(255,255,255,0.3)' }}>
-            {step + 1} / {totalSteps}
-          </span>
-          {/* Session timer — only shown when user has opted in via Pomodoro Timer setting */}
-          {comfortPrefs.pomodoroTimer && elapsedMinutes > 0 && (
-            <span
-              className="flex items-center gap-1 text-[10px] font-semibold tabular-nums px-2 py-0.5 rounded-full"
-              style={{
-                background: elapsedMinutes >= 20 ? 'rgba(249,115,22,0.12)' : 'rgba(255,255,255,0.06)',
-                color: elapsedMinutes >= 20 ? '#f97316' : 'rgba(255,255,255,0.45)',
-                border: elapsedMinutes >= 20 ? '1px solid rgba(249,115,22,0.3)' : '1px solid rgba(255,255,255,0.08)',
-              }}
-            >
-              <Clock size={9} />
-              {elapsedMinutes}m
-            </span>
-          )}
-        </div>
-
-        {/* "I need a break" — only shown mid-lesson (step > 0, not the last step) */}
-        {step > 0 && step < totalSteps - 1 && (
-          <button
-            onClick={handleBreak}
-            className="flex items-center gap-1.5 mx-auto mt-2"
-            style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px 8px' }}
-          >
-            <Coffee size={11} />
-            I need a break — save &amp; resume later
-          </button>
-        )}
-      </div>
+      <LessonHeader
+        step={step}
+        totalSteps={totalSteps}
+        currentStep={currentStep}
+        topic={topic}
+        onBack={step > 0 ? goBack : exitLesson}
+        onSettings={() => setSettingsOpen(true)}
+        remainingMinutes={remainingMinutes}
+      />
 
       {/* ── Persistent keyword glossary (new flow only, steps 2+) ── */}
       {isNewFlow && step >= 2 && (
@@ -963,6 +815,16 @@ export default function LessonPlayer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
+            {/* Break link — mid-lesson only */}
+            {step > 0 && step < totalSteps - 1 && (
+              <button
+                onClick={handleBreak}
+                style={{ display: 'flex', alignItems: 'center', gap: 6, width: '100%', justifyContent: 'center', marginBottom: 8, fontSize: 11, color: 'rgba(255,255,255,0.28)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px 0' }}
+              >
+                <Coffee size={11} />
+                Save &amp; take a break
+              </button>
+            )}
             {/* Transition warning — "Coming up next" preview */}
             {nextStep && (
               <div className="flex items-center gap-1.5 mb-3 px-1">

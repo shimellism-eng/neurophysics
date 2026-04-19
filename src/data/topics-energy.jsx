@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Zap, Flame, Battery, Wind, Sun, Waves, AlertTriangle, Lightbulb, FlaskConical, ArrowDown, Maximize2, Magnet } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
 import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot, MisconceptionCard, RealWorldCard, CompareRow, SimSlider, SimNarration } from './visuals-helpers'
+import { useSimAudio } from '../utils/simAudio'
 
 const C = '#f97316'
 
@@ -297,11 +298,26 @@ function EnergyEquationsLesson() {
   const [hGPE, setHGPE] = useState(20)
   const [kEl, setKEl] = useState(50)
   const [eEl, setEEl] = useState(0.5)
+  const [sonOn, setSonOn] = useState(false)
   const keVal = (0.5 * mKE * vKE * vKE).toFixed(1)
   const gpeVal = (mGPE * 10 * hGPE).toFixed(0)
   const eelVal = (0.5 * kEl * eEl * eEl).toFixed(2)
   const tabs = ['Kinetic', 'Gravitational', 'Elastic']
   const colors = [C, '#22c55e', '#a855f7']
+  const { startTone, setFreq, stopTone } = useSimAudio()
+
+  // Rising tone ∝ KE (log scale, 150–550 Hz over full KE range)
+  const kePitch = () => 150 + Math.log2(parseFloat(keVal) + 1) * 30
+
+  useEffect(() => {
+    if (sonOn && tab === 0) startTone(kePitch(), 'triangle', 0.11)
+    else { stopTone(); if (tab !== 0) setSonOn(false) }
+  }, [sonOn, tab])
+
+  useEffect(() => {
+    if (sonOn && tab === 0) setFreq(kePitch())
+  }, [keVal, sonOn, tab])
+
   return (
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
       <div className="flex gap-1.5 justify-center">
@@ -317,6 +333,14 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₖ = ½mv²" color={C} />
           <div className="rounded-[12px] p-2.5" style={{ background: `${C}10`, border: `1px solid ${C}30` }}>
+            <div className="flex justify-end mb-1">
+              <button type="button" onClick={() => setSonOn(o => !o)}
+                aria-label={sonOn ? 'Stop sonification' : 'Play sonification — rising pitch as KE increases'}
+                title={sonOn ? 'Stop sound' : 'Hear KE as rising tone'}
+                style={{ fontSize: 16, background: 'none', border: 'none', cursor: 'pointer', opacity: sonOn ? 1 : 0.4, padding: 2 }}>
+                🔊
+              </button>
+            </div>
             <SimSlider label="Mass m" min={1} max={50} value={mKE} onChange={setMKE} unit="kg" color={C} />
             <SimSlider label="Speed v" min={1} max={20} value={vKE} onChange={setVKE} unit="m/s" color="#3b82f6" />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>

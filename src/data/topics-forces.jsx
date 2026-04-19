@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ArrowRight, ArrowLeft, ArrowUp, ArrowDown, Scale, Gauge, Activity, TrendingDown } from 'lucide-react'
 import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { useSimAudio } from '../utils/simAudio'
 
 const FC = '#00a8e8'
 
@@ -599,7 +600,24 @@ function NewtonsLawsLesson() {
   const [law, setLaw] = useState(1)
   const [mass, setMass] = useState(5)
   const [fN, setFN] = useState(20)
+  const [sonOn, setSonOn] = useState(false)
   const accel = (fN / mass).toFixed(2)
+  const { startTone, setFreq, stopTone } = useSimAudio()
+
+  // Pitch ∝ net force (sawtooth buzz, 110–330 Hz)
+  useEffect(() => {
+    if (sonOn && law === 2) {
+      startTone(110 + fN * 4.4, 'sawtooth', 0.10)
+    } else {
+      stopTone()
+      if (law !== 2) setSonOn(false)
+    }
+  }, [sonOn, law])
+
+  useEffect(() => {
+    if (sonOn && law === 2) setFreq(110 + fN * 4.4)
+  }, [fN, sonOn, law])
+
   return (
     <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
       {/* Law toggle */}
@@ -656,6 +674,14 @@ function NewtonsLawsLesson() {
             <text x="35" y="54" textAnchor="middle" fill="#c084fc" fontSize={11} fontWeight="bold">F = ma</text>
           </svg>
           <div className="rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
+            <div className="flex justify-end mb-1">
+              <button type="button" onClick={() => setSonOn(o => !o)}
+                aria-label={sonOn ? 'Stop sonification' : 'Play sonification — pitch maps to force'}
+                title={sonOn ? 'Stop sound' : 'Hear force as pitch'}
+                style={{ fontSize: 16, background: 'none', border: 'none', cursor: 'pointer', opacity: sonOn ? 1 : 0.4, padding: 2 }}>
+                🔊
+              </button>
+            </div>
             <SimSlider label="Mass" min={1} max={10} value={mass} onChange={setMass} unit="kg" color="#c084fc" />
             <SimSlider label="Force" min={1} max={50} value={fN} onChange={setFN} unit="N" color={FC} />
             <div className="flex justify-between text-xs mt-1.5 pt-1.5 font-bold" style={{ borderTop: '1px solid #0b1121' }}>

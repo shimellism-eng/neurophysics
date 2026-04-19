@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { useSimAudio } from '../utils/simAudio'
 
 const EC = '#155dfc'
 
@@ -481,8 +482,20 @@ function DomesticElectricityReality() {
 function ElectricalPowerLesson() {
   const [voltage, setVoltage] = useState(12)
   const [current, setCurrent] = useState(2)
+  const [sonOn, setSonOn] = useState(false)
   const power = (voltage * current).toFixed(0)
   const resistance = (voltage / current).toFixed(1)
+  const { startTone, setFreq, stopTone } = useSimAudio()
+
+  // Hum pitch ∝ current (sine, 110–550 Hz: 0.5A→110Hz, 10A→550Hz)
+  useEffect(() => {
+    if (sonOn) startTone(current * 55, 'sine', 0.10)
+    else stopTone()
+  }, [sonOn])
+
+  useEffect(() => {
+    if (sonOn) setFreq(current * 55)
+  }, [current, sonOn])
 
   return (
     <div className="w-full flex flex-col justify-center gap-2 px-3 py-2">
@@ -491,6 +504,14 @@ function ElectricalPowerLesson() {
         <FormulaBox formula="P = I²R" color="#f97316" />
       </div>
       <div className="rounded-[12px] p-2.5" style={{ background: `${EC}10`, border: `1px solid ${EC}30` }}>
+        <div className="flex justify-end mb-1">
+          <button type="button" onClick={() => setSonOn(o => !o)}
+            aria-label={sonOn ? 'Stop sonification' : 'Play sonification — pitch maps to current'}
+            title={sonOn ? 'Stop sound' : 'Hear current as pitch'}
+            style={{ fontSize: 16, background: 'none', border: 'none', cursor: 'pointer', opacity: sonOn ? 1 : 0.4, padding: 2 }}>
+            🔊
+          </button>
+        </div>
         <SimSlider label="Voltage" min={1} max={24} value={voltage} onChange={setVoltage} unit="V" color={EC} />
         <SimSlider label="Current" min={0.5} max={10} step={0.5} value={current} onChange={setCurrent} unit="A" color="#f97316" />
         <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>

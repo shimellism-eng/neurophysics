@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Waves, Radio, Eye, Sun } from 'lucide-react'
 import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
+import { useSimAudio } from '../utils/simAudio'
 
 const WC = '#fdc700'
 const MC = '#10b981'
@@ -124,9 +125,21 @@ function WaveTypesReality() {
 // ─── 33. Wave Properties ─────────────────────────────────────────────────────
 function WavePropertiesLesson() {
   const [freq, setFreq] = useState(2)
+  const [sonOn, setSonOn] = useState(false)
   const speed = 300
   const wavelength = (speed / freq).toFixed(0)
   const period = (1 / freq).toFixed(2)
+  const { startTone, setFreq: setAudioFreq, stopTone } = useSimAudio()
+
+  // Pitch ∝ wave frequency (sine, 220–1100 Hz: 1Hz→220Hz, 5Hz→1100Hz)
+  useEffect(() => {
+    if (sonOn) startTone(freq * 220, 'sine', 0.12)
+    else stopTone()
+  }, [sonOn])
+
+  useEffect(() => {
+    if (sonOn) setAudioFreq(freq * 220)
+  }, [freq, sonOn])
 
   const xStart = 22, xEnd = 256, yMid = 56, A = 26
   const waveW = xEnd - xStart
@@ -187,7 +200,15 @@ function WavePropertiesLesson() {
         </>}
       </svg>
 
-      <SimSlider label="Frequency" min={1} max={5} step={0.5} value={freq} onChange={setFreq} unit="Hz" color={WC} />
+      <div className="flex items-center gap-2">
+        <div className="flex-1"><SimSlider label="Frequency" min={1} max={5} step={0.5} value={freq} onChange={setFreq} unit="Hz" color={WC} /></div>
+        <button type="button" onClick={() => setSonOn(o => !o)}
+          aria-label={sonOn ? 'Stop sonification' : 'Play wave as sound — pitch maps to frequency'}
+          title={sonOn ? 'Stop sound' : 'Hear wave frequency'}
+          style={{ fontSize: 16, background: 'none', border: 'none', cursor: 'pointer', opacity: sonOn ? 1 : 0.4, padding: 2, flexShrink: 0 }}>
+          🔊
+        </button>
+      </div>
       <div className="grid grid-cols-2 gap-2 text-xs">
         <div className="p-2 rounded-[8px] text-center" style={{ background: `${WC}10`, color: WC }}>v = fλ = {speed} m/s</div>
         <div className="p-2 rounded-[8px] text-center" style={{ background: '#1d293d', color: '#a8b8cc' }}>T = 1/f = {period} s</div>

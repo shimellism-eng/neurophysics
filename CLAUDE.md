@@ -383,13 +383,13 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] "What's happening" narration toggle (SimNarration collapsible panel on all lesson sims)
 - [ ] Tap-to-select, tap-to-place for drag-and-drop (no drag-and-drop sims exist currently)
 
-#### 5.3 Sonification (Stretch Goal)
-- [ ] Forces: pitch maps to net force, pulse tempo to acceleration
-- [ ] Waves: play sound wave shown, pitch mapping for EM
-- [ ] Electricity: hum pitch maps to current, clicks for charge carriers
-- [ ] Energy: rising tone for KE increase
-- [ ] Off by default, speaker icon toggle per sim
-- [ ] Respect Sound Effects setting, volume slider per sim
+#### 5.3 Sonification (Stretch Goal) ✅ shipped
+- [x] Forces: sawtooth buzz pitch ∝ net force (NewtonsLawsLesson Law 2, 110–330 Hz)
+- [x] Waves: sine pitch ∝ wave frequency (WavePropertiesLesson, 220–1100 Hz)
+- [x] Electricity: sine hum pitch ∝ current (ElectricalPowerLesson, 110–550 Hz)
+- [x] Energy: triangle rising tone ∝ KE log scale (EnergyEquationsLesson, 150–550 Hz)
+- [x] Off by default, 🔊 speaker toggle per sim
+- [x] useSimAudio hook (src/utils/simAudio.js) — Web Audio API, fade in/out, cleanup on unmount
 
 #### 5.4 Abstract Concept Scaffolding (concrete then visual then abstract)
 - [ ] Forces: real photo/video then interactive FBD then body-based language

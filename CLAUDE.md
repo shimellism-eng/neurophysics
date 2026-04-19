@@ -326,10 +326,10 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [x] Correct answer: "Got it!" + "X in a row" streak indicator for 3+ consecutive correct
 - Note: `misconception_tags` field not added to question bank — questions use `senNote` as explanation source
 
-#### 3.3 Interleaved Practice
-- [ ] "Mixed Revision" mode: questions from multiple topics, SRS-weighted
-- [ ] Learner chooses: Topic Practice | Mixed Revision | Exam Prep (mixed + optional timer)
-- [ ] Colour-coded topic label on each question card
+#### 3.3 Interleaved Practice ✅ shipped a3d66f5
+- [x] "Mixed Revision" mode: questions from multiple topics, SRS-weighted
+- [x] Colour-coded topic label on each question card (QuickWinScreen + MixedRevisionScreen)
+- [x] Per-topic result breakdown in module colours
 
 #### 3.4 Micro-Topic Segmenting
 - [ ] Audit all concept screens for length

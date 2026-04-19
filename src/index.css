@@ -43,7 +43,7 @@
   --np-gold:    #fdc700;
 
   /* Semantic status aliases */
-  --np-accent:  var(--np-cyan);
+  --np-accent:  var(--np-indigo);
   --np-success: #22c55e;
   --np-warning: #f59e0b;
   --np-danger:  #ef4444;
@@ -120,6 +120,28 @@ body.high-contrast {
   /* Remove browser default outline for mouse users */
   :focus:not(:focus-visible) {
     outline: none;
+  }
+
+  /* ── Touch targets: min 48×48px, 8px gap between adjacent interactives ─── */
+  button,
+  a,
+  [role="button"],
+  [role="tab"],
+  [role="checkbox"],
+  [role="radio"],
+  [role="switch"],
+  label[for],
+  select {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  /* Adjacent interactive siblings get top margin so they never crowd each other */
+  button + button,
+  a + a,
+  button + a,
+  a + button,
+  [role="button"] + [role="button"] {
+    margin-top: max(var(--touch-gap, 8px), 8px);
   }
 
   html, body {

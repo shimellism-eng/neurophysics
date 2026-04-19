@@ -1,9 +1,9 @@
 import { motion } from 'motion/react'
-import { ArrowLeft, X, SlidersHorizontal } from 'lucide-react'
+import { ArrowLeft, X } from 'lucide-react'
 
 /**
- * Minimal lesson header — ≤80px tall.
- * Back/X | Topic title (no truncation) | Settings icon
+ * Minimal lesson header — ≤65px tall.
+ * Back/X | Topic title | nothing on right
  * Smooth 3px progress bar
  * "Step label · About X min left" context line
  */
@@ -13,7 +13,6 @@ export default function LessonHeader({
   currentStep,
   topic,
   onBack,
-  onSettings,
   remainingMinutes,
 }) {
   const pct = Math.round(((step + 1) / totalSteps) * 100)
@@ -64,19 +63,6 @@ export default function LessonHeader({
           {topic.title}
         </h1>
 
-        <button
-          onClick={onSettings}
-          aria-label="Comfort settings"
-          style={{
-            width: 38, height: 38, borderRadius: 10, flexShrink: 0,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: 'rgba(255,255,255,0.05)',
-            border: '0.75px solid var(--np-border)',
-            cursor: 'pointer',
-          }}
-        >
-          <SlidersHorizontal size={14} color="rgba(255,255,255,0.45)" />
-        </button>
       </div>
 
       {/* Smooth progress bar */}

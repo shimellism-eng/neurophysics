@@ -285,30 +285,6 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
   return (
     <div className="flex flex-col gap-0" style={{ background: '#080f1e', minHeight: '100%' }}>
 
-      {/* Progress dots */}
-      <div className="flex items-center justify-center gap-2 pt-6 pb-5">
-        {keywords.map((_, i) => {
-          const isActive = i === wordIndex
-          const isCompleted = i < wordIndex
-          return (
-            <motion.div
-              key={i}
-              className="rounded-full"
-              animate={{
-                width: isActive ? 32 : 10,
-                background: isActive
-                  ? moduleColor
-                  : isCompleted
-                    ? moduleColor
-                    : 'rgba(255,255,255,0.1)',
-                boxShadow: isActive ? `0 0 12px ${moduleColor}80` : 'none',
-              }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              style={{ height: 10 }}
-            />
-          )
-        })}
-      </div>
 
       {/* Word card */}
       <AnimatePresence mode="wait">

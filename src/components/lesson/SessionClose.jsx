@@ -116,9 +116,8 @@ export default function SessionClose({
           <div
             className="relative w-24 h-24 rounded-full flex items-center justify-center"
             style={{
-              background: `linear-gradient(135deg, ${topic.moduleColor}28, ${topic.moduleColor}10)`,
-              border: `2.5px solid ${topic.moduleColor}60`,
-              boxShadow: `0 0 32px ${topic.moduleColor}30, inset 0 1px 0 ${topic.moduleColor}40`,
+              background: `linear-gradient(135deg, ${topic.moduleColor}20, ${topic.moduleColor}08)`,
+              border: `1.5px solid ${topic.moduleColor}35`,
             }}
           >
             <CheckCircle2 size={40} color={topic.moduleColor} strokeWidth={2} />
@@ -128,27 +127,6 @@ export default function SessionClose({
             {mounted && <ConfettiDots moduleColor={topic.moduleColor} reducedMotion={reducedMotion} />}
           </AnimatePresence>
         </div>
-
-        {/* XP earned */}
-        <motion.div
-          className="flex flex-col items-center gap-1"
-          initial={reducedMotion ? {} : { opacity: 0, scale: 0.5, y: -20 }}
-          animate={reducedMotion ? {} : { opacity: 1, scale: 1, y: 0 }}
-          transition={reducedMotion ? { duration: 0 } : { type: 'spring', stiffness: 320, damping: 22, delay: 0.15 }}
-        >
-          <div
-            className="font-display font-bold"
-            style={{ fontSize: 28, color: '#fdc700', letterSpacing: '-0.02em', lineHeight: 1 }}
-          >
-            ✨ +50 XP
-          </div>
-          <div
-            className="text-sm font-semibold"
-            style={{ color: '#fb923c' }}
-          >
-            🔥 Keep it up!
-          </div>
-        </motion.div>
 
         <div className="text-center">
           <h2
@@ -171,8 +149,7 @@ export default function SessionClose({
         className="rounded-[18px] overflow-hidden"
         style={{
           background: `${topic.moduleColor}0d`,
-          border: `1px solid ${topic.moduleColor}28`,
-          borderLeft: `4px solid ${topic.moduleColor}`,
+          border: `1px solid rgba(255,255,255,0.08)`,
         }}
         initial={reducedMotion ? {} : { opacity: 0, y: 14 }}
         animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
@@ -226,47 +203,19 @@ export default function SessionClose({
         </p>
       </motion.div>
 
-      {/* Module progress card */}
-      {moduleName && moduleTopicCount > 0 && (
-        <motion.div
-          style={{
-            background: 'rgba(15,22,41,0.95)',
-            border: '0.75px solid rgba(255,255,255,0.08)',
-            borderRadius: 16, padding: '14px 18px',
-            display: 'flex', alignItems: 'center', gap: 12,
-          }}
-          initial={reducedMotion ? {} : { opacity: 0, y: 10 }}
-          animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
-          transition={{ delay: reducedMotion ? 0 : 0.3, duration: reducedMotion ? 0 : 0.35 }}
-        >
-          <div style={{ fontSize: 28 }}>🏆</div>
-          <div>
-            <div style={{ fontWeight: 700, fontSize: 14, color: '#f8fafc' }}>
-              {moduleMasteredCount} / {moduleTopicCount} {moduleName} topics mastered
-            </div>
-            <div style={{ fontSize: 12, color: '#94a3b8', marginTop: 2 }}>
-              {moduleMasteredCount === moduleTopicCount
-                ? 'Module complete! 🎉'
-                : `${moduleTopicCount - moduleMasteredCount} to go`}
-            </div>
-          </div>
-        </motion.div>
-      )}
 
       {/* CTAs */}
       <div className="flex flex-col gap-3">
-        {/* Primary CTA — 3D button */}
         <motion.button
           className="font-display w-full rounded-[16px] font-bold flex items-center justify-center gap-2"
           style={{
             height: 56,
             fontSize: 16,
-            background: `linear-gradient(135deg, ${topic.moduleColor}, ${topic.moduleColor}cc)`,
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${topic.moduleColor}35`,
+            background: topic.moduleColor,
             color: '#fff',
           }}
           onClick={onStartQuiz}
-          whileTap={reducedMotion ? {} : { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${topic.moduleColor}20` }}
+          whileTap={reducedMotion ? {} : { scale: 0.97 }}
           initial={reducedMotion ? {} : { opacity: 0, y: 18 }}
           animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
           transition={{ delay: reducedMotion ? 0 : 0.33 }}
@@ -275,36 +224,17 @@ export default function SessionClose({
           <ChevronRight size={20} strokeWidth={2.5} />
         </motion.button>
 
-        {/* Secondary outline CTA */}
         {examCount > 0 && (
           <motion.button
-            className="font-display w-full rounded-[16px] font-bold flex items-center justify-center gap-2 relative overflow-hidden"
-            style={{
-              height: 56,
-              fontSize: 15,
-              background: 'rgba(99,102,241,0.1)',
-              color: '#818cf8',
-              // Gradient border via box-shadow trick
-              boxShadow: 'inset 0 0 0 1px rgba(99,102,241,0.5)',
-            }}
+            className="font-display w-full text-sm font-semibold flex items-center justify-center gap-1.5"
+            style={{ height: 44, color: 'rgba(255,255,255,0.45)', background: 'transparent', border: 'none' }}
             onClick={() => navigate(`/exam/${topicId}`)}
             whileTap={reducedMotion ? {} : { scale: 0.98 }}
-            initial={reducedMotion ? {} : { opacity: 0, y: 18 }}
-            animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
-            transition={{ delay: reducedMotion ? 0 : 0.41 }}
+            initial={reducedMotion ? {} : { opacity: 0 }}
+            animate={reducedMotion ? {} : { opacity: 1 }}
+            transition={{ delay: reducedMotion ? 0 : 0.45 }}
           >
-            {/* Gradient border overlay */}
-            <div
-              className="absolute inset-0 rounded-[16px] pointer-events-none"
-              style={{
-                background: 'linear-gradient(135deg, rgba(99,102,241,0.4), rgba(168,85,247,0.25))',
-                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                WebkitMaskComposite: 'xor',
-                maskComposite: 'exclude',
-                padding: 1,
-              }}
-            />
-            <GraduationCap size={17} />
+            <GraduationCap size={14} />
             Exam practice ({examCount} questions)
           </motion.button>
         )}

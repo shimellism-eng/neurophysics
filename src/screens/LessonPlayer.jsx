@@ -717,17 +717,9 @@ export default function LessonPlayer() {
         currentStep={currentStep}
         topic={topic}
         onBack={step > 0 ? goBack : exitLesson}
-        onSettings={() => setSettingsOpen(true)}
         remainingMinutes={remainingMinutes}
       />
 
-      {/* ── Persistent keyword glossary (new flow only, steps 2+) ── */}
-      {isNewFlow && step >= 2 && (
-        <KeywordGlossaryBar
-          keywords={topic.lessonKeywords}
-          moduleColor={topic.moduleColor}
-        />
-      )}
 
       {/* ── Main content area ── */}
       <div className="flex-1 overflow-y-auto" style={{ minHeight: 0 }}>

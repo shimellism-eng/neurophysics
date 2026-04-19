@@ -315,8 +315,9 @@ function ComfortFAB() {
   const location = useLocation()
   const { user } = useAuth()
 
-  // Only show when logged in, hide on auth/onboarding/landing
-  const hidden = !user || ['/auth', '/onboarding', '/'].includes(location.pathname) && !user
+  // Hide on auth/onboarding/landing and during all lesson/practice/exam routes
+  const isLessonRoute = /^\/(lesson|diagnostic|practice|adaptive|exam|practical)\//.test(location.pathname)
+  const hidden = !user || isLessonRoute || ['/auth', '/onboarding', '/'].includes(location.pathname)
   if (hidden) return null
 
   return (
@@ -329,20 +330,19 @@ function ComfortFAB() {
         background: 'rgba(15,22,41,0.85)',
         backdropFilter: 'blur(8px)',
         WebkitBackdropFilter: 'blur(8px)',
-        border: '0.75px solid rgba(0,212,255,0.25)',
+        border: '0.75px solid rgba(99,102,241,0.25)',
         boxShadow: '0 2px 12px rgba(0,0,0,0.25)',
       }}
       onClick={() => setSettingsOpen(true)}
       aria-label="Open comfort settings"
     >
-      {/* Accessibility icon — sliders */}
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(0,212,255,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(99,102,241,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="4" y1="6" x2="20" y2="6"/>
         <line x1="4" y1="12" x2="20" y2="12"/>
         <line x1="4" y1="18" x2="20" y2="18"/>
-        <circle cx="9" cy="6" r="2" fill="rgba(0,212,255,0.8)" stroke="none"/>
-        <circle cx="15" cy="12" r="2" fill="rgba(0,212,255,0.8)" stroke="none"/>
-        <circle cx="9" cy="18" r="2" fill="rgba(0,212,255,0.8)" stroke="none"/>
+        <circle cx="9" cy="6" r="2" fill="rgba(99,102,241,0.8)" stroke="none"/>
+        <circle cx="15" cy="12" r="2" fill="rgba(99,102,241,0.8)" stroke="none"/>
+        <circle cx="9" cy="18" r="2" fill="rgba(99,102,241,0.8)" stroke="none"/>
       </svg>
     </button>
   )

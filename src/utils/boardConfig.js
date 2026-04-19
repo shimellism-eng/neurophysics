@@ -136,6 +136,25 @@ export function saveSelectedBoard(boardId) {
   try { localStorage.setItem('np_board', boardId) } catch {}
 }
 
+const VALID_COURSES = ['combined', 'physics_only']
+
+/** Read the student's course type: 'combined' or 'physics_only'. Defaults to 'combined'. */
+export function getSelectedCourse() {
+  try {
+    const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
+    return VALID_COURSES.includes(prefs.course) ? prefs.course : 'combined'
+  } catch { return 'combined' }
+}
+
+/** Persist course type selection to neurophysics_prefs */
+export function setSelectedCourse(course) {
+  try {
+    const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
+    prefs.course = course
+    localStorage.setItem('neurophysics_prefs', JSON.stringify(prefs))
+  } catch {}
+}
+
 /** Is the given module/topic available for the current board?
  *  boards param: string[] | null | undefined — null/undefined means available for all */
 export function isAvailableForBoard(boards, boardId) {

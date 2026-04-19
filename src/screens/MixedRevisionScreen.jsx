@@ -10,6 +10,7 @@ import { ALL_QUESTIONS } from '../data/questionBank/index'
 import { useSRS } from '../hooks/useSRS'
 import { MODULES, TOPICS } from '../data/topics'
 import { trackMisconception } from '../utils/misconceptions'
+import { getSelectedCourse } from '../utils/boardConfig'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
 
@@ -39,7 +40,11 @@ function shuffle(arr) {
 }
 
 function pickQuestions(dueQuestionIds) {
-  const mcqs    = ALL_QUESTIONS.filter(q => q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null)
+  const course = getSelectedCourse()
+  const mcqs    = ALL_QUESTIONS.filter(q =>
+    q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null &&
+    (course === 'physics_only' || q.course === 'combined')
+  )
   const dueSet  = new Set(dueQuestionIds)
   const due     = dueQuestionIds.map(id => mcqs.find(q => q.id === id)).filter(Boolean)
   const rest    = shuffle(mcqs.filter(q => !dueSet.has(q.id)))

@@ -9,7 +9,7 @@ import { Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, Bookmark
 import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
 import { getNextQuestion } from '../data/questionBank/index'
-import { getSelectedBoard } from '../utils/boardConfig'
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import { supabase } from '../lib/supabase'
 import PageHeader from '../components/PageHeader'
 import ConfusionBusterQuestion from '../components/questions/ConfusionBusterQuestion'
@@ -138,6 +138,7 @@ function CalcQuestion({ q, onAnswer }) {
         <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
           className="space-y-2">
           <div className="px-3 py-2 rounded-[10px]"
+            aria-live="polite" aria-atomic="true"
             style={{ background: correct ? 'rgba(0,188,125,0.08)' : 'rgba(239,68,68,0.08)',
               border: `0.75px solid ${correct ? 'rgba(0,188,125,0.25)' : 'rgba(239,68,68,0.25)'}` }}>
             <div className="text-xs font-semibold mb-1" style={{ color: correct ? '#00bc7d' : '#ef4444' }}>
@@ -300,6 +301,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
             {/* Feedback */}
             {result.feedback && (
               <div className="flex items-start gap-2 px-3 py-2.5 rounded-[10px]"
+                aria-live="polite"
                 style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
                 <Lightbulb size={13} color="#fdc700" style={{ marginTop: 1, flexShrink: 0 }} />
                 <p className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>{result.feedback}</p>
@@ -425,7 +427,7 @@ export default function AdaptivePractice() {
   const { tier, streak, totalAttempts, submit, reset } = useAdaptive(topicId)
   const { ms, start, stop } = useTimer()
 
-  const [courseFilter, setCourseFilter] = useState('all')
+  const [courseFilter, setCourseFilter] = useState(() => getSelectedCourse() === 'physics_only' ? 'all' : 'combined')
   const [savedConfirm, setSavedConfirm] = useState(false)
   const [sessionCount, setSessionCount] = useState(0)
   const [sessionCorrect, setSessionCorrect] = useState(0)
@@ -801,8 +803,8 @@ export default function AdaptivePractice() {
             />
             {/* Sheet */}
             <motion.div
-              className="absolute bottom-0 left-0 right-0 px-5 pb-10 pt-6 rounded-t-[24px]"
-              style={{ background: 'rgba(15,22,41,0.98)', border: '0.75px solid rgba(255,255,255,0.1)', zIndex: 50 }}
+              className="absolute bottom-0 left-0 right-0 px-5 pt-6 rounded-t-[20px]"
+              style={{ background: 'rgba(15,22,41,0.98)', border: '0.75px solid rgba(255,255,255,0.1)', zIndex: 50, paddingBottom: 'calc(20px + var(--safe-bottom))' }}
               initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }}
               transition={{ type: 'spring', damping: 26, stiffness: 300 }}
             >

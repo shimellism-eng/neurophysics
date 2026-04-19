@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap, Calendar, SlidersHorizontal } from 'lucide-react'
-import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard } from '../utils/boardConfig'
+import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard, getSelectedCourse, setSelectedCourse } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
 import { secureRemove } from '../utils/secureStorage'
@@ -154,12 +154,21 @@ export default function SettingsScreen() {
 
   const [signingOut, setSigningOut] = useState(false)
   const [selectedBoardId, setSelectedBoardId] = useState(() => getValidatedBoard())
+  const [selectedCourse, setSelectedCourseState] = useState(() => getSelectedCourse())
 
   const handleSelectBoard = (boardId) => {
     saveSelectedBoard(boardId)
     setSelectedBoardId(boardId)
     showToast(`Switched to ${BOARDS[boardId]?.name} ✓`, BOARDS[boardId]?.color || '#6366f1')
     // Fire a storage event so LearnScreen updates without a full reload
+    try { window.dispatchEvent(new Event('storage')) } catch {}
+  }
+
+  const handleSelectCourse = (course) => {
+    setSelectedCourse(course)
+    setSelectedCourseState(course)
+    const label = course === 'physics_only' ? 'Physics Only' : 'Combined Science'
+    showToast(`Switched to ${label} ✓`, '#9b59b6')
     try { window.dispatchEvent(new Event('storage')) } catch {}
   }
 
@@ -665,6 +674,52 @@ export default function SettingsScreen() {
           </div>
           <p className="text-[10px] text-center pt-1" style={{ color: '#3a4a5a' }}>
             This filters topics to match your exam board's specification
+          </p>
+        </div>
+      </div>
+
+      {/* ── Course Type ── */}
+      <div className="px-5 mb-5">
+        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
+          Course Type
+        </div>
+        <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
+          <div className="flex items-center gap-2 mb-3">
+            <BookOpen size={15} color="#9b59b6" />
+            <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your GCSE course</span>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { id: 'combined', label: 'Combined Science', desc: 'Trilogy / Double Award', emoji: '🔬' },
+              { id: 'physics_only', label: 'Physics Only', desc: 'Separate Science', emoji: '⚛️' },
+            ].map(({ id, label, desc, emoji }) => {
+              const isSelected = selectedCourse === id
+              return (
+                <motion.button
+                  key={id}
+                  onClick={() => handleSelectCourse(id)}
+                  className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
+                  style={{
+                    background: isSelected ? 'rgba(155,89,182,0.15)' : 'rgba(255,255,255,0.03)',
+                    border: isSelected ? '1.5px solid rgba(155,89,182,0.5)' : '0.75px solid var(--np-border)',
+                    transition: 'all 0.15s ease',
+                  }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <div className="flex items-center gap-1.5 mb-0.5">
+                    <span style={{ fontSize: 13 }}>{emoji}</span>
+                    <span className="text-xs font-bold" style={{ color: isSelected ? '#c084fc' : '#f8fafc' }}>
+                      {label}
+                    </span>
+                    {isSelected && <div className="w-1.5 h-1.5 rounded-full ml-auto" style={{ background: '#9b59b6' }} />}
+                  </div>
+                  <span className="text-[10px] leading-tight" style={{ color: '#556677' }}>{desc}</span>
+                </motion.button>
+              )
+            })}
+          </div>
+          <p className="text-[10px] text-center pt-1" style={{ color: '#3a4a5a' }}>
+            Physics Only unlocks extra topics not in Combined Science
           </p>
         </div>
       </div>

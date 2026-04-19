@@ -7,7 +7,7 @@ import {
 } from 'lucide-react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
-import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
+import { getSelectedBoard, isAvailableForBoard, getSelectedCourse } from '../utils/boardConfig'
 import { getRecallQuestionCount } from '../data/questionBank/index'
 
 // ─── Badge definitions (for next milestone) ──────────────────────────────────
@@ -164,14 +164,15 @@ function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, on
 
 // ─── Module card ──────────────────────────────────────────────────────────────
 
-function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selectedBoard }) {
+function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selectedBoard, selectedCourse }) {
   const navigate = useNavigate()
 
-  // Only count topics visible to this board (matches the per-tile filter below)
+  // Only count topics visible to this board + course
   const visibleTopics = module.topics.filter(id => {
     const t = TOPICS[id]
     if (!t) return false
     if (t.boards && t.boards.length > 0 && !t.boards.includes(selectedBoard.id)) return false
+    if (selectedCourse === 'combined' && PHYSICS_ONLY_TOPICS.has(id)) return false
     return true
   })
   const masteredCount = visibleTopics.filter(t => progress[t]?.mastered).length
@@ -267,8 +268,9 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
               {module.topics.map((topicId, i) => {
                 const topic = TOPICS[topicId]
                 if (!topic) return null
-                // Hide topics restricted to other boards
+                // Hide topics restricted to other boards or course
                 if (topic.boards && topic.boards.length > 0 && !topic.boards.includes(selectedBoard.id)) return null
+                if (selectedCourse === 'combined' && PHYSICS_ONLY_TOPICS.has(topicId)) return null
                 return (
                   <TopicTile
                     key={topicId}
@@ -318,19 +320,25 @@ export default function LearnScreen() {
   const [paperFilter, setPaperFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBoard, setSelectedBoard] = useState(() => getSelectedBoard())
+  const [selectedCourse, setSelectedCourseState] = useState(() => getSelectedCourse())
 
-  // Re-read board if settings change while component is mounted
+  // Re-read board/course if settings change while component is mounted
   useEffect(() => {
-    const onStorage = () => setSelectedBoard(getSelectedBoard())
+    const onStorage = () => { setSelectedBoard(getSelectedBoard()); setSelectedCourseState(getSelectedCourse()) }
     window.addEventListener('storage', onStorage)
     // Also check on focus (iOS doesn't fire storage events reliably)
-    const onFocus = () => setSelectedBoard(getSelectedBoard())
+    const onFocus = () => { setSelectedBoard(getSelectedBoard()); setSelectedCourseState(getSelectedCourse()) }
     window.addEventListener('focus', onFocus)
     return () => { window.removeEventListener('storage', onStorage); window.removeEventListener('focus', onFocus) }
   }, [])
 
-  // Board-filtered modules (board-specific modules only show for their board)
-  const boardModules = MODULES.filter(m => isAvailableForBoard(m.boards, selectedBoard.id))
+  // Board + course filtered modules
+  const boardModules = MODULES.filter(m => {
+    if (!isAvailableForBoard(m.boards, selectedBoard.id)) return false
+    // For combined students, hide modules where ALL topics are physics-only
+    if (selectedCourse === 'combined' && m.topics.every(t => PHYSICS_ONLY_TOPICS.has(t))) return false
+    return true
+  })
 
   // Module expand state — persisted in sessionStorage so back-navigation restores it
   // Uses module.name as the stable key (modules have no id field)
@@ -396,6 +404,7 @@ export default function LearnScreen() {
             if (!t) return false
             // Filter by board at topic level too
             if (t.boards && t.boards.length > 0 && !t.boards.includes(selectedBoard.id)) return false
+            if (selectedCourse === 'combined' && PHYSICS_ONLY_TOPICS.has(id)) return false
             return t.title.toLowerCase().includes(searchQuery.toLowerCase())
           })
           .map(id => ({ id, topic: TOPICS[id], module: m }))
@@ -661,6 +670,7 @@ export default function LearnScreen() {
                 expanded={openModules.includes(module.name)}
                 onToggle={() => toggleModule(module.name)}
                 selectedBoard={selectedBoard}
+                selectedCourse={selectedCourse}
               />
             </motion.div>
           ))}

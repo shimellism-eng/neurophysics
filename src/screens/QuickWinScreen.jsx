@@ -10,6 +10,7 @@ import { ALL_QUESTIONS } from '../data/questionBank/index'
 import { useSRS } from '../hooks/useSRS'
 import { TOPICS, MODULES } from '../data/topics'
 import { trackMisconception } from '../utils/misconceptions'
+import { getSelectedCourse } from '../utils/boardConfig'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
 
@@ -40,7 +41,11 @@ function shuffle(arr) {
 }
 
 function pickQuestions(dueQuestionIds) {
-  const mcqs = ALL_QUESTIONS.filter(q => q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null)
+  const course = getSelectedCourse()
+  const mcqs = ALL_QUESTIONS.filter(q =>
+    q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null &&
+    (course === 'physics_only' || q.course === 'combined')
+  )
   const dueSet = new Set(dueQuestionIds)
 
   // SRS-due specific questions first (preserve priority order), then random rest

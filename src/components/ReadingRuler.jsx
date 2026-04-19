@@ -2,158 +2,133 @@ import { useEffect, useRef, useState } from 'react'
 import { useComfort } from '../context/ComfortContext'
 
 const COLOUR_MAP = {
-  yellow: 'rgba(255,249,180,0.38)',
-  blue:   'rgba(180,220,255,0.32)',
-  pink:   'rgba(255,200,220,0.32)',
-  green:  'rgba(200,240,210,0.32)',
+  yellow: 'rgba(255,249,180,0.45)',
+  blue:   'rgba(180,220,255,0.40)',
+  pink:   'rgba(255,200,220,0.40)',
+  green:  'rgba(200,240,210,0.40)',
 }
 
-const MIN_H = 16
-const MAX_H = 96
+const MIN_H = 20
+const MAX_H = 120
+const STEP_H = 10
 const DEFAULT_H = 44
+
+function load(key, fallback) {
+  try { const v = Number(localStorage.getItem(key)); return isNaN(v) || v === 0 ? fallback : v } catch { return fallback }
+}
+function save(key, val) { try { localStorage.setItem(key, val) } catch {} }
 
 export default function ReadingRuler() {
   const { prefs } = useComfort()
-  const [y, setY] = useState(() => {
-    if (typeof window === 'undefined') return 200
-    try { return Number(localStorage.getItem('np_ruler_y')) || Math.round(window.innerHeight * 0.4) } catch { return 200 }
-  })
-  const [height, setHeight] = useState(() => {
-    try { return Number(localStorage.getItem('np_ruler_h')) || DEFAULT_H } catch { return DEFAULT_H }
-  })
 
-  const dragging = useRef(false)
-  const dragStartY = useRef(0)
-  const dragStartRulerY = useRef(0)
+  const [y, setY] = useState(() => load('np_ruler_y', typeof window !== 'undefined' ? Math.round(window.innerHeight * 0.38) : 200))
+  const [height, setHeight] = useState(() => load('np_ruler_h', DEFAULT_H))
 
-  // Persist position + height
+  const dragging   = useRef(false)
+  const startY     = useRef(0)
+  const startRuler = useRef(0)
+
+  useEffect(() => { save('np_ruler_y', y) }, [y])
+  useEffect(() => { save('np_ruler_h', height) }, [height])
+
+  // ── Global move/up listeners ──────────────────────────────────────────────
   useEffect(() => {
-    try { localStorage.setItem('np_ruler_y', y) } catch {}
-  }, [y])
-  useEffect(() => {
-    try { localStorage.setItem('np_ruler_h', height) } catch {}
+    const move = (e) => {
+      if (!dragging.current) return
+      const cy = e.touches ? e.touches[0].clientY : e.clientY
+      const next = startRuler.current + (cy - startY.current)
+      setY(Math.max(0, Math.min(window.innerHeight - height, next)))
+    }
+    const up = () => { dragging.current = false }
+
+    window.addEventListener('mousemove', move)
+    window.addEventListener('mouseup', up)
+    window.addEventListener('touchmove', move, { passive: false })
+    window.addEventListener('touchend', up)
+    return () => {
+      window.removeEventListener('mousemove', move)
+      window.removeEventListener('mouseup', up)
+      window.removeEventListener('touchmove', move)
+      window.removeEventListener('touchend', up)
+    }
   }, [height])
 
-  // ── Handle drag (mouse + touch) ───────────────────────────────────────────
-  const onPointerDown = (e) => {
+  const beginDrag = (e) => {
+    // Don't start drag when tapping the +/- buttons
+    if (e.target.closest('[data-ruler-btn]')) return
     e.preventDefault()
     dragging.current = true
-    dragStartY.current = e.clientY ?? e.touches?.[0]?.clientY ?? 0
-    dragStartRulerY.current = y
+    startY.current     = e.touches ? e.touches[0].clientY : e.clientY
+    startRuler.current = y
   }
 
-  useEffect(() => {
-    const onMove = (e) => {
-      if (!dragging.current) return
-      const clientY = e.clientY ?? e.touches?.[0]?.clientY ?? dragStartY.current
-      const delta = clientY - dragStartY.current
-      setY(prev => {
-        const next = dragStartRulerY.current + delta
-        return Math.max(0, Math.min(window.innerHeight - height, next))
-      })
-    }
-    const onUp = () => { dragging.current = false }
-    window.addEventListener('mousemove', onMove)
-    window.addEventListener('mouseup', onUp)
-    window.addEventListener('touchmove', onMove, { passive: true })
-    window.addEventListener('touchend', onUp)
-    return () => {
-      window.removeEventListener('mousemove', onMove)
-      window.removeEventListener('mouseup', onUp)
-      window.removeEventListener('touchmove', onMove)
-      window.removeEventListener('touchend', onUp)
-    }
-  }, [height])
-
-  const thinner = () => setHeight(h => Math.max(MIN_H, h - 8))
-  const wider   = () => setHeight(h => Math.min(MAX_H, h + 8))
+  const thinner = () => setHeight(h => Math.max(MIN_H, h - STEP_H))
+  const wider   = () => setHeight(h => Math.min(MAX_H, h + STEP_H))
 
   if (!prefs.readingRuler) return null
 
   const bg = COLOUR_MAP[prefs.colourOverlay] || COLOUR_MAP.yellow
+  const btnStyle = {
+    width: 44, height: 44,
+    borderRadius: 12,
+    background: 'rgba(10,16,34,0.82)',
+    border: '1px solid rgba(255,255,255,0.20)',
+    color: 'rgba(255,255,255,0.85)',
+    fontSize: 20, fontWeight: 800, lineHeight: 1,
+    cursor: 'pointer',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    flexShrink: 0,
+    backdropFilter: 'blur(8px)',
+    WebkitBackdropFilter: 'blur(8px)',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
+    touchAction: 'manipulation',
+  }
 
   return (
     <>
-      {/* Ruler bar — pointer-events: none so it never blocks content */}
+      {/* ── Ruler bar — full width, draggable ── */}
       <div
         aria-hidden="true"
+        onMouseDown={beginDrag}
+        onTouchStart={beginDrag}
         style={{
           position: 'fixed',
           top: y,
           left: 0,
-          right: 0,
+          right: 60,          // leave room for control buttons on the right
           height,
           background: bg,
-          pointerEvents: 'none',
           zIndex: 9000,
-          borderTop: '1px solid rgba(255,255,255,0.10)',
-          borderBottom: '1px solid rgba(255,255,255,0.10)',
-        }}
-      />
-
-      {/* Handle — right edge, pointer-events: auto */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'fixed',
-          top: y,
-          right: 0,
-          width: 36,
-          height,
-          zIndex: 9001,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'space-between',
+          borderTop: '1.5px solid rgba(255,255,255,0.14)',
+          borderBottom: '1.5px solid rgba(255,255,255,0.14)',
           cursor: 'grab',
           touchAction: 'none',
           userSelect: 'none',
         }}
-        onMouseDown={onPointerDown}
-        onTouchStart={onPointerDown}
       >
-        {/* Thinner button */}
-        <button
-          onMouseDown={e => e.stopPropagation()}
-          onTouchStart={e => e.stopPropagation()}
-          onClick={thinner}
-          aria-label="Make ruler thinner"
-          style={{
-            width: 28, height: 18,
-            background: 'rgba(0,0,0,0.45)',
-            border: '1px solid rgba(255,255,255,0.18)',
-            borderRadius: '0 0 6px 6px',
-            color: 'rgba(255,255,255,0.7)',
-            fontSize: 11, fontWeight: 800, lineHeight: 1,
-            cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            flexShrink: 0,
-          }}
-        >−</button>
-
-        {/* Drag grip dots */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-          {[0,1,2].map(i => (
-            <div key={i} style={{ width: 3, height: 3, borderRadius: 999, background: 'rgba(0,0,0,0.5)' }} />
+        {/* Subtle grip lines in the middle */}
+        <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', display: 'flex', flexDirection: 'column', gap: 4, pointerEvents: 'none' }}>
+          {[0,1].map(i => (
+            <div key={i} style={{ width: 32, height: 2, borderRadius: 999, background: 'rgba(0,0,0,0.22)' }} />
           ))}
         </div>
+      </div>
 
-        {/* Wider button */}
-        <button
-          onMouseDown={e => e.stopPropagation()}
-          onTouchStart={e => e.stopPropagation()}
-          onClick={wider}
-          aria-label="Make ruler wider"
-          style={{
-            width: 28, height: 18,
-            background: 'rgba(0,0,0,0.45)',
-            border: '1px solid rgba(255,255,255,0.18)',
-            borderRadius: '6px 6px 0 0',
-            color: 'rgba(255,255,255,0.7)',
-            fontSize: 11, fontWeight: 800, lineHeight: 1,
-            cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            flexShrink: 0,
-          }}
-        >+</button>
+      {/* ── Control buttons — always outside the ruler, always tappable ── */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'fixed',
+          top: y + height / 2 - 48,   // vertically centred on the ruler
+          right: 8,
+          zIndex: 9001,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 6,
+        }}
+      >
+        <button data-ruler-btn onClick={thinner} aria-label="Make ruler thinner" style={btnStyle}>−</button>
+        <button data-ruler-btn onClick={wider}   aria-label="Make ruler wider"   style={btnStyle}>+</button>
       </div>
     </>
   )

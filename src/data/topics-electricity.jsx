@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
 
 const EC = '#155dfc'
 
@@ -39,7 +39,7 @@ function CircuitBasicsLesson() {
         Switch: {on ? '▪ Closed' : '/ Open'}
       </button>
 
-      <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }}>
+      <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }} role="img" aria-label="Simple circuit diagram with switch, battery and bulb">
         {/* Top rail */}
         <W x1={20} y1={15} x2={90} y2={15} />
         {/* Switch at top centre */}
@@ -207,7 +207,7 @@ function CircuitComponentsLesson() {
 
   return (
     <div className="w-full flex flex-col gap-2 px-3 pt-3 pb-3">
-      <svg width="280" height="92" viewBox="0 0 280 92" style={{ display: 'block', width: '100%' }}>
+      <svg width="280" height="92" viewBox="0 0 280 92" style={{ display: 'block', width: '100%' }} role="img" aria-label="Grid of circuit component symbols including resistor, LED, diode, LDR and thermistor">
         {symbols.map((sym, i) => {
           const col = i % cols
           const row = Math.floor(i / cols)
@@ -288,7 +288,7 @@ function SeriesParallelLesson() {
       </div>
 
       {isSeries ? (
-        <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }}>
+        <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }} role="img" aria-label="Series circuit diagram with two bulbs connected in a single loop">
           {/* Rectangle */}
           <W x1={15} y1={15} x2={245} y2={15} />
           <W x1={245} y1={15} x2={245} y2={105} />
@@ -316,7 +316,7 @@ function SeriesParallelLesson() {
           <text x={130} y={101} textAnchor="middle" fill="#ef4444" fontSize={7}>One bulb fails → all go out</text>
         </svg>
       ) : (
-        <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
+        <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }} role="img" aria-label="Parallel circuit diagram with two bulbs connected in separate branches">
           {/* Outer rectangle */}
           <W x1={15} y1={20} x2={245} y2={20} />
           <W x1={245} y1={20} x2={245} y2={110} />
@@ -406,7 +406,7 @@ function DomesticElectricityLesson() {
       </div>
 
       {tab === 'ac' ? (
-        <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }}>
+        <svg width="260" height="120" viewBox="0 0 260 120" style={{ display: 'block' }} role="img" aria-label="AC voltage waveform showing sinusoidal oscillation at 50 Hz">
           {/* Axes */}
           <line x1={10} y1={60} x2={250} y2={60} stroke="#2a3a52" strokeWidth="1.2" />
           <line x1={10} y1={10} x2={10} y2={110} stroke="#2a3a52" strokeWidth="1.2" />
@@ -425,7 +425,7 @@ function DomesticElectricityLesson() {
           <text x={130} y={25} textAnchor="middle" fill="#a8b8cc" fontSize={8}>UK mains: 230 V (rms), 50 Hz</text>
         </svg>
       ) : (
-        <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
+        <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }} role="img" aria-label="UK mains plug diagram showing live, neutral and earth pins with colour coding">
           {/* Plug outline */}
           <rect x={70} y={10} width={120} height={85} rx={12} fill="#1d293d" stroke="#4a5a72" strokeWidth="2" />
           {/* Earth pin (top, larger) */}
@@ -491,18 +491,8 @@ function ElectricalPowerLesson() {
         <FormulaBox formula="P = I²R" color="#f97316" />
       </div>
       <div className="rounded-[12px] p-2.5" style={{ background: `${EC}10`, border: `1px solid ${EC}30` }}>
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Voltage V</span>
-          <span style={{ color: EC, fontWeight: 700 }}>{voltage} V</span>
-        </div>
-        <input type="range" min="1" max="24" value={voltage}
-          onChange={e => setVoltage(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: EC }} />
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Current I</span>
-          <span style={{ color: '#f97316', fontWeight: 700 }}>{current} A</span>
-        </div>
-        <input type="range" min="0.5" max="10" step="0.5" value={current}
-          onChange={e => setCurrent(+e.target.value)} className="w-full" style={{ accentColor: '#f97316' }} />
+        <SimSlider label="Voltage" min={1} max={24} value={voltage} onChange={setVoltage} unit="V" color={EC} />
+        <SimSlider label="Current" min={0.5} max={10} step={0.5} value={current} onChange={setCurrent} unit="A" color="#f97316" />
         <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
           <span style={{ color: '#a8b8cc' }}>P = {voltage} × {current} =</span>
           <motion.span key={power} style={{ color: EC }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{power} W</motion.span>
@@ -512,6 +502,7 @@ function ElectricalPowerLesson() {
           <span>Energy/s = {power} J/s</span>
         </div>
       </div>
+      <SimNarration text={`Power = ${current} A × ${voltage} V = ${power} W transferred per second. Resistance = ${resistance} Ω.${Number(power) > 1000 ? ' High power — significant energy transfer.' : ' Moderate power draw.'}`} />
     </div>
   )
 }
@@ -556,7 +547,7 @@ function NationalGridLesson() {
   return (
     <div className="w-full flex flex-col items-center gap-2 px-2 pt-3 pb-2">
       {/* Flow diagram */}
-      <svg width="280" height="72" viewBox="0 0 280 72" style={{ display: 'block', overflow: 'visible' }}>
+      <svg width="280" height="72" viewBox="0 0 280 72" style={{ display: 'block', overflow: 'visible' }} role="img" aria-label="National Grid flow diagram from power station through step-up transformer, transmission cables, step-down transformer to homes">
         {/* Connecting arrows */}
         {[56, 112, 168, 224].map((x, i) => (
           <g key={i}>
@@ -643,7 +634,7 @@ function StaticElectricityLesson() {
         {charged ? '⚡ Charged by friction' : 'Rub balloon →'}
       </button>
 
-      <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
+      <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }} role="img" aria-label="Static electricity diagram showing two charged balloons with negative charge symbols and repulsion">
         {/* Balloon 1 (left) */}
         <ellipse cx={80} cy={60} rx={30} ry={38}
           fill={charged ? '#6366f130' : '#1d293d'}

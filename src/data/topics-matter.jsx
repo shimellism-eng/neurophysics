@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Atom, AlertTriangle, Zap, Shield } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
 
 const PART_C = '#c084fc'
 const ATOM_C = '#e879f9'
@@ -52,7 +52,7 @@ function StatesDensityLesson() {
       </div>
 
       {/* SVG diagram */}
-      <svg width="200" height="110" viewBox="0 0 200 110" style={{ display: 'block', background: '#0f1829', borderRadius: 12, border: `1.5px solid ${cols[state]}` }}>
+      <svg width="200" height="110" viewBox="0 0 200 110" style={{ display: 'block', background: '#0f1829', borderRadius: 12, border: `1.5px solid ${cols[state]}` }} role="img" aria-label="Particle model diagram showing arrangement of particles in solid, liquid or gas state">
         {/* container walls */}
         <rect x="4" y="4" width="192" height="102" rx="8" fill="none" stroke={cols[state]} strokeWidth="1.2" strokeOpacity="0.4" />
         {particles.map((p, i) => (
@@ -116,7 +116,7 @@ function InternalEnergyLesson() {
   return (
     <div className="w-full h-full flex flex-col items-center gap-2 pt-2 px-3" style={{ maxWidth: 480 }}>
       <div className="text-xs font-semibold" style={{ color: PART_C }}>Heating Curve  -  Water</div>
-      <svg width="260" height="150" viewBox="0 0 260 150" style={{ display: 'block' }}>
+      <svg width="260" height="150" viewBox="0 0 260 150" style={{ display: 'block' }} role="img" aria-label="Heating curve graph for water showing temperature rising with flat regions at melting and boiling points where latent heat is absorbed">
         {/* axes */}
         <line x1="26" y1="136" x2="240" y2="136" stroke="#2a3a52" strokeWidth="1.2" />
         <line x1="26" y1="10" x2="26" y2="136" stroke="#2a3a52" strokeWidth="1.2" />
@@ -212,7 +212,7 @@ function SpecificLatentHeatLesson() {
   return (
     <div className="w-full h-full flex flex-col items-center gap-2 pt-2 px-3" style={{ maxWidth: 480 }}>
       <div className="text-xs font-semibold" style={{ color: PART_C }}>Heating Curve — tap a section</div>
-      <svg width="260" height="150" viewBox="0 0 260 150" style={{ display: 'block' }}>
+      <svg width="260" height="150" viewBox="0 0 260 150" style={{ display: 'block' }} role="img" aria-label="Interactive heating curve showing latent heat sections for melting and vaporisation — tap a section for detail">
         {/* axes */}
         <line x1="24" y1="136" x2="248" y2="136" stroke="#2a3a52" strokeWidth="1.2" />
         <line x1="24" y1="10" x2="24" y2="136" stroke="#2a3a52" strokeWidth="1.2" />
@@ -321,7 +321,7 @@ function GasPressureLesson() {
       {tab === 0 ? (
         /* ── Boyle's Law ── */
         <div className="w-full flex flex-col items-center gap-2">
-          <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
+          <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }} role="img" aria-label="Boyle's law cylinder diagram showing gas particles and movable piston — smaller volume gives higher pressure">
             {/* cylinder body */}
             <rect x="40" y="28" width="150" height="64" rx="4" fill="#0f1829" stroke="#2a3a52" strokeWidth="1.5" />
             {/* piston (moves with vol slider) */}
@@ -350,13 +350,7 @@ function GasPressureLesson() {
             {/* volume label */}
             <text x="120" y="20" textAnchor="middle" fill="#637b96" fontSize={8}>V = {vol}%</text>
           </svg>
-          <div className="w-full flex flex-col gap-1 px-2">
-            <div className="flex justify-between text-xs">
-              <span style={{ color: '#a8b8cc' }}>Volume (piston position)</span>
-              <span style={{ color: PART_C }} className="font-bold">{vol}%</span>
-            </div>
-            <input type="range" min="20" max="100" value={vol} onChange={e => setVol(+e.target.value)} className="w-full" style={{ accentColor: PART_C }} />
-          </div>
+          <SimSlider label="Volume" min={20} max={100} value={vol} onChange={setVol} unit="%" color={PART_C} />
           <div className="px-3 py-1 rounded-[10px] font-mono font-bold text-sm" style={{ background: `${PART_C}18`, border: `1px solid ${PART_C}44`, color: PART_C }}>
             P₁V₁ = P₂V₂ (constant T)
           </div>
@@ -364,7 +358,7 @@ function GasPressureLesson() {
       ) : (
         /* ── Pressure-Temperature ── */
         <div className="w-full flex flex-col items-center gap-2">
-          <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
+          <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }} role="img" aria-label="Pressure-temperature cylinder diagram showing gas particles speeding up as temperature increases in a fixed volume">
             {/* fixed cylinder */}
             <rect x="40" y="28" width="160" height="64" rx="4" fill="#0f1829" stroke="#2a3a52" strokeWidth="1.5" />
             {/* sealed right wall (thicker to show fixed) */}
@@ -387,19 +381,14 @@ function GasPressureLesson() {
             {/* temp label */}
             <text x="130" y="20" textAnchor="middle" fill="#637b96" fontSize={8}>T = {tempC}°C = {T2} K</text>
           </svg>
-          <div className="w-full flex flex-col gap-1 px-2">
-            <div className="flex justify-between text-xs">
-              <span style={{ color: '#a8b8cc' }}>Temperature</span>
-              <span style={{ color: PART_C }} className="font-bold">{tempC}°C</span>
-            </div>
-            <input type="range" min="0" max="300" value={tempC} onChange={e => setTempC(+e.target.value)} className="w-full" style={{ accentColor: PART_C }} />
-          </div>
+          <SimSlider label="Temperature" min={0} max={300} value={tempC} onChange={setTempC} unit="°C" color={PART_C} />
           <div className="px-3 py-1 rounded-[10px] font-mono font-bold text-sm" style={{ background: `${PART_C}18`, border: `1px solid ${PART_C}44`, color: PART_C }}>
             P₁/T₁ = P₂/T₂ (constant V)
           </div>
           <div className="text-xs text-center" style={{ color: '#637b96' }}>T must be in Kelvin: T(K) = T(°C) + 273</div>
         </div>
       )}
+      <SimNarration text={tab === 0 ? `Volume ${vol}% — pressure ${P2} atm. Boyle's law: halving volume doubles pressure (constant temperature).` : `Temperature ${tempC}°C (${T2} K) — pressure ${PT_P2} atm. Higher temperature means faster particles, more collisions, higher pressure.`} />
     </div>
   )
 }
@@ -434,7 +423,7 @@ function AtomicStructureLesson() {
   ]
   return (
     <div className="w-full h-full flex flex-col items-center gap-1 pt-2 px-2" style={{ maxWidth: 480 }}>
-      <svg width="260" height="155" viewBox="0 0 260 155" style={{ display: 'block' }}>
+      <svg width="260" height="155" viewBox="0 0 260 155" style={{ display: 'block' }} role="img" aria-label="Atomic structure diagram showing nucleus with protons and neutrons surrounded by electron shells">
         {/* orbital shells (dashed) */}
         {shells.map((s, si) => (
           <circle key={si} cx="130" cy="80" r={s.r} fill="none" stroke={ATOM_C} strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4 3" />
@@ -521,7 +510,7 @@ function AtomicModelLesson() {
       year: '1803', name: 'Dalton', color: '#a8b8cc',
       detail: 'Indivisible solid sphere. All matter made of tiny indestructible spheres.',
       diagram: (col) => (
-        <svg width="40" height="40" viewBox="0 0 40 40">
+        <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Dalton model: solid indivisible sphere">
           <circle cx="20" cy="20" r="16" fill={col} fillOpacity="0.7" stroke={col} strokeWidth="1.5" />
         </svg>
       ),
@@ -530,7 +519,7 @@ function AtomicModelLesson() {
       year: '1897', name: 'Thomson', color: '#fdc700',
       detail: 'Electrons embedded in positive sphere  -  "plum pudding" model.',
       diagram: (col) => (
-        <svg width="40" height="40" viewBox="0 0 40 40">
+        <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Thomson model: plum pudding with electrons embedded in positive sphere">
           <circle cx="20" cy="20" r="16" fill={col} fillOpacity="0.22" stroke={col} strokeWidth="1.5" />
           {[[12,14],[22,10],[28,22],[16,26],[24,28]].map(([x,y],i) => (
             <circle key={i} cx={x} cy={y} r="3" fill={ATOM_C} />
@@ -542,7 +531,7 @@ function AtomicModelLesson() {
       year: '1911', name: 'Rutherford', color: '#f97316',
       detail: 'Gold foil experiment: tiny dense positive nucleus, electrons at large distances.',
       diagram: (col) => (
-        <svg width="40" height="40" viewBox="0 0 40 40">
+        <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Rutherford model: small dense nucleus with electrons orbiting at large distance">
           <circle cx="20" cy="20" r="14" fill="none" stroke={col} strokeWidth="1" strokeDasharray="3 2" />
           <circle cx="20" cy="20" r="4" fill={col} fillOpacity="0.9" stroke={col} strokeWidth="1.5" />
           <circle cx="34" cy="12" r="3" fill={ATOM_C} fillOpacity="0.9" />
@@ -553,7 +542,7 @@ function AtomicModelLesson() {
       year: '1913', name: 'Bohr', color: ATOM_C,
       detail: 'Electrons occupy fixed quantised energy shells around the nucleus.',
       diagram: (col) => (
-        <svg width="40" height="40" viewBox="0 0 40 40">
+        <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Bohr model: nucleus with electrons in fixed quantised energy shells">
           <circle cx="20" cy="20" r="5" fill={col} fillOpacity="0.8" stroke={col} strokeWidth="1.5" />
           <circle cx="20" cy="20" r="11" fill="none" stroke={col} strokeWidth="1" />
           <circle cx="20" cy="20" r="17" fill="none" stroke={col} strokeWidth="1" strokeOpacity="0.5" />
@@ -634,7 +623,7 @@ function RadioactiveDecayLesson() {
   return (
     <div className="w-full h-full flex flex-col items-center gap-2 pt-2 px-2" style={{ maxWidth: 480 }}>
       {/* Penetration SVG */}
-      <svg width="260" height="155" viewBox="0 0 260 155" style={{ display: 'block' }}>
+      <svg width="260" height="155" viewBox="0 0 260 155" style={{ display: 'block' }} role="img" aria-label="Radiation penetration diagram showing alpha, beta and gamma radiation passing through paper, aluminium and lead barriers">
         {/* barriers: paper, aluminium, lead */}
         {/* Paper: x=100 */}
         <rect x="100" y="4" width="8" height="148" fill="#fdc700" fillOpacity="0.22" stroke="#fdc700" strokeWidth="1" strokeOpacity="0.5" />
@@ -747,7 +736,7 @@ function NuclearEquationsLesson() {
   const decayData = [
     {
       svg: (
-        <svg width="260" height="110" viewBox="0 0 260 110" style={{ display: 'block' }}>
+        <svg width="260" height="110" viewBox="0 0 260 110" style={{ display: 'block' }} role="img" aria-label="Alpha decay diagram showing uranium-238 nucleus emitting an alpha particle to form thorium-234">
           {/* U-238 parent */}
           <motion.circle cx={anim ? 30 : 40} cy={55} r={18} fill={`${ATOM_C}30`} stroke={ATOM_C} strokeWidth="1.5"
             animate={{ cx: anim ? 30 : 40 }} transition={{ duration: 0.5 }} />
@@ -779,7 +768,7 @@ function NuclearEquationsLesson() {
     },
     {
       svg: (
-        <svg width="260" height="110" viewBox="0 0 260 110" style={{ display: 'block' }}>
+        <svg width="260" height="110" viewBox="0 0 260 110" style={{ display: 'block' }} role="img" aria-label="Beta decay diagram showing carbon-14 nucleus emitting a beta particle and antineutrino to form nitrogen-14">
           {/* C-14 parent */}
           <circle cx={38} cy={55} r={16} fill={`${ATOM_C}30`} stroke={ATOM_C} strokeWidth="1.5" />
           <NuclideBox A="14" Z="6" sym="C" col={ATOM_C} x={38} y={55} />
@@ -800,7 +789,7 @@ function NuclearEquationsLesson() {
     },
     {
       svg: (
-        <svg width="260" height="110" viewBox="0 0 260 110" style={{ display: 'block' }}>
+        <svg width="260" height="110" viewBox="0 0 260 110" style={{ display: 'block' }} role="img" aria-label="Gamma decay diagram showing excited nucleus emitting a gamma ray photon to reach a lower energy state">
           {/* excited nucleus */}
           <motion.circle cx={70} cy={55} r={18} fill={`${ATOM_C}30`} stroke={ATOM_C} strokeWidth="1.5"
             animate={{ r: [18, 22, 18], fillOpacity: [0.3, 0.55, 0.3] }}
@@ -897,7 +886,7 @@ function HalfLifeLesson() {
 
   return (
     <div className="w-full h-full flex flex-col items-center gap-1 pt-2 px-2" style={{ maxWidth: 480 }}>
-      <svg width="260" height="140" viewBox="0 0 260 140" style={{ display: 'block' }}>
+      <svg width="260" height="140" viewBox="0 0 260 140" style={{ display: 'block' }} role="img" aria-label="Half-life decay graph showing exponential decrease in activity over successive half-lives">
         {/* axes */}
         <line x1="34" y1="120" x2="240" y2="120" stroke="#2a3a52" strokeWidth="1.2" />
         <line x1="34" y1="10" x2="34" y2="120" stroke="#2a3a52" strokeWidth="1.2" />
@@ -943,11 +932,7 @@ function HalfLifeLesson() {
       {/* Slider + readout */}
       <div className="w-full flex items-center gap-3 px-2">
         <div className="flex-1">
-          <div className="flex justify-between text-xs mb-1">
-            <span style={{ color: '#a8b8cc' }}>Half-lives elapsed</span>
-            <span style={{ color: '#fdc700' }} className="font-bold">{n}</span>
-          </div>
-          <input type="range" min="0" max="4" step="1" value={n} onChange={e => setN(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
+          <SimSlider label="Half-lives elapsed" min={0} max={4} step={1} value={n} onChange={setN} unit="" color="#fdc700" />
         </div>
         <div className="text-center">
           <motion.div key={n} className="text-lg font-bold font-mono" style={{ color: '#fdc700' }}
@@ -974,6 +959,7 @@ function HalfLifeLesson() {
       <div className="text-xs text-center" style={{ color: '#637b96' }}>
         {examples[hlEx].name}: t½ = {examples[hlEx].t}
       </div>
+      <SimNarration text={`After ${n} half-life${n === 1 ? '' : 's'}: ${activity}% activity remains. Each half-life halves the activity. ${examples[hlEx].name} has a half-life of ${examples[hlEx].t}.`} />
     </div>
   )
 }
@@ -1092,7 +1078,7 @@ function NuclearFissionLesson() {
 
   return (
     <div className="w-full h-full flex flex-col items-center gap-2 pt-2 px-2" style={{ maxWidth: 480 }}>
-      <svg width="260" height="185" viewBox="0 0 260 185" style={{ display: 'block' }}>
+      <svg width="260" height="185" viewBox="0 0 260 185" style={{ display: 'block' }} role="img" aria-label="Nuclear fission chain reaction diagram showing neutron striking uranium-235 nucleus causing it to split and release more neutrons">
         {/* ── Stage 0 & 1: Initial U-235 + incoming neutron ── */}
         {stage < 2 && (
           <g>
@@ -1228,7 +1214,7 @@ function NuclearFusionLesson() {
 
   return (
     <div className="w-full h-full flex flex-col items-center gap-2 pt-2 px-2" style={{ maxWidth: 480 }}>
-      <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }}>
+      <svg width="260" height="130" viewBox="0 0 260 130" style={{ display: 'block' }} role="img" aria-label="Nuclear fusion diagram showing two hydrogen nuclei (deuterium and tritium) colliding to form helium-4 and a neutron, releasing energy">
         {/* Deuterium (²₁H) */}
         <motion.circle cx={dX} cy={65} r={16}
           fill={`${DC}30`} stroke={DC} strokeWidth="1.8"

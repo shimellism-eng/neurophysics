@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
 import { Ruler, Compass, Wrench } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
 
 const KC = '#00d4ff'
 
@@ -75,26 +75,11 @@ function KeyConceptsUnitsLesson() {
             </span>
             <div style={{ fontSize: 11, color: '#a8b8cc', marginTop: 4 }}>= {stdFormValue}</div>
           </div>
-          {/* Coefficient slider */}
-          <div className="rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
-            <div className="flex justify-between text-xs mb-1">
-              <span style={{ color: '#a8b8cc' }}>Coefficient A (1 ≤ A &lt; 10)</span>
-              <span style={{ color: KC, fontWeight: 700, fontFamily: 'monospace' }}>{coeff}</span>
-            </div>
-            <input type="range" min="1" max="9.9" step="0.1" value={coeff}
-              onChange={e => setCoeff(parseFloat(e.target.value).toFixed(1) * 1)}
-              className="w-full" style={{ accentColor: KC }} />
-          </div>
-          {/* Exponent slider */}
-          <div className="rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
-            <div className="flex justify-between text-xs mb-1">
-              <span style={{ color: '#a8b8cc' }}>Power of 10 (n)</span>
-              <span style={{ color: '#9b59b6', fontWeight: 700, fontFamily: 'monospace' }}>10^{exp}</span>
-            </div>
-            <input type="range" min="-9" max="9" step="1" value={exp}
-              onChange={e => setExp(+e.target.value)}
-              className="w-full" style={{ accentColor: '#9b59b6' }} />
-          </div>
+          <SimSlider label="Coefficient A (1 ≤ A < 10)" min={1} max={9.9} step={0.1} value={coeff}
+            onChange={v => setCoeff(parseFloat(v.toFixed(1)))} color={KC} />
+          <SimSlider label="Power of 10 (n)" min={-9} max={9} step={1} value={exp}
+            onChange={setExp} color="#9b59b6" />
+          <SimNarration text={`${coeff} × 10^${exp} = ${stdFormValue}. ${exp >= 0 ? 'Positive exponent — number is large.' : 'Negative exponent — number is a small fraction.'}`} />
           <div className="text-xs text-center px-2 py-1 rounded-[8px]"
             style={{ background: '#1d293d', color: '#a8b8cc' }}>
             Standard form requires <span style={{ color: KC, fontWeight: 700 }}>1 ≤ A &lt; 10</span>
@@ -148,7 +133,7 @@ function KeyConceptsScalarsLesson() {
     <div className="w-full h-full flex flex-col gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
       <p className="text-xs" style={{ color: '#a8b8cc' }}>Drag sliders — the resultant updates live using Pythagoras</p>
 
-      <svg width="260" height="180" viewBox="0 0 260 180">
+      <svg width="260" height="180" viewBox="0 0 260 180" role="img" aria-label={`Vector diagram: ${eastF} N east and ${northF} N north combine to give resultant ${R} N`}>
         {/* Axes hint */}
         <text x={ox - 10} y={oy + 14} fill="#334155" fontSize={8}>origin</text>
         {/* East arrow */}
@@ -178,21 +163,14 @@ function KeyConceptsScalarsLesson() {
       </svg>
 
       <div className="flex flex-col gap-1.5" style={{ background: '#1d293d', borderRadius: 10, padding: '8px 12px' }}>
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>East force (N)</span>
-          <span style={{ color: KC, fontWeight: 700 }}>{eastF} N</span>
-        </div>
-        <input type="range" min="1" max="10" value={eastF} onChange={e => setEastF(+e.target.value)} className="w-full" style={{ accentColor: KC }} />
-        <div className="flex justify-between text-xs mb-0.5 mt-1">
-          <span style={{ color: '#a8b8cc' }}>North force (N)</span>
-          <span style={{ color: '#f39c12', fontWeight: 700 }}>{northF} N</span>
-        </div>
-        <input type="range" min="1" max="10" value={northF} onChange={e => setNorthF(+e.target.value)} className="w-full" style={{ accentColor: '#f39c12' }} />
+        <SimSlider label="East force" min={1} max={10} step={1} value={eastF} onChange={setEastF} unit="N" color={KC} />
+        <SimSlider label="North force" min={1} max={10} step={1} value={northF} onChange={setNorthF} unit="N" color="#f39c12" />
         <div className="flex justify-between text-xs mt-1.5 pt-1.5 font-bold" style={{ borderTop: '1px solid #0b1121' }}>
           <span style={{ color: '#a8b8cc' }}>Resultant = √({eastF}² + {northF}²)</span>
           <span style={{ color: '#00bc7d' }}>{R} N</span>
         </div>
       </div>
+      <SimNarration text={`Two forces: ${eastF} N east and ${northF} N north. Using Pythagoras, the resultant is ${R} N at an angle — this is the single force that has the same effect as both.`} />
     </div>
   )
 }

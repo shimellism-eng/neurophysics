@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
 import { Telescope, Star, History } from 'lucide-react'
-import { MisconceptionCard, RealWorldCard, FormulaBox } from './visuals-helpers'
+import { MisconceptionCard, RealWorldCard, FormulaBox, SimSlider, SimNarration } from './visuals-helpers'
 
 const UC = '#9b59b6'  // purple for universe/space
 
@@ -21,7 +21,7 @@ function TelescopeOpticsLesson() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
       {/* Ray diagram */}
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Refracting telescope ray diagram: objective lens focal length ${fObj} mm, eyepiece focal length ${fEye} mm, magnification ${mag}×`}>
         {/* Optical axis */}
         <line x1="10" y1={axisY} x2={W - 10} y2={axisY} stroke="#334155" strokeWidth="1" strokeDasharray="4 3" />
 
@@ -72,24 +72,15 @@ function TelescopeOpticsLesson() {
 
       {/* Sliders */}
       <div className="w-full rounded-[12px] px-3 py-2" style={{ background: '#1d293d' }}>
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Objective focal length</span>
-          <span style={{ color: UC }} className="font-bold">{fObj} mm</span>
-        </div>
-        <input type="range" min="200" max="2000" step="100" value={fObj}
-          onChange={e => setFObj(+e.target.value)} className="w-full mb-2" style={{ accentColor: UC }} />
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Eyepiece focal length</span>
-          <span style={{ color: '#00d4ff' }} className="font-bold">{fEye} mm</span>
-        </div>
-        <input type="range" min="5" max="50" step="5" value={fEye}
-          onChange={e => setFEye(+e.target.value)} className="w-full" style={{ accentColor: '#00d4ff' }} />
+        <SimSlider label="Objective focal length" min={200} max={2000} step={100} value={fObj} onChange={setFObj} unit="mm" color={UC} />
+        <SimSlider label="Eyepiece focal length" min={5} max={50} step={5} value={fEye} onChange={setFEye} unit="mm" color="#00d4ff" />
         <div className="flex justify-between mt-1.5 pt-1.5 text-xs font-bold font-mono"
           style={{ borderTop: '1px solid #0b1121' }}>
           <span style={{ color: '#a8b8cc' }}>M = {fObj} ÷ {fEye} =</span>
           <motion.span key={mag} style={{ color: UC }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{mag}×</motion.span>
         </div>
       </div>
+      <SimNarration text={`Objective focal length: ${fObj} mm. Eyepiece focal length: ${fEye} mm. Magnification = ${fObj} ÷ ${fEye} = ${mag}×. ${mag > 50 ? 'High magnification — ideal for planets and the Moon.' : 'Lower magnification — better for wide-field views of star clusters.'}`} />
     </div>
   )
 }
@@ -134,7 +125,7 @@ function StellarClassificationLesson() {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-start gap-1 px-2 py-1" style={{ background: '#0b1121' }}>
-      <svg width="260" height="220" viewBox="0 0 260 220" style={{ flexShrink: 0 }}>
+      <svg width="260" height="220" viewBox="0 0 260 220" role="img" aria-label="Hertzsprung-Russell diagram showing stellar classification: main sequence band from hot blue stars top-left to cool red stars bottom-right, with supergiants at top and white dwarfs bottom-left. Tap a star dot to see its properties." style={{ flexShrink: 0 }}>
         {/* Background gradient: hot (blue-left) to cool (red-right) */}
         <defs>
           <linearGradient id="hrBg" x1="0" y1="0" x2="1" y2="0">
@@ -283,7 +274,7 @@ function HistoryAstronomyLesson() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-start gap-2 px-2 py-2" style={{ background: '#0b1121' }}>
       {/* Timeline SVG */}
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Interactive timeline of astronomy history from ancient Greece to 2021, showing key discoveries including Copernicus, Galileo, Newton, Hubble, and the James Webb Space Telescope">
         {/* Timeline axis */}
         <line x1={padL} y1="42" x2={W - padR} y2="42" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
 

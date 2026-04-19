@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useState } from 'react'
 
 // ─── IdeaCaption (legacy alias — kept for any remaining direct uses) ──────────
 export function IdeaCaption({ children }) {
@@ -218,6 +219,62 @@ export function InfoBadge({ children, color }) {
     <div className="inline-flex items-center px-2.5 py-1 rounded-full"
       style={{ background: `${color}15`, border: `1px solid ${color}40`, fontSize: 10, fontWeight: 600, color }}>
       {children}
+    </div>
+  )
+}
+
+// ─── SimSlider — accessible range input with ± step buttons ──────────────────
+// Wraps every sim slider: aria-label, aria-live value, 32px ± tap targets.
+export function SimSlider({ label, min, max, step = 1, value, onChange, unit = '', color = '#00a8e8' }) {
+  const clamp = v => Math.max(min, Math.min(max, v))
+  const btnStyle = {
+    width: 32, height: 32, borderRadius: 8, background: '#1d293d',
+    color: '#a8b8cc', border: '1px solid #2d3f5a', flexShrink: 0,
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    fontSize: 16, fontWeight: 700, cursor: 'pointer', lineHeight: 1,
+  }
+  return (
+    <div className="w-full">
+      <div className="flex justify-between items-center mb-0.5" style={{ fontSize: 11 }}>
+        <span style={{ color: '#a8b8cc' }}>{label}</span>
+        <span aria-live="polite" style={{ color, fontWeight: 700 }}>{value}{unit ? ` ${unit}` : ''}</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+        <button type="button" onClick={() => onChange(clamp(value - step))} style={btnStyle}
+          aria-label={`Decrease ${label}`}>−</button>
+        <input
+          type="range" min={min} max={max} step={step} value={value}
+          onChange={e => onChange(+e.target.value)}
+          style={{ flex: 1, accentColor: color }}
+          aria-label={`${label}`}
+          aria-valuemin={min} aria-valuemax={max}
+          aria-valuenow={value} aria-valuetext={`${value}${unit ? ' ' + unit : ''}`}
+        />
+        <button type="button" onClick={() => onChange(clamp(value + step))} style={btnStyle}
+          aria-label={`Increase ${label}`}>+</button>
+      </div>
+    </div>
+  )
+}
+
+// ─── SimNarration — "What's happening" plain-English panel with aria-live ─────
+export function SimNarration({ text }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div style={{ borderTop: '0.75px solid rgba(255,255,255,0.07)', paddingTop: 5, marginTop: 4, width: '100%' }}>
+      <button type="button" onClick={() => setOpen(o => !o)}
+        aria-expanded={open}
+        style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 10, color: '#64748b',
+          background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit' }}>
+        <span style={{ fontSize: 11 }}>{open ? '▾' : '▸'}</span>
+        What's happening
+      </button>
+      {open && (
+        <p aria-live="polite"
+          style={{ margin: '4px 0 0', fontSize: 10, color: '#94a3b8', lineHeight: 1.55 }}>
+          {text}
+        </p>
+      )}
     </div>
   )
 }

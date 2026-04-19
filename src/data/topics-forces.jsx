@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ArrowRight, ArrowLeft, ArrowUp, ArrowDown, Scale, Gauge, Activity, TrendingDown } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow, MisconceptionCard, RealWorldCard } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, LabelledArrow, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
 
 const FC = '#00a8e8'
 
@@ -26,7 +26,7 @@ function ForceInteractionsLesson() {
         ))}
       </div>
       {/* SVG Free Body Diagram */}
-      <svg width="260" height="178" viewBox="0 0 260 178">
+      <svg width="260" height="178" viewBox="0 0 260 178" role="img" aria-label="Free body diagram showing forces acting on an object: normal force, weight, thrust, and friction">
         {/* Ground line */}
         <line x1="20" y1="122" x2="240" y2="122" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
         {/* Hatch marks for ground */}
@@ -110,7 +110,7 @@ function WorkDoneLesson() {
   return (
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
       {/* Diagram */}
-      <svg width="260" height="108" viewBox="0 0 260 108">
+      <svg width="260" height="108" viewBox="0 0 260 108" role="img" aria-label="Animated diagram showing a box being pushed along a surface by an applied force">
         {/* Ground */}
         <line x1="14" y1="88" x2="246" y2="88" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
         {[30,55,80,105,130,155,180,205,230].map(x => (
@@ -137,21 +137,14 @@ function WorkDoneLesson() {
       </svg>
       {/* Sliders */}
       <div className="rounded-[12px] p-2" style={{ background: '#1d293d' }}>
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Force (N)</span>
-          <span style={{ color: FC }} className="font-bold">{force} N</span>
-        </div>
-        <input type="range" min="1" max="50" value={force} onChange={e => setForce(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: FC }} />
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Distance (m)</span>
-          <span style={{ color: '#fdc700' }} className="font-bold">{dist} m</span>
-        </div>
-        <input type="range" min="1" max="10" value={dist} onChange={e => setDist(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
+        <SimSlider label="Force" min={1} max={50} value={force} onChange={setForce} unit="N" color={FC} />
+        <SimSlider label="Distance" min={1} max={10} value={dist} onChange={setDist} unit="m" color="#fdc700" />
         <div className="flex justify-between mt-1.5 pt-1.5 text-xs font-bold" style={{ borderTop: '1px solid #0b1121' }}>
           <span style={{ color: '#a8b8cc' }}>W = {force} × {dist}</span>
           <motion.span key={work} style={{ color: FC }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{work} J</motion.span>
         </div>
       </div>
+      <SimNarration text={`Applying ${force} N over ${dist} m transfers ${work} J of energy. ${work > 200 ? "That's a large amount of work — like pushing a heavy object a long way." : work > 50 ? "That's a moderate amount of work." : "That's a small amount of work — low force or short distance."}`} />
     </div>
   )
 }
@@ -205,7 +198,7 @@ function HookesLawLesson() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-4 py-2">
       <div className="flex gap-6 items-start">
-        <svg width="52" height={svgH} viewBox={`0 0 52 ${svgH}`}>
+        <svg width="52" height={svgH} viewBox={`0 0 52 ${svgH}`} role="img" aria-label="Spring stretching diagram showing extension and load">
           {/* ceiling bar */}
           <line x1="4" y1="1" x2="48" y2="1" stroke="#a8b8cc" strokeWidth="3" strokeLinecap="round" />
           <line x1="26" y1="1" x2="26" y2={stemY} stroke="#a8b8cc" strokeWidth="2" />
@@ -220,11 +213,7 @@ function HookesLawLesson() {
         <div className="flex flex-col justify-center gap-3 flex-1">
           <FormulaBox formula="F = ke" color={FC} />
           <div className="flex flex-col gap-1">
-            <div className="flex justify-between text-xs">
-              <span style={{ color: '#a8b8cc' }}>Extension</span>
-              <span style={{ color: FC }} className="font-bold">{ext} cm</span>
-            </div>
-            <input type="range" min="1" max="8" value={ext} onChange={e => setExt(+e.target.value)} className="w-full" style={{ accentColor: FC }} />
+            <SimSlider label="Extension" min={1} max={8} value={ext} onChange={setExt} unit="cm" color={FC} />
           </div>
           <div className="font-mono text-xs" style={{ color: '#a8b8cc' }}>
             <div>k = 10 N/m</div>
@@ -272,7 +261,7 @@ function MomentsLesson() {
   const isBalanced = Math.abs(moment1 - moment2) < 50
   return (
     <div className="w-full h-full flex flex-col items-center justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
-      <svg width="260" height="138" viewBox="0 0 260 138">
+      <svg width="260" height="138" viewBox="0 0 260 138" role="img" aria-label="See-saw balance diagram showing moments about a pivot">
         {/* Pivot triangle */}
         <polygon points={`${pivotX - 10},${beamY + 2} ${pivotX + 10},${beamY + 2} ${pivotX},${beamY + 18}`} fill={FC} />
         <line x1={pivotX - 12} y1={beamY + 18} x2={pivotX + 12} y2={beamY + 18} stroke={FC} strokeWidth="2" />
@@ -306,16 +295,13 @@ function MomentsLesson() {
       </svg>
       {/* Slider */}
       <div className="w-full rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
-        <div className="flex justify-between text-xs mb-1">
-          <span style={{ color: '#a8b8cc' }}>F₁ (N)</span>
-          <span style={{ color: '#e879f9' }} className="font-bold">{f1} N</span>
-        </div>
-        <input type="range" min="1" max="20" value={f1} onChange={e => setF1(+e.target.value)} className="w-full" style={{ accentColor: '#e879f9' }} />
+        <SimSlider label="F₁" min={1} max={20} value={f1} onChange={setF1} unit="N" color="#e879f9" />
         <div className="flex justify-between text-xs mt-1.5">
           <span style={{ color: '#a8b8cc' }}>Moment = F × d (N·m)</span>
           <span style={{ color: FC }} className="font-mono font-bold">{f1}×70 = {f1 * 70}</span>
         </div>
       </div>
+      <SimNarration text={`F₁ = ${f1} N at 70 cm from pivot → moment = ${f1 * 70} N·cm. F₂ = 10 N at 70 cm → moment = ${10 * 70} N·cm. ${isBalanced ? 'The beam is balanced — clockwise equals anticlockwise moments.' : 'The beam tips — moments are not equal.'}`} />
     </div>
   )
 }
@@ -353,7 +339,7 @@ function FluidPressureLesson() {
   const selectedY = cY + depthPx
   return (
     <div className="w-full h-full flex flex-col items-center justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
-      <svg width="260" height="138" viewBox="0 0 260 138">
+      <svg width="260" height="138" viewBox="0 0 260 138" role="img" aria-label="Fluid pressure diagram showing pressure increasing with depth in a liquid container">
         {/* Container */}
         <rect x={cX} y={cY} width={cW} height={cH} rx="6" fill="rgba(0,120,220,0.12)" stroke={FC} strokeWidth="1.5" />
         {/* Dashed depth lines every 12px (10 divisions) */}
@@ -407,12 +393,9 @@ function FluidPressureLesson() {
       </svg>
       {/* Slider */}
       <div className="w-full rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
-        <div className="flex justify-between text-xs mb-1">
-          <span style={{ color: '#a8b8cc' }}>Depth (m)</span>
-          <span style={{ color: '#fdc700' }} className="font-bold">{depth} m</span>
-        </div>
-        <input type="range" min="1" max="10" step="1" value={depth} onChange={e => setDepth(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
+        <SimSlider label="Depth" min={1} max={10} step={1} value={depth} onChange={setDepth} unit="m" color="#fdc700" />
       </div>
+      <SimNarration text={`At ${depth} m depth in water: P = ρgh = 1000 × 10 × ${depth} = ${p.toLocaleString()} Pa (${(p/1000).toFixed(0)} kPa). ${depth >= 8 ? 'Very high pressure — equivalent to deep-sea conditions.' : depth >= 5 ? 'Significant pressure — noticeable on a submerged object.' : 'Relatively low pressure near the surface.'}`} />
     </div>
   )
 }
@@ -456,7 +439,7 @@ function MotionGraphsLesson() {
       </div>
 
       {/* SVG graph */}
-      <svg width="260" height="148" viewBox="0 0 260 148">
+      <svg width="260" height="148" viewBox="0 0 260 148" role="img" aria-label="Distance-time and velocity-time graph showing motion with three segments at different speeds">
         {/* Axes */}
         <line x1="30" y1="8" x2="30" y2="120" stroke="#334155" strokeWidth="1.5" />
         <line x1="30" y1="120" x2="252" y2="120" stroke="#334155" strokeWidth="1.5" />
@@ -556,7 +539,7 @@ function TerminalVelocityLesson() {
   const fullPath = 'M20,105 C40,85 55,55 80,42 C95,35 105,32 120,32 L140,32 C142,32 144,28 146,50 C150,65 155,70 175,72 L240,72'
   return (
     <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
-      <svg width="100%" viewBox="0 0 260 120" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+      <svg width="100%" viewBox="0 0 260 120" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }} role="img" aria-label="Velocity-time graph showing terminal velocity stages: acceleration, parachute opening, and new lower terminal velocity">
         <line x1="18" y1="10" x2="18" y2="110" stroke="#2d3e55" strokeWidth="1.2" />
         <line x1="18" y1="110" x2="250" y2="110" stroke="#2d3e55" strokeWidth="1.2" />
         <text x="4" y="60" fill="#4a5a72" fontSize="7" textAnchor="middle" transform="rotate(-90,4,60)">Velocity</text>
@@ -631,7 +614,7 @@ function NewtonsLawsLesson() {
       </div>
 
       {law === 1 && (
-        <svg width="260" height="118" viewBox="0 0 260 118" key="law1">
+        <svg width="260" height="118" viewBox="0 0 260 118" key="law1" role="img" aria-label="Newton's First Law diagram: object at rest with balanced forces, and object moving at constant velocity">
           {/* Object at rest  -  balanced arrows */}
           <rect x="20" y="40" width="50" height="36" rx="6" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1.5" />
           <text x="45" y="63" textAnchor="middle" fill="#a8b8cc" fontSize={9}>at rest</text>
@@ -657,7 +640,7 @@ function NewtonsLawsLesson() {
 
       {law === 2 && (
         <div className="flex flex-col gap-2" key="law2">
-          <svg width="260" height="90" viewBox="0 0 260 90">
+          <svg width="260" height="90" viewBox="0 0 260 90" role="img" aria-label="Newton's Second Law force diagram showing F=ma with adjustable mass and force">
             {/* Box */}
             <rect x="80" y="30" width="56" height="38" rx="6" fill="#1d293d" stroke="#c084fc" strokeWidth="1.5" />
             <text x="108" y="54" textAnchor="middle" fill="#c084fc" fontSize={9} fontWeight="bold">{mass} kg</text>
@@ -673,16 +656,8 @@ function NewtonsLawsLesson() {
             <text x="35" y="54" textAnchor="middle" fill="#c084fc" fontSize={11} fontWeight="bold">F = ma</text>
           </svg>
           <div className="rounded-[10px] px-3 py-2" style={{ background: '#1d293d' }}>
-            <div className="flex justify-between text-xs mb-0.5">
-              <span style={{ color: '#a8b8cc' }}>Mass (kg)</span>
-              <span style={{ color: '#c084fc' }} className="font-bold">{mass} kg</span>
-            </div>
-            <input type="range" min="1" max="10" value={mass} onChange={e => setMass(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: '#c084fc' }} />
-            <div className="flex justify-between text-xs mb-0.5">
-              <span style={{ color: '#a8b8cc' }}>Force (N)</span>
-              <span style={{ color: FC }} className="font-bold">{fN} N</span>
-            </div>
-            <input type="range" min="1" max="50" value={fN} onChange={e => setFN(+e.target.value)} className="w-full" style={{ accentColor: FC }} />
+            <SimSlider label="Mass" min={1} max={10} value={mass} onChange={setMass} unit="kg" color="#c084fc" />
+            <SimSlider label="Force" min={1} max={50} value={fN} onChange={setFN} unit="N" color={FC} />
             <div className="flex justify-between text-xs mt-1.5 pt-1.5 font-bold" style={{ borderTop: '1px solid #0b1121' }}>
               <span style={{ color: '#a8b8cc' }}>a = F/m = {fN}/{mass}</span>
               <span style={{ color: '#fdc700' }}>{accel} m/s²</span>
@@ -692,7 +667,7 @@ function NewtonsLawsLesson() {
       )}
 
       {law === 3 && (
-        <svg width="260" height="118" viewBox="0 0 260 118" key="law3">
+        <svg width="260" height="118" viewBox="0 0 260 118" key="law3" role="img" aria-label="Newton's Third Law diagram showing equal and opposite action-reaction forces between two objects">
           {/* Object A */}
           <rect x="20" y="44" width="56" height="34" rx="6" fill="#1d293d" stroke="#e879f9" strokeWidth="1.5" />
           <text x="48" y="65" textAnchor="middle" fill="#e879f9" fontSize={9} fontWeight="bold">Object A</text>
@@ -761,14 +736,10 @@ function StoppingDistanceLesson() {
   return (
     <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
       {/* Speed slider */}
-      <div className="flex items-center gap-3">
-        <span className="text-xs" style={{ color: '#a8b8cc' }}>Speed</span>
-        <input type="range" min="10" max="30" step="1" value={speed} onChange={e => setSpeed(+e.target.value)} className="flex-1" style={{ accentColor: FC }} />
-        <span className="text-xs font-bold w-14 text-right" style={{ color: FC }}>{speed} m/s</span>
-      </div>
+      <SimSlider label="Speed" min={10} max={30} step={1} value={speed} onChange={setSpeed} unit="m/s" color={FC} />
 
       {/* SVG bar diagram */}
-      <svg width="280" height="128" viewBox="0 0 280 128">
+      <svg width="280" height="128" viewBox="0 0 280 128" role="img" aria-label="Bar diagram showing thinking distance and braking distance at the selected speed">
         {/* Car icon at left */}
         <rect x="2" y="46" width="28" height="16" rx="4" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1.5" />
         <rect x="7" y="40" width="18" height="10" rx="3" fill="#1d293d" stroke="#a8b8cc" strokeWidth="1" />
@@ -805,6 +776,7 @@ function StoppingDistanceLesson() {
         <text x="140" y="100" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>wet/icy road → much greater braking distance (less friction)</text>
         <text x="140" y="114" textAnchor="middle" fill="#fdc700" fontSize={7.5}>2× speed → 4× braking distance (v² relationship)</text>
       </svg>
+      <SimNarration text={`At ${speed} m/s: thinking distance ${thinking} m + braking distance ${braking} m = ${total} m total. ${speed >= 25 ? 'High speed — braking distance dominates (v² relationship).' : 'Moderate speed — thinking and braking distances are comparable.'}`} />
     </div>
   )
 }
@@ -873,7 +845,7 @@ function MomentumLesson() {
       </div>
 
       {/* Collision SVG */}
-      <svg width="260" height="116" viewBox="0 0 260 116">
+      <svg width="260" height="116" viewBox="0 0 260 116" role="img" aria-label="Collision diagram showing two balls before, during, and after a collision with momentum labels">
         {/* Phase label */}
         <text x="130" y="14" textAnchor="middle" fill="#a8b8cc" fontSize={8} fontWeight="bold" textDecoration="underline">
           {phase === 'before' ? 'Before collision' : phase === 'colliding' ? 'At collision' : 'After collision'}
@@ -1014,7 +986,7 @@ function VectorsScalarsLesson() {
       {mode === 'resultant' && (
         <div>
           <p className="text-xs mb-3" style={{ color: '#a8b8cc' }}>Add perpendicular vectors using <strong style={{ color: FC }}>Pythagoras' theorem</strong>.</p>
-          <svg viewBox="0 0 240 160" width="100%" style={{ maxHeight: 160 }}>
+          <svg viewBox="0 0 240 160" width="100%" style={{ maxHeight: 160 }} role="img" aria-label="Vector addition diagram showing a 3N horizontal force and 4N vertical force combining to give a 5N resultant using Pythagoras">
             <defs><marker id="ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill={FC}/></marker>
             <marker id="av" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f97316"/></marker>
             <marker id="ar" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#00bc7d"/></marker></defs>

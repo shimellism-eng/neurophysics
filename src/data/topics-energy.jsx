@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Zap, Flame, Battery, Wind, Sun, Waves, AlertTriangle, Lightbulb, FlaskConical, ArrowDown, Maximize2, Magnet } from 'lucide-react'
 import AtomIcon from '../components/AtomIcon'
-import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot, MisconceptionCard, RealWorldCard, CompareRow } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, AnimBar, FormulaBox, Dot, MisconceptionCard, RealWorldCard, CompareRow, SimSlider, SimNarration } from './visuals-helpers'
 
 const C = '#f97316'
 
@@ -317,10 +317,8 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₖ = ½mv²" color={C} />
           <div className="rounded-[12px] p-2.5" style={{ background: `${C}10`, border: `1px solid ${C}30` }}>
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Mass m</span><span style={{ color: C, fontWeight: 700 }}>{mKE} kg</span></div>
-            <input type="range" min="1" max="50" value={mKE} onChange={e => setMKE(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: C }} />
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Speed v</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{vKE} m/s</span></div>
-            <input type="range" min="1" max="20" value={vKE} onChange={e => setVKE(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
+            <SimSlider label="Mass m" min={1} max={50} value={mKE} onChange={setMKE} unit="kg" color={C} />
+            <SimSlider label="Speed v" min={1} max={20} value={vKE} onChange={setVKE} unit="m/s" color="#3b82f6" />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
               <span style={{ color: '#a8b8cc' }}>Eₖ =</span>
               <motion.span key={keVal} style={{ color: C }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{keVal} J</motion.span>
@@ -332,10 +330,8 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₚ = mgh" color="#22c55e" />
           <div className="rounded-[12px] p-2.5" style={{ background: '#22c55e10', border: '1px solid #22c55e30' }}>
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Mass m</span><span style={{ color: '#22c55e', fontWeight: 700 }}>{mGPE} kg</span></div>
-            <input type="range" min="1" max="50" value={mGPE} onChange={e => setMGPE(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: '#22c55e' }} />
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Height h</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{hGPE} m</span></div>
-            <input type="range" min="1" max="100" value={hGPE} onChange={e => setHGPE(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
+            <SimSlider label="Mass m" min={1} max={50} value={mGPE} onChange={setMGPE} unit="kg" color="#22c55e" />
+            <SimSlider label="Height h" min={1} max={100} value={hGPE} onChange={setHGPE} unit="m" color="#3b82f6" />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
               <span style={{ color: '#a8b8cc' }}>Eₚ =</span>
               <motion.span key={gpeVal} style={{ color: '#22c55e' }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{gpeVal} J</motion.span>
@@ -347,10 +343,8 @@ function EnergyEquationsLesson() {
         <div className="flex flex-col gap-2">
           <FormulaBox formula="Eₑ = ½ke²" color="#a855f7" />
           <div className="rounded-[12px] p-2.5" style={{ background: '#a855f710', border: '1px solid #a855f730' }}>
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Spring const k</span><span style={{ color: '#a855f7', fontWeight: 700 }}>{kEl} N/m</span></div>
-            <input type="range" min="1" max="100" value={kEl} onChange={e => setKEl(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: '#a855f7' }} />
-            <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Extension e</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{eEl} m</span></div>
-            <input type="range" min="0.1" max="2" step="0.1" value={eEl} onChange={e => setEEl(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
+            <SimSlider label="Spring const k" min={1} max={100} value={kEl} onChange={setKEl} unit="N/m" color="#a855f7" />
+            <SimSlider label="Extension e" min={0.1} max={2} step={0.1} value={eEl} onChange={setEEl} unit="m" color="#3b82f6" />
             <div className="flex justify-between mt-2 pt-1.5 text-sm font-bold" style={{ borderTop: '1px solid #1d293d' }}>
               <span style={{ color: '#a8b8cc' }}>Eₑ =</span>
               <motion.span key={eelVal} style={{ color: '#a855f7' }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>{eelVal} J</motion.span>
@@ -358,6 +352,13 @@ function EnergyEquationsLesson() {
           </div>
         </div>
       )}
+      <SimNarration text={
+        tab === 0
+          ? `Kinetic energy: ½ × ${mKE} kg × (${vKE} m/s)² = ${keVal} J. ${+keVal > 5000 ? 'Large KE — like a fast heavy object.' : 'Moderate KE.'}`
+          : tab === 1
+          ? `Gravitational PE: ${mGPE} kg × 10 × ${hGPE} m = ${gpeVal} J. ${+gpeVal > 10000 ? 'Large GPE — a heavy object at significant height.' : 'Moderate GPE.'}`
+          : `Elastic PE: ½ × ${kEl} N/m × (${eEl} m)² = ${eelVal} J. ${+eelVal > 50 ? 'Large elastic store — stiff spring or large extension.' : 'Moderate elastic store.'}`
+      } />
     </div>
   )
 }
@@ -431,7 +432,7 @@ function EfficiencyLesson() {
         </span>
       </div>
       {/* Textbook-style Sankey diagram */}
-      <svg width="100%" viewBox={`0 0 ${W} ${svgH}`} style={{ display: 'block', flex: 1, minHeight: 0 }}>
+      <svg width="100%" viewBox={`0 0 ${W} ${svgH}`} style={{ display: 'block', flex: 1, minHeight: 0 }} role="img" aria-label="Sankey diagram showing useful energy output and wasted energy for the selected efficiency">
         {/* ── Input section: full green band left of split ── */}
         <rect x={0} y={topY} width={splitX} height={usefulBH + wastedBH}
           fill="#00bc7d40" stroke="#00bc7d" strokeWidth="1.2" />
@@ -454,13 +455,8 @@ function EfficiencyLesson() {
         {/* Wasted label (right of downward band) */}
         <text x={xWRight + 5} y={(yBottom + yWBot) / 2 + 4} fill="#ef4444" fontSize={7.5} dominantBaseline="middle">Wasted: {wasted} J</text>
       </svg>
-      <div className="flex flex-col gap-1">
-        <div className="flex justify-between text-xs">
-          <span style={{ color: '#a8b8cc' }}>Efficiency: <span style={{ color: '#00bc7d', fontWeight: 700 }}>{eff}%</span></span>
-          <span style={{ color: '#ef4444', fontSize: 10 }}>Wasted: {wasted} J</span>
-        </div>
-        <input type="range" min="10" max="90" value={eff} onChange={e => setEff(+e.target.value)} className="w-full" style={{ accentColor: '#00bc7d' }} />
-      </div>
+      <SimSlider label="Efficiency" min={10} max={90} value={eff} onChange={setEff} unit="%" color="#00bc7d" />
+      <SimNarration text={`Efficiency ${eff}%: from 100 J input, ${useful} J is useful output and ${wasted} J is wasted as heat or sound. ${eff >= 70 ? 'High efficiency — most energy is usefully transferred.' : eff >= 40 ? 'Moderate efficiency — significant waste.' : 'Low efficiency — most energy is wasted.'}`} />
     </div>
   )
 }
@@ -505,10 +501,8 @@ function PowerLesson() {
         <FormulaBox formula="P = W/t" color="#3b82f6" />
       </div>
       <div className="rounded-[12px] p-2.5" style={{ background: `${C}10`, border: `1px solid ${C}30` }}>
-        <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Energy (J)</span><span style={{ color: C, fontWeight: 700 }}>{energy} J</span></div>
-        <input type="range" min="100" max="10000" step="100" value={energy} onChange={e => setEnergy(+e.target.value)} className="w-full mb-1.5" style={{ accentColor: C }} />
-        <div className="flex justify-between text-xs mb-0.5"><span style={{ color: '#a8b8cc' }}>Time (s)</span><span style={{ color: '#3b82f6', fontWeight: 700 }}>{time} s</span></div>
-        <input type="range" min="1" max="100" step="1" value={time} onChange={e => setTime(+e.target.value)} className="w-full" style={{ accentColor: '#3b82f6' }} />
+        <SimSlider label="Energy" min={100} max={10000} step={100} value={energy} onChange={setEnergy} unit="J" color={C} />
+        <SimSlider label="Time" min={1} max={100} step={1} value={time} onChange={setTime} unit="s" color="#3b82f6" />
         <div className="flex justify-between mt-1.5 pt-1.5 font-bold text-sm" style={{ borderTop: '1px solid #1d293d' }}>
           <span style={{ color: '#a8b8cc' }}>Power</span>
           <motion.span key={power} style={{ color: C }} initial={{ scale: 0.85 }} animate={{ scale: 1 }}>
@@ -529,6 +523,7 @@ function PowerLesson() {
         ))}
       </div>
       <div style={{ fontSize: 9, color: '#a8b8cc', textAlign: 'center' }}>1 kW = 1000 W · 1 kWh = using 1 kW for 1 hour</div>
+      <SimNarration text={`Transferring ${energy} J in ${time} s → power = ${powerNum >= 1000 ? (powerNum / 1000).toFixed(2) + ' kW' : power + ' W'}. ${powerNum >= 2000 ? 'That matches a high-power appliance like a kettle.' : powerNum >= 100 ? 'Similar to a laptop or TV.' : 'Low power — like a phone charger or LED bulb.'}`} />
     </div>
   )
 }

@@ -366,8 +366,8 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 
 ### Sprint 5: Physics Content
 
-#### 5.1 Equation Builder
-- [ ] EquationBuilder component: select equation then input known values then step-by-step solve
+#### 5.1 Equation Builder ✅ shipped d4302bf
+- [x] EquationBuilder component: select equation then input known values then step-by-step solve
 - [ ] KaTeX rendering, min 1.2em, generous spacing
 - [ ] Consistent variable colour-coding across entire app: velocity=cyan, force=amber, energy=green, time=pink, mass=purple
 - [ ] Show triangle method alongside algebraic rearrangement
@@ -375,13 +375,13 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 - [ ] Practice mode: given values, select equation first, then solve
 - [ ] aria-label on equations with spoken form
 
-#### 5.2 Sim Accessibility
-- [ ] Keyboard nav on all sims (Tab, Enter, Arrows, Escape)
-- [ ] ARIA labels on all sim elements
-- [ ] aria-live regions for value changes
-- [ ] + and - step buttons alongside every slider
-- [ ] Tap-to-select, tap-to-place for drag-and-drop
-- [ ] "What's happening" narration toggle: plain English panel updating in real-time
+#### 5.2 Sim Accessibility ✅ shipped
+- [x] Keyboard nav on all sims (Tab, Enter, Arrows — native range inputs + ± buttons)
+- [x] ARIA labels on all sim elements (role="img" aria-label on all SVGs across 8 topic files)
+- [x] aria-live regions for value changes (SimSlider value display + SimNarration panel)
+- [x] + and - step buttons alongside every slider (SimSlider component, 32px tap targets)
+- [x] "What's happening" narration toggle (SimNarration collapsible panel on all lesson sims)
+- [ ] Tap-to-select, tap-to-place for drag-and-drop (no drag-and-drop sims exist currently)
 
 #### 5.3 Sonification (Stretch Goal)
 - [ ] Forces: pitch maps to net force, pulse tempo to acceleration

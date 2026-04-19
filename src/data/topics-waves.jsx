@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Waves, Radio, Eye, Sun } from 'lucide-react'
-import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard } from './visuals-helpers'
+import { IdeaCaption, RealityBadge, FormulaBox, MisconceptionCard, RealWorldCard, SimSlider, SimNarration } from './visuals-helpers'
 
 const WC = '#fdc700'
 const MC = '#10b981'
@@ -28,7 +28,7 @@ function WaveTypesLesson() {
       </div>
 
       {type === 'transverse' ? (
-        <svg width="260" height="110" viewBox="0 0 260 110">
+        <svg width="260" height="110" viewBox="0 0 260 110" role="img" aria-label="Transverse wave diagram showing oscillation perpendicular to direction of travel">
           {/* Axis line */}
           <line x1="10" y1="55" x2="250" y2="55" stroke="#2d3f5c" strokeWidth="1" strokeDasharray="4 3" />
           {/* Wave */}
@@ -55,7 +55,7 @@ function WaveTypesLesson() {
           <text x="130" y="12" textAnchor="middle" fill="#a8b8cc" fontSize={8}>vibration ⊥ travel direction</text>
         </svg>
       ) : (
-        <svg width="260" height="110" viewBox="0 0 260 110">
+        <svg width="260" height="110" viewBox="0 0 260 110" role="img" aria-label="Longitudinal wave diagram showing compressions and rarefactions along direction of travel">
           {/* Longitudinal particle groups: 3 compressions, 2 rarefactions */}
           {[
             { cx: 22,  type: 'C', count: 5, gap: 4 },
@@ -147,7 +147,7 @@ function WavePropertiesLesson() {
 
   return (
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
-      <svg width="260" height="108" viewBox="0 0 260 108">
+      <svg width="260" height="108" viewBox="0 0 260 108" role="img" aria-label="Wave diagram showing wavelength and amplitude with labelled peaks and troughs">
         {/* Wavelength bracket  -  above wave, peak1 to peak2 */}
         {showFull && peak2X <= xEnd && <>
           <line x1={peak1X} y1="10" x2={peak2X} y2="10" stroke="#a8b8cc" strokeWidth="1.2" />
@@ -187,18 +187,12 @@ function WavePropertiesLesson() {
         </>}
       </svg>
 
-      <div className="flex flex-col gap-1">
-        <div className="flex justify-between text-xs">
-          <span style={{ color: '#a8b8cc' }}>Frequency (Hz)</span>
-          <span style={{ color: WC }} className="font-bold">{freq} Hz</span>
-        </div>
-        <input type="range" min="1" max="5" step="0.5" value={freq}
-          onChange={e => setFreq(+e.target.value)} className="w-full" style={{ accentColor: WC }} />
-      </div>
+      <SimSlider label="Frequency" min={1} max={5} step={0.5} value={freq} onChange={setFreq} unit="Hz" color={WC} />
       <div className="grid grid-cols-2 gap-2 text-xs">
         <div className="p-2 rounded-[8px] text-center" style={{ background: `${WC}10`, color: WC }}>v = fλ = {speed} m/s</div>
         <div className="p-2 rounded-[8px] text-center" style={{ background: '#1d293d', color: '#a8b8cc' }}>T = 1/f = {period} s</div>
       </div>
+      <SimNarration text={`Frequency ${freq} Hz, wavelength ${wavelength} m. Wave speed = ${speed} m/s (constant). Period = ${period} s per complete cycle.`} />
     </div>
   )
 }
@@ -240,7 +234,7 @@ function WaveReflectionLesson() {
       </div>
 
       {mode === 'reflection' ? (
-        <svg width="260" height="150" viewBox="0 0 260 150">
+        <svg width="260" height="150" viewBox="0 0 260 150" role="img" aria-label="Reflection diagram showing incident ray, reflected ray and normal line at a flat mirror surface">
           {/* Surface / mirror */}
           <line x1="20" y1="90" x2="240" y2="90" stroke="#a8b8cc" strokeWidth="2" />
           {/* Hatch below surface */}
@@ -269,7 +263,7 @@ function WaveReflectionLesson() {
           <text x="130" y="140" textAnchor="middle" fill="#a8b8cc" fontSize={9}>angle i = angle r</text>
         </svg>
       ) : (
-        <svg width="260" height="150" viewBox="0 0 260 150">
+        <svg width="260" height="150" viewBox="0 0 260 150" role="img" aria-label="Refraction diagram showing ray bending at a boundary between two media">
           {/* Boundary */}
           <line x1="20" y1="75" x2="240" y2="75" stroke="#2b7fff" strokeWidth="1.5" opacity="0.6" />
           {/* Medium labels */}
@@ -332,7 +326,7 @@ function TotalInternalReflectionLesson() {
   const c = cases[angle]
   return (
     <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
-      <svg width="100%" viewBox="0 0 260 130" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+      <svg width="100%" viewBox="0 0 260 130" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }} role="img" aria-label="Total internal reflection diagram showing light ray in glass block at different angles of incidence">
         {/* Glass block (bottom half) */}
         <rect x="0" y="65" width="260" height="65" fill="#1e3a5f" opacity="0.7" />
         <text x="8" y="125" fill="#60a5fa" fontSize="7">Glass (denser)</text>
@@ -396,7 +390,7 @@ function TotalInternalReflectionReality() {
 function SoundWavesLesson() {
   return (
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
-      <svg width="260" height="90" viewBox="0 0 260 90">
+      <svg width="260" height="90" viewBox="0 0 260 90" role="img" aria-label="Sound wave diagram showing compressions and rarefactions as a longitudinal wave">
         <text x="130" y="11" textAnchor="middle" fill={WC} fontSize={9} fontWeight="bold">Sound as a Longitudinal Wave</text>
         {/* 7 groups alternating C and R */}
         {[
@@ -613,7 +607,7 @@ function LensesLesson() {
       </div>
 
       {type === 'convex' ? (
-        <svg width="260" height="150" viewBox="0 0 260 150">
+        <svg width="260" height="150" viewBox="0 0 260 150" role="img" aria-label="Converging lens diagram showing parallel light rays focusing to a focal point">
           <text x="130" y="12" textAnchor="middle" fill={WC} fontSize={9} fontWeight="bold">converging lens</text>
           {/* Optical axis */}
           <line x1="10" y1="75" x2="250" y2="75" stroke="#2d3f5c" strokeWidth="1" strokeDasharray="4 3" />
@@ -638,7 +632,7 @@ function LensesLesson() {
           <text x="130" y="143" textAnchor="middle" fill="#a8b8cc" fontSize={8}>parallel rays converge at focal point F</text>
         </svg>
       ) : (
-        <svg width="260" height="150" viewBox="0 0 260 150">
+        <svg width="260" height="150" viewBox="0 0 260 150" role="img" aria-label="Diverging lens diagram showing parallel light rays spreading apart after passing through the lens">
           <text x="130" y="12" textAnchor="middle" fill={WC} fontSize={9} fontWeight="bold">diverging lens</text>
           {/* Optical axis */}
           <line x1="10" y1="75" x2="250" y2="75" stroke="#2d3f5c" strokeWidth="1" strokeDasharray="4 3" />
@@ -720,14 +714,7 @@ function BlackBodyLesson() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-1">
-        <div className="flex justify-between text-xs">
-          <span style={{ color: '#a8b8cc' }}>Temperature (K)</span>
-          <span style={{ color: WC }}>{temp.toLocaleString()} K</span>
-        </div>
-        <input type="range" min="1000" max="10000" step="500" value={temp}
-          onChange={e => setTemp(+e.target.value)} className="w-full" style={{ accentColor: WC }} />
-      </div>
+      <SimSlider label="Temperature" min={1000} max={10000} step={500} value={temp} onChange={setTemp} unit="K" color={WC} />
 
       {/* Spectrum bar with peak marker */}
       <div className="flex flex-col gap-1">
@@ -747,6 +734,7 @@ function BlackBodyLesson() {
         Wien's law: hotter → shorter peak λ → bluer colour
         {temp >= 5000 && temp <= 6000 && <span style={{ color: WC }}> ☀ Sun ≈ 5500 K → yellow-white</span>}
       </div>
+      <SimNarration text={`Temperature ${temp.toLocaleString()} K — ${name}. Hotter objects emit shorter wavelengths. ${temp >= 5000 && temp <= 6000 ? 'Similar to the Sun at ~5500 K.' : temp < 3000 ? 'Emits mostly infrared and red light.' : 'Emitting visible and UV radiation.'}`} />
     </div>
   )
 }
@@ -788,7 +776,7 @@ function MagnetismLesson() {
       </div>
 
       {view === 'bar' ? (
-        <svg width="260" height="160" viewBox="0 0 260 160">
+        <svg width="260" height="160" viewBox="0 0 260 160" role="img" aria-label="Bar magnet field diagram showing magnetic field lines from north to south pole">
           {/* Bar magnet  -  horizontal, centered */}
           <rect x="80" y="67" width="50" height="26" rx="4" fill="#2b7fff30" stroke="#2b7fff" strokeWidth="1.5" />
           <text x="105" y="84" textAnchor="middle" fill="#2b7fff" fontSize={12} fontWeight="bold">N</text>
@@ -813,7 +801,7 @@ function MagnetismLesson() {
           <text x="130" y="148" textAnchor="middle" fill="#a8b8cc" fontSize={8}>field strongest at poles (lines closer)</text>
         </svg>
       ) : (
-        <svg width="260" height="160" viewBox="0 0 260 160">
+        <svg width="260" height="160" viewBox="0 0 260 160" role="img" aria-label="Electromagnet diagram showing circular magnetic field around a current-carrying wire">
           {/* Battery symbol */}
           <line x1="18" y1="78" x2="18" y2="68" stroke="#a8b8cc" strokeWidth="2" />
           <line x1="14" y1="68" x2="22" y2="68" stroke="#a8b8cc" strokeWidth="1.5" />
@@ -878,7 +866,7 @@ function MotorEffectLesson() {
   return (
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
       <div className="text-xs font-semibold text-center" style={{ color: MC }}>Fleming's Left Hand Rule</div>
-      <svg width="250" height="180" viewBox="0 0 250 180">
+      <svg width="250" height="180" viewBox="0 0 250 180" role="img" aria-label="Fleming's Left Hand Rule diagram showing thumb as force, index finger as field, middle finger as current direction">
         {/* Background panel */}
         <rect x="10" y="8" width="230" height="130" rx="10" fill="#1d293d" stroke="#2d3f5c" strokeWidth="1.2" />
         {/* ThuMb arrow  -  pointing UP (Force / Motion) */}
@@ -940,7 +928,7 @@ function ElectromagnetismLesson() {
   return (
     <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
       {/* Solenoid SVG */}
-      <svg width="100%" viewBox="0 0 260 100" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+      <svg width="100%" viewBox="0 0 260 100" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }} role="img" aria-label="Solenoid diagram showing magnetic field lines through a coil of wire">
         {/* Iron core (mode 2) */}
         {mode === 2 && <rect x="40" y="38" width="180" height="24" rx="4" fill="#64748b" opacity="0.6" />}
         {/* Coil turns */}
@@ -1019,7 +1007,7 @@ function EMInductionLesson() {
       </div>
 
       {mode === 'generator' ? (
-        <svg width="260" height="160" viewBox="0 0 260 160">
+        <svg width="260" height="160" viewBox="0 0 260 160" role="img" aria-label="AC generator diagram showing rotating coil between north and south magnetic poles producing alternating current">
           {/* N and S poles */}
           <rect x="20" y="50" width="34" height="60" rx="4" fill="#2b7fff25" stroke="#2b7fff" strokeWidth="1.5" />
           <text x="37" y="84" textAnchor="middle" fill="#2b7fff" fontSize={12} fontWeight="bold">N</text>
@@ -1056,7 +1044,7 @@ function EMInductionLesson() {
         </svg>
       ) : (
         <>
-          <svg width="260" height="130" viewBox="0 0 260 130">
+          <svg width="260" height="130" viewBox="0 0 260 130" role="img" aria-label="Transformer diagram showing primary and secondary coils on an iron core with AC input and output">
             {/* Primary coil */}
             <rect x="15" y="45" width="70" height="40" rx="4" fill="#1d293d" stroke="#2b7fff" strokeWidth="1.8" />
             {[20,30,40,50,60,70,80].map((x, i) => (
@@ -1084,14 +1072,8 @@ function EMInductionLesson() {
             <text x="130" y="110" textAnchor="middle" fill={WC} fontSize={10} fontWeight="bold">Vₛ/Vₚ = nₛ/nₚ</text>
           </svg>
           {/* Turns ratio slider */}
-          <div className="flex flex-col gap-1 px-1">
-            <div className="flex justify-between text-xs">
-              <span style={{ color: '#a8b8cc' }}>nₛ/nₚ ratio: {turns}×</span>
-              <span style={{ color: Vs > 230 ? '#ef4444' : '#00bc7d' }}>Vₛ = {Vs} V ({stepType})</span>
-            </div>
-            <input type="range" min="0.5" max="4" step="0.5" value={turns}
-              onChange={e => setTurns(+e.target.value)} className="w-full" style={{ accentColor: MC }} />
-          </div>
+          <SimSlider label="nₛ/nₚ ratio" min={0.5} max={4} step={0.5} value={turns} onChange={setTurns} unit="×" color={MC} />
+          <SimNarration text={`Turns ratio ${turns}×. Input 230 V AC → output ${Vs} V (${stepType}). ${stepType === 'step-up' ? 'Higher secondary voltage — used in transmission to reduce current losses.' : stepType === 'step-down' ? 'Lower secondary voltage — used near homes for safe supply.' : 'Equal turns — voltage unchanged.'}`} />
         </>
       )}
     </div>
@@ -1140,7 +1122,7 @@ function TransformersLesson() {
           </button>
         ))}
       </div>
-      <svg width="100%" viewBox="0 0 260 120" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+      <svg width="100%" viewBox="0 0 260 120" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }} role="img" aria-label="Transformer coil diagram showing primary and secondary windings with turns ratio">
         <rect x="10" y="35" width="70" height="50" rx="5" fill="#0d1e35" stroke={accentP} strokeWidth="1.8" />
         {[15,22,29,36,43,50,57,64].map((x,i) => (
           <path key={i} d={`M${x},35 Q${x+3},26 ${x+7},35`} fill="none" stroke={accentP} strokeWidth="1.5"/>
@@ -1213,7 +1195,7 @@ function ACGeneratorsLesson() {
   const wavePath = waveX.map((x,i) => `${i===0?'M':'L'}${x},${waveY[i]}`).join(' ')
   return (
     <div className="w-full flex flex-col gap-2 px-3 pt-2 pb-2">
-      <svg width="100%" viewBox="0 0 240 100" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }}>
+      <svg width="100%" viewBox="0 0 240 100" style={{ background: '#0f1829', borderRadius: 10, border: '1.5px solid #1d293d' }} role="img" aria-label="Electromagnetic induction diagram showing coil rotating between magnetic poles generating EMF">
         {/* Magnets */}
         <rect x="5" y="20" width="30" height="60" rx="4" fill="#ef444430" stroke="#ef4444" strokeWidth="1.2" />
         <text x="12" y="54" fill="#ef4444" fontSize="9" fontWeight="800">N</text>
@@ -1233,7 +1215,7 @@ function ACGeneratorsLesson() {
         <text x="125" y="13" fill={p.color} fontSize="8" fontWeight="700" textAnchor="middle">EMF: {p.emf === 0 ? '0' : p.emf === 1 ? 'MAX +' : 'MAX −'}</text>
       </svg>
       {/* AC output wave */}
-      <svg width="100%" viewBox="0 0 240 90" style={{ background: '#0b1121', borderRadius: 8, border: '1px solid #1d293d' }}>
+      <svg width="100%" viewBox="0 0 240 90" style={{ background: '#0b1121', borderRadius: 8, border: '1px solid #1d293d' }} role="img" aria-label="AC output waveform showing sinusoidal voltage varying with time">
         <line x1="10" y1="70" x2="230" y2="70" stroke="#2d3e55" strokeWidth="1" />
         <line x1="10" y1="10" x2="10" y2="85" stroke="#2d3e55" strokeWidth="1" />
         <text x="115" y="87" fill="#4a5a72" fontSize="6" textAnchor="middle">Time →</text>
@@ -1293,7 +1275,7 @@ function SolarSystemLesson() {
   ]
   return (
     <div className="w-full flex flex-col items-center py-2" style={{ background: '#0b1121' }}>
-      <svg width="100%" viewBox="0 0 310 238" style={{ maxWidth: 310 }}>
+      <svg width="100%" viewBox="0 0 310 238" style={{ maxWidth: 310 }} role="img" aria-label="Solar system diagram showing planets orbiting the Sun at different distances">
         <defs>
           <radialGradient id="sunGrad" cx="38%" cy="38%">
             <stop offset="0%" stopColor="#fff7aa" />
@@ -1380,7 +1362,7 @@ function SolarSystemReality() {
 function StellarEvolutionLesson() {
   return (
     <div className="w-full h-full flex flex-col justify-center gap-0 px-2 py-1">
-      <svg width="260" height="230" viewBox="0 0 260 230">
+      <svg width="260" height="230" viewBox="0 0 260 230" role="img" aria-label="Stellar evolution diagram showing life cycle of low-mass and high-mass stars from nebula to final remnant">
         {/* ── SHARED TOP ── */}
         {/* Nebula */}
         <rect x="90" y="4" width="80" height="18" rx="4" fill="#6366f125" stroke="#6366f1" strokeWidth="1.2" />
@@ -1486,7 +1468,7 @@ function VisibleLightLesson() {
         ))}
       </div>
       {mode === 'reflection' ? (
-        <svg width="260" height="170" viewBox="0 0 260 170">
+        <svg width="260" height="170" viewBox="0 0 260 170" role="img" aria-label="Light reflection diagram comparing specular reflection from smooth surfaces and diffuse reflection from rough surfaces">
           {/* Specular reflection */}
           <text x="10" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Specular (smooth surface)</text>
           <rect x="10" y="18" width="105" height="10" rx="2" fill="#1d293d" stroke="#4a5a72" strokeWidth="1" />
@@ -1536,7 +1518,7 @@ function VisibleLightLesson() {
           <text x="130" y="156" textAnchor="middle" fill="#a8b8cc" fontSize={7.5}>Blue object under red light → absorbs red → looks BLACK</text>
         </svg>
       ) : (
-        <svg width="260" height="170" viewBox="0 0 260 170">
+        <svg width="260" height="170" viewBox="0 0 260 170" role="img" aria-label="Colour absorption diagram showing which wavelengths different coloured objects absorb and reflect">
           <text x="10" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Why objects have colour</text>
           {[
             { label: 'Red object', absorbs: ['violet','blue','green','yellow'], reflects: ['red'], fill: '#ef4444', x: 10 },
@@ -1596,7 +1578,7 @@ function RedshiftLesson() {
   const labLines = [38, 52, 65]
   return (
     <div className="w-full h-full flex flex-col justify-center gap-2 px-3 py-2">
-      <svg width="260" height="140" viewBox="0 0 260 140">
+      <svg width="260" height="140" viewBox="0 0 260 140" role="img" aria-label="Redshift diagram comparing laboratory spectrum absorption lines with redshifted galaxy spectrum showing lines shifted toward red">
         {/* ── Laboratory spectrum ── */}
         <text x="10" y="14" fill="#a8b8cc" fontSize={8} fontWeight="bold">Laboratory spectrum</text>
         <defs>

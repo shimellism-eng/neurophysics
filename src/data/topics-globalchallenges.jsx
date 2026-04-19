@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
 import { Car, Zap, TrendingDown, DollarSign } from 'lucide-react'
-import { MisconceptionCard, RealWorldCard, FormulaBox } from './visuals-helpers'
+import { MisconceptionCard, RealWorldCard, FormulaBox, SimSlider, SimNarration } from './visuals-helpers'
 
 const GC_RAD = '#f59e0b'  // amber for radiation & risk
 
@@ -24,19 +24,10 @@ function TransportSafetyLesson() {
 
   return (
     <div className="w-full h-full flex flex-col justify-start gap-2 px-3 py-2" style={{ background: '#0b1121' }}>
-      {/* Speed slider */}
-      <div className="flex items-center gap-2 w-full">
-        <span style={{ fontSize: 10, color: '#a8b8cc', whiteSpace: 'nowrap' }}>Speed (m/s)</span>
-        <input
-          type="range" min="5" max="30" step="1" value={speed}
-          onChange={e => setSpeed(+e.target.value)}
-          className="flex-1" style={{ accentColor: GC }}
-        />
-        <span style={{ fontSize: 11, fontWeight: 700, color: GC, fontFamily: 'monospace', minWidth: 32, textAlign: 'right' }}>{speed} m/s</span>
-      </div>
+      <SimSlider label="Speed" min={5} max={30} step={1} value={speed} onChange={setSpeed} unit="m/s" color={GC} />
 
       {/* SVG comparison */}
-      <svg width="100%" viewBox="0 0 260 148" style={{ borderRadius: 10, border: '1.5px solid #1d293d', background: '#0f1829' }}>
+      <svg width="100%" viewBox="0 0 260 148" role="img" aria-label={`Bar chart comparing impact force with and without crumple zone at ${speed} m/s: ${forceWithout.toLocaleString()} N without vs ${forceWith.toLocaleString()} N with crumple zone`} style={{ borderRadius: 10, border: '1.5px solid #1d293d', background: '#0f1829' }}>
         {/* Column headers */}
         <text x="70" y="16" textAnchor="middle" fill="#ef4444" fontSize={8} fontWeight="bold">WITHOUT crumple zone</text>
         <text x="190" y="16" textAnchor="middle" fill={GC} fontSize={8} fontWeight="bold">WITH crumple zone</text>
@@ -93,6 +84,7 @@ function TransportSafetyLesson() {
           Crumple zone: {Math.round(forceWithout / forceWith)}× less force on passenger
         </text>
       </svg>
+      <SimNarration text={`At ${speed} m/s, momentum is ${momentum} kg·m/s. Without a crumple zone the stop takes 0.05 s — force on passenger: ${forceWithout.toLocaleString()} N. With a crumple zone the stop takes 0.3 s — force drops to ${forceWith.toLocaleString()} N, about ${Math.round(forceWithout / forceWith)}× less.`} />
     </div>
   )
 }
@@ -165,29 +157,9 @@ function ElectricityCostsLesson() {
 
       {/* Sliders */}
       <div className="rounded-[12px] px-3 py-2 flex flex-col gap-1.5" style={{ background: '#1d293d' }}>
-        {/* Power */}
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Power</span>
-          <span style={{ color: GC, fontWeight: 700 }}>{powerKw} kW</span>
-        </div>
-        <input type="range" min="0.1" max="3" step="0.1" value={powerKw}
-          onChange={e => setPowerKw(+e.target.value)} className="w-full" style={{ accentColor: GC }} />
-
-        {/* Time */}
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Time</span>
-          <span style={{ color: '#fdc700', fontWeight: 700 }}>{hours} h</span>
-        </div>
-        <input type="range" min="1" max="24" step="1" value={hours}
-          onChange={e => setHours(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
-
-        {/* Unit rate */}
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Unit rate</span>
-          <span style={{ color: '#c084fc', fontWeight: 700 }}>{rateP} p/kWh</span>
-        </div>
-        <input type="range" min="20" max="35" step="1" value={rateP}
-          onChange={e => setRateP(+e.target.value)} className="w-full" style={{ accentColor: '#c084fc' }} />
+        <SimSlider label="Power" min={0.1} max={3} step={0.1} value={powerKw} onChange={setPowerKw} unit="kW" color={GC} />
+        <SimSlider label="Time" min={1} max={24} step={1} value={hours} onChange={setHours} unit="h" color="#fdc700" />
+        <SimSlider label="Unit rate" min={20} max={35} step={1} value={rateP} onChange={setRateP} unit="p/kWh" color="#c084fc" />
       </div>
 
       {/* Result box */}
@@ -200,6 +172,7 @@ function ElectricityCostsLesson() {
           {costP}p <span style={{ fontSize: 11, color: '#a8b8cc', fontWeight: 500 }}>(£{costPounds})</span>
         </motion.div>
       </div>
+      <SimNarration text={`A ${powerKw} kW appliance running for ${hours} hour${hours !== 1 ? 's' : ''} uses ${energyKwh} kWh of energy. At ${rateP}p per kWh, that costs ${costP}p (£${costPounds}).`} />
     </div>
   )
 }
@@ -262,7 +235,7 @@ function RadiationRiskLesson() {
       <div style={{ fontSize: 10, color: GC_RAD, fontWeight: 700, textAlign: 'center', letterSpacing: 1 }}>
         UK average background dose: ~2.7 mSv/year
       </div>
-      <svg width="100%" viewBox="0 0 260 148" style={{ borderRadius: 10, border: `1.5px solid #1d293d`, background: '#0f1829' }}>
+      <svg width="100%" viewBox="0 0 260 148" role="img" aria-label="Bar chart of UK background radiation sources: radon 50%, medical 15%, ground/buildings 14%, food and drink 12%, cosmic rays 10%, nuclear industry 1%" style={{ borderRadius: 10, border: `1.5px solid #1d293d`, background: '#0f1829' }}>
         <text x="8" y="14" fill="#a8b8cc" fontSize={7.5} fontWeight="bold">Sources of background radiation in the UK:</text>
         {sources.map((s, i) => {
           const barPx = Math.round((s.pct / 50) * barWidth)
@@ -352,22 +325,12 @@ function ElectricFieldsLesson() {
 
       {/* Sliders */}
       <div className="rounded-[12px] px-3 py-2 flex flex-col gap-1.5" style={{ background: '#1d293d' }}>
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Voltage (V)</span>
-          <span style={{ color: EF, fontWeight: 700 }}>{voltageV} V</span>
-        </div>
-        <input type="range" min="50" max="500" step="10" value={voltageV}
-          onChange={e => setVoltageV(+e.target.value)} className="w-full" style={{ accentColor: EF }} />
-        <div className="flex justify-between text-xs mb-0.5">
-          <span style={{ color: '#a8b8cc' }}>Plate separation (mm)</span>
-          <span style={{ color: '#fdc700', fontWeight: 700 }}>{sepMm} mm</span>
-        </div>
-        <input type="range" min="2" max="20" step="1" value={sepMm}
-          onChange={e => setSepMm(+e.target.value)} className="w-full" style={{ accentColor: '#fdc700' }} />
+        <SimSlider label="Voltage" min={50} max={500} step={10} value={voltageV} onChange={setVoltageV} unit="V" color={EF} />
+        <SimSlider label="Plate separation" min={2} max={20} step={1} value={sepMm} onChange={setSepMm} unit="mm" color="#fdc700" />
       </div>
 
       {/* SVG field diagram */}
-      <svg width="100%" viewBox="0 0 260 80" style={{ borderRadius: 10, border: `1.5px solid #1d293d`, background: '#0f1829' }}>
+      <svg width="100%" viewBox="0 0 260 80" role="img" aria-label={`Uniform electric field diagram: ${numLines} parallel field lines between plates ${sepMm} mm apart at ${voltageV} V`} style={{ borderRadius: 10, border: `1.5px solid #1d293d`, background: '#0f1829' }}>
         {/* Plates */}
         <rect x="10" y="10" width="10" height="60" rx="2" fill="#ef4444" opacity="0.9" />
         <text x="15" y="8" textAnchor="middle" fill="#ef4444" fontSize={7} fontWeight="bold">+</text>
@@ -394,6 +357,7 @@ function ElectricFieldsLesson() {
           Uniform field — parallel lines, equally spaced, perpendicular to plates
         </text>
       </svg>
+      <SimNarration text={`Voltage: ${voltageV} V across plates ${sepMm} mm apart. Field strength E = ${voltageV} ÷ ${sepMm / 1000} = ${fieldStrength.toLocaleString()} V/m. ${fieldStrength > 20000 ? 'Strong field — lines are densely packed.' : 'Weaker field — lines are more spread out.'}`} />
     </div>
   )
 }

@@ -418,7 +418,7 @@ export default function DiagnosticQuestion() {
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
-          <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Knowledge Check</div>
+          <div className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>Knowledge Check</div>
           <h1 className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
         </div>
         <motion.button
@@ -520,7 +520,7 @@ export default function DiagnosticQuestion() {
           {/* Question type badge for interactive */}
           {isInteractive && TYPE_LABELS[qType] && (
             <div className="mb-2">
-              <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: `${topic.moduleColor}15`, color: topic.moduleColor, border: `1px solid ${topic.moduleColor}30` }}>
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: 'rgba(99,102,241,0.1)', color: '#818cf8', border: '1px solid rgba(99,102,241,0.2)' }}>
                 {TYPE_LABELS[qType]}
               </span>
             </div>

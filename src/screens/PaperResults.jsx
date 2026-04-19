@@ -249,7 +249,6 @@ function StageNumber({ score, total, timeUsed, onNext }) {
                 className="flex items-center justify-between px-4 py-2.5"
                 style={{
                   background: isMe ? g.bg : i % 2 === 0 ? 'rgba(18,26,47,0.5)' : 'transparent',
-                  borderLeft: isMe ? `3px solid ${g.color}` : '3px solid transparent',
                 }}
                 initial={{ opacity: 0, x: -8 }}
                 animate={{ opacity: 1, x: 0 }}

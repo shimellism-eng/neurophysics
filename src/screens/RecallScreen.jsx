@@ -83,7 +83,7 @@ export default function RecallScreen() {
           </p>
           <button
             className="px-6 py-3 rounded-[12px] text-sm font-bold mt-2"
-            style={{ background: moduleColor, color: '#fff' }}
+            style={{ background: '#6366f1', color: '#fff' }}
             onClick={() => navigate(-1)}
           >
             Go back
@@ -160,7 +160,7 @@ export default function RecallScreen() {
             {missedQs.length > 0 && (
               <motion.button
                 className="w-full py-3.5 rounded-[14px] text-sm font-bold"
-                style={{ background: moduleColor, color: '#fff' }}
+                style={{ background: '#6366f1', color: '#fff' }}
                 onClick={() => {
                   const ids = results.filter(r => !r.correct).map(r => r.id)
                   setMissedIds(ids)

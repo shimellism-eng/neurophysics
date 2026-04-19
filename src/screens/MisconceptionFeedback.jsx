@@ -94,7 +94,7 @@ export default function MisconceptionFeedback() {
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1">
-          <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Feedback</div>
+          <div className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>Feedback</div>
           <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>{topic.title}</h1>
         </div>
         <motion.div
@@ -254,14 +254,14 @@ export default function MisconceptionFeedback() {
         >
           <button
             className="w-full flex items-center justify-between px-4 py-3"
-            style={{ background: `${topic.moduleColor}10` }}
+            style={{ background: 'rgba(255,255,255,0.03)' }}
             onClick={() => setShowConcept(v => !v)}
           >
-            <span className="text-xs font-semibold" style={{ color: topic.moduleColor }}>✅ Core Concept</span>
+            <span className="text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.5)' }}>✅ Core Concept</span>
             <motion.span
               animate={{ rotate: showConcept ? 180 : 0 }}
               transition={{ duration: 0.2 }}
-              style={{ color: topic.moduleColor, fontSize: 14 }}
+              style={{ color: 'rgba(255,255,255,0.35)', fontSize: 14 }}
             >
               ▼
             </motion.span>

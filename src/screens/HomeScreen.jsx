@@ -451,7 +451,7 @@ export default function HomeScreen() {
           <motion.div className="mt-5" initial={reducedMotion ? {} : { opacity: 0 }} animate={reducedMotion ? {} : { opacity: 1 }} transition={{ delay: reducedMotion ? 0 : 0.3 }}>
             <div className="w-full rounded-full overflow-hidden" style={{ height: 6, background: 'rgba(255,255,255,0.06)' }}>
               <motion.div className="h-full rounded-full"
-                style={{ background: `linear-gradient(90deg, #6366f1, ${moduleColor})` }}
+                style={{ background: '#6366f1' }}
                 initial={reducedMotion ? {} : { width: 0 }}
                 animate={{ width: `${progressPct}%` }}
                 transition={{ delay: reducedMotion ? 0 : 0.5, duration: reducedMotion ? 0 : 1, ease: 'easeOut' }}

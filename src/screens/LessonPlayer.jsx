@@ -115,7 +115,7 @@ function KeywordGlossaryBar({ keywords, moduleColor }) {
             exit={reducedMotion ? {} : { opacity: 0, y: -6, height: 0 }}
             transition={{ duration: reducedMotion ? 0 : 0.18 }}
           >
-            <span className="text-xs font-bold" style={{ color: moduleColor }}>
+            <span className="text-xs font-bold" style={{ color: '#e2e8f0' }}>
               {keywords[active].word}
               {keywords[active].symbol ? ` (${keywords[active].symbol})` : ''}
               {keywords[active].unit ? ` - ${keywords[active].unit}` : ''}
@@ -142,7 +142,7 @@ function LegacyConceptStep({ topic }) {
       {/* Concept */}
       <div className="rounded-[16px] p-4"
         style={{ background: `${topic.moduleColor}12`, border: `0.75px solid ${topic.moduleColor}40` }}>
-        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: topic.moduleColor }}>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
           Key Concept
         </div>
         <p className="text-sm leading-relaxed" style={{ color: '#cad5e2' }}>{topic.concept}</p>
@@ -615,7 +615,7 @@ export default function LessonPlayer() {
               </motion.button>
               <motion.button
                 className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
-                style={{ background: topic.moduleColor, color: '#fff' }}
+                style={{ background: '#6366f1', color: '#fff' }}
                 onClick={() => {
                   // Clamp saved step; if it's the done step, restart from 0
                   const resumeStep = Math.min(savedProgress.step, totalSteps - 1)
@@ -821,16 +821,16 @@ export default function LessonPlayer() {
             {nextStep && (
               <div className="flex items-center gap-1.5 mb-3 px-1">
                 <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Coming up:</span>
-                {NextIcon && <NextIcon size={11} color={topic.moduleColor} />}
-                <span style={{ fontSize: 12, fontWeight: 700, color: topic.moduleColor }}>{nextStep.label}</span>
+                {NextIcon && <NextIcon size={11} color="rgba(255,255,255,0.4)" />}
+                <span style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.55)' }}>{nextStep.label}</span>
                 <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>· {nextStep.hint}</span>
               </div>
             )}
             <motion.button
               className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
               style={{
-                background: `${topic.moduleColor}`,
-                boxShadow: `0 8px 24px ${topic.moduleColor}30`,
+                background: '#6366f1',
+                boxShadow: '0 4px 16px rgba(99,102,241,0.3)',
                 color: '#fff',
               }}
               onClick={goNext}

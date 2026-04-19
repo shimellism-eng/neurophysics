@@ -136,9 +136,9 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
                 <div
                   className="text-xs leading-relaxed px-4 py-3 rounded-[10px]"
                   style={{
-                    background: 'rgba(253,199,0,0.08)',
-                    borderLeft: '3px solid rgba(253,199,0,0.5)',
-                    color: 'rgba(253,199,0,0.85)',
+                    background: 'rgba(255,255,255,0.04)',
+                    border: '0.75px solid rgba(255,255,255,0.08)',
+                    color: '#a8b8cc',
                   }}
                 >
                   {step.annotation}

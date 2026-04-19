@@ -599,7 +599,7 @@ export default function AdaptivePractice() {
             </motion.button>
             <motion.button
               className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
-              style={{ background: moduleColor, color: '#fff' }}
+              style={{ background: '#6366f1', color: '#fff' }}
               onClick={() => { clearSession(); navigate(-1) }}
               whileTap={{ scale: 0.96 }}>
               Done
@@ -750,7 +750,7 @@ export default function AdaptivePractice() {
             </div>
             <motion.button
               className="px-6 py-3 rounded-[14px] text-sm font-bold"
-              style={{ background: moduleColor, color: '#fff' }}
+              style={{ background: '#6366f1', color: '#fff' }}
               onClick={() => navigate(-1)} whileTap={{ scale: 0.97 }}>
               Go back
             </motion.button>

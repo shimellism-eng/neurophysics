@@ -126,7 +126,7 @@ export default function RecallScreen() {
               </div>
             )}
             {pct >= 70 && pct < 100 && (
-              <div className="mt-3 text-sm font-semibold" style={{ color: '#f59e0b' }}>
+              <div className="mt-3 text-sm font-semibold" style={{ color: '#a8b8cc' }}>
                 Almost there — review the ones you missed and try again.
               </div>
             )}

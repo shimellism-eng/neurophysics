@@ -738,30 +738,20 @@ export default function SettingsScreen() {
           <div className="relative">
             {examDate ? (() => {
               const d = new Date(examDate)
-              const today = new Date(); today.setHours(0,0,0,0)
-              const daysLeft = Math.ceil((d - today) / 86400000)
-              const urgent = daysLeft <= 14
-              const soon   = daysLeft <= 42
-              const passed = daysLeft < 0
-              const accentColor = passed ? '#64748b' : urgent ? '#ef4444' : soon ? '#f39c12' : '#10b981'
-              const label = passed ? 'Exam passed' : urgent ? 'Very soon!' : soon ? 'Coming up' : 'On track'
+              const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
               return (
                 <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
-                  style={{ background: `${accentColor}14`, border: `1px solid ${accentColor}33`, pointerEvents: 'none' }}>
-                  <div className="flex flex-col items-center justify-center w-12 h-12 rounded-[10px] shrink-0"
-                    style={{ background: `${accentColor}22` }}>
-                    <span className="text-lg font-black leading-none" style={{ color: accentColor }}>
-                      {passed ? '✓' : daysLeft}
-                    </span>
-                    {!passed && <span className="text-[9px] font-bold" style={{ color: accentColor }}>days</span>}
+                  style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.08)', pointerEvents: 'none' }}>
+                  <div className="w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0"
+                    style={{ background: 'rgba(99,102,241,0.1)' }}>
+                    <Calendar size={18} color="#6366f1" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>
-                      {d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' })}
-                    </div>
-                    <div className="text-xs mt-0.5 font-semibold" style={{ color: accentColor }}>{label}</div>
+                    <p className="text-sm leading-snug" style={{ color: '#a8b8cc' }}>
+                      Your exam is on {dateStr}. Let's make today count.
+                    </p>
                   </div>
-                  <Pencil size={14} color="#64748b" />
+                  <Pencil size={14} color="rgba(255,255,255,0.2)" />
                 </div>
               )
             })() : (

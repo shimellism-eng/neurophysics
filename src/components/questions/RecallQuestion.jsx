@@ -34,7 +34,7 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null
 
   const cmdStyle = COMMAND_COLORS[data.commandWord] || COMMAND_COLORS.State
-  const accent   = moduleColor || '#6366f1'
+  const accent   = '#6366f1'
 
   const handleReveal = () => setRevealed(true)
 

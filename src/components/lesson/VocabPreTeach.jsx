@@ -111,7 +111,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
             padding: '0 24px',
           }}
           onClick={onPass}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+          whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
         >
           Continue to the lesson
           <ChevronRight size={16} strokeWidth={2.5} />
@@ -240,7 +240,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
                   minHeight: 56,
                 }}
                 onClick={handleNext}
-                whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+                whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
@@ -401,18 +401,18 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
             <div
               className="rounded-[18px] px-5 mb-5"
               style={{
-                background: 'rgba(253,199,0,0.06)',
-                border: '1px solid rgba(255,255,255,0.09)',
+                background: 'rgba(255,255,255,0.03)',
+                border: '0.75px solid rgba(255,255,255,0.08)',
                 paddingTop: 16,
                 paddingBottom: 16,
               }}
             >
-              <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: '#fdc700' }}>
+              <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 Everyday link
               </div>
               <div className="flex items-start gap-2">
-                <Link size={13} color="#fdc700" style={{ marginTop: 2, flexShrink: 0, opacity: 0.8 }} />
-                <p className="text-sm leading-relaxed font-medium" style={{ color: '#fdc700', opacity: 0.9 }}>
+                <Link size={13} color="rgba(255,255,255,0.3)" style={{ marginTop: 2, flexShrink: 0 }} />
+                <p className="text-sm leading-relaxed font-medium" style={{ color: '#a8b8cc' }}>
                   {current.everydayNote}
                 </p>
               </div>
@@ -426,13 +426,13 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
         <motion.button
           className="font-display w-full rounded-[18px] font-bold text-sm flex flex-col items-center justify-center gap-0.5"
           style={{
-            background: `${moduleColor}`,
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+            background: 'var(--np-indigo)',
+            boxShadow: '0 4px 16px rgba(99,102,241,0.3)',
             color: '#fff',
             minHeight: 56,
           }}
           onClick={handleNext}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+          whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
         >
           <div className="flex items-center gap-2">
             {isLast ? (

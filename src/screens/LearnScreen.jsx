@@ -3,12 +3,11 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CheckCircle2, Zap, ChevronDown, ChevronUp,
-  ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X, BookOpen,
+  ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X,
 } from 'lucide-react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard, getSelectedCourse } from '../utils/boardConfig'
-import { getRecallQuestionCount } from '../data/questionBank/index'
 
 // ─── Badge definitions (for next milestone) ──────────────────────────────────
 
@@ -53,112 +52,58 @@ function ProgressRing({ pct, color, size = 50 }) {
 
 // ─── Topic tile ───────────────────────────────────────────────────────────────
 
-function TopicTile({ topic, topicId, moduleColor, masteryState, index, onTap, onPractice, onRecall }) {
+function TopicTile({ topic, moduleColor, masteryState, index, onTap }) {
   const isMastered = masteryState === 'mastered'
   const isStarted  = masteryState === 'started'
-  const barColor   = isMastered ? moduleColor : isStarted ? '#fbbf24' : 'rgba(255,255,255,0.1)'
   const ctaLabel   = isMastered ? 'Review' : isStarted ? 'Continue' : 'Start'
-  const ctaColor   = isMastered ? moduleColor : isStarted ? '#fbbf24' : 'rgba(255,255,255,0.38)'
-  const ctaBg      = isMastered ? `${moduleColor}14` : isStarted ? 'rgba(251,191,36,0.1)' : 'rgba(255,255,255,0.05)'
-  const ctaBorder  = isMastered ? `1px solid ${moduleColor}30` : isStarted ? '1px solid rgba(251,191,36,0.25)' : '1px solid rgba(255,255,255,0.1)'
-  const titleColor = isMastered ? '#f8fafc' : isStarted ? '#e2e8f0' : 'rgba(255,255,255,0.72)'
 
   return (
-    <motion.div
-      className="w-full rounded-[18px] overflow-hidden flex items-stretch"
+    <motion.button
+      type="button"
+      className="w-full flex items-center gap-3 px-4 text-left"
       style={{
-        minHeight: 68,
-        background: isMastered
-          ? `${moduleColor}0c`
-          : isStarted ? 'rgba(251,191,36,0.04)' : 'rgba(255,255,255,0.03)',
-        border: isMastered
-          ? `1px solid ${moduleColor}28`
-          : isStarted ? '1px solid rgba(251,191,36,0.18)' : '1px solid var(--np-border)',
+        minHeight: 52,
+        background: 'transparent',
+        border: '0.75px solid rgba(255,255,255,0.08)',
+        borderRadius: 14,
+        paddingTop: 10,
+        paddingBottom: 10,
       }}
+      onClick={onTap}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03, duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* Left state bar */}
-      <div style={{ width: 3, background: barColor, flexShrink: 0 }} />
-
-      {/* Main tap area — Learn / Continue / Review */}
-      <button
-        type="button"
-        className="flex-1 min-w-0 flex items-center py-3 pl-3 text-left"
-        onClick={onTap}
+      {/* State dot */}
+      <div
+        className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
+        style={{ background: isMastered ? `${moduleColor}22` : 'rgba(255,255,255,0.05)' }}
       >
-        {/* State icon */}
-        <div
-          className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
-          style={{
-            background: isMastered ? `${moduleColor}20` : isStarted ? 'rgba(251,191,36,0.12)' : 'rgba(255,255,255,0.06)',
-            border: isMastered ? `1.5px solid ${moduleColor}45` : isStarted ? '1.5px solid rgba(251,191,36,0.38)' : '1.5px solid rgba(255,255,255,0.14)',
-          }}
-        >
-          {isMastered ? (
-            <CheckCircle2 size={14} color={moduleColor} strokeWidth={2.5} />
-          ) : isStarted ? (
-            <Zap size={12} color="#fbbf24" strokeWidth={2.5} />
-          ) : (
-            <div className="w-2 h-2 rounded-full" style={{ background: 'rgba(255,255,255,0.3)' }} />
-          )}
-        </div>
+        {isMastered ? (
+          <CheckCircle2 size={12} color={moduleColor} strokeWidth={2.5} />
+        ) : isStarted ? (
+          <div className="w-2 h-2 rounded-full" style={{ background: '#6366f1' }} />
+        ) : (
+          <div className="w-2 h-2 rounded-full" style={{ background: 'rgba(255,255,255,0.18)' }} />
+        )}
+      </div>
 
-        {/* Title only */}
-        <div className="flex-1 min-w-0 px-3">
-          <p className="text-[15px] font-semibold truncate" style={{ color: titleColor }}>
-            {topic.title}
-          </p>
-        </div>
-
-        {/* CTA label */}
-        <div className="mr-3 shrink-0 px-3 py-1.5 rounded-full" style={{ background: ctaBg, border: ctaBorder }}>
-          <span className="text-[12px] font-semibold whitespace-nowrap" style={{ color: ctaColor }}>
-            {ctaLabel}
-          </span>
-        </div>
-      </button>
-
-      {/* Vertical divider */}
-      <div style={{ width: '0.75px', background: 'rgba(255,255,255,0.07)', margin: '12px 0' }} />
-
-      {/* Practice button — ⚡ icon zone */}
-      <button
-        type="button"
-        className="flex items-center justify-center shrink-0"
-        style={{ width: 48 }}
-        onClick={e => { e.stopPropagation(); onPractice() }}
+      {/* Title — wraps to second line if needed */}
+      <p
+        className="flex-1 text-[14px] font-semibold leading-snug"
+        style={{ color: isMastered ? 'rgba(255,255,255,0.45)' : '#e2e8f0' }}
       >
-        <div
-          className="w-8 h-8 rounded-full flex items-center justify-center"
-          style={{ background: 'rgba(168,85,247,0.1)', border: '1px solid rgba(168,85,247,0.22)' }}
-        >
-          <Zap size={14} color="#a855f7" strokeWidth={2.5} />
-        </div>
-      </button>
+        {topic.title}
+      </p>
 
-      {/* Recall button — 📖 icon zone (only shown if recall Qs exist) */}
-      {onRecall && (
-        <>
-          <div style={{ width: '0.75px', background: 'rgba(255,255,255,0.07)', margin: '12px 0' }} />
-          <button
-            type="button"
-            className="flex items-center justify-center shrink-0 min-h-[44px]"
-            style={{ width: 48 }}
-            onClick={e => { e.stopPropagation(); onRecall() }}
-            aria-label="Knowledge recall"
-          >
-            <div
-              className="w-8 h-8 rounded-full flex items-center justify-center"
-              style={{ background: 'rgba(0,188,125,0.1)', border: '1px solid rgba(0,188,125,0.22)' }}
-            >
-              <BookOpen size={13} color="#00bc7d" strokeWidth={2.5} />
-            </div>
-          </button>
-        </>
-      )}
-    </motion.div>
+      {/* Status label — plain text, no button shape */}
+      <span
+        className="text-[12px] font-medium shrink-0"
+        style={{ color: isMastered ? 'rgba(255,255,255,0.25)' : isStarted ? '#818cf8' : 'rgba(255,255,255,0.18)' }}
+      >
+        {ctaLabel}
+      </span>
+    </motion.button>
   )
 }
 
@@ -275,27 +220,18 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
                   <TopicTile
                     key={topicId}
                     topic={topic}
-                    topicId={topicId}
                     moduleColor={module.color}
                     masteryState={getState(topicId)}
                     index={i}
                     onTap={() => {
                       if (topic.hook || (topic.lessonSteps && topic.lessonSteps.length > 0)) {
-                        // Has lesson content — always go to lesson
-                        // (practicalId on these topics links the RP via the ⚡ button, not the main tap)
                         navigate(`/lesson/${topicId}`)
                       } else if (topic.practicalId) {
-                        // Practical-only topic (stub in topics-practicals.jsx — no lesson)
                         navigate(`/practical/${topic.practicalId}`)
                       } else {
                         navigate(`/practice/${topicId}`)
                       }
                     }}
-                    onPractice={() => navigate(`/practice/${topicId}`)}
-                    onRecall={getRecallQuestionCount(topicId, selectedBoard.id) > 0
-                      ? () => navigate(`/recall/${topicId}`)
-                      : undefined
-                    }
                   />
                 )
               })}

@@ -13,7 +13,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, CaretRight, GraduationCap, CalendarBlank } from '@phosphor-icons/react'
+import { CheckCircle, CaretRight, CalendarBlank } from '@phosphor-icons/react'
 import { useEffect, useState } from 'react'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 
@@ -30,7 +30,7 @@ const CONFETTI_PARTICLES = Array.from({ length: 24 }, (_, i) => {
   return { angle, color, distance, isRect }
 })
 
-function ConfettiDots({ moduleColor, reducedMotion }) {
+function ConfettiDots({ reducedMotion }) {
   if (reducedMotion) return null
   return (
     <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
@@ -84,7 +84,7 @@ export default function SessionClose({
       >
         {/* Checkmark with pulsing ring + confetti */}
         <div className="relative flex items-center justify-center" style={{ width: 120, height: 120 }}>
-          {/* Pulsing ring — suppressed when reduced-motion */}
+          {/* Pulsing ring — indigo, not moduleColor */}
           {!reducedMotion && (
             <motion.div
               className="absolute rounded-full"
@@ -92,13 +92,12 @@ export default function SessionClose({
                 width: 96,
                 height: 96,
                 background: 'transparent',
-                border: `2px solid ${topic.moduleColor}50`,
+                border: '2px solid rgba(99,102,241,0.35)',
               }}
-              animate={{ scale: [1, 1.18, 1], opacity: [0.6, 0, 0.6] }}
+              animate={{ scale: [1, 1.18, 1], opacity: [0.5, 0, 0.5] }}
               transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
             />
           )}
-          {/* Outer slow pulse — suppressed when reduced-motion */}
           {!reducedMotion && (
             <motion.div
               className="absolute rounded-full"
@@ -106,25 +105,24 @@ export default function SessionClose({
                 width: 96,
                 height: 96,
                 background: 'transparent',
-                border: `1px solid ${topic.moduleColor}30`,
+                border: '1px solid rgba(99,102,241,0.18)',
               }}
-              animate={{ scale: [1, 1.32, 1], opacity: [0.4, 0, 0.4] }}
+              animate={{ scale: [1, 1.32, 1], opacity: [0.35, 0, 0.35] }}
               transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
             />
           )}
-          {/* Main circle */}
+          {/* Main circle — flat indigo tint, no gradient */}
           <div
             className="relative w-24 h-24 rounded-full flex items-center justify-center"
             style={{
-              background: `linear-gradient(135deg, ${topic.moduleColor}20, ${topic.moduleColor}08)`,
-              border: `1.5px solid ${topic.moduleColor}35`,
+              background: 'rgba(99,102,241,0.15)',
+              border: '1.5px solid rgba(99,102,241,0.35)',
             }}
           >
-            <CheckCircle size={40} color={topic.moduleColor} />
+            <CheckCircle size={40} color="#818cf8" />
           </div>
-          {/* Confetti dots */}
           <AnimatePresence>
-            {mounted && <ConfettiDots moduleColor={topic.moduleColor} reducedMotion={reducedMotion} />}
+            {mounted && <ConfettiDots reducedMotion={reducedMotion} />}
           </AnimatePresence>
         </div>
 
@@ -133,7 +131,7 @@ export default function SessionClose({
             className="font-display font-bold"
             style={{ color: '#f8fafc', fontSize: 22, letterSpacing: '-0.03em' }}
           >
-            Lesson complete
+            Session complete
           </h2>
           {topic.emoji && (
             <div className="text-2xl mt-1">{topic.emoji}</div>
@@ -144,19 +142,22 @@ export default function SessionClose({
         </div>
       </motion.div>
 
-      {/* What you learned today - 3 bullets */}
+      {/* What you learned today */}
       <motion.div
         className="rounded-[18px] overflow-hidden"
         style={{
-          background: `${topic.moduleColor}0d`,
-          border: `1px solid rgba(255,255,255,0.08)`,
+          background: 'rgba(99,102,241,0.06)',
+          border: '1px solid rgba(255,255,255,0.08)',
         }}
         initial={reducedMotion ? {} : { opacity: 0, y: 14 }}
         animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
         transition={{ delay: reducedMotion ? 0 : 0.18, duration: reducedMotion ? 0 : 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="px-4 pt-4 pb-3">
-          <div className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: topic.moduleColor }}>
+          <div
+            className="text-[10px] font-bold uppercase tracking-widest mb-3"
+            style={{ color: 'rgba(255,255,255,0.4)' }}
+          >
             What you learned today
           </div>
           <div className="flex flex-col">
@@ -166,8 +167,8 @@ export default function SessionClose({
                   <div
                     className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5"
                     style={{
-                      background: `linear-gradient(135deg, ${topic.moduleColor}40, ${topic.moduleColor}20)`,
-                      color: topic.moduleColor,
+                      background: 'rgba(99,102,241,0.15)',
+                      color: '#818cf8',
                     }}
                   >
                     {i + 1}
@@ -177,7 +178,7 @@ export default function SessionClose({
                 {i < recap.length - 1 && (
                   <div
                     className="ml-10"
-                    style={{ height: 1, background: `${topic.moduleColor}15` }}
+                    style={{ height: 1, background: 'rgba(255,255,255,0.06)' }}
                   />
                 )}
               </div>
@@ -197,22 +198,22 @@ export default function SessionClose({
         <CalendarBlank size={16} color="#818cf8" style={{ marginTop: 2, flexShrink: 0 }} />
         <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
           This will come up again in{' '}
-          <strong style={{ color: topic.moduleColor }}>1 day</strong>
+          <strong style={{ color: '#818cf8' }}>1 day</strong>
           {' '}for a quick retrieval check.
           Spaced practice is what moves it from short-term to long-term memory.
         </p>
       </motion.div>
 
-
-      {/* CTAs */}
+      {/* CTAs — ONE primary + ONE text link */}
       <div className="flex flex-col gap-3">
         <motion.button
           className="font-display w-full rounded-[16px] font-bold flex items-center justify-center gap-2"
           style={{
             height: 56,
             fontSize: 16,
-            background: topic.moduleColor,
+            background: '#6366f1',
             color: '#fff',
+            border: 'none',
           }}
           onClick={onStartQuiz}
           whileTap={reducedMotion ? {} : { scale: 0.97 }}
@@ -220,24 +221,21 @@ export default function SessionClose({
           animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
           transition={{ delay: reducedMotion ? 0 : 0.33 }}
         >
-          Test Your Knowledge
+          Continue
           <CaretRight size={20} />
         </motion.button>
 
-        {examCount > 0 && (
-          <motion.button
-            className="font-display w-full text-sm font-semibold flex items-center justify-center gap-1.5"
-            style={{ height: 44, color: 'rgba(255,255,255,0.45)', background: 'transparent', border: 'none' }}
-            onClick={() => navigate(`/exam/${topicId}`)}
-            whileTap={reducedMotion ? {} : { scale: 0.98 }}
-            initial={reducedMotion ? {} : { opacity: 0 }}
-            animate={reducedMotion ? {} : { opacity: 1 }}
-            transition={{ delay: reducedMotion ? 0 : 0.45 }}
-          >
-            <GraduationCap size={14} />
-            Exam practice ({examCount} questions)
-          </motion.button>
-        )}
+        <motion.button
+          className="font-display w-full text-sm font-semibold flex items-center justify-center"
+          style={{ height: 44, color: 'rgba(255,255,255,0.4)', background: 'transparent', border: 'none' }}
+          onClick={() => navigate('/learn')}
+          whileTap={reducedMotion ? {} : { scale: 0.98 }}
+          initial={reducedMotion ? {} : { opacity: 0 }}
+          animate={reducedMotion ? {} : { opacity: 1 }}
+          transition={{ delay: reducedMotion ? 0 : 0.45 }}
+        >
+          Back to topics
+        </motion.button>
       </div>
     </div>
   )

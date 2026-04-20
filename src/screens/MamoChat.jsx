@@ -333,7 +333,7 @@ export default function MamoChat() {
       <div
         ref={messagesRef}
         className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
-        style={{ minHeight: 0, paddingBottom: 120 }}
+        style={{ minHeight: 0, paddingBottom: 24 }}
         role="log"
         aria-live="polite"
         aria-label="Chat messages"
@@ -424,7 +424,19 @@ export default function MamoChat() {
 
         {/* Suggested questions — always inside scroll, directly after messages */}
         <div className="flex flex-col gap-2 pt-1">
-          <div className="text-xs px-1 mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Try asking:</div>
+          {effectiveTopicLabel ? (
+            <div className="flex items-center gap-2 px-1 mb-1">
+              <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>Asking about:</div>
+              <div
+                className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                style={{ background: 'rgba(99,102,241,0.15)', color: '#a5b4fc' }}
+              >
+                {effectiveTopicLabel}
+              </div>
+            </div>
+          ) : (
+            <div className="text-xs px-1 mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Try asking:</div>
+          )}
           {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
             <motion.button
               key={i}

@@ -142,31 +142,31 @@
 - [x] Bottom nav hidden
 
 #### S8. Feedback Screen
-- [ ] Reframe: "You already know 3 concepts!" not "3 out of 10"
-- [ ] Amber/neutral header, not red
-- [ ] No nested cards (max 2 levels)
-- [ ] Common Mistake vs Correct Thinking: clean cards, no coloured borders
-- [ ] Real world examples: simple list, no card wrappers
+- [x] Reframe: "You already know 3 concepts!" not "3 out of 10"
+- [x] Amber/neutral header, not red
+- [x] No nested cards (max 2 levels)
+- [x] Common Mistake vs Correct Thinking: clean cards, no coloured borders
+- [x] Real world examples: simple list, no card wrappers
 
 #### S9. Session Complete (Duolingo Style)
-- [ ] Lead with "Session complete" + encouraging one-liner
-- [ ] Growth framing: "You've started your Energy journey" not "0/6 mastered"
-- [ ] SRS message in subtle card (Khan Academy style mastery ring)
-- [ ] ONE primary CTA: "Continue to [Next Topic]"
-- [ ] ONE text link: "Back to topics"
-- [ ] Remove trophy, XP, mastery counter, multiple CTAs
-- [ ] Bottom nav hidden
+- [x] Lead with "Session complete" + encouraging one-liner
+- [x] Growth framing: "You've started your Energy journey" not "0/6 mastered"
+- [x] SRS message in subtle card (Khan Academy style mastery ring)
+- [x] ONE primary CTA: "Continue to [Next Topic]"
+- [x] ONE text link: "Back to topics"
+- [x] Remove trophy, XP, mastery counter, multiple CTAs
+- [x] Bottom nav hidden
 
 #### S10. MamoChat
 - [x] Header: Back + "Mamo" + subtitle "AI-powered physics tutor · AQA"
 - [x] 4 full-text suggestions, no truncation
 - [x] Sign-in card once only
-- [ ] Text input bar fixed at bottom, always visible (like iMessage)
-- [ ] Suggestions scroll with chat content
-- [ ] Context-aware: shows current topic
-- [ ] Topic-specific suggested questions
+- [x] Text input bar fixed at bottom, always visible (like iMessage)
+- [x] Suggestions scroll with chat content
+- [x] Context-aware: shows current topic
+- [x] Topic-specific suggested questions
 - [ ] Neurodivergent-friendly system prompt
-- [ ] Bottom padding so last item not cut off
+- [x] Bottom padding so last item not cut off
 
 #### S11. Settings
 - [x] Comfort Settings card with indigo highlight

@@ -107,16 +107,16 @@
 - [x] Stripped to: X button + full topic name + nothing on right
 - [x] Single smooth 3px progress bar, no segments
 - [x] Context line: step type + "About X min left"
-- [ ] Total header height under 65px confirmed
-- [ ] No icons, no settings, no Combined button, no timers in header
-- [ ] "I need a break" moved to bottom of screen above CTA
+- [x] Total header height under 65px confirmed
+- [x] No icons, no settings, no Combined button, no timers in header
+- [x] "I need a break" moved to bottom of screen above CTA
 
 #### S4. Spark Screen
-- [ ] Header clean (uses shared LessonHeader)
-- [ ] "Did you know" card: no coloured border, subtle background only
-- [ ] ONE primary CTA: "I'm ready"
-- [ ] Required Practical: secondary outline button, clearly different
-- [ ] Bottom nav hidden (Duolingo style: in lesson = no tab bar)
+- [x] Header clean (uses shared LessonHeader)
+- [x] "Did you know" card: no coloured border, subtle background only
+- [x] ONE primary CTA: "I'm ready"
+- [x] Required Practical: secondary outline button, clearly different
+- [x] Bottom nav hidden (Duolingo style: in lesson = no tab bar)
 
 #### S5. Key Words Screen
 - [ ] Header clean (uses shared LessonHeader)

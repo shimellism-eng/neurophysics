@@ -1,16 +1,22 @@
 /**
- * HookCard — Step 1
- * Activates curiosity and personal relevance BEFORE cognitive work begins.
- * Research: ADHD motivation (Barkley novelty/interest model), UDL affective network,
- * autistic learners need the "why" before investing attention.
+ * HookCard — Step 1 (Spark)
+ * Activates curiosity before cognitive work. Research: ADHD motivation
+ * (Barkley novelty/interest model), UDL affective network, autistic
+ * learners need the "why" before investing attention.
  */
 import { motion } from 'motion/react'
-import { Lightning, SpeakerHigh } from '@phosphor-icons/react'
+import { SpeakerHigh } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
+
+const BODY = "'Atkinson Hyperlegible', sans-serif"
+const HEAD = "'Bricolage Grotesque', sans-serif"
 
 export default function HookCard({ hook, moduleColor, onReady }) {
   const { hookFact, hookQuestion, hookEmoji = '⚡' } = hook
-  const ttsEnabled = (() => { try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts } catch { return false } })()
+  const ttsEnabled = (() => {
+    try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts }
+    catch { return false }
+  })()
 
   return (
     <motion.div
@@ -19,62 +25,34 @@ export default function HookCard({ hook, moduleColor, onReady }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Fact card */}
+      {/* "Did you know?" fact card — subtle tint, no coloured border */}
       <div
-        className="rounded-[22px] px-5 py-6 relative overflow-hidden"
         style={{
-          minHeight: 200,
-          background: `linear-gradient(135deg, ${moduleColor}22 0%, ${moduleColor}08 100%)`,
-          border: `1.5px solid ${moduleColor}40`,
+          borderRadius: 22,
+          padding: '24px 20px',
+          minHeight: 180,
+          position: 'relative',
+          overflow: 'hidden',
+          background: `${moduleColor}0f`,
+          border: '1px solid rgba(255,255,255,0.07)',
         }}
       >
-        {/* Second decorative gradient layer */}
+        {/* Decorative emoji — bottom-right, very faint */}
         <div
           aria-hidden="true"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: `radial-gradient(ellipse 60% 80% at 80% 120%, ${moduleColor}30, transparent)`,
-            pointerEvents: 'none',
-          }}
-        />
-
-        {/* Huge background emoji - decorative, bottom-right */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            right: 12,
-            bottom: -8,
-            fontSize: '120px',
-            lineHeight: 1,
-            opacity: 0.12,
-            userSelect: 'none',
-            pointerEvents: 'none',
-          }}
+          style={{ position: 'absolute', right: 12, bottom: -8, fontSize: 110, lineHeight: 1, opacity: 0.09, userSelect: 'none', pointerEvents: 'none' }}
         >
           {hookEmoji}
         </div>
 
-        {/* "Did you know?" label + TTS */}
-        <div className="flex items-center gap-2 mb-4">
-          <div
-            className="flex items-center gap-2 flex-1"
-            style={{
-              fontSize: 11,
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
-              color: moduleColor,
-            }}
-          >
-            <Lightning size={12} />
+        {/* Label row */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+          <span style={{ fontFamily: BODY, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: moduleColor, flex: 1 }}>
             Did you know?
-          </div>
+          </span>
           {ttsEnabled && (
             <button
-              className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold"
-              style={{ background: `${moduleColor}20`, color: moduleColor }}
+              style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: `${moduleColor}20`, color: moduleColor, fontFamily: BODY, fontSize: 10, fontWeight: 600, border: 'none', cursor: 'pointer' }}
               onClick={() => speak(hookFact + '. ' + hookQuestion)}
               aria-label="Read aloud"
             >
@@ -84,88 +62,43 @@ export default function HookCard({ hook, moduleColor, onReady }) {
           )}
         </div>
 
-        {/* Hook fact */}
-        <p
-          className="font-display"
-          style={{
-            fontSize: 18,
-            fontWeight: 700,
-            lineHeight: 1.45,
-            letterSpacing: '-0.02em',
-            color: '#f8fafc',
-            position: 'relative',
-          }}
-        >
+        {/* Hook fact — display font for impact */}
+        <p style={{ fontFamily: HEAD, fontSize: 18, fontWeight: 700, lineHeight: 1.45, letterSpacing: '-0.02em', color: '#f8fafc', position: 'relative' }}>
           {hookFact}
         </p>
       </div>
 
       {/* Prior knowledge question */}
       <div>
-        <div
-          className="text-[10px] font-bold uppercase tracking-widest mb-3"
-          style={{ color: 'rgba(255,255,255,0.35)' }}
-        >
-          Before we start - just for you
+        <div style={{ fontFamily: BODY, fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', marginBottom: 10 }}>
+          Before we start
         </div>
-        <div
-          className="rounded-[16px] px-4 py-4"
-          style={{
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.1)',
-          }}
-        >
-          <p
-            className="font-display leading-relaxed"
-            style={{ fontSize: 15, fontWeight: 600, color: '#cad5e2' }}
-          >
+        <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: 16 }}>
+          <p style={{ fontFamily: BODY, fontSize: 15, fontWeight: 600, lineHeight: 1.55, color: '#cad5e2' }}>
             {hookQuestion}
           </p>
-          <p
-            className="text-xs mt-2"
-            style={{ color: 'rgba(255,255,255,0.3)' }}
-          >
-            No right or wrong answer - this is just for you.
+          <p style={{ fontFamily: BODY, fontSize: 12, color: 'rgba(255,255,255,0.28)', marginTop: 8 }}>
+            No right or wrong answer — this is just for you.
           </p>
         </div>
       </div>
 
-      {/* Ready CTA with animated glow */}
-      <div style={{ position: 'relative' }}>
-        {/* Pulsing glow layer behind button */}
-        <motion.div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            borderRadius: 16,
-            background: `${moduleColor}55`,
-            filter: 'blur(18px)',
-            pointerEvents: 'none',
-          }}
-          animate={{ opacity: [0.4, 0.7, 0.4] }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-        />
-
-        <motion.button
-          className="font-display w-full py-4 rounded-[16px] font-bold flex items-center justify-center gap-2"
-          style={{
-            fontSize: 15,
-            minHeight: 56,
-            background: `${moduleColor}`,
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
-            color: '#fff',
-            position: 'relative',
-          }}
-          onClick={onReady}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          ✦ I'm ready - show me
-        </motion.button>
-      </div>
+      {/* Single primary CTA */}
+      <motion.button
+        style={{
+          width: '100%', minHeight: 56, background: '#6366f1',
+          border: 'none', borderRadius: 16, cursor: 'pointer',
+          fontFamily: BODY, fontSize: 16, fontWeight: 700, color: '#fff',
+          letterSpacing: '-0.01em',
+        }}
+        onClick={onReady}
+        whileTap={{ scale: 0.98 }}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        I'm ready
+      </motion.button>
     </motion.div>
   )
 }

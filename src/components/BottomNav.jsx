@@ -1,4 +1,3 @@
-import { motion } from 'motion/react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { House, BookOpen, ChatCircle, Gear } from '@phosphor-icons/react'
 
@@ -35,10 +34,10 @@ export default function BottomNav() {
         transform: 'translateX(-50%)',
         width: '100%',
         maxWidth: 480,
-        background: 'rgba(8,15,30,0.82)',
+        background: 'rgba(7,17,29,0.92)',
         borderTop: '0.75px solid var(--np-border)',
-        backdropFilter: 'blur(var(--np-glass-blur)) saturate(180%)',
-        WebkitBackdropFilter: 'blur(var(--np-glass-blur)) saturate(180%)',
+        backdropFilter: 'blur(18px) saturate(140%)',
+        WebkitBackdropFilter: 'blur(18px) saturate(140%)',
         paddingBottom: 'var(--safe-bottom)',
         boxShadow: '0 -1px 0 rgba(255,255,255,0.04), 0 -8px 32px rgba(8,15,30,0.8)',
       }}
@@ -49,8 +48,8 @@ export default function BottomNav() {
           return (
             <button
               key={path}
-              className="flex flex-col items-center justify-center relative"
-              style={{ minWidth: 72, height: 52, gap: 4 }}
+              className="flex flex-col items-center justify-center"
+              style={{ minWidth: 68, height: 56, gap: 3 }}
               onClick={() => navigate(path)}
               aria-label={label}
               aria-current={active ? 'page' : undefined}
@@ -58,24 +57,16 @@ export default function BottomNav() {
               <Icon
                 size={22}
                 weight={active ? 'fill' : 'regular'}
-                color={active ? '#6366f1' : 'rgba(255,255,255,0.35)'}
+                color={active ? 'var(--np-accent)' : 'rgba(255,255,255,0.35)'}
               />
-
-              {/* Small indigo dot under active icon */}
-              {active && (
-                <motion.div
-                  layoutId="nav-dot"
-                  style={{
-                    width: 4,
-                    height: 4,
-                    borderRadius: '50%',
-                    background: '#6366f1',
-                    position: 'absolute',
-                    bottom: 6,
-                  }}
-                  transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-                />
-              )}
+              <span style={{
+                fontSize: 10,
+                lineHeight: 1,
+                color: active ? 'var(--np-indigo)' : 'var(--np-text-dim)',
+                textAlign: 'center',
+              }}>
+                {label}
+              </span>
             </button>
           )
         })}

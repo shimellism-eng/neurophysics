@@ -80,20 +80,20 @@
 ### Per-Screen Redesign
 
 #### S1. Home Screen (Duolingo-Style Rebuild)
-- [ ] DELETE current card grid layout entirely
-- [ ] Replace with Duolingo-style vertical path: circular lesson nodes in a single column, connected by a subtle dotted line
-- [ ] Active/next node: larger, indigo fill, pulsing gently
-- [ ] Completed nodes: smaller, checkmark, muted colour
-- [ ] Future nodes: greyed out, locked appearance
-- [ ] Simple greeting + name at top, no avatar, no badge, no brain icon
-- [ ] ONE continue card at top if mid-lesson (merge Start Here + Resume)
-- [ ] Quick Win: small text link below path, not a card. "Quick Win · 5 questions, 3 min"
-- [ ] Remove streak card entirely (opt-in via Comfort Settings only)
-- [ ] Remove XP card entirely (opt-in via Comfort Settings only)
-- [ ] Remove "0/68 topics" deficit counter
-- [ ] Remove ALL coloured card backgrounds (orange, teal, cyan)
-- [ ] Remove ALL left border stripes
-- [ ] No cards at all on this screen. Path nodes + text only.
+- [x] DELETE current card grid layout entirely
+- [x] Replace with Duolingo-style vertical path: circular lesson nodes in a single column, connected by a subtle dotted line
+- [x] Active/next node: larger, indigo fill, pulsing gently
+- [x] Completed nodes: smaller, checkmark, muted colour
+- [x] Future nodes: greyed out, locked appearance
+- [x] Simple greeting + name at top, no avatar, no badge, no brain icon
+- [x] ONE continue card at top if mid-lesson (merge Start Here + Resume)
+- [x] Quick Win: small text link below path, not a card. "Quick Win · 5 questions, 3 min"
+- [x] Remove streak card entirely (opt-in via Comfort Settings only)
+- [x] Remove XP card entirely (opt-in via Comfort Settings only)
+- [x] Remove "0/68 topics" deficit counter
+- [x] Remove ALL coloured card backgrounds (orange, teal, cyan)
+- [x] Remove ALL left border stripes
+- [x] No cards at all on this screen. Path nodes + text only.
 
 #### S2. Learn Screen (Topic List)
 - [ ] Remove coloured borders on all topic cards

@@ -19,22 +19,22 @@
 /* ─── Design Tokens ──────────────────────────────────────────────────────── */
 /* App.jsx overrides --np-bg and --np-card at runtime for accessibility themes */
 :root {
-  /* Backgrounds */
-  --np-bg:            #080f1e;
-  --np-bg-mid:        #0d1526;
-  --np-bg-lift:       #111827;
-  --np-card:          rgba(15,22,41,0.95);
-  --np-card-deep:     rgba(8,15,30,0.96);
-  --np-card-lift:     rgba(20,30,55,0.90);
+  /* Backgrounds — OKLCH tinted toward indigo hue 265 */
+  --np-bg:            oklch(0.08 0.018 265);
+  --np-bg-mid:        oklch(0.10 0.018 265);
+  --np-bg-lift:       oklch(0.13 0.012 265);
+  --np-card:          oklch(0.12 0.02 265 / 0.95);
+  --np-card-deep:     oklch(0.09 0.02 265 / 0.96);
+  --np-card-lift:     oklch(0.15 0.015 265 / 0.90);
 
   /* Surface aliases (spec names used in phases 1-4) */
   --surface-1:        rgba(15,22,41,0.95);
   --surface-2:        rgba(255,255,255,0.04);
 
-  /* Borders */
-  --np-border:        rgba(255,255,255,0.08);
-  --np-border-mid:    rgba(255,255,255,0.12);
-  --np-border-strong: rgba(255,255,255,0.18);
+  /* Borders — tinted neutral */
+  --np-border:        oklch(0.35 0.008 265 / 0.12);
+  --np-border-mid:    oklch(0.5 0.008 265 / 0.18);
+  --np-border-strong: oklch(0.6 0.008 265 / 0.25);
 
   /* Brand */
   --np-cyan:    #00d4ff;
@@ -56,11 +56,11 @@
   --np-warning: #f59e0b;
   --np-danger:  #ef4444;
 
-  /* Text */
-  --np-text:       #e2e8f0;
-  --np-text-mid:   #cbd5e1;
-  --np-text-muted: #a8b8cc;
-  --np-text-dim:   #6c7c93;
+  /* Text — 2 tones only, tinted toward 265 */
+  --np-text:       oklch(0.92 0.012 265);
+  --np-text-mid:   oklch(0.82 0.015 265);
+  --np-text-muted: oklch(0.62 0.018 265);
+  --np-text-dim:   oklch(0.45 0.015 265);
 
   /* Typography */
   --font-body:    'Atkinson Hyperlegible', sans-serif;

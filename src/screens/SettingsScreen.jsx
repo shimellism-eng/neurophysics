@@ -539,6 +539,32 @@ export default function SettingsScreen() {
         <p className="text-sm mt-1" style={{ color: 'var(--np-text-muted)' }}>Customise your experience</p>
       </div>
 
+      {/* Comfort Settings CTA — top of page */}
+      <div className="px-5 mb-5">
+        <motion.button
+          className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-left active:opacity-75"
+          style={{
+            background: 'rgba(99,102,241,0.08)',
+            border: '0.75px solid rgba(99,102,241,0.3)',
+          }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          onClick={() => openComfortSettings(true)}
+        >
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+            style={{ background: 'rgba(99,102,241,0.15)' }}>
+            <Sliders size={18} style={{ color: '#818cf8' }} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>Comfort Settings</div>
+            <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
+              Font, colours, motion, TTS, reading ruler & more
+            </div>
+          </div>
+          <CaretRight size={16} style={{ color: 'var(--np-text-muted)' }} />
+        </motion.button>
+      </div>
+
       {/* Profile card */}
       <div className="px-5 mb-6">
         <motion.div
@@ -650,19 +676,19 @@ export default function SettingsScreen() {
                   onClick={() => handleSelectBoard(boardId)}
                   className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
                   style={{
-                    background: isSelected ? `${board.color}18` : 'rgba(255,255,255,0.03)',
-                    border: isSelected ? `1.5px solid ${board.color}60` : '0.75px solid var(--np-border)',
+                    background: isSelected ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.03)',
+                    border: isSelected ? '1.5px solid rgba(99,102,241,0.5)' : '0.75px solid rgba(255,255,255,0.08)',
                     transition: 'all 0.15s ease',
                   }}
                   whileTap={{ scale: 0.97 }}
                 >
                   <div className="flex items-center gap-1.5 mb-0.5">
                     <span style={{ fontSize: 13 }}>{board.flag}</span>
-                    <span className="text-xs font-bold" style={{ color: isSelected ? board.color : '#f8fafc' }}>
+                    <span className="text-xs font-bold" style={{ color: isSelected ? '#a5b4fc' : '#f8fafc' }}>
                       {board.name}
                     </span>
                     {isSelected && (
-                      <div className="w-1.5 h-1.5 rounded-full ml-auto" style={{ background: board.color }} />
+                      <div className="w-1.5 h-1.5 rounded-full ml-auto" style={{ background: '#6366f1' }} />
                     )}
                   </div>
                   <span className="text-[10px] leading-tight" style={{ color: '#556677' }}>
@@ -799,32 +825,6 @@ export default function SettingsScreen() {
             </button>
           )}
         </div>
-      </div>
-
-      {/* Comfort Settings CTA */}
-      <div className="px-5 mb-5">
-        <motion.button
-          className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-left active:opacity-75"
-          style={{
-            background: 'linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0.12) 100%)',
-            border: '0.75px solid rgba(99,102,241,0.3)',
-          }}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          onClick={() => openComfortSettings(true)}
-        >
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-            style={{ background: 'rgba(99,102,241,0.15)' }}>
-            <Sliders size={18} style={{ color: 'var(--np-cyan)' }} />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>Comfort Settings</div>
-            <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
-              Font, colours, motion, TTS, reading ruler & more
-            </div>
-          </div>
-          <CaretRight size={16} style={{ color: 'var(--np-text-muted)' }} />
-        </motion.button>
       </div>
 
       {/* Sections */}

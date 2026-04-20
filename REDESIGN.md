@@ -46,36 +46,36 @@
 #### G1. Colour System
 - [x] Kill all cyan (#00D4FF, #4AEAFF) across entire codebase
 - [x] Kill all gradient buttons, replace with solid fills
-- [ ] Kill all orange as primary accent, keep only as semantic warning colour
-- [ ] Single accent: indigo #6366F1 for all primary actions and active states
-- [ ] Tinted neutrals toward indigo hue using OKLCH
-- [ ] Only 2 text colours everywhere: near-white primary + muted grey secondary
-- [ ] Remove ALL coloured label text (orange, green, red section headers)
-- [ ] Success green, error red, warning amber: same hex values on every screen
+- [x] Kill all orange as primary accent, keep only as semantic warning colour
+- [x] Single accent: indigo #6366F1 for all primary actions and active states
+- [x] Tinted neutrals toward indigo hue using OKLCH
+- [x] Only 2 text colours everywhere: near-white primary + muted grey secondary
+- [x] Remove ALL coloured label text (orange, green, red section headers)
+- [x] Success green, error red, warning amber: same hex values on every screen
 
 #### G2. Card Borders
 - [x] Remove coloured left-side border accents (Impeccable ban)
-- [ ] All card borders: rgba(255,255,255,0.08) everywhere
-- [ ] No glowing borders, no coloured outlines
-- [ ] Remove unnecessary card wrappers where spacing alone works
+- [x] All card borders: rgba(255,255,255,0.08) everywhere
+- [x] No glowing borders, no coloured outlines
+- [x] Remove unnecessary card wrappers where spacing alone works
 
 #### G3. Typography
 - [x] Atkinson Hyperlegible for body, Bricolage Grotesque for headings
-- [ ] Strict 4-5 size type scale with 1.25+ ratio between steps
-- [ ] No random in-between font sizes
-- [ ] Remove all coloured section header text, use white + icon/dot if needed
+- [x] Strict 4-5 size type scale with 1.25+ ratio between steps
+- [x] No random in-between font sizes
+- [x] Remove all coloured section header text, use white + icon/dot if needed
 
 #### G4. Buttons
 - [x] No gradient buttons anywhere
-- [ ] Primary CTA: same indigo, same radius, same height, same font on every screen
-- [ ] Secondary: outline style everywhere
-- [ ] Tertiary: text link only
+- [x] Primary CTA: same indigo, same radius, same height, same font on every screen
+- [x] Secondary: outline style everywhere
+- [x] Tertiary: text link only
 
 #### G5. Navigation
 - [x] Remove floating ComfortFAB from all screens
-- [ ] Bottom nav hidden during all lesson screens
-- [ ] Bottom nav icons only, no text labels, indigo active, grey inactive
-- [ ] X button exits lessons, back arrow for non-lesson navigation
+- [x] Bottom nav hidden during all lesson screens
+- [x] Bottom nav icons only, no text labels, indigo active, grey inactive
+- [x] X button exits lessons, back arrow for non-lesson navigation
 
 ### Per-Screen Redesign
 
@@ -165,29 +165,29 @@
 - [x] Suggestions scroll with chat content
 - [x] Context-aware: shows current topic
 - [x] Topic-specific suggested questions
-- [ ] Neurodivergent-friendly system prompt
+- [x] Neurodivergent-friendly system prompt
 - [x] Bottom padding so last item not cut off
 
 #### S11. Settings
 - [x] Comfort Settings card with indigo highlight
 - [x] Exam date: encouraging text, no red
-- [ ] Exam board grid: subtle borders only
-- [ ] Comfort Settings moved to top of page
-- [ ] Streak/XP toggles inside Comfort Settings (opt-in, not default)
+- [x] Exam board grid: subtle borders only
+- [x] Comfort Settings moved to top of page
+- [x] Streak/XP toggles inside Comfort Settings (opt-in, not default)
 
 #### S12. Grade 9 Challenge
-- [ ] No gradient start button
-- [ ] Explain jargon in subtitle ("Chained calcs" etc.)
-- [ ] Show estimated time
-- [ ] "Question 1" not "Q1 of 33"
-- [ ] Remove duplicate mark scheme hint
-- [ ] Bottom nav hidden
+- [x] No gradient start button
+- [x] Explain jargon in subtitle ("Chained calcs" etc.)
+- [x] Show estimated time
+- [x] "Question 1" not "Q1 of 33"
+- [x] Remove duplicate mark scheme hint
+- [x] Bottom nav hidden
 
 #### S13. Comfort Settings Panel
 - [x] Quick presets working
 - [x] Font controls with +/- buttons
 - [x] Background colour options
-- [ ] Live preview strip
-- [ ] Celebrations toggle (controls streak/XP/trophy visibility)
-- [ ] Sound effects toggle
-- [ ] Reset to defaults
+- [x] Live preview strip
+- [x] Celebrations toggle (controls streak/XP/trophy visibility)
+- [x] Sound effects toggle
+- [x] Reset to defaults

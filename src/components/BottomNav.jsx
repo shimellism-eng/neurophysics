@@ -50,47 +50,31 @@ export default function BottomNav() {
             <button
               key={path}
               className="flex flex-col items-center justify-center relative"
-              style={{ minWidth: 72, height: 52, gap: active ? 4 : 0 }}
+              style={{ minWidth: 72, height: 52, gap: 4 }}
               onClick={() => navigate(path)}
               aria-label={label}
               aria-current={active ? 'page' : undefined}
             >
-              {/* Cyan underline indicator */}
+              <Icon
+                size={22}
+                weight={active ? 'fill' : 'regular'}
+                color={active ? '#6366f1' : 'rgba(255,255,255,0.35)'}
+              />
+
+              {/* Small indigo dot under active icon */}
               {active && (
                 <motion.div
-                  layoutId="nav-underline"
-                  className="absolute top-0 rounded-b-full"
+                  layoutId="nav-dot"
                   style={{
-                    height: 3,
-                    width: 24,
-                    background: 'var(--np-cyan)',
-                    boxShadow: '0 0 8px var(--np-cyan)',
+                    width: 4,
+                    height: 4,
+                    borderRadius: '50%',
+                    background: '#6366f1',
+                    position: 'absolute',
+                    bottom: 6,
                   }}
                   transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 />
-              )}
-
-              <Icon
-                size={22}
-                weight={active ? 'duotone' : 'regular'}
-                color={active ? 'var(--np-cyan)' : 'rgba(255,255,255,0.3)'}
-              />
-
-              {/* Label only on active */}
-              {active && (
-                <motion.span
-                  initial={{ opacity: 0, y: 4 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.15 }}
-                  style={{
-                    fontSize: 10,
-                    fontWeight: 600,
-                    color: 'var(--np-cyan)',
-                    fontFamily: 'var(--font-body)',
-                  }}
-                >
-                  {label}
-                </motion.span>
               )}
             </button>
           )

@@ -260,7 +260,10 @@ export default function Grade9Challenge() {
           <Trophy size={56} color="#a855f7" />
           <div className="text-center">
             <div className="text-2xl font-black mb-1" style={{ color: '#f8fafc' }}>{challengeTitle}</div>
-            <div className="text-sm" style={{ color: '#64748b' }}>Chained calcs · RPA errors · Novel context</div>
+            <div className="text-sm mb-1" style={{ color: '#64748b' }}>Chained calcs · RPA errors · Novel context</div>
+            <div className="text-xs leading-relaxed" style={{ color: '#64748b' }}>
+              Chained calcs = multi-step problems where each answer feeds into the next · RPA errors = spotting how an experimental mistake shifts your result
+            </div>
           </div>
           <div className="w-full space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider mb-2 text-center" style={{ color: '#64748b' }}>Your course</div>
@@ -293,9 +296,12 @@ export default function Grade9Challenge() {
               </motion.button>
             ))}
           </div>
+          <div className="text-xs text-center" style={{ color: '#64748b' }}>
+            {total} questions · ~{Math.ceil(total * 1.5)} min
+          </div>
           <motion.button
             className="w-full py-4 rounded-[16px] text-base font-bold"
-            style={{ background: '#7c3aed', color: '#fff' }}
+            style={{ background: '#6366f1', color: '#fff' }}
             onClick={() => setStarted(true)}
             whileTap={{ scale: 0.97 }}>
             Start Challenge
@@ -327,7 +333,7 @@ export default function Grade9Challenge() {
         </button>
         <div className="flex-1 min-w-0">
           <div className="text-xs font-bold" style={{ color: '#c084fc' }}>{challengeHeader}</div>
-          <div className="text-xs" style={{ color: '#64748b' }}>Q{qIndex + 1} of {total}</div>
+          <div className="text-xs" style={{ color: '#64748b' }}>Question {qIndex + 1}</div>
         </div>
         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
           style={{ background: 'rgba(253,199,0,0.1)', border: '0.75px solid rgba(253,199,0,0.3)' }}>
@@ -339,7 +345,7 @@ export default function Grade9Challenge() {
       {/* Progress bar */}
       <div className="h-1 shrink-0" style={{ background: '#1d293d' }}>
         <motion.div className="h-full rounded-full"
-          style={{ background: '#7c3aed' }}
+          style={{ background: '#6366f1' }}
           animate={{ width: `${((qIndex + (completed ? 1 : 0)) / total) * 100}%` }}
           transition={{ type: 'spring', stiffness: 120, damping: 20 }} />
       </div>
@@ -383,8 +389,7 @@ export default function Grade9Challenge() {
           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
           <motion.button
             className="w-full py-4 rounded-[16px] text-base font-bold flex items-center justify-center gap-2"
-            style={{ background: '#7c3aed', color: '#fff',
-              boxShadow: '0 4px 20px rgba(168,85,247,0.4)' }}
+            style={{ background: '#6366f1', color: '#fff' }}
             onClick={handleNext} whileTap={{ scale: 0.97 }}>
             {isLast ? 'See results' : 'Next question'} <CaretRight size={18} />
           </motion.button>

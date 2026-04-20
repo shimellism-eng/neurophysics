@@ -46,7 +46,7 @@ function Toggle({ on, onChange, label }) {
       <span
         className="absolute inset-0 rounded-full transition-colors"
         style={{
-          background: on ? 'var(--np-cyan)' : 'rgba(255,255,255,0.15)',
+          background: on ? '#6366f1' : 'rgba(255,255,255,0.15)',
           transition: 'background 200ms',
         }}
       />
@@ -78,7 +78,7 @@ function Slider({ value, min, max, step = 0.1, onChange, label, format }) {
         <div className="absolute top-1/2 -translate-y-1/2 w-full rounded-full"
           style={{ height: 4, background: 'rgba(255,255,255,0.12)' }} />
         <div className="absolute top-1/2 -translate-y-1/2 rounded-full"
-          style={{ height: 4, width: `${pct}%`, background: 'var(--np-cyan)' }} />
+          style={{ height: 4, width: `${pct}%`, background: '#6366f1' }} />
         <input
           type="range" min={min} max={max} step={step} value={value}
           aria-label={label}
@@ -109,9 +109,9 @@ function ChipGroup({ options, value, onChange }) {
           onClick={() => onChange(opt.value)}
           className="px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors"
           style={{
-            background: value === opt.value ? 'var(--np-cyan)' : 'rgba(255,255,255,0.08)',
-            color:      value === opt.value ? '#080f1e'        : 'var(--np-text)',
-            border:     `0.75px solid ${value === opt.value ? 'var(--np-cyan)' : 'var(--np-border)'}`,
+            background: value === opt.value ? '#6366f1' : 'rgba(255,255,255,0.08)',
+            color:      value === opt.value ? '#ffffff' : 'var(--np-text)',
+            border:     `0.75px solid ${value === opt.value ? '#6366f1' : 'var(--np-border)'}`,
           }}
         >
           {opt.icon && <span className="mr-1">{opt.icon}</span>}
@@ -126,8 +126,8 @@ function Section({ icon: Icon, title, children }) {
   return (
     <div className="mb-2">
       <div className="flex items-center gap-2 pt-4 pb-1">
-        <Icon size={14} style={{ color: 'var(--np-cyan)' }} />
-        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--np-cyan)' }}>
+        <Icon size={14} style={{ color: '#818cf8' }} />
+        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#818cf8' }}>
           {title}
         </span>
       </div>
@@ -276,6 +276,33 @@ export default function ComfortSettings() {
                 </div>
               </Section>
 
+              {/* Live Preview Strip */}
+              <div
+                className="rounded-[14px] px-4 py-3.5 mb-1"
+                style={{
+                  background: prefs.background === 'cream' ? '#faf6ef' : prefs.background === 'lightblue' ? '#eef4fb' : prefs.background === 'lightyellow' ? '#fdfae8' : '#0d1526',
+                  border: '0.75px solid rgba(255,255,255,0.1)',
+                  transition: 'background 0.25s',
+                }}
+              >
+                <div className="text-[10px] font-bold uppercase tracking-widest mb-2"
+                  style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  Preview
+                </div>
+                <p
+                  style={{
+                    fontSize: `${prefs.fontSize ?? 1}rem`,
+                    lineHeight: prefs.lineSpacing ?? 1.7,
+                    fontFamily: prefs.fontFamily === 'opendyslexic' ? "'OpenDyslexic', sans-serif" : prefs.fontFamily === 'atkinson' ? "'Atkinson Hyperlegible', sans-serif" : 'var(--font-body)',
+                    color: prefs.background === 'dark' || !prefs.background ? '#e8edf4' : '#1a2233',
+                    margin: 0,
+                  }}
+                >
+                  The force on a moving charge in a magnetic field is{' '}
+                  <span style={{ fontWeight: 700 }}>F = BQv</span>
+                </p>
+              </div>
+
               {/* Text & Reading */}
               <Section icon={TextT} title="Text & Reading">
                 <Row label="Font size" hint="0.8 – 1.6 rem">
@@ -370,6 +397,14 @@ export default function ComfortSettings() {
                   <Toggle on={prefs.pomodoroTimer} onChange={v => setPref('pomodoroTimer', v)}
                     label="Pomodoro timer" />
                 </Row>
+                <Row label="Show streak" hint="Displays your daily study streak">
+                  <Toggle on={!!prefs.showStreak} onChange={v => setPref('showStreak', v)}
+                    label="Show streak" />
+                </Row>
+                <Row label="Show XP" hint="Shows XP earned after each lesson">
+                  <Toggle on={!!prefs.showXP} onChange={v => setPref('showXP', v)}
+                    label="Show XP" />
+                </Row>
               </Section>
 
               {/* Reset */}
@@ -413,7 +448,7 @@ export function ComfortFirstTimePrompt() {
         style={{
           bottom: 'calc(96px + env(safe-area-inset-bottom, 0px) + 12px)',
           background: 'var(--np-card)',
-          border: '0.75px solid var(--np-cyan)',
+          border: '0.75px solid rgba(99,102,241,0.4)',
           boxShadow: '0 0 24px rgba(99,102,241,0.15)',
         }}
         initial={reduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
@@ -432,7 +467,7 @@ export function ComfortFirstTimePrompt() {
             <div className="flex gap-2 mt-3">
               <button
                 className="flex-1 py-2 rounded-xl text-sm font-semibold active:opacity-70"
-                style={{ background: 'var(--np-cyan)', color: '#080f1e' }}
+                style={{ background: '#6366f1', color: '#fff' }}
                 onClick={() => {
                   dismissFirstTimePrompt()
                   setSettingsOpen(true)

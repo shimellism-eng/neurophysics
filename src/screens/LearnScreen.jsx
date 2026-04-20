@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CaretDown, CaretUp, ArrowRight, Trophy, Clock, CaretRight, Star, MagnifyingGlass, X } from '@phosphor-icons/react'
+import { CaretDown, CaretUp, ArrowRight, Trophy, Clock, CaretRight, MagnifyingGlass, X } from '@phosphor-icons/react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard, getSelectedCourse } from '../utils/boardConfig'
@@ -60,9 +60,9 @@ function TopicTile({ topic, moduleColor, masteryState, index, onTap }) {
       className="w-full flex items-center gap-3 px-4 text-left"
       style={{
         minHeight: 52,
-        background: 'transparent',
-        border: '0.75px solid rgba(255,255,255,0.08)',
-        borderRadius: 14,
+        background: 'rgba(99,102,241,0.06)',
+        border: '1px solid rgba(99,102,241,0.1)',
+        borderRadius: 12,
         paddingTop: 10,
         paddingBottom: 10,
       }}
@@ -140,7 +140,7 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <div className="text-sm font-bold leading-tight" style={{ color: 'var(--np-text)' }}>
+              <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.01em', color: 'var(--np-text)' }}>
                 {module.name}
               </div>
               {module.topics.every(t => PHYSICS_ONLY_TOPICS.has(t)) && (
@@ -281,6 +281,8 @@ export default function LearnScreen() {
   const { progress } = useProgress()
   const [paperFilter, setPaperFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [filterOpen, setFilterOpen] = useState(false)
   const [selectedBoard, setSelectedBoard] = useState(() => getSelectedBoard())
   const [selectedCourse, setSelectedCourseState] = useState(() => getSelectedCourse())
 
@@ -377,28 +379,35 @@ export default function LearnScreen() {
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
 
-      {/* ── Header: compact progress ── */}
-      <div className="px-5 pb-4 shrink-0" style={{ paddingTop: '12px' }}>
-        <div className="flex items-center justify-between mb-1">
+      {/* ── Header ── */}
+      <div className="px-5 shrink-0" style={{ paddingTop: '18px', paddingBottom: '12px' }}>
+
+        {/* Title row */}
+        <div className="flex items-start justify-between mb-4">
           <div>
-            <h1 className="text-[22px] font-bold tracking-tight" style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}>
-              GCSE Physics
-            </h1>
             <button
               onClick={() => navigate('/settings')}
-              className="inline-flex items-center gap-1 mt-0.5 px-2 py-0.5 rounded-full text-[10px] font-bold"
-              style={{
-                background: `${selectedBoard.color}18`,
-                border: `1px solid ${selectedBoard.color}40`,
-                color: selectedBoard.color,
-              }}
+              style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', display: 'block', marginBottom: 6 }}
             >
               {selectedBoard.flag} {selectedBoard.name}
             </button>
+            <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1, color: 'var(--np-text)' }}>
+              GCSE Physics
+            </h1>
           </div>
+          <button
+            onClick={() => { if (searchOpen) setSearchQuery(''); setSearchOpen(v => !v) }}
+            className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0 mt-1"
+            style={{ background: searchOpen ? 'rgba(99,102,241,0.15)' : 'rgba(255,255,255,0.05)', border: `1px solid ${searchOpen ? 'rgba(99,102,241,0.3)' : 'rgba(255,255,255,0.08)'}` }}
+            aria-label={searchOpen ? 'Close search' : 'Search topics'}
+          >
+            {searchOpen ? <X size={16} color="#818cf8" /> : <MagnifyingGlass size={16} color="rgba(255,255,255,0.42)" />}
+          </button>
         </div>
+
+        {/* Progress bar */}
         {masteredTotal > 0 && (
-          <div className="mb-2 h-[3px] rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+          <div className="mb-4 h-[2px] rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.05)' }}>
             <motion.div
               className="h-full rounded-full"
               style={{ background: '#6366f1' }}
@@ -409,70 +418,108 @@ export default function LearnScreen() {
           </div>
         )}
 
-        {/* Search bar */}
-        <div className="relative mb-3">
-          <MagnifyingGlass size={14} color="rgba(255,255,255,0.25)"
-            style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
-          <input
-            type="search"
-            placeholder="Search topics…"
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-9 py-2.5 rounded-[14px] text-sm outline-none"
-            style={{
-              background: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(255,255,255,0.09)',
-              color: 'var(--np-text)',
-            }}
-          />
-          {searchQuery.length > 0 && (
-            <button onClick={() => setSearchQuery('')}
-              aria-label="Clear search"
-              style={{ position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)' }}>
-              <X size={14} color="rgba(255,255,255,0.3)" />
-            </button>
+        {/* Collapsible search */}
+        <AnimatePresence>
+          {searchOpen && (
+            <motion.div
+              key="search-bar"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div className="relative mb-3">
+                <MagnifyingGlass size={14} color="rgba(255,255,255,0.25)"
+                  style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
+                <input
+                  type="search"
+                  placeholder="Search topics…"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  autoFocus
+                  className="w-full pl-9 pr-9 py-2.5 rounded-[14px] text-sm outline-none"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.09)', color: 'var(--np-text)' }}
+                />
+                {searchQuery.length > 0 && (
+                  <button onClick={() => setSearchQuery('')} aria-label="Clear search"
+                    style={{ position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)' }}>
+                    <X size={14} color="rgba(255,255,255,0.3)" />
+                  </button>
+                )}
+              </div>
+            </motion.div>
           )}
-        </div>
+        </AnimatePresence>
 
-        {/* Filter tabs + exam quick access */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 -mx-1 px-1" style={{ scrollbarWidth: 'none' }}>
-          {FILTERS.map(f => {
-            const isActive = paperFilter === f.id
-            return (
-              <motion.button
-                key={f.id}
-                onClick={() => setPaperFilter(f.id)}
-                className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0 whitespace-nowrap"
-                style={{
-                  height: 36,
-                  background: isActive ? `${f.color}20` : 'rgba(255,255,255,0.04)',
-                  border: isActive ? `1px solid ${f.color}50` : '1px solid var(--np-border)',
-                  color: isActive ? f.color : 'rgba(255,255,255,0.32)',
-                  transition: 'all 0.18s ease',
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {isActive && <div className="w-1.5 h-1.5 rounded-full" style={{ background: f.color }} />}
-                {f.label}
-              </motion.button>
-            )
-          })}
-
-          {/* Equation Drill chip */}
+        {/* Filter row — single button + equations */}
+        <div className="flex items-center gap-2">
+          <motion.button
+            onClick={() => setFilterOpen(v => !v)}
+            className="flex items-center gap-2 px-3 rounded-full text-[11px] font-bold shrink-0"
+            style={{
+              height: 34,
+              background: paperFilter !== 'all' ? 'rgba(99,102,241,0.15)' : 'rgba(255,255,255,0.04)',
+              border: `1px solid ${paperFilter !== 'all' ? 'rgba(99,102,241,0.35)' : 'rgba(255,255,255,0.08)'}`,
+              color: paperFilter !== 'all' ? '#818cf8' : 'rgba(255,255,255,0.38)',
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 2.5, width: 11 }}>
+              <span style={{ height: 1.5, background: 'currentColor', borderRadius: 1, display: 'block' }} />
+              <span style={{ height: 1.5, background: 'currentColor', borderRadius: 1, display: 'block', width: '70%' }} />
+              <span style={{ height: 1.5, background: 'currentColor', borderRadius: 1, display: 'block', width: '40%' }} />
+            </span>
+            {paperFilter === 'all' ? 'All topics' : FILTERS.find(f => f.id === paperFilter)?.label ?? 'Filter'}
+          </motion.button>
           <motion.button
             onClick={() => navigate('/equation-drill')}
-            className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0 whitespace-nowrap"
-            style={{
-              height: 36,
-              background: 'rgba(99,102,241,0.07)',
-              border: '1px solid rgba(99,102,241,0.22)',
-              color: '#6366f1',
-            }}
+            className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0"
+            style={{ height: 34, background: 'rgba(99,102,241,0.07)', border: '1px solid rgba(99,102,241,0.2)', color: '#818cf8' }}
             whileTap={{ scale: 0.95 }}
           >
             ⚡ Equations
           </motion.button>
         </div>
+
+        {/* Filter pills — collapsible */}
+        <AnimatePresence>
+          {filterOpen && (
+            <motion.div
+              key="filter-pills"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div className="flex items-center gap-1.5 pt-2 pb-1 overflow-x-auto -mx-1 px-1" style={{ scrollbarWidth: 'none' }}>
+                {FILTERS.map(f => {
+                  const isActive = paperFilter === f.id
+                  return (
+                    <motion.button
+                      key={f.id}
+                      onClick={() => { setPaperFilter(f.id); setFilterOpen(false) }}
+                      className="flex items-center gap-1 px-3 rounded-full text-[11px] font-bold shrink-0 whitespace-nowrap"
+                      style={{
+                        height: 34,
+                        background: isActive ? `${f.color}20` : 'rgba(255,255,255,0.04)',
+                        border: isActive ? `1px solid ${f.color}50` : '1px solid rgba(255,255,255,0.08)',
+                        color: isActive ? f.color : 'rgba(255,255,255,0.32)',
+                        transition: 'all 0.18s ease',
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {isActive && <div className="w-1.5 h-1.5 rounded-full" style={{ background: f.color }} />}
+                      {f.label}
+                    </motion.button>
+                  )
+                })}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
 
       {/* ── Scrollable body ── */}
@@ -548,28 +595,7 @@ export default function LearnScreen() {
         {/* ── Normal content (hidden while searching) ── */}
         {!isSearching && <>
 
-        {/* ── Next milestone (inline, compact) ── */}
-        {nextBadge && (
-          <motion.div
-            className="rounded-[22px] px-4 py-3.5 flex items-center gap-3"
-            style={{ background: 'var(--np-card)', border: '1px solid rgba(255,255,255,0.08)' }}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-          >
-            <span style={{ fontSize: 22 }}>{nextBadge.emoji}</span>
-            <div className="flex-1 min-w-0">
-              <span className="text-[12px] font-semibold" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                Next milestone
-              </span>
-              <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{nextBadge.label}</div>
-              <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{nextBadge.hint}</div>
-            </div>
-            <Star size={15} color="rgba(255,255,255,0.25)" />
-          </motion.div>
-        )}
-
-        {/* ── Start here CTA (new users) ── */}
+{/* ── Start here CTA (new users) ── */}
         <AnimatePresence>
           {isNewUser && firstTopic && firstModule && (
             <motion.button

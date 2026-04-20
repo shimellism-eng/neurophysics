@@ -3,7 +3,7 @@
  * F10/F12: surfaces at 15 min (short) and 25 min (long).
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { X } from 'lucide-react'
+import { X } from '@phosphor-icons/react'
 
 export default function BreakNudge({ nudgeLevel, onDismiss, onSnooze }) {
   const isLong = nudgeLevel === 'long'

@@ -4,7 +4,7 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
+import { Warning, CheckCircle, XCircle } from '@phosphor-icons/react'
 
 export default function MisconceptionQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null
@@ -36,7 +36,7 @@ export default function MisconceptionQuestion({ data, moduleColor, onComplete })
         }}
       >
         <div className="flex items-center gap-2 mb-3">
-          <AlertTriangle size={14} color="#fdc700" />
+          <Warning size={14} color="#fdc700" />
           <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#fdc700' }}>
             True or false?
           </span>

@@ -5,7 +5,7 @@
 import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle2, XCircle, ChevronRight, BookOpen, MessageCircleQuestion } from 'lucide-react'
+import { CheckCircle, XCircle, CaretRight, BookOpen, ChatCircleDots } from '@phosphor-icons/react'
 import { ALL_QUESTIONS } from '../data/questionBank/index'
 import { useSRS } from '../hooks/useSRS'
 import { MODULES, TOPICS } from '../data/topics'
@@ -347,7 +347,7 @@ export default function MixedRevisionScreen() {
                       style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.55)', border: '0.75px solid rgba(255,255,255,0.1)', fontSize: 12, cursor: 'pointer' }}
                       onClick={() => goToTopic(q.topicId)}
                     >
-                      <BookOpen size={13} strokeWidth={2} />
+                      <BookOpen size={13} />
                       Show concept
                     </button>
                     {!isCorrect && (
@@ -365,7 +365,7 @@ export default function MixedRevisionScreen() {
                           navigate(`/mamo?${params.toString()}`)
                         }}
                       >
-                        <MessageCircleQuestion size={13} strokeWidth={2} />
+                        <ChatCircleDots size={13} />
                         Ask Mamo
                       </button>
                     )}
@@ -390,7 +390,7 @@ export default function MixedRevisionScreen() {
               onClick={handleNext}
             >
               {idx + 1 >= questions.length ? 'See results' : 'Next question'}
-              <ChevronRight size={20} strokeWidth={2.5} />
+              <CaretRight size={20} />
             </motion.button>
           </motion.div>
         )}

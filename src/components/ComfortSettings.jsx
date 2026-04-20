@@ -4,7 +4,7 @@
  */
 import { useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { X, Type, Palette, Volume2, BookOpen, Brain, RotateCcw } from 'lucide-react'
+import { X, TextT, Palette, SpeakerHigh, BookOpen, Brain, ArrowCounterClockwise } from '@phosphor-icons/react'
 import { useComfort, COMFORT_PRESETS, COMFORT_DEFAULTS } from '../context/ComfortContext'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useAuth } from '../context/AuthContext'
@@ -277,7 +277,7 @@ export default function ComfortSettings() {
               </Section>
 
               {/* Text & Reading */}
-              <Section icon={Type} title="Text & Reading">
+              <Section icon={TextT} title="Text & Reading">
                 <Row label="Font size" hint="0.8 – 1.6 rem">
                   <Slider
                     value={prefs.fontSize} min={0.8} max={1.6} step={0.05}
@@ -321,7 +321,7 @@ export default function ComfortSettings() {
               </Section>
 
               {/* Motion & Sound */}
-              <Section icon={Volume2} title="Motion & Sound">
+              <Section icon={SpeakerHigh} title="Motion & Sound">
                 <Row label="Reduced motion" hint="Disables animations and transitions">
                   <Toggle on={prefs.reduceMotion} onChange={v => setPref('reduceMotion', v)}
                     label="Reduced motion" />
@@ -384,7 +384,7 @@ export default function ComfortSettings() {
                   onClick={resetToDefaults}
                   aria-label="Reset all comfort settings to defaults"
                 >
-                  <RotateCcw size={16} />
+                  <ArrowCounterClockwise size={16} />
                   <span className="text-sm font-semibold">Reset to Defaults</span>
                 </button>
               </div>

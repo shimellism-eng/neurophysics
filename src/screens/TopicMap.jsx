@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle2, Zap, ChevronDown, ChevronUp, ArrowRight } from 'lucide-react'
+import { CheckCircle, Lightning, CaretDown, CaretUp, ArrowRight } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 
@@ -94,14 +94,14 @@ function TopicTile({ topic, moduleColor, masteryState, index, onTap }) {
               className="w-6 h-6 rounded-full flex items-center justify-center"
               style={{ background: `${moduleColor}25`, border: `1.5px solid ${moduleColor}60` }}
             >
-              <CheckCircle2 size={13} color={moduleColor} strokeWidth={2.5} />
+              <CheckCircle size={13} color={moduleColor} />
             </div>
           ) : isStarted ? (
             <div
               className="w-6 h-6 rounded-full flex items-center justify-center"
               style={{ background: 'rgba(251,191,36,0.15)', border: '1.5px solid rgba(251,191,36,0.5)' }}
             >
-              <Zap size={11} color="#fbbf24" strokeWidth={2.5} />
+              <Lightning size={11} color="#fbbf24" />
             </div>
           ) : (
             /* Untouched: open circle — tappable, not "locked" */
@@ -234,8 +234,8 @@ function ModuleCard({ module, moduleIndex, progress, isFirstUnstarted }) {
               style={{ background: 'rgba(255,255,255,0.05)' }}
             >
               {expanded
-                ? <ChevronUp size={13} color="rgba(255,255,255,0.4)" />
-                : <ChevronDown size={13} color="rgba(255,255,255,0.4)" />
+                ? <CaretUp size={13} color="rgba(255,255,255,0.4)" />
+                : <CaretDown size={13} color="rgba(255,255,255,0.4)" />
               }
             </div>
           </div>
@@ -356,7 +356,7 @@ export default function TopicMap() {
                 border: '1px solid rgba(34,197,94,0.3)',
               }}
             >
-              <CheckCircle2 size={12} color="#22c55e" />
+              <CheckCircle size={12} color="#22c55e" />
               <span className="text-xs font-bold" style={{ color: '#22c55e' }}>
                 {overallPct}% mastered
               </span>

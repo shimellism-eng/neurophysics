@@ -20,7 +20,7 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronDown, ChevronUp, Eye, EyeOff, Lightbulb, CheckCircle, ZoomIn } from 'lucide-react'
+import { CaretDown, CaretUp, Eye, EyeSlash, Lightbulb, CheckCircle, MagnifyingGlassPlus } from '@phosphor-icons/react'
 import { EXAM_DIAGRAMS } from '../../data/examDiagrams'
 
 export default function DiagramQuestion({ data, moduleColor, onComplete }) {
@@ -101,7 +101,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
             style={{ color: moduleColor, background: `${moduleColor}18`, border: `0.75px solid ${moduleColor}30` }}
             onClick={() => setZoomed(z => !z)}
           >
-            <ZoomIn size={10} />
+            <MagnifyingGlassPlus size={10} />
             {zoomed ? 'Shrink' : 'Zoom'}
           </button>
         </div>
@@ -213,7 +213,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
                 onClick={() => toggleReveal(p.part)}
               >
                 {revealed[p.part]
-                  ? <><EyeOff size={11} /> Hide</>
+                  ? <><EyeSlash size={11} /> Hide</>
                   : <><Eye size={11} /> Answer</>
                 }
               </button>
@@ -268,7 +268,7 @@ export default function DiagramQuestion({ data, moduleColor, onComplete }) {
             <span className="flex-1 text-left text-xs font-semibold">
               {showHint ? 'Hide hint' : 'Show hint'}
             </span>
-            {showHint ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+            {showHint ? <CaretUp size={13} /> : <CaretDown size={13} />}
           </button>
           <AnimatePresence>
             {showHint && (

@@ -8,10 +8,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {
-  ArrowLeft, Flag, ChevronUp, ChevronDown, Trophy,
-  Clock, CheckCircle, AlertCircle, BarChart3, BookOpen, Eye, EyeOff,
-} from 'lucide-react'
+import { ArrowLeft, Flag, CaretUp, CaretDown, Trophy, Clock, CheckCircle, Warning, ChartBar, BookOpen, Eye, EyeSlash } from '@phosphor-icons/react'
 import { getTimedPaperQuestions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
 import { useReducedMotion } from '../hooks/useReducedMotion'
@@ -568,7 +565,7 @@ export default function TimedPaper() {
   if (timesUp && !showResults) {
     return (
       <div className="flex flex-col h-full items-center justify-center gap-5 px-8" style={{ background: '#0b1121' }}>
-        <Clock size={64} color="#ef4444" strokeWidth={1.2} />
+        <Clock size={64} color="#ef4444" />
         <div className="text-2xl font-black text-center" style={{ color: '#f8fafc' }}>Time's up!</div>
         <div className="text-sm text-center" style={{ color: '#a8b8cc' }}>
           You answered {answeredCount} of {total} questions.
@@ -648,7 +645,7 @@ export default function TimedPaper() {
           aria-label={hideTimer ? 'Show timer' : 'Hide timer'}
         >
           {hideTimer
-            ? <EyeOff size={15} color="#8899b0" />
+            ? <EyeSlash size={15} color="#8899b0" />
             : <Eye size={15} color="#8899b0" />
           }
         </button>
@@ -772,7 +769,7 @@ export default function TimedPaper() {
             style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d', color: '#a8b8cc' }}
             onClick={() => setPaletteOpen(v => !v)}>
             <span className="text-xs font-bold">{answeredCount}/{total}</span>
-            {paletteOpen ? <ChevronDown size={15} /> : <ChevronUp size={15} />}
+            {paletteOpen ? <CaretDown size={15} /> : <CaretUp size={15} />}
           </button>
 
           {flaggedCount > 0 && (

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CheckCircle2, RefreshCw } from 'lucide-react'
+import { CheckCircle, ArrowClockwise } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
 
 // Spec: velocity=cyan, force=amber, energy=green, time=pink, mass=purple
@@ -303,7 +303,7 @@ export default function EquationBuilder({ equationData, moduleColor, onComplete 
                 className="flex items-center gap-2 mx-auto text-sm"
                 style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', padding: '4px 8px' }}
               >
-                <RefreshCw size={13} /> Try another rearrangement
+                <ArrowClockwise size={13} /> Try another rearrangement
               </button>
             </div>
           )}
@@ -342,7 +342,7 @@ export default function EquationBuilder({ equationData, moduleColor, onComplete 
       {practiceMode && solved && (
         <div className="rounded-[16px] p-4 mb-4" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.3)' }}>
           <div className="flex items-center gap-2 mb-3">
-            <CheckCircle2 size={18} color="#22c55e" />
+            <CheckCircle size={18} color="#22c55e" />
             <span className="font-bold text-sm" style={{ color: '#22c55e' }}>Solution</span>
           </div>
           <div className="flex flex-col gap-1.5 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>

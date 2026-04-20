@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { AlertCircle } from 'lucide-react'
+import { Warning } from '@phosphor-icons/react'
 import AtomIcon from '../components/AtomIcon'
 
 export default function SplashScreen() {
@@ -112,7 +112,7 @@ export default function SplashScreen() {
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <AlertCircle size={14} color="#ef4444" />
+            <Warning size={14} color="#ef4444" />
             <span className="text-xs" style={{ color: '#ef4444' }}>Please confirm your age to continue</span>
           </motion.div>
         )}

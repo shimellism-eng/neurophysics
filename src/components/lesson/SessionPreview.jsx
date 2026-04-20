@@ -4,7 +4,7 @@
  * Start / Not now actions. No forced start.
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { Clock } from 'lucide-react'
+import { Clock } from '@phosphor-icons/react'
 
 // Estimated minutes per step type
 const STEP_MINUTES = {

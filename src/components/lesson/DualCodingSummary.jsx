@@ -14,7 +14,7 @@
  */
 import { motion } from 'motion/react'
 import { useState } from 'react'
-import { BookOpen, Volume2, CheckCircle2, Mic } from 'lucide-react'
+import { BookOpen, SpeakerHigh, CheckCircle, Microphone } from '@phosphor-icons/react'
 
 export default function DualCodingSummary({ summary, moduleColor, topicTitle, onComplete }) {
   const { equation, sentence, promptText, DiagramComponent } = summary
@@ -73,7 +73,7 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
             onClick={handleSpeak}
             aria-label="Read aloud"
           >
-            <Volume2 size={10} />
+            <SpeakerHigh size={10} />
             Read aloud
           </button>
         </div>
@@ -148,7 +148,7 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
                 }}
                 onClick={handleVoiceNote}
               >
-                <Mic size={12} />
+                <Microphone size={12} />
                 {recording ? 'Recording…' : 'Voice note'}
               </button>
 
@@ -174,7 +174,7 @@ export default function DualCodingSummary({ summary, moduleColor, topicTitle, on
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
           >
-            <CheckCircle2 size={18} color="#4ade80" />
+            <CheckCircle size={18} color="#4ade80" />
             <div>
               <div className="text-xs font-bold" style={{ color: '#4ade80' }}>Saved for this session ✓</div>
               <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{userSummary}</p>

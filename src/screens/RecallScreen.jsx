@@ -9,7 +9,7 @@
 import { useState, useMemo, useCallback } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle2, RotateCcw, BookOpen } from 'lucide-react'
+import { CheckCircle, ArrowCounterClockwise, BookOpen } from '@phosphor-icons/react'
 import { TOPICS, MODULES } from '../data/topics'
 import { getRecallQuestions } from '../data/questionBank/index'
 import { getSelectedBoard } from '../utils/boardConfig'
@@ -170,7 +170,7 @@ export default function RecallScreen() {
                 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <RotateCcw size={14} className="inline mr-2" />
+                <ArrowCounterClockwise size={14} className="inline mr-2" />
                 Practise missed questions
               </motion.button>
             )}

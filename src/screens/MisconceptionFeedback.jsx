@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { ArrowLeft, CheckCircle, XCircle, RefreshCw, Map, Star, Zap } from 'lucide-react'
+import { ArrowLeft, CheckCircle, XCircle, ArrowClockwise, MapTrifold, Star, Lightning } from '@phosphor-icons/react'
 import { useEffect, useRef, useState } from 'react'
 import { TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
@@ -150,7 +150,7 @@ export default function MisconceptionFeedback() {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20, delay: 0.4 }}
               >
-                <Zap size={13} color="#fdc700" strokeWidth={2.5} />
+                <Lightning size={13} color="#fdc700" />
                 <span className="text-sm font-bold" style={{ color: '#fdc700' }}>+{xpEarned} XP</span>
               </motion.div>
             )}
@@ -294,7 +294,7 @@ export default function MisconceptionFeedback() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              <RefreshCw size={16} />
+              <ArrowClockwise size={16} />
               Try Again
             </motion.button>
           )}
@@ -314,7 +314,7 @@ export default function MisconceptionFeedback() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65 }}
           >
-            <Map size={16} />
+            <MapTrifold size={16} />
             Topic Map
           </motion.button>
         </div>

@@ -5,7 +5,7 @@
  * autistic learners need the "why" before investing attention.
  */
 import { motion } from 'motion/react'
-import { Zap, Volume2 } from 'lucide-react'
+import { Lightning, SpeakerHigh } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
 
 export default function HookCard({ hook, moduleColor, onReady }) {
@@ -68,7 +68,7 @@ export default function HookCard({ hook, moduleColor, onReady }) {
               color: moduleColor,
             }}
           >
-            <Zap size={12} />
+            <Lightning size={12} />
             Did you know?
           </div>
           {ttsEnabled && (
@@ -78,7 +78,7 @@ export default function HookCard({ hook, moduleColor, onReady }) {
               onClick={() => speak(hookFact + '. ' + hookQuestion)}
               aria-label="Read aloud"
             >
-              <Volume2 size={10} />
+              <SpeakerHigh size={10} />
               Read
             </button>
           )}

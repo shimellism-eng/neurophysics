@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import {
-  Trophy, ChevronRight, ChevronLeft, BookOpen,
-  BarChart3, Lightbulb, Clock, Target, Star, ArrowLeft,
-} from 'lucide-react'
+  Trophy, CaretRight, CaretLeft, BookOpen,
+  ChartBar, Lightbulb, Clock, Target, Star, ArrowLeft,
+} from '@phosphor-icons/react'
 
 import { getSelectedBoard, CCEA_BOUNDARIES } from '../utils/boardConfig'
 
@@ -291,7 +291,7 @@ function StageNumber({ score, total, timeUsed, onNext }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          See Breakdown <ChevronRight size={18} />
+          See Breakdown <CaretRight size={18} />
         </motion.button>
       </div>
     </div>
@@ -332,7 +332,7 @@ function StageBreakdown({ questions, answers, timeUsed, onNext, onBack }) {
           animate={{ opacity: 1, y: 0 }}
         >
           <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(99,102,241,0.15)' }}>
-            <BarChart3 size={20} color="#6366f1" />
+            <ChartBar size={20} color="#6366f1" />
           </div>
           <div>
             <h2 className="text-lg font-bold" style={{ color: '#f8fafc' }}>The Breakdown</h2>
@@ -427,7 +427,7 @@ function StageBreakdown({ questions, answers, timeUsed, onNext, onBack }) {
           style={{ background: 'rgba(18,26,47,0.8)', color: '#94a3b8', border: '0.75px solid #1d293d' }}
           onClick={onBack}
         >
-          <ChevronLeft size={16} /> Back
+          <CaretLeft size={16} /> Back
         </button>
         <motion.button
           className="flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-bold text-white"
@@ -435,7 +435,7 @@ function StageBreakdown({ questions, answers, timeUsed, onNext, onBack }) {
           onClick={onNext}
           whileTap={{ scale: 0.97 }}
         >
-          The Plan <ChevronRight size={18} />
+          The Plan <CaretRight size={18} />
         </motion.button>
       </div>
     </div>
@@ -527,7 +527,7 @@ function StageThePlan({ questions, answers, onDone }) {
                     <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444' }}>
                       Practice
                     </span>
-                    <ChevronRight size={16} color="#ef4444" />
+                    <CaretRight size={16} color="#ef4444" />
                   </div>
                 </motion.button>
               ))}
@@ -610,7 +610,7 @@ function StageThePlan({ questions, answers, onDone }) {
               <p className="text-xs" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
             </div>
           </div>
-          <ChevronRight size={18} color="#a855f7" />
+          <CaretRight size={18} color="#a855f7" />
         </motion.button>
       </div>
 
@@ -662,7 +662,7 @@ export default function PaperResults() {
           style={{ background: 'rgba(18,26,47,0.8)' }}
           onClick={() => navigate('/')}
         >
-          <ChevronLeft size={20} color="#94a3b8" />
+          <CaretLeft size={20} color="#94a3b8" />
         </button>
 
         <div className="flex items-center gap-2">

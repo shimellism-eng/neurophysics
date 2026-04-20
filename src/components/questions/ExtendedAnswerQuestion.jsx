@@ -6,7 +6,7 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { Lightbulb, CheckCircle, XCircle, Loader2, AlertCircle } from 'lucide-react'
+import { Lightbulb, CheckCircle, XCircle, CircleNotch, Warning } from '@phosphor-icons/react'
 import { supabase } from '../../lib/supabase'
 import { getValidatedBoard } from '../../utils/boardConfig'
 
@@ -194,7 +194,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
             exit={{ opacity: 0 }}
             className="flex flex-col items-center gap-4 py-8"
           >
-            <Loader2 size={32} color={moduleColor} className="animate-spin" />
+            <CircleNotch size={32} color={moduleColor} className="animate-spin" />
             <p className="text-sm font-semibold" style={{ color: '#a8b8cc' }}>
               Mamo is marking your answer…
             </p>
@@ -327,7 +327,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
           >
             <div className="flex items-center gap-2 px-4 py-3 rounded-[12px]"
               style={{ background: 'rgba(239,68,68,0.08)', border: '0.75px solid rgba(239,68,68,0.25)' }}>
-              <AlertCircle size={15} color="#ef4444" style={{ flexShrink: 0 }} />
+              <Warning size={15} color="#ef4444" style={{ flexShrink: 0 }} />
               <p className="text-xs" style={{ color: '#ef4444' }}>
                 AI marking unavailable — self-rate your answer instead.
               </p>

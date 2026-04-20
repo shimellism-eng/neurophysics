@@ -7,7 +7,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, Map, CheckCircle2, XCircle } from 'lucide-react'
+import { CaretRight, MapTrifold, CheckCircle, XCircle } from '@phosphor-icons/react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 
@@ -66,7 +66,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
             }}
           >
             <div className="flex items-center gap-2 mb-3">
-              <Map size={13} color={moduleColor} />
+              <MapTrifold size={13} color={moduleColor} />
               <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: moduleColor }}>
                 Where this fits
               </span>
@@ -179,7 +179,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
                   onClick={() => handleSelect(i)}
                 >
                   <span className="flex items-center gap-2">
-                    {showIcon && isCorrect && <CheckCircle2 size={15} color="#4ade80" style={{ flexShrink: 0 }} />}
+                    {showIcon && isCorrect && <CheckCircle size={15} color="#4ade80" style={{ flexShrink: 0 }} />}
                     {showIcon && !isCorrect && isSelected && <XCircle size={15} color="#ef4444" style={{ flexShrink: 0 }} />}
                     <span>{ans}</span>
                   </span>
@@ -246,7 +246,7 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
               animate={{ opacity: 1, y: 0 }}
             >
               {qIndex + 1 < questions.length ? 'Next question' : 'See where this fits'}
-              <ChevronRight size={16} strokeWidth={2.5} />
+              <CaretRight size={16} />
             </motion.button>
           )}
         </motion.div>

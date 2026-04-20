@@ -6,7 +6,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Shield, Check, ChevronRight, AlertTriangle } from 'lucide-react'
+import { Shield, Check, CaretRight, Warning } from '@phosphor-icons/react'
 
 const CURRENT_YEAR = new Date().getFullYear()
 
@@ -151,7 +151,7 @@ export default function ConsentScreen() {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
               >
-                <AlertTriangle size={14} color="#f87171" style={{ flexShrink: 0, marginTop: 1 }} />
+                <Warning size={14} color="#f87171" style={{ flexShrink: 0, marginTop: 1 }} />
                 <p className="text-xs leading-relaxed" style={{ color: '#fca5a5' }}>
                   NeuroPhysics requires users to be 13 or older. If you are under 13,
                   please ask a parent or guardian to create an account on your behalf.
@@ -171,7 +171,7 @@ export default function ConsentScreen() {
                 exit={{ opacity: 0, height: 0 }}
               >
                 <div className="flex items-start gap-2">
-                  <AlertTriangle size={14} color="#f39c12" style={{ flexShrink: 0, marginTop: 1 }} />
+                  <Warning size={14} color="#f39c12" style={{ flexShrink: 0, marginTop: 1 }} />
                   <p className="text-xs leading-relaxed" style={{ color: '#fde68a' }}>
                     You're under 16. A parent or guardian should review our{' '}
                     <span style={{ color: '#f39c12', textDecoration: 'underline' }}>Privacy Policy</span>{' '}
@@ -195,7 +195,7 @@ export default function ConsentScreen() {
                       transition: 'all 0.2s',
                     }}
                   >
-                    {parentalConsent && <Check size={14} color="#fff" strokeWidth={2.5} />}
+                    {parentalConsent && <Check size={14} color="#fff" />}
                   </div>
                   <p className="text-xs font-semibold leading-relaxed" style={{ color: parentalConsent ? '#fde68a' : '#a8b8cc' }}>
                     My parent or guardian has agreed to me using this app
@@ -236,7 +236,7 @@ export default function ConsentScreen() {
                     transition: 'all 0.2s',
                   }}
                 >
-                  {ageConfirmed && <Check size={14} color="#fff" strokeWidth={2.5} />}
+                  {ageConfirmed && <Check size={14} color="#fff" />}
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold" style={{ color: ageConfirmed ? '#818cf8' : '#f8fafc' }}>
@@ -270,7 +270,7 @@ export default function ConsentScreen() {
                 transition: 'all 0.2s',
               }}
             >
-              {termsRead && <Check size={14} color="#fff" strokeWidth={2.5} />}
+              {termsRead && <Check size={14} color="#fff" />}
             </div>
             <div className="flex-1">
               <p className="text-sm font-semibold" style={{ color: termsRead ? '#818cf8' : '#f8fafc' }}>
@@ -327,7 +327,7 @@ export default function ConsentScreen() {
           transition={{ delay: 0.3, duration: 0.4 }}
         >
           Get Started
-          <ChevronRight size={18} strokeWidth={2.5} />
+          <CaretRight size={18} />
         </motion.button>
 
       </div>

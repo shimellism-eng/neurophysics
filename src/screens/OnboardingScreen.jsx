@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User, Zap, Brain, Trophy, GraduationCap, CalendarDays, Pencil, Target, ChevronLeft } from 'lucide-react'
+import { Check, ArrowRight, User, Lightning, Brain, Trophy, GraduationCap, CalendarBlank, Pencil, Target, CaretLeft } from '@phosphor-icons/react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
@@ -65,7 +65,7 @@ function OptionCard({ option, enabled, onToggle, index }) {
           border: enabled ? 'none' : '0.75px solid #2d3e55',
         }}
       >
-        {enabled && <Check size={14} color="#fff" strokeWidth={2.5} />}
+        {enabled && <Check size={14} color="#fff" />}
       </div>
     </motion.button>
   )
@@ -81,7 +81,7 @@ function StepValueProp({ onNext }) {
       desc: 'Dyslexia-friendly fonts, TTS, focus mode, and spaced repetition — all built in.',
     },
     {
-      icon: Zap,
+      icon: Lightning,
       color: '#f97316',
       title: 'AI tutor on tap',
       desc: 'Mamo explains concepts in plain English, 24/7 — no judgement, no rush.',
@@ -551,7 +551,7 @@ function StepAccessibility({ onNext, onSkip }) {
                     border: isSelected ? 'none' : '0.75px solid rgba(255,255,255,0.18)',
                   }}
                 >
-                  {isSelected && <Check size={14} color="#0b1121" strokeWidth={2.5} />}
+                  {isSelected && <Check size={14} color="#0b1121" />}
                 </div>
               </motion.button>
             )
@@ -854,7 +854,7 @@ function StepBoard({ onNext, reducedMotion }) {
                       className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
                       style={{ background: board.color }}
                     >
-                      <Check size={13} color="#fff" strokeWidth={2.5} />
+                      <Check size={13} color="#fff" />
                     </div>
                   )}
                 </motion.button>
@@ -958,7 +958,7 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
             style={{ background: 'rgba(255,255,255,0.05)', border: '0.75px solid rgba(255,255,255,0.08)' }}
             aria-label="Go back to board selection"
           >
-            <ChevronLeft size={20} color="#a8b8cc" />
+            <CaretLeft size={20} color="#a8b8cc" />
           </button>
           <div className="flex items-center gap-2 mb-6">
             <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
@@ -1029,7 +1029,7 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
               <div className="px-5 py-4 flex items-center gap-3">
                 <div className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
                   style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.22)' }}>
-                  <CalendarDays size={18} color="#6366f1" />
+                  <CalendarBlank size={18} color="#6366f1" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>When's your exam?</div>
@@ -1097,7 +1097,7 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
                   {sel && (
                     <div className="absolute top-2.5 right-2.5 w-4 h-4 rounded-full flex items-center justify-center"
                       style={{ background: color }}>
-                      <Check size={9} color="#fff" strokeWidth={3} />
+                      <Check size={9} color="#fff" />
                     </div>
                   )}
                   <span className="font-black leading-none" style={{ fontSize: 26, color: sel ? color : 'rgba(255,255,255,0.75)', letterSpacing: '-0.03em' }}>
@@ -1138,7 +1138,7 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
           whileTap={{ scale: 0.97 }}
         >
           Let's go
-          <ArrowRight size={18} strokeWidth={2.5} />
+          <ArrowRight size={18} />
         </motion.button>
         {!grade && (
           <p className="text-center text-xs mt-2" style={{ color: '#6b7d8f' }}>Grade 7 selected by default — tap a tile to change</p>

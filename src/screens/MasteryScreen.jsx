@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Circle, Zap, Trophy, Star, Clock, ChevronRight } from 'lucide-react'
+import { CheckCircle, Circle, Lightning, Trophy, Star, Clock, CaretRight } from '@phosphor-icons/react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
@@ -138,7 +138,7 @@ function NextMilestoneCard({ badge }) {
         <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{badge.label}</div>
         <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.38)' }}>{badge.hint}</div>
       </div>
-      <Star size={16} color={badge.color} strokeWidth={1.5} />
+      <Star size={16} color={badge.color} />
     </motion.div>
   )
 }
@@ -300,7 +300,7 @@ export default function MasteryScreen() {
                     <span className="text-xs font-semibold" style={{ color: '#64748b' }}>{mastered.length} done</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Zap size={12} color="#fdc700" />
+                    <Lightning size={12} color="#fdc700" />
                     <span className="text-xs font-semibold" style={{ color: '#64748b' }}>{started.length} active</span>
                   </div>
                 </div>
@@ -503,8 +503,8 @@ export default function MasteryScreen() {
                       {isMastered
                         ? <CheckCircle size={11} />
                         : isStarted
-                          ? <Zap size={11} />
-                          : <Circle size={11} strokeWidth={1.5} />}
+                          ? <Lightning size={11} />
+                          : <Circle size={11} />}
                       {t?.title}
                     </motion.button>
                   )
@@ -545,7 +545,7 @@ export default function MasteryScreen() {
               <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Chained calcs · RPA errors · Novel context</p>
             </div>
           </div>
-          <ChevronRight size={18} color="rgba(168,85,247,0.6)" />
+          <CaretRight size={18} color="rgba(168,85,247,0.6)" />
         </motion.button>
 
         <motion.button
@@ -571,7 +571,7 @@ export default function MasteryScreen() {
               <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
             </div>
           </div>
-          <ChevronRight size={18} color="rgba(99,102,241,0.5)" />
+          <CaretRight size={18} color="rgba(99,102,241,0.5)" />
         </motion.button>
       </div>
 

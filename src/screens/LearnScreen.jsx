@@ -1,10 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {
-  CheckCircle2, Zap, ChevronDown, ChevronUp,
-  ArrowRight, Trophy, Clock, ChevronRight, Star, Search, X,
-} from 'lucide-react'
+import { CheckCircle, Lightning, CaretDown, CaretUp, ArrowRight, Trophy, Clock, CaretRight, Star, MagnifyingGlass, X } from '@phosphor-icons/react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard, getSelectedCourse } from '../utils/boardConfig'
@@ -80,7 +77,7 @@ function TopicTile({ topic, moduleColor, masteryState, index, onTap }) {
         style={{ background: isMastered ? `${moduleColor}22` : 'rgba(255,255,255,0.05)' }}
       >
         {isMastered ? (
-          <CheckCircle2 size={12} color={moduleColor} strokeWidth={2.5} />
+          <CheckCircle size={12} color={moduleColor} />
         ) : isStarted ? (
           <div className="w-2 h-2 rounded-full" style={{ background: '#6366f1' }} />
         ) : (
@@ -182,8 +179,8 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
             <div className="w-6 h-6 rounded-full flex items-center justify-center"
               style={{ background: 'rgba(255,255,255,0.05)' }}>
               {expanded
-                ? <ChevronUp size={13} color="rgba(255,255,255,0.4)" />
-                : <ChevronDown size={13} color="rgba(255,255,255,0.4)" />}
+                ? <CaretUp size={13} color="rgba(255,255,255,0.4)" />
+                : <CaretDown size={13} color="rgba(255,255,255,0.4)" />}
             </div>
           </div>
         </div>
@@ -418,7 +415,7 @@ export default function LearnScreen() {
 
         {/* Search bar */}
         <div className="relative mb-3">
-          <Search size={14} color="rgba(255,255,255,0.25)"
+          <MagnifyingGlass size={14} color="rgba(255,255,255,0.25)"
             style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} />
           <input
             type="search"
@@ -542,10 +539,10 @@ export default function LearnScreen() {
                         </div>
                       </div>
                       {state === 'mastered' && (
-                        <CheckCircle2 size={16} color={mod.color} />
+                        <CheckCircle size={16} color={mod.color} />
                       )}
                       {state === 'started' && (
-                        <Zap size={14} color="#fbbf24" />
+                        <Lightning size={14} color="#fbbf24" />
                       )}
                     </motion.button>
                   )
@@ -575,7 +572,7 @@ export default function LearnScreen() {
               <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{nextBadge.label}</div>
               <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{nextBadge.hint}</div>
             </div>
-            <Star size={15} color={nextBadge.color} strokeWidth={1.5} />
+            <Star size={15} color={nextBadge.color} />
           </motion.div>
         )}
 
@@ -622,7 +619,7 @@ export default function LearnScreen() {
                 animate={{ x: [0, 4, 0] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <ArrowRight size={22} color="rgba(255,255,255,0.85)" strokeWidth={2.5} />
+                <ArrowRight size={22} color="rgba(255,255,255,0.85)" />
               </motion.div>
             </motion.button>
           )}
@@ -686,7 +683,7 @@ export default function LearnScreen() {
                   <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Hard exam questions · Unusual scenarios</p>
                 </div>
               </div>
-              <ChevronRight size={18} color="rgba(168,85,247,0.6)" />
+              <CaretRight size={18} color="rgba(168,85,247,0.6)" />
             </motion.button>
 
             <motion.button
@@ -709,7 +706,7 @@ export default function LearnScreen() {
                   <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
                 </div>
               </div>
-              <ChevronRight size={18} color="rgba(99,102,241,0.5)" />
+              <CaretRight size={18} color="rgba(99,102,241,0.5)" />
             </motion.button>
           </motion.div>
         )}

@@ -4,7 +4,7 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, XCircle, RotateCcw } from 'lucide-react'
+import { CheckCircle, XCircle, ArrowCounterClockwise } from '@phosphor-icons/react'
 
 export default function SequenceSortQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null
@@ -61,7 +61,7 @@ export default function SequenceSortQuestion({ data, moduleColor, onComplete }) 
               style={{ color: '#a8b8cc', background: 'none', border: 'none' }}
               onClick={handleReset}
             >
-              <RotateCcw size={11} />
+              <ArrowCounterClockwise size={11} />
               Reset
             </button>
           )}

@@ -13,7 +13,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, Lightbulb, CheckCircle2, XCircle, Star, Volume2 } from 'lucide-react'
+import { CaretRight, Lightbulb, CheckCircle, XCircle, Star, SpeakerHigh } from '@phosphor-icons/react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 import { speak } from '../../utils/tts'
@@ -32,7 +32,7 @@ function TTSButton({ text, moduleColor }) {
       onClick={() => speak(text)}
       aria-label="Read question aloud"
     >
-      <Volume2 size={10} />
+      <SpeakerHigh size={10} />
       Read
     </button>
   )
@@ -178,7 +178,7 @@ function FeedbackBanner({ correct, correctAnswer, answerUnit, moduleColor }) {
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
       {correct
-        ? <CheckCircle2 size={20} color="#4ade80" style={{ flexShrink: 0, marginTop: 1 }} />
+        ? <CheckCircle size={20} color="#4ade80" style={{ flexShrink: 0, marginTop: 1 }} />
         : <XCircle size={20} color="#a5b4fc" style={{ flexShrink: 0, marginTop: 1 }} />
       }
       <div>
@@ -306,7 +306,7 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             animate={{ opacity: 1, y: 0 }}
           >
             Next tier
-            <ChevronRight size={16} strokeWidth={2.5} />
+            <CaretRight size={16} />
           </motion.button>
         </div>
       )}
@@ -441,7 +441,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             animate={{ opacity: 1, y: 0 }}
           >
             Final tier - on your own
-            <ChevronRight size={16} strokeWidth={2.5} />
+            <CaretRight size={16} />
           </motion.button>
         </div>
       )}
@@ -480,7 +480,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
           }}
         >
           {isCorrect
-            ? <CheckCircle2 size={32} color="#4ade80" />
+            ? <CheckCircle size={32} color="#4ade80" />
             : <Lightbulb size={32} color={moduleColor} />
           }
         </div>
@@ -630,7 +630,6 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
                           size={32}
                           color={active ? '#fdc700' : 'rgba(255,255,255,0.12)'}
                           fill={active ? '#fdc700' : 'none'}
-                          strokeWidth={1.5}
                         />
                       </motion.div>
                       <span

@@ -5,7 +5,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, Trophy, Star, ChevronRight, RotateCcw } from 'lucide-react'
+import { ArrowLeft, Trophy, Star, CaretRight, ArrowCounterClockwise } from '@phosphor-icons/react'
 import { getGrade9Questions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
 import { getSelectedBoard } from '../utils/boardConfig'
@@ -190,7 +190,7 @@ export default function Grade9Challenge() {
         </div>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', delay: 0.1 }}>
-            <Trophy size={72} color={isTop ? '#fdc700' : isMid ? '#a855f7' : '#64748b'} strokeWidth={1.2} />
+            <Trophy size={72} color={isTop ? '#fdc700' : isMid ? '#a855f7' : '#64748b'} />
           </motion.div>
 
           <motion.div className="text-center" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}>
@@ -231,7 +231,7 @@ export default function Grade9Challenge() {
               className="flex-1 py-3.5 rounded-[14px] text-sm font-bold flex items-center justify-center gap-2"
               style={{ background: 'rgba(168,85,247,0.12)', border: '0.75px solid rgba(168,85,247,0.3)', color: '#c084fc' }}
               onClick={restart} whileTap={{ scale: 0.96 }}>
-              <RotateCcw size={15} /> Try again
+              <ArrowCounterClockwise size={15} /> Try again
             </motion.button>
             <motion.button
               className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
@@ -257,7 +257,7 @@ export default function Grade9Challenge() {
           </button>
         </div>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-6">
-          <Trophy size={56} color="#a855f7" strokeWidth={1.3} />
+          <Trophy size={56} color="#a855f7" />
           <div className="text-center">
             <div className="text-2xl font-black mb-1" style={{ color: '#f8fafc' }}>{challengeTitle}</div>
             <div className="text-sm" style={{ color: '#64748b' }}>Chained calcs · RPA errors · Novel context</div>
@@ -386,7 +386,7 @@ export default function Grade9Challenge() {
             style={{ background: '#7c3aed', color: '#fff',
               boxShadow: '0 4px 20px rgba(168,85,247,0.4)' }}
             onClick={handleNext} whileTap={{ scale: 0.97 }}>
-            {isLast ? 'See results' : 'Next question'} <ChevronRight size={18} />
+            {isLast ? 'See results' : 'Next question'} <CaretRight size={18} />
           </motion.button>
         </motion.div>
       )}

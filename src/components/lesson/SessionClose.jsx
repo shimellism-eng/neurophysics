@@ -13,7 +13,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle2, ChevronRight, GraduationCap, CalendarClock } from 'lucide-react'
+import { CheckCircle, CaretRight, GraduationCap, CalendarBlank } from '@phosphor-icons/react'
 import { useEffect, useState } from 'react'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 
@@ -120,7 +120,7 @@ export default function SessionClose({
               border: `1.5px solid ${topic.moduleColor}35`,
             }}
           >
-            <CheckCircle2 size={40} color={topic.moduleColor} strokeWidth={2} />
+            <CheckCircle size={40} color={topic.moduleColor} />
           </div>
           {/* Confetti dots */}
           <AnimatePresence>
@@ -194,7 +194,7 @@ export default function SessionClose({
         animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
         transition={{ delay: reducedMotion ? 0 : 0.26, duration: reducedMotion ? 0 : 0.35 }}
       >
-        <CalendarClock size={16} color="#818cf8" style={{ marginTop: 2, flexShrink: 0 }} />
+        <CalendarBlank size={16} color="#818cf8" style={{ marginTop: 2, flexShrink: 0 }} />
         <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
           This will come up again in{' '}
           <strong style={{ color: topic.moduleColor }}>1 day</strong>
@@ -221,7 +221,7 @@ export default function SessionClose({
           transition={{ delay: reducedMotion ? 0 : 0.33 }}
         >
           Test Your Knowledge
-          <ChevronRight size={20} strokeWidth={2.5} />
+          <CaretRight size={20} />
         </motion.button>
 
         {examCount > 0 && (

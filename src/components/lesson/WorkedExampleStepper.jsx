@@ -12,7 +12,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, AlertTriangle, CheckCircle2, Volume2 } from 'lucide-react'
+import { CaretRight, Warning, CheckCircle, SpeakerHigh } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
 
 function StepBubble({ number, color }) {
@@ -75,7 +75,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
                 onClick={() => speak(`${title}. ${context || ''} Equation: ${equation}. ${steps.slice(0, revealed).map(s => s.action + ': ' + s.result).join('. ')}`)}
                 aria-label="Read worked example aloud"
               >
-                <Volume2 size={10} />
+                <SpeakerHigh size={10} />
                 Read
               </button>
             )}
@@ -168,7 +168,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
               }}
             >
               <div style={{ boxShadow: '0 0 12px rgba(239,68,68,0.3)', borderRadius: 999, flexShrink: 0, marginTop: 2 }}>
-                <AlertTriangle size={16} color="#f87171" />
+                <Warning size={16} color="#f87171" />
               </div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest mb-1.5" style={{ color: '#f87171' }}>
@@ -198,7 +198,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
               style={{ background: 'rgba(34,197,94,0.07)' }}
             >
               <div style={{ boxShadow: '0 0 12px rgba(34,197,94,0.25)', borderRadius: 999, flexShrink: 0, marginTop: 2 }}>
-                <CheckCircle2 size={16} color="#4ade80" />
+                <CheckCircle size={16} color="#4ade80" />
               </div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest mb-1.5" style={{ color: '#4ade80' }}>
@@ -257,7 +257,7 @@ export default function WorkedExampleStepper({ workedExample, moduleColor, onCom
             : misconceptionAfter && !showMisconception
               ? 'See a common mistake'
               : 'I understand this - let me try'}
-          <ChevronRight size={16} strokeWidth={2.5} />
+          <CaretRight size={16} />
         </motion.button>
       )}
     </div>

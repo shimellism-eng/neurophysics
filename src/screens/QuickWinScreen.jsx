@@ -5,7 +5,7 @@
 import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle2, XCircle, ChevronRight, Zap, BookOpen, MessageCircleQuestion } from 'lucide-react'
+import { CheckCircle, XCircle, CaretRight, Lightning, BookOpen, ChatCircleDots } from '@phosphor-icons/react'
 import { ALL_QUESTIONS } from '../data/questionBank/index'
 import { useSRS } from '../hooks/useSRS'
 import { TOPICS, MODULES } from '../data/topics'
@@ -127,8 +127,8 @@ function ResultScreen({ questions, answers, onDone }) {
               className="flex items-start gap-3 px-4 py-3"
               style={{ borderTop: i === 0 ? 'none' : '0.75px solid rgba(255,255,255,0.06)' }}>
               {wasCorrect
-                ? <CheckCircle2 size={18} color="#4ade80" strokeWidth={2} style={{ flexShrink: 0, marginTop: 2 }} />
-                : <XCircle     size={18} color="#f87171" strokeWidth={2} style={{ flexShrink: 0, marginTop: 2 }} />}
+                ? <CheckCircle size={18} color="#4ade80" style={{ flexShrink: 0, marginTop: 2 }} />
+                : <XCircle     size={18} color="#f87171" style={{ flexShrink: 0, marginTop: 2 }} />}
               <div className="flex-1 min-w-0">
                 <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', marginBottom: 2 }}>{topicLabel(q)}</div>
                 <div className="line-clamp-2" style={{ fontSize: 13, color: wasCorrect ? '#f8fafc' : 'rgba(255,255,255,0.6)' }}>
@@ -347,7 +347,7 @@ export default function QuickWinScreen() {
                       style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.55)', border: '0.75px solid rgba(255,255,255,0.1)', fontSize: 12, cursor: 'pointer' }}
                       onClick={() => goToTopic(q.topicId)}
                     >
-                      <BookOpen size={13} strokeWidth={2} />
+                      <BookOpen size={13} />
                       Show concept
                     </button>
                     {!isCorrect && (
@@ -365,7 +365,7 @@ export default function QuickWinScreen() {
                           navigate(`/mamo?${params.toString()}`)
                         }}
                       >
-                        <MessageCircleQuestion size={13} strokeWidth={2} />
+                        <ChatCircleDots size={13} />
                         Ask Mamo
                       </button>
                     )}
@@ -395,7 +395,7 @@ export default function QuickWinScreen() {
               onClick={handleNext}
             >
               {idx + 1 >= questions.length ? 'See results' : 'Next question'}
-              <ChevronRight size={20} strokeWidth={2.5} />
+              <CaretRight size={20} />
             </motion.button>
           </motion.div>
         )}

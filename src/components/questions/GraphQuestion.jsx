@@ -4,7 +4,7 @@
  */
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, CheckCircle2, XCircle, Lightbulb, Calculator } from 'lucide-react'
+import { CheckCircle, XCircle, Lightbulb, Calculator } from '@phosphor-icons/react'
 
 const GRAPH_W = 300
 const GRAPH_H = 180
@@ -165,7 +165,7 @@ export default function GraphQuestion({ data, moduleColor, onComplete }) {
           />
           {submitted && (
             isCorrect
-              ? <CheckCircle2 size={18} color="#00bc7d" style={{ marginRight: 10, flexShrink: 0 }} />
+              ? <CheckCircle size={18} color="#00bc7d" style={{ marginRight: 10, flexShrink: 0 }} />
               : <XCircle size={18} color="#ef4444" style={{ marginRight: 10, flexShrink: 0 }} />
           )}
           {answerUnit && (

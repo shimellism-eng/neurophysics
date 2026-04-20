@@ -4,7 +4,7 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, XCircle, Lightbulb, RotateCcw } from 'lucide-react'
+import { CheckCircle, XCircle, Lightbulb, ArrowCounterClockwise } from '@phosphor-icons/react'
 
 export default function FillStepsQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null
@@ -151,7 +151,7 @@ export default function FillStepsQuestion({ data, moduleColor, onComplete }) {
             onClick={handleReset}
             whileTap={{ scale: 0.95 }}
           >
-            <RotateCcw size={12} /> Reset
+            <ArrowCounterClockwise size={12} /> Reset
           </motion.button>
           <motion.button
             className="flex-1 py-3 rounded-[12px] font-semibold text-sm"

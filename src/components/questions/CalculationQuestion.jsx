@@ -4,7 +4,7 @@
  */
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, CheckCircle2, XCircle, Lightbulb, Calculator, ChevronRight, ChevronDown } from 'lucide-react'
+import { CheckCircle, XCircle, Lightbulb, Calculator, CaretRight, CaretDown } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
 
 const GROWTH_FRAMES = [
@@ -95,7 +95,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
           <span className="flex items-center gap-2">
             <span>📐</span> See how this type of question works
           </span>
-          <ChevronDown size={14} style={{ transform: showExample ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+          <CaretDown size={14} style={{ transform: showExample ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
         </button>
 
         {showExample && (
@@ -149,7 +149,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
           {submitted && (
             <span className="pr-3 shrink-0">
               {isCorrect
-                ? <CheckCircle2 size={18} color="#22c55e" />
+                ? <CheckCircle size={18} color="#22c55e" />
                 : <XCircle size={18} color="#ef4444" />}
             </span>
           )}
@@ -181,7 +181,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
                 border: isCorrect ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)',
               }}
             >
-              {isCorrect ? <CheckCircle2 size={20} color="#22c55e" /> : <XCircle size={20} color="#ef4444" />}
+              {isCorrect ? <CheckCircle size={20} color="#22c55e" /> : <XCircle size={20} color="#ef4444" />}
               <div>
                 <span className="text-sm font-semibold block" style={{ color: isCorrect ? '#00bc7d' : '#ef4444' }}>
                   {isCorrect ? 'Spot on! 🌟' : 'Great attempt — here\'s how to work it out:'}
@@ -242,7 +242,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
                     whileTap={{ scale: 0.96 }}
                   >
                     Show step {revealStep + 1}
-                    <ChevronRight size={12} />
+                    <CaretRight size={12} />
                   </motion.button>
                 )}
               </div>

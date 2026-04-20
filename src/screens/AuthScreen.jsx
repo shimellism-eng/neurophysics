@@ -6,7 +6,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Eye, EyeOff, AlertCircle, ArrowLeft, CheckCircle2, Mail } from 'lucide-react'
+import { Eye, EyeSlash, Warning, ArrowLeft, CheckCircle, Envelope } from '@phosphor-icons/react'
 import { useAuth } from '../context/AuthContext'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
@@ -241,7 +241,7 @@ function Input({ label, type = 'text', value, onChange, placeholder, error, auto
           initial={{ opacity: 0, y: -4 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <AlertCircle size={11} />
+          <Warning size={11} />
           {error}
         </motion.p>
       )}
@@ -268,7 +268,7 @@ function PasswordInput({ label, value, onChange, error, autoComplete, placeholde
           aria-label={show ? 'Hide password' : 'Show password'}
           style={{ color: '#a8b8cc', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
         >
-          {show ? <EyeOff size={16} /> : <Eye size={16} />}
+          {show ? <EyeSlash size={16} /> : <Eye size={16} />}
         </button>
       }
     />
@@ -473,7 +473,7 @@ function Landing({ onEmail, onSignIn }) {
 
           {/* Email */}
           <OAuthButton
-            icon={<Mail size={17} color="#fff" />}
+            icon={<Envelope size={17} color="#fff" />}
             label="Continue with Email"
             onClick={onEmail}
             style={{
@@ -495,7 +495,7 @@ function Landing({ onEmail, onSignIn }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <AlertCircle size={14} color="#ef4444" />
+              <Warning size={14} color="#ef4444" />
               <span className="text-xs" style={{ color: '#ef4444' }}>{oauthError}</span>
             </motion.div>
           )}
@@ -597,7 +597,7 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
           className="w-20 h-20 rounded-full flex items-center justify-center"
           style={{ background: 'rgba(0,188,125,0.15)', border: '1px solid rgba(0,188,125,0.4)' }}
         >
-          <CheckCircle2 size={40} color="#00bc7d" />
+          <CheckCircle size={40} color="#00bc7d" />
         </div>
         <div>
           <h2 className="text-2xl font-extrabold mb-2" style={{ color: '#f8fafc' }}>
@@ -721,7 +721,7 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <AlertCircle size={14} color="#ef4444" />
+              <Warning size={14} color="#ef4444" />
               <span className="text-xs" style={{ color: '#ef4444' }}>{serverError}</span>
             </motion.div>
           )}
@@ -849,7 +849,7 @@ function SignIn({ onBack, onDone, onForgot }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <AlertCircle size={14} color="#ef4444" />
+              <Warning size={14} color="#ef4444" />
               <span className="text-xs" style={{ color: '#ef4444' }}>{serverError}</span>
             </motion.div>
           )}
@@ -913,7 +913,7 @@ function ForgotPassword({ initialEmail, onBack }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <CheckCircle2 size={48} color="#00bc7d" />
+            <CheckCircle size={48} color="#00bc7d" />
             <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc' }}>
               Reset link sent to{' '}
               <strong style={{ color: '#f8fafc' }}>{email}</strong>. Check your inbox.

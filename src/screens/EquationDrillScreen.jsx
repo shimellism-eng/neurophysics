@@ -9,7 +9,7 @@
 import { useState, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronRight, CheckCircle2, XCircle, Lightbulb, RotateCcw, BookMarked } from 'lucide-react'
+import { CaretRight, CheckCircle, XCircle, Lightbulb, ArrowCounterClockwise, BookmarkSimple } from '@phosphor-icons/react'
 import examEquations from '../data/examEquations'
 import PageHeader from '../components/PageHeader'
 
@@ -190,7 +190,7 @@ export default function EquationDrillScreen() {
                 {Object.values(examEquations).flat().length} questions — mixed shuffle
               </div>
             </div>
-            <ChevronRight size={16} color="rgba(99,102,241,0.6)" />
+            <CaretRight size={16} color="rgba(99,102,241,0.6)" />
           </motion.button>
 
           {/* Divider */}
@@ -227,7 +227,7 @@ export default function EquationDrillScreen() {
                     </div>
                   </div>
                 </div>
-                <ChevronRight size={14} color="rgba(255,255,255,0.2)" />
+                <CaretRight size={14} color="rgba(255,255,255,0.2)" />
               </motion.button>
             )
           })}
@@ -306,7 +306,7 @@ export default function EquationDrillScreen() {
               onClick={() => startDrill(selectedGroup)}
               whileTap={{ scale: 0.97 }}
             >
-              <RotateCcw size={14} className="inline mr-2" />
+              <ArrowCounterClockwise size={14} className="inline mr-2" />
               Drill again
             </motion.button>
             <motion.button
@@ -479,7 +479,7 @@ export default function EquationDrillScreen() {
                     whileTap={!revealed ? { scale: 0.98 } : {}}
                   >
                     {/* Icon after reveal */}
-                    {revealed && isAnswer && <CheckCircle2 size={16} color="#00bc7d" className="shrink-0" />}
+                    {revealed && isAnswer && <CheckCircle size={16} color="#00bc7d" className="shrink-0" />}
                     {revealed && isChosen && !isAnswer && <XCircle size={16} color="#f87171" className="shrink-0" />}
                     {(!revealed || (!isAnswer && !isChosen)) && (
                       <span

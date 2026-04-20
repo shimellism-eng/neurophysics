@@ -9,7 +9,7 @@
  */
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle2, Circle, Minus, ChevronDown, Lightbulb, RefreshCw } from 'lucide-react'
+import { CheckCircle, Circle, Minus, CaretDown, Lightbulb, ArrowClockwise } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
 
 // Command word colour coding (research: visual cues help ADHD processing)
@@ -80,7 +80,7 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
         >
           <Lightbulb size={13} />
           <span>{showSenHint ? 'Hide hint' : 'Show hint'}</span>
-          <ChevronDown
+          <CaretDown
             size={12}
             style={{ transform: showSenHint ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
           />
@@ -126,7 +126,7 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
             onClick={handleReveal}
             whileTap={{ scale: 0.97 }}
           >
-            <RefreshCw size={16} />
+            <ArrowClockwise size={16} />
             Flip card
           </motion.button>
         </div>
@@ -182,7 +182,7 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
                   onClick={() => handleRate('correct')}
                   whileTap={{ scale: 0.96 }}
                 >
-                  <CheckCircle2 size={20} />
+                  <CheckCircle size={20} />
                   Got it
                 </motion.button>
                 <motion.button

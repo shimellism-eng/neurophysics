@@ -2,11 +2,7 @@ import { useState, useEffect } from 'react'
 import { Browser } from '@capacitor/browser'
 import { useNavigate, useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import {
-  ChevronLeft, ChevronDown, ChevronUp, Beaker, FlaskConical, BarChart2,
-  SlidersHorizontal, ListOrdered, Table2, BookOpen, ExternalLink,
-  ShieldAlert, CheckCircle2, AlertTriangle, Zap,
-} from 'lucide-react'
+import { CaretLeft, CaretDown, CaretUp, Flask, ChartBar, Sliders, ListNumbers, Table, BookOpen, ArrowSquareOut, ShieldWarning, CheckCircle, Warning, Lightning } from '@phosphor-icons/react'
 import { PRACTICALS } from '../data/practicals'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard } from '../utils/boardConfig'
@@ -15,13 +11,13 @@ import { useDataCollector } from '../hooks/useDataCollector'
 // ─── Tabs ──────────────────────────────────────────────────────────────────────
 const TABS = [
   { id: 'overview',   label: 'Overview',   icon: BookOpen },
-  { id: 'safety',     label: 'Safety',     icon: ShieldAlert },
-  { id: 'variables',  label: 'Variables',  icon: SlidersHorizontal },
-  { id: 'setup',      label: 'Set Up',     icon: FlaskConical },
-  { id: 'method',     label: 'Method',     icon: ListOrdered },
-  { id: 'results',    label: 'Results',    icon: Table2 },
-  { id: 'analysis',   label: 'Analysis',   icon: BarChart2 },
-  { id: 'explore',    label: 'Explore',    icon: ExternalLink },
+  { id: 'safety',     label: 'Safety',     icon: ShieldWarning },
+  { id: 'variables',  label: 'Variables',  icon: Sliders },
+  { id: 'setup',      label: 'Set Up',     icon: Flask },
+  { id: 'method',     label: 'Method',     icon: ListNumbers },
+  { id: 'results',    label: 'Results',    icon: Table },
+  { id: 'analysis',   label: 'Analysis',   icon: ChartBar },
+  { id: 'explore',    label: 'Explore',    icon: ArrowSquareOut },
 ]
 
 // ─── SVG helper atoms ─────────────────────────────────────────────────────────
@@ -1794,21 +1790,21 @@ function TabVariables({ p, color }) {
     <div className="flex flex-col gap-3">
       <div className="rounded-[16px] p-4" style={{ background: 'rgba(59,130,246,0.1)', border: '0.75px solid rgba(59,130,246,0.4)' }}>
         <div className="flex items-center gap-2 mb-2">
-          <SlidersHorizontal size={14} color="#60a5fa"/>
+          <Sliders size={14} color="#60a5fa"/>
           <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#60a5fa' }}>Independent Variable</span>
         </div>
         <p className="text-sm" style={{ color: '#cad5e2' }}>{p.variables.independent}</p>
       </div>
       <div className="rounded-[16px] p-4" style={{ background: 'rgba(16,185,129,0.1)', border: '0.75px solid rgba(16,185,129,0.4)' }}>
         <div className="flex items-center gap-2 mb-2">
-          <BarChart2 size={14} color="#34d399"/>
+          <ChartBar size={14} color="#34d399"/>
           <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#34d399' }}>Dependent Variable</span>
         </div>
         <p className="text-sm" style={{ color: '#cad5e2' }}>{p.variables.dependent}</p>
       </div>
       <div className="rounded-[16px] p-4" style={{ background: 'rgba(245,158,11,0.1)', border: '0.75px solid rgba(245,158,11,0.4)' }}>
         <div className="flex items-center gap-2 mb-3">
-          <CheckCircle2 size={14} color="#fbbf24"/>
+          <CheckCircle size={14} color="#fbbf24"/>
           <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#fbbf24' }}>Control Variables</span>
         </div>
         <div className="flex flex-col gap-2">
@@ -1880,7 +1876,7 @@ function TabResults({ p, color }) {
     <div className="flex flex-col gap-3">
       <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs"
         style={{ background: `${color}15`, border: `0.75px solid ${color}40`, color }}>
-        <CheckCircle2 size={10}/> Sample data (auto-filled)
+        <CheckCircle size={10}/> Sample data (auto-filled)
       </div>
 
       <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid #1d293d' }}>
@@ -2203,7 +2199,7 @@ function TabExplore({ p, color }) {
     return (
       <div className="rounded-[16px] p-6 text-center"
         style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-        <ExternalLink size={24} color="#475569" style={{ margin: '0 auto 8px' }}/>
+        <ArrowSquareOut size={24} color="#475569" style={{ margin: '0 auto 8px' }}/>
         <p className="text-sm" style={{ color: '#64748b' }}>
           External simulations coming soon for this practical.
         </p>
@@ -2214,7 +2210,7 @@ function TabExplore({ p, color }) {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2 px-1">
-        <ExternalLink size={14} color={color}/>
+        <ArrowSquareOut size={14} color={color}/>
         <span className="text-xs font-semibold uppercase tracking-wide" style={{ color }}>
           Try these free simulations
         </span>
@@ -2238,7 +2234,7 @@ function TabExplore({ p, color }) {
             <span className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>
               {sim.name}
             </span>
-            <ExternalLink size={14} color="#475569" style={{ flexShrink: 0, marginTop: 2 }}/>
+            <ArrowSquareOut size={14} color="#475569" style={{ flexShrink: 0, marginTop: 2 }}/>
           </div>
           <p className="text-xs leading-relaxed" style={{ color: '#94a3b8' }}>
             {sim.desc}
@@ -2246,7 +2242,7 @@ function TabExplore({ p, color }) {
           {sim.free && (
             <div className="inline-flex items-center gap-1 mt-2 px-2 py-0.5 rounded-full text-xs"
               style={{ background: 'rgba(16,185,129,0.1)', border: '0.75px solid rgba(16,185,129,0.3)', color: '#34d399' }}>
-              <CheckCircle2 size={10}/> Free
+              <CheckCircle size={10}/> Free
             </div>
           )}
         </motion.button>
@@ -2286,7 +2282,7 @@ function TabExplore({ p, color }) {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ background: 'rgba(99,102,241,0.15)', border: '0.75px solid rgba(99,102,241,0.35)' }}>
-                  <ExternalLink size={18} color="#818cf8"/>
+                  <ArrowSquareOut size={18} color="#818cf8"/>
                 </div>
                 <div>
                   <p className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>
@@ -2357,7 +2353,7 @@ function TabSafety({ p }) {
       {/* Hazards */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <AlertTriangle size={13} color="#f87171"/>
+          <Warning size={13} color="#f87171"/>
           <span className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#f87171' }}>
             Hazards, Risks & Precautions
           </span>
@@ -2392,7 +2388,7 @@ function TabSafety({ p }) {
       {/* General safety note */}
       <div className="rounded-[12px] p-3 flex items-start gap-3"
         style={{ background: 'rgba(16,185,129,0.07)', border: '0.75px solid rgba(16,185,129,0.25)' }}>
-        <ShieldAlert size={16} color="#34d399" className="shrink-0 mt-0.5"/>
+        <ShieldWarning size={16} color="#34d399" className="shrink-0 mt-0.5"/>
         <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
           Always: wear safety goggles, tie back hair, use heatproof mats, check
           equipment before switching on, and wash hands after practical work.
@@ -2462,7 +2458,7 @@ export default function PracticalScreen() {
         <button onClick={() => navigate(-1)}
           className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0"
           style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-          <ChevronLeft size={18} color="#a8b8cc"/>
+          <CaretLeft size={18} color="#a8b8cc"/>
         </button>
         <div className="flex items-center gap-2 min-w-0 flex-1">
           <div className="px-2 py-0.5 rounded-[6px] text-xs font-bold shrink-0"
@@ -2471,7 +2467,7 @@ export default function PracticalScreen() {
           </div>
           <h1 className="text-base font-bold truncate" style={{ color: '#f8fafc' }}>{p.title}</h1>
         </div>
-        <Beaker size={18} color={color} className="shrink-0"/>
+        <Flask size={18} color={color} className="shrink-0"/>
       </div>
 
       {/* Section selector  -  dropdown */}
@@ -2489,8 +2485,8 @@ export default function PracticalScreen() {
             <span className="text-sm font-semibold" style={{ color }}>{activeTabDef?.label}</span>
           </div>
           {dropdownOpen
-            ? <ChevronUp size={16} color={color}/>
-            : <ChevronDown size={16} color={color}/>}
+            ? <CaretUp size={16} color={color}/>
+            : <CaretDown size={16} color={color}/>}
         </button>
 
         {/* Dropdown list */}
@@ -2560,7 +2556,7 @@ export default function PracticalScreen() {
             background: markedComplete ? 'rgba(20,184,166,0.12)' : 'rgba(20,184,166,0.08)',
             border: `0.75px solid ${markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.25)'}`,
           }}>
-          <CheckCircle2 size={15} color={markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.5)'} strokeWidth={2.5}/>
+          <CheckCircle size={15} color={markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.5)'}/>
           <span className="text-sm font-semibold"
             style={{ color: markedComplete ? '#14b8a6' : 'rgba(20,184,166,0.6)' }}>
             {markedComplete ? 'Completed' : 'Mark as complete'}
@@ -2576,7 +2572,7 @@ export default function PracticalScreen() {
             background: 'rgba(168,85,247,0.08)',
             border: '0.75px solid rgba(168,85,247,0.22)',
           }}>
-          <Zap size={14} color="#a855f7" strokeWidth={2.5}/>
+          <Lightning size={14} color="#a855f7"/>
           <span className="text-sm font-semibold" style={{ color: '#a855f7' }}>Practice</span>
         </motion.button>
       </div>

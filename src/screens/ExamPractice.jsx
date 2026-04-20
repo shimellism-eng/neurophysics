@@ -6,7 +6,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
-import { ArrowLeft, GraduationCap, ChevronRight, Award, Volume2, ChevronDown } from 'lucide-react'
+import { ArrowLeft, GraduationCap, CaretRight, Medal, SpeakerHigh, CaretDown } from '@phosphor-icons/react'
 import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import { useReducedMotion } from '../hooks/useReducedMotion'
@@ -167,7 +167,7 @@ function WorkedSolutionCard({ question, correct }) {
           {markScheme && !explanation ? 'Mark Scheme' : 'Why?'}
         </span>
         <motion.span animate={{ rotate: reducedMotion ? 0 : (open ? 180 : 0) }} transition={{ duration: reducedMotion ? 0 : 0.2 }}>
-          <ChevronDown size={14} />
+          <CaretDown size={14} />
         </motion.span>
       </button>
 
@@ -441,7 +441,7 @@ export default function ExamPractice() {
   if (!topic || total === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-full px-6" style={{ background: '#0b1121', color: '#a8b8cc' }}>
-        <GraduationCap size={48} strokeWidth={1.2} style={{ marginBottom: 16, opacity: 0.4 }} />
+        <GraduationCap size={48} style={{ marginBottom: 16, opacity: 0.4 }} />
         <p className="text-center text-sm">No exam practice questions available for this topic yet.</p>
         <button
           className="mt-4 px-6 py-3 rounded-[14px] text-sm font-semibold"
@@ -597,7 +597,7 @@ export default function ExamPractice() {
         </div>
         <div className="flex-1 flex flex-col items-center justify-center px-6">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', delay: 0.2 }}>
-            <Award size={64} color={passed ? '#00bc7d' : topic.moduleColor} strokeWidth={1.2} />
+            <Medal size={64} color={passed ? '#00bc7d' : topic.moduleColor} />
           </motion.div>
           <motion.h1 className="text-2xl font-bold mt-4" style={{ color: '#f8fafc' }}
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
@@ -786,7 +786,7 @@ export default function ExamPractice() {
                     onClick={() => speak(q.question + (q.questionSubtitle ? '. ' + q.questionSubtitle : ''))}
                     aria-label="Read question aloud"
                   >
-                    <Volume2 size={14} color="#818cf8" />
+                    <SpeakerHigh size={14} color="#818cf8" />
                   </button>
                 )}
               </div>

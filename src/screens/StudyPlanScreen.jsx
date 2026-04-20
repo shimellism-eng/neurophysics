@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronDown, ChevronRight, CheckCircle, Lock, RotateCcw, Target } from 'lucide-react'
+import { CaretDown, CaretRight, CheckCircle, Lock, ArrowCounterClockwise, Target } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useStudyPlan } from '../hooks/useStudyPlan'
@@ -139,7 +139,7 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
             </div>
           )}
           <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-            <ChevronDown size={16} color="rgba(255,255,255,0.3)" />
+            <CaretDown size={16} color="rgba(255,255,255,0.3)" />
           </motion.div>
         </div>
       </button>
@@ -176,7 +176,7 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
                     <div className="shrink-0">
                       {done
                         ? review
-                          ? <RotateCcw size={14} color="#f59e0b" />
+                          ? <ArrowCounterClockwise size={14} color="#f59e0b" />
                           : <CheckCircle size={14} color="#22c55e" />
                         : <Lock size={14} color="rgba(255,255,255,0.25)" />}
                     </div>
@@ -193,7 +193,7 @@ function WeekCard({ week, isOpen, onToggle, navigate, progress }) {
                       )}
                     </div>
 
-                    <ChevronRight size={14} color="rgba(255,255,255,0.2)" />
+                    <CaretRight size={14} color="rgba(255,255,255,0.2)" />
                   </motion.button>
                 )
               })}

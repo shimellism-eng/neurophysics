@@ -8,7 +8,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { ChevronRight, Volume2, CheckCircle2, Zap, Link } from 'lucide-react'
+import { CaretRight, SpeakerHigh, CheckCircle, Lightning, Link } from '@phosphor-icons/react'
 import { speak } from '../../utils/tts'
 
 // Micro-check: 2 matching questions at the end
@@ -88,7 +88,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            <CheckCircle2 size={40} color={moduleColor} />
+            <CheckCircle size={40} color={moduleColor} />
           </motion.div>
         </div>
 
@@ -114,7 +114,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
           whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
         >
           Continue to the lesson
-          <ChevronRight size={16} strokeWidth={2.5} />
+          <CaretRight size={16} />
         </motion.button>
       </motion.div>
     )
@@ -247,7 +247,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
                 transition={{ duration: 0.22 }}
               >
                 {qIndex + 1 < pool.length ? 'Next question' : 'See results'}
-                <ChevronRight size={16} strokeWidth={2.5} />
+                <CaretRight size={16} />
               </motion.button>
             )}
           </AnimatePresence>
@@ -370,7 +370,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                 aria-label={`Hear ${current.word} pronounced`}
                 whileTap={{ scale: 0.92 }}
               >
-                <Volume2 size={20} color={moduleColor} />
+                <SpeakerHigh size={20} color={moduleColor} />
               </motion.button>
             </div>
           </div>
@@ -437,13 +437,13 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
           <div className="flex items-center gap-2">
             {isLast ? (
               <>
-                <Zap size={15} strokeWidth={2.5} />
+                <Lightning size={15} />
                 Quick check -- are you ready?
               </>
             ) : (
               <>
                 Next word
-                <ChevronRight size={16} strokeWidth={2.5} />
+                <CaretRight size={16} />
               </>
             )}
           </div>

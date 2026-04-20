@@ -5,7 +5,7 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { CheckCircle, XCircle } from 'lucide-react'
+import { CheckCircle, XCircle } from '@phosphor-icons/react'
 
 export default function HotspotQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null

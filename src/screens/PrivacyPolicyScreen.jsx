@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, Shield } from 'lucide-react'
+import { ArrowLeft, Shield } from '@phosphor-icons/react'
 
 const SECTIONS = [
   {

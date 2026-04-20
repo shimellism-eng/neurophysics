@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Lock, Lightning } from '@phosphor-icons/react'
+import { CheckCircle, CaretRight, Lightning } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useStudyPlan } from '../hooks/useStudyPlan'
@@ -41,11 +41,11 @@ export default function HomeScreen() {
   function getNodeState(topicId) {
     if (progress[topicId]?.mastered) return 'completed'
     if (topicId === activeTopicId) return 'active'
-    return 'locked'
+    if (progress[topicId]?.started) return 'started'
+    return 'available'
   }
 
-  function handleNodeTap(topicId, state) {
-    if (state === 'locked') return
+  function handleNodeTap(topicId) {
     navigate(`/lesson/${topicId}`)
   }
 
@@ -134,8 +134,9 @@ export default function HomeScreen() {
                   const topic = TOPICS[topicId]
                   if (!topic) return null
                   const state = getNodeState(topicId)
-                  const isActive = state === 'active'
+                  const isActive    = state === 'active'
                   const isCompleted = state === 'completed'
+                  const isStarted   = state === 'started'
 
                   return (
                     <div
@@ -143,56 +144,61 @@ export default function HomeScreen() {
                       className="flex items-center gap-4 mb-4"
                       style={{ minHeight: isActive ? 56 : 48 }}
                     >
-                      {/* Node button */}
+                      {/* Node button — always tappable */}
                       <div className="flex items-center justify-center flex-shrink-0" style={{ width: 40 }}>
                         <button
-                          onClick={() => handleNodeTap(topicId, state)}
-                          disabled={state === 'locked'}
-                          aria-label={`${topic.title}${isCompleted ? ' — completed' : isActive ? ' — start now' : ' — locked'}`}
-                          className={`np-active-pulse rounded-full flex items-center justify-center transition-transform ${
-                            state === 'locked' ? 'cursor-default' : 'active:scale-90'
-                          }`}
+                          onClick={() => handleNodeTap(topicId)}
+                          aria-label={`${topic.title}${isCompleted ? ' — completed' : isActive ? ' — suggested next' : isStarted ? ' — in progress' : ''}`}
+                          className="np-active-pulse rounded-full flex items-center justify-center transition-transform active:scale-90"
                           style={{
                             width: isActive ? 48 : 36,
                             height: isActive ? 48 : 36,
+                            // completed: muted filled circle
+                            // active: indigo filled, pulsing
+                            // started: indigo outline with faint fill
+                            // available: outline only, full opacity
                             background: isCompleted
                               ? 'oklch(0.22 0.03 265 / 0.7)'
                               : isActive
                               ? 'oklch(0.55 0.22 265)'
-                              : 'oklch(0.16 0.02 265 / 0.6)',
+                              : isStarted
+                              ? 'oklch(0.55 0.22 265 / 0.18)'
+                              : 'transparent',
                             border: isCompleted
                               ? '1.5px solid oklch(0.38 0.04 265)'
                               : isActive
                               ? 'none'
-                              : '1.5px solid oklch(0.28 0.03 265)',
+                              : isStarted
+                              ? '1.5px solid oklch(0.55 0.22 265 / 0.7)'
+                              : '1.5px solid oklch(0.48 0.06 265)',
                             animation: isActive ? 'np-pulse 2.8s ease-in-out infinite' : 'none',
                           }}
                         >
                           {isCompleted && (
                             <CheckCircle size={17} weight="fill"
-                              style={{ color: 'oklch(0.48 0.06 265)' }} />
+                              style={{ color: 'oklch(0.55 0.1 265)' }} />
                           )}
                           {isActive && (
                             <Lightning size={20} weight="fill"
                               style={{ color: 'oklch(0.97 0.01 265)' }} />
                           )}
-                          {state === 'locked' && (
-                            <Lock size={13} weight="bold"
-                              style={{ color: 'oklch(0.33 0.03 265)' }} />
+                          {isStarted && (
+                            <CaretRight size={13} weight="bold"
+                              style={{ color: 'oklch(0.72 0.18 265)' }} />
                           )}
                         </button>
                       </div>
 
-                      {/* Label */}
+                      {/* Label — full opacity for all states */}
                       <div className="flex-1 min-w-0">
                         <p
                           className="font-medium text-sm leading-snug"
                           style={{
                             color: isCompleted
-                              ? 'oklch(0.42 0.04 265)'
+                              ? 'oklch(0.5 0.04 265)'
                               : isActive
                               ? 'oklch(0.97 0.01 265)'
-                              : 'oklch(0.35 0.03 265)',
+                              : 'oklch(0.82 0.04 265)',
                             fontFamily: isActive ? 'var(--font-display)' : undefined,
                             fontSize: isActive ? '0.9375rem' : undefined,
                             fontWeight: isActive ? 600 : undefined,
@@ -202,8 +208,14 @@ export default function HomeScreen() {
                         </p>
                         {isCompleted && (
                           <p className="text-[11px] mt-0.5"
-                             style={{ color: 'oklch(0.38 0.04 265)' }}>
+                             style={{ color: 'oklch(0.42 0.04 265)' }}>
                             Done
+                          </p>
+                        )}
+                        {isStarted && (
+                          <p className="text-[11px] mt-0.5"
+                             style={{ color: 'oklch(0.62 0.14 265)' }}>
+                            In progress
                           </p>
                         )}
                       </div>

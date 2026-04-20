@@ -133,8 +133,7 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
       transition={{ delay: moduleIndex * 0.05, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
       <button className="w-full" onClick={onToggle} style={{ textAlign: 'left' }}>
-        <div className="px-4 pt-4 pb-3 flex items-center gap-3"
-          style={{ background: `linear-gradient(135deg, ${module.color}18 0%, ${module.color}06 100%)` }}>
+        <div className="px-4 pt-4 pb-3 flex items-center gap-3">
           <div className="w-11 h-11 rounded-[14px] flex items-center justify-center shrink-0"
             style={{ background: `${module.color}25`, border: `1.5px solid ${module.color}50` }}>
             <module.icon size={22} color={module.color} strokeWidth={2} />
@@ -553,20 +552,20 @@ export default function LearnScreen() {
         {nextBadge && (
           <motion.div
             className="rounded-[22px] px-4 py-3.5 flex items-center gap-3"
-            style={{ background: `${nextBadge.color}0d`, border: `1px solid ${nextBadge.color}25` }}
+            style={{ background: 'var(--np-card)', border: '1px solid rgba(255,255,255,0.08)' }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
           >
             <span style={{ fontSize: 22 }}>{nextBadge.emoji}</span>
             <div className="flex-1 min-w-0">
-              <span className="text-[12px] font-semibold" style={{ color: nextBadge.color }}>
+              <span className="text-[12px] font-semibold" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 Next milestone
               </span>
               <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{nextBadge.label}</div>
               <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>{nextBadge.hint}</div>
             </div>
-            <Star size={15} color={nextBadge.color} />
+            <Star size={15} color="rgba(255,255,255,0.25)" />
           </motion.div>
         )}
 
@@ -578,15 +577,15 @@ export default function LearnScreen() {
               className="w-full rounded-[20px] flex items-center justify-between px-5"
               style={{
                 paddingTop: 18, paddingBottom: 18,
-                background: `linear-gradient(135deg, ${firstModule.color}d0, ${firstModule.color}70)`,
-                boxShadow: `0 6px 0 rgba(0,0,0,0.2), 0 12px 32px ${firstModule.color}28`,
+                background: 'var(--np-card)',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
               onClick={() => {
                 const t = TOPICS[firstUnmastered]
                 if (t?.hook || (t?.lessonSteps && t.lessonSteps.length > 0)) navigate(`/lesson/${firstUnmastered}`)
                 else navigate(`/practice/${firstUnmastered}`)
               }}
-              whileTap={{ y: 3, boxShadow: 'none' }}
+              whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.97 }}
@@ -594,17 +593,17 @@ export default function LearnScreen() {
             >
               <div className="flex items-center gap-3">
                 <div className="rounded-[12px] flex items-center justify-center shrink-0"
-                  style={{ width: 44, height: 44, background: 'rgba(255,255,255,0.18)' }}>
-                  <firstModule.icon size={22} color="#fff" strokeWidth={1.8} />
+                  style={{ width: 44, height: 44, background: `${firstModule.color}22`, border: `1px solid ${firstModule.color}40` }}>
+                  <firstModule.icon size={22} color={firstModule.color} strokeWidth={1.8} />
                 </div>
                 <div className="text-left">
-                  <div className="font-semibold text-white opacity-75 mb-0.5" style={{ fontSize: 12 }}>
+                  <div className="font-semibold mb-0.5" style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>
                     Start here
                   </div>
-                  <div className="font-bold text-white" style={{ fontSize: 16, letterSpacing: '-0.02em' }}>
+                  <div className="font-bold" style={{ fontSize: 16, letterSpacing: '-0.02em', color: 'var(--np-text)' }}>
                     {firstTopic.title}
                   </div>
-                  <div className="text-white opacity-60 mt-0.5" style={{ fontSize: 12 }}>
+                  <div className="mt-0.5" style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
                     {firstModule.name} · 5 min
                   </div>
                 </div>
@@ -613,7 +612,7 @@ export default function LearnScreen() {
                 animate={{ x: [0, 4, 0] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <ArrowRight size={22} color="rgba(255,255,255,0.85)" />
+                <ArrowRight size={22} color="#6366f1" />
               </motion.div>
             </motion.button>
           )}
@@ -661,46 +660,46 @@ export default function LearnScreen() {
               className="w-full rounded-[18px] flex items-center justify-between px-5"
               style={{
                 minHeight: 64,
-                background: 'linear-gradient(135deg, rgba(168,85,247,0.18), rgba(99,102,241,0.14))',
-                border: '1px solid rgba(168,85,247,0.35)',
+                background: 'var(--np-card)',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
               onClick={() => navigate('/grade9')}
               whileTap={{ scale: 0.98 }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center shrink-0"
-                  style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(168,85,247,0.15)', border: '1px solid rgba(168,85,247,0.3)' }}>
+                  style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(168,85,247,0.12)', border: '1px solid rgba(168,85,247,0.25)' }}>
                   <Trophy size={18} color="#a855f7" />
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>{topGradeLabel} Challenge</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#a855f7' }}>Hard exam questions · Unusual scenarios</p>
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>Hard exam questions · Unusual scenarios</p>
                 </div>
               </div>
-              <CaretRight size={18} color="rgba(168,85,247,0.6)" />
+              <CaretRight size={18} color="rgba(255,255,255,0.2)" />
             </motion.button>
 
             <motion.button
               className="w-full rounded-[18px] flex items-center justify-between px-5"
               style={{
                 minHeight: 64,
-                background: 'rgba(99,102,241,0.1)',
-                border: '0.75px solid rgba(99,102,241,0.28)',
+                background: 'var(--np-card)',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
               onClick={() => navigate('/timed-paper')}
               whileTap={{ scale: 0.98 }}
             >
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center shrink-0"
-                  style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.3)' }}>
+                  style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.25)' }}>
                   <Clock size={18} color="#6366f1" />
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>Timed paper</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
+                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>Exam-style 35 marks · 55 minutes</p>
                 </div>
               </div>
-              <CaretRight size={18} color="rgba(99,102,241,0.5)" />
+              <CaretRight size={18} color="rgba(255,255,255,0.2)" />
             </motion.button>
           </motion.div>
         )}

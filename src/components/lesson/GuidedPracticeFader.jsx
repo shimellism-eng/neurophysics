@@ -23,12 +23,12 @@ function ttsEnabled() {
 }
 
 // Small TTS button placed top-right of a question card
-function TTSButton({ text, moduleColor }) {
+function TTSButton({ text }) {
   if (!ttsEnabled()) return null
   return (
     <button
       className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold shrink-0"
-      style={{ background: `${moduleColor}20`, color: moduleColor }}
+      style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.55)' }}
       onClick={() => speak(text)}
       aria-label="Read question aloud"
     >
@@ -41,7 +41,7 @@ function TTSButton({ text, moduleColor }) {
 const TIER_LABELS = ['Fill the gap', 'With a hint', 'On your own']
 
 // ─── Tier progress indicator ─────────────────────────────────────────────────
-function TierProgress({ tier, moduleColor }) {
+function TierProgress({ tier }) {
   return (
     <div className="flex items-start justify-between px-1 mb-2">
       {[1, 2, 3].map((t, i) => {
@@ -49,23 +49,22 @@ function TierProgress({ tier, moduleColor }) {
         const isDone = t < tier
         return (
           <div key={t} className="flex flex-col items-center gap-1.5" style={{ flex: 1 }}>
-            {/* Connector line - left side */}
             <div className="flex items-center w-full">
               {i > 0 && (
                 <div
                   className="flex-1 h-px"
                   style={{
-                    background: isDone ? moduleColor : 'rgba(255,255,255,0.1)',
+                    background: isDone ? '#6366f1' : 'rgba(255,255,255,0.1)',
                     transition: 'background 0.4s',
                   }}
                 />
               )}
-              {/* Circle */}
+              {/* Circle — active: indigo fill, done: green, future: ghost */}
               <motion.div
                 className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
                 style={{
                   background: isActive
-                    ? `${moduleColor}`
+                    ? '#6366f1'
                     : isDone
                       ? 'rgba(34,197,94,0.2)'
                       : 'transparent',
@@ -75,7 +74,6 @@ function TierProgress({ tier, moduleColor }) {
                       ? '1.5px solid rgba(34,197,94,0.5)'
                       : '1.5px solid rgba(255,255,255,0.15)',
                   color: isActive ? '#fff' : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
-                  boxShadow: isActive ? `0 0 16px ${moduleColor}50` : 'none',
                   transition: 'all 0.35s ease',
                 }}
                 animate={isActive ? { scale: [1, 1.07, 1] } : { scale: 1 }}
@@ -83,22 +81,20 @@ function TierProgress({ tier, moduleColor }) {
               >
                 {t}
               </motion.div>
-              {/* Right connector */}
               {i < 2 && (
                 <div
                   className="flex-1 h-px"
                   style={{
-                    background: t < tier ? moduleColor : 'rgba(255,255,255,0.1)',
+                    background: t < tier ? '#6366f1' : 'rgba(255,255,255,0.1)',
                     transition: 'background 0.4s',
                   }}
                 />
               )}
             </div>
-            {/* Label */}
             <span
               className="text-[10px] font-semibold text-center leading-tight"
               style={{
-                color: isActive ? moduleColor : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
+                color: isActive ? '#a5b4fc' : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
                 transition: 'color 0.3s',
               }}
             >
@@ -112,7 +108,7 @@ function TierProgress({ tier, moduleColor }) {
 }
 
 // ─── NumericInput ─────────────────────────────────────────────────────────────
-function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disabled, moduleColor }) {
+function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disabled }) {
   const [focused, setFocused] = useState(false)
   return (
     <div
@@ -120,7 +116,7 @@ function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disa
       style={{
         background: 'rgba(255,255,255,0.04)',
         border: focused
-          ? `2px solid ${moduleColor}70`
+          ? '2px solid rgba(99,102,241,0.7)'
           : '2px solid rgba(255,255,255,0.1)',
         transition: 'border-color 0.2s',
       }}
@@ -147,9 +143,9 @@ function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disa
         <div
           className="px-3 py-1.5 mr-2 rounded-[8px] text-xs font-bold"
           style={{
-            background: `${moduleColor}22`,
-            color: moduleColor,
-            border: `1px solid ${moduleColor}35`,
+            background: 'rgba(255,255,255,0.08)',
+            color: 'rgba(255,255,255,0.6)',
+            border: '1px solid rgba(255,255,255,0.12)',
           }}
         >
           {unit}
@@ -160,7 +156,7 @@ function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disa
 }
 
 // ─── FeedbackBanner ──────────────────────────────────────────────────────────
-function FeedbackBanner({ correct, correctAnswer, answerUnit, moduleColor }) {
+function FeedbackBanner({ correct, correctAnswer, answerUnit }) {
   return (
     <motion.div
       className="flex items-start gap-3 px-4 rounded-[14px]"
@@ -171,7 +167,6 @@ function FeedbackBanner({ correct, correctAnswer, answerUnit, moduleColor }) {
         border: correct
           ? '1px solid rgba(34,197,94,0.35)'
           : '1px solid rgba(99,102,241,0.3)',
-        boxShadow: correct ? '0 0 20px rgba(34,197,94,0.08)' : 'none',
       }}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -226,7 +221,7 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
       >
         <div className="flex items-start gap-2">
           <p className="font-display text-[15px] leading-relaxed font-medium flex-1" style={{ color: '#f0f4f8' }}>{question}</p>
-          <TTSButton text={question} moduleColor={moduleColor} />
+          <TTSButton text={question} />
         </div>
       </div>
 
@@ -237,17 +232,17 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             key={i}
             className="flex items-center gap-3 px-3 py-2.5 rounded-[12px]"
             style={{
-              background: i === missingStep ? `${moduleColor}10` : 'rgba(255,255,255,0.03)',
-              border: i === missingStep ? `1px dashed ${moduleColor}50` : '1px solid rgba(255,255,255,0.06)',
+              background: i === missingStep ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.03)',
+              border: i === missingStep ? '1px dashed rgba(99,102,241,0.4)' : '1px solid rgba(255,255,255,0.06)',
             }}
           >
             <div
               className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0"
-              style={{ background: i === missingStep ? moduleColor : 'rgba(255,255,255,0.08)', color: '#fff' }}
+              style={{ background: i === missingStep ? '#6366f1' : 'rgba(255,255,255,0.08)', color: '#fff' }}
             >
               {i + 1}
             </div>
-            <span className="text-xs" style={{ color: i === missingStep ? moduleColor : 'rgba(255,255,255,0.5)' }}>
+            <span className="text-xs" style={{ color: i === missingStep ? '#a5b4fc' : 'rgba(255,255,255,0.5)' }}>
               {i === missingStep ? missingHint : step}
             </span>
           </div>
@@ -259,7 +254,6 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
         onChange={setInput}
         unit={answerUnit}
         disabled={submitted}
-        moduleColor={moduleColor}
       />
 
       {!submitted ? (
@@ -267,11 +261,9 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
           className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
           style={{
             minHeight: 44,
-            background: hasInput
-              ? `${moduleColor}`
-              : 'rgba(255,255,255,0.05)',
-            boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
+            background: hasInput ? '#6366f1' : 'rgba(255,255,255,0.05)',
             color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
+            border: 'none',
           }}
           onClick={() => {
             if (!hasInput) return
@@ -280,7 +272,7 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             if (correct) { playCorrect() } else { playWrong() }
             setSubmitted(true)
           }}
-          whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
+          whileTap={hasInput ? { scale: 0.98 } : {}}
         >
           Check
         </motion.button>
@@ -290,18 +282,17 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             correct={isCorrect}
             correctAnswer={answer}
             answerUnit={answerUnit}
-            moduleColor={moduleColor}
           />
           <motion.button
             className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
               minHeight: 56,
-              background: `${moduleColor}`,
-              boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+              background: '#6366f1',
               color: '#fff',
+              border: 'none',
             }}
             onClick={() => onComplete(isCorrect)}
-            whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+            whileTap={{ scale: 0.98 }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -315,7 +306,7 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
 }
 
 // ─── TIER 2: Partial scaffold ────────────────────────────────────────────────
-function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, playWrong }) {
+function Tier2({ data, onComplete, triggerReaction, playCorrect, playWrong }) {
   const { question, shownEquation, shownStep1, hint, answer, answerUnit } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -333,7 +324,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
       >
         <div className="flex items-start gap-2">
           <p className="font-display text-[15px] leading-relaxed font-medium flex-1" style={{ color: '#f0f4f8' }}>{question}</p>
-          <TTSButton text={question} moduleColor={moduleColor} />
+          <TTSButton text={question} />
         </div>
       </div>
 
@@ -341,7 +332,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
       <div className="flex flex-col gap-2">
         <div
           className="px-3 py-2.5 rounded-[12px] text-xs font-mono font-bold"
-          style={{ background: `${moduleColor}10`, border: `1px solid ${moduleColor}25`, color: moduleColor }}
+          style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', color: '#a5b4fc' }}
         >
           {shownEquation}
         </div>
@@ -364,7 +355,6 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
         onChange={setInput}
         unit={answerUnit}
         disabled={submitted}
-        moduleColor={moduleColor}
       />
 
       {/* Hint button - no penalty */}
@@ -402,11 +392,9 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
           className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
           style={{
             minHeight: 44,
-            background: hasInput
-              ? `${moduleColor}`
-              : 'rgba(255,255,255,0.05)',
-            boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
+            background: hasInput ? '#6366f1' : 'rgba(255,255,255,0.05)',
             color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
+            border: 'none',
           }}
           onClick={() => {
             if (!hasInput) return
@@ -415,7 +403,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             if (correct) { playCorrect() } else { playWrong() }
             setSubmitted(true)
           }}
-          whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
+          whileTap={hasInput ? { scale: 0.98 } : {}}
         >
           Check
         </motion.button>
@@ -425,18 +413,17 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             correct={isCorrect}
             correctAnswer={answer}
             answerUnit={answerUnit}
-            moduleColor={moduleColor}
           />
           <motion.button
             className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
               minHeight: 56,
-              background: `${moduleColor}`,
-              boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+              background: '#6366f1',
               color: '#fff',
+              border: 'none',
             }}
             onClick={() => onComplete(isCorrect)}
-            whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+            whileTap={{ scale: 0.98 }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -453,7 +440,7 @@ function Tier2({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
 const STAR_LABELS = ['Not sure', 'Getting it', 'Confident', 'Really sure', 'Got it!']
 
 // ─── TIER 3: Supported independent ──────────────────────────────────────────
-function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, triggerReaction, playCorrect, playWrong, playComplete }) {
+function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, playWrong, playComplete }) {
   const { question, hint, answer, answerUnit, methodHint } = data
   const [input, setInput] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -475,13 +462,13 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
         <div
           className="w-16 h-16 rounded-full flex items-center justify-center"
           style={{
-            background: isCorrect ? 'rgba(34,197,94,0.15)' : `${moduleColor}18`,
-            border: isCorrect ? '2px solid rgba(34,197,94,0.4)' : `2px solid ${moduleColor}40`,
+            background: isCorrect ? 'rgba(34,197,94,0.15)' : 'rgba(99,102,241,0.15)',
+            border: isCorrect ? '2px solid rgba(34,197,94,0.4)' : '2px solid rgba(99,102,241,0.3)',
           }}
         >
           {isCorrect
             ? <CheckCircle size={32} color="#4ade80" />
-            : <Lightbulb size={32} color={moduleColor} />
+            : <Lightbulb size={32} color="#818cf8" />
           }
         </div>
         <div className="text-center">
@@ -496,12 +483,12 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
           className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
             minHeight: 56,
-            background: `${moduleColor}`,
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+            background: '#6366f1',
             color: '#fff',
+            border: 'none',
           }}
           onClick={() => { triggerReaction('complete'); playComplete(); onComplete() }}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+          whileTap={{ scale: 0.98 }}
         >
           Continue
         </motion.button>
@@ -517,7 +504,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
       >
         <div className="flex items-start gap-2">
           <p className="font-display text-[15px] leading-relaxed font-medium flex-1" style={{ color: '#f0f4f8' }}>{question}</p>
-          <TTSButton text={question} moduleColor={moduleColor} />
+          <TTSButton text={question} />
         </div>
       </div>
 
@@ -526,7 +513,6 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
         onChange={setInput}
         unit={answerUnit}
         disabled={submitted}
-        moduleColor={moduleColor}
       />
 
       {!submitted && (
@@ -564,11 +550,9 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
             className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
             style={{
               minHeight: 44,
-              background: hasInput
-                ? `${moduleColor}`
-                : 'rgba(255,255,255,0.05)',
-              boxShadow: hasInput ? `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35` : 'none',
+              background: hasInput ? '#6366f1' : 'rgba(255,255,255,0.05)',
               color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
+              border: 'none',
             }}
             onClick={() => {
               if (!hasInput) return
@@ -579,7 +563,7 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
               if (!correct) onWrongAnswer?.()
               setSubmitted(true)
             }}
-            whileTap={hasInput ? { y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` } : {}}
+            whileTap={hasInput ? { scale: 0.98 } : {}}
           >
             Check answer
           </motion.button>
@@ -598,7 +582,6 @@ function Tier3({ data, moduleColor, keywords, onComplete, onWrongAnswer, trigger
               correct={isCorrect}
               correctAnswer={answer}
               answerUnit={answerUnit}
-              moduleColor={moduleColor}
             />
 
             {/* Confidence rating */}
@@ -663,7 +646,7 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
   return (
     <div className="px-5 py-5 flex flex-col gap-5">
       {/* Tier progress indicators */}
-      <TierProgress tier={tier} moduleColor={moduleColor} />
+      <TierProgress tier={tier} />
 
       {/* Active tier */}
       <AnimatePresence mode="wait">
@@ -698,7 +681,6 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
           >
             <Tier2
               data={guidedPractice.tier2}
-              moduleColor={moduleColor}
               triggerReaction={triggerReaction}
               playCorrect={playCorrect}
               playWrong={playWrong}
@@ -719,7 +701,6 @@ export default function GuidedPracticeFader({ guidedPractice, moduleColor, keywo
           >
             <Tier3
               data={guidedPractice.tier3}
-              moduleColor={moduleColor}
               keywords={keywords}
               triggerReaction={triggerReaction}
               playCorrect={playCorrect}

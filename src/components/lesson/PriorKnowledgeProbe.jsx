@@ -6,7 +6,7 @@
  * autistic learners benefit from explicit "where is this going?" maps.
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { CaretRight, MapTrifold, CheckCircle, XCircle } from '@phosphor-icons/react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
@@ -17,8 +17,9 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
   const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState(null)
   const [showFeedback, setShowFeedback] = useState(false)
-  // If coming back to this step after completing it, skip straight to done view
   const [done, setDone] = useState(alreadyCompleted)
+  // Full-screen Duolingo-style flash: null | 'correct' | 'wrong'
+  const [flash, setFlash] = useState(null)
   const triggerReaction = useMamoReaction()
   const { playCorrect, playWrong } = useSound()
 
@@ -26,15 +27,23 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
 
   const handleSelect = (idx) => {
     if (selected !== null) return
+    const isCorrect = idx === current.correct
     setSelected(idx)
-    setShowFeedback(true)
-    triggerReaction(idx === current.correct ? 'correct' : 'wrong')
-    if (idx === current.correct) {
+
+    // Duolingo flash — fires immediately, clears after 500ms
+    setFlash(isCorrect ? 'correct' : 'wrong')
+    setTimeout(() => {
+      setFlash(null)
+      setShowFeedback(true)
+    }, 500)
+
+    triggerReaction(isCorrect ? 'correct' : 'wrong')
+    if (isCorrect) {
       playCorrect()
     } else {
       playWrong()
     }
-    if (idx !== current.correct && onWrongAnswer) {
+    if (!isCorrect && onWrongAnswer) {
       onWrongAnswer()
     }
   }
@@ -61,13 +70,13 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
           <div
             className="rounded-[18px] px-4 py-4"
             style={{
-              background: `${moduleColor}10`,
-              border: `1px solid ${moduleColor}30`,
+              background: 'rgba(99,102,241,0.08)',
+              border: '1px solid rgba(255,255,255,0.08)',
             }}
           >
             <div className="flex items-center gap-2 mb-3">
-              <MapTrifold size={13} color={moduleColor} />
-              <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: moduleColor }}>
+              <MapTrifold size={13} color="rgba(255,255,255,0.4)" />
+              <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.35)' }}>
                 Where this fits
               </span>
             </div>
@@ -85,8 +94,8 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
                 </div>
               )}
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold shrink-0" style={{ color: moduleColor }}>TODAY</span>
-                <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: `${moduleColor}25`, color: moduleColor }}>
+                <span className="text-[10px] font-bold shrink-0" style={{ color: '#a5b4fc' }}>TODAY</span>
+                <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: 'rgba(99,102,241,0.2)', color: '#a5b4fc' }}>
                   {topicMapHint.current}
                 </span>
               </div>
@@ -114,12 +123,12 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
           className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
             minHeight: 56,
-            background: `${moduleColor}`,
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+            background: '#6366f1',
             color: '#fff',
+            border: 'none',
           }}
           onClick={() => { triggerReaction('complete'); onComplete() }}
-          whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+          whileTap={{ scale: 0.98 }}
         >
           See it in action
           <span className="ml-2">→</span>
@@ -129,7 +138,26 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
   }
 
   return (
-    <div className="px-5 py-5">
+    <div className="px-5 py-5 relative">
+      {/* Duolingo-style full-screen colour flash */}
+      <AnimatePresence>
+        {flash && (
+          <motion.div
+            key={flash}
+            className="fixed inset-0 pointer-events-none z-50"
+            style={{
+              background: flash === 'correct'
+                ? 'rgba(34,197,94,0.18)'
+                : 'rgba(239,68,68,0.18)',
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Step counter */}
       <div className="flex items-center gap-1.5 mb-5">
         <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -236,12 +264,12 @@ export default function PriorKnowledgeProbe({ probe, moduleColor, topicMapHint, 
               className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2 sticky bottom-4"
               style={{
                 minHeight: 56,
-                background: `${moduleColor}`,
-                boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+                background: '#6366f1',
                 color: '#fff',
+                border: 'none',
               }}
               onClick={handleNext}
-              whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15), 0 4px 10px ${moduleColor}20` }}
+              whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
             >

@@ -119,27 +119,27 @@
 - [x] Bottom nav hidden (Duolingo style: in lesson = no tab bar)
 
 #### S5. Key Words Screen
-- [ ] Header clean (uses shared LessonHeader)
-- [ ] Word card: no dot indicators, card says "1 of 5" internally
-- [ ] No dual timers
-- [ ] Section labels in muted white, not coloured text
-- [ ] No coloured left borders on any cards
-- [ ] Bottom nav hidden
+- [x] Header clean (uses shared LessonHeader)
+- [x] Word card: no dot indicators, card says "1 of 5" internally
+- [x] No dual timers
+- [x] Section labels in muted white, not coloured text
+- [x] No coloured left borders on any cards
+- [x] Bottom nav hidden
 
 #### S6. Connect / Knowledge Check (MCQ - Duolingo Style)
-- [ ] Question + options + ONE button. Nothing else.
-- [ ] Correct: subtle green 1px border + checkmark, brief green flash like Duolingo
-- [ ] Incorrect: subtle red 1px border + X icon, brief red flash like Duolingo
-- [ ] Feedback card below with explanation
-- [ ] No equation chips scrolling at top
-- [ ] Bottom nav hidden
+- [x] Question + options + ONE button. Nothing else.
+- [x] Correct: subtle green 1px border + checkmark, brief green flash like Duolingo
+- [x] Incorrect: subtle red 1px border + X icon, brief red flash like Duolingo
+- [x] Feedback card below with explanation
+- [x] No equation chips scrolling at top
+- [x] Bottom nav hidden
 
 #### S7. Explore Screen (Brilliant Style)
-- [ ] Clean grid of topic items with generous whitespace
-- [ ] Subtle card styling, no coloured borders
-- [ ] ONE CTA at bottom
-- [ ] Break nudge: friendly, dismissible
-- [ ] Bottom nav hidden
+- [x] Clean grid of topic items with generous whitespace
+- [x] Subtle card styling, no coloured borders
+- [x] ONE CTA at bottom
+- [x] Break nudge: friendly, dismissible
+- [x] Bottom nav hidden
 
 #### S8. Feedback Screen
 - [ ] Reframe: "You already know 3 concepts!" not "3 out of 10"

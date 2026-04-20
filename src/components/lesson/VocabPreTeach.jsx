@@ -43,7 +43,6 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
     const isCorrect = opt === currentOptions.correctDef
     setAnswered(opt)
     if (isCorrect) setCorrect(c => c + 1)
-    // No auto-advance -- user taps "Next" button
   }
 
   const handleNext = () => {
@@ -56,8 +55,6 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
   }
 
   if (done) {
-    const lastWasCorrect = answered === currentOptions.correctDef
-    const finalScore = correct + (lastWasCorrect ? 0 : 0) // correct already includes last answer via handleAnswer
     return (
       <motion.div
         className="flex flex-col items-center gap-5 px-5 py-8"
@@ -65,36 +62,23 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
       >
-        {/* Pulsing checkmark circle -- 96x96 */}
-        <div className="relative flex items-center justify-center">
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 96,
-              height: 96,
-              background: `${moduleColor}18`,
-            }}
-            animate={{ scale: [1, 1.18, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          <motion.div
-            className="relative w-24 h-24 rounded-full flex items-center justify-center"
-            style={{
-              background: `linear-gradient(135deg, ${moduleColor}28, ${moduleColor}10)`,
-              border: `2px solid ${moduleColor}60`,
-              boxShadow: `0 0 32px ${moduleColor}30`,
-            }}
-            initial={{ scale: 0.6, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <CheckCircle size={40} color={moduleColor} />
-          </motion.div>
-        </div>
+        {/* Clean checkmark circle — no glow, no colored border */}
+        <motion.div
+          className="w-24 h-24 rounded-full flex items-center justify-center"
+          style={{
+            background: 'rgba(99,102,241,0.15)',
+            border: '2px solid rgba(99,102,241,0.35)',
+          }}
+          initial={{ scale: 0.6, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <CheckCircle size={40} color="#818cf8" />
+        </motion.div>
 
         <div className="text-center">
           <p className="font-display text-lg font-bold mb-1.5" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
-            Words unlocked -- you're ready
+            Words unlocked — you're ready
           </p>
           <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.4)', maxWidth: 280 }}>
             These keywords stay available throughout the lesson. Tap any word chip to see its definition again.
@@ -104,14 +88,14 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         <motion.button
           className="font-display w-full rounded-[18px] font-bold text-sm flex items-center justify-center gap-2"
           style={{
-            background: `${moduleColor}`,
-            boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+            background: '#6366f1',
             color: '#fff',
             minHeight: 56,
             padding: '0 24px',
+            border: 'none',
           }}
           onClick={onPass}
-          whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
+          whileTap={{ scale: 0.98 }}
         >
           Continue to the lesson
           <CaretRight size={16} />
@@ -135,7 +119,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         </div>
         <div
           className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
-          style={{ background: `${moduleColor}20`, color: moduleColor }}
+          style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.55)' }}
         >
           {qIndex + 1} of {pool.length}
         </div>
@@ -151,7 +135,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
         >
           <p className="font-display text-base font-bold mb-5" style={{ color: '#f8fafc' }}>
             What does{' '}
-            <span style={{ color: moduleColor }}>{current.word}</span>{' '}
+            <span style={{ color: '#a5b4fc' }}>{current.word}</span>{' '}
             mean?
           </p>
 
@@ -234,13 +218,13 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
               <motion.button
                 className="font-display w-full rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
                 style={{
-                  background: `${moduleColor}`,
-                  boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${moduleColor}35`,
+                  background: '#6366f1',
                   color: '#fff',
                   minHeight: 56,
+                  border: 'none',
                 }}
                 onClick={handleNext}
-                whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
+                whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
@@ -285,7 +269,6 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
   return (
     <div className="flex flex-col gap-0" style={{ background: '#080f1e', minHeight: '100%' }}>
 
-
       {/* Word card */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -296,11 +279,11 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
           exit={{ opacity: 0, x: -24 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Word + symbol header */}
+          {/* Word + symbol header — flat tint, no gradient */}
           <div
             className="rounded-[22px] px-5 py-5 mb-4"
             style={{
-              background: `linear-gradient(135deg, ${moduleColor}1c 0%, ${moduleColor}08 100%)`,
+              background: `${moduleColor}0f`,
               border: '1px solid rgba(255,255,255,0.1)',
               minHeight: 120,
             }}
@@ -320,7 +303,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                   </div>
                   <div
                     className="text-[10px] font-bold uppercase tracking-widest"
-                    style={{ color: `${moduleColor}cc` }}
+                    style={{ color: 'rgba(255,255,255,0.35)' }}
                   >
                     of {keywords.length} key words
                   </div>
@@ -334,13 +317,13 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                   {current.word}
                 </div>
 
-                {/* Symbol + unit as separate pills */}
+                {/* Symbol + unit as separate pills — neutral styling */}
                 {(current.symbol || current.unit) && (
                   <div className="flex flex-wrap gap-2">
                     {current.symbol && (
                       <div
                         className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold"
-                        style={{ background: `${moduleColor}22`, color: moduleColor, border: `1px solid ${moduleColor}30` }}
+                        style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.12)' }}
                       >
                         Symbol: {current.symbol}
                       </div>
@@ -348,7 +331,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                     {current.unit && (
                       <div
                         className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold"
-                        style={{ background: `${moduleColor}22`, color: moduleColor, border: `1px solid ${moduleColor}30` }}
+                        style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)', border: '1px solid rgba(255,255,255,0.12)' }}
                       >
                         Unit: {current.unit}
                       </div>
@@ -363,14 +346,14 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                 style={{
                   width: 48,
                   height: 48,
-                  background: `${moduleColor}22`,
+                  background: 'rgba(255,255,255,0.08)',
                   border: '1px solid rgba(255,255,255,0.12)',
                 }}
                 onClick={() => speak(current.word + '. ' + current.definition)}
                 aria-label={`Hear ${current.word} pronounced`}
                 whileTap={{ scale: 0.92 }}
               >
-                <SpeakerHigh size={20} color={moduleColor} />
+                <SpeakerHigh size={20} color="rgba(255,255,255,0.6)" />
               </motion.button>
             </div>
           </div>
@@ -387,7 +370,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
           >
             <div
               className="text-[10px] font-bold uppercase tracking-widest mb-2"
-              style={{ color: `${moduleColor}99` }}
+              style={{ color: 'rgba(255,255,255,0.35)' }}
             >
               In physics, this means:
             </div>
@@ -427,18 +410,18 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
           className="font-display w-full rounded-[18px] font-bold text-sm flex flex-col items-center justify-center gap-0.5"
           style={{
             background: 'var(--np-indigo)',
-            boxShadow: '0 4px 16px rgba(99,102,241,0.3)',
             color: '#fff',
             minHeight: 56,
+            border: 'none',
           }}
           onClick={handleNext}
-          whileTap={{ y: 4, boxShadow: '0 2px 8px rgba(99,102,241,0.15)' }}
+          whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-center gap-2">
             {isLast ? (
               <>
                 <Lightning size={15} />
-                Quick check -- are you ready?
+                Quick check — are you ready?
               </>
             ) : (
               <>

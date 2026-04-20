@@ -234,8 +234,8 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
                 onClick={() => navigate('/timed-paper')}
                 style={{
                   width: '100%', minHeight: 44, background: 'transparent',
-                  border: '1px solid rgba(255,255,255,0.1)', borderRadius: 12,
-                  fontFamily: BODY, fontSize: 14, fontWeight: 600, color: 'rgba(255,255,255,0.42)', cursor: 'pointer',
+                  border: '1px solid rgba(99,102,241,0.3)', borderRadius: 12,
+                  fontFamily: BODY, fontSize: 14, fontWeight: 600, color: '#818cf8', cursor: 'pointer',
                 }}
               >
                 Exam practice

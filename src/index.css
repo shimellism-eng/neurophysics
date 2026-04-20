@@ -37,9 +37,6 @@
   --np-border-strong: oklch(0.6 0.008 265 / 0.25);
 
   /* Brand */
-  --np-cyan:    #00d4ff;
-  --cyan:       #00d4ff;
-  --cyan-dim:   rgba(0,212,255,0.12);
   --np-indigo:  #6366f1;
   --np-purple:  #9b59b6;
   --np-amber:   #f39c12;
@@ -86,7 +83,7 @@
   --radius-xl: 16px;
 
   /* Depth */
-  --shadow-card:     0 2px 0 rgba(0,0,0,0.4), 0 8px 32px rgba(0,212,255,0.06);
+  --shadow-card:     0 2px 0 rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.12);
   --shadow-raised:   0 8px 24px rgba(0,0,0,0.18);
   --shadow-floating: 0 18px 44px rgba(0,0,0,0.32);
 

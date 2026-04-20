@@ -16,7 +16,7 @@ import ConfusionBusterQuestion from '../components/questions/ConfusionBusterQues
 
 const TIER_CONFIG = {
   1: { label: 'Tier 1', sub: 'Recall & MCQ', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)' },
-  2: { label: 'Tier 2', sub: 'Application',  color: '#f97316', bg: 'rgba(249,115,22,0.12)' },
+  2: { label: 'Tier 2', sub: 'Application',  color: '#6366f1', bg: 'rgba(99,102,241,0.12)' },
   3: { label: 'Tier 3', sub: 'Mastery',      color: '#a855f7', bg: 'rgba(168,85,247,0.12)' },
 }
 
@@ -618,52 +618,25 @@ export default function AdaptivePractice() {
       <PageHeader
         onBack={() => navigate(-1)}
         title={
-          <div className="text-sm font-bold truncate" style={{ color: moduleColor }}>
+          <div className="text-sm font-bold truncate" style={{ color: '#f8fafc' }}>
             {topic.title}
           </div>
         }
         subtitle={
-          <>
-            <div className="text-xs mt-0.5" style={{ color: '#8899b0' }}>
-              {sessionCount} answered · {sessionCorrect} correct
-            </div>
-            <span style={{ fontSize: 11, color: '#8899b0', fontStyle: 'italic' }}>
-              {getProgressLabel(sessionCount, reviewMode ? (maxQuestions || 5) : 20)}
-            </span>
-          </>
+          <span style={{ fontSize: 11, color: '#8899b0', fontStyle: 'italic' }}>
+            {getProgressLabel(sessionCount, reviewMode ? (maxQuestions || 5) : 20)}
+          </span>
         }
       />
 
-      {/* Course filter + streak row */}
-      <div className="px-5 pt-3 pb-1 shrink-0 flex items-center justify-between gap-3">
-        {/* Combined / Physics filter */}
-        <div className="flex gap-2">
-          {[
-            { id: 'all',      label: 'Physics' },
-            { id: 'combined', label: 'Combined' },
-          ].map(f => (
-            <button key={f.id} type="button"
-              className="px-3 py-1.5 rounded-full text-xs font-bold"
-              style={{
-                background: courseFilter === f.id ? `${moduleColor}22` : 'rgba(255,255,255,0.04)',
-                border: courseFilter === f.id ? `1px solid ${moduleColor}55` : '1px solid rgba(255,255,255,0.08)',
-                color: courseFilter === f.id ? moduleColor : 'rgba(255,255,255,0.35)',
-              }}
-              onClick={() => handleCourseFilter(f.id)}>
-              {f.label}
-            </button>
-          ))}
+      {/* Streak row */}
+      {streak > 0 && (
+        <div className="px-5 pt-3 pb-1 shrink-0 flex items-center justify-end">
+          <span className="text-xs font-semibold" style={{ color: '#00bc7d' }}>
+            <span aria-hidden="true">🔥</span> {streak} in a row
+          </span>
         </div>
-
-        {/* Streak — no tier mention */}
-        {streak > 0 && (
-          <div className="flex items-center gap-1.5 shrink-0">
-            <span className="text-xs font-semibold" style={{ color: '#00bc7d' }}>
-              <span aria-hidden="true">🔥</span> {streak} in a row
-            </span>
-          </div>
-        )}
-      </div>
+      )}
 
       {/* Question content */}
       <div className="flex-1 overflow-y-auto px-5 pt-4 pb-2" style={{ minHeight: 0 }}>
@@ -677,7 +650,7 @@ export default function AdaptivePractice() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="px-2.5 py-1 rounded-full text-xs font-bold"
                   style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}>
-                  {currentQ.type === 'mcq' ? <><span aria-hidden="true">⚡</span> Multiple choice</> : currentQ.type === 'calculation' ? <><span aria-hidden="true">🔢</span> Calculation</> : currentQ.type === 'extended' ? <><span aria-hidden="true">✍️</span> Extended</> : currentQ.type === 'confusion_buster' ? <><span aria-hidden="true">🔀</span> Confusion buster</> : <><span aria-hidden="true">💬</span> Short answer</>}
+                  {currentQ.type === 'mcq' ? 'Multiple choice' : currentQ.type === 'calculation' ? 'Calculation' : currentQ.type === 'extended' ? 'Extended' : currentQ.type === 'confusion_buster' ? 'Confusion buster' : 'Short answer'}
                 </span>
                 <span className="text-xs" style={{ color: '#8899b0' }}>
                   {currentQ.marks} mark{currentQ.marks !== 1 ? 's' : ''}
@@ -686,7 +659,7 @@ export default function AdaptivePractice() {
 
               {/* Adaptive reasoning label */}
               <p className="text-xs italic mb-3" style={{ color: '#a8b8cc' }}>
-                {tier === 1 ? <><span aria-hidden="true">📚</span> Revisiting — building foundations</> : tier === 2 ? <><span aria-hidden="true">🎯</span> Practising — consolidating understanding</> : <><span aria-hidden="true">🚀</span> Challenging — pushing for mastery</>}
+                {tier === 1 ? 'Revisiting — building foundations' : tier === 2 ? 'Practising — consolidating understanding' : 'Challenging — pushing for mastery'}
               </p>
 
               {/* Question text */}

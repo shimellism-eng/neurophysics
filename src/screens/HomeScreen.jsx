@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, CaretRight, Lightning } from '@phosphor-icons/react'
+import { CheckCircle, Lightning } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useStudyPlan } from '../hooks/useStudyPlan'
@@ -106,7 +106,7 @@ export default function HomeScreen() {
             className="absolute top-0 bottom-0 pointer-events-none"
             aria-hidden="true"
             style={{
-              left: 19,
+              left: 22,
               width: 2,
               backgroundImage:
                 'repeating-linear-gradient(to bottom, oklch(0.35 0.02 265) 0, oklch(0.35 0.02 265) 4px, transparent 4px, transparent 9px)',
@@ -120,7 +120,7 @@ export default function HomeScreen() {
             return (
               <div key={moduleIdx}>
                 {/* Module section label */}
-                <div className="flex items-center gap-3 mb-3 mt-3" style={{ paddingLeft: 52 }}>
+                <div className="flex items-center gap-3 mb-3 mt-3" style={{ paddingLeft: 60 }}>
                   <span
                     className="text-[10.5px] font-bold uppercase tracking-[0.13em]"
                     style={{ fontFamily: 'var(--font-display)', color: 'oklch(0.42 0.04 265)' }}
@@ -137,54 +137,51 @@ export default function HomeScreen() {
                   const isActive    = state === 'active'
                   const isCompleted = state === 'completed'
                   const isStarted   = state === 'started'
+                  const ModuleIcon  = module.icon
 
                   return (
                     <div
                       key={topicId}
                       className="flex items-center gap-4 mb-4"
-                      style={{ minHeight: isActive ? 56 : 48 }}
+                      style={{ minHeight: isActive ? 64 : 52 }}
                     >
                       {/* Node button — always tappable */}
-                      <div className="flex items-center justify-center flex-shrink-0" style={{ width: 40 }}>
+                      <div className="flex items-center justify-center flex-shrink-0" style={{ width: 44 }}>
                         <button
                           onClick={() => handleNodeTap(topicId)}
                           aria-label={`${topic.title}${isCompleted ? ' — completed' : isActive ? ' — suggested next' : isStarted ? ' — in progress' : ''}`}
                           className="np-active-pulse rounded-full flex items-center justify-center transition-transform active:scale-90"
                           style={{
-                            width: isActive ? 48 : 36,
-                            height: isActive ? 48 : 36,
-                            // completed: muted filled circle
-                            // active: indigo filled, pulsing
-                            // started: indigo outline with faint fill
-                            // available: outline only, full opacity
+                            width: isActive ? 56 : 44,
+                            height: isActive ? 56 : 44,
                             background: isCompleted
                               ? 'oklch(0.22 0.03 265 / 0.7)'
                               : isActive
                               ? 'oklch(0.55 0.22 265)'
                               : isStarted
-                              ? 'oklch(0.55 0.22 265 / 0.18)'
+                              ? `${module.color}22`
                               : 'transparent',
                             border: isCompleted
                               ? '1.5px solid oklch(0.38 0.04 265)'
                               : isActive
                               ? 'none'
                               : isStarted
-                              ? '1.5px solid oklch(0.55 0.22 265 / 0.7)'
-                              : '1.5px solid oklch(0.48 0.06 265)',
+                              ? `1.5px solid ${module.color}99`
+                              : `1.5px solid ${module.color}55`,
                             animation: isActive ? 'np-pulse 2.8s ease-in-out infinite' : 'none',
                           }}
                         >
-                          {isCompleted && (
-                            <CheckCircle size={17} weight="fill"
+                          {isCompleted ? (
+                            <CheckCircle size={18} weight="fill"
                               style={{ color: 'oklch(0.55 0.1 265)' }} />
-                          )}
-                          {isActive && (
-                            <Lightning size={20} weight="fill"
-                              style={{ color: 'oklch(0.97 0.01 265)' }} />
-                          )}
-                          {isStarted && (
-                            <CaretRight size={13} weight="bold"
-                              style={{ color: 'oklch(0.72 0.18 265)' }} />
+                          ) : isActive ? (
+                            <ModuleIcon size={24} color="white" />
+                          ) : isStarted ? (
+                            <ModuleIcon size={19} color={module.color} />
+                          ) : (
+                            <span style={{ opacity: 0.5 }}>
+                              <ModuleIcon size={18} color={module.color} />
+                            </span>
                           )}
                         </button>
                       </div>

@@ -222,7 +222,7 @@ function FloatingMamo() {
                   height: 12,
                   top: 2,
                   right: 2,
-                  background: 'var(--np-cyan)',
+                  background: '#6366f1',
                   border: '2px solid var(--np-bg)',
                 }}
                 animate={reduceMotion ? {} : { scale: [1, 1.3, 1] }}
@@ -347,7 +347,7 @@ function AppShell() {
       <div className="flex flex-col h-full items-center justify-center" style={{ background: 'var(--np-bg)' }}>
         <motion.div
           className="w-8 h-8 rounded-full border-2"
-          style={{ borderColor: 'rgba(0,212,255,0.3)', borderTopColor: 'var(--np-cyan)' }}
+          style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
           animate={rmLoading ? {} : { rotate: 360 }}
           transition={rmLoading ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
         />
@@ -466,7 +466,7 @@ function AppShell() {
           </p>
           <button onClick={() => window.location.reload()} style={{
             marginTop: 8, padding: '12px 24px',
-            background: 'var(--np-cyan)', color: 'var(--np-bg)',
+            background: '#6366f1', color: '#fff',
             border: 'none', borderRadius: 12,
             fontSize: 14, fontWeight: 700, cursor: 'pointer',
           }}>Try again</button>

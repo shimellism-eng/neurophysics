@@ -478,7 +478,7 @@ export default function LessonPlayer() {
                     <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 500 }}>Coming up next</span>
                     <span>{TOPICS[nextTopicId]?.title || 'Next topic'}</span>
                   </div>
-                  <ChevronRight size={18} strokeWidth={2.5} />
+                  <CaretRight size={18} weight="bold" />
                 </motion.button>
               )}
               <motion.button
@@ -773,7 +773,7 @@ export default function LessonPlayer() {
               transition={{ delay: 0.3 }}
             >
               Test Your Knowledge
-              <ChevronRight size={20} strokeWidth={2.5} />
+              <CaretRight size={20} weight="bold" />
             </motion.button>
             {examCount > 0 && (
               <motion.button

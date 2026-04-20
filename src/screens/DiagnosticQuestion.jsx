@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useMemo, useCallback, useRef } from 'react'
-import { ArrowLeft, HelpCircle, BookOpen, ChevronDown, AlignLeft, Lightbulb, Eye, EyeOff, Volume2 } from 'lucide-react'
+import { ArrowLeft, Question, BookOpen, CaretDown, AlignLeft, Lightbulb, Eye, EyeSlash, SpeakerHigh } from '@phosphor-icons/react'
 import { speak } from '../utils/tts'
 import { getSelectedBoard } from '../utils/boardConfig'
 import { useSessionTimer } from '../hooks/useSessionTimer'
@@ -239,7 +239,7 @@ function SENPanel({ topic, activeTab, onTab }) {
                   <Lightbulb size={12} color="#fdc700" />
                   <span className="flex-1 text-left">Want to see model answers?</span>
                   <motion.div animate={{ rotate: showModelAnswers ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                    <ChevronDown size={11} color="#fdc700" />
+                    <CaretDown size={11} color="#fdc700" />
                   </motion.div>
                 </motion.button>
                 <AnimatePresence>
@@ -305,7 +305,7 @@ export default function DiagnosticQuestion() {
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
   if (!topic || total === 0) return (
-    <div className="flex flex-col items-center justify-center h-full px-6" style={{ background: '#0b1121', color: '#a8b8cc' }}>
+    <div className="flex flex-col items-center justify-center h-full px-6" style={{ background: 'var(--np-bg)', color: '#a8b8cc' }}>
       <BookOpen size={48} strokeWidth={1.2} style={{ marginBottom: 16, opacity: 0.4 }} />
       <p className="text-center text-sm">No questions available for this topic yet.</p>
       <button
@@ -403,7 +403,7 @@ export default function DiagnosticQuestion() {
   const showFooter = isInteractive ? interactiveCompleted : selected !== null
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
 
       {/* F10/F12: Break nudge */}
       {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
@@ -430,10 +430,10 @@ export default function DiagnosticQuestion() {
           onClick={() => setShowSEN(v => !v)}
           whileTap={{ scale: 0.95 }}
         >
-          <HelpCircle size={14} color={showSEN ? '#155dfc' : '#a8b8cc'} />
+          <Question size={14} color={showSEN ? '#155dfc' : '#a8b8cc'} />
           <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#a8b8cc' }}>Need help? 💡</span>
           <motion.div animate={{ rotate: showSEN ? 180 : 0 }}>
-            <ChevronDown size={12} color={showSEN ? '#155dfc' : '#a8b8cc'} />
+            <CaretDown size={12} color={showSEN ? '#155dfc' : '#a8b8cc'} />
           </motion.div>
         </motion.button>
       </div>
@@ -479,10 +479,10 @@ export default function DiagnosticQuestion() {
               }}
               onClick={() => setShowHint(v => !v)}
             >
-              {showHint ? <EyeOff size={13} /> : <Eye size={13} />}
+              {showHint ? <EyeSlash size={13} /> : <Eye size={13} />}
               <span className="flex-1 text-left">{showHint ? 'Hide visual' : '💡 Show visual hint'}</span>
               <motion.div animate={{ rotate: showHint ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                <ChevronDown size={12} />
+                <CaretDown size={12} />
               </motion.div>
             </button>
             <AnimatePresence>
@@ -507,7 +507,7 @@ export default function DiagnosticQuestion() {
           position: 'sticky',
           top: 0,
           zIndex: 10,
-          background: '#0b1121',
+          background: 'var(--np-bg)',
           paddingTop: 12,
           paddingBottom: 12,
           borderBottom: '0.75px solid rgba(255,255,255,0.07)',
@@ -547,7 +547,7 @@ export default function DiagnosticQuestion() {
                 onClick={speakQuestion}
                 aria-label="Read question aloud"
               >
-                <Volume2 size={14} color="#818cf8" />
+                <SpeakerHigh size={14} color="#818cf8" />
               </button>
             )}
           </div>
@@ -586,7 +586,7 @@ export default function DiagnosticQuestion() {
                     <motion.button
                       key={idx}
                       className="w-full text-left rounded-[16px] p-4 flex items-center gap-3"
-                      style={getOptionStyle(idx)}
+                      style={{ minHeight: 56, ...getOptionStyle(idx) }}
                       onClick={() => handleSelect(idx)}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -661,7 +661,7 @@ export default function DiagnosticQuestion() {
         {showFooter && (
           <motion.div
             className="shrink-0 px-5 pt-3"
-            style={{ background: '#0b1121', borderTop: '0.75px solid #1d293d', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
+            style={{ background: 'rgba(8,15,30,0.82)', backdropFilter: 'blur(12px) saturate(180%)', WebkitBackdropFilter: 'blur(12px) saturate(180%)', borderTop: '0.75px solid var(--np-border)', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -685,7 +685,7 @@ export default function DiagnosticQuestion() {
                   className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
                   style={{
                     background: isLast
-                      ? '#6366f1'
+                      ? 'var(--np-indigo)'
                       : `${topic.moduleColor}`,
                     boxShadow: isLast
                       ? '0px 8px 24px rgba(99,102,241,0.4)'

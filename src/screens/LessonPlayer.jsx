@@ -19,10 +19,10 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
-  ChevronRight, BookOpen, FlaskConical,
-  GraduationCap, Zap, Globe, Lightbulb, Volume2,
-  Layers, Target, Star, CheckCircle2, Map, Coffee,
-} from 'lucide-react'
+  CaretRight, BookOpen, Flask,
+  GraduationCap, Lightning, Globe, Lightbulb, SpeakerHigh,
+  Stack, Target, Star, CheckCircle, MapTrifold, Coffee, List,
+} from '@phosphor-icons/react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
@@ -49,21 +49,21 @@ import SessionPreview from '../components/lesson/SessionPreview'
 import LessonHeader from '../components/lesson/LessonHeader'
 
 const NEW_STEPS = [
-  { id: 'hook',      label: 'Spark',       icon: Zap,          hint: 'Why this matters' },
+  { id: 'hook',      label: 'Spark',       icon: Lightning,    hint: 'Why this matters' },
   { id: 'vocab',     label: 'Key Words',   icon: BookOpen,     hint: 'Learn the language first' },
-  { id: 'connect',   label: 'Connect',     icon: Map,          hint: 'What you already know' },
-  { id: 'explore',   label: 'Explore',     icon: FlaskConical, hint: 'See it in action' },
+  { id: 'connect',   label: 'Connect',     icon: MapTrifold,   hint: 'What you already know' },
+  { id: 'explore',   label: 'Explore',     icon: Flask,        hint: 'See it in action' },
   { id: 'understand',label: 'Understand',  icon: Lightbulb,    hint: 'How it really works' },
   { id: 'practise',  label: 'Practise',    icon: Target,       hint: 'Try it yourself' },
   { id: 'lockin',    label: 'Lock It In',  icon: Star,         hint: 'Make it stick' },
   { id: 'realworld', label: 'Real World',  icon: Globe,        hint: 'See it everywhere' },
-  { id: 'done',      label: 'Done',        icon: CheckCircle2, hint: 'Session complete' },
+  { id: 'done',      label: 'Done',        icon: CheckCircle,  hint: 'Session complete' },
 ]
 
 // ─── LEGACY 4-step flow ──────────────────────────────────────────────────────
 
 const LEGACY_STEPS = [
-  { id: 'explore',   label: 'Explore',     icon: Zap,       hint: 'Interact with the diagram' },
+  { id: 'explore',   label: 'Explore',     icon: Lightning, hint: 'Interact with the diagram' },
   { id: 'idea',      label: 'Big Idea',    icon: Lightbulb, hint: 'Spot the misconception' },
   { id: 'realworld', label: 'Real World',  icon: Globe,     hint: 'See it in action' },
   { id: 'concept',   label: 'Key Concept', icon: BookOpen,  hint: 'Cement your understanding' },
@@ -464,7 +464,7 @@ export default function LessonPlayer() {
                 <motion.button
                   className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
                   style={{
-                    background: '#6366f1',
+                    background: 'var(--np-indigo)',
                     color: '#fff',
                     boxShadow: '0 8px 24px rgba(99,102,241,0.4)',
                   }}
@@ -569,7 +569,7 @@ export default function LessonPlayer() {
                 </motion.button>
                 <motion.button
                   className="flex-1 font-bold"
-                  style={{ height: 52, borderRadius: 14, background: '#6366f1', color: '#080f1e', border: 'none', cursor: 'pointer', fontSize: 15 }}
+                  style={{ height: 52, borderRadius: 14, background: 'var(--np-indigo)', color: 'var(--np-bg)', border: 'none', cursor: 'pointer', fontSize: 15 }}
                   whileTap={{ y: 2 }}
                   onClick={() => setPomoDismissed(true)}
                 >
@@ -615,7 +615,7 @@ export default function LessonPlayer() {
               </motion.button>
               <motion.button
                 className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
-                style={{ background: '#6366f1', color: '#fff' }}
+                style={{ background: 'var(--np-indigo)', color: '#fff' }}
                 onClick={() => {
                   // Clamp saved step; if it's the done step, restart from 0
                   const resumeStep = Math.min(savedProgress.step, totalSteps - 1)
@@ -656,7 +656,7 @@ export default function LessonPlayer() {
                 <div style={{ width: 40, height: 4, borderRadius: 999, background: 'rgba(255,255,255,0.15)' }} />
               </div>
               <div className="flex items-center gap-2 mb-5">
-                <LayoutList size={16} color={topic.moduleColor} />
+                <List size={16} color={topic.moduleColor} />
                 <h3 style={{ color: '#f8fafc', fontSize: 17, fontWeight: 800, margin: 0 }}>Lesson Outline</h3>
                 <span className="ml-auto text-xs tabular-nums" style={{ color: 'rgba(255,255,255,0.35)' }}>
                   ~{remainingMinutes} min left
@@ -802,7 +802,7 @@ export default function LessonPlayer() {
         return (
           <motion.div
             className="shrink-0 px-5 pt-3"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.06)', background: '#080f1e', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
+            style={{ borderTop: '0.75px solid var(--np-border)', background: 'rgba(8,15,30,0.82)', backdropFilter: 'blur(12px) saturate(180%)', WebkitBackdropFilter: 'blur(12px) saturate(180%)', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -829,7 +829,7 @@ export default function LessonPlayer() {
             <motion.button
               className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
               style={{
-                background: '#6366f1',
+                background: 'var(--np-indigo)',
                 boxShadow: '0 4px 16px rgba(99,102,241,0.3)',
                 color: '#fff',
               }}
@@ -837,7 +837,7 @@ export default function LessonPlayer() {
               whileTap={{ scale: 0.97 }}
             >
               Ready
-              <ChevronRight size={18} strokeWidth={2.5} />
+              <CaretRight size={18} weight="bold" />
             </motion.button>
           </motion.div>
         )
@@ -894,7 +894,7 @@ export default function LessonPlayer() {
             <motion.button
               className="font-display w-full max-w-xs py-4 rounded-[16px] font-bold text-sm"
               style={{
-                background: '#6366f1',
+                background: 'var(--np-indigo)',
                 boxShadow: '0 6px 0 rgba(0,0,0,0.25), 0 12px 28px rgba(99,102,241,0.35)',
                 color: '#fff',
               }}

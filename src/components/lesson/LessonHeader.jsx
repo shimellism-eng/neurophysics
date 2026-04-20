@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { ArrowLeft, X } from 'lucide-react'
+import { ArrowLeft, X } from '@phosphor-icons/react'
 
 /**
  * Minimal lesson header — ≤65px tall.
@@ -45,8 +45,8 @@ export default function LessonHeader({
           }}
         >
           {step > 0
-            ? <ArrowLeft size={16} color="rgba(255,255,255,0.5)" />
-            : <X size={16} color="rgba(255,255,255,0.5)" />
+            ? <ArrowLeft size={16} color="rgba(255,255,255,0.5)" weight="bold" />
+            : <X size={16} color="rgba(255,255,255,0.5)" weight="bold" />
           }
         </button>
 
@@ -65,20 +65,28 @@ export default function LessonHeader({
 
       </div>
 
-      {/* Smooth progress bar */}
-      <div
-        style={{
-          height: 3, borderRadius: 999,
-          background: 'rgba(255,255,255,0.08)',
-          marginBottom: 7,
-          overflow: 'hidden',
-        }}
-      >
-        <motion.div
-          style={{ height: '100%', borderRadius: 999, background: topic.moduleColor }}
-          animate={{ width: `${pct}%` }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
-        />
+      {/* Segmented pill progress */}
+      <div className="flex gap-1" style={{ marginBottom: 7 }}>
+        {Array.from({ length: totalSteps }).map((_, i) => {
+          const isCompleted = i < step
+          const isCurrent   = i === step
+          return (
+            <motion.div
+              key={i}
+              style={{
+                flex: isCurrent ? 2 : 1,
+                height: 4,
+                borderRadius: 999,
+                background: isCompleted ? topic.moduleColor
+                  : isCurrent ? topic.moduleColor
+                  : 'rgba(255,255,255,0.1)',
+                opacity: isCompleted ? 0.6 : isCurrent ? 1 : 1,
+              }}
+              animate={{ flex: isCurrent ? 2 : 1 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+            />
+          )
+        })}
       </div>
 
       {/* Context line */}

@@ -5,7 +5,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { ChevronDown, ChevronRight, CheckCircle2, Circle } from 'lucide-react'
+import { CaretDown, CaretRight, CheckCircle, Circle } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
 import { getSelectedBoard } from '../utils/boardConfig'
 import { useProgress } from '../hooks/useProgress'
@@ -19,7 +19,7 @@ function hasLesson(topic) {
 // ─── Status indicator ─────────────────────────────────────────────────────────
 function StatusDot({ mastered, started }) {
   if (mastered) {
-    return <CheckCircle2 size={20} color="#4ade80" strokeWidth={2} />
+    return <CheckCircle size={20} color="#4ade80" />
   }
   if (started) {
     return (
@@ -29,7 +29,7 @@ function StatusDot({ mastered, started }) {
       />
     )
   }
-  return <Circle size={18} color="rgba(255,255,255,0.2)" strokeWidth={1.5} />
+  return <Circle size={18} color="rgba(255,255,255,0.2)" />
 }
 
 // ─── Module section ───────────────────────────────────────────────────────────
@@ -105,7 +105,7 @@ function ModuleSection({ module, topics, progress, boardId }) {
           />
         </div>
 
-        <ChevronDown
+        <CaretDown
           size={16}
           color="rgba(255,255,255,0.4)"
           style={{ transform: open ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.25s' }}
@@ -171,7 +171,7 @@ function ModuleSection({ module, topics, progress, boardId }) {
                     )}
                   </div>
 
-                  <ChevronRight size={14} color="rgba(255,255,255,0.2)" />
+                  <CaretRight size={14} color="rgba(255,255,255,0.2)" />
                 </button>
               )
             })}
@@ -251,7 +251,7 @@ export default function SpecChecklist() {
         {/* Legend */}
         <div className="flex items-center gap-4 mt-3">
           <div className="flex items-center gap-1.5">
-            <CheckCircle2 size={13} color="#4ade80" />
+            <CheckCircle size={13} color="#4ade80" />
             <span className="text-[11px]" style={{ color: 'rgba(255,255,255,0.4)' }}>Mastered</span>
           </div>
           <div className="flex items-center gap-1.5">

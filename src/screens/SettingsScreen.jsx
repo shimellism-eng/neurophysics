@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Accessibility, Info, ChevronRight, Trash2, Shield, FileText, Pencil, Check, X, LogOut, Type, Clock, Volume2, BookOpen, GraduationCap, Calendar, SlidersHorizontal } from 'lucide-react'
+import { Sun, Bell, Wheelchair, Info, CaretRight, Trash, Shield, FileText, Pencil, Check, X, SignOut, TextT, Clock, SpeakerHigh, BookOpen, GraduationCap, CalendarBlankBlank, Sliders } from '@phosphor-icons/react'
 import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard, getSelectedCourse, setSelectedCourse } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
@@ -128,8 +128,8 @@ function Toggle({ on, onToggle, disabled = false, label }) {
       onClick={disabled ? undefined : (e) => { e.stopPropagation(); onToggle() }}
       className="w-12 h-6 rounded-full relative shrink-0 outline-none"
       style={{
-        background: on ? '#6366f1' : '#1d293d',
-        border: `1px solid ${on ? '#6366f1' : '#2d3e55'}`,
+        background: on ? 'var(--np-indigo)' : '#1d293d',
+        border: `1px solid ${on ? 'var(--np-indigo)' : '#2d3e55'}`,
         opacity: disabled ? 0.4 : 1,
         cursor: disabled ? 'not-allowed' : 'pointer',
       }}
@@ -159,7 +159,7 @@ export default function SettingsScreen() {
   const handleSelectBoard = (boardId) => {
     saveSelectedBoard(boardId)
     setSelectedBoardId(boardId)
-    showToast(`Switched to ${BOARDS[boardId]?.name} ✓`, BOARDS[boardId]?.color || '#6366f1')
+    showToast(`Switched to ${BOARDS[boardId]?.name} ✓`, BOARDS[boardId]?.color || 'var(--np-indigo)')
     // Fire a storage event so LearnScreen updates without a full reload
     try { window.dispatchEvent(new Event('storage')) } catch {}
   }
@@ -251,7 +251,7 @@ export default function SettingsScreen() {
     localStorage.setItem('np_auto_tts', prefs.autoTTS ? 'true' : 'false')
   }, []) // eslint-disable-line
 
-  const showToast = (msg, color = '#6366f1') => {
+  const showToast = (msg, color = 'var(--np-indigo)') => {
     setToast({ msg, color })
     setTimeout(() => setToast(null), 2800)
   }
@@ -572,7 +572,7 @@ export default function SettingsScreen() {
                 style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)' }}
                 aria-label="Edit profile"
               >
-                <Pencil size={14} color="#6366f1" />
+                <Pencil size={14} color="var(--np-indigo)" />
               </button>
             </div>
           ) : (
@@ -592,7 +592,7 @@ export default function SettingsScreen() {
                     className="w-11 h-11 rounded-[12px] text-xl flex items-center justify-center"
                     style={{
                       background: editAvatar === em ? 'rgba(99,102,241,0.2)' : 'rgba(255,255,255,0.06)',
-                      border: editAvatar === em ? '2px solid #6366f1' : '0.75px solid rgba(255,255,255,0.1)',
+                      border: editAvatar === em ? '2px solid var(--np-indigo)' : '0.75px solid rgba(255,255,255,0.1)',
                       transform: editAvatar === em ? 'scale(1.1)' : 'scale(1)',
                       transition: 'all 0.15s',
                     }}
@@ -619,7 +619,7 @@ export default function SettingsScreen() {
                 <button
                   onClick={saveEditProfile}
                   className="w-10 h-10 rounded-[10px] flex items-center justify-center"
-                  style={{ background: '#6366f1' }}
+                  style={{ background: 'var(--np-indigo)' }}
                   aria-label="Save profile"
                 >
                   <Check size={16} color="#fff" />
@@ -637,7 +637,7 @@ export default function SettingsScreen() {
         </div>
         <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
           <div className="flex items-center gap-2 mb-3">
-            <GraduationCap size={15} color="#6366f1" />
+            <GraduationCap size={15} color="var(--np-indigo)" />
             <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your exam board</span>
           </div>
           <div className="grid grid-cols-2 gap-2">
@@ -731,7 +731,7 @@ export default function SettingsScreen() {
         </div>
         <div className="rounded-[16px] p-4" style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
           <div className="flex items-center gap-2 mb-3">
-            <Calendar size={15} color="#6366f1" />
+            <CalendarBlank size={15} color="var(--np-indigo)" />
             <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your exam date</span>
           </div>
           {/* Invisible native date input overlaid on custom display */}
@@ -744,7 +744,7 @@ export default function SettingsScreen() {
                   style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.08)', pointerEvents: 'none' }}>
                   <div className="w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0"
                     style={{ background: 'rgba(99,102,241,0.1)' }}>
-                    <Calendar size={18} color="#6366f1" />
+                    <CalendarBlank size={18} color="var(--np-indigo)" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm leading-snug" style={{ color: '#a8b8cc' }}>
@@ -759,7 +759,7 @@ export default function SettingsScreen() {
                 style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', pointerEvents: 'none' }}>
                 <div className="w-12 h-12 rounded-[10px] flex items-center justify-center shrink-0"
                   style={{ background: 'rgba(99,102,241,0.15)' }}>
-                  <Calendar size={22} color="#6366f1" />
+                  <CalendarBlank size={22} color="var(--np-indigo)" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>Set your exam date</div>
@@ -815,7 +815,7 @@ export default function SettingsScreen() {
         >
           <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
             style={{ background: 'rgba(99,102,241,0.15)' }}>
-            <SlidersHorizontal size={18} style={{ color: 'var(--np-cyan)' }} />
+            <Sliders size={18} style={{ color: 'var(--np-cyan)' }} />
           </div>
           <div className="flex-1 min-w-0">
             <div className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>Comfort Settings</div>
@@ -823,7 +823,7 @@ export default function SettingsScreen() {
               Font, colours, motion, TTS, reading ruler & more
             </div>
           </div>
-          <ChevronRight size={16} style={{ color: 'var(--np-text-muted)' }} />
+          <CaretRight size={16} style={{ color: 'var(--np-text-muted)' }} />
         </motion.button>
       </div>
 
@@ -847,7 +847,7 @@ export default function SettingsScreen() {
                 }
                 const rowInner = (
                   <>
-                    <item.icon size={18} color={item.on ? '#6366f1' : '#a8b8cc'} />
+                    <item.icon size={18} color={item.on ? 'var(--np-indigo)' : '#a8b8cc'} />
                     <div className="flex-1">
                       <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>
                         {item.label}
@@ -855,7 +855,7 @@ export default function SettingsScreen() {
                       <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>{item.hint}</div>
                     </div>
                     {item.chevron
-                      ? <ChevronRight size={14} color={item.label === 'Reminder time' && showTimePicker ? '#6366f1' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
+                      ? <CaretRight size={14} color={item.label === 'Reminder time' && showTimePicker ? 'var(--np-indigo)' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
                       : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} label={item.label} />
                       : null
                     }
@@ -902,7 +902,7 @@ export default function SettingsScreen() {
                         <div className="flex flex-col items-center gap-1">
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
                             onClick={() => setReminderHour(h => (h + 1) % 24)}
                             aria-label="Increase hour"
                           >▲</button>
@@ -912,7 +912,7 @@ export default function SettingsScreen() {
                           </div>
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
                             onClick={() => setReminderHour(h => (h + 23) % 24)}
                             aria-label="Decrease hour"
                           >▼</button>
@@ -922,7 +922,7 @@ export default function SettingsScreen() {
                         <div className="flex flex-col items-center gap-1">
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
                             onClick={() => setReminderMinute(m => (m + 15) % 60)}
                             aria-label="Increase minute"
                           >▲</button>
@@ -932,7 +932,7 @@ export default function SettingsScreen() {
                           </div>
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: '#6366f1' }}
+                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
                             onClick={() => setReminderMinute(m => (m + 45) % 60)}
                             aria-label="Decrease minute"
                           >▼</button>
@@ -946,7 +946,7 @@ export default function SettingsScreen() {
                       </div>
                       <button
                         className="w-full py-3 rounded-[12px] text-sm font-bold mt-1"
-                        style={{ background: '#6366f1', color: '#fff', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}
+                        style={{ background: 'var(--np-indigo)', color: '#fff', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}
                         onClick={handleSaveReminderTime}
                       >
                         Save time
@@ -989,7 +989,7 @@ export default function SettingsScreen() {
                   transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
                 />
               ) : (
-                <LogOut size={18} color="#a8b8cc" />
+                <SignOut size={18} color="#a8b8cc" />
               )}
               <div className="flex-1">
                 <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>
@@ -1014,12 +1014,12 @@ export default function SettingsScreen() {
                 onClick={() => setShowDeleteConfirm(true)}
                 aria-label="Clear all my data"
               >
-                <Trash2 size={18} color="#ef4444" />
+                <Trash size={18} color="#ef4444" />
                 <div className="flex-1">
                   <div className="text-sm font-medium" style={{ color: '#ef4444' }}>Delete Account</div>
                   <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>Permanently deletes your account and all data</div>
                 </div>
-                <ChevronRight size={14} color="#ef444480" />
+                <CaretRight size={14} color="#ef444480" />
               </button>
             ) : (
               <div className="px-4 py-4" style={{ background: 'rgba(239,68,68,0.07)' }}>

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { Send, Sparkles, RotateCcw } from 'lucide-react'
+import { PaperPlaneTilt, Sparkle, ArrowCounterClockwise } from '@phosphor-icons/react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { getSelectedBoard } from '../utils/boardConfig'
@@ -56,7 +56,7 @@ function TypingDots() {
   if (reduceMotion) {
     return (
       <div className="flex gap-1 items-center h-5 px-1">
-        <span className="text-xs" style={{ color: '#6366f1' }}>Thinking…</span>
+        <span className="text-xs" style={{ color: 'var(--np-indigo)' }}>Thinking…</span>
       </div>
     )
   }
@@ -66,7 +66,7 @@ function TypingDots() {
         <motion.div
           key={i}
           className="w-2 h-2 rounded-full"
-          style={{ background: '#6366f1' }}
+          style={{ background: 'var(--np-indigo)' }}
           animate={{ y: [0, -5, 0], opacity: [0.4, 1, 0.4] }}
           transition={{ repeat: Infinity, duration: 0.9, delay: i * 0.2, ease: 'easeInOut' }}
         />
@@ -364,9 +364,9 @@ export default function MamoChat() {
             {msg.role === 'assistant' && (
               <div
                 className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center mt-1"
-                style={{ background: '#6366f120', border: '1px solid #6366f140' }}
+                style={{ background: 'var(--np-indigo)20', border: '1px solid var(--np-indigo)40' }}
               >
-                <Sparkles size={12} color="#6366f1" />
+                <Sparkle size={12} color="var(--np-indigo)" />
               </div>
             )}
             <div style={{ maxWidth: '82%' }}>
@@ -374,7 +374,7 @@ export default function MamoChat() {
                 className="rounded-[16px] px-4 py-3 text-sm leading-relaxed"
                 style={{
                   background: msg.role === 'user'
-                    ? '#6366f1'
+                    ? 'var(--np-indigo)'
                     : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(15,22,41,0.95)',
                   border: msg.role === 'user' ? 'none'
                     : msg.isError ? '0.75px solid rgba(239,68,68,0.3)'
@@ -387,7 +387,7 @@ export default function MamoChat() {
                 {msg.streaming && msg.content && (
                   <span
                     className="inline-block w-0.5 h-4 ml-0.5 align-middle rounded-full"
-                    style={{ background: '#6366f1', animation: 'blink 0.8s step-end infinite' }}
+                    style={{ background: 'var(--np-indigo)', animation: 'blink 0.8s step-end infinite' }}
                   />
                 )}
               </div>
@@ -414,7 +414,7 @@ export default function MamoChat() {
                     sendMessage(lastUserMsg)
                   }}
                 >
-                  <RotateCcw size={13} />
+                  <ArrowCounterClockwise size={13} />
                   Retry
                 </button>
               )}
@@ -488,14 +488,14 @@ export default function MamoChat() {
         <motion.button
           className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
           style={{
-            background: input.trim() && !streaming ? '#6366f1' : 'rgba(255,255,255,0.08)',
+            background: input.trim() && !streaming ? 'var(--np-indigo)' : 'rgba(255,255,255,0.08)',
             boxShadow: input.trim() && !streaming ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
           }}
           onClick={() => sendMessage()}
           whileTap={{ scale: 0.92 }}
           disabled={!input.trim() || streaming}
         >
-          <Send size={18} color={input.trim() && !streaming ? '#fff' : '#a8b8cc'} />
+          <PaperPlaneTilt size={18} color={input.trim() && !streaming ? '#fff' : '#a8b8cc'} />
         </motion.button>
       </div>
 

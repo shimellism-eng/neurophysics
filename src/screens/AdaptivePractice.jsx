@@ -5,7 +5,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
-import { Zap, TrendingUp, TrendingDown, Minus, ChevronRight, RotateCcw, BookmarkPlus, Check, Loader2, CheckCircle, XCircle, Lightbulb, AlertCircle } from 'lucide-react'
+import { Lightning, TrendUp, TrendDown, Minus, CaretRight, ArrowCounterClockwise, BookmarkSimple, Check, CircleNotch, CheckCircle, XCircle, Lightbulb, Warning } from '@phosphor-icons/react'
 import { TOPICS, MODULES, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useAdaptive } from '../hooks/useAdaptive'
 import { getNextQuestion } from '../data/questionBank/index'
@@ -250,7 +250,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
         {status === 'marking' && (
           <motion.div key="marking" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             className="flex flex-col items-center gap-3 py-6">
-            <Loader2 size={28} color={moduleColor} className="animate-spin" />
+            <CircleNotch size={28} color={moduleColor} className="animate-spin" />
             <p className="text-sm" style={{ color: '#a8b8cc' }}>Mamo is marking your answer…</p>
           </motion.div>
         )}
@@ -330,7 +330,7 @@ function ExtendedQuestion({ q, onAnswer, moduleColor = '#6366f1' }) {
           <motion.div key="error" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3">
             <div className="flex items-center gap-2 px-3 py-2 rounded-[10px]"
               style={{ background: 'rgba(239,68,68,0.08)', border: '0.75px solid rgba(239,68,68,0.25)' }}>
-              <AlertCircle size={13} color="#ef4444" style={{ flexShrink: 0 }} />
+              <Warning size={13} color="#ef4444" style={{ flexShrink: 0 }} />
               <p className="text-xs" style={{ color: '#ef4444' }}>AI marking unavailable — self-rate instead.</p>
             </div>
             {/* Show mark scheme */}
@@ -389,14 +389,14 @@ function TierChange({ from, to }) {
     <motion.div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
       style={{ background: 'rgba(0,188,125,0.1)', border: '0.75px solid rgba(0,188,125,0.3)' }}
       initial={{ scale: 0.8 }} animate={{ scale: [0.8, 1.1, 1] }}>
-      <TrendingUp size={12} color="#00bc7d" />
+      <TrendUp size={12} color="#00bc7d" />
       <span className="text-xs font-bold" style={{ color: '#00bc7d' }}>Tier up! → Tier {to}</span>
     </motion.div>
   )
   return (
     <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
       style={{ background: 'rgba(239,68,68,0.1)', border: '0.75px solid rgba(239,68,68,0.3)' }}>
-      <TrendingDown size={12} color="#ef4444" />
+      <TrendDown size={12} color="#ef4444" />
       <span className="text-xs font-semibold" style={{ color: '#ef4444' }}>Tier down → Tier {to}</span>
     </div>
   )
@@ -595,7 +595,7 @@ export default function AdaptivePractice() {
                 loadQuestion([], courseFilter, tier)
               }}
               whileTap={{ scale: 0.96 }}>
-              <RotateCcw size={14} /> Restart
+              <ArrowCounterClockwise size={14} /> Restart
             </motion.button>
             <motion.button
               className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
@@ -730,7 +730,7 @@ export default function AdaptivePractice() {
                     className="w-full py-4 rounded-[16px] text-base font-bold flex items-center justify-center gap-2"
                     style={{ background: `${moduleColor}`, color: '#fff' }}
                     onClick={handleNext} whileTap={{ scale: 0.97 }}>
-                    Next question <ChevronRight size={18} />
+                    Next question <CaretRight size={18} />
                   </motion.button>
                 </motion.div>
               )}
@@ -775,13 +775,13 @@ export default function AdaptivePractice() {
             {savedConfirm ? (
               <motion.div key="saved" className="flex items-center gap-2"
                 initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}>
-                <Check size={15} color="#00bc7d" strokeWidth={2.5} />
+                <Check size={15} color="#00bc7d" />
                 <span className="text-sm font-semibold" style={{ color: '#00bc7d' }}>Progress saved</span>
               </motion.div>
             ) : (
               <motion.div key="save" className="flex items-center gap-2"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <BookmarkPlus size={15} color="rgba(255,255,255,0.35)" strokeWidth={2} />
+                <BookmarkSimple size={15} color="rgba(255,255,255,0.35)" />
                 <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>
                   Save &amp; come back later
                 </span>

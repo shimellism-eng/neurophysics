@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Wheelchair, Info, CaretRight, Trash, Shield, FileText, Pencil, Check, X, SignOut, TextT, Clock, SpeakerHigh, BookOpen, GraduationCap, CalendarBlankBlank, Sliders } from '@phosphor-icons/react'
+import { Sun, Bell, Wheelchair, Info, CaretRight, Trash, Shield, FileText, Pencil, Check, X, SignOut, TextT, Clock, SpeakerHigh, BookOpen, GraduationCap, CalendarBlank, Sliders } from '@phosphor-icons/react'
 import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard, getSelectedCourse, setSelectedCourse } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'

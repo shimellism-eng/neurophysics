@@ -22,7 +22,7 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
   const [correct, setCorrect] = useState(0)
   const [done, setDone] = useState(false)
 
-  const current = pool[qIndex]
+  const current = pool[qIndex] ?? null
 
   const [options] = useState(() => {
     return pool.map(kw => {
@@ -53,6 +53,9 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
       setDone(true)
     }
   }
+
+  // If pool is empty (e.g. only 1 keyword was stripped by safeKeywords), skip check
+  if (pool.length === 0) { onPass(); return null }
 
   if (done) {
     return (
@@ -103,6 +106,8 @@ function MicroCheck({ keywords, moduleColor, onPass }) {
       </motion.div>
     )
   }
+
+  if (!current || !currentOptions) return null
 
   const isAnswered = answered !== null
   const isWrong = isAnswered && answered !== currentOptions.correctDef
@@ -245,8 +250,17 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
   const [wordIndex, setWordIndex] = useState(0)
   const [inCheck, setInCheck] = useState(false)
 
-  const current = keywords[wordIndex]
-  const isLast = wordIndex === keywords.length - 1
+  // Strip any malformed/undefined entries that slipped through data validation
+  const safeKeywords = (keywords || []).filter(k => k && k.word)
+
+  const current = safeKeywords[wordIndex]
+  const isLast = wordIndex === safeKeywords.length - 1
+
+  // If the keywords array is empty after filtering, skip straight to onComplete
+  if (safeKeywords.length === 0) {
+    onComplete()
+    return null
+  }
 
   const handleNext = () => {
     if (!isLast) {
@@ -259,12 +273,15 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
   if (inCheck) {
     return (
       <MicroCheck
-        keywords={keywords}
+        keywords={safeKeywords}
         moduleColor={moduleColor}
         onPass={onComplete}
       />
     )
   }
+
+  // Null guard: shouldn't happen after safeKeywords check above, but prevents any crash
+  if (!current) return null
 
   return (
     <div className="flex flex-col gap-0" style={{ background: '#080f1e', minHeight: '100%' }}>
@@ -305,7 +322,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
                     className="text-[10px] font-bold uppercase tracking-widest"
                     style={{ color: 'rgba(255,255,255,0.35)' }}
                   >
-                    of {keywords.length} key words
+                    of {safeKeywords.length} key words
                   </div>
                 </div>
 
@@ -435,7 +452,7 @@ export default function VocabPreTeach({ keywords, moduleColor, onComplete }) {
               className="text-[11px] font-semibold"
               style={{ color: 'rgba(255,255,255,0.6)', letterSpacing: '0.01em' }}
             >
-              {wordIndex + 2} of {keywords.length}
+              {wordIndex + 2} of {safeKeywords.length}
             </div>
           )}
         </motion.button>

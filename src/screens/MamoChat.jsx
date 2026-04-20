@@ -333,7 +333,7 @@ export default function MamoChat() {
       <div
         ref={messagesRef}
         className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
-        style={{ minHeight: 0, paddingBottom: 24 }}
+        style={{ minHeight: 0, paddingBottom: 'calc(var(--bottom-chrome-height, 76px) + 80px)' }}
         role="log"
         aria-live="polite"
         aria-label="Chat messages"
@@ -464,13 +464,19 @@ export default function MamoChat() {
         </p>
       </div>
 
-      {/* ── Input bar — always visible, pinned above tab nav ─────────────────── */}
+      {/* ── Input bar — fixed above bottom nav, always visible ─────────────────── */}
       <div
-        className="px-4 py-3 shrink-0 flex gap-2 items-end"
+        className="flex gap-2 items-end px-4"
         style={{
+          position: 'fixed',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 20,
           borderTop: '0.75px solid rgba(255,255,255,0.07)',
           background: 'rgba(8,15,30,0.98)',
-          paddingBottom: 'calc(12px + env(safe-area-inset-bottom, 0px))',
+          paddingTop: 12,
+          paddingBottom: 'calc(var(--bottom-chrome-height, 76px) + 8px)',
         }}
       >
         <textarea

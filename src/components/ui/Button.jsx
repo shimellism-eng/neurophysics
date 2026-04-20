@@ -2,7 +2,7 @@
 // Consistent CTA button. Min tap target 44×44px (iOS HIG).
 //
 // Variants: primary | secondary | ghost | danger
-// Sizes:    sm (36px) | md (44px) | lg (52px)
+// Sizes:    sm (44px) | md (46px) | lg (54px)
 //
 // Also exports MotionButton = motion(Button) for screens that need whileTap.
 
@@ -11,20 +11,20 @@ import { motion } from 'motion/react'
 
 const VARIANTS = {
   primary: {
-    background: 'var(--np-indigo)',
-    color: '#fff',
-    border: 'none',
-    boxShadow: 'var(--shadow-raised)',
+    background: 'var(--np-accent)',
+    color: '#07111d',
+    border: '0.75px solid rgba(255,255,255,0.10)',
+    boxShadow: '0 10px 22px rgba(0,0,0,0.20)',
   },
   secondary: {
-    background: 'rgba(99,102,241,0.12)',
-    color: 'var(--np-indigo)',
-    border: '0.75px solid rgba(99,102,241,0.28)',
+    background: 'var(--surface-quiet)',
+    color: 'var(--np-text)',
+    border: 'var(--border-quiet)',
   },
   ghost: {
-    background: 'rgba(255,255,255,0.06)',
-    color: 'var(--np-text)',
-    border: '0.75px solid var(--np-border)',
+    background: 'transparent',
+    color: 'var(--np-text-muted)',
+    border: '0.75px solid transparent',
   },
   danger: {
     background: 'rgba(239,68,68,0.12)',
@@ -34,9 +34,9 @@ const VARIANTS = {
 };
 
 const SIZES = {
-  sm: { height: 36,  padding: '0 14px', fontSize: '0.875rem',  borderRadius: 'var(--radius-sm)' },
-  md: { height: 44,  padding: '0 20px', fontSize: '1rem',      borderRadius: 'var(--radius-md)' },
-  lg: { height: 52,  padding: '0 28px', fontSize: '1.0625rem', borderRadius: 'var(--radius-lg)' },
+  sm: { height: 44,  padding: '0 14px', fontSize: '0.875rem',  borderRadius: 'var(--radius-md)' },
+  md: { height: 46,  padding: '0 20px', fontSize: '0.95rem',   borderRadius: 'var(--radius-lg)' },
+  lg: { height: 54,  padding: '0 28px', fontSize: '1rem',      borderRadius: 'var(--radius-xl)' },
 };
 
 const Button = forwardRef(function Button({

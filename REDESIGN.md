@@ -96,12 +96,12 @@
 - [x] No cards at all on this screen. Path nodes + text only.
 
 #### S2. Learn Screen (Topic List)
-- [ ] Remove coloured borders on all topic cards
-- [ ] Topic identity from icon colour inside card, not border
-- [ ] Sub-topic names never truncated, wrap to second line
-- [ ] Expanded sub-topics: clean list with name + status text, no extra icons
-- [ ] Practice questions + Exam practice buttons restored as secondary style
-- [ ] Remove "1/65 mastered" or rephrase as progress bar with no number
+- [x] Remove coloured borders on all topic cards
+- [x] Topic identity from icon colour inside card, not border
+- [x] Sub-topic names never truncated, wrap to second line
+- [x] Expanded sub-topics: clean list with name + status text, no extra icons
+- [x] Practice questions + Exam practice buttons restored as secondary style
+- [x] Remove "1/65 mastered" or rephrase as progress bar with no number
 
 #### S3. Lesson Header (All Lesson Screens - Brilliant Style)
 - [x] Stripped to: X button + full topic name + nothing on right

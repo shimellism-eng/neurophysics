@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Lightning, CaretDown, CaretUp, ArrowRight, Trophy, Clock, CaretRight, Star, MagnifyingGlass, X } from '@phosphor-icons/react'
+import { CaretDown, CaretUp, ArrowRight, Trophy, Clock, CaretRight, Star, MagnifyingGlass, X } from '@phosphor-icons/react'
 import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard, getSelectedCourse } from '../utils/boardConfig'
@@ -73,17 +73,9 @@ function TopicTile({ topic, moduleColor, masteryState, index, onTap }) {
     >
       {/* State dot */}
       <div
-        className="w-6 h-6 rounded-full flex items-center justify-center shrink-0"
-        style={{ background: isMastered ? `${moduleColor}22` : 'rgba(255,255,255,0.05)' }}
-      >
-        {isMastered ? (
-          <CheckCircle size={12} color={moduleColor} />
-        ) : isStarted ? (
-          <div className="w-2 h-2 rounded-full" style={{ background: '#6366f1' }} />
-        ) : (
-          <div className="w-2 h-2 rounded-full" style={{ background: 'rgba(255,255,255,0.18)' }} />
-        )}
-      </div>
+        className="w-2 h-2 rounded-full shrink-0"
+        style={{ background: isMastered ? moduleColor : isStarted ? '#6366f1' : 'rgba(255,255,255,0.18)' }}
+      />
 
       {/* Title — wraps to second line if needed */}
       <p
@@ -134,8 +126,7 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
       className="rounded-[22px] overflow-hidden"
       style={{
         background: 'var(--np-card)',
-        border: `1px solid ${pct > 0 ? module.color + '35' : 'var(--np-border)'}`,
-        boxShadow: pct > 0 ? `0 4px 24px ${module.color}10` : 'none',
+        border: '1px solid rgba(255,255,255,0.08)',
       }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -168,10 +159,10 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
             </div>
             <div className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.35)' }}>
               {masteredCount > 0
-                ? `${masteredCount} of ${totalTopics} mastered`
+                ? `${masteredCount} mastered`
                 : startedCount > 0
-                  ? `${startedCount} in progress`
-                  : `${totalTopics} to explore`}
+                  ? `${startedCount} started`
+                  : `${totalTopics} topics`}
             </div>
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -406,12 +397,18 @@ export default function LearnScreen() {
               {selectedBoard.flag} {selectedBoard.name}
             </button>
           </div>
-          {masteredTotal > 0 && (
-            <span className="text-xs font-bold" style={{ color: '#6366f1' }}>
-              {masteredTotal}/{totalTopics} mastered
-            </span>
-          )}
         </div>
+        {masteredTotal > 0 && (
+          <div className="mb-2 h-[3px] rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+            <motion.div
+              className="h-full rounded-full"
+              style={{ background: '#6366f1' }}
+              initial={{ width: 0 }}
+              animate={{ width: `${overallPct}%` }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            />
+          </div>
+        )}
 
         {/* Search bar */}
         <div className="relative mb-3">
@@ -503,7 +500,7 @@ export default function LearnScreen() {
                       className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[16px] text-left"
                       style={{
                         background: 'var(--np-card)',
-                        border: `1px solid ${state === 'mastered' ? mod.color + '45' : 'rgba(255,255,255,0.13)'}`,
+                        border: '1px solid rgba(255,255,255,0.09)',
                         borderRadius: 18,
                         minHeight: 56,
                       }}
@@ -538,12 +535,9 @@ export default function LearnScreen() {
                           )}
                         </div>
                       </div>
-                      {state === 'mastered' && (
-                        <CheckCircle size={16} color={mod.color} />
-                      )}
-                      {state === 'started' && (
-                        <Lightning size={14} color="#fbbf24" />
-                      )}
+                      <span className="text-[11px] font-medium shrink-0" style={{ color: state === 'mastered' ? 'rgba(255,255,255,0.3)' : state === 'started' ? '#818cf8' : 'rgba(255,255,255,0.18)' }}>
+                        {state === 'mastered' ? 'Mastered' : state === 'started' ? 'Started' : 'Start'}
+                      </span>
                     </motion.button>
                   )
                 })}

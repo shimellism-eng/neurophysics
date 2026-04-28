@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "generatedAt": "2026-04-28T11:12:18.283616+00:00",
+  "counts": {
+    "total": 1650,
+    "byBoard": {
+      "aqa": 900,
+      "edexcel": 750
+    }
+  },
+  "boards": {
+    "aqa": {
+      "all": "/data/questions/aqa/all.json",
+      "count": 900,
+      "topics": {
+        "atomic_structure": "/data/questions/aqa/atomic_structure.json",
+        "electricity": "/data/questions/aqa/electricity.json",
+        "energy": "/data/questions/aqa/energy.json",
+        "forces": "/data/questions/aqa/forces.json",
+        "magnetism": "/data/questions/aqa/magnetism.json",
+        "particle_model": "/data/questions/aqa/particle_model.json",
+        "space": "/data/questions/aqa/space.json",
+        "waves": "/data/questions/aqa/waves.json"
+      }
+    },
+    "edexcel": {
+      "all": "/data/questions/edexcel/all.json",
+      "count": 750,
+      "topics": {
+        "atomic_structure": "/data/questions/edexcel/atomic_structure.json",
+        "electricity": "/data/questions/edexcel/electricity.json",
+        "energy": "/data/questions/edexcel/energy.json",
+        "forces": "/data/questions/edexcel/forces.json",
+        "magnetism": "/data/questions/edexcel/magnetism.json",
+        "particle_model": "/data/questions/edexcel/particle_model.json",
+        "space": "/data/questions/edexcel/space.json",
+        "waves": "/data/questions/edexcel/waves.json"
+      }
+    }
+  }
+}

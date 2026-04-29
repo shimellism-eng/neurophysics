@@ -37,19 +37,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "easy",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a clinic worksheet, a learner checks: a student points to a huge group of stars and dust held together by gravity. What is this called?",
       "options": [
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "One star with one moon.",
+        "A small asteroid.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it."
+        "A crater on the Moon."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 2,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_easy_026",
@@ -61,19 +72,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "easy",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a museum label, a visitor reads: a results table says Andromeda contains many stars, gas and dust. Which object is being described?",
       "options": [
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A cloud in Earth air.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system."
+        "A comet tail.",
+        "A layer of the atmosphere."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 1,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_easy_036",
@@ -85,19 +107,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "easy",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a school lab card, a pupil answers: which answer names a very large collection of stars held together by gravity?",
       "options": [
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere."
+        "A small asteroid.",
+        "A group of satellites.",
+        "A single planet."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 0,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_easy_046",
@@ -109,19 +142,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "easy",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a telescope image shows a spiral system of many stars. What type of object is shown?",
       "options": [
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A comet tail.",
+        "A crater on the Moon.",
+        "One star with one moon.",
         "A galaxy is a large collection of stars held together by gravity."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 3,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_easy_056",
@@ -133,19 +177,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "easy",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: during space revision, what is the name for a huge star system such as the Milky Way?",
       "options": [
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A group of satellites.",
+        "A layer of the atmosphere.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it."
+        "A cloud in Earth air."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 2,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_126",
@@ -157,19 +212,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a revision flashcard, a student practises: the Milky Way is described as billions of stars held by gravity. What is it?",
       "options": [
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A crater on the Moon.",
+        "A single planet.",
+        "A small asteroid.",
         "A galaxy is a large collection of stars held together by gravity."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 3,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_136",
@@ -181,19 +247,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a hospital training card, a trainee checks: a astronomer points to a huge group of stars and dust held together by gravity. What is this called?",
       "options": [
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A layer of the atmosphere.",
+        "One star with one moon.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it."
+        "A comet tail."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 2,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_146",
@@ -205,19 +282,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says Andromeda contains many stars, gas and dust. Which object is being described?",
       "options": [
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A single planet.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system."
+        "A cloud in Earth air.",
+        "A group of satellites."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 1,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_156",
@@ -229,19 +317,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a classroom board, a group discusses: which answer names a very large collection of stars held together by gravity?",
       "options": [
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere."
+        "One star with one moon.",
+        "A small asteroid.",
+        "A crater on the Moon."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 0,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_166",
@@ -253,19 +352,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a telescope image shows a spiral system of many stars. What type of object is shown?",
       "options": [
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A cloud in Earth air.",
+        "A comet tail.",
+        "A layer of the atmosphere.",
         "A galaxy is a large collection of stars held together by gravity."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 3,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_176",
@@ -277,19 +387,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: during space revision, what is the name for a huge star system such as the Milky Way?",
       "options": [
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A small asteroid.",
+        "A group of satellites.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it."
+        "A single planet."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 2,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_hard_186",
@@ -301,19 +422,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "hard",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: the Milky Way is described as billions of stars held by gravity. What is it?",
       "options": [
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A comet tail.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system."
+        "A crater on the Moon.",
+        "One star with one moon."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 1,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_medium_066",
@@ -325,19 +457,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "medium",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a exam practice page, a candidate works: a parent points to a huge group of stars and dust held together by gravity. What is this called?",
       "options": [
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A group of satellites.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system."
+        "A layer of the atmosphere.",
+        "A cloud in Earth air."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 1,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_medium_076",
@@ -349,19 +492,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "medium",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a home study card, a learner revises: a log book says Andromeda contains many stars, gas and dust. Which object is being described?",
       "options": [
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere."
+        "A crater on the Moon.",
+        "A single planet.",
+        "A small asteroid."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 0,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_medium_086",
@@ -373,19 +527,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "medium",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a research log book, an assistant notes: which answer names a very large collection of stars held together by gravity?",
       "options": [
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A layer of the atmosphere.",
+        "One star with one moon.",
+        "A comet tail.",
         "A galaxy is a large collection of stars held together by gravity."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 3,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_medium_096",
@@ -397,19 +562,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "medium",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct?",
+      "question": "On a planetarium screen, a visitor chooses: a telescope image shows a spiral system of many stars. What type of object is shown?",
       "options": [
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "A single planet.",
+        "A cloud in Earth air.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it."
+        "A group of satellites."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 2,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_medium_106",
@@ -421,19 +597,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "medium",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: during space revision, what is the name for a huge star system such as the Milky Way?",
       "options": [
-        "A galaxy can exist only inside Earth's atmosphere.",
+        "One star with one moon.",
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system."
+        "A small asteroid.",
+        "A crater on the Moon."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 1,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_galaxy_medium_116",
@@ -445,19 +632,30 @@
       "subtopicSlug": "galaxies",
       "difficulty": "medium",
       "skill": "Define a galaxy",
-      "question": "Which statement about galaxies is correct? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: the Milky Way is described as billions of stars held by gravity. What is it?",
       "options": [
         "A galaxy is a large collection of stars held together by gravity.",
-        "A galaxy is a single star with many planets around it.",
-        "A galaxy is smaller than a solar system.",
-        "A galaxy can exist only inside Earth's atmosphere."
+        "A cloud in Earth air.",
+        "A comet tail.",
+        "A layer of the atmosphere."
       ],
       "correctAnswer": "A galaxy is a large collection of stars held together by gravity.",
       "correctIndex": 0,
-      "explanation": "Galaxies contain billions of stars, gas and dust, all held together by gravity.",
+      "explanation": "A galaxy is a large collection of stars held together by gravity.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Galaxies contain billions of stars, gas and dust, all held together by gravity."
+      "senNote": "A galaxy is a large collection of stars held together by gravity.",
+      "conceptFamily": "galaxies",
+      "responseMode": "direct_recall",
+      "patternId": "galaxy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "galaxy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_easy_002",
@@ -493,19 +691,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "easy",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a clinic worksheet, a learner checks: a student orders the life cycle of a star like the Sun. What comes after red giant?",
       "options": [
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It turns into a planet.",
+        "It becomes a comet.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star."
+        "It becomes a moon."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_easy_022",
@@ -517,19 +726,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "easy",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a museum label, a visitor reads: a results table shows red giant, then planetary nebula. What final object forms?",
       "options": [
-        "It becomes a main-sequence star again.",
+        "It stays red forever.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole."
+        "It changes into a galaxy.",
+        "It stops all nuclear change instantly."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_easy_032",
@@ -541,19 +761,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "easy",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a school lab card, a pupil answers: what happens near the end of the life of a star with about the Sun's mass?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again."
+        "It becomes a comet.",
+        "It explodes as every type of supernova.",
+        "It becomes a black hole at once."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_easy_042",
@@ -565,19 +796,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "easy",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a low-mass star reaches the red giant stage. Which later outcome is correct?",
       "options": [
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It changes into a galaxy.",
+        "It becomes a moon.",
+        "It turns into a planet.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 3,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_easy_052",
@@ -589,19 +831,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "easy",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which sequence is right for a Sun-like star after the red giant stage?",
       "options": [
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It explodes as every type of supernova.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star."
+        "It stays red forever."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_easy_062",
@@ -613,19 +866,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "easy",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a revision flashcard, a student practises: a Sun-like star has become a red giant. What stage comes after it sheds outer layers?",
       "options": [
-        "It becomes a main-sequence star again.",
+        "It becomes a moon.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole."
+        "It becomes a black hole at once.",
+        "It becomes a comet."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_hard_132",
@@ -637,19 +901,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "hard",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a hospital training card, a trainee checks: a astronomer orders the life cycle of a star like the Sun. What comes after red giant?",
       "options": [
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It stops all nuclear change instantly.",
+        "It turns into a planet.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star."
+        "It changes into a galaxy."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_hard_142",
@@ -661,19 +936,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "hard",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows red giant, then planetary nebula. What final object forms?",
       "options": [
-        "It becomes a main-sequence star again.",
+        "It becomes a black hole at once.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole."
+        "It stays red forever.",
+        "It explodes as every type of supernova."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_hard_152",
@@ -685,19 +971,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "hard",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a classroom board, a group discusses: what happens near the end of the life of a star with about the Sun's mass?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again."
+        "It turns into a planet.",
+        "It becomes a comet.",
+        "It becomes a moon."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_hard_162",
@@ -709,19 +1006,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "hard",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a workshop checklist, an engineer checks: a low-mass star reaches the red giant stage. Which later outcome is correct?",
       "options": [
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It stays red forever.",
+        "It changes into a galaxy.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 3,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_hard_172",
@@ -733,19 +1041,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "hard",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which sequence is right for a Sun-like star after the red giant stage?",
       "options": [
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It becomes a comet.",
+        "It explodes as every type of supernova.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star."
+        "It becomes a black hole at once."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_hard_182",
@@ -757,19 +1076,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "hard",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: a Sun-like star has become a red giant. What stage comes after it sheds outer layers?",
       "options": [
-        "It becomes a main-sequence star again.",
+        "It changes into a galaxy.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole."
+        "It becomes a moon.",
+        "It turns into a planet."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_medium_072",
@@ -781,19 +1111,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "medium",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a exam practice page, a candidate works: a parent orders the life cycle of a star like the Sun. What comes after red giant?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again."
+        "It explodes as every type of supernova.",
+        "It stops all nuclear change instantly.",
+        "It stays red forever."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_medium_082",
@@ -805,19 +1146,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "medium",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a home study card, a learner revises: a log book shows red giant, then planetary nebula. What final object forms?",
       "options": [
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It becomes a moon.",
+        "It becomes a black hole at once.",
+        "It becomes a comet.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 3,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_medium_092",
@@ -829,19 +1181,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "medium",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a research log book, an assistant notes: what happens near the end of the life of a star with about the Sun's mass?",
       "options": [
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It stops all nuclear change instantly.",
+        "It turns into a planet.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star."
+        "It changes into a galaxy."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_medium_102",
@@ -853,19 +1216,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "medium",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage?",
+      "question": "On a planetarium screen, a visitor chooses: a low-mass star reaches the red giant stage. Which later outcome is correct?",
       "options": [
-        "It becomes a main-sequence star again.",
+        "It becomes a black hole at once.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole."
+        "It stays red forever.",
+        "It explodes as every type of supernova."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_medium_112",
@@ -877,19 +1251,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "medium",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which sequence is right for a Sun-like star after the red giant stage?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again."
+        "It turns into a planet.",
+        "It becomes a comet.",
+        "It becomes a moon."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_star_life_medium_122",
@@ -901,19 +1286,30 @@
       "subtopicSlug": "life_cycle_of_stars",
       "difficulty": "medium",
       "skill": "Recall the life cycle of a Sun-like star",
-      "question": "What happens to a star like the Sun after the red giant stage? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: a Sun-like star has become a red giant. What stage comes after it sheds outer layers?",
       "options": [
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It stays red forever.",
+        "It changes into a galaxy.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 3,
-      "explanation": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf.",
+      "explanation": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
       "diagramJson": null,
       "topicId": "stellar_evolution",
-      "senNote": "A Sun-like star becomes a red giant, then a planetary nebula, and finally a white dwarf."
+      "senNote": "A Sun-like star forms a planetary nebula and becomes a white dwarf.",
+      "conceptFamily": "star-life-cycle",
+      "responseMode": "sequence_check",
+      "patternId": "sun_like_star_life_cycle",
+      "contextType": "sequence",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sun_like_star_life_cycle",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_easy_008",
@@ -949,19 +1345,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "easy",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a clinic worksheet, a learner checks: a student compares ground and space telescopes. Why is space clearer?",
       "options": [
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "Lenses become weightless.",
+        "Mirrors stop reflecting.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further."
+        "Space removes the need for detectors."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_easy_028",
@@ -973,19 +1380,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "easy",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a museum label, a visitor reads: a results table says some wavelengths are absorbed by air. Why place a telescope in orbit?",
       "options": [
-        "There is more sound in the air to carry the signals.",
+        "Gravity bends no light at all.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly."
+        "The telescope makes its own stars.",
+        "The Sun powers every image."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_easy_038",
@@ -997,19 +1415,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "easy",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a school lab card, a pupil answers: why do space telescopes avoid much of the blurring caused by the atmosphere?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals."
+        "Mirrors stop reflecting.",
+        "The Moon blocks all clouds.",
+        "Stars become closer."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_easy_048",
@@ -1021,19 +1450,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "easy",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a satellite telescope observes faint galaxies. What advantage does its position give?",
       "options": [
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "The telescope makes its own stars.",
+        "Space removes the need for detectors.",
+        "Lenses become weightless.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 3,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_easy_058",
@@ -1045,19 +1485,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "easy",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which reason explains why some telescopes are launched into space?",
       "options": [
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "The Moon blocks all clouds.",
+        "The Sun powers every image.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further."
+        "Gravity bends no light at all."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_hard_128",
@@ -1069,19 +1520,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "hard",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a revision flashcard, a student practises: a telescope is put above Earth's atmosphere. Why can this improve its images?",
       "options": [
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "Space removes the need for detectors.",
+        "Stars become closer.",
+        "Mirrors stop reflecting.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 3,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_hard_138",
@@ -1093,19 +1555,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "hard",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a hospital training card, a trainee checks: a astronomer compares ground and space telescopes. Why is space clearer?",
       "options": [
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "The Sun powers every image.",
+        "Lenses become weightless.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further."
+        "The telescope makes its own stars."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_hard_148",
@@ -1117,19 +1590,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "hard",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says some wavelengths are absorbed by air. Why place a telescope in orbit?",
       "options": [
-        "There is more sound in the air to carry the signals.",
+        "Stars become closer.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly."
+        "Gravity bends no light at all.",
+        "The Moon blocks all clouds."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_hard_158",
@@ -1141,19 +1625,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "hard",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a classroom board, a group discusses: why do space telescopes avoid much of the blurring caused by the atmosphere?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals."
+        "Lenses become weightless.",
+        "Mirrors stop reflecting.",
+        "Space removes the need for detectors."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_hard_168",
@@ -1165,19 +1660,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "hard",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a satellite telescope observes faint galaxies. What advantage does its position give?",
       "options": [
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "Gravity bends no light at all.",
+        "The telescope makes its own stars.",
+        "The Sun powers every image.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 3,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_hard_178",
@@ -1189,19 +1695,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "hard",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which reason explains why some telescopes are launched into space?",
       "options": [
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "Mirrors stop reflecting.",
+        "The Moon blocks all clouds.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further."
+        "Stars become closer."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_medium_068",
@@ -1213,19 +1730,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "medium",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a science fair poster, a team explains: a telescope is put above Earth's atmosphere. Why can this improve its images?",
       "options": [
-        "There is more sound in the air to carry the signals.",
+        "The telescope makes its own stars.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly."
+        "Space removes the need for detectors.",
+        "Lenses become weightless."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_medium_078",
@@ -1237,19 +1765,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "medium",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a exam practice page, a candidate works: a parent compares ground and space telescopes. Why is space clearer?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals."
+        "The Moon blocks all clouds.",
+        "The Sun powers every image.",
+        "Gravity bends no light at all."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_medium_088",
@@ -1261,19 +1800,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "medium",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a home study card, a learner revises: a log book says some wavelengths are absorbed by air. Why place a telescope in orbit?",
       "options": [
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "Space removes the need for detectors.",
+        "Stars become closer.",
+        "Mirrors stop reflecting.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 3,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_medium_098",
@@ -1285,19 +1835,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "medium",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space?",
+      "question": "On a research log book, an assistant notes: why do space telescopes avoid much of the blurring caused by the atmosphere?",
       "options": [
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "The Sun powers every image.",
+        "Lenses become weightless.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further."
+        "The telescope makes its own stars."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_medium_108",
@@ -1309,19 +1870,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "medium",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a satellite telescope observes faint galaxies. What advantage does its position give?",
       "options": [
-        "There is more sound in the air to carry the signals.",
+        "Stars become closer.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly."
+        "Gravity bends no light at all.",
+        "The Moon blocks all clouds."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_telescope_medium_118",
@@ -1333,19 +1905,30 @@
       "subtopicSlug": "observing_space",
       "difficulty": "medium",
       "skill": "Explain where telescopes are placed",
-      "question": "Why are optical telescopes often placed on mountains or in space? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which reason explains why some telescopes are launched into space?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals."
+        "Lenses become weightless.",
+        "Mirrors stop reflecting.",
+        "Space removes the need for detectors."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
-      "explanation": "Less atmosphere means clearer observations because there is less absorption and distortion of light.",
+      "explanation": "A telescope above the atmosphere avoids much absorption and distortion.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Less atmosphere means clearer observations because there is less absorption and distortion of light."
+      "senNote": "A telescope above the atmosphere avoids much absorption and distortion.",
+      "conceptFamily": "observing-space",
+      "responseMode": "reasoning_check",
+      "patternId": "space_telescope_atmosphere",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "space_telescope_atmosphere",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_easy_010",
@@ -1381,19 +1964,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "easy",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a clinic worksheet, a learner checks: a student in orbit is still pulled by Earth's gravity. Why do they seem to float?",
       "options": [
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "Their mass is zero.",
+        "Air pushes them upward.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit."
+        "The Moon pulls harder than Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_easy_030",
@@ -1405,19 +1999,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "easy",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a museum label, a visitor reads: a results table says the spacecraft and astronaut fall around Earth together. What does this cause?",
       "options": [
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "The spacecraft cancels gravity.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere."
+        "Magnets pull them from the floor.",
+        "They stop moving forwards."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_easy_040",
@@ -1429,19 +2034,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "easy",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a school lab card, a pupil answers: why is apparent weightlessness felt by astronauts moving around Earth?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down."
+        "Air pushes them upward.",
+        "They are outside the Universe.",
+        "There is no gravity in orbit."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_easy_050",
@@ -1453,19 +2069,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "easy",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: in orbit, gravity provides the curved path. Why does the crew not feel normal weight?",
       "options": [
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "Magnets pull them from the floor.",
+        "The Moon pulls harder than Earth.",
+        "Their mass is zero.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 3,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_easy_060",
@@ -1477,19 +2104,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "easy",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which explanation fits an astronaut in continuous free fall around Earth?",
       "options": [
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "They are outside the Universe.",
+        "They stop moving forwards.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit."
+        "The spacecraft cancels gravity."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_hard_130",
@@ -1501,19 +2139,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "hard",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a revision flashcard, a student practises: astronauts float inside an orbiting spacecraft. Why do they feel weightless?",
       "options": [
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "The Moon pulls harder than Earth.",
+        "There is no gravity in orbit.",
+        "Air pushes them upward.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 3,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_hard_140",
@@ -1525,19 +2174,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "hard",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a hospital training card, a trainee checks: a astronomer in orbit is still pulled by Earth's gravity. Why do they seem to float?",
       "options": [
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "They stop moving forwards.",
+        "Their mass is zero.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit."
+        "Magnets pull them from the floor."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_hard_150",
@@ -1549,19 +2209,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "hard",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says the spacecraft and astronaut fall around Earth together. What does this cause?",
       "options": [
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "There is no gravity in orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere."
+        "The spacecraft cancels gravity.",
+        "They are outside the Universe."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_hard_160",
@@ -1573,19 +2244,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "hard",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a classroom board, a group discusses: why is apparent weightlessness felt by astronauts moving around Earth?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down."
+        "Their mass is zero.",
+        "Air pushes them upward.",
+        "The Moon pulls harder than Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_hard_170",
@@ -1597,19 +2279,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "hard",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: in orbit, gravity provides the curved path. Why does the crew not feel normal weight?",
       "options": [
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "The spacecraft cancels gravity.",
+        "Magnets pull them from the floor.",
+        "They stop moving forwards.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 3,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_hard_180",
@@ -1621,19 +2314,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "hard",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which explanation fits an astronaut in continuous free fall around Earth?",
       "options": [
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "Air pushes them upward.",
+        "They are outside the Universe.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit."
+        "There is no gravity in orbit."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_medium_070",
@@ -1645,19 +2349,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "medium",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a science fair poster, a team explains: astronauts float inside an orbiting spacecraft. Why do they feel weightless?",
       "options": [
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "Magnets pull them from the floor.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere."
+        "The Moon pulls harder than Earth.",
+        "Their mass is zero."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_medium_080",
@@ -1669,19 +2384,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "medium",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a exam practice page, a candidate works: a parent in orbit is still pulled by Earth's gravity. Why do they seem to float?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down."
+        "They are outside the Universe.",
+        "They stop moving forwards.",
+        "The spacecraft cancels gravity."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_medium_090",
@@ -1693,19 +2419,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "medium",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a home study card, a learner revises: a log book says the spacecraft and astronaut fall around Earth together. What does this cause?",
       "options": [
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "The Moon pulls harder than Earth.",
+        "There is no gravity in orbit.",
+        "Air pushes them upward.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 3,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_medium_100",
@@ -1717,19 +2454,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "medium",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit?",
+      "question": "On a research log book, an assistant notes: why is apparent weightlessness felt by astronauts moving around Earth?",
       "options": [
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "They stop moving forwards.",
+        "Their mass is zero.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit."
+        "Magnets pull them from the floor."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_medium_110",
@@ -1741,19 +2489,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "medium",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: in orbit, gravity provides the curved path. Why does the crew not feel normal weight?",
       "options": [
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "There is no gravity in orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere."
+        "The spacecraft cancels gravity.",
+        "They are outside the Universe."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_weightless_medium_120",
@@ -1765,19 +2524,30 @@
       "subtopicSlug": "orbits",
       "difficulty": "medium",
       "skill": "Explain apparent weightlessness in orbit",
-      "question": "Why do astronauts appear weightless in orbit? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which explanation fits an astronaut in continuous free fall around Earth?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down."
+        "Their mass is zero.",
+        "Air pushes them upward.",
+        "The Moon pulls harder than Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
-      "explanation": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless.",
+      "explanation": "Astronauts in orbit are in continuous free fall around Earth.",
       "diagramJson": null,
       "topicId": "solar_system",
-      "senNote": "Astronauts and the spacecraft are both falling together around Earth, so they appear weightless."
+      "senNote": "Astronauts in orbit are in continuous free fall around Earth.",
+      "conceptFamily": "orbits",
+      "responseMode": "reasoning_check",
+      "patternId": "apparent_weightlessness_orbit",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "apparent_weightlessness_orbit",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_easy_004",
@@ -1813,19 +2583,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "easy",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a clinic worksheet, a learner checks: a student sees galaxy absorption lines at longer wavelengths. What motion does this show?",
       "options": [
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They have stopped shining.",
+        "They are all blue stars.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only."
+        "They are smaller than atoms."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 2,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_easy_024",
@@ -1837,19 +2618,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "easy",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a museum label, a visitor reads: a results table records red-shift from many galaxies. What conclusion is supported?",
       "options": [
-        "They have stopped emitting electromagnetic waves.",
+        "They are inside Earth air.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light."
+        "They orbit the Moon.",
+        "They are changing into planets."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 1,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_easy_034",
@@ -1861,19 +2653,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "easy",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a school lab card, a pupil answers: what does red-shift in light from distant galaxies tell us about the Universe?",
       "options": [
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves."
+        "They are all blue stars.",
+        "Their light has no wavelength.",
+        "They are moving towards us."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 0,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_easy_044",
@@ -1885,19 +2688,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "easy",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a spectrum from a far galaxy is stretched. Which movement is most likely?",
       "options": [
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They orbit the Moon.",
+        "They are smaller than atoms.",
+        "They have stopped shining.",
         "They are moving away from us."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 3,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_easy_054",
@@ -1909,19 +2723,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "easy",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: in astronomy data, red-shift is evidence for what galaxy motion?",
       "options": [
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "Their light has no wavelength.",
+        "They are changing into planets.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only."
+        "They are inside Earth air."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 2,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_hard_134",
@@ -1933,19 +2758,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "hard",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a revision flashcard, a student practises: light from a distant galaxy is shifted towards red. What does this suggest?",
       "options": [
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They are smaller than atoms.",
+        "They are moving towards us.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only."
+        "They are all blue stars."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 2,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_hard_144",
@@ -1957,19 +2793,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "hard",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a hospital training card, a trainee checks: a astronomer sees galaxy absorption lines at longer wavelengths. What motion does this show?",
       "options": [
-        "They have stopped emitting electromagnetic waves.",
+        "They are changing into planets.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light."
+        "They have stopped shining.",
+        "They orbit the Moon."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 1,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_hard_154",
@@ -1981,19 +2828,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "hard",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard records red-shift from many galaxies. What conclusion is supported?",
       "options": [
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves."
+        "They are moving towards us.",
+        "They are inside Earth air.",
+        "Their light has no wavelength."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 0,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_hard_164",
@@ -2005,19 +2863,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "hard",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a classroom board, a group discusses: what does red-shift in light from distant galaxies tell us about the Universe?",
       "options": [
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They have stopped shining.",
+        "They are all blue stars.",
+        "They are smaller than atoms.",
         "They are moving away from us."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 3,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_hard_174",
@@ -2029,19 +2898,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "hard",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a spectrum from a far galaxy is stretched. Which movement is most likely?",
       "options": [
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They are inside Earth air.",
+        "They orbit the Moon.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only."
+        "They are changing into planets."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 2,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_hard_184",
@@ -2053,19 +2933,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "hard",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: in astronomy data, red-shift is evidence for what galaxy motion?",
       "options": [
-        "They have stopped emitting electromagnetic waves.",
+        "They are all blue stars.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light."
+        "Their light has no wavelength.",
+        "They are moving towards us."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 1,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_064",
@@ -2077,19 +2968,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a science fair poster, a team explains: light from a distant galaxy is shifted towards red. What does this suggest?",
       "options": [
-        "They have stopped emitting electromagnetic waves.",
+        "They orbit the Moon.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light."
+        "They are smaller than atoms.",
+        "They have stopped shining."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 1,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_074",
@@ -2101,19 +3003,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a exam practice page, a candidate works: a parent sees galaxy absorption lines at longer wavelengths. What motion does this show?",
       "options": [
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves."
+        "Their light has no wavelength.",
+        "They are changing into planets.",
+        "They are inside Earth air."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 0,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_084",
@@ -2125,19 +3038,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a home study card, a learner revises: a log book records red-shift from many galaxies. What conclusion is supported?",
       "options": [
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They are smaller than atoms.",
+        "They are moving towards us.",
+        "They are all blue stars.",
         "They are moving away from us."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 3,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_094",
@@ -2149,19 +3073,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies?",
+      "question": "On a research log book, an assistant notes: what does red-shift in light from distant galaxies tell us about the Universe?",
       "options": [
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They are changing into planets.",
+        "They have stopped shining.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only."
+        "They orbit the Moon."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 2,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_104",
@@ -2173,19 +3108,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a spectrum from a far galaxy is stretched. Which movement is most likely?",
       "options": [
-        "They have stopped emitting electromagnetic waves.",
+        "They are moving towards us.",
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light."
+        "They are inside Earth air.",
+        "Their light has no wavelength."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 1,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_114",
@@ -2197,19 +3143,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: in astronomy data, red-shift is evidence for what galaxy motion?",
       "options": [
         "They are moving away from us.",
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves."
+        "They have stopped shining.",
+        "They are all blue stars.",
+        "They are smaller than atoms."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 0,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "space_redshift_medium_124",
@@ -2221,19 +3178,30 @@
       "subtopicSlug": "red-shift",
       "difficulty": "medium",
       "skill": "Interpret red-shift",
-      "question": "What does red-shift suggest about many distant galaxies? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: light from a distant galaxy is shifted towards red. What does this suggest?",
       "options": [
-        "They are becoming cooler than all nearby stars only.",
-        "They are moving towards us faster than light.",
-        "They have stopped emitting electromagnetic waves.",
+        "They are inside Earth air.",
+        "They orbit the Moon.",
+        "They are changing into planets.",
         "They are moving away from us."
       ],
       "correctAnswer": "They are moving away from us.",
       "correctIndex": 3,
-      "explanation": "Red-shift shows that light has stretched, which happens when a source is moving away from us.",
+      "explanation": "Red-shift shows light has been stretched, so the galaxy is moving away.",
       "diagramJson": null,
       "topicId": "redshift",
-      "senNote": "Red-shift shows that light has stretched, which happens when a source is moving away from us."
+      "senNote": "Red-shift shows light has been stretched, so the galaxy is moving away.",
+      "conceptFamily": "red-shift",
+      "responseMode": "interpretation",
+      "patternId": "red_shift_galaxy_motion",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "red_shift_galaxy_motion",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     }
   ]
 }

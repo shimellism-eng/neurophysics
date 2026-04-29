@@ -37,19 +37,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "easy",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a clinic worksheet, a learner checks: a student compares the useful and wasted arrows on a Sankey diagram. What conclusion fits?",
       "options": [
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "No energy is transferred.",
+        "The diagram shows mass.",
         "The device is fairly efficient.",
-        "The device has zero energy input."
+        "The device is impossible."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_easy_029",
@@ -61,19 +72,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "easy",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a museum label, a visitor reads: a results table shows most input energy leaving by the useful pathway. What does that mean?",
       "options": [
-        "The device does no useful work.",
+        "Input energy is zero.",
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy."
+        "The useful output is tiny.",
+        "The wasted store is largest."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_easy_039",
@@ -85,19 +107,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "easy",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a school lab card, a pupil answers: what does a wide useful output arrow show on a Sankey diagram?",
       "options": [
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work."
+        "The diagram shows mass.",
+        "The arrows show speed.",
+        "Most energy is wasted."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_easy_049",
@@ -109,19 +142,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "easy",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a device's Sankey diagram has only a narrow wasted branch. What can be inferred?",
       "options": [
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The useful output is tiny.",
+        "The device is impossible.",
+        "No energy is transferred.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 3,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_easy_059",
@@ -133,19 +177,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "easy",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which statement matches a Sankey diagram with more useful than wasted output?",
       "options": [
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The arrows show speed.",
+        "The wasted store is largest.",
         "The device is fairly efficient.",
-        "The device has zero energy input."
+        "Input energy is zero."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_hard_129",
@@ -157,19 +212,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "hard",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a revision flashcard, a student practises: a Sankey diagram has a large useful arrow and a small wasted arrow. What does this show?",
       "options": [
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The device is impossible.",
+        "Most energy is wasted.",
+        "The diagram shows mass.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 3,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_hard_139",
@@ -181,19 +247,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "hard",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a hospital training card, a trainee checks: a astronomer compares the useful and wasted arrows on a Sankey diagram. What conclusion fits?",
       "options": [
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The wasted store is largest.",
+        "No energy is transferred.",
         "The device is fairly efficient.",
-        "The device has zero energy input."
+        "The useful output is tiny."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_hard_149",
@@ -205,19 +282,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "hard",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows most input energy leaving by the useful pathway. What does that mean?",
       "options": [
-        "The device does no useful work.",
+        "Most energy is wasted.",
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy."
+        "Input energy is zero.",
+        "The arrows show speed."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_hard_159",
@@ -229,19 +317,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "hard",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a classroom board, a group discusses: what does a wide useful output arrow show on a Sankey diagram?",
       "options": [
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work."
+        "No energy is transferred.",
+        "The diagram shows mass.",
+        "The device is impossible."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_hard_169",
@@ -253,19 +352,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "hard",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a device's Sankey diagram has only a narrow wasted branch. What can be inferred?",
       "options": [
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "Input energy is zero.",
+        "The useful output is tiny.",
+        "The wasted store is largest.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 3,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_hard_179",
@@ -277,19 +387,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "hard",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which statement matches a Sankey diagram with more useful than wasted output?",
       "options": [
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The diagram shows mass.",
+        "The arrows show speed.",
         "The device is fairly efficient.",
-        "The device has zero energy input."
+        "Most energy is wasted."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_medium_069",
@@ -301,19 +422,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "medium",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a science fair poster, a team explains: a Sankey diagram has a large useful arrow and a small wasted arrow. What does this show?",
       "options": [
-        "The device does no useful work.",
+        "The useful output is tiny.",
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy."
+        "The device is impossible.",
+        "No energy is transferred."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_medium_079",
@@ -325,19 +457,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "medium",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a exam practice page, a candidate works: a parent compares the useful and wasted arrows on a Sankey diagram. What conclusion fits?",
       "options": [
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work."
+        "The arrows show speed.",
+        "The wasted store is largest.",
+        "Input energy is zero."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_medium_089",
@@ -349,19 +492,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "medium",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a home study card, a learner revises: a log book shows most input energy leaving by the useful pathway. What does that mean?",
       "options": [
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The device is impossible.",
+        "Most energy is wasted.",
+        "The diagram shows mass.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 3,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_medium_099",
@@ -373,19 +527,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "medium",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
+      "question": "On a research log book, an assistant notes: what does a wide useful output arrow show on a Sankey diagram?",
       "options": [
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "The wasted store is largest.",
+        "No energy is transferred.",
         "The device is fairly efficient.",
-        "The device has zero energy input."
+        "The useful output is tiny."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_medium_109",
@@ -397,19 +562,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "medium",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a device's Sankey diagram has only a narrow wasted branch. What can be inferred?",
       "options": [
-        "The device does no useful work.",
+        "Most energy is wasted.",
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy."
+        "Input energy is zero.",
+        "The arrows show speed."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_sankey_medium_119",
@@ -421,19 +597,30 @@
       "subtopicSlug": "efficiency",
       "difficulty": "medium",
       "skill": "Interpret a Sankey diagram",
-      "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which statement matches a Sankey diagram with more useful than wasted output?",
       "options": [
         "The device is fairly efficient.",
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work."
+        "No energy is transferred.",
+        "The diagram shows mass.",
+        "The device is impossible."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
-      "explanation": "A larger useful output compared with wasted output means a higher efficiency.",
+      "explanation": "A wider useful arrow means most of the input energy is usefully transferred.",
       "diagramJson": null,
       "topicId": "efficiency",
-      "senNote": "A larger useful output compared with wasted output means a higher efficiency."
+      "senNote": "A wider useful arrow means most of the input energy is usefully transferred.",
+      "conceptFamily": "efficiency",
+      "responseMode": "interpretation",
+      "patternId": "sankey_efficiency",
+      "contextType": "diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "sankey_efficiency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_easy_005",
@@ -469,19 +656,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "easy",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a clinic worksheet, a learner checks: a student watches a dropped object speed up. Which store is being emptied?",
       "options": [
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Nuclear energy store",
+        "Elastic energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store"
+        "Sound energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 2,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_easy_025",
@@ -493,19 +691,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "easy",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a museum label, a visitor reads: a results table tracks energy in a falling book. Which store gets smaller?",
       "options": [
-        "The magnetic energy store",
+        "Magnetic energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only"
+        "Thermal energy store of the room",
+        "Light energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 1,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_easy_035",
@@ -517,19 +726,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "easy",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a school lab card, a pupil answers: as a raised object moves downwards, which energy store decreases?",
       "options": [
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store"
+        "Elastic energy store",
+        "Electrostatic energy store",
+        "Chemical energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 0,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_easy_045",
@@ -541,19 +761,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "easy",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a climber drops a stone from rest. Which store is reduced during the fall?",
       "options": [
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Thermal energy store of the room",
+        "Sound energy store",
+        "Nuclear energy store",
         "The gravitational potential energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 3,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_easy_055",
@@ -565,19 +796,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "easy",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which energy store is lower after an object has fallen closer to Earth?",
       "options": [
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Electrostatic energy store",
+        "Light energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store"
+        "Magnetic energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 2,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_hard_135",
@@ -589,19 +831,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "hard",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a revision flashcard, a student practises: a ball falls from a shelf. Which energy store decreases?",
       "options": [
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Sound energy store",
+        "Chemical energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store"
+        "Elastic energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 2,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_hard_145",
@@ -613,19 +866,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "hard",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a hospital training card, a trainee checks: a astronomer watches a dropped object speed up. Which store is being emptied?",
       "options": [
-        "The magnetic energy store",
+        "Light energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only"
+        "Nuclear energy store",
+        "Thermal energy store of the room"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 1,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_hard_155",
@@ -637,19 +901,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "hard",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard tracks energy in a falling book. Which store gets smaller?",
       "options": [
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store"
+        "Chemical energy store",
+        "Magnetic energy store",
+        "Electrostatic energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 0,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_hard_165",
@@ -661,19 +936,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "hard",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a classroom board, a group discusses: as a raised object moves downwards, which energy store decreases?",
       "options": [
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Nuclear energy store",
+        "Elastic energy store",
+        "Sound energy store",
         "The gravitational potential energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 3,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_hard_175",
@@ -685,19 +971,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "hard",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a climber drops a stone from rest. Which store is reduced during the fall?",
       "options": [
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Magnetic energy store",
+        "Thermal energy store of the room",
         "The gravitational potential energy store",
-        "The nuclear energy store"
+        "Light energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 2,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_hard_185",
@@ -709,19 +1006,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "hard",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which energy store is lower after an object has fallen closer to Earth?",
       "options": [
-        "The magnetic energy store",
+        "Elastic energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only"
+        "Electrostatic energy store",
+        "Chemical energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 1,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_065",
@@ -733,19 +1041,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a science fair poster, a team explains: a ball falls from a shelf. Which energy store decreases?",
       "options": [
-        "The magnetic energy store",
+        "Thermal energy store of the room",
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only"
+        "Sound energy store",
+        "Nuclear energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 1,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_075",
@@ -757,19 +1076,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a exam practice page, a candidate works: a parent watches a dropped object speed up. Which store is being emptied?",
       "options": [
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store"
+        "Electrostatic energy store",
+        "Light energy store",
+        "Magnetic energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 0,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_085",
@@ -781,19 +1111,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a home study card, a learner revises: a log book tracks energy in a falling book. Which store gets smaller?",
       "options": [
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Sound energy store",
+        "Chemical energy store",
+        "Elastic energy store",
         "The gravitational potential energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 3,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_095",
@@ -805,19 +1146,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly?",
+      "question": "On a research log book, an assistant notes: as a raised object moves downwards, which energy store decreases?",
       "options": [
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Light energy store",
+        "Nuclear energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store"
+        "Thermal energy store of the room"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 2,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_105",
@@ -829,19 +1181,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a climber drops a stone from rest. Which store is reduced during the fall?",
       "options": [
-        "The magnetic energy store",
+        "Chemical energy store",
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only"
+        "Magnetic energy store",
+        "Electrostatic energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 1,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_115",
@@ -853,19 +1216,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which energy store is lower after an object has fallen closer to Earth?",
       "options": [
         "The gravitational potential energy store",
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store"
+        "Nuclear energy store",
+        "Elastic energy store",
+        "Sound energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 0,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_stores_medium_125",
@@ -877,19 +1251,30 @@
       "subtopicSlug": "energy_stores",
       "difficulty": "medium",
       "skill": "Identify changing energy stores",
-      "question": "When a ball falls, which energy store decreases most clearly? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: a ball falls from a shelf. Which energy store decreases?",
       "options": [
-        "The nuclear energy store",
-        "The elastic energy store only",
-        "The magnetic energy store",
+        "Magnetic energy store",
+        "Thermal energy store of the room",
+        "Light energy store",
         "The gravitational potential energy store"
       ],
       "correctAnswer": "The gravitational potential energy store",
       "correctIndex": 3,
-      "explanation": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases.",
+      "explanation": "As height decreases, the gravitational potential energy store decreases.",
       "diagramJson": null,
       "topicId": "energy_stores",
-      "senNote": "As a ball falls, gravitational potential energy decreases and kinetic energy usually increases."
+      "senNote": "As height decreases, the gravitational potential energy store decreases.",
+      "conceptFamily": "energy-stores",
+      "responseMode": "direct_recall",
+      "patternId": "falling_object_energy_store",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "falling_object_energy_store",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_easy_007",
@@ -925,19 +1310,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "easy",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a clinic worksheet, a learner checks: an museum report suggests more insulation in the roof. Which reason is correct?",
       "options": [
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It makes conduction faster.",
+        "It increases heat loss.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof."
+        "It makes the roof colder by magic."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 2,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_easy_027",
@@ -949,19 +1345,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "easy",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a museum label, a visitor reads: a teacher compares thin and thick insulation. Why does the thicker layer help?",
       "options": [
-        "It creates more energy inside the roof.",
+        "It removes all particles.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger."
+        "It changes heat into mass.",
+        "It stops every energy transfer completely."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 1,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_easy_037",
@@ -973,19 +1380,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "easy",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a school lab card, a pupil answers: why does trapped air in insulation slow energy transfer by conduction?",
       "options": [
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof."
+        "It increases heat loss.",
+        "It reflects all sound only.",
+        "It creates energy."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 0,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_easy_047",
@@ -997,19 +1415,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "easy",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a house loses less thermal energy after insulation is fitted. What is the main effect?",
       "options": [
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It changes heat into mass.",
+        "It makes the roof colder by magic.",
+        "It makes conduction faster.",
         "It slows the rate of thermal energy transfer by conduction."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 3,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_easy_057",
@@ -1021,19 +1450,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "easy",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which explanation links insulation to a slower rate of heat transfer?",
       "options": [
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It reflects all sound only.",
+        "It stops every energy transfer completely.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof."
+        "It removes all particles."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 2,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_127",
@@ -1045,19 +1485,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a revision flashcard, a student practises: thick loft insulation is added to a house. How does it reduce heat loss?",
       "options": [
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It makes the roof colder by magic.",
+        "It creates energy.",
+        "It increases heat loss.",
         "It slows the rate of thermal energy transfer by conduction."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 3,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_137",
@@ -1069,19 +1520,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a hospital training card, a trainee checks: an observatory report suggests more insulation in the roof. Which reason is correct?",
       "options": [
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It stops every energy transfer completely.",
+        "It makes conduction faster.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof."
+        "It changes heat into mass."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 2,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_147",
@@ -1093,19 +1555,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a observatory data sheet, an astronomer reviews: a group compares thin and thick insulation. Why does the thicker layer help?",
       "options": [
-        "It creates more energy inside the roof.",
+        "It creates energy.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger."
+        "It removes all particles.",
+        "It reflects all sound only."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 1,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_157",
@@ -1117,19 +1590,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a classroom board, a group discusses: why does trapped air in insulation slow energy transfer by conduction?",
       "options": [
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof."
+        "It makes conduction faster.",
+        "It increases heat loss.",
+        "It makes the roof colder by magic."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 0,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_167",
@@ -1141,19 +1625,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a house loses less thermal energy after insulation is fitted. What is the main effect?",
       "options": [
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It removes all particles.",
+        "It changes heat into mass.",
+        "It stops every energy transfer completely.",
         "It slows the rate of thermal energy transfer by conduction."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 3,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_177",
@@ -1165,19 +1660,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which explanation links insulation to a slower rate of heat transfer?",
       "options": [
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It increases heat loss.",
+        "It reflects all sound only.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof."
+        "It creates energy."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 2,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_hard_187",
@@ -1189,19 +1695,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "hard",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: thick loft insulation is added to a house. How does it reduce heat loss?",
       "options": [
-        "It creates more energy inside the roof.",
+        "It changes heat into mass.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger."
+        "It makes the roof colder by magic.",
+        "It makes conduction faster."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 1,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_medium_067",
@@ -1213,19 +1730,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "medium",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a exam practice page, a candidate works: an home experiment report suggests more insulation in the roof. Which reason is correct?",
       "options": [
-        "It creates more energy inside the roof.",
+        "It reflects all sound only.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger."
+        "It stops every energy transfer completely.",
+        "It removes all particles."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 1,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_medium_077",
@@ -1237,19 +1765,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "medium",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a home study card, a learner revises: a assistant compares thin and thick insulation. Why does the thicker layer help?",
       "options": [
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof."
+        "It makes the roof colder by magic.",
+        "It creates energy.",
+        "It increases heat loss."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 0,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_medium_087",
@@ -1261,19 +1800,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "medium",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a research log book, an assistant notes: why does trapped air in insulation slow energy transfer by conduction?",
       "options": [
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It stops every energy transfer completely.",
+        "It makes conduction faster.",
+        "It changes heat into mass.",
         "It slows the rate of thermal energy transfer by conduction."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 3,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_medium_097",
@@ -1285,19 +1835,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "medium",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house?",
+      "question": "On a planetarium screen, a visitor chooses: a house loses less thermal energy after insulation is fitted. What is the main effect?",
       "options": [
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof.",
+        "It creates energy.",
+        "It removes all particles.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof."
+        "It reflects all sound only."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 2,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_medium_107",
@@ -1309,19 +1870,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "medium",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which explanation links insulation to a slower rate of heat transfer?",
       "options": [
-        "It creates more energy inside the roof.",
+        "It makes conduction faster.",
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger."
+        "It increases heat loss.",
+        "It makes the roof colder by magic."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 1,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_insulation_medium_117",
@@ -1333,19 +1905,30 @@
       "subtopicSlug": "insulation",
       "difficulty": "medium",
       "skill": "Explain how insulation reduces energy transfer",
-      "question": "Why does thicker loft insulation reduce energy transfer from a house? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: thick loft insulation is added to a house. How does it reduce heat loss?",
       "options": [
         "It slows the rate of thermal energy transfer by conduction.",
-        "It increases the temperature difference across the roof.",
-        "It makes convection currents stronger.",
-        "It creates more energy inside the roof."
+        "It removes all particles.",
+        "It changes heat into mass.",
+        "It stops every energy transfer completely."
       ],
       "correctAnswer": "It slows the rate of thermal energy transfer by conduction.",
       "correctIndex": 0,
-      "explanation": "Insulation traps air and reduces conduction, which slows thermal energy transfer.",
+      "explanation": "Insulation slows thermal energy transfer, especially by conduction.",
       "diagramJson": null,
       "topicId": "energy_pathways",
-      "senNote": "Insulation traps air and reduces conduction, which slows thermal energy transfer."
+      "senNote": "Insulation slows thermal energy transfer, especially by conduction.",
+      "conceptFamily": "insulation",
+      "responseMode": "reasoning_check",
+      "patternId": "loft_insulation_conduction",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "loft_insulation_conduction",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_easy_001",
@@ -1381,19 +1964,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "easy",
       "skill": "Calculate kinetic energy",
-      "question": "A 4 kg trolley moves at 4 m/s. What is its kinetic energy?",
+      "question": "On a clinic worksheet, a learner checks: a student substitutes values into E_k = 1/2mv^2 and gets 32 J. What should they choose?",
       "options": [
-        "17 J",
-        "36 J",
+        "64 J",
+        "16 J",
         "32 J",
-        "16 J"
+        "35 J"
       ],
       "correctAnswer": "32 J",
       "correctIndex": 2,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 32 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 32 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_easy_021",
@@ -1405,19 +1999,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "easy",
       "skill": "Calculate kinetic energy",
-      "question": "A 5 kg trolley moves at 5 m/s. What is its kinetic energy?",
+      "question": "On a museum label, a visitor reads: a moving ball's kinetic energy is calculated as 62.5 J. Which option matches?",
       "options": [
-        "67.5 J",
+        "125 J",
         "62.5 J",
-        "25 J",
-        "26 J"
+        "31.25 J",
+        "66.5 J"
       ],
       "correctAnswer": "62.5 J",
       "correctIndex": 1,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 62.5 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 62.5 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_easy_031",
@@ -1429,19 +2034,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "easy",
       "skill": "Calculate kinetic energy",
-      "question": "A 6 kg trolley moves at 6 m/s. What is its kinetic energy?",
+      "question": "On a school lab card, a pupil answers: the worked answer for a moving cart is 108 J. What is its kinetic energy?",
       "options": [
         "108 J",
-        "36 J",
-        "37 J",
-        "114 J"
+        "216 J",
+        "54 J",
+        "113 J"
       ],
       "correctAnswer": "108 J",
       "correctIndex": 0,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 108 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 108 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_easy_041",
@@ -1453,19 +2069,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "easy",
       "skill": "Calculate kinetic energy",
-      "question": "A 7 kg trolley moves at 7 m/s. What is its kinetic energy?",
+      "question": "On a factory safety note, an apprentice reviews: a training screen shows the final line of a kinetic energy calculation as 171.5 J. Pick the result.",
       "options": [
-        "49 J",
-        "50 J",
-        "178.5 J",
+        "343 J",
+        "85.75 J",
+        "177.5 J",
         "171.5 J"
       ],
       "correctAnswer": "171.5 J",
       "correctIndex": 3,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 171.5 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 171.5 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_easy_051",
@@ -1477,19 +2104,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "easy",
       "skill": "Calculate kinetic energy",
-      "question": "A 2 kg trolley moves at 8 m/s. What is its kinetic energy?",
+      "question": "On a space centre display, a guide explains: which value should be written when the kinetic energy calculation gives 64 J?",
       "options": [
-        "65 J",
-        "66 J",
+        "128 J",
+        "32 J",
         "64 J",
-        "16 J"
+        "66 J"
       ],
       "correctAnswer": "64 J",
       "correctIndex": 2,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 64 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 64 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_easy_061",
@@ -1501,19 +2139,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "easy",
       "skill": "Calculate kinetic energy",
-      "question": "A 3 kg trolley moves at 2 m/s. What is its kinetic energy?",
+      "question": "On a revision flashcard, a student practises: a hospital trolley calculation gives a kinetic energy of 6 J. Which answer is correct?",
       "options": [
-        "9 J",
+        "12 J",
         "6 J",
-        "7 J",
-        "4 J"
+        "3 J",
+        "9 J"
       ],
       "correctAnswer": "6 J",
       "correctIndex": 1,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 6 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 6 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_hard_131",
@@ -1525,19 +2174,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "hard",
       "skill": "Calculate kinetic energy",
-      "question": "A 4 kg trolley moves at 2 m/s. What is its kinetic energy?",
+      "question": "On a hospital training card, a trainee checks: a astronomer substitutes values into E_k = 1/2mv^2 and gets 8 J. What should they choose?",
       "options": [
+        "16 J",
         "4 J",
-        "12 J",
         "8 J",
-        "9 J"
+        "12 J"
       ],
       "correctAnswer": "8 J",
       "correctIndex": 2,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 8 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 8 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_hard_141",
@@ -1549,19 +2209,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "hard",
       "skill": "Calculate kinetic energy",
-      "question": "A 5 kg trolley moves at 3 m/s. What is its kinetic energy?",
+      "question": "On a observatory data sheet, an astronomer reviews: a moving ball's kinetic energy is calculated as 22.5 J. Which option matches?",
       "options": [
-        "27.5 J",
+        "45 J",
         "22.5 J",
-        "15 J",
-        "9 J"
+        "11.25 J",
+        "27.5 J"
       ],
       "correctAnswer": "22.5 J",
       "correctIndex": 1,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 22.5 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 22.5 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_hard_151",
@@ -1573,19 +2244,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "hard",
       "skill": "Calculate kinetic energy",
-      "question": "A 6 kg trolley moves at 4 m/s. What is its kinetic energy?",
+      "question": "On a classroom board, a group discusses: the worked answer for a moving cart is 48 J. What is its kinetic energy?",
       "options": [
         "48 J",
+        "96 J",
         "24 J",
-        "16 J",
         "54 J"
       ],
       "correctAnswer": "48 J",
       "correctIndex": 0,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 48 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 48 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_hard_161",
@@ -1597,19 +2279,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "hard",
       "skill": "Calculate kinetic energy",
-      "question": "A 7 kg trolley moves at 5 m/s. What is its kinetic energy?",
+      "question": "On a workshop checklist, an engineer checks: a notebook shows the final line of a kinetic energy calculation as 87.5 J. Pick the result.",
       "options": [
-        "35 J",
-        "25 J",
-        "94.5 J",
+        "175 J",
+        "43.75 J",
+        "89.5 J",
         "87.5 J"
       ],
       "correctAnswer": "87.5 J",
       "correctIndex": 3,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 87.5 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 87.5 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_hard_171",
@@ -1621,19 +2314,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "hard",
       "skill": "Calculate kinetic energy",
-      "question": "A 2 kg trolley moves at 6 m/s. What is its kinetic energy?",
+      "question": "On a field trip notebook, a pupil records: which value should be written when the kinetic energy calculation gives 36 J?",
       "options": [
-        "37 J",
-        "38 J",
+        "72 J",
+        "18 J",
         "36 J",
-        "12 J"
+        "39 J"
       ],
       "correctAnswer": "36 J",
       "correctIndex": 2,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 36 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 36 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_hard_181",
@@ -1645,19 +2349,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "hard",
       "skill": "Calculate kinetic energy",
-      "question": "A 3 kg trolley moves at 7 m/s. What is its kinetic energy?",
+      "question": "On a science fair poster, a team explains: a exam practice trolley calculation gives a kinetic energy of 73.5 J. Which answer is correct?",
       "options": [
-        "76.5 J",
+        "147 J",
         "73.5 J",
-        "21 J",
-        "49 J"
+        "36.75 J",
+        "77.5 J"
       ],
       "correctAnswer": "73.5 J",
       "correctIndex": 1,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 73.5 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 73.5 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_medium_071",
@@ -1669,19 +2384,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "medium",
       "skill": "Calculate kinetic energy",
-      "question": "A 4 kg trolley moves at 3 m/s. What is its kinetic energy?",
+      "question": "On a exam practice page, a candidate works: a parent substitutes values into E_k = 1/2mv^2 and gets 18 J. What should they choose?",
       "options": [
         "18 J",
-        "12 J",
+        "36 J",
         "9 J",
-        "22 J"
+        "23 J"
       ],
       "correctAnswer": "18 J",
       "correctIndex": 0,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 18 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 18 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_medium_081",
@@ -1693,19 +2419,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "medium",
       "skill": "Calculate kinetic energy",
-      "question": "A 5 kg trolley moves at 4 m/s. What is its kinetic energy?",
+      "question": "On a home study card, a learner revises: a moving ball's kinetic energy is calculated as 40 J. Which option matches?",
       "options": [
+        "80 J",
         "20 J",
-        "16 J",
-        "45 J",
+        "46 J",
         "40 J"
       ],
       "correctAnswer": "40 J",
       "correctIndex": 3,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 40 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 40 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_medium_091",
@@ -1717,19 +2454,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "medium",
       "skill": "Calculate kinetic energy",
-      "question": "A 6 kg trolley moves at 5 m/s. What is its kinetic energy?",
+      "question": "On a research log book, an assistant notes: the worked answer for a moving cart is 75 J. What is its kinetic energy?",
       "options": [
-        "25 J",
-        "81 J",
+        "150 J",
+        "37.5 J",
         "75 J",
-        "30 J"
+        "77 J"
       ],
       "correctAnswer": "75 J",
       "correctIndex": 2,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 75 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 75 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_medium_101",
@@ -1741,19 +2489,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "medium",
       "skill": "Calculate kinetic energy",
-      "question": "A 7 kg trolley moves at 6 m/s. What is its kinetic energy?",
+      "question": "On a planetarium screen, a visitor chooses: a sound desk shows the final line of a kinetic energy calculation as 126 J. Pick the result.",
       "options": [
-        "133 J",
+        "252 J",
         "126 J",
-        "42 J",
-        "36 J"
+        "63 J",
+        "129 J"
       ],
       "correctAnswer": "126 J",
       "correctIndex": 1,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 126 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 126 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_medium_111",
@@ -1765,19 +2524,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "medium",
       "skill": "Calculate kinetic energy",
-      "question": "A 2 kg trolley moves at 7 m/s. What is its kinetic energy?",
+      "question": "On a radio studio demo, a presenter explains: which value should be written when the kinetic energy calculation gives 49 J?",
       "options": [
         "49 J",
-        "14 J",
-        "50 J",
-        "51 J"
+        "98 J",
+        "24.5 J",
+        "53 J"
       ],
       "correctAnswer": "49 J",
       "correctIndex": 0,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 49 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 49 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_ke_medium_121",
@@ -1789,19 +2559,30 @@
       "subtopicSlug": "kinetic_energy",
       "difficulty": "medium",
       "skill": "Calculate kinetic energy",
-      "question": "A 3 kg trolley moves at 8 m/s. What is its kinetic energy?",
+      "question": "On a energy survey report, a surveyor writes: a clinic trolley calculation gives a kinetic energy of 96 J. Which answer is correct?",
       "options": [
-        "24 J",
-        "64 J",
-        "99 J",
+        "192 J",
+        "48 J",
+        "101 J",
         "96 J"
       ],
       "correctAnswer": "96 J",
       "correctIndex": 3,
-      "explanation": "Kinetic energy equals 0.5 x mass x speed squared.",
+      "explanation": "The kinetic energy calculation gives 96 J.",
       "diagramJson": null,
       "topicId": "energy_equations",
-      "senNote": "Kinetic energy equals 0.5 x mass x speed squared."
+      "senNote": "The kinetic energy calculation gives 96 J.",
+      "conceptFamily": "kinetic-energy",
+      "responseMode": "direct_substitution",
+      "patternId": "kinetic_energy_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "kinetic_energy_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_easy_003",
@@ -1837,19 +2618,30 @@
       "subtopicSlug": "power",
       "difficulty": "easy",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 700 J of energy in 30 s. What is its power?",
+      "question": "On a clinic worksheet, a learner checks: a student finds energy transferred per second is 23.33 W. What power is this?",
       "options": [
-        "0.04 W",
-        "28.33 W",
+        "46.66 W",
+        "11.66 W",
         "23.33 W",
-        "21000 W"
+        "26.33 W"
       ],
       "correctAnswer": "23.33 W",
       "correctIndex": 2,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 23.33 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 23.33 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_easy_023",
@@ -1861,19 +2653,30 @@
       "subtopicSlug": "power",
       "difficulty": "easy",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 750 J of energy in 35 s. What is its power?",
+      "question": "On a museum label, a visitor reads: a heater's energy transfer rate is 21.43 W. Which power value matches?",
       "options": [
-        "26.43 W",
+        "42.86 W",
         "21.43 W",
-        "26250 W",
-        "0.05 W"
+        "10.71 W",
+        "25.43 W"
       ],
       "correctAnswer": "21.43 W",
       "correctIndex": 1,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 21.43 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 21.43 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_easy_033",
@@ -1885,19 +2688,30 @@
       "subtopicSlug": "power",
       "difficulty": "easy",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 800 J of energy in 40 s. What is its power?",
+      "question": "On a school lab card, a pupil answers: the power calculation for a lamp gives 20 W. Which answer should be selected?",
       "options": [
         "20 W",
-        "32000 W",
-        "0.05 W",
+        "40 W",
+        "10 W",
         "25 W"
       ],
       "correctAnswer": "20 W",
       "correctIndex": 0,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 20 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 20 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_easy_043",
@@ -1909,19 +2723,30 @@
       "subtopicSlug": "power",
       "difficulty": "easy",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 850 J of energy in 45 s. What is its power?",
+      "question": "On a factory safety note, an apprentice reviews: a training screen shows P = E/t and the result is 18.89 W. What is P?",
       "options": [
-        "38250 W",
-        "0.05 W",
-        "23.89 W",
+        "37.78 W",
+        "9.45 W",
+        "24.89 W",
         "18.89 W"
       ],
       "correctAnswer": "18.89 W",
       "correctIndex": 3,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 18.89 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 18.89 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_easy_053",
@@ -1933,19 +2758,30 @@
       "subtopicSlug": "power",
       "difficulty": "easy",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 900 J of energy in 20 s. What is its power?",
+      "question": "On a space centre display, a guide explains: which value is correct if a device transfers energy at a rate of 45 W?",
       "options": [
-        "0.02 W",
-        "50 W",
+        "90 W",
+        "22.5 W",
         "45 W",
-        "18000 W"
+        "47 W"
       ],
       "correctAnswer": "45 W",
       "correctIndex": 2,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 45 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 45 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_hard_133",
@@ -1957,19 +2793,30 @@
       "subtopicSlug": "power",
       "difficulty": "hard",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 900 J of energy in 30 s. What is its power?",
+      "question": "On a revision flashcard, a student practises: a hospital device transfers 30 J each second. What is the power?",
       "options": [
-        "0.03 W",
-        "35 W",
+        "60 W",
+        "15 W",
         "30 W",
-        "27000 W"
+        "33 W"
       ],
       "correctAnswer": "30 W",
       "correctIndex": 2,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 30 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 30 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_hard_143",
@@ -1981,19 +2828,30 @@
       "subtopicSlug": "power",
       "difficulty": "hard",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 950 J of energy in 35 s. What is its power?",
+      "question": "On a hospital training card, a trainee checks: a astronomer finds energy transferred per second is 27.14 W. What power is this?",
       "options": [
-        "32.14 W",
+        "54.28 W",
         "27.14 W",
-        "33250 W",
-        "0.04 W"
+        "13.57 W",
+        "31.14 W"
       ],
       "correctAnswer": "27.14 W",
       "correctIndex": 1,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 27.14 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 27.14 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_hard_153",
@@ -2005,19 +2863,30 @@
       "subtopicSlug": "power",
       "difficulty": "hard",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 600 J of energy in 40 s. What is its power?",
+      "question": "On a observatory data sheet, an astronomer reviews: a heater's energy transfer rate is 15 W. Which power value matches?",
       "options": [
         "15 W",
-        "24000 W",
-        "0.07 W",
+        "30 W",
+        "7.5 W",
         "20 W"
       ],
       "correctAnswer": "15 W",
       "correctIndex": 0,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 15 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 15 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_hard_163",
@@ -2029,19 +2898,30 @@
       "subtopicSlug": "power",
       "difficulty": "hard",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 650 J of energy in 45 s. What is its power?",
+      "question": "On a classroom board, a group discusses: the power calculation for a lamp gives 14.44 W. Which answer should be selected?",
       "options": [
-        "29250 W",
-        "0.07 W",
-        "19.44 W",
+        "28.88 W",
+        "7.22 W",
+        "20.44 W",
         "14.44 W"
       ],
       "correctAnswer": "14.44 W",
       "correctIndex": 3,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 14.44 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 14.44 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_hard_173",
@@ -2053,19 +2933,30 @@
       "subtopicSlug": "power",
       "difficulty": "hard",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 700 J of energy in 20 s. What is its power?",
+      "question": "On a workshop checklist, an engineer checks: a notebook shows P = E/t and the result is 35 W. What is P?",
       "options": [
-        "0.03 W",
-        "40 W",
+        "70 W",
+        "17.5 W",
         "35 W",
-        "14000 W"
+        "37 W"
       ],
       "correctAnswer": "35 W",
       "correctIndex": 2,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 35 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 35 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_hard_183",
@@ -2077,19 +2968,30 @@
       "subtopicSlug": "power",
       "difficulty": "hard",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 750 J of energy in 25 s. What is its power?",
+      "question": "On a field trip notebook, a pupil records: which value is correct if a device transfers energy at a rate of 30 W?",
       "options": [
-        "35 W",
+        "60 W",
         "30 W",
-        "18750 W",
-        "0.03 W"
+        "15 W",
+        "33 W"
       ],
       "correctAnswer": "30 W",
       "correctIndex": 1,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 30 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 30 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_063",
@@ -2101,19 +3003,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 950 J of energy in 25 s. What is its power?",
+      "question": "On a science fair poster, a team explains: a exam practice device transfers 38 J each second. What is the power?",
       "options": [
-        "43 W",
+        "76 W",
         "38 W",
-        "23750 W",
-        "0.03 W"
+        "19 W",
+        "42 W"
       ],
       "correctAnswer": "38 W",
       "correctIndex": 1,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 38 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 38 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_073",
@@ -2125,19 +3038,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 600 J of energy in 30 s. What is its power?",
+      "question": "On a exam practice page, a candidate works: a parent finds energy transferred per second is 20 W. What power is this?",
       "options": [
         "20 W",
-        "18000 W",
-        "0.05 W",
+        "40 W",
+        "10 W",
         "25 W"
       ],
       "correctAnswer": "20 W",
       "correctIndex": 0,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 20 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 20 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_083",
@@ -2149,19 +3073,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 650 J of energy in 35 s. What is its power?",
+      "question": "On a home study card, a learner revises: a heater's energy transfer rate is 18.57 W. Which power value matches?",
       "options": [
-        "22750 W",
-        "0.05 W",
-        "23.57 W",
+        "37.14 W",
+        "9.29 W",
+        "24.57 W",
         "18.57 W"
       ],
       "correctAnswer": "18.57 W",
       "correctIndex": 3,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 18.57 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 18.57 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_093",
@@ -2173,19 +3108,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 700 J of energy in 40 s. What is its power?",
+      "question": "On a research log book, an assistant notes: the power calculation for a lamp gives 17.5 W. Which answer should be selected?",
       "options": [
-        "0.06 W",
-        "22.5 W",
+        "35 W",
+        "8.75 W",
         "17.5 W",
-        "28000 W"
+        "19.5 W"
       ],
       "correctAnswer": "17.5 W",
       "correctIndex": 2,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 17.5 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 17.5 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_103",
@@ -2197,19 +3143,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 750 J of energy in 45 s. What is its power?",
+      "question": "On a planetarium screen, a visitor chooses: a sound desk shows P = E/t and the result is 16.67 W. What is P?",
       "options": [
-        "21.67 W",
+        "33.34 W",
         "16.67 W",
-        "33750 W",
-        "0.06 W"
+        "8.34 W",
+        "19.67 W"
       ],
       "correctAnswer": "16.67 W",
       "correctIndex": 1,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 16.67 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 16.67 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_113",
@@ -2221,19 +3178,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 800 J of energy in 20 s. What is its power?",
+      "question": "On a radio studio demo, a presenter explains: which value is correct if a device transfers energy at a rate of 40 W?",
       "options": [
         "40 W",
-        "16000 W",
-        "0.03 W",
-        "45 W"
+        "80 W",
+        "20 W",
+        "44 W"
       ],
       "correctAnswer": "40 W",
       "correctIndex": 0,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 40 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 40 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "energy_power_medium_123",
@@ -2245,19 +3213,30 @@
       "subtopicSlug": "power",
       "difficulty": "medium",
       "skill": "Calculate power from energy and time",
-      "question": "An electric heater transfers 850 J of energy in 25 s. What is its power?",
+      "question": "On a energy survey report, a surveyor writes: a clinic device transfers 34 J each second. What is the power?",
       "options": [
-        "21250 W",
-        "0.03 W",
+        "68 W",
+        "17 W",
         "39 W",
         "34 W"
       ],
       "correctAnswer": "34 W",
       "correctIndex": 3,
-      "explanation": "Power equals energy transferred divided by time taken.",
+      "explanation": "Power is the rate of energy transfer, giving 34 W.",
       "diagramJson": null,
       "topicId": "power_calc",
-      "senNote": "Power equals energy transferred divided by time taken."
+      "senNote": "Power is the rate of energy transfer, giving 34 W.",
+      "conceptFamily": "power",
+      "responseMode": "direct_substitution",
+      "patternId": "power_energy_time",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "power_energy_time",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     }
   ]
 }

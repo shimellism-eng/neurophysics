@@ -46,6 +46,8 @@ import recallForcesQuestions        from './qb-recall-forces'
 import recallWavesQuestions         from './qb-recall-waves'
 import recallElectromagnetismQuestions from './qb-recall-electromagnetism'
 import recallSpaceQuestions         from './qb-recall-space'
+import recallBoardOverlayQuestions  from './qb-recall-board-overlays'
+import { filterQuestionsForSelection, isQuestionAvailableForSelection } from '../../utils/curriculumFilters'
 
 export const ALL_QUESTIONS = [
   ...energyQuestions,
@@ -74,17 +76,18 @@ export const ALL_RECALL_QUESTIONS = [
   ...recallWavesQuestions,
   ...recallElectromagnetismQuestions,
   ...recallSpaceQuestions,
+  ...recallBoardOverlayQuestions,
 ]
 
 /**
- * Get questions for a specific topic, optionally filtered by tier and board.
+ * Get questions for a specific topic, optionally filtered by tier, board, and course.
  * Questions with no boards field are shown for all boards.
  */
-export function getQuestionsForTopic(topicId, tier = null, board = null) {
+export function getQuestionsForTopic(topicId, tier = null, board = null, course = 'all') {
   return ALL_QUESTIONS.filter(q =>
     q.topicId === topicId &&
     (tier === null || q.tier === tier) &&
-    (q.boards == null || q.boards.length === 0 || !board || q.boards.includes(board))
+    isQuestionAvailableForSelection(q, board, course)
   )
 }
 
@@ -96,22 +99,18 @@ export function getQuestionsForTopic(topicId, tier = null, board = null) {
  *        Questions with no boards field are shown for every board.
  */
 export function getNextQuestion(topicId, tier, excludeIds = [], course = 'all', board = null) {
-  const matchesCourse = (q) => course === 'all' || q.course === 'combined'
-  const matchesBoard  = (q) => q.boards == null || q.boards.length === 0 || !board || q.boards.includes(board)
   const pool = ALL_QUESTIONS.filter(q =>
     q.topicId === topicId &&
     q.tier === tier &&
     !excludeIds.includes(q.id) &&
-    matchesCourse(q) &&
-    matchesBoard(q)
+    isQuestionAvailableForSelection(q, board, course)
   )
   if (pool.length === 0) {
     // Fall back to any unseen question at this tier (respecting course/board filters)
     const fallback = ALL_QUESTIONS.filter(q =>
       q.topicId === topicId &&
       q.tier === tier &&
-      matchesCourse(q) &&
-      matchesBoard(q)
+      isQuestionAvailableForSelection(q, board, course)
     )
     if (fallback.length === 0) return null
     return fallback[Math.floor(Math.random() * fallback.length)]
@@ -137,8 +136,7 @@ export function getQuestionCountForTopic(topicId) {
  * Get questions filtered by course.
  */
 export function getQuestionsForCourse(course) {
-  if (course === 'physics_only') return ALL_QUESTIONS
-  return ALL_QUESTIONS.filter(q => q.course === 'combined')
+  return filterQuestionsForSelection(ALL_QUESTIONS, null, course)
 }
 
 /**
@@ -150,9 +148,7 @@ export function getQuestionsForCourse(course) {
 export function getRecallQuestions(topicId, board = null, course = 'all') {
   return ALL_RECALL_QUESTIONS.filter(q => {
     if (q.topicId !== topicId) return false
-    if (board && q.boards?.length > 0 && !q.boards.includes(board)) return false
-    if (course !== 'all' && course === 'combined' && q.course === 'physics_only') return false
-    return true
+    return isQuestionAvailableForSelection(q, board, course)
   })
 }
 

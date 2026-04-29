@@ -37,19 +37,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "easy",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a clinic worksheet, a learner checks: a student orders the EM spectrum from low to high frequency. Which is at the high end?",
       "options": [
-        "Infrared",
-        "Radio waves",
+        "Microwaves",
+        "Visible light",
         "Gamma rays",
-        "Microwaves"
+        "Sound waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_easy_023",
@@ -61,19 +72,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "easy",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a museum label, a visitor reads: a results table lists radio, infrared, ultraviolet and gamma. Which has the highest frequency?",
       "options": [
-        "Radio waves",
+        "Infrared",
         "Gamma rays",
-        "Microwaves",
-        "Infrared"
+        "Ultraviolet",
+        "Water waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_easy_033",
@@ -85,19 +107,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "easy",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a school lab card, a pupil answers: which electromagnetic radiation has the shortest wavelength and highest frequency?",
       "options": [
         "Gamma rays",
-        "Microwaves",
-        "Infrared",
+        "Visible light",
+        "X-rays",
         "Radio waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_easy_043",
@@ -109,19 +142,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "easy",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: in the EM spectrum, which wave is beyond X-rays at the high-frequency end?",
       "options": [
+        "Ultraviolet",
+        "Sound waves",
         "Microwaves",
-        "Infrared",
-        "Radio waves",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 3,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_easy_053",
@@ -133,19 +177,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "easy",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: a detector is set up for the most energetic EM radiation. Which type is this?",
       "options": [
-        "Infrared",
-        "Radio waves",
+        "X-rays",
+        "Water waves",
         "Gamma rays",
-        "Microwaves"
+        "Infrared"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_easy_063",
@@ -157,19 +212,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "easy",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a revision flashcard, a student practises: a hospital needs the electromagnetic wave with the highest frequency. Which wave is it?",
       "options": [
-        "Radio waves",
+        "Sound waves",
         "Gamma rays",
-        "Microwaves",
-        "Infrared"
+        "Radio waves",
+        "Visible light"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_hard_133",
@@ -181,19 +247,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "hard",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a hospital training card, a trainee checks: a astronomer orders the EM spectrum from low to high frequency. Which is at the high end?",
       "options": [
-        "Infrared",
-        "Radio waves",
+        "Water waves",
+        "Microwaves",
         "Gamma rays",
-        "Microwaves"
+        "Ultraviolet"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_hard_143",
@@ -205,19 +282,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "hard",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard lists radio, infrared, ultraviolet and gamma. Which has the highest frequency?",
       "options": [
         "Radio waves",
         "Gamma rays",
-        "Microwaves",
-        "Infrared"
+        "Infrared",
+        "X-rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_hard_153",
@@ -229,19 +317,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "hard",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a classroom board, a group discusses: which electromagnetic radiation has the shortest wavelength and highest frequency?",
       "options": [
         "Gamma rays",
         "Microwaves",
-        "Infrared",
-        "Radio waves"
+        "Visible light",
+        "Sound waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_hard_163",
@@ -253,19 +352,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "hard",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a workshop checklist, an engineer checks: in the EM spectrum, which wave is beyond X-rays at the high-frequency end?",
       "options": [
-        "Microwaves",
         "Infrared",
-        "Radio waves",
+        "Ultraviolet",
+        "Water waves",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 3,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_hard_173",
@@ -277,19 +387,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "hard",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: a detector is set up for the most energetic EM radiation. Which type is this?",
       "options": [
-        "Infrared",
-        "Radio waves",
+        "Visible light",
+        "X-rays",
         "Gamma rays",
-        "Microwaves"
+        "Radio waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_hard_183",
@@ -301,19 +422,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "hard",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: a exam practice needs the electromagnetic wave with the highest frequency. Which wave is it?",
       "options": [
-        "Radio waves",
+        "Ultraviolet",
         "Gamma rays",
-        "Microwaves",
-        "Infrared"
+        "Sound waves",
+        "Microwaves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_medium_073",
@@ -325,19 +457,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "medium",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a exam practice page, a candidate works: a parent orders the EM spectrum from low to high frequency. Which is at the high end?",
       "options": [
         "Gamma rays",
-        "Microwaves",
-        "Infrared",
-        "Radio waves"
+        "X-rays",
+        "Water waves",
+        "Infrared"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_medium_083",
@@ -349,19 +492,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "medium",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a home study card, a learner revises: a log book lists radio, infrared, ultraviolet and gamma. Which has the highest frequency?",
       "options": [
-        "Microwaves",
-        "Infrared",
+        "Sound waves",
         "Radio waves",
+        "Visible light",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 3,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_medium_093",
@@ -373,19 +527,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "medium",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a research log book, an assistant notes: which electromagnetic radiation has the shortest wavelength and highest frequency?",
       "options": [
-        "Infrared",
-        "Radio waves",
+        "Water waves",
+        "Microwaves",
         "Gamma rays",
-        "Microwaves"
+        "Ultraviolet"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_medium_103",
@@ -397,19 +562,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "medium",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency?",
+      "question": "On a planetarium screen, a visitor chooses: in the EM spectrum, which wave is beyond X-rays at the high-frequency end?",
       "options": [
         "Radio waves",
         "Gamma rays",
-        "Microwaves",
-        "Infrared"
+        "Infrared",
+        "X-rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_medium_113",
@@ -421,19 +597,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "medium",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: a detector is set up for the most energetic EM radiation. Which type is this?",
       "options": [
         "Gamma rays",
         "Microwaves",
-        "Infrared",
-        "Radio waves"
+        "Visible light",
+        "Sound waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_em_medium_123",
@@ -445,19 +632,30 @@
       "subtopicSlug": "electromagnetic_spectrum",
       "difficulty": "medium",
       "skill": "Recall the order of electromagnetic waves",
-      "question": "Which electromagnetic wave has the highest frequency? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: a clinic needs the electromagnetic wave with the highest frequency. Which wave is it?",
       "options": [
-        "Microwaves",
         "Infrared",
-        "Radio waves",
+        "Ultraviolet",
+        "Water waves",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 3,
-      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum.",
+      "explanation": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
       "diagramJson": null,
       "topicId": "em_spectrum",
-      "senNote": "Gamma rays have the highest frequency and shortest wavelength in the electromagnetic spectrum."
+      "senNote": "Gamma rays are at the highest-frequency end of the electromagnetic spectrum.",
+      "conceptFamily": "electromagnetic-spectrum",
+      "responseMode": "direct_recall",
+      "patternId": "em_spectrum_frequency",
+      "contextType": "ranking",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "em_spectrum_frequency",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_easy_005",
@@ -493,19 +691,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "easy",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a clinic worksheet, a learner checks: light crosses from air into a glass block. What happens to its speed and path?",
       "options": [
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It keeps the same speed.",
+        "It stops at the surface.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal."
+        "It loses all energy."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 2,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_easy_025",
@@ -517,19 +726,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "easy",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a museum label, a visitor reads: a results table shows a ray bending towards the normal as it enters glass. Why?",
       "options": [
-        "It slows down and bends away from the normal.",
+        "It becomes sound.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction."
+        "It bends randomly.",
+        "It travels backwards only."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 1,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_easy_035",
@@ -541,19 +761,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "easy",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a school lab card, a pupil answers: what happens when light passes from air into a denser transparent material?",
       "options": [
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal."
+        "It stops at the surface.",
+        "It turns into infrared.",
+        "It speeds up and bends away."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 0,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_easy_045",
@@ -565,19 +796,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "easy",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a guide draws refraction into glass. Which description is correct?",
       "options": [
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It bends randomly.",
+        "It loses all energy.",
+        "It keeps the same speed.",
         "It slows down and bends towards the normal."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 3,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_easy_055",
@@ -589,19 +831,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "easy",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which statement describes light entering glass from air?",
       "options": [
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It turns into infrared.",
+        "It travels backwards only.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal."
+        "It becomes sound."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 2,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_hard_135",
@@ -613,19 +866,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "hard",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a revision flashcard, a student practises: a ray enters glass from air at an angle. How does it change direction?",
       "options": [
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It loses all energy.",
+        "It speeds up and bends away.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal."
+        "It stops at the surface."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 2,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_hard_145",
@@ -637,19 +901,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "hard",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a hospital training card, a trainee checks: light crosses from air into a glass block. What happens to its speed and path?",
       "options": [
-        "It slows down and bends away from the normal.",
+        "It travels backwards only.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction."
+        "It keeps the same speed.",
+        "It bends randomly."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 1,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_hard_155",
@@ -661,19 +936,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "hard",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows a ray bending towards the normal as it enters glass. Why?",
       "options": [
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal."
+        "It speeds up and bends away.",
+        "It becomes sound.",
+        "It turns into infrared."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 0,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_hard_165",
@@ -685,19 +971,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "hard",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a classroom board, a group discusses: what happens when light passes from air into a denser transparent material?",
       "options": [
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It keeps the same speed.",
+        "It stops at the surface.",
+        "It loses all energy.",
         "It slows down and bends towards the normal."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 3,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_hard_175",
@@ -709,19 +1006,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "hard",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a pupil draws refraction into glass. Which description is correct?",
       "options": [
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It becomes sound.",
+        "It bends randomly.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal."
+        "It travels backwards only."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 2,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_hard_185",
@@ -733,19 +1041,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "hard",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which statement describes light entering glass from air?",
       "options": [
-        "It slows down and bends away from the normal.",
+        "It stops at the surface.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction."
+        "It turns into infrared.",
+        "It speeds up and bends away."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 1,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_065",
@@ -757,19 +1076,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a science fair poster, a team explains: a ray enters glass from air at an angle. How does it change direction?",
       "options": [
-        "It slows down and bends away from the normal.",
+        "It bends randomly.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction."
+        "It loses all energy.",
+        "It keeps the same speed."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 1,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_075",
@@ -781,19 +1111,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a exam practice page, a candidate works: light crosses from air into a glass block. What happens to its speed and path?",
       "options": [
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal."
+        "It turns into infrared.",
+        "It travels backwards only.",
+        "It becomes sound."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 0,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_085",
@@ -805,19 +1146,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a home study card, a learner revises: a log book shows a ray bending towards the normal as it enters glass. Why?",
       "options": [
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It loses all energy.",
+        "It speeds up and bends away.",
+        "It stops at the surface.",
         "It slows down and bends towards the normal."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 3,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_095",
@@ -829,19 +1181,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light?",
+      "question": "On a research log book, an assistant notes: what happens when light passes from air into a denser transparent material?",
       "options": [
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It travels backwards only.",
+        "It keeps the same speed.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal."
+        "It bends randomly."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 2,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_105",
@@ -853,19 +1216,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a presenter draws refraction into glass. Which description is correct?",
       "options": [
-        "It slows down and bends away from the normal.",
+        "It speeds up and bends away.",
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction."
+        "It becomes sound.",
+        "It turns into infrared."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 1,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_115",
@@ -877,19 +1251,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which statement describes light entering glass from air?",
       "options": [
         "It slows down and bends towards the normal.",
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal."
+        "It keeps the same speed.",
+        "It stops at the surface.",
+        "It loses all energy."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 0,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_refraction_medium_125",
@@ -901,19 +1286,30 @@
       "subtopicSlug": "refraction",
       "difficulty": "medium",
       "skill": "Describe refraction into a denser medium",
-      "question": "Light passes from air into glass. Which change happens to the light? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: a ray enters glass from air at an angle. How does it change direction?",
       "options": [
-        "It speeds up and bends away from the normal.",
-        "It keeps the same speed and does not change direction.",
-        "It slows down and bends away from the normal.",
+        "It becomes sound.",
+        "It bends randomly.",
+        "It travels backwards only.",
         "It slows down and bends towards the normal."
       ],
       "correctAnswer": "It slows down and bends towards the normal.",
       "correctIndex": 3,
-      "explanation": "Light slows down in glass, so it bends towards the normal.",
+      "explanation": "When light enters glass from air, it slows and bends towards the normal.",
       "diagramJson": null,
       "topicId": "visible_light",
-      "senNote": "Light slows down in glass, so it bends towards the normal."
+      "senNote": "When light enters glass from air, it slows and bends towards the normal.",
+      "conceptFamily": "refraction",
+      "responseMode": "reasoning_check",
+      "patternId": "refraction_air_to_glass",
+      "contextType": "ray_diagram",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "refraction_air_to_glass",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_easy_007",
@@ -949,19 +1345,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "easy",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a clinic worksheet, a learner checks: a student tightens a string and the note is higher. What changed?",
       "options": [
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "Longer wavelength only",
+        "No vibration",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave"
+        "A quieter sound only"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_easy_027",
@@ -973,19 +1380,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "easy",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a museum label, a visitor reads: a results table compares two sound waves. Which change gives a higher pitch?",
       "options": [
-        "Reducing the energy transferred",
+        "Lower amplitude",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound"
+        "Lower speed in air",
+        "A longer string with no change in frequency"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_easy_037",
@@ -997,19 +1415,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "easy",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a school lab card, a pupil answers: what must increase for a sound wave to be heard as a higher note?",
       "options": [
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred"
+        "No vibration",
+        "More echoes",
+        "Lower frequency"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_easy_047",
@@ -1021,19 +1450,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "easy",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a tuning fork makes a higher pitch than another. Which wave feature is greater?",
       "options": [
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "Lower speed in air",
+        "A quieter sound only",
+        "Longer wavelength only",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 3,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_easy_057",
@@ -1045,19 +1485,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "easy",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which change in vibration makes a sound higher in pitch?",
       "options": [
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "More echoes",
+        "A longer string with no change in frequency",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave"
+        "Lower amplitude"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_127",
@@ -1069,19 +1520,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a revision flashcard, a student practises: a sound from a speaker becomes higher pitched. Which wave property increased?",
       "options": [
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "A quieter sound only",
+        "Lower frequency",
+        "No vibration",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 3,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_137",
@@ -1093,19 +1555,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a hospital training card, a trainee checks: a astronomer tightens a string and the note is higher. What changed?",
       "options": [
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "A longer string with no change in frequency",
+        "Longer wavelength only",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave"
+        "Lower speed in air"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_147",
@@ -1117,19 +1590,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard compares two sound waves. Which change gives a higher pitch?",
       "options": [
-        "Reducing the energy transferred",
+        "Lower frequency",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound"
+        "Lower amplitude",
+        "More echoes"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_157",
@@ -1141,19 +1625,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a classroom board, a group discusses: what must increase for a sound wave to be heard as a higher note?",
       "options": [
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred"
+        "Longer wavelength only",
+        "No vibration",
+        "A quieter sound only"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_167",
@@ -1165,19 +1660,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a tuning fork makes a higher pitch than another. Which wave feature is greater?",
       "options": [
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "Lower amplitude",
+        "Lower speed in air",
+        "A longer string with no change in frequency",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 3,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_177",
@@ -1189,19 +1695,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which change in vibration makes a sound higher in pitch?",
       "options": [
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "No vibration",
+        "More echoes",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave"
+        "Lower frequency"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_hard_187",
@@ -1213,19 +1730,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "hard",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: a sound from a speaker becomes higher pitched. Which wave property increased?",
       "options": [
-        "Reducing the energy transferred",
+        "Lower speed in air",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound"
+        "A quieter sound only",
+        "Longer wavelength only"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_medium_067",
@@ -1237,19 +1765,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "medium",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a exam practice page, a candidate works: a parent tightens a string and the note is higher. What changed?",
       "options": [
-        "Reducing the energy transferred",
+        "More echoes",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound"
+        "A longer string with no change in frequency",
+        "Lower amplitude"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_medium_077",
@@ -1261,19 +1800,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "medium",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a home study card, a learner revises: a log book compares two sound waves. Which change gives a higher pitch?",
       "options": [
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred"
+        "A quieter sound only",
+        "Lower frequency",
+        "No vibration"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_medium_087",
@@ -1285,19 +1835,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "medium",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a research log book, an assistant notes: what must increase for a sound wave to be heard as a higher note?",
       "options": [
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "A longer string with no change in frequency",
+        "Longer wavelength only",
+        "Lower speed in air",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 3,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_medium_097",
@@ -1309,19 +1870,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "medium",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch?",
+      "question": "On a planetarium screen, a visitor chooses: a tuning fork makes a higher pitch than another. Which wave feature is greater?",
       "options": [
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "Lower frequency",
+        "Lower amplitude",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave"
+        "More echoes"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_medium_107",
@@ -1333,19 +1905,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "medium",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which change in vibration makes a sound higher in pitch?",
       "options": [
-        "Reducing the energy transferred",
+        "Longer wavelength only",
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound"
+        "No vibration",
+        "A quieter sound only"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_pitch_medium_117",
@@ -1357,19 +1940,30 @@
       "subtopicSlug": "sound_waves",
       "difficulty": "medium",
       "skill": "Link frequency to pitch",
-      "question": "Which change makes a sound higher in pitch? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: a sound from a speaker becomes higher pitched. Which wave property increased?",
       "options": [
         "Increasing the frequency of the wave",
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred"
+        "Lower amplitude",
+        "Lower speed in air",
+        "A longer string with no change in frequency"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
-      "explanation": "Pitch depends on frequency. Higher frequency means higher pitch.",
+      "explanation": "A higher pitch means the sound frequency is higher.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Pitch depends on frequency. Higher frequency means higher pitch."
+      "senNote": "A higher pitch means the sound frequency is higher.",
+      "conceptFamily": "sound-pitch",
+      "responseMode": "direct_recall",
+      "patternId": "frequency_pitch_link",
+      "contextType": "observation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "frequency_pitch_link",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_easy_009",
@@ -1405,19 +1999,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "easy",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a clinic worksheet, a learner checks: a student explains a pregnancy scan. Why can ultrasound be used instead of ionising radiation?",
       "options": [
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It only travels in a vacuum.",
+        "It uses visible light.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue."
+        "It needs radioactive tracer."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_easy_029",
@@ -1429,19 +2034,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "easy",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a museum label, a visitor reads: a results table shows echoes from boundaries inside the body. What makes ultrasound useful?",
       "options": [
-        "It always carries more energy than X-rays.",
+        "It changes tissue into bone.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum."
+        "It is too low for humans to hear.",
+        "It destroys the detector."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_easy_039",
@@ -1453,19 +2069,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "easy",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a school lab card, a pupil answers: why can ultrasound make medical images without using ionising radiation?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays."
+        "It uses visible light.",
+        "It makes no reflections.",
+        "It is ionising gamma radiation."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_easy_049",
@@ -1477,19 +2104,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "easy",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a scanner sends high-frequency sound into the body. How can this produce an image?",
       "options": [
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It is too low for humans to hear.",
+        "It needs radioactive tracer.",
+        "It only travels in a vacuum.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 3,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_easy_059",
@@ -1501,19 +2139,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "easy",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which reason explains a safe use of ultrasound in medical scanning?",
       "options": [
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It makes no reflections.",
+        "It destroys the detector.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue."
+        "It changes tissue into bone."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_hard_129",
@@ -1525,19 +2174,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "hard",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a revision flashcard, a student practises: a hospital uses ultrasound to form an image of soft tissue. Why is it suitable?",
       "options": [
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
+        "It uses visible light.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 3,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_hard_139",
@@ -1549,19 +2209,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "hard",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a hospital training card, a trainee checks: a astronomer explains a pregnancy scan. Why can ultrasound be used instead of ionising radiation?",
       "options": [
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It destroys the detector.",
+        "It only travels in a vacuum.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue."
+        "It is too low for humans to hear."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_hard_149",
@@ -1573,19 +2244,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "hard",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows echoes from boundaries inside the body. What makes ultrasound useful?",
       "options": [
-        "It always carries more energy than X-rays.",
+        "It is ionising gamma radiation.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum."
+        "It changes tissue into bone.",
+        "It makes no reflections."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_hard_159",
@@ -1597,19 +2279,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "hard",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a classroom board, a group discusses: why can ultrasound make medical images without using ionising radiation?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays."
+        "It only travels in a vacuum.",
+        "It uses visible light.",
+        "It needs radioactive tracer."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_hard_169",
@@ -1621,19 +2314,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "hard",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: a scanner sends high-frequency sound into the body. How can this produce an image?",
       "options": [
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It changes tissue into bone.",
+        "It is too low for humans to hear.",
+        "It destroys the detector.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 3,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_hard_179",
@@ -1645,19 +2349,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "hard",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which reason explains a safe use of ultrasound in medical scanning?",
       "options": [
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It uses visible light.",
+        "It makes no reflections.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue."
+        "It is ionising gamma radiation."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_medium_069",
@@ -1669,19 +2384,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "medium",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a science fair poster, a team explains: a exam practice uses ultrasound to form an image of soft tissue. Why is it suitable?",
       "options": [
-        "It always carries more energy than X-rays.",
+        "It is too low for humans to hear.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum."
+        "It needs radioactive tracer.",
+        "It only travels in a vacuum."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_medium_079",
@@ -1693,19 +2419,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "medium",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a exam practice page, a candidate works: a parent explains a pregnancy scan. Why can ultrasound be used instead of ionising radiation?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays."
+        "It makes no reflections.",
+        "It destroys the detector.",
+        "It changes tissue into bone."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_medium_089",
@@ -1717,19 +2454,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "medium",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a home study card, a learner revises: a log book shows echoes from boundaries inside the body. What makes ultrasound useful?",
       "options": [
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
+        "It uses visible light.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 3,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_medium_099",
@@ -1741,19 +2489,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "medium",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body?",
+      "question": "On a research log book, an assistant notes: why can ultrasound make medical images without using ionising radiation?",
       "options": [
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It destroys the detector.",
+        "It only travels in a vacuum.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue."
+        "It is too low for humans to hear."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_medium_109",
@@ -1765,19 +2524,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "medium",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a scanner sends high-frequency sound into the body. How can this produce an image?",
       "options": [
-        "It always carries more energy than X-rays.",
+        "It is ionising gamma radiation.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum."
+        "It changes tissue into bone.",
+        "It makes no reflections."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_ultrasound_medium_119",
@@ -1789,19 +2559,30 @@
       "subtopicSlug": "ultrasound",
       "difficulty": "medium",
       "skill": "Explain one use of ultrasound",
-      "question": "Why is ultrasound useful for scanning inside the human body? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which reason explains a safe use of ultrasound in medical scanning?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays."
+        "It only travels in a vacuum.",
+        "It uses visible light.",
+        "It needs radioactive tracer."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
-      "explanation": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising.",
+      "explanation": "Ultrasound reflects at boundaries to form images and is non-ionising.",
       "diagramJson": null,
       "topicId": "sound_ultrasound",
-      "senNote": "Ultrasound reflects at boundaries between tissues and is safe because it is non-ionising."
+      "senNote": "Ultrasound reflects at boundaries to form images and is non-ionising.",
+      "conceptFamily": "ultrasound",
+      "responseMode": "reasoning_check",
+      "patternId": "ultrasound_imaging",
+      "contextType": "real_context",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ultrasound_imaging",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_easy_001",
@@ -1837,19 +2618,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "easy",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 20 Hz and a wavelength of 0.7 m. What is the wave speed?",
+      "question": "On a clinic worksheet, a learner checks: a student uses v = f x lambda. If f is 3 Hz and wavelength is 4.67 m, what is v?",
       "options": [
-        "28.57 m/s",
-        "19 m/s",
+        "28 m/s",
+        "7 m/s",
         "14 m/s",
-        "20.7 m/s"
+        "17 m/s"
       ],
       "correctAnswer": "14 m/s",
       "correctIndex": 2,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 14 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 14 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_easy_021",
@@ -1861,19 +2653,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "easy",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 25 Hz and a wavelength of 0.8 m. What is the wave speed?",
+      "question": "On a museum label, a visitor reads: a ripple travels with wavelength 5 m and frequency 4 Hz. Which speed is correct?",
       "options": [
-        "25 m/s",
+        "40 m/s",
         "20 m/s",
-        "25.8 m/s",
-        "31.25 m/s"
+        "10 m/s",
+        "24 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 1,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 20 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 20 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_easy_031",
@@ -1885,19 +2688,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "easy",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 30 Hz and a wavelength of 0.9 m. What is the wave speed?",
+      "question": "On a school lab card, a pupil answers: 5 waves pass each second and each wave is 5.4 m long. Find the speed.",
       "options": [
         "27 m/s",
-        "30.9 m/s",
-        "33.33 m/s",
+        "54 m/s",
+        "13.5 m/s",
         "32 m/s"
       ],
       "correctAnswer": "27 m/s",
       "correctIndex": 0,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 27 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 27 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_easy_041",
@@ -1909,19 +2723,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "easy",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 35 Hz and a wavelength of 1 m. What is the wave speed?",
+      "question": "On a factory safety note, an apprentice reviews: a training screen gives f = 2 Hz and lambda = 17.5 m. What speed should be written?",
       "options": [
-        "36 m/s",
-        "37 m/s",
-        "40 m/s",
+        "70 m/s",
+        "17.5 m/s",
+        "41 m/s",
         "35 m/s"
       ],
       "correctAnswer": "35 m/s",
       "correctIndex": 3,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 35 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 35 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_easy_051",
@@ -1933,19 +2758,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "easy",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 40 Hz and a wavelength of 0.5 m. What is the wave speed?",
+      "question": "On a space centre display, a guide explains: which answer matches 3 Hz multiplied by 6.67 m for wave speed?",
       "options": [
-        "80 m/s",
-        "25 m/s",
+        "40 m/s",
+        "10 m/s",
         "20 m/s",
-        "40.5 m/s"
+        "22 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 2,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 20 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 20 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_easy_061",
@@ -1957,19 +2793,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "easy",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 45 Hz and a wavelength of 0.6 m. What is the wave speed?",
+      "question": "On a revision flashcard, a student practises: a hospital wave has frequency 4 Hz and wavelength 6.75 m. What is its speed?",
       "options": [
-        "32 m/s",
+        "54 m/s",
         "27 m/s",
-        "45.6 m/s",
-        "75 m/s"
+        "13.5 m/s",
+        "30 m/s"
       ],
       "correctAnswer": "27 m/s",
       "correctIndex": 1,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 27 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 27 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_hard_131",
@@ -1981,19 +2828,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "hard",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 35 Hz and a wavelength of 0.7 m. What is the wave speed?",
+      "question": "On a hospital training card, a trainee checks: a astronomer uses v = f x lambda. If f is 5 Hz and wavelength is 4.9 m, what is v?",
       "options": [
-        "50 m/s",
-        "29.5 m/s",
+        "49 m/s",
+        "12.25 m/s",
         "24.5 m/s",
-        "35.7 m/s"
+        "28.5 m/s"
       ],
       "correctAnswer": "24.5 m/s",
       "correctIndex": 2,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 24.5 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 24.5 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_hard_141",
@@ -2005,19 +2863,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "hard",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 40 Hz and a wavelength of 0.8 m. What is the wave speed?",
+      "question": "On a observatory data sheet, an astronomer reviews: a ripple travels with wavelength 16 m and frequency 2 Hz. Which speed is correct?",
       "options": [
-        "37 m/s",
+        "64 m/s",
         "32 m/s",
-        "40.8 m/s",
-        "50 m/s"
+        "16 m/s",
+        "37 m/s"
       ],
       "correctAnswer": "32 m/s",
       "correctIndex": 1,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 32 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 32 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_hard_151",
@@ -2029,19 +2898,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "hard",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 45 Hz and a wavelength of 0.9 m. What is the wave speed?",
+      "question": "On a classroom board, a group discusses: 3 waves pass each second and each wave is 13.5 m long. Find the speed.",
       "options": [
         "40.5 m/s",
-        "45.9 m/s",
-        "50 m/s",
-        "45.5 m/s"
+        "81 m/s",
+        "20.25 m/s",
+        "46.5 m/s"
       ],
       "correctAnswer": "40.5 m/s",
       "correctIndex": 0,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 40.5 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 40.5 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_hard_161",
@@ -2053,19 +2933,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "hard",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 50 Hz and a wavelength of 1 m. What is the wave speed?",
+      "question": "On a workshop checklist, an engineer checks: a notebook gives f = 4 Hz and lambda = 12.5 m. What speed should be written?",
       "options": [
-        "51 m/s",
+        "100 m/s",
+        "25 m/s",
         "52 m/s",
-        "55 m/s",
         "50 m/s"
       ],
       "correctAnswer": "50 m/s",
       "correctIndex": 3,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 50 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 50 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_hard_171",
@@ -2077,19 +2968,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "hard",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 10 Hz and a wavelength of 0.5 m. What is the wave speed?",
+      "question": "On a field trip notebook, a pupil records: which answer matches 5 Hz multiplied by 1 m for wave speed?",
       "options": [
-        "20 m/s",
         "10 m/s",
+        "2.5 m/s",
         "5 m/s",
-        "10.5 m/s"
+        "8 m/s"
       ],
       "correctAnswer": "5 m/s",
       "correctIndex": 2,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 5 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 5 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_hard_181",
@@ -2101,19 +3003,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "hard",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 15 Hz and a wavelength of 0.6 m. What is the wave speed?",
+      "question": "On a science fair poster, a team explains: a exam practice wave has frequency 2 Hz and wavelength 4.5 m. What is its speed?",
       "options": [
-        "14 m/s",
+        "18 m/s",
         "9 m/s",
-        "15.6 m/s",
-        "25 m/s"
+        "4.5 m/s",
+        "13 m/s"
       ],
       "correctAnswer": "9 m/s",
       "correctIndex": 1,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 9 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 9 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_medium_071",
@@ -2125,19 +3038,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "medium",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 50 Hz and a wavelength of 0.7 m. What is the wave speed?",
+      "question": "On a exam practice page, a candidate works: a parent uses v = f x lambda. If f is 3 Hz and wavelength is 11.67 m, what is v?",
       "options": [
         "35 m/s",
-        "50.7 m/s",
-        "71.43 m/s",
+        "70 m/s",
+        "17.5 m/s",
         "40 m/s"
       ],
       "correctAnswer": "35 m/s",
       "correctIndex": 0,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 35 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 35 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_medium_081",
@@ -2149,19 +3073,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "medium",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 10 Hz and a wavelength of 0.8 m. What is the wave speed?",
+      "question": "On a home study card, a learner revises: a ripple travels with wavelength 2 m and frequency 4 Hz. Which speed is correct?",
       "options": [
-        "10.8 m/s",
-        "12.5 m/s",
-        "13 m/s",
+        "16 m/s",
+        "4 m/s",
+        "14 m/s",
         "8 m/s"
       ],
       "correctAnswer": "8 m/s",
       "correctIndex": 3,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 8 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 8 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_medium_091",
@@ -2173,19 +3108,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "medium",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 15 Hz and a wavelength of 0.9 m. What is the wave speed?",
+      "question": "On a research log book, an assistant notes: 5 waves pass each second and each wave is 2.7 m long. Find the speed.",
       "options": [
-        "16.67 m/s",
-        "18.5 m/s",
+        "27 m/s",
+        "6.75 m/s",
         "13.5 m/s",
-        "15.9 m/s"
+        "15.5 m/s"
       ],
       "correctAnswer": "13.5 m/s",
       "correctIndex": 2,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 13.5 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 13.5 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_medium_101",
@@ -2197,19 +3143,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "medium",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 20 Hz and a wavelength of 1 m. What is the wave speed?",
+      "question": "On a planetarium screen, a visitor chooses: a sound desk gives f = 2 Hz and lambda = 10 m. What speed should be written?",
       "options": [
-        "25 m/s",
+        "40 m/s",
         "20 m/s",
-        "21 m/s",
-        "22 m/s"
+        "10 m/s",
+        "23 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 1,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 20 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 20 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_medium_111",
@@ -2221,19 +3178,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "medium",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 25 Hz and a wavelength of 0.5 m. What is the wave speed?",
+      "question": "On a radio studio demo, a presenter explains: which answer matches 3 Hz multiplied by 4.17 m for wave speed?",
       "options": [
         "12.5 m/s",
-        "25.5 m/s",
-        "50 m/s",
-        "17.5 m/s"
+        "25 m/s",
+        "6.25 m/s",
+        "16.5 m/s"
       ],
       "correctAnswer": "12.5 m/s",
       "correctIndex": 0,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 12.5 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 12.5 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "waves_speed_medium_121",
@@ -2245,19 +3213,30 @@
       "subtopicSlug": "wave_speed",
       "difficulty": "medium",
       "skill": "Use wave speed = frequency x wavelength",
-      "question": "A wave has a frequency of 30 Hz and a wavelength of 0.6 m. What is the wave speed?",
+      "question": "On a energy survey report, a surveyor writes: a clinic wave has frequency 4 Hz and wavelength 4.5 m. What is its speed?",
       "options": [
-        "30.6 m/s",
-        "50 m/s",
+        "36 m/s",
+        "9 m/s",
         "23 m/s",
         "18 m/s"
       ],
       "correctAnswer": "18 m/s",
       "correctIndex": 3,
-      "explanation": "Wave speed equals frequency multiplied by wavelength.",
+      "explanation": "Wave speed is frequency multiplied by wavelength, giving 18 m/s.",
       "diagramJson": null,
       "topicId": "wave_properties",
-      "senNote": "Wave speed equals frequency multiplied by wavelength."
+      "senNote": "Wave speed is frequency multiplied by wavelength, giving 18 m/s.",
+      "conceptFamily": "wave-speed",
+      "responseMode": "direct_substitution",
+      "patternId": "wave_speed_calculation",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wave_speed_calculation",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     }
   ]
 }

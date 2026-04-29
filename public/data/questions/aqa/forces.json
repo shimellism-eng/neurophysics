@@ -13,7 +13,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "easy",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 20 N/m and extends by 3 cm. What force stretches the spring?",
+      "question": "In a spring practical, a 20 N/m spring extends by 3 cm. What force is needed?",
       "options": [
         "60 N",
         "0.15 N",
@@ -22,10 +22,10 @@
       ],
       "correctAnswer": "0.6 N",
       "correctIndex": 3,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 3 cm to 0.03 m, then use F = k x e. 20 x 0.03 = 0.6 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 3 cm to 0.03 m, then use F = k x e. 20 x 0.03 = 0.6 N."
     },
     {
       "id": "forces_hooke_easy_017",
@@ -37,7 +37,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "easy",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 25 N/m and extends by 4 cm. What force stretches the spring?",
+      "question": "A spring in a force meter stretches by 2 cm. Its spring constant is 50 N/m. Which force is needed?",
       "options": [
         "0.16 N",
         "2 N",
@@ -46,10 +46,10 @@
       ],
       "correctAnswer": "1 N",
       "correctIndex": 2,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 2 cm to 0.02 m, then use F = k x e. 50 x 0.02 = 1 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 2 cm to 0.02 m, then use F = k x e. 50 x 0.02 = 1 N."
     },
     {
       "id": "forces_hooke_easy_027",
@@ -61,7 +61,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "easy",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 30 N/m and extends by 5 cm. What force stretches the spring?",
+      "question": "For a rubber cord in a lab test, extension is 3 cm and k is 50 N/m. What does F = k x e give?",
       "options": [
         "2.5 N",
         "1.5 N",
@@ -70,10 +70,10 @@
       ],
       "correctAnswer": "1.5 N",
       "correctIndex": 1,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 3 cm to 0.03 m, then use F = k x e. 50 x 0.03 = 1.5 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 3 cm to 0.03 m, then use F = k x e. 50 x 0.03 = 1.5 N."
     },
     {
       "id": "forces_hooke_easy_037",
@@ -85,7 +85,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "easy",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 35 N/m and extends by 6 cm. What force stretches the spring?",
+      "question": "A student converts 4 cm to metres before using a spring on a trolley. Which force matches k = 52.5 N/m?",
       "options": [
         "2.1 N",
         "210 N",
@@ -94,10 +94,10 @@
       ],
       "correctAnswer": "2.1 N",
       "correctIndex": 0,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 4 cm to 0.04 m, then use F = k x e. 52.5 x 0.04 = 2.1 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 4 cm to 0.04 m, then use F = k x e. 52.5 x 0.04 = 2.1 N."
     },
     {
       "id": "forces_hooke_easy_047",
@@ -109,7 +109,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "easy",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 40 N/m and extends by 7 cm. What force stretches the spring?",
+      "question": "On a force-extension graph for a metal spring in a clamp stand, the gradient is 56 N/m. What force gives 5 cm extension?",
       "options": [
         "280 N",
         "0.17 N",
@@ -118,10 +118,10 @@
       ],
       "correctAnswer": "2.8 N",
       "correctIndex": 3,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 5 cm to 0.05 m, then use F = k x e. 56 x 0.05 = 2.8 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 5 cm to 0.05 m, then use F = k x e. 56 x 0.05 = 2.8 N."
     },
     {
       "id": "forces_hooke_easy_057",
@@ -133,7 +133,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "easy",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 15 N/m and extends by 8 cm. What force stretches the spring?",
+      "question": "A spring used to hang masses is still proportional. Choose the force for k = 20 N/m and extension 6 cm.",
       "options": [
         "0.53 N",
         "2.2 N",
@@ -142,10 +142,10 @@
       ],
       "correctAnswer": "1.2 N",
       "correctIndex": 2,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 6 cm to 0.06 m, then use F = k x e. 20 x 0.06 = 1.2 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 6 cm to 0.06 m, then use F = k x e. 20 x 0.06 = 1.2 N."
     },
     {
       "id": "forces_hooke_hard_127",
@@ -157,7 +157,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 20 N/m and extends by 8 cm. What force stretches the spring?",
+      "question": "A student forgets to convert centimetres when using Hooke's law. A spring has k = 20 N/m and extension = 8 cm. What is the correct force?",
       "options": [
         "160 N",
         "0.4 N",
@@ -166,10 +166,10 @@
       ],
       "correctAnswer": "1.6 N",
       "correctIndex": 3,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "The extension must be in metres. 8 cm = 0.08 m, so F = 20 x 0.08 = 1.6 N. Using 8 directly gives the wrong size.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "The extension must be in metres. 8 cm = 0.08 m, so F = 20 x 0.08 = 1.6 N. Using 8 directly gives the wrong size."
     },
     {
       "id": "forces_hooke_hard_137",
@@ -181,7 +181,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 25 N/m and extends by 2 cm. What force stretches the spring?",
+      "question": "A spring in a classroom practical stretches by 8 cm. Its spring constant is 6.25 N/m. Which force is needed?",
       "options": [
         "0.08 N",
         "1.5 N",
@@ -190,10 +190,10 @@
       ],
       "correctAnswer": "0.5 N",
       "correctIndex": 2,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 8 cm to 0.08 m, then use F = k x e. 6.25 x 0.08 = 0.5 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 8 cm to 0.08 m, then use F = k x e. 6.25 x 0.08 = 0.5 N."
     },
     {
       "id": "forces_hooke_hard_147",
@@ -205,7 +205,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 30 N/m and extends by 3 cm. What force stretches the spring?",
+      "question": "For a elastic cord before its limit, extension is 10 cm and k is 9 N/m. What does F = k x e give?",
       "options": [
         "1.9 N",
         "0.9 N",
@@ -214,10 +214,10 @@
       ],
       "correctAnswer": "0.9 N",
       "correctIndex": 1,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 10 cm to 0.1 m, then use F = k x e. 9 x 0.1 = 0.9 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 10 cm to 0.1 m, then use F = k x e. 9 x 0.1 = 0.9 N."
     },
     {
       "id": "forces_hooke_hard_157",
@@ -229,7 +229,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 35 N/m and extends by 4 cm. What force stretches the spring?",
+      "question": "A student converts 2 cm to metres before using a spring in a Newton meter. Which force matches k = 70 N/m?",
       "options": [
         "1.4 N",
         "140 N",
@@ -238,10 +238,10 @@
       ],
       "correctAnswer": "1.4 N",
       "correctIndex": 0,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 2 cm to 0.02 m, then use F = k x e. 70 x 0.02 = 1.4 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 2 cm to 0.02 m, then use F = k x e. 70 x 0.02 = 1.4 N."
     },
     {
       "id": "forces_hooke_hard_167",
@@ -253,7 +253,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 40 N/m and extends by 5 cm. What force stretches the spring?",
+      "question": "On a force-extension graph for a test spring on a bench, the gradient is 66.67 N/m. What force gives 3 cm extension?",
       "options": [
         "200 N",
         "0.12 N",
@@ -262,10 +262,10 @@
       ],
       "correctAnswer": "2 N",
       "correctIndex": 3,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 3 cm to 0.03 m, then use F = k x e. 66.67 x 0.03 = 2 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 3 cm to 0.03 m, then use F = k x e. 66.67 x 0.03 = 2 N."
     },
     {
       "id": "forces_hooke_hard_177",
@@ -277,7 +277,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 15 N/m and extends by 6 cm. What force stretches the spring?",
+      "question": "A spring attached to a ruler is still proportional. Choose the force for k = 22.5 N/m and extension 4 cm.",
       "options": [
         "0.4 N",
         "1.9 N",
@@ -286,10 +286,10 @@
       ],
       "correctAnswer": "0.9 N",
       "correctIndex": 2,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 4 cm to 0.04 m, then use F = k x e. 22.5 x 0.04 = 0.9 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 4 cm to 0.04 m, then use F = k x e. 22.5 x 0.04 = 0.9 N."
     },
     {
       "id": "forces_hooke_hard_187",
@@ -301,7 +301,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "hard",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 20 N/m and extends by 7 cm. What force stretches the spring?",
+      "question": "A spring in a graph experiment stretches by 5 cm. Its spring constant is 28 N/m. Which force is needed?",
       "options": [
         "2.4 N",
         "1.4 N",
@@ -310,10 +310,10 @@
       ],
       "correctAnswer": "1.4 N",
       "correctIndex": 1,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 5 cm to 0.05 m, then use F = k x e. 28 x 0.05 = 1.4 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 5 cm to 0.05 m, then use F = k x e. 28 x 0.05 = 1.4 N."
     },
     {
       "id": "forces_hooke_medium_067",
@@ -325,7 +325,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "medium",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 20 N/m and extends by 2 cm. What force stretches the spring?",
+      "question": "For a spring with a mass hanger, extension is 6 cm and k is 6.67 N/m. What does F = k x e give?",
       "options": [
         "1.4 N",
         "0.4 N",
@@ -334,10 +334,10 @@
       ],
       "correctAnswer": "0.4 N",
       "correctIndex": 1,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 6 cm to 0.06 m, then use F = k x e. 6.67 x 0.06 = 0.4 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 6 cm to 0.06 m, then use F = k x e. 6.67 x 0.06 = 0.4 N."
     },
     {
       "id": "forces_hooke_medium_077",
@@ -349,7 +349,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "medium",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 25 N/m and extends by 3 cm. What force stretches the spring?",
+      "question": "A student converts 8 cm to metres before using a spring in an extension test. Which force matches k = 9.38 N/m?",
       "options": [
         "0.75 N",
         "75 N",
@@ -358,10 +358,10 @@
       ],
       "correctAnswer": "0.75 N",
       "correctIndex": 0,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 8 cm to 0.08 m, then use F = k x e. 9.38 x 0.08 = 0.75 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 8 cm to 0.08 m, then use F = k x e. 9.38 x 0.08 = 0.75 N."
     },
     {
       "id": "forces_hooke_medium_087",
@@ -373,7 +373,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "medium",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 30 N/m and extends by 4 cm. What force stretches the spring?",
+      "question": "On a force-extension graph for a coil spring in a demo, the gradient is 12 N/m. What force gives 10 cm extension?",
       "options": [
         "120 N",
         "0.13 N",
@@ -382,10 +382,10 @@
       ],
       "correctAnswer": "1.2 N",
       "correctIndex": 3,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 10 cm to 0.1 m, then use F = k x e. 12 x 0.1 = 1.2 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 10 cm to 0.1 m, then use F = k x e. 12 x 0.1 = 1.2 N."
     },
     {
       "id": "forces_hooke_medium_097",
@@ -397,7 +397,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "medium",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 35 N/m and extends by 5 cm. What force stretches the spring?",
+      "question": "A spring in a measuring device is still proportional. Choose the force for k = 87.5 N/m and extension 2 cm.",
       "options": [
         "0.14 N",
         "2.75 N",
@@ -406,10 +406,10 @@
       ],
       "correctAnswer": "1.75 N",
       "correctIndex": 2,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 2 cm to 0.02 m, then use F = k x e. 87.5 x 0.02 = 1.75 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 2 cm to 0.02 m, then use F = k x e. 87.5 x 0.02 = 1.75 N."
     },
     {
       "id": "forces_hooke_medium_107",
@@ -421,7 +421,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "medium",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 40 N/m and extends by 6 cm. What force stretches the spring?",
+      "question": "A spring being calibrated stretches by 3 cm. Its spring constant is 80 N/m. Which force is needed?",
       "options": [
         "3.4 N",
         "2.4 N",
@@ -430,10 +430,10 @@
       ],
       "correctAnswer": "2.4 N",
       "correctIndex": 1,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 3 cm to 0.03 m, then use F = k x e. 80 x 0.03 = 2.4 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 3 cm to 0.03 m, then use F = k x e. 80 x 0.03 = 2.4 N."
     },
     {
       "id": "forces_hooke_medium_117",
@@ -445,7 +445,7 @@
       "subtopicSlug": "hookes_law",
       "difficulty": "medium",
       "skill": "Use Hooke's law",
-      "question": "A spring has a spring constant of 15 N/m and extends by 7 cm. What force stretches the spring?",
+      "question": "For a spring under a small load, extension is 4 cm and k is 26.25 N/m. What does F = k x e give?",
       "options": [
         "1.05 N",
         "105 N",
@@ -454,10 +454,10 @@
       ],
       "correctAnswer": "1.05 N",
       "correctIndex": 0,
-      "explanation": "Convert centimetres to metres, then use force = spring constant x extension.",
+      "explanation": "Convert 4 cm to 0.04 m, then use F = k x e. 26.25 x 0.04 = 1.05 N.",
       "diagramJson": null,
       "topicId": "hookes_law",
-      "senNote": "Convert centimetres to metres, then use force = spring constant x extension."
+      "senNote": "Convert 4 cm to 0.04 m, then use F = k x e. 26.25 x 0.04 = 1.05 N."
     },
     {
       "id": "forces_speed_easy_003",
@@ -469,7 +469,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 70 m in 6 s. What is the cyclist's speed?",
+      "question": "A runner covers 35.01 m in 3 s. Which average speed is correct?",
       "options": [
         "420 m/s",
         "0.09 m/s",
@@ -478,10 +478,10 @@
       ],
       "correctAnswer": "11.67 m/s",
       "correctIndex": 3,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 35.01 m / 3 s = 11.67 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 35.01 m / 3 s = 11.67 m/s."
     },
     {
       "id": "forces_speed_easy_013",
@@ -493,7 +493,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 80 m in 7 s. What is the cyclist's speed?",
+      "question": "A distance-time graph for a toy car rises by 45.72 m over 4 s. What is the gradient?",
       "options": [
         "0.09 m/s",
         "13.43 m/s",
@@ -502,10 +502,10 @@
       ],
       "correctAnswer": "11.43 m/s",
       "correctIndex": 2,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 45.72 m / 4 s = 11.43 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 45.72 m / 4 s = 11.43 m/s."
     },
     {
       "id": "forces_speed_easy_023",
@@ -517,7 +517,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 90 m in 8 s. What is the cyclist's speed?",
+      "question": "During a practical, a trolley travels 56.25 m and takes 5 s. Choose the speed.",
       "options": [
         "13.25 m/s",
         "11.25 m/s",
@@ -526,10 +526,10 @@
       ],
       "correctAnswer": "11.25 m/s",
       "correctIndex": 1,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 56.25 m / 5 s = 11.25 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 56.25 m / 5 s = 11.25 m/s."
     },
     {
       "id": "forces_speed_easy_033",
@@ -541,7 +541,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 100 m in 9 s. What is the cyclist's speed?",
+      "question": "Use speed = distance / time for a skater: 66.66 m divided by 6 s. Which answer fits?",
       "options": [
         "11.11 m/s",
         "900 m/s",
@@ -550,10 +550,10 @@
       ],
       "correctAnswer": "11.11 m/s",
       "correctIndex": 0,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 66.66 m / 6 s = 11.11 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 66.66 m / 6 s = 11.11 m/s."
     },
     {
       "id": "forces_speed_easy_043",
@@ -565,7 +565,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 110 m in 10 s. What is the cyclist's speed?",
+      "question": "A timer records 7 s for a model train to move 77 m. What speed should be written down?",
       "options": [
         "1100 m/s",
         "0.09 m/s",
@@ -574,10 +574,10 @@
       ],
       "correctAnswer": "11 m/s",
       "correctIndex": 3,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 77 m / 7 s = 11 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 77 m / 7 s = 11 m/s."
     },
     {
       "id": "forces_speed_easy_053",
@@ -589,7 +589,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 120 m in 5 s. What is the cyclist's speed?",
+      "question": "A cyclist on a track covers 192 m in 8 s. Which average speed is correct?",
       "options": [
         "0.04 m/s",
         "26 m/s",
@@ -598,10 +598,10 @@
       ],
       "correctAnswer": "24 m/s",
       "correctIndex": 2,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 192 m / 8 s = 24 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 192 m / 8 s = 24 m/s."
     },
     {
       "id": "forces_speed_easy_063",
@@ -613,7 +613,7 @@
       "subtopicSlug": "motion",
       "difficulty": "easy",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 130 m in 6 s. What is the cyclist's speed?",
+      "question": "A distance-time graph for a robot buggy rises by 195.03 m over 9 s. What is the gradient?",
       "options": [
         "23.67 m/s",
         "21.67 m/s",
@@ -622,10 +622,10 @@
       ],
       "correctAnswer": "21.67 m/s",
       "correctIndex": 1,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 195.03 m / 9 s = 21.67 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 195.03 m / 9 s = 21.67 m/s."
     },
     {
       "id": "forces_speed_hard_133",
@@ -637,7 +637,7 @@
       "subtopicSlug": "motion",
       "difficulty": "hard",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 80 m in 7 s. What is the cyclist's speed?",
+      "question": "A cyclist in a race covers 80 m in 7 s. Which speed is closest to the cyclist's average speed?",
       "options": [
         "0.09 m/s",
         "13.43 m/s",
@@ -646,10 +646,10 @@
       ],
       "correctAnswer": "11.43 m/s",
       "correctIndex": 2,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Average speed is distance divided by time: 80 / 7 = 11.43 m/s to two decimal places. Multiplying gives an unrealistically large answer.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Average speed is distance divided by time: 80 / 7 = 11.43 m/s to two decimal places. Multiplying gives an unrealistically large answer."
     },
     {
       "id": "forces_speed_hard_143",
@@ -661,7 +661,7 @@
       "subtopicSlug": "motion",
       "difficulty": "hard",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 90 m in 8 s. What is the cyclist's speed?",
+      "question": "During a practical, a remote-control car travels 112.5 m and takes 10 s. Choose the speed.",
       "options": [
         "13.25 m/s",
         "11.25 m/s",
@@ -670,10 +670,10 @@
       ],
       "correctAnswer": "11.25 m/s",
       "correctIndex": 1,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 112.5 m / 10 s = 11.25 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 112.5 m / 10 s = 11.25 m/s."
     },
     {
       "id": "forces_speed_hard_153",
@@ -685,7 +685,7 @@
       "subtopicSlug": "motion",
       "difficulty": "hard",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 100 m in 9 s. What is the cyclist's speed?",
+      "question": "Use speed = distance / time for a walking student: 33.33 m divided by 3 s. Which answer fits?",
       "options": [
         "11.11 m/s",
         "900 m/s",
@@ -694,10 +694,10 @@
       ],
       "correctAnswer": "11.11 m/s",
       "correctIndex": 0,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 33.33 m / 3 s = 11.11 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 33.33 m / 3 s = 11.11 m/s."
     },
     {
       "id": "forces_speed_hard_163",
@@ -709,7 +709,7 @@
       "subtopicSlug": "motion",
       "difficulty": "hard",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 110 m in 10 s. What is the cyclist's speed?",
+      "question": "A timer records 4 s for a glider on an air track to move 44 m. What speed should be written down?",
       "options": [
         "1100 m/s",
         "0.09 m/s",
@@ -718,10 +718,10 @@
       ],
       "correctAnswer": "11 m/s",
       "correctIndex": 3,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 44 m / 4 s = 11 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 44 m / 4 s = 11 m/s."
     },
     {
       "id": "forces_speed_hard_173",
@@ -733,7 +733,7 @@
       "subtopicSlug": "motion",
       "difficulty": "hard",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 120 m in 5 s. What is the cyclist's speed?",
+      "question": "A sprint athlete covers 120 m in 5 s. Which average speed is correct?",
       "options": [
         "0.04 m/s",
         "26 m/s",
@@ -742,10 +742,10 @@
       ],
       "correctAnswer": "24 m/s",
       "correctIndex": 2,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 120 m / 5 s = 24 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 120 m / 5 s = 24 m/s."
     },
     {
       "id": "forces_speed_hard_183",
@@ -757,7 +757,7 @@
       "subtopicSlug": "motion",
       "difficulty": "hard",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 130 m in 6 s. What is the cyclist's speed?",
+      "question": "A distance-time graph for a bike wheel marker rises by 130.02 m over 6 s. What is the gradient?",
       "options": [
         "23.67 m/s",
         "21.67 m/s",
@@ -766,10 +766,10 @@
       ],
       "correctAnswer": "21.67 m/s",
       "correctIndex": 1,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 130.02 m / 6 s = 21.67 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 130.02 m / 6 s = 21.67 m/s."
     },
     {
       "id": "forces_speed_medium_073",
@@ -781,7 +781,7 @@
       "subtopicSlug": "motion",
       "difficulty": "medium",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 140 m in 7 s. What is the cyclist's speed?",
+      "question": "During a practical, a laboratory cart travels 140 m and takes 7 s. Choose the speed.",
       "options": [
         "20 m/s",
         "980 m/s",
@@ -790,10 +790,10 @@
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 0,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 140 m / 7 s = 20 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 140 m / 7 s = 20 m/s."
     },
     {
       "id": "forces_speed_medium_083",
@@ -805,7 +805,7 @@
       "subtopicSlug": "motion",
       "difficulty": "medium",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 150 m in 8 s. What is the cyclist's speed?",
+      "question": "Use speed = distance / time for a sports drone: 150 m divided by 8 s. Which answer fits?",
       "options": [
         "1200 m/s",
         "0.05 m/s",
@@ -814,10 +814,10 @@
       ],
       "correctAnswer": "18.75 m/s",
       "correctIndex": 3,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 150 m / 8 s = 18.75 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 150 m / 8 s = 18.75 m/s."
     },
     {
       "id": "forces_speed_medium_093",
@@ -829,7 +829,7 @@
       "subtopicSlug": "motion",
       "difficulty": "medium",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 160 m in 9 s. What is the cyclist's speed?",
+      "question": "A timer records 9 s for a train model to move 160.02 m. What speed should be written down?",
       "options": [
         "0.06 m/s",
         "19.78 m/s",
@@ -838,10 +838,10 @@
       ],
       "correctAnswer": "17.78 m/s",
       "correctIndex": 2,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 160.02 m / 9 s = 17.78 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 160.02 m / 9 s = 17.78 m/s."
     },
     {
       "id": "forces_speed_medium_103",
@@ -853,7 +853,7 @@
       "subtopicSlug": "motion",
       "difficulty": "medium",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 170 m in 10 s. What is the cyclist's speed?",
+      "question": "A ball rolling along a bench covers 170 m in 10 s. Which average speed is correct?",
       "options": [
         "19 m/s",
         "17 m/s",
@@ -862,10 +862,10 @@
       ],
       "correctAnswer": "17 m/s",
       "correctIndex": 1,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 170 m / 10 s = 17 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 170 m / 10 s = 17 m/s."
     },
     {
       "id": "forces_speed_medium_113",
@@ -877,7 +877,7 @@
       "subtopicSlug": "motion",
       "difficulty": "medium",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 60 m in 5 s. What is the cyclist's speed?",
+      "question": "A distance-time graph for a student on a scooter rises by 36 m over 3 s. What is the gradient?",
       "options": [
         "12 m/s",
         "300 m/s",
@@ -886,10 +886,10 @@
       ],
       "correctAnswer": "12 m/s",
       "correctIndex": 0,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 36 m / 3 s = 12 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 36 m / 3 s = 12 m/s."
     },
     {
       "id": "forces_speed_medium_123",
@@ -901,7 +901,7 @@
       "subtopicSlug": "motion",
       "difficulty": "medium",
       "skill": "Calculate speed",
-      "question": "A cyclist travels 70 m in 6 s. What is the cyclist's speed?",
+      "question": "During a practical, a timing trolley travels 46.68 m and takes 4 s. Choose the speed.",
       "options": [
         "420 m/s",
         "0.09 m/s",
@@ -910,10 +910,10 @@
       ],
       "correctAnswer": "11.67 m/s",
       "correctIndex": 3,
-      "explanation": "Speed is distance divided by time.",
+      "explanation": "Use speed = distance / time. 46.68 m / 4 s = 11.67 m/s.",
       "diagramJson": null,
       "topicId": "motion_graphs",
-      "senNote": "Speed is distance divided by time."
+      "senNote": "Use speed = distance / time. 46.68 m / 4 s = 11.67 m/s."
     },
     {
       "id": "forces_newton3_easy_009",
@@ -1069,19 +1069,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "hard",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a rocket pushes gas downwards, which answer shows Newton's third law?",
+      "question": "Rocket exhaust is forced downward during launch. Which force acts back on the rocket?",
       "options": [
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "Both forces act on the same object.",
+        "The smaller object is the only one with a force.",
+        "The reaction force happens after a delay.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
       "correctIndex": 3,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_hard_139",
@@ -1093,19 +1093,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "hard",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a swimmer pushes water backwards, which answer shows Newton's third law?",
+      "question": "A swimmer pushes water behind them at the pool wall. Which force pushes the swimmer?",
       "options": [
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "Both forces act on the same object.",
+        "The smaller object is the only one with a force.",
         "The water pushes the swimmer forwards.",
-        "Only the larger object experiences a force."
+        "The water pushes the swimmer forwards."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_hard_149",
@@ -1117,19 +1117,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "hard",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a skateboarder pushes the ground backwards, which answer shows Newton's third law?",
+      "question": "A skateboarder pushes backward on a pavement. Which force starts the motion?",
       "options": [
-        "The second force only appears if the object speeds up.",
+        "Both forces act on the same object.",
         "The ground pushes the skateboarder forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction."
+        "The reaction force happens after a delay.",
+        "The ground pushes the skateboarder forwards."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_hard_159",
@@ -1141,19 +1141,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "hard",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a person jumps off a boat, which answer shows Newton's third law?",
+      "question": "A person jumps forward from a small boat. Which motion shows the reaction force?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up."
+        "The smaller object is the only one with a force.",
+        "The reaction force happens after a delay.",
+        "The boat moves backwards as the person moves forwards."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_hard_169",
@@ -1165,19 +1165,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "hard",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a rocket pushes gas downwards, which answer shows Newton's third law? Choose the best answer.",
+      "question": "A rocket pushes hot gas toward the ground. What is the equal and opposite force?",
       "options": [
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The paired forces point the same way.",
+        "Only the faster object feels a force.",
+        "The forces cancel because both are on one object.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
       "correctIndex": 3,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_hard_179",
@@ -1189,19 +1189,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "hard",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a swimmer pushes water backwards, which answer shows Newton's third law? Choose the best answer.",
+      "question": "During a swimming stroke, water is driven backwards. Which reaction force acts forwards?",
       "options": [
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The paired forces point the same way.",
+        "Only the faster object feels a force.",
         "The water pushes the swimmer forwards.",
-        "Only the larger object experiences a force."
+        "The water pushes the swimmer forwards."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_medium_069",
@@ -1213,19 +1213,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "medium",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a skateboarder pushes the ground backwards, which answer shows Newton's third law?",
+      "question": "A rider pushes the ground behind the skateboard. What is the reaction force?",
       "options": [
-        "The second force only appears if the object speeds up.",
+        "The paired forces point the same way.",
         "The ground pushes the skateboarder forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction."
+        "The forces cancel because both are on one object.",
+        "The ground pushes the skateboarder forwards."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_medium_079",
@@ -1237,19 +1237,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "medium",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a person jumps off a boat, which answer shows Newton's third law?",
+      "question": "Someone pushes a boat backward while stepping onto a jetty. What should the boat do?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up."
+        "Only the faster object feels a force.",
+        "The forces cancel because both are on one object.",
+        "The boat moves backwards as the person moves forwards."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_medium_089",
@@ -1261,19 +1261,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "medium",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a rocket pushes gas downwards, which answer shows Newton's third law?",
+      "question": "In a rocket launch, gas moves down from the engine. Which reaction force is correct?",
       "options": [
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The second force appears only if acceleration is zero.",
+        "The bigger object has no force on it.",
+        "The forces are not a pair because the masses differ.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
       "correctIndex": 3,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_medium_099",
@@ -1285,19 +1285,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "medium",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a swimmer pushes water backwards, which answer shows Newton's third law?",
+      "question": "A swimmer’s hands push water back. What force does the water exert?",
       "options": [
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The second force appears only if acceleration is zero.",
+        "The bigger object has no force on it.",
         "The water pushes the swimmer forwards.",
-        "Only the larger object experiences a force."
+        "The water pushes the swimmer forwards."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_medium_109",
@@ -1309,19 +1309,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "medium",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a skateboarder pushes the ground backwards, which answer shows Newton's third law? Choose the best answer.",
+      "question": "A skateboarder uses one foot to push the road backward. Which force moves them forward?",
       "options": [
-        "The second force only appears if the object speeds up.",
+        "The second force appears only if acceleration is zero.",
         "The ground pushes the skateboarder forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction."
+        "The forces are not a pair because the masses differ.",
+        "The ground pushes the skateboarder forwards."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_newton3_medium_119",
@@ -1333,19 +1333,19 @@
       "subtopicSlug": "newtons_third_law",
       "difficulty": "medium",
       "skill": "Recognise action-reaction pairs",
-      "question": "When a person jumps off a boat, which answer shows Newton's third law? Choose the best answer.",
+      "question": "A person leaves a canoe by pushing it away. Which option shows Newton’s third law?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up."
+        "The bigger object has no force on it.",
+        "The forces are not a pair because the masses differ.",
+        "The boat moves backwards as the person moves forwards."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
-      "explanation": "Action and reaction forces are equal in size, opposite in direction, and act on different objects.",
+      "explanation": "Newton's third law forces are equal and opposite, and they act on different objects.",
       "diagramJson": null,
       "topicId": "newtons_laws",
-      "senNote": "Action and reaction forces are equal in size, opposite in direction, and act on different objects."
+      "senNote": "Newton's third law forces are equal and opposite, and they act on different objects."
     },
     {
       "id": "forces_resultant_easy_001",
@@ -1357,7 +1357,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 23 N to the right and 15 N to the left. Which statement is correct?",
+      "question": "Two pupils pull a rope in opposite directions. One pulls with 23 N to the right and the other pulls with 15 N to the left. What is the resultant force?",
       "options": [
         "38 N to the right",
         "8 N to the left",
@@ -1366,10 +1366,10 @@
       ],
       "correctAnswer": "8 N to the right",
       "correctIndex": 3,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Forces in opposite directions are subtracted. 23 N - 15 N = 8 N, and the larger force is to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Forces in opposite directions are subtracted. 23 N - 15 N = 8 N, and the larger force is to the right."
     },
     {
       "id": "forces_resultant_easy_011",
@@ -1381,7 +1381,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 28 N to the right and 18 N to the left. Which statement is correct?",
+      "question": "A crate is pulled 16 N right and 6 N left. What is the resultant force?",
       "options": [
         "10 N to the left",
         "18 N to the right",
@@ -1390,10 +1390,10 @@
       ],
       "correctAnswer": "10 N to the right",
       "correctIndex": 2,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 16 N - 6 N = 10 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 16 N - 6 N = 10 N to the right."
     },
     {
       "id": "forces_resultant_easy_021",
@@ -1405,7 +1405,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 33 N to the right and 21 N to the left. Which statement is correct?",
+      "question": "Two opposite horizontal forces act on a sledge: 20 N forwards and 8 N backwards. Which result is correct?",
       "options": [
         "21 N to the right",
         "12 N to the right",
@@ -1414,10 +1414,10 @@
       ],
       "correctAnswer": "12 N to the right",
       "correctIndex": 1,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 20 N - 8 N = 12 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 20 N - 8 N = 12 N to the right."
     },
     {
       "id": "forces_resultant_easy_031",
@@ -1429,7 +1429,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 38 N to the right and 24 N to the left. Which statement is correct?",
+      "question": "A free-body diagram for a trolley shows 24 N right and 10 N left. Choose the overall force.",
       "options": [
         "14 N to the right",
         "62 N to the right",
@@ -1438,10 +1438,10 @@
       ],
       "correctAnswer": "14 N to the right",
       "correctIndex": 0,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 24 N - 10 N = 14 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 24 N - 10 N = 14 N to the right."
     },
     {
       "id": "forces_resultant_easy_041",
@@ -1453,7 +1453,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 43 N to the right and 27 N to the left. Which statement is correct?",
+      "question": "A student subtracts the smaller force from the larger for a go-kart. What resultant comes from 28 N right and 12 N left?",
       "options": [
         "70 N to the right",
         "16 N to the left",
@@ -1462,10 +1462,10 @@
       ],
       "correctAnswer": "16 N to the right",
       "correctIndex": 3,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 28 N - 12 N = 16 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 28 N - 12 N = 16 N to the right."
     },
     {
       "id": "forces_resultant_easy_051",
@@ -1477,7 +1477,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 48 N to the right and 30 N to the left. Which statement is correct?",
+      "question": "The forces on a box on a bench are unbalanced: 32 N to the right and 14 N to the left. Which statement is correct?",
       "options": [
         "18 N to the left",
         "30 N to the right",
@@ -1486,10 +1486,10 @@
       ],
       "correctAnswer": "18 N to the right",
       "correctIndex": 2,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 32 N - 14 N = 18 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 32 N - 14 N = 18 N to the right."
     },
     {
       "id": "forces_resultant_easy_061",
@@ -1501,7 +1501,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "easy",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 53 N to the right and 33 N to the left. Which statement is correct?",
+      "question": "A shopping cart is pulled 36 N right and 16 N left. What is the resultant force?",
       "options": [
         "33 N to the right",
         "20 N to the right",
@@ -1510,10 +1510,10 @@
       ],
       "correctAnswer": "20 N to the right",
       "correctIndex": 1,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 36 N - 16 N = 20 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 36 N - 16 N = 20 N to the right."
     },
     {
       "id": "forces_resultant_hard_131",
@@ -1525,7 +1525,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "hard",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 43 N to the right and 14 N to the left. Which statement is correct?",
+      "question": "A trolley has a 43 N driving force to the right and a 14 N friction force to the left. Which result is correct?",
       "options": [
         "29 N to the left",
         "14 N to the right",
@@ -1534,10 +1534,10 @@
       ],
       "correctAnswer": "29 N to the right",
       "correctIndex": 2,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "The forces act in opposite directions, so subtract them: 43 N - 14 N = 29 N to the right. Adding them is the common mistake.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "The forces act in opposite directions, so subtract them: 43 N - 14 N = 29 N to the right. Adding them is the common mistake."
     },
     {
       "id": "forces_resultant_hard_141",
@@ -1549,7 +1549,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "hard",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 48 N to the right and 17 N to the left. Which statement is correct?",
+      "question": "Two opposite horizontal forces act on a training sled: 49 N forwards and 18 N backwards. Which result is correct?",
       "options": [
         "17 N to the right",
         "31 N to the right",
@@ -1558,10 +1558,10 @@
       ],
       "correctAnswer": "31 N to the right",
       "correctIndex": 1,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 49 N - 18 N = 31 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 49 N - 18 N = 31 N to the right."
     },
     {
       "id": "forces_resultant_hard_151",
@@ -1573,7 +1573,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "hard",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 53 N to the right and 20 N to the left. Which statement is correct?",
+      "question": "A free-body diagram for a model car shows 53 N right and 20 N left. Choose the overall force.",
       "options": [
         "33 N to the right",
         "73 N to the right",
@@ -1582,10 +1582,10 @@
       ],
       "correctAnswer": "33 N to the right",
       "correctIndex": 0,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 53 N - 20 N = 33 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 53 N - 20 N = 33 N to the right."
     },
     {
       "id": "forces_resultant_hard_161",
@@ -1597,7 +1597,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "hard",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 58 N to the right and 23 N to the left. Which statement is correct?",
+      "question": "A student subtracts the smaller force from the larger for a equipment case. What resultant comes from 41 N right and 6 N left?",
       "options": [
         "81 N to the right",
         "35 N to the left",
@@ -1606,10 +1606,10 @@
       ],
       "correctAnswer": "35 N to the right",
       "correctIndex": 3,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 41 N - 6 N = 35 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 41 N - 6 N = 35 N to the right."
     },
     {
       "id": "forces_resultant_hard_171",
@@ -1621,7 +1621,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "hard",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 18 N to the right and 26 N to the left. Which statement is correct?",
+      "question": "The forces on a low-friction cart are unbalanced: 16 N to the right and 8 N to the left. Which statement is correct?",
       "options": [
         "8 N to the right",
         "18 N to the left",
@@ -1630,10 +1630,10 @@
       ],
       "correctAnswer": "8 N to the left",
       "correctIndex": 2,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 16 N - 8 N = 8 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 16 N - 8 N = 8 N to the left."
     },
     {
       "id": "forces_resultant_hard_181",
@@ -1645,7 +1645,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "hard",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 23 N to the right and 29 N to the left. Which statement is correct?",
+      "question": "A table tennis ball launcher is pulled 16 N right and 10 N left. What is the resultant force?",
       "options": [
         "23 N to the left",
         "6 N to the left",
@@ -1654,10 +1654,10 @@
       ],
       "correctAnswer": "6 N to the left",
       "correctIndex": 1,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 16 N - 10 N = 6 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 16 N - 10 N = 6 N to the left."
     },
     {
       "id": "forces_resultant_medium_071",
@@ -1669,7 +1669,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "medium",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 58 N to the right and 36 N to the left. Which statement is correct?",
+      "question": "Two opposite horizontal forces act on a rope marker: 34 N forwards and 12 N backwards. Which result is correct?",
       "options": [
         "22 N to the right",
         "94 N to the right",
@@ -1678,10 +1678,10 @@
       ],
       "correctAnswer": "22 N to the right",
       "correctIndex": 0,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 34 N - 12 N = 22 N to the right.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 34 N - 12 N = 22 N to the right."
     },
     {
       "id": "forces_resultant_medium_081",
@@ -1693,7 +1693,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "medium",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 18 N to the right and 39 N to the left. Which statement is correct?",
+      "question": "A free-body diagram for a lab block shows 35 N right and 14 N left. Choose the overall force.",
       "options": [
         "57 N to the left",
         "21 N to the right",
@@ -1702,10 +1702,10 @@
       ],
       "correctAnswer": "21 N to the left",
       "correctIndex": 3,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 35 N - 14 N = 21 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 35 N - 14 N = 21 N to the left."
     },
     {
       "id": "forces_resultant_medium_091",
@@ -1717,7 +1717,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "medium",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 23 N to the right and 42 N to the left. Which statement is correct?",
+      "question": "A student subtracts the smaller force from the larger for a toolbox. What resultant comes from 35 N right and 16 N left?",
       "options": [
         "19 N to the right",
         "23 N to the left",
@@ -1726,10 +1726,10 @@
       ],
       "correctAnswer": "19 N to the left",
       "correctIndex": 2,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 35 N - 16 N = 19 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 35 N - 16 N = 19 N to the left."
     },
     {
       "id": "forces_resultant_medium_101",
@@ -1741,7 +1741,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "medium",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 28 N to the right and 45 N to the left. Which statement is correct?",
+      "question": "The forces on a sports bag are unbalanced: 35 N to the right and 18 N to the left. Which statement is correct?",
       "options": [
         "28 N to the left",
         "17 N to the left",
@@ -1750,10 +1750,10 @@
       ],
       "correctAnswer": "17 N to the left",
       "correctIndex": 1,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 35 N - 18 N = 17 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 35 N - 18 N = 17 N to the left."
     },
     {
       "id": "forces_resultant_medium_111",
@@ -1765,7 +1765,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "medium",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 33 N to the right and 48 N to the left. Which statement is correct?",
+      "question": "A wheeled platform is pulled 35 N right and 20 N left. What is the resultant force?",
       "options": [
         "15 N to the left",
         "81 N to the left",
@@ -1774,10 +1774,10 @@
       ],
       "correctAnswer": "15 N to the left",
       "correctIndex": 0,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 35 N - 20 N = 15 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 35 N - 20 N = 15 N to the left."
     },
     {
       "id": "forces_resultant_medium_121",
@@ -1789,7 +1789,7 @@
       "subtopicSlug": "resultant_force",
       "difficulty": "medium",
       "skill": "Calculate resultant force",
-      "question": "A box is pushed with 38 N to the right and 51 N to the left. Which statement is correct?",
+      "question": "Two opposite horizontal forces act on a school desk: 19 N forwards and 6 N backwards. Which result is correct?",
       "options": [
         "89 N to the left",
         "13 N to the right",
@@ -1798,10 +1798,10 @@
       ],
       "correctAnswer": "13 N to the left",
       "correctIndex": 3,
-      "explanation": "Resultant force is the difference between forces acting in opposite directions.",
+      "explanation": "Opposite forces subtract. 19 N - 6 N = 13 N to the left.",
       "diagramJson": null,
       "topicId": "force_interactions",
-      "senNote": "Resultant force is the difference between forces acting in opposite directions."
+      "senNote": "Opposite forces subtract. 19 N - 6 N = 13 N to the left."
     },
     {
       "id": "forces_work_easy_005",
@@ -1813,7 +1813,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "easy",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 20 N through 3 m. How much work is done?",
+      "question": "A student pushes a crate with a steady 20 N force along the floor for 3 m. How much work is done on the crate?",
       "options": [
         "23 J",
         "6.67 J",
@@ -1822,10 +1822,10 @@
       ],
       "correctAnswer": "60 J",
       "correctIndex": 3,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Work done = force x distance moved in the direction of the force. 20 x 3 = 60 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Work done = force x distance moved in the direction of the force. 20 x 3 = 60 J."
     },
     {
       "id": "forces_work_easy_015",
@@ -1837,7 +1837,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "easy",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 25 N through 4 m. How much work is done?",
+      "question": "A trolley is pulled 2 m by a force of 50 N. How much work is done?",
       "options": [
         "6.25 J",
         "104 J",
@@ -1846,10 +1846,10 @@
       ],
       "correctAnswer": "100 J",
       "correctIndex": 2,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 50 N x 2 m = 100 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 50 N x 2 m = 100 J."
     },
     {
       "id": "forces_work_easy_025",
@@ -1861,7 +1861,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "easy",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 30 N through 5 m. How much work is done?",
+      "question": "A student moves a crate using 50 N over 3 m. Which work done value is correct?",
       "options": [
         "155 J",
         "150 J",
@@ -1870,10 +1870,10 @@
       ],
       "correctAnswer": "150 J",
       "correctIndex": 1,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 50 N x 3 m = 150 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 50 N x 3 m = 150 J."
     },
     {
       "id": "forces_work_easy_035",
@@ -1885,7 +1885,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "easy",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 35 N through 6 m. How much work is done?",
+      "question": "A force-distance graph for a sledge is a rectangle: 52.5 N for 4 m. What is the area?",
       "options": [
         "210 J",
         "41 J",
@@ -1894,10 +1894,10 @@
       ],
       "correctAnswer": "210 J",
       "correctIndex": 0,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 52.5 N x 4 m = 210 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 52.5 N x 4 m = 210 J."
     },
     {
       "id": "forces_work_easy_045",
@@ -1909,7 +1909,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "easy",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 40 N through 7 m. How much work is done?",
+      "question": "Energy is transferred when a sports bag moves 5 m under a 56 N force. Choose the work done.",
       "options": [
         "47 J",
         "5.71 J",
@@ -1918,10 +1918,10 @@
       ],
       "correctAnswer": "280 J",
       "correctIndex": 3,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 56 N x 5 m = 280 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 56 N x 5 m = 280 J."
     },
     {
       "id": "forces_work_easy_055",
@@ -1933,7 +1933,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "easy",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 45 N through 8 m. How much work is done?",
+      "question": "Use W = F x d for a toolbox: 60 N multiplied by 6 m. Which answer is right?",
       "options": [
         "5.62 J",
         "368 J",
@@ -1942,10 +1942,10 @@
       ],
       "correctAnswer": "360 J",
       "correctIndex": 2,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 60 N x 6 m = 360 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 60 N x 6 m = 360 J."
     },
     {
       "id": "forces_work_hard_135",
@@ -1957,7 +1957,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "hard",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 45 N through 2 m. How much work is done?",
+      "question": "A 45 N force moves a box 2 m in the same direction as the force. Which answer shows the work done and avoids adding the numbers?",
       "options": [
         "22.5 J",
         "92 J",
@@ -1966,10 +1966,10 @@
       ],
       "correctAnswer": "90 J",
       "correctIndex": 2,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Work done is force multiplied by distance, not added. 45 x 2 = 90 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Work done is force multiplied by distance, not added. 45 x 2 = 90 J."
     },
     {
       "id": "forces_work_hard_145",
@@ -1981,7 +1981,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "hard",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 50 N through 3 m. How much work is done?",
+      "question": "A lab cart is pulled 8 m by a force of 18.75 N. How much work is done?",
       "options": [
         "153 J",
         "150 J",
@@ -1990,10 +1990,10 @@
       ],
       "correctAnswer": "150 J",
       "correctIndex": 1,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 18.75 N x 8 m = 150 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 18.75 N x 8 m = 150 J."
     },
     {
       "id": "forces_work_hard_155",
@@ -2005,7 +2005,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "hard",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 15 N through 4 m. How much work is done?",
+      "question": "A student moves a box of books using 6 N over 10 m. Which work done value is correct?",
       "options": [
         "60 J",
         "19 J",
@@ -2014,10 +2014,10 @@
       ],
       "correctAnswer": "60 J",
       "correctIndex": 0,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 6 N x 10 m = 60 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 6 N x 10 m = 60 J."
     },
     {
       "id": "forces_work_hard_165",
@@ -2029,7 +2029,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "hard",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 20 N through 5 m. How much work is done?",
+      "question": "A force-distance graph for a wheeled case is a rectangle: 50 N for 2 m. What is the area?",
       "options": [
         "25 J",
         "4 J",
@@ -2038,10 +2038,10 @@
       ],
       "correctAnswer": "100 J",
       "correctIndex": 3,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 50 N x 2 m = 100 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 50 N x 2 m = 100 J."
     },
     {
       "id": "forces_work_hard_175",
@@ -2053,7 +2053,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "hard",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 25 N through 6 m. How much work is done?",
+      "question": "Energy is transferred when a desk drawer moves 3 m under a 50 N force. Choose the work done.",
       "options": [
         "4.17 J",
         "156 J",
@@ -2062,10 +2062,10 @@
       ],
       "correctAnswer": "150 J",
       "correctIndex": 2,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 50 N x 3 m = 150 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 50 N x 3 m = 150 J."
     },
     {
       "id": "forces_work_hard_185",
@@ -2077,7 +2077,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "hard",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 30 N through 7 m. How much work is done?",
+      "question": "Use W = F x d for a training sled: 52.5 N multiplied by 4 m. Which answer is right?",
       "options": [
         "217 J",
         "210 J",
@@ -2086,10 +2086,10 @@
       ],
       "correctAnswer": "210 J",
       "correctIndex": 1,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 52.5 N x 4 m = 210 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 52.5 N x 4 m = 210 J."
     },
     {
       "id": "forces_work_medium_065",
@@ -2101,7 +2101,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 50 N through 2 m. How much work is done?",
+      "question": "A equipment trolley is pulled 5 m by a force of 20 N. How much work is done?",
       "options": [
         "102 J",
         "100 J",
@@ -2110,10 +2110,10 @@
       ],
       "correctAnswer": "100 J",
       "correctIndex": 1,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 20 N x 5 m = 100 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 20 N x 5 m = 100 J."
     },
     {
       "id": "forces_work_medium_075",
@@ -2125,7 +2125,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 15 N through 3 m. How much work is done?",
+      "question": "A student moves a loaded tray using 7.5 N over 6 m. Which work done value is correct?",
       "options": [
         "45 J",
         "18 J",
@@ -2134,10 +2134,10 @@
       ],
       "correctAnswer": "45 J",
       "correctIndex": 0,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 7.5 N x 6 m = 45 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 7.5 N x 6 m = 45 J."
     },
     {
       "id": "forces_work_medium_085",
@@ -2149,7 +2149,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 20 N through 4 m. How much work is done?",
+      "question": "A force-distance graph for a wooden block is a rectangle: 10 N for 8 m. What is the area?",
       "options": [
         "24 J",
         "5 J",
@@ -2158,10 +2158,10 @@
       ],
       "correctAnswer": "80 J",
       "correctIndex": 3,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 10 N x 8 m = 80 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 10 N x 8 m = 80 J."
     },
     {
       "id": "forces_work_medium_095",
@@ -2173,7 +2173,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 25 N through 5 m. How much work is done?",
+      "question": "Energy is transferred when a model lift moves 10 m under a 12.5 N force. Choose the work done.",
       "options": [
         "5 J",
         "130 J",
@@ -2182,10 +2182,10 @@
       ],
       "correctAnswer": "125 J",
       "correctIndex": 2,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 12.5 N x 10 m = 125 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 12.5 N x 10 m = 125 J."
     },
     {
       "id": "forces_work_medium_105",
@@ -2197,7 +2197,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 30 N through 6 m. How much work is done?",
+      "question": "Use W = F x d for a stack of mats: 90 N multiplied by 2 m. Which answer is right?",
       "options": [
         "186 J",
         "180 J",
@@ -2206,10 +2206,10 @@
       ],
       "correctAnswer": "180 J",
       "correctIndex": 1,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 90 N x 2 m = 180 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 90 N x 2 m = 180 J."
     },
     {
       "id": "forces_work_medium_115",
@@ -2221,7 +2221,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 35 N through 7 m. How much work is done?",
+      "question": "A storage box is pulled 3 m by a force of 81.67 N. How much work is done?",
       "options": [
         "245 J",
         "42 J",
@@ -2230,10 +2230,10 @@
       ],
       "correctAnswer": "245 J",
       "correctIndex": 0,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 81.67 N x 3 m = 245 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 81.67 N x 3 m = 245 J."
     },
     {
       "id": "forces_work_medium_125",
@@ -2245,7 +2245,7 @@
       "subtopicSlug": "work_done",
       "difficulty": "medium",
       "skill": "Calculate work done",
-      "question": "A student pushes a crate with a force of 40 N through 8 m. How much work is done?",
+      "question": "A student moves a small cart using 80 N over 4 m. Which work done value is correct?",
       "options": [
         "48 J",
         "5 J",
@@ -2254,10 +2254,10 @@
       ],
       "correctAnswer": "320 J",
       "correctIndex": 3,
-      "explanation": "Work done equals force multiplied by distance moved in the direction of the force.",
+      "explanation": "Use work done = force x distance. 80 N x 4 m = 320 J.",
       "diagramJson": null,
       "topicId": "work_done",
-      "senNote": "Work done equals force multiplied by distance moved in the direction of the force."
+      "senNote": "Use work done = force x distance. 80 N x 4 m = 320 J."
     },
     {
       "id": "aqa_forces_scalar_and_vector_quantities_easy_051",
@@ -3722,7 +3722,7 @@
       ],
       "correctAnswer": "5 m/s",
       "correctIndex": 0,
-      "explanation": "Use speed = distance / time, so 60 / 12 = 5 m/s. A common mistake is to multiply the numbers.",
+      "explanation": "Use speed = distance / time. 60 / 12 = 5 m/s. Multiplying distance by time is a common mistake.",
       "misconceptionTag": [
         "multiply_distance_time",
         "add_distance_time",
@@ -3735,9 +3735,9 @@
         "replacesQuestionId": null,
         "qualityFlags": []
       },
-      "question": "A cyclist travels 60 m in 12 s. What is the cyclist's speed?",
+      "question": "A toy car travels 60 m along a track in 12 s. What is its average speed?",
       "topicId": "motion_graphs",
-      "senNote": "Use speed = distance / time, so 60 / 12 = 5 m/s. A common mistake is to multiply the numbers."
+      "senNote": "Use speed = distance / time. 60 / 12 = 5 m/s. Multiplying distance by time is a common mistake."
     },
     {
       "id": "aqa_forces_speed_distance_time_medium_088",

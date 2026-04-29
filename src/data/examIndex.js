@@ -2,13 +2,12 @@
  * examIndex.js — merges all exam-style question data files
  * and exposes a single lookup function.
  */
-import { PHYSICS_ONLY_TOPICS } from './topics'
-import { getValidatedBoard } from '../utils/boardConfig'
+import { getSelectedCourse, getValidatedBoard } from '../utils/boardConfig'
+import { filterQuestionsForSelection, isQuestionAvailableForSelection, isTopicAvailableForSelection } from '../utils/curriculumFilters'
 
 /** Filter a question list by the current board (used for g-value board splits) */
-function filterByBoard(questions) {
-  const boardId = getValidatedBoard()
-  return questions.filter(q => !q.boards || q.boards.includes(boardId))
+function filterBySelection(questions, boardId = getValidatedBoard(), course = getSelectedCourse()) {
+  return filterQuestionsForSelection(questions, boardId, course)
 }
 import examCalculations from './examCalculations'
 import examPracticals from './examPracticals'
@@ -26,56 +25,57 @@ import examNovelContext from './examNovelContext'
  * Return all exam practice questions for a given subtopic ID.
  * Merges across all exam data sources.
  */
-export function getExamQuestions(subtopicId) {
+export function getExamQuestions(subtopicId, { boardId = getValidatedBoard(), course = getSelectedCourse() } = {}) {
+  if (!isTopicAvailableForSelection(subtopicId, boardId, course)) return []
   const questions = []
 
   // Calculations
   if (examCalculations[subtopicId]) {
-    questions.push(...filterByBoard(examCalculations[subtopicId]))
+    questions.push(...filterBySelection(examCalculations[subtopicId], boardId, course))
   }
 
   // Required practical sequence sorts + describe-method / error-analysis variants
   if (examPracticals[subtopicId]) {
-    questions.push(...examPracticals[subtopicId])
+    questions.push(...filterBySelection(examPracticals[subtopicId], boardId, course))
   }
   // _describe suffix keys hold method-description and error-analysis questions
   if (examPracticals[subtopicId + '_describe']) {
-    questions.push(...examPracticals[subtopicId + '_describe'])
+    questions.push(...filterBySelection(examPracticals[subtopicId + '_describe'], boardId, course))
   }
 
   // Particle model fill-in-the-steps
   if (examParticleModel[subtopicId]) {
-    questions.push(...examParticleModel[subtopicId])
+    questions.push(...filterBySelection(examParticleModel[subtopicId], boardId, course))
   }
 
   // Graph reading questions
   if (examGraphs[subtopicId]) {
-    questions.push(...examGraphs[subtopicId])
+    questions.push(...filterBySelection(examGraphs[subtopicId], boardId, course))
   }
 
   // Space topic questions
   if (examSpace[subtopicId]) {
-    questions.push(...examSpace[subtopicId])
+    questions.push(...filterBySelection(examSpace[subtopicId], boardId, course))
   }
 
   // Equation recall (MCQ-style)
   if (examEquations[subtopicId]) {
-    questions.push(...examEquations[subtopicId])
+    questions.push(...filterBySelection(examEquations[subtopicId], boardId, course))
   }
 
   // Extended 6-mark open-ended questions
   if (examExtended[subtopicId]) {
-    questions.push(...examExtended[subtopicId])
+    questions.push(...filterBySelection(examExtended[subtopicId], boardId, course))
   }
 
   // Diagram-based past paper style questions
   if (examDiagramQs[subtopicId]) {
-    questions.push(...examDiagramQs[subtopicId])
+    questions.push(...filterBySelection(examDiagramQs[subtopicId], boardId, course))
   }
 
   // Grade 9 chained-equation calculations
   if (examChained[subtopicId]) {
-    questions.push(...examChained[subtopicId])
+    questions.push(...filterBySelection(examChained[subtopicId], boardId, course))
   }
 
   return questions
@@ -84,8 +84,8 @@ export function getExamQuestions(subtopicId) {
 /**
  * Get count of exam questions available for a topic.
  */
-export function getExamQuestionCount(subtopicId) {
-  return getExamQuestions(subtopicId).length
+export function getExamQuestionCount(subtopicId, options) {
+  return getExamQuestions(subtopicId, options).length
 }
 
 /**
@@ -111,26 +111,23 @@ export function getExamTopicIds() {
  * Used by Grade9Challenge screen. Shuffled on each call.
  * @param {string} [course] - 'combined' | 'physics_only' | undefined
  */
-export function getGrade9Questions(course) {
+export function getGrade9Questions(course = getSelectedCourse(), boardId = getValidatedBoard()) {
   const questions = []
-  const physicsOnly = course === 'combined'  // if combined, exclude physics-only topics
 
   // Chained-equation multi-step calculations from all topics
   Object.entries(examChained).forEach(([topicId, qs]) => {
-    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
-    questions.push(...qs)
+    if (!isTopicAvailableForSelection(topicId, boardId, course)) return
+    questions.push(...filterBySelection(qs, boardId, course))
   })
 
   // RPA "too high / too low" error direction questions
   examRPAErrors.forEach(q => {
-    if (physicsOnly && q.topicId && PHYSICS_ONLY_TOPICS.has(q.topicId)) return
-    questions.push(q)
+    if (isQuestionAvailableForSelection(q, boardId, course)) questions.push(q)
   })
 
   // Novel-context 6-mark questions
   examNovelContext.forEach(q => {
-    if (physicsOnly && q.topic && PHYSICS_ONLY_TOPICS.has(q.topic)) return
-    questions.push(q)
+    if (isQuestionAvailableForSelection(q, boardId, course)) questions.push(q)
   })
 
   // Shuffle
@@ -147,46 +144,45 @@ export function getGrade9Questions(course) {
  * Structure: MCQ → short answer → calculation → extended.
  * @param {string} [course] - 'combined' | 'physics_only' | undefined
  */
-export function getTimedPaperQuestions(course) {
+export function getTimedPaperQuestions(course = getSelectedCourse(), boardId = getValidatedBoard()) {
   const paper = []
-  const physicsOnly = course === 'combined'
 
   // Section A — 5 × MCQ / equation-recall (1 mark each)
   const mcqPool = []
   Object.entries(examEquations).forEach(([topicId, qs]) => {
-    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
-    mcqPool.push(...qs)
+    if (!isTopicAvailableForSelection(topicId, boardId, course)) return
+    mcqPool.push(...filterBySelection(qs, boardId, course))
   })
   paper.push(...mcqPool.sort(() => Math.random() - 0.5).slice(0, 5))
 
   // Section B — Short answer: 2 × calculation (tier 1–2) + 1 × RPA error
   const calcPool = []
   Object.entries(examCalculations).forEach(([topicId, qs]) => {
-    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
-    calcPool.push(...filterByBoard(qs).filter(q => q.tier <= 2))
+    if (!isTopicAvailableForSelection(topicId, boardId, course)) return
+    calcPool.push(...filterBySelection(qs, boardId, course).filter(q => q.tier <= 2))
   })
   paper.push(...calcPool.sort(() => Math.random() - 0.5).slice(0, 2))
 
-  const rpaPool = examRPAErrors.filter(q => !physicsOnly || !q.topicId || !PHYSICS_ONLY_TOPICS.has(q.topicId))
+  const rpaPool = filterBySelection(examRPAErrors, boardId, course)
   if (rpaPool.length > 0) paper.push(rpaPool[Math.floor(Math.random() * rpaPool.length)])
 
   // Section C — Chained calculation (tier 3) + graph/diagram
   const chainPool = []
   Object.entries(examChained).forEach(([topicId, qs]) => {
-    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
-    chainPool.push(...qs)
+    if (!isTopicAvailableForSelection(topicId, boardId, course)) return
+    chainPool.push(...filterBySelection(qs, boardId, course))
   })
   if (chainPool.length > 0) paper.push(chainPool[Math.floor(Math.random() * chainPool.length)])
 
   const graphPool = []
   Object.entries(examGraphs).forEach(([topicId, qs]) => {
-    if (physicsOnly && PHYSICS_ONLY_TOPICS.has(topicId)) return
-    graphPool.push(...qs)
+    if (!isTopicAvailableForSelection(topicId, boardId, course)) return
+    graphPool.push(...filterBySelection(qs, boardId, course))
   })
   if (graphPool.length > 0) paper.push(graphPool[Math.floor(Math.random() * graphPool.length)])
 
   // Section D — Novel context OR extended 6-mark
-  const novelPool = examNovelContext.filter(q => !physicsOnly || !q.topic || !PHYSICS_ONLY_TOPICS.has(q.topic))
+  const novelPool = filterBySelection(examNovelContext, boardId, course)
   if (novelPool.length > 0) paper.push(novelPool[Math.floor(Math.random() * novelPool.length)])
 
   return paper

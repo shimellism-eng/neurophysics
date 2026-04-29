@@ -1,8 +1,8 @@
 // Board configuration — master source of truth for all exam board metadata.
-// Add new boards here; the rest of the app reads from this file.
+// Keep the structure extendable so future boards can be re-added safely.
 
 export const BOARDS = {
-  'aqa': {
+  aqa: {
     id: 'aqa',
     name: 'AQA',
     fullName: 'AQA GCSE Physics',
@@ -15,7 +15,7 @@ export const BOARDS = {
     description: 'Most popular in England',
     paperLabels: ['All', 'Paper 1', 'Paper 2'],
   },
-  'edexcel': {
+  edexcel: {
     id: 'edexcel',
     name: 'Edexcel',
     fullName: 'Edexcel GCSE Physics (1PH0)',
@@ -28,99 +28,55 @@ export const BOARDS = {
     description: 'Pearson · g = 10 N/kg',
     paperLabels: ['All', 'Paper 1', 'Paper 2'],
   },
-  'ocr-a': {
-    id: 'ocr-a',
-    name: 'OCR Gateway A',
-    fullName: 'OCR Gateway Physics A (J249)',
-    gradeSystem: '9-1',
-    g: 9.8,
-    practicalLabel: 'PAG Activity',
-    practicalShort: 'PAG',
-    color: '#10b981',
-    flag: '🇬🇧',
-    description: 'Includes Global Challenges module',
-    paperLabels: ['All', 'Paper 1', 'Paper 2'],
-  },
-  'ocr-b': {
-    id: 'ocr-b',
-    name: 'OCR 21st Century',
-    fullName: 'OCR Twenty First Century Physics B (J259)',
-    gradeSystem: '9-1',
-    g: 9.8,
-    practicalLabel: 'PAG Activity',
-    practicalShort: 'PAG',
-    color: '#06b6d4',
-    flag: '🇬🇧',
-    description: 'Context-led · Studying the Universe module',
-    paperLabels: ['All', 'Paper 1', 'Paper 2'],
-  },
-  'wjec': {
-    id: 'wjec',
-    name: 'WJEC / Eduqas',
-    fullName: 'WJEC / Eduqas GCSE Physics',
-    gradeSystem: '9-1',
-    g: 9.8,
-    practicalLabel: 'Specified Practical',
-    practicalShort: 'SP',
-    color: '#fbbf24',
-    flag: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
-    description: 'Wales & England · Unitised assessment',
-    paperLabels: ['All', 'Unit 1', 'Unit 2', 'Unit 3'],
-  },
-  'ccea': {
-    id: 'ccea',
-    name: 'CCEA',
-    fullName: 'CCEA GCSE Physics',
-    gradeSystem: 'A*-G',
-    g: 10,
-    practicalLabel: 'Prescribed Practical',
-    practicalShort: 'PP',
-    color: '#e879f9',
-    flag: '🇬🇧',
-    description: 'Northern Ireland · A*–G grading',
-    paperLabels: ['All', 'Unit 1', 'Unit 2'],
-  },
 }
 
 // Ordered list for board picker UI
-export const BOARD_ORDER = ['aqa', 'edexcel', 'ocr-a', 'ocr-b', 'wjec', 'ccea']
+export const BOARD_ORDER = ['aqa', 'edexcel']
 
 // All-boards shorthand — use for topics available on every spec
-export const ALL_BOARDS = BOARD_ORDER
+export const ALL_BOARDS = [...BOARD_ORDER]
 
-// ── CCEA grade system (A*–G with C* grade) ──────────────────────────────────
+// Legacy CCEA exports kept as inert constants so older imports do not break.
 export const CCEA_GRADES = ['A*', 'A', 'B', 'C*', 'C', 'D', 'E', 'F', 'G']
-
-// Approximate percentage boundaries for CCEA (practice purposes only)
 export const CCEA_BOUNDARIES = [
-  { grade: 'A*', min: 0.85, color: '#a855f7', bg: 'rgba(168,85,247,0.15)', desc: 'Outstanding' },
-  { grade: 'A',  min: 0.75, color: '#6366f1', bg: 'rgba(99,102,241,0.15)',  desc: 'Excellent' },
-  { grade: 'B',  min: 0.65, color: '#3b82f6', bg: 'rgba(59,130,246,0.15)',  desc: 'Good' },
+  { grade: 'A*', min: 0.85, color: '#a855f7', bg: 'rgba(168,85,247,0.15)', desc: 'Stretch target range' },
+  { grade: 'A', min: 0.75, color: '#6366f1', bg: 'rgba(99,102,241,0.15)', desc: 'Very strong practice range' },
+  { grade: 'B', min: 0.65, color: '#3b82f6', bg: 'rgba(59,130,246,0.15)', desc: 'Strong practice range' },
   { grade: 'C*', min: 0.58, color: '#10b981', bg: 'rgba(16,185,129,0.15)', desc: 'Strong pass' },
-  { grade: 'C',  min: 0.50, color: '#10b981', bg: 'rgba(16,185,129,0.12)', desc: 'Standard pass' },
-  { grade: 'D',  min: 0.40, color: '#f59e0b', bg: 'rgba(245,158,11,0.15)',  desc: 'Near pass' },
-  { grade: 'E',  min: 0.30, color: '#f97316', bg: 'rgba(249,115,22,0.12)',  desc: 'Below pass' },
-  { grade: 'F',  min: 0.20, color: '#ef4444', bg: 'rgba(239,68,68,0.10)',   desc: 'Well below' },
-  { grade: 'G',  min: 0.10, color: '#ef4444', bg: 'rgba(239,68,68,0.08)',   desc: 'Developing' },
+  { grade: 'C', min: 0.5, color: '#10b981', bg: 'rgba(16,185,129,0.12)', desc: 'Standard pass' },
+  { grade: 'D', min: 0.4, color: '#f59e0b', bg: 'rgba(245,158,11,0.15)', desc: 'Emerging pass range' },
+  { grade: 'E', min: 0.3, color: '#f97316', bg: 'rgba(249,115,22,0.12)', desc: 'Needs more review' },
+  { grade: 'F', min: 0.2, color: '#ef4444', bg: 'rgba(239,68,68,0.10)', desc: 'Early practice range' },
+  { grade: 'G', min: 0.1, color: '#ef4444', bg: 'rgba(239,68,68,0.08)', desc: 'Early practice range' },
 ]
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+function warnUnsupportedBoard(message) {
+  if (import.meta.env.DEV) {
+    console.warn(message)
+  }
+}
 
 /** Get the board config for a saved board ID, falling back to AQA */
 export function getBoard(boardId) {
-  return BOARDS[boardId] || BOARDS['aqa']
+  if (BOARDS[boardId]) return BOARDS[boardId]
+  if (boardId != null) {
+    warnUnsupportedBoard(`[boardConfig] Unsupported board requested: ${boardId}. Using AQA default.`)
+  }
+  return BOARDS.aqa
 }
 
 /**
  * Read np_board from localStorage and validate it against known board IDs.
- * Returns the validated ID string, falling back to 'aqa' if missing or tampered.
- * This prevents an injected localStorage value from reaching the rest of the app.
+ * Returns a safe supported ID string, defaulting to 'aqa' if missing or invalid.
  */
 export function getValidatedBoard() {
   try {
     const stored = localStorage.getItem('np_board')
-    const validIds = Object.keys(BOARDS)
-    return validIds.includes(stored) ? stored : 'aqa'
+    if (stored && BOARDS[stored]) return stored
+    if (stored != null && stored !== '') {
+      warnUnsupportedBoard(`[boardConfig] Unsupported stored board "${stored}". Resetting to AQA.`)
+    }
+    return 'aqa'
   } catch {
     return 'aqa'
   }
@@ -128,12 +84,18 @@ export function getValidatedBoard() {
 
 /** Read the currently selected board config from localStorage (validated) */
 export function getSelectedBoard() {
-  return BOARDS[getValidatedBoard()]
+  return getBoard(getValidatedBoard())
 }
 
 /** Save a board selection to localStorage */
 export function saveSelectedBoard(boardId) {
-  try { localStorage.setItem('np_board', boardId) } catch {}
+  try {
+    if (BOARDS[boardId]) {
+      localStorage.setItem('np_board', boardId)
+      return
+    }
+    warnUnsupportedBoard(`[boardConfig] Ignored unsupported board save request: ${boardId}`)
+  } catch {}
 }
 
 const VALID_COURSES = ['combined', 'physics_only']
@@ -143,7 +105,9 @@ export function getSelectedCourse() {
   try {
     const prefs = JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}')
     return VALID_COURSES.includes(prefs.course) ? prefs.course : 'combined'
-  } catch { return 'combined' }
+  } catch {
+    return 'combined'
+  }
 }
 
 /** Persist course type selection to neurophysics_prefs */
@@ -158,6 +122,6 @@ export function setSelectedCourse(course) {
 /** Is the given module/topic available for the current board?
  *  boards param: string[] | null | undefined — null/undefined means available for all */
 export function isAvailableForBoard(boards, boardId) {
-  if (boards == null || !Array.isArray(boards) || boards.length === 0) return true // no restriction = universal
+  if (boards == null || !Array.isArray(boards) || boards.length === 0) return true
   return boards.includes(boardId)
 }

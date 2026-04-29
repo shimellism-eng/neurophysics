@@ -37,19 +37,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam?",
+      "question": "On a clinic worksheet, a learner checks: a student compares the same mass of water as liquid and gas. Why is steam less dense?",
       "options": [
-        "The liquid particles stop moving completely.",
-        "Steam contains no energy so it spreads out.",
+        "Particles disappear during boiling.",
+        "Steam has no particles.",
         "The particles are much closer together in the liquid.",
-        "The particles in steam are heavier than the particles in water."
+        "The mass must become negative."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 2,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_easy_029",
@@ -61,19 +72,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam?",
+      "question": "On a museum label, a visitor reads: a results table shows particles in steam spread far apart. What does this mean for density?",
       "options": [
-        "Steam contains no energy so it spreads out.",
+        "Particles shrink to make steam dense.",
         "The particles are much closer together in the liquid.",
-        "The particles in steam are heavier than the particles in water.",
-        "The liquid particles stop moving completely."
+        "Liquid particles are further apart.",
+        "The container creates extra particles."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 1,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_easy_039",
@@ -85,19 +107,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam?",
+      "question": "On a school lab card, a pupil answers: why does the same mass of steam occupy a larger volume than liquid water?",
       "options": [
         "The particles are much closer together in the liquid.",
-        "The particles in steam are heavier than the particles in water.",
-        "The liquid particles stop moving completely.",
-        "Steam contains no energy so it spreads out."
+        "Steam has no particles.",
+        "Steam has zero volume.",
+        "Particles get heavier in steam."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 0,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_easy_049",
@@ -109,19 +142,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a student says steam particles are further apart than liquid particles. How does this affect density?",
       "options": [
-        "The particles in steam are heavier than the particles in water.",
-        "The liquid particles stop moving completely.",
-        "Steam contains no energy so it spreads out.",
+        "Liquid particles are further apart.",
+        "The mass must become negative.",
+        "Particles disappear during boiling.",
         "The particles are much closer together in the liquid."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 3,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_easy_059",
@@ -133,19 +177,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which particle explanation fits liquid water having a higher density than steam?",
       "options": [
-        "The liquid particles stop moving completely.",
-        "Steam contains no energy so it spreads out.",
+        "Steam has zero volume.",
+        "The container creates extra particles.",
         "The particles are much closer together in the liquid.",
-        "The particles in steam are heavier than the particles in water."
+        "Particles shrink to make steam dense."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 2,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_hard_129",
@@ -157,19 +212,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare density in different states",
-      "question": "A kettle gives off steam while liquid water remains inside it. Which explanation is best for why the liquid water is denser than the steam?",
+      "question": "On a revision flashcard, a student practises: liquid water is denser than steam. What does the particle model say?",
       "options": [
         "The particles are closer together in the liquid, so the same mass takes up less volume.",
-        "The particles in steam are lighter than the particles in liquid water.",
-        "The liquid particles stop moving, so they become heavier.",
-        "Steam contains no energy, so it rises and becomes less dense."
+        "The mass must become negative.",
+        "Particles get heavier in steam.",
+        "Steam has no particles."
       ],
       "correctAnswer": "The particles are closer together in the liquid, so the same mass takes up less volume.",
       "correctIndex": 0,
-      "explanation": "Density depends on how much mass is packed into a volume. In the liquid, the particles are much closer together, so the same mass fits into a smaller space. A common wrong idea is that gas particles are lighter, but the particles themselves do not become lighter when a liquid turns into a gas.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Liquid water is denser because its particles are closer together."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_hard_139",
@@ -181,19 +247,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare density in different states",
-      "question": "Which statement is correct about liquid water and steam?",
+      "question": "On a hospital training card, a trainee checks: a astronomer compares the same mass of water as liquid and gas. Why is steam less dense?",
       "options": [
         "Steam is less dense because its particles are more spread out.",
-        "Steam is less dense because each particle becomes smaller.",
-        "Liquid water is less dense because its particles are heavier.",
-        "Liquid water is denser only because it has no internal energy."
+        "The container creates extra particles.",
+        "Particles disappear during boiling.",
+        "Liquid particles are further apart."
       ],
       "correctAnswer": "Steam is less dense because its particles are more spread out.",
       "correctIndex": 0,
-      "explanation": "When water becomes steam, the particles spread out and occupy a much larger volume, so the density decreases. A common wrong idea is that the particles themselves become smaller, but it is the spacing between particles that changes.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Gas particles are more spread out, not smaller."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_hard_149",
@@ -205,19 +282,30 @@
       "subtopicSlug": "density",
       "difficulty": "hard",
       "skill": "Compare density in different states",
-      "question": "Two sealed containers each hold the same mass of water. In one container the water is liquid. In the other it is steam. Which conclusion can be drawn?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows particles in steam spread far apart. What does this mean for density?",
       "options": [
         "The steam must occupy a larger volume, so its density is lower.",
-        "The steam must have smaller particles, so its density is lower.",
-        "The liquid must have more mass packed into it, so its density is higher because it contains more particles.",
-        "Both have the same density because they contain the same mass."
+        "Particles get heavier in steam.",
+        "Particles shrink to make steam dense.",
+        "Steam has zero volume."
       ],
       "correctAnswer": "The steam must occupy a larger volume, so its density is lower.",
       "correctIndex": 0,
-      "explanation": "Density depends on both mass and volume. If the mass is the same, the less dense substance must take up more volume. A common wrong idea is to focus only on the mass being the same, but the key step is linking lower density to larger volume.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Same mass but lower density means larger volume."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_hard_159",
@@ -229,19 +317,30 @@
       "subtopicSlug": "density",
       "difficulty": "hard",
       "skill": "Use particle ideas to explain density changes",
-      "question": "A student says, \"Steam is less dense than liquid water because the particles shrink during boiling.\" Which response is best?",
+      "question": "On a classroom board, a group discusses: why does the same mass of steam occupy a larger volume than liquid water?",
       "options": [
         "The student is wrong because the particles do not shrink; they become more spread out.",
-        "The student is right because particles lose mass when they boil.",
-        "The student is right because boiling removes internal energy from the particles.",
-        "The student is wrong because liquid particles stop moving and lock together."
+        "Particles disappear during boiling.",
+        "Steam has no particles.",
+        "The mass must become negative."
       ],
       "correctAnswer": "The student is wrong because the particles do not shrink; they become more spread out.",
       "correctIndex": 0,
-      "explanation": "When liquid water becomes steam, the particles stay the same kind of particles but become much more spread out. That larger spacing increases the volume and lowers the density. A common wrong idea is that the particles themselves get smaller, but the change is in spacing, not particle size.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Boiling changes particle spacing, not particle size."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_hard_169",
@@ -253,19 +352,30 @@
       "subtopicSlug": "density",
       "difficulty": "hard",
       "skill": "Link particle model and density",
-      "question": "Which explanation best links the particle model to the lower density of steam compared with liquid water?",
+      "question": "On a workshop checklist, an engineer checks: a student says steam particles are further apart than liquid particles. How does this affect density?",
       "options": [
         "In steam, the particles are much further apart, so the same mass is spread through a larger volume.",
-        "In steam, the particles have disappeared, so there is less mass in the gas.",
-        "In steam, the particles stop colliding, so density no longer depends on volume.",
-        "In steam, the particles become lighter because energy is lost during the change of state."
+        "Particles shrink to make steam dense.",
+        "Liquid particles are further apart.",
+        "The container creates extra particles."
       ],
       "correctAnswer": "In steam, the particles are much further apart, so the same mass is spread through a larger volume.",
       "correctIndex": 0,
-      "explanation": "The particle model explains density by how closely packed the particles are. Steam has the same kind of particles as the liquid, but they are much further apart, so the volume is larger and the density is lower. A common wrong idea is that the gas has less mass because particles disappear, but the key point is increased spacing.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Same particles, larger volume, lower density."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_hard_179",
@@ -277,19 +387,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare density in different states",
-      "question": "A student compares liquid water with steam and says, \"The steam is less dense because there is more empty space between the particles.\" Is this correct?",
+      "question": "On a field trip notebook, a pupil records: which particle explanation fits liquid water having a higher density than steam?",
       "options": [
         "Yes, because the particles are more spread out in the gas.",
-        "Yes, because the particles in the gas are lighter.",
-        "No, because gas particles stop moving.",
-        "No, because density depends only on mass, not on volume."
+        "Steam has no particles.",
+        "Steam has zero volume.",
+        "Particles get heavier in steam."
       ],
       "correctAnswer": "Yes, because the particles are more spread out in the gas.",
       "correctIndex": 0,
-      "explanation": "The student is correct. In steam, the particles are much further apart, so the same mass occupies a larger volume and the density is lower. A common wrong idea is that density depends only on mass, but volume matters as well.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "More space between particles means lower density."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_medium_069",
@@ -301,19 +422,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare density in different states",
-      "question": "A balloon fills with steam from a kettle. Which statement is correct about the steam compared with the liquid water in the kettle?",
+      "question": "On a science fair poster, a team explains: liquid water is denser than steam. What does the particle model say?",
       "options": [
         "The steam is less dense because its particles are more spread out.",
-        "The steam is less dense because its particles have less mass.",
-        "The steam is denser because gases rise.",
-        "The steam is denser because it has gained energy."
+        "Liquid particles are further apart.",
+        "The mass must become negative.",
+        "Particles disappear during boiling."
       ],
       "correctAnswer": "The steam is less dense because its particles are more spread out.",
       "correctIndex": 0,
-      "explanation": "Steam is less dense than liquid water because the particles are much more spread out, so the same mass occupies a larger volume. A common wrong idea is that the particles lose mass, but the particle spacing changes, not the particle mass.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Steam is less dense because the particles are more spread out."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_medium_079",
@@ -325,19 +457,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Choose the best explanation for density differences",
-      "question": "Which explanation best describes why a gas is usually less dense than the same substance as a liquid?",
+      "question": "On a exam practice page, a candidate works: a parent compares the same mass of water as liquid and gas. Why is steam less dense?",
       "options": [
         "The particles are further apart in the gas.",
-        "The particles in the gas are smaller.",
-        "The particles in the gas stop moving between collisions.",
-        "The gas contains less energy than the liquid."
+        "Steam has zero volume.",
+        "The container creates extra particles.",
+        "Particles shrink to make steam dense."
       ],
       "correctAnswer": "The particles are further apart in the gas.",
       "correctIndex": 0,
-      "explanation": "A gas is usually less dense because its particles are much further apart, so the same mass fills a larger volume. A common wrong idea is that gas particles are smaller, but the size of the particles is not the reason for the density change.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Lower density in gases is mainly due to greater spacing."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_medium_089",
@@ -349,19 +492,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare particle spacing and density",
-      "question": "Two samples have the same mass. Sample A is liquid water and Sample B is steam. Which statement is correct?",
+      "question": "On a home study card, a learner revises: a log book shows particles in steam spread far apart. What does this mean for density?",
       "options": [
         "Sample B must have a larger volume than Sample A.",
-        "Sample B must have smaller particles than Sample A.",
-        "Sample A must have no internal energy.",
-        "Sample A and Sample B must have the same density because the masses are equal."
+        "The mass must become negative.",
+        "Particles get heavier in steam.",
+        "Steam has no particles."
       ],
       "correctAnswer": "Sample B must have a larger volume than Sample A.",
       "correctIndex": 0,
-      "explanation": "If the masses are equal, the less dense sample must take up more volume. Steam is less dense than liquid water because its particles are more spread out. A common wrong idea is that equal mass means equal density, but density depends on volume too.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Same mass but lower density means bigger volume."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_medium_099",
@@ -373,19 +527,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Identify a correct statement about density in different states",
-      "question": "Which statement is correct about liquid water and steam?",
+      "question": "On a research log book, an assistant notes: why does the same mass of steam occupy a larger volume than liquid water?",
       "options": [
         "Liquid water is denser because its particles are closer together.",
-        "Steam is denser because gas particles are lighter and rise.",
-        "Liquid water is denser because its particles stop moving.",
-        "Steam is less dense only because energy disappears during boiling."
+        "The container creates extra particles.",
+        "Particles disappear during boiling.",
+        "Liquid particles are further apart."
       ],
       "correctAnswer": "Liquid water is denser because its particles are closer together.",
       "correctIndex": 0,
-      "explanation": "Liquid water is denser because its particles are packed much closer together than in steam. That means more mass is packed into each unit volume. A common wrong idea is that particles stop moving in the liquid, but liquid particles still move randomly.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Closer particle spacing gives the liquid a higher density."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_medium_109",
@@ -397,19 +562,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a student says steam particles are further apart than liquid particles. How does this affect density?",
       "options": [
-        "Steam contains no energy so it spreads out.",
+        "Particles get heavier in steam.",
         "The particles are much closer together in the liquid.",
-        "The particles in steam are heavier than the particles in water.",
-        "The liquid particles stop moving completely."
+        "Particles shrink to make steam dense.",
+        "Steam has zero volume."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 1,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_compare_medium_119",
@@ -421,19 +597,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Compare density in different states",
-      "question": "Why is liquid water denser than steam? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which particle explanation fits liquid water having a higher density than steam?",
       "options": [
         "The particles are much closer together in the liquid.",
-        "The particles in steam are heavier than the particles in water.",
-        "The liquid particles stop moving completely.",
-        "Steam contains no energy so it spreads out."
+        "Particles disappear during boiling.",
+        "Steam has no particles.",
+        "The mass must become negative."
       ],
       "correctAnswer": "The particles are much closer together in the liquid.",
       "correctIndex": 0,
-      "explanation": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles.",
+      "explanation": "Steam is less dense because its particles are much further apart than in liquid water.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density depends on how much mass is packed into a given volume. Liquid particles are closer together than gas particles."
+      "senNote": "Steam is less dense because its particles are much further apart than in liquid water.",
+      "conceptFamily": "density-states",
+      "responseMode": "reasoning_check",
+      "patternId": "liquid_gas_density_particle_spacing",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "liquid_gas_density_particle_spacing",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_easy_001",
@@ -469,19 +656,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A block has a mass of 50 g and a volume of 7 cm^3. What is its density?",
+      "question": "On a clinic worksheet, a learner checks: a student divides mass by volume and gets 7.14 g/cm^3. What density should be recorded?",
       "options": [
-        "0.14 g/cm^3",
-        "8.14 g/cm^3",
+        "14.28 g/cm^",
+        "3.57 g/cm^",
         "7.14 g/cm^3",
-        "350 g/cm^3"
+        "10.14 g/cm^"
       ],
       "correctAnswer": "7.14 g/cm^3",
       "correctIndex": 2,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 7.14 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 7.14 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_easy_021",
@@ -493,19 +691,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A block has a mass of 60 g and a volume of 8 cm^3. What is its density?",
+      "question": "On a museum label, a visitor reads: a small cube's density calculation gives 7.5 g/cm^3. Which option matches?",
       "options": [
-        "8.5 g/cm^3",
+        "15 g/cm^",
         "7.5 g/cm^3",
-        "480 g/cm^3",
-        "0.13 g/cm^3"
+        "3.75 g/cm^",
+        "11.5 g/cm^"
       ],
       "correctAnswer": "7.5 g/cm^3",
       "correctIndex": 1,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 7.5 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 7.5 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_easy_031",
@@ -517,19 +726,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A block has a mass of 70 g and a volume of 9 cm^3. What is its density?",
+      "question": "On a school lab card, a pupil answers: the result of rho = m/V for a sample is 7.78 g/cm^3. Choose the density.",
       "options": [
         "7.78 g/cm^3",
-        "630 g/cm^3",
-        "0.13 g/cm^3",
-        "8.78 g/cm^3"
+        "15.56 g/cm^",
+        "3.89 g/cm^",
+        "12.78 g/cm^"
       ],
       "correctAnswer": "7.78 g/cm^3",
       "correctIndex": 0,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 7.78 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 7.78 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_easy_041",
@@ -541,19 +761,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A block has a mass of 80 g and a volume of 10 cm^3. What is its density?",
+      "question": "On a factory safety note, an apprentice reviews: a training screen shows the final density answer as 8 g/cm^3. Which is right?",
       "options": [
-        "800 g/cm^3",
-        "0.12 g/cm^3",
-        "9 g/cm^3",
+        "16 g/cm^",
+        "4 g/cm^",
+        "14 g/cm^",
         "8 g/cm^3"
       ],
       "correctAnswer": "8 g/cm^3",
       "correctIndex": 3,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 8 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 8 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_easy_051",
@@ -565,19 +796,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A block has a mass of 90 g and a volume of 5 cm^3. What is its density?",
+      "question": "On a space centre display, a guide explains: which value should be written when the density calculation gives 18 g/cm^3?",
       "options": [
-        "0.06 g/cm^3",
-        "19 g/cm^3",
+        "36 g/cm^",
+        "9 g/cm^",
         "18 g/cm^3",
-        "450 g/cm^3"
+        "20 g/cm^"
       ],
       "correctAnswer": "18 g/cm^3",
       "correctIndex": 2,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 18 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 18 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_easy_061",
@@ -589,19 +831,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A block has a mass of 100 g and a volume of 6 cm^3. What is its density?",
+      "question": "On a revision flashcard, a student practises: a hospital block has a calculated density of 16.67 g/cm^3. Which value is correct?",
       "options": [
-        "17.67 g/cm^3",
+        "33.34 g/cm^",
         "16.67 g/cm^3",
-        "600 g/cm^3",
-        "0.06 g/cm^3"
+        "8.34 g/cm^",
+        "19.67 g/cm^"
       ],
       "correctAnswer": "16.67 g/cm^3",
       "correctIndex": 1,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 16.67 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 16.67 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_hard_131",
@@ -613,19 +866,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "A metal block has a mass of 54 g. When it is lowered into water, the water level rises from 20 cm^3 to 26 cm^3. What is the density of the block?",
+      "question": "On a hospital training card, a trainee checks: a astronomer divides mass by volume and gets 9 g/cm^3. What density should be recorded?",
       "options": [
         "9 g/cm^3",
-        "2.08 g/cm^3",
-        "0.11 g/cm^3",
-        "74 g/cm^3"
+        "18 g/cm^",
+        "4.5 g/cm^",
+        "13 g/cm^"
       ],
       "correctAnswer": "9 g/cm^3",
       "correctIndex": 0,
-      "explanation": "First find the block's volume from the rise in water level: 26 - 20 = 6 cm^3. Then density = mass / volume = 54 / 6 = 9 g/cm^3. A common mistake is to divide by 26 cm^3, but that is the final reading, not the displaced volume.",
+      "explanation": "Density is mass divided by volume, giving 9 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "First find the block's volume from the rise in water level: 26 - 20 = 6 cm^3. Then density = mass / volume = 54 / 6 = 9 g/cm^3. A common mistake is to divide by 26 cm^3, but that is the final reading, not the displaced volume."
+      "senNote": "Density is mass divided by volume, giving 9 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_hard_141",
@@ -637,19 +901,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "A cube has a mass of 100 g and a volume of 8 cm^3. Which statement is correct about the cube?",
+      "question": "On a observatory data sheet, an astronomer reviews: a small cube's density calculation gives Its density is 12.5 g/cm^3.. Which option matches?",
       "options": [
         "Its density is 12.5 g/cm^3.",
-        "Its density is 800 g/cm^3 because mass and volume should be multiplied.",
-        "Its density is 0.08 g/cm^3 because volume should be divided by mass.",
-        "It must be less dense than a larger object."
+        "25 Itsdensityisg/cm^",
+        "6.25 Itsdensityisg/cm^",
+        "17.5 Itsdensityisg/cm^"
       ],
       "correctAnswer": "Its density is 12.5 g/cm^3.",
       "correctIndex": 0,
-      "explanation": "Density is mass divided by volume, so 100 / 8 = 12.5 g/cm^3. The size of another object does not tell you its density on its own. A common wrong idea is to multiply mass and volume, but density compares how much mass is packed into each unit of volume.",
+      "explanation": "Density is mass divided by volume, giving Its density is 12.5 g/cm^3..",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density is mass divided by volume, so 100 / 8 = 12.5 g/cm^3. The size of another object does not tell you its density on its own. A common wrong idea is to multiply mass and volume, but density compares how much mass is packed into each unit of volume."
+      "senNote": "Density is mass divided by volume, giving Its density is 12.5 g/cm^3..",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_hard_151",
@@ -661,19 +936,30 @@
       "subtopicSlug": "density",
       "difficulty": "hard",
       "skill": "Calculate density",
-      "question": "Block A has a mass of 30 g and a volume of 9 cm^3. Block B has a mass of 40 g and a volume of 10 cm^3. Which statement is correct?",
+      "question": "On a classroom board, a group discusses: the result of rho = m/V for a sample is Block B is denser because 40 / 10 = 4 g/cm^3, which is greater than 30 / 9 about 3.33 g/cm^3.. Choose the density.",
       "options": [
-        "Block B is denser because it has the larger mass.",
-        "Block A is denser because 30 / 9 is smaller than 40 / 10.",
+        "80 BlockBisdenserbecause/=g/cm^,whichisgreaterthan/aboutg/cm^",
+        "20 BlockBisdenserbecause/=g/cm^,whichisgreaterthan/aboutg/cm^",
         "Block B is denser because 40 / 10 = 4 g/cm^3, which is greater than 30 / 9 about 3.33 g/cm^3.",
-        "The two blocks have the same density because their masses are similar."
+        "46 BlockBisdenserbecause/=g/cm^,whichisgreaterthan/aboutg/cm^"
       ],
       "correctAnswer": "Block B is denser because 40 / 10 = 4 g/cm^3, which is greater than 30 / 9 about 3.33 g/cm^3.",
       "correctIndex": 2,
-      "explanation": "You must compare both densities, not just masses. Block A has density about 3.33 g/cm^3 and Block B has density 4 g/cm^3, so Block B is denser. A common mistake is to assume the larger mass always means greater density without checking volume as well.",
+      "explanation": "Density is mass divided by volume, giving Block B is denser because 40 / 10 = 4 g/cm^3, which is greater than 30 / 9 about 3.33 g/cm^3..",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "You must compare both densities, not just masses. Block A has density about 3.33 g/cm^3 and Block B has density 4 g/cm^3, so Block B is denser. A common mistake is to assume the larger mass always means greater density without checking volume as well."
+      "senNote": "Density is mass divided by volume, giving Block B is denser because 40 / 10 = 4 g/cm^3, which is greater than 30 / 9 about 3.33 g/cm^3..",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_hard_161",
@@ -685,19 +971,30 @@
       "subtopicSlug": "density",
       "difficulty": "hard",
       "skill": "Calculate density",
-      "question": "A student says, \"This larger block must be denser because it has a bigger volume.\" Which response is best?",
+      "question": "On a workshop checklist, an engineer checks: a notebook shows the final density answer as Not necessarily, because density depends on both mass and volume.. Which is right?",
       "options": [
-        "Correct, because density depends only on volume.",
-        "Correct, because bigger objects always have more mass packed in.",
+        null,
+        "Different answer 2",
         "Not necessarily, because density depends on both mass and volume.",
-        "Not necessarily, because large objects have no measurable density."
+        "Different answer 3"
       ],
       "correctAnswer": "Not necessarily, because density depends on both mass and volume.",
       "correctIndex": 2,
-      "explanation": "Density tells you how much mass there is in each unit of volume, so you need both mass and volume to decide. A larger object can be less dense if its mass does not increase as much as its volume. A common wrong idea is that bigger automatically means denser.",
+      "explanation": "Density is mass divided by volume, giving Not necessarily, because density depends on both mass and volume..",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density tells you how much mass there is in each unit of volume, so you need both mass and volume to decide. A larger object can be less dense if its mass does not increase as much as its volume. A common wrong idea is that bigger automatically means denser."
+      "senNote": "Density is mass divided by volume, giving Not necessarily, because density depends on both mass and volume..",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_hard_171",
@@ -709,19 +1006,30 @@
       "subtopicSlug": "density",
       "difficulty": "hard",
       "skill": "Calculate density",
-      "question": "A rock has a mass of 50 g. The water level in a measuring cylinder rises from 30 cm^3 to 35 cm^3 when the rock is added. Which conclusion can be drawn?",
+      "question": "On a field trip notebook, a pupil records: which value should be written when the density calculation gives Its density is 10 g/cm^3 because the displaced volume is 5 cm^3.?",
       "options": [
         "Its density is 10 g/cm^3 because the displaced volume is 5 cm^3.",
-        "Its density is 1.43 g/cm^3 because the final reading is 35 cm^3.",
-        "Its density is 250 g/cm^3 because mass and volume should be multiplied.",
-        "Its density cannot be found because the rock is irregular."
+        "20 Itsdensityisg/cm^becausethedisplacedvolumeiscm^",
+        "5 Itsdensityisg/cm^becausethedisplacedvolumeiscm^",
+        "13 Itsdensityisg/cm^becausethedisplacedvolumeiscm^"
       ],
       "correctAnswer": "Its density is 10 g/cm^3 because the displaced volume is 5 cm^3.",
       "correctIndex": 0,
-      "explanation": "For an irregular object, use displacement to find the volume. The rock's volume is 35 - 30 = 5 cm^3, so density = 50 / 5 = 10 g/cm^3. A common mistake is to divide by the final reading instead of the rise in water level.",
+      "explanation": "Density is mass divided by volume, giving Its density is 10 g/cm^3 because the displaced volume is 5 cm^3..",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "For an irregular object, use displacement to find the volume. The rock's volume is 35 - 30 = 5 cm^3, so density = 50 / 5 = 10 g/cm^3. A common mistake is to divide by the final reading instead of the rise in water level."
+      "senNote": "Density is mass divided by volume, giving Its density is 10 g/cm^3 because the displaced volume is 5 cm^3..",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_hard_181",
@@ -733,19 +1041,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "Which method would best allow a student to find the density of an irregular stone?",
+      "question": "On a science fair poster, a team explains: a exam practice block has a calculated density of Measure its mass, then find its volume from water displacement.. Which value is correct?",
       "options": [
         "Measure its mass, then find its volume from water displacement.",
-        "Measure only its volume because density does not depend on mass.",
-        "Measure its mass and multiply by its volume.",
-        "Heat the stone until its temperature changes."
+        null,
+        "Different answer 2",
+        "Different answer 3"
       ],
       "correctAnswer": "Measure its mass, then find its volume from water displacement.",
       "correctIndex": 0,
-      "explanation": "To find density, you need both mass and volume. For an irregular stone, volume is found by how much water it displaces, then density = mass / volume. A common wrong idea is that volume alone is enough, but density always depends on both quantities.",
+      "explanation": "Density is mass divided by volume, giving Measure its mass, then find its volume from water displacement..",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "To find density, you need both mass and volume. For an irregular stone, volume is found by how much water it displaces, then density = mass / volume. A common wrong idea is that volume alone is enough, but density always depends on both quantities."
+      "senNote": "Density is mass divided by volume, giving Measure its mass, then find its volume from water displacement..",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_medium_071",
@@ -757,19 +1076,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "Two blocks each have a mass of 60 g. Block X has a volume of 12 cm^3 and Block Y has a volume of 20 cm^3. Which block is denser?",
+      "question": "On a exam practice page, a candidate works: a parent divides mass by volume and gets Block X, because the same mass is packed into a smaller volume.. What density should be recorded?",
       "options": [
         "Block X, because the same mass is packed into a smaller volume.",
-        "Block Y, because the larger block must be denser.",
-        "They have the same density because their masses are equal.",
-        "There is not enough information because density depends only on mass."
+        null,
+        "Different answer 2",
+        "Different answer 3"
       ],
       "correctAnswer": "Block X, because the same mass is packed into a smaller volume.",
       "correctIndex": 0,
-      "explanation": "If two objects have the same mass, the one with the smaller volume is denser because more mass is packed into each cubic centimetre. A common wrong idea is that the larger object must be denser, but density depends on mass and volume together.",
+      "explanation": "Density is mass divided by volume, giving Block X, because the same mass is packed into a smaller volume..",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "If two objects have the same mass, the one with the smaller volume is denser because more mass is packed into each cubic centimetre. A common wrong idea is that the larger object must be denser, but density depends on mass and volume together."
+      "senNote": "Density is mass divided by volume, giving Block X, because the same mass is packed into a smaller volume..",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_medium_081",
@@ -781,19 +1111,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "A piece of metal has a mass of 40 g and displaces 8 cm^3 of water. What is its density?",
+      "question": "On a home study card, a learner revises: a small cube's density calculation gives 5 g/cm^3. Which option matches?",
       "options": [
         "5 g/cm^3",
-        "320 g/cm^3",
-        "0.2 g/cm^3",
-        "4 g/cm^3"
+        "10 g/cm^",
+        "2.5 g/cm^",
+        "11 g/cm^"
       ],
       "correctAnswer": "5 g/cm^3",
       "correctIndex": 0,
-      "explanation": "The displaced water gives the metal's volume, so density = 40 / 8 = 5 g/cm^3. A common mistake is to multiply 40 by 8 or to invert the division, but density means mass per unit volume.",
+      "explanation": "Density is mass divided by volume, giving 5 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "The displaced water gives the metal's volume, so density = 40 / 8 = 5 g/cm^3. A common mistake is to multiply 40 by 8 or to invert the division, but density means mass per unit volume."
+      "senNote": "Density is mass divided by volume, giving 5 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_medium_091",
@@ -805,19 +1146,30 @@
       "subtopicSlug": "density",
       "difficulty": "easy",
       "skill": "Calculate density",
-      "question": "A sample has a mass of 50 g and a volume of 9 cm^3. What is its density?",
+      "question": "On a research log book, an assistant notes: the result of rho = m/V for a sample is 5.56 g/cm^3. Choose the density.",
       "options": [
         "5.56 g/cm^3",
-        "0.18 g/cm^3",
-        "6.56 g/cm^3",
-        "450 g/cm^3"
+        "11.12 g/cm^",
+        "2.78 g/cm^",
+        "7.56 g/cm^"
       ],
       "correctAnswer": "5.56 g/cm^3",
       "correctIndex": 0,
-      "explanation": "Density = mass / volume, so 50 / 9 = 5.56 g/cm^3 to 2 decimal places. A common mistake is to invert the calculation and do 9 / 50 instead.",
+      "explanation": "Density is mass divided by volume, giving 5.56 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density = mass / volume, so 50 / 9 = 5.56 g/cm^3 to 2 decimal places. A common mistake is to invert the calculation and do 9 / 50 instead."
+      "senNote": "Density is mass divided by volume, giving 5.56 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_medium_101",
@@ -829,19 +1181,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "A student records these measurements for a block: mass = 60 g, length = 5 cm, width = 2 cm, height = 1 cm. What is the density of the block?",
+      "question": "On a planetarium screen, a visitor chooses: a sound desk shows the final density answer as 6 g/cm^3. Which is right?",
       "options": [
         "6 g/cm^3",
-        "60 g/cm^3",
-        "0.17 g/cm^3",
-        "13 g/cm^3"
+        "12 g/cm^",
+        "3 g/cm^",
+        "9 g/cm^"
       ],
       "correctAnswer": "6 g/cm^3",
       "correctIndex": 0,
-      "explanation": "First find the volume of the block: 5 x 2 x 1 = 10 cm^3. Then density = 60 / 10 = 6 g/cm^3. A common mistake is to stop after finding the volume or to multiply mass by volume instead of dividing.",
+      "explanation": "Density is mass divided by volume, giving 6 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "First find the volume of the block: 5 x 2 x 1 = 10 cm^3. Then density = 60 / 10 = 6 g/cm^3. A common mistake is to stop after finding the volume or to multiply mass by volume instead of dividing."
+      "senNote": "Density is mass divided by volume, giving 6 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_medium_111",
@@ -853,19 +1216,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "A block has a mass of 70 g and a volume of 5 cm^3. What is its density?",
+      "question": "On a radio studio demo, a presenter explains: which value should be written when the density calculation gives 14 g/cm^3?",
       "options": [
         "14 g/cm^3",
-        "350 g/cm^3",
-        "0.07 g/cm^3",
-        "15 g/cm^3"
+        "28 g/cm^",
+        "7 g/cm^",
+        "18 g/cm^"
       ],
       "correctAnswer": "14 g/cm^3",
       "correctIndex": 0,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 14 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 14 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_density_medium_121",
@@ -877,19 +1251,30 @@
       "subtopicSlug": "density",
       "difficulty": "medium",
       "skill": "Calculate density",
-      "question": "A block has a mass of 80 g and a volume of 6 cm^3. What is its density?",
+      "question": "On a energy survey report, a surveyor writes: a clinic block has a calculated density of 13.33 g/cm^3. Which value is correct?",
       "options": [
-        "480 g/cm^3",
-        "0.07 g/cm^3",
-        "14.33 g/cm^3",
+        "26.66 g/cm^",
+        "6.67 g/cm^",
+        "18.33 g/cm^",
         "13.33 g/cm^3"
       ],
       "correctAnswer": "13.33 g/cm^3",
       "correctIndex": 3,
-      "explanation": "Density equals mass divided by volume.",
+      "explanation": "Density is mass divided by volume, giving 13.33 g/cm^3.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Density equals mass divided by volume."
+      "senNote": "Density is mass divided by volume, giving 13.33 g/cm^3.",
+      "conceptFamily": "density",
+      "responseMode": "direct_substitution",
+      "patternId": "density_mass_volume",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "density_mass_volume",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_easy_005",
@@ -925,19 +1310,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "easy",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy?",
+      "question": "On a clinic worksheet, a learner checks: a student heats a block and asks what energy store has increased. Which definition is correct?",
       "options": [
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space.",
+        "Only chemical energy.",
+        "Only the temperature reading.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds."
+        "Only energy outside the object."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 2,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_easy_025",
@@ -949,19 +1345,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "easy",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy?",
+      "question": "On a museum label, a visitor reads: a results table says internal energy depends on particles. What does it include?",
       "options": [
-        "It is zero whenever a substance is not moving through space.",
+        "Only nuclear energy.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds.",
-        "It is the same as gravitational potential energy only."
+        "Only gravitational potential energy.",
+        "Only energy from magnets."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 1,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_easy_035",
@@ -973,19 +1380,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "easy",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy?",
+      "question": "On a school lab card, a pupil answers: which statement describes the internal energy of a system?",
       "options": [
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds.",
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space."
+        "Only the temperature reading.",
+        "Only sound energy.",
+        "Only energy of the whole object moving."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 0,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_easy_045",
@@ -997,19 +1415,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "easy",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: particles have kinetic and potential energy. What is their total called?",
       "options": [
-        "It is only the energy stored in chemical bonds.",
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space.",
+        "Only gravitational potential energy.",
+        "Only energy outside the object.",
+        "Only chemical energy.",
         "It is the total kinetic energy and potential energy of the particles in a system."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 3,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_easy_055",
@@ -1021,19 +1450,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "easy",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: a teacher asks for internal energy, not the motion of the whole object. Which answer fits?",
       "options": [
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space.",
+        "Only sound energy.",
+        "Only energy from magnets.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds."
+        "Only nuclear energy."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 2,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_125",
@@ -1045,19 +1485,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Use particle ideas to describe internal energy",
-      "question": "A hot metal spoon and a cool metal spoon are both at rest on a table. Which statement is correct?",
+      "question": "On a revision flashcard, a student practises: what is internal energy in the particle model?",
       "options": [
         "The hot spoon has more internal energy because its particles have more kinetic energy.",
-        "Both spoons have zero internal energy because neither spoon is moving across the table.",
-        "The cool spoon has more internal energy because its particles are packed more closely.",
-        "Both spoons have the same internal energy because they are made of the same metal."
+        "Only energy outside the object.",
+        "Only energy of the whole object moving.",
+        "Only the temperature reading."
       ],
       "correctAnswer": "The hot spoon has more internal energy because its particles have more kinetic energy.",
       "correctIndex": 0,
-      "explanation": "Internal energy is the energy stored in the particles, not the movement of the whole object. In the hotter spoon, the particles have more kinetic energy, so the internal energy is higher. A common wrong idea is that an object at rest has no internal energy, but its particles are still moving randomly.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "An object can be still overall but still have internal energy in its particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_135",
@@ -1069,19 +1520,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Choose the best explanation of internal energy",
-      "question": "Which explanation best describes internal energy in a substance?",
+      "question": "On a hospital training card, a trainee checks: a astronomer heats a block and asks what energy store has increased. Which definition is correct?",
       "options": [
         "It is the total kinetic and potential energy of the particles.",
-        "It is only the movement of the whole object through space.",
-        "It is only the kinetic energy of the particles.",
-        "It is the same as the temperature of the substance."
+        "Only energy from magnets.",
+        "Only chemical energy.",
+        "Only gravitational potential energy."
       ],
       "correctAnswer": "It is the total kinetic and potential energy of the particles.",
       "correctIndex": 0,
-      "explanation": "Internal energy includes both the kinetic energy of particle motion and the potential energy linked to the forces between particles. A common wrong idea is to treat internal energy as temperature only, but temperature is just related to average kinetic energy, not the full internal energy store.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both kinetic and potential energy of particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_145",
@@ -1093,19 +1555,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "hard",
       "skill": "Compare changes in internal energy",
-      "question": "Two identical blocks are heated. Block A rises in temperature. Block B melts at a constant temperature. Which statement is correct?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says internal energy depends on particles. What does it include?",
       "options": [
         "Both blocks gain internal energy, but Block B gains it without a temperature rise during melting.",
-        "Only Block A gains internal energy because Block B stays at the same temperature.",
-        "Only Block B gains internal energy because melting needs energy but heating does not.",
-        "Neither block gains internal energy because energy is used up during the change of state."
+        "Only energy of the whole object moving.",
+        "Only nuclear energy.",
+        "Only sound energy."
       ],
       "correctAnswer": "Both blocks gain internal energy, but Block B gains it without a temperature rise during melting.",
       "correctIndex": 0,
-      "explanation": "Heating increases internal energy. For Block A, the particles gain kinetic energy and the temperature rises. For Block B, energy is still transferred in during melting, but it changes the particle arrangement instead of raising temperature. A common wrong idea is that no temperature rise means no increase in internal energy.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy can increase even when temperature stays constant during a change of state."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_155",
@@ -1117,19 +1590,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "hard",
       "skill": "Reject a subtle misconception about internal energy",
-      "question": "A student says, \"Internal energy is just the temperature of an object.\" Which response is best?",
+      "question": "On a classroom board, a group discusses: which statement describes the internal energy of a system?",
       "options": [
         "That is not correct because internal energy includes potential energy as well as the kinetic energy linked to temperature.",
-        "That is correct because temperature measures all the energy in a substance.",
-        "That is not correct because internal energy is only the movement of the whole object.",
-        "That is correct because particles stop moving when temperature is constant."
+        "Only chemical energy.",
+        "Only the temperature reading.",
+        "Only energy outside the object."
       ],
       "correctAnswer": "That is not correct because internal energy includes potential energy as well as the kinetic energy linked to temperature.",
       "correctIndex": 0,
-      "explanation": "Temperature is linked to the average kinetic energy of particles, but internal energy also includes potential energy due to forces between particles. A common wrong idea is to treat temperature and internal energy as exactly the same thing, but internal energy is broader.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Temperature is part of the picture, not the whole of internal energy."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_165",
@@ -1141,19 +1625,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Apply internal energy to a real situation",
-      "question": "A mug of hot tea is left on a desk and cools down. Which statement is correct?",
+      "question": "On a workshop checklist, an engineer checks: particles have kinetic and potential energy. What is their total called?",
       "options": [
         "The internal energy of the tea decreases as energy is transferred to the surroundings.",
-        "The internal energy of the tea stays the same because the mug is not moving.",
-        "The internal energy of the tea increases because the tea is still above room temperature.",
-        "The tea loses all internal energy once its temperature starts to fall."
+        "Only nuclear energy.",
+        "Only gravitational potential energy.",
+        "Only energy from magnets."
       ],
       "correctAnswer": "The internal energy of the tea decreases as energy is transferred to the surroundings.",
       "correctIndex": 0,
-      "explanation": "As the tea cools, it transfers energy to the surroundings, so its internal energy decreases. A common wrong idea is to think internal energy depends on the mug moving as a whole, but it depends on the energy stored in the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Cooling means energy leaves the tea, so its internal energy falls."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_175",
@@ -1165,19 +1660,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Compare internal energy in two situations",
-      "question": "Two identical metal balls are on a bench. One is warmer than the other. Which statement is most likely to be correct?",
+      "question": "On a field trip notebook, a pupil records: a teacher asks for internal energy, not the motion of the whole object. Which answer fits?",
       "options": [
         "The warmer ball has greater internal energy because its particles have more kinetic energy on average.",
-        "The cooler ball has greater internal energy because it loses less energy to the surroundings.",
-        "Both balls have the same internal energy because they are the same size.",
-        "Both balls have zero internal energy because neither ball is moving across the bench."
+        "Only the temperature reading.",
+        "Only sound energy.",
+        "Only energy of the whole object moving."
       ],
       "correctAnswer": "The warmer ball has greater internal energy because its particles have more kinetic energy on average.",
       "correctIndex": 0,
-      "explanation": "For two identical objects, the warmer one usually has greater internal energy because its particles have more kinetic energy on average. A common wrong idea is that a stationary object has zero internal energy, but the particles inside are still moving randomly.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Warmer identical objects usually have greater internal energy."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_hard_185",
@@ -1189,19 +1695,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Identify a correct statement about internal energy",
-      "question": "Which statement is correct about internal energy?",
+      "question": "On a science fair poster, a team explains: what is internal energy in the particle model?",
       "options": [
         "It depends on the energy stored in the particles, not on whether the whole object is moving.",
-        "It is zero whenever an object is not moving through space.",
-        "It is only the potential energy between particles.",
-        "It disappears during changes of state."
+        "Only gravitational potential energy.",
+        "Only energy outside the object.",
+        "Only chemical energy."
       ],
       "correctAnswer": "It depends on the energy stored in the particles, not on whether the whole object is moving.",
       "correctIndex": 0,
-      "explanation": "Internal energy is the energy stored in the particles of a system. It does not become zero just because the whole object is not moving from place to place. A common wrong idea is to confuse internal energy with the motion of the whole object.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy is about particle energy, not whole-object motion."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_medium_065",
@@ -1213,19 +1730,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Apply the idea of internal energy",
-      "question": "A pan of water is heated on a hob. Which explanation is best?",
+      "question": "On a exam practice page, a candidate works: a parent heats a block and asks what energy store has increased. Which definition is correct?",
       "options": [
         "The internal energy of the water increases because energy is transferred to its particles.",
-        "The internal energy stays the same until the water starts boiling.",
-        "The internal energy increases only if the pan moves.",
-        "The internal energy decreases because heating makes particles spread out."
+        "Only sound energy.",
+        "Only energy from magnets.",
+        "Only nuclear energy."
       ],
       "correctAnswer": "The internal energy of the water increases because energy is transferred to its particles.",
       "correctIndex": 0,
-      "explanation": "Heating transfers energy to the water, so its internal energy increases. The particles gain energy even before the water boils. A common wrong idea is that internal energy stays constant until a visible change happens, but it increases as soon as energy is transferred in.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Heating a substance increases its internal energy."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_medium_075",
@@ -1237,19 +1765,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Distinguish internal energy from movement of the whole object",
-      "question": "A book slides across a table and then comes to rest. Which statement is correct?",
+      "question": "On a home study card, a learner revises: a log book says internal energy depends on particles. What does it include?",
       "options": [
         "The book can still have internal energy when it is at rest.",
-        "The book has no internal energy once it stops moving.",
-        "Internal energy is the same as the book\u2019s speed.",
-        "Internal energy only exists in gases."
+        "Only energy outside the object.",
+        "Only energy of the whole object moving.",
+        "Only the temperature reading."
       ],
       "correctAnswer": "The book can still have internal energy when it is at rest.",
       "correctIndex": 0,
-      "explanation": "Internal energy is stored in the particles inside the book, so it does not vanish when the book stops moving across the table. A common wrong idea is to confuse internal energy with the movement of the whole object.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "An object at rest can still have internal energy."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_medium_085",
@@ -1261,19 +1800,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Use particle ideas to explain internal energy",
-      "question": "Which statement is correct about the internal energy of a solid?",
+      "question": "On a research log book, an assistant notes: which statement describes the internal energy of a system?",
       "options": [
         "It includes kinetic energy because the particles vibrate, and potential energy because forces act between them.",
-        "It is zero because the particles are fixed in place.",
-        "It is only kinetic energy because the particles are moving.",
-        "It is only potential energy because the particles cannot move from place to place."
+        "Only energy from magnets.",
+        "Only chemical energy.",
+        "Only gravitational potential energy."
       ],
       "correctAnswer": "It includes kinetic energy because the particles vibrate, and potential energy because forces act between them.",
       "correctIndex": 0,
-      "explanation": "Particles in a solid still vibrate, so they have kinetic energy, and there are also forces between them, so there is potential energy too. A common wrong idea is that particles fixed in position have no kinetic energy, but vibrating particles still have it.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Particles in solids vibrate, so solids still have internal energy."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_medium_095",
@@ -1285,19 +1835,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy?",
+      "question": "On a planetarium screen, a visitor chooses: particles have kinetic and potential energy. What is their total called?",
       "options": [
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space.",
+        "Only energy of the whole object moving.",
+        "Only nuclear energy.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds."
+        "Only sound energy."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 2,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_medium_105",
@@ -1309,19 +1870,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: a teacher asks for internal energy, not the motion of the whole object. Which answer fits?",
       "options": [
-        "It is zero whenever a substance is not moving through space.",
+        "Only chemical energy.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds.",
-        "It is the same as gravitational potential energy only."
+        "Only the temperature reading.",
+        "Only energy outside the object."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 1,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_internal_medium_115",
@@ -1333,19 +1905,30 @@
       "subtopicSlug": "internal_energy",
       "difficulty": "medium",
       "skill": "Define internal energy",
-      "question": "Which statement best describes internal energy? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: what is internal energy in the particle model?",
       "options": [
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "It is only the energy stored in chemical bonds.",
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space."
+        "Only nuclear energy.",
+        "Only gravitational potential energy.",
+        "Only energy from magnets."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 0,
-      "explanation": "Internal energy includes both the kinetic and potential energy of the particles.",
+      "explanation": "Internal energy is the total kinetic and potential energy of particles in a system.",
       "diagramJson": null,
       "topicId": "internal_energy",
-      "senNote": "Internal energy includes both the kinetic and potential energy of the particles."
+      "senNote": "Internal energy is the total kinetic and potential energy of particles in a system.",
+      "conceptFamily": "internal-energy",
+      "responseMode": "direct_recall",
+      "patternId": "internal_energy_definition",
+      "contextType": "definition",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "internal_energy_definition",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_easy_007",
@@ -1381,19 +1964,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "easy",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.4 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a clinic worksheet, a learner checks: a student uses E = mL and gets 133600 J. What should they write?",
       "options": [
-        "835000 J",
-        "134600 J",
+        "267200 J",
+        "66800 J",
         "133600 J",
-        "334000.4 J"
+        "133603 J"
       ],
       "correctAnswer": "133600 J",
       "correctIndex": 2,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 133600 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 133600 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_easy_027",
@@ -1405,19 +1999,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "easy",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.5 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a museum label, a visitor reads: a sample changes state and the latent heat calculation is 167000 J. Which option matches?",
       "options": [
-        "168000 J",
+        "334000 J",
         "167000 J",
-        "334000.5 J",
-        "668000 J"
+        "83500 J",
+        "167004 J"
       ],
       "correctAnswer": "167000 J",
       "correctIndex": 1,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 167000 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 167000 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_easy_037",
@@ -1429,19 +2034,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "easy",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.6 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a school lab card, a pupil answers: the energy needed for a change of state is worked out as 200400 J. Choose it.",
       "options": [
         "200400 J",
-        "334000.6 J",
-        "556666.67 J",
-        "201400 J"
+        "400800 J",
+        "100200 J",
+        "200405 J"
       ],
       "correctAnswer": "200400 J",
       "correctIndex": 0,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 200400 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 200400 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_easy_047",
@@ -1453,19 +2069,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "easy",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.7 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a factory safety note, an apprentice reviews: a training screen shows E = mass x latent heat = 233800 J. What is E?",
       "options": [
-        "334000.7 J",
-        "477142.86 J",
-        "234800 J",
+        "467600 J",
+        "116900 J",
+        "233806 J",
         "233800 J"
       ],
       "correctAnswer": "233800 J",
       "correctIndex": 3,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 233800 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 233800 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_easy_057",
@@ -1477,19 +2104,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "easy",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.2 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a space centre display, a guide explains: which value is correct for the latent heat energy calculation result 66800 J?",
       "options": [
-        "1670000 J",
-        "67800 J",
+        "133600 J",
+        "33400 J",
         "66800 J",
-        "334000.2 J"
+        "66802 J"
       ],
       "correctAnswer": "66800 J",
       "correctIndex": 2,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 66800 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 66800 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_127",
@@ -1501,19 +2139,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A 0.20 kg sample of ice at 0 C is just melted. The specific latent heat of fusion of ice is 334000 J/kg. How much energy was needed for the melting?",
+      "question": "On a revision flashcard, a student practises: a hospital melting calculation gives 66800 J. Which energy is correct?",
       "options": [
         "66800 J",
-        "334000 J",
-        "16700 J",
-        "133600 J"
+        "133600 J",
+        "33400 J",
+        "66803 J"
       ],
       "correctAnswer": "66800 J",
       "correctIndex": 0,
-      "explanation": "Use E = mL for a change of state. Here, 0.20 x 334000 = 66800 J. A common mistake is to use 334000 J directly and forget that the sample has a mass of only 0.20 kg.",
+      "explanation": "E = mL gives 66800 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Use E = mL for a change of state. Here, 0.20 x 334000 = 66800 J. A common mistake is to use 334000 J directly and forget that the sample has a mass of only 0.20 kg."
+      "senNote": "E = mL gives 66800 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_137",
@@ -1525,19 +2174,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A student heats ice at 0 C until it has just melted. Which statement is correct?",
+      "question": "On a hospital training card, a trainee checks: a astronomer heats ice at its melting point. Why does the temperature not rise?",
       "options": [
         "Its temperature stays at 0 C while energy is used to separate the particles.",
-        "Its temperature rises because the particles stop moving.",
-        "Its mass decreases because some energy disappears.",
-        "Its particles become smaller as they melt."
+        "0 ItstemperaturestaysatCwhileenergyisusedtoseparatetheparticles",
+        "0.1 ItstemperaturestaysatCwhileenergyisusedtoseparatetheparticles",
+        "4 ItstemperaturestaysatCwhileenergyisusedtoseparatetheparticles"
       ],
       "correctAnswer": "Its temperature stays at 0 C while energy is used to separate the particles.",
       "correctIndex": 0,
-      "explanation": "During melting, energy is still transferred, but it is used to separate the particles rather than increase their average kinetic energy. That is why the temperature stays constant. A common wrong idea is that the particles stop moving, but they still move and vibrate.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "During melting, energy is still transferred, but it is used to separate the particles rather than increase their average kinetic energy. That is why the temperature stays constant. A common wrong idea is that the particles stop moving, but they still move and vibrate."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_147",
@@ -1549,19 +2209,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "hard",
       "skill": "Use specific latent heat",
-      "question": "Two 0.10 kg samples at 0 C are heated by identical heaters for the same time. Sample A is ice and Sample B is liquid water. After one minute, Sample A is still at 0 C but Sample B is warmer. Which explanation is best?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows a flat section during melting. What is the transferred energy doing?",
       "options": [
         "Sample A is using energy for melting, so its internal energy increases without a temperature rise.",
-        "Sample A receives less energy because ice cannot absorb heat.",
-        "Sample B has no internal energy, so its temperature rises more easily.",
-        "Sample A stays at 0 C because its particles stop moving."
+        "It is destroyed.",
+        "It makes particles vanish.",
+        "It stops all particle motion."
       ],
       "correctAnswer": "Sample A is using energy for melting, so its internal energy increases without a temperature rise.",
       "correctIndex": 0,
-      "explanation": "When ice melts, the transferred energy increases internal energy by loosening the forces between particles, so the temperature can stay constant. The liquid water warms because its energy is increasing the particles' average kinetic energy. A common wrong idea is that constant temperature means no energy transfer.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "When ice melts, the transferred energy increases internal energy by loosening the forces between particles, so the temperature can stay constant. The liquid water warms because its energy is increasing the particles' average kinetic energy. A common wrong idea is that constant temperature means no energy transfer."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_157",
@@ -1573,19 +2244,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "hard",
       "skill": "Use specific latent heat",
-      "question": "A heating curve for water has flat sections at 0 C and 100 C. Which statement is correct?",
+      "question": "On a classroom board, a group discusses: during a change of state, why can energy be transferred with no temperature increase?",
       "options": [
         "At both flat sections, energy is transferred without a temperature rise because the state is changing.",
-        "At 0 C only, no energy is transferred because the temperature is constant.",
-        "At 100 C, the particles stop moving so the temperature cannot rise.",
-        "At both flat sections, the particles become smaller."
+        "It only increases mass.",
+        "It becomes sound only.",
+        "It changes the thermometer scale."
       ],
       "correctAnswer": "At both flat sections, energy is transferred without a temperature rise because the state is changing.",
       "correctIndex": 0,
-      "explanation": "The flat sections show melting and boiling. In both cases, energy is still transferred, but it is used to separate particles and change state, so the temperature stays constant. A common wrong idea is that a flat line means the heater has stopped or no energy is being transferred.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "The flat sections show melting and boiling. In both cases, energy is still transferred, but it is used to separate particles and change state, so the temperature stays constant. A common wrong idea is that a flat line means the heater has stopped or no energy is being transferred."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_167",
@@ -1597,19 +2279,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "hard",
       "skill": "Use specific latent heat",
-      "question": "Which statement correctly compares specific heat capacity and specific latent heat?",
+      "question": "On a workshop checklist, an engineer checks: a substance is boiling at a constant temperature. What is the energy used for?",
       "options": [
         "Specific heat capacity is energy needed to change temperature; specific latent heat is energy needed to change state without changing temperature.",
-        "They both describe energy needed to raise temperature.",
-        "Specific latent heat only depends on the mass, not the substance.",
-        "Specific heat capacity is used when a substance melts but latent heat is used when it warms as a liquid."
+        "It makes particles vanish.",
+        "It lowers the melting point to zero.",
+        "It leaves the sample immediately."
       ],
       "correctAnswer": "Specific heat capacity is energy needed to change temperature; specific latent heat is energy needed to change state without changing temperature.",
       "correctIndex": 0,
-      "explanation": "Specific heat capacity describes changing temperature, while specific latent heat describes changing state at constant temperature. The key idea is whether the energy changes average kinetic energy or is used to separate particles. A common mistake is to treat the two ideas as the same because both involve heating.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Specific heat capacity describes changing temperature, while specific latent heat describes changing state at constant temperature. The key idea is whether the energy changes average kinetic energy or is used to separate particles. A common mistake is to treat the two ideas as the same because both involve heating."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_177",
@@ -1621,19 +2314,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "Steam condenses on a cold window. Which statement is correct?",
+      "question": "On a field trip notebook, a pupil records: which explanation fits latent heat during a change of state?",
       "options": [
         "The steam releases energy as it changes state, even though the particles themselves do not change.",
-        "The steam gains latent heat from the window.",
-        "The particles get heavier as they become liquid.",
-        "The temperature of the steam must rise while it condenses."
+        "It becomes sound only.",
+        "It stops all particle motion.",
+        "It is destroyed."
       ],
       "correctAnswer": "The steam releases energy as it changes state, even though the particles themselves do not change.",
       "correctIndex": 0,
-      "explanation": "Condensation is the reverse of boiling, so energy is released to the surroundings as the gas changes to a liquid. The particles themselves stay as water particles; only their spacing and arrangement change. A common wrong idea is that the particles change type or get heavier.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Condensation is the reverse of boiling, so energy is released to the surroundings as the gas changes to a liquid. The particles themselves stay as water particles; only their spacing and arrangement change. A common wrong idea is that the particles change type or get heavier."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_hard_187",
@@ -1645,19 +2349,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A heater transfers 334000 J to 1.0 kg of ice at 0 C. Which change would this energy produce?",
+      "question": "On a science fair poster, a team explains: a sample melts while its temperature stays steady. Where is the energy going?",
       "options": [
         "It would just melt all the ice.",
-        "It would raise the ice to 334000 C.",
-        "It would boil the ice without melting it first.",
-        "It would halve the mass of the ice."
+        "It lowers the melting point to zero.",
+        "It changes the thermometer scale.",
+        "It only increases mass."
       ],
       "correctAnswer": "It would just melt all the ice.",
       "correctIndex": 0,
-      "explanation": "For ice, E = mL. With 1.0 kg and L = 334000 J/kg, 334000 J is exactly enough to melt the ice at 0 C. A common wrong idea is that all supplied energy must raise temperature, but during melting the temperature stays constant.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "For ice, E = mL. With 1.0 kg and L = 334000 J/kg, 334000 J is exactly enough to melt the ice at 0 C. A common wrong idea is that all supplied energy must raise temperature, but during melting the temperature stays constant."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_medium_067",
@@ -1669,19 +2384,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A heating graph for ice rises to 0 C and then stays flat for a time. Which conclusion can be drawn from the flat section?",
+      "question": "On a exam practice page, a candidate works: a parent heats ice at its melting point. Why does the temperature not rise?",
       "options": [
         "Energy is being used to melt the ice rather than raise its temperature.",
-        "The particles have stopped moving until the graph rises again.",
-        "No energy is being transferred because the temperature is constant.",
-        "The mass of the ice must be decreasing."
+        "It stops all particle motion.",
+        "It leaves the sample immediately.",
+        "It makes particles vanish."
       ],
       "correctAnswer": "Energy is being used to melt the ice rather than raise its temperature.",
       "correctIndex": 0,
-      "explanation": "A flat section on a heating curve shows a change of state. The energy is still being transferred, but it is used to separate particles, so the temperature does not rise. A common wrong idea is that constant temperature means the heater is not doing anything.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "A flat section on a heating curve shows a change of state. The energy is still being transferred, but it is used to separate particles, so the temperature does not rise. A common wrong idea is that constant temperature means the heater is not doing anything."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_medium_077",
@@ -1693,19 +2419,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A 0.40 kg sample of ice at 0 C receives 66800 J of energy. The specific latent heat of fusion is 334000 J/kg. How much of the ice melts?",
+      "question": "On a home study card, a learner revises: a log book shows a flat section during melting. What is the transferred energy doing?",
       "options": [
         "0.20 kg",
-        "0.04 kg",
-        "0.40 kg",
-        "1.20 kg"
+        "0.4 kg",
+        "0.1 kg",
+        "6.2 kg"
       ],
       "correctAnswer": "0.20 kg",
       "correctIndex": 0,
-      "explanation": "Rearrange E = mL to m = E / L. So m = 66800 / 334000 = 0.20 kg. A common mistake is to assume all 0.40 kg melts, but the energy supplied is only enough for half the mass.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Rearrange E = mL to m = E / L. So m = 66800 / 334000 = 0.20 kg. A common mistake is to assume all 0.40 kg melts, but the energy supplied is only enough for half the mass."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_medium_087",
@@ -1717,19 +2454,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "Which process uses specific latent heat of vaporisation?",
+      "question": "On a research log book, an assistant notes: during a change of state, why can energy be transferred with no temperature increase?",
       "options": [
         "Changing liquid water at 100 C into steam at 100 C",
-        "Raising water from 20 C to 30 C",
-        "Cooling steam from 120 C to 100 C",
-        "Melting ice at 0 C"
+        "200 ChangingliquidwateratCintosteamatC",
+        "50 ChangingliquidwateratCintosteamatC",
+        "102 ChangingliquidwateratCintosteamatC"
       ],
       "correctAnswer": "Changing liquid water at 100 C into steam at 100 C",
       "correctIndex": 0,
-      "explanation": "Specific latent heat of vaporisation is the energy needed to change a liquid into a gas without changing temperature. Melting uses latent heat of fusion instead. A common wrong idea is to confuse latent heat with simply heating a substance to a higher temperature.",
+      "explanation": "Latent heat changes particle arrangement during a change of state.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Specific latent heat of vaporisation is the energy needed to change a liquid into a gas without changing temperature. Melting uses latent heat of fusion instead. A common wrong idea is to confuse latent heat with simply heating a substance to a higher temperature."
+      "senNote": "Latent heat changes particle arrangement during a change of state.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_medium_097",
@@ -1741,19 +2489,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.6 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a planetarium screen, a visitor chooses: a sound desk shows E = mass x latent heat = 200400 J. What is E?",
       "options": [
-        "556666.67 J",
-        "201400 J",
+        "400800 J",
+        "100200 J",
         "200400 J",
-        "334000.6 J"
+        "200403 J"
       ],
       "correctAnswer": "200400 J",
       "correctIndex": 2,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 200400 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 200400 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_medium_107",
@@ -1765,19 +2524,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.7 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a radio studio demo, a presenter explains: which value is correct for the latent heat energy calculation result 233800 J?",
       "options": [
-        "234800 J",
+        "467600 J",
         "233800 J",
-        "334000.7 J",
-        "477142.86 J"
+        "116900 J",
+        "233804 J"
       ],
       "correctAnswer": "233800 J",
       "correctIndex": 1,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 233800 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 233800 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_latent_medium_117",
@@ -1789,19 +2559,30 @@
       "subtopicSlug": "latent_heat",
       "difficulty": "medium",
       "skill": "Use specific latent heat",
-      "question": "A sample of ice has a mass of 0.2 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
+      "question": "On a energy survey report, a surveyor writes: a clinic melting calculation gives 66800 J. Which energy is correct?",
       "options": [
         "66800 J",
-        "334000.2 J",
-        "1670000 J",
-        "67800 J"
+        "133600 J",
+        "33400 J",
+        "66805 J"
       ],
       "correctAnswer": "66800 J",
       "correctIndex": 0,
-      "explanation": "Energy transferred for a change of state equals mass multiplied by specific latent heat.",
+      "explanation": "E = mL gives 66800 J.",
       "diagramJson": null,
       "topicId": "specific_latent_heat",
-      "senNote": "Energy transferred for a change of state equals mass multiplied by specific latent heat."
+      "senNote": "E = mL gives 66800 J.",
+      "conceptFamily": "latent-heat",
+      "responseMode": "direct_substitution",
+      "patternId": "latent_heat_energy",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "latent_heat_energy",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_easy_003",
@@ -1837,19 +2618,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "easy",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct?",
+      "question": "On a clinic worksheet, a learner checks: a student models a solid with beads. How should the beads move?",
       "options": [
-        "They have no kinetic energy at all.",
-        "They fill the whole container because they can flow.",
+        "No movement at all.",
+        "Changing places freely.",
         "They vibrate about fixed positions.",
-        "They are far apart and move freely in all directions."
+        "Moving in long straight lines."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 2,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_easy_023",
@@ -1861,19 +2653,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "easy",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct?",
+      "question": "On a museum label, a visitor reads: a results table shows particles close together in fixed places. Which state is shown?",
       "options": [
-        "They fill the whole container because they can flow.",
+        "Flowing past each other.",
         "They vibrate about fixed positions.",
-        "They are far apart and move freely in all directions.",
-        "They have no kinetic energy at all."
+        "Spread throughout the container.",
+        "Expanding to fill any container."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 1,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_easy_033",
@@ -1885,19 +2688,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "easy",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct?",
+      "question": "On a school lab card, a pupil answers: what is true about the arrangement and motion of particles in a solid?",
       "options": [
         "They vibrate about fixed positions.",
-        "They are far apart and move freely in all directions.",
-        "They have no kinetic energy at all.",
-        "They fill the whole container because they can flow."
+        "Changing places freely.",
+        "No attraction at all.",
+        "Far apart and moving freely."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 0,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_easy_043",
@@ -1909,19 +2723,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "easy",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a metal block keeps its shape. Which particle description explains this?",
       "options": [
-        "They are far apart and move freely in all directions.",
-        "They have no kinetic energy at all.",
-        "They fill the whole container because they can flow.",
+        "Spread throughout the container.",
+        "Moving in long straight lines.",
+        "No movement at all.",
         "They vibrate about fixed positions."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 3,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_easy_053",
@@ -1933,19 +2758,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "easy",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which answer best describes solid particles at room temperature?",
       "options": [
-        "They have no kinetic energy at all.",
-        "They fill the whole container because they can flow.",
+        "No attraction at all.",
+        "Expanding to fill any container.",
         "They vibrate about fixed positions.",
-        "They are far apart and move freely in all directions."
+        "Flowing past each other."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 2,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_hard_133",
@@ -1957,19 +2793,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Use particle ideas to describe a solid",
-      "question": "A metal tray keeps its shape when it is carried across a room. Which explanation is best?",
+      "question": "On a revision flashcard, a student practises: which statement describes particles in a solid?",
       "options": [
         "Its particles are close together and only vibrate about fixed positions.",
-        "Its particles are far apart and flow freely through the tray.",
-        "Its particles stop moving completely, so the shape stays fixed.",
-        "Its particles become larger when the metal is solid."
+        "Moving in long straight lines.",
+        "Far apart and moving freely.",
+        "Changing places freely."
       ],
       "correctAnswer": "Its particles are close together and only vibrate about fixed positions.",
       "correctIndex": 0,
-      "explanation": "A solid keeps its shape because its particles stay close together and vibrate about fixed positions instead of moving past each other. A common wrong idea is that particles in a solid stop moving, but they still vibrate.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Particles in a solid vibrate but do not move past each other."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_hard_143",
@@ -1981,19 +2828,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Choose the best explanation for particles in a solid",
-      "question": "Which statement is correct about particles in a solid?",
+      "question": "On a hospital training card, a trainee checks: a astronomer models a solid with beads. How should the beads move?",
       "options": [
         "They are close together and vibrate about fixed positions.",
-        "They are larger than gas particles of the same substance.",
-        "They are fixed because they have no kinetic energy.",
-        "They fill the container because they can flow."
+        "Expanding to fill any container.",
+        "No movement at all.",
+        "Spread throughout the container."
       ],
       "correctAnswer": "They are close together and vibrate about fixed positions.",
       "correctIndex": 0,
-      "explanation": "Particles in a solid are packed closely and vibrate in fixed positions. A common wrong idea is that solid particles have no kinetic energy, but vibrating particles still have kinetic energy.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Solid particles are close together and still vibrate."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_hard_153",
@@ -2005,19 +2863,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "hard",
       "skill": "Compare particle arrangements in different states",
-      "question": "A substance changes from a solid to a liquid. Which statement is correct?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows particles close together in fixed places. Which state is shown?",
       "options": [
         "The particles stay the same, but they are able to move past each other more easily.",
-        "The particles become smaller, so the substance can flow.",
-        "The particles stop vibrating and begin to disappear.",
-        "The particles become lighter, so the density must become zero."
+        "Far apart and moving freely.",
+        "Flowing past each other.",
+        "No attraction at all."
       ],
       "correctAnswer": "The particles stay the same, but they are able to move past each other more easily.",
       "correctIndex": 0,
-      "explanation": "During melting, the particles do not change into different particles. They gain energy and are able to move past each other instead of only vibrating in fixed positions. A common wrong idea is that the particles themselves change size or type during a change of state.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Changes of state change particle arrangement, not the particles themselves."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_hard_163",
@@ -2029,19 +2898,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "hard",
       "skill": "Reject a misconception about particles in solids and liquids",
-      "question": "A student says, \"Particles in a liquid are fixed in place like particles in a solid.\" Which response is best?",
+      "question": "On a classroom board, a group discusses: what is true about the arrangement and motion of particles in a solid?",
       "options": [
         "The student is wrong because liquid particles can move past each other, even though they stay close together.",
-        "The student is right because liquids always keep a fixed shape.",
-        "The student is right because particles stop moving once a substance becomes liquid.",
-        "The student is wrong because liquid particles are much larger than solid particles."
+        "No movement at all.",
+        "Changing places freely.",
+        "Moving in long straight lines."
       ],
       "correctAnswer": "The student is wrong because liquid particles can move past each other, even though they stay close together.",
       "correctIndex": 0,
-      "explanation": "Liquid particles are still close together, but they are not fixed in position. They can move past each other, which is why a liquid can flow. A common wrong idea is to assume that close particles must be fixed, but that is only true for a solid.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Liquid particles are close together but not fixed in place."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_hard_173",
@@ -2053,19 +2933,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Use particle ideas to explain a solid",
-      "question": "A cube of ice keeps its shape when placed on a plate. Which explanation is best?",
+      "question": "On a workshop checklist, an engineer checks: a metal block keeps its shape. Which particle description explains this?",
       "options": [
         "Its particles only vibrate about fixed positions.",
-        "Its particles stop moving completely once they are cold.",
-        "Its particles are spread far apart so they cannot flow.",
-        "Its particles become heavier in the solid state."
+        "Flowing past each other.",
+        "Spread throughout the container.",
+        "Expanding to fill any container."
       ],
       "correctAnswer": "Its particles only vibrate about fixed positions.",
       "correctIndex": 0,
-      "explanation": "Ice keeps its shape because its particles vibrate about fixed positions rather than moving freely past each other. A common wrong idea is that cold solid particles stop moving, but they still vibrate.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "A solid keeps its shape because the particles stay in fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_hard_183",
@@ -2077,19 +2968,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Apply the particle model to a solid",
-      "question": "A student presses on a solid block and it does not flow to fill the container. Which statement is correct?",
+      "question": "On a field trip notebook, a pupil records: which answer best describes solid particles at room temperature?",
       "options": [
         "The particles are close together and cannot move past each other freely.",
-        "The particles have no energy at all.",
-        "The particles are farther apart than in a gas.",
-        "The particles change into different particles when pressed."
+        "Changing places freely.",
+        "No attraction at all.",
+        "Far apart and moving freely."
       ],
       "correctAnswer": "The particles are close together and cannot move past each other freely.",
       "correctIndex": 0,
-      "explanation": "A solid does not flow because its particles are held closely together and cannot move past each other freely. A common wrong idea is that the particles have no energy, but they still vibrate even in a solid.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Solids do not flow because their particles cannot move past each other freely."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_063",
@@ -2101,19 +3003,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Compare solids and liquids using the particle model",
-      "question": "Which explanation best compares a solid with a liquid?",
+      "question": "On a science fair poster, a team explains: which statement describes particles in a solid?",
       "options": [
         "In both, particles are close together, but only in the liquid can they move past each other.",
-        "In both, particles are fixed in place and cannot move.",
-        "In the solid, particles are larger than in the liquid.",
-        "In the liquid, particles have no kinetic energy so they can flow."
+        "Spread throughout the container.",
+        "Moving in long straight lines.",
+        "No movement at all."
       ],
       "correctAnswer": "In both, particles are close together, but only in the liquid can they move past each other.",
       "correctIndex": 0,
-      "explanation": "Both solids and liquids have particles that are close together. The difference is that liquid particles can move past one another, while solid particles only vibrate about fixed positions. A common wrong idea is that liquid particles are fixed in place like a solid.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Solids and liquids both have close particles, but liquids can flow."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_073",
@@ -2125,19 +3038,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Choose a valid explanation using the particle model",
-      "question": "A solid iron bar is heated and still keeps its shape. Which statement is correct?",
+      "question": "On a exam practice page, a candidate works: a parent models a solid with beads. How should the beads move?",
       "options": [
         "Its particles gain energy but still vibrate about fixed positions.",
-        "Its particles stop moving as it gets hotter.",
-        "Its particles become a different size when heated.",
-        "Its particles spread so far apart that the solid becomes a gas straight away."
+        "No attraction at all.",
+        "Expanding to fill any container.",
+        "Flowing past each other."
       ],
       "correctAnswer": "Its particles gain energy but still vibrate about fixed positions.",
       "correctIndex": 0,
-      "explanation": "Heating a solid increases the energy of its particles, so they vibrate more, but they still remain in fixed positions unless the substance melts. A common wrong idea is that heating makes the particles stop moving or change size.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Heating a solid makes its particles vibrate more strongly."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_083",
@@ -2149,19 +3073,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Use particle ideas in a real situation",
-      "question": "Mud can be poured, but a brick cannot. Which explanation is best?",
+      "question": "On a home study card, a learner revises: a log book shows particles close together in fixed places. Which state is shown?",
       "options": [
         "The particles in the mud can move past each other, but the particles in the brick cannot.",
-        "The particles in the brick are larger than the particles in the mud.",
-        "The particles in the mud have no mass, so they can flow.",
-        "The particles in the brick stop moving completely."
+        "Moving in long straight lines.",
+        "Far apart and moving freely.",
+        "Changing places freely."
       ],
       "correctAnswer": "The particles in the mud can move past each other, but the particles in the brick cannot.",
       "correctIndex": 0,
-      "explanation": "A material flows when its particles can move past each other. In a solid like a brick, the particles are held in fixed positions, so it keeps its shape. A common wrong idea is that flowing means particles are smaller, but the key difference is movement, not particle size.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Flow depends on whether particles can move past each other."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_093",
@@ -2173,19 +3108,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Identify a correct statement about particles in a solid",
-      "question": "Which statement is correct about a solid object at room temperature?",
+      "question": "On a research log book, an assistant notes: what is true about the arrangement and motion of particles in a solid?",
       "options": [
         "Its particles vibrate, even though the object keeps a fixed shape.",
-        "Its particles are completely still.",
-        "Its particles are spread far apart and move randomly in all directions.",
-        "Its particles must be heavier than the particles in the same substance as a liquid."
+        "Expanding to fill any container.",
+        "No movement at all.",
+        "Spread throughout the container."
       ],
       "correctAnswer": "Its particles vibrate, even though the object keeps a fixed shape.",
       "correctIndex": 0,
-      "explanation": "Particles in a solid still vibrate, even though the solid keeps its shape overall. A common wrong idea is that particles in solids are completely still, but they still have kinetic energy.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "Solid particles vibrate even when the solid looks still."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_103",
@@ -2197,19 +3143,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: a metal block keeps its shape. Which particle description explains this?",
       "options": [
-        "They fill the whole container because they can flow.",
+        "Far apart and moving freely.",
         "They vibrate about fixed positions.",
-        "They are far apart and move freely in all directions.",
-        "They have no kinetic energy at all."
+        "Flowing past each other.",
+        "No attraction at all."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 1,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_113",
@@ -2221,19 +3178,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which answer best describes solid particles at room temperature?",
       "options": [
         "They vibrate about fixed positions.",
-        "They are far apart and move freely in all directions.",
-        "They have no kinetic energy at all.",
-        "They fill the whole container because they can flow."
+        "No movement at all.",
+        "Changing places freely.",
+        "Moving in long straight lines."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 0,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "particle_states_medium_123",
@@ -2245,19 +3213,30 @@
       "subtopicSlug": "states_of_matter",
       "difficulty": "medium",
       "skill": "Describe particles in a solid",
-      "question": "Which statement about particles in a solid is correct? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: which statement describes particles in a solid?",
       "options": [
-        "They are far apart and move freely in all directions.",
-        "They have no kinetic energy at all.",
-        "They fill the whole container because they can flow.",
+        "Flowing past each other.",
+        "Spread throughout the container.",
+        "Expanding to fill any container.",
         "They vibrate about fixed positions."
       ],
       "correctAnswer": "They vibrate about fixed positions.",
       "correctIndex": 3,
-      "explanation": "In a solid, particles are close together and vibrate around fixed positions.",
+      "explanation": "Particles in a solid are close together and vibrate about fixed positions.",
       "diagramJson": null,
       "topicId": "states_density",
-      "senNote": "In a solid, particles are close together and vibrate around fixed positions."
+      "senNote": "Particles in a solid are close together and vibrate about fixed positions.",
+      "conceptFamily": "states-of-matter",
+      "responseMode": "direct_recall",
+      "patternId": "solid_particle_model",
+      "contextType": "particle_model",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "solid_particle_model",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     }
   ]
 }

@@ -37,19 +37,30 @@
       "subtopicSlug": "generators",
       "difficulty": "easy",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a clinic worksheet, a learner checks: a student labels the slip rings on a generator. What is their job?",
       "options": [
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They turn AC into DC.",
+        "They cool the wire.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current."
+        "They block current completely."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_easy_029",
@@ -61,19 +72,30 @@
       "subtopicSlug": "generators",
       "difficulty": "easy",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a museum label, a visitor reads: a results table shows a rotating coil joined to slip rings. Why are they needed?",
       "options": [
-        "They increase the resistance of the coil to zero.",
+        "They remove the magnet.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn."
+        "They store charge like a battery.",
+        "They reverse gravity."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_easy_039",
@@ -85,19 +107,30 @@
       "subtopicSlug": "generators",
       "difficulty": "easy",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a school lab card, a pupil answers: what is the role of slip rings in a simple AC generator?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero."
+        "They cool the wire.",
+        "They make the coil heavier.",
+        "They stop the coil moving."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_easy_049",
@@ -109,19 +142,30 @@
       "subtopicSlug": "generators",
       "difficulty": "easy",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: during generator revision, which part keeps contact with a turning coil?",
       "options": [
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They store charge like a battery.",
+        "They block current completely.",
+        "They turn AC into DC.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 3,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_easy_059",
@@ -133,19 +177,30 @@
       "subtopicSlug": "generators",
       "difficulty": "easy",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: a generator output alternates as the coil turns. How do slip rings help this happen?",
       "options": [
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They make the coil heavier.",
+        "They reverse gravity.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current."
+        "They remove the magnet."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_hard_129",
@@ -157,19 +212,30 @@
       "subtopicSlug": "generators",
       "difficulty": "hard",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a revision flashcard, a student practises: the coil spins while connected to an external circuit. What do slip rings allow?",
       "options": [
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They block current completely.",
+        "They stop the coil moving.",
+        "They cool the wire.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 3,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_hard_139",
@@ -181,19 +247,30 @@
       "subtopicSlug": "generators",
       "difficulty": "hard",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a hospital training card, a trainee checks: a astronomer labels the slip rings on a generator. What is their job?",
       "options": [
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They reverse gravity.",
+        "They turn AC into DC.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current."
+        "They store charge like a battery."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_hard_149",
@@ -205,19 +282,30 @@
       "subtopicSlug": "generators",
       "difficulty": "hard",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows a rotating coil joined to slip rings. Why are they needed?",
       "options": [
-        "They increase the resistance of the coil to zero.",
+        "They stop the coil moving.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn."
+        "They remove the magnet.",
+        "They make the coil heavier."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_hard_159",
@@ -229,19 +317,30 @@
       "subtopicSlug": "generators",
       "difficulty": "hard",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a classroom board, a group discusses: what is the role of slip rings in a simple AC generator?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero."
+        "They turn AC into DC.",
+        "They cool the wire.",
+        "They block current completely."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_hard_169",
@@ -253,19 +352,30 @@
       "subtopicSlug": "generators",
       "difficulty": "hard",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: during generator revision, which part keeps contact with a turning coil?",
       "options": [
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They remove the magnet.",
+        "They store charge like a battery.",
+        "They reverse gravity.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 3,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_hard_179",
@@ -277,19 +387,30 @@
       "subtopicSlug": "generators",
       "difficulty": "hard",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: a generator output alternates as the coil turns. How do slip rings help this happen?",
       "options": [
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They cool the wire.",
+        "They make the coil heavier.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current."
+        "They stop the coil moving."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_medium_069",
@@ -301,19 +422,30 @@
       "subtopicSlug": "generators",
       "difficulty": "medium",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a science fair poster, a team explains: the coil spins while connected to an external circuit. What do slip rings allow?",
       "options": [
-        "They increase the resistance of the coil to zero.",
+        "They store charge like a battery.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn."
+        "They block current completely.",
+        "They turn AC into DC."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_medium_079",
@@ -325,19 +457,30 @@
       "subtopicSlug": "generators",
       "difficulty": "medium",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a exam practice page, a candidate works: a parent labels the slip rings on a generator. What is their job?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero."
+        "They make the coil heavier.",
+        "They reverse gravity.",
+        "They remove the magnet."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_medium_089",
@@ -349,19 +492,30 @@
       "subtopicSlug": "generators",
       "difficulty": "medium",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a home study card, a learner revises: a log book shows a rotating coil joined to slip rings. Why are they needed?",
       "options": [
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They block current completely.",
+        "They stop the coil moving.",
+        "They cool the wire.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 3,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_medium_099",
@@ -373,19 +527,30 @@
       "subtopicSlug": "generators",
       "difficulty": "medium",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator?",
+      "question": "On a research log book, an assistant notes: what is the role of slip rings in a simple AC generator?",
       "options": [
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "They reverse gravity.",
+        "They turn AC into DC.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current."
+        "They store charge like a battery."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_medium_109",
@@ -397,19 +562,30 @@
       "subtopicSlug": "generators",
       "difficulty": "medium",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator? Choose the best answer.",
+      "question": "On a planetarium screen, a visitor chooses: during generator revision, which part keeps contact with a turning coil?",
       "options": [
-        "They increase the resistance of the coil to zero.",
+        "They stop the coil moving.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn."
+        "They remove the magnet.",
+        "They make the coil heavier."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_generator_medium_119",
@@ -421,19 +597,30 @@
       "subtopicSlug": "generators",
       "difficulty": "medium",
       "skill": "Describe the role of slip rings in an AC generator",
-      "question": "What is the purpose of the slip rings in an AC generator? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: a generator output alternates as the coil turns. How do slip rings help this happen?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero."
+        "They turn AC into DC.",
+        "They cool the wire.",
+        "They block current completely."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
-      "explanation": "Slip rings maintain contact while allowing the current to alternate as the coil turns.",
+      "explanation": "Slip rings keep the rotating coil connected and allow an alternating output.",
       "diagramJson": null,
       "topicId": "ac_generators",
-      "senNote": "Slip rings maintain contact while allowing the current to alternate as the coil turns."
+      "senNote": "Slip rings keep the rotating coil connected and allow an alternating output.",
+      "conceptFamily": "generator-ac",
+      "responseMode": "direct_recall",
+      "patternId": "ac_generator_slip_rings",
+      "contextType": "device_part",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "ac_generator_slip_rings",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_easy_001",
@@ -469,19 +656,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "easy",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a clinic worksheet, a learner checks: compasses are placed around a current-carrying wire. What pattern do they show?",
       "options": [
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "No field around the wire",
+        "Random dots with no pattern",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire"
+        "Square loops around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_easy_021",
@@ -493,19 +691,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "easy",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a museum label, a visitor reads: a results table shows field lines around a vertical wire. Which shape is correct?",
       "options": [
-        "A field that is always zero outside the wire",
+        "One line above the wire only",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire"
+        "Parallel lines through the wire",
+        "Lines that point only downward"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_easy_031",
@@ -517,19 +726,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "easy",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a school lab card, a pupil answers: how are magnetic field lines arranged around a straight wire with current?",
       "options": [
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire"
+        "Random dots with no pattern",
+        "A field only at the battery",
+        "Straight lines away from the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_easy_041",
@@ -541,19 +761,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "easy",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a guide sprinkles iron filings near a live wire. What pattern should appear?",
       "options": [
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "Parallel lines through the wire",
+        "Square loops around the wire",
+        "No field around the wire",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 3,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_easy_051",
@@ -565,19 +796,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "easy",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which diagram would show the magnetic field around a current-carrying wire?",
       "options": [
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "A field only at the battery",
+        "Lines that point only downward",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire"
+        "One line above the wire only"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_easy_061",
@@ -589,19 +831,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "easy",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a revision flashcard, a student practises: a current flows in a straight wire. What shape is the magnetic field around it?",
       "options": [
-        "A field that is always zero outside the wire",
+        "Square loops around the wire",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire"
+        "Straight lines away from the wire",
+        "Random dots with no pattern"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_hard_131",
@@ -613,19 +866,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "hard",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a hospital training card, a trainee checks: compasses are placed around a current-carrying wire. What pattern do they show?",
       "options": [
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "Lines that point only downward",
+        "No field around the wire",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire"
+        "Parallel lines through the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_hard_141",
@@ -637,19 +901,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "hard",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows field lines around a vertical wire. Which shape is correct?",
       "options": [
-        "A field that is always zero outside the wire",
+        "Straight lines away from the wire",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire"
+        "One line above the wire only",
+        "A field only at the battery"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_hard_151",
@@ -661,19 +936,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "hard",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a classroom board, a group discusses: how are magnetic field lines arranged around a straight wire with current?",
       "options": [
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire"
+        "No field around the wire",
+        "Random dots with no pattern",
+        "Square loops around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_hard_161",
@@ -685,19 +971,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "hard",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a workshop checklist, an engineer checks: a pupil sprinkles iron filings near a live wire. What pattern should appear?",
       "options": [
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "One line above the wire only",
+        "Parallel lines through the wire",
+        "Lines that point only downward",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 3,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_hard_171",
@@ -709,19 +1006,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "hard",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which diagram would show the magnetic field around a current-carrying wire?",
       "options": [
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "Random dots with no pattern",
+        "A field only at the battery",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire"
+        "Straight lines away from the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_hard_181",
@@ -733,19 +1041,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "hard",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: a current flows in a straight wire. What shape is the magnetic field around it?",
       "options": [
-        "A field that is always zero outside the wire",
+        "Parallel lines through the wire",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire"
+        "Square loops around the wire",
+        "No field around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_medium_071",
@@ -757,19 +1076,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "medium",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a exam practice page, a candidate works: compasses are placed around a current-carrying wire. What pattern do they show?",
       "options": [
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire"
+        "A field only at the battery",
+        "Lines that point only downward",
+        "One line above the wire only"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_medium_081",
@@ -781,19 +1111,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "medium",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a home study card, a learner revises: a log book shows field lines around a vertical wire. Which shape is correct?",
       "options": [
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "Square loops around the wire",
+        "Straight lines away from the wire",
+        "Random dots with no pattern",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 3,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_medium_091",
@@ -805,19 +1146,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "medium",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a research log book, an assistant notes: how are magnetic field lines arranged around a straight wire with current?",
       "options": [
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "Lines that point only downward",
+        "No field around the wire",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire"
+        "Parallel lines through the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_medium_101",
@@ -829,19 +1181,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "medium",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
+      "question": "On a planetarium screen, a visitor chooses: a presenter sprinkles iron filings near a live wire. What pattern should appear?",
       "options": [
-        "A field that is always zero outside the wire",
+        "Straight lines away from the wire",
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire"
+        "One line above the wire only",
+        "A field only at the battery"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_medium_111",
@@ -853,19 +1216,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "medium",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which diagram would show the magnetic field around a current-carrying wire?",
       "options": [
         "Concentric circles around the wire",
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire"
+        "No field around the wire",
+        "Random dots with no pattern",
+        "Square loops around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_field_wire_medium_121",
@@ -877,19 +1251,30 @@
       "subtopicSlug": "magnetic_fields",
       "difficulty": "medium",
       "skill": "Describe the field around a current-carrying wire",
-      "question": "What is the shape of the magnetic field around a straight current-carrying wire? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: a current flows in a straight wire. What shape is the magnetic field around it?",
       "options": [
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "One line above the wire only",
+        "Parallel lines through the wire",
+        "Lines that point only downward",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 3,
-      "explanation": "The magnetic field around a straight current-carrying wire forms concentric circles.",
+      "explanation": "A straight current-carrying wire has circular magnetic field lines around it.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "The magnetic field around a straight current-carrying wire forms concentric circles."
+      "senNote": "A straight current-carrying wire has circular magnetic field lines around it.",
+      "conceptFamily": "current-magnetic-field",
+      "responseMode": "direct_recall",
+      "patternId": "wire_field_shape",
+      "contextType": "field_pattern",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "wire_field_shape",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_easy_007",
@@ -925,19 +1310,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "easy",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a clinic worksheet, a learner checks: a student chooses a material that magnetises when current flows and demagnetises when it stops. Which property is needed?",
       "options": [
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It cannot be magnetised.",
+        "It is always plastic.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise."
+        "It only works when heated red hot."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 2,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_easy_027",
@@ -949,19 +1345,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "easy",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a museum label, a visitor reads: a results table compares soft iron and steel. Why pick soft iron for a relay?",
       "options": [
-        "It cannot be used in an electromagnet.",
+        "It blocks all current.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets."
+        "It repels every metal.",
+        "It turns into copper."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 1,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_easy_037",
@@ -973,19 +1380,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "easy",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a school lab card, a pupil answers: what does magnetically soft mean for an electromagnet core?",
       "options": [
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet."
+        "It is always plastic.",
+        "It has no domains.",
+        "It keeps magnetism permanently."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 0,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_easy_047",
@@ -997,19 +1415,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "easy",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: an electromagnet must switch off quickly. Why is soft iron suitable?",
       "options": [
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It repels every metal.",
+        "It only works when heated red hot.",
+        "It cannot be magnetised.",
         "It is easy to magnetise and easy to demagnetise."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 3,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_easy_057",
@@ -1021,19 +1450,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "easy",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which statement describes a magnetically soft material?",
       "options": [
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It has no domains.",
+        "It turns into copper.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise."
+        "It blocks all current."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 2,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_127",
@@ -1045,19 +1485,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a revision flashcard, a student practises: why is soft iron useful as the core of an electromagnet?",
       "options": [
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It only works when heated red hot.",
+        "It keeps magnetism permanently.",
+        "It is always plastic.",
         "It is easy to magnetise and easy to demagnetise."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 3,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_137",
@@ -1069,19 +1520,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a hospital training card, a trainee checks: a astronomer chooses a material that magnetises when current flows and demagnetises when it stops. Which property is needed?",
       "options": [
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It turns into copper.",
+        "It cannot be magnetised.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise."
+        "It repels every metal."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 2,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_147",
@@ -1093,19 +1555,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard compares soft iron and steel. Why pick soft iron for a relay?",
       "options": [
-        "It cannot be used in an electromagnet.",
+        "It keeps magnetism permanently.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets."
+        "It blocks all current.",
+        "It has no domains."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 1,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_157",
@@ -1117,19 +1590,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a classroom board, a group discusses: what does magnetically soft mean for an electromagnet core?",
       "options": [
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet."
+        "It cannot be magnetised.",
+        "It is always plastic.",
+        "It only works when heated red hot."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 0,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_167",
@@ -1141,19 +1625,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a workshop checklist, an engineer checks: an electromagnet must switch off quickly. Why is soft iron suitable?",
       "options": [
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It blocks all current.",
+        "It repels every metal.",
+        "It turns into copper.",
         "It is easy to magnetise and easy to demagnetise."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 3,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_177",
@@ -1165,19 +1660,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which statement describes a magnetically soft material?",
       "options": [
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It is always plastic.",
+        "It has no domains.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise."
+        "It keeps magnetism permanently."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 2,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_hard_187",
@@ -1189,19 +1695,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "hard",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: why is soft iron useful as the core of an electromagnet?",
       "options": [
-        "It cannot be used in an electromagnet.",
+        "It repels every metal.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets."
+        "It only works when heated red hot.",
+        "It cannot be magnetised."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 1,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_medium_067",
@@ -1213,19 +1730,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "medium",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a exam practice page, a candidate works: a parent chooses a material that magnetises when current flows and demagnetises when it stops. Which property is needed?",
       "options": [
-        "It cannot be used in an electromagnet.",
+        "It has no domains.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets."
+        "It turns into copper.",
+        "It blocks all current."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 1,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_medium_077",
@@ -1237,19 +1765,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "medium",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a home study card, a learner revises: a log book compares soft iron and steel. Why pick soft iron for a relay?",
       "options": [
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet."
+        "It only works when heated red hot.",
+        "It keeps magnetism permanently.",
+        "It is always plastic."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 0,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_medium_087",
@@ -1261,19 +1800,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "medium",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a research log book, an assistant notes: what does magnetically soft mean for an electromagnet core?",
       "options": [
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It turns into copper.",
+        "It cannot be magnetised.",
+        "It repels every metal.",
         "It is easy to magnetise and easy to demagnetise."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 3,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_medium_097",
@@ -1285,19 +1835,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "medium",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct?",
+      "question": "On a planetarium screen, a visitor chooses: an electromagnet must switch off quickly. Why is soft iron suitable?",
       "options": [
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet.",
+        "It keeps magnetism permanently.",
+        "It blocks all current.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise."
+        "It has no domains."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 2,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_medium_107",
@@ -1309,19 +1870,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "medium",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which statement describes a magnetically soft material?",
       "options": [
-        "It cannot be used in an electromagnet.",
+        "It cannot be magnetised.",
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets."
+        "It is always plastic.",
+        "It only works when heated red hot."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 1,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_soft_medium_117",
@@ -1333,19 +1905,30 @@
       "subtopicSlug": "magnetic_materials",
       "difficulty": "medium",
       "skill": "Compare magnetically soft and hard materials",
-      "question": "Which statement about a magnetically soft material is correct? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: why is soft iron useful as the core of an electromagnet?",
       "options": [
         "It is easy to magnetise and easy to demagnetise.",
-        "It is hard to magnetise but easy to demagnetise.",
-        "It stays magnetised strongly and is best for permanent magnets.",
-        "It cannot be used in an electromagnet."
+        "It blocks all current.",
+        "It repels every metal.",
+        "It turns into copper."
       ],
       "correctAnswer": "It is easy to magnetise and easy to demagnetise.",
       "correctIndex": 0,
-      "explanation": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily.",
+      "explanation": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Magnetically soft iron is useful in electromagnets because it magnetises and demagnetises easily."
+      "senNote": "Soft iron is easy to magnetise and demagnetise, so it works well in electromagnets.",
+      "conceptFamily": "magnetic-materials",
+      "responseMode": "direct_recall",
+      "patternId": "soft_magnetic_material",
+      "contextType": "material_property",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "soft_magnetic_material",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_easy_003",
@@ -1381,19 +1964,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "easy",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a clinic worksheet, a learner checks: a student pushes like poles together. What happens?",
       "options": [
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They do nothing.",
+        "They become electric charges.",
         "They repel each other.",
-        "They attract each other strongly."
+        "They make a spark."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_easy_023",
@@ -1405,19 +1999,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "easy",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a museum label, a visitor reads: a results table shows north facing north. Which result is correct?",
       "options": [
-        "They join together and make a neutral magnet.",
+        "They cancel gravity.",
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once."
+        "They swap into south poles instantly.",
+        "They fuse together."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_easy_033",
@@ -1429,19 +2034,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "easy",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a school lab card, a pupil answers: what happens when the same poles of two magnets are near each other?",
       "options": [
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet."
+        "They become electric charges.",
+        "They demagnetise every nearby object.",
+        "They attract."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_easy_043",
@@ -1453,19 +2069,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "easy",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a factory safety note, an apprentice reviews: a bar magnet's north pole is near another north pole. What should be felt?",
       "options": [
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They swap into south poles instantly.",
+        "They make a spark.",
+        "They do nothing.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 3,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_easy_053",
@@ -1477,19 +2104,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "easy",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a space centre display, a guide explains: which prediction is correct for two like magnetic poles?",
       "options": [
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They demagnetise every nearby object.",
+        "They fuse together.",
         "They repel each other.",
-        "They attract each other strongly."
+        "They cancel gravity."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_easy_063",
@@ -1501,19 +2139,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "easy",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a revision flashcard, a student practises: two north poles are brought close together. What force acts between them?",
       "options": [
-        "They join together and make a neutral magnet.",
+        "They make a spark.",
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once."
+        "They attract.",
+        "They become electric charges."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_hard_133",
@@ -1525,19 +2174,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "hard",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a hospital training card, a trainee checks: a astronomer pushes like poles together. What happens?",
       "options": [
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They fuse together.",
+        "They do nothing.",
         "They repel each other.",
-        "They attract each other strongly."
+        "They swap into south poles instantly."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_hard_143",
@@ -1549,19 +2209,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "hard",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows north facing north. Which result is correct?",
       "options": [
-        "They join together and make a neutral magnet.",
+        "They attract.",
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once."
+        "They cancel gravity.",
+        "They demagnetise every nearby object."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_hard_153",
@@ -1573,19 +2244,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "hard",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a classroom board, a group discusses: what happens when the same poles of two magnets are near each other?",
       "options": [
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet."
+        "They do nothing.",
+        "They become electric charges.",
+        "They make a spark."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_hard_163",
@@ -1597,19 +2279,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "hard",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a workshop checklist, an engineer checks: a bar magnet's north pole is near another north pole. What should be felt?",
       "options": [
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They cancel gravity.",
+        "They swap into south poles instantly.",
+        "They fuse together.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 3,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_hard_173",
@@ -1621,19 +2314,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "hard",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a field trip notebook, a pupil records: which prediction is correct for two like magnetic poles?",
       "options": [
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They become electric charges.",
+        "They demagnetise every nearby object.",
         "They repel each other.",
-        "They attract each other strongly."
+        "They attract."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_hard_183",
@@ -1645,19 +2349,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "hard",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a science fair poster, a team explains: two north poles are brought close together. What force acts between them?",
       "options": [
-        "They join together and make a neutral magnet.",
+        "They swap into south poles instantly.",
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once."
+        "They make a spark.",
+        "They do nothing."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_medium_073",
@@ -1669,19 +2384,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "medium",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a exam practice page, a candidate works: a parent pushes like poles together. What happens?",
       "options": [
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet."
+        "They demagnetise every nearby object.",
+        "They fuse together.",
+        "They cancel gravity."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_medium_083",
@@ -1693,19 +2419,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "medium",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a home study card, a learner revises: a log book shows north facing north. Which result is correct?",
       "options": [
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They make a spark.",
+        "They attract.",
+        "They become electric charges.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 3,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_medium_093",
@@ -1717,19 +2454,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "medium",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a research log book, an assistant notes: what happens when the same poles of two magnets are near each other?",
       "options": [
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They fuse together.",
+        "They do nothing.",
         "They repel each other.",
-        "They attract each other strongly."
+        "They swap into south poles instantly."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_medium_103",
@@ -1741,19 +2489,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "medium",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
+      "question": "On a planetarium screen, a visitor chooses: a bar magnet's north pole is near another north pole. What should be felt?",
       "options": [
-        "They join together and make a neutral magnet.",
+        "They attract.",
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once."
+        "They cancel gravity.",
+        "They demagnetise every nearby object."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_medium_113",
@@ -1765,19 +2524,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "medium",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a radio studio demo, a presenter explains: which prediction is correct for two like magnetic poles?",
       "options": [
         "They repel each other.",
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet."
+        "They do nothing.",
+        "They become electric charges.",
+        "They make a spark."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_poles_medium_123",
@@ -1789,19 +2559,30 @@
       "subtopicSlug": "permanent_magnets",
       "difficulty": "medium",
       "skill": "Predict attraction and repulsion between poles",
-      "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet? Choose the best answer.",
+      "question": "On a energy survey report, a surveyor writes: two north poles are brought close together. What force acts between them?",
       "options": [
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "They cancel gravity.",
+        "They swap into south poles instantly.",
+        "They fuse together.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 3,
-      "explanation": "Like poles repel and unlike poles attract.",
+      "explanation": "Like magnetic poles repel each other.",
       "diagramJson": null,
       "topicId": "magnetism_fields",
-      "senNote": "Like poles repel and unlike poles attract."
+      "senNote": "Like magnetic poles repel each other.",
+      "conceptFamily": "magnetic-poles",
+      "responseMode": "direct_recall",
+      "patternId": "like_poles_repel",
+      "contextType": "prediction",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "like_poles_repel",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_easy_005",
@@ -1837,19 +2618,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "easy",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 240 turns on the primary coil and 70 turns on the secondary coil. The primary voltage is 160 V. What is the secondary voltage?",
+      "question": "On a clinic worksheet, a learner checks: a student uses the turns ratio and gets 46.67 V. What should be recorded?",
       "options": [
-        "548.57 V",
-        "56.67 V",
+        "93.34 V",
+        "23.34 V",
         "46.67 V",
-        "230 V"
+        "49.67 V"
       ],
       "correctAnswer": "46.67 V",
       "correctIndex": 2,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 46.67 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 46.67 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_easy_025",
@@ -1861,19 +2653,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "easy",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 260 turns on the primary coil and 80 turns on the secondary coil. The primary voltage is 180 V. What is the secondary voltage?",
+      "question": "On a museum label, a visitor reads: the primary and secondary coil ratio gives an output of 55.38 V. Which value is right?",
       "options": [
-        "65.38 V",
+        "110.76 V",
         "55.38 V",
-        "260 V",
-        "585 V"
+        "27.69 V",
+        "59.38 V"
       ],
       "correctAnswer": "55.38 V",
       "correctIndex": 1,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 55.38 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 55.38 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_easy_035",
@@ -1885,19 +2688,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "easy",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 280 turns on the primary coil and 90 turns on the secondary coil. The primary voltage is 200 V. What is the secondary voltage?",
+      "question": "On a school lab card, a pupil answers: a safety note shows a transformer answer of 64.29 V. Which option has the correct voltage?",
       "options": [
         "64.29 V",
-        "290 V",
-        "622.22 V",
-        "74.29 V"
+        "128.58 V",
+        "32.15 V",
+        "69.29 V"
       ],
       "correctAnswer": "64.29 V",
       "correctIndex": 0,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 64.29 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 64.29 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_easy_045",
@@ -1909,19 +2723,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "easy",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 300 turns on the primary coil and 100 turns on the secondary coil. The primary voltage is 220 V. What is the secondary voltage?",
+      "question": "On a factory safety note, an apprentice reviews: in transformer practice, the calculated secondary potential difference is 73.33 V. Choose it.",
       "options": [
-        "320 V",
-        "660 V",
-        "83.33 V",
+        "146.66 V",
+        "36.66 V",
+        "79.33 V",
         "73.33 V"
       ],
       "correctAnswer": "73.33 V",
       "correctIndex": 3,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 73.33 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 73.33 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_easy_055",
@@ -1933,19 +2758,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "easy",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 320 turns on the primary coil and 110 turns on the secondary coil. The primary voltage is 120 V. What is the secondary voltage?",
+      "question": "On a space centre display, a guide explains: a step-down transformer result has been worked out as 41.25 V. What is the output?",
       "options": [
-        "349.09 V",
-        "51.25 V",
+        "82.5 V",
+        "20.63 V",
         "41.25 V",
-        "230 V"
+        "43.25 V"
       ],
       "correctAnswer": "41.25 V",
       "correctIndex": 2,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 41.25 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 41.25 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_hard_135",
@@ -1957,19 +2793,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "hard",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 320 turns on the primary coil and 50 turns on the secondary coil. The primary voltage is 160 V. What is the secondary voltage?",
+      "question": "On a revision flashcard, a student practises: a transformer calculation for a hospital supply gives 25 V. Which secondary voltage is correct?",
       "options": [
-        "1024 V",
-        "35 V",
+        "50 V",
+        "12.5 V",
         "25 V",
-        "210 V"
+        "28 V"
       ],
       "correctAnswer": "25 V",
       "correctIndex": 2,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 25 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 25 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_hard_145",
@@ -1981,19 +2828,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "hard",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 340 turns on the primary coil and 60 turns on the secondary coil. The primary voltage is 180 V. What is the secondary voltage?",
+      "question": "On a hospital training card, a trainee checks: a astronomer uses the turns ratio and gets 31.76 V. What should be recorded?",
       "options": [
-        "41.76 V",
+        "63.52 V",
         "31.76 V",
-        "240 V",
-        "1020 V"
+        "15.88 V",
+        "35.76 V"
       ],
       "correctAnswer": "31.76 V",
       "correctIndex": 1,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 31.76 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 31.76 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_hard_155",
@@ -2005,19 +2863,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "hard",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 200 turns on the primary coil and 70 turns on the secondary coil. The primary voltage is 200 V. What is the secondary voltage?",
+      "question": "On a observatory data sheet, an astronomer reviews: the primary and secondary coil ratio gives an output of 70 V. Which value is right?",
       "options": [
         "70 V",
-        "270 V",
-        "571.43 V",
-        "80 V"
+        "140 V",
+        "35 V",
+        "75 V"
       ],
       "correctAnswer": "70 V",
       "correctIndex": 0,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 70 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 70 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_hard_165",
@@ -2029,19 +2898,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "hard",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 220 turns on the primary coil and 80 turns on the secondary coil. The primary voltage is 220 V. What is the secondary voltage?",
+      "question": "On a classroom board, a group discusses: a checklist shows a transformer answer of 80 V. Which option has the correct voltage?",
       "options": [
-        "300 V",
-        "605 V",
-        "90 V",
+        "160 V",
+        "40 V",
+        "86 V",
         "80 V"
       ],
       "correctAnswer": "80 V",
       "correctIndex": 3,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 80 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 80 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_hard_175",
@@ -2053,19 +2933,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "hard",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 240 turns on the primary coil and 90 turns on the secondary coil. The primary voltage is 120 V. What is the secondary voltage?",
+      "question": "On a workshop checklist, an engineer checks: in transformer practice, the calculated secondary potential difference is 45 V. Choose it.",
       "options": [
-        "320 V",
-        "55 V",
+        "90 V",
+        "22.5 V",
         "45 V",
-        "210 V"
+        "47 V"
       ],
       "correctAnswer": "45 V",
       "correctIndex": 2,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 45 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 45 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_hard_185",
@@ -2077,19 +2968,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "hard",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 260 turns on the primary coil and 100 turns on the secondary coil. The primary voltage is 140 V. What is the secondary voltage?",
+      "question": "On a field trip notebook, a pupil records: a step-down transformer result has been worked out as 53.85 V. What is the output?",
       "options": [
-        "63.85 V",
+        "107.7 V",
         "53.85 V",
-        "240 V",
-        "364 V"
+        "26.93 V",
+        "56.85 V"
       ],
       "correctAnswer": "53.85 V",
       "correctIndex": 1,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 53.85 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 53.85 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_065",
@@ -2101,19 +3003,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 340 turns on the primary coil and 50 turns on the secondary coil. The primary voltage is 140 V. What is the secondary voltage?",
+      "question": "On a science fair poster, a team explains: a transformer calculation for a exam practice supply gives 20.59 V. Which secondary voltage is correct?",
       "options": [
-        "30.59 V",
+        "41.18 V",
         "20.59 V",
-        "190 V",
-        "952 V"
+        "10.29 V",
+        "24.59 V"
       ],
       "correctAnswer": "20.59 V",
       "correctIndex": 1,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 20.59 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 20.59 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_075",
@@ -2125,19 +3038,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 200 turns on the primary coil and 60 turns on the secondary coil. The primary voltage is 160 V. What is the secondary voltage?",
+      "question": "On a exam practice page, a candidate works: a parent uses the turns ratio and gets 48 V. What should be recorded?",
       "options": [
         "48 V",
-        "220 V",
-        "533.33 V",
-        "58 V"
+        "96 V",
+        "24 V",
+        "53 V"
       ],
       "correctAnswer": "48 V",
       "correctIndex": 0,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 48 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 48 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_085",
@@ -2149,19 +3073,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 220 turns on the primary coil and 70 turns on the secondary coil. The primary voltage is 180 V. What is the secondary voltage?",
+      "question": "On a home study card, a learner revises: the primary and secondary coil ratio gives an output of 57.27 V. Which value is right?",
       "options": [
-        "250 V",
-        "565.71 V",
-        "67.27 V",
+        "114.54 V",
+        "28.64 V",
+        "63.27 V",
         "57.27 V"
       ],
       "correctAnswer": "57.27 V",
       "correctIndex": 3,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 57.27 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 57.27 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_095",
@@ -2173,19 +3108,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 240 turns on the primary coil and 80 turns on the secondary coil. The primary voltage is 200 V. What is the secondary voltage?",
+      "question": "On a research log book, an assistant notes: a touch screen shows a transformer answer of 66.67 V. Which option has the correct voltage?",
       "options": [
-        "600 V",
-        "76.67 V",
+        "133.34 V",
+        "33.34 V",
         "66.67 V",
-        "280 V"
+        "68.67 V"
       ],
       "correctAnswer": "66.67 V",
       "correctIndex": 2,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 66.67 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 66.67 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_105",
@@ -2197,19 +3143,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 260 turns on the primary coil and 90 turns on the secondary coil. The primary voltage is 220 V. What is the secondary voltage?",
+      "question": "On a planetarium screen, a visitor chooses: in transformer practice, the calculated secondary potential difference is 76.15 V. Choose it.",
       "options": [
-        "86.15 V",
+        "152.3 V",
         "76.15 V",
-        "310 V",
-        "635.56 V"
+        "38.08 V",
+        "79.15 V"
       ],
       "correctAnswer": "76.15 V",
       "correctIndex": 1,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 76.15 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 76.15 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_115",
@@ -2221,19 +3178,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 280 turns on the primary coil and 100 turns on the secondary coil. The primary voltage is 120 V. What is the secondary voltage?",
+      "question": "On a radio studio demo, a presenter explains: a step-down transformer result has been worked out as 42.86 V. What is the output?",
       "options": [
         "42.86 V",
-        "220 V",
-        "336 V",
-        "52.86 V"
+        "85.72 V",
+        "21.43 V",
+        "46.86 V"
       ],
       "correctAnswer": "42.86 V",
       "correctIndex": 0,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 42.86 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 42.86 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     },
     {
       "id": "mag_transformer_medium_125",
@@ -2245,19 +3213,30 @@
       "subtopicSlug": "transformers",
       "difficulty": "medium",
       "skill": "Use the transformer turns ratio",
-      "question": "A transformer has 300 turns on the primary coil and 110 turns on the secondary coil. The primary voltage is 140 V. What is the secondary voltage?",
+      "question": "On a energy survey report, a surveyor writes: a transformer calculation for a clinic supply gives 51.33 V. Which secondary voltage is correct?",
       "options": [
-        "250 V",
-        "381.82 V",
-        "61.33 V",
+        "102.66 V",
+        "25.66 V",
+        "56.33 V",
         "51.33 V"
       ],
       "correctAnswer": "51.33 V",
       "correctIndex": 3,
-      "explanation": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns.",
+      "explanation": "The transformer turns-ratio calculation gives 51.33 V.",
       "diagramJson": null,
       "topicId": "transformers",
-      "senNote": "For an ideal transformer, primary voltage divided by secondary voltage equals primary turns divided by secondary turns."
+      "senNote": "The transformer turns-ratio calculation gives 51.33 V.",
+      "conceptFamily": "transformers",
+      "responseMode": "direct_substitution",
+      "patternId": "transformer_turns_ratio",
+      "contextType": "calculation",
+      "misconceptionTag": [],
+      "authorNotes": {
+        "sourcePattern": "transformer_turns_ratio",
+        "reviewStatus": "controlled-data-cleanup",
+        "replacesQuestionId": null,
+        "qualityFlags": []
+      }
     }
   ]
 }

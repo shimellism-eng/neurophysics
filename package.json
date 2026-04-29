@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "audit:curriculum": "node scripts/validate-curriculum-filters.mjs",
     "preview": "vite preview",
     "postinstall": "patch-package || true",
     "cap:sync": "vite build && npx cap sync ios",

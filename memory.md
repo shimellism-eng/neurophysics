@@ -81,6 +81,27 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,741 nodes, 3,461 edges, 101 clusters, 138 flows.
 
+### Comfort UI foundation cleanup
+- Committed shared UI/comfort foundation cleanup as `82a7b7f` (`Clean up comfort UI foundation`).
+- Kept this as a foundation bucket only:
+  - updated global design tokens and reusable utility classes in `index.css`
+  - refined `ComfortSettings` styling/copy while preserving preference keys and behaviour
+  - changed comfort preset icons from emoji to text initials for cleaner rendering
+  - improved `PageHeader` wrapping, optional eyebrow support, and quiet surface styling
+  - added `ownsTopInset` support to `SafeAreaPage`
+  - simplified the crash fallback display in `main.jsx`
+- No 9-step lesson flow, question content, board rules, XP/streak logic, or route ownership changed.
+
+### Comfort foundation verification
+- GitNexus impact check for `useComfort` reported HIGH because it is used across Settings, LessonPlayer, overlays, and comfort UI. The staged context change did not alter the `useComfort` API or stored preference shape.
+- Other impact checks for `ComfortProvider`, `ComfortSettings`, `SafeAreaPage`, and `PageHeader` reported LOW.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,745 nodes, 3,467 edges, 102 clusters, 139 flows.
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

@@ -126,6 +126,24 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,765 nodes, 3,489 edges, 103 clusters, 140 flows.
 
+### Public/support screen cleanup
+- Committed the support-screen slice as `28076f3` (`Clean up public support screens`).
+- Updated public landing claims to match the AQA/Edexcel release scope (`2` exam boards, not `6`).
+- Polished splash, landing, terms, privacy, and spec checklist presentation/copy.
+- Privacy/terms now describe local progress, optional synced comfort settings, and local Mamo chat thread storage more accurately.
+- `SpecChecklist` and `useStudyPlan` now use shared curriculum/course helpers so combined/physics-only filtering is consistent.
+
+### Support screen verification
+- GitNexus impact checks for touched screen symbols reported LOW risk.
+- GitNexus impact for `useStudyPlan` reported LOW risk with direct dependents `HomeScreen` and `StudyPlanScreen`.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,768 nodes, 3,495 edges, 103 clusters, 141 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

@@ -158,6 +158,31 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,749 nodes, 3,471 edges, 102 clusters, 139 flows.
 
+### Question behaviour/scoring cleanup
+- Committed question outcome contract cleanup as `21b7e19` (`Fix question outcome scoring contracts`).
+- `ExtendedAnswerQuestion` and `NovelContextQuestion` now return structured outcomes with:
+  - `marksAwarded`
+  - `marksAvailable`
+  - `correct`
+  - `source`
+  - `selfScore` / `score` where relevant
+- `NovelContextQuestion` self-review now offers every mark value from `0` to full marks instead of only `0`, midpoint, and full marks.
+- `CalculationQuestion` now handles iOS keyboard viewport pressure by hiding the worked-example panel while the keyboard is open and scrolling the answer input into view.
+- `Grade9Challenge` now normalises object outcomes via `outcome.correct`, avoiding the old bug where any score object would be treated as truthy/correct.
+
+### Question behaviour verification
+- GitNexus impact checks for `CalculationQuestion`, `ExtendedAnswerQuestion`, `NovelContextQuestion`, and `Grade9Challenge` reported LOW risk.
+- Caller contract check:
+  - `TimedPaper` already uses `normaliseTimedPaperOutcome`.
+  - `ExamPractice` already accepts rich outcome objects.
+  - `Grade9Challenge` was patched in this bucket.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,752 nodes, 3,473 edges, 103 clusters, 139 flows.
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

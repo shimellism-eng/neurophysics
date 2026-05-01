@@ -129,6 +129,35 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,749 nodes, 3,469 edges, 104 clusters, 139 flows.
 
+### Question-component presentation cleanup
+- Committed visual-only question component cleanup as `2842d4d` (`Polish question component presentation`).
+- Polished:
+  - `CalculationQuestion`
+  - `ConfusionBusterQuestion`
+  - `ExtendedAnswerQuestion`
+  - `GraphQuestion`
+  - `NovelContextQuestion`
+  - `RecallQuestion`
+  - `Card`
+- Kept this commit visual-only:
+  - removed emoji labels from question UI copy
+  - improved graph sizing/readability
+  - aligned card styling with the shared surface tokens
+  - did not change answer checking, marking logic, callbacks, question data, or pedagogy
+- Left behaviour/scoring changes dirty for the next bucket:
+  - richer `onComplete` score objects in extended/novel questions
+  - full mark-range self-score choices
+  - calculation keyboard viewport handling
+
+### Question presentation verification
+- GitNexus impact checks for all touched question components reported LOW risk.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,749 nodes, 3,471 edges, 102 clusters, 139 flows.
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

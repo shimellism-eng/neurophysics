@@ -4,9 +4,11 @@ dist/
 ios/
 android/
 .DS_Store
+**/.DS_Store
 __pycache__/
 *.log
 *.pdf
+*.backup
 .vite/
 .claude/
 .claude*/
@@ -40,3 +42,9 @@ typescript_types.ts
 import_questions.py
 validate_questions.py
 notes.md
+
+# Local design/prototype scratch space kept out of release commits
+prototypes/
+skills-lock.json
+/Design
+/EVERY

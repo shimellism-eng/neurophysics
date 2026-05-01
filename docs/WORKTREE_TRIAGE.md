@@ -18,8 +18,21 @@ These are intentionally not part of the release patch:
 - Large screen rewrites or visual changes
 - Question-bank rewrites or deleted split-bank files
 - New runtime repository/import layers
-- Prototype screens, generated database files, schema drafts, and import scripts
+- Prototype screens and design scratch files, now ignored via `.gitignore`
+- Generated database files, schema drafts, and import scripts
 - Local agent/config/cache folders
+
+## Local noise ignored
+
+These files/folders are kept on disk but should not appear in release staging:
+
+- `*.backup`
+- `prototypes/`
+- `skills-lock.json`
+- root scratch files `/Design` and `/EVERY`
+- `.DS_Store` files at any depth
+
+`src/.DS_Store` was previously tracked by Git and should stay removed from the repository index.
 
 ## Review rule
 

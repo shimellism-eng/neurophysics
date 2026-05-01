@@ -30,44 +30,21 @@ GitNexus impact checks were run before each symbol-touching slice. `gitnexus_det
 - MamoChat mobile comfort cleanup
 - Unused split question-bank deletion
 
-## Still dirty and not staged
+## Quarantined locally, not shipped
 
-These files remain dirty because they affect question content, board coverage, or generated/import experiments. They should not be mixed into a release cleanup commit.
+The remaining dirty content/tooling experiments were preserved locally and removed from the tracked worktree:
 
-### Question-bank and exam data
+- `.quarantine/deferred-question-content.patch`
+- `.quarantine/export_runtime_questions.py`
 
-- `src/data/examCalculations.js`
-- `src/data/examExtended.js`
-- `src/data/questionBank/qb-atomic.js`
-- `src/data/questionBank/qb-forces.js`
-- `src/data/questionBank/qb-globalchallenges.js`
-- `src/data/questionBank/qb-waves.js`
+Why quarantined:
 
-Why left out:
-
-- They add or alter question content.
-- Some additions are for non-release boards (`ocr-a`, `ocr-b`, `wjec`, `ccea`).
+- The source diff added or altered question content.
+- Some additions were for non-release boards (`ocr-a`, `ocr-b`, `wjec`, `ccea`).
 - Release scope is AQA + Edexcel only.
+- The export script may be useful later, but it is not required for this release path.
 
-### Topic copy/data
-
-- `src/data/topics-electricity.jsx`
-- `src/data/topics-energy.jsx`
-- `src/data/topics-forces.jsx`
-
-Why left out:
-
-- These are lesson/content copy changes.
-- Some are harmless clarifications, but they should be reviewed as a pedagogy/content slice, not bundled with structure cleanup.
-
-### Untracked tooling
-
-- `scripts/export_runtime_questions.py`
-
-Why left out:
-
-- Looks like a useful export/import utility, but it is not required for the current release path.
-- Should be reviewed with the question-bank/data pipeline work.
+`.quarantine/` is ignored by Git so these local notes cannot accidentally ship.
 
 ### Moved doc
 
@@ -81,7 +58,7 @@ If a file contains release work and unrelated content edits, stage only the rele
 
 ## Recommended next cleanup order
 
-1. Review AQA/Edexcel-only question-bank changes separately from non-release board additions.
-2. Review topic-copy changes with a pedagogy lens.
-3. Decide whether `scripts/export_runtime_questions.py` belongs under `scripts/` or should stay local only.
+1. Review `.quarantine/deferred-question-content.patch` if we want to recover any AQA/Edexcel-only content later.
+2. Review topic-copy changes with a pedagogy lens before reapplying any of them.
+3. Decide whether `.quarantine/export_runtime_questions.py` belongs under `scripts/` or should stay local only.
 4. Run the final clean build/audit/iOS build from a clean checkout before deployment.

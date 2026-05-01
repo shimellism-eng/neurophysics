@@ -185,6 +185,13 @@
 - Left live question-bank additions/edits dirty because they include content and non-release board material.
 - GitNexus index refreshed after commit: 1,772 nodes, 3,502 edges, 101 clusters, 141 flows.
 
+### Remaining content experiments quarantined
+- Preserved the remaining dirty question/topic data changes in `.quarantine/deferred-question-content.patch`.
+- Preserved the untracked runtime export script in `.quarantine/export_runtime_questions.py`.
+- Restored the tracked data/topic files to the committed release state because the dirty content included non-release board material and should not ship in the AQA/Edexcel release.
+- Added `.quarantine/` to `.gitignore` so local deferred experiments cannot be staged accidentally.
+- Updated `docs/WORKTREE_TRIAGE.md` with the quarantine location and next review steps.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

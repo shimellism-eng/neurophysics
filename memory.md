@@ -5,6 +5,45 @@
 
 ## What Was Just Done (latest — 2026-05-01)
 
+### Runtime-backed practice layer cleanup
+- Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
+- Added the runtime-backed question repository and adaptive engine:
+  - `src/lib/questionRepository.js`
+  - `src/lib/adaptiveEngine.js`
+  - `src/hooks/useAdaptiveRuntime.js`
+- Added `PracticeHubScreen` and wired `/practice-tools` in `App.jsx`.
+- Updated practice entry points to use the runtime repository where this bucket already intended it:
+  - `AdaptivePractice`
+  - `QuickWinScreen`
+  - `MixedRevisionScreen`
+  - `RecallScreen`
+  - `Grade9Challenge`
+  - `useSRS`
+- Included `@capacitor/network` with the App offline/runtime bucket instead of committing it separately.
+- Added `docs/runtime-boundary-note.md` to explain the runtime boundary for human reviewers.
+- Added the previously untracked `qb-recall-board-overlays.js` because committed `questionBank/index.js` already imports it; without this file, a clean checkout cannot build.
+- Staged only the narrow topic metadata normalisations needed by the curriculum checker (`physics-only` -> `physics_only`) and left broader lesson-copy/question-content edits dirty for separate review.
+
+### Runtime cleanup verification
+- GitNexus query/impact fallback was used. New symbols were not yet indexed before commit, so direct impact lookup for new runtime symbols was unavailable; existing touched route symbols reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,736 nodes, 3,456 edges, 101 clusters, 138 flows.
+
+### Remaining cleanup buckets
+- Still dirty and intentionally not committed:
+  - UI/comfort/safe-area component changes
+  - lesson component polish
+  - question-bank split/deletion work
+  - topic lesson-copy edits
+  - practical PNG -> WebP replacement
+  - auth/main/offline boundary changes outside the runtime bucket
+  - README and runtime export script
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

@@ -1207,7 +1207,7 @@ function SetupSpring() {
         <Lbl x={220} y={45 + springLen / 2} t={`e = ${ext} cm`} c="#10b981" s={9} a="start"/>
 
         {beyondLimit && (
-          <text x={70} y={25} fontSize={9} fill="#ef4444">⚠ Beyond elastic limit</text>
+          <text x={70} y={25} fontSize={9} fill="#ef4444">Beyond elastic limit</text>
         )}
 
         <Lbl x={163} y={18} t="Clamp stand" c="#64748b" s={8}/>
@@ -1217,7 +1217,7 @@ function SetupSpring() {
       {/* ── Readout tiles ── */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
         {[
-          { label: beyondLimit ? 'Force ⚠' : 'Force', value: force, unit: 'N', accent: beyondLimit ? '#ef4444' : '#3b82f6', bg: beyondLimit ? '#250505' : '#001025' },
+          { label: beyondLimit ? 'Force limit' : 'Force', value: force, unit: 'N', accent: beyondLimit ? '#ef4444' : '#3b82f6', bg: beyondLimit ? '#250505' : '#001025' },
           { label: 'Extension', value: ext, unit: 'cm', accent: '#10b981', bg: '#00251a' },
           { label: 'k = F / e', value: force > 0 && parseFloat(ext) > 0 ? (force / parseFloat(ext)).toFixed(1) : '—', unit: 'N/cm', accent: '#6366f1', bg: '#0f0a2a' },
         ].map(({ label, value, unit, accent, bg }) => (
@@ -1744,11 +1744,11 @@ const DIAGRAMS = {
 function TabOverview({ p, color }) {
   return (
     <div className="flex flex-col gap-4">
-      {/* ⚠️ Hazard banner — shown on overview for ADHD/SEN students */}
+      {/* Hazard banner — shown on overview for ADHD/SEN students */}
       {p.hazards && p.hazards.length > 0 && (
         <div className="mb-4 px-4 py-3 rounded-[14px]" style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.3)' }}>
           <div className="flex items-center gap-2 mb-2">
-            <span style={{ fontSize: 16 }}>⚠️</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: '#fbbf24' }}>Risk</span>
             <span className="text-xs font-bold uppercase tracking-wide" style={{ color: '#ef4444' }}>Safety First</span>
           </div>
           <div className="flex flex-col gap-1">
@@ -1826,7 +1826,7 @@ function TabSetup({ p, color }) {
     <div className="rounded-[16px] overflow-hidden" style={{ background: '#121a2f', border: `0.75px solid ${color}30` }}>
       <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wide"
         style={{ background: `${color}10`, color, borderBottom: `0.75px solid ${color}20` }}>
-        Lab Setup
+        Lab setup
       </div>
       <div className="p-3">
         {Diagram ? <Diagram/> : null}
@@ -2467,7 +2467,7 @@ export default function PracticalScreen() {
             style={{ background: `${color}20`, border: `0.75px solid ${color}60`, color }}>
             {boardPracticalId}
           </div>
-          <h1 className="text-base font-bold truncate" style={{ color: '#f8fafc' }}>{p.title}</h1>
+          <h1 className="text-base font-bold leading-tight" style={{ color: '#f8fafc', overflowWrap: 'anywhere' }}>{p.title}</h1>
         </div>
         <Flask size={18} color={color} className="shrink-0"/>
       </div>

@@ -92,18 +92,22 @@ export function MisconceptionCard({ wrong, right, wrongLabel = 'Common mistake',
 export function RealWorldCard({ icon, title, desc, color = '#00bc7d', delay = 0 }) {
   return (
     <motion.div
-      className="rounded-[12px] px-3 py-2.5 flex gap-3 items-start w-full"
-      style={{ background: `${color}0f`, border: `1px solid ${color}30` }}
+      className="rounded-[16px] px-3.5 py-3 flex gap-3 items-start w-full"
+      style={{
+        background: 'rgba(15,27,43,0.92)',
+        border: '1px solid rgba(255,255,255,0.08)',
+        boxShadow: '0 12px 28px rgba(0,0,0,0.14)',
+      }}
       initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay }}
     >
       <div className="flex items-center justify-center rounded-[8px] shrink-0"
-        style={{ width: 34, height: 34, background: `${color}18`, border: `1px solid ${color}30`, fontSize: 18 }}>
+        style={{ width: 38, height: 38, background: `${color}16`, border: `1px solid ${color}26`, fontSize: 18 }}>
         {icon}
       </div>
       <div className="flex-1 min-w-0">
-        <div style={{ fontSize: 12, fontWeight: 700, color, marginBottom: 2 }}>{title}</div>
-        <div style={{ fontSize: 10, color: '#a8b8cc', lineHeight: 1.45 }}>{desc}</div>
+        <div style={{ fontSize: 12.5, fontWeight: 700, color, marginBottom: 4 }}>{title}</div>
+        <div style={{ fontSize: 11, color: '#b3c0cb', lineHeight: 1.5 }}>{desc}</div>
       </div>
     </motion.div>
   )

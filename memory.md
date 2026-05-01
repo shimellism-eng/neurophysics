@@ -44,6 +44,25 @@
   - auth/main/offline boundary changes outside the runtime bucket
   - README and runtime export script
 
+### Practical infographic asset cleanup
+- Committed asset-only practical infographic cleanup as `2b09120` (`Use WebP practical infographics`).
+- Replaced the large RP1/RP2 PNG files with WebP equivalents:
+  - `public/practicals/RP1.webp`
+  - `public/practicals/RP2.webp`
+- Updated only the necessary `TabMethod` image path in `PracticalScreen` from `.png` to `.webp`.
+- Added lazy/async image hints for the infographic image.
+- Left unrelated `PracticalScreen` wording/layout edits dirty for separate review.
+
+### Practical asset verification
+- GitNexus impact checks for `PracticalScreen` and `TabMethod` reported LOW risk.
+- Confirmed WebP files are valid image binaries.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,740 nodes, 3,459 edges, 102 clusters, 138 flows.
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

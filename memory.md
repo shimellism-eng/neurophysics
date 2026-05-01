@@ -102,6 +102,33 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,745 nodes, 3,467 edges, 102 clusters, 139 flows.
 
+### Learner-flow presentation cleanup
+- Committed learner-flow presentation cleanup as `1d5b71a` (`Polish learner flow presentation`).
+- Polished:
+  - `BreakNudge`
+  - `HeartsDisplay`
+  - `GuidedPracticeFader`
+  - `HookCard`
+  - `LessonHeader`
+  - `SessionClose`
+  - `SessionPreview`
+- Kept this presentation-only:
+  - no lesson step ordering changes
+  - no 9-step lesson flow changes
+  - no scoring/mastery changes
+  - no question/content data edits
+  - no route changes
+- Restored the risky `LessonHeader` safe-area padding line before commit so cleanup did not remove notch protection.
+
+### Learner-flow verification
+- GitNexus impact checks for all touched learner-flow components reported LOW risk.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,749 nodes, 3,469 edges, 104 clusters, 139 flows.
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

@@ -161,6 +161,14 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,768 nodes, 3,497 edges, 101 clusters, 141 flows.
 
+### Worktree triage docs cleanup
+- Committed docs cleanup as `929415f` (`Update worktree triage docs`).
+- Updated `docs/WORKTREE_TRIAGE.md` so it reflects the cleanup buckets that are now committed.
+- Updated `docs/RELEASE_READINESS.md` release-check commands after the root README move.
+- Moved the untracked root `README.md` into `docs/QUESTION_BANK_STARTER.md` because it describes a question-bank starter package, not the app root.
+- Left remaining question-bank/topic data dirty for explicit content review because it includes non-release board additions and large split-bank deletions.
+- GitNexus index refreshed after commit: 1,773 nodes, 3,500 edges, 103 clusters, 141 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

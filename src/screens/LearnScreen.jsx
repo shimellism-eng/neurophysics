@@ -1,246 +1,115 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { MODULES, TOPICS, PHYSICS_ONLY_TOPICS } from '../data/topics'
+import { MagnifyingGlass, CaretDown } from '@phosphor-icons/react'
+import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
-import { getSelectedBoard, isAvailableForBoard, getSelectedCourse } from '../utils/boardConfig'
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
+import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection, isTopicAvailableForSelection } from '../utils/curriculumFilters'
 
-const BODY = "'Atkinson Hyperlegible', sans-serif"
-const HEAD = "'Bricolage Grotesque', sans-serif"
-
-// ── Mastery ring (Khan Academy style) ─────────────────────────────────────────
-
-function Ring({ pct, color, size = 40 }) {
-  const stroke = 3.5
-  const r      = (size - stroke * 2) / 2
-  const circ   = 2 * Math.PI * r
-  const dash   = (pct / 100) * circ
-
-  return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true" style={{ flexShrink: 0 }}>
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={stroke} />
-      {pct > 0 && (
-        <circle
-          cx={size / 2} cy={size / 2} r={r} fill="none"
-          stroke={color} strokeWidth={stroke} strokeLinecap="round"
-          strokeDasharray={`${dash} ${circ}`}
-          transform={`rotate(-90 ${size / 2} ${size / 2})`}
-          style={{ transition: 'stroke-dasharray 0.9s cubic-bezier(0.16,1,0.3,1)' }}
-        />
-      )}
-      {pct > 0 && (
-        <text
-          x={size / 2} y={size / 2}
-          textAnchor="middle" dominantBaseline="central"
-          fontSize={pct === 100 ? 12 : 9} fontWeight={700}
-          fill={color}
-        >
-          {pct === 100 ? '✓' : `${Math.round(pct)}%`}
-        </text>
-      )}
-    </svg>
-  )
-}
-
-// ── Topic row ─────────────────────────────────────────────────────────────────
-
-function TopicRow({ topic, masteryState, moduleColor, isLast, onTap }) {
-  const isMastered = masteryState === 'mastered'
-  const isStarted  = masteryState === 'started'
+function TopicRow({ topic, state, onTap, isLast }) {
+  const label = state === 'mastered' ? 'Review' : state === 'started' ? 'Continue' : 'Start'
+  const color = state === 'mastered' ? 'var(--np-success)' : state === 'started' ? 'var(--np-accent-strong)' : 'var(--np-text-dim)'
 
   return (
     <button
       type="button"
       onClick={onTap}
-      className="w-full flex items-center text-left"
+      className="w-full flex items-center gap-3 px-4 py-3 text-left"
       style={{
-        minHeight: 48,
-        paddingTop: 13,
-        paddingBottom: 13,
-        paddingLeft: 20,
-        paddingRight: 16,
+        minHeight: 46,
         background: 'transparent',
         borderBottom: isLast ? 'none' : '1px solid rgba(255,255,255,0.05)',
       }}
     >
-      {/* State dot */}
-      <div
-        style={{
-          width: 8,
-          height: 8,
-          borderRadius: '50%',
-          flexShrink: 0,
-          marginRight: 14,
-          background: isMastered ? moduleColor
-            : isStarted ? `${moduleColor}80`
-            : 'rgba(255,255,255,0.14)',
-        }}
-      />
-
-      {/* Topic name — wraps naturally */}
-      <span
-        className="flex-1 leading-snug"
-        style={{ fontFamily: BODY, fontSize: 15, fontWeight: 500, color: isMastered ? 'rgba(255,255,255,0.42)' : '#f1f5f9' }}
-      >
+      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
+      <span className="flex-1 text-sm leading-snug" style={{ color: 'var(--np-text)' }}>
         {topic.title}
       </span>
-
-      {/* Status */}
-      <span
-        style={{
-          fontFamily: BODY,
-          fontSize: 12,
-          fontWeight: 600,
-          marginLeft: 12,
-          flexShrink: 0,
-          color: isMastered ? '#22c55e' : isStarted ? '#6366f1' : 'rgba(255,255,255,0.28)',
-        }}
-      >
-        {isMastered ? 'Review' : isStarted ? 'Continue' : 'Start'}
+      <span className="text-[11px] font-semibold shrink-0" style={{ color }}>
+        {label}
       </span>
     </button>
   )
 }
 
-// ── Module card ───────────────────────────────────────────────────────────────
-
-function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selectedBoard, selectedCourse }) {
-  const navigate = useNavigate()
-
-  const visibleTopics = module.topics.filter(id => {
-    const t = TOPICS[id]
-    if (!t) return false
-    if (t.boards?.length > 0 && !t.boards.includes(selectedBoard.id)) return false
-    if (selectedCourse === 'combined' && PHYSICS_ONLY_TOPICS.has(id)) return false
-    return true
-  })
+function ModuleCard({ module, progress, expanded, onToggle, selectedBoard, selectedCourse, onTopicTap }) {
+  const visibleTopics = getVisibleTopicIdsForSelection(module.topics, selectedBoard.id, selectedCourse)
 
   const masteredCount = visibleTopics.filter(id => progress[id]?.mastered).length
-  const startedCount  = visibleTopics.filter(id => progress[id]?.started && !progress[id]?.mastered).length
-  const totalCount    = visibleTopics.length
-  const pct           = totalCount > 0 ? (masteredCount / totalCount) * 100 : 0
-
-  const getState = id => {
-    if (progress[id]?.mastered) return 'mastered'
-    if (progress[id]?.started)  return 'started'
-    return 'untouched'
-  }
-
-  const handleTopicTap = topicId => {
-    const t = TOPICS[topicId]
-    if (!t) return
-    if (t.hook || t.lessonSteps?.length > 0) navigate(`/lesson/${topicId}`)
-    else if (t.practicalId) navigate(`/practical/${t.practicalId}`)
-    else navigate(`/practice/${topicId}`)
-  }
+  const startedCount = visibleTopics.filter(id => progress[id]?.started && !progress[id]?.mastered).length
+  const subtitle = masteredCount > 0
+    ? `${masteredCount} of ${visibleTopics.length} complete`
+    : startedCount > 0
+      ? `${startedCount} in progress`
+      : `${visibleTopics.length} topics`
 
   return (
     <motion.div
       className="rounded-[20px] overflow-hidden"
-      style={{ background: `${module.color}0f`, border: '1px solid rgba(255,255,255,0.06)' }}
-      initial={{ opacity: 0, y: 14 }}
+      style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)', boxShadow: 'var(--shadow-card)' }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: moduleIndex * 0.04, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* ── Card header ── */}
       <button
         type="button"
         onClick={onToggle}
-        className="w-full text-left"
-        style={{ padding: '16px 16px 0', background: 'transparent' }}
+        className="w-full text-left px-4 py-4"
         aria-expanded={expanded}
+        style={{ background: 'transparent' }}
       >
         <div className="flex items-center gap-3">
-          {/* Icon circle */}
           <div
-            className="flex items-center justify-center shrink-0 rounded-full"
-            style={{ width: 48, height: 48, background: `${module.color}22` }}
+            className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
+            style={{ background: `${module.color}20`, color: module.color }}
           >
-            <module.icon size={22} color={module.color} />
+            <module.icon size={20} />
           </div>
 
-          {/* Name + count */}
           <div className="flex-1 min-w-0">
-            <div style={{ fontFamily: BODY, fontSize: 17, fontWeight: 700, letterSpacing: '-0.01em', color: '#f1f5f9', lineHeight: 1.2 }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, letterSpacing: '-0.025em', color: 'var(--np-text)', lineHeight: 1.15 }}>
               {module.name}
             </div>
-            <div style={{ fontFamily: BODY, fontSize: 13, color: 'rgba(255,255,255,0.38)', marginTop: 3 }}>
-              {masteredCount > 0
-                ? `${masteredCount} of ${totalCount} completed`
-                : startedCount > 0
-                  ? `${startedCount} in progress`
-                  : `${totalCount} topics`}
+            <div className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>
+              {subtitle}
             </div>
           </div>
 
-          {/* Mastery ring */}
-          <Ring pct={pct} color={module.color} size={40} />
-        </div>
-
-        {/* Progress bar */}
-        <div style={{ height: 2, borderRadius: 99, background: 'rgba(255,255,255,0.07)', overflow: 'hidden', margin: '14px 0' }}>
-          <motion.div
-            style={{ height: '100%', borderRadius: 99, background: module.color }}
-            initial={{ width: 0 }}
-            animate={{ width: `${pct}%` }}
-            transition={{ duration: 1, delay: moduleIndex * 0.05, ease: [0.16, 1, 0.3, 1] }}
-          />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
+            <CaretDown
+              size={18}
+              color="var(--np-text-dim)"
+              style={{ transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 180ms ease' }}
+            />
+          </div>
         </div>
       </button>
 
-      {/* ── Expanded content ── */}
       <AnimatePresence initial={false}>
         {expanded && (
           <motion.div
-            key="expanded"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             style={{ overflow: 'hidden' }}
           >
-            <div style={{ height: 1, background: 'rgba(255,255,255,0.06)', margin: '0 16px' }} />
-
-            {visibleTopics.map((topicId, i) => {
+            <div style={{ height: 1, margin: '0 16px', background: 'rgba(255,255,255,0.05)' }} />
+            {visibleTopics.map((topicId, index) => {
               const topic = TOPICS[topicId]
               if (!topic) return null
+              const state = progress[topicId]?.mastered ? 'mastered' : progress[topicId]?.started ? 'started' : 'untouched'
               return (
                 <TopicRow
                   key={topicId}
                   topic={topic}
-                  masteryState={getState(topicId)}
-                  moduleColor={module.color}
-                  isLast={i === visibleTopics.length - 1}
-                  onTap={() => handleTopicTap(topicId)}
+                  state={state}
+                  isLast={index === visibleTopics.length - 1}
+                  onTap={() => onTopicTap(topicId)}
                 />
               )
             })}
-
-            {/* Practice + Exam buttons */}
-            <div style={{ padding: '12px 16px 16px', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <button
-                type="button"
-                onClick={() => { const first = visibleTopics[0]; if (first) navigate(`/practice/${first}`) }}
-                style={{
-                  width: '100%', minHeight: 44, background: 'transparent',
-                  border: '1px solid rgba(99,102,241,0.4)', borderRadius: 12,
-                  fontFamily: BODY, fontSize: 14, fontWeight: 600, color: '#818cf8', cursor: 'pointer',
-                }}
-              >
-                Practice questions
-              </button>
-              <button
-                type="button"
-                onClick={() => navigate('/timed-paper')}
-                style={{
-                  width: '100%', minHeight: 44, background: 'transparent',
-                  border: '1px solid rgba(99,102,241,0.3)', borderRadius: 12,
-                  fontFamily: BODY, fontSize: 14, fontWeight: 600, color: '#818cf8', cursor: 'pointer',
-                }}
-              >
-                Exam practice
-              </button>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -248,101 +117,152 @@ function ModuleCard({ module, moduleIndex, progress, expanded, onToggle, selecte
   )
 }
 
-// ── Screen ────────────────────────────────────────────────────────────────────
-
 export default function LearnScreen() {
-  const navigate                            = useNavigate()
-  const { progress }                        = useProgress()
-  const [selectedBoard, setSelectedBoard]   = useState(() => getSelectedBoard())
+  const navigate = useNavigate()
+  const { progress } = useProgress()
+  const [selectedBoard, setSelectedBoard] = useState(() => getSelectedBoard())
   const [selectedCourse, setSelectedCourse] = useState(() => getSelectedCourse())
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
-    const sync = () => { setSelectedBoard(getSelectedBoard()); setSelectedCourse(getSelectedCourse()) }
+    const sync = () => {
+      setSelectedBoard(getSelectedBoard())
+      setSelectedCourse(getSelectedCourse())
+    }
     window.addEventListener('storage', sync)
     window.addEventListener('focus', sync)
-    return () => { window.removeEventListener('storage', sync); window.removeEventListener('focus', sync) }
+    return () => {
+      window.removeEventListener('storage', sync)
+      window.removeEventListener('focus', sync)
+    }
   }, [])
 
-  const boardModules = MODULES.filter(m => {
-    if (!isAvailableForBoard(m.boards, selectedBoard.id)) return false
-    if (selectedCourse === 'combined' && m.topics.every(t => PHYSICS_ONLY_TOPICS.has(t))) return false
-    return true
-  })
+  const boardModules = MODULES.filter(module => isModuleAvailableForSelection(module, selectedBoard.id, selectedCourse))
 
-  const [openModules, setOpenModules] = useState(() => {
+  const [openModule, setOpenModule] = useState(() => {
     try {
-      const saved = sessionStorage.getItem('np_open_modules')
-      return saved ? JSON.parse(saved) : [boardModules[0]?.name].filter(Boolean)
-    } catch { return [] }
+      return sessionStorage.getItem('np_open_module') || boardModules[0]?.name || ''
+    } catch {
+      return boardModules[0]?.name || ''
+    }
   })
 
-  const toggleModule = name => {
-    setOpenModules(prev => {
-      const next = prev.includes(name) ? prev.filter(x => x !== name) : [...prev, name]
-      sessionStorage.setItem('np_open_modules', JSON.stringify(next))
+  const toggleModule = (name) => {
+    setOpenModule(current => {
+      const next = current === name ? '' : name
+      sessionStorage.setItem('np_open_module', next)
       return next
     })
   }
 
-  const totalTopics   = boardModules.flatMap(m => m.topics).filter(id => TOPICS[id]).length
-  const masteredTotal = Object.values(progress).filter(p => p?.mastered).length
-  const overallPct    = totalTopics > 0 ? (masteredTotal / totalTopics) * 100 : 0
+  const handleTopicTap = (topicId) => {
+    const topic = TOPICS[topicId]
+    if (!topic) return
+    if (topic.hook || topic.lessonSteps?.length > 0) navigate(`/lesson/${topicId}`)
+    else if (topic.practicalId) navigate(`/practical/${topic.practicalId}`)
+    else navigate(`/practice/${topicId}`)
+  }
+
+  const trimmedSearch = searchQuery.trim().toLowerCase()
+  const searchResults = trimmedSearch.length < 2
+    ? []
+    : boardModules
+      .flatMap(module => module.topics
+        .filter(id => {
+          const topic = TOPICS[id]
+          if (!topic) return false
+          if (!isTopicAvailableForSelection(topic, selectedBoard.id, selectedCourse)) return false
+          return topic.title.toLowerCase().includes(trimmedSearch) || module.name.toLowerCase().includes(trimmedSearch)
+        })
+        .map(id => ({ id, topic: TOPICS[id], module })))
+      .slice(0, 6)
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: 'var(--np-bg)' }}>
-      <div className="flex-1 overflow-y-auto" style={{ minHeight: 0, paddingBottom: 'var(--page-bottom-gap)' }}>
-
-        {/* ── Heading area ── */}
-        <div style={{ padding: '28px 16px 20px' }}>
-          <h1 style={{ fontFamily: HEAD, fontSize: 28, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1, color: '#f1f5f9', marginBottom: 16 }}>
-            GCSE Physics
+    <div
+      className="flex flex-col min-h-full np-shell-gradient"
+      style={{
+        paddingTop: 'var(--safe-top)',
+        paddingBottom: 'calc(var(--bottom-chrome-height) + var(--page-bottom-gap))',
+      }}
+    >
+      <div style={{ minHeight: 0 }}>
+        <div style={{ padding: '24px 16px 18px' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.06, color: 'var(--np-text)', marginBottom: 8 }}>
+            Learn
           </h1>
+          <p style={{ fontSize: 14, color: 'var(--np-text-muted)', marginBottom: 16 }}>
+            Find a topic and start when you are ready.
+          </p>
 
-          {/* Overall progress bar */}
-          <div style={{ height: 2, borderRadius: 99, background: 'rgba(255,255,255,0.07)', overflow: 'hidden', marginBottom: 10 }}>
-            <motion.div
-              style={{ height: '100%', borderRadius: 99, background: '#6366f1' }}
-              initial={{ width: 0 }}
-              animate={{ width: `${overallPct}%` }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          <label
+            className="flex items-center gap-3 rounded-[18px] px-4"
+            style={{ minHeight: 50, background: 'var(--surface-panel)', border: 'var(--border-quiet)', boxShadow: 'var(--shadow-card)' }}
+          >
+            <MagnifyingGlass size={17} color="var(--np-text-dim)" />
+            <input
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder="Search topics"
+              aria-label="Search topics"
+              className="flex-1 bg-transparent outline-none text-sm"
+              style={{ color: 'var(--np-text)' }}
             />
-          </div>
+          </label>
 
-          {/* Board label — tiny, muted, tappable to go to settings */}
           <button
             onClick={() => navigate('/settings')}
-            style={{ fontFamily: BODY, fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.24)', background: 'transparent', padding: 0 }}
+            className="mt-3 inline-flex items-center rounded-full px-3 py-1.5"
+            style={{ fontSize: 11, fontWeight: 600, color: 'var(--np-accent-strong)', background: 'rgba(94,167,161,0.08)', border: '1px solid rgba(94,167,161,0.18)' }}
           >
-            {selectedBoard.flag} {selectedBoard.name}
+            {selectedBoard.name}
           </button>
         </div>
 
-        {/* ── Module cards ── */}
+        <div aria-live="polite" aria-atomic="true" className="sr-only">
+          {searchResults.length > 0 ? `${searchResults.length} matching topic${searchResults.length === 1 ? '' : 's'} found` : ''}
+        </div>
+
+        {searchResults.length > 0 && (
+          <div style={{ padding: '0 12px 14px' }}>
+            <div className="np-card-quiet" style={{ overflow: 'hidden' }}>
+              <div className="px-4 pt-4 pb-2 text-[11px] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--np-text-dim)' }}>
+                Matching topics
+              </div>
+              {searchResults.map(({ id, topic, module }, index) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => handleTopicTap(id)}
+                  className="w-full flex items-center gap-3 px-4 py-3 text-left"
+                  style={{ background: 'transparent', borderTop: index === 0 ? 'none' : '1px solid rgba(255,255,255,0.05)' }}
+                >
+                  <div className="w-9 h-9 rounded-[12px] flex items-center justify-center shrink-0" style={{ background: `${module.color}18`, color: module.color }}>
+                    <module.icon size={16} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold leading-snug" style={{ color: 'var(--np-text)', overflowWrap: 'anywhere' }}>{topic.title}</div>
+                    <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>{module.name}</div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div style={{ padding: '0 12px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {boardModules.map((module, i) => (
+          {boardModules.map(module => (
             <ModuleCard
               key={module.name}
               module={module}
-              moduleIndex={i}
               progress={progress}
-              expanded={openModules.includes(module.name)}
+              expanded={openModule === module.name}
               onToggle={() => toggleModule(module.name)}
               selectedBoard={selectedBoard}
               selectedCourse={selectedCourse}
+              onTopicTap={handleTopicTap}
             />
           ))}
         </div>
-
-        {/* ── Quick Win ── */}
-        <div style={{ textAlign: 'center', padding: '28px 16px 8px' }}>
-          <button
-            onClick={() => navigate('/quickwin')}
-            style={{ fontFamily: BODY, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.28)', background: 'transparent', padding: '8px 0' }}
-          >
-            Quick Win · 5 questions
-          </button>
-        </div>
-
       </div>
     </div>
   )

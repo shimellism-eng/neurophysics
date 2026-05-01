@@ -46,7 +46,7 @@ function Toggle({ on, onChange, label }) {
       <span
         className="absolute inset-0 rounded-full transition-colors"
         style={{
-          background: on ? '#6366f1' : 'rgba(255,255,255,0.15)',
+          background: on ? 'var(--np-accent)' : 'rgba(255,255,255,0.15)',
           transition: 'background 200ms',
         }}
       />
@@ -78,7 +78,7 @@ function Slider({ value, min, max, step = 0.1, onChange, label, format }) {
         <div className="absolute top-1/2 -translate-y-1/2 w-full rounded-full"
           style={{ height: 4, background: 'rgba(255,255,255,0.12)' }} />
         <div className="absolute top-1/2 -translate-y-1/2 rounded-full"
-          style={{ height: 4, width: `${pct}%`, background: '#6366f1' }} />
+          style={{ height: 4, width: `${pct}%`, background: 'var(--np-accent)' }} />
         <input
           type="range" min={min} max={max} step={step} value={value}
           aria-label={label}
@@ -109,9 +109,9 @@ function ChipGroup({ options, value, onChange }) {
           onClick={() => onChange(opt.value)}
           className="px-3 py-1.5 rounded-xl text-xs font-semibold transition-colors"
           style={{
-            background: value === opt.value ? '#6366f1' : 'rgba(255,255,255,0.08)',
-            color:      value === opt.value ? '#ffffff' : 'var(--np-text)',
-            border:     `0.75px solid ${value === opt.value ? '#6366f1' : 'var(--np-border)'}`,
+            background: value === opt.value ? 'var(--np-accent-soft)' : 'rgba(255,255,255,0.05)',
+            color:      value === opt.value ? 'var(--np-accent-strong)' : 'var(--np-text)',
+            border:     `0.75px solid ${value === opt.value ? 'rgba(116,188,181,0.26)' : 'var(--np-border)'}`,
           }}
         >
           {opt.icon && <span className="mr-1">{opt.icon}</span>}
@@ -126,8 +126,8 @@ function Section({ icon: Icon, title, children }) {
   return (
     <div className="mb-2">
       <div className="flex items-center gap-2 pt-4 pb-1">
-        <Icon size={14} style={{ color: '#818cf8' }} />
-        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#818cf8' }}>
+        <Icon size={14} style={{ color: 'var(--np-accent-strong)' }} />
+        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--np-accent-strong)' }}>
           {title}
         </span>
       </div>
@@ -154,18 +154,18 @@ export default function ComfortSettings() {
   }, [settingsOpen, setSettingsOpen])
 
   const bgOptions = [
-    { value: 'dark',        label: 'Dark',        icon: '🌑' },
-    { value: 'cream',       label: 'Cream',       icon: '🌕' },
-    { value: 'lightblue',   label: 'Light Blue',  icon: '💧' },
-    { value: 'lightyellow', label: 'Light Yellow', icon: '🌞' },
+    { value: 'dark',        label: 'Dark' },
+    { value: 'cream',       label: 'Cream' },
+    { value: 'lightblue',   label: 'Light blue' },
+    { value: 'lightyellow', label: 'Light yellow' },
   ]
 
   const overlayOptions = [
     { value: 'none',   label: 'Off' },
-    { value: 'yellow', label: 'Yellow', icon: '🟡' },
-    { value: 'blue',   label: 'Blue',   icon: '🔵' },
-    { value: 'pink',   label: 'Pink',   icon: '🩷' },
-    { value: 'green',  label: 'Green',  icon: '🟢' },
+    { value: 'yellow', label: 'Yellow' },
+    { value: 'blue',   label: 'Blue' },
+    { value: 'pink',   label: 'Pink' },
+    { value: 'green',  label: 'Green' },
   ]
 
   const fontOptions = [
@@ -211,11 +211,11 @@ export default function ComfortSettings() {
             ref={sheetRef}
             role="dialog"
             aria-modal="true"
-            aria-label="Comfort Settings"
-            className="fixed left-0 right-0 bottom-0 z-[999] rounded-t-[24px] overflow-hidden"
+            aria-label="Comfort settings"
+            className="fixed left-0 right-0 bottom-0 z-[999] overflow-hidden np-sheet-utility"
             style={{
-              background: 'var(--np-card-deep)',
-              border: '0.75px solid var(--np-border)',
+              borderTopLeftRadius: '24px',
+              borderTopRightRadius: '24px',
               maxHeight: '88vh',
               display: 'flex',
               flexDirection: 'column',
@@ -235,10 +235,10 @@ export default function ComfortSettings() {
               style={{ borderBottom: '0.75px solid var(--np-border)' }}>
               <div>
                 <h2 className="font-bold text-lg" style={{ color: 'var(--np-text)', fontFamily: 'var(--font-display)' }}>
-                  Comfort Settings
+                  Comfort settings
                 </h2>
                 <p className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
-                  Personalise how the app looks and feels
+                  Adjust text, colour, motion and reading support
                 </p>
               </div>
               <button
@@ -255,7 +255,7 @@ export default function ComfortSettings() {
             <div className="flex-1 overflow-y-auto px-5 pb-8" style={{ overscrollBehavior: 'contain' }}>
 
               {/* Presets */}
-              <Section icon={Brain} title="Quick Presets">
+              <Section icon={Brain} title="Quick presets">
                 <div className="grid grid-cols-2 gap-2 py-3">
                   {Object.entries(COMFORT_PRESETS).map(([key, preset]) => (
                     <button
@@ -263,7 +263,7 @@ export default function ComfortSettings() {
                       onClick={() => applyPreset(key)}
                       className="flex items-center gap-2 px-3 py-3 rounded-xl text-left active:opacity-75"
                       style={{
-                        background: 'rgba(255,255,255,0.06)',
+                        background: 'rgba(255,255,255,0.04)',
                         border: '0.75px solid var(--np-border)',
                       }}
                     >
@@ -286,7 +286,7 @@ export default function ComfortSettings() {
                 }}
               >
                 <div className="text-[10px] font-bold uppercase tracking-widest mb-2"
-                  style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  style={{ color: 'var(--np-text-dim)' }}>
                   Preview
                 </div>
                 <p
@@ -303,8 +303,8 @@ export default function ComfortSettings() {
                 </p>
               </div>
 
-              {/* Text & Reading */}
-              <Section icon={TextT} title="Text & Reading">
+              {/* Text and reading */}
+              <Section icon={TextT} title="Text and reading">
                 <Row label="Font size" hint="0.8 – 1.6 rem">
                   <Slider
                     value={prefs.fontSize} min={0.8} max={1.6} step={0.05}
@@ -347,8 +347,8 @@ export default function ComfortSettings() {
                 </Row>
               </Section>
 
-              {/* Motion & Sound */}
-              <Section icon={SpeakerHigh} title="Motion & Sound">
+              {/* Motion and sound */}
+              <Section icon={SpeakerHigh} title="Motion and sound">
                 <Row label="Reduced motion" hint="Disables animations and transitions">
                   <Toggle on={prefs.reduceMotion} onChange={v => setPref('reduceMotion', v)}
                     label="Reduced motion" />
@@ -364,7 +364,7 @@ export default function ComfortSettings() {
               </Section>
 
               {/* Reading Assistance */}
-              <Section icon={BookOpen} title="Read Aloud (TTS)">
+              <Section icon={BookOpen} title="Read aloud">
                 <Row label="Text-to-speech">
                   <Toggle on={prefs.tts} onChange={v => setPref('tts', v)}
                     label="Text-to-speech" />
@@ -383,8 +383,8 @@ export default function ComfortSettings() {
                 </Row>
               </Section>
 
-              {/* Learning Mode */}
-              <Section icon={Brain} title="Learning Mode">
+              {/* Learning mode */}
+              <Section icon={Brain} title="Learning mode">
                 <Row label="Challenge mode (hearts)" hint="Off = unlimited attempts, no penalty">
                   <Toggle on={prefs.challengeMode} onChange={v => setPref('challengeMode', v)}
                     label="Challenge mode" />
@@ -420,7 +420,7 @@ export default function ComfortSettings() {
                   aria-label="Reset all comfort settings to defaults"
                 >
                   <ArrowCounterClockwise size={16} />
-                  <span className="text-sm font-semibold">Reset to Defaults</span>
+                  <span className="text-sm font-semibold">Reset to defaults</span>
                 </button>
               </div>
 
@@ -448,26 +448,31 @@ export function ComfortFirstTimePrompt() {
         style={{
           bottom: 'calc(96px + env(safe-area-inset-bottom, 0px) + 12px)',
           background: 'var(--np-card)',
-          border: '0.75px solid rgba(99,102,241,0.4)',
-          boxShadow: '0 0 24px rgba(99,102,241,0.15)',
+          border: '0.75px solid rgba(116,188,181,0.24)',
+          boxShadow: 'var(--shadow-soft)',
         }}
         initial={reduced ? { opacity: 0 } : { opacity: 0, y: 20 }}
         animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
       >
         <div className="flex items-start gap-3">
-          <span style={{ fontSize: 28, lineHeight: 1 }}>♿</span>
+          <div
+            className="w-11 h-11 rounded-[14px] flex items-center justify-center shrink-0"
+            style={{ background: 'var(--np-accent-soft)', border: '0.75px solid rgba(116,188,181,0.22)' }}
+          >
+            <Brain size={18} style={{ color: 'var(--np-accent-strong)' }} />
+          </div>
           <div className="flex-1">
             <p className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>
-              Set up your learning preferences
+              Set up your study preferences
             </p>
             <p className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>
-              Adjust fonts, colours, motion, and more for the way you learn best.
+              Make text, colour and motion feel calmer before you begin.
             </p>
             <div className="flex gap-2 mt-3">
               <button
                 className="flex-1 py-2 rounded-xl text-sm font-semibold active:opacity-70"
-                style={{ background: '#6366f1', color: '#fff' }}
+                style={{ background: 'var(--np-accent)', color: '#07111d' }}
                 onClick={() => {
                   dismissFirstTimePrompt()
                   setSettingsOpen(true)

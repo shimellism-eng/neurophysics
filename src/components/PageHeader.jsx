@@ -17,6 +17,7 @@ import { CaretLeft } from '@phosphor-icons/react'
 export default function PageHeader({
   title,
   subtitle,
+  eyebrow,
   onBack,
   backLabel = 'Go back',
   rightSlot,
@@ -35,18 +36,18 @@ export default function PageHeader({
         className,
       ].filter(Boolean).join(' ')}
       style={{
-        background: 'rgba(8,15,30,0.72)',
-        backdropFilter: 'blur(12px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(12px) saturate(180%)',
+        background: 'rgba(7,17,29,0.88)',
+        backdropFilter: 'blur(10px) saturate(130%)',
+        WebkitBackdropFilter: 'blur(10px) saturate(130%)',
         borderBottom: '0.75px solid var(--np-border)',
-        minHeight: 64,
+        minHeight: 60,
         ...style,
       }}
     >
       {onBack && (
         <button
           className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0 active:opacity-75"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid var(--np-border)' }}
+          style={{ background: 'var(--surface-quiet)', border: '0.75px solid var(--np-border)' }}
           onClick={onBack}
           aria-label={backLabel}
         >
@@ -55,10 +56,18 @@ export default function PageHeader({
       )}
 
       <div className="flex-1 min-w-0">
+        {eyebrow && (
+          <div
+            className="text-[11px] font-semibold mb-1 uppercase tracking-[0.14em]"
+            style={{ color: 'var(--np-accent-strong)' }}
+          >
+            {eyebrow}
+          </div>
+        )}
         {typeof title === 'string' ? (
           <div
-            className="font-display font-bold truncate"
-            style={{ color: 'var(--np-text)', fontSize: 18 }}
+            className="font-display font-bold leading-tight"
+            style={{ color: 'var(--np-text)', fontSize: 18, overflowWrap: 'anywhere' }}
           >
             {title}
           </div>
@@ -67,7 +76,7 @@ export default function PageHeader({
         )}
         {subtitle != null && (
           typeof subtitle === 'string' ? (
-            <div className="text-xs mt-0.5 truncate" style={{ color: 'var(--np-text-muted)' }}>
+            <div className="text-xs mt-0.5 leading-snug" style={{ color: 'var(--np-text-muted)', overflowWrap: 'anywhere' }}>
               {subtitle}
             </div>
           ) : (

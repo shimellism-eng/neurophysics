@@ -19,33 +19,43 @@
 /* ─── Design Tokens ──────────────────────────────────────────────────────── */
 /* App.jsx overrides --np-bg and --np-card at runtime for accessibility themes */
 :root {
-  /* Backgrounds — OKLCH tinted toward indigo hue 265 */
-  --np-bg:            oklch(0.08 0.018 265);
-  --np-bg-mid:        oklch(0.10 0.018 265);
-  --np-bg-lift:       oklch(0.13 0.012 265);
-  --np-card:          oklch(0.12 0.02 265 / 0.95);
-  --np-card-deep:     oklch(0.09 0.02 265 / 0.96);
-  --np-card-lift:     oklch(0.15 0.015 265 / 0.90);
+  /* Backgrounds — quiet ink with restrained science accents */
+  --np-bg:            #07111d;
+  --np-bg-mid:        #0a1725;
+  --np-bg-lift:       #102033;
+  --np-card:          rgba(15, 27, 43, 0.94);
+  --np-card-deep:     rgba(7, 17, 29, 0.96);
+  --np-card-lift:     rgba(22, 39, 60, 0.90);
 
   /* Surface aliases (spec names used in phases 1-4) */
-  --surface-1:        rgba(15,22,41,0.95);
+  --surface-1:        rgba(15, 27, 43, 0.95);
   --surface-2:        rgba(255,255,255,0.04);
+  --surface-panel:    rgba(15, 27, 43, 0.92);
+  --surface-quiet:    rgba(255,255,255,0.045);
+  --surface-raised:   rgba(24, 43, 66, 0.94);
 
   /* Borders — tinted neutral */
-  --np-border:        oklch(0.35 0.008 265 / 0.12);
-  --np-border-mid:    oklch(0.5 0.008 265 / 0.18);
-  --np-border-strong: oklch(0.6 0.008 265 / 0.25);
+  --np-border:        rgba(210, 225, 240, 0.085);
+  --np-border-mid:    rgba(210, 225, 240, 0.14);
+  --np-border-strong: rgba(210, 225, 240, 0.22);
+  --border-quiet:     0.75px solid var(--np-border);
 
   /* Brand */
-  --np-indigo:  #6366f1;
-  --np-purple:  #9b59b6;
-  --np-amber:   #f39c12;
+  --np-indigo:  #5ea7a1;
+  --np-purple:  #8d7aa8;
+  --np-amber:   #d88b2d;
   --np-pink:    #e91e8c;
   --np-green:   #22c55e;
   --green:      #22c55e;
   --np-red:     #ef4444;
   --red:        #ef4444;
-  --np-gold:    #fdc700;
+  --np-gold:    #d8a72d;
+  --np-accent-strong: #74bcb5;
+  --np-accent-soft:   rgba(94, 167, 161, 0.14);
+  --np-support:       #8d7aa8;
+  --np-support-soft:  rgba(141, 122, 168, 0.12);
+  --np-warning-soft:  rgba(216, 139, 45, 0.14);
+  --np-danger-soft:   rgba(239, 68, 68, 0.12);
 
   /* Semantic status aliases */
   --np-accent:  var(--np-indigo);
@@ -54,10 +64,10 @@
   --np-danger:  #ef4444;
 
   /* Text — 2 tones only, tinted toward 265 */
-  --np-text:       oklch(0.92 0.012 265);
-  --np-text-mid:   oklch(0.82 0.015 265);
-  --np-text-muted: oklch(0.62 0.018 265);
-  --np-text-dim:   oklch(0.45 0.015 265);
+  --np-text:       #eef4f6;
+  --np-text-mid:   #c9d6dc;
+  --np-text-muted: #8ea0aa;
+  --np-text-dim:   #5b6b76;
 
   /* Typography */
   --font-body:    'Atkinson Hyperlegible', sans-serif;
@@ -70,22 +80,26 @@
   /* Layout */
   --safe-top:    env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  --nav-height:  60px;
+  --nav-height:  58px;
   --bottom-chrome-height: calc(var(--nav-height) + var(--safe-bottom));
   --page-h-pad:  20px;
   --page-top-gap: 12px;
   --page-bottom-gap: 24px;
+  --fixed-footer-pad: calc(14px + var(--safe-bottom));
+  --sheet-bottom-pad: calc(24px + var(--safe-bottom));
 
   /* Shape */
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 28px;
-  --radius-xl: 16px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
 
   /* Depth */
-  --shadow-card:     0 2px 0 rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.12);
-  --shadow-raised:   0 8px 24px rgba(0,0,0,0.18);
+  --shadow-card:     0 1px 0 rgba(255,255,255,0.025) inset, 0 18px 42px rgba(0,0,0,0.18);
+  --shadow-raised:   0 10px 24px rgba(0,0,0,0.22);
   --shadow-floating: 0 18px 44px rgba(0,0,0,0.32);
+  --shadow-soft:     0 12px 34px rgba(0,0,0,0.18);
 
   /* Glass blur — set to 0px in high-contrast mode */
   --np-glass-blur: 28px;
@@ -157,6 +171,7 @@ body.high-contrast {
 
   html, body {
     height: 100%;
+    min-height: 100dvh;
     width: 100%;
     overflow: hidden;
     overscroll-behavior: none;
@@ -177,8 +192,8 @@ body.high-contrast {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.7;
-    letter-spacing: 0.04em;
+    line-height: 1.62;
+    letter-spacing: 0.01em;
   }
 
   /* Display font for headings (h1-h3, nav, brand) — Bricolage Grotesque */
@@ -198,6 +213,84 @@ body.high-contrast {
 
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  .np-shell-gradient {
+    background:
+      radial-gradient(circle at 50% -18%, rgba(94, 167, 161, 0.12), transparent 34%),
+      linear-gradient(180deg, #07111d 0%, #091420 52%, #07111d 100%);
+  }
+
+  .np-card-quiet {
+    background: var(--surface-panel);
+    border: var(--border-quiet);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+  }
+
+  .np-card-study {
+    background:
+      linear-gradient(180deg, rgba(94, 167, 161, 0.14), rgba(94, 167, 161, 0.065)),
+      var(--surface-panel);
+    border: 0.75px solid rgba(116, 188, 181, 0.24);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .np-sheet-utility {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)),
+      var(--np-card-deep);
+    border: var(--border-quiet);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-floating);
+  }
+
+  .np-interruption-card {
+    background:
+      linear-gradient(180deg, rgba(216, 139, 45, 0.08), rgba(255,255,255,0.015)),
+      var(--surface-raised);
+    border: 0.75px solid rgba(216, 139, 45, 0.22);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .np-quiet-note {
+    background: rgba(255,255,255,0.03);
+    border: var(--border-quiet);
+    border-radius: var(--radius-lg);
+  }
+
+  .np-pill {
+    background: rgba(255,255,255,0.045);
+    border: var(--border-quiet);
+    border-radius: 999px;
+    color: var(--np-text-muted);
+  }
+
+  .np-section-label {
+    color: var(--np-text-dim);
+    font-size: 0.68rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .np-progress-track {
+    background: rgba(255,255,255,0.075);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .np-progress-fill {
+    background: linear-gradient(90deg, var(--np-accent), var(--np-accent-strong));
+    border-radius: inherit;
+  }
+
+  .np-icon-button {
+    background: var(--surface-quiet);
+    border: var(--border-quiet);
+    border-radius: var(--radius-md);
   }
 
   /* Ensure all overflow-scroll containers get native iOS scroll */

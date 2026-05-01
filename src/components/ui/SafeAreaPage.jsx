@@ -15,15 +15,20 @@ export default function SafeAreaPage({
   children,
   hasNav = false,
   topPad = false,
+  ownsTopInset = false,
   className = '',
   style,
 }) {
+  const topPadding = ownsTopInset
+    ? `calc(var(--safe-top) + ${topPad ? 'var(--page-top-gap)' : '0px'})`
+    : (topPad ? 'var(--page-top-gap)' : undefined)
+
   return (
     <div
       className={`flex flex-col h-full overflow-y-auto ${className}`}
       style={{
         background: 'var(--np-bg)',
-        paddingTop: topPad ? 'var(--page-top-gap)' : undefined,
+        paddingTop: topPadding,
         ...style,
       }}
     >

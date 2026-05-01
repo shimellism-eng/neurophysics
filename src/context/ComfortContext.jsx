@@ -60,7 +60,7 @@ export const COMFORT_DEFAULTS = {
 export const COMFORT_PRESETS = {
   dyslexiaFriendly: {
     label: 'Dyslexia-friendly',
-    icon:  '📖',
+    icon:  'D',
     prefs: {
       fontFamily:    'opendyslexic',
       lineSpacing:   2.0,
@@ -71,7 +71,7 @@ export const COMFORT_PRESETS = {
   },
   adhdFriendly: {
     label: 'ADHD-friendly',
-    icon:  '⚡',
+    icon:  'A',
     prefs: {
       celebrations:  false,
       sessionLength: 10,
@@ -80,7 +80,7 @@ export const COMFORT_PRESETS = {
   },
   lowSensory: {
     label: 'Low sensory',
-    icon:  '🌙',
+    icon:  'L',
     prefs: {
       reduceMotion:  true,
       sounds:        false,

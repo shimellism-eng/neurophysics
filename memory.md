@@ -92,6 +92,23 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,760 nodes, 3,485 edges, 102 clusters, 140 flows.
 
+### Lesson player chrome cleanup
+- Committed the lesson-player slice as `9568aed` (`Clean up lesson player chrome`).
+- Kept the 9-step flow definition and lesson content untouched.
+- Made the lesson shell calmer by replacing emoji-style affordances with icons/text, simplifying the footer CTA, and keeping completion handled by `SessionClose`.
+- `nextTopicId` now respects the selected board/course when choosing the next unmastered topic.
+- Exam-count loading is now dynamic so lesson entry does not eagerly pull the exam index.
+
+### Lesson player verification
+- GitNexus impact for `LessonPlayer` reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,761 nodes, 3,487 edges, 101 clusters, 140 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

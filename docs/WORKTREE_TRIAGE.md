@@ -28,6 +28,7 @@ GitNexus impact checks were run before each symbol-touching slice. `gitnexus_det
 - TimedPaper controls cleanup
 - Public/support screen cleanup
 - MamoChat mobile comfort cleanup
+- Unused split question-bank deletion
 
 ## Still dirty and not staged
 
@@ -47,20 +48,6 @@ Why left out:
 - They add or alter question content.
 - Some additions are for non-release boards (`ocr-a`, `ocr-b`, `wjec`, `ccea`).
 - Release scope is AQA + Edexcel only.
-
-### Deleted split-bank files
-
-- `src/data/questionBank/qb-atomic-part1.js`
-- `src/data/questionBank/qb-atomic-part2.js`
-- `src/data/questionBank/qb-electricity-part1.js`
-- `src/data/questionBank/qb-electricity-part2.js`
-- `src/data/questionBank/qb-waves-part1.js`
-- `src/data/questionBank/qb-waves-part2.js`
-
-Why left out:
-
-- No current source import references these part files.
-- Deleting them is probably safe mechanically, but it is still a large content-bank cleanup and should get its own explicit review.
 
 ### Topic copy/data
 
@@ -94,8 +81,7 @@ If a file contains release work and unrelated content edits, stage only the rele
 
 ## Recommended next cleanup order
 
-1. Decide whether the deleted split-bank files should be permanently removed.
-2. Review AQA/Edexcel-only question-bank changes separately from non-release board additions.
-3. Review topic-copy changes with a pedagogy lens.
-4. Decide whether `scripts/export_runtime_questions.py` belongs under `scripts/` or should stay local only.
-5. Run the final clean build/audit/iOS build from a clean checkout before deployment.
+1. Review AQA/Edexcel-only question-bank changes separately from non-release board additions.
+2. Review topic-copy changes with a pedagogy lens.
+3. Decide whether `scripts/export_runtime_questions.py` belongs under `scripts/` or should stay local only.
+4. Run the final clean build/audit/iOS build from a clean checkout before deployment.

@@ -169,6 +169,22 @@
 - Left remaining question-bank/topic data dirty for explicit content review because it includes non-release board additions and large split-bank deletions.
 - GitNexus index refreshed after commit: 1,773 nodes, 3,500 edges, 103 clusters, 141 flows.
 
+### Unused split-bank cleanup
+- Committed deletion of unreferenced split-bank files as `c87a232` (`Remove unused split question banks`).
+- Verified no runtime source imports referenced:
+  - `qb-atomic-part1.js`
+  - `qb-atomic-part2.js`
+  - `qb-electricity-part1.js`
+  - `qb-electricity-part2.js`
+  - `qb-waves-part1.js`
+  - `qb-waves-part2.js`
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- Left live question-bank additions/edits dirty because they include content and non-release board material.
+- GitNexus index refreshed after commit: 1,772 nodes, 3,502 edges, 101 clusters, 141 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

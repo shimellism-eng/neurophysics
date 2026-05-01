@@ -46,7 +46,7 @@ export default defineConfig({
           },
           {
             // Supabase auth/data — always network, never cache user-specific responses.
-            urlPattern: /^https://.*.supabase.co//,
+            urlPattern: /^https:\/\/.*\.supabase\.co\//,
             handler: 'NetworkOnly',
           },
           {
@@ -70,21 +70,52 @@ export default defineConfig({
           'vendor-motion': ['motion/react'],
           'vendor-ui': ['lucide-react'],
           'vendor-sentry': ['@sentry/react'],
-          // Exam question data — only loaded when ExamPractice is first visited
-          'data-exam': [
-            './src/data/examCalculations.js',
-            './src/data/examEquations.js',
-            './src/data/examGraphs.js',
-            './src/data/examPracticals.js',
-            './src/data/examParticleModel.js',
-            './src/data/examSpace.js',
-            './src/data/examIndex.js',
-            './src/data/examChained.js',
+          // Exam question data — split into cacheable secondary chunks.
+          'data-exam-diagrams': [
             './src/data/examDiagramQs.js',
             './src/data/examDiagrams.jsx',
+          ],
+          'data-exam-calculations': [
+            './src/data/examCalculations.js',
+            './src/data/examEquations.js',
+          ],
+          'data-exam-extended': [
             './src/data/examExtended.js',
             './src/data/examNovelContext.js',
+            './src/data/examChained.js',
+          ],
+          'data-exam-practicals': [
+            './src/data/examPracticals.js',
             './src/data/examRPAErrors.js',
+            './src/data/examGraphs.js',
+          ],
+          'data-exam-topics': [
+            './src/data/examParticleModel.js',
+            './src/data/examSpace.js',
+          ],
+          'data-exam-core': [
+            './src/data/examIndex.js',
+          ],
+          // Topic lesson data is shared by exam filtering and route screens.
+          'data-topics-waves': [
+            './src/data/topics-waves.jsx',
+          ],
+          'data-topics-forces': [
+            './src/data/topics-forces.jsx',
+          ],
+          'data-topics-matter': [
+            './src/data/topics-matter.jsx',
+          ],
+          'data-topics-energy-electricity': [
+            './src/data/topics-energy.jsx',
+            './src/data/topics-electricity.jsx',
+          ],
+          'data-topics-extra': [
+            './src/data/topics-practicals.jsx',
+            './src/data/topics-keyconcepts.jsx',
+            './src/data/topics-globalchallenges.jsx',
+            './src/data/topics-universe.jsx',
+            './src/data/topics.jsx',
           ],
           // Diagnostic question data — only loaded when DiagnosticQuestion is first visited
           'data-questions': [

@@ -144,6 +144,23 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,768 nodes, 3,495 edges, 103 clusters, 141 flows.
 
+### MamoChat mobile comfort cleanup
+- Committed the chat slice as `fdfc654` (`Improve MamoChat mobile comfort`).
+- Improved guest handling by routing guest attempts to sign-in instead of silently failing.
+- Added visual viewport handling so the input bar follows the iOS keyboard more cleanly.
+- Reduced starter prompts while the keyboard is open, softened copy/colours, and kept Mamo as signed-in-only support.
+- Did not change the AI endpoint, prompt safety model, auth model, or GCSE physics content.
+
+### MamoChat verification
+- GitNexus impact for `MamoChat` reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,768 nodes, 3,497 edges, 101 clusters, 141 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

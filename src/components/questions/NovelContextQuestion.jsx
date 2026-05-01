@@ -82,7 +82,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
       {questionSubtitle && (
         <div className="text-xs font-semibold px-3 py-1.5 rounded-full inline-flex"
           style={{ background: `${moduleColor}15`, color: moduleColor, border: `1px solid ${moduleColor}30` }}>
-          ✍️ {questionSubtitle}
+          {questionSubtitle}
         </div>
       )}
 

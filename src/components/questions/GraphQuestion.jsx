@@ -6,9 +6,9 @@ import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle, Lightbulb, Calculator } from '@phosphor-icons/react'
 
-const GRAPH_W = 300
-const GRAPH_H = 180
-const PAD = { top: 15, right: 20, bottom: 35, left: 45 }
+const GRAPH_W = 360
+const GRAPH_H = 232
+const PAD = { top: 18, right: 16, bottom: 42, left: 46 }
 const PLOT_W = GRAPH_W - PAD.left - PAD.right
 const PLOT_H = GRAPH_H - PAD.top - PAD.bottom
 
@@ -68,12 +68,12 @@ export default function GraphQuestion({ data, moduleColor, onComplete }) {
     <div>
       {/* Graph */}
       <motion.div
-        className="rounded-[16px] p-3 mb-4 flex justify-center"
+        className="rounded-[18px] p-2.5 mb-4 flex justify-center"
         style={{ background: 'rgba(18,26,47,0.95)', border: '1px solid #2d3e55' }}
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
       >
-        <svg viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} width="100%" style={{ maxWidth: GRAPH_W }}>
+        <svg viewBox={`0 0 ${GRAPH_W} ${GRAPH_H}`} width="100%" style={{ maxWidth: '100%', display: 'block' }}>
           {/* Grid */}
           {xTicks.map(v => {
             const x = PAD.left + (v / xScale.max) * PLOT_W
@@ -94,7 +94,7 @@ export default function GraphQuestion({ data, moduleColor, onComplete }) {
             return (
               <g key={`xt${v}`}>
                 <line x1={x} y1={PAD.top + PLOT_H} x2={x} y2={PAD.top + PLOT_H + 4} stroke="#556" strokeWidth={1} />
-                <text x={x} y={PAD.top + PLOT_H + 15} fill="#8899aa" fontSize={9} textAnchor="middle">{v}</text>
+                <text x={x} y={PAD.top + PLOT_H + 18} fill="#8899aa" fontSize={10} textAnchor="middle">{v}</text>
               </g>
             )
           })}
@@ -105,14 +105,14 @@ export default function GraphQuestion({ data, moduleColor, onComplete }) {
             return (
               <g key={`yt${v}`}>
                 <line x1={PAD.left - 4} y1={y} x2={PAD.left} y2={y} stroke="#556" strokeWidth={1} />
-                <text x={PAD.left - 8} y={y + 3} fill="#8899aa" fontSize={9} textAnchor="end">{v}</text>
+                <text x={PAD.left - 8} y={y + 4} fill="#8899aa" fontSize={10} textAnchor="end">{v}</text>
               </g>
             )
           })}
 
           {/* Axis labels */}
-          <text x={PAD.left + PLOT_W / 2} y={GRAPH_H - 2} fill="#a8b8cc" fontSize={10} textAnchor="middle">{xLabel}</text>
-          <text x={12} y={PAD.top + PLOT_H / 2} fill="#a8b8cc" fontSize={10} textAnchor="middle" transform={`rotate(-90, 12, ${PAD.top + PLOT_H / 2})`}>{yLabel}</text>
+          <text x={PAD.left + PLOT_W / 2} y={GRAPH_H - 6} fill="#a8b8cc" fontSize={11} textAnchor="middle">{xLabel}</text>
+          <text x={14} y={PAD.top + PLOT_H / 2} fill="#a8b8cc" fontSize={11} textAnchor="middle" transform={`rotate(-90, 14, ${PAD.top + PLOT_H / 2})`}>{yLabel}</text>
 
           {/* Shaded area */}
           {taskType === 'area' && areaD && (

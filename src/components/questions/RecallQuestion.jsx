@@ -98,7 +98,7 @@ export default function RecallQuestion({ data, moduleColor, onComplete }) {
               className="rounded-[12px] px-4 py-3 text-sm"
               style={{ background: 'rgba(255,193,7,0.08)', border: '0.75px solid rgba(255,193,7,0.2)', color: '#fbbf24' }}
             >
-              💡 {data.senNote}
+              {data.senNote}
             </div>
           </motion.div>
         )}

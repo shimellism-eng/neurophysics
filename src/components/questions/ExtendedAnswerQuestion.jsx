@@ -118,7 +118,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          ✍️ {questionSubtitle}
+          {questionSubtitle}
         </motion.div>
       )}
 
@@ -275,7 +275,7 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
                 transition={{ delay: 0.35 }}
               >
                 <div className="px-4 py-2.5 flex items-center gap-2" style={{ borderBottom: '0.75px solid rgba(34,197,94,0.15)' }}>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: '#22c55e' }}>✅ Example Model Answer</span>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: '#22c55e' }}>Example model answer</span>
                   <span style={{ fontSize: 11, color: '#86efac' }}>— see how a top answer is structured</span>
                 </div>
                 <div className="px-4 py-3">

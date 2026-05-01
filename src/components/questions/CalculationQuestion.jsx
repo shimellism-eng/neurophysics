@@ -8,9 +8,9 @@ import { CheckCircle, XCircle, Lightbulb, Calculator, CaretRight, CaretDown } fr
 import { speak } from '../../utils/tts'
 
 const GROWTH_FRAMES = [
-  "Getting it wrong is how the memory forms. 🧠",
+  "Getting it wrong is how the memory forms.",
   "Every mistake is a learning moment.",
-  "Physics is hard — you're doing it anyway. 💪",
+  "Physics is hard — you're doing it anyway.",
   "Wrong answers teach more than right ones.",
 ]
 
@@ -89,11 +89,11 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
       <div className="mb-3">
         <button
           className="w-full flex items-center justify-between px-4 py-3 rounded-[12px] text-sm font-semibold"
-          style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.25)', color: '#fdc700' }}
+          style={{ background: 'rgba(216,139,45,0.08)', border: '0.75px solid rgba(216,139,45,0.24)', color: 'var(--np-amber)' }}
           onClick={() => setShowExample(v => !v)}
         >
           <span className="flex items-center gap-2">
-            <span>📐</span> See how this type of question works
+            <Calculator size={14} /> See how this type of question works
           </span>
           <CaretDown size={14} style={{ transform: showExample ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
         </button>
@@ -184,7 +184,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
               {isCorrect ? <CheckCircle size={20} color="#22c55e" /> : <XCircle size={20} color="#ef4444" />}
               <div>
                 <span className="text-sm font-semibold block" style={{ color: isCorrect ? '#00bc7d' : '#ef4444' }}>
-                  {isCorrect ? 'Spot on! 🌟' : 'Great attempt — here\'s how to work it out:'}
+                  {isCorrect ? 'Spot on.' : 'Good attempt — here\'s how to work it out:'}
                 </span>
                 {!isCorrect && (
                   <span className="text-xs" style={{ color: '#a8b8cc' }}>

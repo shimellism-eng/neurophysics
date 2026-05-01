@@ -194,7 +194,6 @@ export default function ConfusionBusterQuestion({ data, moduleColor, onComplete 
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="text-lg leading-none shrink-0">💡</span>
             <span className="text-xs leading-relaxed" style={{ color: '#fdc700' }}>
               {senNote}
             </span>

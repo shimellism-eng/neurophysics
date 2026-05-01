@@ -1,9 +1,9 @@
 // src/components/ui/Card.jsx
-// Glassmorphism surface card. Renders a <div> by default.
+// Quiet premium surface card. Renders a <div> by default.
 // Pass onClick to get an accessible <button> (full-width, text-left).
 //
 // Props:
-//   accent   (string)  — CSS colour; adds a subtle glow + tinted border
+//   accent   (string)  — CSS colour; adds a subtle tinted border
 //   padding  (string)  — Tailwind padding class, default 'p-4'
 //   onClick  (fn)      — makes the card a tappable button
 
@@ -16,10 +16,10 @@ export default function Card({
   padding = 'p-4',
 }) {
   const baseStyle = {
-    background: 'var(--np-card)',
-    border: `0.75px solid ${accent ? `${accent}28` : 'var(--np-border)'}`,
+    background: 'var(--surface-panel)',
+    border: `0.75px solid ${accent ? `${accent}30` : 'var(--np-border)'}`,
     borderRadius: 'var(--radius-xl)',
-    ...(accent && { boxShadow: `0 8px 24px ${accent}12` }),
+    boxShadow: 'var(--shadow-card)',
     ...style,
   };
 

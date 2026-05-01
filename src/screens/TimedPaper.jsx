@@ -11,6 +11,13 @@ import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, Flag, CaretUp, CaretDown, Trophy, Clock, CheckCircle, Warning, ChartBar, BookOpen, Eye, EyeSlash } from '@phosphor-icons/react'
 import { getTimedPaperQuestions } from '../data/examIndex'
 import { getAnswerMarksTotal } from '../features/timed-paper/scoring'
+import {
+  getPaperTotalMarks,
+  getTimedPaperTimeUsed,
+  normaliseTimedPaperAnswers,
+  normaliseTimedPaperOutcome,
+  parseSavedTimedPaperState,
+} from '../features/timed-paper/session'
 import { saveQuizResult } from '../hooks/useInsights'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import {
@@ -259,24 +266,13 @@ export default function TimedPaper() {
   }, [course])
 
   const total = questions.length
-  const totalMarks = questions.reduce((sum, question) => sum + (question?.marks || 1), 0)
+  const totalMarks = getPaperTotalMarks(questions)
 
   // Restore state if available
-  const loadState = () => {
-    try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')
-      if (saved?.questions) {
-        return {
-          qIndex:    saved.qIndex || 0,
-          answers:   saved.answers || {},
-          flags:     saved.flags || {},
-          remaining: saved.timeRemaining || PAPER_DURATION,
-          score:     getAnswerMarksTotal(saved.answers || {}),
-        }
-      }
-    } catch {}
-    return { qIndex: 0, answers: {}, flags: {}, remaining: PAPER_DURATION, score: 0 }
-  }
+  const loadState = () => parseSavedTimedPaperState(
+    localStorage.getItem(STORAGE_KEY),
+    PAPER_DURATION
+  )
 
   const init = loadState()
   const isResuming = (() => {
@@ -393,23 +389,7 @@ export default function TimedPaper() {
   const scoreRef = useRef(init.score)
 
   const handleComplete = useCallback((outcome) => {
-    const marksAvailable = q?.marks || 1
-    const normalised = typeof outcome === 'object' && outcome !== null
-      ? {
-          answered: outcome.answered ?? true,
-          marksAwarded: Math.max(0, Math.min(outcome.marksAwarded ?? outcome.selfScore ?? outcome.score ?? (outcome.correct ? marksAvailable : 0), marksAvailable)),
-          marksAvailable: outcome.marksAvailable ?? marksAvailable,
-          correct: typeof outcome.correct === 'boolean'
-            ? outcome.correct
-            : (outcome.marksAwarded ?? outcome.selfScore ?? outcome.score ?? 0) >= marksAvailable,
-          source: outcome.source,
-        }
-      : {
-          answered: true,
-          marksAwarded: outcome ? marksAvailable : 0,
-          marksAvailable,
-          correct: !!outcome,
-        }
+    const normalised = normaliseTimedPaperOutcome(outcome, q?.marks || 1)
 
     setCompleted(true)
     setAnswers(prev => {
@@ -601,11 +581,9 @@ export default function TimedPaper() {
   // ── Results (inline - full 3-stage flow in PaperResults) ──────────────────
   if (showResults) {
     // Normalise: ensure every question index has an entry; unanswered stays separate from incorrect
-    const normalisedAnswers = questions.map((_, i) =>
-      answers[i] ?? { answered: false, correct: false, marksAwarded: 0, marksAvailable: questions[i]?.marks || 1, score: 0 }
-    )
+    const normalisedAnswers = normaliseTimedPaperAnswers(questions, answers)
     const normalisedScore = getAnswerMarksTotal(normalisedAnswers)
-    navigate('/paper-results', { state: { score: normalisedScore, total: totalMarks, questions, answers: normalisedAnswers, timeUsed: paperDuration - remaining } })
+    navigate('/paper-results', { state: { score: normalisedScore, total: totalMarks, questions, answers: normalisedAnswers, timeUsed: getTimedPaperTimeUsed(paperDuration, remaining) } })
     return null
   }
 

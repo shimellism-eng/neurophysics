@@ -1,91 +1,101 @@
 # Worktree Triage
 
-## Staged for release hardening
+## Current cleanup state
 
-These changes are safe to review as the release patch:
+The release-hardening and structure cleanup has been split into small commits. Each code slice was verified from a staged-only checkout with:
 
-- AQA/Edexcel-only metadata, manifest, docs, and social preview assets
-- Timed-paper mark-label and score-replacement fixes
-- API rate-limit/auth safety changes
-- Supabase no-cache service-worker change
-- Valid OpenDyslexic font binaries
-- Session memory update
+- `npm test`
+- `npm run build`
+- `npm run audit:curriculum`
+- `git diff --cached --check`
 
-## Left dirty for separate review
+GitNexus impact checks were run before each symbol-touching slice. `gitnexus_detect_changes` is not exposed by the local CLI, so staged-only checkout verification was used as the scope fallback.
 
-These are intentionally not part of the release patch:
+## Committed cleanup buckets
 
-- Large screen rewrites or visual changes
-- Question-bank rewrites or deleted split-bank files
-- New runtime repository/import layers
-- Prototype screens and design scratch files, now ignored via `.gitignore`
-- Generated database files, schema drafts, and import scripts
-- Local agent/config/cache folders
+- Runtime-backed practice layer
+- Practical WebP asset replacement
+- Practical screen presentation polish
+- Comfort/UI foundation cleanup
+- Learner-flow presentation polish
+- Question-component presentation cleanup
+- Question behavior/scoring cleanup
+- Auth, consent, and onboarding cleanup
+- Learner progress/result screen cleanup
+- Exam practice marks display cleanup
+- Learn screen topic-browser cleanup
+- LessonPlayer chrome cleanup
+- TimedPaper controls cleanup
+- Public/support screen cleanup
+- MamoChat mobile comfort cleanup
 
-## Remaining Dirty Buckets
+## Still dirty and not staged
 
-### Keep for focused review
+These files remain dirty because they affect question content, board coverage, or generated/import experiments. They should not be mixed into a release cleanup commit.
 
-These may contain useful work, but each needs its own intent, review, and tests before it belongs in `main`:
+### Question-bank and exam data
 
-- App shell and routing: `src/App.jsx`, `src/main.jsx`
-- Comfort/accessibility/UI system: `src/index.css`, `src/context/ComfortContext.jsx`, `src/components/ComfortSettings.jsx`, `src/components/ui/Card.jsx`, `src/components/ui/SafeAreaPage.jsx`, `src/components/PageHeader.jsx`
-- Lesson UI polish: `src/components/lesson/*`, `src/screens/LessonPlayer.jsx`
-- Practice/runtime experiments: `src/lib/questionRepository.js`, `src/lib/adaptiveEngine.js`, `src/hooks/useAdaptiveRuntime.js`, `src/screens/PracticeHubScreen.jsx`
-- Practice screens with behavioural surface area: `src/screens/AdaptivePractice.jsx`, `src/screens/QuickWinScreen.jsx`, `src/screens/MixedRevisionScreen.jsx`, `src/screens/ExamPractice.jsx`, `src/screens/DiagnosticQuestion.jsx`, `src/screens/TimedPaper.jsx`
-- Account/onboarding/settings screens: `src/screens/AuthScreen.jsx`, `src/screens/ConsentScreen.jsx`, `src/screens/OnboardingScreen.jsx`, `src/screens/SettingsScreen.jsx`
-- Study/support screens: `src/screens/HomeScreen.jsx`, `src/screens/LearnScreen.jsx`, `src/screens/MasteryScreen.jsx`, `src/screens/MamoChat.jsx`, `src/screens/PaperResults.jsx`, `src/screens/RecallScreen.jsx`, `src/screens/SpecChecklist.jsx`, `src/screens/SplashScreen.jsx`
+- `src/data/examCalculations.js`
+- `src/data/examExtended.js`
+- `src/data/questionBank/qb-atomic.js`
+- `src/data/questionBank/qb-forces.js`
+- `src/data/questionBank/qb-globalchallenges.js`
+- `src/data/questionBank/qb-waves.js`
 
-### Restore or replace only with explicit approval
+Why left out:
 
-These affect shipped content/assets and should not be casually kept or removed:
+- They add or alter question content.
+- Some additions are for non-release boards (`ocr-a`, `ocr-b`, `wjec`, `ccea`).
+- Release scope is AQA + Edexcel only.
 
-- Deleted original practical PNGs: `public/practicals/RP1.png`, `public/practicals/RP2.png`
-- New practical WebP replacements: `public/practicals/RP1.webp`, `public/practicals/RP2.webp`
-- Deleted split question-bank files:
-  - `src/data/questionBank/qb-atomic-part1.js`
-  - `src/data/questionBank/qb-atomic-part2.js`
-  - `src/data/questionBank/qb-electricity-part1.js`
-  - `src/data/questionBank/qb-electricity-part2.js`
-  - `src/data/questionBank/qb-waves-part1.js`
-  - `src/data/questionBank/qb-waves-part2.js`
-- Modified question/content files: `src/data/examCalculations.js`, `src/data/examExtended.js`, `src/data/questionBank/*.js`, `src/data/topics*.jsx`, `src/data/visuals-helpers.jsx`
+### Deleted split-bank files
 
-### Promote into docs/tools only if wanted
+- `src/data/questionBank/qb-atomic-part1.js`
+- `src/data/questionBank/qb-atomic-part2.js`
+- `src/data/questionBank/qb-electricity-part1.js`
+- `src/data/questionBank/qb-electricity-part2.js`
+- `src/data/questionBank/qb-waves-part1.js`
+- `src/data/questionBank/qb-waves-part2.js`
 
-These are useful-looking, but should not sit as loose root/untracked files:
+Why left out:
 
-- `README.md`
-- `docs/runtime-boundary-note.md`
-- `public/terms.html`
+- No current source import references these part files.
+- Deleting them is probably safe mechanically, but it is still a large content-bank cleanup and should get its own explicit review.
+
+### Topic copy/data
+
+- `src/data/topics-electricity.jsx`
+- `src/data/topics-energy.jsx`
+- `src/data/topics-forces.jsx`
+
+Why left out:
+
+- These are lesson/content copy changes.
+- Some are harmless clarifications, but they should be reviewed as a pedagogy/content slice, not bundled with structure cleanup.
+
+### Untracked tooling
+
 - `scripts/export_runtime_questions.py`
-- `src/data/questionBank/qb-recall-board-overlays.js`
 
-### Config and release surface review
+Why left out:
 
-These are small enough to review, but can affect production behaviour:
+- Looks like a useful export/import utility, but it is not required for the current release path.
+- Should be reviewed with the question-bank/data pipeline work.
 
-- `AGENTS.md`, `CLAUDE.md`
-- `package.json`, `package-lock.json`
-- `public/privacy.html`
-- `vercel.json`
-- `vite.config.js`
-- `src/utils/notifications.js`
+### Moved doc
 
-## Local noise ignored
-
-These files/folders are kept on disk but should not appear in release staging:
-
-- `*.backup`
-- `prototypes/`
-- `skills-lock.json`
-- root scratch files `/Design` and `/EVERY`
-- `.DS_Store` files at any depth
-
-`src/.DS_Store` was previously tracked by Git and should stay removed from the repository index.
+- Root `README.md` was moved to `docs/QUESTION_BANK_STARTER.md` because it describes a question-bank starter package, not the app root.
 
 ## Review rule
 
-Use explicit path staging. Do not run `git add -A` in this repo while the worktree contains mixed historical changes.
+Use explicit path staging. Do not run `git add -A` while the worktree contains mixed historical changes.
 
-If a file contains both release work and unrelated edits, stage only the release hunk or leave the file dirty for a later focused commit.
+If a file contains release work and unrelated content edits, stage only the release hunk or leave the file dirty for a later focused commit.
+
+## Recommended next cleanup order
+
+1. Decide whether the deleted split-bank files should be permanently removed.
+2. Review AQA/Edexcel-only question-bank changes separately from non-release board additions.
+3. Review topic-copy changes with a pedagogy lens.
+4. Decide whether `scripts/export_runtime_questions.py` belongs under `scripts/` or should stay local only.
+5. Run the final clean build/audit/iOS build from a clean checkout before deployment.

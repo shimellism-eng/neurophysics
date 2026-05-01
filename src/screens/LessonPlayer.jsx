@@ -28,7 +28,11 @@ import { useProgress } from '../hooks/useProgress'
 import { useHearts } from '../hooks/useHearts'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useComfort } from '../context/ComfortContext'
-import { getExamQuestionCount } from '../data/examIndex'
+// Dynamic import keeps the 1.4 MB exam data chunk out of the lesson bundle
+const loadExamCount = (topicId) =>
+  import('../data/examIndex').then(m => m.getExamQuestionCount(topicId))
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
+import { getVisibleTopicIdsForSelection } from '../utils/curriculumFilters'
 import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import BreakNudge from '../components/BreakNudge'
@@ -154,7 +158,7 @@ function LegacyConceptStep({ topic }) {
           style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.3)', color: '#818cf8' }}
           onClick={() => speak(topic.concept + '. ' + topic.description)}
         >
-          <Volume2 size={12} />
+          <SpeakerHigh size={12} />
           Read aloud
         </button>
       )}
@@ -240,12 +244,9 @@ export default function LessonPlayer() {
   const { showNudge, nudgeLevel, dismissBreak } = useSessionTimer(true)
 
   // Break nudge snooze — hides nudge for 5 minutes then lets it reappear
-  const snoozeUntilRef = useRef(0)
   const [snoozed, setSnoozed] = useState(false)
   const snoozeBreak = () => {
-    snoozeUntilRef.current = Date.now() + 5 * 60 * 1000
     setSnoozed(true)
-    // Re-enable after 5 minutes so the nudge can surface again
     setTimeout(() => setSnoozed(false), 5 * 60 * 1000)
   }
   const nudgeVisible = showNudge && !snoozed
@@ -266,7 +267,9 @@ export default function LessonPlayer() {
   const pomoVisible = pomoDone && !pomoDismissed
 
   // Compute next unmastered topic (for "Next topic" CTA at lesson end)
-  const allTopicIds = MODULES.flatMap(m => m.topics)
+  const selectedBoardId = getSelectedBoard().id
+  const selectedCourse = getSelectedCourse()
+  const allTopicIds = MODULES.flatMap(m => getVisibleTopicIdsForSelection(m.topics, selectedBoardId, selectedCourse))
   const currentTopicIdx = allTopicIds.indexOf(id)
   const nextTopicId = allTopicIds.slice(currentTopicIdx + 1).find(tid => !progress[tid]?.mastered) ?? null
 
@@ -293,7 +296,10 @@ export default function LessonPlayer() {
   const totalSteps = STEPS.length
   const currentStep = STEPS[step]
   const isLast     = step === totalSteps - 1
-  const examCount  = getExamQuestionCount(id)
+  const [examCount, setExamCount] = useState(0)
+  useEffect(() => {
+    loadExamCount(id).then(setExamCount)
+  }, [id])
 
   const STEP_TIME_EST = { hook: 1, vocab: 2, connect: 2, explore: 3, understand: 3, practise: 4, lockin: 2, realworld: 2, done: 1, idea: 2, concept: 2 }
   const remainingMinutes = STEPS.slice(step).reduce((sum, s) => sum + (STEP_TIME_EST[s.id] || 2), 0)
@@ -458,45 +464,6 @@ export default function LessonPlayer() {
                 'Use spaced repetition to lock this in.',
               ]}
             />
-            {/* Next topic / back to topics CTAs */}
-            <div className="px-5 flex flex-col gap-3 pb-10">
-              {nextTopicId && (
-                <motion.button
-                  className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
-                  style={{
-                    background: 'var(--np-indigo)',
-                    color: '#fff',
-                    boxShadow: '0 8px 24px rgba(99,102,241,0.4)',
-                  }}
-                  onClick={() => navigate(`/lesson/${nextTopicId}`)}
-                  whileTap={{ scale: 0.97 }}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <div className="flex flex-col items-center">
-                    <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 500 }}>Coming up next</span>
-                    <span>{TOPICS[nextTopicId]?.title || 'Next topic'}</span>
-                  </div>
-                  <CaretRight size={18} weight="bold" />
-                </motion.button>
-              )}
-              <motion.button
-                className="w-full py-3 rounded-[14px] text-sm font-semibold"
-                style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '0.75px solid rgba(255,255,255,0.08)',
-                  color: 'rgba(255,255,255,0.4)',
-                }}
-                onClick={() => navigate('/learn')}
-                whileTap={{ scale: 0.97 }}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                Back to topics
-              </motion.button>
-            </div>
           </div>
         )
       }
@@ -551,12 +518,12 @@ export default function LessonPlayer() {
               <div className="flex justify-center mb-4">
                 <div style={{ width: 40, height: 4, borderRadius: 999, background: 'rgba(255,255,255,0.15)' }} />
               </div>
-              <div style={{ fontSize: 32, textAlign: 'center', marginBottom: 8 }}>☕</div>
+              <div className="flex justify-center mb-2"><Coffee size={30} color="var(--np-accent-strong)" /></div>
               <h3 style={{ color: '#f8fafc', fontSize: 20, fontWeight: 800, textAlign: 'center', marginBottom: 6 }}>
-                Great work — time for a break!
+                Good work — pause for a moment
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, textAlign: 'center', lineHeight: 1.55, marginBottom: 24 }}>
-                You've been studying for {comfortPrefs.sessionLength} minutes. A short break helps your brain consolidate what you've learned.
+                You have been studying for {comfortPrefs.sessionLength} minutes. A short break can help you come back clearer.
               </p>
               <div className="flex gap-3">
                 <motion.button
@@ -569,11 +536,11 @@ export default function LessonPlayer() {
                 </motion.button>
                 <motion.button
                   className="flex-1 font-bold"
-                  style={{ height: 52, borderRadius: 14, background: 'var(--np-indigo)', color: 'var(--np-bg)', border: 'none', cursor: 'pointer', fontSize: 15 }}
+                  style={{ height: 52, borderRadius: 14, background: 'var(--np-accent)', color: '#07111d', border: 'none', cursor: 'pointer', fontSize: 15 }}
                   whileTap={{ y: 2 }}
                   onClick={() => setPomoDismissed(true)}
                 >
-                  Keep going
+                  Continue studying
                 </motion.button>
               </div>
             </motion.div>
@@ -595,8 +562,8 @@ export default function LessonPlayer() {
             transition={{ type: 'spring', damping: 25 }}>
             <div style={{ width: 36, height: 5, borderRadius: 3, background: 'rgba(255,255,255,0.25)', margin: '0 auto 12px' }} />
             <div className="text-center mb-5">
-              <div className="text-2xl mb-2">📍</div>
-              <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>Continue where you left off?</div>
+              <div className="flex justify-center mb-2"><List size={24} color="var(--np-accent-strong)" /></div>
+              <div className="text-lg font-bold" style={{ color: '#f8fafc' }}>Continue this lesson?</div>
               <div className="text-sm mt-1" style={{ color: '#8899b0' }}>
                 You were on step {savedProgress.step + 1} of {totalSteps} in this lesson
               </div>
@@ -611,11 +578,11 @@ export default function LessonPlayer() {
                   setStep(0)
                 }}
                 whileTap={{ scale: 0.97 }}>
-                Start over
+                Start again
               </motion.button>
               <motion.button
                 className="flex-1 py-3.5 rounded-[14px] text-sm font-bold"
-                style={{ background: 'var(--np-indigo)', color: '#fff' }}
+                style={{ background: 'var(--np-accent)', color: '#07111d' }}
                 onClick={() => {
                   // Clamp saved step; if it's the done step, restart from 0
                   const resumeStep = Math.min(savedProgress.step, totalSteps - 1)
@@ -629,7 +596,7 @@ export default function LessonPlayer() {
                   setShowIntro(false)
                 }}
                 whileTap={{ scale: 0.97 }}>
-                Resume →
+                Resume
               </motion.button>
             </div>
           </motion.div>
@@ -690,7 +657,7 @@ export default function LessonPlayer() {
                     >
                       <div style={{ width: 34, height: 34, borderRadius: 10, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: isCurrent ? `${topic.moduleColor}28` : isCompleted ? 'rgba(34,197,94,0.12)' : 'rgba(255,255,255,0.06)' }}>
                         {isCompleted
-                          ? <CheckCircle2 size={16} color="#22c55e" />
+                          ? <CheckCircle size={16} color="#22c55e" />
                           : <Icon size={16} color={isCurrent ? topic.moduleColor : 'rgba(255,255,255,0.3)'} />
                         }
                       </div>
@@ -750,7 +717,7 @@ export default function LessonPlayer() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
             >
-              <FlaskConical size={15} />
+              <Flask size={15} />
               Required Practical
             </motion.button>
           </div>
@@ -772,13 +739,13 @@ export default function LessonPlayer() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Test Your Knowledge
+              Start practice
               <CaretRight size={20} weight="bold" />
             </motion.button>
             {examCount > 0 && (
               <motion.button
                 className="w-full py-4 rounded-[16px] flex items-center justify-center gap-2 font-semibold text-base"
-                style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.4)', color: '#818cf8' }}
+                style={{ background: 'var(--surface-quiet)', border: 'var(--border-quiet)', color: 'var(--np-accent-strong)' }}
                 onClick={() => navigate(`/exam/${id}`)}
                 whileTap={{ scale: 0.98 }}
                 initial={{ opacity: 0, y: 16 }}
@@ -792,7 +759,7 @@ export default function LessonPlayer() {
           </div>
         )}
 
-        <div style={{ height: (isLast || stepHasOwnCTA) ? 0 : 80 }} />
+        <div style={{ height: (isLast || stepHasOwnCTA) ? 0 : 24 }} />
       </div>
 
       {/* ── Next button - only for steps without their own CTA ── */}
@@ -802,41 +769,22 @@ export default function LessonPlayer() {
         return (
           <motion.div
             className="shrink-0 px-5 pt-3"
-            style={{ borderTop: '0.75px solid var(--np-border)', background: 'rgba(8,15,30,0.82)', backdropFilter: 'blur(12px) saturate(180%)', WebkitBackdropFilter: 'blur(12px) saturate(180%)', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
+            style={{ borderTop: '0.75px solid var(--np-border)', background: 'rgba(7,17,29,0.92)', backdropFilter: 'blur(10px) saturate(130%)', WebkitBackdropFilter: 'blur(10px) saturate(130%)', paddingBottom: 'calc(16px + var(--safe-bottom))' }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            {/* Break link — mid-lesson only */}
-            {step > 0 && step < totalSteps - 1 && (
-              <button
-                onClick={handleBreak}
-                style={{ display: 'flex', alignItems: 'center', gap: 6, width: '100%', justifyContent: 'center', marginBottom: 8, fontSize: 11, color: 'rgba(255,255,255,0.28)', background: 'none', border: 'none', cursor: 'pointer', padding: '4px 0' }}
-              >
-                <Coffee size={11} />
-                Save &amp; take a break
-              </button>
-            )}
-            {/* Transition warning — "Coming up next" preview */}
-            {nextStep && (
-              <div className="flex items-center gap-1.5 mb-3 px-1">
-                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Coming up:</span>
-                {NextIcon && <NextIcon size={11} color="rgba(255,255,255,0.4)" />}
-                <span style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.55)' }}>{nextStep.label}</span>
-                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>· {nextStep.hint}</span>
-              </div>
-            )}
             <motion.button
               className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
               style={{
-                background: 'var(--np-indigo)',
-                boxShadow: '0 4px 16px rgba(99,102,241,0.3)',
-                color: '#fff',
+                background: 'var(--np-accent)',
+                boxShadow: '0 8px 18px rgba(0,0,0,0.18)',
+                color: '#07111d',
               }}
               onClick={goNext}
               whileTap={{ scale: 0.97 }}
             >
-              Ready
+              Continue
               <CaretRight size={18} weight="bold" />
             </motion.button>
           </motion.div>
@@ -870,38 +818,41 @@ export default function LessonPlayer() {
       <AnimatePresence>
         {lost && !exploreMode && (
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="hearts-overlay-title"
             className="absolute inset-0 z-50 flex flex-col items-center justify-center px-8 text-center"
             style={{ background: 'rgba(8,15,30,0.95)', backdropFilter: 'blur(12px)' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
             <motion.div
-              className="text-6xl mb-4"
-              animate={{ rotate: [0, -10, 10, -8, 8, 0] }}
+              className="mb-4 flex justify-center"
+              animate={{ rotate: [0, -6, 6, -4, 4, 0] }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              💔
+              <Coffee size={46} color="var(--np-accent-strong)" />
             </motion.div>
-            <h2 className="font-display text-2xl font-bold mb-2" style={{ color: '#f8fafc' }}>
+            <h2 id="hearts-overlay-title" className="font-display text-2xl font-bold mb-2" style={{ color: '#f8fafc' }}>
               Nearly there!
             </h2>
             <p className="text-sm mb-2" style={{ color: 'rgba(255,255,255,0.65)' }}>
               Those tricky questions are exactly where the learning happens.
             </p>
             <p className="text-xs mb-6" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              You can turn off hearts in Comfort Settings for zero-stakes practice.
+              You can turn off hearts in Comfort settings for zero-stakes practice.
             </p>
             <motion.button
               className="font-display w-full max-w-xs py-4 rounded-[16px] font-bold text-sm"
               style={{
-                background: 'var(--np-indigo)',
-                boxShadow: '0 6px 0 rgba(0,0,0,0.25), 0 12px 28px rgba(99,102,241,0.35)',
-                color: '#fff',
+                background: 'var(--np-accent)',
+                boxShadow: '0 6px 0 rgba(0,0,0,0.25), 0 12px 28px rgba(94,167,161,0.28)',
+                color: '#07111d',
               }}
               onClick={() => { resetHearts() }}
               whileTap={{ y: 4 }}
             >
-              Keep going →
+              Continue
             </motion.button>
           </motion.div>
         )}

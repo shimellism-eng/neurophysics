@@ -72,6 +72,26 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,758 nodes, 3,483 edges, 102 clusters, 140 flows.
 
+### Learn screen structure cleanup
+- Committed the Learn screen slice as `03f9b9c` (`Simplify learn screen topic browser`).
+- Replaced local topic/module visibility checks with shared curriculum filter helpers.
+- Added topic search and simplified module expansion state so the screen is easier to reason about.
+- Kept routing through the existing lesson/practical/practice decision:
+  - lesson when `topic.hook || topic.lessonSteps?.length > 0`
+  - practical when `topic.practicalId`
+  - practice fallback
+- Did not touch topic/question data, board rules, or the 9-step lesson flow.
+
+### Learn screen verification
+- GitNexus impact for `LearnScreen` reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,760 nodes, 3,485 edges, 102 clusters, 140 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

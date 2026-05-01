@@ -266,7 +266,7 @@ function SENPanel({ topic, activeTab, onTab }) {
 
 const TYPE_LABELS = {
   'tap-match': '🔗 Match',
-  'hotspot': '📍 Tap the right area',
+  'hotspot': 'Tap the right area',
   'sequence': '🔢 Put in order',
   'misconception': '🤔 True or false?',
   'confidence': '💭 How confident are you?',
@@ -418,8 +418,8 @@ export default function DiagnosticQuestion() {
           <ArrowLeft size={18} color="#a8b8cc" />
         </button>
         <div className="flex-1 min-w-0">
-          <div className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>Knowledge Check</div>
-          <h1 className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
+          <div className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>Knowledge check</div>
+          <h1 className="text-base font-bold leading-tight" style={{ color: '#f8fafc', overflowWrap: 'anywhere' }}>{topic.title}</h1>
         </div>
         <motion.button
           className="flex items-center gap-1.5 px-3 py-2.5 min-h-[44px] rounded-[12px]"
@@ -431,7 +431,7 @@ export default function DiagnosticQuestion() {
           whileTap={{ scale: 0.95 }}
         >
           <Question size={14} color={showSEN ? '#155dfc' : '#a8b8cc'} />
-          <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#a8b8cc' }}>Need help? 💡</span>
+          <span className="text-xs font-semibold" style={{ color: showSEN ? '#155dfc' : '#a8b8cc' }}>Need support</span>
           <motion.div animate={{ rotate: showSEN ? 180 : 0 }}>
             <CaretDown size={12} color={showSEN ? '#155dfc' : '#a8b8cc'} />
           </motion.div>
@@ -480,7 +480,7 @@ export default function DiagnosticQuestion() {
               onClick={() => setShowHint(v => !v)}
             >
               {showHint ? <EyeSlash size={13} /> : <Eye size={13} />}
-              <span className="flex-1 text-left">{showHint ? 'Hide visual' : '💡 Show visual hint'}</span>
+              <span className="flex-1 text-left">{showHint ? 'Hide visual' : 'Show visual hint'}</span>
               <motion.div animate={{ rotate: showHint ? 180 : 0 }} transition={{ duration: 0.2 }}>
                 <CaretDown size={12} />
               </motion.div>
@@ -621,11 +621,11 @@ export default function DiagnosticQuestion() {
                       initial={{ opacity: 0, y: 6 }}
                       animate={{ opacity: 1, y: 0 }}
                     >
-                      <span style={{ fontSize: 16 }}>{isCorrect ? '🌟' : '💡'}</span>
+
                       <p className="text-xs leading-relaxed font-medium" style={{ color: isCorrect ? '#00bc7d' : '#818cf8' }}>
                         {isCorrect
-                          ? 'Spot on! That\'s exactly right.'
-                          : 'Great attempt — the correct answer is highlighted in green. Check the sentence starters below for how to explain it.'}
+                          ? 'Correct. You chose the right answer.'
+                          : 'Not quite. The correct answer is highlighted. Use the sentence starters below to build your explanation.'}
                       </p>
                     </motion.div>
                   )}
@@ -679,7 +679,7 @@ export default function DiagnosticQuestion() {
                 whileTap={{ scale: 0.97 }}
               >Check answer</motion.button>
             ) : (
-              /* Next / See Results for both MCQ (after submit) and interactive (after complete) */
+              /* Next / See results for both MCQ (after submit) and interactive (after complete) */
               (submitted || interactiveCompleted) && (
                 <motion.button
                   className="w-full py-4 rounded-[16px] font-semibold text-base flex items-center justify-center gap-2"
@@ -697,7 +697,7 @@ export default function DiagnosticQuestion() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                 >
-                  {isLast ? 'See Results' : 'Next →'}
+                  {isLast ? 'See results' : 'Next'}
                 </motion.button>
               )
             )}

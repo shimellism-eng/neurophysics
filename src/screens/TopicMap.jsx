@@ -204,7 +204,7 @@ function ModuleCard({ module, moduleIndex, progress, isFirstUnstarted }) {
 
           {/* Module info */}
           <div className="flex-1 min-w-0">
-            <div className="text-sm font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>
+            <div className="text-sm font-bold leading-tight" style={{ color: '#f8fafc', overflowWrap: 'anywhere' }}>
               {module.name}
             </div>
             <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">

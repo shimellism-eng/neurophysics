@@ -275,7 +275,7 @@ export default function StudyPlanScreen() {
         {plan.examStatus === 'passed' && (
           <div className="rounded-[22px] px-5 py-6 text-center"
             style={{ background: s.bg, border: `1px solid ${s.border}` }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>🎓</div>
+            <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.16em', color: '#818cf8', marginBottom: 12 }}>STUDY PLAN</div>
             <div className="font-bold" style={{ color: '#f8fafc', fontSize: 16 }}>Exam date has passed</div>
             <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>
               Update your exam date in Settings to start a new plan.
@@ -304,7 +304,7 @@ export default function StudyPlanScreen() {
                   </div>
                   <div className="mt-2 text-xs font-bold"
                     style={{ color: plan.onTrack ? '#22c55e' : '#f59e0b' }}>
-                    {plan.onTrack ? '✅ On track' : '⚠️ Pick up the pace'}
+                    {plan.onTrack ? 'On track' : 'Needs attention'}
                   </div>
 
                   {/* Pace control */}

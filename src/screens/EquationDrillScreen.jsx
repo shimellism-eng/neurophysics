@@ -390,7 +390,7 @@ export default function EquationDrillScreen() {
                       : { background: 'rgba(239,68,68,0.1)', border: '0.75px solid rgba(239,68,68,0.3)', color: '#f87171' }
                   }
                 >
-                  {currentQ.onSheet ? '📋 On equation sheet' : '🧠 Must memorise'}
+                  {currentQ.onSheet ? 'On equation sheet' : 'Must memorise'}
                 </span>
               </div>
             )}
@@ -437,7 +437,7 @@ export default function EquationDrillScreen() {
                           color: '#fbbf24',
                         }}
                       >
-                        💡 {currentQ.senNote}
+                        {currentQ.senNote}
                       </div>
                     </motion.div>
                   )}

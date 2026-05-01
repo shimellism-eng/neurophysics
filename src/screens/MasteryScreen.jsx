@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Circle, Lightning, Trophy, Star, Clock, CaretRight } from '@phosphor-icons/react'
+import { CheckCircle, Circle, Lightning, Trophy, Star, Clock, CaretRight, Atom, Magnet, WaveTriangle } from '@phosphor-icons/react'
 import { TOPICS, MODULES } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, isAvailableForBoard } from '../utils/boardConfig'
@@ -13,7 +13,7 @@ import { MotionButton } from '../components/ui/Button'
 const BADGES = [
   {
     id: 'first_step',
-    emoji: '🔬',
+    Icon: Atom,
     label: 'First Step',
     color: '#00bc7d',
     hint: 'Complete 1 topic',
@@ -21,7 +21,7 @@ const BADGES = [
   },
   {
     id: 'momentum',
-    emoji: '⚡',
+    Icon: Lightning,
     label: 'Momentum',
     color: '#fdc700',
     hint: 'Master 5 topics',
@@ -29,7 +29,7 @@ const BADGES = [
   },
   {
     id: 'force_field',
-    emoji: '🧲',
+    Icon: Magnet,
     label: 'Force Field',
     color: '#00a8e8',
     hint: 'Master 10 topics',
@@ -37,7 +37,7 @@ const BADGES = [
   },
   {
     id: 'wave_rider',
-    emoji: '🌊',
+    Icon: WaveTriangle,
     label: 'Wave Rider',
     color: '#fdc700',
     hint: 'Complete all Waves topics',
@@ -49,7 +49,7 @@ const BADGES = [
   },
   {
     id: 'nuclear',
-    emoji: '⚛️',
+    Icon: Atom,
     label: 'Nuclear',
     color: '#e879f9',
     hint: 'Complete all Atomic Structure topics',
@@ -61,8 +61,8 @@ const BADGES = [
   },
   {
     id: 'grade9',
-    emoji: '🏆',
-    label: 'Top Grade',
+    Icon: Trophy,
+    label: 'Stretch target',
     color: '#f97316',
     hint: 'Master all topics',
     check: (mastered, progress, modules, allTopics) => mastered.length >= allTopics.length,
@@ -73,6 +73,7 @@ const BADGES = [
 // Badge card
 // ---------------------------------------------------------------------------
 function BadgeCard({ badge, unlocked }) {
+  const Icon = badge.Icon || Star
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.85 }}
@@ -94,7 +95,7 @@ function BadgeCard({ badge, unlocked }) {
         cursor: 'default',
       }}
     >
-      <span style={{ fontSize: 26, lineHeight: 1 }}>{badge.emoji}</span>
+      <Icon size={24} weight={unlocked ? 'fill' : 'regular'} color={unlocked ? badge.color : '#4a5a6e'} />
       <span
         className="text-xs text-center leading-tight px-1"
         style={{ color: unlocked ? badge.color : '#4a5a6e', fontWeight: 500 }}
@@ -109,6 +110,7 @@ function BadgeCard({ badge, unlocked }) {
 // Next milestone card (shown when nothing earned yet)
 // ---------------------------------------------------------------------------
 function NextMilestoneCard({ badge }) {
+  const Icon = badge.Icon || Star
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
@@ -126,10 +128,9 @@ function NextMilestoneCard({ badge }) {
           width: 52, height: 52, borderRadius: 14,
           background: `${badge.color}14`,
           border: `1.5px solid ${badge.color}35`,
-          fontSize: 24,
         }}
       >
-        {badge.emoji}
+        <Icon size={24} weight="regular" color={badge.color} />
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-xs font-bold uppercase tracking-wider mb-0.5" style={{ color: badge.color }}>
@@ -158,7 +159,7 @@ export default function MasteryScreen() {
   const hasProgress = mastered.length > 0
 
   // Badge logic — board-aware grade label
-  const topGradeLabel = board.gradeSystem === 'A*-G' ? 'Grade A*' : 'Grade 9'
+  const topGradeLabel = 'Stretch target'
   const labelBadge = (b) => b.id === 'grade9' ? { ...b, label: topGradeLabel } : b
   const unlockedBadgeIds = BADGES
     .filter(b => b.check(mastered, progress, MODULES, allTopics))
@@ -171,16 +172,6 @@ export default function MasteryScreen() {
   const generateReport_unused = () => {
     const name = JSON.parse(localStorage.getItem('neurophysics_profile') || '{}').name || 'Student'
     const date = new Date().toLocaleDateString('en-GB')
-    const moduleEmoji = {
-      'Energy': '⚡',
-      'Electricity': '🔋',
-      'Particle Model': '💧',
-      'Atomic Structure': '⚛️',
-      'Forces': '🏃',
-      'Waves': '🌊',
-      'Magnetism & Electromagnetism': '🧲',
-      'Space Physics': '🚀',
-    }
     const sep = '─────────────────────────────'
     const lines = [
       sep,
@@ -192,8 +183,7 @@ export default function MasteryScreen() {
       'Per module:',
       ...MODULES.map(mod => {
         const count = mod.topics.filter(t => progress[t]?.mastered).length
-        const icon  = moduleEmoji[mod.name] || '📘'
-        return `${icon} ${mod.name}: ${count}/${mod.topics.length} mastered`
+        return `${mod.name}: ${count}/${mod.topics.length} mastered`
       }),
       '',
       `Badges earned: ${earnedBadges.map(b => b.label).join(', ') || 'None yet'}`,

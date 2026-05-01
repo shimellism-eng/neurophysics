@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react'
 
 export default function HeartsDisplay({ hearts, maxHearts = 3 }) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-1" role="status" aria-label={`${hearts} of ${maxHearts} hearts remaining`}>
       {Array.from({ length: maxHearts }).map((_, i) => (
         <motion.div
           key={i}
@@ -10,16 +10,17 @@ export default function HeartsDisplay({ hearts, maxHearts = 3 }) {
           transition={{ duration: 0.3 }}
         >
           <span
+            aria-hidden="true"
             style={{
-              fontSize: 16,
-              opacity: i < hearts ? 1 : 0.2,
-              filter: i < hearts ? 'none' : 'grayscale(1)',
+              width: 10,
+              height: 10,
+              borderRadius: '50%',
+              opacity: i < hearts ? 1 : 0.25,
               display: 'block',
-              lineHeight: 1,
+              background: i < hearts ? '#ef4444' : 'rgba(255,255,255,0.25)',
+              boxShadow: i < hearts ? '0 0 0 1px rgba(239,68,68,0.35)' : 'none',
             }}
-          >
-            ❤️
-          </span>
+          />
         </motion.div>
       ))}
     </div>

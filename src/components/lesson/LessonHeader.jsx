@@ -22,9 +22,9 @@ export default function LessonHeader({
       className="shrink-0 sticky top-0 z-10"
       style={{
         position: 'relative',
-        background: 'var(--np-card-deep)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
+        background: 'rgba(7,17,29,0.90)',
+        backdropFilter: 'blur(10px) saturate(130%)',
+        WebkitBackdropFilter: 'blur(10px) saturate(130%)',
         borderBottom: '0.75px solid var(--np-border)',
         paddingTop: 'max(10px, env(safe-area-inset-top, 0px))',
         paddingInline: 20,
@@ -37,7 +37,7 @@ export default function LessonHeader({
         style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'rgba(255,255,255,0.06)' }}
       >
         <motion.div
-          style={{ height: '100%', background: '#6366f1', borderRadius: '0 999px 999px 0' }}
+          style={{ height: '100%', background: 'var(--np-accent)', borderRadius: '0 999px 999px 0' }}
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -52,7 +52,7 @@ export default function LessonHeader({
           style={{
             width: 34, height: 34, borderRadius: 10, flexShrink: 0,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: 'rgba(255,255,255,0.05)',
+            background: 'var(--surface-quiet)',
             border: '0.75px solid var(--np-border)',
             cursor: 'pointer',
           }}
@@ -70,10 +70,9 @@ export default function LessonHeader({
           >
             {topic.title}
           </h1>
-          {(currentStep?.label || (!isLast && remainingMinutes > 0)) && (
-            <div style={{ fontSize: 11, lineHeight: 1.2, color: 'rgba(255,255,255,0.38)', marginTop: 2 }}>
+          {currentStep?.label && (
+            <div style={{ fontSize: 11, lineHeight: 1.2, color: 'var(--np-text-muted)', marginTop: 2 }}>
               {currentStep?.label}
-              {!isLast && remainingMinutes > 0 && ` · About ${remainingMinutes} min left`}
             </div>
           )}
         </div>

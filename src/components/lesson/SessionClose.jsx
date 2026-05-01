@@ -18,8 +18,8 @@ import { useEffect, useState } from 'react'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 
 const CONFETTI_COLORS = [
-  '#f87171', '#fdc700', '#4ade80', '#60a5fa',
-  '#c084fc', '#fb923c', '#f472b6', '#34d399',
+  '#5ea7a1', '#74bcb5', '#fdc700', '#f59e0b',
+  '#4ade80', '#34d399', '#60a5fa', '#93c5fd',
 ]
 
 const CONFETTI_PARTICLES = Array.from({ length: 24 }, (_, i) => {
@@ -84,7 +84,7 @@ export default function SessionClose({
       >
         {/* Checkmark with pulsing ring + confetti */}
         <div className="relative flex items-center justify-center" style={{ width: 120, height: 120 }}>
-          {/* Pulsing ring — indigo, not moduleColor */}
+          {/* Pulsing ring */}
           {!reducedMotion && (
             <motion.div
               className="absolute rounded-full"
@@ -92,7 +92,7 @@ export default function SessionClose({
                 width: 96,
                 height: 96,
                 background: 'transparent',
-                border: '2px solid rgba(99,102,241,0.35)',
+                border: '2px solid rgba(94,167,161,0.35)',
               }}
               animate={{ scale: [1, 1.18, 1], opacity: [0.5, 0, 0.5] }}
               transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
@@ -105,21 +105,21 @@ export default function SessionClose({
                 width: 96,
                 height: 96,
                 background: 'transparent',
-                border: '1px solid rgba(99,102,241,0.18)',
+                border: '1px solid rgba(94,167,161,0.18)',
               }}
               animate={{ scale: [1, 1.32, 1], opacity: [0.35, 0, 0.35] }}
               transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
             />
           )}
-          {/* Main circle — flat indigo tint, no gradient */}
+          {/* Main circle */}
           <div
             className="relative w-24 h-24 rounded-full flex items-center justify-center"
             style={{
-              background: 'rgba(99,102,241,0.15)',
-              border: '1.5px solid rgba(99,102,241,0.35)',
+              background: 'rgba(94,167,161,0.15)',
+              border: '1.5px solid rgba(94,167,161,0.35)',
             }}
           >
-            <CheckCircle size={40} color="#818cf8" />
+            <CheckCircle size={40} color="#74bcb5" />
           </div>
           <AnimatePresence>
             {mounted && <ConfettiDots reducedMotion={reducedMotion} />}
@@ -146,7 +146,7 @@ export default function SessionClose({
       <motion.div
         className="rounded-[18px] overflow-hidden"
         style={{
-          background: 'rgba(99,102,241,0.06)',
+          background: 'rgba(18,26,47,0.74)',
           border: '1px solid rgba(255,255,255,0.08)',
         }}
         initial={reducedMotion ? {} : { opacity: 0, y: 14 }}
@@ -167,8 +167,8 @@ export default function SessionClose({
                   <div
                     className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold shrink-0 mt-0.5"
                     style={{
-                      background: 'rgba(99,102,241,0.15)',
-                      color: '#818cf8',
+                      background: 'rgba(94,167,161,0.16)',
+                      color: '#74bcb5',
                     }}
                   >
                     {i + 1}
@@ -190,15 +190,15 @@ export default function SessionClose({
       {/* Spaced review message */}
       <motion.div
         className="flex items-start gap-3 px-4 py-3.5 rounded-[14px]"
-        style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}
+        style={{ background: 'rgba(94,167,161,0.08)', border: '1px solid rgba(94,167,161,0.2)' }}
         initial={reducedMotion ? {} : { opacity: 0, y: 10 }}
         animate={reducedMotion ? {} : { opacity: 1, y: 0 }}
         transition={{ delay: reducedMotion ? 0 : 0.26, duration: reducedMotion ? 0 : 0.35 }}
       >
-        <CalendarBlank size={16} color="#818cf8" style={{ marginTop: 2, flexShrink: 0 }} />
-        <p className="text-xs leading-relaxed" style={{ color: '#a5b4fc' }}>
+        <CalendarBlank size={16} color="#74bcb5" style={{ marginTop: 2, flexShrink: 0 }} />
+        <p className="text-xs leading-relaxed" style={{ color: '#bfe4df' }}>
           This will come up again in{' '}
-          <strong style={{ color: '#818cf8' }}>1 day</strong>
+          <strong style={{ color: '#74bcb5' }}>1 day</strong>
           {' '}for a quick retrieval check.
           Spaced practice is what moves it from short-term to long-term memory.
         </p>
@@ -211,8 +211,8 @@ export default function SessionClose({
           style={{
             height: 56,
             fontSize: 16,
-            background: '#6366f1',
-            color: '#fff',
+            background: 'var(--np-accent)',
+            color: '#07111d',
             border: 'none',
           }}
           onClick={onStartQuiz}

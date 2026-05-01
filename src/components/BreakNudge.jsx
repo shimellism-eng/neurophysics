@@ -18,20 +18,22 @@ export default function BreakNudge({ nudgeLevel, onDismiss, onSnooze }) {
         transition={{ type: 'spring', stiffness: 320, damping: 28 }}
       >
         <div
-          className="rounded-[20px] px-5 py-4 flex items-start gap-4"
+          className="np-interruption-card px-5 py-4 flex items-start gap-4"
           style={{
-            background: isLong ? 'rgba(99,102,241,0.15)' : 'rgba(253,199,0,0.10)',
-            border: isLong ? '1px solid rgba(99,102,241,0.4)' : '1px solid rgba(253,199,0,0.35)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-            backdropFilter: 'blur(12px)',
+            background: isLong
+              ? 'linear-gradient(180deg, rgba(94,167,161,0.09), rgba(255,255,255,0.015)), var(--surface-raised)'
+              : 'linear-gradient(180deg, rgba(216,139,45,0.08), rgba(255,255,255,0.015)), var(--surface-raised)',
+            border: isLong
+              ? '1px solid rgba(116,188,181,0.24)'
+              : '1px solid rgba(216,139,45,0.22)',
           }}
         >
-          <span style={{ fontSize: 28, lineHeight: 1 }}>{isLong ? '🧘' : '☕'}</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.14em] shrink-0" style={{ color: isLong ? 'var(--np-accent-strong)' : 'var(--np-amber)', paddingTop: 4 }}>Break</span>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-bold" style={{ color: isLong ? '#818cf8' : '#fdc700' }}>
+            <p className="text-sm font-bold" style={{ color: isLong ? 'var(--np-text)' : 'var(--np-text)' }}>
               {isLong ? 'You\'ve been studying for 25 minutes.' : 'You\'ve been going for 15 minutes.'}
             </p>
-            <p className="text-xs mt-1 leading-relaxed" style={{ color: '#a8b8cc' }}>
+            <p className="text-xs mt-1 leading-relaxed" style={{ color: 'var(--np-text-muted)' }}>
               {isLong
                 ? 'Your brain needs a rest to consolidate memory. Take a 10-minute break before continuing.'
                 : 'Good progress! A short 5-minute break now will help you remember more.'}
@@ -52,7 +54,7 @@ export default function BreakNudge({ nudgeLevel, onDismiss, onSnooze }) {
                 style={{
                   background: 'rgba(255,255,255,0.05)',
                   border: '0.75px solid rgba(255,255,255,0.12)',
-                  color: 'rgba(255,255,255,0.45)',
+                  color: 'var(--np-text-muted)',
                 }}
                 onClick={onSnooze}
                 aria-label="Snooze break reminder for 5 minutes"

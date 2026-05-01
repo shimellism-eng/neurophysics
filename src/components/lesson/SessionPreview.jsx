@@ -52,9 +52,8 @@ export default function SessionPreview({
           onClick={onDismiss}
         >
           <motion.div
-            className="rounded-t-[28px] px-6 pt-5 pb-8"
+            className="rounded-t-[28px] px-6 pt-5 pb-8 np-sheet-utility"
             style={{
-              background: '#0d1629',
               position: 'relative',
               overflow: 'hidden',
               maxHeight: '88vh',
@@ -67,16 +66,6 @@ export default function SessionPreview({
             transition={{ type: 'spring', damping: 28, stiffness: 300 }}
             onClick={e => e.stopPropagation()}
           >
-            {/* Radial bloom */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: 'absolute', top: 0, left: 0, right: 0, height: 180,
-                background: `radial-gradient(ellipse 80% 100% at 50% 0%, ${topic.moduleColor}22 0%, transparent 70%)`,
-                pointerEvents: 'none',
-              }}
-            />
-
             {/* Drag handle */}
             <div className="flex justify-center mb-4" style={{ position: 'relative' }}>
               <div style={{ width: 40, height: 4, borderRadius: 999, background: 'rgba(255,255,255,0.15)' }} />
@@ -85,7 +74,7 @@ export default function SessionPreview({
             {/* Module label */}
             <div
               className="uppercase tracking-widest mb-1"
-              style={{ color: topic.moduleColor, fontSize: 11, fontWeight: 700, position: 'relative' }}
+              style={{ color: 'var(--np-amber)', fontSize: 11, fontWeight: 700, position: 'relative' }}
             >
               {topic.module}
             </div>
@@ -126,8 +115,8 @@ export default function SessionPreview({
                 style={{
                   position: 'relative',
                   borderRadius: 14,
-                  background: 'rgba(255,255,255,0.04)',
-                  border: '0.75px solid rgba(255,255,255,0.07)',
+                  background: 'rgba(255,255,255,0.03)',
+                  border: '0.75px solid rgba(255,255,255,0.06)',
                   flexShrink: 0,
                   maxHeight: 260,
                 }}
@@ -149,13 +138,13 @@ export default function SessionPreview({
                       <div
                         style={{
                           width: 22, height: 22, borderRadius: '50%', flexShrink: 0,
-                          background: i === 0 ? topic.moduleColor : 'rgba(255,255,255,0.08)',
+                          background: i === 0 ? 'rgba(216,139,45,0.18)' : 'rgba(255,255,255,0.08)',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                         }}
                       >
                         {Icon
-                          ? <Icon size={11} color={i === 0 ? '#fff' : 'rgba(255,255,255,0.4)'} />
-                          : <span style={{ fontSize: 10, fontWeight: 700, color: i === 0 ? '#fff' : 'rgba(255,255,255,0.4)' }}>{i + 1}</span>
+                          ? <Icon size={11} color={i === 0 ? 'var(--np-amber)' : 'rgba(255,255,255,0.4)'} />
+                          : <span style={{ fontSize: 10, fontWeight: 700, color: i === 0 ? 'var(--np-amber)' : 'rgba(255,255,255,0.4)' }}>{i + 1}</span>
                         }
                       </div>
 
@@ -199,8 +188,8 @@ export default function SessionPreview({
             {/* Actions */}
             <div className="flex gap-3" style={{ position: 'relative', flexShrink: 0 }}>
               <motion.button
-                className="flex-1 font-display font-bold text-base"
-                style={{
+              className="flex-1 font-display font-bold text-base"
+              style={{
                   height: 56, borderRadius: 16,
                   background: 'transparent',
                   color: 'rgba(255,255,255,0.6)',
@@ -214,15 +203,15 @@ export default function SessionPreview({
               </motion.button>
 
               <motion.button
-                className="flex-1 font-display font-bold text-base"
-                style={{
+              className="flex-1 font-display font-bold text-base"
+              style={{
                   height: 56, borderRadius: 16,
-                  background: `${topic.moduleColor}`,
-                  color: '#fff',
-                  boxShadow: `0 6px 0 rgba(0,0,0,0.25), 0 12px 28px ${topic.moduleColor}35`,
-                  border: 'none', cursor: 'pointer',
+                  background: 'var(--np-accent)',
+                  color: '#07111d',
+                  boxShadow: 'var(--shadow-raised)',
+                  border: '0.75px solid rgba(255,255,255,0.08)', cursor: 'pointer',
                 }}
-                whileTap={{ y: 4, boxShadow: `0 2px 0 rgba(0,0,0,0.15)` }}
+                whileTap={{ y: 2, boxShadow: '0 4px 12px rgba(0,0,0,0.12)' }}
                 onClick={onStart}
               >
                 Start session

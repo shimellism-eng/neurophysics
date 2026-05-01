@@ -13,7 +13,7 @@
  */
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
-import { CaretRight, Lightbulb, CheckCircle, XCircle, Star, SpeakerHigh } from '@phosphor-icons/react'
+import { CaretRight, Lightbulb, CheckCircle, XCircle, SpeakerHigh } from '@phosphor-icons/react'
 import { useMamoReaction } from '../../context/MamoContext'
 import { useSound } from '../../hooks/useSound'
 import { speak } from '../../utils/tts'
@@ -54,17 +54,17 @@ function TierProgress({ tier }) {
                 <div
                   className="flex-1 h-px"
                   style={{
-                    background: isDone ? '#6366f1' : 'rgba(255,255,255,0.1)',
+                    background: isDone ? '#5ea7a1' : 'rgba(255,255,255,0.1)',
                     transition: 'background 0.4s',
                   }}
                 />
               )}
-              {/* Circle — active: indigo fill, done: green, future: ghost */}
+              {/* Circle — active teal, done green, future ghost */}
               <motion.div
                 className="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
                 style={{
                   background: isActive
-                    ? '#6366f1'
+                    ? '#5ea7a1'
                     : isDone
                       ? 'rgba(34,197,94,0.2)'
                       : 'transparent',
@@ -85,7 +85,7 @@ function TierProgress({ tier }) {
                 <div
                   className="flex-1 h-px"
                   style={{
-                    background: t < tier ? '#6366f1' : 'rgba(255,255,255,0.1)',
+                    background: t < tier ? '#5ea7a1' : 'rgba(255,255,255,0.1)',
                     transition: 'background 0.4s',
                   }}
                 />
@@ -94,7 +94,7 @@ function TierProgress({ tier }) {
             <span
               className="text-[10px] font-semibold text-center leading-tight"
               style={{
-                color: isActive ? '#a5b4fc' : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
+                color: isActive ? '#74bcb5' : isDone ? '#4ade80' : 'rgba(255,255,255,0.45)',
                 transition: 'color 0.3s',
               }}
             >
@@ -116,7 +116,7 @@ function NumericInput({ value, onChange, unit, placeholder = 'Your answer', disa
       style={{
         background: 'rgba(255,255,255,0.04)',
         border: focused
-          ? '2px solid rgba(99,102,241,0.7)'
+          ? '2px solid rgba(116,188,181,0.7)'
           : '2px solid rgba(255,255,255,0.1)',
         transition: 'border-color 0.2s',
       }}
@@ -163,10 +163,10 @@ function FeedbackBanner({ correct, correctAnswer, answerUnit }) {
       style={{
         paddingTop: 16,
         paddingBottom: 16,
-        background: correct ? 'rgba(34,197,94,0.1)' : 'rgba(99,102,241,0.1)',
+        background: correct ? 'rgba(34,197,94,0.1)' : 'rgba(94,167,161,0.12)',
         border: correct
           ? '1px solid rgba(34,197,94,0.35)'
-          : '1px solid rgba(99,102,241,0.3)',
+          : '1px solid rgba(116,188,181,0.32)',
       }}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -174,10 +174,10 @@ function FeedbackBanner({ correct, correctAnswer, answerUnit }) {
     >
       {correct
         ? <CheckCircle size={20} color="#4ade80" style={{ flexShrink: 0, marginTop: 1 }} />
-        : <XCircle size={20} color="#a5b4fc" style={{ flexShrink: 0, marginTop: 1 }} />
+        : <XCircle size={20} color="#74bcb5" style={{ flexShrink: 0, marginTop: 1 }} />
       }
       <div>
-        <div className="text-sm font-bold" style={{ color: correct ? '#4ade80' : '#a5b4fc' }}>
+        <div className="text-sm font-bold" style={{ color: correct ? '#4ade80' : '#74bcb5' }}>
           {correct ? 'Correct!' : 'Not quite'}
         </div>
         {!correct && (
@@ -185,11 +185,11 @@ function FeedbackBanner({ correct, correctAnswer, answerUnit }) {
             <span className="text-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
               Correct answer:{' '}
             </span>
-            <span className="text-sm font-bold font-mono" style={{ color: '#c7d2fe' }}>
+            <span className="text-sm font-bold font-mono" style={{ color: '#d9ece9' }}>
               {correctAnswer}
             </span>
             {answerUnit && (
-              <span className="text-xs font-semibold ml-1" style={{ color: 'rgba(199,210,254,0.7)' }}>
+              <span className="text-xs font-semibold ml-1" style={{ color: 'rgba(217,236,233,0.72)' }}>
                 {answerUnit}
               </span>
             )}
@@ -232,17 +232,17 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             key={i}
             className="flex items-center gap-3 px-3 py-2.5 rounded-[12px]"
             style={{
-              background: i === missingStep ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.03)',
-              border: i === missingStep ? '1px dashed rgba(99,102,241,0.4)' : '1px solid rgba(255,255,255,0.06)',
+              background: i === missingStep ? 'rgba(94,167,161,0.1)' : 'rgba(255,255,255,0.03)',
+              border: i === missingStep ? '1px dashed rgba(94,167,161,0.4)' : '1px solid rgba(255,255,255,0.06)',
             }}
           >
             <div
               className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0"
-              style={{ background: i === missingStep ? '#6366f1' : 'rgba(255,255,255,0.08)', color: '#fff' }}
+              style={{ background: i === missingStep ? '#5ea7a1' : 'rgba(255,255,255,0.08)', color: '#fff' }}
             >
               {i + 1}
             </div>
-            <span className="text-xs" style={{ color: i === missingStep ? '#a5b4fc' : 'rgba(255,255,255,0.5)' }}>
+            <span className="text-xs" style={{ color: i === missingStep ? '#bfe4df' : 'rgba(255,255,255,0.5)' }}>
               {i === missingStep ? missingHint : step}
             </span>
           </div>
@@ -261,8 +261,8 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
           className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
           style={{
             minHeight: 44,
-            background: hasInput ? '#6366f1' : 'rgba(255,255,255,0.05)',
-            color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
+            background: hasInput ? 'var(--np-accent)' : 'rgba(255,255,255,0.05)',
+            color: hasInput ? '#07111d' : 'rgba(255,255,255,0.3)',
             border: 'none',
           }}
           onClick={() => {
@@ -287,8 +287,8 @@ function Tier1({ data, moduleColor, onComplete, triggerReaction, playCorrect, pl
             className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
               minHeight: 56,
-              background: '#6366f1',
-              color: '#fff',
+              background: 'var(--np-accent)',
+              color: '#07111d',
               border: 'none',
             }}
             onClick={() => onComplete(isCorrect)}
@@ -332,7 +332,7 @@ function Tier2({ data, onComplete, triggerReaction, playCorrect, playWrong }) {
       <div className="flex flex-col gap-2">
         <div
           className="px-3 py-2.5 rounded-[12px] text-xs font-mono font-bold"
-          style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', color: '#a5b4fc' }}
+          style={{ background: 'rgba(94,167,161,0.1)', border: '1px solid rgba(94,167,161,0.2)', color: '#bfe4df' }}
         >
           {shownEquation}
         </div>
@@ -392,8 +392,8 @@ function Tier2({ data, onComplete, triggerReaction, playCorrect, playWrong }) {
           className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
           style={{
             minHeight: 44,
-            background: hasInput ? '#6366f1' : 'rgba(255,255,255,0.05)',
-            color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
+            background: hasInput ? 'var(--np-accent)' : 'rgba(255,255,255,0.05)',
+            color: hasInput ? '#07111d' : 'rgba(255,255,255,0.3)',
             border: 'none',
           }}
           onClick={() => {
@@ -418,8 +418,8 @@ function Tier2({ data, onComplete, triggerReaction, playCorrect, playWrong }) {
             className="font-display w-full py-4 rounded-[16px] font-bold text-sm flex items-center justify-center gap-2"
             style={{
               minHeight: 56,
-              background: '#6366f1',
-              color: '#fff',
+              background: 'var(--np-accent)',
+              color: '#07111d',
               border: 'none',
             }}
             onClick={() => onComplete(isCorrect)}
@@ -437,7 +437,13 @@ function Tier2({ data, onComplete, triggerReaction, playCorrect, playWrong }) {
 }
 
 // ─── Confidence star labels ───────────────────────────────────────────────────
-const STAR_LABELS = ['Not sure', 'Getting it', 'Confident', 'Really sure', 'Got it!']
+const CONFIDENCE_OPTIONS = [
+  { value: 1, label: 'Not sure' },
+  { value: 2, label: 'Getting it' },
+  { value: 3, label: 'Confident' },
+  { value: 4, label: 'Really sure' },
+  { value: 5, label: 'Got it!' },
+]
 
 // ─── TIER 3: Supported independent ──────────────────────────────────────────
 function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, playWrong, playComplete }) {
@@ -446,7 +452,6 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
   const [submitted, setSubmitted] = useState(false)
   const [methodShown, setMethodShown] = useState(false)
   const [confidence, setConfidence] = useState(0)
-  const [hoveredStar, setHoveredStar] = useState(0)
 
   const numAnswer = parseFloat(input)
   const isCorrect = submitted && Math.abs(numAnswer - answer) < Math.abs(answer * 0.03 + 0.01)
@@ -462,13 +467,13 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
         <div
           className="w-16 h-16 rounded-full flex items-center justify-center"
           style={{
-            background: isCorrect ? 'rgba(34,197,94,0.15)' : 'rgba(99,102,241,0.15)',
-            border: isCorrect ? '2px solid rgba(34,197,94,0.4)' : '2px solid rgba(99,102,241,0.3)',
+            background: isCorrect ? 'rgba(34,197,94,0.15)' : 'rgba(94,167,161,0.15)',
+            border: isCorrect ? '2px solid rgba(34,197,94,0.4)' : '2px solid rgba(94,167,161,0.3)',
           }}
         >
           {isCorrect
             ? <CheckCircle size={32} color="#4ade80" />
-            : <Lightbulb size={32} color="#818cf8" />
+            : <Lightbulb size={32} color="#74bcb5" />
           }
         </div>
         <div className="text-center">
@@ -483,8 +488,8 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
           className="font-display w-full py-4 rounded-[16px] font-bold text-sm"
           style={{
             minHeight: 56,
-            background: '#6366f1',
-            color: '#fff',
+            background: 'var(--np-accent)',
+            color: '#07111d',
             border: 'none',
           }}
           onClick={() => { triggerReaction('complete'); playComplete(); onComplete() }}
@@ -523,9 +528,9 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
               className="font-display flex items-center justify-center gap-1.5 py-2.5 rounded-[12px] text-xs font-semibold"
               style={{
                 minHeight: 44,
-                background: 'rgba(99,102,241,0.08)',
-                border: '1px solid rgba(99,102,241,0.25)',
-                color: '#818cf8',
+                background: 'rgba(94,167,161,0.08)',
+                border: '1px solid rgba(116,188,181,0.25)',
+                color: '#74bcb5',
               }}
               onClick={() => setMethodShown(true)}
             >
@@ -537,11 +542,11 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
             {methodShown && (
               <motion.div
                 className="px-4 py-3 rounded-[12px]"
-                style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}
+                style={{ background: 'rgba(94,167,161,0.08)', border: '1px solid rgba(94,167,161,0.2)' }}
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
               >
-                <p className="text-xs" style={{ color: '#a5b4fc' }}>{methodHint}</p>
+                <p className="text-xs" style={{ color: '#bfe4df' }}>{methodHint}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -550,8 +555,8 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
             className="font-display w-full py-3.5 rounded-[14px] font-bold text-sm"
             style={{
               minHeight: 44,
-              background: hasInput ? '#6366f1' : 'rgba(255,255,255,0.05)',
-              color: hasInput ? '#fff' : 'rgba(255,255,255,0.3)',
+              background: hasInput ? 'var(--np-accent)' : 'rgba(255,255,255,0.05)',
+              color: hasInput ? '#07111d' : 'rgba(255,255,255,0.3)',
               border: 'none',
             }}
             onClick={() => {
@@ -592,40 +597,28 @@ function Tier3({ data, onComplete, onWrongAnswer, triggerReaction, playCorrect, 
               <p className="text-xs font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 How confident do you feel solving a problem like this without support?
               </p>
-              <div className="flex gap-1 justify-center" role="group" aria-label="Rate your confidence">
-                {[1, 2, 3, 4, 5].map(n => {
-                  const active = n <= (hoveredStar || confidence)
+              <div className="grid grid-cols-2 gap-2" role="group" aria-label="Rate your confidence">
+                {CONFIDENCE_OPTIONS.map(option => {
+                  const active = confidence === option.value
                   return (
                     <button
-                      key={n}
-                      onClick={() => setConfidence(n)}
-                      onMouseEnter={() => setHoveredStar(n)}
-                      onMouseLeave={() => setHoveredStar(0)}
-                      aria-label={`Confidence: ${n} out of 5`}
-                      className="flex flex-col items-center gap-1.5"
-                      style={{ flex: 1, minHeight: 44 }}
+                      key={option.value}
+                      onClick={() => setConfidence(option.value)}
+                      aria-label={option.label}
+                      className="rounded-[12px] px-3 py-3 text-sm font-semibold text-left min-h-[52px]"
+                      style={{
+                        background: active ? 'rgba(94,167,161,0.16)' : 'rgba(255,255,255,0.03)',
+                        border: active ? '1px solid rgba(116,188,181,0.55)' : '1px solid rgba(255,255,255,0.08)',
+                        color: active ? '#eef4f6' : 'rgba(255,255,255,0.74)',
+                        boxShadow: active ? '0 10px 22px rgba(0,0,0,0.12)' : 'none',
+                      }}
                     >
-                      <motion.div
-                        animate={{ scale: active ? 1.12 : 1 }}
-                        transition={{ duration: 0.18 }}
-                      >
-                        <Star
-                          size={32}
-                          color={active ? '#fdc700' : 'rgba(255,255,255,0.12)'}
-                          fill={active ? '#fdc700' : 'none'}
-                        />
-                      </motion.div>
-                      <span
-                        className="text-[9px] font-semibold text-center leading-tight"
-                        style={{ color: active ? 'rgba(253,199,0,0.8)' : 'rgba(255,255,255,0.2)' }}
-                      >
-                        {STAR_LABELS[n - 1]}
-                      </span>
+                      {option.label}
                     </button>
                   )
                 })}
               </div>
-              <p className="text-[10px] text-center mt-3" style={{ color: 'rgba(255,255,255,0.45)' }}>
+              <p className="text-xs text-center mt-3" style={{ color: 'rgba(255,255,255,0.52)' }}>
                 This shapes your future practice sessions
               </p>
             </div>

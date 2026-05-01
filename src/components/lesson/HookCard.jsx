@@ -12,7 +12,7 @@ const BODY = "'Atkinson Hyperlegible', sans-serif"
 const HEAD = "'Bricolage Grotesque', sans-serif"
 
 export default function HookCard({ hook, moduleColor, onReady }) {
-  const { hookFact, hookQuestion, hookEmoji = '⚡' } = hook
+  const { hookFact, hookQuestion } = hook
   const ttsEnabled = (() => {
     try { return !!JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').tts }
     catch { return false }
@@ -25,7 +25,7 @@ export default function HookCard({ hook, moduleColor, onReady }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      {/* "Did you know?" fact card — subtle tint, no coloured border */}
+      {/* "Did you know?" fact card — calmer study-card treatment */}
       <div
         style={{
           borderRadius: 22,
@@ -33,26 +33,18 @@ export default function HookCard({ hook, moduleColor, onReady }) {
           minHeight: 180,
           position: 'relative',
           overflow: 'hidden',
-          background: `${moduleColor}0f`,
-          border: '1px solid rgba(255,255,255,0.07)',
+          background: 'linear-gradient(180deg, rgba(216,139,45,0.08), rgba(255,255,255,0.015)), var(--surface-raised)',
+          border: '1px solid rgba(216,139,45,0.18)',
         }}
       >
-        {/* Decorative emoji — bottom-right, very faint */}
-        <div
-          aria-hidden="true"
-          style={{ position: 'absolute', right: 12, bottom: -8, fontSize: 110, lineHeight: 1, opacity: 0.09, userSelect: 'none', pointerEvents: 'none' }}
-        >
-          {hookEmoji}
-        </div>
-
         {/* Label row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
-          <span style={{ fontFamily: BODY, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: moduleColor, flex: 1 }}>
+          <span style={{ fontFamily: BODY, fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--np-amber)', flex: 1 }}>
             Did you know?
           </span>
           {ttsEnabled && (
             <button
-              style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: `${moduleColor}20`, color: moduleColor, fontFamily: BODY, fontSize: 10, fontWeight: 600, border: 'none', cursor: 'pointer' }}
+              style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '4px 10px', borderRadius: 999, background: 'rgba(255,255,255,0.06)', color: 'var(--np-accent-strong)', fontFamily: BODY, fontSize: 10, fontWeight: 600, border: '1px solid rgba(116,188,181,0.18)', cursor: 'pointer' }}
               onClick={() => speak(hookFact + '. ' + hookQuestion)}
               aria-label="Read aloud"
             >
@@ -73,7 +65,7 @@ export default function HookCard({ hook, moduleColor, onReady }) {
         <div style={{ fontFamily: BODY, fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.35)', marginBottom: 10 }}>
           Before we start
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: 16 }}>
+        <div style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)', borderRadius: 16, padding: 16 }}>
           <p style={{ fontFamily: BODY, fontSize: 15, fontWeight: 600, lineHeight: 1.55, color: '#cad5e2' }}>
             {hookQuestion}
           </p>
@@ -86,10 +78,11 @@ export default function HookCard({ hook, moduleColor, onReady }) {
       {/* Single primary CTA */}
       <motion.button
         style={{
-          width: '100%', minHeight: 56, background: '#6366f1',
+          width: '100%', minHeight: 56, background: 'var(--np-accent)',
           border: 'none', borderRadius: 16, cursor: 'pointer',
-          fontFamily: BODY, fontSize: 16, fontWeight: 700, color: '#fff',
+          fontFamily: BODY, fontSize: 16, fontWeight: 700, color: '#07111d',
           letterSpacing: '-0.01em',
+          boxShadow: 'var(--shadow-raised)',
         }}
         onClick={onReady}
         whileTap={{ scale: 0.98 }}

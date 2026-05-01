@@ -99,7 +99,7 @@ const examCalculations = {
       equation: "s = ut + ½at²",
       steps: [
         { label: "Initial velocity (dropped from rest)", value: "0", unit: "m/s", hint: "Dropped from rest means u = 0" },
-        { label: "Acceleration due to gravity", value: "9.8", unit: "m/s²", hint: "g = 9.8 m/s² downward (AQA/OCR/WJEC)" },
+        { label: "Acceleration due to gravity", value: "9.8", unit: "m/s²", hint: "g = 9.8 m/s² downward (AQA)" },
         { label: "Time", value: "3", unit: "s", hint: "Given in the question" },
         { label: "Calculate: s = 0×3 + ½×9.8×9", value: "44.1", unit: "m", hint: "s = 0 + ½ × 9.8 × 9 = 44.1 m" }
       ],
@@ -118,7 +118,7 @@ const examCalculations = {
       equation: "s = ut + ½at²",
       steps: [
         { label: "Initial velocity (dropped from rest)", value: "0", unit: "m/s", hint: "Dropped from rest means u = 0" },
-        { label: "Acceleration due to gravity", value: "10", unit: "m/s²", hint: "g = 10 m/s² downward (Edexcel/CCEA)" },
+        { label: "Acceleration due to gravity", value: "10", unit: "m/s²", hint: "g = 10 m/s² downward (Edexcel)" },
         { label: "Time", value: "3", unit: "s", hint: "Given in the question" },
         { label: "Calculate: s = 0×3 + ½×10×9", value: "45", unit: "m", hint: "s = 0 + ½ × 10 × 9 = 45 m" }
       ],

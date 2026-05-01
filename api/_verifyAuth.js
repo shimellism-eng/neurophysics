@@ -9,10 +9,10 @@ let _adminClient = null
 
 function getAdminClient() {
   if (_adminClient) return _adminClient
-  const url = process.env.VITE_SUPABASE_URL
+  const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY
   if (!url || !key) {
-    console.error('[security] VITE_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not set')
+    console.error('[security] SUPABASE_URL/VITE_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not set')
     return null
   }
   _adminClient = createClient(url, key, {
@@ -39,7 +39,7 @@ export async function verifySupabaseJWT(authHeader) {
 
   if (!admin) {
     // ⚠️  Admin client not configured — fail closed, never allow unauthenticated access.
-    // Ensure VITE_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel.
+    // Ensure SUPABASE_URL or VITE_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel.
     console.error('[security] Supabase admin client not configured — rejecting request')
     throw new Error('Auth service unavailable')
   }

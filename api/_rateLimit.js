@@ -6,8 +6,8 @@
 //   UPSTASH_REDIS_REST_URL
 //   UPSTASH_REDIS_REST_TOKEN
 //
-// Fails OPEN if env vars are missing (local dev / not yet configured)
-// so the app keeps working while Upstash is not set up.
+// Fails CLOSED if env vars are missing so protected AI endpoints never run
+// without the persistent limiter configured.
 
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis }     from '@upstash/redis'
@@ -20,10 +20,7 @@ function getLimiter() {
   const url   = process.env.UPSTASH_REDIS_REST_URL
   const token = process.env.UPSTASH_REDIS_REST_TOKEN
 
-  if (!url || !token) {
-    // Not configured — return null so callers fail open
-    return null
-  }
+  if (!url || !token) return null
 
   _limiter = new Ratelimit({
     redis: new Redis({ url, token }),
@@ -44,8 +41,12 @@ function getLimiter() {
 export async function rateLimitCheck(req, res) {
   const limiter = getLimiter()
 
-  // Upstash not configured — fail open (allow all)
-  if (!limiter) return false
+  // Upstash not configured — fail closed for protected AI endpoints.
+  if (!limiter) {
+    console.error('[security] Upstash rate limiter not configured — rejecting protected request')
+    res.status(503).json({ error: 'Rate limit service unavailable. Try again later.' })
+    return true
+  }
 
   const ip =
     (req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||

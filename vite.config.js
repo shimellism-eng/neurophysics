@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: false, // already have public/manifest.json
       workbox: {
         // App shell — cache on install (exclude large practicals infographics)
-        globPatterns: ['**/*.{js,css,html,ico,svg,woff2}', '*.png'],
+        globPatterns: ['**/*.{js,css,html,ico,svg,woff2,otf}', '*.png'],
         globIgnores: ['practicals/**'],
         // Runtime caching
         runtimeCaching: [
@@ -45,13 +45,9 @@ export default defineConfig({
             },
           },
           {
-            // Supabase auth — network first, fall back to cache
-            urlPattern: /^https:\/\/.*\.supabase\.co\/auth\//,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'supabase-auth',
-              networkTimeoutSeconds: 10,
-            },
+            // Supabase auth/data — always network, never cache user-specific responses.
+            urlPattern: /^https://.*.supabase.co//,
+            handler: 'NetworkOnly',
           },
           {
             // All API endpoints — always network, never cache

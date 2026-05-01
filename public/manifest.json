@@ -1,7 +1,7 @@
 {
   "name": "NeuroPhysics",
   "short_name": "NeuroPhysics",
-  "description": "GCSE Physics revision app for neurodivergent learners — AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA",
+  "description": "GCSE Physics revision app for neurodivergent learners — AQA and Edexcel",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

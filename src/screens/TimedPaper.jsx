@@ -1,5 +1,5 @@
 /**
- * TimedPaper - 35-mark mini-paper with:
+ * TimedPaper - board-filtered mini-paper with:
  * - Global countdown timer (55 min) with amber/red urgency
  * - Question palette (numbered circles, answered/flagged states)
  * - Full state persistence (survives app backgrounding)
@@ -240,6 +240,12 @@ function getSectionLabel(idx, questions) {
   return { section: 'D', label: 'Extended Response' }
 }
 
+function getAnswerMarksTotal(answerMap = {}) {
+  return Object.values(answerMap).reduce((sum, answer) => (
+    sum + (answer?.marksAwarded ?? answer?.selfScore ?? answer?.score ?? 0)
+  ), 0)
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 export default function TimedPaper() {
   const navigate = useNavigate()
@@ -258,6 +264,7 @@ export default function TimedPaper() {
   }, [course])
 
   const total = questions.length
+  const totalMarks = questions.reduce((sum, question) => sum + (question?.marks || 1), 0)
 
   // Restore state if available
   const loadState = () => {
@@ -269,7 +276,7 @@ export default function TimedPaper() {
           answers:   saved.answers || {},
           flags:     saved.flags || {},
           remaining: saved.timeRemaining || PAPER_DURATION,
-          score:     saved.score || 0,
+          score:     getAnswerMarksTotal(saved.answers || {}),
         }
       }
     } catch {}
@@ -390,19 +397,35 @@ export default function TimedPaper() {
   // scoreRef keeps a always-current score value so handleNext never reads stale closure state
   const scoreRef = useRef(init.score)
 
-  const handleComplete = useCallback((correct) => {
-    const newScore = correct ? score + 1 : score
-    if (correct) {
-      setScore(newScore)
-      scoreRef.current = newScore
-    }
+  const handleComplete = useCallback((outcome) => {
+    const marksAvailable = q?.marks || 1
+    const normalised = typeof outcome === 'object' && outcome !== null
+      ? {
+          answered: outcome.answered ?? true,
+          marksAwarded: Math.max(0, Math.min(outcome.marksAwarded ?? outcome.selfScore ?? outcome.score ?? (outcome.correct ? marksAvailable : 0), marksAvailable)),
+          marksAvailable: outcome.marksAvailable ?? marksAvailable,
+          correct: typeof outcome.correct === 'boolean'
+            ? outcome.correct
+            : (outcome.marksAwarded ?? outcome.selfScore ?? outcome.score ?? 0) >= marksAvailable,
+          source: outcome.source,
+        }
+      : {
+          answered: true,
+          marksAwarded: outcome ? marksAvailable : 0,
+          marksAvailable,
+          correct: !!outcome,
+        }
+
     setCompleted(true)
     setAnswers(prev => {
-      const updated = { ...prev, [qIndex]: { correct } }
-      persist({ answers: updated, score: newScore })
+      const updated = { ...prev, [qIndex]: normalised }
+      const updatedScore = getAnswerMarksTotal(updated)
+      setScore(updatedScore)
+      scoreRef.current = updatedScore
+      persist({ answers: updated, score: updatedScore })
       return updated
     })
-  }, [score, qIndex, persist])
+  }, [qIndex, persist, q])
 
   // Use functional update so rapid taps never read stale qIndex.
   // Reads scoreRef.current instead of score to avoid stale closure on last question.
@@ -411,7 +434,7 @@ export default function TimedPaper() {
       if (prev >= total - 1) {
         // Last question — go to results (defer to next tick to avoid setState-in-render)
         setTimeout(() => {
-          saveQuizResult('timed_paper', scoreRef.current, total)
+          saveQuizResult('timed_paper', scoreRef.current, totalMarks)
           localStorage.removeItem(STORAGE_KEY)
           setShowResults(true)
         }, 0)
@@ -477,7 +500,7 @@ export default function TimedPaper() {
             <div style={{ fontSize: 56 }} className="mb-3">⏱</div>
             <h2 className="text-2xl font-black mb-2" style={{ color: '#f8fafc' }}>Ready to start?</h2>
             <p className="text-sm" style={{ color: '#a8b8cc' }}>
-              35 marks · choose your course and time allowance
+              {totalMarks} marks · choose your course and time allowance
             </p>
           </motion.div>
 
@@ -582,12 +605,12 @@ export default function TimedPaper() {
 
   // ── Results (inline - full 3-stage flow in PaperResults) ──────────────────
   if (showResults) {
-    // Normalise: ensure every question index has an entry; unanswered = incorrect
+    // Normalise: ensure every question index has an entry; unanswered stays separate from incorrect
     const normalisedAnswers = questions.map((_, i) =>
-      answers[i] ?? { answered: false, correct: false, score: 0 }
+      answers[i] ?? { answered: false, correct: false, marksAwarded: 0, marksAvailable: questions[i]?.marks || 1, score: 0 }
     )
-    const normalisedScore = normalisedAnswers.filter(a => a.correct).length
-    navigate('/paper-results', { state: { score: normalisedScore, total, questions, answers: normalisedAnswers, timeUsed: PAPER_DURATION - remaining } })
+    const normalisedScore = getAnswerMarksTotal(normalisedAnswers)
+    navigate('/paper-results', { state: { score: normalisedScore, total: totalMarks, questions, answers: normalisedAnswers, timeUsed: paperDuration - remaining } })
     return null
   }
 

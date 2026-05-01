@@ -620,7 +620,7 @@ export const PRACTICALS = {
       'Thread the copper wire horizontally through the gap between the magnet poles.',
       'Connect the wire to the power supply via ammeter and rheostat.',
       'Switch on and record the balance reading at each current setting (0, 0.5, 1.0, 1.5, 2.0, 2.5 A).',
-      'The force on the wire equals the reaction force on the magnet: F = (balance reading change) × g (using g = 9.8 N/kg for AQA/OCR/WJEC or g = 10 N/kg for Edexcel/CCEA).',
+      'The force on the wire equals the reaction force on the magnet: F = (balance reading change) × g (use g = 9.8 N/kg for AQA or g = 10 N/kg for Edexcel).',
       'Plot F vs I — should be linear (F = BIL).',
       'Repeat with different lengths of wire in the magnetic field.',
     ],
@@ -703,7 +703,7 @@ export const PRACTICALS = {
       'Record the time between light gate triggers to calculate average speed at each gate.',
       'Calculate acceleration: a = (v₂² - v₁²) / 2s.',
       'Repeat for angles: 5°, 10°, 15°, 20°, 25°.',
-      'Plot a vs sinθ — should be linear (a = gsinθ, so gradient = g = 9.8 N/kg for AQA/OCR/WJEC or g = 10 N/kg for Edexcel/CCEA).',
+      'Plot a vs sinθ — should be linear (a = gsinθ, so gradient = g = 9.8 N/kg for AQA or g = 10 N/kg for Edexcel).',
     ],
     resultsTable: {
       headers: ['Angle θ (°)', 'sinθ', 'a (m/s²)', 'Expected a = 10sinθ'],
@@ -714,7 +714,7 @@ export const PRACTICALS = {
         [20, 0.342, 3.20, 3.42],
       ]
     },
-    analysis: 'Plot a vs sinθ. Gradient should equal g (≈9.8 m/s² for AQA/OCR/WJEC; ≈10 m/s² for Edexcel). Discrepancy due to friction. Can calculate coefficient of friction from y-intercept.',
+    analysis: 'Plot a vs sinθ. Gradient should equal g (≈9.8 m/s² for AQA; ≈10 m/s² for Edexcel). Discrepancy due to friction. Can calculate coefficient of friction from y-intercept.',
     errors: [
       { source: 'Friction between trolley and ramp', effect: 'Measured acceleration less than gsinθ', precaution: 'Compensate friction by tilting ramp slightly before adding slope angle; or note and include in analysis' },
       { source: 'Trolley not starting from rest', effect: 'Initial velocity ≠ 0 → incorrect a', precaution: 'Hold trolley gently against a stop; release cleanly without push' },

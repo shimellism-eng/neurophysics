@@ -40,7 +40,7 @@ Only if one of these is true:
 **NeuroPhysics** — GCSE Physics PWA for neurodivergent learners (ADHD, dyslexia, autism).
 
 - **Stack:** React + Vite, **JSX only — no TypeScript**. Supabase auth. Vercel hosting. iOS wrapper via Capacitor.
-- **Boards covered (six):** AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA.
+- **Release scope:** AQA and Edexcel only.
 - **Live:** neurophysics.co.uk
 - **Owner:** Mamo — physics teacher, SEN specialist, ADHD.
 
@@ -109,7 +109,7 @@ Read **memory.md** before every session. Update it after. CLAUDE.md = permanent 
 - CORS: unknown origins → 403. Never accept API keys from request headers
 - Rate limiting: Upstash Redis sliding window (20 req/60s) via `_rateLimit.js`
 
-## Multi-Board (6 boards: AQA, Edexcel, OCR-A, OCR-B, WJEC, CCEA)
+## Multi-Board (2 release boards: AQA, Edexcel)
 - Board stored in `localStorage` key `np_board` (default `'aqa'`). Use `getSelectedBoard()` / `getValidatedBoard()` from boardConfig.js — never raw localStorage
 - `boards: ['edexcel']` on module/topic restricts to that board. No field = universal. `boards == null` = universal
 - CCEA: A*-G grades — check `board.gradeSystem === 'A*-G'` before showing 9-1 UI

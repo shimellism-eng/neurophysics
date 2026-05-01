@@ -1,7 +1,31 @@
 # NeuroPhysics — Session Memory
 
 ## Last Updated
-2026-04-18
+2026-05-01
+
+## What Was Just Done (latest — 2026-05-01)
+
+### AQA + Edexcel release hardening
+- Release claims are now scoped to AQA and Edexcel only in public metadata and release docs.
+- Removed active V2 release surface by verification: no `np_ui_v2`, `?v2`, or `*ScreenV2` references are present in shipped source/docs.
+- Updated Open Graph/Twitter metadata and regenerated social preview PNGs from the current AQA/Edexcel SVG.
+- TimedPaper no longer claims a hard-coded 35 marks. It displays the computed mark total from the generated paper.
+- TimedPaper scoring now recomputes total marks from the current answer map, so revisiting/re-answering a question replaces marks instead of adding duplicates.
+- AI endpoint rate limiting now fails closed if Upstash is missing.
+- Supabase server auth now accepts `SUPABASE_URL` or `VITE_SUPABASE_URL`.
+- Service worker no longer caches Supabase auth/data responses.
+- OpenDyslexic font files were replaced with valid OpenType binaries and added to the PWA precache pattern.
+
+### Verification
+- `npm run build` passed.
+- `npm run audit:curriculum` passed.
+- iOS simulator build passed with `CODE_SIGNING_ALLOWED=NO`.
+- `pnpm test` could not run because `pnpm` is not installed and the repo has no test script.
+- `git diff --check` passed after removing one trailing whitespace line in `DiagnosticQuestion.jsx`.
+- GitNexus impact checks were run for TimedPaper, getTimedPaperQuestions, rateLimitCheck, verifySupabaseJWT, and MasteryScreen. All reported LOW risk or unavailable target for non-indexed constants.
+
+### Notes
+- The repo still has many pre-existing dirty and untracked files. Do not commit broadly. Stage only the files from this release-hardening pass.
 
 ## What Was Just Done (latest — 2026-04-18)
 

@@ -61,26 +61,12 @@
   <!-- Subtitle -->
   <text x="600" y="360" font-family="system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-weight="400" font-size="36" fill="#b0c4de" text-anchor="middle" letter-spacing="0.5">GCSE Physics for neurodivergent learners</text>
 
-  <!-- Board pills -->
+  <!-- Release board pills -->
   <g transform="translate(600, 440)" text-anchor="middle">
-    <!-- AQA pill -->
-    <rect x="-440" y="-18" width="80" height="36" rx="18" fill="#00d4ff" opacity="0.15" stroke="#00d4ff" stroke-width="1" opacity="0.4" />
-    <text x="-400" y="6" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#00d4ff">AQA</text>
-    <!-- Edexcel pill -->
-    <rect x="-340" y="-18" width="108" height="36" rx="18" fill="#00d4ff" opacity="0.1" stroke="#00d4ff" stroke-width="1" opacity="0.3" />
-    <text x="-286" y="6" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#7ec8e3">Edexcel</text>
-    <!-- OCR-A pill -->
-    <rect x="-212" y="-18" width="100" height="36" rx="18" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="1" opacity="0.4" />
-    <text x="-162" y="6" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#c39bd3">OCR-A</text>
-    <!-- OCR-B pill -->
-    <rect x="-92" y="-18" width="100" height="36" rx="18" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="1" opacity="0.3" />
-    <text x="-42" y="6" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#c39bd3">OCR-B</text>
-    <!-- WJEC pill -->
-    <rect x="28" y="-18" width="90" height="36" rx="18" fill="#00d4ff" opacity="0.1" stroke="#00d4ff" stroke-width="1" opacity="0.3" />
-    <text x="73" y="6" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#7ec8e3">WJEC</text>
-    <!-- CCEA pill -->
-    <rect x="138" y="-18" width="90" height="36" rx="18" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="1" opacity="0.3" />
-    <text x="183" y="6" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#c39bd3">CCEA</text>
+    <rect x="-125" y="-22" width="90" height="44" rx="22" fill="#00d4ff" opacity="0.16" stroke="#00d4ff" stroke-width="1" />
+    <text x="-80" y="7" font-family="system-ui, sans-serif" font-weight="700" font-size="20" fill="#00d4ff">AQA</text>
+    <rect x="5" y="-22" width="120" height="44" rx="22" fill="#00d4ff" opacity="0.12" stroke="#00d4ff" stroke-width="1" />
+    <text x="65" y="7" font-family="system-ui, sans-serif" font-weight="700" font-size="20" fill="#7ec8e3">Edexcel</text>
   </g>
 
   <!-- Tagline at bottom -->

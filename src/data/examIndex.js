@@ -140,7 +140,7 @@ export function getGrade9Questions(course = getSelectedCourse(), boardId = getVa
 }
 
 /**
- * Get a balanced mini-paper for timed practice (35 marks).
+ * Get a balanced mini-paper for timed practice.
  * Structure: MCQ → short answer → calculation → extended.
  * @param {string} [course] - 'combined' | 'physics_only' | undefined
  */

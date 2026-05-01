@@ -568,7 +568,7 @@ export default function MasteryScreen() {
             </div>
             <div className="text-left">
               <p className="text-sm font-bold" style={{ color: '#f8fafc' }}>Timed paper</p>
-              <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style 35 marks · 55 minutes</p>
+              <p className="text-xs mt-0.5" style={{ color: '#818cf8' }}>Exam-style mini-paper · 55 minutes</p>
             </div>
           </div>
           <CaretRight size={18} color="rgba(99,102,241,0.5)" />

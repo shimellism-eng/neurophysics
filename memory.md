@@ -37,6 +37,18 @@
 - Existing dirty/untracked historical work remains intentionally uncommitted.
 - No V2 resurrection, no question-bank/content edits, no 9-step lesson-flow changes, and no broad folder reshuffle.
 
+### Repo hygiene cleanup
+- Added `.gitignore` rules for local backup/prototype/scratch files:
+  - `*.backup`
+  - `prototypes/`
+  - `skills-lock.json`
+  - root scratch files `/Design` and `/EVERY`
+  - `.DS_Store` files at any depth
+- Removed tracked `src/.DS_Store` from Git while leaving local files alone.
+- Updated `docs/WORKTREE_TRIAGE.md` to document the ignored local-noise bucket.
+- Commit: `eb7c515` Ignore local scratch files
+- Verification passed: `npm test`, `npm run build`, `git diff --cached --check`.
+
 ### AQA + Edexcel release hardening
 - Release claims are now scoped to AQA and Edexcel only in public metadata and release docs.
 - Removed active V2 release surface by verification: no `np_ui_v2`, `?v2`, or `*ScreenV2` references are present in shipped source/docs.

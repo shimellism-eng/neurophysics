@@ -3,10 +3,18 @@ node_modules/
 dist/
 ios/
 android/
+.DS_Store
+__pycache__/
 *.log
 *.pdf
 .vite/
 .claude/
+.claude*/
+.agents/
+.serena/
+.kiro/
+.opencode.json
+.impeccable.md
 .env
 .env.local
 .env.production
@@ -14,3 +22,21 @@ android/
 .gitnexus
 # Added by code-review-graph
 .code-review-graph/
+
+# Keep public build output clean of temporary prototype/demo pages
+public/*demo*.html
+public/*prototype*.html
+public/.DS_Store
+
+# Local audit/import scratch files
+AUDIT.md
+FULL_AUDIT.md
+questions.db
+questions_import.json
+question_schema.json
+sample_seed.json
+schema.sql
+typescript_types.ts
+import_questions.py
+validate_questions.py
+notes.md

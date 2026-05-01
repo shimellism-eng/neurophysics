@@ -5,8 +5,9 @@
  */
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { Shield, Check, CaretRight, Warning } from '@phosphor-icons/react'
+import { useAuth } from '../context/AuthContext'
 
 const CURRENT_YEAR = new Date().getFullYear()
 
@@ -20,6 +21,8 @@ function calcAge(year, month) {
 
 export default function ConsentScreen() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const { continueAsGuest } = useAuth()
   const [birthYear, setBirthYear] = useState('')
   const [birthMonth, setBirthMonth] = useState('')
   const [ageConfirmed, setAgeConfirmed] = useState(false)
@@ -35,6 +38,7 @@ export default function ConsentScreen() {
   const canContinue = isOldEnough && ageConfirmed && termsRead && (!needs13to15Notice || parentalConsent)
 
   const handleContinue = () => {
+    const nextMode = searchParams.get('next')
     try {
       localStorage.setItem('neurophysics_consent', JSON.stringify({
         ts: Date.now(),
@@ -42,13 +46,19 @@ export default function ConsentScreen() {
         ageVerified: age,
       }))
     } catch {}
+    if (nextMode === 'guest') {
+      continueAsGuest()
+      const onboarded = !!localStorage.getItem('neurophysics_onboarded')
+      navigate(onboarded ? '/' : '/onboarding', { replace: true })
+      return
+    }
     navigate('/auth', { replace: true })
   }
 
   return (
     <div
-      className="flex flex-col h-full overflow-hidden"
-      style={{ background: '#0b1121' }}
+      className="flex flex-col h-full overflow-hidden np-shell-gradient"
+      style={{ paddingTop: 'var(--safe-top)' }}
     >
       <div className="flex-1 overflow-y-auto px-5 pt-10 pb-8 flex flex-col gap-6" style={{ minHeight: 0 }}>
 
@@ -60,13 +70,13 @@ export default function ConsentScreen() {
           transition={{ duration: 0.4 }}
         >
           <div className="w-16 h-16 rounded-[22px] flex items-center justify-center"
-            style={{ background: 'rgba(99,102,241,0.15)', border: '1.5px solid rgba(99,102,241,0.35)' }}>
-            <Shield size={30} color="#818cf8" />
+            style={{ background: 'var(--np-accent-soft)', border: '1.5px solid rgba(116,188,181,0.32)' }}>
+            <Shield size={30} color="var(--np-accent-strong)" />
           </div>
-          <h1 className="text-2xl font-bold" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
+          <h1 className="text-2xl font-bold" style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}>
             Before you start
           </h1>
-          <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc', maxWidth: 300 }}>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--np-text-muted)', maxWidth: 300 }}>
             NeuroPhysics is a GCSE revision app for students aged 13+. Please take a moment to confirm the following.
           </p>
         </motion.div>
@@ -74,26 +84,26 @@ export default function ConsentScreen() {
         {/* What we collect — plain English summary */}
         <motion.div
           className="rounded-[18px] px-4 py-4 space-y-3"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.4 }}
         >
-          <p className="text-xs font-bold uppercase tracking-wide" style={{ color: '#556677' }}>What we use your data for</p>
+          <p className="text-xs font-bold uppercase tracking-wide" style={{ color: 'var(--np-text-dim)' }}>What we use your data for</p>
           {[
-            { emoji: '📧', label: 'Your email address', detail: 'To create your account' },
-            { emoji: '📊', label: 'Your revision progress', detail: 'Stored on your device only' },
-            { emoji: '💬', label: 'AI chat & marking', detail: 'Sent to Google, not stored by us' },
+            { icon: '1', label: 'Your email address', detail: 'Used only if you create an account.' },
+            { icon: '2', label: 'Your study settings', detail: 'Saved on your device and may sync when you sign in.' },
+            { icon: '3', label: 'AI chat and marking', detail: 'Sent to Google to generate responses. Recent Mamo threads may stay on your device.' },
           ].map(item => (
             <div key={item.label} className="flex items-start gap-3">
-              <span style={{ fontSize: 18, lineHeight: 1.4 }}>{item.emoji}</span>
+              <span style={{ fontSize: 13, lineHeight: 1.4, color: 'var(--np-accent-strong)', fontWeight: 700, width: 16 }}>{item.icon}</span>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{item.label}</p>
-                <p className="text-xs" style={{ color: '#a8b8cc' }}>{item.detail}</p>
+                <p className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>{item.label}</p>
+                <p className="text-xs" style={{ color: 'var(--np-text-muted)' }}>{item.detail}</p>
               </div>
             </div>
           ))}
-          <p className="text-xs pt-1" style={{ color: '#556677' }}>
+          <p className="text-xs pt-1" style={{ color: 'var(--np-text-dim)' }}>
             We never sell your data or use it for advertising.
           </p>
         </motion.div>
@@ -101,21 +111,21 @@ export default function ConsentScreen() {
         {/* Age verification */}
         <motion.div
           className="rounded-[18px] px-4 py-4"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+          style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.4 }}
         >
-          <p className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: '#556677' }}>Your date of birth</p>
+          <p className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: 'var(--np-text-dim)' }}>Your date of birth</p>
           <div className="flex gap-3">
             <select
               value={birthMonth}
               onChange={e => setBirthMonth(e.target.value)}
               className="flex-1 rounded-[10px] px-3 py-2.5 text-sm font-semibold"
               style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '0.75px solid #2d3e55',
-                color: birthMonth ? '#f8fafc' : '#556677',
+                background: 'var(--surface-quiet)',
+                border: 'var(--border-quiet)',
+                color: birthMonth ? 'var(--np-text)' : 'var(--np-text-dim)',
                 outline: 'none',
               }}
             >
@@ -133,9 +143,9 @@ export default function ConsentScreen() {
               max={CURRENT_YEAR}
               className="w-24 rounded-[10px] px-3 py-2.5 text-sm font-semibold"
               style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '0.75px solid #2d3e55',
-                color: '#f8fafc',
+                background: 'var(--surface-quiet)',
+                border: 'var(--border-quiet)',
+                color: 'var(--np-text)',
                 outline: 'none',
               }}
             />
@@ -165,24 +175,24 @@ export default function ConsentScreen() {
             {needs13to15Notice && (
               <motion.div
                 className="mt-3 rounded-[10px] px-3 py-3 space-y-3"
-                style={{ background: 'rgba(243,156,18,0.08)', border: '1px solid rgba(243,156,18,0.3)' }}
+                style={{ background: 'var(--np-warning-soft)', border: '1px solid rgba(216,139,45,0.28)' }}
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
               >
                 <div className="flex items-start gap-2">
-                  <Warning size={14} color="#f39c12" style={{ flexShrink: 0, marginTop: 1 }} />
-                  <p className="text-xs leading-relaxed" style={{ color: '#fde68a' }}>
+                  <Warning size={14} color="var(--np-amber)" style={{ flexShrink: 0, marginTop: 1 }} />
+                  <p className="text-xs leading-relaxed" style={{ color: 'var(--np-text-mid)' }}>
                     You're under 16. A parent or guardian should review our{' '}
-                    <span style={{ color: '#f39c12', textDecoration: 'underline' }}>Privacy Policy</span>{' '}
+                    <span style={{ color: 'var(--np-amber)', textDecoration: 'underline' }}>Privacy policy</span>{' '}
                     before you continue. By ticking the box below, you confirm a parent or guardian has agreed to you using NeuroPhysics.
                   </p>
                 </div>
                 <button
                   className="w-full flex items-start gap-3 rounded-[10px] px-3 py-3 text-left"
                   style={{
-                    background: parentalConsent ? 'rgba(243,156,18,0.12)' : 'rgba(255,255,255,0.03)',
-                    border: parentalConsent ? '1px solid rgba(243,156,18,0.5)' : '0.75px solid rgba(243,156,18,0.2)',
+                      background: parentalConsent ? 'rgba(216,139,45,0.12)' : 'rgba(255,255,255,0.03)',
+                      border: parentalConsent ? '1px solid rgba(216,139,45,0.42)' : '0.75px solid rgba(216,139,45,0.2)',
                     transition: 'all 0.2s',
                   }}
                   onClick={() => setParentalConsent(p => !p)}
@@ -190,14 +200,14 @@ export default function ConsentScreen() {
                   <div
                     className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
                     style={{
-                      background: parentalConsent ? '#f39c12' : 'rgba(255,255,255,0.07)',
-                      border: parentalConsent ? 'none' : '0.75px solid rgba(243,156,18,0.4)',
+                      background: parentalConsent ? 'var(--np-amber)' : 'rgba(255,255,255,0.07)',
+                      border: parentalConsent ? 'none' : '0.75px solid rgba(216,139,45,0.32)',
                       transition: 'all 0.2s',
                     }}
                   >
                     {parentalConsent && <Check size={14} color="#fff" />}
                   </div>
-                  <p className="text-xs font-semibold leading-relaxed" style={{ color: parentalConsent ? '#fde68a' : '#a8b8cc' }}>
+                  <p className="text-xs font-semibold leading-relaxed" style={{ color: parentalConsent ? 'var(--np-text)' : 'var(--np-text-muted)' }}>
                     My parent or guardian has agreed to me using this app
                   </p>
                 </button>
@@ -219,8 +229,8 @@ export default function ConsentScreen() {
               <motion.button
                 className="w-full flex items-start gap-3 rounded-[14px] px-4 py-4 text-left"
                 style={{
-                  background: ageConfirmed ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
-                  border: ageConfirmed ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
+                  background: ageConfirmed ? 'var(--np-accent-soft)' : 'var(--surface-panel)',
+                  border: ageConfirmed ? '1px solid rgba(116,188,181,0.4)' : 'var(--border-quiet)',
                   transition: 'all 0.2s',
                 }}
                 onClick={() => setAgeConfirmed(p => !p)}
@@ -231,18 +241,18 @@ export default function ConsentScreen() {
                 <div
                   className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
                   style={{
-                    background: ageConfirmed ? '#6366f1' : 'rgba(255,255,255,0.07)',
-                    border: ageConfirmed ? 'none' : '0.75px solid #2d3e55',
+                    background: ageConfirmed ? 'var(--np-accent)' : 'rgba(255,255,255,0.07)',
+                    border: ageConfirmed ? 'none' : 'var(--border-quiet)',
                     transition: 'all 0.2s',
                   }}
                 >
                   {ageConfirmed && <Check size={14} color="#fff" />}
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-semibold" style={{ color: ageConfirmed ? '#818cf8' : '#f8fafc' }}>
+                  <p className="text-sm font-semibold" style={{ color: ageConfirmed ? 'var(--np-accent-strong)' : 'var(--np-text)' }}>
                     I confirm I am {age} years old
                   </p>
-                  <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
+                  <p className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
                     {age < 16
                       ? 'As you are under 16, a parent or guardian should confirm this on your behalf.'
                       : 'I understand how my data is used and my rights under UK GDPR.'}
@@ -256,8 +266,8 @@ export default function ConsentScreen() {
           <button
             className="w-full flex items-start gap-3 rounded-[14px] px-4 py-4 text-left"
             style={{
-              background: termsRead ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
-              border: termsRead ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
+              background: termsRead ? 'var(--np-accent-soft)' : 'var(--surface-panel)',
+              border: termsRead ? '1px solid rgba(116,188,181,0.4)' : 'var(--border-quiet)',
               transition: 'all 0.2s',
             }}
             onClick={() => setTermsRead(p => !p)}
@@ -265,18 +275,18 @@ export default function ConsentScreen() {
             <div
               className="w-6 h-6 rounded-[6px] shrink-0 flex items-center justify-center mt-0.5"
               style={{
-                background: termsRead ? '#6366f1' : 'rgba(255,255,255,0.07)',
-                border: termsRead ? 'none' : '0.75px solid #2d3e55',
+                background: termsRead ? 'var(--np-accent)' : 'rgba(255,255,255,0.07)',
+                border: termsRead ? 'none' : 'var(--border-quiet)',
                 transition: 'all 0.2s',
               }}
             >
               {termsRead && <Check size={14} color="#fff" />}
             </div>
             <div className="flex-1">
-              <p className="text-sm font-semibold" style={{ color: termsRead ? '#818cf8' : '#f8fafc' }}>
-                I agree to the Terms and Privacy Policy
+              <p className="text-sm font-semibold" style={{ color: termsRead ? 'var(--np-accent-strong)' : 'var(--np-text)' }}>
+                I agree to the terms of service and privacy policy
               </p>
-              <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>
+              <p className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
                 I understand how my data is used and my rights under UK law.
               </p>
             </div>
@@ -292,20 +302,34 @@ export default function ConsentScreen() {
         >
           <button
             className="text-xs underline"
-            style={{ color: '#6366f1' }}
+            style={{ color: 'var(--np-accent-strong)' }}
             onClick={() => navigate('/privacy')}
           >
-            Privacy Policy
+            Privacy policy
           </button>
-          <span style={{ color: '#2d3e55' }}>·</span>
+          <span style={{ color: 'var(--np-text-dim)' }}>·</span>
           <button
             className="text-xs underline"
-            style={{ color: '#6366f1' }}
+            style={{ color: 'var(--np-accent-strong)' }}
             onClick={() => navigate('/terms')}
           >
-            Terms of Service
+            Terms of service
           </button>
         </motion.div>
+
+        {searchParams.get('next') === 'guest' && (
+          <motion.div
+            className="rounded-[14px] px-4 py-3"
+            style={{ background: 'var(--np-accent-soft)', border: '0.75px solid rgba(116,188,181,0.22)' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.28, duration: 0.4 }}
+          >
+            <p className="text-xs leading-relaxed" style={{ color: 'var(--np-text-muted)' }}>
+              Guest mode lets you explore lessons and study tools first. Some features, including Mamo and cross-device syncing, need a free account.
+            </p>
+          </motion.div>
+        )}
 
         {/* Continue button */}
         <motion.button
@@ -314,10 +338,10 @@ export default function ConsentScreen() {
           className="w-full py-4 rounded-[16px] font-bold text-base flex items-center justify-center gap-2"
           style={{
             background: canContinue
-              ? '#6366f1'
+              ? 'var(--np-accent)'
               : 'rgba(255,255,255,0.05)',
-            color: canContinue ? '#fff' : '#3a4a5a',
-            boxShadow: canContinue ? '0 8px 24px rgba(99,102,241,0.35)' : 'none',
+            color: canContinue ? '#07111d' : 'var(--np-text-dim)',
+            boxShadow: canContinue ? 'var(--shadow-raised)' : 'none',
             cursor: canContinue ? 'pointer' : 'not-allowed',
             transition: 'all 0.25s',
           }}
@@ -326,7 +350,7 @@ export default function ConsentScreen() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4 }}
         >
-          Get Started
+          Continue
           <CaretRight size={18} />
         </motion.button>
 

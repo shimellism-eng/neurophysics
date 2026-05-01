@@ -51,8 +51,8 @@ export async function scheduleDailyReminder(hour = 20, minute = 0) {
       notifications: [
         {
           id: DAILY_REMINDER_ID,
-          title: 'NeuroPhysics 🔬',
-          body: "Time to revise! Don't break your streak 🔥",
+          title: 'NeuroPhysics',
+          body: "A calm study reminder is ready whenever you are.",
           schedule: {
             on: { hour, minute },
             repeats: true,
@@ -68,8 +68,8 @@ export async function scheduleDailyReminder(hour = 20, minute = 0) {
   // Web fallback — fire an immediate confirmation; background scheduling
   // is not supported without a service worker / Push API.
   if (Notification.permission === 'granted') {
-    new Notification('NeuroPhysics 🔬', {
-      body: "Daily reminders are on! Open the app each day to study 📚",
+    new Notification('NeuroPhysics', {
+      body: "Daily reminders are on. Open the app whenever you are ready to study.",
       icon: '/vite.svg',
     })
     return true

@@ -1,39 +1,37 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
-import { Check, ArrowRight, User, Lightning, Brain, Trophy, GraduationCap, CalendarBlank, Pencil, Target, CaretLeft } from '@phosphor-icons/react'
+import { Check, ArrowRight, User, Lightning, Brain, Trophy, GraduationCap, CalendarBlank, Pencil, Target, CaretLeft, BookOpen, SpeakerHigh, Eye, ShieldCheck } from '@phosphor-icons/react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
 import { getBoardOptions } from '../features/settings/boardCourseDisplay'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
-const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
-
 const OPTIONS = [
   {
     id: 'sounds',
-    title: 'Sound Effects',
-    desc: 'Plays a soft sound for correct and wrong answers.',
+    title: 'Sound effects',
+    desc: 'Plays a soft sound for feedback moments.',
     defaultOn: true,
   },
   {
     id: 'focus',
-    title: 'Focus Mode',
-    desc: 'Reduces distractions and simplifies the layout.',
+    title: 'Calm layout',
+    desc: 'Reduces visual distractions and keeps the screen simpler.',
   },
   {
     id: 'visual',
-    title: 'Visual-Rich Mode',
+    title: 'Visual-rich mode',
     desc: 'Uses more diagrams, simulations, and visual metaphors.',
     defaultOn: true,
   },
   {
     id: 'tts',
-    title: 'Text-to-Speech',
+    title: 'Text-to-speech',
     desc: 'Adds a button to read explanations aloud.',
   },
   {
     id: 'dyslexia',
-    title: 'Dyslexia-friendly Font',
+    title: 'Dyslexia-friendly font',
     desc: 'Switches to a font designed for easier reading.',
   },
 ]
@@ -43,8 +41,8 @@ function OptionCard({ option, enabled, onToggle, index }) {
     <motion.button
       className="w-full text-left rounded-[18px] px-5 py-4 flex items-center justify-between gap-4"
       style={{
-        background: enabled ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
-        border: enabled ? '1px solid rgba(99,102,241,0.55)' : '0.75px solid #1d293d',
+        background: enabled ? 'var(--np-accent-soft)' : 'var(--surface-panel)',
+        border: enabled ? '1px solid rgba(116,188,181,0.4)' : 'var(--border-quiet)',
         transition: 'background 0.2s, border-color 0.2s',
       }}
       onClick={onToggle}
@@ -54,16 +52,16 @@ function OptionCard({ option, enabled, onToggle, index }) {
       whileTap={{ scale: 0.98 }}
     >
       <div className="flex-1 min-w-0">
-        <div className="text-base font-semibold mb-0.5" style={{ color: enabled ? '#818cf8' : '#f8fafc' }}>
+        <div className="text-base font-semibold mb-0.5" style={{ color: enabled ? 'var(--np-accent-strong)' : 'var(--np-text)' }}>
           {option.title}
         </div>
-        <div className="text-sm leading-snug" style={{ color: '#a8b8cc' }}>{option.desc}</div>
+        <div className="text-sm leading-snug" style={{ color: 'var(--np-text-muted)' }}>{option.desc}</div>
       </div>
       <div
         className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center transition-all"
         style={{
-          background: enabled ? '#6366f1' : 'rgba(255,255,255,0.07)',
-          border: enabled ? 'none' : '0.75px solid #2d3e55',
+          background: enabled ? 'var(--np-accent)' : 'rgba(255,255,255,0.07)',
+          border: enabled ? 'none' : 'var(--border-quiet)',
         }}
       >
         {enabled && <Check size={14} color="#fff" />}
@@ -78,20 +76,20 @@ function StepValueProp({ onNext }) {
     {
       icon: Brain,
       color: '#6366f1',
-      title: 'Built for every brain',
-      desc: 'Dyslexia-friendly fonts, TTS, focus mode, and spaced repetition — all built in.',
+      title: 'Designed to reduce overwhelm',
+      desc: 'Reading support, calmer visuals, and a steady lesson structure are built in.',
     },
     {
       icon: Lightning,
       color: '#f97316',
       title: 'AI tutor on tap',
-      desc: 'Mamo explains concepts in plain English, 24/7 — no judgement, no rush.',
+      desc: 'Mamo explains concepts in plain English when you need extra support.',
     },
     {
       icon: Trophy,
       color: '#fdc700',
       title: 'Exam-ready',
-      desc: 'Every topic mapped to GCSE Physics. Practice papers. Top-grade challenge.',
+      desc: 'GCSE Physics topics, exam practice, and stretch questions when you want them.',
     },
   ]
 
@@ -108,42 +106,42 @@ function StepValueProp({ onNext }) {
         <div className="pt-12 pb-6">
           {/* Step indicator (1/5) */}
           <div className="flex items-center gap-2 mb-8">
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#6366f1' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
-            <div className="w-6 h-1.5 rounded-full" style={{ background: '#1d293d' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: 'var(--np-accent)' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.08)' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.08)' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.08)' }} />
+            <div className="w-6 h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.08)' }} />
           </div>
 
           {/* Atom icon */}
           <motion.div
             className="w-20 h-20 rounded-[24px] flex items-center justify-center mb-6"
-            style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.2), rgba(129,140,248,0.1))', border: '1px solid rgba(99,102,241,0.3)' }}
+            style={{ background: 'linear-gradient(135deg, rgba(94,167,161,0.18), rgba(216,139,45,0.08))', border: '1px solid rgba(116,188,181,0.22)' }}
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.15, type: 'spring', stiffness: 300, damping: 22 }}
           >
-            <span style={{ fontSize: 40 }}>⚛️</span>
+              <Brain size={36} color="var(--np-accent-strong)" weight="duotone" />
           </motion.div>
 
           <motion.h1
             className="text-4xl font-extrabold leading-tight mb-3"
-            style={{ color: '#f8fafc', letterSpacing: '-0.025em' }}
+            style={{ color: 'var(--np-text)', letterSpacing: '-0.025em' }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
             Physics that fits{'\n'}
-            <span style={{ color: '#6366f1' }}>your brain.</span>
+            <span style={{ color: 'var(--np-accent-strong)' }}>your brain.</span>
           </motion.h1>
           <motion.p
             className="text-base leading-relaxed mb-8"
-            style={{ color: '#a8b8cc' }}
+            style={{ color: 'var(--np-text-muted)' }}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28 }}
           >
-            GCSE Physics — adapted for neurodivergent learners, built by people who get it.
+            GCSE Physics with calmer structure, optional support tools, and less clutter.
           </motion.p>
         </div>
 
@@ -153,7 +151,7 @@ function StepValueProp({ onNext }) {
             <motion.div
               key={f.title}
               className="flex items-start gap-4 rounded-[18px] px-5 py-4"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
+              style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.35 + i * 0.08 }}
@@ -165,8 +163,8 @@ function StepValueProp({ onNext }) {
                 <f.icon size={18} color={f.color} />
               </div>
               <div>
-                <div className="text-sm font-bold mb-0.5" style={{ color: '#f8fafc' }}>{f.title}</div>
-                <div className="text-xs leading-snug" style={{ color: '#a8b8cc' }}>{f.desc}</div>
+                <div className="text-sm font-bold mb-0.5" style={{ color: 'var(--np-text)' }}>{f.title}</div>
+                <div className="text-xs leading-snug" style={{ color: 'var(--np-text-muted)' }}>{f.desc}</div>
               </div>
             </motion.div>
           ))}
@@ -176,7 +174,7 @@ function StepValueProp({ onNext }) {
       {/* CTA */}
       <motion.div
         className="px-6 pt-3 shrink-0"
-        style={{ borderTop: '0.75px solid #1d293d', background: '#0b1121', paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
+        style={{ borderTop: 'var(--border-quiet)', background: 'var(--np-bg)', paddingBottom: 'calc(28px + env(safe-area-inset-bottom, 0px))' }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
@@ -184,9 +182,9 @@ function StepValueProp({ onNext }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: '#6366f1',
-            color: '#fff',
-            boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
+            background: 'var(--np-accent)',
+            color: '#07111d',
+            boxShadow: 'var(--shadow-raised)',
           }}
           onClick={onNext}
           whileTap={{ scale: 0.97 }}
@@ -203,7 +201,6 @@ function StepValueProp({ onNext }) {
 // ─── Step 3 (last, optional): Profile / Avatar ────────────────────────────────
 function StepProfile({ onNext, onSkip }) {
   const [name, setName] = useState('')
-  const [avatar, setAvatar] = useState('🧠')
   const [error, setError] = useState(false)
   const [ageGroup, setAgeGroup] = useState('')
   const canContinue = name.trim() && ageGroup
@@ -212,7 +209,7 @@ function StepProfile({ onNext, onSkip }) {
     const trimmed = name.trim()
     if (!trimmed) { setError(true); return }
     if (!ageGroup) return
-    onNext({ name: trimmed, avatar, ageGroup })
+    onNext({ name: trimmed, avatar: '', ageGroup })
   }
 
   return (
@@ -259,34 +256,20 @@ function StepProfile({ onNext, onSkip }) {
           </p>
         </motion.div>
 
-        {/* Avatar picker */}
+        {/* Profile icon note */}
         <motion.div
-          className="mb-5"
+          className="mb-5 rounded-[16px] px-4 py-3"
+          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.4 }}
         >
-          <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#a8b8cc' }}>
-            Pick an avatar
+          <div className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#a8b8cc' }}>
+            Profile icon
           </div>
-          <div className="flex flex-wrap gap-2">
-            {AVATARS.map(emoji => (
-              <button
-                key={emoji}
-                className="w-12 h-12 rounded-[14px] text-2xl flex items-center justify-center transition-all"
-                style={{
-                  background: avatar === emoji ? 'rgba(99,102,241,0.2)' : 'rgba(18,26,47,0.9)',
-                  border: avatar === emoji ? '2px solid #6366f1' : '0.75px solid #1d293d',
-                  transform: avatar === emoji ? 'scale(1.08)' : 'scale(1)',
-                  transition: 'all 0.15s',
-                }}
-                onClick={() => setAvatar(emoji)}
-                aria-label={`Select avatar ${emoji}`}
-              >
-                {emoji}
-              </button>
-            ))}
-          </div>
+          <p className="text-sm leading-snug" style={{ color: '#c8d4e3', margin: 0 }}>
+            Your profile icon will use your first initial, keeping the app calmer and more consistent.
+          </p>
         </motion.div>
 
         {/* Name input */}
@@ -362,7 +345,7 @@ function StepProfile({ onNext, onSkip }) {
               animate={{ opacity: 1, y: 0 }}
             >
               <p className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                🔒 Your data is protected under <strong style={{ color: '#818cf8' }}>UK GDPR</strong>. We never sell your data. You can delete your account at any time in Settings.
+                Your data is protected under <strong style={{ color: '#818cf8' }}>UK GDPR</strong>. We never sell your data. You can delete your account at any time in Settings.
               </p>
             </motion.div>
           )}
@@ -380,16 +363,16 @@ function StepProfile({ onNext, onSkip }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: canContinue ? '#6366f1' : 'rgba(99,102,241,0.3)',
-            color: '#fff',
-            boxShadow: canContinue ? '0 8px 28px rgba(99,102,241,0.4)' : 'none',
+            background: canContinue ? 'var(--np-accent)' : 'rgba(94,167,161,0.22)',
+            color: canContinue ? '#07111d' : 'var(--np-text-muted)',
+            boxShadow: canContinue ? 'var(--shadow-raised)' : 'none',
             transition: 'all 0.2s',
           }}
           onClick={handleNext}
           whileTap={{ scale: 0.97 }}
           aria-label="Save profile and enter app"
         >
-          Let's go
+          Continue
           <ArrowRight size={18} />
         </motion.button>
         <motion.button
@@ -409,34 +392,34 @@ function StepProfile({ onNext, onSkip }) {
 // ─── Step 2: Accessibility / Neurodivergent Needs — skippable ────────────────
 const ACCESSIBILITY_OPTIONS = [
   {
-    id: 'adhd',
-    label: 'ADHD',
-    desc: 'Break reminders every 20 min, larger tap targets',
-    icon: '⚡',
+    id: 'calm',
+    label: 'Calmer screens',
+    desc: 'Less motion, fewer celebration effects, and a quieter feel.',
+    Icon: Lightning,
   },
   {
-    id: 'dyslexia',
-    label: 'Dyslexia',
-    desc: 'OpenDyslexic font, cream background, relaxed line-height',
-    icon: '📖',
+    id: 'reading',
+    label: 'Easier reading',
+    desc: 'Reading ruler, read-aloud support, and more readable text settings.',
+    Icon: BookOpen,
   },
   {
-    id: 'autism',
-    label: 'Autism / sensory sensitivity',
-    desc: 'Reduce motion, muted animations',
-    icon: '🔇',
+    id: 'spacing',
+    label: 'More spacing',
+    desc: 'Larger text and looser line spacing to reduce visual crowding.',
+    Icon: SpeakerHigh,
   },
   {
-    id: 'visual',
-    label: 'Visual sensitivity',
-    desc: 'High contrast, reduce brightness',
-    icon: '👁',
+    id: 'contrast',
+    label: 'Clearer contrast',
+    desc: 'Stronger contrast to make text and controls easier to spot.',
+    Icon: Eye,
   },
   {
     id: 'none',
-    label: 'None of these',
-    desc: 'No adjustments needed',
-    icon: '✓',
+    label: 'No changes for now',
+    desc: 'Start with the default setup and adjust later in Settings.',
+    Icon: ShieldCheck,
   },
 ]
 
@@ -461,10 +444,18 @@ function StepAccessibility({ onNext, onSkip }) {
       try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}') } catch { return {} }
     })()
     let updated = { ...existing }
-    if (selected.includes('adhd'))    updated = { ...updated, breakInterval: 20 }
-    if (selected.includes('dyslexia')) updated = { ...updated, dyslexicFont: true, colorTheme: 'cream', lineHeight: 'relaxed' }
-    if (selected.includes('autism'))  updated = { ...updated, reduceMotion: true }
-    if (selected.includes('visual'))  updated = { ...updated, highContrast: true }
+    if (selected.includes('calm')) {
+      updated = { ...updated, reduceMotion: true, celebrations: false, sounds: false, challengeMode: false, exploreMode: true }
+    }
+    if (selected.includes('reading')) {
+      updated = { ...updated, fontFamily: 'opendyslexic', dyslexicFont: true, readingRuler: true, tts: true, background: 'cream' }
+    }
+    if (selected.includes('spacing')) {
+      updated = { ...updated, fontSize: 1.1, lineSpacing: 1.95 }
+    }
+    if (selected.includes('contrast')) {
+      updated = { ...updated, highContrast: true }
+    }
     localStorage.setItem('neurophysics_prefs', JSON.stringify(updated))
     onNext()
   }
@@ -507,11 +498,11 @@ function StepAccessibility({ onNext, onSkip }) {
             className="text-4xl font-extrabold leading-tight mb-3"
             style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}
           >
-            How do you{'\n'}
-            <span style={{ color: '#6366f1' }}>learn best?</span>
+            Choose a calmer{'\n'}
+            <span style={{ color: '#6366f1' }}>starting setup</span>
           </h1>
           <p className="text-base leading-relaxed" style={{ color: '#a8b8cc' }}>
-            We'll set up the app to suit you — you can always change this in Settings.
+            Pick any options that sound helpful. You can change all of them later in Settings.
           </p>
         </motion.div>
 
@@ -535,7 +526,7 @@ function StepAccessibility({ onNext, onSkip }) {
                 transition={{ delay: 0.15 + i * 0.07, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span style={{ fontSize: 22, lineHeight: 1 }}>{opt.icon}</span>
+                <opt.Icon size={22} color={isSelected ? '#6366f1' : '#a8b8cc'} weight="duotone" />
                 <div className="flex-1 min-w-0">
                   <div
                     className="text-base font-semibold mb-0.5"
@@ -570,9 +561,9 @@ function StepAccessibility({ onNext, onSkip }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: 'linear-gradient(135deg, #00a8cc, #6366f1)',
-            color: '#0b1121',
-            boxShadow: '0 8px 28px rgba(99,102,241,0.3)',
+            background: 'var(--np-accent)',
+            color: '#07111d',
+            boxShadow: 'var(--shadow-raised)',
           }}
           onClick={applyAndContinue}
           whileTap={{ scale: 0.97 }}
@@ -664,9 +655,9 @@ function StepPrefs({ onNext, onSkip }) {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: '#6366f1',
-            color: '#fff',
-            boxShadow: '0 8px 28px rgba(99,102,241,0.4)',
+            background: 'var(--np-accent)',
+            color: '#07111d',
+            boxShadow: 'var(--shadow-raised)',
           }}
           onClick={() => onNext(prefs)}
           whileTap={{ scale: 0.97 }}
@@ -706,20 +697,20 @@ function StepHowItWorks({ onNext }) {
             How NeuroPhysics works
           </h2>
           <p style={{ fontSize: 14, color: '#94a3b8', margin: 0, lineHeight: 1.6 }}>
-            Built for the way <em>your</em> brain learns — not a textbook brain.
+            Built to feel calmer, clearer, and easier to return to.
           </p>
           {[
-            { icon: '🧠', title: 'Spaced repetition', desc: 'Topics come back at the perfect moment — just before you forget. Science-proven to double retention.' },
-            { icon: '⚡', title: 'Bite-sized lessons', desc: '5-minute sessions. One concept at a time. No walls of text. Your working memory will thank you.' },
-            { icon: '🤖', title: 'Mamo, your AI tutor', desc: 'Stuck? Ask Mamo anything, any time. No judgement. No waiting for a teacher.' },
-          ].map(({ icon, title, desc }) => (
+            { Icon: Brain, title: 'Spaced repetition', desc: 'Topics come back at the right moment, just before you forget. This helps knowledge stick.' },
+            { Icon: Lightning, title: 'Bite-sized lessons', desc: 'Short sessions. One concept at a time. No walls of text.' },
+            { Icon: Brain, title: 'Mamo, your study coach', desc: 'Ask for help when you are stuck. Clear support, without judgement.' },
+          ].map(({ Icon, title, desc }) => (
             <div key={title} style={{
               background: 'rgba(15,22,41,0.95)',
               border: '0.75px solid rgba(255,255,255,0.08)',
               borderRadius: 16, padding: '16px 18px',
               display: 'flex', gap: 14, alignItems: 'flex-start'
             }}>
-              <span style={{ fontSize: 28, lineHeight: 1 }}>{icon}</span>
+              <Icon size={26} color="#818cf8" weight="duotone" />
               <div>
                 <div style={{ fontWeight: 700, fontSize: 15, color: '#f8fafc', marginBottom: 4 }}>{title}</div>
                 <div style={{ fontSize: 13, color: '#94a3b8', lineHeight: 1.5 }}>{desc}</div>
@@ -741,7 +732,7 @@ function StepHowItWorks({ onNext }) {
   )
 }
 
-// ─── Step 3: Exam Board ───────────────────────────────────────────────────────
+// ─── Step 3: Exam board ───────────────────────────────────────────────────────
 function StepBoard({ onNext, reducedMotion }) {
   const [selected, setSelected] = useState('aqa')
 
@@ -785,7 +776,7 @@ function StepBoard({ onNext, reducedMotion }) {
             >
               <GraduationCap size={18} color="#6366f1" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Exam Board</span>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#6366f1' }}>Exam board</span>
           </div>
 
           <h1 className="text-4xl font-extrabold leading-tight mb-3" style={{ color: '#f8fafc', letterSpacing: '-0.02em' }}>
@@ -835,7 +826,7 @@ function StepBoard({ onNext, reducedMotion }) {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <span className="text-base font-bold" style={{ color: isSelected ? '#f8fafc' : '#c8d4e3' }}>
-                        {board.flag} {board.name}
+                        {board.name}
                       </span>
                       {board.gradeSystem === 'A*-G' && (
                         <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full"
@@ -890,7 +881,7 @@ function StepBoard({ onNext, reducedMotion }) {
           onClick={handleNext}
           whileTap={{ scale: 0.97 }}
         >
-          {BOARDS[selected].flag} {BOARDS[selected].name} — that's me
+          {BOARDS[selected].name} — that's me
           <ArrowRight size={18} />
         </motion.button>
       </motion.div>
@@ -901,17 +892,17 @@ function StepBoard({ onNext, reducedMotion }) {
 // ─── Step 2: Setup (Exam Date + Age) ─────────────────────────────────────────
 const GRADE_OPTIONS_91 = [
   { value: '4', label: 'Grade 4', sub: 'Pass',         color: '#f59e0b' },
-  { value: '5', label: 'Grade 5', sub: 'Strong Pass',  color: '#22c55e' },
+  { value: '5', label: 'Grade 5', sub: 'Strong pass',  color: '#22c55e' },
   { value: '6', label: 'Grade 6', sub: 'Merit',        color: '#10b981' },
   { value: '7', label: 'Grade 7', sub: 'Good',         color: '#6366f1' },
   { value: '8', label: 'Grade 8', sub: 'Distinction',  color: '#8b5cf6' },
-  { value: '9', label: 'Grade 9', sub: 'Top Grade',    color: '#e91e8c' },
+  { value: '9', label: 'Grade 9', sub: 'Stretch target',    color: '#e91e8c' },
 ]
 const GRADE_OPTIONS_CCEA = [
   { value: 'C',  label: 'Grade C',  sub: 'Pass',        color: '#f59e0b' },
   { value: 'B',  label: 'Grade B',  sub: 'Merit',       color: '#22c55e' },
   { value: 'A',  label: 'Grade A',  sub: 'Distinction', color: '#6366f1' },
-  { value: 'A*', label: 'Grade A*', sub: 'Top Grade',   color: '#e91e8c' },
+  { value: 'A*', label: 'Grade A*', sub: 'Stretch target',   color: '#e91e8c' },
 ]
 
 function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
@@ -927,7 +918,7 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
   const passed = daysLeft !== null && daysLeft <= 0
   const urgency = daysLeft === null ? null
     : passed    ? { color: '#94a3b8', bg: 'rgba(148,163,184,0.08)', border: 'rgba(148,163,184,0.18)', label: 'Passed' }
-    : daysLeft <= 14 ? { color: '#ef4444', bg: 'rgba(239,68,68,0.08)',  border: 'rgba(239,68,68,0.22)',  label: 'Very soon' }
+    : daysLeft <= 14 ? { color: '#ef4444', bg: 'rgba(239,68,68,0.08)',  border: 'rgba(239,68,68,0.22)',  label: 'Exam is close' }
     : daysLeft <= 42 ? { color: '#f59e0b', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.22)', label: 'Coming up' }
     : { color: '#22c55e', bg: 'rgba(34,197,94,0.08)', border: 'rgba(34,197,94,0.2)', label: 'On track' }
   const fmtDate = examD ? examD.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
@@ -1128,16 +1119,16 @@ function StepSetup({ onNext, boardId, onBack, reducedMotion }) {
         <motion.button
           className="w-full py-4 rounded-[20px] text-base font-bold flex items-center justify-center gap-2"
           style={{
-            background: 'linear-gradient(135deg, #00c4ee 0%, #6366f1 60%, #9b59b6 100%)',
-            color: '#fff',
-            boxShadow: '0 6px 28px rgba(99,102,241,0.2), 0 2px 8px rgba(99,102,241,0.25)',
+            background: 'var(--np-accent)',
+            color: '#07111d',
+            boxShadow: 'var(--shadow-raised)',
             letterSpacing: '-0.01em',
             transition: 'all 0.2s',
           }}
           onClick={() => onNext({ grade: grade || '7', examDate: examDate || null })}
           whileTap={{ scale: 0.97 }}
         >
-          Let's go
+          Continue
           <ArrowRight size={18} />
         </motion.button>
         {!grade && (
@@ -1175,14 +1166,14 @@ export default function OnboardingScreen() {
   const finishOnboarding = ({ grade, examDate }) => {
     localStorage.setItem('neurophysics_onboarded', '1')
     localStorage.setItem('neurophysics_profile', JSON.stringify({
-      name: '', avatar: '🧠', ageGroup: null,
+      name: '', avatar: '', ageGroup: null,
       grade: grade || '7', examDate: examDate || null, boardId,
     }))
     navigate('/', { replace: true })
   }
 
   return (
-    <div className="flex flex-col h-full" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full np-shell-gradient" style={{ paddingTop: 'var(--safe-top)' }}>
       <AnimatePresence mode="wait">
         {step === 0 && <StepBoard key="board" onNext={handleBoardNext} reducedMotion={reducedMotion} />}
         {step === 1 && <StepSetup key="setup" onNext={handleSetupNext} boardId={boardId} onBack={() => setStep(0)} reducedMotion={reducedMotion} />}

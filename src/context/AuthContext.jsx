@@ -94,7 +94,7 @@ export function AuthProvider({ children }) {
               localStorage.setItem('neurophysics_profile', JSON.stringify({
                 ...profile,
                 name: rawName.split(' ')[0], // first name only
-                avatar: profile.avatar || '🧠',
+                avatar: profile.avatar || '',
               }))
             }
           }

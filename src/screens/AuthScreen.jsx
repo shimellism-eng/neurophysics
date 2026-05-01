@@ -1,7 +1,7 @@
 /**
- * AuthScreen — Aurora design.
- * Deep purple #07041A base, layered glow mesh, animated SVG atom.
- * SEN-optimised: calm pacing, clear hierarchy, reduce-motion respected.
+ * AuthScreen — calm sign-in flow.
+ * Shares the same ink + teal design language as the main app so entry
+ * no longer feels like a separate purple product.
  */
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -109,13 +109,13 @@ function AtomSVG({ size = 120, reduceMotion = false }) {
     >
       <defs>
         <radialGradient id="authNucGrad" cx="38%" cy="35%">
-          <stop offset="0%"   stopColor="#c4b5fd" />
-          <stop offset="100%" stopColor="#4338ca" />
+          <stop offset="0%"   stopColor="#bde3dd" />
+          <stop offset="100%" stopColor="#5ea7a1" />
         </radialGradient>
         <radialGradient id="authNucGlow" cx="50%" cy="50%">
-          <stop offset="0%"   stopColor="#6366f1" stopOpacity="0.5" />
-          <stop offset="55%"  stopColor="#6366f1" stopOpacity="0.12" />
-          <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+          <stop offset="0%"   stopColor="#5ea7a1" stopOpacity="0.46" />
+          <stop offset="55%"  stopColor="#5ea7a1" stopOpacity="0.1" />
+          <stop offset="100%" stopColor="#5ea7a1" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -124,7 +124,7 @@ function AtomSVG({ size = 120, reduceMotion = false }) {
         <ellipse
           key={i}
           cx={cx} cy={cy} rx={rx} ry={ry}
-          fill="none" stroke="#a78bfa" strokeWidth="1.1" opacity="0.52"
+          fill="none" stroke="rgba(116,188,181,0.58)" strokeWidth="1.1" opacity="0.52"
           transform={`rotate(${o.tiltDeg} ${cx} ${cy})`}
         />
       ))}
@@ -155,8 +155,8 @@ function AtomSVG({ size = 120, reduceMotion = false }) {
 function AuroraBackground({ reduceMotion }) {
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden="true" style={{ zIndex: 0 }}>
-      {/* Base deep purple */}
-      <div className="absolute inset-0" style={{ background: '#07041A' }} />
+      {/* Base deep ink */}
+      <div className="absolute inset-0 np-shell-gradient" />
 
       {/* Central bloom — large, slow breathing */}
       <motion.div
@@ -165,20 +165,20 @@ function AuroraBackground({ reduceMotion }) {
           width: 560, height: 460,
           top: '-8%', left: '50%', marginLeft: -280,
           background:
-            'radial-gradient(ellipse, rgba(90,55,230,0.30) 0%, rgba(70,44,185,0.12) 45%, transparent 72%)',
+            'radial-gradient(ellipse, rgba(94,167,161,0.22) 0%, rgba(116,188,181,0.10) 42%, transparent 72%)',
           filter: 'blur(2px)',
         }}
         animate={reduceMotion ? undefined : { scale: [1, 1.12, 1], opacity: [0.75, 1, 0.75] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
 
-      {/* Top-right violet accent */}
+  {/* Top-right warm accent */}
       <motion.div
         className="absolute rounded-full"
         style={{
           width: 270, height: 270,
           top: -55, right: -35,
-          background: 'radial-gradient(circle, rgba(139,92,246,0.24) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(216,139,45,0.14) 0%, transparent 70%)',
         }}
         animate={reduceMotion ? undefined : { scale: [1, 1.22, 1], opacity: [0.5, 0.88, 0.5] }}
         transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
@@ -190,7 +190,7 @@ function AuroraBackground({ reduceMotion }) {
         style={{
           width: 320, height: 320,
           bottom: 50, left: -75,
-          background: 'radial-gradient(circle, rgba(79,70,229,0.20) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(94,167,161,0.16) 0%, transparent 70%)',
         }}
         animate={reduceMotion ? undefined : { scale: [1, 1.14, 1], opacity: [0.55, 0.9, 0.55] }}
         transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut', delay: 5 }}
@@ -206,7 +206,7 @@ function Input({ label, type = 'text', value, onChange, placeholder, error, auto
       {label && (
         <label
           className="block text-xs font-semibold uppercase tracking-wide mb-1.5"
-          style={{ color: '#a8b8cc' }}
+          style={{ color: 'var(--np-text-muted)' }}
         >
           {label}
         </label>
@@ -220,11 +220,11 @@ function Input({ label, type = 'text', value, onChange, placeholder, error, auto
           autoComplete={autoComplete}
           className="w-full px-4 py-3.5 rounded-[14px] text-sm outline-none"
           style={{
-            background: 'rgba(14,10,36,0.88)',
+            background: 'var(--surface-panel)',
             border: error
               ? '1px solid rgba(239,68,68,0.6)'
-              : '0.75px solid rgba(110,80,200,0.25)',
-            color: '#f8fafc',
+              : 'var(--border-quiet)',
+            color: 'var(--np-text)',
             transition: 'border-color 0.2s',
             paddingRight: rightSlot ? 48 : undefined,
             fontSize: 16,
@@ -266,7 +266,7 @@ function PasswordInput({ label, value, onChange, error, autoComplete, placeholde
           type="button"
           onClick={() => setShow(v => !v)}
           aria-label={show ? 'Hide password' : 'Show password'}
-          style={{ color: '#a8b8cc', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+          style={{ color: 'var(--np-text-muted)', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
         >
           {show ? <EyeSlash size={16} /> : <Eye size={16} />}
         </button>
@@ -282,10 +282,10 @@ function PrimaryButton({ children, onClick, loading, disabled, style = {} }) {
       className="w-full py-4 rounded-[16px] text-sm font-bold flex items-center justify-center gap-2"
       style={{
         background: disabled || loading
-          ? 'rgba(99,102,241,0.35)'
-          : '#6366f1',
-        color: '#fff',
-        boxShadow: disabled || loading ? 'none' : '0 8px 28px rgba(99,102,241,0.4)',
+          ? 'rgba(94,167,161,0.38)'
+          : 'var(--np-accent)',
+        color: '#07111d',
+        boxShadow: disabled || loading ? 'none' : 'var(--shadow-raised)',
         transition: 'all 0.2s',
         cursor: disabled || loading ? 'not-allowed' : 'pointer',
         ...style,
@@ -311,12 +311,12 @@ function OAuthButton({ icon, label, onClick, loading, dark = false, style: extra
     <motion.button
       className="w-full rounded-[14px] text-sm font-semibold flex items-center justify-center gap-2.5"
       style={{
-        background: dark ? '#000' : '#fff',
-        color: dark ? '#fff' : '#1a1a1a',
+        background: dark ? 'rgba(255,255,255,0.06)' : 'var(--surface-panel)',
+        color: dark ? 'var(--np-text)' : 'var(--np-text)',
         border: dark
           ? '1px solid rgba(255,255,255,0.14)'
-          : '1px solid rgba(0,0,0,0.1)',
-        boxShadow: dark ? 'none' : '0 1px 4px rgba(0,0,0,0.14)',
+          : 'var(--border-quiet)',
+        boxShadow: dark ? 'none' : 'var(--shadow-soft)',
         cursor: loading ? 'not-allowed' : 'pointer',
         opacity: loading ? 0.6 : 1,
         minHeight: 48,
@@ -333,8 +333,8 @@ function OAuthButton({ icon, label, onClick, loading, dark = false, style: extra
         <motion.div
           className="w-4 h-4 rounded-full border-2"
           style={{
-            borderColor: dark ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)',
-            borderTopColor: dark ? '#fff' : '#333',
+            borderColor: dark ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.16)',
+            borderTopColor: dark ? '#fff' : 'var(--np-accent)',
           }}
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
@@ -349,9 +349,9 @@ function OAuthButton({ icon, label, onClick, loading, dark = false, style: extra
 function Divider({ label = 'or' }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex-1 h-px" style={{ background: 'rgba(110,80,200,0.18)' }} />
-      <span className="text-xs" style={{ color: '#4a3a6a' }}>{label}</span>
-      <div className="flex-1 h-px" style={{ background: 'rgba(110,80,200,0.18)' }} />
+      <div className="flex-1 h-px" style={{ background: 'var(--np-border-mid)' }} />
+      <span className="text-xs" style={{ color: 'var(--np-text-dim)' }}>{label}</span>
+      <div className="flex-1 h-px" style={{ background: 'var(--np-border-mid)' }} />
     </div>
   )
 }
@@ -363,7 +363,7 @@ function BackHeader({ onBack }) {
       <button
         onClick={onBack}
         className="flex items-center gap-2 mb-6"
-        style={{ color: '#a8b8cc', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+        style={{ color: 'var(--np-text-muted)', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
         aria-label="Go back"
       >
         <ArrowLeft size={18} />
@@ -375,7 +375,8 @@ function BackHeader({ onBack }) {
 
 // ─── Landing ──────────────────────────────────────────────────────────────────
 function Landing({ onEmail, onSignIn }) {
-  const { signInWithOAuth, continueAsGuest } = useAuth()
+  const { signInWithOAuth } = useAuth()
+  const navigate = useNavigate()
   const [oauthLoading, setOauthLoading] = useState(null)
   const [oauthError, setOauthError] = useState('')
   const reduceMotion = useReducedMotion()
@@ -410,8 +411,8 @@ function Landing({ onEmail, onSignIn }) {
             style={{
               width: 168, height: 168,
               borderRadius: 44,
-              background: 'rgba(99,60,220,0.07)',
-              border: '1px solid rgba(139,92,246,0.18)',
+              background: 'rgba(255,255,255,0.035)',
+              border: '1px solid rgba(116,188,181,0.16)',
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
             }}
@@ -433,14 +434,14 @@ function Landing({ onEmail, onSignIn }) {
               className="font-extrabold tracking-tight leading-none mb-3"
               style={{ fontSize: 40, letterSpacing: '-0.025em' }}
             >
-              <span style={{ color: '#f0ecff' }}>Neuro</span>
-              <span style={{ color: '#818cf8' }}>Physics</span>
+              <span style={{ color: 'var(--np-text)' }}>Neuro</span>
+              <span style={{ color: 'var(--np-accent-strong)' }}>Physics</span>
             </h1>
             <p
               className="text-sm leading-relaxed"
-              style={{ color: '#7d6fa8', letterSpacing: '0.01em' }}
+              style={{ color: 'var(--np-text-muted)', letterSpacing: '0.01em' }}
             >
-              GCSE Physics · Built for every mind.
+              GCSE Physics · Calm support for focused study.
             </p>
           </motion.div>
         </div>
@@ -477,10 +478,10 @@ function Landing({ onEmail, onSignIn }) {
             label="Continue with Email"
             onClick={onEmail}
             style={{
-              background: '#6366f1',
-              color: '#fff',
-              border: 'none',
-              boxShadow: '0 6px 24px rgba(99,102,241,0.4)',
+              background: 'var(--np-accent)',
+              color: '#07111d',
+              border: '0.75px solid rgba(255,255,255,0.08)',
+              boxShadow: 'var(--shadow-raised)',
             }}
           />
 
@@ -501,12 +502,12 @@ function Landing({ onEmail, onSignIn }) {
           )}
 
           {/* Sign-in link */}
-          <p className="text-center text-sm pt-0.5" style={{ color: '#7d6fa8' }}>
+          <p className="text-center text-sm pt-0.5" style={{ color: 'var(--np-text-muted)' }}>
             Already have an account?{' '}
             <button
               onClick={onSignIn}
               style={{
-                color: '#818cf8',
+                color: 'var(--np-accent-strong)',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
@@ -514,27 +515,27 @@ function Landing({ onEmail, onSignIn }) {
                 fontSize: 'inherit',
               }}
             >
-              Sign In
+              Sign in
             </button>
           </p>
 
           {/* Legal */}
-          <p className="text-center text-xs" style={{ color: '#3d2f5c' }}>
+          <p className="text-center text-xs" style={{ color: 'var(--np-text-dim)' }}>
             By continuing you agree to our{' '}
-            <a href="#/terms" className="underline" style={{ color: '#6366f1' }}>
-              Terms
+            <a href="#/terms" className="underline" style={{ color: 'var(--np-accent-strong)' }}>
+              Terms of service
             </a>{' '}
             and{' '}
-            <a href="#/privacy" className="underline" style={{ color: '#6366f1' }}>
-              Privacy Policy
+            <a href="#/privacy" className="underline" style={{ color: 'var(--np-accent-strong)' }}>
+              Privacy policy
             </a>
           </p>
 
           {/* Guest access */}
           <button
-            onClick={continueAsGuest}
+            onClick={() => navigate('/consent?next=guest')}
             className="w-full text-center text-sm pt-2 pb-1 underline underline-offset-2"
-            style={{ color: '#a8b8cc', background: 'none', border: 'none', cursor: 'pointer' }}
+            style={{ color: 'var(--np-text-muted)', background: 'none', border: 'none', cursor: 'pointer' }}
           >
             Continue without an account
           </button>
@@ -581,7 +582,7 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
     } else if (data?.user && !data.session) {
       setEmailSent(true)
     } else {
-      localStorage.setItem('neurophysics_profile', JSON.stringify({ name: name.trim(), avatar: '🧠' }))
+      localStorage.setItem('neurophysics_profile', JSON.stringify({ name: name.trim(), avatar: '' }))
       onDone()
     }
   }
@@ -600,21 +601,21 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
           <CheckCircle size={40} color="#00bc7d" />
         </div>
         <div>
-          <h2 className="text-2xl font-extrabold mb-2" style={{ color: '#f8fafc' }}>
+          <h2 className="text-2xl font-extrabold mb-2" style={{ color: 'var(--np-text)' }}>
             Check your email
           </h2>
-          <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc' }}>
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--np-text-muted)' }}>
             We sent a confirmation link to{' '}
-            <strong style={{ color: '#f8fafc' }}>{email}</strong>.
+            <strong style={{ color: 'var(--np-text)' }}>{email}</strong>.
             Open it to activate your account, then sign in.
           </p>
         </div>
         <button
           onClick={onSignIn || onBack}
           className="text-sm font-semibold"
-          style={{ color: '#818cf8', background: 'none', border: 'none', cursor: 'pointer' }}
+          style={{ color: 'var(--np-accent-strong)', background: 'none', border: 'none', cursor: 'pointer' }}
         >
-          Back to Sign In
+          Back to sign in
         </button>
       </motion.div>
     )
@@ -633,12 +634,12 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
         <div className="mb-5">
           <h1
             className="text-3xl font-extrabold mb-1"
-            style={{ color: '#f0ecff', letterSpacing: '-0.02em' }}
+            style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}
           >
             Sign up with email
           </h1>
-          <p className="text-sm" style={{ color: '#7d6fa8' }}>
-            Start your GCSE Physics journey.
+          <p className="text-sm" style={{ color: 'var(--np-text-muted)' }}>
+            Create an account to save progress across devices.
           </p>
         </div>
 
@@ -680,13 +681,13 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
           <button
             className="flex items-start gap-3 px-4 py-3 rounded-[14px] text-left"
             style={{
-              background: ageChecked ? 'rgba(99,102,241,0.1)' : 'rgba(14,10,36,0.88)',
+              background: ageChecked ? 'var(--np-accent-soft)' : 'var(--surface-panel)',
               border:
                 errors.age && !ageChecked
                   ? '1px solid rgba(239,68,68,0.6)'
                   : ageChecked
-                  ? '1px solid rgba(99,102,241,0.5)'
-                  : '0.75px solid rgba(110,80,200,0.22)',
+                  ? '1px solid rgba(116,188,181,0.4)'
+                  : 'var(--border-quiet)',
               transition: 'all 0.2s',
             }}
             onClick={() => { setAgeChecked(v => !v); setErrors(v => ({ ...v, age: '' })) }}
@@ -697,8 +698,8 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
             <div
               className="w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 mt-0.5"
               style={{
-                background: ageChecked ? '#6366f1' : 'transparent',
-                border: ageChecked ? 'none' : '1.5px solid #4a3a6a',
+                background: ageChecked ? 'var(--np-accent)' : 'transparent',
+                border: ageChecked ? 'none' : '1.5px solid var(--np-border-mid)',
                 transition: 'all 0.15s',
               }}
             >
@@ -730,17 +731,17 @@ function SignUpEmail({ onBack, onSignIn, onDone }) {
 
       <div
         className="px-6 pt-3 pb-10 shrink-0"
-        style={{ borderTop: '0.75px solid rgba(110,80,200,0.15)' }}
+        style={{ borderTop: '0.75px solid var(--np-border)' }}
       >
         <PrimaryButton onClick={handleSignUp} loading={loading}>
-          Create Account
+          Create account
         </PrimaryButton>
       </div>
     </motion.div>
   )
 }
 
-// ─── Sign In ──────────────────────────────────────────────────────────────────
+// ─── Sign in ──────────────────────────────────────────────────────────────────
 function SignIn({ onBack, onDone, onForgot }) {
   const { signIn, signInWithOAuth } = useAuth()
   const [email, setEmail] = useState('')
@@ -788,12 +789,12 @@ function SignIn({ onBack, onDone, onForgot }) {
         <div className="mb-5">
           <h1
             className="text-3xl font-extrabold mb-1"
-            style={{ color: '#f0ecff', letterSpacing: '-0.02em' }}
+            style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}
           >
             Welcome back
           </h1>
-          <p className="text-sm" style={{ color: '#7d6fa8' }}>
-            Sign in to continue your streak.
+          <p className="text-sm" style={{ color: 'var(--np-text-muted)' }}>
+            Sign in to pick up where you left off.
           </p>
         </div>
 
@@ -836,7 +837,7 @@ function SignIn({ onBack, onDone, onForgot }) {
 
           <button
             className="text-xs text-right"
-            style={{ color: '#818cf8', background: 'none', border: 'none', cursor: 'pointer' }}
+            style={{ color: 'var(--np-accent-strong)', background: 'none', border: 'none', cursor: 'pointer' }}
             onClick={() => onForgot(email)}
           >
             Forgot password?
@@ -858,10 +859,10 @@ function SignIn({ onBack, onDone, onForgot }) {
 
       <div
         className="px-6 pt-3 pb-10 shrink-0"
-        style={{ borderTop: '0.75px solid rgba(110,80,200,0.15)' }}
+        style={{ borderTop: '0.75px solid var(--np-border)' }}
       >
         <PrimaryButton onClick={handleSignIn} loading={loading}>
-          Sign In
+          Sign in
         </PrimaryButton>
       </div>
     </motion.div>
@@ -898,11 +899,11 @@ function ForgotPassword({ initialEmail, onBack }) {
         <div className="mb-5">
           <h1
             className="text-3xl font-extrabold mb-1"
-            style={{ color: '#f0ecff', letterSpacing: '-0.02em' }}
+            style={{ color: 'var(--np-text)', letterSpacing: '-0.02em' }}
           >
             Reset password
           </h1>
-          <p className="text-sm" style={{ color: '#7d6fa8' }}>
+          <p className="text-sm" style={{ color: 'var(--np-text-muted)' }}>
             We'll send a reset link to your email.
           </p>
         </div>
@@ -913,17 +914,17 @@ function ForgotPassword({ initialEmail, onBack }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <CheckCircle size={48} color="#00bc7d" />
-            <p className="text-sm leading-relaxed" style={{ color: '#a8b8cc' }}>
+            <CheckCircle size={48} color="var(--np-success)" />
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--np-text-muted)' }}>
               Reset link sent to{' '}
-              <strong style={{ color: '#f8fafc' }}>{email}</strong>. Check your inbox.
+              <strong style={{ color: 'var(--np-text)' }}>{email}</strong>. Check your inbox.
             </p>
             <button
               onClick={onBack}
               className="text-sm font-semibold"
-              style={{ color: '#818cf8', background: 'none', border: 'none', cursor: 'pointer' }}
+              style={{ color: 'var(--np-accent-strong)', background: 'none', border: 'none', cursor: 'pointer' }}
             >
-              Back to Sign In
+              Back to sign in
             </button>
           </motion.div>
         ) : (
@@ -944,7 +945,7 @@ function ForgotPassword({ initialEmail, onBack }) {
       {!sent && (
         <div
           className="px-6 pt-3 pb-10 shrink-0"
-          style={{ borderTop: '0.75px solid rgba(110,80,200,0.15)' }}
+        style={{ borderTop: '0.75px solid var(--np-border)' }}
         >
           <PrimaryButton onClick={handle} loading={loading}>
             Send Reset Link
@@ -981,7 +982,14 @@ export default function AuthScreen() {
   }
 
   return (
-    <div className="flex flex-col h-full" style={{ background: '#07041A' }}>
+    <div
+      className="flex flex-col h-full np-shell-gradient"
+      style={{
+        marginTop: 'calc(-1 * var(--safe-top))',
+        paddingTop: 'var(--safe-top)',
+        minHeight: 'calc(100% + var(--safe-top))',
+      }}
+    >
       <AnimatePresence mode="wait">
         {view === 'landing' && (
           <motion.div key="landing" className="flex flex-col h-full">

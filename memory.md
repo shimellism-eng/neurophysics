@@ -55,6 +55,23 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,757 nodes, 3,481 edges, 103 clusters, 140 flows.
 
+### Exam practice marks cleanup
+- Committed the exam-practice slice as `fcd65c8` (`Fix exam practice marks display`).
+- `ExamPractice` now totals actual available marks instead of treating every question as 1 mark.
+- Result saving/display now uses the computed mark total, so multi-mark exam-style questions are not under-reported.
+- Also aligned the screen with the shared `PageHeader` and calmer label/copy style.
+- Left `TimedPaper`, `LearnScreen`, and `LessonPlayer` dirty for separate review because those diffs include navigation/timer/lesson-flow changes.
+
+### Exam practice verification
+- GitNexus impact for `ExamPractice` reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,758 nodes, 3,483 edges, 102 clusters, 140 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

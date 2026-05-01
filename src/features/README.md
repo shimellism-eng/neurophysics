@@ -1,15 +1,34 @@
 # Feature Structure
 
-This folder is the target home for feature-owned helpers and small modules.
+This folder is for feature-owned helpers that make the existing route screens
+easier to read. It is not a dumping ground for full screen moves.
 
-Keep route screens in `src/screens/` until a feature can be moved safely in a focused refactor.
+## What Belongs Here
 
-Current lanes:
+- Small pure helpers with smoke tests.
+- Storage wrappers that preserve the same localStorage keys.
+- Route-decision helpers that keep the same destination rules.
+- Thin feature utilities that can be reviewed without opening a giant screen.
 
-- `timed-paper/` - timed-paper scoring and paper-session helpers
-- `practice/` - practice-mode helpers
-- `settings/` - settings/profile helpers
-- `lesson/` - lesson-flow helpers
-- `auth/` - auth helpers
+## What Does Not Belong Here Yet
 
-Do not move question content or the 9-step lesson flow here as part of cleanup work.
+- Whole route screens from `src/screens/`.
+- Question-bank content or curriculum data.
+- The 9-step lesson flow.
+- XP, streak, spaced-repetition, or board-filtering rule changes.
+- Broad rewrites mixed with release fixes.
+
+## Current Lanes
+
+- `timed-paper/` - scoring, answer/session normalisation, computed mark helpers.
+- `practice/` - shared practice-mode helpers.
+- `settings/` - settings/profile persistence helpers.
+- `lesson/` - lesson/practice/practical routing helpers only.
+- `auth/` - tiny auth helpers only.
+
+## Screen Ownership Rule
+
+Route screens stay in `src/screens/` until a focused refactor has extracted the
+logic around them first. Move helper logic before moving UI files. Each cleanup
+commit should explain one concern, pass smoke checks, and avoid touching
+pedagogy.

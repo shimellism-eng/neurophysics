@@ -69,8 +69,25 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
     }
   }
 
-  const handleContinue  = () => onComplete(result.marksAwarded >= half)
-  const handleSelfScore = (pts) => { setSelfScore(pts); onComplete(pts >= half) }
+  const handleContinue  = () => onComplete({
+    answered: true,
+    marksAwarded: result.marksAwarded,
+    marksAvailable: marks,
+    correct: result.marksAwarded >= half,
+    source: 'ai-marking',
+  })
+  const handleSelfScore = (pts) => {
+    setSelfScore(pts)
+    onComplete({
+      answered: true,
+      marksAwarded: pts,
+      marksAvailable: marks,
+      correct: pts >= half,
+      score: pts,
+      selfScore: pts,
+      source: 'self-review',
+    })
+  }
 
   const pct        = result ? result.marksAwarded / marks : 0
   const scoreColor = pct >= 0.8 ? '#00bc7d' : pct >= 0.5 ? '#fbbf24' : '#ef4444'
@@ -288,7 +305,7 @@ export default function NovelContextQuestion({ data, moduleColor = '#6366f1', on
                   How many marks did you earn?
                 </div>
                 <div className="flex gap-2 justify-center flex-wrap">
-                  {[0, Math.floor(marks / 2), marks].map(pts => (
+                  {Array.from({ length: marks + 1 }, (_, i) => i).map(pts => (
                     <motion.button key={pts}
                       className="px-5 py-2 rounded-[10px] text-sm font-bold"
                       style={{

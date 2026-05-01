@@ -101,11 +101,25 @@ export default function ExtendedAnswerQuestion({ data, moduleColor, onComplete }
 
   const handleFallbackScore = (score) => {
     setFallbackScore(score)
-    onComplete(score >= Math.ceil(marks / 2))
+    onComplete({
+      answered: true,
+      marksAwarded: score,
+      marksAvailable: marks,
+      correct: score >= Math.ceil(marks / 2),
+      score,
+      selfScore: score,
+      source: 'self-review',
+    })
   }
 
   const handleContinue = () => {
-    onComplete(result.marksAwarded >= Math.ceil(marks / 2))
+    onComplete({
+      answered: true,
+      marksAwarded: result.marksAwarded,
+      marksAvailable: marks,
+      correct: result.marksAwarded >= Math.ceil(marks / 2),
+      source: 'ai-marking',
+    })
   }
 
   return (

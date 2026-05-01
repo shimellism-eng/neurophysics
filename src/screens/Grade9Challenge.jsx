@@ -243,7 +243,11 @@ export default function Grade9Challenge() {
   const isLast = qIndex === total - 1
   const typeInfo = TYPE_LABELS[q.type] || { label: topLabel, emoji: '⭐' }
 
-  const handleComplete = useCallback((correct) => {
+  const handleComplete = useCallback((outcome) => {
+    const correct = typeof outcome === 'object' && outcome !== null
+      ? Boolean(outcome.correct)
+      : Boolean(outcome)
+
     if (correct) setScore(s => s + 1)
     setCompleted(true)
   }, [])

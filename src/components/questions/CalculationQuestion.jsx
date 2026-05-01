@@ -21,7 +21,9 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   const [submitted, setSubmitted] = useState(false)
   const [revealStep, setRevealStep] = useState(0)
   const [showExample, setShowExample] = useState(false)
+  const [keyboardOpen, setKeyboardOpen] = useState(false)
   const inputRef = useRef(null)
+  const rootRef = useRef(null)
 
   // Auto-TTS: read question text on mount if user has opted in
   useEffect(() => {
@@ -30,6 +32,29 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
       if (text) setTimeout(() => speak(text), 400)
     }
   }, []) // eslint-disable-line
+
+  useEffect(() => {
+    const viewport = window.visualViewport
+    if (!viewport) return undefined
+
+    const handleViewport = () => {
+      const keyboardHeight = Math.max(0, window.innerHeight - (viewport.height + viewport.offsetTop))
+      setKeyboardOpen(keyboardHeight > 120)
+    }
+
+    handleViewport()
+    viewport.addEventListener('resize', handleViewport)
+    viewport.addEventListener('scroll', handleViewport)
+    return () => {
+      viewport.removeEventListener('resize', handleViewport)
+      viewport.removeEventListener('scroll', handleViewport)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!keyboardOpen || document.activeElement !== inputRef.current) return
+    rootRef.current?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }, [keyboardOpen])
 
   const numericAnswer = parseFloat(input)
   const isCorrect = submitted && (
@@ -56,7 +81,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
   }
 
   return (
-    <div>
+    <div ref={rootRef} style={{ scrollMarginBottom: keyboardOpen ? 260 : 120 }}>
       {/* Equation reminder */}
       <motion.div
         className="flex items-center gap-2 px-4 py-3 rounded-[14px] mb-4"
@@ -86,6 +111,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
       )}
 
       {/* SEN: worked example panel */}
+      {!keyboardOpen && (
       <div className="mb-3">
         <button
           className="w-full flex items-center justify-between px-4 py-3 rounded-[12px] text-sm font-semibold"
@@ -116,6 +142,7 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
           </div>
         )}
       </div>
+      )}
 
       {/* Answer input */}
       <div className="mb-4">
@@ -136,6 +163,10 @@ export default function CalculationQuestion({ data, moduleColor, onComplete }) {
             inputMode="decimal"
             value={input}
             onChange={e => !submitted && setInput(e.target.value)}
+            onFocus={() => {
+              setShowExample(false)
+              requestAnimationFrame(() => rootRef.current?.scrollIntoView({ block: 'center', behavior: 'smooth' }))
+            }}
             onKeyDown={e => e.key === 'Enter' && handleSubmit()}
             placeholder="Your answer"
             disabled={submitted}

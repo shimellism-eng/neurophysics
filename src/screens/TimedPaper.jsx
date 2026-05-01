@@ -8,7 +8,8 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, Flag, CaretUp, CaretDown, Trophy, Clock, CheckCircle, Warning, ChartBar, BookOpen, Eye, EyeSlash } from '@phosphor-icons/react'
+import { ArrowLeft, Flag, CaretUp, CaretDown, Trophy, Clock, CheckCircle, Warning, ChartBar, BookOpen, Pause, Play, Eye, EyeSlash } from '@phosphor-icons/react'
+import PageHeader from '../components/PageHeader'
 import { getTimedPaperQuestions } from '../data/examIndex'
 import { getAnswerMarksTotal } from '../features/timed-paper/scoring'
 import {
@@ -38,7 +39,7 @@ function TimerArc({ remaining, total }) {
   const pct = remaining / total
   const urgent = remaining < 120
   const warning = remaining < 300
-  const color = urgent ? '#ef4444' : warning ? '#f59e0b' : '#6366f1'
+  const color = urgent ? '#ef4444' : warning ? '#f59e0b' : '#5ea7a1'
   const size = 44
   const r = 18
   const circ = 2 * Math.PI * r
@@ -85,7 +86,7 @@ function QuestionPalette({ questions, answers, flags, currentIdx, onJump, open, 
             <span className="text-xs font-bold" style={{ color: '#f8fafc' }}>Question Palette</span>
             <div className="flex items-center gap-3 text-xs" style={{ color: '#8899b0' }}>
               <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full border border-current inline-block" /> Unanswered</span>
-              <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-indigo-500 inline-block" /> Answered</span>
+              <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full inline-block" style={{ background: 'var(--np-accent)' }} /> Answered</span>
               <span className="flex items-center gap-1"><Flag size={10} color="#f59e0b" /> Flagged</span>
             </div>
           </div>
@@ -98,9 +99,9 @@ function QuestionPalette({ questions, answers, flags, currentIdx, onJump, open, 
                 <motion.button key={i}
                   className="relative w-11 h-11 rounded-[10px] text-sm font-bold flex items-center justify-center"
                   style={{
-                    background: current ? '#6366f1' : answered ? 'rgba(99,102,241,0.2)' : 'rgba(18,26,47,0.9)',
-                    border: current ? '2px solid #6366f1' : answered ? '1.5px solid #6366f1' : '0.75px solid #2d3e55',
-                    color: current ? '#fff' : answered ? '#818cf8' : '#a8b8cc',
+                    background: current ? '#5ea7a1' : answered ? 'rgba(94,167,161,0.18)' : 'rgba(18,26,47,0.9)',
+                    border: current ? '2px solid #5ea7a1' : answered ? '1.5px solid rgba(94,167,161,0.55)' : '0.75px solid #2d3e55',
+                    color: current ? '#07111d' : answered ? '#74bcb5' : '#a8b8cc',
                   }}
                   onClick={() => { onJump(i); onToggle() }}
                   whileTap={{ scale: 0.9 }}>
@@ -140,7 +141,7 @@ function RPAErrorQuestion({ data, onComplete }) {
     <div className="space-y-3">
       <div className="flex items-center gap-2">
         <span className="px-2 py-0.5 rounded-full text-xs font-bold"
-          style={{ background: 'rgba(99,102,241,0.15)', color: '#818cf8', border: '0.75px solid rgba(99,102,241,0.3)' }}>
+          style={{ background: 'rgba(94,167,161,0.14)', color: '#74bcb5', border: '0.75px solid rgba(94,167,161,0.28)' }}>
           {data.rpaRef}
         </span>
         <span className="text-xs" style={{ color: '#8899b0' }}>{data.rpaName}</span>
@@ -159,8 +160,8 @@ function RPAErrorQuestion({ data, onComplete }) {
             return (
               <motion.button key={opt.value} className="flex-1 py-3 rounded-[12px] text-sm font-bold"
                 style={{
-                  background: isCorrect ? 'rgba(0,188,125,0.15)' : isWrong ? 'rgba(239,68,68,0.15)' : selected === opt.value ? 'rgba(99,102,241,0.15)' : 'rgba(18,26,47,0.9)',
-                  border: isCorrect ? '1.5px solid #00bc7d' : isWrong ? '1.5px solid #ef4444' : selected === opt.value ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
+                  background: isCorrect ? 'rgba(0,188,125,0.15)' : isWrong ? 'rgba(239,68,68,0.15)' : selected === opt.value ? 'rgba(94,167,161,0.15)' : 'rgba(18,26,47,0.9)',
+                  border: isCorrect ? '1.5px solid #00bc7d' : isWrong ? '1.5px solid #ef4444' : selected === opt.value ? '1.5px solid #5ea7a1' : '0.75px solid #1d293d',
                   color: isCorrect ? '#00bc7d' : isWrong ? '#ef4444' : '#f8fafc',
                 }}
                 onClick={() => { if (!submitted) setSelected(opt.value) }}
@@ -173,7 +174,7 @@ function RPAErrorQuestion({ data, onComplete }) {
       </div>
       {!submitted && (
         <motion.button className="w-full py-3 rounded-[14px] text-sm font-bold"
-          style={{ background: selected ? '#6366f1' : '#1d293d', color: selected ? '#fff' : '#8899b0' }}
+          style={{ background: selected ? 'var(--np-accent)' : '#1d293d', color: selected ? '#07111d' : '#8899b0' }}
           onClick={handleSubmit} disabled={!selected} whileTap={{ scale: 0.97 }}>
           Check answer
         </motion.button>
@@ -212,14 +213,14 @@ function EquationRecallQuestion({ data, onComplete }) {
           <motion.button key={idx}
             className="w-full text-left rounded-[14px] p-4 flex items-center gap-3"
             style={{
-              background: correct ? 'rgba(0,188,125,0.12)' : wrong ? 'rgba(239,68,68,0.12)' : sel === idx ? 'rgba(99,102,241,0.12)' : 'rgba(18,26,47,0.9)',
-              border: correct ? '1.5px solid #00bc7d' : wrong ? '1.5px solid #ef4444' : sel === idx ? '1.5px solid #6366f1' : '0.75px solid #1d293d',
+              background: correct ? 'rgba(0,188,125,0.12)' : wrong ? 'rgba(239,68,68,0.12)' : sel === idx ? 'rgba(94,167,161,0.12)' : 'rgba(18,26,47,0.9)',
+              border: correct ? '1.5px solid #00bc7d' : wrong ? '1.5px solid #ef4444' : sel === idx ? '1.5px solid #5ea7a1' : '0.75px solid #1d293d',
               color: '#f8fafc',
             }}
             onClick={() => { if (!sub) setSel(idx) }}
             whileTap={sub ? {} : { scale: 0.98 }}>
             <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
-              style={{ background: sel === idx && !sub ? '#6366f1' : sub && idx === data.correctAnswer ? '#00bc7d' : sub && idx === sel ? '#ef4444' : '#1d293d', color: '#fff' }}>
+              style={{ background: sel === idx && !sub ? '#5ea7a1' : sub && idx === data.correctAnswer ? '#00bc7d' : sub && idx === sel ? '#ef4444' : '#1d293d', color: '#fff' }}>
               {['A','B','C','D'][idx]}
             </div>
             <span className="text-sm">{opt}</span>
@@ -228,7 +229,7 @@ function EquationRecallQuestion({ data, onComplete }) {
       })}
       {!sub && (
         <motion.button className="w-full mt-2 py-3 rounded-[14px] text-sm font-bold"
-          style={{ background: sel !== null ? '#6366f1' : '#1d293d', color: sel !== null ? '#fff' : '#8899b0' }}
+          style={{ background: sel !== null ? 'var(--np-accent)' : '#1d293d', color: sel !== null ? '#07111d' : '#8899b0' }}
           onClick={submit} disabled={sel === null} whileTap={{ scale: 0.97 }}>
           Confirm
         </motion.button>
@@ -322,7 +323,6 @@ export default function TimedPaper() {
     try { sessionStorage.setItem('neurophysics_paper_paused', String(paused)) } catch {}
   }, [paused])
 
-  // Persist hide-timer preference to sessionStorage
   useEffect(() => {
     try { sessionStorage.setItem('neurophysics_paper_hide_timer', String(hideTimer)) } catch {}
   }, [hideTimer])
@@ -435,7 +435,7 @@ export default function TimedPaper() {
   const renderQuestion = () => {
     // key={qIndex} on every component forces a fresh mount when navigating,
     // preventing state bleed between same-type questions
-    const props = { key: qIndex, data: q, moduleColor: '#6366f1', onComplete: handleComplete }
+    const props = { key: qIndex, data: q, moduleColor: '#5ea7a1', onComplete: handleComplete }
     switch (q.type) {
       case 'equation-recall':      return <EquationRecallQuestion key={qIndex} data={q} onComplete={handleComplete} />
       case 'calculation':
@@ -473,9 +473,9 @@ export default function TimedPaper() {
             animate={{ opacity: 1, y: 0 }}
           >
             <div style={{ fontSize: 56 }} className="mb-3">⏱</div>
-            <h2 className="text-2xl font-black mb-2" style={{ color: '#f8fafc' }}>Ready to start?</h2>
+            <h2 className="text-2xl font-black mb-2" style={{ color: '#f8fafc' }}>Start timed paper</h2>
             <p className="text-sm" style={{ color: '#a8b8cc' }}>
-              {totalMarks} marks · choose your course and time allowance
+              {totalMarks} marks · choose your course and time
             </p>
           </motion.div>
 
@@ -488,14 +488,14 @@ export default function TimedPaper() {
           >
             <div className="text-xs font-bold uppercase tracking-wider mb-2 text-center" style={{ color: '#8899b0' }}>Your course</div>
             {[
-              { id: 'combined', label: 'Combined Science', sub: 'Excludes Physics-only topics', color: '#818cf8' },
-              { id: 'physics_only', label: 'Physics Only', sub: 'All topics including Physics-only', color: '#e879f9' },
+              { id: 'combined', label: 'Combined Science', sub: 'Excludes Physics-only topics' },
+              { id: 'physics_only', label: 'Physics Only', sub: 'All topics including Physics-only' },
             ].map(opt => (
               <motion.button key={opt.id}
                 className="w-full flex items-center gap-3 px-4 py-3 rounded-[14px] text-left"
                 style={{
-                  background: course === opt.id ? `${opt.color}15` : 'rgba(18,26,47,0.9)',
-                  border: course === opt.id ? `1.5px solid ${opt.color}50` : '0.75px solid #1d293d',
+                  background: course === opt.id ? 'rgba(94,167,161,0.12)' : 'rgba(18,26,47,0.9)',
+                  border: course === opt.id ? '1.5px solid rgba(116,188,181,0.35)' : '0.75px solid #1d293d',
                 }}
                 onClick={() => {
                   setCourse(opt.id)
@@ -506,8 +506,8 @@ export default function TimedPaper() {
                 }}
                 whileTap={{ scale: 0.98 }}>
                 <div className="w-4 h-4 rounded-full border-2 flex items-center justify-center"
-                  style={{ borderColor: course === opt.id ? opt.color : '#1d293d' }}>
-                  {course === opt.id && <div className="w-2 h-2 rounded-full" style={{ background: opt.color }} />}
+                  style={{ borderColor: course === opt.id ? '#74bcb5' : '#1d293d' }}>
+                  {course === opt.id && <div className="w-2 h-2 rounded-full" style={{ background: '#74bcb5' }} />}
                 </div>
                 <div>
                   <div className="text-sm font-bold" style={{ color: '#f8fafc' }}>{opt.label}</div>
@@ -526,19 +526,19 @@ export default function TimedPaper() {
             <div className="text-xs font-bold uppercase tracking-wider mb-1 text-center" style={{ color: '#8899b0' }}>Time allowance</div>
             <motion.button
               className="w-full py-5 rounded-[16px] flex items-center justify-between px-5"
-              style={{ background: 'rgba(99,102,241,0.12)', border: '1.5px solid rgba(99,102,241,0.45)', color: '#f8fafc' }}
+              style={{ background: 'rgba(94,167,161,0.12)', border: '1.5px solid rgba(116,188,181,0.35)', color: '#f8fafc' }}
               onClick={() => { setPaperDuration(PAPER_DURATION_STD); setRemaining(PAPER_DURATION_STD); setShowTimeChoice(false) }}
               whileTap={{ scale: 0.97 }}
             >
               <div className="text-left">
                 <div className="text-base font-bold">Standard time</div>
-                <div className="text-xs mt-0.5" style={{ color: '#818cf8' }}>55 minutes</div>
+                <div className="text-xs mt-0.5" style={{ color: '#74bcb5' }}>55 minutes</div>
               </div>
-              <Clock size={22} color="#818cf8" />
+              <Clock size={22} color="#74bcb5" />
             </motion.button>
 
             <motion.button
-              className="w-full py-5 rounded-[16px] flex items-center justify-between px-5"
+              className="w-full py-4 rounded-[16px] flex items-center justify-between px-5"
               style={{ background: 'rgba(253,199,0,0.08)', border: '1.5px solid rgba(253,199,0,0.3)', color: '#f8fafc' }}
               onClick={() => { setPaperDuration(PAPER_DURATION_EHCP); setRemaining(PAPER_DURATION_EHCP); setShowTimeChoice(false) }}
               whileTap={{ scale: 0.97 }}
@@ -559,18 +559,18 @@ export default function TimedPaper() {
     )
   }
 
-  // ── Time's up modal ────────────────────────────────────────────────────────
+  // ── Time finished modal ────────────────────────────────────────────────────────
   if (timesUp && !showResults) {
     return (
       <div className="flex flex-col h-full items-center justify-center gap-5 px-8" style={{ background: '#0b1121' }}>
         <Clock size={64} color="#ef4444" />
-        <div className="text-2xl font-black text-center" style={{ color: '#f8fafc' }}>Time's up!</div>
+        <div className="text-2xl font-black text-center" style={{ color: '#f8fafc' }}>Time finished</div>
         <div className="text-sm text-center" style={{ color: '#a8b8cc' }}>
-          You answered {answeredCount} of {total} questions.
+          You finished {answeredCount} of {total} questions. Unanswered questions will be shown separately in the review.
         </div>
         <motion.button className="w-full py-4 rounded-[16px] font-bold"
-          style={{ background: '#6366f1', color: '#fff' }}
-          onClick={() => { saveQuizResult('timed_paper', score, total); localStorage.removeItem(STORAGE_KEY); setShowResults(true) }}
+          style={{ background: 'var(--np-accent)', color: '#07111d' }}
+          onClick={() => { saveQuizResult('timed_paper', scoreRef.current, totalMarks); localStorage.removeItem(STORAGE_KEY); setShowResults(true) }}
           whileTap={{ scale: 0.97 }}>
           See results
         </motion.button>
@@ -589,7 +589,7 @@ export default function TimedPaper() {
 
   // ── Question screen ────────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col h-full overflow-hidden relative" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-hidden relative np-shell-gradient">
       {/* Resume banner */}
       <AnimatePresence>
         {resumeBanner && (
@@ -599,18 +599,18 @@ export default function TimedPaper() {
             initial={{ y: -60 }} animate={{ y: 0 }} exit={{ y: -60 }}>
             <div>
               <div className="text-xs font-bold" style={{ color: '#fbbf24' }}>You were away for a while</div>
-              <div className="text-xs" style={{ color: '#a8b8cc' }}>Timer was paused. Continue or abandon?</div>
+              <div className="text-xs" style={{ color: '#a8b8cc' }}>Timer paused. Continue or leave the paper?</div>
             </div>
             <div className="flex gap-2">
               <button className="px-3 py-1.5 rounded-[8px] text-xs font-bold"
                 style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444' }}
                 onClick={() => { localStorage.removeItem(STORAGE_KEY); navigate(-1) }}>
-                Abandon
+                Leave paper
               </button>
               <button className="px-3 py-1.5 rounded-[8px] text-xs font-bold"
-                style={{ background: '#6366f1', color: '#fff' }}
+                style={{ background: 'var(--np-accent)', color: '#07111d' }}
                 onClick={() => setResumeBanner(false)}>
-                Resume
+                Continue
               </button>
             </div>
           </motion.div>
@@ -618,59 +618,39 @@ export default function TimedPaper() {
       </AnimatePresence>
 
       {/* Header */}
-      <div className="px-4 pt-5 pb-3 shrink-0 flex items-center gap-3"
-        style={{ borderBottom: '0.75px solid rgba(255,255,255,0.07)' }}>
-        <button onClick={() => navigate(-1)}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}>
-          <ArrowLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex-1 min-w-0">
-          <div className="text-xs font-bold" style={{ color: '#f8fafc' }}>
-            Exam-style Physics Paper
+      <PageHeader
+        eyebrow="Timed paper"
+        title="Exam-style Physics Paper"
+        subtitle={`Q${qIndex + 1}/${total} · Section ${sectionInfo.section}`}
+        onBack={() => navigate(-1)}
+        rightSlot={
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setHideTimer(v => !v)}
+              className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
+              style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
+              aria-label={hideTimer ? 'Show timer' : 'Hide timer'}
+            >
+              {hideTimer
+                ? <EyeSlash size={15} color="#8899b0" />
+                : <Eye size={15} color="#8899b0" />
+              }
+            </button>
+            {!hideTimer && <TimerArc remaining={remaining} total={paperDuration} />}
+            {hideTimer && (
+              <div className="w-11 h-11 flex items-center justify-center rounded-full"
+                style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
+                <span className="text-xs font-bold" style={{ color: '#475569' }}>-</span>
+              </div>
+            )}
           </div>
-          <div className="text-xs" style={{ color: '#8899b0' }}>
-            Q{qIndex + 1}/{total} · {answeredCount} answered · Section {sectionInfo.section}
-          </div>
-        </div>
-        {/* Timer hide toggle */}
-        <button
-          onClick={() => setHideTimer(v => !v)}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-          aria-label={hideTimer ? 'Show timer' : 'Hide timer'}
-        >
-          {hideTimer
-            ? <EyeSlash size={15} color="#8899b0" />
-            : <Eye size={15} color="#8899b0" />
-          }
-        </button>
-        {/* Pause / Resume button */}
-        <button
-          onClick={() => setPaused(v => !v)}
-          className="px-2.5 py-3 rounded-[10px] flex items-center gap-1 shrink-0 text-xs font-bold"
-          style={{
-            background: paused ? 'rgba(34,197,94,0.15)' : 'rgba(18,26,47,0.9)',
-            border: paused ? '0.75px solid rgba(34,197,94,0.4)' : '0.75px solid #1d293d',
-            color: paused ? '#22c55e' : '#8899b0',
-          }}
-          aria-label={paused ? 'Resume paper' : 'Pause paper'}
-        >
-          {paused ? '▶' : '⏸'}
-        </button>
-        {!hideTimer && <TimerArc remaining={remaining} total={paperDuration} />}
-        {hideTimer && (
-          <div className="w-11 h-11 flex items-center justify-center rounded-full"
-            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}>
-            <span className="text-xs font-bold" style={{ color: '#475569' }}>—</span>
-          </div>
-        )}
-      </div>
+        }
+      />
 
       {/* Progress bar */}
-      <div className="h-0.5 shrink-0" style={{ background: '#1d293d' }}>
+      <div className="h-0.5 shrink-0" style={{ background: 'rgba(255,255,255,0.08)' }}>
         <motion.div className="h-full"
-          style={{ background: '#6366f1' }}
+          style={{ background: 'var(--np-accent)' }}
           animate={{ width: `${(answeredCount / total) * 100}%` }} />
       </div>
 
@@ -686,15 +666,15 @@ export default function TimedPaper() {
               className="px-8 py-6 rounded-[22px] text-center"
               style={{ background: 'rgba(18,26,47,0.98)', border: '1px solid #1d293d', maxWidth: 300 }}
               initial={{ scale: 0.92 }} animate={{ scale: 1 }} exit={{ scale: 0.92 }}>
-              <div style={{ fontSize: 36, marginBottom: 10 }}>⏸</div>
+              <Clock size={36} color="#8899b0" style={{ marginBottom: 10 }} />
               <div className="font-bold mb-1" style={{ color: '#f8fafc', fontSize: 16 }}>Paper paused</div>
-              <p className="text-sm mb-4" style={{ color: '#8899b0' }}>Tap Resume when you're ready to continue.</p>
+              <p className="text-sm mb-4" style={{ color: '#8899b0' }}>Tap Continue when you are ready.</p>
               <motion.button
                 className="w-full py-3 rounded-[14px] font-bold text-sm"
-                style={{ background: '#22c55e', color: '#fff' }}
+                style={{ background: 'var(--np-accent)', color: '#07111d' }}
                 onClick={() => setPaused(false)}
                 whileTap={{ scale: 0.97 }}>
-                ▶ Resume
+                Continue
               </motion.button>
             </motion.div>
           </motion.div>
@@ -713,7 +693,7 @@ export default function TimedPaper() {
         {/* Section label */}
         <div className="flex items-center justify-between mb-3">
           <span className="px-2 py-0.5 rounded-full text-xs font-bold"
-            style={{ background: 'rgba(99,102,241,0.12)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}>
+            style={{ background: 'rgba(94,167,161,0.12)', border: '0.75px solid rgba(116,188,181,0.24)', color: '#74bcb5' }}>
             Section {sectionInfo.section} - {sectionInfo.label}
           </span>
           <button
@@ -776,6 +756,19 @@ export default function TimedPaper() {
             </div>
           )}
 
+          <button
+            className="px-4 py-3 rounded-[13px] text-sm font-semibold flex items-center gap-2"
+            style={{
+              background: paused ? 'rgba(34,197,94,0.15)' : 'rgba(18,26,47,0.9)',
+              border: paused ? '0.75px solid rgba(34,197,94,0.4)' : '0.75px solid #1d293d',
+              color: paused ? '#22c55e' : '#a8b8cc',
+            }}
+            onClick={() => setPaused(v => !v)}
+            aria-label={paused ? 'Resume paper' : 'Pause paper'}>
+            {paused ? <Play size={14} /> : <Pause size={14} />}
+            <span className="hidden sm:inline">{paused ? 'Resume' : 'Pause'}</span>
+          </button>
+
           {/* Skip - always available, no score recorded */}
           {!completed && !isLast && (
             <motion.button
@@ -791,13 +784,13 @@ export default function TimedPaper() {
           <motion.button
             className="flex-1 py-3 rounded-[13px] text-sm font-bold"
             style={{
-              background: completed ? '#6366f1' : '#1d293d',
-              color: completed ? '#fff' : '#475569',
-              boxShadow: completed ? '0 4px 16px rgba(99,102,241,0.35)' : 'none',
+              background: completed ? 'var(--np-accent)' : '#1d293d',
+              color: completed ? '#07111d' : '#475569',
+              boxShadow: completed ? '0 4px 16px rgba(94,167,161,0.28)' : 'none',
             }}
             onClick={completed ? handleNext : undefined}
             whileTap={completed ? { scale: 0.97 } : {}}>
-            {isLast ? (completed ? 'Submit paper' : 'Answer to submit') : (completed ? 'Next →' : 'Answer to continue')}
+            {isLast ? (completed ? 'Submit paper' : 'Answer first') : (completed ? 'Next' : 'Answer first')}
           </motion.button>
         </div>
       </div>

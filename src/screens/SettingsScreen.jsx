@@ -10,28 +10,10 @@ import { useComfort } from '../context/ComfortContext'
 import { supabase } from '../lib/supabase'
 import { requestNotificationPermission, scheduleDailyReminder, cancelDailyReminder, checkNotificationPermission } from '../utils/notifications'
 import SafeAreaPage from '../components/ui/SafeAreaPage.jsx'
+import { loadPrefs, loadProfile, savePrefs, saveProfile } from '../features/settings/storage'
 
 // ─── Profile helpers ──────────────────────────────────────────────────────────
-const PROFILE_KEY = 'neurophysics_profile'
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
-
-function loadProfile() {
-  try { return JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}') } catch { return {} }
-}
-function saveProfile(p) {
-  localStorage.setItem(PROFILE_KEY, JSON.stringify(p))
-}
-
-// ─── Persistence ──────────────────────────────────────────────────────────────
-const PREFS_KEY = 'neurophysics_prefs'
-
-function loadPrefs() {
-  try { return JSON.parse(localStorage.getItem(PREFS_KEY) || '{}') } catch { return {} }
-}
-
-function savePrefs(prefs) {
-  localStorage.setItem(PREFS_KEY, JSON.stringify(prefs))
-}
 
 // ─── Effect appliers ─────────────────────────────────────────────────────────
 const RM_STYLE_ID = 'np-reduce-motion'

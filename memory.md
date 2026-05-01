@@ -69,6 +69,7 @@
 - Restored `CLAUDE.md` to the accurate committed version because the dirty rewrite incorrectly claimed TypeScript and the wrong live domain.
 - Left `package.json` and `package-lock.json` dirty because their `@capacitor/network` dependency belongs with the separate uncommitted App offline/PracticeHub changes.
 - Commit: `e0186c8` Clean release surface config
+- Commit: `485693a` Refresh GitNexus project instructions
 - Verification passed: `npm test`, `npm run build`, `git diff --cached --check`.
 
 ### AQA + Edexcel release hardening

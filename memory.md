@@ -5,6 +5,29 @@
 
 ## What Was Just Done (latest — 2026-05-01)
 
+### Auth, consent, onboarding cleanup
+- Committed the auth/onboarding bucket as `7c52965` (`Clean up auth consent onboarding flow`).
+- Kept the cleanup scoped to entry and consent screens:
+  - `src/context/AuthContext.jsx`
+  - `src/screens/AuthScreen.jsx`
+  - `src/screens/ConsentScreen.jsx`
+  - `src/screens/OnboardingScreen.jsx`
+  - `src/utils/notifications.js`
+- Guest access now routes through `/consent?next=guest` before creating the guest session, so privacy/age consent is not bypassed.
+- Auth/profile avatar fallbacks now use an empty value instead of an emoji, matching the calmer profile presentation.
+- Auth, consent, onboarding, and notification copy were polished to the shared ink/teal visual language.
+- The active onboarding flow remains board -> setup -> app; the 9-step lesson flow, question content, XP/streak rules, and board filtering were not touched.
+
+### Auth cleanup verification
+- GitNexus impact checks were used before staging. `useAuth` is a high-impact symbol, but the scoped diff did not change the auth API/session contract.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,753 nodes, 3,475 edges, 102 clusters, 139 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

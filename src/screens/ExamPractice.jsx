@@ -11,6 +11,7 @@ import { speak } from '../utils/tts'
 import { useSessionTimer } from '../hooks/useSessionTimer'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import BreakNudge from '../components/BreakNudge'
+import PageHeader from '../components/PageHeader'
 import { TOPICS } from '../data/topics'
 import { getExamQuestions } from '../data/examIndex'
 import { saveQuizResult } from '../hooks/useInsights'
@@ -163,8 +164,7 @@ function WorkedSolutionCard({ question, correct }) {
         style={{ color: open ? '#6366f1' : '#a8b8cc' }}
       >
         <span className="text-xs font-bold flex items-center gap-1.5">
-          <span>📖</span>
-          {markScheme && !explanation ? 'Mark Scheme' : 'Why?'}
+          {markScheme && !explanation ? 'Mark scheme' : 'Why?'}
         </span>
         <motion.span animate={{ rotate: reducedMotion ? 0 : (open ? 180 : 0) }} transition={{ duration: reducedMotion ? 0 : 0.2 }}>
           <CaretDown size={14} />
@@ -267,7 +267,7 @@ const EXTENDED_GUIDES = {
       '⑤ Connect to the context / draw a conclusion',
       '⑥ Use precise terminology throughout (no synonyms)',
     ],
-    tip: 'AQA mark schemes award each point separately — even 2/6 correct earns marks.',
+    tip: 'AQA mark schemes often award each point separately, so partial answers can still earn marks.',
   },
   edexcel: {
     label: 'Edexcel 6-mark structure',
@@ -279,7 +279,7 @@ const EXTENDED_GUIDES = {
       '⑤ Point 3: State a third relevant fact',
       '⑥ Linked reason 3: Explain WHY / conclusion',
     ],
-    tip: 'Edexcel expects "Point + Reason" pairs. Each pair earns 2 marks. Unlinked points earn 0.',
+    tip: 'For Edexcel, point-and-reason pairs are often rewarded well. Try to link each point clearly to the reason behind it.',
   },
   'ocr-a': {
     label: 'OCR Gateway 6-mark structure',
@@ -291,7 +291,7 @@ const EXTENDED_GUIDES = {
       '⑤ Quantify using an equation where possible',
       '⑥ Evaluate / conclude based on the context',
     ],
-    tip: "OCR often uses unfamiliar scenarios. Apply physics you know — don't panic.",
+    tip: "OCR often uses unfamiliar scenarios. Apply the physics you know to the new context step by step.",
   },
   'ocr-b': {
     label: 'OCR 21C 6-mark structure',
@@ -303,7 +303,7 @@ const EXTENDED_GUIDES = {
       '⑤ Evaluate benefits/limitations',
       '⑥ Conclude with reference to the context',
     ],
-    tip: 'OCR-B values interconnected thinking — show how one physics idea links to another.',
+    tip: 'OCR-B often rewards interconnected thinking — show how one physics idea links to another.',
   },
   wjec: {
     label: 'WJEC 6-mark structure',
@@ -315,7 +315,7 @@ const EXTENDED_GUIDES = {
       '⑤ Make a second point with explanation',
       '⑥ Conclusion referencing the question',
     ],
-    tip: 'WJEC mark schemes are specific — use exact terminology from the specification.',
+    tip: 'WJEC mark schemes are often specific, so precise terminology usually helps.',
   },
   ccea: {
     label: 'CCEA 6-mark structure',
@@ -327,7 +327,7 @@ const EXTENDED_GUIDES = {
       '⑤ Make a second linked point',
       '⑥ Conclusion / evaluation',
     ],
-    tip: 'CCEA rewards multi-step reasoning with calculations. Show all working.',
+    tip: 'CCEA often rewards multi-step reasoning with calculations, so show your working clearly.',
   },
 }
 
@@ -341,26 +341,26 @@ function shuffle(arr) {
 }
 
 const TYPE_LABELS = {
-  'calculation': '🧮 Calculation',
-  'sequence': '🔢 Put in order',
-  'fill-steps': '📝 Complete the explanation',
-  'graph-read': '📈 Read the graph',
-  'tap-match': '🔗 Match',
-  'hotspot': '📍 Tap the right area',
-  'misconception': '🤔 True or false?',
-  'confidence': '💭 How confident are you?',
-  'equation-recall': '📐 Recall the equation',
-  'extended-answer': '✍️ 6-mark question',
-  'diagram-question': '📊 Diagram question',
+  'calculation': 'Calculation',
+  'sequence': 'Put in order',
+  'fill-steps': 'Complete the explanation',
+  'graph-read': 'Read the graph',
+  'tap-match': 'Match',
+  'hotspot': 'Tap the right area',
+  'misconception': 'True or false?',
+  'confidence': 'How confident are you?',
+  'equation-recall': 'Recall the equation',
+  'extended-answer': '6-mark question',
+  'diagram-question': 'Diagram question',
 }
 
 const getProgressLabel = (current, total) => {
   const pct = current / total;
-  if (pct === 0) return "Let's go! 🚀";
-  if (pct < 0.35) return 'Good start! ⚡';
-  if (pct < 0.6) return 'Halfway there 💪';
-  if (pct < 0.85) return 'Nearly done! 🔥';
-  return 'Last few! 🏁';
+  if (pct === 0) return 'Start steady';
+  if (pct < 0.35) return 'Good start';
+  if (pct < 0.6) return 'Halfway there';
+  if (pct < 0.85) return 'Almost there';
+  return 'Final questions';
 }
 
 export default function ExamPractice() {
@@ -374,11 +374,16 @@ export default function ExamPractice() {
   }, [id])
 
   const total = questions.length
+  const totalMarks = useMemo(
+    () => questions.reduce((sum, question) => sum + (question?.marks || 1), 0),
+    [questions]
+  )
 
   const [qIndex, setQIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [completed, setCompleted] = useState(false)
   const [showResults, setShowResults] = useState(false)
+  const scoreRef = useRef(0)
 
   // MCQ state (for equation-recall type)
   const [selected, setSelected] = useState(null)
@@ -415,11 +420,30 @@ export default function ExamPractice() {
   const isLast = qIndex === total - 1
 
   // All hooks must be declared before any early return (Rules of Hooks)
-  const handleInteractiveComplete = useCallback((correct) => {
-    if (correct) setScore(s => s + 1)
-    setLastCorrect(!!correct)
+  const handleInteractiveComplete = useCallback((outcome) => {
+    const marksAvailable = q?.marks || 1
+    const normalised = typeof outcome === 'object' && outcome !== null
+      ? {
+          marksAwarded: Math.max(0, Math.min(outcome.marksAwarded ?? outcome.selfScore ?? outcome.score ?? (outcome.correct ? marksAvailable : 0), marksAvailable)),
+          marksAvailable: outcome.marksAvailable ?? marksAvailable,
+          correct: typeof outcome.correct === 'boolean'
+            ? outcome.correct
+            : (outcome.marksAwarded ?? outcome.selfScore ?? outcome.score ?? 0) >= marksAvailable,
+        }
+      : {
+          marksAwarded: outcome ? marksAvailable : 0,
+          marksAvailable,
+          correct: !!outcome,
+        }
+
+    setScore(prev => {
+      const next = prev + normalised.marksAwarded
+      scoreRef.current = next
+      return next
+    })
+    setLastCorrect(normalised.correct)
     setCompleted(true)
-  }, [])
+  }, [q])
 
   // Per-question reset: re-open decoder whenever question changes and has a command word
   useEffect(() => {
@@ -460,7 +484,14 @@ export default function ExamPractice() {
     if (selected === null || mcqSubmitted) return
     setMcqSubmitted(true)
     const isCorrect = selected === q.correctAnswer
-    if (isCorrect) setScore(s => s + 1)
+    if (isCorrect) {
+      const awarded = q.marks || 1
+      setScore(prev => {
+        const next = prev + awarded
+        scoreRef.current = next
+        return next
+      })
+    }
     setLastCorrect(isCorrect)
     setCompleted(true)
   }
@@ -468,7 +499,7 @@ export default function ExamPractice() {
   const handleNext = () => {
     if (isLast) {
       // Save result and show results screen
-      saveQuizResult(id, score, total)
+      saveQuizResult(id, scoreRef.current, totalMarks)
       try { window.dispatchEvent(new Event('storage')) } catch (e) {}
       setShowResults(true)
     } else {
@@ -582,50 +613,43 @@ export default function ExamPractice() {
 
   // Results screen
   if (showResults) {
-    const pct = Math.round((score / total) * 100)
+    const finalScore = scoreRef.current || score
+    const pct = Math.round((finalScore / totalMarks) * 100)
     const passed = pct >= 60
     return (
-      <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
-        <div className="px-5 pt-5 pb-3 shrink-0">
-          <button
-            onClick={() => navigate(`/lesson/${id}`)}
-            className="w-11 h-11 rounded-[12px] flex items-center justify-center"
-            style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
-          >
-            <ArrowLeft size={18} color="#a8b8cc" />
-          </button>
-        </div>
+      <div className="flex flex-col h-full overflow-hidden np-shell-gradient">
+        <PageHeader
+          title="Exam practice complete"
+          subtitle={topic.title}
+          onBack={() => navigate(`/lesson/${id}`)}
+        />
         <div className="flex-1 flex flex-col items-center justify-center px-6">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', delay: 0.2 }}>
             <Medal size={64} color={passed ? '#00bc7d' : topic.moduleColor} />
           </motion.div>
-          <motion.h1 className="text-2xl font-bold mt-4" style={{ color: '#f8fafc' }}
-            initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-            Exam practice complete
-          </motion.h1>
           <motion.div className="mt-3 px-6 py-3 rounded-[16px]"
             aria-live="polite" aria-atomic="true"
-            style={{ background: passed ? 'rgba(0,188,125,0.12)' : 'rgba(239,68,68,0.12)', border: passed ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(239,68,68,0.3)' }}
+            style={{ background: passed ? 'rgba(0,188,125,0.12)' : 'rgba(216,139,45,0.12)', border: passed ? '1px solid rgba(0,188,125,0.3)' : '1px solid rgba(216,139,45,0.28)' }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-            <span className="text-lg font-bold" style={{ color: passed ? '#00bc7d' : '#ef4444' }}>
-              {score} / {total} ({pct}%)
+            <span className="text-lg font-bold" style={{ color: passed ? '#00bc7d' : 'var(--np-amber)' }}>
+              {finalScore} / {totalMarks} marks ({pct}%)
             </span>
           </motion.div>
           <motion.p className="text-sm mt-4 text-center" style={{ color: '#a8b8cc' }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-            {pct >= 80 ? 'Excellent exam technique!' : pct >= 60 ? 'Good effort — keep practising the tricky ones.' : 'Keep going — review the worked solutions to improve.'}
+            {pct >= 80 ? 'Approximate practice snapshot: strong exam technique.' : pct >= 60 ? 'Approximate practice snapshot: good progress — keep practising the trickier questions.' : 'Approximate practice snapshot: review the worked solutions, then try again.'}
           </motion.p>
           <motion.div className="flex gap-3 mt-6" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
             <button
               className="px-5 py-3 rounded-[14px] text-sm font-semibold"
-              style={{ background: 'rgba(18,26,47,0.9)', border: '1px solid #2d3e55', color: '#a8b8cc' }}
+              style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)', color: 'var(--np-text-muted)' }}
               onClick={() => navigate(`/lesson/${id}`)}
             >
-              Back to Lesson
+              Back to lesson
             </button>
             <button
               className="px-5 py-3 rounded-[14px] text-sm font-semibold"
-              style={{ background: `${topic.moduleColor}`, color: '#fff', boxShadow: `0 6px 20px ${topic.moduleColor}40` }}
+              style={{ background: 'var(--np-accent)', color: '#07111d', boxShadow: 'var(--shadow-raised)' }}
               onClick={() => navigate('/learn')}
             >
               All Topics
@@ -642,29 +666,24 @@ export default function ExamPractice() {
     : completed
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
+    <div className="flex flex-col h-full overflow-hidden np-shell-gradient">
       {/* F10/F12: Break nudge */}
       {showNudge && <BreakNudge nudgeLevel={nudgeLevel} onDismiss={dismissBreak} />}
 
       {/* Header */}
-      <div className="px-5 pt-5 pb-3 shrink-0 flex items-center gap-3 sticky top-0 z-10" style={{ background: 'rgba(8,15,30,0.96)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '0.75px solid rgba(255,255,255,0.07)', paddingTop: '12px' }}>
-        <button
-          onClick={() => navigate('/learn')}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)' }}
-        >
-          <ArrowLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex-1 min-w-0">
-          <div className="text-xs font-medium" style={{ color: topic.moduleColor }}>Exam practice</div>
-          <h1 className="text-base font-bold leading-tight truncate" style={{ color: '#f8fafc' }}>{topic.title}</h1>
-        </div>
-        <div className="px-3 py-1 rounded-full text-xs font-semibold"
-          style={{ background: 'rgba(99,102,241,0.12)', color: '#818cf8', border: '1px solid rgba(99,102,241,0.3)' }}>
-          <GraduationCap size={12} className="inline mr-1" style={{ verticalAlign: -1 }} />
-          Exam
-        </div>
-      </div>
+      <PageHeader
+        eyebrow="Exam practice"
+        title={topic.title}
+        subtitle={`${qIndex + 1} of ${total} questions`}
+        onBack={() => navigate('/learn')}
+        rightSlot={
+          <div className="px-3 py-1 rounded-full text-xs font-semibold"
+            style={{ background: 'var(--np-accent-soft)', color: 'var(--np-accent-strong)', border: '1px solid rgba(116,188,181,0.28)' }}>
+            <GraduationCap size={12} className="inline mr-1" style={{ verticalAlign: -1 }} />
+            Exam
+          </div>
+        }
+      />
 
       {/* Progress */}
       <div className="px-5 pb-3 shrink-0">
@@ -672,7 +691,7 @@ export default function ExamPractice() {
           <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.08)' }}>
             <motion.div
               className="h-full rounded-full"
-              style={{ background: '#818cf8' }}
+              style={{ background: 'var(--np-accent)' }}
               animate={{ width: `${((qIndex + (completed ? 1 : 0)) / total) * 100}%` }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             />
@@ -798,7 +817,7 @@ export default function ExamPractice() {
                   style={{ background: 'rgba(99,102,241,0.10)', border: '0.75px solid rgba(99,102,241,0.25)', color: '#818cf8' }}
                   onClick={() => setCmdWordOpen(true)}
                 >
-                  💡 Exam tip
+                  Exam tip
                 </button>
               )}
 
@@ -884,7 +903,7 @@ export default function ExamPractice() {
                                   <p key={i} style={{ fontSize: 12, color: '#cbd5e1', lineHeight: 1.5 }}>{step}</p>
                                 ))}
                                 <p className="mt-2 pt-2" style={{ fontSize: 11, color: '#818cf8', fontStyle: 'italic', borderTop: '0.75px solid rgba(99,102,241,0.2)' }}>
-                                  💡 {guide.tip}
+                                  {guide.tip}
                                 </p>
                               </div>
                             </div>
@@ -925,7 +944,7 @@ export default function ExamPractice() {
                 className="w-full py-4 rounded-[16px] font-semibold text-base"
                 style={{
                   background: '#6366f1',
-                  boxShadow: '0px 8px 24px rgba(99,102,241,0.4)',
+                  boxShadow: 'var(--shadow-raised)',
                   color: '#fff',
                 }}
                 onClick={handleMcqSubmit}
@@ -940,7 +959,7 @@ export default function ExamPractice() {
                       ? '#6366f1'
                       : `${topic.moduleColor}`,
                     boxShadow: isLast
-                      ? '0px 8px 24px rgba(99,102,241,0.4)'
+                      ? 'var(--shadow-raised)'
                       : `0px 8px 24px ${topic.moduleColor}40`,
                     color: '#fff',
                   }}
@@ -949,7 +968,7 @@ export default function ExamPractice() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                 >
-                  {isLast ? 'See Results' : 'Next →'}
+                  {isLast ? 'See results' : 'Next'}
                 </motion.button>
               )
             )}

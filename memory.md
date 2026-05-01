@@ -5,6 +5,38 @@
 
 ## What Was Just Done (latest — 2026-05-01)
 
+### Code-structure cleanup helpers
+- Added small `src/features/` helper modules without moving large route screens.
+- Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.
+- Extracted shared topic study routing while preserving the exact lesson gate: `topic.hook || topic.lessonSteps?.length > 0`, then practical route, then practice fallback.
+- Extracted settings/profile localStorage helpers while keeping the same keys: `neurophysics_profile` and `neurophysics_prefs`.
+- Extracted board/course display helpers for board option ordering and course labels without touching `getSelectedBoard`, board filtering, or board config rules.
+- Expanded smoke tests:
+  - `scripts/smoke-timed-paper-scoring.mjs`
+  - `scripts/smoke-topic-routing.mjs`
+  - `scripts/smoke-settings-storage.mjs`
+  - `scripts/smoke-board-course-display.mjs`
+- Updated `src/features/README.md` to explain what belongs in features and why screens stay route-owned until extracted safely.
+
+### Verification
+- `npm test` passed.
+- `npm run build` passed.
+- `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commits.
+- GitNexus impact checks were run before symbol edits. `TimedPaper`, `QuickWinScreen`, `MixedRevisionScreen`, `SettingsScreen`, and `OnboardingScreen` were LOW risk. `getSelectedBoard` was CRITICAL, so it was intentionally not edited.
+- GitNexus index was refreshed after each commit.
+
+### Commits
+- `35ec5e7` Extract timed paper session helpers
+- `0ed37f0` Extract topic study routing helper
+- `a1e2232` Extract settings storage helpers
+- `40a6819` Document feature helper structure
+- `344cde3` Extract board course display helpers
+
+### Notes
+- Existing dirty/untracked historical work remains intentionally uncommitted.
+- No V2 resurrection, no question-bank/content edits, no 9-step lesson-flow changes, and no broad folder reshuffle.
+
 ### AQA + Edexcel release hardening
 - Release claims are now scoped to AQA and Edexcel only in public metadata and release docs.
 - Removed active V2 release surface by verification: no `np_ui_v2`, `?v2`, or `*ScreenV2` references are present in shipped source/docs.

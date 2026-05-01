@@ -3,10 +3,10 @@
  * Mixes chained calculations, RPA error-direction, and novel-context questions.
  */
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, Trophy, Star, CaretRight, ArrowCounterClockwise } from '@phosphor-icons/react'
-import { getGrade9Questions } from '../data/examIndex'
+import { getGrade9Questions } from '../lib/questionRepository'
 import { saveQuizResult } from '../hooks/useInsights'
 import { getSelectedBoard } from '../utils/boardConfig'
 
@@ -105,35 +105,139 @@ function RPAErrorQuestion({ data, onComplete }) {
   )
 }
 
+function MCQChallengeQuestion({ data, onComplete }) {
+  const [selectedIndex, setSelectedIndex] = useState(null)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = () => {
+    if (selectedIndex == null || submitted) return
+    setSubmitted(true)
+    onComplete(selectedIndex === data.correctIndex)
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="space-y-2">
+        {data.options.map((option, index) => {
+          const isCorrect = submitted && index === data.correctIndex
+          const isWrong = submitted && index === selectedIndex && selectedIndex !== data.correctIndex
+          const isSelected = selectedIndex === index
+          return (
+            <motion.button
+              key={`${data.id}-opt-${index}`}
+              className="w-full text-left px-4 py-3 rounded-[12px] text-sm font-semibold"
+              style={{
+                background: isCorrect
+                  ? 'rgba(0,188,125,0.15)'
+                  : isWrong
+                    ? 'rgba(239,68,68,0.15)'
+                    : isSelected
+                      ? 'rgba(168,85,247,0.15)'
+                      : 'rgba(18,26,47,0.9)',
+                border: isCorrect
+                  ? '1.5px solid #00bc7d'
+                  : isWrong
+                    ? '1.5px solid #ef4444'
+                    : isSelected
+                      ? '1.5px solid #a855f7'
+                      : '0.75px solid #1d293d',
+                color: '#f8fafc',
+              }}
+              onClick={() => { if (!submitted) setSelectedIndex(index) }}
+              whileTap={submitted ? {} : { scale: 0.98 }}
+            >
+              {option}
+            </motion.button>
+          )
+        })}
+      </div>
+
+      {!submitted && (
+        <motion.button
+          className="w-full py-3 rounded-[14px] text-sm font-bold"
+          style={{ background: selectedIndex != null ? MODULE_COLOR : '#1d293d', color: selectedIndex != null ? '#fff' : '#64748b' }}
+          onClick={handleSubmit}
+          disabled={selectedIndex == null}
+          whileTap={{ scale: selectedIndex != null ? 0.97 : 1 }}
+        >
+          Check answer
+        </motion.button>
+      )}
+
+      {submitted && (
+        <motion.div
+          className="space-y-2"
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          {data.explanation && (
+            <div className="px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
+              <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{data.explanation}</span>
+            </div>
+          )}
+          {data.senNote && data.senNote !== data.explanation && (
+            <div className="px-3 py-2 rounded-[10px]"
+              style={{ background: 'rgba(253,199,0,0.07)', border: '0.75px solid rgba(253,199,0,0.2)' }}>
+              <span className="text-xs" style={{ color: '#fdc700' }}>{data.senNote}</span>
+            </div>
+          )}
+        </motion.div>
+      )}
+    </div>
+  )
+}
+
 // ── TYPE LABELS ───────────────────────────────────────────────────────────────
 const TYPE_LABELS = {
   'calculation-chained': { label: 'Chained Calculation', emoji: '🔗' },
-  'rpa-error':           { label: 'RPA Error Analysis',  emoji: '🔬' },
-  'novel-context':       { label: 'Novel Context',        emoji: '🌍' },
+  'rpa-error':           { label: 'RPA Error Analysis', emoji: '🔬' },
+  'novel-context':       { label: 'Novel Context', emoji: '🌍' },
+  'mcq-challenge':       { label: 'Challenge Question', emoji: '⭐' },
 }
 
 // ── Main Screen ───────────────────────────────────────────────────────────────
 export default function Grade9Challenge() {
   const navigate = useNavigate()
+  const board = getSelectedBoard()
 
   const [course, setCourse] = useState(() => {
     try { return JSON.parse(localStorage.getItem('neurophysics_prefs') || '{}').course || 'combined' } catch { return 'combined' }
   })
   const [started, setStarted] = useState(false)
-  const questions = useMemo(() => getGrade9Questions(course), [course])
+  const [loading, setLoading] = useState(true)
+  const [questions, setQuestions] = useState([])
   const total = questions.length
 
   const [qIndex, setQIndex]       = useState(0)
   const [score, setScore]         = useState(0)
   const [completed, setCompleted] = useState(false)
   const [showResults, setShowResults] = useState(false)
-
-  const board = getSelectedBoard()
   const isCCEA = board.gradeSystem === 'A*-G'
   const topLabel    = isCCEA ? 'Grade A*' : 'Grade 9'
   const midLabel    = isCCEA ? 'Grade A'  : 'Grade 8'
   const challengeTitle = isCCEA ? 'Grade A* Challenge' : 'Grade 9 Challenge'
   const challengeHeader = isCCEA ? 'GRADE A* CHALLENGE' : 'GRADE 9 CHALLENGE'
+
+  useEffect(() => {
+    let cancelled = false
+    setLoading(true)
+    getGrade9Questions({ examBoard: board.id, course })
+      .then((loadedQuestions) => {
+        if (cancelled) return
+        setQuestions(loadedQuestions)
+      })
+      .catch(() => {
+        if (cancelled) return
+        setQuestions([])
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [board.id, course])
 
   const q = questions[qIndex] || {}
   const isLast = qIndex === total - 1
@@ -170,6 +274,7 @@ export default function Grade9Challenge() {
       case 'novel-context':       return <NovelContextQuestion {...props} />
       case 'rpa-error':           return <RPAErrorQuestion {...props} />
       case 'extended-answer':     return <ExtendedAnswerQuestion {...props} />
+      case 'mcq-challenge':       return <MCQChallengeQuestion {...props} />
       default: return null
     }
   }
@@ -297,14 +402,15 @@ export default function Grade9Challenge() {
             ))}
           </div>
           <div className="text-xs text-center" style={{ color: '#64748b' }}>
-            {total} questions · ~{Math.ceil(total * 1.5)} min
+            {loading ? 'Loading challenge…' : `${total} questions · ~${Math.ceil(total * 1.5)} min`}
           </div>
           <motion.button
             className="w-full py-4 rounded-[16px] text-base font-bold"
-            style={{ background: '#6366f1', color: '#fff' }}
-            onClick={() => setStarted(true)}
+            style={{ background: loading || total === 0 ? '#1d293d' : '#6366f1', color: loading || total === 0 ? '#64748b' : '#fff' }}
+            onClick={() => { if (!loading && total > 0) setStarted(true) }}
+            disabled={loading || total === 0}
             whileTap={{ scale: 0.97 }}>
-            Start Challenge
+            {loading ? 'Loading…' : total === 0 ? 'No questions yet' : 'Start Challenge'}
           </motion.button>
         </div>
       </div>

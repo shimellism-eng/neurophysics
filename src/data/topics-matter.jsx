@@ -1898,7 +1898,7 @@ export const MATTER_TOPICS = {
     ],
   },
   gas_pressure: {
-    id: 'gas_pressure', module: 'Particle Model', moduleColor: PART_C, course: 'physics-only',
+    id: 'gas_pressure', module: 'Particle Model', moduleColor: PART_C, course: 'physics_only',
     title: 'Gas Pressure', subtitle: 'Boyle\'s Law, Temperature & Combined Gas Law (HT)',
     description: 'Gas pressure is caused by particles colliding with the walls of their container. At constant temperature: pV = constant — Boyle\'s Law (p₁V₁ = p₂V₂). At constant volume, increasing temperature increases the average kinetic energy of particles — they collide more frequently and forcefully → pressure increases. HT: The combined gas law links all three variables using absolute temperature in Kelvin: p₁V₁/T₁ = p₂V₂/T₂. Convert: T(K) = T(°C) + 273. At constant volume: p/T = constant (p₁/T₁ = p₂/T₂). Temperature in Kelvin must always be used — using °C gives wrong answers. This is why sealed containers (e.g. aerosols) must not be heated — pressure could build to a dangerous level.',
     lessonVisual: GasPressureLesson, ideaVisual: GasPressureIdea, realityVisual: GasPressureReality,
@@ -2924,7 +2924,7 @@ export const MATTER_TOPICS = {
     ],
   },
   radiation_hazards: {
-    id: 'radiation_hazards', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
+    id: 'radiation_hazards', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics_only',
     title: 'Background Radiation, Uses & Hazards', subtitle: 'Contamination vs Irradiation & Uses of Each Type',
     description: 'Background radiation is low-level radiation from natural sources (rocks, cosmic rays, radon gas) and man-made sources (medical, nuclear industry). Irradiation is exposure to a source outside the body — stops when source removed. Contamination means radioactive material inside or on the body — more dangerous as it continues to irradiate internal tissue. Uses: Alpha — smoke detectors (ionises air in detector; smoke absorbs alpha, triggering alarm). Beta — paper/metal thickness monitoring (beta passes through thin material; too little detected = too thick); medical tracers. Gamma — sterilising surgical equipment and food (kills bacteria); cancer radiotherapy (targeted beam kills tumour cells); medical imaging tracers (e.g. technetium-99m). Alpha is most dangerous when inhaled or ingested; gamma most dangerous from outside.',
     lessonVisual: RadiationHazardsLesson, ideaVisual: RadiationHazardsIdea, realityVisual: RadiationHazardsReality,
@@ -3092,7 +3092,7 @@ export const MATTER_TOPICS = {
     ],
   },
   nuclear_fission: {
-    id: 'nuclear_fission', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
+    id: 'nuclear_fission', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics_only',
     title: 'Nuclear Fission', subtitle: 'Chain Reactions, Reactors & Moderator',
     description: 'Nuclear fission occurs when a large unstable nucleus (e.g. U-235) absorbs a neutron and splits into two smaller nuclei, releasing 2-3 neutrons and a large amount of energy. These neutrons can trigger further fissions — a chain reaction. In a nuclear reactor: the moderator (usually water or graphite) slows down fast neutrons to the thermal speeds needed for U-235 to absorb them efficiently. Control rods (boron or cadmium) absorb neutrons to control the reaction rate — inserting them further slows the reaction; withdrawing them speeds it up.',
     lessonVisual: NuclearFissionLesson, ideaVisual: NuclearFissionIdea, realityVisual: NuclearFissionReality,
@@ -3265,7 +3265,7 @@ export const MATTER_TOPICS = {
     ],
   },
   nuclear_fusion: {
-    id: 'nuclear_fusion', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics-only',
+    id: 'nuclear_fusion', module: 'Atomic Structure', moduleColor: ATOM_C, course: 'physics_only',
     title: 'Nuclear Fusion', subtitle: 'Joining Nuclei in Stars',
     description: 'Nuclear fusion is when two light nuclei (e.g. hydrogen isotopes) join together to form a heavier nucleus, releasing large amounts of energy. This is the process that powers stars. Fusion requires extremely high temperatures (≥10⁷ K) to overcome the electrostatic repulsion between nuclei. During fusion, some mass is converted into energy (E = mc²).',
     lessonVisual: NuclearFusionLesson, ideaVisual: NuclearFusionIdea, realityVisual: NuclearFusionReality,

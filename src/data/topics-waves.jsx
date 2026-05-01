@@ -2044,7 +2044,7 @@ export const WAVES_TOPICS = {
     ],
   },
   wave_reflection: {
-    id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light', course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'wave_reflection', module: 'Waves', moduleColor: WC, practicalId: 'light', course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Reflection & Refraction', subtitle: 'Boundary Behaviour of Waves',
     description: 'Reflection: angle of incidence = angle of reflection (measured from the normal). Refraction: waves change speed at a boundary between media, causing a change in direction. Entering a denser medium: slows down, bends towards normal. Entering a less dense medium: speeds up, bends away from normal.',
     lessonVisual: WaveReflectionLesson, ideaVisual: WaveReflectionIdea, realityVisual: WaveReflectionReality,
@@ -2194,7 +2194,7 @@ export const WAVES_TOPICS = {
     ],
   },
   total_internal_reflection: {
-    id: 'total_internal_reflection', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'total_internal_reflection', module: 'Waves', moduleColor: WC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Total Internal Reflection', subtitle: 'Critical Angle & Optical Fibres',
     description: 'Total internal reflection (TIR) occurs when light travels from a denser medium (e.g. glass) to a less dense medium (e.g. air) and the angle of incidence exceeds the critical angle. At the critical angle, the refracted ray travels along the boundary. Above it, all light reflects internally. Optical fibres exploit TIR to transmit data as light pulses over long distances with minimal energy loss.',
     lessonVisual: TotalInternalReflectionLesson, ideaVisual: TotalInternalReflectionIdea, realityVisual: TotalInternalReflectionReality,
@@ -2344,7 +2344,7 @@ export const WAVES_TOPICS = {
     ],
   },
   sound_ultrasound: {
-    id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'sound_ultrasound', module: 'Waves', moduleColor: WC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Sound Waves & Ultrasound', subtitle: 'Hearing Range, Seismic Waves & Medical Imaging',
     description: 'Sound travels as longitudinal waves - faster in denser media (solids > liquids > gases). Human hearing range: 20 Hz to 20 kHz — the ear drum and inner ear structures only vibrate efficiently within this range; very low or very high frequencies do not produce a response. Ultrasound (>20 kHz) is partially reflected at media boundaries — used in medical imaging and flaw detection. Seismic P-waves are longitudinal and travel through both solids and liquids. Seismic S-waves are transverse and cannot travel through liquids — because S-waves do not reach the far side of Earth, this is evidence that Earth has a liquid outer core. Echo sounding uses high-frequency sound to measure water depth: depth = (speed × time) ÷ 2.',
     lessonVisual: SoundWavesLesson, ideaVisual: SoundWavesIdea, realityVisual: SoundWavesReality,
@@ -2644,7 +2644,7 @@ export const WAVES_TOPICS = {
     ],
   },
   lenses: {
-    id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'lenses', module: 'Waves', moduleColor: WC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Lenses & Optics', subtitle: 'Convex, Concave, Magnification & Lens Power',
     description: 'Lenses refract (bend) light. Convex (converging) lenses bring parallel rays to a focal point — can produce real inverted images (object beyond focal point) or virtual upright magnified images (object within focal point, like a magnifying glass). Concave (diverging) lenses always produce virtual, upright, diminished images. Magnification = image height ÷ object height = image distance ÷ object distance (no units). Power of a lens: P = 1/f, where f is the focal length in metres — power is measured in dioptres (D). A shorter focal length = more powerful lens = greater bending of light.',
     lessonVisual: LensesLesson, ideaVisual: LensesIdea, realityVisual: LensesReality,
@@ -2794,7 +2794,7 @@ export const WAVES_TOPICS = {
     ],
   },
   black_body: {
-    id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'black_body', module: 'Waves', moduleColor: WC, practicalId: 'radiation', course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Black Body Radiation', subtitle: 'Emission, Absorption & Earth\'s Temperature',
     description: 'All objects above absolute zero emit infrared radiation. Hotter objects emit more radiation at shorter wavelengths. A perfect black body absorbs all radiation and is the best possible emitter. At constant temperature, absorption rate = emission rate. Earth\'s temperature depends on absorption and emission of radiation - basis of climate science.',
     lessonVisual: BlackBodyLesson, ideaVisual: BlackBodyIdea, realityVisual: BlackBodyReality,
@@ -3414,7 +3414,7 @@ export const WAVES_TOPICS = {
     ],
   },
   em_induction: {
-    id: 'em_induction', module: 'Magnetism', moduleColor: MC, course: 'physics-only',
+    id: 'em_induction', module: 'Magnetism', moduleColor: MC, course: 'physics_only',
     title: 'EM Induction & Transformers', subtitle: 'Generator Effect, Vp/Vs = Np/Ns & VpIp = VsIs',
     description: 'Moving a conductor relative to a magnetic field (or changing the field) induces a potential difference — the generator effect. Factors affecting induced pd: speed of movement, magnetic field strength, number of turns. Transformers use AC to change voltage: Vp/Vs = Np/Ns. For a 100% efficient transformer, power in = power out: VpIp = VsIs. A microphone uses the generator effect: sound waves vibrate a coil in a magnetic field, inducing a current that mirrors the pressure wave — the reverse of a loudspeaker. National Grid uses high voltage (low current) to minimise energy losses (P = I²R).',
     lessonVisual: EMInductionLesson, ideaVisual: EMInductionIdea, realityVisual: EMInductionReality,
@@ -3564,7 +3564,7 @@ export const WAVES_TOPICS = {
     ],
   },
   ac_generators: {
-    id: 'ac_generators', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
+    id: 'ac_generators', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics_only',
     title: 'AC Generators & Dynamos', subtitle: 'Alternators (AC) vs Dynamos (DC)',
     description: 'An AC generator (alternator) converts kinetic energy into electrical energy. A coil rotates in a magnetic field — as it cuts through field lines, an EMF is induced. The direction of induced current reverses each half-turn, producing alternating current. Slip rings and brushes maintain continuous electrical contact, preserving the AC. A dynamo uses a split-ring commutator instead — the connections are reversed every half-turn so the current always flows the same way through the external circuit, producing direct current (DC). Output voltage is increased by rotating faster (also increases frequency), using a stronger magnet, or adding more turns.',
     lessonVisual: ACGeneratorsLesson, ideaVisual: ACGeneratorsIdea, realityVisual: ACGeneratorsReality,
@@ -3714,7 +3714,7 @@ export const WAVES_TOPICS = {
     ],
   },
   transformers: {
-    id: 'transformers', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics-only',
+    id: 'transformers', module: 'Magnetism & Electromagnetism', moduleColor: MC, course: 'physics_only',
     title: 'Transformers', subtitle: 'Step-Up, Step-Down & The National Grid',
     specRef: '4.7.5',
     description: 'A transformer changes the voltage of an alternating current. It works by electromagnetic induction: AC in the primary coil creates a changing magnetic field in the iron core, which induces an alternating voltage in the secondary coil. Step-up transformers increase voltage (more secondary turns); step-down transformers decrease voltage (fewer secondary turns). The turns ratio equation: Vp/Vs = Np/Ns. For an ideal (100% efficient) transformer, power is conserved: VpIp = VsIs, so increasing voltage decreases current proportionally. Transformers ONLY work with AC — a DC current produces a static magnetic field, which cannot induce an EMF in the secondary coil. The National Grid uses step-up transformers (to ~400 kV) to reduce current, minimising resistive heating losses (P = I²R). Step-down transformers then reduce voltage for safe domestic use (230 V).',
@@ -3866,7 +3866,7 @@ export const WAVES_TOPICS = {
     ],
   },
   solar_system: {
-    id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics-only',
+    id: 'solar_system', module: 'Space', moduleColor: SC, course: 'physics_only',
     title: 'Solar System & Orbital Motion', subtitle: 'Gravity, Circular Orbits & Satellites',
     description: 'Our solar system: Sun, 8 planets, dwarf planets, moons, asteroids, comets. Gravity provides the centripetal force for orbital motion. In a circular orbit, speed is constant but velocity direction continuously changes — the object always accelerates towards the centre (centripetal acceleration). Orbital speed: v = 2πr/T, where r = orbital radius and T = orbital period. A planet further from the Sun has a larger orbit and moves more slowly (longer T). Artificial satellites: low Earth orbit (~200 km, short period — imaging/weather); geostationary orbit (~36 000 km, 24 h period, stays above same equatorial point — communications/TV). Comets have highly elliptical orbits — fastest at perihelion (closest to Sun), slowest at aphelion.',
     lessonVisual: SolarSystemLesson, ideaVisual: SolarSystemIdea, realityVisual: SolarSystemReality,
@@ -4043,7 +4043,7 @@ export const WAVES_TOPICS = {
     ],
   },
   stellar_evolution: {
-    id: 'stellar_evolution', module: 'Space', moduleColor: SC, course: 'physics-only',
+    id: 'stellar_evolution', module: 'Space', moduleColor: SC, course: 'physics_only',
     title: 'Stellar Evolution', subtitle: 'Life Cycle of Stars & Main Sequence Stability',
     description: 'Stars form from nebulae (clouds of gas and dust) pulled together by gravity — this is the protostar stage. When core temperature is high enough, hydrogen fusion begins: this is the main sequence stage. During main sequence, the star is stable because inward gravitational force is balanced by outward radiation pressure from fusion — this equilibrium can last billions of years. When hydrogen runs out, balance is lost: a Sun-like star expands to a red giant, ejects its outer layers as a planetary nebula, then collapses to a white dwarf (gradually cooling to a black dwarf). Massive stars become red supergiants, then collapse and explode as supernovae — producing all elements heavier than iron — then form neutron stars or black holes.',
     lessonVisual: StellarEvolutionLesson, ideaVisual: StellarEvolutionIdea, realityVisual: StellarEvolutionReality,
@@ -4193,7 +4193,7 @@ export const WAVES_TOPICS = {
     ],
   },
   visible_light: {
-    id: 'visible_light', module: 'Waves', moduleColor: WC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'visible_light', module: 'Waves', moduleColor: WC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Visible Light & Colour', subtitle: 'Specular vs Diffuse Reflection, Filters & Colour',
     description: 'Specular reflection occurs at smooth surfaces — incident rays reflect in a single direction (angle of incidence = angle of reflection). Diffuse reflection occurs at rough surfaces — rays scatter in many directions, making objects visible from all angles. A colour filter absorbs all wavelengths except its own colour, which it transmits. An opaque object reflects some wavelengths and absorbs others — the reflected wavelengths determine its colour. A white object reflects all wavelengths; a black object absorbs all. An object can only reflect wavelengths present in the incident light — a blue object under red light looks black because it absorbs red and has no blue to reflect.',
     lessonVisual: VisibleLightLesson, ideaVisual: VisibleLightIdea, realityVisual: VisibleLightReality,
@@ -4343,7 +4343,7 @@ export const WAVES_TOPICS = {
     ],
   },
   redshift: {
-    id: 'redshift', module: 'Space', moduleColor: SC, course: 'physics-only',
+    id: 'redshift', module: 'Space', moduleColor: SC, course: 'physics_only',
     title: 'Red-shift & The Big Bang', subtitle: 'Expanding Universe, Dark Matter & Dark Energy',
     description: 'Red-shift: light from distant galaxies is shifted towards the red end of the spectrum — their wavelength is stretched. This shows galaxies are moving away from us. Farther galaxies have greater red-shift (moving faster) — evidence the universe is expanding and supports the Big Bang theory (universe began from a single hot, dense point ~13.8 billion years ago). Since 1998, observations of supernovae show distant galaxies are receding ever faster. Much remains unexplained: dark matter (provides extra gravity, holds galaxies together, does not emit EM radiation) and dark energy (drives the ever-faster expansion) together account for about 95% of the universe\'s content.',
     lessonVisual: RedshiftLesson, ideaVisual: RedshiftIdea, realityVisual: RedshiftReality,

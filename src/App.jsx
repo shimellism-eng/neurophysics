@@ -1,9 +1,10 @@
 import { HashRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { useState, useEffect, useCallback, useRef, lazy, Suspense } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo, lazy, Suspense } from 'react'
 import AtomIcon from './components/AtomIcon'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { MamoProvider, useMamoState } from './context/MamoContext'
+import { Network } from '@capacitor/network'
 import { ComfortProvider, useComfort } from './context/ComfortContext'
 import ComfortSettings, { ComfortFirstTimePrompt } from './components/ComfortSettings'
 import BottomNav from './components/BottomNav'
@@ -68,6 +69,7 @@ const RecallScreen      = lazy(() => import('./screens/RecallScreen'))
 const EquationDrillScreen = lazy(() => import('./screens/EquationDrillScreen'))
 const QuickWinScreen      = lazy(() => import('./screens/QuickWinScreen'))
 const MixedRevisionScreen = lazy(() => import('./screens/MixedRevisionScreen'))
+const PracticeHubScreen   = lazy(() => import('./screens/PracticeHubScreen'))
 
 // ── Suspense fallback ─────────────────────────────────────────────────────────
 function RouteLoader() {
@@ -78,7 +80,7 @@ function RouteLoader() {
     <div className="flex items-center justify-center h-full" style={{ background: 'var(--np-bg)' }}>
       <motion.div
         className="w-8 h-8 rounded-full border-2"
-        style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: 'var(--np-indigo)' }}
+        style={{ borderColor: 'rgba(116,188,181,0.22)', borderTopColor: 'var(--np-accent)' }}
         animate={reduceMotion ? {} : { rotate: 360 }}
         transition={reduceMotion ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
       />
@@ -102,7 +104,7 @@ function PulseRing() {
   return (
     <motion.div
       className="absolute inset-0 rounded-full"
-      style={{ border: '2px solid rgba(99,102,241,0.35)' }}
+      style={{ border: '2px solid rgba(116,188,181,0.3)' }}
       animate={{ scale: [1, 1.4], opacity: [0.4, 0] }}
       transition={{ repeat: Infinity, duration: 3, ease: 'easeOut', repeatDelay: 1.5 }}
     />
@@ -121,9 +123,9 @@ function FloatingMamo() {
   const [dismissed, setDismissed] = useState(() => !!_loadPrefs().hideMamo)
   const hiddenByPref = dismissed
   const hide = hiddenByRoute || hiddenByExam || hiddenByPref
-  const reduceMotion = (() => {
+  const reduceMotion = useMemo(() => {
     try { return !!_loadPrefs().reduceMotion } catch { return false }
-  })() || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  }, []) || (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 
   // Listen for the Settings toggle re-enabling Mamo (storage event from same tab via custom event)
   useEffect(() => {
@@ -189,8 +191,9 @@ function FloatingMamo() {
             style={{
               width: 60,
               height: 60,
-              background: '#6366f1',
-              boxShadow: '0 2px 16px rgba(99,102,241,0.35)',
+              background: 'var(--np-accent)',
+              boxShadow: '0 10px 22px rgba(0,0,0,0.24)',
+              border: '1px solid rgba(255,255,255,0.08)',
             }}
             onClick={() => navigate(mamoPath)}
             whileTap={{ scale: 0.9 }}
@@ -210,7 +213,7 @@ function FloatingMamo() {
                 transition={reduceMotion ? { duration: 0 } : { duration: reaction === 'complete' ? 0.7 : 0.5 }}
               />
             )}
-            <AtomIcon size={24} color="#fff" />
+            <AtomIcon size={24} color="#07111d" />
             <PulseRing />
 
             {/* Conversation-presence badge */}
@@ -222,7 +225,7 @@ function FloatingMamo() {
                   height: 12,
                   top: 2,
                   right: 2,
-                  background: '#6366f1',
+                  background: 'var(--np-accent)',
                   border: '2px solid var(--np-bg)',
                 }}
                 animate={reduceMotion ? {} : { scale: [1, 1.3, 1] }}
@@ -318,14 +321,35 @@ function AppShell() {
   const location = useLocation()
   const { user, loading } = useAuth()
 
-  // Offline detection
-  const [isOffline, setIsOffline] = useState(!navigator.onLine)
+  // Offline detection: use Capacitor's native network signal in the iPhone app,
+  // with browser events as a safe fallback for the web version.
+  const [isOffline, setIsOffline] = useState(() => (
+    typeof navigator !== 'undefined' ? !navigator.onLine : false
+  ))
   useEffect(() => {
+    let networkListener = null
+    let cancelled = false
+
+    const updateStatus = (connected) => {
+      if (!cancelled) setIsOffline(!connected)
+    }
+
+    Network.getStatus()
+      .then(status => updateStatus(status.connected))
+      .catch(() => updateStatus(typeof navigator !== 'undefined' ? navigator.onLine : true))
+
+    Network.addListener('networkStatusChange', status => updateStatus(status.connected))
+      .then(listener => { networkListener = listener })
+      .catch(() => {})
+
     const goOffline = () => setIsOffline(true)
     const goOnline  = () => setIsOffline(false)
     window.addEventListener('offline', goOffline)
     window.addEventListener('online',  goOnline)
+
     return () => {
+      cancelled = true
+      networkListener?.remove?.()
       window.removeEventListener('offline', goOffline)
       window.removeEventListener('online',  goOnline)
     }
@@ -337,6 +361,17 @@ function AppShell() {
   }, [location.pathname])
   const isPublic = PUBLIC_ROUTES.includes(location.pathname)
   const showShell = !!user && SHELL_ROUTES.includes(location.pathname)
+  const routeOwnsTopInset = (
+    location.pathname === '/auth' ||
+    location.pathname === '/consent' ||
+    location.pathname === '/privacy' ||
+    location.pathname === '/terms' ||
+    location.pathname === '/onboarding' ||
+    (location.pathname === '/' && !!user) ||
+    location.pathname === '/learn' ||
+    location.pathname === '/settings'
+  )
+  const shellBackground = 'radial-gradient(circle at 50% -18%, rgba(94, 167, 161, 0.12), transparent 34%), linear-gradient(180deg, #07111d 0%, #091420 52%, #07111d 100%)'
 
   // Show nothing while auth state loads
   if (loading) {
@@ -347,7 +382,7 @@ function AppShell() {
       <div className="flex flex-col h-full items-center justify-center" style={{ background: 'var(--np-bg)' }}>
         <motion.div
           className="w-8 h-8 rounded-full border-2"
-          style={{ borderColor: 'rgba(99,102,241,0.3)', borderTopColor: '#6366f1' }}
+          style={{ borderColor: 'rgba(116,188,181,0.22)', borderTopColor: 'var(--np-accent)' }}
           animate={rmLoading ? {} : { rotate: 360 }}
           transition={rmLoading ? { duration: 0 } : { repeat: Infinity, duration: 0.8, ease: 'linear' }}
         />
@@ -379,16 +414,18 @@ function AppShell() {
       className="relative flex flex-col"
       style={{
         height: '100dvh',
-        minHeight: '100vh',
+        minHeight: '100dvh',
         width: '100%',
         maxWidth: 480,
         margin: '0 auto',
-        background: 'var(--np-bg)',
+        background: shellBackground,
         overflow: 'hidden',
       }}
     >
-      {/* Top safe-area spacer */}
-      <div style={{ height: 'var(--safe-top)', background: 'var(--np-bg)', flexShrink: 0 }} />
+      {/* Top safe-area spacer — auth owns its own top inset so the gradient can cover the whole screen */}
+      {!routeOwnsTopInset && (
+        <div style={{ height: 'var(--safe-top)', background: shellBackground, flexShrink: 0 }} />
+      )}
       <div className="flex-1 overflow-hidden relative" style={{ paddingBottom: showShell ? 'var(--bottom-chrome-height)' : 0 }}>
         <Suspense fallback={<RouteLoader />}>
           <AnimatePresence mode="wait">
@@ -423,6 +460,7 @@ function AppShell() {
                 <Route path="/privacy" element={<PrivacyPolicyScreen />} />
                 <Route path="/terms" element={<TermsScreen />} />
                 <Route path="/practice/:topicId" element={<AdaptivePractice />} />
+                <Route path="/practice-tools" element={<PracticeHubScreen />} />
                 <Route path="/recall/:topicId" element={<RecallScreen />} />
                 <Route path="/equation-drill" element={<EquationDrillScreen />} />
                 <Route path="/quickwin" element={<QuickWinScreen />} />
@@ -466,7 +504,7 @@ function AppShell() {
           </p>
           <button onClick={() => window.location.reload()} style={{
             marginTop: 8, padding: '12px 24px',
-            background: '#6366f1', color: '#fff',
+            background: 'var(--np-accent)', color: '#07111d',
             border: 'none', borderRadius: 12,
             fontSize: 14, fontWeight: 700, cursor: 'pointer',
           }}>Try again</button>

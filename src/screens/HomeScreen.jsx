@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CheckCircle, Lightning } from '@phosphor-icons/react'
+import { BookOpen, ChatCircle, Lightning, Target } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { useStudyPlan } from '../hooks/useStudyPlan'
-import { getSelectedBoard } from '../utils/boardConfig'
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
+import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection } from '../utils/curriculumFilters'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 
 function getGreeting() {
@@ -14,11 +15,32 @@ function getGreeting() {
   return 'Good evening'
 }
 
+function QuickAction({ icon: Icon, label, meta, onClick, accent = 'var(--np-accent-soft)', iconColor = 'var(--np-accent-strong)' }) {
+  return (
+    <button
+      onClick={onClick}
+      className="rounded-[18px] px-4 py-4 text-left transition-opacity active:opacity-80"
+      style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)', boxShadow: 'var(--shadow-card)' }}
+    >
+      <div className="w-10 h-10 rounded-[14px] flex items-center justify-center mb-3" style={{ background: accent, color: iconColor }}>
+        <Icon size={18} />
+      </div>
+      <div className="text-[0.98rem] font-semibold leading-tight" style={{ color: 'var(--np-text)', fontFamily: 'var(--font-display)', letterSpacing: '-0.025em' }}>
+        {label}
+      </div>
+      <div className="text-xs mt-1 leading-snug" style={{ color: 'var(--np-text-muted)' }}>
+        {meta}
+      </div>
+    </button>
+  )
+}
+
 export default function HomeScreen() {
   const navigate = useNavigate()
   const { progress } = useProgress()
   const { todayTopicId } = useStudyPlan(progress)
   const board = getSelectedBoard()
+  const course = getSelectedCourse()
   const [userName, setUserName] = useState('')
 
   useEffect(() => {
@@ -31,211 +53,166 @@ export default function HomeScreen() {
     catch { return null }
   })()
 
-  const visibleModules = MODULES.filter(m => !m.boards || m.boards.includes(board.id))
-  const allTopicIds = visibleModules.flatMap(m => m.topics.filter(id => TOPICS[id]))
-
-  const activeTopicId = todayTopicId ||
-    allTopicIds.find(id => !progress[id]?.mastered) ||
-    null
-
-  function getNodeState(topicId) {
-    if (progress[topicId]?.mastered) return 'completed'
-    if (topicId === activeTopicId) return 'active'
-    if (progress[topicId]?.started) return 'started'
-    return 'available'
-  }
-
-  function handleNodeTap(topicId) {
-    navigate(`/lesson/${topicId}`)
-  }
+  const visibleModules = MODULES.filter(m => isModuleAvailableForSelection(m, board.id, course))
+  const allTopicIds = visibleModules.flatMap(m => getVisibleTopicIdsForSelection(m.topics, board.id, course).filter(id => TOPICS[id]))
+  const activeTopicId = todayTopicId || allTopicIds.find(id => !progress[id]?.mastered) || null
+  const activeTopic = activeTopicId ? TOPICS[activeTopicId] : null
+  const activeModule = visibleModules.find(m => m.topics.includes(activeTopicId))
+  const ActiveIcon = activeModule?.icon || BookOpen
+  const completedCount = allTopicIds.filter(id => progress[id]?.mastered).length
+  const totalTopics = allTopicIds.length
+  const progressPct = totalTopics > 0 ? Math.round((completedCount / totalTopics) * 100) : 0
+  const remainingCount = Math.max(totalTopics - completedCount, 0)
+  const learnerLabel = userName || 'Learner'
+  const learnerInitial = learnerLabel.trim().charAt(0).toUpperCase() || 'L'
 
   return (
-    <SafeAreaPage className="bg-[#080f1e] min-h-screen">
-      <style>{`
-        @keyframes np-pulse {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.45); }
-          60% { box-shadow: 0 0 0 9px rgba(99,102,241,0); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .np-active-pulse { animation: none !important; }
-        }
-      `}</style>
-
-      <div className="px-5 pt-10 pb-32">
-
-        {/* Greeting */}
-        <div className="mb-8 px-1">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em]"
-             style={{ color: 'oklch(0.55 0.04 265)' }}>
-            {getGreeting()}
-          </p>
-          <h1 className="mt-0.5 text-[1.6rem] font-bold leading-tight"
-              style={{ fontFamily: 'var(--font-display)', color: 'oklch(0.97 0.01 265)' }}>
-            {userName || 'Welcome back'}
-          </h1>
-        </div>
-
-        {/* Resume / continue in-progress lesson */}
-        {resumeData && TOPICS[resumeData.topicId] && (
-          <button
-            onClick={() => navigate(`/lesson/${resumeData.topicId}`)}
-            className="w-full mb-8 px-4 py-3.5 rounded-2xl flex items-center gap-3 text-left transition-opacity active:opacity-75"
+    <SafeAreaPage
+      hasNav
+      ownsTopInset
+      className="min-h-screen"
+      style={{ background: 'radial-gradient(circle at 50% -18%, rgba(94,167,161,0.12), transparent 34%), linear-gradient(180deg, #07111d 0%, #091420 52%, #07111d 100%)' }}
+    >
+      <div className="px-5 pt-4 pb-6" style={{ paddingBottom: 'calc(var(--page-bottom-gap) + 8px)' }}>
+        <div className="flex items-center gap-4 mb-7">
+          <div
+            className="w-[64px] h-[64px] rounded-[22px] flex items-center justify-center shrink-0"
             style={{
-              background: 'oklch(0.22 0.06 265 / 0.55)',
-              border: '1px solid oklch(0.5 0.18 265 / 0.28)',
+              background: 'linear-gradient(180deg, rgba(94,167,161,0.18), rgba(94,167,161,0.08))',
+              border: '1px solid rgba(94,167,161,0.22)',
+              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
             }}
           >
-            <Lightning size={17} weight="fill" style={{ color: 'oklch(0.72 0.18 265)', flexShrink: 0 }} />
-            <div className="min-w-0">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] mb-0.5"
-                 style={{ color: 'oklch(0.62 0.14 265)' }}>
-                Continue where you left off
-              </p>
-              <p className="text-sm font-medium truncate"
-                 style={{ color: 'oklch(0.87 0.08 265)' }}>
-                {TOPICS[resumeData.topicId].title}
-              </p>
+            <span style={{ color: 'var(--np-accent-strong)', fontFamily: 'var(--font-display)', fontSize: '1.65rem', fontWeight: 800 }}>
+              {learnerInitial}
+            </span>
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <p className="text-[0.82rem] font-semibold mb-1" style={{ color: 'var(--np-accent-strong)', letterSpacing: '-0.01em' }}>
+              {getGreeting()}
+            </p>
+            <h1
+              className="text-[1.95rem] font-bold leading-[0.98]"
+              style={{ fontFamily: 'var(--font-display)', color: 'var(--np-text)', letterSpacing: '-0.05em' }}
+            >
+              {learnerLabel}
+            </h1>
+            <div className="flex flex-wrap gap-2 mt-3">
+              <span
+                className="inline-flex items-center rounded-full px-3 py-1.5 text-[11px] font-semibold"
+                style={{ background: 'rgba(94,167,161,0.10)', color: 'var(--np-accent-strong)', border: '1px solid rgba(94,167,161,0.18)' }}
+              >
+                {board.name}
+              </span>
+              <span
+                className="inline-flex items-center rounded-full px-3 py-1.5 text-[11px] font-semibold"
+                style={{ background: 'rgba(255,255,255,0.04)', color: 'var(--np-text-mid)', border: '1px solid rgba(255,255,255,0.07)' }}
+              >
+                {completedCount}/{totalTopics} complete
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {activeTopic && (
+          <button
+            onClick={() => navigate(`/lesson/${resumeData?.topicId || activeTopicId}`)}
+            className="w-full rounded-[26px] p-5 text-left transition-transform active:scale-[0.99]"
+            style={{
+              background: 'linear-gradient(135deg, #4d8b86 0%, #346864 100%)',
+              color: 'white',
+              boxShadow: '0 20px 48px rgba(0,0,0,0.24)',
+              border: '1px solid rgba(255,255,255,0.06)',
+            }}
+          >
+            <div className="text-[11px] font-semibold uppercase tracking-[0.14em]" style={{ color: 'rgba(255,255,255,0.8)' }}>
+              {resumeData ? 'Continue' : 'Do this next'}
+            </div>
+            <div className="grid grid-cols-[52px_minmax(0,1fr)_auto] gap-3 items-center mt-3">
+              <div
+                className="w-[52px] h-[52px] rounded-[16px] flex items-center justify-center"
+                style={{ background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.1)' }}
+              >
+                <ActiveIcon size={24} color="white" />
+              </div>
+              <div className="min-w-0">
+                <div
+                  className="text-[1.45rem] font-bold leading-[1.03]"
+                  style={{ fontFamily: 'var(--font-display)', letterSpacing: '-0.045em', overflowWrap: 'anywhere' }}
+                >
+                  {activeTopic.title}
+                </div>
+                <div className="text-[13px] mt-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                  {activeModule?.name || 'GCSE Physics'}
+                </div>
+              </div>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)' }}>
+                <span style={{ fontSize: '1.4rem', lineHeight: 1, color: 'white' }}>›</span>
+              </div>
             </div>
           </button>
         )}
 
-        {/* Vertical path */}
-        <div className="relative">
-          {/* Dotted connector line */}
-          <div
-            className="absolute top-0 bottom-0 pointer-events-none"
-            aria-hidden="true"
-            style={{
-              left: 22,
-              width: 2,
-              backgroundImage:
-                'repeating-linear-gradient(to bottom, oklch(0.35 0.02 265) 0, oklch(0.35 0.02 265) 4px, transparent 4px, transparent 9px)',
-            }}
-          />
-
-          {visibleModules.map((module, moduleIdx) => {
-            const moduleTopics = module.topics.filter(id => TOPICS[id])
-            if (moduleTopics.length === 0) return null
-
-            return (
-              <div key={moduleIdx}>
-                {/* Module section label */}
-                <div className="flex items-center gap-3 mb-3 mt-3" style={{ paddingLeft: 60 }}>
-                  <span
-                    className="text-[10.5px] font-bold uppercase tracking-[0.13em]"
-                    style={{ fontFamily: 'var(--font-display)', color: 'oklch(0.42 0.04 265)' }}
-                  >
-                    {module.name}
-                  </span>
+        <div className="grid gap-3 mt-4">
+          <div className="np-card-quiet p-4">
+            <div className="flex items-center justify-between gap-3">
+              <div className="min-w-0">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--np-text-dim)' }}>
+                  Progress
                 </div>
-
-                {/* Topic nodes */}
-                {moduleTopics.map((topicId) => {
-                  const topic = TOPICS[topicId]
-                  if (!topic) return null
-                  const state = getNodeState(topicId)
-                  const isActive    = state === 'active'
-                  const isCompleted = state === 'completed'
-                  const isStarted   = state === 'started'
-                  const ModuleIcon  = module.icon
-
-                  return (
-                    <div
-                      key={topicId}
-                      className="flex items-center gap-4 mb-4"
-                      style={{ minHeight: isActive ? 64 : 52 }}
-                    >
-                      {/* Node button — always tappable */}
-                      <div className="flex items-center justify-center flex-shrink-0" style={{ width: 44 }}>
-                        <button
-                          onClick={() => handleNodeTap(topicId)}
-                          aria-label={`${topic.title}${isCompleted ? ' — completed' : isActive ? ' — suggested next' : isStarted ? ' — in progress' : ''}`}
-                          className="np-active-pulse rounded-full flex items-center justify-center transition-transform active:scale-90"
-                          style={{
-                            width: isActive ? 56 : 44,
-                            height: isActive ? 56 : 44,
-                            background: isCompleted
-                              ? 'oklch(0.22 0.03 265 / 0.7)'
-                              : isActive
-                              ? 'oklch(0.55 0.22 265)'
-                              : isStarted
-                              ? `${module.color}22`
-                              : 'transparent',
-                            border: isCompleted
-                              ? '1.5px solid oklch(0.38 0.04 265)'
-                              : isActive
-                              ? 'none'
-                              : isStarted
-                              ? `1.5px solid ${module.color}99`
-                              : `1.5px solid ${module.color}55`,
-                            animation: isActive ? 'np-pulse 2.8s ease-in-out infinite' : 'none',
-                          }}
-                        >
-                          {isCompleted ? (
-                            <CheckCircle size={18} weight="fill"
-                              style={{ color: 'oklch(0.55 0.1 265)' }} />
-                          ) : isActive ? (
-                            <ModuleIcon size={24} color="white" />
-                          ) : isStarted ? (
-                            <ModuleIcon size={19} color={module.color} />
-                          ) : (
-                            <span style={{ opacity: 0.5 }}>
-                              <ModuleIcon size={18} color={module.color} />
-                            </span>
-                          )}
-                        </button>
-                      </div>
-
-                      {/* Label — full opacity for all states */}
-                      <div className="flex-1 min-w-0">
-                        <p
-                          className="font-medium text-sm leading-snug"
-                          style={{
-                            color: isCompleted
-                              ? 'oklch(0.5 0.04 265)'
-                              : isActive
-                              ? 'oklch(0.97 0.01 265)'
-                              : 'oklch(0.82 0.04 265)',
-                            fontFamily: isActive ? 'var(--font-display)' : undefined,
-                            fontSize: isActive ? '0.9375rem' : undefined,
-                            fontWeight: isActive ? 600 : undefined,
-                          }}
-                        >
-                          {topic.title}
-                        </p>
-                        {isCompleted && (
-                          <p className="text-[11px] mt-0.5"
-                             style={{ color: 'oklch(0.42 0.04 265)' }}>
-                            Done
-                          </p>
-                        )}
-                        {isStarted && (
-                          <p className="text-[11px] mt-0.5"
-                             style={{ color: 'oklch(0.62 0.14 265)' }}>
-                            In progress
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  )
-                })}
+                <div className="text-[1.05rem] font-semibold mt-1" style={{ color: 'var(--np-text)', fontFamily: 'var(--font-display)', letterSpacing: '-0.025em' }}>
+                  {completedCount} complete, {remainingCount} left
+                </div>
+                <div className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>
+                  {progressPct}% of your course is finished.
+                </div>
               </div>
-            )
-          })}
-        </div>
+              <div
+                className="w-[54px] h-[54px] rounded-full flex items-center justify-center shrink-0 text-sm font-bold"
+                style={{
+                  color: 'var(--np-accent-strong)',
+                  background: `conic-gradient(var(--np-accent) 0 ${progressPct * 3.6}deg, rgba(255,255,255,0.08) ${progressPct * 3.6}deg 360deg)`,
+                }}
+              >
+                <div className="w-[42px] h-[42px] rounded-full flex items-center justify-center" style={{ background: 'var(--np-card-deep)' }}>
+                  {progressPct}%
+                </div>
+              </div>
+            </div>
+          </div>
 
-        {/* Quick Win text link */}
-        <div className="mt-10 text-center">
-          <button
-            onClick={() => navigate('/quickwin')}
-            className="text-sm transition-colors"
-            style={{ color: 'oklch(0.44 0.06 265)' }}
-            aria-label="Quick Win — 5 questions, 3 minutes"
-          >
-            Quick Win · 5 questions, 3 min
-          </button>
+          <div className="grid grid-cols-2 gap-3">
+            <QuickAction
+              icon={BookOpen}
+              label="Learn"
+              meta="Browse topics"
+              onClick={() => navigate('/learn')}
+            />
+            <QuickAction
+              icon={Lightning}
+              label="Practice"
+              meta="Quick Win, mixed, adaptive"
+              onClick={() => navigate('/practice-tools')}
+              accent="rgba(129,140,248,0.14)"
+              iconColor="#a5b4fc"
+            />
+            <QuickAction
+              icon={Target}
+              label="Timed paper"
+              meta="Exam timing"
+              onClick={() => navigate('/timed-paper')}
+              accent="rgba(216,139,45,0.14)"
+              iconColor="var(--np-amber)"
+            />
+            <QuickAction
+              icon={ChatCircle}
+              label="Mamo"
+              meta="Ask for help"
+              onClick={() => navigate('/mamo')}
+            />
+          </div>
         </div>
-
       </div>
     </SafeAreaPage>
   )

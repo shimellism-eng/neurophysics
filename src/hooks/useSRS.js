@@ -1,14 +1,43 @@
 import { useState, useEffect, useCallback } from 'react'
 import { supabase, supabaseConfigured } from '../lib/supabase'
-import { ALL_QUESTIONS } from '../data/questionBank/index'
+import { getQuestionMap } from '../lib/questionRepository'
+import { BOARD_ORDER } from '../utils/boardConfig'
 
 const STORAGE_KEY = 'np_srs'
 const INTERVALS = [1, 3, 7, 14, 30, 60] // SM-2 fixed progression (days)
 
-// Lazy singleton Map for O(1) question lookup
-let _qMap = null
+// Lazy singleton Map for O(1) question lookup backed by runtime JSON
+let _qMap = new Map()
+let _qMapLoadPromise = null
+
+async function ensureQuestionMapLoaded() {
+  if (_qMap.size > 0) return _qMap
+  if (!_qMapLoadPromise) {
+    _qMapLoadPromise = Promise.all(
+      BOARD_ORDER.map(async (examBoard) => {
+        try {
+          return await getQuestionMap({ examBoard })
+        } catch {
+          return new Map()
+        }
+      }),
+    ).then((maps) => {
+      const merged = new Map()
+      for (const map of maps) {
+        for (const [id, question] of map.entries()) {
+          if (!merged.has(id)) merged.set(id, question)
+        }
+      }
+      _qMap = merged
+      return _qMap
+    }).finally(() => {
+      _qMapLoadPromise = null
+    })
+  }
+  return _qMapLoadPromise
+}
+
 function qMap() {
-  if (!_qMap) _qMap = new Map(ALL_QUESTIONS.map(q => [q.id, q]))
   return _qMap
 }
 
@@ -85,6 +114,9 @@ export function useSRS() {
   useEffect(() => {
     const sync = () => setStore({ ...srsStore })
     srsListeners.add(sync)
+    ensureQuestionMapLoaded().then(() => {
+      notifySRS()
+    }).catch(() => {})
     return () => srsListeners.delete(sync)
   }, [])
 
@@ -104,7 +136,7 @@ export function useSRS() {
       .filter(([qId, e]) => {
         if (!e.next_due || e.next_due > now) return false
         const q = map.get(qId)
-        return q && q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null
+        return q && q.options?.length >= 2 && q.correctIndex != null
       })
       .sort(([, a], [, b]) => a.next_due !== b.next_due ? a.next_due - b.next_due : a.ease_factor - b.ease_factor)
       .map(([qId]) => qId)

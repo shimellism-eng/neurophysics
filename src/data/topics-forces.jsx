@@ -1786,7 +1786,7 @@ export const FORCES_TOPICS = {
     ],
   },
   moments: {
-    id: 'moments', module: 'Forces', moduleColor: FC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'moments', module: 'Forces', moduleColor: FC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Moments, Levers & Gears', subtitle: 'Moment = F × d from Pivot',
     description: 'A moment (turning effect) = force × perpendicular distance from pivot. For a balanced system: clockwise moments = anticlockwise moments. Levers multiply force (effort × effort arm = load × load arm). Gears transmit rotational force - a larger gear turns more slowly but with more force.',
     lessonVisual: MomentsLesson, ideaVisual: MomentsIdea, realityVisual: MomentsReality,
@@ -1932,7 +1932,7 @@ export const FORCES_TOPICS = {
     ],
   },
   fluid_pressure: {
-    id: 'fluid_pressure', module: 'Forces', moduleColor: FC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'fluid_pressure', module: 'Forces', moduleColor: FC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Pressure & Upthrust', subtitle: 'P = F/A, p = ρgh and Upthrust',
     description: 'Pressure on a solid surface: P = F/A (force ÷ area, in Pascals). A larger contact area spreads the same force over more surface, reducing pressure — this is why snowshoes prevent sinking. Pressure in a fluid acts in all directions. Pressure increases with depth: p = ρgh (density × g × height). The atmosphere is a fluid — atmospheric pressure decreases with altitude as there is less air above. Upthrust occurs because pressure at the bottom of a submerged object is greater than at the top, creating a net upward force equal to the weight of fluid displaced (Archimedes\' principle).',
     lessonVisual: FluidPressureLesson, ideaVisual: FluidPressureIdea, realityVisual: FluidPressureReality,
@@ -2816,7 +2816,7 @@ export const FORCES_TOPICS = {
     ],
   },
   momentum: {
-    id: 'momentum', module: 'Forces', moduleColor: FC, course: 'physics-only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
+    id: 'momentum', module: 'Forces', moduleColor: FC, course: 'physics_only', boards: ['aqa','edexcel','ocr-a','ocr-b','wjec','ccea'],
     title: 'Momentum & Impulse', subtitle: 'p = mv, Conservation & Impulse = FΔt',
     description: 'Momentum p = mv (kg·m/s). In a closed system, total momentum is conserved: total before = total after any collision or explosion. Impulse = force × time = change in momentum: FΔt = Δp = Δ(mv). This means a large force for a short time OR a small force for a long time can produce the same change in momentum. The area under a force-time (F-t) graph equals the impulse (change in momentum). Safety features (airbags, crumple zones) increase collision time (Δt), which reduces force for the same change in momentum (F = Δp/Δt).',
     lessonVisual: MomentumLesson, ideaVisual: MomentumIdea, realityVisual: MomentumReality,
@@ -2971,7 +2971,7 @@ export const FORCES_TOPICS = {
     moduleColor: FC,
     paper: 2,
     boards: ['wjec'],
-    course: 'physics-only',
+    course: 'physics_only',
     hook: {
       hookFact: 'A car going round a roundabout at constant speed is still accelerating — because its direction keeps changing.',
       hookQuestion: 'If speed is constant, how can a circular object be accelerating?',

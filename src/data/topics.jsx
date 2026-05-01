@@ -26,19 +26,14 @@ export const TOPICS = {
   ...UNIVERSE_TOPICS,
 }
 
-// Topics that are GCSE Physics only (NOT in Combined Science Trilogy)
-export const PHYSICS_ONLY_TOPICS = new Set([
-  'moments',
-  'fluid_pressure',
-  'nuclear_fission',
-  'nuclear_fusion',
-  'lenses',
-  'ac_generators',
-  'transformers',
-  'solar_system',
-  'stellar_evolution',
-  'redshift',
-])
+const normalizeCourseValue = (course) => course === 'physics-only' ? 'physics_only' : course
+
+// Derived from topic metadata so course filtering cannot drift from the content model.
+export const PHYSICS_ONLY_TOPICS = new Set(
+  Object.values(TOPICS)
+    .filter((topic) => normalizeCourseValue(topic.course) === 'physics_only')
+    .map((topic) => topic.id)
+)
 
 export const MODULES = [
   {

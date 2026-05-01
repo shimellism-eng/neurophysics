@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { Sun, Bell, Wheelchair, Info, CaretRight, Trash, Shield, FileText, Pencil, Check, X, SignOut, TextT, Clock, SpeakerHigh, BookOpen, GraduationCap, CalendarBlank, Sliders } from '@phosphor-icons/react'
+import { Bell, Info, CaretRight, Trash, Shield, FileText, Pencil, Check, X, SignOut, Clock, BookOpen, GraduationCap, CalendarBlank, Sliders } from '@phosphor-icons/react'
 import { BOARDS, BOARD_ORDER, getSelectedBoard, getValidatedBoard, saveSelectedBoard, getSelectedCourse, setSelectedCourse } from '../utils/boardConfig'
 import AtomIcon from '../components/AtomIcon'
 import { useNavigate } from 'react-router-dom'
@@ -14,7 +14,6 @@ import { loadPrefs, loadProfile, savePrefs, saveProfile } from '../features/sett
 import { COURSE_OPTIONS, getBoardOptions, getCourseLabel } from '../features/settings/boardCourseDisplay'
 
 // ─── Profile helpers ──────────────────────────────────────────────────────────
-const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
 
 // ─── Effect appliers ─────────────────────────────────────────────────────────
 const RM_STYLE_ID = 'np-reduce-motion'
@@ -111,8 +110,8 @@ function Toggle({ on, onToggle, disabled = false, label }) {
       onClick={disabled ? undefined : (e) => { e.stopPropagation(); onToggle() }}
       className="w-12 h-6 rounded-full relative shrink-0 outline-none"
       style={{
-        background: on ? 'var(--np-indigo)' : '#1d293d',
-        border: `1px solid ${on ? 'var(--np-indigo)' : '#2d3e55'}`,
+        background: on ? 'var(--np-accent)' : '#1d293d',
+        border: `1px solid ${on ? 'rgba(94,167,161,0.45)' : '#2d3e55'}`,
         opacity: disabled ? 0.4 : 1,
         cursor: disabled ? 'not-allowed' : 'pointer',
       }}
@@ -142,7 +141,7 @@ export default function SettingsScreen() {
   const handleSelectBoard = (boardId) => {
     saveSelectedBoard(boardId)
     setSelectedBoardId(boardId)
-    showToast(`Switched to ${BOARDS[boardId]?.name} ✓`, BOARDS[boardId]?.color || 'var(--np-indigo)')
+    showToast(`Switched to ${BOARDS[boardId]?.name} ✓`, 'var(--np-accent-strong)')
     // Fire a storage event so LearnScreen updates without a full reload
     try { window.dispatchEvent(new Event('storage')) } catch {}
   }
@@ -150,9 +149,11 @@ export default function SettingsScreen() {
   const handleSelectCourse = (course) => {
     setSelectedCourse(course)
     setSelectedCourseState(course)
-    showToast(`Switched to ${getCourseLabel(course)} ✓`, '#9b59b6')
+    showToast(`Switched to ${getCourseLabel(course)} ✓`, 'var(--np-accent)')
     try { window.dispatchEvent(new Event('storage')) } catch {}
   }
+
+  const selectedBoard = BOARDS[selectedBoardId] || BOARDS[getSelectedBoard()]
 
   const handleSignOut = () => {
     setSigningOut(true)
@@ -203,7 +204,7 @@ export default function SettingsScreen() {
 
   const startEditProfile = () => {
     setEditName(profile.name || '')
-    setEditAvatar(profile.avatar || '🧠')
+    setEditAvatar(profile.avatar || '')
     setEditingProfile(true)
   }
 
@@ -233,7 +234,7 @@ export default function SettingsScreen() {
     localStorage.setItem('np_auto_tts', prefs.autoTTS ? 'true' : 'false')
   }, []) // eslint-disable-line
 
-  const showToast = (msg, color = 'var(--np-indigo)') => {
+  const showToast = (msg, color = 'var(--np-accent-strong)') => {
     setToast({ msg, color })
     setTimeout(() => setToast(null), 2800)
   }
@@ -314,7 +315,7 @@ export default function SettingsScreen() {
   const toggleExploreMode = () => {
     const next = prefs.exploreMode === false ? true : false // default is true (explore on = no hearts)
     setPref('exploreMode', next)
-    showToast(next ? 'Explore Mode on — learn without hearts' : 'Hearts mode on — challenge yourself!', next ? '#10b981' : '#f59e0b')
+    showToast(next ? 'Explore Mode on — learn without hearts' : 'Hearts mode on — extra challenge added', next ? '#10b981' : '#f59e0b')
   }
 
   // ── Sound Effects
@@ -324,7 +325,7 @@ export default function SettingsScreen() {
     showToast(next ? 'Sound effects on' : 'Sound effects off', next ? '#10b981' : '#a8b8cc')
   }
 
-  // ── Daily Reminders
+  // ── Daily reminders
   const [showTimePicker, setShowTimePicker] = useState(false)
   const [reminderHour, setReminderHour] = useState(() => prefs.reminderHour ?? 20)
   const [reminderMinute, setReminderMinute] = useState(() => prefs.reminderMinute ?? 0)
@@ -335,7 +336,7 @@ export default function SettingsScreen() {
       checkNotificationPermission().then(status => {
         if (status === 'denied') {
           setPref('reminders', false)
-          showToast('Notification permission was revoked — reminders disabled', '#ef4444')
+          showToast('Reminder permission is off, so daily reminders were turned off', '#ef4444')
         }
       })
     }
@@ -352,18 +353,18 @@ export default function SettingsScreen() {
         if (ok) {
           setPref('reminders', true)
           const label = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`
-          showToast(`Daily reminder set for ${label} ✓`, '#10b981')
+          showToast(`Daily reminder set for ${label}`, '#10b981')
         }
       } else if (status === 'denied') {
-        showToast('Notifications blocked — enable in device settings', '#ef4444')
+        showToast('Reminders are blocked. You can allow them in your device settings.', '#ef4444')
       } else {
-        showToast('Notifications not supported here', '#f59e0b')
+        showToast('Reminders are not supported on this device or browser.', '#f59e0b')
       }
     } else {
       await cancelDailyReminder()
       setPref('reminders', false)
       setShowTimePicker(false)
-      showToast('Daily reminders off', '#a8b8cc')
+      showToast('Daily reminders turned off', '#a8b8cc')
     }
   }
 
@@ -374,7 +375,7 @@ export default function SettingsScreen() {
     if (prefs.reminders) {
       await scheduleDailyReminder(reminderHour, reminderMinute)
       const label = `${String(reminderHour).padStart(2, '0')}:${String(reminderMinute).padStart(2, '0')}`
-      showToast(`Reminder updated to ${label} ✓`, '#10b981')
+      showToast(`Reminder time updated to ${label}`, '#10b981')
     }
     setShowTimePicker(false)
   }
@@ -384,56 +385,68 @@ export default function SettingsScreen() {
   const handleDeleteData = async () => {
     if (isDeleting) return
     setIsDeleting(true)
-
-    // Attempt server-side Supabase account deletion (best-effort)
     try {
-      // Refresh session first so the token isn't stale
+      const clearLocalData = async () => {
+        localStorage.removeItem('neurophysics_prefs')
+        localStorage.removeItem('neurophysics_onboarded')
+        localStorage.removeItem('neurophysics_profile')
+        localStorage.removeItem('neurophysics_consent')
+        localStorage.removeItem('np_progress')
+        localStorage.removeItem('np_stats')
+        localStorage.removeItem('np_board')
+        localStorage.removeItem('np_auto_tts')
+        localStorage.removeItem('np_bg_theme')
+        localStorage.removeItem('np_pace_override')
+        Object.keys(localStorage)
+          .filter(k => k.startsWith('mamo_thread_') || k.startsWith('np_lesson_progress_'))
+          .forEach(k => localStorage.removeItem(k))
+        await secureRemove('mamo_api_key')
+      }
+
+      if (user?.isGuest) {
+        await clearLocalData()
+        showToast('Local guest data cleared', '#10b981')
+        await new Promise(r => setTimeout(r, 900))
+        await signOut()
+        return
+      }
+
       const { data: refreshData } = await supabase.auth.refreshSession()
       const token = refreshData?.session?.access_token
         ?? (await supabase.auth.getSession()).data?.session?.access_token
 
-      if (token) {
-        // Use relative URL so it works from neurophysics.co.uk AND neurophysics.vercel.app
-        const apiBase = window.location.origin.includes('localhost')
-          ? (import.meta.env.VITE_API_BASE || 'http://localhost:3000')
-          : window.location.origin
-        const res = await fetch(`${apiBase}/api/delete-account`, {
-          method: 'POST',
-          headers: { 'Authorization': `Bearer ${token}` },
-        })
-        if (!res.ok) {
-          const err = await res.json().catch(() => ({}))
-          console.warn('Server-side account deletion failed:', err.error)
-        }
+      if (!token) {
+        showToast('Could not verify your session. Please sign in again and try account deletion.', '#ef4444')
+        return
       }
+
+      const apiBase = window.location.origin.includes('localhost')
+        ? (import.meta.env.VITE_API_BASE || 'http://localhost:3000')
+        : window.location.origin
+
+      const res = await fetch(`${apiBase}/api/delete-account`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${token}` },
+      })
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}))
+        console.warn('Server-side account deletion failed:', err.error)
+        showToast('Account deletion did not complete. Your account is still active.', '#ef4444')
+        return
+      }
+
+      await clearLocalData()
+      showToast('Account deleted', '#10b981')
+      await new Promise(r => setTimeout(r, 900))
+      await signOut()
     } catch (e) {
       console.warn('Delete-account request failed:', e.message)
+      showToast('Account deletion did not complete. Please try again.', '#ef4444')
+    } finally {
+      setIsDeleting(false)
+      setShowDeleteConfirm(false)
     }
-
-    // Always clear all local data and sign out regardless of server result
-    try {
-      localStorage.removeItem('neurophysics_prefs')
-      localStorage.removeItem('neurophysics_onboarded')
-      localStorage.removeItem('neurophysics_profile')
-      localStorage.removeItem('neurophysics_consent')
-      localStorage.removeItem('np_progress')
-      localStorage.removeItem('np_stats')
-      localStorage.removeItem('np_board')
-      localStorage.removeItem('np_auto_tts')
-      localStorage.removeItem('np_bg_theme')
-      localStorage.removeItem('np_pace_override')
-      Object.keys(localStorage)
-        .filter(k => k.startsWith('mamo_thread_') || k.startsWith('np_lesson_progress_'))
-        .forEach(k => localStorage.removeItem(k))
-      await secureRemove('mamo_api_key')
-    } catch (e) {
-      console.warn('Local data clear failed:', e.message)
-    }
-
-    showToast('Account deleted — goodbye 👋', '#10b981')
-    // Small delay so toast is visible before redirect
-    await new Promise(r => setTimeout(r, 900))
-    await signOut()
   }
 
   const sections = [
@@ -442,8 +455,8 @@ export default function SettingsScreen() {
       items: [
         {
           icon: AtomIcon,
-          label: 'Hide Mamo Button',
-          hint: 'Removes the floating AI tutor button if it\'s distracting',
+          label: 'Hide Mamo button',
+          hint: 'Hides the floating Mamo button if it feels distracting',
           on: !!prefs.hideMamo,
           onToggle: toggleHideMamo,
         },
@@ -454,10 +467,10 @@ export default function SettingsScreen() {
       items: [
         {
           icon: Bell,
-          label: 'Daily Reminders',
+          label: 'Daily reminders',
           hint: prefs.reminders
             ? `Every day at ${String(prefs.reminderHour ?? 20).padStart(2, '0')}:${String(prefs.reminderMinute ?? 0).padStart(2, '0')}`
-            : 'Get a nudge to keep your streak going',
+            : 'Get a gentle reminder to study',
           on: !!prefs.reminders,
           onToggle: toggleReminders,
         },
@@ -475,10 +488,17 @@ export default function SettingsScreen() {
       items: [
         {
           icon: BookOpen,
-          label: 'Spec Checklist',
-          hint: "Track all your specification topics",
+          label: 'Spec checklist',
+          hint: "Track each topic in your specification",
           chevron: true,
           onPress: () => navigate('/spec-checklist'),
+        },
+        {
+          icon: GraduationCap,
+          label: 'Practice tools',
+          hint: 'Open Quick Win, Mixed Practice, and Adaptive Practice',
+          chevron: true,
+          onPress: () => navigate('/practice-tools'),
         },
       ],
     },
@@ -487,14 +507,14 @@ export default function SettingsScreen() {
       items: [
         {
           icon: Shield,
-          label: 'Privacy Policy',
+          label: 'Privacy policy',
           hint: 'How we handle your data',
           chevron: true,
           onPress: () => navigate('/privacy'),
         },
         {
           icon: FileText,
-          label: 'Terms of Service',
+          label: 'Terms of service',
           hint: 'App usage terms',
           chevron: true,
           onPress: () => navigate('/terms'),
@@ -515,43 +535,21 @@ export default function SettingsScreen() {
   ]
 
   return (
-    <SafeAreaPage hasNav>
+    <SafeAreaPage
+      hasNav
+      ownsTopInset
+      style={{ background: 'radial-gradient(circle at 50% -18%, rgba(94,167,161,0.12), transparent 34%), linear-gradient(180deg, #07111d 0%, #091420 52%, #07111d 100%)' }}
+    >
       <div className="px-5 pt-3 pb-4">
         <h1 className="text-2xl font-bold" style={{ color: 'var(--np-text)', fontFamily: 'var(--font-display)', letterSpacing: '-0.02em' }}>Settings</h1>
-        <p className="text-sm mt-1" style={{ color: 'var(--np-text-muted)' }}>Customise your experience</p>
-      </div>
-
-      {/* Comfort Settings CTA — top of page */}
-      <div className="px-5 mb-5">
-        <motion.button
-          className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-left active:opacity-75"
-          style={{
-            background: 'rgba(99,102,241,0.08)',
-            border: '0.75px solid rgba(99,102,241,0.3)',
-          }}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          onClick={() => openComfortSettings(true)}
-        >
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-            style={{ background: 'rgba(99,102,241,0.15)' }}>
-            <Sliders size={18} style={{ color: '#818cf8' }} />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>Comfort Settings</div>
-            <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
-              Font, colours, motion, TTS, reading ruler & more
-            </div>
-          </div>
-          <CaretRight size={16} style={{ color: 'var(--np-text-muted)' }} />
-        </motion.button>
+        <p className="text-sm mt-1" style={{ color: 'var(--np-text-muted)' }}>Set up a calmer study space</p>
       </div>
 
       {/* Profile card */}
       <div className="px-5 mb-6">
         <motion.div
-          className="rounded-[20px] p-5"
-          style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}
+          className="rounded-[20px] p-4"
+          style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)', boxShadow: 'var(--shadow-card)' }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -560,15 +558,15 @@ export default function SettingsScreen() {
             <div className="flex items-center gap-4">
               <div
                 className="w-16 h-16 rounded-[20px] flex items-center justify-center text-3xl shrink-0"
-                style={{ background: 'linear-gradient(135deg, rgba(21,93,252,0.15), rgba(99,102,241,0.15))', border: '1px solid rgba(99,102,241,0.3)' }}
+                style={{ background: 'var(--surface-quiet)', border: 'var(--border-quiet)' }}
               >
-                {profile.avatar || '🧠'}
+                {(profile.name || user?.user_metadata?.full_name || 'P').slice(0, 1).toUpperCase()}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-base font-bold truncate" style={{ color: 'var(--np-text)' }}>
+                <div className="text-base font-bold leading-tight" style={{ color: 'var(--np-text)', overflowWrap: 'anywhere' }}>
                   {profile.name || user?.user_metadata?.full_name || 'Physics Learner'}
                 </div>
-                <div className="text-xs truncate" style={{ color: 'var(--np-text-muted)' }}>{user?.email}</div>
+                <div className="text-xs leading-snug" style={{ color: 'var(--np-text-muted)', overflowWrap: 'anywhere' }}>{user?.email}</div>
                 <div className="flex items-center gap-1 mt-1">
                   <div className="w-2 h-2 rounded-full" style={{ background: '#00bc7d' }} />
                   <span className="text-xs" style={{ color: '#00bc7d' }}>Active learner</span>
@@ -577,40 +575,24 @@ export default function SettingsScreen() {
               <button
                 onClick={startEditProfile}
                 className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-                style={{ background: 'rgba(99,102,241,0.1)', border: '0.75px solid rgba(99,102,241,0.25)' }}
+                style={{ background: 'var(--surface-quiet)', border: 'var(--border-quiet)' }}
                 aria-label="Edit profile"
               >
-                <Pencil size={14} color="var(--np-indigo)" />
+                <Pencil size={14} color="var(--np-accent-strong)" />
               </button>
             </div>
           ) : (
             /* Edit mode */
             <div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Edit Profile</span>
+                <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Edit profile</span>
                 <button onClick={() => setEditingProfile(false)} aria-label="Cancel editing" className="w-11 h-11 flex items-center justify-center">
-                  <X size={16} color="#a8b8cc" />
+                  <X size={16} color="var(--np-text-muted)" />
                 </button>
               </div>
-              {/* Avatar picker */}
-              <div className="flex flex-wrap gap-2 mb-3">
-                {AVATARS.map(em => (
-                  <button
-                    key={em}
-                    className="w-11 h-11 rounded-[12px] text-xl flex items-center justify-center"
-                    style={{
-                      background: editAvatar === em ? 'rgba(99,102,241,0.2)' : 'rgba(255,255,255,0.06)',
-                      border: editAvatar === em ? '2px solid var(--np-indigo)' : '0.75px solid rgba(255,255,255,0.1)',
-                      transform: editAvatar === em ? 'scale(1.1)' : 'scale(1)',
-                      transition: 'all 0.15s',
-                    }}
-                    onClick={() => setEditAvatar(em)}
-                    aria-label={`Select avatar ${em}`}
-                  >
-                    {em}
-                  </button>
-                ))}
-              </div>
+              <p className="text-xs mb-3" style={{ color: 'var(--np-text-muted)' }}>
+                Your profile icon is generated from your name.
+              </p>
               {/* Name input */}
               <div className="flex gap-2">
                 <input
@@ -627,7 +609,7 @@ export default function SettingsScreen() {
                 <button
                   onClick={saveEditProfile}
                   className="w-10 h-10 rounded-[10px] flex items-center justify-center"
-                  style={{ background: 'var(--np-indigo)' }}
+                  style={{ background: 'var(--np-accent)' }}
                   aria-label="Save profile"
                 >
                   <Check size={16} color="#fff" />
@@ -638,175 +620,165 @@ export default function SettingsScreen() {
         </motion.div>
       </div>
 
-      {/* ── Exam Board Picker ── */}
+      {/* Learning setup */}
       <div className="px-5 mb-5">
         <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
-          Exam Board
+          Learning setup
         </div>
-        <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
-          <div className="flex items-center gap-2 mb-3">
-            <GraduationCap size={15} color="var(--np-indigo)" />
-            <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your exam board</span>
+        <div className="rounded-[18px] overflow-hidden" style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)', boxShadow: 'var(--shadow-card)' }}>
+          <div className="px-4 py-4">
+            <div className="flex items-center gap-2 mb-2">
+              <GraduationCap size={15} color="var(--np-accent-strong)" />
+              <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Exam board</span>
+            </div>
+            <div className="relative">
+              <select
+                value={selectedBoardId}
+                onChange={(e) => handleSelectBoard(e.target.value)}
+                className="w-full appearance-none rounded-[14px] px-4 py-3 text-sm font-semibold outline-none"
+                style={{
+                  background: 'var(--surface-quiet)',
+                  color: 'var(--np-text)',
+                  border: 'var(--border-quiet)',
+                  boxShadow: 'var(--shadow-soft)',
+                }}
+                aria-label="Choose exam board"
+              >
+                {getBoardOptions(BOARDS, BOARD_ORDER).map((board) => (
+                  <option key={board.id} value={board.id}>
+                    {board.name}
+                  </option>
+                ))}
+              </select>
+              <CaretRight
+                size={15}
+                style={{
+                  color: 'var(--np-text-muted)',
+                  position: 'absolute',
+                  right: 14,
+                  top: '50%',
+                  transform: 'translateY(-50%) rotate(90deg)',
+                  pointerEvents: 'none',
+                }}
+              />
+            </div>
+            <p className="text-xs mt-2" style={{ color: 'var(--np-text-muted)' }}>
+              {selectedBoard?.description}
+            </p>
           </div>
-          <div className="grid grid-cols-2 gap-2">
-            {getBoardOptions(BOARDS, BOARD_ORDER).map(board => {
-              const isSelected = selectedBoardId === board.id
-              return (
-                <motion.button
-                  key={board.id}
-                  onClick={() => handleSelectBoard(board.id)}
-                  className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
-                  style={{
-                    background: isSelected ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.03)',
-                    border: isSelected ? '1.5px solid rgba(99,102,241,0.5)' : '0.75px solid rgba(255,255,255,0.08)',
-                    transition: 'all 0.15s ease',
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <div className="flex items-center gap-1.5 mb-0.5">
-                    <span style={{ fontSize: 13 }}>{board.flag}</span>
-                    <span className="text-xs font-bold" style={{ color: isSelected ? '#a5b4fc' : '#f8fafc' }}>
-                      {board.name}
-                    </span>
-                    {isSelected && (
-                      <div className="w-1.5 h-1.5 rounded-full ml-auto" style={{ background: '#6366f1' }} />
-                    )}
-                  </div>
-                  <span className="text-[10px] leading-tight" style={{ color: '#556677' }}>
-                    {board.description}
-                  </span>
-                </motion.button>
-              )
-            })}
-          </div>
-          <p className="text-[10px] text-center pt-1" style={{ color: '#3a4a5a' }}>
-            This filters topics to match your exam board's specification
-          </p>
-        </div>
-      </div>
 
-      {/* ── Course Type ── */}
-      <div className="px-5 mb-5">
-        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
-          Course Type
-        </div>
-        <div className="rounded-[16px] p-4 space-y-2" style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
-          <div className="flex items-center gap-2 mb-3">
-            <BookOpen size={15} color="#9b59b6" />
-            <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your GCSE course</span>
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            {COURSE_OPTIONS.map(({ id, label, desc, emoji }) => {
-              const isSelected = selectedCourse === id
-              return (
-                <motion.button
-                  key={id}
-                  onClick={() => handleSelectCourse(id)}
-                  className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
-                  style={{
-                    background: isSelected ? 'rgba(155,89,182,0.15)' : 'rgba(255,255,255,0.03)',
-                    border: isSelected ? '1.5px solid rgba(155,89,182,0.5)' : '0.75px solid var(--np-border)',
-                    transition: 'all 0.15s ease',
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <div className="flex items-center gap-1.5 mb-0.5">
-                    <span style={{ fontSize: 13 }}>{emoji}</span>
-                    <span className="text-xs font-bold" style={{ color: isSelected ? '#c084fc' : '#f8fafc' }}>
+          <div style={{ height: 1, background: 'rgba(255,255,255,0.05)' }} />
+
+          <div className="px-4 py-4">
+            <div className="flex items-center gap-2 mb-3">
+              <BookOpen size={15} color="var(--np-accent-strong)" />
+              <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Course type</span>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              {COURSE_OPTIONS.map(({ id, label, desc }) => {
+                const selected = selectedCourse === id
+                return (
+                  <motion.button
+                    key={id}
+                    onClick={() => handleSelectCourse(id)}
+                    className="flex flex-col items-start rounded-[14px] px-3 py-3 text-left"
+                    style={{
+                      background: selected ? 'var(--np-accent-soft)' : 'var(--surface-quiet)',
+                      border: selected ? '1px solid rgba(94,167,161,0.34)' : 'var(--border-quiet)',
+                    }}
+                    whileTap={{ scale: 0.985 }}
+                  >
+                    <span className="text-sm font-semibold" style={{ color: selected ? 'var(--np-accent-strong)' : 'var(--np-text)' }}>
                       {label}
                     </span>
-                    {isSelected && <div className="w-1.5 h-1.5 rounded-full ml-auto" style={{ background: '#9b59b6' }} />}
-                  </div>
-                  <span className="text-[10px] leading-tight" style={{ color: '#556677' }}>{desc}</span>
-                </motion.button>
-              )
-            })}
+                    <span className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>
+                      {desc}
+                    </span>
+                  </motion.button>
+                )
+              })}
+            </div>
           </div>
-          <p className="text-[10px] text-center pt-1" style={{ color: '#3a4a5a' }}>
-            Physics Only unlocks extra topics not in Combined Science
-          </p>
+
+          <div style={{ height: 1, background: 'rgba(255,255,255,0.05)' }} />
+
+          <div className="px-4 py-4">
+            <div className="flex items-center gap-2 mb-3">
+              <CalendarBlank size={15} color="var(--np-accent-strong)" />
+              <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Exam date</span>
+            </div>
+            <div className="relative">
+              <div
+                className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
+                style={{ background: 'var(--surface-quiet)', border: 'var(--border-quiet)' }}
+              >
+                <div className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0" style={{ background: 'var(--np-accent-soft)' }}>
+                  <CalendarBlank size={18} color="var(--np-accent-strong)" />
+                </div>
+                <div className="flex-1 min-w-0 pr-8">
+                  <div className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>
+                    {examDate ? new Date(examDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : 'Set your exam date'}
+                  </div>
+                  <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
+                    {examDate ? 'Used to shape your revision plan.' : 'Add a date when you know it.'}
+                  </div>
+                </div>
+                <span className="text-[11px] font-semibold" style={{ color: 'var(--np-accent-strong)' }}>Edit</span>
+              </div>
+              <input
+                type="date"
+                value={examDate}
+                min={new Date().toISOString().split('T')[0]}
+                onChange={handleExamDateChange}
+                style={{ position: 'absolute', inset: 0, opacity: 0, width: '100%', height: '100%', cursor: 'pointer' }}
+              />
+            </div>
+            {examDate && (
+              <button
+                onClick={() => {
+                  setExamDate('')
+                  const updated = { ...loadProfile(), examDate: null }
+                  saveProfile(updated)
+                  setProfile(updated)
+                }}
+                className="mt-2 text-[11px] font-semibold"
+                style={{ color: 'var(--np-text-muted)' }}
+              >
+                Clear date
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* ── Exam Date ── */}
+      {/* Comfort settings CTA */}
       <div className="px-5 mb-5">
-        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
-          Exam Date
-        </div>
-        <div className="rounded-[16px] p-4" style={{ background: 'var(--np-card)', border: '0.75px solid var(--np-border)' }}>
-          <div className="flex items-center gap-2 mb-3">
-            <CalendarBlank size={15} color="var(--np-indigo)" />
-            <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your exam date</span>
+        <motion.button
+          className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-left active:opacity-75"
+          style={{
+            background: 'var(--surface-panel)',
+            border: 'var(--border-quiet)',
+          }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          onClick={() => openComfortSettings(true)}
+        >
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+            style={{ background: 'var(--np-accent-soft)' }}>
+            <Sliders size={18} style={{ color: 'var(--np-accent-strong)' }} />
           </div>
-          {/* Invisible native date input overlaid on custom display */}
-          <div className="relative">
-            {examDate ? (() => {
-              const d = new Date(examDate)
-              const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
-              return (
-                <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
-                  style={{ background: 'rgba(255,255,255,0.04)', border: '0.75px solid rgba(255,255,255,0.08)', pointerEvents: 'none' }}>
-                  <div className="w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0"
-                    style={{ background: 'rgba(99,102,241,0.1)' }}>
-                    <CalendarBlank size={18} color="var(--np-indigo)" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm leading-snug" style={{ color: '#a8b8cc' }}>
-                      Your exam is on {dateStr}. Let's make today count.
-                    </p>
-                  </div>
-                  <Pencil size={14} color="rgba(255,255,255,0.2)" />
-                </div>
-              )
-            })() : (
-              <div className="flex items-center gap-3 px-4 py-3 rounded-[14px]"
-                style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', pointerEvents: 'none' }}>
-                <div className="w-12 h-12 rounded-[10px] flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(99,102,241,0.15)' }}>
-                  <CalendarBlank size={22} color="var(--np-indigo)" />
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm font-bold" style={{ color: 'var(--np-text)' }}>Set your exam date</div>
-                  <div className="text-xs mt-0.5" style={{ color: '#6b7d8f' }}>Get a personalised revision plan</div>
-                </div>
-                <div className="px-3 py-1.5 rounded-full text-xs font-bold"
-                  style={{ background: 'rgba(99,102,241,0.2)', color: '#818cf8', border: '1px solid rgba(99,102,241,0.35)' }}>
-                  Set date
-                </div>
-              </div>
-            )}
-            {/* Invisible native date input on top */}
-            <input
-              type="date"
-              value={examDate}
-              min={new Date().toISOString().split('T')[0]}
-              onChange={handleExamDateChange}
-              onFocus={e => { e.target.style.fontSize = '16px' }}
-              style={{
-                position: 'absolute', inset: 0, opacity: 0,
-                width: '100%', height: '100%', cursor: 'pointer',
-              }}
-            />
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-sm" style={{ color: 'var(--np-text)' }}>Comfort settings</div>
+            <div className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>
+              Font, colours, motion, read aloud and focus tools
+            </div>
           </div>
-          {examDate && (
-            <button
-              onClick={() => {
-                setExamDate('')
-                const updated = { ...loadProfile(), examDate: null }
-                saveProfile(updated)
-                setProfile(updated)
-              }}
-              className="mt-2 w-full text-xs text-center py-1"
-              style={{ color: '#3a4a5a' }}
-            >
-              Clear date
-            </button>
-          )}
-        </div>
+          <CaretRight size={16} style={{ color: 'var(--np-text-muted)' }} />
+        </motion.button>
       </div>
 
       {/* Sections */}
-      <div className="px-5 space-y-5" style={{ paddingBottom: 'calc(var(--safe-bottom) + var(--page-bottom-gap))' }}>
+      <div className="px-5 space-y-5" style={{ paddingBottom: 'calc(var(--page-bottom-gap) + 84px)' }}>
         {sections.map((section, si) => (
           <motion.div
             key={section.title}
@@ -825,7 +797,7 @@ export default function SettingsScreen() {
                 }
                 const rowInner = (
                   <>
-                    <item.icon size={18} color={item.on ? 'var(--np-indigo)' : '#a8b8cc'} />
+                    <item.icon size={18} color={item.on ? 'var(--np-accent-strong)' : '#a8b8cc'} />
                     <div className="flex-1">
                       <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>
                         {item.label}
@@ -833,7 +805,7 @@ export default function SettingsScreen() {
                       <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>{item.hint}</div>
                     </div>
                     {item.chevron
-                      ? <CaretRight size={14} color={item.label === 'Reminder time' && showTimePicker ? 'var(--np-indigo)' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
+                      ? <CaretRight size={14} color={item.label === 'Reminder time' && showTimePicker ? 'var(--np-accent-strong)' : '#a8b8cc'} style={{ transform: item.label === 'Reminder time' && showTimePicker ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
                       : item.onToggle ? <Toggle on={!!item.on} onToggle={item.onToggle} label={item.label} />
                       : null
                     }
@@ -880,7 +852,7 @@ export default function SettingsScreen() {
                         <div className="flex flex-col items-center gap-1">
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
+                            style={{ background: 'var(--np-accent-soft)', color: 'var(--np-accent-strong)' }}
                             onClick={() => setReminderHour(h => (h + 1) % 24)}
                             aria-label="Increase hour"
                           >▲</button>
@@ -890,7 +862,7 @@ export default function SettingsScreen() {
                           </div>
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
+                            style={{ background: 'var(--np-accent-soft)', color: 'var(--np-accent-strong)' }}
                             onClick={() => setReminderHour(h => (h + 23) % 24)}
                             aria-label="Decrease hour"
                           >▼</button>
@@ -900,7 +872,7 @@ export default function SettingsScreen() {
                         <div className="flex flex-col items-center gap-1">
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
+                            style={{ background: 'var(--np-accent-soft)', color: 'var(--np-accent-strong)' }}
                             onClick={() => setReminderMinute(m => (m + 15) % 60)}
                             aria-label="Increase minute"
                           >▲</button>
@@ -910,7 +882,7 @@ export default function SettingsScreen() {
                           </div>
                           <button
                             className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xs font-bold"
-                            style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--np-indigo)' }}
+                            style={{ background: 'var(--np-accent-soft)', color: 'var(--np-accent-strong)' }}
                             onClick={() => setReminderMinute(m => (m + 45) % 60)}
                             aria-label="Decrease minute"
                           >▼</button>
@@ -924,7 +896,7 @@ export default function SettingsScreen() {
                       </div>
                       <button
                         className="w-full py-3 rounded-[12px] text-sm font-bold mt-1"
-                        style={{ background: 'var(--np-indigo)', color: '#fff', boxShadow: '0 4px 16px rgba(99,102,241,0.3)' }}
+                        style={{ background: 'var(--np-accent)', color: '#07111d', boxShadow: '0 8px 18px rgba(0,0,0,0.18)' }}
                         onClick={handleSaveReminderTime}
                       >
                         Save time
@@ -937,27 +909,40 @@ export default function SettingsScreen() {
           </motion.div>
         ))}
 
-        {/* Sign out */}
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-          <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
-            Account
-          </div>
-          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid var(--np-border)' }}>
-            <div className="flex items-center gap-3 px-4 py-3" style={{ background: 'var(--np-card)', borderBottom: '0.75px solid var(--np-border)' }}>
-              <div className="w-2 h-2 rounded-full" style={{ background: user?.isGuest ? '#f59e0b' : '#00bc7d' }} />
-              <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>
-                {user?.isGuest
-                  ? <span>Browsing as <strong style={{ color: 'var(--np-text)' }}>Guest</strong> — progress saved locally</span>
-                  : <>Signed in as <strong style={{ color: 'var(--np-text)' }}>{user?.email}</strong></>
-                }
-              </div>
+      {/* Sign out */}
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
+          Account
+        </div>
+        <div className="space-y-2">
+          <div
+            className="rounded-[16px] px-4 py-3 flex items-center gap-3"
+            style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}
+          >
+            <div className="w-2 h-2 rounded-full shrink-0" style={{ background: user?.isGuest ? '#f5a524' : 'var(--np-accent-strong)' }} />
+            <div className="text-xs leading-snug" style={{ color: 'var(--np-text-muted)' }}>
+              {user?.isGuest
+                ? <span>Browsing as <strong style={{ color: 'var(--np-text)' }}>Guest</strong>. Progress stays on this device.</span>
+                : <>Signed in as <strong style={{ color: 'var(--np-text)' }}>{user?.email}</strong></>
+              }
             </div>
-            <button
-              className="w-full flex items-center gap-3 px-4 py-4 text-left"
-              style={{ background: 'var(--np-card)', opacity: signingOut ? 0.6 : 1, transition: 'opacity 0.15s' }}
-              onClick={signingOut ? undefined : handleSignOut}
-              disabled={signingOut}
-              aria-label="Sign out"
+          </div>
+
+          <button
+            className="w-full flex items-center gap-3 px-4 py-3.5 rounded-[16px] text-left"
+            style={{
+              background: 'var(--surface-panel)',
+              border: 'var(--border-quiet)',
+              opacity: signingOut ? 0.6 : 1,
+              transition: 'opacity 0.15s',
+            }}
+            onClick={signingOut ? undefined : handleSignOut}
+            disabled={signingOut}
+            aria-label="Sign out"
+          >
+            <div
+              className="w-10 h-10 rounded-[12px] flex items-center justify-center shrink-0"
+              style={{ background: 'rgba(255,255,255,0.04)', border: 'var(--border-quiet)' }}
             >
               {signingOut ? (
                 <motion.div
@@ -967,47 +952,51 @@ export default function SettingsScreen() {
                   transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
                 />
               ) : (
-                <SignOut size={18} color="#a8b8cc" />
+                <SignOut size={18} color="var(--np-text-muted)" />
               )}
-              <div className="flex-1">
-                <div className="text-sm font-medium" style={{ color: 'var(--np-text)' }}>
-                  {signingOut ? 'Signing out…' : 'Sign Out'}
-                </div>
-                <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>Your progress is saved locally</div>
+            </div>
+            <div className="flex-1">
+              <div className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>
+                {signingOut ? 'Signing out…' : 'Sign out'}
               </div>
-            </button>
-          </div>
-        </motion.div>
+              <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>
+                {user?.isGuest ? 'Return to the sign-in screen' : 'You can sign back in anytime'}
+              </div>
+            </div>
+            <CaretRight size={14} color="var(--np-text-muted)" />
+          </button>
+        </div>
+      </motion.div>
 
         {/* Delete all data — hidden for guest users (no Supabase account) */}
         {!user?.isGuest && <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
           <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--np-text-muted)' }}>
             Data
           </div>
-          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid rgba(239,68,68,0.25)' }}>
+          <div className="rounded-[16px] overflow-hidden" style={{ border: '0.75px solid rgba(239,68,68,0.18)', background: 'rgba(15,22,41,0.82)' }}>
             {!showDeleteConfirm ? (
               <button
                 className="w-full flex items-center gap-3 px-4 py-4 text-left"
-                style={{ background: 'rgba(15,22,41,0.95)' }}
+                style={{ background: 'rgba(15,22,41,0.82)' }}
                 onClick={() => setShowDeleteConfirm(true)}
                 aria-label="Clear all my data"
               >
                 <Trash size={18} color="#ef4444" />
                 <div className="flex-1">
-                  <div className="text-sm font-medium" style={{ color: '#ef4444' }}>Delete Account</div>
-                  <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>Permanently deletes your account and all data</div>
+                  <div className="text-sm font-medium" style={{ color: '#fca5a5' }}>Delete account</div>
+                  <div className="text-xs" style={{ color: 'var(--np-text-muted)' }}>Permanently delete your account and saved data</div>
                 </div>
-                <CaretRight size={14} color="#ef444480" />
+                <CaretRight size={14} color="rgba(252,165,165,0.55)" />
               </button>
             ) : (
-              <div className="px-4 py-4" style={{ background: 'rgba(239,68,68,0.07)' }}>
-                <p className="text-sm font-semibold mb-1" style={{ color: '#ef4444' }}>Delete your account?</p>
-                <p className="text-xs mb-3" style={{ color: 'var(--np-text-muted)' }}>This will permanently delete your account, all progress, preferences and API key. This cannot be undone.</p>
+              <div className="px-4 py-4" style={{ background: 'rgba(239,68,68,0.05)' }}>
+                <p className="text-sm font-semibold mb-1" style={{ color: '#fca5a5' }}>Delete your account?</p>
+                <p className="text-xs mb-3" style={{ color: 'var(--np-text-muted)' }}>This removes your account, progress, preferences, and API key. This cannot be undone.</p>
                 <div className="flex gap-2">
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-bold flex items-center justify-center gap-1.5"
                     style={{
-                      background: isDeleting ? 'rgba(239,68,68,0.5)' : deleteCountdown > 0 ? 'rgba(239,68,68,0.35)' : '#ef4444',
+                      background: isDeleting ? 'rgba(239,68,68,0.42)' : deleteCountdown > 0 ? 'rgba(239,68,68,0.28)' : 'rgba(239,68,68,0.88)',
                       color: '#fff',
                       opacity: (isDeleting || deleteCountdown > 0) ? 0.7 : 1,
                       transition: 'background 0.3s, opacity 0.3s',
@@ -1025,7 +1014,7 @@ export default function SettingsScreen() {
                         </svg>
                         Deleting…
                       </>
-                    ) : deleteCountdown > 0 ? `Wait ${deleteCountdown}s…` : 'Confirm delete'}
+                    ) : deleteCountdown > 0 ? `Wait ${deleteCountdown}s…` : 'Delete account'}
                   </button>
                   <button
                     className="flex-1 py-2.5 rounded-[10px] text-xs font-semibold"
@@ -1048,7 +1037,7 @@ export default function SettingsScreen() {
         <motion.div
           className="fixed bottom-24 left-4 right-4 py-3 px-4 rounded-[14px] text-sm font-medium text-center"
           style={{
-            background: 'var(--np-card-deep)',
+            background: 'var(--surface-panel)',
             border: `0.75px solid ${toast.color}60`,
             color: toast.color,
             boxShadow: '0 4px 24px rgba(0,0,0,0.4)',

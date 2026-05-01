@@ -6,12 +6,12 @@
  * the AQA recall question banks. Flashcard-style: student writes answer,
  * reveals model answer, self-rates. Session summary at end.
  */
-import { useState, useMemo, useCallback } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useState, useMemo, useCallback, useEffect } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, ArrowCounterClockwise, BookOpen } from '@phosphor-icons/react'
 import { TOPICS, MODULES } from '../data/topics'
-import { getRecallQuestions } from '../data/questionBank/index'
+import { getRecallQuestions } from '../lib/questionRepository'
 import { getSelectedBoard } from '../utils/boardConfig'
 import PageHeader from '../components/PageHeader'
 import RecallQuestion from '../components/questions/RecallQuestion'
@@ -30,6 +30,7 @@ function shuffle(arr) {
 export default function RecallScreen() {
   const { topicId } = useParams()
   const navigate    = useNavigate()
+  const location    = useLocation()
   const board       = getSelectedBoard()
 
   const topic  = TOPICS[topicId]
@@ -41,13 +42,54 @@ export default function RecallScreen() {
   const [results,   setResults]   = useState([]) // { id, correct: bool }
   const [done,      setDone]      = useState(false)
   const [missedIds, setMissedIds] = useState(null)
+  const [baseQuestions, setBaseQuestions] = useState([])
+  const [loaded, setLoaded] = useState(false)
+
+  const safeExit = useCallback(() => {
+    const from = location.state?.from
+    if (typeof from === 'string' && from.startsWith('/')) {
+      navigate(from, { replace: true })
+      return
+    }
+
+    const historyIndex = window.history?.state?.idx
+    if (typeof historyIndex === 'number' && historyIndex > 0) {
+      navigate(-1)
+      return
+    }
+
+    navigate('/learn', { replace: true })
+  }, [location.state, navigate])
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function loadRecallPool() {
+      setLoaded(false)
+      try {
+        const qs = await getRecallQuestions({ examBoard: board.id, topicId, shuffle: false })
+        if (!cancelled) setBaseQuestions(qs)
+      } catch {
+        if (!cancelled) setBaseQuestions([])
+      } finally {
+        if (!cancelled) setLoaded(true)
+      }
+    }
+
+    setQIndex(0)
+    setResults([])
+    setDone(false)
+    setMissedIds(null)
+    loadRecallPool()
+
+    return () => { cancelled = true }
+  }, [topicId, board.id])
 
   // ── Load & shuffle questions ───────────────────────────────────────────────
   const questions = useMemo(() => {
-    const qs = getRecallQuestions(topicId, board.id)
-    const pool = missedIds ? qs.filter(q => missedIds.includes(q.id)) : qs
-    return shuffle(pool.length > 0 ? pool : qs)
-  }, [topicId, board.id, missedIds])
+    const pool = missedIds ? baseQuestions.filter(q => missedIds.includes(q.id)) : baseQuestions
+    return shuffle(pool.length > 0 ? pool : baseQuestions)
+  }, [baseQuestions, missedIds])
 
   const currentQ = questions[qIndex]
 
@@ -66,6 +108,21 @@ export default function RecallScreen() {
   const total   = results.length
   const pct     = total > 0 ? Math.round((correct / total) * 100) : 0
 
+  if (!loaded) {
+    return (
+      <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+        <PageHeader
+          title={topic?.title || 'Knowledge Recall'}
+          subtitle={`Knowledge Recall · AO1 · ${board.name}`}
+          onBack={safeExit}
+        />
+        <div className="flex-1 flex items-center justify-center px-6 text-center" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 14 }}>
+          Loading recall questions...
+        </div>
+      </div>
+    )
+  }
+
   // ── Empty state (no recall Qs for this topic / board) ────────────────────
   if (questions.length === 0) {
     return (
@@ -73,7 +130,7 @@ export default function RecallScreen() {
         <PageHeader
           title={topic?.title || 'Knowledge Recall'}
           subtitle="Knowledge Recall · AO1"
-          onBack={() => navigate(-1)}
+          onBack={safeExit}
         />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-4 text-center">
           <BookOpen size={40} color="rgba(255,255,255,0.2)" />
@@ -84,7 +141,7 @@ export default function RecallScreen() {
           <button
             className="px-6 py-3 rounded-[12px] text-sm font-bold mt-2"
             style={{ background: '#6366f1', color: '#fff' }}
-            onClick={() => navigate(-1)}
+            onClick={safeExit}
           >
             Go back
           </button>
@@ -103,7 +160,7 @@ export default function RecallScreen() {
         <PageHeader
           title={topic?.title || 'Knowledge Recall'}
           subtitle="Session complete"
-          onBack={() => navigate(-1)}
+          onBack={safeExit}
         />
         <div
           className="flex-1 overflow-y-auto px-5 py-6 flex flex-col gap-5"
@@ -177,7 +234,7 @@ export default function RecallScreen() {
             <motion.button
               className="w-full py-3.5 rounded-[14px] text-sm font-bold"
               style={{ background: 'rgba(255,255,255,0.07)', border: '0.75px solid rgba(255,255,255,0.1)', color: '#a8b8cc' }}
-              onClick={() => navigate(-1)}
+              onClick={safeExit}
               whileTap={{ scale: 0.97 }}
             >
               Back to topic
@@ -198,7 +255,7 @@ export default function RecallScreen() {
       <PageHeader
         title={topic?.title || 'Knowledge Recall'}
         subtitle={`Knowledge Recall · AO1 · ${board.name}`}
-        onBack={() => navigate(-1)}
+        onBack={safeExit}
       />
 
       {/* Progress bar */}

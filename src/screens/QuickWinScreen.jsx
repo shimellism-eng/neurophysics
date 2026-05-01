@@ -1,25 +1,26 @@
 /**
- * QuickWinScreen — 5-question cross-topic MCQ session (1.4 Quick Win Mode)
- * No setup, no gates. Prioritises SRS-due topics, falls back to random mix.
+ * QuickWinScreen — 5-question cross-topic MCQ session.
+ * First runtime integration for the exported question bank JSON.
  */
-import { useState, useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useCallback } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { CheckCircle, XCircle, CaretRight, Lightning, BookOpen, ChatCircleDots } from '@phosphor-icons/react'
-import { ALL_QUESTIONS } from '../data/questionBank/index'
 import { useSRS } from '../hooks/useSRS'
 import { TOPICS, MODULES } from '../data/topics'
 import { trackMisconception } from '../utils/misconceptions'
-import { getSelectedCourse } from '../utils/boardConfig'
+import { getValidatedBoard } from '../utils/boardConfig'
+import { checkAnswer, getRandomQuiz } from '../lib/questionRepository'
+import { navigateToTopicStudy } from '../features/lesson/routing'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
-import { navigateToTopicStudy } from '../features/lesson/routing'
 
 const QUICK_WIN_COUNT = 5
 
 // Topic label for a question — falls back to topicId if not in TOPICS
 function topicLabel(q) {
-  return TOPICS[q.topicId]?.title || q.topicId
+  return TOPICS[q.topicId]?.title || q.topic
 }
 
 const _colorCache = {}
@@ -29,48 +30,6 @@ function topicColor(topicId) {
   const color = mod?.color || '#6366f1'
   _colorCache[topicId] = color
   return color
-}
-
-// Shuffle array (Fisher-Yates)
-function shuffle(arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-function pickQuestions(dueQuestionIds) {
-  const course = getSelectedCourse()
-  const mcqs = ALL_QUESTIONS.filter(q =>
-    q.type === 'mcq' && q.options?.length >= 2 && q.correctIndex != null &&
-    (course === 'physics_only' || q.course === 'combined')
-  )
-  const dueSet = new Set(dueQuestionIds)
-
-  // SRS-due specific questions first (preserve priority order), then random rest
-  const due  = dueQuestionIds.length > 0 ? dueQuestionIds.map(id => mcqs.find(q => q.id === id)).filter(Boolean) : []
-  const rest = shuffle(mcqs.filter(q => !dueSet.has(q.id)))
-
-  const combined = [...due, ...rest]
-  // Deduplicate by topicId — take at most 2 per topic for variety
-  const topicCounts = {}
-  const picked = []
-  for (const q of combined) {
-    if (picked.length >= QUICK_WIN_COUNT) break
-    topicCounts[q.topicId] = (topicCounts[q.topicId] || 0) + 1
-    if (topicCounts[q.topicId] <= 2) picked.push(q)
-  }
-  // Fill any remaining slots without topic restriction
-  if (picked.length < QUICK_WIN_COUNT) {
-    const pickedIds = new Set(picked.map(q => q.id))
-    for (const q of combined) {
-      if (picked.length >= QUICK_WIN_COUNT) break
-      if (!pickedIds.has(q.id)) { picked.push(q); pickedIds.add(q.id) }
-    }
-  }
-  return picked
 }
 
 // ── Result screen ─────────────────────────────────────────────────────────────
@@ -166,11 +125,11 @@ function ResultScreen({ questions, answers, onDone }) {
 
 export default function QuickWinScreen() {
   const navigate = useNavigate()
-  const { getDueQuestions, updateProgress } = useSRS()
-
-  const questions = useMemo(() => {
-    return pickQuestions(getDueQuestions())
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  const location = useLocation()
+  const { updateProgress } = useSRS()
+  const [questions, setQuestions] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [loadError, setLoadError] = useState('')
 
   const [idx, setIdx]           = useState(0)
   const [selected, setSelected] = useState(null)   // chosen option index
@@ -179,10 +138,75 @@ export default function QuickWinScreen() {
   const [done, setDone]         = useState(false)
   const [sessionStreak, setSessionStreak] = useState(0)
 
+  const safeExit = useCallback(() => {
+    const from = location.state?.from
+    if (typeof from === 'string' && from.startsWith('/')) {
+      navigate(from, { replace: true })
+      return
+    }
+
+    const historyIndex = window.history?.state?.idx
+    if (typeof historyIndex === 'number' && historyIndex > 0) {
+      navigate(-1)
+      return
+    }
+
+    navigate('/practice-tools', { replace: true })
+  }, [location.state, navigate])
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function loadQuiz() {
+      setLoading(true)
+      setLoadError('')
+      try {
+        const quiz = await getRandomQuiz({
+          examBoard: getValidatedBoard(),
+          count: QUICK_WIN_COUNT,
+          maxPerTopic: 2,
+        })
+        if (!cancelled) setQuestions(quiz)
+      } catch (error) {
+        if (!cancelled) {
+          setLoadError(error instanceof Error ? error.message : 'Could not load questions')
+          setQuestions([])
+        }
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    loadQuiz()
+    return () => { cancelled = true }
+  }, [])
+
+  if (loading) {
+    return (
+      <SafeAreaPage>
+        <PageHeader title="Quick win" onBack={safeExit} />
+        <div className="flex items-center justify-center h-full" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 14 }}>
+          Loading questions...
+        </div>
+      </SafeAreaPage>
+    )
+  }
+
+  if (loadError) {
+    return (
+      <SafeAreaPage>
+        <PageHeader title="Quick win" onBack={safeExit} />
+        <div className="flex items-center justify-center h-full px-6 text-center" style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>
+          {loadError}
+        </div>
+      </SafeAreaPage>
+    )
+  }
+
   if (!questions.length) {
     return (
       <SafeAreaPage>
-        <PageHeader title="Quick Win" onBack={() => navigate('/')} />
+        <PageHeader title="Quick win" onBack={safeExit} />
         <div className="flex items-center justify-center h-full" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 14 }}>
           No questions available
         </div>
@@ -194,7 +218,8 @@ export default function QuickWinScreen() {
 
   function handleSelect(optIdx) {
     if (revealed) return
-    const correct = optIdx === q.correctIndex
+    const review = checkAnswer(q, optIdx)
+    const correct = review.isCorrect
     setSelected(optIdx)
     setRevealed(true)
     setSessionStreak(s => correct ? s + 1 : 0)
@@ -224,9 +249,9 @@ export default function QuickWinScreen() {
   if (done) {
     return (
       <SafeAreaPage>
-        <PageHeader title="Quick Win" onBack={() => navigate('/')} />
+        <PageHeader title="Quick win" onBack={safeExit} />
         <div className="overflow-y-auto flex-1" style={{ minHeight: 0 }}>
-          <ResultScreen questions={questions} answers={answers} onDone={() => navigate('/')} />
+          <ResultScreen questions={questions} answers={answers} onDone={safeExit} />
         </div>
       </SafeAreaPage>
     )
@@ -236,7 +261,7 @@ export default function QuickWinScreen() {
 
   return (
     <SafeAreaPage>
-      <PageHeader title="Quick Win" onBack={() => navigate('/')} />
+      <PageHeader title="Quick win" onBack={safeExit} />
 
       {/* Progress dots */}
       <div className="flex gap-2 px-5 mb-5">
@@ -335,7 +360,7 @@ export default function QuickWinScreen() {
                   {/* Layer 2 — why (senNote as explanation) */}
                   {q.senNote && (
                     <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', paddingTop: 8, borderTop: '0.75px solid rgba(255,255,255,0.08)', lineHeight: 1.6 }}>
-                      {q.senNote}
+                      {q.explanation}
                     </div>
                   )}
 

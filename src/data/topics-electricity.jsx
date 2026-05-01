@@ -1855,7 +1855,7 @@ export const ELECTRICITY_TOPICS = {
   },
 
   static_electricity: {
-    id: 'static_electricity', module: 'Electricity', moduleColor: EC, course: 'physics-only',
+    id: 'static_electricity', module: 'Electricity', moduleColor: EC, course: 'physics_only',
     title: 'Static Electricity',
     subtitle: 'Charging by Friction, Electric Fields & Discharge',
     description: 'Static electricity is caused by the transfer of electrons between materials when rubbed together. The material that gains electrons becomes negatively charged; the one that loses electrons becomes positively charged. Like charges repel; unlike charges attract. An electric field is the region around a charged object where another charge experiences a force. Electric field lines point from positive to negative (in the direction a positive charge would move). Around an isolated positive charge, field lines radiate outward; around a negative charge, they point inward. Between two parallel oppositely-charged plates, the field is uniform (parallel lines). Large charge builds up on storm clouds — lightning is rapid discharge.',

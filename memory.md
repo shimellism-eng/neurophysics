@@ -49,6 +49,16 @@
 - Commit: `eb7c515` Ignore local scratch files
 - Verification passed: `npm test`, `npm run build`, `git diff --cached --check`.
 
+### Remaining dirty worktree triage
+- Expanded `docs/WORKTREE_TRIAGE.md` with clear buckets for the remaining dirty files:
+  - keep for focused review
+  - restore or replace only with explicit approval
+  - promote into docs/tools only if wanted
+  - config and release-surface review
+- No dirty code/content files were staged or changed during this triage pass.
+- Commit: `24f5ccc` Document remaining dirty worktree buckets
+- Verification passed: `npm test`, `npm run build`, `git diff --cached --check`.
+
 ### AQA + Edexcel release hardening
 - Release claims are now scoped to AQA and Edexcel only in public metadata and release docs.
 - Removed active V2 release surface by verification: no `np_ui_v2`, `?v2`, or `*ScreenV2` references are present in shipped source/docs.

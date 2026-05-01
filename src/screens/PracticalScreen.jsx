@@ -1845,8 +1845,10 @@ function TabMethod({ p, color }) {
     return (
       <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
         <img
-          src={`/practicals/${p.number}.png`}
+          src={`/practicals/${p.number}.webp`}
           alt={`${p.title} — method infographic`}
+          loading="lazy"
+          decoding="async"
           style={{ width: '100%', borderRadius: 16, display: 'block' }}
         />
       </motion.div>

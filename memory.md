@@ -191,6 +191,14 @@
 - Restored the tracked data/topic files to the committed release state because the dirty content included non-release board material and should not ship in the AQA/Edexcel release.
 - Added `.quarantine/` to `.gitignore` so local deferred experiments cannot be staged accidentally.
 - Updated `docs/WORKTREE_TRIAGE.md` with the quarantine location and next review steps.
+- Final release checks passed:
+  - `npm test` passed. It printed a local Vite websocket port warning, but exited 0 and all smoke checks passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+  - V2 reference scan passed.
+  - Unsupported-board public/docs claim scan passed.
+  - iOS simulator build passed with `CODE_SIGNING_ALLOWED=NO`.
+- GitNexus index refreshed after final cleanup: 1,760 nodes, 3,476 edges, 101 clusters, 140 flows.
 
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).

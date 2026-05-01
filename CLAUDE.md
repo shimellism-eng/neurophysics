@@ -86,7 +86,7 @@ Read **memory.md** before every session. Update it after. CLAUDE.md = permanent 
 - `src/components/` — reusable UI: `lesson/` (7 step components), `questions/` (10 question types)
 - `src/data/` — topic data (`topics-*.jsx`), question banks (`questionBank/qb-*.js`), exam data (`exam*.js`)
 - `src/hooks/` — useAdaptive, useHearts, useInsights, useProgress, useSessionTimer, useSound
-- `src/utils/` — boardConfig.js (single source of truth for 6 boards), secureStorage, tts
+- `src/utils/` — boardConfig.js (single source of truth for release board selection), secureStorage, tts
 - `src/context/` — AuthContext (Supabase), MamoContext (app state)
 - `api/` — serverless: mark.js, gemini.js, _verifyAuth.js, _rateLimit.js, delete-account.js
 
@@ -112,9 +112,8 @@ Read **memory.md** before every session. Update it after. CLAUDE.md = permanent 
 ## Multi-Board (2 release boards: AQA, Edexcel)
 - Board stored in `localStorage` key `np_board` (default `'aqa'`). Use `getSelectedBoard()` / `getValidatedBoard()` from boardConfig.js — never raw localStorage
 - `boards: ['edexcel']` on module/topic restricts to that board. No field = universal. `boards == null` = universal
-- CCEA: A*-G grades — check `board.gradeSystem === 'A*-G'` before showing 9-1 UI
-- g values: Edexcel/CCEA = 10, AQA/OCR/WJEC = 9.8 — read from `BOARDS[boardId].g`
-- Board-specific question banks: `qb-keyconcepts.js` (Edexcel), `qb-globalchallenges.js` (OCR-A), `qb-universe-ocr.js` (OCR-B)
+- Release board-specific question banks must be AQA/Edexcel only unless Mamo explicitly unlocks a future-board release.
+- g values and grade labels must be read from `BOARDS[boardId]`, not hardcoded in UI.
 
 ---
 
@@ -201,7 +200,7 @@ Two MCP graph tools are active — use before Grep/Glob/Read.
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **neurophysics** (1772 symbols, 3502 relationships, 141 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **neurophysics** (1760 symbols, 3476 relationships, 140 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 

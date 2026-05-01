@@ -30,8 +30,8 @@ xcodebuild -project ios/App/App.xcodeproj -scheme App -sdk iphonesimulator -conf
 Run these release-claim checks:
 
 ```bash
-rg "np_ui_v2|\\?v2|HomeScreenV2|TopicsScreenV2|PapersScreenV2|SettingsScreenV2" src docs public index.html CLAUDE.md
-rg "6 exam boards|OCR-A|OCR-B|OCR Gateway|OCR 21C|OCR 21|WJEC|Eduqas|CCEA" index.html public CLAUDE.md docs
+rg "np_ui_v2|\\?v2|HomeScreenV2|TopicsScreenV2|PapersScreenV2|SettingsScreenV2" src docs public index.html CLAUDE.md -g '!docs/RELEASE_READINESS.md'
+rg "6 exam boards|OCR-A|OCR-B|OCR Gateway|OCR 21C|OCR 21|WJEC|Eduqas|CCEA" index.html public CLAUDE.md docs -g '!docs/RELEASE_READINESS.md'
 ```
 
 Both commands should return no shipped release claims for V2 or unsupported boards.

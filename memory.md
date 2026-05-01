@@ -63,6 +63,24 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,740 nodes, 3,459 edges, 102 clusters, 138 flows.
 
+### Practical screen presentation cleanup
+- Committed practical visual polish as `53d8eca` (`Polish practical screen presentation`).
+- Kept this visual-only:
+  - improved `RealWorldCard` spacing/surface styling
+  - replaced warning emoji labels with text labels for cleaner rendering
+  - changed `Lab Setup` to `Lab setup`
+  - let long practical titles wrap instead of truncating
+- No practical methods, hazards arrays, calculations, question content, routing, or board logic were changed.
+
+### Practical presentation verification
+- GitNexus impact checks for `PracticalScreen`, `SetupSpring`, `TabOverview`, `TabSetup`, and `RealWorldCard` reported LOW risk.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,741 nodes, 3,461 edges, 101 clusters, 138 flows.
+
 ### Code-structure cleanup helpers
 - Added small `src/features/` helper modules without moving large route screens.
 - Extracted timed-paper session helpers for computed total marks, outcome normalisation, restored state parsing, unanswered-answer normalisation, and time-used calculation.

@@ -35,7 +35,7 @@ function getStarters(label) {
 
 const INITIAL_MSG = {
   role: 'assistant',
-  content: "Hi! I'm **Mamo**, your physics tutor 🔬\n\nAsk me anything about GCSE Physics — I'll break it down step by step.",
+  content: "Hi! I'm **Mamo**. Ask a GCSE Physics question and I'll explain it step by step.",
 }
 
 // ── Friendly error messages ───────────────────────────────────────────────────
@@ -56,7 +56,7 @@ function TypingDots() {
   if (reduceMotion) {
     return (
       <div className="flex gap-1 items-center h-5 px-1">
-        <span className="text-xs" style={{ color: 'var(--np-indigo)' }}>Thinking…</span>
+        <span className="text-xs" style={{ color: 'var(--np-accent-strong)' }}>Thinking…</span>
       </div>
     )
   }
@@ -66,7 +66,7 @@ function TypingDots() {
         <motion.div
           key={i}
           className="w-2 h-2 rounded-full"
-          style={{ background: 'var(--np-indigo)' }}
+          style={{ background: 'var(--np-accent)' }}
           animate={{ y: [0, -5, 0], opacity: [0.4, 1, 0.4] }}
           transition={{ repeat: Infinity, duration: 0.9, delay: i * 0.2, ease: 'easeInOut' }}
         />
@@ -124,11 +124,14 @@ export default function MamoChat() {
   const [streaming, setStreaming]       = useState(false)
   const [lastUserMsg, setLastUserMsg]   = useState('')
   const [session, setSession]           = useState(undefined) // undefined = loading
+  const [keyboardInset, setKeyboardInset] = useState(0)
   const messagesRef = useRef(null)
   const inputRef  = useRef(null)
   const abortRef  = useRef(null)
 
   const effectiveTopicLabel = topicLabel
+  const guestLocked = session === null
+  const keyboardOpen = keyboardInset > 120
   // Persist messages to localStorage (skip the initial welcome msg)
   useEffect(() => {
     if (messages.length <= 1) return
@@ -171,6 +174,29 @@ export default function MamoChat() {
       messagesRef.current.scrollTop = messagesRef.current.scrollHeight
     }
   }, [messages, streaming])
+
+  useEffect(() => {
+    const viewport = window.visualViewport
+    if (!viewport) return undefined
+
+    const handleViewport = () => {
+      const inset = Math.max(0, window.innerHeight - (viewport.height + viewport.offsetTop))
+      setKeyboardInset(inset)
+    }
+
+    handleViewport()
+    viewport.addEventListener('resize', handleViewport)
+    viewport.addEventListener('scroll', handleViewport)
+    return () => {
+      viewport.removeEventListener('resize', handleViewport)
+      viewport.removeEventListener('scroll', handleViewport)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!keyboardOpen || !messagesRef.current) return
+    messagesRef.current.scrollTop = messagesRef.current.scrollHeight
+  }, [keyboardOpen, messages.length])
 
   const clearThread = () => {
     localStorage.removeItem(storageKey)
@@ -217,6 +243,7 @@ export default function MamoChat() {
       if (!session?.access_token) {
         setStreaming(false)
         setMessages(prev => prev.filter(m => !m.streaming))
+        navigate('/auth')
         return
       }
 
@@ -321,33 +348,39 @@ export default function MamoChat() {
   }, [input, streaming, messages, effectiveTopicLabel])
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#080f1e' }}>
+    <div className="flex flex-col h-full overflow-hidden np-shell-gradient">
       {/* ── Header ─────────────────────────────────────────────────────────── */}
       <PageHeader
         onBack={() => navigate(-1)}
         title="Mamo"
-        subtitle={`AI-powered physics tutor · ${getSelectedBoard().name}`}
+        subtitle={`Physics support · ${getSelectedBoard().name}`}
       />
 
       {/* ── Scrollable area: sign-in card + messages + suggestions + disclaimer ── */}
       <div
         ref={messagesRef}
         className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
-        style={{ minHeight: 0, paddingBottom: 'calc(var(--bottom-chrome-height, 76px) + 80px)' }}
+        style={{ minHeight: 0, paddingBottom: keyboardOpen ? keyboardInset + 92 : 112 }}
         role="log"
         aria-live="polite"
         aria-label="Chat messages"
       >
         {/* Sign-in card — shown once at top when guest */}
-        {session === null && (
+        {guestLocked && (
           <div
-            className="rounded-[14px] px-4 py-3 flex items-start gap-3"
-            style={{ background: 'rgba(99,102,241,0.07)', border: '0.75px solid rgba(99,102,241,0.2)' }}
+            className="np-card-study px-4 py-3 flex items-start gap-3"
           >
-            <span style={{ fontSize: 18 }}>🔒</span>
+            <Sparkle size={18} color="var(--np-accent-strong)" style={{ flexShrink: 0, marginTop: 2 }} />
             <div>
-              <p className="text-sm font-semibold" style={{ color: '#e2e8f0' }}>Sign in to use Mamo</p>
-              <p className="text-xs mt-0.5" style={{ color: '#a8b8cc' }}>Create a free account to unlock the AI tutor. Your progress will be saved across devices.</p>
+              <p className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Sign in to use Mamo</p>
+              <p className="text-xs mt-0.5" style={{ color: 'var(--np-text-muted)' }}>Create a free account to ask questions, keep chat history across devices, and save your study progress.</p>
+              <button
+                className="mt-3 px-3 py-2 rounded-[10px] text-xs font-semibold"
+                style={{ background: 'var(--np-accent)', color: '#07111d' }}
+                onClick={() => navigate('/auth')}
+              >
+                Sign in to use Mamo
+              </button>
             </div>
           </div>
         )}
@@ -364,9 +397,9 @@ export default function MamoChat() {
             {msg.role === 'assistant' && (
               <div
                 className="w-7 h-7 rounded-full shrink-0 flex items-center justify-center mt-1"
-                style={{ background: 'var(--np-indigo)20', border: '1px solid var(--np-indigo)40' }}
+                style={{ background: 'var(--np-accent-soft)', border: '1px solid rgba(94,167,161,0.24)' }}
               >
-                <Sparkle size={12} color="var(--np-indigo)" />
+                <Sparkle size={12} color="var(--np-accent-strong)" />
               </div>
             )}
             <div style={{ maxWidth: '82%' }}>
@@ -374,20 +407,20 @@ export default function MamoChat() {
                 className="rounded-[16px] px-4 py-3 text-sm leading-relaxed"
                 style={{
                   background: msg.role === 'user'
-                    ? 'var(--np-indigo)'
-                    : msg.isError ? 'rgba(239,68,68,0.08)' : 'rgba(15,22,41,0.95)',
+                    ? 'var(--np-accent)'
+                    : msg.isError ? 'rgba(239,68,68,0.08)' : 'var(--surface-panel)',
                   border: msg.role === 'user' ? 'none'
                     : msg.isError ? '0.75px solid rgba(239,68,68,0.3)'
                     : '0.75px solid rgba(255,255,255,0.08)',
-                  color: '#f8fafc',
-                  boxShadow: msg.role === 'user' ? '0 4px 16px rgba(99,102,241,0.3)' : 'none',
+                  color: msg.role === 'user' ? '#07111d' : '#f8fafc',
+                  boxShadow: msg.role === 'user' ? '0 8px 20px rgba(0,0,0,0.18)' : 'none',
                 }}
               >
                 {renderContent(msg.content)}
                 {msg.streaming && msg.content && (
                   <span
                     className="inline-block w-0.5 h-4 ml-0.5 align-middle rounded-full"
-                    style={{ background: 'var(--np-indigo)', animation: 'blink 0.8s step-end infinite' }}
+                    style={{ background: 'var(--np-accent)', animation: 'blink 0.8s step-end infinite' }}
                   />
                 )}
               </div>
@@ -395,7 +428,7 @@ export default function MamoChat() {
               {msg.streaming && !msg.content && (
                 <div
                   className="rounded-[16px] px-4 py-3 mt-1"
-                  style={{ background: 'rgba(15,22,41,0.95)', border: '0.75px solid rgba(255,255,255,0.08)' }}
+                  style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}
                 >
                   <TypingDots />
                 </div>
@@ -405,14 +438,18 @@ export default function MamoChat() {
                 <button
                   className="mt-2 px-4 py-2.5 rounded-[12px] text-xs font-semibold min-h-[44px] flex items-center gap-2"
                   style={{
-                    background: 'rgba(99,102,241,0.1)',
-                    border: '0.75px solid rgba(99,102,241,0.3)',
-                    color: '#818cf8',
+                    background: 'var(--surface-quiet)',
+                    border: 'var(--border-quiet)',
+                    color: 'var(--np-accent-strong)',
                   }}
-                  onClick={() => {
-                    setMessages(prev => prev.slice(0, -1))
-                    sendMessage(lastUserMsg)
-                  }}
+              onClick={() => {
+                if (guestLocked) {
+                  navigate('/auth')
+                  return
+                }
+                setMessages(prev => prev.slice(0, -1))
+                sendMessage(lastUserMsg)
+              }}
                 >
                   <ArrowCounterClockwise size={13} />
                   Retry
@@ -423,31 +460,39 @@ export default function MamoChat() {
         ))}
 
         {/* Suggested questions — always inside scroll, directly after messages */}
+        {!keyboardOpen && (
         <div className="flex flex-col gap-2 pt-1">
           {effectiveTopicLabel ? (
             <div className="flex items-center gap-2 px-1 mb-1">
-              <div className="text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>Asking about:</div>
+              <div className="text-xs" style={{ color: 'var(--np-text-dim)' }}>Topic:</div>
               <div
                 className="text-xs font-semibold px-2 py-0.5 rounded-full"
-                style={{ background: 'rgba(99,102,241,0.15)', color: '#a5b4fc' }}
+                style={{ background: 'var(--np-accent-soft)', color: 'var(--np-accent-strong)' }}
               >
                 {effectiveTopicLabel}
               </div>
             </div>
           ) : (
-            <div className="text-xs px-1 mb-1" style={{ color: 'rgba(255,255,255,0.35)' }}>Try asking:</div>
+            <div className="text-xs px-1 mb-1" style={{ color: 'var(--np-text-dim)' }}>Try one of these:</div>
           )}
-          {getStarters(effectiveTopicLabel).slice(0, 4).map((q, i) => (
+          {getStarters(effectiveTopicLabel).slice(0, 3).map((q, i) => (
             <motion.button
               key={i}
               className="text-left px-4 py-3 rounded-[12px] text-sm leading-snug"
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '0.75px solid rgba(255,255,255,0.08)',
-                color: '#cad5e2',
+                background: 'rgba(255,255,255,0.03)',
+                border: 'var(--border-quiet)',
+                color: guestLocked ? 'var(--np-text-muted)' : 'var(--np-text-mid)',
                 minHeight: 48,
+                opacity: guestLocked ? 0.7 : 1,
               }}
-              onClick={() => sendMessage(q)}
+              onClick={() => {
+                if (guestLocked) {
+                  navigate('/auth')
+                  return
+                }
+                sendMessage(q)
+              }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
@@ -457,10 +502,11 @@ export default function MamoChat() {
             </motion.button>
           ))}
         </div>
+        )}
 
         {/* AI disclaimer */}
-        <p className="text-center pt-2 pb-1" style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)' }}>
-          AI-generated · Always verify with your teacher
+        <p className="text-center pt-2 pb-1" style={{ fontSize: 11, color: 'var(--np-text-dim)' }}>
+          Study support · Check important answers with your teacher
         </p>
       </div>
 
@@ -469,29 +515,32 @@ export default function MamoChat() {
         className="flex gap-2 items-end px-4"
         style={{
           position: 'fixed',
-          left: 0,
-          right: 0,
-          bottom: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100%',
+          maxWidth: 480,
+          bottom: keyboardOpen ? `${Math.max(8, keyboardInset + 8)}px` : 'var(--bottom-chrome-height, 76px)',
           zIndex: 20,
           borderTop: '0.75px solid rgba(255,255,255,0.07)',
-          background: 'rgba(8,15,30,0.98)',
+          background: 'rgba(7,17,29,0.96)',
           paddingTop: 12,
-          paddingBottom: 'calc(var(--bottom-chrome-height, 76px) + 8px)',
+          paddingBottom: 8,
         }}
       >
         <textarea
           ref={inputRef}
           className="flex-1 px-4 py-3 rounded-[10px] text-sm outline-none resize-none"
           style={{
-            background: 'rgba(255,255,255,0.06)',
-            border: '0.75px solid rgba(255,255,255,0.1)',
+            background: 'var(--surface-quiet)',
+            border: 'var(--border-quiet)',
             color: '#f8fafc',
             minHeight: 48,
             maxHeight: 120,
             lineHeight: 1.5,
             overflowY: 'auto',
           }}
-          placeholder="Ask me anything about physics..."
+          placeholder={guestLocked ? 'Sign in to ask Mamo a question' : 'Ask a physics question...'}
+          disabled={guestLocked || streaming}
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => {
@@ -506,14 +555,15 @@ export default function MamoChat() {
         <motion.button
           className="w-12 h-12 rounded-[14px] flex items-center justify-center shrink-0"
           style={{
-            background: input.trim() && !streaming ? 'var(--np-indigo)' : 'rgba(255,255,255,0.08)',
-            boxShadow: input.trim() && !streaming ? '0 4px 16px rgba(99,102,241,0.4)' : 'none',
+            background: input.trim() && !streaming && !guestLocked ? 'var(--np-accent)' : 'rgba(255,255,255,0.08)',
+            boxShadow: input.trim() && !streaming && !guestLocked ? '0 8px 18px rgba(0,0,0,0.18)' : 'none',
+            border: input.trim() && !streaming && !guestLocked ? '0.75px solid rgba(255,255,255,0.08)' : '0.75px solid rgba(255,255,255,0.06)',
           }}
           onClick={() => sendMessage()}
           whileTap={{ scale: 0.92 }}
-          disabled={!input.trim() || streaming}
+          disabled={!input.trim() || streaming || guestLocked}
         >
-          <PaperPlaneTilt size={18} color={input.trim() && !streaming ? '#fff' : '#a8b8cc'} />
+          <PaperPlaneTilt size={18} color={input.trim() && !streaming && !guestLocked ? '#07111d' : 'var(--np-text-muted)'} />
         </motion.button>
       </div>
 

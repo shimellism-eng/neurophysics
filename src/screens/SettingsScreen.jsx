@@ -11,6 +11,7 @@ import { supabase } from '../lib/supabase'
 import { requestNotificationPermission, scheduleDailyReminder, cancelDailyReminder, checkNotificationPermission } from '../utils/notifications'
 import SafeAreaPage from '../components/ui/SafeAreaPage.jsx'
 import { loadPrefs, loadProfile, savePrefs, saveProfile } from '../features/settings/storage'
+import { COURSE_OPTIONS, getBoardOptions, getCourseLabel } from '../features/settings/boardCourseDisplay'
 
 // ─── Profile helpers ──────────────────────────────────────────────────────────
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
@@ -149,8 +150,7 @@ export default function SettingsScreen() {
   const handleSelectCourse = (course) => {
     setSelectedCourse(course)
     setSelectedCourseState(course)
-    const label = course === 'physics_only' ? 'Physics Only' : 'Combined Science'
-    showToast(`Switched to ${label} ✓`, '#9b59b6')
+    showToast(`Switched to ${getCourseLabel(course)} ✓`, '#9b59b6')
     try { window.dispatchEvent(new Event('storage')) } catch {}
   }
 
@@ -649,13 +649,12 @@ export default function SettingsScreen() {
             <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your exam board</span>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            {BOARD_ORDER.map(boardId => {
-              const board = BOARDS[boardId]
-              const isSelected = selectedBoardId === boardId
+            {getBoardOptions(BOARDS, BOARD_ORDER).map(board => {
+              const isSelected = selectedBoardId === board.id
               return (
                 <motion.button
-                  key={boardId}
-                  onClick={() => handleSelectBoard(boardId)}
+                  key={board.id}
+                  onClick={() => handleSelectBoard(board.id)}
                   className="flex flex-col items-start px-3 py-2.5 rounded-[12px] text-left"
                   style={{
                     background: isSelected ? 'rgba(99,102,241,0.1)' : 'rgba(255,255,255,0.03)',
@@ -697,10 +696,7 @@ export default function SettingsScreen() {
             <span className="text-sm font-semibold" style={{ color: 'var(--np-text)' }}>Your GCSE course</span>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            {[
-              { id: 'combined', label: 'Combined Science', desc: 'Trilogy / Double Award', emoji: '🔬' },
-              { id: 'physics_only', label: 'Physics Only', desc: 'Separate Science', emoji: '⚛️' },
-            ].map(({ id, label, desc, emoji }) => {
+            {COURSE_OPTIONS.map(({ id, label, desc, emoji }) => {
               const isSelected = selectedCourse === id
               return (
                 <motion.button

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
 import { Check, ArrowRight, User, Lightning, Brain, Trophy, GraduationCap, CalendarBlank, Pencil, Target, CaretLeft } from '@phosphor-icons/react'
 import { BOARDS, BOARD_ORDER, saveSelectedBoard } from '../utils/boardConfig'
+import { getBoardOptions } from '../features/settings/boardCourseDisplay'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
 const AVATARS = ['🧠', '⚛️', '🔬', '🚀', '⚡', '🌊', '🔭', '💡', '🧲', '🌡️']
@@ -803,19 +804,18 @@ function StepBoard({ onNext, reducedMotion }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            {BOARD_ORDER.map((boardId, i) => {
-              const board = BOARDS[boardId]
-              const isSelected = selected === boardId
+            {getBoardOptions(BOARDS, BOARD_ORDER).map((board, i) => {
+              const isSelected = selected === board.id
               return (
                 <motion.button
-                  key={boardId}
+                  key={board.id}
                   className="w-full text-left rounded-[18px] px-4 py-4 flex items-center gap-4"
                   style={{
                     background: isSelected ? `${board.color}12` : 'rgba(18,26,47,0.9)',
                     border: isSelected ? `1.5px solid ${board.color}60` : '0.75px solid #1d293d',
                     transition: 'background 0.18s, border-color 0.18s',
                   }}
-                  onClick={() => setSelected(boardId)}
+                  onClick={() => setSelected(board.id)}
                   initial={{ opacity: 0, x: -14 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + i * 0.06, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}

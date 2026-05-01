@@ -10,6 +10,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, Flag, CaretUp, CaretDown, Trophy, Clock, CheckCircle, Warning, ChartBar, BookOpen, Eye, EyeSlash } from '@phosphor-icons/react'
 import { getTimedPaperQuestions } from '../data/examIndex'
+import { getAnswerMarksTotal } from '../features/timed-paper/scoring'
 import { saveQuizResult } from '../hooks/useInsights'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import {
@@ -238,12 +239,6 @@ function getSectionLabel(idx, questions) {
   if (idx <= mcqEnd + 3) return { section: 'B', label: 'Short Answer' }
   if (idx <= mcqEnd + 5) return { section: 'C', label: 'Calculations' }
   return { section: 'D', label: 'Extended Response' }
-}
-
-function getAnswerMarksTotal(answerMap = {}) {
-  return Object.values(answerMap).reduce((sum, answer) => (
-    sum + (answer?.marksAwarded ?? answer?.selfScore ?? answer?.score ?? 0)
-  ), 0)
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

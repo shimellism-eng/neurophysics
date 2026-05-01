@@ -109,6 +109,23 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,761 nodes, 3,487 edges, 101 clusters, 140 flows.
 
+### Timed paper controls cleanup
+- Committed the timed-paper slice as `d6e023b` (`Polish timed paper controls`).
+- Aligned timed-paper colours/copy with the shared app palette and `PageHeader`.
+- Preserved the hide-timer comfort control; the dirty version had removed it, so it was restored before commit.
+- Pause/continue controls remain available and saved to session storage.
+- Time-up result saving uses the score ref and computed total marks, matching the timed-paper scoring helpers.
+
+### Timed paper verification
+- GitNexus impact for `TimedPaper` reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,765 nodes, 3,489 edges, 103 clusters, 140 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

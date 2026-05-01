@@ -22,6 +22,7 @@ Run these before deploying:
 
 ```bash
 npm run build
+npm test
 npm run audit:curriculum
 xcodebuild -project ios/App/App.xcodeproj -scheme App -sdk iphonesimulator -configuration Debug -destination 'generic/platform=iOS Simulator' build CODE_SIGNING_ALLOWED=NO
 ```

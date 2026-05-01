@@ -13,6 +13,7 @@ import { trackMisconception } from '../utils/misconceptions'
 import { getSelectedCourse } from '../utils/boardConfig'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
+import { navigateToTopicStudy } from '../features/lesson/routing'
 
 const QUICK_WIN_COUNT = 5
 
@@ -217,9 +218,7 @@ export default function QuickWinScreen() {
   function goToTopic(topicId) {
     const t = TOPICS[topicId]
     if (!t) return
-    if (t.hook || t.lessonSteps?.length > 0) navigate(`/lesson/${topicId}`)
-    else if (t.practicalId) navigate(`/practical/${t.practicalId}`)
-    else navigate(`/practice/${topicId}`)
+    navigateToTopicStudy(navigate, t, topicId)
   }
 
   if (done) {

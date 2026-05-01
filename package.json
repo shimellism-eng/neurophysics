@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "npm run audit:curriculum && node scripts/smoke-timed-paper-scoring.mjs",
+    "test": "npm run audit:curriculum && node scripts/smoke-timed-paper-scoring.mjs && node scripts/smoke-topic-routing.mjs",
     "audit:curriculum": "node scripts/validate-curriculum-filters.mjs",
     "preview": "vite preview",
     "postinstall": "patch-package || true",

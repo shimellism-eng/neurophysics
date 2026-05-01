@@ -16,8 +16,7 @@ export default function SplashScreen() {
 
   return (
     <div
-      className="flex flex-col h-full"
-      style={{ background: 'radial-gradient(ellipse at 50% 28%, #0d1a35 0%, #0b1121 65%)' }}
+      className="flex flex-col h-full np-shell-gradient"
     >
       {/* Logo + tagline */}
       <div className="flex-1 flex flex-col items-center justify-center px-8 gap-6">
@@ -29,19 +28,19 @@ export default function SplashScreen() {
         >
           <motion.div
             className="absolute rounded-full"
-            style={{ width: 140, height: 140, border: '1.5px solid rgba(99,102,241,0.25)' }}
+            style={{ width: 140, height: 140, border: '1px solid rgba(94,167,161,0.22)' }}
             animate={{ scale: [1, 1.18, 1], opacity: [0.4, 0, 0.4] }}
             transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
           />
           <div
             className="w-28 h-28 rounded-full flex items-center justify-center"
             style={{
-              background: 'radial-gradient(circle at 40% 35%, #1e3a6e, #0b1121)',
-              boxShadow: '0 0 60px rgba(99,102,241,0.35), 0 0 120px rgba(99,102,241,0.12)',
-              border: '1.5px solid rgba(99,102,241,0.4)',
+              background: 'radial-gradient(circle at 40% 35%, rgba(94,167,161,0.22), #0b1121)',
+              boxShadow: '0 18px 44px rgba(0,0,0,0.32)',
+              border: '1px solid rgba(94,167,161,0.28)',
             }}
           >
-            <AtomIcon size={72} color="#a78bfa" />
+            <AtomIcon size={72} color="var(--np-accent-strong)" />
           </div>
         </motion.div>
 
@@ -58,7 +57,7 @@ export default function SplashScreen() {
             NeuroPhysics
           </h1>
           <p className="text-base text-center leading-relaxed max-w-xs" style={{ color: '#a8b8cc' }}>
-            Master GCSE Physics step by step.{'\n'}Calm, focused, and clear.
+            Master GCSE Physics step by step.{'\n'}Calm, clear, and ready when you are.
           </p>
         </motion.div>
       </div>
@@ -74,10 +73,10 @@ export default function SplashScreen() {
         <button
           className="flex items-start gap-3 px-4 py-3 rounded-[14px] text-left"
           style={{
-            background: ageConfirmed ? 'rgba(99,102,241,0.1)' : 'rgba(18,26,47,0.9)',
+            background: ageConfirmed ? 'var(--np-accent-soft)' : 'rgba(18,26,47,0.9)',
             border: showAgeError && !ageConfirmed
               ? '1px solid rgba(239,68,68,0.6)'
-              : ageConfirmed ? '1px solid rgba(99,102,241,0.5)' : '0.75px solid #1d293d',
+              : ageConfirmed ? '1px solid rgba(116,188,181,0.4)' : 'var(--border-quiet)',
             transition: 'all 0.2s',
           }}
           onClick={() => { setAgeConfirmed(v => !v); setShowAgeError(false) }}
@@ -88,7 +87,7 @@ export default function SplashScreen() {
           <div
             className="w-5 h-5 rounded-[6px] flex items-center justify-center shrink-0 mt-0.5"
             style={{
-              background: ageConfirmed ? '#6366f1' : 'transparent',
+              background: ageConfirmed ? 'var(--np-accent)' : 'transparent',
               border: ageConfirmed ? 'none' : '1.5px solid #4a5a72',
               transition: 'all 0.15s',
             }}
@@ -121,35 +120,35 @@ export default function SplashScreen() {
         <motion.button
           className="w-full py-4 rounded-[18px] text-base font-bold"
           style={{
-            background: ageConfirmed ? '#6366f1' : 'rgba(99,102,241,0.3)',
-            color: '#fff',
-            boxShadow: ageConfirmed ? '0 8px 28px rgba(99,102,241,0.4)' : 'none',
+            background: ageConfirmed ? 'var(--np-accent)' : 'rgba(94,167,161,0.28)',
+            color: '#07111d',
+            boxShadow: ageConfirmed ? 'var(--shadow-raised)' : 'none',
             transition: 'all 0.2s',
           }}
           onClick={handleGetStarted}
           whileTap={{ scale: 0.97 }}
-          aria-label="Get started with NeuroPhysics"
+          aria-label="Continue to NeuroPhysics"
         >
-          Get Started
+          Continue
         </motion.button>
 
         {/* Legal links — fully tappable */}
         <p className="text-center text-xs leading-relaxed px-4" style={{ color: '#4a5a72' }}>
           By continuing you agree to our{' '}
           <button
-            style={{ color: '#6366f1', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textDecoration: 'underline', fontSize: 'inherit' }}
+            style={{ color: 'var(--np-accent-strong)', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textDecoration: 'underline', fontSize: 'inherit' }}
             onClick={() => navigate('/terms')}
-            aria-label="Read Terms of Service"
+            aria-label="Read Terms of service"
           >
-            Terms of Service
+            Terms of service
           </button>
           {' '}and{' '}
           <button
-            style={{ color: '#6366f1', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textDecoration: 'underline', fontSize: 'inherit' }}
+            style={{ color: 'var(--np-accent-strong)', background: 'none', border: 'none', padding: 0, cursor: 'pointer', textDecoration: 'underline', fontSize: 'inherit' }}
             onClick={() => navigate('/privacy')}
-            aria-label="Read Privacy Policy"
+            aria-label="Read Privacy policy"
           >
-            Privacy Policy
+            Privacy policy
           </button>
         </p>
       </motion.div>

@@ -5,67 +5,67 @@ import PublicHeader from '../components/PublicHeader'
 const STATS = [
   { value: '58', label: 'Topics' },
   { value: '2,900+', label: 'Questions' },
-  { value: '6', label: 'Exam Boards' },
-  { value: '100%', label: 'Neurodivergent-friendly' },
+  { value: '2', label: 'Exam boards' },
+  { value: 'Support', label: 'Tools built in' },
 ]
 
 const HOW_IT_WORKS = [
   {
     num: '1',
-    emoji: '🎓',
+    emoji: '1',
     title: 'Pick your exam board',
-    desc: 'AQA, Edexcel, OCR, WJEC, CCEA — we cover them all.',
+    desc: 'Choose AQA or Edexcel so examples and guidance stay more relevant.',
   },
   {
     num: '2',
-    emoji: '📚',
+    emoji: '2',
     title: 'Learn by topic',
     desc: 'Bite-sized lessons with diagrams and worked examples.',
   },
   {
     num: '3',
-    emoji: '✏️',
-    title: 'Practise & test',
+    emoji: '3',
+    title: 'Practise and test',
     desc: 'Adaptive questions that get harder as you improve.',
   },
   {
     num: '4',
-    emoji: '📈',
-    title: 'Track mastery',
+    emoji: '4',
+    title: 'Track progress',
     desc: 'See your progress across every topic at a glance.',
   },
 ]
 
 const BRAIN_CARDS = [
   {
-    emoji: '🧠',
-    title: 'ADHD-friendly',
-    desc: 'Chunked content, break reminders, no walls of text.',
+    emoji: 'A',
+    title: 'Calmer study flow',
+    desc: 'Chunked content, optional reminders, and less clutter.',
     color: '#6366f1',
   },
   {
-    emoji: '📖',
-    title: 'Dyslexia support',
-    desc: 'Readable fonts, high contrast, text-to-speech on every screen.',
+    emoji: 'D',
+    title: 'Reading support',
+    desc: 'Readable fonts, contrast options, and text-to-speech tools.',
     color: '#06b6d4',
   },
   {
-    emoji: '🤖',
-    title: 'AI tutor (Mamo)',
-    desc: 'Ask anything, 24/7, no judgement.',
+    emoji: 'M',
+    title: 'Mamo support',
+    desc: 'Ask for help when you need it, in clear step-by-step language.',
     color: '#e879f9',
   },
 ]
 
 const MODULES = [
-  { emoji: '⚡', name: 'Energy', color: '#f97316' },
-  { emoji: '💪', name: 'Forces', color: '#10b981' },
-  { emoji: '🌊', name: 'Waves', color: '#06b6d4' },
-  { emoji: '🔌', name: 'Electricity', color: '#fbbf24' },
-  { emoji: '⚛️', name: 'Atomic', color: '#e879f9' },
-  { emoji: '🔮', name: 'Particle', color: '#9b59b6' },
-  { emoji: '🚀', name: 'Space', color: '#6366f1' },
-  { emoji: '🧲', name: 'Magnetism', color: '#f43f5e' },
+  { emoji: 'E', name: 'Energy', color: '#f97316' },
+  { emoji: 'F', name: 'Forces', color: '#10b981' },
+  { emoji: 'W', name: 'Waves', color: '#06b6d4' },
+  { emoji: 'El', name: 'Electricity', color: '#fbbf24' },
+  { emoji: 'A', name: 'Atomic', color: '#e879f9' },
+  { emoji: 'P', name: 'Particle', color: '#9b59b6' },
+  { emoji: 'S', name: 'Space', color: '#6366f1' },
+  { emoji: 'M', name: 'Magnetism', color: '#f43f5e' },
 ]
 
 const fadeUp = (delay = 0) => ({
@@ -80,7 +80,7 @@ export default function LandingScreen() {
   return (
     <div
       style={{
-        minHeight: '100vh',
+        minHeight: '100dvh',
         width: '100%',
         background: '#0a0a0f',
         overflowY: 'auto',
@@ -144,7 +144,7 @@ export default function LandingScreen() {
         >
           Built for neurodivergent learners.
           <br />
-          Every topic. Every exam board.
+          Designed to reduce overwhelm.
         </motion.p>
 
         <motion.div
@@ -302,7 +302,7 @@ export default function LandingScreen() {
         </div>
       </section>
 
-      {/* Built for every brain */}
+      {/* Designed to reduce overwhelm */}
       <section style={{ padding: '0 16px 40px', maxWidth: 480, margin: '0 auto' }}>
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -316,7 +316,7 @@ export default function LandingScreen() {
             color: '#fff',
           }}
         >
-          Built for every brain
+          Designed to reduce overwhelm
         </motion.h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {BRAIN_CARDS.map((card, i) => (

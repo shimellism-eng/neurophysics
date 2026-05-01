@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { MODULES, TOPICS } from '../data/topics'
-import { getSelectedBoard } from '../utils/boardConfig'
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
+import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection } from '../utils/curriculumFilters'
 
 /**
  * useStudyPlan — exam-aware smart study planner
@@ -20,11 +21,12 @@ export function useStudyPlan(progress, paceOverride = 0) {
     today.setHours(0, 0, 0, 0)
 
     const board = getSelectedBoard()
+    const course = getSelectedCourse()
 
     // ── all topics for the selected board (module order) ─────────────────────
     const allTopicIds = MODULES
-      .filter(m => !m.boards || m.boards.includes(board.id))
-      .flatMap(m => m.topics)
+      .filter(m => isModuleAvailableForSelection(m, board.id, course))
+      .flatMap(m => getVisibleTopicIdsForSelection(m.topics, board.id, course))
       .filter(id => TOPICS[id])
 
     const totalTopics    = allTopicIds.length

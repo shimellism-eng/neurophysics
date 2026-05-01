@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, Shield } from '@phosphor-icons/react'
+import { Shield } from '@phosphor-icons/react'
+import PageHeader from '../components/PageHeader'
 
 const SECTIONS = [
   {
@@ -12,27 +13,27 @@ We take your privacy seriously and are committed to complying with the UK Genera
     title: '2. What data we collect and why',
     body: `We collect only what we need to run the app:
 
-📧 Your email address
+Your email address
 Why: To create and manage your account.
 Stored by: Supabase (our secure login provider).
 Legal basis: Contract — needed to provide the service.
 
-📊 Your learning progress
+Your learning progress
 What: Topics started and completed, XP points, streak.
 Where: Stored on your device only. Not sent to any server.
 Legal basis: Legitimate interests (providing personalised revision).
 
-⚙️ Your accessibility settings
+Your accessibility settings
 What: Preferences like reduce-motion, font choices.
-Where: Stored on your device only.
+Where: Stored on your device. If you sign in, we may also sync these settings to your account so they follow you across devices.
 Legal basis: Legitimate interests (making the app usable for you).
 
-💬 Messages you send to Mamo (AI tutor)
+Messages you send to Mamo (AI tutor)
 What: The text of each question you type.
-Where: Sent to Google's Gemini API to generate a reply, then discarded. We do not store your chat messages.
+Where: Sent to Google's Gemini API to generate a reply. Recent chat threads may also stay on your device locally so you can continue a conversation later. We do not store your chat history on our own servers.
 Legal basis: Consent (you actively choose to use the chat).
 
-📝 AI marking submissions
+AI marking submissions
 What: Your written exam answers and the relevant mark scheme.
 Where: Sent to Google's Gemini API for marking, then discarded. We do not store your answers.
 Legal basis: Consent (you actively choose to submit for marking).
@@ -41,7 +42,7 @@ We do NOT collect your name, date of birth, location, payment information, or an
   },
   {
     title: '3. Special category data',
-    body: `During setup you may choose options such as dyslexia-friendly font or focus mode. These choices are stored only on your device and are not sent to us or any third party. We do not hold or process any medical or disability data about you.`,
+    body: `During setup you may choose comfort options such as calmer motion, reading support, larger spacing, or contrast changes. These choices are optional support preferences — not medical data. They are stored on your device and may sync to your account if you sign in so they stay consistent across devices. We do not hold diagnostic or health records about you.`,
   },
   {
     title: '4. Children and young people',
@@ -59,7 +60,7 @@ Parents and guardians: contact us at support@neurophysics.app to request account
   },
   {
     title: '5. How your data is stored',
-    body: `Your learning progress and settings are stored locally on your device. Your email address is held by Supabase on servers within the EU/EEA.
+    body: `Your learning progress is stored locally on your device. Your email address is held by Supabase on servers within the EU/EEA. If you sign in, your comfort settings may also sync to our secure database so they can follow you across devices. Recent Mamo chat threads may stay in local device storage until you clear them or delete the app data.
 
 We take reasonable technical and organisational steps to protect your data, including encrypted connections (HTTPS) and access controls on our systems.
 
@@ -68,23 +69,25 @@ If you tap an external simulation link in the Explore tab, you will leave NeuroP
   {
     title: '6. How long we keep your data',
     body: `• Your account and email: kept until you delete your account.
-• Learning progress and settings: stored on your device — deleted when you clear app data or uninstall.
-• AI chat messages and marking submissions: not stored after the response is generated.
+• Learning progress: stored on your device — deleted when you clear app data or uninstall.
+• Comfort settings: stored on your device and, for signed-in users, may remain in your account until you delete the account.
+• Mamo chat threads: may remain in local device storage until cleared from the device.
+• AI marking submissions: not stored by us after the response is generated.
 • Server request logs (Vercel): retained for up to 30 days for security purposes.
 
-When you delete your account (Settings → Delete Account), your email is permanently removed from Supabase within 30 days.`,
+When you delete your account (Settings → Delete account), your email is permanently removed from Supabase within 30 days.`,
   },
   {
     title: '7. Your rights under UK GDPR',
     body: `You have the right to:
 
-✓ Access — request a copy of the personal data we hold about you.
-✓ Erasure ("right to be forgotten") — ask us to delete your account and associated data.
-✓ Rectification — ask us to correct inaccurate data.
-✓ Restriction — ask us to limit how we process your data.
-✓ Object — object to processing based on legitimate interests.
-✓ Portability — receive your data in a portable format.
-✓ Withdraw consent — where processing is based on consent, you can withdraw it at any time.
+Access — request a copy of the personal data we hold about you.
+Erasure ("right to be forgotten") — ask us to delete your account and associated data.
+Rectification — ask us to correct inaccurate data.
+Restriction — ask us to limit how we process your data.
+Object — object to processing based on legitimate interests.
+Portability — receive your data in a portable format.
+Withdraw consent — where processing is based on consent, you can withdraw it at any time.
 
 To exercise any of these rights, contact us at support@neurophysics.app. We will respond within one calendar month.
 
@@ -109,6 +112,7 @@ Exam-style questions are original content created for revision practice. NeuroPh
 • Remember you are logged in (necessary — cannot be disabled)
 • Save your learning progress (necessary for the app to work)
 • Remember your accessibility preferences (necessary for accessibility)
+• Keep recent Mamo chat threads on your device so you can continue a conversation later
 
 We do not use advertising cookies, tracking cookies, or analytics that identify you personally.`,
   },
@@ -130,7 +134,7 @@ We collect minimal data as described above. If you believe a child under 13 in t
   },
   {
     title: '12. Changes to this policy',
-    body: `We may update this Privacy Policy to reflect changes in the law or how the app works. The latest version is always available in Settings → Privacy Policy. For significant changes affecting children's data, we will notify you within the app.`,
+    body: `We may update this Privacy policy to reflect changes in the law or how the app works. The latest version is always available in Settings → Privacy policy. For significant changes affecting children's data, we will notify you within the app.`,
   },
   {
     title: '13. Contact and complaints',
@@ -149,39 +153,41 @@ export default function PrivacyPolicyScreen() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
-      {/* Header */}
-      <div className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3" style={{ borderBottom: '0.75px solid #1d293d' }}>
-        <button
-          onClick={() => navigate(-1)}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
-          aria-label="Go back"
-        >
-          <ArrowLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex items-center gap-2">
-          <Shield size={16} color="#6366f1" />
-          <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Privacy Policy</h1>
-        </div>
-      </div>
+    <div className="flex flex-col h-full overflow-hidden np-shell-gradient" style={{ paddingTop: 'var(--safe-top)' }}>
+      <PageHeader
+        eyebrow="Legal"
+        title="Privacy policy"
+        subtitle="How NeuroPhysics handles your data"
+        onBack={() => navigate(-1)}
+        rightSlot={<Shield size={16} color="var(--np-accent-strong)" />}
+      />
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6" style={{ minHeight: 0 }}>
-        <div className="rounded-[14px] px-4 py-3" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
-          <p className="text-xs font-semibold" style={{ color: '#818cf8' }}>Last updated: April 2026</p>
-          <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>This policy applies to the NeuroPhysics app and website. It explains what data we collect, why, and your rights under UK law.</p>
+        <div className="rounded-[14px] px-4 py-3" style={{ background: 'var(--np-accent-soft)', border: '0.75px solid rgba(116,188,181,0.22)' }}>
+          <p className="text-xs font-semibold" style={{ color: 'var(--np-accent-strong)' }}>Last updated: April 2026</p>
+          <p className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>This policy applies to the NeuroPhysics app and website. It explains what data we collect, why, and your rights under UK law.</p>
         </div>
 
         {SECTIONS.map(s => (
           <div key={s.title}>
-            <h2 className="text-sm font-bold mb-2" style={{ color: '#f8fafc' }}>{s.title}</h2>
-            <p className="text-sm leading-relaxed whitespace-pre-line break-words" style={{ color: '#a8b8cc' }}>{s.body}</p>
+            <h2 className="text-sm font-bold mb-2" style={{ color: 'var(--np-text)' }}>{s.title}</h2>
+            <p className="text-sm leading-relaxed whitespace-pre-line break-words" style={{ color: 'var(--np-text-muted)' }}>{s.body}</p>
           </div>
         ))}
 
         <div className="rounded-[14px] px-4 py-3" style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.2)' }}>
-          <p className="text-xs" style={{ color: '#00bc7d' }}>🔒 NeuroPhysics is committed to the ICO Children's Code. Your data is never sold, never used for advertising, and you can delete everything at any time.</p>
+          <p className="text-xs" style={{ color: '#00bc7d' }}>NeuroPhysics follows the ICO Children's Code. Your data is never sold, never used for advertising, and you can delete your account data at any time.</p>
+        </div>
+
+        <div className="rounded-[14px] px-4 py-3" style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}>
+          <p className="text-xs font-semibold" style={{ color: 'var(--np-text)' }}>Public web copy</p>
+          <p className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>
+            This same policy is also available on the web at{' '}
+            <a href="https://www.neurophysics.co.uk/privacy" target="_blank" rel="noreferrer" style={{ color: 'var(--np-accent-strong)' }}>
+              neurophysics.co.uk/privacy
+            </a>
+          </p>
         </div>
 
         <div style={{ height: 32 }} />

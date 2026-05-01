@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, FileText } from '@phosphor-icons/react'
+import { FileText } from '@phosphor-icons/react'
+import PageHeader from '../components/PageHeader'
 
 const SECTIONS = [
   {
     title: '1. Who these terms apply to',
-    body: `These Terms of Service ("Terms") govern your use of NeuroPhysics, a GCSE Physics revision app operated by an independent UK-based developer ("we", "us", "our").
+    body: `These Terms of service ("Terms") govern your use of NeuroPhysics, a GCSE Physics revision app operated by an independent UK-based developer ("we", "us", "our").
 
 By creating an account or using the app, you agree to these Terms. If you do not agree, please do not use the app.
 
@@ -86,7 +87,7 @@ These limitations do not apply to liability for death or personal injury caused 
   },
   {
     title: '9. Privacy and data',
-    body: `Your use of NeuroPhysics is also governed by our Privacy Policy, which explains how we collect and use your data in compliance with UK GDPR and the Data Protection Act 2018. You can read it in Settings → Privacy Policy.`,
+    body: `Your use of NeuroPhysics is also governed by our Privacy policy, which explains how we collect and use your data in compliance with UK GDPR and the Data Protection Act 2018. You can read it in Settings → Privacy policy.`,
   },
   {
     title: '10. Changes to these terms',
@@ -110,36 +111,38 @@ export default function TermsScreen() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex flex-col h-full overflow-hidden" style={{ background: '#0b1121' }}>
-      {/* Header */}
-      <div className="px-5 pt-5 pb-4 shrink-0 flex items-center gap-3" style={{ borderBottom: '0.75px solid #1d293d' }}>
-        <button
-          onClick={() => navigate(-1)}
-          className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0"
-          style={{ background: 'rgba(18,26,47,0.9)', border: '0.75px solid #1d293d' }}
-          aria-label="Go back"
-        >
-          <ArrowLeft size={18} color="#a8b8cc" />
-        </button>
-        <div className="flex items-center gap-2">
-          <FileText size={16} color="#6366f1" />
-          <h1 className="text-base font-bold" style={{ color: '#f8fafc' }}>Terms of Service</h1>
-        </div>
-      </div>
+    <div className="flex flex-col h-full overflow-hidden np-shell-gradient" style={{ paddingTop: 'var(--safe-top)' }}>
+      <PageHeader
+        eyebrow="Legal"
+        title="Terms of service"
+        subtitle="How NeuroPhysics may be used"
+        onBack={() => navigate(-1)}
+        rightSlot={<FileText size={16} color="var(--np-accent-strong)" />}
+      />
 
       {/* Content */}
       <div className="flex-1 overflow-y-auto px-5 py-5 space-y-6" style={{ minHeight: 0 }}>
-        <div className="rounded-[14px] px-4 py-3" style={{ background: 'rgba(99,102,241,0.08)', border: '0.75px solid rgba(99,102,241,0.25)' }}>
-          <p className="text-xs font-semibold" style={{ color: '#818cf8' }}>Last updated: April 2026 · England and Wales</p>
-          <p className="text-xs mt-1" style={{ color: '#a8b8cc' }}>Please read these terms before using NeuroPhysics. They explain your rights and responsibilities as a user.</p>
+        <div className="rounded-[14px] px-4 py-3" style={{ background: 'var(--np-accent-soft)', border: '0.75px solid rgba(116,188,181,0.22)' }}>
+          <p className="text-xs font-semibold" style={{ color: 'var(--np-accent-strong)' }}>Last updated: April 2026 · England and Wales</p>
+          <p className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>Please read these terms before using NeuroPhysics. They explain your rights and responsibilities as a user.</p>
         </div>
 
         {SECTIONS.map(s => (
           <div key={s.title}>
-            <h2 className="text-sm font-bold mb-2" style={{ color: '#f8fafc' }}>{s.title}</h2>
-            <p className="text-sm leading-relaxed whitespace-pre-line break-words" style={{ color: '#a8b8cc' }}>{s.body}</p>
+            <h2 className="text-sm font-bold mb-2" style={{ color: 'var(--np-text)' }}>{s.title}</h2>
+            <p className="text-sm leading-relaxed whitespace-pre-line break-words" style={{ color: 'var(--np-text-muted)' }}>{s.body}</p>
           </div>
         ))}
+
+        <div className="rounded-[14px] px-4 py-3" style={{ background: 'var(--surface-panel)', border: 'var(--border-quiet)' }}>
+          <p className="text-xs font-semibold" style={{ color: 'var(--np-text)' }}>Public web copy</p>
+          <p className="text-xs mt-1" style={{ color: 'var(--np-text-muted)' }}>
+            These terms are also available on the web at{' '}
+            <a href="https://www.neurophysics.co.uk/terms" target="_blank" rel="noreferrer" style={{ color: 'var(--np-accent-strong)' }}>
+              neurophysics.co.uk/terms
+            </a>
+          </p>
+        </div>
 
         <div style={{ height: 32 }} />
       </div>

@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { CaretDown, CaretRight, CheckCircle, Circle } from '@phosphor-icons/react'
 import { MODULES, TOPICS } from '../data/topics'
-import { getSelectedBoard } from '../utils/boardConfig'
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
+import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection } from '../utils/curriculumFilters'
 import { useProgress } from '../hooks/useProgress'
 import PageHeader from '../components/PageHeader'
 
@@ -36,15 +37,7 @@ function StatusDot({ mastered, started }) {
 function ModuleSection({ module, topics, progress, boardId }) {
   const [open, setOpen] = useState(true)
 
-  // Filter topics that exist and belong to this board
-  const validTopics = topics.filter(t => {
-    if (!t) return false
-    // If topic has a boards restriction, check it
-    if (t.boards && t.boards.length > 0) {
-      return t.boards.includes(boardId)
-    }
-    return true
-  })
+  const validTopics = topics.filter(Boolean)
 
   if (validTopics.length === 0) return null
 
@@ -143,7 +136,6 @@ function ModuleSection({ module, topics, progress, boardId }) {
                       style={{ color: p.mastered ? 'rgba(255,255,255,0.55)' : '#e2e8f0', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 4 }}
                     >
                       <span className="truncate">
-                        {topic.emoji && <span className="mr-1.5">{topic.emoji}</span>}
                         {topic.title}
                       </span>
                       {topic.boards && topic.boards.length > 0 && (() => {
@@ -187,24 +179,18 @@ export default function SpecChecklist() {
   const navigate = useNavigate()
   const board = getSelectedBoard()
   const boardId = board.id
+  const course = getSelectedCourse()
 
   const { progress } = useProgress()
 
   // Filter modules by board
-  const visibleModules = MODULES.filter(mod => {
-    if (!mod.boards || mod.boards.length === 0) return true
-    return mod.boards.includes(boardId)
-  })
+  const visibleModules = MODULES.filter(mod => isModuleAvailableForSelection(mod, boardId, course))
 
-  // Build topic list per module, also filter by board
+  // Build topic list per module, also filter by course + board
   function getModuleTopics(mod) {
-    return mod.topics
+    return getVisibleTopicIdsForSelection(mod.topics, boardId, course)
       .map(id => TOPICS[id])
       .filter(Boolean)
-      .filter(t => {
-        if (t.boards && t.boards.length > 0) return t.boards.includes(boardId)
-        return true
-      })
   }
 
   // Overall counts
@@ -265,7 +251,7 @@ export default function SpecChecklist() {
         </div>
         {/* Board badge legend */}
         <div className="mt-2 text-xs" style={{ color: '#a8b8cc' }}>
-          💡 Coloured badges = board-specific content
+          Coloured badges = board-specific content
         </div>
       </div>
 

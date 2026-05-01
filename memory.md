@@ -59,6 +59,18 @@
 - Commit: `24f5ccc` Document remaining dirty worktree buckets
 - Verification passed: `npm test`, `npm run build`, `git diff --cached --check`.
 
+### Config and release-surface cleanup
+- Kept release-safe config/docs changes:
+  - `AGENTS.md` GitNexus index counts refreshed.
+  - `public/privacy.html` now reflects comfort-setting sync and local Mamo chat thread storage.
+  - `public/terms.html` added for public web access to Terms of service.
+  - `vercel.json` CSP now allows Plausible, matching the committed analytics script in `index.html`.
+  - `vite.config.js` Supabase no-cache regex fixed and data chunking made more granular.
+- Restored `CLAUDE.md` to the accurate committed version because the dirty rewrite incorrectly claimed TypeScript and the wrong live domain.
+- Left `package.json` and `package-lock.json` dirty because their `@capacitor/network` dependency belongs with the separate uncommitted App offline/PracticeHub changes.
+- Commit: `e0186c8` Clean release surface config
+- Verification passed: `npm test`, `npm run build`, `git diff --cached --check`.
+
 ### AQA + Edexcel release hardening
 - Release claims are now scoped to AQA and Edexcel only in public metadata and release docs.
 - Removed active V2 release surface by verification: no `np_ui_v2`, `?v2`, or `*ScreenV2` references are present in shipped source/docs.

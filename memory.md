@@ -28,6 +28,33 @@
 - `git diff --cached --check` passed before commit.
 - GitNexus index refreshed after commit: 1,753 nodes, 3,475 edges, 102 clusters, 139 flows.
 
+### Learner progress presentation cleanup
+- Committed the first main-learner slice as `035ac00` (`Polish learner progress screens`).
+- Kept this commit to small progress/result screens:
+  - `DiagnosticQuestion`
+  - `EquationDrillScreen`
+  - `MasteryScreen`
+  - `PaperResults`
+  - `StudyPlanScreen`
+  - `TopicMap`
+- Removed several emoji-style UI labels, improved long-title wrapping, softened grade/progress copy, and aligned result/progress colours with the shared app palette.
+- `PaperResults` now reads `marksAwarded` where available, so result breakdowns match the timed-paper scoring contract.
+- Left the larger learner-flow files dirty for separate review because they mix UI cleanup with behaviour-affecting changes:
+  - `LearnScreen`
+  - `LessonPlayer`
+  - `ExamPractice`
+  - `TimedPaper`
+
+### Learner presentation verification
+- GitNexus impact checks for the touched screen symbols reported LOW risk.
+- `gitnexus_detect_changes` is not exposed in the local CLI, so staged-only verification was used as the scope check.
+- Exported the staged index to a clean temporary checkout and verified:
+  - `npm test` passed.
+  - `npm run build` passed.
+  - `npm run audit:curriculum` passed.
+- `git diff --cached --check` passed before commit.
+- GitNexus index refreshed after commit: 1,757 nodes, 3,481 edges, 103 clusters, 140 flows.
+
 ### Runtime-backed practice layer cleanup
 - Committed the practice/runtime bucket as `ec9643b` (`Integrate runtime-backed practice layer`).
 - Added the runtime-backed question repository and adaptive engine:

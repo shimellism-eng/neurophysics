@@ -5,6 +5,36 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice Edexcel Electrical Energy correction
+- Mamo spotted that the screen title said `Electrical Power`, but the question chip was actually `Electrical Energy`.
+- Fixed the actual selected subtopic: Edexcel `Electrical Energy`.
+- Added 18 reviewed authored exam-style questions for Edexcel Electrical Energy in `src/data/adaptiveQuestionSource/authoredElectricity.js`.
+- Replaced the old scaffold-style learner text for that subtopic, including phrases like:
+  - "Which option best separates..."
+  - "Choose the statement that fits this exact GCSE Physics idea..."
+  - "For electrical energy..."
+- Updated runtime JSON for:
+  - `public/data/questions/edexcel/electricity.json`
+  - `public/data/questions/edexcel/all.json`
+- Current Electricity good-to-go count after this correction:
+  - AQA: 24/144 good to go.
+  - Edexcel: 37/94 good to go.
+  - Combined Electricity: 61/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `git diff --check` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator install/launch passes.
+
+### Next step
+- Fix the two electricity areas Mamo showed directly in screenshots:
+  - AQA `Current`: 5/5 authored.
+  - Edexcel `Current-Voltage Characteristics`: 19/19 authored.
+
 ### Adaptive Practice authored Atomic Structure checkpoint
 - Replaced the learner-facing Atomic Structure bank with authored exam-style questions for AQA and Edexcel.
 - Added `src/data/adaptiveQuestionSource/authoredAtomicStructure.js` as the source of truth for this checkpoint:

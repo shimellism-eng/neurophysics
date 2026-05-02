@@ -5,6 +5,36 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Power + Edexcel Parallel Circuits correction
+- Checked spec anchors before authoring:
+  - AQA `4.2.4.1` covers electrical power, `P = V × I`, `P = I²R`, and energy transfer over time.
+  - Edexcel local manifest had a bad `10.20` reference for `Parallel Circuits`; official Edexcel Physics 1PH0 has `10.20` as thermistors.
+  - Corrected Edexcel `Parallel Circuits` hidden spec coverage to `10.3/10.11/10.14/10.17`:
+    - series/parallel circuit differences
+    - current conservation at junctions
+    - resistance change in series/parallel
+    - core practical testing series and parallel circuits
+- Fixed:
+  - AQA `Power`: 5/5 authored exam-style questions.
+  - Edexcel `Parallel Circuits`: 19/19 authored exam-style questions.
+- Current Electricity good-to-go count after this correction:
+  - AQA: 39/144 good to go.
+  - Edexcel: 94/94 good to go.
+  - Combined Electricity: 133/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator install/launch passes.
+
+### Next step
+- Continue AQA Electricity only until AQA catches up:
+  - AQA `Energy Transfer`: 5/5 authored.
+  - AQA `Series Current`: 5/5 authored.
+
 ### Adaptive Practice AQA Potential Difference + Edexcel Domestic Electricity correction
 - Checked official spec anchors before authoring:
   - AQA `4.2.1.3` covers current, resistance and potential difference, including `V = I × R`, units, and measuring current/potential difference.

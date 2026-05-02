@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "electricity",
-  "generatedAt": "2026-05-02T06:56:16.740Z",
+  "generatedAt": "2026-05-02T07:04:48.155Z",
   "questions": [
     {
       "id": "aqa_electricity_charge_current_definition_001",
@@ -9755,7 +9755,7 @@
       "senNote": "This checks one idea only: Describe potential difference in parallel."
     },
     {
-      "id": "aqa_4_2_4_1_power_power_vi_direct_recall_001",
+      "id": "aqa_electricity_power_definition_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -9780,130 +9780,57 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_power_power_vi",
-        "statement": "Use power, potential difference and current. (Power)",
+        "id": "aqa_electricity_power_definition_001_lo",
+        "statement": "State power as the rate of energy transfer.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.4.1:power_vi:direct_recall",
-      "conceptFamily": "power_vi",
-      "contextType": "a safety decision",
-      "skill": "Use power, potential difference and current.",
-      "stem": "Which statement is correct for power? Use the wording carefully: this is about use power, potential difference and current.",
-      "question": "Which statement is correct for power? Use the wording carefully: this is about use power, potential difference and current.",
-      "options": [
-        "In this power item, electrical power can be calculated using power = potential difference × current.",
-        "In this power item, power is measured in coulombs.",
-        "For power, the answer claims that power = current ÷ potential difference.",
-        "For power, the statement is that power = charge × resistance only."
-      ],
-      "correctAnswer": "In this power item, electrical power can be calculated using power = potential difference × current.",
-      "correctIndex": 0,
-      "explanation": "4.2.4.1 targets: Use power, potential difference and current. Focus area: Power. For this question, Electrical power can be calculated using power = potential difference × current. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_vi",
-      "distractorRationales": [
-        {
-          "text": "For power, the answer claims that power = current ÷ potential difference.",
-          "misconception": "Power = current ÷ potential difference."
-        },
-        {
-          "text": "For power, the statement is that power = charge × resistance only.",
-          "misconception": "Power = charge × resistance only."
-        },
-        {
-          "text": "In this power item, power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power, potential difference and current."
-    },
-    {
-      "id": "aqa_4_2_4_1_power_power_i2r_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Power",
-      "topicSlug": "electricity",
-      "subtopicSlug": "power",
-      "topicId": "electrical_power",
-      "specRef": "4.2.4.1",
-      "specStatement": "Electrical power and energy transfers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_1_power_power_i2r",
-        "statement": "Use power, current and resistance. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.4.1:power_i2r:concept_discrimination",
-      "conceptFamily": "power_i2r",
-      "contextType": "a graph-reading task",
-      "skill": "Use power, current and resistance.",
-      "stem": "A student is comparing similar ideas in power. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use power, current and resistance.",
-      "question": "A student is comparing similar ideas in power. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use power, current and resistance.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_power_definition_001",
+      "conceptFamily": "state_power_as_the_rate_of_energy_transfer",
+      "contextType": "exam_style",
+      "skill": "State power as the rate of energy transfer.",
+      "stem": "What does the power of an electrical appliance tell you?",
+      "question": "What does the power of an electrical appliance tell you?",
       "options": [
-        "For power, the answer claims that power is independent of current.",
-        "For power, the answer claims that power = current × resistance².",
-        "For power, the statement is that power can also be calculated using power = current² × resistance.",
-        "For power, the answer claims that power = resistance ÷ current²."
+        "The rate at which it transfers energy.",
+        "The total charge stored in the appliance.",
+        "The resistance of the plug only.",
+        "The potential difference of the mains supply."
       ],
-      "correctAnswer": "For power, the statement is that power can also be calculated using power = current² × resistance.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.1 targets: Use power, current and resistance. Focus area: Power. For this question, Power can also be calculated using power = current² × resistance. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_i2r",
+      "correctAnswer": "The rate at which it transfers energy.",
+      "correctIndex": 0,
+      "explanation": "Power is the rate of energy transfer. A higher power means energy is transferred more quickly.",
+      "misconceptionTag": "power-rate-energy-transfer",
       "distractorRationales": [
         {
-          "text": "For power, the answer claims that power = resistance ÷ current².",
-          "misconception": "Power = current × resistance²."
+          "text": "The total charge stored in the appliance.",
+          "misconception": "power confused with charge"
         },
         {
-          "text": "For power, the answer claims that power is independent of current.",
-          "misconception": "Power = resistance ÷ current²."
+          "text": "The resistance of the plug only.",
+          "misconception": "power confused with resistance"
         },
         {
-          "text": "For power, the answer claims that power = current × resistance².",
-          "misconception": "Power is independent of current."
+          "text": "The potential difference of the mains supply.",
+          "misconception": "power confused with voltage"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power, current and resistance."
+      "senNote": "Checks: State power as the rate of energy transfer."
     },
     {
-      "id": "aqa_4_2_4_1_power_energy_power_time_misconception_correction_003",
+      "id": "aqa_electricity_power_vi_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -9928,56 +9855,57 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_power_energy_power_time",
-        "statement": "Use energy transferred by a device. (Power)",
+        "id": "aqa_electricity_power_vi_002_lo",
+        "statement": "Calculate electrical power using potential difference and current.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.4.1:energy_power_time:misconception_correction",
-      "conceptFamily": "energy_power_time",
-      "contextType": "a comparison question",
-      "skill": "Use energy transferred by a device.",
-      "stem": "A revision note about power contains an error. Which replacement is correct? Keep the answer focused on power: use energy transferred by a device.",
-      "question": "A revision note about power contains an error. Which replacement is correct? Keep the answer focused on power: use energy transferred by a device.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_power_vi_002",
+      "conceptFamily": "calculate_electrical_power_using_potential_difference_and_current",
+      "contextType": "exam_style",
+      "skill": "Calculate electrical power using potential difference and current.",
+      "stem": "A motor has a potential difference of 12 V across it and a current of 2.0 A through it. What is the power of the motor?",
+      "question": "A motor has a potential difference of 12 V across it and a current of 2.0 A through it. What is the power of the motor?",
       "options": [
-        "For power, the statement is that energy transferred is measured in amperes.",
-        "For power, the answer claims that energy transferred = power ÷ time.",
-        "For power, the statement is that energy transfer does not depend on time.",
-        "For power, the statement is that energy transferred = power × time."
+        "6.0 W",
+        "10 W",
+        "14 W",
+        "24 W"
       ],
-      "correctAnswer": "For power, the statement is that energy transferred = power × time.",
+      "correctAnswer": "24 W",
       "correctIndex": 3,
-      "explanation": "4.2.4.1 targets: Use energy transferred by a device. Focus area: Power. For this question, Energy transferred = power × time. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_power_time",
+      "explanation": "Use P = V × I. P = 12 × 2.0 = 24 W.",
+      "misconceptionTag": "power-voltage-current",
       "distractorRationales": [
         {
-          "text": "For power, the statement is that energy transfer does not depend on time.",
-          "misconception": "Energy transferred = power ÷ time."
+          "text": "6.0 W",
+          "misconception": ""
         },
         {
-          "text": "For power, the answer claims that energy transferred = power ÷ time.",
-          "misconception": "Energy transferred is measured in amperes."
+          "text": "10 W",
+          "misconception": ""
         },
         {
-          "text": "For power, the statement is that energy transferred is measured in amperes.",
-          "misconception": "Energy transfer does not depend on time."
+          "text": "14 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use energy transferred by a device."
+      "senNote": "Checks: Calculate electrical power using potential difference and current."
     },
     {
-      "id": "aqa_4_2_4_1_power_cost_electricity_data_interpretation_004",
+      "id": "aqa_electricity_power_i2r_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10002,56 +9930,57 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_power_cost_electricity",
-        "statement": "Calculate cost of electricity. (Power)",
+        "id": "aqa_electricity_power_i2r_003_lo",
+        "statement": "Calculate power using current and resistance.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.4.1:cost_electricity:data_interpretation",
-      "conceptFamily": "cost_electricity",
-      "contextType": "a method-choice question",
-      "skill": "Calculate cost of electricity.",
-      "stem": "A small data set about power is being interpreted. Which conclusion is valid? Keep the answer focused on power: calculate cost of electricity.",
-      "question": "A small data set about power is being interpreted. Which conclusion is valid? Keep the answer focused on power: calculate cost of electricity.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_power_i2r_003",
+      "conceptFamily": "calculate_power_using_current_and_resistance",
+      "contextType": "exam_style",
+      "skill": "Calculate power using current and resistance.",
+      "stem": "A current of 3.0 A flows through a 4.0 ohm resistor. What power is transferred by the resistor?",
+      "question": "A current of 3.0 A flows through a 4.0 ohm resistor. What power is transferred by the resistor?",
       "options": [
-        "For power, the option says that cost is found from current alone.",
-        "In this item, it means that cost does not depend on how long the device is used.",
-        "For power, it means that cost is measured in watts.",
-        "In this item, it means that cost is found from energy used in kWh multiplied by cost per kWh."
+        "7.0 W",
+        "12 W",
+        "24 W",
+        "36 W"
       ],
-      "correctAnswer": "In this item, it means that cost is found from energy used in kWh multiplied by cost per kWh.",
+      "correctAnswer": "36 W",
       "correctIndex": 3,
-      "explanation": "4.2.4.1 targets: Calculate cost of electricity. Focus area: Power. For this question, Cost is found from energy used in kWh multiplied by cost per kWh. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:cost_electricity",
+      "explanation": "Use P = I² × R. P = 3.0² × 4.0 = 36 W.",
+      "misconceptionTag": "power-current-squared-resistance",
       "distractorRationales": [
         {
-          "text": "For power, the option says that cost is found from current alone.",
-          "misconception": "Cost is found from current alone."
+          "text": "7.0 W",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that cost is measured in watts.",
-          "misconception": "Cost is measured in watts."
+          "text": "12 W",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that cost does not depend on how long the device is used.",
-          "misconception": "Cost does not depend on how long the device is used."
+          "text": "24 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate cost of electricity."
+      "senNote": "Checks: Calculate power using current and resistance."
     },
     {
-      "id": "aqa_4_2_4_1_power_heating_effect_representation_interpretation_005",
+      "id": "aqa_electricity_power_compare_appliances_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10076,53 +10005,129 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_1_power_heating_effect",
-        "statement": "Link resistance to heating. (Power)",
+        "id": "aqa_electricity_power_compare_appliances_004_lo",
+        "statement": "Compare power when current changes at the same potential difference.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.4.1:heating_effect:representation_interpretation",
-      "conceptFamily": "heating_effect",
-      "contextType": "a results discussion",
-      "skill": "Link resistance to heating.",
-      "stem": "Which option correctly reads the power model or diagram idea? Use the wording carefully: this is about link resistance to heating.",
-      "question": "Which option correctly reads the power model or diagram idea? Use the wording carefully: this is about link resistance to heating.",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_power_compare_appliances_004",
+      "conceptFamily": "compare_power_when_current_changes_at_the_same_potential_difference",
+      "contextType": "exam_style",
+      "skill": "Compare power when current changes at the same potential difference.",
+      "stem": "Two lamps are connected to the same potential difference. Lamp X has twice the current of lamp Y. Which statement is correct?",
+      "question": "Two lamps are connected to the same potential difference. Lamp X has twice the current of lamp Y. Which statement is correct?",
       "options": [
-        "For power, it means that resistance makes energy disappear rather than transfer.",
-        "The answer for power says that heating proves no current is flowing.",
-        "For power, the statement is that a current through resistance transfers energy by heating the component and surroundings.",
-        "The answer for power says that resistance removes all energy transfer."
+        "Lamp X transfers energy at twice the rate of lamp Y.",
+        "Lamp Y transfers energy at twice the rate of lamp X.",
+        "Both lamps must have the same power.",
+        "Lamp X transfers no energy because its current is larger."
       ],
-      "correctAnswer": "For power, the statement is that a current through resistance transfers energy by heating the component and surroundings.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.1 targets: Link resistance to heating. Focus area: Power. For this question, A current through resistance transfers energy by heating the component and surroundings. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:heating_effect",
+      "correctAnswer": "Lamp X transfers energy at twice the rate of lamp Y.",
+      "correctIndex": 0,
+      "explanation": "For the same potential difference, P = V × I, so doubling the current doubles the power.",
+      "misconceptionTag": "power-compare-current",
       "distractorRationales": [
         {
-          "text": "The answer for power says that heating proves no current is flowing.",
-          "misconception": "Resistance removes all energy transfer."
+          "text": "Lamp Y transfers energy at twice the rate of lamp X.",
+          "misconception": "power-current relationship reversed"
         },
         {
-          "text": "For power, it means that resistance makes energy disappear rather than transfer.",
-          "misconception": "Heating proves no current is flowing."
+          "text": "Both lamps must have the same power.",
+          "misconception": "current difference ignored"
         },
         {
-          "text": "The answer for power says that resistance removes all energy transfer.",
-          "misconception": "Resistance makes energy disappear rather than transfer."
+          "text": "Lamp X transfers no energy because its current is larger.",
+          "misconception": "larger current misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Link resistance to heating."
+      "senNote": "Checks: Compare power when current changes at the same potential difference."
+    },
+    {
+      "id": "aqa_electricity_power_energy_time_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Power",
+      "topicSlug": "electricity",
+      "subtopicSlug": "power",
+      "topicId": "electrical_power",
+      "specRef": "4.2.4.1",
+      "specStatement": "Electrical power and energy transfers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_power_energy_time_005_lo",
+        "statement": "Calculate energy transferred using power and time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_power_energy_time_005",
+      "conceptFamily": "calculate_energy_transferred_using_power_and_time",
+      "contextType": "exam_style",
+      "skill": "Calculate energy transferred using power and time.",
+      "stem": "A 60 W lamp is switched on for 120 s. How much energy is transferred?",
+      "question": "A 60 W lamp is switched on for 120 s. How much energy is transferred?",
+      "options": [
+        "0.50 J",
+        "60 J",
+        "180 J",
+        "7200 J"
+      ],
+      "correctAnswer": "7200 J",
+      "correctIndex": 3,
+      "explanation": "Use energy transferred = power × time. E = 60 × 120 = 7200 J.",
+      "misconceptionTag": "energy-power-time",
+      "distractorRationales": [
+        {
+          "text": "0.50 J",
+          "misconception": ""
+        },
+        {
+          "text": "60 J",
+          "misconception": ""
+        },
+        {
+          "text": "180 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate energy transferred using power and time."
     },
     {
       "id": "aqa_4_2_4_1_energy_transfer_energy_power_time_direct_recall_001",

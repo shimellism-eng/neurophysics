@@ -107,7 +107,7 @@ export const ADAPTIVE_SPEC_MANIFESTS = {
       entry({ topic: 'Electricity', subtopic: 'Domestic Electricity', topicId: 'domestic_electricity', specRef: '10.39', statement: 'Explain mains electricity safety including fuses and earthing.', paper: 'Paper 2' }),
       entry({ topic: 'Electricity', subtopic: 'Electrical Energy', topicId: 'electrical_power', specRef: '10.29', statement: 'Use electrical energy transfer equations.', paper: 'Paper 2' }),
       entry({ topic: 'Electricity', subtopic: 'Electrical Power', topicId: 'electrical_power', specRef: '10.31', statement: 'Use power equations in electrical circuits.', paper: 'Paper 2' }),
-      entry({ topic: 'Electricity', subtopic: 'Parallel Circuits', topicId: 'series_parallel', specRef: '10.20', statement: 'Describe current and potential difference in series and parallel circuits.', paper: 'Paper 2' }),
+      entry({ topic: 'Electricity', subtopic: 'Parallel Circuits', topicId: 'series_parallel', specRef: '10.3/10.11/10.14/10.17', statement: 'Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.', paper: 'Paper 2' }),
       entry({ topic: 'Energy', subtopic: 'Efficiency', topicId: 'efficiency', specRef: '3.12', statement: 'Calculate efficiency and interpret energy transfers.', paper: 'Paper 1' }),
       entry({ topic: 'Energy', subtopic: 'Energy Resources', topicId: 'energy_resources', specRef: '3.8', statement: 'Evaluate renewable and non-renewable energy resources.', paper: 'Paper 1' }),
       entry({ topic: 'Energy', subtopic: 'Gravitational Potential Energy', topicId: 'energy_equations', specRef: '8.3', statement: 'Use gravitational potential energy and kinetic energy equations.', paper: 'Paper 2' }),

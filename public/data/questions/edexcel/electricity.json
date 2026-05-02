@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "electricity",
-  "generatedAt": "2026-05-02T06:56:16.774Z",
+  "generatedAt": "2026-05-02T07:04:48.182Z",
   "questions": [
     {
       "id": "edexcel_electricity_cv_resistance_calculation_001",
@@ -5409,7 +5409,7 @@
       "senNote": "Checks: Explain an overload risk using current and power."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_pd_direct_recall_001",
+      "id": "edexcel_electricity_parallel_define_001",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5420,8 +5420,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -5431,127 +5431,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_define_001_lo",
+        "statement": "Describe the structure of a parallel circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.20:parallel_pd:direct_recall",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a labelled diagram",
-      "skill": "Describe potential difference in parallel.",
-      "stem": "Which statement is correct for parallel circuits? Keep the answer focused on parallel circuits: describe potential difference in parallel.",
-      "question": "Which statement is correct for parallel circuits? Keep the answer focused on parallel circuits: describe potential difference in parallel.",
-      "options": [
-        "The claim for parallel circuits is that potential difference is zero in every branch.",
-        "In this item, it means that potential difference across each parallel branch is the same as the supply.",
-        "The claim for parallel circuits is that potential difference is shared equally by branch number only.",
-        "For parallel circuits, this would mean that potential difference is larger after each component."
-      ],
-      "correctAnswer": "In this item, it means that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 1,
-      "explanation": "10.20 targets: Describe potential difference in parallel. Focus area: Parallel Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
-      "distractorRationales": [
-        {
-          "text": "The claim for parallel circuits is that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is shared equally by branch number only."
-        },
-        {
-          "text": "The claim for parallel circuits is that potential difference is zero in every branch.",
-          "misconception": "Potential difference is zero in every branch."
-        },
-        {
-          "text": "For parallel circuits, this would mean that potential difference is larger after each component.",
-          "misconception": "Potential difference is larger after each component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_parallel_current_concept_discrimination_002",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.20:parallel_current:concept_discrimination",
-      "conceptFamily": "parallel_current",
-      "contextType": "a short calculation",
-      "skill": "Describe current in parallel.",
-      "stem": "A student is comparing similar ideas in parallel circuits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
-      "question": "A student is comparing similar ideas in parallel circuits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_define_001",
+      "conceptFamily": "describe_the_structure_of_a_parallel_circuit",
+      "contextType": "exam_style",
+      "skill": "Describe the structure of a parallel circuit.",
+      "stem": "Which circuit has components connected in parallel?",
+      "question": "Which circuit has components connected in parallel?",
       "options": [
-        "For parallel circuits, the statement is that current cannot split in parallel.",
-        "For parallel circuits, the statement is that total current is always smaller than each branch current.",
-        "For parallel circuits, the statement is that only one branch can carry current.",
-        "For parallel circuits, the answer claims that total current is the sum of the currents in the branches."
+        "A circuit with more than one path for current.",
+        "A circuit with only one path for current.",
+        "A circuit with no source of potential difference.",
+        "A circuit where current cannot split at any point."
       ],
-      "correctAnswer": "For parallel circuits, the answer claims that total current is the sum of the currents in the branches.",
-      "correctIndex": 3,
-      "explanation": "10.20 targets: Describe current in parallel. Focus area: Parallel Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "correctAnswer": "A circuit with more than one path for current.",
+      "correctIndex": 0,
+      "explanation": "A parallel circuit has branches, giving current more than one path to follow.",
+      "misconceptionTag": "parallel-more-than-one-path",
       "distractorRationales": [
         {
-          "text": "For parallel circuits, the statement is that total current is always smaller than each branch current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "A circuit with only one path for current.",
+          "misconception": "series circuit confused with parallel"
         },
         {
-          "text": "For parallel circuits, the statement is that only one branch can carry current.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "A circuit with no source of potential difference.",
+          "misconception": "incomplete circuit confused with parallel"
         },
         {
-          "text": "For parallel circuits, the statement is that current cannot split in parallel.",
-          "misconception": "Only one branch can carry current."
+          "text": "A circuit where current cannot split at any point.",
+          "misconception": "junction behaviour misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Describe the structure of a parallel circuit."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_resistance_misconception_correction_003",
+      "id": "edexcel_electricity_parallel_pd_same_002",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5562,8 +5492,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -5573,56 +5503,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_resistance",
-        "statement": "Compare total resistance in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_pd_same_002_lo",
+        "statement": "Recall that potential difference is the same across parallel branches.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.20:parallel_resistance:misconception_correction",
-      "conceptFamily": "parallel_resistance",
-      "contextType": "a safety decision",
-      "skill": "Compare total resistance in parallel.",
-      "stem": "A revision note about parallel circuits contains an error. Which replacement is correct? Keep the answer focused on parallel circuits: compare total resistance in parallel.",
-      "question": "A revision note about parallel circuits contains an error. Which replacement is correct? Keep the answer focused on parallel circuits: compare total resistance in parallel.",
+      "commandWord": "calculate",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_pd_same_002",
+      "conceptFamily": "recall_that_potential_difference_is_the_same_across_parallel_branches",
+      "contextType": "exam_style",
+      "skill": "Recall that potential difference is the same across parallel branches.",
+      "stem": "Two lamps are connected in parallel to a 6 V battery. What is the potential difference across each lamp?",
+      "question": "Two lamps are connected in parallel to a 6 V battery. What is the potential difference across each lamp?",
       "options": [
-        "The claim for parallel circuits is that adding a parallel branch lowers the total resistance because there are more paths for charge.",
-        "For parallel circuits: Total resistance equals the largest branch resistance.",
-        "For parallel circuits, the option says that parallel branches stop charge moving.",
-        "For parallel circuits: Adding a parallel branch always increases total resistance."
+        "6 V across each lamp",
+        "3 V across each lamp",
+        "12 V across each lamp",
+        "0 V across each lamp"
       ],
-      "correctAnswer": "The claim for parallel circuits is that adding a parallel branch lowers the total resistance because there are more paths for charge.",
+      "correctAnswer": "6 V across each lamp",
       "correctIndex": 0,
-      "explanation": "10.20 targets: Compare total resistance in parallel. Focus area: Parallel Circuits. For this question, Adding a parallel branch lowers the total resistance because there are more paths for charge. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_resistance",
+      "explanation": "Components in parallel are connected across the same two points, so each branch has the full supply potential difference.",
+      "misconceptionTag": "parallel-pd-same",
       "distractorRationales": [
         {
-          "text": "For parallel circuits: Total resistance equals the largest branch resistance.",
-          "misconception": "Adding a parallel branch always increases total resistance."
+          "text": "3 V across each lamp",
+          "misconception": "parallel potential difference confused with series sharing"
         },
         {
-          "text": "For parallel circuits: Adding a parallel branch always increases total resistance.",
-          "misconception": "Parallel branches stop charge moving."
+          "text": "12 V across each lamp",
+          "misconception": "supply voltage incorrectly added"
         },
         {
-          "text": "For parallel circuits, the option says that parallel branches stop charge moving.",
-          "misconception": "Total resistance equals the largest branch resistance."
+          "text": "0 V across each lamp",
+          "misconception": "complete circuit misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare total resistance in parallel."
+      "senNote": "Checks: Recall that potential difference is the same across parallel branches."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_series_current_data_interpretation_004",
+      "id": "edexcel_electricity_parallel_current_split_003",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5633,8 +5564,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -5644,56 +5575,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_current_split_003_lo",
+        "statement": "Use conservation of current at a junction.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.20:series_current:data_interpretation",
-      "conceptFamily": "series_current",
-      "contextType": "a graph-reading task",
-      "skill": "Describe current in a series circuit.",
-      "stem": "A small data set about parallel circuits is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
-      "question": "A small data set about parallel circuits is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_parallel_current_split_003",
+      "conceptFamily": "use_conservation_of_current_at_a_junction",
+      "contextType": "exam_style",
+      "skill": "Use conservation of current at a junction.",
+      "stem": "A current of 0.60 A reaches a junction. One branch has a current of 0.20 A. What is the current in the other branch?",
+      "question": "A current of 0.60 A reaches a junction. One branch has a current of 0.20 A. What is the current in the other branch?",
       "options": [
-        "In this item, it means that current splits between components in a single loop.",
-        "For parallel circuits, the option says that current is used up by each component.",
-        "For parallel circuits, the option says that current is the same at every point in a series circuit.",
-        "For parallel circuits, it means that current is largest after the final component."
+        "0.20 A",
+        "0.40 A",
+        "0.60 A",
+        "0.80 A"
       ],
-      "correctAnswer": "For parallel circuits, the option says that current is the same at every point in a series circuit.",
-      "correctIndex": 2,
-      "explanation": "10.20 targets: Describe current in a series circuit. Focus area: Parallel Circuits. For this question, Current is the same at every point in a series circuit. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
+      "correctAnswer": "0.40 A",
+      "correctIndex": 1,
+      "explanation": "Current is conserved at a junction. The branch currents add to the total, so the other branch is 0.60 - 0.20 = 0.40 A.",
+      "misconceptionTag": "junction-current-conservation",
       "distractorRationales": [
         {
-          "text": "For parallel circuits, the option says that current is used up by each component.",
-          "misconception": "Current is used up by each component."
+          "text": "0.20 A",
+          "misconception": ""
         },
         {
-          "text": "For parallel circuits, it means that current is largest after the final component.",
-          "misconception": "Current is largest after the final component."
+          "text": "0.60 A",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that current splits between components in a single loop.",
-          "misconception": "Current splits between components in a single loop."
+          "text": "0.80 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
+      "senNote": "Checks: Use conservation of current at a junction."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_pd_representation_interpretation_005",
+      "id": "edexcel_electricity_parallel_total_current_004",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5704,8 +5636,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -5715,56 +5647,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_total_current_004_lo",
+        "statement": "Calculate total current in a parallel circuit.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.20:parallel_pd:representation_interpretation",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a comparison question",
-      "skill": "Describe potential difference in parallel.",
-      "stem": "Which option correctly reads the parallel circuits model or diagram idea? Use the wording carefully: this is about describe potential difference in parallel.",
-      "question": "Which option correctly reads the parallel circuits model or diagram idea? Use the wording carefully: this is about describe potential difference in parallel.",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_parallel_total_current_004",
+      "conceptFamily": "calculate_total_current_in_a_parallel_circuit",
+      "contextType": "exam_style",
+      "skill": "Calculate total current in a parallel circuit.",
+      "stem": "A parallel circuit has branch currents of 0.30 A and 0.45 A. What is the total current from the cell?",
+      "question": "A parallel circuit has branch currents of 0.30 A and 0.45 A. What is the total current from the cell?",
       "options": [
-        "For parallel circuits, the answer claims that potential difference is larger after each component.",
-        "For parallel circuits, the statement is that potential difference across each parallel branch is the same as the supply.",
-        "For parallel circuits, the statement is that potential difference is zero in every branch.",
-        "For parallel circuits, the statement is that potential difference is shared equally by branch number only."
+        "0.15 A",
+        "0.30 A",
+        "0.45 A",
+        "0.75 A"
       ],
-      "correctAnswer": "For parallel circuits, the statement is that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 1,
-      "explanation": "10.20 targets: Describe potential difference in parallel. Focus area: Parallel Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
+      "correctAnswer": "0.75 A",
+      "correctIndex": 3,
+      "explanation": "The total current is the sum of the branch currents: 0.30 + 0.45 = 0.75 A.",
+      "misconceptionTag": "parallel-total-current",
       "distractorRationales": [
         {
-          "text": "For parallel circuits, the statement is that potential difference is zero in every branch.",
-          "misconception": "Potential difference is shared equally by branch number only."
+          "text": "0.15 A",
+          "misconception": ""
         },
         {
-          "text": "For parallel circuits, the answer claims that potential difference is larger after each component.",
-          "misconception": "Potential difference is zero in every branch."
+          "text": "0.30 A",
+          "misconception": ""
         },
         {
-          "text": "For parallel circuits, the statement is that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is larger after each component."
+          "text": "0.45 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
+      "senNote": "Checks: Calculate total current in a parallel circuit."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_current_direct_recall_006",
+      "id": "edexcel_electricity_parallel_resistance_decrease_005",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5775,8 +5708,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -5786,56 +5719,201 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_resistance_decrease_005_lo",
+        "statement": "Describe how adding a parallel resistor affects total resistance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_resistance_decrease_005",
+      "conceptFamily": "describe_how_adding_a_parallel_resistor_affects_total_resistance",
+      "contextType": "exam_style",
+      "skill": "Describe how adding a parallel resistor affects total resistance.",
+      "stem": "A second identical resistor is added in parallel with the first. What happens to the total resistance of the circuit?",
+      "question": "A second identical resistor is added in parallel with the first. What happens to the total resistance of the circuit?",
+      "options": [
+        "It decreases.",
+        "It doubles.",
+        "It stays the same.",
+        "It becomes infinite."
+      ],
+      "correctAnswer": "It decreases.",
+      "correctIndex": 0,
+      "explanation": "Adding a parallel branch gives charge another path, so the total resistance decreases.",
+      "misconceptionTag": "parallel-resistance-decrease",
+      "distractorRationales": [
+        {
+          "text": "It doubles.",
+          "misconception": "parallel resistors confused with series resistors"
+        },
+        {
+          "text": "It stays the same.",
+          "misconception": "extra branch ignored"
+        },
+        {
+          "text": "It becomes infinite.",
+          "misconception": "parallel path confused with broken circuit"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe how adding a parallel resistor affects total resistance."
+    },
+    {
+      "id": "edexcel_electricity_parallel_lamp_fault_006",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_lamp_fault_006_lo",
+        "statement": "Predict the effect of a broken branch in a parallel circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "predict",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_lamp_fault_006",
+      "conceptFamily": "predict_the_effect_of_a_broken_branch_in_a_parallel_circuit",
+      "contextType": "exam_style",
+      "skill": "Predict the effect of a broken branch in a parallel circuit.",
+      "stem": "Two lamps are connected in parallel. One lamp breaks. What happens to the other lamp?",
+      "question": "Two lamps are connected in parallel. One lamp breaks. What happens to the other lamp?",
+      "options": [
+        "It stays lit if its branch is still complete.",
+        "It must go out because all current used the broken lamp first.",
+        "It becomes twice as bright in every circuit.",
+        "It changes into a resistor with no current."
+      ],
+      "correctAnswer": "It stays lit if its branch is still complete.",
+      "correctIndex": 0,
+      "explanation": "In a parallel circuit, each branch has its own path. A break in one branch does not necessarily break the other branch.",
+      "misconceptionTag": "parallel-branch-fault",
+      "distractorRationales": [
+        {
+          "text": "It must go out because all current used the broken lamp first.",
+          "misconception": "series behaviour applied to parallel circuit"
+        },
+        {
+          "text": "It becomes twice as bright in every circuit.",
+          "misconception": "brightness overgeneralised"
+        },
+        {
+          "text": "It changes into a resistor with no current.",
+          "misconception": "component identity confused"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Predict the effect of a broken branch in a parallel circuit."
+    },
+    {
+      "id": "edexcel_electricity_parallel_series_compare_007",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_series_compare_007_lo",
+        "statement": "Compare the structure of series and parallel circuits.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.20:parallel_current:direct_recall",
-      "conceptFamily": "parallel_current",
-      "contextType": "a method-choice question",
-      "skill": "Describe current in parallel.",
-      "stem": "Which answer matches this parallel circuits objective: Describe current in parallel? Keep the answer focused on parallel circuits: describe current in parallel.",
-      "question": "Which answer matches this parallel circuits objective: Describe current in parallel? Keep the answer focused on parallel circuits: describe current in parallel.",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_series_compare_007",
+      "conceptFamily": "compare_the_structure_of_series_and_parallel_circuits",
+      "contextType": "exam_style",
+      "skill": "Compare the structure of series and parallel circuits.",
+      "stem": "Which statement correctly compares series and parallel circuits?",
+      "question": "Which statement correctly compares series and parallel circuits?",
       "options": [
-        "For parallel circuits, the option says that total current is the sum of the currents in the branches.",
-        "In this item, it means that total current is always smaller than each branch current.",
-        "In this item, it means that only one branch can carry current.",
-        "The claim for parallel circuits is that current cannot split in parallel."
+        "Series circuits have one path; parallel circuits have more than one path.",
+        "Series circuits always have a larger supply voltage.",
+        "Parallel circuits have no junctions.",
+        "Parallel circuits cannot contain lamps."
       ],
-      "correctAnswer": "For parallel circuits, the option says that total current is the sum of the currents in the branches.",
+      "correctAnswer": "Series circuits have one path; parallel circuits have more than one path.",
       "correctIndex": 0,
-      "explanation": "10.20 targets: Describe current in parallel. Focus area: Parallel Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "explanation": "A series circuit has a single loop. A parallel circuit has branches and junctions.",
+      "misconceptionTag": "series-parallel-structure",
       "distractorRationales": [
         {
-          "text": "In this item, it means that only one branch can carry current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "Series circuits always have a larger supply voltage.",
+          "misconception": "supply voltage confused with layout"
         },
         {
-          "text": "The claim for parallel circuits is that current cannot split in parallel.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "Parallel circuits have no junctions.",
+          "misconception": "parallel branch structure misunderstood"
         },
         {
-          "text": "In this item, it means that total current is always smaller than each branch current.",
-          "misconception": "Only one branch can carry current."
+          "text": "Parallel circuits cannot contain lamps.",
+          "misconception": "component type confused with circuit type"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Compare the structure of series and parallel circuits."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_resistance_applied_context_007",
+      "id": "edexcel_electricity_parallel_branch_resistance_008",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -5846,8 +5924,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -5857,340 +5935,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_resistance",
-        "statement": "Compare total resistance in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_branch_resistance_008_lo",
+        "statement": "Relate branch resistance to branch current in parallel.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_branch_resistance_008",
+      "conceptFamily": "relate_branch_resistance_to_branch_current_in_parallel",
+      "contextType": "exam_style",
+      "skill": "Relate branch resistance to branch current in parallel.",
+      "stem": "Two parallel branches are connected to the same battery. Branch X has a lower resistance than branch Y. Which branch has the larger current?",
+      "question": "Two parallel branches are connected to the same battery. Branch X has a lower resistance than branch Y. Which branch has the larger current?",
+      "options": [
+        "Branch X",
+        "Branch Y",
+        "Both branches must have zero current.",
+        "Both branches must have exactly the same current."
+      ],
+      "correctAnswer": "Branch X",
+      "correctIndex": 0,
+      "explanation": "The potential difference is the same across each branch. The branch with lower resistance has the larger current.",
+      "misconceptionTag": "parallel-branch-resistance-current",
+      "distractorRationales": [
+        {
+          "text": "Branch Y",
+          "misconception": "higher resistance incorrectly linked to larger current"
+        },
+        {
+          "text": "Both branches must have zero current.",
+          "misconception": "parallel circuit mistaken for open circuit"
+        },
+        {
+          "text": "Both branches must have exactly the same current.",
+          "misconception": "same potential difference confused with same current"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Relate branch resistance to branch current in parallel."
+    },
+    {
+      "id": "edexcel_electricity_parallel_meter_current_009",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_meter_current_009_lo",
+        "statement": "Choose where to connect an ammeter in a parallel branch.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.20:parallel_resistance:applied_context",
-      "conceptFamily": "parallel_resistance",
-      "contextType": "a results discussion",
-      "skill": "Compare total resistance in parallel.",
-      "stem": "In a results discussion, which conclusion is correct for parallel circuits? Use the wording carefully: this is about compare total resistance in parallel.",
-      "question": "In a results discussion, which conclusion is correct for parallel circuits? Use the wording carefully: this is about compare total resistance in parallel.",
-      "options": [
-        "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-        "For parallel circuits, it means that total resistance equals the largest branch resistance.",
-        "For parallel circuits, it means that adding a parallel branch lowers the total resistance because there are more paths for charge.",
-        "For parallel circuits, the statement is that parallel branches stop charge moving."
-      ],
-      "correctAnswer": "For parallel circuits, it means that adding a parallel branch lowers the total resistance because there are more paths for charge.",
-      "correctIndex": 2,
-      "explanation": "10.20 targets: Compare total resistance in parallel. Focus area: Parallel Circuits. For this question, Adding a parallel branch lowers the total resistance because there are more paths for charge. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_resistance",
-      "distractorRationales": [
-        {
-          "text": "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-          "misconception": "Adding a parallel branch always increases total resistance."
-        },
-        {
-          "text": "For parallel circuits, the statement is that parallel branches stop charge moving.",
-          "misconception": "Parallel branches stop charge moving."
-        },
-        {
-          "text": "For parallel circuits, it means that total resistance equals the largest branch resistance.",
-          "misconception": "Total resistance equals the largest branch resistance."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare total resistance in parallel."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_series_current_misconception_correction_008",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.20:series_current:misconception_correction",
-      "conceptFamily": "series_current",
-      "contextType": "a classroom demonstration",
-      "skill": "Describe current in a series circuit.",
-      "stem": "Which answer corrects a misconception about parallel circuits? Keep the answer focused on parallel circuits: describe current in a series circuit.",
-      "question": "Which answer corrects a misconception about parallel circuits? Keep the answer focused on parallel circuits: describe current in a series circuit.",
-      "options": [
-        "For parallel circuits, the statement is that current is the same at every point in a series circuit.",
-        "In this parallel circuits item, current is largest after the final component.",
-        "In this parallel circuits item, current splits between components in a single loop.",
-        "For parallel circuits, it means that current is used up by each component."
-      ],
-      "correctAnswer": "For parallel circuits, the statement is that current is the same at every point in a series circuit.",
-      "correctIndex": 0,
-      "explanation": "10.20 targets: Describe current in a series circuit. Focus area: Parallel Circuits. For this question, Current is the same at every point in a series circuit. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "In this parallel circuits item, current is largest after the final component.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "In this parallel circuits item, current splits between components in a single loop.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "For parallel circuits, it means that current is used up by each component.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_parallel_pd_exam_decision_009",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.20:parallel_pd:exam_decision",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a revision checkpoint",
-      "skill": "Describe potential difference in parallel.",
-      "stem": "The mark scheme is testing describe potential difference in parallel. Which answer matches that point? Check the clue before choosing: Describe potential difference in parallel.",
-      "question": "The mark scheme is testing describe potential difference in parallel. Which answer matches that point? Check the clue before choosing: Describe potential difference in parallel.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_meter_current_009",
+      "conceptFamily": "choose_where_to_connect_an_ammeter_in_a_parallel_branch",
+      "contextType": "exam_style",
+      "skill": "Choose where to connect an ammeter in a parallel branch.",
+      "stem": "Where should an ammeter be placed to measure the current in one branch of a parallel circuit?",
+      "question": "Where should an ammeter be placed to measure the current in one branch of a parallel circuit?",
       "options": [
-        "In this parallel circuits item, potential difference is zero in every branch.",
-        "In this parallel circuits item, potential difference across each parallel branch is the same as the supply.",
-        "For parallel circuits, the statement is that potential difference is shared equally by branch number only.",
-        "For parallel circuits, the answer claims that potential difference is larger after each component."
+        "In series with the component in that branch.",
+        "In parallel across the whole battery.",
+        "Across the switch only.",
+        "Between two points without completing a path."
       ],
-      "correctAnswer": "In this parallel circuits item, potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 1,
-      "explanation": "10.20 targets: Describe potential difference in parallel. Focus area: Parallel Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
-      "distractorRationales": [
-        {
-          "text": "For parallel circuits, the answer claims that potential difference is larger after each component.",
-          "misconception": "Potential difference is shared equally by branch number only."
-        },
-        {
-          "text": "For parallel circuits, the statement is that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is zero in every branch."
-        },
-        {
-          "text": "In this parallel circuits item, potential difference is zero in every branch.",
-          "misconception": "Potential difference is larger after each component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_parallel_current_representation_interpretation_010",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.20:parallel_current:representation_interpretation",
-      "conceptFamily": "parallel_current",
-      "contextType": "an exam-style data table",
-      "skill": "Describe current in parallel.",
-      "stem": "A representation of parallel circuits is described in words. Which interpretation is correct? Use the wording carefully: this is about describe current in parallel.",
-      "question": "A representation of parallel circuits is described in words. Which interpretation is correct? Use the wording carefully: this is about describe current in parallel.",
-      "options": [
-        "The answer for parallel circuits says that current cannot split in parallel.",
-        "For parallel circuits, the statement is that only one branch can carry current.",
-        "The answer for parallel circuits says that total current is always smaller than each branch current.",
-        "In this parallel circuits item, total current is the sum of the currents in the branches."
-      ],
-      "correctAnswer": "In this parallel circuits item, total current is the sum of the currents in the branches.",
-      "correctIndex": 3,
-      "explanation": "10.20 targets: Describe current in parallel. Focus area: Parallel Circuits. For this question, Total current is the sum of the currents in the branches. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
-      "distractorRationales": [
-        {
-          "text": "The answer for parallel circuits says that current cannot split in parallel.",
-          "misconception": "Current cannot split in parallel."
-        },
-        {
-          "text": "The answer for parallel circuits says that total current is always smaller than each branch current.",
-          "misconception": "Total current is always smaller than each branch current."
-        },
-        {
-          "text": "For parallel circuits, the statement is that only one branch can carry current.",
-          "misconception": "Only one branch can carry current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in parallel."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_parallel_resistance_concept_discrimination_011",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_resistance",
-        "statement": "Compare total resistance in parallel. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.20:parallel_resistance:concept_discrimination",
-      "conceptFamily": "parallel_resistance",
-      "contextType": "a required-practical notebook",
-      "skill": "Compare total resistance in parallel.",
-      "stem": "A student is comparing similar ideas in parallel circuits. Which statement is correct? Check the clue before choosing: Compare total resistance in parallel.",
-      "question": "A student is comparing similar ideas in parallel circuits. Which statement is correct? Check the clue before choosing: Compare total resistance in parallel.",
-      "options": [
-        "In this item, it means that adding a parallel branch lowers the total resistance because there are more paths for charge.",
-        "For parallel circuits, it means that parallel branches stop charge moving.",
-        "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-        "For parallel circuits, it means that total resistance equals the largest branch resistance."
-      ],
-      "correctAnswer": "In this item, it means that adding a parallel branch lowers the total resistance because there are more paths for charge.",
+      "correctAnswer": "In series with the component in that branch.",
       "correctIndex": 0,
-      "explanation": "10.20 targets: Compare total resistance in parallel. Focus area: Parallel Circuits. For this question, Adding a parallel branch lowers the total resistance because there are more paths for charge. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_resistance",
+      "explanation": "An ammeter measures the current through a branch, so it must be connected in series within that branch.",
+      "misconceptionTag": "parallel-ammeter-branch",
       "distractorRationales": [
         {
-          "text": "For parallel circuits, it means that parallel branches stop charge moving.",
-          "misconception": "Adding a parallel branch always increases total resistance."
+          "text": "In parallel across the whole battery.",
+          "misconception": "voltmeter connection confused with ammeter"
         },
         {
-          "text": "For parallel circuits, it means that total resistance equals the largest branch resistance.",
-          "misconception": "Parallel branches stop charge moving."
+          "text": "Across the switch only.",
+          "misconception": "switch measurement confused with branch current"
         },
         {
-          "text": "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-          "misconception": "Total resistance equals the largest branch resistance."
+          "text": "Between two points without completing a path.",
+          "misconception": "ammeter must be part of circuit path"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare total resistance in parallel."
+      "senNote": "Checks: Choose where to connect an ammeter in a parallel branch."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_series_current_applied_context_012",
+      "id": "edexcel_electricity_parallel_meter_pd_010",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6201,8 +6068,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -6212,198 +6079,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_meter_pd_010_lo",
+        "statement": "Choose where to connect a voltmeter in a parallel circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.20:series_current:applied_context",
-      "conceptFamily": "series_current",
-      "contextType": "a technician report",
-      "skill": "Describe current in a series circuit.",
-      "stem": "A question set in a technician report tests parallel circuits. Which answer applies the idea correctly? Use the wording carefully: this is about describe current in a series circuit.",
-      "question": "A question set in a technician report tests parallel circuits. Which answer applies the idea correctly? Use the wording carefully: this is about describe current in a series circuit.",
-      "options": [
-        "For parallel circuits, the option says that current is used up by each component.",
-        "For parallel circuits, this would mean that current is largest after the final component.",
-        "The claim for parallel circuits is that current is the same at every point in a series circuit.",
-        "For parallel circuits, this would mean that current splits between components in a single loop."
-      ],
-      "correctAnswer": "The claim for parallel circuits is that current is the same at every point in a series circuit.",
-      "correctIndex": 2,
-      "explanation": "10.20 targets: Describe current in a series circuit. Focus area: Parallel Circuits. For this question, Current is the same at every point in a series circuit. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
-      "distractorRationales": [
-        {
-          "text": "For parallel circuits, this would mean that current splits between components in a single loop.",
-          "misconception": "Current is used up by each component."
-        },
-        {
-          "text": "For parallel circuits, the option says that current is used up by each component.",
-          "misconception": "Current is largest after the final component."
-        },
-        {
-          "text": "For parallel circuits, this would mean that current is largest after the final component.",
-          "misconception": "Current splits between components in a single loop."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_parallel_pd_data_interpretation_013",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.20:parallel_pd:data_interpretation",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a labelled diagram",
-      "skill": "Describe potential difference in parallel.",
-      "stem": "A small data set about parallel circuits is being interpreted. Which conclusion is valid? Demand focus: describe potential difference in parallel.",
-      "question": "A small data set about parallel circuits is being interpreted. Which conclusion is valid? Demand focus: describe potential difference in parallel.",
-      "options": [
-        "For parallel circuits: Potential difference across each parallel branch is the same as the supply.",
-        "The claim for parallel circuits is that potential difference is shared equally by branch number only.",
-        "The claim for parallel circuits is that potential difference is zero in every branch.",
-        "For parallel circuits, this would mean that potential difference is larger after each component."
-      ],
-      "correctAnswer": "For parallel circuits: Potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 0,
-      "explanation": "10.20 targets: Describe potential difference in parallel. Focus area: Parallel Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
-      "distractorRationales": [
-        {
-          "text": "The claim for parallel circuits is that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is shared equally by branch number only."
-        },
-        {
-          "text": "The claim for parallel circuits is that potential difference is zero in every branch.",
-          "misconception": "Potential difference is zero in every branch."
-        },
-        {
-          "text": "For parallel circuits, this would mean that potential difference is larger after each component.",
-          "misconception": "Potential difference is larger after each component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_parallel_current_exam_decision_014",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.20:parallel_current:exam_decision",
-      "conceptFamily": "parallel_current",
-      "contextType": "a short calculation",
-      "skill": "Describe current in parallel.",
-      "stem": "Which answer is the strongest GCSE Physics response for parallel circuits? Check the clue before choosing: Describe current in parallel.",
-      "question": "Which answer is the strongest GCSE Physics response for parallel circuits? Check the clue before choosing: Describe current in parallel.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_meter_pd_010",
+      "conceptFamily": "choose_where_to_connect_a_voltmeter_in_a_parallel_circuit",
+      "contextType": "exam_style",
+      "skill": "Choose where to connect a voltmeter in a parallel circuit.",
+      "stem": "How should a voltmeter be connected to measure the potential difference across one branch?",
+      "question": "How should a voltmeter be connected to measure the potential difference across one branch?",
       "options": [
-        "The answer for parallel circuits says that total current is the sum of the currents in the branches.",
-        "In this parallel circuits item, total current is always smaller than each branch current.",
-        "In this parallel circuits item, only one branch can carry current.",
-        "In this parallel circuits item, current cannot split in parallel."
+        "In parallel with that branch.",
+        "In series before the junction.",
+        "Only on the live side of the battery.",
+        "In place of the component."
       ],
-      "correctAnswer": "The answer for parallel circuits says that total current is the sum of the currents in the branches.",
+      "correctAnswer": "In parallel with that branch.",
       "correctIndex": 0,
-      "explanation": "10.20 targets: Describe current in parallel. Focus area: Parallel Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "explanation": "A voltmeter compares two points, so it is connected in parallel across the branch or component.",
+      "misconceptionTag": "parallel-voltmeter-branch",
       "distractorRationales": [
         {
-          "text": "In this parallel circuits item, total current is always smaller than each branch current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "In series before the junction.",
+          "misconception": "ammeter style connection confused with voltmeter"
         },
         {
-          "text": "In this parallel circuits item, only one branch can carry current.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "Only on the live side of the battery.",
+          "misconception": "one-point measurement misconception"
         },
         {
-          "text": "In this parallel circuits item, current cannot split in parallel.",
-          "misconception": "Only one branch can carry current."
+          "text": "In place of the component.",
+          "misconception": "meter replacing component rather than measuring across it"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Choose where to connect a voltmeter in a parallel circuit."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_resistance_direct_recall_015",
+      "id": "edexcel_electricity_parallel_practical_setup_011",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6414,8 +6140,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -6425,127 +6151,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_resistance",
-        "statement": "Compare total resistance in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_practical_setup_011_lo",
+        "statement": "Identify evidence for equal potential difference across parallel branches.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.20:parallel_resistance:direct_recall",
-      "conceptFamily": "parallel_resistance",
-      "contextType": "a safety decision",
-      "skill": "Compare total resistance in parallel.",
-      "stem": "Which answer matches this parallel circuits objective: Compare total resistance in parallel? Demand focus: compare total resistance in parallel.",
-      "question": "Which answer matches this parallel circuits objective: Compare total resistance in parallel? Demand focus: compare total resistance in parallel.",
-      "options": [
-        "The answer for parallel circuits says that total resistance equals the largest branch resistance.",
-        "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-        "For parallel circuits, the statement is that adding a parallel branch lowers the total resistance because there are more paths for charge.",
-        "For parallel circuits, the statement is that parallel branches stop charge moving."
-      ],
-      "correctAnswer": "For parallel circuits, the statement is that adding a parallel branch lowers the total resistance because there are more paths for charge.",
-      "correctIndex": 2,
-      "explanation": "10.20 targets: Compare total resistance in parallel. Focus area: Parallel Circuits. For this question, Adding a parallel branch lowers the total resistance because there are more paths for charge. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_resistance",
-      "distractorRationales": [
-        {
-          "text": "The answer for parallel circuits says that total resistance equals the largest branch resistance.",
-          "misconception": "Adding a parallel branch always increases total resistance."
-        },
-        {
-          "text": "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-          "misconception": "Parallel branches stop charge moving."
-        },
-        {
-          "text": "For parallel circuits, the statement is that parallel branches stop charge moving.",
-          "misconception": "Total resistance equals the largest branch resistance."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare total resistance in parallel."
-    },
-    {
-      "id": "edexcel_10_20_parallel_circuits_series_current_concept_discrimination_016",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Parallel Circuits",
-      "topicSlug": "electricity",
-      "subtopicSlug": "parallel_circuits",
-      "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_series_current",
-        "statement": "Describe current in a series circuit. (Parallel Circuits)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO3",
       "demand": "standard",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.20:series_current:concept_discrimination",
-      "conceptFamily": "series_current",
-      "contextType": "a graph-reading task",
-      "skill": "Describe current in a series circuit.",
-      "stem": "Which option best separates the correct parallel circuits idea from a common mix-up? Check the clue before choosing: Describe current in a series circuit.",
-      "question": "Which option best separates the correct parallel circuits idea from a common mix-up? Check the clue before choosing: Describe current in a series circuit.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_practical_setup_011",
+      "conceptFamily": "identify_evidence_for_equal_potential_difference_across_parallel_branches",
+      "contextType": "exam_style",
+      "skill": "Identify evidence for equal potential difference across parallel branches.",
+      "stem": "In a practical, a student tests two resistors in parallel. Which measurement would show that the branches have the same potential difference?",
+      "question": "In a practical, a student tests two resistors in parallel. Which measurement would show that the branches have the same potential difference?",
       "options": [
-        "For parallel circuits, the statement is that current is largest after the final component.",
-        "For parallel circuits, the statement is that current splits between components in a single loop.",
-        "For parallel circuits, the answer claims that current is the same at every point in a series circuit.",
-        "For parallel circuits, the statement is that current is used up by each component."
+        "A voltmeter reading across each branch.",
+        "An ammeter reading before the first branch only.",
+        "A thermometer reading on each resistor.",
+        "A ruler measurement of the wire length."
       ],
-      "correctAnswer": "For parallel circuits, the answer claims that current is the same at every point in a series circuit.",
-      "correctIndex": 2,
-      "explanation": "10.20 targets: Describe current in a series circuit. Focus area: Parallel Circuits. For this question, Current is the same at every point in a series circuit. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:series_current",
+      "correctAnswer": "A voltmeter reading across each branch.",
+      "correctIndex": 0,
+      "explanation": "Potential difference is measured with a voltmeter connected across the two points being compared.",
+      "misconceptionTag": "parallel-practical-pd",
       "distractorRationales": [
         {
-          "text": "For parallel circuits, the statement is that current is used up by each component.",
-          "misconception": "Current is used up by each component."
+          "text": "An ammeter reading before the first branch only.",
+          "misconception": "current reading confused with potential difference"
         },
         {
-          "text": "For parallel circuits, the statement is that current is largest after the final component.",
-          "misconception": "Current is largest after the final component."
+          "text": "A thermometer reading on each resistor.",
+          "misconception": "temperature not p.d."
         },
         {
-          "text": "For parallel circuits, the statement is that current splits between components in a single loop.",
-          "misconception": "Current splits between components in a single loop."
+          "text": "A ruler measurement of the wire length.",
+          "misconception": "wire length not direct p.d. measurement"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in a series circuit."
+      "senNote": "Checks: Identify evidence for equal potential difference across parallel branches."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_pd_misconception_correction_017",
+      "id": "edexcel_electricity_parallel_current_conservation_012",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6556,8 +6212,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -6567,56 +6223,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_pd",
-        "statement": "Describe potential difference in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_current_conservation_012_lo",
+        "statement": "Apply current conservation to a three-branch parallel circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.20:parallel_pd:misconception_correction",
-      "conceptFamily": "parallel_pd",
-      "contextType": "a comparison question",
-      "skill": "Describe potential difference in parallel.",
-      "stem": "Which answer corrects a misconception about parallel circuits? Choose the statement that fits this exact GCSE Physics idea: describe potential difference in parallel.",
-      "question": "Which answer corrects a misconception about parallel circuits? Choose the statement that fits this exact GCSE Physics idea: describe potential difference in parallel.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_parallel_current_conservation_012",
+      "conceptFamily": "apply_current_conservation_to_a_three_branch_parallel_circuit",
+      "contextType": "exam_style",
+      "skill": "Apply current conservation to a three-branch parallel circuit.",
+      "stem": "A current of 1.2 A leaves a cell and splits into three branches. Two branch currents are 0.50 A and 0.30 A. What is the third branch current?",
+      "question": "A current of 1.2 A leaves a cell and splits into three branches. Two branch currents are 0.50 A and 0.30 A. What is the third branch current?",
       "options": [
-        "The answer for parallel circuits says that potential difference is shared equally by branch number only.",
-        "For parallel circuits, it means that potential difference is larger after each component.",
-        "The answer for parallel circuits says that potential difference is zero in every branch.",
-        "For parallel circuits, the statement is that potential difference across each parallel branch is the same as the supply."
+        "0.40 A",
+        "0.80 A",
+        "1.0 A",
+        "2.0 A"
       ],
-      "correctAnswer": "For parallel circuits, the statement is that potential difference across each parallel branch is the same as the supply.",
-      "correctIndex": 3,
-      "explanation": "10.20 targets: Describe potential difference in parallel. Focus area: Parallel Circuits. For this question, Potential difference across each parallel branch is the same as the supply. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_pd",
+      "correctAnswer": "0.40 A",
+      "correctIndex": 0,
+      "explanation": "The branch currents must add to 1.2 A. The missing current is 1.2 - 0.50 - 0.30 = 0.40 A.",
+      "misconceptionTag": "three-branch-current",
       "distractorRationales": [
         {
-          "text": "The answer for parallel circuits says that potential difference is zero in every branch.",
-          "misconception": "Potential difference is shared equally by branch number only."
+          "text": "0.80 A",
+          "misconception": ""
         },
         {
-          "text": "For parallel circuits, it means that potential difference is larger after each component.",
-          "misconception": "Potential difference is zero in every branch."
+          "text": "1.0 A",
+          "misconception": ""
         },
         {
-          "text": "The answer for parallel circuits says that potential difference is shared equally by branch number only.",
-          "misconception": "Potential difference is larger after each component."
+          "text": "2.0 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe potential difference in parallel."
+      "senNote": "Checks: Apply current conservation to a three-branch parallel circuit."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_current_data_interpretation_018",
+      "id": "edexcel_electricity_parallel_more_branches_013",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6627,8 +6284,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -6638,56 +6295,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_current",
-        "statement": "Describe current in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_more_branches_013_lo",
+        "statement": "Predict total current when another parallel branch is added.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.20:parallel_current:data_interpretation",
-      "conceptFamily": "parallel_current",
-      "contextType": "a method-choice question",
-      "skill": "Describe current in parallel.",
-      "stem": "Which conclusion about parallel circuits is supported by the evidence? Demand focus: describe current in parallel.",
-      "question": "Which conclusion about parallel circuits is supported by the evidence? Demand focus: describe current in parallel.",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "predict",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_more_branches_013",
+      "conceptFamily": "predict_total_current_when_another_parallel_branch_is_added",
+      "contextType": "exam_style",
+      "skill": "Predict total current when another parallel branch is added.",
+      "stem": "A third lamp is added in parallel to two lamps already connected to a battery. What happens to the total current from the battery?",
+      "question": "A third lamp is added in parallel to two lamps already connected to a battery. What happens to the total current from the battery?",
       "options": [
-        "In this item, it means that total current is always smaller than each branch current.",
-        "The claim for parallel circuits is that current cannot split in parallel.",
-        "In this item, it means that total current is the sum of the currents in the branches.",
-        "In this item, it means that only one branch can carry current."
+        "It increases.",
+        "It decreases to zero.",
+        "It must stay the same.",
+        "It becomes the same as the current in one branch."
       ],
-      "correctAnswer": "In this item, it means that total current is the sum of the currents in the branches.",
-      "correctIndex": 2,
-      "explanation": "10.20 targets: Describe current in parallel. Focus area: Parallel Circuits. For this question, Total current is the sum of the currents in the branches. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_current",
+      "correctAnswer": "It increases.",
+      "correctIndex": 0,
+      "explanation": "Adding another parallel branch decreases total resistance, so the total current from the battery increases.",
+      "misconceptionTag": "parallel-more-branches-current",
       "distractorRationales": [
         {
-          "text": "In this item, it means that only one branch can carry current.",
-          "misconception": "Current cannot split in parallel."
+          "text": "It decreases to zero.",
+          "misconception": "extra branch confused with broken circuit"
         },
         {
-          "text": "The claim for parallel circuits is that current cannot split in parallel.",
-          "misconception": "Total current is always smaller than each branch current."
+          "text": "It must stay the same.",
+          "misconception": "additional branch ignored"
         },
         {
-          "text": "In this item, it means that total current is always smaller than each branch current.",
-          "misconception": "Only one branch can carry current."
+          "text": "It becomes the same as the current in one branch.",
+          "misconception": "total and branch current confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe current in parallel."
+      "senNote": "Checks: Predict total current when another parallel branch is added."
     },
     {
-      "id": "edexcel_10_20_parallel_circuits_parallel_resistance_representation_interpretation_019",
+      "id": "edexcel_electricity_parallel_resistance_compare_014",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -6698,8 +6356,8 @@
       "topicSlug": "electricity",
       "subtopicSlug": "parallel_circuits",
       "topicId": "series_parallel",
-      "specRef": "10.20",
-      "specStatement": "Describe current and potential difference in series and parallel circuits.",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
       "paper": "Paper 2",
       "courseAvailability": [
         "combined",
@@ -6709,53 +6367,414 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_20_parallel_circuits_parallel_resistance",
-        "statement": "Compare total resistance in parallel. (Parallel Circuits)",
+        "id": "edexcel_electricity_parallel_resistance_compare_014_lo",
+        "statement": "Compare total parallel resistance with individual branch resistance.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.20:parallel_resistance:representation_interpretation",
-      "conceptFamily": "parallel_resistance",
-      "contextType": "a results discussion",
-      "skill": "Compare total resistance in parallel.",
-      "stem": "A representation of parallel circuits is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: compare total resistance in parallel.",
-      "question": "A representation of parallel circuits is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: compare total resistance in parallel.",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_resistance_compare_014",
+      "conceptFamily": "compare_total_parallel_resistance_with_individual_branch_resistance",
+      "contextType": "exam_style",
+      "skill": "Compare total parallel resistance with individual branch resistance.",
+      "stem": "Two 10 ohm resistors are connected in parallel. How does their total resistance compare with 10 ohms?",
+      "question": "Two 10 ohm resistors are connected in parallel. How does their total resistance compare with 10 ohms?",
       "options": [
-        "For parallel circuits, it means that parallel branches stop charge moving.",
-        "For parallel circuits: Adding a parallel branch lowers the total resistance because there are more paths for charge.",
-        "For parallel circuits, it means that total resistance equals the largest branch resistance.",
-        "For parallel circuits, it means that adding a parallel branch always increases total resistance."
+        "It is less than 10 ohms.",
+        "It is exactly 10 ohms.",
+        "It is 20 ohms.",
+        "It is impossible for current to flow."
       ],
-      "correctAnswer": "For parallel circuits: Adding a parallel branch lowers the total resistance because there are more paths for charge.",
-      "correctIndex": 1,
-      "explanation": "10.20 targets: Compare total resistance in parallel. Focus area: Parallel Circuits. For this question, Adding a parallel branch lowers the total resistance because there are more paths for charge. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parallel_resistance",
+      "correctAnswer": "It is less than 10 ohms.",
+      "correctIndex": 0,
+      "explanation": "The total resistance of parallel resistors is less than the resistance of the smallest individual branch.",
+      "misconceptionTag": "parallel-total-resistance-less",
       "distractorRationales": [
         {
-          "text": "For parallel circuits, it means that adding a parallel branch always increases total resistance.",
-          "misconception": "Adding a parallel branch always increases total resistance."
+          "text": "It is exactly 10 ohms.",
+          "misconception": "one branch ignored"
         },
         {
-          "text": "For parallel circuits, it means that parallel branches stop charge moving.",
-          "misconception": "Parallel branches stop charge moving."
+          "text": "It is 20 ohms.",
+          "misconception": "parallel confused with series"
         },
         {
-          "text": "For parallel circuits, it means that total resistance equals the largest branch resistance.",
-          "misconception": "Total resistance equals the largest branch resistance."
+          "text": "It is impossible for current to flow.",
+          "misconception": "parallel circuit mistaken for open circuit"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.20; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare total resistance in parallel."
+      "senNote": "Checks: Compare total parallel resistance with individual branch resistance."
+    },
+    {
+      "id": "edexcel_electricity_parallel_branch_open_015",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_branch_open_015_lo",
+        "statement": "Predict the current in an open parallel branch.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "predict",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_branch_open_015",
+      "conceptFamily": "predict_the_current_in_an_open_parallel_branch",
+      "contextType": "exam_style",
+      "skill": "Predict the current in an open parallel branch.",
+      "stem": "A switch opens one branch of a parallel circuit. What happens to the current in that open branch?",
+      "question": "A switch opens one branch of a parallel circuit. What happens to the current in that open branch?",
+      "options": [
+        "It becomes zero.",
+        "It becomes larger than the total current.",
+        "It is shared equally with every other branch.",
+        "It changes into potential difference."
+      ],
+      "correctAnswer": "It becomes zero.",
+      "correctIndex": 0,
+      "explanation": "An open switch breaks that branch, so charge cannot flow through it.",
+      "misconceptionTag": "open-branch-current-zero",
+      "distractorRationales": [
+        {
+          "text": "It becomes larger than the total current.",
+          "misconception": "open branch current misconception"
+        },
+        {
+          "text": "It is shared equally with every other branch.",
+          "misconception": "branch-specific switch ignored"
+        },
+        {
+          "text": "It changes into potential difference.",
+          "misconception": "quantity confusion"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Predict the current in an open parallel branch."
+    },
+    {
+      "id": "edexcel_electricity_parallel_equal_lamps_016",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_equal_lamps_016_lo",
+        "statement": "Describe potential difference across identical parallel lamps.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_equal_lamps_016",
+      "conceptFamily": "describe_potential_difference_across_identical_parallel_lamps",
+      "contextType": "exam_style",
+      "skill": "Describe potential difference across identical parallel lamps.",
+      "stem": "Two identical lamps are connected in parallel to the same cell. Which statement is correct?",
+      "question": "Two identical lamps are connected in parallel to the same cell. Which statement is correct?",
+      "options": [
+        "The lamps have the same potential difference across them.",
+        "The first lamp gets all the potential difference.",
+        "The second lamp only works if the first lamp is removed.",
+        "The lamps must have zero current because there are two paths."
+      ],
+      "correctAnswer": "The lamps have the same potential difference across them.",
+      "correctIndex": 0,
+      "explanation": "Parallel branches are connected across the same supply, so identical lamps have the same potential difference across them.",
+      "misconceptionTag": "parallel-identical-lamps-pd",
+      "distractorRationales": [
+        {
+          "text": "The first lamp gets all the potential difference.",
+          "misconception": "series sharing applied to parallel"
+        },
+        {
+          "text": "The second lamp only works if the first lamp is removed.",
+          "misconception": "parallel independence misunderstood"
+        },
+        {
+          "text": "The lamps must have zero current because there are two paths.",
+          "misconception": "branching misunderstood"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe potential difference across identical parallel lamps."
+    },
+    {
+      "id": "edexcel_electricity_parallel_series_pd_compare_017",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_series_pd_compare_017_lo",
+        "statement": "Choose a circuit arrangement that gives full supply p.d. to each component.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_series_pd_compare_017",
+      "conceptFamily": "choose_a_circuit_arrangement_that_gives_full_supply_p_d_to_each_component",
+      "contextType": "exam_style",
+      "skill": "Choose a circuit arrangement that gives full supply p.d. to each component.",
+      "stem": "A 12 V supply is connected to two identical lamps. Which arrangement gives each lamp 12 V across it?",
+      "question": "A 12 V supply is connected to two identical lamps. Which arrangement gives each lamp 12 V across it?",
+      "options": [
+        "The lamps connected in parallel.",
+        "The lamps connected in series.",
+        "The lamps connected with no cell.",
+        "The lamps connected only to an ammeter."
+      ],
+      "correctAnswer": "The lamps connected in parallel.",
+      "correctIndex": 0,
+      "explanation": "In parallel, each lamp is connected across the same two supply terminals, so each gets the full 12 V.",
+      "misconceptionTag": "parallel-full-supply-pd",
+      "distractorRationales": [
+        {
+          "text": "The lamps connected in series.",
+          "misconception": "series sharing confused with full branch voltage"
+        },
+        {
+          "text": "The lamps connected with no cell.",
+          "misconception": "source omitted"
+        },
+        {
+          "text": "The lamps connected only to an ammeter.",
+          "misconception": "meter confused with power supply"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose a circuit arrangement that gives full supply p.d. to each component."
+    },
+    {
+      "id": "edexcel_electricity_parallel_house_lighting_018",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_house_lighting_018_lo",
+        "statement": "Apply parallel circuit ideas to domestic lighting.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_parallel_house_lighting_018",
+      "conceptFamily": "apply_parallel_circuit_ideas_to_domestic_lighting",
+      "contextType": "exam_style",
+      "skill": "Apply parallel circuit ideas to domestic lighting.",
+      "stem": "Why are lamps in a house normally connected in parallel rather than all in series?",
+      "question": "Why are lamps in a house normally connected in parallel rather than all in series?",
+      "options": [
+        "Each lamp can receive the mains potential difference and work independently.",
+        "A series circuit gives every lamp the full mains potential difference.",
+        "Parallel circuits stop all current from flowing.",
+        "A broken lamp in parallel always switches off every other lamp."
+      ],
+      "correctAnswer": "Each lamp can receive the mains potential difference and work independently.",
+      "correctIndex": 0,
+      "explanation": "In parallel, each lamp has the supply potential difference and one branch can be switched without breaking every other branch.",
+      "misconceptionTag": "parallel-domestic-lighting",
+      "distractorRationales": [
+        {
+          "text": "A series circuit gives every lamp the full mains potential difference.",
+          "misconception": "series voltage sharing misunderstood"
+        },
+        {
+          "text": "Parallel circuits stop all current from flowing.",
+          "misconception": "parallel path misunderstood"
+        },
+        {
+          "text": "A broken lamp in parallel always switches off every other lamp.",
+          "misconception": "parallel independence reversed"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Apply parallel circuit ideas to domestic lighting."
+    },
+    {
+      "id": "edexcel_electricity_parallel_fault_diagnosis_019",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Parallel Circuits",
+      "topicSlug": "electricity",
+      "subtopicSlug": "parallel_circuits",
+      "topicId": "series_parallel",
+      "specRef": "10.3/10.11/10.14/10.17",
+      "specStatement": "Describe series and parallel circuits, junction current, resistance changes, and the core practical using series and parallel circuits.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_parallel_fault_diagnosis_019_lo",
+        "statement": "Evaluate parallel circuit readings using current conservation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "evaluate",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:edexcel_electricity_parallel_fault_diagnosis_019",
+      "conceptFamily": "evaluate_parallel_circuit_readings_using_current_conservation",
+      "contextType": "exam_style",
+      "skill": "Evaluate parallel circuit readings using current conservation.",
+      "stem": "In a parallel circuit, ammeter A before the junction reads 0.90 A. Branch ammeters read 0.30 A and 0.60 A. What does this show?",
+      "question": "In a parallel circuit, ammeter A before the junction reads 0.90 A. Branch ammeters read 0.30 A and 0.60 A. What does this show?",
+      "options": [
+        "The readings are consistent because branch currents add to the total current.",
+        "The readings are impossible because every branch must have 0.90 A.",
+        "The circuit must be series because there are three ammeters.",
+        "The battery has no potential difference."
+      ],
+      "correctAnswer": "The readings are consistent because branch currents add to the total current.",
+      "correctIndex": 0,
+      "explanation": "The two branch currents add to 0.90 A, matching the total current before the junction.",
+      "misconceptionTag": "parallel-current-reading-consistency",
+      "distractorRationales": [
+        {
+          "text": "The readings are impossible because every branch must have 0.90 A.",
+          "misconception": "total current confused with branch current"
+        },
+        {
+          "text": "The circuit must be series because there are three ammeters.",
+          "misconception": "equipment count confused with circuit layout"
+        },
+        {
+          "text": "The battery has no potential difference.",
+          "misconception": "current readings ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.3/10.11/10.14/10.17.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Evaluate parallel circuit readings using current conservation."
     }
   ]
 }

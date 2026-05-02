@@ -8,6 +8,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
 const dataRoot = path.join(root, 'public', 'data', 'questions')
 const manifestPath = path.join(dataRoot, 'manifest.json')
+const reportOnly = process.argv.includes('--report-only')
+const qualityRules = {
+  duplicateIds: 0,
+  duplicateExactStems: 0,
+  nearDuplicateStems: 0,
+  correctAnswerMismatches: 0,
+  missingFromAll: 0,
+  changedVsAll: 0,
+}
 const strictSchemaKeys = [
   'id',
   'examBoard',
@@ -154,6 +163,14 @@ function summarizeQuestions(label, questions) {
   for (const [subtopic, count] of countBy(questions, (question) => question.subtopic).slice(0, 12)) {
     console.log(`  - ${subtopic}: ${count}`)
   }
+
+  return {
+    duplicateIds: duplicateIds.length,
+    duplicateExactStems: duplicateStems.length,
+    nearDuplicateStems: nearDuplicateStems.length,
+    repeatedOptions: repeatedOptions.length,
+    correctAnswerMismatches: schema.answerMismatches.length,
+  }
 }
 
 function compareAllWithTopicFiles(manifest, boardId, allQuestions) {
@@ -188,10 +205,29 @@ function compareAllWithTopicFiles(manifest, boardId, allQuestions) {
   console.log(`  topic-file question references: ${topicOnlyCount}`)
   console.log(`  missing from all.json: ${missingInAll}`)
   console.log(`  changed vs all.json: ${changedInAll}`)
+
+  return {
+    missingFromAll: missingInAll,
+    changedVsAll: changedInAll,
+  }
+}
+
+function collectFailures(boardId, summary, topicFileSummary) {
+  const failures = []
+  const metrics = { ...summary, ...topicFileSummary }
+
+  for (const [metric, maxAllowed] of Object.entries(qualityRules)) {
+    if ((metrics[metric] || 0) > maxAllowed) {
+      failures.push(`${boardId}: ${metric}=${metrics[metric]} > ${maxAllowed}`)
+    }
+  }
+
+  return failures
 }
 
 function main() {
   const manifest = readJson(manifestPath)
+  const failures = []
   console.log(`# Question repetition audit`)
   console.log(`manifest generatedAt: ${manifest.generatedAt || 'unknown'}`)
   console.log(`manifest total: ${manifest.counts?.total ?? 'unknown'}`)
@@ -200,10 +236,24 @@ function main() {
     const board = manifest.boards[boardId]
     const allPayload = readJson(resolveDataPath(board.all))
     const allQuestions = allPayload.questions || []
-    summarizeQuestions(`${boardId}/all.json`, allQuestions)
+    const questionSummary = summarizeQuestions(`${boardId}/all.json`, allQuestions)
     console.log(`\n## ${boardId}/all.json vs topic files`)
-    compareAllWithTopicFiles(manifest, boardId, allQuestions)
+    const topicFileSummary = compareAllWithTopicFiles(manifest, boardId, allQuestions)
+    failures.push(...collectFailures(boardId, questionSummary, topicFileSummary))
   }
+
+  if (failures.length) {
+    console.error(`\n## Quality gate failed`)
+    for (const failure of failures) {
+      console.error(`  - ${failure}`)
+    }
+    if (!reportOnly) {
+      process.exitCode = 1
+    }
+    return
+  }
+
+  console.log(`\n## Quality gate passed`)
 }
 
 main()

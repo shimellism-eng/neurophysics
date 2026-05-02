@@ -5,6 +5,30 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Forces stopping-distance cluster authored
+- Fixed AQA `Stopping Distance`: 5/5 authored and passed.
+- Fixed AQA `Reaction Time`: 5/5 authored and passed.
+- Fixed AQA `Forces and Braking`: 5/5 authored and passed.
+- Official anchors:
+  - AQA Physics 8463 `4.5.6.3` and `4.5.6.3.2`.
+  - AQA Combined Science 8464 Physics `6.5.4.3` and `6.5.4.3.2`.
+- Replaced visible scaffold phrases with exam-style questions about:
+  - stopping distance = thinking distance + braking distance,
+  - speed, wet roads, tyres, and braking distance,
+  - reaction-time practicals and driver distraction,
+  - braking energy transfer, deceleration, work done, heating, and crash forces.
+- Runtime quality checks:
+  - `Stopping Distance`: 5 generated, 5 authored, 0 scaffold leaks.
+  - `Reaction Time`: 5 generated, 5 authored, 0 scaffold leaks.
+  - `Forces and Braking`: 5 generated, 5 authored, 0 scaffold leaks.
+- Verification:
+  - `npm run audit:questions` passes.
+  - `node scripts/smoke-adaptive-course-filter.mjs` passes.
+  - `npm run build` passes.
+
+### Next step
+- Continue AQA Forces with `Momentum` and `Conservation of Momentum` for Physics Only filtering, then move to remaining AQA Forces calculations/graphs.
+
 ### Adaptive Practice AQA Forces weight/terminal velocity authored
 - Fixed AQA `Weight, Mass and Gravity`: 5/5 authored and passed.
 - Fixed AQA `Terminal Velocity`: 5/5 authored and passed.

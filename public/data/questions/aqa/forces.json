@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "forces",
-  "generatedAt": "2026-05-02T11:24:04.221Z",
+  "generatedAt": "2026-05-02T11:32:33.663Z",
   "questions": [
     {
       "id": "aqa_forces_hookes_law_relationship_001",
@@ -10721,7 +10721,7 @@
       "senNote": "Checks: Interpret gravitational field strength from a weight-mass graph."
     },
     {
-      "id": "aqa_4_5_6_3_stopping_distance_stopping_total_direct_recall_001",
+      "id": "aqa_forces_stopping_distance_total_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10733,6 +10733,7 @@
       "subtopicSlug": "stopping_distance",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -10743,56 +10744,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_stopping_distance_stopping_total",
-        "statement": "Define stopping distance. (Stopping Distance)",
+        "id": "aqa_forces_stopping_distance_total_001_lo",
+        "statement": "Calculate stopping distance from thinking distance and braking distance.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.3:stopping_total:direct_recall",
-      "conceptFamily": "stopping_total",
-      "contextType": "a safety decision",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_stopping_distance_total_001",
+      "conceptFamily": "calculate_stopping_distance_from_thinking_distance_and_braking_distance",
+      "contextType": "exam_style",
       "skill": "Stopping Distance practice",
-      "stem": "Which statement is correct for stopping distance? Keep the answer focused on stopping distance: define stopping distance.",
-      "question": "Which statement is correct for stopping distance? Keep the answer focused on stopping distance: define stopping distance.",
+      "stem": "A car has a thinking distance of 12 m and a braking distance of 28 m. What is the stopping distance?",
+      "question": "A car has a thinking distance of 12 m and a braking distance of 28 m. What is the stopping distance?",
       "options": [
-        "In this item, it means that stopping distance is thinking distance minus braking distance.",
-        "In this item, it means that stopping distance is braking distance only.",
-        "In this item, it means that stopping distance is measured in seconds.",
-        "The claim for stopping distance is that stopping distance = thinking distance + braking distance."
+        "40 m",
+        "16 m",
+        "28 m",
+        "336 m"
       ],
-      "correctAnswer": "The claim for stopping distance is that stopping distance = thinking distance + braking distance.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.3 targets: Define stopping distance. Focus area: Stopping Distance. For this question, Stopping distance = thinking distance + braking distance. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:stopping_total",
+      "correctAnswer": "40 m",
+      "correctIndex": 0,
+      "explanation": "Stopping distance is the thinking distance plus the braking distance: \\(12 + 28 = 40\\,m\\).",
+      "misconceptionTag": "stopping-distance-sum",
       "distractorRationales": [
         {
-          "text": "In this item, it means that stopping distance is braking distance only.",
-          "misconception": "Stopping distance is braking distance only."
+          "text": "16 m",
+          "misconception": "braking distance minus thinking distance"
         },
         {
-          "text": "In this item, it means that stopping distance is thinking distance minus braking distance.",
-          "misconception": "Stopping distance is thinking distance minus braking distance."
+          "text": "28 m",
+          "misconception": "thinking distance ignored"
         },
         {
-          "text": "In this item, it means that stopping distance is measured in seconds.",
-          "misconception": "Stopping distance is measured in seconds."
+          "text": "336 m",
+          "misconception": "distances multiplied"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Define stopping distance."
+      "senNote": "Checks: Calculate stopping distance from thinking distance and braking distance."
     },
     {
-      "id": "aqa_4_5_6_3_stopping_distance_thinking_distance_concept_discrimination_002",
+      "id": "aqa_forces_stopping_distance_speed_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10804,6 +10806,7 @@
       "subtopicSlug": "stopping_distance",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -10814,56 +10817,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_stopping_distance_thinking_distance",
-        "statement": "Identify factors affecting thinking distance. (Stopping Distance)",
+        "id": "aqa_forces_stopping_distance_speed_002_lo",
+        "statement": "Explain how speed affects thinking and braking distances.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_stopping_distance_speed_002",
+      "conceptFamily": "explain_how_speed_affects_thinking_and_braking_distances",
+      "contextType": "exam_style",
+      "skill": "Stopping Distance practice",
+      "stem": "A driver travels at a higher speed on the same dry road. Which distance increases before the car stops?",
+      "question": "A driver travels at a higher speed on the same dry road. Which distance increases before the car stops?",
+      "options": [
+        "Both thinking distance and braking distance increase.",
+        "Only thinking distance increases.",
+        "Only braking distance increases.",
+        "Neither distance changes if the driver is alert."
+      ],
+      "correctAnswer": "Both thinking distance and braking distance increase.",
+      "correctIndex": 0,
+      "explanation": "At higher speed, the car travels further during the driver’s reaction time and needs a longer distance to brake.",
+      "misconceptionTag": "speed-affects-both-distances",
+      "distractorRationales": [
+        {
+          "text": "Only thinking distance increases.",
+          "misconception": "braking distance effect of speed ignored"
+        },
+        {
+          "text": "Only braking distance increases.",
+          "misconception": "thinking distance effect of speed ignored"
+        },
+        {
+          "text": "Neither distance changes if the driver is alert.",
+          "misconception": "speed effect ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain how speed affects thinking and braking distances."
+    },
+    {
+      "id": "aqa_forces_stopping_distance_wet_road_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Stopping Distance",
+      "topicSlug": "forces",
+      "subtopicSlug": "stopping_distance",
+      "topicId": "stopping_distance",
+      "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
+      "specStatement": "Forces and braking.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_stopping_distance_wet_road_003_lo",
+        "statement": "Link road conditions to braking distance.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.3:thinking_distance:concept_discrimination",
-      "conceptFamily": "thinking_distance",
-      "contextType": "a graph-reading task",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_stopping_distance_wet_road_003",
+      "conceptFamily": "link_road_conditions_to_braking_distance",
+      "contextType": "exam_style",
       "skill": "Stopping Distance practice",
-      "stem": "A student is comparing similar ideas in stopping distance. Which statement is correct? Use the wording carefully: this is about identify factors affecting thinking distance.",
-      "question": "A student is comparing similar ideas in stopping distance. Which statement is correct? Use the wording carefully: this is about identify factors affecting thinking distance.",
+      "stem": "A car brakes on a wet road instead of a dry road. Which part of the stopping distance is most directly increased by the wet road?",
+      "question": "A car brakes on a wet road instead of a dry road. Which part of the stopping distance is most directly increased by the wet road?",
       "options": [
-        "The answer for stopping distance says that thinking distance increases with speed and reaction time.",
-        "In this stopping distance item, thinking distance is independent of speed.",
-        "In this stopping distance item, thinking distance decreases when tired.",
-        "In this stopping distance item, thinking distance is the distance after brakes are applied."
+        "Braking distance",
+        "Thinking distance",
+        "Driver reaction time only",
+        "The speed before braking only"
       ],
-      "correctAnswer": "The answer for stopping distance says that thinking distance increases with speed and reaction time.",
+      "correctAnswer": "Braking distance",
       "correctIndex": 0,
-      "explanation": "4.5.6.3 targets: Identify factors affecting thinking distance. Focus area: Stopping Distance. For this question, Thinking distance increases with speed and reaction time. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:thinking_distance",
+      "explanation": "Wet roads reduce friction between the tyres and the road, so the braking distance increases.",
+      "misconceptionTag": "wet-road-thinking-distance",
       "distractorRationales": [
         {
-          "text": "In this stopping distance item, thinking distance decreases when tired.",
-          "misconception": "Thinking distance is independent of speed."
+          "text": "Thinking distance",
+          "misconception": "road condition confused with reaction time"
         },
         {
-          "text": "In this stopping distance item, thinking distance is the distance after brakes are applied.",
-          "misconception": "Thinking distance decreases when tired."
+          "text": "Driver reaction time only",
+          "misconception": "road condition assigned to driver response"
         },
         {
-          "text": "In this stopping distance item, thinking distance is independent of speed.",
-          "misconception": "Thinking distance is the distance after brakes are applied."
+          "text": "The speed before braking only",
+          "misconception": "initial speed changed without being stated"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify factors affecting thinking distance."
+      "senNote": "Checks: Link road conditions to braking distance."
     },
     {
-      "id": "aqa_4_5_6_3_stopping_distance_braking_distance_misconception_correction_003",
+      "id": "aqa_forces_stopping_distance_table_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10875,6 +10952,7 @@
       "subtopicSlug": "stopping_distance",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -10885,269 +10963,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_stopping_distance_braking_distance",
-        "statement": "Identify factors affecting braking distance. (Stopping Distance)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.3:braking_distance:misconception_correction",
-      "conceptFamily": "braking_distance",
-      "contextType": "a comparison question",
-      "skill": "Stopping Distance practice",
-      "stem": "A revision note about stopping distance contains an error. Which replacement is correct? Use the wording carefully: this is about identify factors affecting braking distance.",
-      "question": "A revision note about stopping distance contains an error. Which replacement is correct? Use the wording carefully: this is about identify factors affecting braking distance.",
-      "options": [
-        "For stopping distance: Braking distance is unaffected by speed.",
-        "In this item, it means that braking distance is only reaction time.",
-        "In this item, it means that braking distance is shorter on ice.",
-        "The claim for stopping distance is that braking distance increases with speed, poor tyres, poor brakes or slippery roads."
-      ],
-      "correctAnswer": "The claim for stopping distance is that braking distance increases with speed, poor tyres, poor brakes or slippery roads.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.3 targets: Identify factors affecting braking distance. Focus area: Stopping Distance. For this question, Braking distance increases with speed, poor tyres, poor brakes or slippery roads. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:braking_distance",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that braking distance is only reaction time.",
-          "misconception": "Braking distance is shorter on ice."
-        },
-        {
-          "text": "In this item, it means that braking distance is shorter on ice.",
-          "misconception": "Braking distance is unaffected by speed."
-        },
-        {
-          "text": "For stopping distance: Braking distance is unaffected by speed.",
-          "misconception": "Braking distance is only reaction time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify factors affecting braking distance."
-    },
-    {
-      "id": "aqa_4_5_6_3_stopping_distance_force_braking_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Stopping Distance",
-      "topicSlug": "forces",
-      "subtopicSlug": "stopping_distance",
-      "topicId": "stopping_distance",
-      "specRef": "4.5.6.3",
-      "specStatement": "Forces and braking.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_3_stopping_distance_force_braking",
-        "statement": "Explain braking force effects. (Stopping Distance)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.3:force_braking:data_interpretation",
-      "conceptFamily": "force_braking",
-      "contextType": "a method-choice question",
-      "skill": "Stopping Distance practice",
-      "stem": "A small data set about stopping distance is being interpreted. Which conclusion is valid? Demand focus: explain braking force effects.",
-      "question": "A small data set about stopping distance is being interpreted. Which conclusion is valid? Demand focus: explain braking force effects.",
-      "options": [
-        "For stopping distance, this would mean that skidding means more grip.",
-        "The claim for stopping distance is that a large braking force can cause overheating or skidding.",
-        "For stopping distance, the option says that braking force has no energy transfer.",
-        "For stopping distance, this would mean that a larger braking force always makes tyres cooler."
-      ],
-      "correctAnswer": "The claim for stopping distance is that a large braking force can cause overheating or skidding.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.3 targets: Explain braking force effects. Focus area: Stopping Distance. For this question, A large braking force can cause overheating or skidding. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_braking",
-      "distractorRationales": [
-        {
-          "text": "For stopping distance, this would mean that a larger braking force always makes tyres cooler.",
-          "misconception": "A larger braking force always makes tyres cooler."
-        },
-        {
-          "text": "For stopping distance, the option says that braking force has no energy transfer.",
-          "misconception": "Braking force has no energy transfer."
-        },
-        {
-          "text": "For stopping distance, this would mean that skidding means more grip.",
-          "misconception": "Skidding means more grip."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain braking force effects."
-    },
-    {
-      "id": "aqa_4_5_6_3_stopping_distance_reaction_time_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Stopping Distance",
-      "topicSlug": "forces",
-      "subtopicSlug": "stopping_distance",
-      "topicId": "stopping_distance",
-      "specRef": "4.5.6.3",
-      "specStatement": "Forces and braking.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_3_stopping_distance_reaction_time",
-        "statement": "Choose a reaction-time method. (Stopping Distance)",
+        "id": "aqa_forces_stopping_distance_table_004_lo",
+        "statement": "Interpret data showing how speed affects braking distance.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
       "demand": "high",
       "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.3:reaction_time:representation_interpretation",
-      "conceptFamily": "reaction_time",
-      "contextType": "a results discussion",
+      "commandWord": "interpret",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_forces_stopping_distance_table_004",
+      "conceptFamily": "interpret_data_showing_how_speed_affects_braking_distance",
+      "contextType": "exam_style",
       "skill": "Stopping Distance practice",
-      "stem": "Which option correctly reads the stopping distance model or diagram idea? Check the clue before choosing: Choose a reaction-time method.",
-      "question": "Which option correctly reads the stopping distance model or diagram idea? Check the clue before choosing: Choose a reaction-time method.",
+      "stem": "A results table shows that doubling the speed of a car more than doubles the braking distance. Which conclusion is valid?",
+      "question": "A results table shows that doubling the speed of a car more than doubles the braking distance. Which conclusion is valid?",
       "options": [
-        "In this stopping distance item, reaction time is measured with a voltmeter.",
-        "For stopping distance, the answer claims that reaction time is the same for everyone.",
-        "For stopping distance, the statement is that reaction time cannot be affected by alcohol or tiredness.",
-        "In this stopping distance item, reaction time can be estimated using a ruler-drop test or measured with sensors."
+        "Braking distance increases non-linearly with speed.",
+        "Braking distance is independent of speed.",
+        "Thinking distance must be zero.",
+        "The brakes must have failed in every trial."
       ],
-      "correctAnswer": "In this stopping distance item, reaction time can be estimated using a ruler-drop test or measured with sensors.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.3 targets: Choose a reaction-time method. Focus area: Stopping Distance. For this question, Reaction time can be estimated using a ruler-drop test or measured with sensors. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:reaction_time",
-      "distractorRationales": [
-        {
-          "text": "For stopping distance, the answer claims that reaction time is the same for everyone.",
-          "misconception": "Reaction time is measured with a voltmeter."
-        },
-        {
-          "text": "For stopping distance, the statement is that reaction time cannot be affected by alcohol or tiredness.",
-          "misconception": "Reaction time is the same for everyone."
-        },
-        {
-          "text": "In this stopping distance item, reaction time is measured with a voltmeter.",
-          "misconception": "Reaction time cannot be affected by alcohol or tiredness."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Choose a reaction-time method."
-    },
-    {
-      "id": "aqa_4_5_6_3_2_reaction_time_reaction_time_direct_recall_001",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Reaction Time",
-      "topicSlug": "forces",
-      "subtopicSlug": "reaction_time",
-      "topicId": "stopping_distance",
-      "specRef": "4.5.6.3.2",
-      "specStatement": "Reaction time.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_3_2_reaction_time_reaction_time",
-        "statement": "Choose a reaction-time method. (Reaction Time)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.3.2:reaction_time:direct_recall",
-      "conceptFamily": "reaction_time",
-      "contextType": "a comparison question",
-      "skill": "Reaction Time practice",
-      "stem": "Which statement is correct for reaction time? Choose the statement that fits this exact GCSE Physics idea: choose a reaction-time method.",
-      "question": "Which statement is correct for reaction time? Choose the statement that fits this exact GCSE Physics idea: choose a reaction-time method.",
-      "options": [
-        "For reaction time, it means that reaction time can be estimated using a ruler-drop test or measured with sensors.",
-        "For reaction time, the answer claims that reaction time is measured with a voltmeter.",
-        "In this reaction time item, reaction time cannot be affected by alcohol or tiredness.",
-        "For reaction time, the statement is that reaction time is the same for everyone."
-      ],
-      "correctAnswer": "For reaction time, it means that reaction time can be estimated using a ruler-drop test or measured with sensors.",
+      "correctAnswer": "Braking distance increases non-linearly with speed.",
       "correctIndex": 0,
-      "explanation": "4.5.6.3.2 targets: Choose a reaction-time method. Focus area: Reaction Time. For this question, Reaction time can be estimated using a ruler-drop test or measured with sensors. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:reaction_time",
+      "explanation": "The table shows that braking distance rises by a larger factor than speed, so the relationship is not linear.",
+      "misconceptionTag": "braking-distance-linear",
       "distractorRationales": [
         {
-          "text": "For reaction time, the answer claims that reaction time is measured with a voltmeter.",
-          "misconception": "Reaction time is measured with a voltmeter."
+          "text": "Braking distance is independent of speed.",
+          "misconception": "trend ignored"
         },
         {
-          "text": "For reaction time, the statement is that reaction time is the same for everyone.",
-          "misconception": "Reaction time is the same for everyone."
+          "text": "Thinking distance must be zero.",
+          "misconception": "wrong distance inferred"
         },
         {
-          "text": "In this reaction time item, reaction time cannot be affected by alcohol or tiredness.",
-          "misconception": "Reaction time cannot be affected by alcohol or tiredness."
+          "text": "The brakes must have failed in every trial.",
+          "misconception": "unjustified fault conclusion"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Choose a reaction-time method."
+      "senNote": "Checks: Interpret data showing how speed affects braking distance."
     },
     {
-      "id": "aqa_4_5_6_3_2_reaction_time_thinking_distance_concept_discrimination_002",
+      "id": "aqa_forces_stopping_distance_tyre_condition_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Stopping Distance",
+      "topicSlug": "forces",
+      "subtopicSlug": "stopping_distance",
+      "topicId": "stopping_distance",
+      "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
+      "specStatement": "Forces and braking.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_stopping_distance_tyre_condition_005_lo",
+        "statement": "Explain how tyre condition affects stopping distance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_stopping_distance_tyre_condition_005",
+      "conceptFamily": "explain_how_tyre_condition_affects_stopping_distance",
+      "contextType": "exam_style",
+      "skill": "Stopping Distance practice",
+      "stem": "A car has worn tyres. Why can this increase its stopping distance?",
+      "question": "A car has worn tyres. Why can this increase its stopping distance?",
+      "options": [
+        "The tyres provide less grip, increasing the braking distance.",
+        "The driver’s thinking distance must become zero.",
+        "The car’s mass becomes smaller.",
+        "The brakes transfer no energy."
+      ],
+      "correctAnswer": "The tyres provide less grip, increasing the braking distance.",
+      "correctIndex": 0,
+      "explanation": "Worn tyres reduce friction with the road, so the car needs a longer braking distance.",
+      "misconceptionTag": "tyre-grip-braking-distance",
+      "distractorRationales": [
+        {
+          "text": "The driver’s thinking distance must become zero.",
+          "misconception": "thinking distance effect invented"
+        },
+        {
+          "text": "The car’s mass becomes smaller.",
+          "misconception": "mass change invented"
+        },
+        {
+          "text": "The brakes transfer no energy.",
+          "misconception": "energy transfer during braking ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain how tyre condition affects stopping distance."
+    },
+    {
+      "id": "aqa_forces_reaction_time_definition_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -11159,6 +11098,7 @@
       "subtopicSlug": "reaction_time",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3.2",
+      "combinedSpecRef": "6.5.4.3.2",
       "specStatement": "Reaction time.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -11169,56 +11109,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_2_reaction_time_thinking_distance",
-        "statement": "Identify factors affecting thinking distance. (Reaction Time)",
+        "id": "aqa_forces_reaction_time_definition_001_lo",
+        "statement": "Define reaction time in a stopping-distance context.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "define",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_reaction_time_definition_001",
+      "conceptFamily": "define_reaction_time_in_a_stopping_distance_context",
+      "contextType": "exam_style",
+      "skill": "Reaction Time practice",
+      "stem": "In a stopping-distance test, what is meant by reaction time?",
+      "question": "In a stopping-distance test, what is meant by reaction time?",
+      "options": [
+        "The time between seeing a hazard and starting to brake.",
+        "The time taken for the car to stop after the brakes are applied.",
+        "The time for the tyres to cool after braking.",
+        "The time taken to travel the braking distance."
+      ],
+      "correctAnswer": "The time between seeing a hazard and starting to brake.",
+      "correctIndex": 0,
+      "explanation": "Reaction time is the delay between detecting a hazard and making the response, such as pressing the brake pedal.",
+      "misconceptionTag": "reaction-time-vs-braking-time",
+      "distractorRationales": [
+        {
+          "text": "The time taken for the car to stop after the brakes are applied.",
+          "misconception": "braking time confused with reaction time"
+        },
+        {
+          "text": "The time for the tyres to cool after braking.",
+          "misconception": "irrelevant process chosen"
+        },
+        {
+          "text": "The time taken to travel the braking distance.",
+          "misconception": "distance stage confused with driver response"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Define reaction time in a stopping-distance context."
+    },
+    {
+      "id": "aqa_forces_reaction_time_mobile_phone_002",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Reaction Time",
+      "topicSlug": "forces",
+      "subtopicSlug": "reaction_time",
+      "topicId": "stopping_distance",
+      "specRef": "4.5.6.3.2",
+      "combinedSpecRef": "6.5.4.3.2",
+      "specStatement": "Reaction time.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_reaction_time_mobile_phone_002_lo",
+        "statement": "Link driver distraction to thinking distance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.3.2:thinking_distance:concept_discrimination",
-      "conceptFamily": "thinking_distance",
-      "contextType": "a method-choice question",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_reaction_time_mobile_phone_002",
+      "conceptFamily": "link_driver_distraction_to_thinking_distance",
+      "contextType": "exam_style",
       "skill": "Reaction Time practice",
-      "stem": "A student is comparing similar ideas in reaction time. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
-      "question": "A student is comparing similar ideas in reaction time. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
+      "stem": "A driver is distracted by a mobile phone. Which part of the stopping distance is increased first?",
+      "question": "A driver is distracted by a mobile phone. Which part of the stopping distance is increased first?",
       "options": [
-        "For reaction time, it means that thinking distance is the distance after brakes are applied.",
-        "For reaction time, the option says that thinking distance increases with speed and reaction time.",
-        "For reaction time, the option says that thinking distance is independent of speed.",
-        "For reaction time, the option says that thinking distance decreases when tired."
+        "Thinking distance",
+        "Braking distance",
+        "The length of the car",
+        "The road’s friction only"
       ],
-      "correctAnswer": "For reaction time, the option says that thinking distance increases with speed and reaction time.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.3.2 targets: Identify factors affecting thinking distance. Focus area: Reaction Time. For this question, Thinking distance increases with speed and reaction time. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:thinking_distance",
+      "correctAnswer": "Thinking distance",
+      "correctIndex": 0,
+      "explanation": "Distraction increases reaction time. At the same speed, a longer reaction time means a longer thinking distance.",
+      "misconceptionTag": "distraction-braking-distance",
       "distractorRationales": [
         {
-          "text": "For reaction time, the option says that thinking distance decreases when tired.",
-          "misconception": "Thinking distance is independent of speed."
+          "text": "Braking distance",
+          "misconception": "distraction confused with tyre/brake condition"
         },
         {
-          "text": "For reaction time, it means that thinking distance is the distance after brakes are applied.",
-          "misconception": "Thinking distance decreases when tired."
+          "text": "The length of the car",
+          "misconception": "vehicle size confused with distance travelled"
         },
         {
-          "text": "For reaction time, the option says that thinking distance is independent of speed.",
-          "misconception": "Thinking distance is the distance after brakes are applied."
+          "text": "The road’s friction only",
+          "misconception": "road condition invented"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify factors affecting thinking distance."
+      "senNote": "Checks: Link driver distraction to thinking distance."
     },
     {
-      "id": "aqa_4_5_6_3_2_reaction_time_stopping_total_misconception_correction_003",
+      "id": "aqa_forces_reaction_time_ruler_test_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -11230,6 +11244,7 @@
       "subtopicSlug": "reaction_time",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3.2",
+      "combinedSpecRef": "6.5.4.3.2",
       "specStatement": "Reaction time.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -11240,195 +11255,200 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_2_reaction_time_stopping_total",
-        "statement": "Define stopping distance. (Reaction Time)",
+        "id": "aqa_forces_reaction_time_ruler_test_003_lo",
+        "statement": "Interpret ruler-drop data for reaction time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_forces_reaction_time_ruler_test_003",
+      "conceptFamily": "interpret_ruler_drop_data_for_reaction_time",
+      "contextType": "exam_style",
+      "skill": "Reaction Time practice",
+      "stem": "In a ruler-drop test, a ruler falls further before it is caught on the second attempt. What does this show about the second reaction time?",
+      "question": "In a ruler-drop test, a ruler falls further before it is caught on the second attempt. What does this show about the second reaction time?",
+      "options": [
+        "It was longer.",
+        "It was shorter.",
+        "It was exactly zero.",
+        "It cannot be compared because the same ruler was used."
+      ],
+      "correctAnswer": "It was longer.",
+      "correctIndex": 0,
+      "explanation": "If the ruler falls further before being caught, more time passed before the response, so the reaction time was longer.",
+      "misconceptionTag": "ruler-drop-distance-direction",
+      "distractorRationales": [
+        {
+          "text": "It was shorter.",
+          "misconception": "fall distance interpreted backwards"
+        },
+        {
+          "text": "It was exactly zero.",
+          "misconception": "catching confused with instant response"
+        },
+        {
+          "text": "It cannot be compared because the same ruler was used.",
+          "misconception": "controlled variable misunderstood"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret ruler-drop data for reaction time."
+    },
+    {
+      "id": "aqa_forces_reaction_time_repeat_readings_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Reaction Time",
+      "topicSlug": "forces",
+      "subtopicSlug": "reaction_time",
+      "topicId": "stopping_distance",
+      "specRef": "4.5.6.3.2",
+      "combinedSpecRef": "6.5.4.3.2",
+      "specStatement": "Reaction time.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_reaction_time_repeat_readings_004_lo",
+        "statement": "Explain why reaction-time tests use repeated readings.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "practical_reasoning",
+      "patternId": "authored:aqa_forces_reaction_time_repeat_readings_004",
+      "conceptFamily": "explain_why_reaction_time_tests_use_repeated_readings",
+      "contextType": "exam_style",
+      "skill": "Reaction Time practice",
+      "stem": "Why should a pupil repeat a reaction-time test several times?",
+      "question": "Why should a pupil repeat a reaction-time test several times?",
+      "options": [
+        "To identify anomalous results and calculate a mean.",
+        "To make their reaction time disappear.",
+        "To change the force of gravity each time.",
+        "To avoid measuring the ruler distance."
+      ],
+      "correctAnswer": "To identify anomalous results and calculate a mean.",
+      "correctIndex": 0,
+      "explanation": "Repeats make the result more reliable because unusual readings can be spotted and a mean can be calculated.",
+      "misconceptionTag": "reaction-time-repeat-readings",
+      "distractorRationales": [
+        {
+          "text": "To make their reaction time disappear.",
+          "misconception": "repeat readings misunderstood"
+        },
+        {
+          "text": "To change the force of gravity each time.",
+          "misconception": "irrelevant variable chosen"
+        },
+        {
+          "text": "To avoid measuring the ruler distance.",
+          "misconception": "measurement omitted"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why reaction-time tests use repeated readings."
+    },
+    {
+      "id": "aqa_forces_reaction_time_alcohol_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Reaction Time",
+      "topicSlug": "forces",
+      "subtopicSlug": "reaction_time",
+      "topicId": "stopping_distance",
+      "specRef": "4.5.6.3.2",
+      "combinedSpecRef": "6.5.4.3.2",
+      "specStatement": "Reaction time.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_reaction_time_alcohol_005_lo",
+        "statement": "Predict the effect of increased reaction time on thinking distance.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.3.2:stopping_total:misconception_correction",
-      "conceptFamily": "stopping_total",
-      "contextType": "a results discussion",
+      "commandWord": "predict",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_reaction_time_alcohol_005",
+      "conceptFamily": "predict_the_effect_of_increased_reaction_time_on_thinking_distance",
+      "contextType": "exam_style",
       "skill": "Reaction Time practice",
-      "stem": "A revision note about reaction time contains an error. Which replacement is correct? Use the wording carefully: this is about define stopping distance.",
-      "question": "A revision note about reaction time contains an error. Which replacement is correct? Use the wording carefully: this is about define stopping distance.",
+      "stem": "Alcohol can increase a driver’s reaction time. What effect does this have at the same driving speed?",
+      "question": "Alcohol can increase a driver’s reaction time. What effect does this have at the same driving speed?",
       "options": [
-        "In this item, it means that stopping distance = thinking distance + braking distance.",
-        "For reaction time, it means that stopping distance is thinking distance minus braking distance.",
-        "For reaction time, it means that stopping distance is braking distance only.",
-        "For reaction time, it means that stopping distance is measured in seconds."
+        "The thinking distance increases.",
+        "The thinking distance decreases.",
+        "The braking distance becomes zero.",
+        "The vehicle stops before the driver reacts."
       ],
-      "correctAnswer": "In this item, it means that stopping distance = thinking distance + braking distance.",
+      "correctAnswer": "The thinking distance increases.",
       "correctIndex": 0,
-      "explanation": "4.5.6.3.2 targets: Define stopping distance. Focus area: Reaction Time. For this question, Stopping distance = thinking distance + braking distance. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:stopping_total",
+      "explanation": "At the same speed, a longer reaction time means the vehicle travels further before braking starts.",
+      "misconceptionTag": "reaction-time-thinking-distance",
       "distractorRationales": [
         {
-          "text": "For reaction time, it means that stopping distance is measured in seconds.",
-          "misconception": "Stopping distance is braking distance only."
+          "text": "The thinking distance decreases.",
+          "misconception": "effect of reaction time reversed"
         },
         {
-          "text": "For reaction time, it means that stopping distance is braking distance only.",
-          "misconception": "Stopping distance is thinking distance minus braking distance."
+          "text": "The braking distance becomes zero.",
+          "misconception": "braking stage removed incorrectly"
         },
         {
-          "text": "For reaction time, it means that stopping distance is thinking distance minus braking distance.",
-          "misconception": "Stopping distance is measured in seconds."
+          "text": "The vehicle stops before the driver reacts.",
+          "misconception": "sequence of stopping misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Define stopping distance."
-    },
-    {
-      "id": "aqa_4_5_6_3_2_reaction_time_braking_distance_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Reaction Time",
-      "topicSlug": "forces",
-      "subtopicSlug": "reaction_time",
-      "topicId": "stopping_distance",
-      "specRef": "4.5.6.3.2",
-      "specStatement": "Reaction time.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_3_2_reaction_time_braking_distance",
-        "statement": "Identify factors affecting braking distance. (Reaction Time)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.3.2:braking_distance:data_interpretation",
-      "conceptFamily": "braking_distance",
-      "contextType": "a classroom demonstration",
-      "skill": "Reaction Time practice",
-      "stem": "A small data set about reaction time is being interpreted. Which conclusion is valid? Demand focus: identify factors affecting braking distance.",
-      "question": "A small data set about reaction time is being interpreted. Which conclusion is valid? Demand focus: identify factors affecting braking distance.",
-      "options": [
-        "For reaction time, it means that braking distance is shorter on ice.",
-        "The answer for reaction time says that braking distance increases with speed, poor tyres, poor brakes or slippery roads.",
-        "For reaction time, the answer claims that braking distance is only reaction time.",
-        "For reaction time, it means that braking distance is unaffected by speed."
-      ],
-      "correctAnswer": "The answer for reaction time says that braking distance increases with speed, poor tyres, poor brakes or slippery roads.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.3.2 targets: Identify factors affecting braking distance. Focus area: Reaction Time. For this question, Braking distance increases with speed, poor tyres, poor brakes or slippery roads. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:braking_distance",
-      "distractorRationales": [
-        {
-          "text": "For reaction time, it means that braking distance is shorter on ice.",
-          "misconception": "Braking distance is shorter on ice."
-        },
-        {
-          "text": "For reaction time, it means that braking distance is unaffected by speed.",
-          "misconception": "Braking distance is unaffected by speed."
-        },
-        {
-          "text": "For reaction time, the answer claims that braking distance is only reaction time.",
-          "misconception": "Braking distance is only reaction time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify factors affecting braking distance."
-    },
-    {
-      "id": "aqa_4_5_6_3_2_reaction_time_reaction_time_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Reaction Time",
-      "topicSlug": "forces",
-      "subtopicSlug": "reaction_time",
-      "topicId": "stopping_distance",
-      "specRef": "4.5.6.3.2",
-      "specStatement": "Reaction time.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_3_2_reaction_time_reaction_time",
-        "statement": "Choose a reaction-time method. (Reaction Time)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.3.2:reaction_time:representation_interpretation",
-      "conceptFamily": "reaction_time",
-      "contextType": "a revision checkpoint",
-      "skill": "Reaction Time practice",
-      "stem": "Which option correctly reads the reaction time model or diagram idea? Keep the answer focused on reaction time: choose a reaction-time method.",
-      "question": "Which option correctly reads the reaction time model or diagram idea? Keep the answer focused on reaction time: choose a reaction-time method.",
-      "options": [
-        "For reaction time, the option says that reaction time cannot be affected by alcohol or tiredness.",
-        "For reaction time, the option says that reaction time is the same for everyone.",
-        "The claim for reaction time is that reaction time can be estimated using a ruler-drop test or measured with sensors.",
-        "For reaction time, the option says that reaction time is measured with a voltmeter."
-      ],
-      "correctAnswer": "The claim for reaction time is that reaction time can be estimated using a ruler-drop test or measured with sensors.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.3.2 targets: Choose a reaction-time method. Focus area: Reaction Time. For this question, Reaction time can be estimated using a ruler-drop test or measured with sensors. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:reaction_time",
-      "distractorRationales": [
-        {
-          "text": "For reaction time, the option says that reaction time is the same for everyone.",
-          "misconception": "Reaction time is measured with a voltmeter."
-        },
-        {
-          "text": "For reaction time, the option says that reaction time cannot be affected by alcohol or tiredness.",
-          "misconception": "Reaction time is the same for everyone."
-        },
-        {
-          "text": "For reaction time, the option says that reaction time is measured with a voltmeter.",
-          "misconception": "Reaction time cannot be affected by alcohol or tiredness."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Choose a reaction-time method."
+      "senNote": "Checks: Predict the effect of increased reaction time on thinking distance."
     },
     {
       "id": "aqa_4_5_7_1_momentum_momentum_equation_direct_recall_001",
@@ -12131,7 +12151,7 @@
       "senNote": "This checks one idea only: Apply conservation of momentum."
     },
     {
-      "id": "aqa_4_5_6_3_forces_and_braking_force_braking_direct_recall_001",
+      "id": "aqa_forces_braking_force_energy_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12143,6 +12163,7 @@
       "subtopicSlug": "forces_and_braking",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -12153,127 +12174,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_forces_and_braking_force_braking",
-        "statement": "Explain braking force effects. (Forces and Braking)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.3:force_braking:direct_recall",
-      "conceptFamily": "force_braking",
-      "contextType": "a safety decision",
-      "skill": "Forces and Braking practice",
-      "stem": "Which statement is correct for forces and braking? Use the wording carefully: this is about explain braking force effects.",
-      "question": "Which statement is correct for forces and braking? Use the wording carefully: this is about explain braking force effects.",
-      "options": [
-        "For forces and braking, the statement is that a large braking force can cause overheating or skidding.",
-        "For forces and braking, the statement is that a larger braking force always makes tyres cooler.",
-        "For forces and braking, the answer claims that braking force has no energy transfer.",
-        "For forces and braking, the statement is that skidding means more grip."
-      ],
-      "correctAnswer": "For forces and braking, the statement is that a large braking force can cause overheating or skidding.",
-      "correctIndex": 0,
-      "explanation": "4.5.6.3 targets: Explain braking force effects. Focus area: Forces and Braking. For this question, A large braking force can cause overheating or skidding. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_braking",
-      "distractorRationales": [
-        {
-          "text": "For forces and braking, the statement is that a larger braking force always makes tyres cooler.",
-          "misconception": "A larger braking force always makes tyres cooler."
-        },
-        {
-          "text": "For forces and braking, the answer claims that braking force has no energy transfer.",
-          "misconception": "Braking force has no energy transfer."
-        },
-        {
-          "text": "For forces and braking, the statement is that skidding means more grip.",
-          "misconception": "Skidding means more grip."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain braking force effects."
-    },
-    {
-      "id": "aqa_4_5_6_3_forces_and_braking_braking_distance_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Forces and Braking",
-      "topicSlug": "forces",
-      "subtopicSlug": "forces_and_braking",
-      "topicId": "stopping_distance",
-      "specRef": "4.5.6.3",
-      "specStatement": "Forces and braking.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_3_forces_and_braking_braking_distance",
-        "statement": "Identify factors affecting braking distance. (Forces and Braking)",
+        "id": "aqa_forces_braking_force_energy_001_lo",
+        "statement": "Describe the energy transfer during braking.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.3:braking_distance:concept_discrimination",
-      "conceptFamily": "braking_distance",
-      "contextType": "a graph-reading task",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_braking_force_energy_001",
+      "conceptFamily": "describe_the_energy_transfer_during_braking",
+      "contextType": "exam_style",
       "skill": "Forces and Braking practice",
-      "stem": "A student is comparing similar ideas in forces and braking. Which statement is correct? Check the clue before choosing: Identify factors affecting braking distance.",
-      "question": "A student is comparing similar ideas in forces and braking. Which statement is correct? Check the clue before choosing: Identify factors affecting braking distance.",
+      "stem": "When a car brakes, what happens to the car’s kinetic energy store?",
+      "question": "When a car brakes, what happens to the car’s kinetic energy store?",
       "options": [
-        "In this forces and braking item, braking distance is shorter on ice.",
-        "In this forces and braking item, braking distance is unaffected by speed.",
-        "For forces and braking, the statement is that braking distance increases with speed, poor tyres, poor brakes or slippery roads.",
-        "In this forces and braking item, braking distance is only reaction time."
+        "Energy is transferred to thermal stores in the brakes and surroundings.",
+        "Energy is destroyed by the brakes.",
+        "Energy is transferred only to a chemical store.",
+        "The kinetic energy store increases."
       ],
-      "correctAnswer": "For forces and braking, the statement is that braking distance increases with speed, poor tyres, poor brakes or slippery roads.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.3 targets: Identify factors affecting braking distance. Focus area: Forces and Braking. For this question, Braking distance increases with speed, poor tyres, poor brakes or slippery roads. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:braking_distance",
+      "correctAnswer": "Energy is transferred to thermal stores in the brakes and surroundings.",
+      "correctIndex": 0,
+      "explanation": "Braking does work against friction, transferring energy from the kinetic store to thermal stores.",
+      "misconceptionTag": "braking-energy-transfer",
       "distractorRationales": [
         {
-          "text": "In this forces and braking item, braking distance is unaffected by speed.",
-          "misconception": "Braking distance is shorter on ice."
+          "text": "Energy is destroyed by the brakes.",
+          "misconception": "energy conservation missed"
         },
         {
-          "text": "In this forces and braking item, braking distance is only reaction time.",
-          "misconception": "Braking distance is unaffected by speed."
+          "text": "Energy is transferred only to a chemical store.",
+          "misconception": "wrong energy store chosen"
         },
         {
-          "text": "In this forces and braking item, braking distance is shorter on ice.",
-          "misconception": "Braking distance is only reaction time."
+          "text": "The kinetic energy store increases.",
+          "misconception": "direction of transfer reversed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify factors affecting braking distance."
+      "senNote": "Checks: Describe the energy transfer during braking."
     },
     {
-      "id": "aqa_4_5_6_3_forces_and_braking_stopping_total_misconception_correction_003",
+      "id": "aqa_forces_braking_force_deceleration_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12285,6 +12236,7 @@
       "subtopicSlug": "forces_and_braking",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -12295,56 +12247,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_forces_and_braking_stopping_total",
-        "statement": "Define stopping distance. (Forces and Braking)",
+        "id": "aqa_forces_braking_force_deceleration_002_lo",
+        "statement": "Link braking force to deceleration.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.3:stopping_total:misconception_correction",
-      "conceptFamily": "stopping_total",
-      "contextType": "a comparison question",
+      "commandWord": "predict",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_braking_force_deceleration_002",
+      "conceptFamily": "link_braking_force_to_deceleration",
+      "contextType": "exam_style",
       "skill": "Forces and Braking practice",
-      "stem": "A revision note about forces and braking contains an error. Which replacement is correct? Demand focus: define stopping distance.",
-      "question": "A revision note about forces and braking contains an error. Which replacement is correct? Demand focus: define stopping distance.",
+      "stem": "A car experiences a larger braking force while its mass stays the same. What happens to its deceleration?",
+      "question": "A car experiences a larger braking force while its mass stays the same. What happens to its deceleration?",
       "options": [
-        "For forces and braking, the statement is that stopping distance = thinking distance + braking distance.",
-        "In this forces and braking item, stopping distance is braking distance only.",
-        "The answer for forces and braking says that stopping distance is thinking distance minus braking distance.",
-        "For forces and braking, the statement is that stopping distance is measured in seconds."
+        "The deceleration increases.",
+        "The deceleration decreases.",
+        "The deceleration is always zero.",
+        "The mass must increase first."
       ],
-      "correctAnswer": "For forces and braking, the statement is that stopping distance = thinking distance + braking distance.",
+      "correctAnswer": "The deceleration increases.",
       "correctIndex": 0,
-      "explanation": "4.5.6.3 targets: Define stopping distance. Focus area: Forces and Braking. For this question, Stopping distance = thinking distance + braking distance. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:stopping_total",
+      "explanation": "For the same mass, a larger resultant braking force produces a larger deceleration.",
+      "misconceptionTag": "braking-force-deceleration",
       "distractorRationales": [
         {
-          "text": "For forces and braking, the statement is that stopping distance is measured in seconds.",
-          "misconception": "Stopping distance is braking distance only."
+          "text": "The deceleration decreases.",
+          "misconception": "force effect reversed"
         },
         {
-          "text": "In this forces and braking item, stopping distance is braking distance only.",
-          "misconception": "Stopping distance is thinking distance minus braking distance."
+          "text": "The deceleration is always zero.",
+          "misconception": "braking force ignored"
         },
         {
-          "text": "The answer for forces and braking says that stopping distance is thinking distance minus braking distance.",
-          "misconception": "Stopping distance is measured in seconds."
+          "text": "The mass must increase first.",
+          "misconception": "mass change invented"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Define stopping distance."
+      "senNote": "Checks: Link braking force to deceleration."
     },
     {
-      "id": "aqa_4_5_6_3_forces_and_braking_thinking_distance_data_interpretation_004",
+      "id": "aqa_forces_braking_force_work_done_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12356,6 +12309,7 @@
       "subtopicSlug": "forces_and_braking",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -12366,56 +12320,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_forces_and_braking_thinking_distance",
-        "statement": "Identify factors affecting thinking distance. (Forces and Braking)",
+        "id": "aqa_forces_braking_force_work_done_003_lo",
+        "statement": "Calculate work done by a braking force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.3:thinking_distance:data_interpretation",
-      "conceptFamily": "thinking_distance",
-      "contextType": "a method-choice question",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_braking_force_work_done_003",
+      "conceptFamily": "calculate_work_done_by_a_braking_force",
+      "contextType": "exam_style",
       "skill": "Forces and Braking practice",
-      "stem": "A small data set about forces and braking is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
-      "question": "A small data set about forces and braking is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
+      "stem": "A braking force of 3000 N acts over 20 m. How much work is done by the braking force?",
+      "question": "A braking force of 3000 N acts over 20 m. How much work is done by the braking force?",
       "options": [
-        "In this item, it means that thinking distance increases with speed and reaction time.",
-        "For forces and braking, this would mean that thinking distance decreases when tired.",
-        "For forces and braking: Thinking distance is independent of speed.",
-        "For forces and braking, the option says that thinking distance is the distance after brakes are applied."
+        "60 000 J",
+        "150 J",
+        "3020 J",
+        "0.0067 J"
       ],
-      "correctAnswer": "In this item, it means that thinking distance increases with speed and reaction time.",
+      "correctAnswer": "60 000 J",
       "correctIndex": 0,
-      "explanation": "4.5.6.3 targets: Identify factors affecting thinking distance. Focus area: Forces and Braking. For this question, Thinking distance increases with speed and reaction time. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:thinking_distance",
+      "explanation": "Use \\(W = Fs\\). The work done is \\(3000 \\times 20 = 60\\,000\\,J\\).",
+      "misconceptionTag": "braking-work-done",
       "distractorRationales": [
         {
-          "text": "For forces and braking: Thinking distance is independent of speed.",
-          "misconception": "Thinking distance is independent of speed."
+          "text": "150 J",
+          "misconception": "force divided by distance"
         },
         {
-          "text": "For forces and braking, this would mean that thinking distance decreases when tired.",
-          "misconception": "Thinking distance decreases when tired."
+          "text": "3020 J",
+          "misconception": "force and distance added"
         },
         {
-          "text": "For forces and braking, the option says that thinking distance is the distance after brakes are applied.",
-          "misconception": "Thinking distance is the distance after brakes are applied."
+          "text": "0.0067 J",
+          "misconception": "distance divided by force"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify factors affecting thinking distance."
+      "senNote": "Checks: Calculate work done by a braking force."
     },
     {
-      "id": "aqa_4_5_6_3_forces_and_braking_force_braking_representation_interpretation_005",
+      "id": "aqa_forces_braking_force_temperature_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12427,6 +12382,7 @@
       "subtopicSlug": "forces_and_braking",
       "topicId": "stopping_distance",
       "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
       "specStatement": "Forces and braking.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -12437,53 +12393,127 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_3_forces_and_braking_force_braking",
-        "statement": "Explain braking force effects. (Forces and Braking)",
+        "id": "aqa_forces_braking_force_temperature_004_lo",
+        "statement": "Explain why braking heats the brakes.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_braking_force_temperature_004",
+      "conceptFamily": "explain_why_braking_heats_the_brakes",
+      "contextType": "exam_style",
+      "skill": "Forces and Braking practice",
+      "stem": "Heavy braking can make the brakes very hot. Which statement explains why?",
+      "question": "Heavy braking can make the brakes very hot. Which statement explains why?",
+      "options": [
+        "Work is done against friction, increasing the thermal energy of the brakes.",
+        "The brakes gain mass and become hotter.",
+        "The tyres remove all internal energy from the brakes.",
+        "The car’s speed is converted into gravitational field strength."
+      ],
+      "correctAnswer": "Work is done against friction, increasing the thermal energy of the brakes.",
+      "correctIndex": 0,
+      "explanation": "Friction in the brakes transfers energy to thermal stores, raising the temperature of the brake components.",
+      "misconceptionTag": "brake-heating-friction",
+      "distractorRationales": [
+        {
+          "text": "The brakes gain mass and become hotter.",
+          "misconception": "mass gain invented"
+        },
+        {
+          "text": "The tyres remove all internal energy from the brakes.",
+          "misconception": "energy transfer direction wrong"
+        },
+        {
+          "text": "The car’s speed is converted into gravitational field strength.",
+          "misconception": "wrong energy pathway"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why braking heats the brakes."
+    },
+    {
+      "id": "aqa_forces_braking_force_safety_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Forces and Braking",
+      "topicSlug": "forces",
+      "subtopicSlug": "forces_and_braking",
+      "topicId": "stopping_distance",
+      "specRef": "4.5.6.3",
+      "combinedSpecRef": "6.5.4.3",
+      "specStatement": "Forces and braking.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_braking_force_safety_005_lo",
+        "statement": "Link large deceleration to large forces in a crash.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "high",
       "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.3:force_braking:representation_interpretation",
-      "conceptFamily": "force_braking",
-      "contextType": "a results discussion",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_braking_force_safety_005",
+      "conceptFamily": "link_large_deceleration_to_large_forces_in_a_crash",
+      "contextType": "exam_style",
       "skill": "Forces and Braking practice",
-      "stem": "Which option correctly reads the forces and braking model or diagram idea? Check the clue before choosing: Explain braking force effects.",
-      "question": "Which option correctly reads the forces and braking model or diagram idea? Check the clue before choosing: Explain braking force effects.",
+      "stem": "Why can very large decelerations during a crash injure passengers?",
+      "question": "Why can very large decelerations during a crash injure passengers?",
       "options": [
-        "For forces and braking, it means that braking force has no energy transfer.",
-        "The claim for forces and braking is that a larger braking force always makes tyres cooler.",
-        "For forces and braking, it means that skidding means more grip.",
-        "For forces and braking, the option says that a large braking force can cause overheating or skidding."
+        "Large forces act on passengers over a short time.",
+        "Passengers have no mass during the crash.",
+        "The car has no kinetic energy before impact.",
+        "All forces on passengers act in the same direction forever."
       ],
-      "correctAnswer": "For forces and braking, the option says that a large braking force can cause overheating or skidding.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.3 targets: Explain braking force effects. Focus area: Forces and Braking. For this question, A large braking force can cause overheating or skidding. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_braking",
+      "correctAnswer": "Large forces act on passengers over a short time.",
+      "correctIndex": 0,
+      "explanation": "A rapid change in velocity means a large acceleration in magnitude, so large forces can act on passengers.",
+      "misconceptionTag": "crash-deceleration-force",
       "distractorRationales": [
         {
-          "text": "For forces and braking, it means that braking force has no energy transfer.",
-          "misconception": "A larger braking force always makes tyres cooler."
+          "text": "Passengers have no mass during the crash.",
+          "misconception": "mass removed incorrectly"
         },
         {
-          "text": "For forces and braking, it means that skidding means more grip.",
-          "misconception": "Braking force has no energy transfer."
+          "text": "The car has no kinetic energy before impact.",
+          "misconception": "initial motion ignored"
         },
         {
-          "text": "The claim for forces and braking is that a larger braking force always makes tyres cooler.",
-          "misconception": "Skidding means more grip."
+          "text": "All forces on passengers act in the same direction forever.",
+          "misconception": "force interaction misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain braking force effects."
+      "senNote": "Checks: Link large deceleration to large forces in a crash."
     },
     {
       "id": "aqa_forces_terminal_velocity_start_fall_001",

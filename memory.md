@@ -5,6 +5,33 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Newton's Laws authored
+- Fixed AQA `Newton's Laws`: 5/5 authored and passed.
+- Fixed AQA `Newton's Third Law`: 18/18 authored and passed.
+- Official anchors checked:
+  - AQA Physics 8463 `4.5.6.2` / `4.5.6.2.3`.
+  - AQA Combined Science 8464 Physics `6.5.4.2` / `6.5.4.2.3`.
+- Hidden spec metadata:
+  - `specRef`: `4.5.6.2` or `4.5.6.2.3`.
+  - `combinedSpecRef`: `6.5.4.2` or `6.5.4.2.3`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Newton's Laws runtime count: 5, authored count: 5, scaffold leaks: 0.
+  - Newton's Third Law runtime count: 18, authored count: 18, scaffold leaks: 0.
+  - Covers Newton's first law, `F = ma`, acceleration rearrangement, inertial mass graph gradient, action-reaction pairs, different-object rule, equal/opposite forces, collisions, propulsion, non-contact forces, and balanced-force misconceptions.
+- Current premium Adaptive Practice progress:
+  - AQA: 353/832 authored, 479 remaining.
+  - Edexcel: 213/681 authored, 468 remaining.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `node scripts/smoke-adaptive-course-filter.mjs` passes.
+  - `npm run build` passes.
+
+### Next step
+- Continue AQA Forces:
+  - Next highest-impact remaining subtopic is `Weight, Mass and Gravity` / `Terminal Velocity`, then move through stopping distance and momentum.
+
 ### Board-specific spec ordering and course filtering aligned
 - Added a board-specific curriculum ordering layer in `src/features/curriculum/curriculumOrder.js`.
 - AQA now follows the broad AQA Physics specification order:

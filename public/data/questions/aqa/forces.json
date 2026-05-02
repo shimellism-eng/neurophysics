@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "forces",
-  "generatedAt": "2026-05-02T10:28:52.450Z",
+  "generatedAt": "2026-05-02T11:03:38.845Z",
   "questions": [
     {
       "id": "aqa_forces_hookes_law_relationship_001",
@@ -2741,7 +2741,7 @@
       "senNote": "This checks one idea only: Use acceleration."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_third_law_direct_recall_001",
+      "id": "aqa_forces_newtons_third_law_skater_pair_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2753,6 +2753,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -2763,127 +2764,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_third_law",
-        "statement": "Recognise interaction pairs. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_skater_pair_001_lo",
+        "statement": "Identify a Newton’s third-law pair in a contact interaction.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.2.3:third_law:direct_recall",
-      "conceptFamily": "third_law",
-      "contextType": "a comparison question",
-      "skill": "Newton's Third Law practice",
-      "stem": "Which statement is correct for newton's third law? Demand focus: recognise interaction pairs.",
-      "question": "Which statement is correct for newton's third law? Demand focus: recognise interaction pairs.",
-      "options": [
-        "For newton's third law: Interaction forces are equal in size, opposite in direction and act on different objects.",
-        "For newton's third law, this would mean that the forces cancel because they act on one object.",
-        "The claim for newton's third law is that the larger object always exerts the larger force.",
-        "The claim for newton's third law is that interaction forces act on the same object."
-      ],
-      "correctAnswer": "For newton's third law: Interaction forces are equal in size, opposite in direction and act on different objects.",
-      "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Recognise interaction pairs. Focus area: Newton's Third Law. For this question, Interaction forces are equal in size, opposite in direction and act on different objects. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:third_law",
-      "distractorRationales": [
-        {
-          "text": "The claim for newton's third law is that interaction forces act on the same object.",
-          "misconception": "Interaction forces act on the same object."
-        },
-        {
-          "text": "The claim for newton's third law is that the larger object always exerts the larger force.",
-          "misconception": "The larger object always exerts the larger force."
-        },
-        {
-          "text": "For newton's third law, this would mean that the forces cancel because they act on one object.",
-          "misconception": "The forces cancel because they act on one object."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise interaction pairs."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_second_law_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_second_law",
-        "statement": "Use Newton’s second law. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.2.3:second_law:concept_discrimination",
-      "conceptFamily": "second_law",
-      "contextType": "a method-choice question",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_skater_pair_001",
+      "conceptFamily": "identify_a_newtons_third_law_pair_in_a_contact_interaction",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "A student is comparing similar ideas in newton's third law. Which statement is correct? Use the wording carefully: this is about use Newton’s second law.",
-      "question": "A student is comparing similar ideas in newton's third law. Which statement is correct? Use the wording carefully: this is about use Newton’s second law.",
+      "stem": "A skater pushes backwards on a wall. Which force is paired with this force by Newton’s third law?",
+      "question": "A skater pushes backwards on a wall. Which force is paired with this force by Newton’s third law?",
       "options": [
-        "The answer for newton's third law says that mass is measured in newtons.",
-        "The answer for newton's third law says that acceleration is independent of force.",
-        "In this newton's third law item, resultant force = mass × acceleration.",
-        "For newton's third law, the statement is that resultant force = mass ÷ acceleration."
+        "The wall pushes forwards on the skater.",
+        "The Earth pulls down on the skater.",
+        "The skater pushes down on the ice.",
+        "The ice pushes up on the skater."
       ],
-      "correctAnswer": "In this newton's third law item, resultant force = mass × acceleration.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.2.3 targets: Use Newton’s second law. Focus area: Newton's Third Law. For this question, Resultant force = mass × acceleration. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:second_law",
+      "correctAnswer": "The wall pushes forwards on the skater.",
+      "correctIndex": 0,
+      "explanation": "The third-law pair is the force of the skater on the wall and the force of the wall on the skater.",
+      "misconceptionTag": "wrong-interaction-pair",
       "distractorRationales": [
         {
-          "text": "The answer for newton's third law says that acceleration is independent of force.",
-          "misconception": "Resultant force = mass ÷ acceleration."
+          "text": "The Earth pulls down on the skater.",
+          "misconception": "weight chosen instead of interaction pair"
         },
         {
-          "text": "The answer for newton's third law says that mass is measured in newtons.",
-          "misconception": "Acceleration is independent of force."
+          "text": "The skater pushes down on the ice.",
+          "misconception": "different interaction chosen"
         },
         {
-          "text": "For newton's third law, the statement is that resultant force = mass ÷ acceleration.",
-          "misconception": "Mass is measured in newtons."
+          "text": "The ice pushes up on the skater.",
+          "misconception": "normal contact force chosen instead of wall pair"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Newton’s second law."
+      "senNote": "Checks: Identify a Newton’s third-law pair in a contact interaction."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_first_law_misconception_correction_003",
+      "id": "aqa_forces_newtons_third_law_book_table_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2895,6 +2826,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -2905,56 +2837,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_first_law",
-        "statement": "Apply Newton’s first law. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_book_table_002_lo",
+        "statement": "State the size and direction of an equal and opposite contact force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.2.3:first_law:misconception_correction",
-      "conceptFamily": "first_law",
-      "contextType": "a results discussion",
+      "commandWord": "state",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_book_table_002",
+      "conceptFamily": "state_the_size_and_direction_of_an_equal_and_opposite_contact_force",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "A revision note about newton's third law contains an error. Which replacement is correct? Use the wording carefully: this is about apply Newton’s first law.",
-      "question": "A revision note about newton's third law contains an error. Which replacement is correct? Use the wording carefully: this is about apply Newton’s first law.",
+      "stem": "A book rests on a table. The book pushes down on the table with a force of 8 N. What force does the table exert on the book?",
+      "question": "A book rests on a table. The book pushes down on the table with a force of 8 N. What force does the table exert on the book?",
       "options": [
-        "In this item, it means that an object remains at rest or constant velocity unless a resultant force acts.",
-        "The claim for newton's third law is that a moving object always needs a resultant force to keep moving.",
-        "The claim for newton's third law is that objects stop because forces are balanced.",
-        "The claim for newton's third law is that balanced forces always make speed increase."
+        "8 N upwards.",
+        "8 N downwards.",
+        "More than 8 N upwards.",
+        "0 N because the book is not moving."
       ],
-      "correctAnswer": "In this item, it means that an object remains at rest or constant velocity unless a resultant force acts.",
+      "correctAnswer": "8 N upwards.",
       "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Apply Newton’s first law. Focus area: Newton's Third Law. For this question, An object remains at rest or constant velocity unless a resultant force acts. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:first_law",
+      "explanation": "The table exerts an equal and opposite contact force on the book: 8 N upwards.",
+      "misconceptionTag": "third-law-size-direction",
       "distractorRationales": [
         {
-          "text": "The claim for newton's third law is that objects stop because forces are balanced.",
-          "misconception": "A moving object always needs a resultant force to keep moving."
+          "text": "8 N downwards.",
+          "misconception": "direction not reversed"
         },
         {
-          "text": "The claim for newton's third law is that a moving object always needs a resultant force to keep moving.",
-          "misconception": "Balanced forces always make speed increase."
+          "text": "More than 8 N upwards.",
+          "misconception": "larger support force assumed"
         },
         {
-          "text": "The claim for newton's third law is that balanced forces always make speed increase.",
-          "misconception": "Objects stop because forces are balanced."
+          "text": "0 N because the book is not moving.",
+          "misconception": "stationary confused with no interaction force"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Apply Newton’s first law."
+      "senNote": "Checks: State the size and direction of an equal and opposite contact force."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces_data_interpretation_004",
+      "id": "aqa_forces_newtons_third_law_different_objects_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2966,6 +2899,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -2976,198 +2910,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces",
-        "statement": "Interpret balanced forces. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.2.3:balanced_forces:data_interpretation",
-      "conceptFamily": "balanced_forces",
-      "contextType": "a classroom demonstration",
-      "skill": "Newton's Third Law practice",
-      "stem": "A small data set about newton's third law is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: interpret balanced forces.",
-      "question": "A small data set about newton's third law is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: interpret balanced forces.",
-      "options": [
-        "For newton's third law, it means that balanced forces give zero resultant force, so velocity does not change.",
-        "For newton's third law: Balanced forces make acceleration increase.",
-        "The claim for newton's third law is that balanced forces always mean the object is stationary.",
-        "The claim for newton's third law is that balanced forces remove all motion instantly."
-      ],
-      "correctAnswer": "For newton's third law, it means that balanced forces give zero resultant force, so velocity does not change.",
-      "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Interpret balanced forces. Focus area: Newton's Third Law. For this question, Balanced forces give zero resultant force, so velocity does not change. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:balanced_forces",
-      "distractorRationales": [
-        {
-          "text": "The claim for newton's third law is that balanced forces always mean the object is stationary.",
-          "misconception": "Balanced forces always mean the object is stationary."
-        },
-        {
-          "text": "For newton's third law: Balanced forces make acceleration increase.",
-          "misconception": "Balanced forces make acceleration increase."
-        },
-        {
-          "text": "The claim for newton's third law is that balanced forces remove all motion instantly.",
-          "misconception": "Balanced forces remove all motion instantly."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret balanced forces."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_third_law_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_third_law",
-        "statement": "Recognise interaction pairs. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.2.3:third_law:representation_interpretation",
-      "conceptFamily": "third_law",
-      "contextType": "a revision checkpoint",
-      "skill": "Newton's Third Law practice",
-      "stem": "Which option correctly reads the newton's third law model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: recognise interaction pairs.",
-      "question": "Which option correctly reads the newton's third law model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: recognise interaction pairs.",
-      "options": [
-        "For newton's third law, the statement is that interaction forces are equal in size, opposite in direction and act on different objects.",
-        "For newton's third law, the statement is that the larger object always exerts the larger force.",
-        "For newton's third law, the statement is that interaction forces act on the same object.",
-        "In this newton's third law item, the forces cancel because they act on one object."
-      ],
-      "correctAnswer": "For newton's third law, the statement is that interaction forces are equal in size, opposite in direction and act on different objects.",
-      "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Recognise interaction pairs. Focus area: Newton's Third Law. For this question, Interaction forces are equal in size, opposite in direction and act on different objects. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:third_law",
-      "distractorRationales": [
-        {
-          "text": "For newton's third law, the statement is that the larger object always exerts the larger force.",
-          "misconception": "Interaction forces act on the same object."
-        },
-        {
-          "text": "In this newton's third law item, the forces cancel because they act on one object.",
-          "misconception": "The larger object always exerts the larger force."
-        },
-        {
-          "text": "For newton's third law, the statement is that interaction forces act on the same object.",
-          "misconception": "The forces cancel because they act on one object."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise interaction pairs."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_second_law_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_second_law",
-        "statement": "Use Newton’s second law. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_different_objects_003_lo",
+        "statement": "Recall that Newton’s third-law forces act on different objects.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.2.3:second_law:direct_recall",
-      "conceptFamily": "second_law",
-      "contextType": "an exam-style data table",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_newtons_third_law_different_objects_003",
+      "conceptFamily": "recall_that_newtons_third_law_forces_act_on_different_objects",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "Which answer matches this newton's third law objective: Use Newton’s second law? Check the clue before choosing: Use Newton’s second law.",
-      "question": "Which answer matches this newton's third law objective: Use Newton’s second law? Check the clue before choosing: Use Newton’s second law.",
+      "stem": "Which statement about Newton’s third-law forces is correct?",
+      "question": "Which statement about Newton’s third-law forces is correct?",
       "options": [
-        "In this item, it means that acceleration is independent of force.",
-        "In this item, it means that resultant force = mass × acceleration.",
-        "In this item, it means that mass is measured in newtons.",
-        "The claim for newton's third law is that resultant force = mass ÷ acceleration."
+        "They act on different objects.",
+        "They act on the same object and cancel.",
+        "They always act in the same direction.",
+        "The larger object always exerts the larger force."
       ],
-      "correctAnswer": "In this item, it means that resultant force = mass × acceleration.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.2.3 targets: Use Newton’s second law. Focus area: Newton's Third Law. For this question, Resultant force = mass × acceleration. Context used: an exam-style data table; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:second_law",
+      "correctAnswer": "They act on different objects.",
+      "correctIndex": 0,
+      "explanation": "Third-law forces are equal in size, opposite in direction and act on different objects.",
+      "misconceptionTag": "same-object-cancel",
       "distractorRationales": [
         {
-          "text": "In this item, it means that mass is measured in newtons.",
-          "misconception": "Resultant force = mass ÷ acceleration."
+          "text": "They act on the same object and cancel.",
+          "misconception": "third-law pair confused with balanced forces"
         },
         {
-          "text": "The claim for newton's third law is that resultant force = mass ÷ acceleration.",
-          "misconception": "Acceleration is independent of force."
+          "text": "They always act in the same direction.",
+          "misconception": "opposite direction missed"
         },
         {
-          "text": "In this item, it means that acceleration is independent of force.",
-          "misconception": "Mass is measured in newtons."
+          "text": "The larger object always exerts the larger force.",
+          "misconception": "equal magnitude missed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Newton’s second law."
+      "senNote": "Checks: Recall that Newton’s third-law forces act on different objects."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_first_law_applied_context_007",
+      "id": "aqa_forces_newtons_third_law_collision_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3179,6 +2972,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3189,8 +2983,8 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_first_law",
-        "statement": "Apply Newton’s first law. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_collision_004_lo",
+        "statement": "Apply Newton’s third law to a collision.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
@@ -3198,47 +2992,48 @@
       "difficulty": "medium",
       "commandWord": "apply",
       "responseMode": "applied_context",
-      "patternId": "4.5.6.2.3:first_law:applied_context",
-      "conceptFamily": "first_law",
-      "contextType": "a required-practical notebook",
+      "patternId": "authored:aqa_forces_newtons_third_law_collision_004",
+      "conceptFamily": "apply_newtons_third_law_to_a_collision",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "In a required-practical notebook, which conclusion is correct for newton's third law? Check the clue before choosing: Apply Newton’s first law.",
-      "question": "In a required-practical notebook, which conclusion is correct for newton's third law? Check the clue before choosing: Apply Newton’s first law.",
+      "stem": "A car and a van collide. During the collision, the car exerts a force on the van. What can be said about the force exerted by the van on the car?",
+      "question": "A car and a van collide. During the collision, the car exerts a force on the van. What can be said about the force exerted by the van on the car?",
       "options": [
-        "For newton's third law, the statement is that an object remains at rest or constant velocity unless a resultant force acts.",
-        "In this newton's third law item, balanced forces always make speed increase.",
-        "The answer for newton's third law says that objects stop because forces are balanced.",
-        "For newton's third law, the statement is that a moving object always needs a resultant force to keep moving."
+        "It is equal in size and opposite in direction.",
+        "It is smaller because the car is lighter.",
+        "It is larger because the van is larger.",
+        "It acts in the same direction as the force on the van."
       ],
-      "correctAnswer": "For newton's third law, the statement is that an object remains at rest or constant velocity unless a resultant force acts.",
+      "correctAnswer": "It is equal in size and opposite in direction.",
       "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Apply Newton’s first law. Focus area: Newton's Third Law. For this question, An object remains at rest or constant velocity unless a resultant force acts. Context used: a required-practical notebook; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:first_law",
+      "explanation": "In an interaction, each object exerts an equal and opposite force on the other object.",
+      "misconceptionTag": "collision-force-size",
       "distractorRationales": [
         {
-          "text": "For newton's third law, the statement is that a moving object always needs a resultant force to keep moving.",
-          "misconception": "A moving object always needs a resultant force to keep moving."
+          "text": "It is smaller because the car is lighter.",
+          "misconception": "mass used to compare third-law force size"
         },
         {
-          "text": "In this newton's third law item, balanced forces always make speed increase.",
-          "misconception": "Balanced forces always make speed increase."
+          "text": "It is larger because the van is larger.",
+          "misconception": "vehicle size used to compare force size"
         },
         {
-          "text": "The answer for newton's third law says that objects stop because forces are balanced.",
-          "misconception": "Objects stop because forces are balanced."
+          "text": "It acts in the same direction as the force on the van.",
+          "misconception": "opposite direction missed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Apply Newton’s first law."
+      "senNote": "Checks: Apply Newton’s third law to a collision."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces_misconception_correction_008",
+      "id": "aqa_forces_newtons_third_law_gravity_pair_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3250,6 +3045,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3260,269 +3056,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces",
-        "statement": "Interpret balanced forces. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_gravity_pair_005_lo",
+        "statement": "Identify a third-law pair for a gravitational interaction.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_gravity_pair_005",
+      "conceptFamily": "identify_a_third_law_pair_for_a_gravitational_interaction",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "The Earth pulls down on a satellite. What is the matching Newton’s third-law force?",
+      "question": "The Earth pulls down on a satellite. What is the matching Newton’s third-law force?",
+      "options": [
+        "The satellite pulls up on the Earth.",
+        "The satellite pushes down on the Earth.",
+        "The Earth pushes up on the satellite.",
+        "The satellite has no effect on the Earth because it has less mass."
+      ],
+      "correctAnswer": "The satellite pulls up on the Earth.",
+      "correctIndex": 0,
+      "explanation": "Gravitational forces also come in pairs: the satellite pulls the Earth with an equal and opposite force.",
+      "misconceptionTag": "gravity-third-law-pair",
+      "distractorRationales": [
+        {
+          "text": "The satellite pushes down on the Earth.",
+          "misconception": "direction wrong for gravitational pair"
+        },
+        {
+          "text": "The Earth pushes up on the satellite.",
+          "misconception": "contact support force invented"
+        },
+        {
+          "text": "The satellite has no effect on the Earth because it has less mass.",
+          "misconception": "smaller object assumed to exert no force"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify a third-law pair for a gravitational interaction."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_balanced_forces_006",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_balanced_forces_006_lo",
+        "statement": "Distinguish Newton’s third law from balanced forces.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.2.3:balanced_forces:misconception_correction",
-      "conceptFamily": "balanced_forces",
-      "contextType": "a technician report",
-      "skill": "Newton's Third Law practice",
-      "stem": "Which answer corrects a misconception about newton's third law? Keep the answer focused on newton's third law: interpret balanced forces.",
-      "question": "Which answer corrects a misconception about newton's third law? Keep the answer focused on newton's third law: interpret balanced forces.",
-      "options": [
-        "For newton's third law, it means that balanced forces give zero resultant force, so velocity does not change.",
-        "For newton's third law, the statement is that balanced forces remove all motion instantly.",
-        "For newton's third law, the statement is that balanced forces always mean the object is stationary.",
-        "For newton's third law, the statement is that balanced forces make acceleration increase."
-      ],
-      "correctAnswer": "For newton's third law, it means that balanced forces give zero resultant force, so velocity does not change.",
-      "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Interpret balanced forces. Focus area: Newton's Third Law. For this question, Balanced forces give zero resultant force, so velocity does not change. Context used: a technician report; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:balanced_forces",
-      "distractorRationales": [
-        {
-          "text": "For newton's third law, the statement is that balanced forces make acceleration increase.",
-          "misconception": "Balanced forces always mean the object is stationary."
-        },
-        {
-          "text": "For newton's third law, the statement is that balanced forces remove all motion instantly.",
-          "misconception": "Balanced forces make acceleration increase."
-        },
-        {
-          "text": "For newton's third law, the statement is that balanced forces always mean the object is stationary.",
-          "misconception": "Balanced forces remove all motion instantly."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret balanced forces."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_third_law_exam_decision_009",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_third_law",
-        "statement": "Recognise interaction pairs. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.6.2.3:third_law:exam_decision",
-      "conceptFamily": "third_law",
-      "contextType": "a labelled diagram",
-      "skill": "Newton's Third Law practice",
-      "stem": "The mark scheme is testing recognise interaction pairs. Which answer matches that point? Keep the answer focused on newton's third law: recognise interaction pairs.",
-      "question": "The mark scheme is testing recognise interaction pairs. Which answer matches that point? Keep the answer focused on newton's third law: recognise interaction pairs.",
-      "options": [
-        "For newton's third law, it means that the larger object always exerts the larger force.",
-        "The answer for newton's third law says that interaction forces act on the same object.",
-        "In this newton's third law item, the forces cancel because they act on one object.",
-        "For newton's third law, it means that interaction forces are equal in size, opposite in direction and act on different objects."
-      ],
-      "correctAnswer": "For newton's third law, it means that interaction forces are equal in size, opposite in direction and act on different objects.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.3 targets: Recognise interaction pairs. Focus area: Newton's Third Law. For this question, Interaction forces are equal in size, opposite in direction and act on different objects. Context used: a labelled diagram; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:third_law",
-      "distractorRationales": [
-        {
-          "text": "In this newton's third law item, the forces cancel because they act on one object.",
-          "misconception": "Interaction forces act on the same object."
-        },
-        {
-          "text": "The answer for newton's third law says that interaction forces act on the same object.",
-          "misconception": "The larger object always exerts the larger force."
-        },
-        {
-          "text": "For newton's third law, it means that the larger object always exerts the larger force.",
-          "misconception": "The forces cancel because they act on one object."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise interaction pairs."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_second_law_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_second_law",
-        "statement": "Use Newton’s second law. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.2.3:second_law:representation_interpretation",
-      "conceptFamily": "second_law",
-      "contextType": "a short calculation",
-      "skill": "Newton's Third Law practice",
-      "stem": "A representation of newton's third law is described in words. Which interpretation is correct? Demand focus: use Newton’s second law.",
-      "question": "A representation of newton's third law is described in words. Which interpretation is correct? Demand focus: use Newton’s second law.",
-      "options": [
-        "The answer for newton's third law says that acceleration is independent of force.",
-        "The answer for newton's third law says that resultant force = mass ÷ acceleration.",
-        "For newton's third law, the answer claims that resultant force = mass × acceleration.",
-        "For newton's third law, the statement is that mass is measured in newtons."
-      ],
-      "correctAnswer": "For newton's third law, the answer claims that resultant force = mass × acceleration.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.2.3 targets: Use Newton’s second law. Focus area: Newton's Third Law. For this question, Resultant force = mass × acceleration. Context used: a short calculation; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:second_law",
-      "distractorRationales": [
-        {
-          "text": "The answer for newton's third law says that resultant force = mass ÷ acceleration.",
-          "misconception": "Resultant force = mass ÷ acceleration."
-        },
-        {
-          "text": "The answer for newton's third law says that acceleration is independent of force.",
-          "misconception": "Acceleration is independent of force."
-        },
-        {
-          "text": "For newton's third law, the statement is that mass is measured in newtons.",
-          "misconception": "Mass is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use Newton’s second law."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_first_law_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_first_law",
-        "statement": "Apply Newton’s first law. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.2.3:first_law:concept_discrimination",
-      "conceptFamily": "first_law",
-      "contextType": "a safety decision",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_newtons_third_law_balanced_forces_006",
+      "conceptFamily": "distinguish_newtons_third_law_from_balanced_forces",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "A student is comparing similar ideas in newton's third law. Which statement is correct? Demand focus: apply Newton’s first law.",
-      "question": "A student is comparing similar ideas in newton's third law. Which statement is correct? Demand focus: apply Newton’s first law.",
+      "stem": "Why do Newton’s third-law forces not cancel each other out?",
+      "question": "Why do Newton’s third-law forces not cancel each other out?",
       "options": [
-        "In this item, it means that balanced forces always make speed increase.",
-        "The claim for newton's third law is that an object remains at rest or constant velocity unless a resultant force acts.",
-        "For newton's third law: A moving object always needs a resultant force to keep moving.",
-        "In this item, it means that objects stop because forces are balanced."
+        "They act on different objects.",
+        "They are never equal in size.",
+        "They act in the same direction.",
+        "They only happen when objects are stationary."
       ],
-      "correctAnswer": "The claim for newton's third law is that an object remains at rest or constant velocity unless a resultant force acts.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.2.3 targets: Apply Newton’s first law. Focus area: Newton's Third Law. For this question, An object remains at rest or constant velocity unless a resultant force acts. Context used: a safety decision; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:first_law",
+      "correctAnswer": "They act on different objects.",
+      "correctIndex": 0,
+      "explanation": "Forces can cancel only when they act on the same object. A third-law pair acts on two different objects.",
+      "misconceptionTag": "third-law-not-balanced-forces",
       "distractorRationales": [
         {
-          "text": "In this item, it means that balanced forces always make speed increase.",
-          "misconception": "A moving object always needs a resultant force to keep moving."
+          "text": "They are never equal in size.",
+          "misconception": "equal size rejected"
         },
         {
-          "text": "In this item, it means that objects stop because forces are balanced.",
-          "misconception": "Balanced forces always make speed increase."
+          "text": "They act in the same direction.",
+          "misconception": "direction rule reversed"
         },
         {
-          "text": "For newton's third law: A moving object always needs a resultant force to keep moving.",
-          "misconception": "Objects stop because forces are balanced."
+          "text": "They only happen when objects are stationary.",
+          "misconception": "third law limited to stationary objects"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Apply Newton’s first law."
+      "senNote": "Checks: Distinguish Newton’s third law from balanced forces."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces_applied_context_012",
+      "id": "aqa_forces_newtons_third_law_swimmer_007",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3534,6 +3191,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3544,8 +3202,8 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces",
-        "statement": "Interpret balanced forces. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_swimmer_007_lo",
+        "statement": "Apply Newton’s third law to propulsion in water.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
@@ -3553,47 +3211,48 @@
       "difficulty": "medium",
       "commandWord": "apply",
       "responseMode": "applied_context",
-      "patternId": "4.5.6.2.3:balanced_forces:applied_context",
-      "conceptFamily": "balanced_forces",
-      "contextType": "a graph-reading task",
+      "patternId": "authored:aqa_forces_newtons_third_law_swimmer_007",
+      "conceptFamily": "apply_newtons_third_law_to_propulsion_in_water",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "A question set in a graph-reading task tests newton's third law. Which answer applies the idea correctly? Use the wording carefully: this is about interpret balanced forces.",
-      "question": "A question set in a graph-reading task tests newton's third law. Which answer applies the idea correctly? Use the wording carefully: this is about interpret balanced forces.",
+      "stem": "A swimmer pushes water backwards. Which force moves the swimmer forwards?",
+      "question": "A swimmer pushes water backwards. Which force moves the swimmer forwards?",
       "options": [
-        "In this item, it means that balanced forces make acceleration increase.",
-        "For newton's third law, the option says that balanced forces remove all motion instantly.",
-        "For newton's third law, it means that balanced forces always mean the object is stationary.",
-        "In this item, it means that balanced forces give zero resultant force, so velocity does not change."
+        "The water pushes the swimmer forwards.",
+        "The swimmer’s weight pushes the swimmer forwards.",
+        "The swimmer pushes themselves forwards directly.",
+        "The water pulls the swimmer downwards."
       ],
-      "correctAnswer": "In this item, it means that balanced forces give zero resultant force, so velocity does not change.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.3 targets: Interpret balanced forces. Focus area: Newton's Third Law. For this question, Balanced forces give zero resultant force, so velocity does not change. Context used: a graph-reading task; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:balanced_forces",
+      "correctAnswer": "The water pushes the swimmer forwards.",
+      "correctIndex": 0,
+      "explanation": "The swimmer pushes water backwards, and the water exerts an equal and opposite forward force on the swimmer.",
+      "misconceptionTag": "propulsion-reaction-force",
       "distractorRationales": [
         {
-          "text": "For newton's third law, the option says that balanced forces remove all motion instantly.",
-          "misconception": "Balanced forces always mean the object is stationary."
+          "text": "The swimmer’s weight pushes the swimmer forwards.",
+          "misconception": "weight direction confused"
         },
         {
-          "text": "For newton's third law, it means that balanced forces always mean the object is stationary.",
-          "misconception": "Balanced forces make acceleration increase."
+          "text": "The swimmer pushes themselves forwards directly.",
+          "misconception": "same-object force misconception"
         },
         {
-          "text": "In this item, it means that balanced forces make acceleration increase.",
-          "misconception": "Balanced forces remove all motion instantly."
+          "text": "The water pulls the swimmer downwards.",
+          "misconception": "wrong direction and interaction"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret balanced forces."
+      "senNote": "Checks: Apply Newton’s third law to propulsion in water."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_third_law_data_interpretation_013",
+      "id": "aqa_forces_newtons_third_law_rocket_008",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3605,6 +3264,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3615,56 +3275,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_third_law",
-        "statement": "Recognise interaction pairs. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_rocket_008_lo",
+        "statement": "Use Newton’s third law to explain rocket thrust.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.2.3:third_law:data_interpretation",
-      "conceptFamily": "third_law",
-      "contextType": "a comparison question",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_rocket_008",
+      "conceptFamily": "use_newtons_third_law_to_explain_rocket_thrust",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "A small data set about newton's third law is being interpreted. Which conclusion is valid? Use the wording carefully: this is about recognise interaction pairs.",
-      "question": "A small data set about newton's third law is being interpreted. Which conclusion is valid? Use the wording carefully: this is about recognise interaction pairs.",
+      "stem": "A rocket engine pushes exhaust gases downwards. What force acts on the rocket?",
+      "question": "A rocket engine pushes exhaust gases downwards. What force acts on the rocket?",
       "options": [
-        "The claim for newton's third law is that the larger object always exerts the larger force.",
-        "In this item, it means that interaction forces are equal in size, opposite in direction and act on different objects.",
-        "The claim for newton's third law is that interaction forces act on the same object.",
-        "For newton's third law, this would mean that the forces cancel because they act on one object."
+        "The exhaust gases push the rocket upwards.",
+        "The exhaust gases pull the rocket downwards.",
+        "Only gravity acts on the rocket.",
+        "The rocket pushes itself upwards with no interaction."
       ],
-      "correctAnswer": "In this item, it means that interaction forces are equal in size, opposite in direction and act on different objects.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.2.3 targets: Recognise interaction pairs. Focus area: Newton's Third Law. For this question, Interaction forces are equal in size, opposite in direction and act on different objects. Context used: a comparison question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:third_law",
+      "correctAnswer": "The exhaust gases push the rocket upwards.",
+      "correctIndex": 0,
+      "explanation": "The rocket pushes gases downwards, and the gases push the rocket upwards.",
+      "misconceptionTag": "rocket-thrust-pair",
       "distractorRationales": [
         {
-          "text": "The claim for newton's third law is that interaction forces act on the same object.",
-          "misconception": "Interaction forces act on the same object."
+          "text": "The exhaust gases pull the rocket downwards.",
+          "misconception": "opposite direction missed"
         },
         {
-          "text": "The claim for newton's third law is that the larger object always exerts the larger force.",
-          "misconception": "The larger object always exerts the larger force."
+          "text": "Only gravity acts on the rocket.",
+          "misconception": "engine interaction ignored"
         },
         {
-          "text": "For newton's third law, this would mean that the forces cancel because they act on one object.",
-          "misconception": "The forces cancel because they act on one object."
+          "text": "The rocket pushes itself upwards with no interaction.",
+          "misconception": "force without interaction"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recognise interaction pairs."
+      "senNote": "Checks: Use Newton’s third law to explain rocket thrust."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_second_law_exam_decision_014",
+      "id": "aqa_forces_newtons_third_law_tug_of_war_009",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3676,6 +3337,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3686,56 +3348,422 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_second_law",
-        "statement": "Use Newton’s second law. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_tug_of_war_009_lo",
+        "statement": "Apply equal and opposite forces to a rope interaction.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "apply",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_tug_of_war_009",
+      "conceptFamily": "apply_equal_and_opposite_forces_to_a_rope_interaction",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "A pupil pulls on a rope with 120 N. The rope pulls on the pupil. Which statement is correct?",
+      "question": "A pupil pulls on a rope with 120 N. The rope pulls on the pupil. Which statement is correct?",
+      "options": [
+        "The rope pulls back on the pupil with 120 N.",
+        "The rope pulls back with less than 120 N because it is lighter.",
+        "The rope pulls back with more than 120 N because it is stretched.",
+        "The rope does not pull on the pupil until the pupil moves."
+      ],
+      "correctAnswer": "The rope pulls back on the pupil with 120 N.",
+      "correctIndex": 0,
+      "explanation": "The pupil and rope exert equal and opposite forces on each other.",
+      "misconceptionTag": "rope-force-pair",
+      "distractorRationales": [
+        {
+          "text": "The rope pulls back with less than 120 N because it is lighter.",
+          "misconception": "object mass used incorrectly"
+        },
+        {
+          "text": "The rope pulls back with more than 120 N because it is stretched.",
+          "misconception": "stretch confused with third-law size"
+        },
+        {
+          "text": "The rope does not pull on the pupil until the pupil moves.",
+          "misconception": "motion required incorrectly"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Apply equal and opposite forces to a rope interaction."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_lift_off_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_lift_off_010_lo",
+        "statement": "Identify a third-law pair in a lift-producing interaction.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_lift_off_010",
+      "conceptFamily": "identify_a_third_law_pair_in_a_lift_producing_interaction",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "A drone pushes air downwards with its propellers. Which force is the Newton’s third-law pair?",
+      "question": "A drone pushes air downwards with its propellers. Which force is the Newton’s third-law pair?",
+      "options": [
+        "The air pushes the drone upwards.",
+        "The Earth pulls the drone downwards.",
+        "The drone pushes the air upwards.",
+        "The propellers reduce the drone’s mass."
+      ],
+      "correctAnswer": "The air pushes the drone upwards.",
+      "correctIndex": 0,
+      "explanation": "The drone pushes air downwards; the air pushes the drone upwards.",
+      "misconceptionTag": "lift-reaction-force",
+      "distractorRationales": [
+        {
+          "text": "The Earth pulls the drone downwards.",
+          "misconception": "weight chosen instead of propeller-air interaction"
+        },
+        {
+          "text": "The drone pushes the air upwards.",
+          "misconception": "direction of force on air reversed"
+        },
+        {
+          "text": "The propellers reduce the drone’s mass.",
+          "misconception": "mass change invented"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify a third-law pair in a lift-producing interaction."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_hammer_nail_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_hammer_nail_011_lo",
+        "statement": "Choose the matching force in an impact interaction.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_hammer_nail_011",
+      "conceptFamily": "choose_the_matching_force_in_an_impact_interaction",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "A hammer hits a nail. The hammer exerts a force on the nail. Which force completes the Newton’s third-law pair?",
+      "question": "A hammer hits a nail. The hammer exerts a force on the nail. Which force completes the Newton’s third-law pair?",
+      "options": [
+        "The nail exerts an equal force back on the hammer.",
+        "The nail exerts no force because it is not moving.",
+        "The nail exerts a smaller force because it is smaller.",
+        "The hand exerts the same force on the hammer."
+      ],
+      "correctAnswer": "The nail exerts an equal force back on the hammer.",
+      "correctIndex": 0,
+      "explanation": "The nail exerts an equal and opposite force on the hammer during the interaction.",
+      "misconceptionTag": "impact-third-law-pair",
+      "distractorRationales": [
+        {
+          "text": "The nail exerts no force because it is not moving.",
+          "misconception": "stationary object assumed unable to exert force"
+        },
+        {
+          "text": "The nail exerts a smaller force because it is smaller.",
+          "misconception": "size used to compare force size"
+        },
+        {
+          "text": "The hand exerts the same force on the hammer.",
+          "misconception": "different interaction chosen"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose the matching force in an impact interaction."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_two_magnets_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_two_magnets_012_lo",
+        "statement": "Apply Newton’s third law to a non-contact magnetic force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "apply",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_two_magnets_012",
+      "conceptFamily": "apply_newtons_third_law_to_a_non_contact_magnetic_force",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "Two magnets repel each other. Magnet A exerts a force on magnet B. What can be said about the force from B on A?",
+      "question": "Two magnets repel each other. Magnet A exerts a force on magnet B. What can be said about the force from B on A?",
+      "options": [
+        "It is equal in size and opposite in direction.",
+        "It is zero because the magnets are not touching.",
+        "It is in the same direction.",
+        "It is larger if magnet B is labelled north."
+      ],
+      "correctAnswer": "It is equal in size and opposite in direction.",
+      "correctIndex": 0,
+      "explanation": "Newton’s third law applies to non-contact forces as well as contact forces.",
+      "misconceptionTag": "non-contact-third-law",
+      "distractorRationales": [
+        {
+          "text": "It is zero because the magnets are not touching.",
+          "misconception": "non-contact forces ignored"
+        },
+        {
+          "text": "It is in the same direction.",
+          "misconception": "opposite direction missed"
+        },
+        {
+          "text": "It is larger if magnet B is labelled north.",
+          "misconception": "pole label confused with force size"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Apply Newton’s third law to a non-contact magnetic force."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_same_type_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_same_type_013_lo",
+        "statement": "Recognise that third-law pairs are the same type of interaction force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recognise",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_newtons_third_law_same_type_013",
+      "conceptFamily": "recognise_that_third_law_pairs_are_the_same_type_of_interaction_force",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "Which description correctly matches a Newton’s third-law force pair?",
+      "question": "Which description correctly matches a Newton’s third-law force pair?",
+      "options": [
+        "Two contact forces between the same two objects, acting in opposite directions.",
+        "One contact force and one weight force on the same object.",
+        "Two forces in the same direction on one object.",
+        "A large force and a small force that act at different times."
+      ],
+      "correctAnswer": "Two contact forces between the same two objects, acting in opposite directions.",
+      "correctIndex": 0,
+      "explanation": "A third-law pair is the same type of force between the same two objects, equal in size and opposite in direction.",
+      "misconceptionTag": "mixed-force-types",
+      "distractorRationales": [
+        {
+          "text": "One contact force and one weight force on the same object.",
+          "misconception": "different force types and same object"
+        },
+        {
+          "text": "Two forces in the same direction on one object.",
+          "misconception": "same-object force pair"
+        },
+        {
+          "text": "A large force and a small force that act at different times.",
+          "misconception": "unequal delayed pair"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recognise that third-law pairs are the same type of interaction force."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_acceleration_014",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_acceleration_014_lo",
+        "statement": "Explain why equal third-law forces can produce different accelerations.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.6.2.3:second_law:exam_decision",
-      "conceptFamily": "second_law",
-      "contextType": "a method-choice question",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_newtons_third_law_acceleration_014",
+      "conceptFamily": "explain_why_equal_third_law_forces_can_produce_different_accelerations",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "Which answer is the strongest GCSE Physics response for newton's third law? Choose the statement that fits this exact GCSE Physics idea: use Newton’s second law.",
-      "question": "Which answer is the strongest GCSE Physics response for newton's third law? Choose the statement that fits this exact GCSE Physics idea: use Newton’s second law.",
+      "stem": "A small cart and a large cart push apart during an explosion. They exert equal forces on each other. Why can their accelerations be different?",
+      "question": "A small cart and a large cart push apart during an explosion. They exert equal forces on each other. Why can their accelerations be different?",
       "options": [
-        "For newton's third law, it means that resultant force = mass ÷ acceleration.",
-        "For newton's third law, it means that mass is measured in newtons.",
-        "For newton's third law, it means that acceleration is independent of force.",
-        "For newton's third law, the statement is that resultant force = mass × acceleration."
+        "Their masses are different.",
+        "The forces are not a Newton’s third-law pair.",
+        "The larger cart must have the larger acceleration.",
+        "Only one cart experiences a force."
       ],
-      "correctAnswer": "For newton's third law, the statement is that resultant force = mass × acceleration.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.3 targets: Use Newton’s second law. Focus area: Newton's Third Law. For this question, Resultant force = mass × acceleration. Context used: a method-choice question; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:second_law",
+      "correctAnswer": "Their masses are different.",
+      "correctIndex": 0,
+      "explanation": "The forces are equal, but \\(a = F \\div m\\), so the cart with smaller mass has the larger acceleration.",
+      "misconceptionTag": "equal-force-different-acceleration",
       "distractorRationales": [
         {
-          "text": "For newton's third law, it means that acceleration is independent of force.",
-          "misconception": "Resultant force = mass ÷ acceleration."
+          "text": "The forces are not a Newton’s third-law pair.",
+          "misconception": "equal interaction forces rejected"
         },
         {
-          "text": "For newton's third law, it means that mass is measured in newtons.",
-          "misconception": "Acceleration is independent of force."
+          "text": "The larger cart must have the larger acceleration.",
+          "misconception": "mass effect reversed"
         },
         {
-          "text": "For newton's third law, it means that resultant force = mass ÷ acceleration.",
-          "misconception": "Mass is measured in newtons."
+          "text": "Only one cart experiences a force.",
+          "misconception": "interaction force on both objects missed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Newton’s second law."
+      "senNote": "Checks: Explain why equal third-law forces can produce different accelerations."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_first_law_direct_recall_015",
+      "id": "aqa_forces_newtons_third_law_normal_weight_015",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3747,6 +3775,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3757,127 +3786,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_first_law",
-        "statement": "Apply Newton’s first law. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_normal_weight_015_lo",
+        "statement": "Distinguish a balanced force pair from a Newton’s third-law pair.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.2.3:first_law:direct_recall",
-      "conceptFamily": "first_law",
-      "contextType": "a results discussion",
-      "skill": "Newton's Third Law practice",
-      "stem": "Which answer matches this newton's third law objective: Apply Newton’s first law? Choose the statement that fits this exact GCSE Physics idea: apply Newton’s first law.",
-      "question": "Which answer matches this newton's third law objective: Apply Newton’s first law? Choose the statement that fits this exact GCSE Physics idea: apply Newton’s first law.",
-      "options": [
-        "For newton's third law, the answer claims that objects stop because forces are balanced.",
-        "For newton's third law, the answer claims that balanced forces always make speed increase.",
-        "For newton's third law, the answer claims that an object remains at rest or constant velocity unless a resultant force acts.",
-        "For newton's third law, the statement is that a moving object always needs a resultant force to keep moving."
-      ],
-      "correctAnswer": "For newton's third law, the answer claims that an object remains at rest or constant velocity unless a resultant force acts.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.2.3 targets: Apply Newton’s first law. Focus area: Newton's Third Law. For this question, An object remains at rest or constant velocity unless a resultant force acts. Context used: a results discussion; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:first_law",
-      "distractorRationales": [
-        {
-          "text": "For newton's third law, the answer claims that objects stop because forces are balanced.",
-          "misconception": "A moving object always needs a resultant force to keep moving."
-        },
-        {
-          "text": "For newton's third law, the statement is that a moving object always needs a resultant force to keep moving.",
-          "misconception": "Balanced forces always make speed increase."
-        },
-        {
-          "text": "For newton's third law, the answer claims that balanced forces always make speed increase.",
-          "misconception": "Objects stop because forces are balanced."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Apply Newton’s first law."
-    },
-    {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Third Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_third_law",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2.3",
-      "specStatement": "Newton's Third Law.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_balanced_forces",
-        "statement": "Interpret balanced forces. (Newton's Third Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO3",
       "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.2.3:balanced_forces:concept_discrimination",
-      "conceptFamily": "balanced_forces",
-      "contextType": "a classroom demonstration",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "misconception_correction",
+      "patternId": "authored:aqa_forces_newtons_third_law_normal_weight_015",
+      "conceptFamily": "distinguish_a_balanced_force_pair_from_a_newtons_third_law_pair",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "Which option best separates the correct newton's third law idea from a common mix-up? Check the clue before choosing: Interpret balanced forces.",
-      "question": "Which option best separates the correct newton's third law idea from a common mix-up? Check the clue before choosing: Interpret balanced forces.",
+      "stem": "A box is stationary on a floor. Why are the box’s weight and the normal contact force from the floor not a Newton’s third-law pair?",
+      "question": "A box is stationary on a floor. Why are the box’s weight and the normal contact force from the floor not a Newton’s third-law pair?",
       "options": [
-        "For newton's third law, the answer claims that balanced forces always mean the object is stationary.",
-        "For newton's third law, the answer claims that balanced forces make acceleration increase.",
-        "In this newton's third law item, balanced forces remove all motion instantly.",
-        "For newton's third law, the statement is that balanced forces give zero resultant force, so velocity does not change."
+        "They both act on the box.",
+        "They are equal and opposite.",
+        "They are both measured in newtons.",
+        "They only act when the box is moving."
       ],
-      "correctAnswer": "For newton's third law, the statement is that balanced forces give zero resultant force, so velocity does not change.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.3 targets: Interpret balanced forces. Focus area: Newton's Third Law. For this question, Balanced forces give zero resultant force, so velocity does not change. Context used: a classroom demonstration; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:balanced_forces",
+      "correctAnswer": "They both act on the box.",
+      "correctIndex": 0,
+      "explanation": "The weight and normal contact force are balanced forces on one object. A third-law pair acts on two different objects.",
+      "misconceptionTag": "weight-normal-not-third-law",
       "distractorRationales": [
         {
-          "text": "For newton's third law, the answer claims that balanced forces always mean the object is stationary.",
-          "misconception": "Balanced forces always mean the object is stationary."
+          "text": "They are equal and opposite.",
+          "misconception": "balanced forces mistaken for third-law pair"
         },
         {
-          "text": "For newton's third law, the answer claims that balanced forces make acceleration increase.",
-          "misconception": "Balanced forces make acceleration increase."
+          "text": "They are both measured in newtons.",
+          "misconception": "unit used as pair criterion"
         },
         {
-          "text": "In this newton's third law item, balanced forces remove all motion instantly.",
-          "misconception": "Balanced forces remove all motion instantly."
+          "text": "They only act when the box is moving.",
+          "misconception": "stationary condition invented"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret balanced forces."
+      "senNote": "Checks: Distinguish a balanced force pair from a Newton’s third-law pair."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_third_law_misconception_correction_017",
+      "id": "aqa_forces_newtons_third_law_diagram_choice_016",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3889,6 +3848,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3899,56 +3859,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_third_law",
-        "statement": "Recognise interaction pairs. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_diagram_choice_016_lo",
+        "statement": "Select the correct object and direction for a third-law arrow.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.2.3:third_law:misconception_correction",
-      "conceptFamily": "third_law",
-      "contextType": "a revision checkpoint",
+      "commandWord": "select",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_forces_newtons_third_law_diagram_choice_016",
+      "conceptFamily": "select_the_correct_object_and_direction_for_a_third_law_arrow",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "Which answer corrects a misconception about newton's third law? Check the clue before choosing: Recognise interaction pairs.",
-      "question": "Which answer corrects a misconception about newton's third law? Check the clue before choosing: Recognise interaction pairs.",
+      "stem": "A diagram shows a hand pushing a box to the right. Which arrow should show the Newton’s third-law force paired with the hand’s force on the box?",
+      "question": "A diagram shows a hand pushing a box to the right. Which arrow should show the Newton’s third-law force paired with the hand’s force on the box?",
       "options": [
-        "For newton's third law, the statement is that the larger object always exerts the larger force.",
-        "For newton's third law, the statement is that interaction forces act on the same object.",
-        "In this newton's third law item, the forces cancel because they act on one object.",
-        "For newton's third law, the statement is that interaction forces are equal in size, opposite in direction and act on different objects."
+        "An arrow on the hand pointing left.",
+        "An arrow on the box pointing right.",
+        "An arrow on the box pointing left.",
+        "An arrow on the ground pointing down."
       ],
-      "correctAnswer": "For newton's third law, the statement is that interaction forces are equal in size, opposite in direction and act on different objects.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.3 targets: Recognise interaction pairs. Focus area: Newton's Third Law. For this question, Interaction forces are equal in size, opposite in direction and act on different objects. Context used: a revision checkpoint; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:third_law",
+      "correctAnswer": "An arrow on the hand pointing left.",
+      "correctIndex": 0,
+      "explanation": "The paired force is the force of the box on the hand, so it acts on the hand in the opposite direction.",
+      "misconceptionTag": "third-law-arrow-object",
       "distractorRationales": [
         {
-          "text": "For newton's third law, the statement is that the larger object always exerts the larger force.",
-          "misconception": "Interaction forces act on the same object."
+          "text": "An arrow on the box pointing right.",
+          "misconception": "same force redrawn"
         },
         {
-          "text": "In this newton's third law item, the forces cancel because they act on one object.",
-          "misconception": "The larger object always exerts the larger force."
+          "text": "An arrow on the box pointing left.",
+          "misconception": "friction confused with third-law pair"
         },
         {
-          "text": "For newton's third law, the statement is that interaction forces act on the same object.",
-          "misconception": "The forces cancel because they act on one object."
+          "text": "An arrow on the ground pointing down.",
+          "misconception": "different interaction chosen"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recognise interaction pairs."
+      "senNote": "Checks: Select the correct object and direction for a third-law arrow."
     },
     {
-      "id": "aqa_4_5_6_2_3_newtons_third_law_second_law_data_interpretation_018",
+      "id": "aqa_forces_newtons_third_law_bite_size_017",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3960,6 +3921,7 @@
       "subtopicSlug": "newtons_third_law",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
       "specStatement": "Newton's Third Law.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -3970,53 +3932,127 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_3_newtons_third_law_second_law",
-        "statement": "Use Newton’s second law. (Newton's Third Law)",
+        "id": "aqa_forces_newtons_third_law_bite_size_017_lo",
+        "statement": "Explain a recoil example using Newton’s third law.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.2.3:second_law:data_interpretation",
-      "conceptFamily": "second_law",
-      "contextType": "an exam-style data table",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_third_law_bite_size_017",
+      "conceptFamily": "explain_a_recoil_example_using_newtons_third_law",
+      "contextType": "exam_style",
       "skill": "Newton's Third Law practice",
-      "stem": "Which conclusion about newton's third law is supported by the evidence? Keep the answer focused on newton's third law: use Newton’s second law.",
-      "question": "Which conclusion about newton's third law is supported by the evidence? Keep the answer focused on newton's third law: use Newton’s second law.",
+      "stem": "A person jumps from a small boat onto a jetty. The boat moves backwards. Which explanation is correct?",
+      "question": "A person jumps from a small boat onto a jetty. The boat moves backwards. Which explanation is correct?",
       "options": [
-        "For newton's third law: Resultant force = mass × acceleration.",
-        "For newton's third law, the option says that acceleration is independent of force.",
-        "For newton's third law, the option says that mass is measured in newtons.",
-        "For newton's third law, it means that resultant force = mass ÷ acceleration."
+        "The person pushes the boat backwards and the boat pushes the person forwards.",
+        "The person’s weight pushes the boat backwards.",
+        "The boat moves back because there is no reaction force.",
+        "The boat pushes the person backwards as they jump."
       ],
-      "correctAnswer": "For newton's third law: Resultant force = mass × acceleration.",
+      "correctAnswer": "The person pushes the boat backwards and the boat pushes the person forwards.",
       "correctIndex": 0,
-      "explanation": "4.5.6.2.3 targets: Use Newton’s second law. Focus area: Newton's Third Law. For this question, Resultant force = mass × acceleration. Context used: an exam-style data table; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:second_law",
+      "explanation": "The person and boat exert equal and opposite forces on each other during the push.",
+      "misconceptionTag": "recoil-third-law",
       "distractorRationales": [
         {
-          "text": "For newton's third law, the option says that mass is measured in newtons.",
-          "misconception": "Resultant force = mass ÷ acceleration."
+          "text": "The person’s weight pushes the boat backwards.",
+          "misconception": "weight confused with push interaction"
         },
         {
-          "text": "For newton's third law, it means that resultant force = mass ÷ acceleration.",
-          "misconception": "Acceleration is independent of force."
+          "text": "The boat moves back because there is no reaction force.",
+          "misconception": "reaction force omitted"
         },
         {
-          "text": "For newton's third law, the option says that acceleration is independent of force.",
-          "misconception": "Mass is measured in newtons."
+          "text": "The boat pushes the person backwards as they jump.",
+          "misconception": "direction reversed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Newton’s second law."
+      "senNote": "Checks: Explain a recoil example using Newton’s third law."
+    },
+    {
+      "id": "aqa_forces_newtons_third_law_marks_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Third Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_third_law",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2.3",
+      "combinedSpecRef": "6.5.4.2.3",
+      "specStatement": "Newton's Third Law.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_third_law_marks_018_lo",
+        "statement": "Select the complete exam description of Newton’s third law.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "select",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_forces_newtons_third_law_marks_018",
+      "conceptFamily": "select_the_complete_exam_description_of_newtons_third_law",
+      "contextType": "exam_style",
+      "skill": "Newton's Third Law practice",
+      "stem": "Which answer would best describe a Newton’s third-law pair in an exam?",
+      "question": "Which answer would best describe a Newton’s third-law pair in an exam?",
+      "options": [
+        "Equal and opposite forces acting on two different objects.",
+        "Equal and opposite forces acting on the same object.",
+        "A driving force and friction acting on a car.",
+        "Any two forces with the same size."
+      ],
+      "correctAnswer": "Equal and opposite forces acting on two different objects.",
+      "correctIndex": 0,
+      "explanation": "A complete answer must include equal size, opposite direction and different objects.",
+      "misconceptionTag": "incomplete-third-law-description",
+      "distractorRationales": [
+        {
+          "text": "Equal and opposite forces acting on the same object.",
+          "misconception": "balanced forces described instead"
+        },
+        {
+          "text": "A driving force and friction acting on a car.",
+          "misconception": "same-object forces chosen"
+        },
+        {
+          "text": "Any two forces with the same size.",
+          "misconception": "direction and object criteria missing"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Select the complete exam description of Newton’s third law."
     },
     {
       "id": "aqa_forces_resultant_force_definition_001",
@@ -9955,7 +9991,7 @@
       "senNote": "This checks one idea only: Use acceleration."
     },
     {
-      "id": "aqa_4_5_6_2_newtons_laws_first_law_direct_recall_001",
+      "id": "aqa_forces_newtons_laws_first_law_velocity_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -9967,6 +10003,7 @@
       "subtopicSlug": "newtons_laws",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2",
+      "combinedSpecRef": "6.5.4.2",
       "specStatement": "Forces, accelerations and Newton's laws of motion.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -9977,198 +10014,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_newtons_laws_first_law",
-        "statement": "Apply Newton’s first law. (Newton's Laws)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.2:first_law:direct_recall",
-      "conceptFamily": "first_law",
-      "contextType": "a safety decision",
-      "skill": "Newton's Laws practice",
-      "stem": "Which statement is correct for newton's laws? Keep the answer focused on newton's laws: apply Newton’s first law.",
-      "question": "Which statement is correct for newton's laws? Keep the answer focused on newton's laws: apply Newton’s first law.",
-      "options": [
-        "For newton's laws: An object remains at rest or constant velocity unless a resultant force acts.",
-        "The claim for newton's laws is that a moving object always needs a resultant force to keep moving.",
-        "For newton's laws, this would mean that objects stop because forces are balanced.",
-        "The claim for newton's laws is that balanced forces always make speed increase."
-      ],
-      "correctAnswer": "For newton's laws: An object remains at rest or constant velocity unless a resultant force acts.",
-      "correctIndex": 0,
-      "explanation": "4.5.6.2 targets: Apply Newton’s first law. Focus area: Newton's Laws. For this question, An object remains at rest or constant velocity unless a resultant force acts. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:first_law",
-      "distractorRationales": [
-        {
-          "text": "The claim for newton's laws is that a moving object always needs a resultant force to keep moving.",
-          "misconception": "A moving object always needs a resultant force to keep moving."
-        },
-        {
-          "text": "The claim for newton's laws is that balanced forces always make speed increase.",
-          "misconception": "Balanced forces always make speed increase."
-        },
-        {
-          "text": "For newton's laws, this would mean that objects stop because forces are balanced.",
-          "misconception": "Objects stop because forces are balanced."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Apply Newton’s first law."
-    },
-    {
-      "id": "aqa_4_5_6_2_newtons_laws_second_law_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Laws",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_laws",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2",
-      "specStatement": "Forces, accelerations and Newton's laws of motion.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_newtons_laws_second_law",
-        "statement": "Use Newton’s second law. (Newton's Laws)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.2:second_law:concept_discrimination",
-      "conceptFamily": "second_law",
-      "contextType": "a graph-reading task",
-      "skill": "Newton's Laws practice",
-      "stem": "A student is comparing similar ideas in newton's laws. Which statement is correct? Demand focus: use Newton’s second law.",
-      "question": "A student is comparing similar ideas in newton's laws. Which statement is correct? Demand focus: use Newton’s second law.",
-      "options": [
-        "In this item, it means that resultant force = mass ÷ acceleration.",
-        "In this item, it means that acceleration is independent of force.",
-        "In this item, it means that resultant force = mass × acceleration.",
-        "The claim for newton's laws is that mass is measured in newtons."
-      ],
-      "correctAnswer": "In this item, it means that resultant force = mass × acceleration.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.2 targets: Use Newton’s second law. Focus area: Newton's Laws. For this question, Resultant force = mass × acceleration. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:second_law",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that acceleration is independent of force.",
-          "misconception": "Resultant force = mass ÷ acceleration."
-        },
-        {
-          "text": "The claim for newton's laws is that mass is measured in newtons.",
-          "misconception": "Acceleration is independent of force."
-        },
-        {
-          "text": "In this item, it means that resultant force = mass ÷ acceleration.",
-          "misconception": "Mass is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use Newton’s second law."
-    },
-    {
-      "id": "aqa_4_5_6_2_newtons_laws_third_law_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Newton's Laws",
-      "topicSlug": "forces",
-      "subtopicSlug": "newtons_laws",
-      "topicId": "newtons_laws",
-      "specRef": "4.5.6.2",
-      "specStatement": "Forces, accelerations and Newton's laws of motion.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_newtons_laws_third_law",
-        "statement": "Recognise interaction pairs. (Newton's Laws)",
+        "id": "aqa_forces_newtons_laws_first_law_velocity_001_lo",
+        "statement": "Apply Newton’s first law to constant velocity.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.2:third_law:misconception_correction",
-      "conceptFamily": "third_law",
-      "contextType": "a comparison question",
+      "commandWord": "determine",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_newtons_laws_first_law_velocity_001",
+      "conceptFamily": "apply_newtons_first_law_to_constant_velocity",
+      "contextType": "exam_style",
       "skill": "Newton's Laws practice",
-      "stem": "A revision note about newton's laws contains an error. Which replacement is correct? Demand focus: recognise interaction pairs.",
-      "question": "A revision note about newton's laws contains an error. Which replacement is correct? Demand focus: recognise interaction pairs.",
+      "stem": "A puck slides across an almost frictionless ice rink at a constant velocity. What is the resultant force on the puck?",
+      "question": "A puck slides across an almost frictionless ice rink at a constant velocity. What is the resultant force on the puck?",
       "options": [
-        "For newton's laws: Interaction forces are equal in size, opposite in direction and act on different objects.",
-        "For newton's laws, this would mean that the forces cancel because they act on one object.",
-        "For newton's laws, this would mean that the larger object always exerts the larger force.",
-        "For newton's laws, this would mean that interaction forces act on the same object."
+        "0 N",
+        "A forward force, because the puck is moving.",
+        "A backward force equal to its weight.",
+        "A force that increases with speed."
       ],
-      "correctAnswer": "For newton's laws: Interaction forces are equal in size, opposite in direction and act on different objects.",
+      "correctAnswer": "0 N",
       "correctIndex": 0,
-      "explanation": "4.5.6.2 targets: Recognise interaction pairs. Focus area: Newton's Laws. For this question, Interaction forces are equal in size, opposite in direction and act on different objects. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:third_law",
+      "explanation": "An object moving at constant velocity has no acceleration, so the resultant force is zero.",
+      "misconceptionTag": "constant-velocity-needs-force",
       "distractorRationales": [
         {
-          "text": "For newton's laws, this would mean that the forces cancel because they act on one object.",
-          "misconception": "Interaction forces act on the same object."
+          "text": "A forward force, because the puck is moving.",
+          "misconception": "motion confused with resultant force"
         },
         {
-          "text": "For newton's laws, this would mean that interaction forces act on the same object.",
-          "misconception": "The larger object always exerts the larger force."
+          "text": "A backward force equal to its weight.",
+          "misconception": "weight treated as horizontal resultant force"
         },
         {
-          "text": "For newton's laws, this would mean that the larger object always exerts the larger force.",
-          "misconception": "The forces cancel because they act on one object."
+          "text": "A force that increases with speed.",
+          "misconception": "speed confused with force size"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recognise interaction pairs."
+      "senNote": "Checks: Apply Newton’s first law to constant velocity."
     },
     {
-      "id": "aqa_4_5_6_2_newtons_laws_balanced_forces_data_interpretation_004",
+      "id": "aqa_forces_newtons_laws_second_law_calculation_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10180,6 +10076,7 @@
       "subtopicSlug": "newtons_laws",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2",
+      "combinedSpecRef": "6.5.4.2",
       "specStatement": "Forces, accelerations and Newton's laws of motion.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -10190,56 +10087,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_newtons_laws_balanced_forces",
-        "statement": "Interpret balanced forces. (Newton's Laws)",
+        "id": "aqa_forces_newtons_laws_second_law_calculation_002_lo",
+        "statement": "Calculate resultant force using Newton’s second law.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.2:balanced_forces:data_interpretation",
-      "conceptFamily": "balanced_forces",
-      "contextType": "a method-choice question",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_newtons_laws_second_law_calculation_002",
+      "conceptFamily": "calculate_resultant_force_using_newtons_second_law",
+      "contextType": "exam_style",
       "skill": "Newton's Laws practice",
-      "stem": "A small data set about newton's laws is being interpreted. Which conclusion is valid? Use the wording carefully: this is about interpret balanced forces.",
-      "question": "A small data set about newton's laws is being interpreted. Which conclusion is valid? Use the wording carefully: this is about interpret balanced forces.",
+      "stem": "A trolley of mass 2.0 kg accelerates at \\(3.0\\,m/s^2\\). What is the resultant force on the trolley?",
+      "question": "A trolley of mass 2.0 kg accelerates at \\(3.0\\,m/s^2\\). What is the resultant force on the trolley?",
       "options": [
-        "In this newton's laws item, balanced forces always mean the object is stationary.",
-        "In this newton's laws item, balanced forces make acceleration increase.",
-        "For newton's laws, the statement is that balanced forces give zero resultant force, so velocity does not change.",
-        "For newton's laws, it means that balanced forces remove all motion instantly."
+        "6.0 N",
+        "1.5 N",
+        "5.0 N",
+        "0.67 N"
       ],
-      "correctAnswer": "For newton's laws, the statement is that balanced forces give zero resultant force, so velocity does not change.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.2 targets: Interpret balanced forces. Focus area: Newton's Laws. For this question, Balanced forces give zero resultant force, so velocity does not change. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:balanced_forces",
+      "correctAnswer": "6.0 N",
+      "correctIndex": 0,
+      "explanation": "Use Newton’s second law: \\(F = ma = 2.0 \\times 3.0 = 6.0\\,N\\).",
+      "misconceptionTag": "second-law-multiply",
       "distractorRationales": [
         {
-          "text": "In this newton's laws item, balanced forces always mean the object is stationary.",
-          "misconception": "Balanced forces always mean the object is stationary."
+          "text": "1.5 N",
+          "misconception": "mass divided by acceleration"
         },
         {
-          "text": "In this newton's laws item, balanced forces make acceleration increase.",
-          "misconception": "Balanced forces make acceleration increase."
+          "text": "5.0 N",
+          "misconception": "mass and acceleration added"
         },
         {
-          "text": "For newton's laws, it means that balanced forces remove all motion instantly.",
-          "misconception": "Balanced forces remove all motion instantly."
+          "text": "0.67 N",
+          "misconception": "acceleration divided by mass"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret balanced forces."
+      "senNote": "Checks: Calculate resultant force using Newton’s second law."
     },
     {
-      "id": "aqa_4_5_6_2_newtons_laws_mass_acceleration_representation_interpretation_005",
+      "id": "aqa_forces_newtons_laws_find_acceleration_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -10251,6 +10149,7 @@
       "subtopicSlug": "newtons_laws",
       "topicId": "newtons_laws",
       "specRef": "4.5.6.2",
+      "combinedSpecRef": "6.5.4.2",
       "specStatement": "Forces, accelerations and Newton's laws of motion.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -10261,53 +10160,200 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_newtons_laws_mass_acceleration",
-        "statement": "Compare acceleration for the same force. (Newton's Laws)",
+        "id": "aqa_forces_newtons_laws_find_acceleration_003_lo",
+        "statement": "Rearrange Newton’s second law to find acceleration.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_newtons_laws_find_acceleration_003",
+      "conceptFamily": "rearrange_newtons_second_law_to_find_acceleration",
+      "contextType": "exam_style",
+      "skill": "Newton's Laws practice",
+      "stem": "A resultant force of 12 N acts on a 3.0 kg cart. What is the acceleration of the cart?",
+      "question": "A resultant force of 12 N acts on a 3.0 kg cart. What is the acceleration of the cart?",
+      "options": [
+        "\\(4.0\\,m/s^2\\)",
+        "\\(36\\,m/s^2\\)",
+        "\\(15\\,m/s^2\\)",
+        "\\(0.25\\,m/s^2\\)"
+      ],
+      "correctAnswer": "\\(4.0\\,m/s^2\\)",
+      "correctIndex": 0,
+      "explanation": "Rearrange \\(F = ma\\) to \\(a = F \\div m\\). The acceleration is \\(12 \\div 3.0 = 4.0\\,m/s^2\\).",
+      "misconceptionTag": "second-law-rearrange-acceleration",
+      "distractorRationales": [
+        {
+          "text": "\\(36\\,m/s^2\\)",
+          "misconception": "force multiplied by mass"
+        },
+        {
+          "text": "\\(15\\,m/s^2\\)",
+          "misconception": "force and mass added"
+        },
+        {
+          "text": "\\(0.25\\,m/s^2\\)",
+          "misconception": "mass divided by force"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange Newton’s second law to find acceleration."
+    },
+    {
+      "id": "aqa_forces_newtons_laws_mass_comparison_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Laws",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_laws",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2",
+      "combinedSpecRef": "6.5.4.2",
+      "specStatement": "Forces, accelerations and Newton's laws of motion.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_laws_mass_comparison_004_lo",
+        "statement": "Compare acceleration for different masses under the same resultant force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_newtons_laws_mass_comparison_004",
+      "conceptFamily": "compare_acceleration_for_different_masses_under_the_same_resultant_force",
+      "contextType": "exam_style",
+      "skill": "Newton's Laws practice",
+      "stem": "Two trolleys are pulled by the same resultant force. Trolley X has twice the mass of trolley Y. How does the acceleration of X compare with Y?",
+      "question": "Two trolleys are pulled by the same resultant force. Trolley X has twice the mass of trolley Y. How does the acceleration of X compare with Y?",
+      "options": [
+        "X has half the acceleration of Y.",
+        "X has twice the acceleration of Y.",
+        "Both trolleys have the same acceleration.",
+        "X has zero acceleration because it has more mass."
+      ],
+      "correctAnswer": "X has half the acceleration of Y.",
+      "correctIndex": 0,
+      "explanation": "For the same resultant force, acceleration is inversely proportional to mass: doubling the mass halves the acceleration.",
+      "misconceptionTag": "mass-acceleration-inverse",
+      "distractorRationales": [
+        {
+          "text": "X has twice the acceleration of Y.",
+          "misconception": "mass effect reversed"
+        },
+        {
+          "text": "Both trolleys have the same acceleration.",
+          "misconception": "mass ignored"
+        },
+        {
+          "text": "X has zero acceleration because it has more mass.",
+          "misconception": "larger mass treated as immovable"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare acceleration for different masses under the same resultant force."
+    },
+    {
+      "id": "aqa_forces_newtons_laws_inertial_mass_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Newton's Laws",
+      "topicSlug": "forces",
+      "subtopicSlug": "newtons_laws",
+      "topicId": "newtons_laws",
+      "specRef": "4.5.6.2",
+      "combinedSpecRef": "6.5.4.2",
+      "specStatement": "Forces, accelerations and Newton's laws of motion.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_newtons_laws_inertial_mass_005_lo",
+        "statement": "Interpret inertial mass from a force-acceleration graph.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.2:mass_acceleration:representation_interpretation",
-      "conceptFamily": "mass_acceleration",
-      "contextType": "a results discussion",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_newtons_laws_inertial_mass_005",
+      "conceptFamily": "interpret_inertial_mass_from_a_force_acceleration_graph",
+      "contextType": "exam_style",
       "skill": "Newton's Laws practice",
-      "stem": "Which option correctly reads the newton's laws model or diagram idea? Demand focus: compare acceleration for the same force.",
-      "question": "Which option correctly reads the newton's laws model or diagram idea? Demand focus: compare acceleration for the same force.",
+      "stem": "A student plots resultant force against acceleration for a trolley. The graph is a straight line through the origin. What does the gradient represent?",
+      "question": "A student plots resultant force against acceleration for a trolley. The graph is a straight line through the origin. What does the gradient represent?",
       "options": [
-        "For newton's laws, it means that acceleration depends only on shape.",
-        "For newton's laws, the statement is that for the same resultant force, a larger mass has a smaller acceleration.",
-        "The answer for newton's laws says that a larger mass has a larger acceleration for the same force.",
-        "The answer for newton's laws says that mass has no effect on acceleration."
+        "The inertial mass of the trolley.",
+        "The speed of the trolley.",
+        "The distance travelled by the trolley.",
+        "The weight of the trolley only when it is stationary."
       ],
-      "correctAnswer": "For newton's laws, the statement is that for the same resultant force, a larger mass has a smaller acceleration.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.2 targets: Compare acceleration for the same force. Focus area: Newton's Laws. For this question, For the same resultant force, a larger mass has a smaller acceleration. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:mass_acceleration",
+      "correctAnswer": "The inertial mass of the trolley.",
+      "correctIndex": 0,
+      "explanation": "From \\(F = ma\\), a graph of force against acceleration has gradient equal to mass.",
+      "misconceptionTag": "force-acceleration-gradient",
       "distractorRationales": [
         {
-          "text": "The answer for newton's laws says that mass has no effect on acceleration.",
-          "misconception": "A larger mass has a larger acceleration for the same force."
+          "text": "The speed of the trolley.",
+          "misconception": "gradient interpreted as speed"
         },
         {
-          "text": "For newton's laws, it means that acceleration depends only on shape.",
-          "misconception": "Mass has no effect on acceleration."
+          "text": "The distance travelled by the trolley.",
+          "misconception": "motion graph rule transferred incorrectly"
         },
         {
-          "text": "The answer for newton's laws says that a larger mass has a larger acceleration for the same force.",
-          "misconception": "Acceleration depends only on shape."
+          "text": "The weight of the trolley only when it is stationary.",
+          "misconception": "weight confused with inertial mass"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare acceleration for the same force."
+      "senNote": "Checks: Interpret inertial mass from a force-acceleration graph."
     },
     {
       "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_mass_direct_recall_001",

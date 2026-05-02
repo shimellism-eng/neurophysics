@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Energy completed
+- Fixed AQA `Power`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.1.1.4`.
+  - AQA Combined Science `combinedSpecRef`: `6.1.1.4`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Power runtime count: 19.
+  - Authored IDs: 19.
+  - Bad scaffold/answer phrase count: 0.
+  - Initial duplicate-gate failure caught one near-duplicate against AQA Electricity power; it was rewritten into a winch/work-done context.
+  - Covers power definition, `P = E / t`, `P = W / t`, joules per second, motor comparisons, rearrangements, unit conversion, practical measurement, and table interpretation.
+- Topic completion:
+  - AQA Energy: 94/94 good to go.
+  - Edexcel Energy: 0/94 good to go.
+  - Combined Energy: 94/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - Exact AQA Power route was shown live in Simulator at `/practice/power_calc`.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue Energy with Edexcel:
+  - Edexcel `Efficiency`: 19 authored exam-style questions.
+
 ### Adaptive Practice AQA Kinetic Energy authored
 - Fixed AQA `Kinetic Energy`: 19/19 authored and passed.
 - Hidden spec metadata:

@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T09:28:20.227Z",
+  "generatedAt": "2026-05-02T09:35:30.930Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -18107,7 +18107,7 @@
       "senNote": "Checks: Convert mass to kilograms before using the kinetic energy equation."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_definition_direct_recall_001",
+      "id": "aqa_energy_power_definition_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18119,6 +18119,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18129,56 +18130,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
+        "id": "aqa_energy_power_definition_001_lo",
+        "statement": "Recall power as a rate of energy transfer.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.4:power_definition:direct_recall",
-      "conceptFamily": "power_definition",
-      "contextType": "a safety decision",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_power_definition_001",
+      "conceptFamily": "recall_power_as_a_rate_of_energy_transfer",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "Which statement is correct for power? Demand focus: recall the meaning of power.",
-      "question": "Which statement is correct for power? Demand focus: recall the meaning of power.",
+      "stem": "Which statement defines power?",
+      "question": "Which statement defines power?",
       "options": [
-        "For power, it means that power is the rate of energy transfer or work done.",
-        "For power: Power is measured in coulombs.",
-        "For power: Power is total energy stored only.",
-        "For power: Power is the same as force."
+        "Power is the rate at which energy is transferred.",
+        "Power is the total energy stored in an object.",
+        "Power is the force acting on each square metre.",
+        "Power is the charge passing a point each second."
       ],
-      "correctAnswer": "For power, it means that power is the rate of energy transfer or work done.",
+      "correctAnswer": "Power is the rate at which energy is transferred.",
       "correctIndex": 0,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
+      "explanation": "Power is the rate of energy transfer or the rate at which work is done.",
+      "misconceptionTag": "power-definition",
       "distractorRationales": [
         {
-          "text": "For power: Power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
+          "text": "Power is the total energy stored in an object.",
+          "misconception": "energy store confused with rate"
         },
         {
-          "text": "For power: Power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
+          "text": "Power is the force acting on each square metre.",
+          "misconception": ""
         },
         {
-          "text": "For power: Power is the same as force.",
-          "misconception": "Power is the same as force."
+          "text": "Power is the charge passing a point each second.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the meaning of power."
+      "senNote": "Checks: Recall power as a rate of energy transfer."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_equation_concept_discrimination_002",
+      "id": "aqa_energy_power_energy_time_equation_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18190,6 +18192,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18200,56 +18203,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_equation",
-        "statement": "Use power = energy transferred ÷ time. (Power)",
+        "id": "aqa_energy_power_energy_time_equation_002_lo",
+        "statement": "Recall the power equation using energy transferred and time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.4:power_equation:concept_discrimination",
-      "conceptFamily": "power_equation",
-      "contextType": "a graph-reading task",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_power_energy_time_equation_002",
+      "conceptFamily": "recall_the_power_equation_using_energy_transferred_and_time",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "A student is comparing similar ideas in power. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
-      "question": "A student is comparing similar ideas in power. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
+      "stem": "Which equation links power, energy transferred and time?",
+      "question": "Which equation links power, energy transferred and time?",
       "options": [
-        "For power, the answer claims that power = energy transferred × time.",
-        "For power, the answer claims that power does not depend on time.",
-        "For power, the answer claims that power = force ÷ area.",
-        "The answer for power says that power = energy transferred ÷ time."
+        "power = energy transferred ÷ time",
+        "power = energy transferred × time",
+        "power = time ÷ energy transferred",
+        "power = force × distance"
       ],
-      "correctAnswer": "The answer for power says that power = energy transferred ÷ time.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Use power = energy transferred ÷ time. Focus area: Power. For this question, Power = energy transferred ÷ time. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_equation",
+      "correctAnswer": "power = energy transferred ÷ time",
+      "correctIndex": 0,
+      "explanation": "Power is energy transferred per second, so P = E ÷ t.",
+      "misconceptionTag": "power-equation-energy-time",
       "distractorRationales": [
         {
-          "text": "For power, the answer claims that power = force ÷ area.",
-          "misconception": "Power = energy transferred × time."
+          "text": "power = energy transferred × time",
+          "misconception": ""
         },
         {
-          "text": "For power, the answer claims that power does not depend on time.",
-          "misconception": "Power = force ÷ area."
+          "text": "power = time ÷ energy transferred",
+          "misconception": ""
         },
         {
-          "text": "For power, the answer claims that power = energy transferred × time.",
-          "misconception": "Power does not depend on time."
+          "text": "power = force × distance",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power = energy transferred ÷ time."
+      "senNote": "Checks: Recall the power equation using energy transferred and time."
     },
     {
-      "id": "aqa_4_1_1_4_power_unit_watt_misconception_correction_003",
+      "id": "aqa_energy_power_work_time_equation_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18261,6 +18265,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18271,56 +18276,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_unit_watt",
-        "statement": "Recall the watt. (Power)",
+        "id": "aqa_energy_power_work_time_equation_003_lo",
+        "statement": "Recall the power equation using work done and time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_power_work_time_equation_003",
+      "conceptFamily": "recall_the_power_equation_using_work_done_and_time",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "A motor does work on a load. Which equation can be used to calculate the motor power?",
+      "question": "A motor does work on a load. Which equation can be used to calculate the motor power?",
+      "options": [
+        "power = work done ÷ time",
+        "power = work done × time",
+        "power = mass × speed²",
+        "power = current × resistance"
+      ],
+      "correctAnswer": "power = work done ÷ time",
+      "correctIndex": 0,
+      "explanation": "Power can be calculated from the rate of doing work: P = W ÷ t.",
+      "misconceptionTag": "power-equation-work-time",
+      "distractorRationales": [
+        {
+          "text": "power = work done × time",
+          "misconception": ""
+        },
+        {
+          "text": "power = mass × speed²",
+          "misconception": ""
+        },
+        {
+          "text": "power = current × resistance",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the power equation using work done and time."
+    },
+    {
+      "id": "aqa_energy_power_calculate_energy_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_calculate_energy_004_lo",
+        "statement": "Calculate power from energy transferred and time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.4:unit_watt:misconception_correction",
-      "conceptFamily": "unit_watt",
-      "contextType": "a comparison question",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_calculate_energy_004",
+      "conceptFamily": "calculate_power_from_energy_transferred_and_time",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "A revision note about power contains an error. Which replacement is correct? Demand focus: recall the watt.",
-      "question": "A revision note about power contains an error. Which replacement is correct? Demand focus: recall the watt.",
+      "stem": "A device transfers 600 J of energy in 20 s. What is its power?",
+      "question": "A device transfers 600 J of energy in 20 s. What is its power?",
       "options": [
-        "For power, the statement is that one watt is one coulomb per volt.",
-        "For power, the answer claims that one watt is one newton per metre.",
-        "For power, the statement is that one watt is one kilogram per second.",
-        "The answer for power says that one watt is one joule per second."
+        "30 W",
+        "12 000 W",
+        "580 W",
+        "620 W"
       ],
-      "correctAnswer": "The answer for power says that one watt is one joule per second.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Recall the watt. Focus area: Power. For this question, One watt is one joule per second. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_watt",
+      "correctAnswer": "30 W",
+      "correctIndex": 0,
+      "explanation": "Power = energy transferred ÷ time = 600 ÷ 20 = 30 W.",
+      "misconceptionTag": "power-divide-by-time",
       "distractorRationales": [
         {
-          "text": "For power, the statement is that one watt is one kilogram per second.",
-          "misconception": "One watt is one newton per metre."
+          "text": "12 000 W",
+          "misconception": ""
         },
         {
-          "text": "For power, the answer claims that one watt is one newton per metre.",
-          "misconception": "One watt is one coulomb per volt."
+          "text": "580 W",
+          "misconception": ""
         },
         {
-          "text": "For power, the statement is that one watt is one coulomb per volt.",
-          "misconception": "One watt is one kilogram per second."
+          "text": "620 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the watt."
+      "senNote": "Checks: Calculate power from energy transferred and time."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_definition_data_interpretation_004",
+      "id": "aqa_energy_power_calculate_work_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18332,6 +18411,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18342,56 +18422,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
+        "id": "aqa_energy_power_calculate_work_005_lo",
+        "statement": "Calculate power from work done and time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.4:power_definition:data_interpretation",
-      "conceptFamily": "power_definition",
-      "contextType": "a method-choice question",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_calculate_work_005",
+      "conceptFamily": "calculate_power_from_work_done_and_time",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "A small data set about power is being interpreted. Which conclusion is valid? Keep the answer focused on power: recall the meaning of power.",
-      "question": "A small data set about power is being interpreted. Which conclusion is valid? Keep the answer focused on power: recall the meaning of power.",
+      "stem": "A crane does 12 000 J of work in 40 s. What is its useful power output?",
+      "question": "A crane does 12 000 J of work in 40 s. What is its useful power output?",
       "options": [
-        "The answer for power says that power is the same as force.",
-        "For power, it means that power is the rate of energy transfer or work done.",
-        "The answer for power says that power is measured in coulombs.",
-        "The answer for power says that power is total energy stored only."
+        "300 W",
+        "480 000 W",
+        "12 040 W",
+        "11 960 W"
       ],
-      "correctAnswer": "For power, it means that power is the rate of energy transfer or work done.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
+      "correctAnswer": "300 W",
+      "correctIndex": 0,
+      "explanation": "Power = work done ÷ time = 12 000 ÷ 40 = 300 W.",
+      "misconceptionTag": "work-power-calculation",
       "distractorRationales": [
         {
-          "text": "The answer for power says that power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
+          "text": "480 000 W",
+          "misconception": ""
         },
         {
-          "text": "The answer for power says that power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
+          "text": "12 040 W",
+          "misconception": ""
         },
         {
-          "text": "The answer for power says that power is the same as force.",
-          "misconception": "Power is the same as force."
+          "text": "11 960 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the meaning of power."
+      "senNote": "Checks: Calculate power from work done and time."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_equation_representation_interpretation_005",
+      "id": "aqa_energy_power_unit_006",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18403,6 +18484,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18413,127 +18495,422 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_equation",
-        "statement": "Use power = energy transferred ÷ time. (Power)",
+        "id": "aqa_energy_power_unit_006_lo",
+        "statement": "State that one watt is one joule per second.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "state",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_power_unit_006",
+      "conceptFamily": "state_that_one_watt_is_one_joule_per_second",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "Which unit is equivalent to one watt?",
+      "question": "Which unit is equivalent to one watt?",
+      "options": [
+        "one joule per second",
+        "one joule per kilogram",
+        "one newton per metre",
+        "one coulomb per second"
+      ],
+      "correctAnswer": "one joule per second",
+      "correctIndex": 0,
+      "explanation": "A power of 1 W means an energy transfer of 1 J every second.",
+      "misconceptionTag": "watt-joule-per-second",
+      "distractorRationales": [
+        {
+          "text": "one joule per kilogram",
+          "misconception": ""
+        },
+        {
+          "text": "one newton per metre",
+          "misconception": ""
+        },
+        {
+          "text": "one coulomb per second",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: State that one watt is one joule per second."
+    },
+    {
+      "id": "aqa_energy_power_compare_motors_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_compare_motors_007_lo",
+        "statement": "Compare power for equal work done in different times.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_power_compare_motors_007",
+      "conceptFamily": "compare_power_for_equal_work_done_in_different_times",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "Two motors lift identical loads through the same height. Motor A takes 4 s and motor B takes 8 s. Which motor has the greater power?",
+      "question": "Two motors lift identical loads through the same height. Motor A takes 4 s and motor B takes 8 s. Which motor has the greater power?",
+      "options": [
+        "Motor A, because it does the same work in less time.",
+        "Motor B, because it takes longer.",
+        "Both motors have zero power because the load starts and finishes at rest.",
+        "Both motors must have the same power because the load height is the same."
+      ],
+      "correctAnswer": "Motor A, because it does the same work in less time.",
+      "correctIndex": 0,
+      "explanation": "Both motors do the same work. The motor that does it in less time has the greater power.",
+      "misconceptionTag": "same-work-different-time",
+      "distractorRationales": [
+        {
+          "text": "Motor B, because it takes longer.",
+          "misconception": ""
+        },
+        {
+          "text": "Both motors have zero power because the load starts and finishes at rest.",
+          "misconception": ""
+        },
+        {
+          "text": "Both motors must have the same power because the load height is the same.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare power for equal work done in different times."
+    },
+    {
+      "id": "aqa_energy_power_rearrange_energy_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_rearrange_energy_008_lo",
+        "statement": "Calculate work done from power and time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_rearrange_energy_008",
+      "conceptFamily": "calculate_work_done_from_power_and_time",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "A winch has a useful power output of 50 W while lifting a load for 120 s. How much useful work is done on the load?",
+      "question": "A winch has a useful power output of 50 W while lifting a load for 120 s. How much useful work is done on the load?",
+      "options": [
+        "6000 J",
+        "0.42 J",
+        "170 J",
+        "2.4 J"
+      ],
+      "correctAnswer": "6000 J",
+      "correctIndex": 0,
+      "explanation": "Work done = power × time = 50 × 120 = 6000 J.",
+      "misconceptionTag": "energy-from-power-time",
+      "distractorRationales": [
+        {
+          "text": "0.42 J",
+          "misconception": ""
+        },
+        {
+          "text": "170 J",
+          "misconception": ""
+        },
+        {
+          "text": "2.4 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate work done from power and time."
+    },
+    {
+      "id": "aqa_energy_power_rearrange_time_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_rearrange_time_009_lo",
+        "statement": "Calculate time from energy transferred and power.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_rearrange_time_009",
+      "conceptFamily": "calculate_time_from_energy_transferred_and_power",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "A pump transfers 2400 J of energy at a power of 80 W. How long does it run?",
+      "question": "A pump transfers 2400 J of energy at a power of 80 W. How long does it run?",
+      "options": [
+        "30 s",
+        "192 000 s",
+        "2480 s",
+        "0.033 s"
+      ],
+      "correctAnswer": "30 s",
+      "correctIndex": 0,
+      "explanation": "Time = energy transferred ÷ power = 2400 ÷ 80 = 30 s.",
+      "misconceptionTag": "time-from-energy-power",
+      "distractorRationales": [
+        {
+          "text": "192 000 s",
+          "misconception": ""
+        },
+        {
+          "text": "2480 s",
+          "misconception": ""
+        },
+        {
+          "text": "0.033 s",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate time from energy transferred and power."
+    },
+    {
+      "id": "aqa_energy_power_higher_power_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_higher_power_010_lo",
+        "statement": "Compare energy transferred by devices of different power for equal time.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_power_higher_power_010",
+      "conceptFamily": "compare_energy_transferred_by_devices_of_different_power_for_equal_time",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "A 200 W heater and a 100 W heater are switched on for the same time. Which heater transfers more energy?",
+      "question": "A 200 W heater and a 100 W heater are switched on for the same time. Which heater transfers more energy?",
+      "options": [
+        "The 200 W heater.",
+        "The 100 W heater.",
+        "Both transfer the same energy.",
+        "Neither transfers energy unless it is moving."
+      ],
+      "correctAnswer": "The 200 W heater.",
+      "correctIndex": 0,
+      "explanation": "For the same time, the larger power means a larger energy transfer.",
+      "misconceptionTag": "power-energy-same-time",
+      "distractorRationales": [
+        {
+          "text": "The 100 W heater.",
+          "misconception": ""
+        },
+        {
+          "text": "Both transfer the same energy.",
+          "misconception": ""
+        },
+        {
+          "text": "Neither transfers energy unless it is moving.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare energy transferred by devices of different power for equal time."
+    },
+    {
+      "id": "aqa_energy_power_same_energy_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_same_energy_011_lo",
+        "statement": "Relate power and time for the same energy transfer.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.4:power_equation:representation_interpretation",
-      "conceptFamily": "power_equation",
-      "contextType": "a results discussion",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_power_same_energy_011",
+      "conceptFamily": "relate_power_and_time_for_the_same_energy_transfer",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "Which option correctly reads the power model or diagram idea? Use the wording carefully: this is about use power = energy transferred ÷ time.",
-      "question": "Which option correctly reads the power model or diagram idea? Use the wording carefully: this is about use power = energy transferred ÷ time.",
+      "stem": "Two lifts transfer the same amount of energy to raise passengers. Lift X has twice the power of lift Y. What must be different?",
+      "question": "Two lifts transfer the same amount of energy to raise passengers. Lift X has twice the power of lift Y. What must be different?",
       "options": [
-        "In this item, it means that power = force ÷ area.",
-        "In this item, it means that power does not depend on time.",
-        "For power, it means that power = energy transferred ÷ time.",
-        "In this item, it means that power = energy transferred × time."
+        "Lift X takes half the time.",
+        "Lift X takes twice the time.",
+        "Lift X transfers half the energy.",
+        "Lift X does no work."
       ],
-      "correctAnswer": "For power, it means that power = energy transferred ÷ time.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.4 targets: Use power = energy transferred ÷ time. Focus area: Power. For this question, Power = energy transferred ÷ time. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_equation",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that power = force ÷ area.",
-          "misconception": "Power = energy transferred × time."
-        },
-        {
-          "text": "In this item, it means that power does not depend on time.",
-          "misconception": "Power = force ÷ area."
-        },
-        {
-          "text": "In this item, it means that power = energy transferred × time.",
-          "misconception": "Power does not depend on time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power = energy transferred ÷ time."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_unit_watt_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_unit_watt",
-        "statement": "Recall the watt. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.4:unit_watt:direct_recall",
-      "conceptFamily": "unit_watt",
-      "contextType": "a classroom demonstration",
-      "skill": "Power practice",
-      "stem": "Which answer matches this power objective: Recall the watt? Keep the answer focused on power: recall the watt.",
-      "question": "Which answer matches this power objective: Recall the watt? Keep the answer focused on power: recall the watt.",
-      "options": [
-        "The answer for power says that one watt is one joule per second.",
-        "For power, it means that one watt is one newton per metre.",
-        "For power, it means that one watt is one coulomb per volt.",
-        "For power, it means that one watt is one kilogram per second."
-      ],
-      "correctAnswer": "The answer for power says that one watt is one joule per second.",
+      "correctAnswer": "Lift X takes half the time.",
       "correctIndex": 0,
-      "explanation": "4.1.1.4 targets: Recall the watt. Focus area: Power. For this question, One watt is one joule per second. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_watt",
+      "explanation": "For the same energy transfer, doubling the power means the time is halved.",
+      "misconceptionTag": "power-time-inverse",
       "distractorRationales": [
         {
-          "text": "For power, it means that one watt is one kilogram per second.",
-          "misconception": "One watt is one newton per metre."
+          "text": "Lift X takes twice the time.",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that one watt is one newton per metre.",
-          "misconception": "One watt is one coulomb per volt."
+          "text": "Lift X transfers half the energy.",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that one watt is one coulomb per volt.",
-          "misconception": "One watt is one kilogram per second."
+          "text": "Lift X does no work.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the watt."
+      "senNote": "Checks: Relate power and time for the same energy transfer."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_definition_applied_context_007",
+      "id": "aqa_energy_power_graph_012",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18545,6 +18922,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18555,56 +18933,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
+        "id": "aqa_energy_power_graph_012_lo",
+        "statement": "Calculate power from repeated energy transfers over time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.1.4:power_definition:applied_context",
-      "conceptFamily": "power_definition",
-      "contextType": "a revision checkpoint",
+      "commandWord": "calculate",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_energy_power_graph_012",
+      "conceptFamily": "calculate_power_from_repeated_energy_transfers_over_time",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for power? Check the clue before choosing: Recall the meaning of power.",
-      "question": "In a revision checkpoint, which conclusion is correct for power? Check the clue before choosing: Recall the meaning of power.",
+      "stem": "A device transfers 100 J in the first second, then another 100 J in the next second. What is its power during these two seconds?",
+      "question": "A device transfers 100 J in the first second, then another 100 J in the next second. What is its power during these two seconds?",
       "options": [
-        "For power: Power is total energy stored only.",
-        "For power: Power is measured in coulombs.",
-        "The claim for power is that power is the rate of energy transfer or work done.",
-        "For power, the option says that power is the same as force."
+        "100 W",
+        "200 W",
+        "50 W",
+        "2 W"
       ],
-      "correctAnswer": "The claim for power is that power is the rate of energy transfer or work done.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
+      "correctAnswer": "100 W",
+      "correctIndex": 0,
+      "explanation": "The device transfers 200 J in 2 s, so power = 200 ÷ 2 = 100 W.",
+      "misconceptionTag": "average-power",
       "distractorRationales": [
         {
-          "text": "For power: Power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
+          "text": "200 W",
+          "misconception": ""
         },
         {
-          "text": "For power: Power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
+          "text": "50 W",
+          "misconception": ""
         },
         {
-          "text": "For power, the option says that power is the same as force.",
-          "misconception": "Power is the same as force."
+          "text": "2 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the meaning of power."
+      "senNote": "Checks: Calculate power from repeated energy transfers over time."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_equation_misconception_correction_008",
+      "id": "aqa_energy_power_work_done_context_013",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18616,6 +18995,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18626,56 +19006,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_equation",
-        "statement": "Use power = energy transferred ÷ time. (Power)",
+        "id": "aqa_energy_power_work_done_context_013_lo",
+        "statement": "Explain power using the same energy transfer over different times.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.4:power_equation:misconception_correction",
-      "conceptFamily": "power_equation",
-      "contextType": "an exam-style data table",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_power_work_done_context_013",
+      "conceptFamily": "explain_power_using_the_same_energy_transfer_over_different_times",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "Which answer corrects a misconception about power? Demand focus: use power = energy transferred ÷ time.",
-      "question": "Which answer corrects a misconception about power? Demand focus: use power = energy transferred ÷ time.",
+      "stem": "A student runs up stairs and then walks up the same stairs. In both cases the student has the same increase in gravitational potential energy. Why is the power greater when running?",
+      "question": "A student runs up stairs and then walks up the same stairs. In both cases the student has the same increase in gravitational potential energy. Why is the power greater when running?",
       "options": [
-        "For power, the answer claims that power does not depend on time.",
-        "The answer for power says that power = energy transferred ÷ time.",
-        "In this power item, power = energy transferred × time.",
-        "For power, the answer claims that power = force ÷ area."
+        "The same energy transfer happens in a shorter time.",
+        "More mass is created while running.",
+        "The energy transfer is zero when walking.",
+        "The height of the stairs changes when running."
       ],
-      "correctAnswer": "The answer for power says that power = energy transferred ÷ time.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.4 targets: Use power = energy transferred ÷ time. Focus area: Power. For this question, Power = energy transferred ÷ time. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_equation",
+      "correctAnswer": "The same energy transfer happens in a shorter time.",
+      "correctIndex": 0,
+      "explanation": "Running and walking up the same stairs can involve the same energy transfer, but running takes less time, so the power is greater.",
+      "misconceptionTag": "stairs-power-time",
       "distractorRationales": [
         {
-          "text": "For power, the answer claims that power = force ÷ area.",
-          "misconception": "Power = energy transferred × time."
+          "text": "More mass is created while running.",
+          "misconception": ""
         },
         {
-          "text": "For power, the answer claims that power does not depend on time.",
-          "misconception": "Power = force ÷ area."
+          "text": "The energy transfer is zero when walking.",
+          "misconception": ""
         },
         {
-          "text": "In this power item, power = energy transferred × time.",
-          "misconception": "Power does not depend on time."
+          "text": "The height of the stairs changes when running.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power = energy transferred ÷ time."
+      "senNote": "Checks: Explain power using the same energy transfer over different times."
     },
     {
-      "id": "aqa_4_1_1_4_power_unit_watt_exam_decision_009",
+      "id": "aqa_energy_power_units_in_calculation_014",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -18687,6 +19068,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -18697,624 +19079,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_unit_watt",
-        "statement": "Recall the watt. (Power)",
+        "id": "aqa_energy_power_units_in_calculation_014_lo",
+        "statement": "Convert kilowatts to watts for power calculations.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.1.4:unit_watt:exam_decision",
-      "conceptFamily": "unit_watt",
-      "contextType": "a required-practical notebook",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_units_in_calculation_014",
+      "conceptFamily": "convert_kilowatts_to_watts_for_power_calculations",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "The mark scheme is testing recall the watt. Which answer matches that point? Check the clue before choosing: Recall the watt.",
-      "question": "The mark scheme is testing recall the watt. Which answer matches that point? Check the clue before choosing: Recall the watt.",
+      "stem": "A 1.5 kW appliance is used for 10 s. Which power value should be used if energy is calculated in joules?",
+      "question": "A 1.5 kW appliance is used for 10 s. Which power value should be used if energy is calculated in joules?",
       "options": [
-        "For power, it means that one watt is one newton per metre.",
-        "The answer for power says that one watt is one coulomb per volt.",
-        "The answer for power says that one watt is one kilogram per second.",
-        "For power, the statement is that one watt is one joule per second."
+        "1500 W",
+        "1.5 W",
+        "10 W",
+        "15 W"
       ],
-      "correctAnswer": "For power, the statement is that one watt is one joule per second.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Recall the watt. Focus area: Power. For this question, One watt is one joule per second. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_watt",
-      "distractorRationales": [
-        {
-          "text": "The answer for power says that one watt is one kilogram per second.",
-          "misconception": "One watt is one newton per metre."
-        },
-        {
-          "text": "For power, it means that one watt is one newton per metre.",
-          "misconception": "One watt is one coulomb per volt."
-        },
-        {
-          "text": "The answer for power says that one watt is one coulomb per volt.",
-          "misconception": "One watt is one kilogram per second."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the watt."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_power_definition_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.4:power_definition:representation_interpretation",
-      "conceptFamily": "power_definition",
-      "contextType": "a technician report",
-      "skill": "Power practice",
-      "stem": "A representation of power is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: recall the meaning of power.",
-      "question": "A representation of power is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: recall the meaning of power.",
-      "options": [
-        "For power, it means that power is the same as force.",
-        "For power, the option says that power is measured in coulombs.",
-        "For power, this would mean that power is total energy stored only.",
-        "For power, this would mean that power is the rate of energy transfer or work done."
-      ],
-      "correctAnswer": "For power, this would mean that power is the rate of energy transfer or work done.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
-      "distractorRationales": [
-        {
-          "text": "For power, this would mean that power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
-        },
-        {
-          "text": "For power, the option says that power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
-        },
-        {
-          "text": "For power, it means that power is the same as force.",
-          "misconception": "Power is the same as force."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the meaning of power."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_power_equation_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_equation",
-        "statement": "Use power = energy transferred ÷ time. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.4:power_equation:concept_discrimination",
-      "conceptFamily": "power_equation",
-      "contextType": "a labelled diagram",
-      "skill": "Power practice",
-      "stem": "A student is comparing similar ideas in power. Which statement is correct? Keep the answer focused on power: use power = energy transferred ÷ time.",
-      "question": "A student is comparing similar ideas in power. Which statement is correct? Keep the answer focused on power: use power = energy transferred ÷ time.",
-      "options": [
-        "For power, this would mean that power does not depend on time.",
-        "For power, this would mean that power = force ÷ area.",
-        "For power, this would mean that power = energy transferred × time.",
-        "In this item, it means that power = energy transferred ÷ time."
-      ],
-      "correctAnswer": "In this item, it means that power = energy transferred ÷ time.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Use power = energy transferred ÷ time. Focus area: Power. For this question, Power = energy transferred ÷ time. Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_equation",
-      "distractorRationales": [
-        {
-          "text": "For power, this would mean that power = force ÷ area.",
-          "misconception": "Power = energy transferred × time."
-        },
-        {
-          "text": "For power, this would mean that power does not depend on time.",
-          "misconception": "Power = force ÷ area."
-        },
-        {
-          "text": "For power, this would mean that power = energy transferred × time.",
-          "misconception": "Power does not depend on time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power = energy transferred ÷ time."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_unit_watt_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_unit_watt",
-        "statement": "Recall the watt. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.1.4:unit_watt:applied_context",
-      "conceptFamily": "unit_watt",
-      "contextType": "a short calculation",
-      "skill": "Power practice",
-      "stem": "A question set in a short calculation tests power. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recall the watt.",
-      "question": "A question set in a short calculation tests power. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recall the watt.",
-      "options": [
-        "For power, it means that one watt is one newton per metre.",
-        "For power, it means that one watt is one kilogram per second.",
-        "For power, the statement is that one watt is one joule per second.",
-        "For power, the answer claims that one watt is one coulomb per volt."
-      ],
-      "correctAnswer": "For power, the statement is that one watt is one joule per second.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.4 targets: Recall the watt. Focus area: Power. For this question, One watt is one joule per second. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_watt",
-      "distractorRationales": [
-        {
-          "text": "For power, it means that one watt is one kilogram per second.",
-          "misconception": "One watt is one newton per metre."
-        },
-        {
-          "text": "For power, it means that one watt is one newton per metre.",
-          "misconception": "One watt is one coulomb per volt."
-        },
-        {
-          "text": "For power, the answer claims that one watt is one coulomb per volt.",
-          "misconception": "One watt is one kilogram per second."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the watt."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_power_definition_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.4:power_definition:data_interpretation",
-      "conceptFamily": "power_definition",
-      "contextType": "a safety decision",
-      "skill": "Power practice",
-      "stem": "A small data set about power is being interpreted. Which conclusion is valid? Use the wording carefully: this is about recall the meaning of power.",
-      "question": "A small data set about power is being interpreted. Which conclusion is valid? Use the wording carefully: this is about recall the meaning of power.",
-      "options": [
-        "In this item, it means that power is total energy stored only.",
-        "In this item, it means that power is the same as force.",
-        "The claim for power is that power is the rate of energy transfer or work done.",
-        "In this item, it means that power is measured in coulombs."
-      ],
-      "correctAnswer": "The claim for power is that power is the rate of energy transfer or work done.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
-        },
-        {
-          "text": "In this item, it means that power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
-        },
-        {
-          "text": "In this item, it means that power is the same as force.",
-          "misconception": "Power is the same as force."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the meaning of power."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_power_equation_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_equation",
-        "statement": "Use power = energy transferred ÷ time. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.1.4:power_equation:exam_decision",
-      "conceptFamily": "power_equation",
-      "contextType": "a graph-reading task",
-      "skill": "Power practice",
-      "stem": "Which answer is the strongest GCSE Physics response for power? Check the clue before choosing: Use power = energy transferred ÷ time.",
-      "question": "Which answer is the strongest GCSE Physics response for power? Check the clue before choosing: Use power = energy transferred ÷ time.",
-      "options": [
-        "For power, the statement is that power = energy transferred × time.",
-        "For power, the answer claims that power = energy transferred ÷ time.",
-        "For power, the statement is that power does not depend on time.",
-        "For power, the statement is that power = force ÷ area."
-      ],
-      "correctAnswer": "For power, the answer claims that power = energy transferred ÷ time.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.4 targets: Use power = energy transferred ÷ time. Focus area: Power. For this question, Power = energy transferred ÷ time. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_equation",
-      "distractorRationales": [
-        {
-          "text": "For power, the statement is that power = force ÷ area.",
-          "misconception": "Power = energy transferred × time."
-        },
-        {
-          "text": "For power, the statement is that power does not depend on time.",
-          "misconception": "Power = force ÷ area."
-        },
-        {
-          "text": "For power, the statement is that power = energy transferred × time.",
-          "misconception": "Power does not depend on time."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use power = energy transferred ÷ time."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_unit_watt_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_unit_watt",
-        "statement": "Recall the watt. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.4:unit_watt:direct_recall",
-      "conceptFamily": "unit_watt",
-      "contextType": "a comparison question",
-      "skill": "Power practice",
-      "stem": "Which answer matches this power objective: Recall the watt? Use the wording carefully: this is about recall the watt.",
-      "question": "Which answer matches this power objective: Recall the watt? Use the wording carefully: this is about recall the watt.",
-      "options": [
-        "The claim for power is that one watt is one coulomb per volt.",
-        "In this item, it means that one watt is one joule per second.",
-        "The claim for power is that one watt is one newton per metre.",
-        "The claim for power is that one watt is one kilogram per second."
-      ],
-      "correctAnswer": "In this item, it means that one watt is one joule per second.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.4 targets: Recall the watt. Focus area: Power. For this question, One watt is one joule per second. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_watt",
-      "distractorRationales": [
-        {
-          "text": "The claim for power is that one watt is one kilogram per second.",
-          "misconception": "One watt is one newton per metre."
-        },
-        {
-          "text": "The claim for power is that one watt is one newton per metre.",
-          "misconception": "One watt is one coulomb per volt."
-        },
-        {
-          "text": "The claim for power is that one watt is one coulomb per volt.",
-          "misconception": "One watt is one kilogram per second."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the watt."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_power_definition_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.4:power_definition:concept_discrimination",
-      "conceptFamily": "power_definition",
-      "contextType": "a method-choice question",
-      "skill": "Power practice",
-      "stem": "Which option best separates the correct power idea from a common mix-up? Demand focus: recall the meaning of power.",
-      "question": "Which option best separates the correct power idea from a common mix-up? Demand focus: recall the meaning of power.",
-      "options": [
-        "The claim for power is that power is total energy stored only.",
-        "For power: Power is measured in coulombs.",
-        "The claim for power is that power is the same as force.",
-        "For power, it means that power is the rate of energy transfer or work done."
-      ],
-      "correctAnswer": "For power, it means that power is the rate of energy transfer or work done.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
-      "distractorRationales": [
-        {
-          "text": "The claim for power is that power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
-        },
-        {
-          "text": "For power: Power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
-        },
-        {
-          "text": "The claim for power is that power is the same as force.",
-          "misconception": "Power is the same as force."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the meaning of power."
-    },
-    {
-      "id": "aqa_4_1_1_4_power_power_equation_misconception_correction_017",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Power",
-      "topicSlug": "energy",
-      "subtopicSlug": "power",
-      "topicId": "power_calc",
-      "specRef": "4.1.1.4",
-      "specStatement": "Power as rate of energy transfer or work done.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_equation",
-        "statement": "Use power = energy transferred ÷ time. (Power)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.4:power_equation:misconception_correction",
-      "conceptFamily": "power_equation",
-      "contextType": "a results discussion",
-      "skill": "Power practice",
-      "stem": "Which answer corrects a misconception about power? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
-      "question": "Which answer corrects a misconception about power? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
-      "options": [
-        "In this item, it means that power = energy transferred ÷ time.",
-        "For power, this would mean that power = force ÷ area.",
-        "For power, it means that power = energy transferred × time.",
-        "For power, this would mean that power does not depend on time."
-      ],
-      "correctAnswer": "In this item, it means that power = energy transferred ÷ time.",
+      "correctAnswer": "1500 W",
       "correctIndex": 0,
-      "explanation": "4.1.1.4 targets: Use power = energy transferred ÷ time. Focus area: Power. For this question, Power = energy transferred ÷ time. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_equation",
+      "explanation": "Power must be in watts when energy is in joules and time is in seconds. 1.5 kW = 1500 W.",
+      "misconceptionTag": "kilowatt-to-watt",
       "distractorRationales": [
         {
-          "text": "For power, this would mean that power = force ÷ area.",
-          "misconception": "Power = energy transferred × time."
+          "text": "1.5 W",
+          "misconception": ""
         },
         {
-          "text": "For power, this would mean that power does not depend on time.",
-          "misconception": "Power = force ÷ area."
+          "text": "10 W",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that power = energy transferred × time.",
-          "misconception": "Power does not depend on time."
+          "text": "15 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use power = energy transferred ÷ time."
+      "senNote": "Checks: Convert kilowatts to watts for power calculations."
     },
     {
-      "id": "aqa_4_1_1_4_power_unit_watt_data_interpretation_018",
+      "id": "aqa_energy_power_work_vs_energy_015",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -19326,6 +19141,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -19336,56 +19152,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_unit_watt",
-        "statement": "Recall the watt. (Power)",
+        "id": "aqa_energy_power_work_vs_energy_015_lo",
+        "statement": "Select the correct calculation for power from work done.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.4:unit_watt:data_interpretation",
-      "conceptFamily": "unit_watt",
-      "contextType": "a classroom demonstration",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_work_vs_energy_015",
+      "conceptFamily": "select_the_correct_calculation_for_power_from_work_done",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "Which conclusion about power is supported by the evidence? Demand focus: recall the watt.",
-      "question": "Which conclusion about power is supported by the evidence? Demand focus: recall the watt.",
+      "stem": "A hoist does 900 J of work in 3 s. Which calculation gives its power?",
+      "question": "A hoist does 900 J of work in 3 s. Which calculation gives its power?",
       "options": [
-        "For power, it means that one watt is one coulomb per volt.",
-        "For power, the statement is that one watt is one joule per second.",
-        "For power, it means that one watt is one kilogram per second.",
-        "For power, it means that one watt is one newton per metre."
+        "900 ÷ 3",
+        "900 × 3",
+        "3 ÷ 900",
+        "900 + 3"
       ],
-      "correctAnswer": "For power, the statement is that one watt is one joule per second.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.4 targets: Recall the watt. Focus area: Power. For this question, One watt is one joule per second. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_watt",
+      "correctAnswer": "900 ÷ 3",
+      "correctIndex": 0,
+      "explanation": "Power is work done divided by time, so the correct calculation is 900 ÷ 3.",
+      "misconceptionTag": "work-divide-time",
       "distractorRationales": [
         {
-          "text": "For power, it means that one watt is one kilogram per second.",
-          "misconception": "One watt is one newton per metre."
+          "text": "900 × 3",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that one watt is one newton per metre.",
-          "misconception": "One watt is one coulomb per volt."
+          "text": "3 ÷ 900",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that one watt is one coulomb per volt.",
-          "misconception": "One watt is one kilogram per second."
+          "text": "900 + 3",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the watt."
+      "senNote": "Checks: Select the correct calculation for power from work done."
     },
     {
-      "id": "aqa_4_1_1_4_power_power_definition_representation_interpretation_019",
+      "id": "aqa_energy_power_efficiency_link_016",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -19397,6 +19214,7 @@
       "subtopicSlug": "power",
       "topicId": "power_calc",
       "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
       "specStatement": "Power as rate of energy transfer or work done.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -19407,53 +19225,273 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_4_power_power_definition",
-        "statement": "Recall the meaning of power. (Power)",
+        "id": "aqa_energy_power_efficiency_link_016_lo",
+        "statement": "Calculate wasted power from input and useful output power.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.4:power_definition:representation_interpretation",
-      "conceptFamily": "power_definition",
-      "contextType": "a revision checkpoint",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_efficiency_link_016",
+      "conceptFamily": "calculate_wasted_power_from_input_and_useful_output_power",
+      "contextType": "exam_style",
       "skill": "Power practice",
-      "stem": "A representation of power is described in words. Which interpretation is correct? Keep the answer focused on power: recall the meaning of power.",
-      "question": "A representation of power is described in words. Which interpretation is correct? Keep the answer focused on power: recall the meaning of power.",
+      "stem": "A motor has an input power of 120 W and a useful output power of 90 W. What is the wasted power?",
+      "question": "A motor has an input power of 120 W and a useful output power of 90 W. What is the wasted power?",
       "options": [
-        "For power, it means that power is measured in coulombs.",
-        "The answer for power says that power is total energy stored only.",
-        "For power, the statement is that power is the same as force.",
-        "The answer for power says that power is the rate of energy transfer or work done."
+        "30 W",
+        "210 W",
+        "0.75 W",
+        "90 W"
       ],
-      "correctAnswer": "The answer for power says that power is the rate of energy transfer or work done.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.4 targets: Recall the meaning of power. Focus area: Power. For this question, Power is the rate of energy transfer or work done. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_definition",
+      "correctAnswer": "30 W",
+      "correctIndex": 0,
+      "explanation": "Wasted power = input power - useful output power = 120 - 90 = 30 W.",
+      "misconceptionTag": "wasted-power",
       "distractorRationales": [
         {
-          "text": "The answer for power says that power is total energy stored only.",
-          "misconception": "Power is total energy stored only."
+          "text": "210 W",
+          "misconception": ""
         },
         {
-          "text": "For power, it means that power is measured in coulombs.",
-          "misconception": "Power is measured in coulombs."
+          "text": "0.75 W",
+          "misconception": ""
         },
         {
-          "text": "For power, the statement is that power is the same as force.",
-          "misconception": "Power is the same as force."
+          "text": "90 W",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the meaning of power."
+      "senNote": "Checks: Calculate wasted power from input and useful output power."
+    },
+    {
+      "id": "aqa_energy_power_practical_motor_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_practical_motor_017_lo",
+        "statement": "Identify measurements needed to calculate power in a lifting investigation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "practical_method",
+      "patternId": "authored:aqa_energy_power_practical_motor_017",
+      "conceptFamily": "identify_measurements_needed_to_calculate_power_in_a_lifting_investigation",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "In an investigation, a motor lifts a load through a measured height. Which additional measurement is needed to calculate power?",
+      "question": "In an investigation, a motor lifts a load through a measured height. Which additional measurement is needed to calculate power?",
+      "options": [
+        "The time taken to lift the load.",
+        "The colour of the load.",
+        "The room temperature only.",
+        "The width of the bench."
+      ],
+      "correctAnswer": "The time taken to lift the load.",
+      "correctIndex": 0,
+      "explanation": "Power is work done divided by time, so the time taken is needed.",
+      "misconceptionTag": "missing-time-measurement",
+      "distractorRationales": [
+        {
+          "text": "The colour of the load.",
+          "misconception": ""
+        },
+        {
+          "text": "The room temperature only.",
+          "misconception": ""
+        },
+        {
+          "text": "The width of the bench.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify measurements needed to calculate power in a lifting investigation."
+    },
+    {
+      "id": "aqa_energy_power_energy_rate_table_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_energy_rate_table_018_lo",
+        "statement": "Use tabulated energy and time values to compare power.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_energy_power_energy_rate_table_018",
+      "conceptFamily": "use_tabulated_energy_and_time_values_to_compare_power",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "Device A transfers 300 J in 5 s. Device B transfers 300 J in 10 s. Which row is correct?",
+      "question": "Device A transfers 300 J in 5 s. Device B transfers 300 J in 10 s. Which row is correct?",
+      "options": [
+        "A has the greater power; both transfer the same energy.",
+        "B has the greater power; both transfer the same energy.",
+        "A and B have the same power; A transfers more energy.",
+        "A has zero power because the time is shorter."
+      ],
+      "correctAnswer": "A has the greater power; both transfer the same energy.",
+      "correctIndex": 0,
+      "explanation": "Both devices transfer 300 J, but A transfers it in less time, so A has the greater power.",
+      "misconceptionTag": "same-energy-shorter-time",
+      "distractorRationales": [
+        {
+          "text": "B has the greater power; both transfer the same energy.",
+          "misconception": ""
+        },
+        {
+          "text": "A and B have the same power; A transfers more energy.",
+          "misconception": ""
+        },
+        {
+          "text": "A has zero power because the time is shorter.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use tabulated energy and time values to compare power."
+    },
+    {
+      "id": "aqa_energy_power_decimal_calculation_019",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Power",
+      "topicSlug": "energy",
+      "subtopicSlug": "power",
+      "topicId": "power_calc",
+      "specRef": "4.1.1.4",
+      "combinedSpecRef": "6.1.1.4",
+      "specStatement": "Power as rate of energy transfer or work done.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_power_decimal_calculation_019_lo",
+        "statement": "Calculate power using decimal values.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_power_decimal_calculation_019",
+      "conceptFamily": "calculate_power_using_decimal_values",
+      "contextType": "exam_style",
+      "skill": "Power practice",
+      "stem": "A small motor transfers 7.5 J of energy in 2.5 s. What is its power?",
+      "question": "A small motor transfers 7.5 J of energy in 2.5 s. What is its power?",
+      "options": [
+        "3.0 W",
+        "18.75 W",
+        "10.0 W",
+        "0.33 W"
+      ],
+      "correctAnswer": "3.0 W",
+      "correctIndex": 0,
+      "explanation": "Power = energy transferred ÷ time = 7.5 ÷ 2.5 = 3.0 W.",
+      "misconceptionTag": "decimal-power-calculation",
+      "distractorRationales": [
+        {
+          "text": "18.75 W",
+          "misconception": ""
+        },
+        {
+          "text": "10.0 W",
+          "misconception": ""
+        },
+        {
+          "text": "0.33 W",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate power using decimal values."
     },
     {
       "id": "aqa_4_5_3_hookes_law_hookes_law_direct_recall_001",

@@ -2,10 +2,10 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "forces",
-  "generatedAt": "2026-05-02T10:18:46.383Z",
+  "generatedAt": "2026-05-02T10:28:52.450Z",
   "questions": [
     {
-      "id": "aqa_4_5_3_hookes_law_hookes_law_direct_recall_001",
+      "id": "aqa_forces_hookes_law_relationship_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -17,6 +17,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -27,56 +28,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_hookes_law",
-        "statement": "Use Hooke’s law. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_relationship_001_lo",
+        "statement": "State the force-extension relationship before the limit of proportionality.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.3:hookes_law:direct_recall",
-      "conceptFamily": "hookes_law",
-      "contextType": "a labelled diagram",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_hookes_law_relationship_001",
+      "conceptFamily": "state_the_force_extension_relationship_before_the_limit_of_proportionality",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "Which statement is correct for hooke's law? Use the wording carefully: this is about use Hooke’s law.",
-      "question": "Which statement is correct for hooke's law? Use the wording carefully: this is about use Hooke’s law.",
+      "stem": "A spring is stretched by small forces and then returns to its original length. What does Hooke’s law say about the force and extension before the limit of proportionality is reached?",
+      "question": "A spring is stretched by small forces and then returns to its original length. What does Hooke’s law say about the force and extension before the limit of proportionality is reached?",
       "options": [
-        "In this item, it means that extension is the original length of the spring.",
-        "In this item, it means that force = spring constant ÷ extension.",
-        "The claim for hooke's law is that force = spring constant × extension, up to the limit of proportionality.",
-        "In this item, it means that hooke’s law applies after every spring is permanently deformed."
+        "The force is directly proportional to the extension.",
+        "The force is inversely proportional to the extension.",
+        "The extension is independent of the force.",
+        "The force is proportional to the original length only."
       ],
-      "correctAnswer": "The claim for hooke's law is that force = spring constant × extension, up to the limit of proportionality.",
-      "correctIndex": 2,
-      "explanation": "4.5.3 targets: Use Hooke’s law. Focus area: Hooke's Law. For this question, Force = spring constant × extension, up to the limit of proportionality. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:hookes_law",
+      "correctAnswer": "The force is directly proportional to the extension.",
+      "correctIndex": 0,
+      "explanation": "Hooke’s law applies before the limit of proportionality: force and extension are directly proportional.",
+      "misconceptionTag": "hooke-proportionality",
       "distractorRationales": [
         {
-          "text": "In this item, it means that force = spring constant ÷ extension.",
-          "misconception": "Force = spring constant ÷ extension."
+          "text": "The force is inversely proportional to the extension.",
+          "misconception": "inverse relationship chosen"
         },
         {
-          "text": "In this item, it means that hooke’s law applies after every spring is permanently deformed.",
-          "misconception": "Hooke’s law applies after every spring is permanently deformed."
+          "text": "The extension is independent of the force.",
+          "misconception": "force-extension relationship ignored"
         },
         {
-          "text": "In this item, it means that extension is the original length of the spring.",
-          "misconception": "Extension is the original length of the spring."
+          "text": "The force is proportional to the original length only.",
+          "misconception": "original length confused with extension"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Hooke’s law."
+      "senNote": "Checks: State the force-extension relationship before the limit of proportionality."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_limit_proportionality_concept_discrimination_002",
+      "id": "aqa_forces_hookes_law_equation_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -88,6 +90,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -98,56 +101,641 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_limit_proportionality",
-        "statement": "Recognise the limit of proportionality. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_equation_002_lo",
+        "statement": "Recall the Hooke’s law equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_hookes_law_equation_002",
+      "conceptFamily": "recall_the_hookes_law_equation",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "Which equation links force, spring constant and extension for a spring within its limit of proportionality?",
+      "question": "Which equation links force, spring constant and extension for a spring within its limit of proportionality?",
+      "options": [
+        "\\(F = ke\\)",
+        "\\(F = k \\div e\\)",
+        "\\(F = e \\div k\\)",
+        "\\(F = m g\\)"
+      ],
+      "correctAnswer": "\\(F = ke\\)",
+      "correctIndex": 0,
+      "explanation": "For a spring obeying Hooke’s law, \\(F = ke\\), where \\(F\\) is force, \\(k\\) is spring constant and \\(e\\) is extension.",
+      "misconceptionTag": "hooke-equation",
+      "distractorRationales": [
+        {
+          "text": "\\(F = k \\div e\\)",
+          "misconception": "extension used as divisor"
+        },
+        {
+          "text": "\\(F = e \\div k\\)",
+          "misconception": "spring constant and extension inverted"
+        },
+        {
+          "text": "\\(F = m g\\)",
+          "misconception": "weight equation selected"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the Hooke’s law equation."
+    },
+    {
+      "id": "aqa_forces_hookes_law_force_calc_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_force_calc_003_lo",
+        "statement": "Calculate force using Hooke’s law.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_hookes_law_force_calc_003",
+      "conceptFamily": "calculate_force_using_hookes_law",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "A spring has a spring constant of 25 N/m. It is stretched by 0.12 m. What force is needed?",
+      "question": "A spring has a spring constant of 25 N/m. It is stretched by 0.12 m. What force is needed?",
+      "options": [
+        "3.0 N",
+        "0.0048 N",
+        "25.12 N",
+        "300 N"
+      ],
+      "correctAnswer": "3.0 N",
+      "correctIndex": 0,
+      "explanation": "Use \\(F = ke\\). The force is \\(25 \\times 0.12 = 3.0\\,N\\).",
+      "misconceptionTag": "hooke-force-calculation",
+      "distractorRationales": [
+        {
+          "text": "0.0048 N",
+          "misconception": "extension divided by spring constant"
+        },
+        {
+          "text": "25.12 N",
+          "misconception": "values added"
+        },
+        {
+          "text": "300 N",
+          "misconception": "centimetres or powers of ten confused"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate force using Hooke’s law."
+    },
+    {
+      "id": "aqa_forces_hookes_law_extension_calc_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_extension_calc_004_lo",
+        "statement": "Calculate extension by rearranging Hooke’s law.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_hookes_law_extension_calc_004",
+      "conceptFamily": "calculate_extension_by_rearranging_hookes_law",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "A spring constant is 40 N/m. A force of 6.0 N is applied. What is the extension of the spring?",
+      "question": "A spring constant is 40 N/m. A force of 6.0 N is applied. What is the extension of the spring?",
+      "options": [
+        "0.15 m",
+        "240 m",
+        "46 m",
+        "6.7 m"
+      ],
+      "correctAnswer": "0.15 m",
+      "correctIndex": 0,
+      "explanation": "Rearrange \\(F = ke\\) to \\(e = F \\div k\\). The extension is \\(6.0 \\div 40 = 0.15\\,m\\).",
+      "misconceptionTag": "hooke-extension-rearrange",
+      "distractorRationales": [
+        {
+          "text": "240 m",
+          "misconception": "force multiplied by spring constant"
+        },
+        {
+          "text": "46 m",
+          "misconception": "values added"
+        },
+        {
+          "text": "6.7 m",
+          "misconception": "spring constant divided by force"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate extension by rearranging Hooke’s law."
+    },
+    {
+      "id": "aqa_forces_hookes_law_extension_length_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_extension_length_005_lo",
+        "statement": "Find extension from original and stretched length.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_hookes_law_extension_length_005",
+      "conceptFamily": "find_extension_from_original_and_stretched_length",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "A spring is 15 cm long before loading and 23 cm long after a load is added. What is the extension?",
+      "question": "A spring is 15 cm long before loading and 23 cm long after a load is added. What is the extension?",
+      "options": [
+        "8 cm",
+        "38 cm",
+        "23 cm",
+        "15 cm"
+      ],
+      "correctAnswer": "8 cm",
+      "correctIndex": 0,
+      "explanation": "Extension is stretched length minus original length: \\(23 - 15 = 8\\,cm\\).",
+      "misconceptionTag": "extension-length-difference",
+      "distractorRationales": [
+        {
+          "text": "38 cm",
+          "misconception": "original and stretched lengths added"
+        },
+        {
+          "text": "23 cm",
+          "misconception": "stretched length used as extension"
+        },
+        {
+          "text": "15 cm",
+          "misconception": "original length used as extension"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Find extension from original and stretched length."
+    },
+    {
+      "id": "aqa_forces_hookes_law_spring_constant_calc_006",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_spring_constant_calc_006_lo",
+        "statement": "Calculate spring constant from force and extension.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_hookes_law_spring_constant_calc_006",
+      "conceptFamily": "calculate_spring_constant_from_force_and_extension",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "A force of 12 N produces an extension of 0.040 m in a spring. What is the spring constant?",
+      "question": "A force of 12 N produces an extension of 0.040 m in a spring. What is the spring constant?",
+      "options": [
+        "300 N/m",
+        "0.0033 N/m",
+        "12.04 N/m",
+        "0.48 N/m"
+      ],
+      "correctAnswer": "300 N/m",
+      "correctIndex": 0,
+      "explanation": "Rearrange \\(F = ke\\) to \\(k = F \\div e\\). The spring constant is \\(12 \\div 0.040 = 300\\,N/m\\).",
+      "misconceptionTag": "spring-constant-rearrange",
+      "distractorRationales": [
+        {
+          "text": "0.0033 N/m",
+          "misconception": "extension divided by force"
+        },
+        {
+          "text": "12.04 N/m",
+          "misconception": "values added"
+        },
+        {
+          "text": "0.48 N/m",
+          "misconception": "force multiplied by extension"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate spring constant from force and extension."
+    },
+    {
+      "id": "aqa_forces_hookes_law_unit_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_unit_007_lo",
+        "statement": "Recall the unit of spring constant.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_hookes_law_unit_007",
+      "conceptFamily": "recall_the_unit_of_spring_constant",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "What is the unit of spring constant in Hooke’s law?",
+      "question": "What is the unit of spring constant in Hooke’s law?",
+      "options": [
+        "N/m",
+        "N m",
+        "m/N",
+        "kg/m³"
+      ],
+      "correctAnswer": "N/m",
+      "correctIndex": 0,
+      "explanation": "Spring constant is force per metre of extension, so its unit is newtons per metre, \\(N/m\\).",
+      "misconceptionTag": "spring-constant-unit",
+      "distractorRationales": [
+        {
+          "text": "N m",
+          "misconception": "work done unit confused"
+        },
+        {
+          "text": "m/N",
+          "misconception": "reciprocal unit chosen"
+        },
+        {
+          "text": "kg/m³",
+          "misconception": "density unit chosen"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the unit of spring constant."
+    },
+    {
+      "id": "aqa_forces_hookes_law_graph_straight_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_graph_straight_008_lo",
+        "statement": "Interpret the straight-line section of a force-extension graph.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_hookes_law_graph_straight_008",
+      "conceptFamily": "interpret_the_straight_line_section_of_a_force_extension_graph",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "A force-extension graph for a spring is a straight line through the origin for the first few readings. What does this show?",
+      "question": "A force-extension graph for a spring is a straight line through the origin for the first few readings. What does this show?",
+      "options": [
+        "Force is directly proportional to extension.",
+        "Extension stays constant as force increases.",
+        "The spring is already plastically deformed.",
+        "The spring constant is zero."
+      ],
+      "correctAnswer": "Force is directly proportional to extension.",
+      "correctIndex": 0,
+      "explanation": "A straight line through the origin shows direct proportionality between force and extension.",
+      "misconceptionTag": "force-extension-straight-line",
+      "distractorRationales": [
+        {
+          "text": "Extension stays constant as force increases.",
+          "misconception": "graph gradient ignored"
+        },
+        {
+          "text": "The spring is already plastically deformed.",
+          "misconception": "straight section confused with plastic deformation"
+        },
+        {
+          "text": "The spring constant is zero.",
+          "misconception": "zero intercept confused with zero gradient"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret the straight-line section of a force-extension graph."
+    },
+    {
+      "id": "aqa_forces_hookes_law_graph_gradient_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_graph_gradient_009_lo",
+        "statement": "Use a force-extension graph to find spring constant.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_hookes_law_graph_gradient_009",
+      "conceptFamily": "use_a_force_extension_graph_to_find_spring_constant",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "On a force-extension graph, a force of 8.0 N gives an extension of 0.020 m in the straight-line region. What is the spring constant?",
+      "question": "On a force-extension graph, a force of 8.0 N gives an extension of 0.020 m in the straight-line region. What is the spring constant?",
+      "options": [
+        "400 N/m",
+        "0.16 N/m",
+        "250 N/m",
+        "8.02 N/m"
+      ],
+      "correctAnswer": "400 N/m",
+      "correctIndex": 0,
+      "explanation": "The gradient of a force-extension graph is \\(F \\div e\\). Here \\(8.0 \\div 0.020 = 400\\,N/m\\).",
+      "misconceptionTag": "graph-gradient-spring-constant",
+      "distractorRationales": [
+        {
+          "text": "0.16 N/m",
+          "misconception": "force multiplied by extension"
+        },
+        {
+          "text": "250 N/m",
+          "misconception": "extension divided by force then scaled incorrectly"
+        },
+        {
+          "text": "8.02 N/m",
+          "misconception": "values added"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use a force-extension graph to find spring constant."
+    },
+    {
+      "id": "aqa_forces_hookes_law_limit_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_limit_010_lo",
+        "statement": "Identify the limit of proportionality on a force-extension graph.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.3:limit_proportionality:concept_discrimination",
-      "conceptFamily": "limit_proportionality",
-      "contextType": "a short calculation",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_hookes_law_limit_010",
+      "conceptFamily": "identify_the_limit_of_proportionality_on_a_force_extension_graph",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "A student is comparing similar ideas in hooke's law. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
-      "question": "A student is comparing similar ideas in hooke's law. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
+      "stem": "A force-extension graph is straight at first and then begins to curve. What does the point where the graph first stops being straight represent?",
+      "question": "A force-extension graph is straight at first and then begins to curve. What does the point where the graph first stops being straight represent?",
       "options": [
-        "For hooke's law, it means that the limit means force is zero.",
-        "For hooke's law, it means that beyond the limit, the graph must stay straight.",
-        "For hooke's law, it means that the limit is the same as the spring length.",
-        "For hooke's law, the statement is that beyond the limit of proportionality, force and extension are no longer directly proportional."
+        "The limit of proportionality.",
+        "The original length of the spring.",
+        "The point where force becomes zero.",
+        "The mass of the load."
       ],
-      "correctAnswer": "For hooke's law, the statement is that beyond the limit of proportionality, force and extension are no longer directly proportional.",
-      "correctIndex": 3,
-      "explanation": "4.5.3 targets: Recognise the limit of proportionality. Focus area: Hooke's Law. For this question, Beyond the limit of proportionality, force and extension are no longer directly proportional. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:limit_proportionality",
+      "correctAnswer": "The limit of proportionality.",
+      "correctIndex": 0,
+      "explanation": "The limit of proportionality is where force and extension stop being directly proportional.",
+      "misconceptionTag": "limit-proportionality-graph",
       "distractorRationales": [
         {
-          "text": "For hooke's law, it means that the limit means force is zero.",
-          "misconception": "Beyond the limit, the graph must stay straight."
+          "text": "The original length of the spring.",
+          "misconception": "length confused with graph feature"
         },
         {
-          "text": "For hooke's law, it means that the limit is the same as the spring length.",
-          "misconception": "The limit means force is zero."
+          "text": "The point where force becomes zero.",
+          "misconception": "origin confused with limit"
         },
         {
-          "text": "For hooke's law, it means that beyond the limit, the graph must stay straight.",
-          "misconception": "The limit is the same as the spring length."
+          "text": "The mass of the load.",
+          "misconception": "load variable confused with graph point"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recognise the limit of proportionality."
+      "senNote": "Checks: Identify the limit of proportionality on a force-extension graph."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_extension_misconception_correction_003",
+      "id": "aqa_forces_hookes_law_beyond_limit_011",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -159,6 +747,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -169,56 +758,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_extension",
-        "statement": "Calculate extension. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_beyond_limit_011_lo",
+        "statement": "Describe behaviour beyond the limit of proportionality.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.3:extension:misconception_correction",
-      "conceptFamily": "extension",
-      "contextType": "a safety decision",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_hookes_law_beyond_limit_011",
+      "conceptFamily": "describe_behaviour_beyond_the_limit_of_proportionality",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "A revision note about hooke's law contains an error. Which replacement is correct? Keep the answer focused on hooke's law: calculate extension.",
-      "question": "A revision note about hooke's law contains an error. Which replacement is correct? Keep the answer focused on hooke's law: calculate extension.",
+      "stem": "A spring has been stretched beyond its limit of proportionality. Which statement is now most likely?",
+      "question": "A spring has been stretched beyond its limit of proportionality. Which statement is now most likely?",
       "options": [
-        "In this item, it means that extension is original length plus stretched length.",
-        "For hooke's law, it means that extension is stretched length minus original length.",
-        "For hooke's law: Extension is the force on the spring.",
-        "In this item, it means that extension is measured in newtons."
+        "Force and extension are no longer directly proportional.",
+        "The spring constant must be exactly zero.",
+        "Extension must decrease when force increases.",
+        "The original length is equal to the force."
       ],
-      "correctAnswer": "For hooke's law, it means that extension is stretched length minus original length.",
-      "correctIndex": 1,
-      "explanation": "4.5.3 targets: Calculate extension. Focus area: Hooke's Law. For this question, Extension is stretched length minus original length. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:extension",
+      "correctAnswer": "Force and extension are no longer directly proportional.",
+      "correctIndex": 0,
+      "explanation": "Beyond the limit of proportionality, the graph is no longer a straight line through the origin, so Hooke’s law no longer applies.",
+      "misconceptionTag": "beyond-limit",
       "distractorRationales": [
         {
-          "text": "In this item, it means that extension is measured in newtons.",
-          "misconception": "Extension is original length plus stretched length."
+          "text": "The spring constant must be exactly zero.",
+          "misconception": "non-linear confused with zero stiffness"
         },
         {
-          "text": "In this item, it means that extension is original length plus stretched length.",
-          "misconception": "Extension is the force on the spring."
+          "text": "Extension must decrease when force increases.",
+          "misconception": "curve misread as decrease"
         },
         {
-          "text": "For hooke's law: Extension is the force on the spring.",
-          "misconception": "Extension is measured in newtons."
+          "text": "The original length is equal to the force.",
+          "misconception": "different quantities confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate extension."
+      "senNote": "Checks: Describe behaviour beyond the limit of proportionality."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_graph_gradient_data_interpretation_004",
+      "id": "aqa_forces_hookes_law_elastic_deformation_012",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -230,6 +820,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -240,198 +831,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_graph_gradient",
-        "statement": "Interpret a force-extension graph. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.3:graph_gradient:data_interpretation",
-      "conceptFamily": "graph_gradient",
-      "contextType": "a graph-reading task",
-      "skill": "Hooke's Law practice",
-      "stem": "A small data set about hooke's law is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
-      "question": "A small data set about hooke's law is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
-      "options": [
-        "The claim for hooke's law is that the area under the graph gives spring constant directly.",
-        "For hooke's law: The y-intercept is always the limit of proportionality.",
-        "For hooke's law, this would mean that the gradient of the straight-line section gives the spring constant.",
-        "The claim for hooke's law is that the gradient gives mass."
-      ],
-      "correctAnswer": "For hooke's law, this would mean that the gradient of the straight-line section gives the spring constant.",
-      "correctIndex": 2,
-      "explanation": "4.5.3 targets: Interpret a force-extension graph. Focus area: Hooke's Law. For this question, The gradient of the straight-line section gives the spring constant. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:graph_gradient",
-      "distractorRationales": [
-        {
-          "text": "The claim for hooke's law is that the area under the graph gives spring constant directly.",
-          "misconception": "The area under the graph gives spring constant directly."
-        },
-        {
-          "text": "For hooke's law: The y-intercept is always the limit of proportionality.",
-          "misconception": "The y-intercept is always the limit of proportionality."
-        },
-        {
-          "text": "The claim for hooke's law is that the gradient gives mass.",
-          "misconception": "The gradient gives mass."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret a force-extension graph."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_elastic_deformation_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_elastic_deformation",
-        "statement": "Describe elastic deformation. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.3:elastic_deformation:representation_interpretation",
-      "conceptFamily": "elastic_deformation",
-      "contextType": "a comparison question",
-      "skill": "Hooke's Law practice",
-      "stem": "Which option correctly reads the hooke's law model or diagram idea? Demand focus: describe elastic deformation.",
-      "question": "Which option correctly reads the hooke's law model or diagram idea? Demand focus: describe elastic deformation.",
-      "options": [
-        "For hooke's law, the answer claims that elastic deformation means no energy is stored.",
-        "For hooke's law, the statement is that elastic deformation occurs only in liquids.",
-        "In this hooke's law item, elastic deformation is always permanent.",
-        "In this hooke's law item, elastic deformation means the object returns to its original shape when the force is removed."
-      ],
-      "correctAnswer": "In this hooke's law item, elastic deformation means the object returns to its original shape when the force is removed.",
-      "correctIndex": 3,
-      "explanation": "4.5.3 targets: Describe elastic deformation. Focus area: Hooke's Law. For this question, Elastic deformation means the object returns to its original shape when the force is removed. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_deformation",
-      "distractorRationales": [
-        {
-          "text": "For hooke's law, the answer claims that elastic deformation means no energy is stored.",
-          "misconception": "Elastic deformation is always permanent."
-        },
-        {
-          "text": "For hooke's law, the statement is that elastic deformation occurs only in liquids.",
-          "misconception": "Elastic deformation means no energy is stored."
-        },
-        {
-          "text": "In this hooke's law item, elastic deformation is always permanent.",
-          "misconception": "Elastic deformation occurs only in liquids."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe elastic deformation."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_hookes_law_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_hookes_law",
-        "statement": "Use Hooke’s law. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_elastic_deformation_012_lo",
+        "statement": "Describe elastic deformation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.3:hookes_law:direct_recall",
-      "conceptFamily": "hookes_law",
-      "contextType": "a method-choice question",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_hookes_law_elastic_deformation_012",
+      "conceptFamily": "describe_elastic_deformation",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "Which answer matches this hooke's law objective: Use Hooke’s law? Use the wording carefully: this is about use Hooke’s law.",
-      "question": "Which answer matches this hooke's law objective: Use Hooke’s law? Use the wording carefully: this is about use Hooke’s law.",
+      "stem": "A rubber band returns to its original length after a small stretching force is removed. Which term describes this behaviour?",
+      "question": "A rubber band returns to its original length after a small stretching force is removed. Which term describes this behaviour?",
       "options": [
-        "For hooke's law, the statement is that force = spring constant × extension, up to the limit of proportionality.",
-        "For hooke's law, it means that extension is the original length of the spring.",
-        "For hooke's law, it means that hooke’s law applies after every spring is permanently deformed.",
-        "For hooke's law, it means that force = spring constant ÷ extension."
+        "Elastic deformation.",
+        "Plastic deformation.",
+        "Resultant deformation.",
+        "Thermal deformation."
       ],
-      "correctAnswer": "For hooke's law, the statement is that force = spring constant × extension, up to the limit of proportionality.",
+      "correctAnswer": "Elastic deformation.",
       "correctIndex": 0,
-      "explanation": "4.5.3 targets: Use Hooke’s law. Focus area: Hooke's Law. For this question, Force = spring constant × extension, up to the limit of proportionality. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:hookes_law",
+      "explanation": "Elastic deformation means the object returns to its original shape and length when the force is removed.",
+      "misconceptionTag": "elastic-deformation",
       "distractorRationales": [
         {
-          "text": "For hooke's law, it means that extension is the original length of the spring.",
-          "misconception": "Force = spring constant ÷ extension."
+          "text": "Plastic deformation.",
+          "misconception": "permanent deformation chosen"
         },
         {
-          "text": "For hooke's law, it means that force = spring constant ÷ extension.",
-          "misconception": "Hooke’s law applies after every spring is permanently deformed."
+          "text": "Resultant deformation.",
+          "misconception": "invented force term chosen"
         },
         {
-          "text": "For hooke's law, it means that hooke’s law applies after every spring is permanently deformed.",
-          "misconception": "Extension is the original length of the spring."
+          "text": "Thermal deformation.",
+          "misconception": "heating confused with stretching"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Hooke’s law."
+      "senNote": "Checks: Describe elastic deformation."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_limit_proportionality_applied_context_007",
+      "id": "aqa_forces_hookes_law_plastic_deformation_013",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -443,6 +893,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -453,127 +904,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_limit_proportionality",
-        "statement": "Recognise the limit of proportionality. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_plastic_deformation_013_lo",
+        "statement": "Recognise plastic deformation after excessive stretching.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
+      "commandWord": "recognise",
       "responseMode": "applied_context",
-      "patternId": "4.5.3:limit_proportionality:applied_context",
-      "conceptFamily": "limit_proportionality",
-      "contextType": "a results discussion",
+      "patternId": "authored:aqa_forces_hookes_law_plastic_deformation_013",
+      "conceptFamily": "recognise_plastic_deformation_after_excessive_stretching",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "In a results discussion, which conclusion is correct for hooke's law? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
-      "question": "In a results discussion, which conclusion is correct for hooke's law? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
+      "stem": "A spring is stretched too far and does not return to its original length when the load is removed. What has happened?",
+      "question": "A spring is stretched too far and does not return to its original length when the load is removed. What has happened?",
       "options": [
-        "In this hooke's law item, the limit is the same as the spring length.",
-        "The answer for hooke's law says that the limit means force is zero.",
-        "For hooke's law, the answer claims that beyond the limit of proportionality, force and extension are no longer directly proportional.",
-        "In this hooke's law item, beyond the limit, the graph must stay straight."
+        "It has been plastically deformed.",
+        "It has obeyed Hooke’s law perfectly.",
+        "Its extension has become zero.",
+        "Its mass has become zero."
       ],
-      "correctAnswer": "For hooke's law, the answer claims that beyond the limit of proportionality, force and extension are no longer directly proportional.",
-      "correctIndex": 2,
-      "explanation": "4.5.3 targets: Recognise the limit of proportionality. Focus area: Hooke's Law. For this question, Beyond the limit of proportionality, force and extension are no longer directly proportional. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:limit_proportionality",
-      "distractorRationales": [
-        {
-          "text": "In this hooke's law item, beyond the limit, the graph must stay straight.",
-          "misconception": "Beyond the limit, the graph must stay straight."
-        },
-        {
-          "text": "The answer for hooke's law says that the limit means force is zero.",
-          "misconception": "The limit means force is zero."
-        },
-        {
-          "text": "In this hooke's law item, the limit is the same as the spring length.",
-          "misconception": "The limit is the same as the spring length."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise the limit of proportionality."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_extension_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_extension",
-        "statement": "Calculate extension. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.3:extension:misconception_correction",
-      "conceptFamily": "extension",
-      "contextType": "a classroom demonstration",
-      "skill": "Hooke's Law practice",
-      "stem": "Which answer corrects a misconception about hooke's law? Keep the answer focused on hooke's law: calculate extension.",
-      "question": "Which answer corrects a misconception about hooke's law? Keep the answer focused on hooke's law: calculate extension.",
-      "options": [
-        "The answer for hooke's law says that extension is stretched length minus original length.",
-        "For hooke's law, it means that extension is the force on the spring.",
-        "For hooke's law, the answer claims that extension is original length plus stretched length.",
-        "For hooke's law, it means that extension is measured in newtons."
-      ],
-      "correctAnswer": "The answer for hooke's law says that extension is stretched length minus original length.",
+      "correctAnswer": "It has been plastically deformed.",
       "correctIndex": 0,
-      "explanation": "4.5.3 targets: Calculate extension. Focus area: Hooke's Law. For this question, Extension is stretched length minus original length. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:extension",
+      "explanation": "Plastic deformation is permanent; the object does not return to its original length after the force is removed.",
+      "misconceptionTag": "plastic-deformation",
       "distractorRationales": [
         {
-          "text": "For hooke's law, it means that extension is the force on the spring.",
-          "misconception": "Extension is original length plus stretched length."
+          "text": "It has obeyed Hooke’s law perfectly.",
+          "misconception": "permanent change confused with elastic behaviour"
         },
         {
-          "text": "For hooke's law, it means that extension is measured in newtons.",
-          "misconception": "Extension is the force on the spring."
+          "text": "Its extension has become zero.",
+          "misconception": "remaining extension ignored"
         },
         {
-          "text": "For hooke's law, the answer claims that extension is original length plus stretched length.",
-          "misconception": "Extension is measured in newtons."
+          "text": "Its mass has become zero.",
+          "misconception": "force/mass misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate extension."
+      "senNote": "Checks: Recognise plastic deformation after excessive stretching."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_graph_gradient_exam_decision_009",
+      "id": "aqa_forces_hookes_law_practical_control_014",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -585,6 +966,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -595,56 +977,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_graph_gradient",
-        "statement": "Interpret a force-extension graph. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_practical_control_014_lo",
+        "statement": "Explain why original length is measured in the force-extension practical.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.3:graph_gradient:exam_decision",
-      "conceptFamily": "graph_gradient",
-      "contextType": "a revision checkpoint",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "practical_reasoning",
+      "patternId": "authored:aqa_forces_hookes_law_practical_control_014",
+      "conceptFamily": "explain_why_original_length_is_measured_in_the_force_extension_practical",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "The mark scheme is testing interpret a force-extension graph. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
-      "question": "The mark scheme is testing interpret a force-extension graph. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
+      "stem": "In a force-extension practical, why should the original length of the spring be measured before adding loads?",
+      "question": "In a force-extension practical, why should the original length of the spring be measured before adding loads?",
       "options": [
-        "The claim for hooke's law is that the gradient of the straight-line section gives the spring constant.",
-        "For hooke's law, the option says that the y-intercept is always the limit of proportionality.",
-        "For hooke's law, the option says that the area under the graph gives spring constant directly.",
-        "For hooke's law, the option says that the gradient gives mass."
+        "So extension can be calculated after each load is added.",
+        "So the mass of the spring can be ignored.",
+        "So the spring constant is automatically zero.",
+        "So the graph does not need axes."
       ],
-      "correctAnswer": "The claim for hooke's law is that the gradient of the straight-line section gives the spring constant.",
+      "correctAnswer": "So extension can be calculated after each load is added.",
       "correctIndex": 0,
-      "explanation": "4.5.3 targets: Interpret a force-extension graph. Focus area: Hooke's Law. For this question, The gradient of the straight-line section gives the spring constant. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:graph_gradient",
+      "explanation": "Extension is the loaded length minus the original length, so the original length is needed for every extension calculation.",
+      "misconceptionTag": "practical-original-length",
       "distractorRationales": [
         {
-          "text": "For hooke's law, the option says that the gradient gives mass.",
-          "misconception": "The area under the graph gives spring constant directly."
+          "text": "So the mass of the spring can be ignored.",
+          "misconception": "mass confused with length measurement"
         },
         {
-          "text": "For hooke's law, the option says that the area under the graph gives spring constant directly.",
-          "misconception": "The y-intercept is always the limit of proportionality."
+          "text": "So the spring constant is automatically zero.",
+          "misconception": "measurement confused with result"
         },
         {
-          "text": "For hooke's law, the option says that the y-intercept is always the limit of proportionality.",
-          "misconception": "The gradient gives mass."
+          "text": "So the graph does not need axes.",
+          "misconception": "practical graphing ignored"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret a force-extension graph."
+      "senNote": "Checks: Explain why original length is measured in the force-extension practical."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_elastic_deformation_representation_interpretation_010",
+      "id": "aqa_forces_hookes_law_practical_table_015",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -656,6 +1039,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -666,269 +1050,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_elastic_deformation",
-        "statement": "Describe elastic deformation. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_practical_table_015_lo",
+        "statement": "Calculate extension from practical measurements.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.3:elastic_deformation:representation_interpretation",
-      "conceptFamily": "elastic_deformation",
-      "contextType": "an exam-style data table",
-      "skill": "Hooke's Law practice",
-      "stem": "A representation of hooke's law is described in words. Which interpretation is correct? Demand focus: describe elastic deformation.",
-      "question": "A representation of hooke's law is described in words. Which interpretation is correct? Demand focus: describe elastic deformation.",
-      "options": [
-        "For hooke's law, this would mean that elastic deformation occurs only in liquids.",
-        "For hooke's law, this would mean that elastic deformation means the object returns to its original shape when the force is removed.",
-        "For hooke's law: Elastic deformation means no energy is stored.",
-        "The claim for hooke's law is that elastic deformation is always permanent."
-      ],
-      "correctAnswer": "For hooke's law, this would mean that elastic deformation means the object returns to its original shape when the force is removed.",
-      "correctIndex": 1,
-      "explanation": "4.5.3 targets: Describe elastic deformation. Focus area: Hooke's Law. For this question, Elastic deformation means the object returns to its original shape when the force is removed. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_deformation",
-      "distractorRationales": [
-        {
-          "text": "The claim for hooke's law is that elastic deformation is always permanent.",
-          "misconception": "Elastic deformation is always permanent."
-        },
-        {
-          "text": "For hooke's law: Elastic deformation means no energy is stored.",
-          "misconception": "Elastic deformation means no energy is stored."
-        },
-        {
-          "text": "For hooke's law, this would mean that elastic deformation occurs only in liquids.",
-          "misconception": "Elastic deformation occurs only in liquids."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe elastic deformation."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_hookes_law_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_hookes_law",
-        "statement": "Use Hooke’s law. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.3:hookes_law:concept_discrimination",
-      "conceptFamily": "hookes_law",
-      "contextType": "a required-practical notebook",
-      "skill": "Hooke's Law practice",
-      "stem": "A student is comparing similar ideas in hooke's law. Which statement is correct? Use the wording carefully: this is about use Hooke’s law.",
-      "question": "A student is comparing similar ideas in hooke's law. Which statement is correct? Use the wording carefully: this is about use Hooke’s law.",
-      "options": [
-        "For hooke's law, it means that force = spring constant × extension, up to the limit of proportionality.",
-        "For hooke's law, the answer claims that force = spring constant ÷ extension.",
-        "For hooke's law, the answer claims that hooke’s law applies after every spring is permanently deformed.",
-        "For hooke's law, the statement is that extension is the original length of the spring."
-      ],
-      "correctAnswer": "For hooke's law, it means that force = spring constant × extension, up to the limit of proportionality.",
-      "correctIndex": 0,
-      "explanation": "4.5.3 targets: Use Hooke’s law. Focus area: Hooke's Law. For this question, Force = spring constant × extension, up to the limit of proportionality. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:hookes_law",
-      "distractorRationales": [
-        {
-          "text": "For hooke's law, the answer claims that hooke’s law applies after every spring is permanently deformed.",
-          "misconception": "Force = spring constant ÷ extension."
-        },
-        {
-          "text": "For hooke's law, the statement is that extension is the original length of the spring.",
-          "misconception": "Hooke’s law applies after every spring is permanently deformed."
-        },
-        {
-          "text": "For hooke's law, the answer claims that force = spring constant ÷ extension.",
-          "misconception": "Extension is the original length of the spring."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use Hooke’s law."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_limit_proportionality_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_limit_proportionality",
-        "statement": "Recognise the limit of proportionality. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.5.3:limit_proportionality:applied_context",
-      "conceptFamily": "limit_proportionality",
-      "contextType": "a technician report",
-      "skill": "Hooke's Law practice",
-      "stem": "A question set in a technician report tests hooke's law. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
-      "question": "A question set in a technician report tests hooke's law. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
-      "options": [
-        "For hooke's law, this would mean that the limit is the same as the spring length.",
-        "For hooke's law, this would mean that the limit means force is zero.",
-        "For hooke's law, the option says that beyond the limit, the graph must stay straight.",
-        "The claim for hooke's law is that beyond the limit of proportionality, force and extension are no longer directly proportional."
-      ],
-      "correctAnswer": "The claim for hooke's law is that beyond the limit of proportionality, force and extension are no longer directly proportional.",
-      "correctIndex": 3,
-      "explanation": "4.5.3 targets: Recognise the limit of proportionality. Focus area: Hooke's Law. For this question, Beyond the limit of proportionality, force and extension are no longer directly proportional. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:limit_proportionality",
-      "distractorRationales": [
-        {
-          "text": "For hooke's law, this would mean that the limit is the same as the spring length.",
-          "misconception": "Beyond the limit, the graph must stay straight."
-        },
-        {
-          "text": "For hooke's law, the option says that beyond the limit, the graph must stay straight.",
-          "misconception": "The limit means force is zero."
-        },
-        {
-          "text": "For hooke's law, this would mean that the limit means force is zero.",
-          "misconception": "The limit is the same as the spring length."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise the limit of proportionality."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_extension_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_extension",
-        "statement": "Calculate extension. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
+      "commandWord": "calculate",
       "responseMode": "data_interpretation",
-      "patternId": "4.5.3:extension:data_interpretation",
-      "conceptFamily": "extension",
-      "contextType": "a labelled diagram",
+      "patternId": "authored:aqa_forces_hookes_law_practical_table_015",
+      "conceptFamily": "calculate_extension_from_practical_measurements",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "A small data set about hooke's law is being interpreted. Which conclusion is valid? Keep the answer focused on hooke's law: calculate extension.",
-      "question": "A small data set about hooke's law is being interpreted. Which conclusion is valid? Keep the answer focused on hooke's law: calculate extension.",
+      "stem": "A spring has original length 10.0 cm. With a 2.0 N load its length is 13.5 cm. Which row should be recorded for extension?",
+      "question": "A spring has original length 10.0 cm. With a 2.0 N load its length is 13.5 cm. Which row should be recorded for extension?",
       "options": [
-        "In this hooke's law item, extension is stretched length minus original length.",
-        "The answer for hooke's law says that extension is the force on the spring.",
-        "For hooke's law, it means that extension is measured in newtons.",
-        "In this hooke's law item, extension is original length plus stretched length."
+        "2.0 N, 3.5 cm",
+        "2.0 N, 13.5 cm",
+        "13.5 N, 2.0 cm",
+        "10.0 N, 3.5 cm"
       ],
-      "correctAnswer": "In this hooke's law item, extension is stretched length minus original length.",
+      "correctAnswer": "2.0 N, 3.5 cm",
       "correctIndex": 0,
-      "explanation": "4.5.3 targets: Calculate extension. Focus area: Hooke's Law. For this question, Extension is stretched length minus original length. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:extension",
+      "explanation": "The extension is \\(13.5 - 10.0 = 3.5\\,cm\\), paired with the applied force of 2.0 N.",
+      "misconceptionTag": "practical-extension-table",
       "distractorRationales": [
         {
-          "text": "In this hooke's law item, extension is original length plus stretched length.",
-          "misconception": "Extension is original length plus stretched length."
+          "text": "2.0 N, 13.5 cm",
+          "misconception": "loaded length used as extension"
         },
         {
-          "text": "The answer for hooke's law says that extension is the force on the spring.",
-          "misconception": "Extension is the force on the spring."
+          "text": "13.5 N, 2.0 cm",
+          "misconception": "force and length columns swapped"
         },
         {
-          "text": "For hooke's law, it means that extension is measured in newtons.",
-          "misconception": "Extension is measured in newtons."
+          "text": "10.0 N, 3.5 cm",
+          "misconception": "original length used as force"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate extension."
+      "senNote": "Checks: Calculate extension from practical measurements."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_graph_gradient_exam_decision_014",
+      "id": "aqa_forces_hookes_law_repeat_readings_016",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -940,6 +1112,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -950,198 +1123,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_graph_gradient",
-        "statement": "Interpret a force-extension graph. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_repeat_readings_016_lo",
+        "statement": "Explain why repeated readings improve a force-extension practical.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.3:graph_gradient:exam_decision",
-      "conceptFamily": "graph_gradient",
-      "contextType": "a short calculation",
-      "skill": "Hooke's Law practice",
-      "stem": "Which answer is the strongest GCSE Physics response for hooke's law? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
-      "question": "Which answer is the strongest GCSE Physics response for hooke's law? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
-      "options": [
-        "For hooke's law, the statement is that the gradient of the straight-line section gives the spring constant.",
-        "In this hooke's law item, the gradient gives mass.",
-        "In this hooke's law item, the y-intercept is always the limit of proportionality.",
-        "In this hooke's law item, the area under the graph gives spring constant directly."
-      ],
-      "correctAnswer": "For hooke's law, the statement is that the gradient of the straight-line section gives the spring constant.",
-      "correctIndex": 0,
-      "explanation": "4.5.3 targets: Interpret a force-extension graph. Focus area: Hooke's Law. For this question, The gradient of the straight-line section gives the spring constant. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:graph_gradient",
-      "distractorRationales": [
-        {
-          "text": "In this hooke's law item, the y-intercept is always the limit of proportionality.",
-          "misconception": "The area under the graph gives spring constant directly."
-        },
-        {
-          "text": "In this hooke's law item, the gradient gives mass.",
-          "misconception": "The y-intercept is always the limit of proportionality."
-        },
-        {
-          "text": "In this hooke's law item, the area under the graph gives spring constant directly.",
-          "misconception": "The gradient gives mass."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret a force-extension graph."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_elastic_deformation_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_elastic_deformation",
-        "statement": "Describe elastic deformation. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.3:elastic_deformation:direct_recall",
-      "conceptFamily": "elastic_deformation",
-      "contextType": "a safety decision",
-      "skill": "Hooke's Law practice",
-      "stem": "Which answer matches this hooke's law objective: Describe elastic deformation? Demand focus: describe elastic deformation.",
-      "question": "Which answer matches this hooke's law objective: Describe elastic deformation? Demand focus: describe elastic deformation.",
-      "options": [
-        "For hooke's law, it means that elastic deformation occurs only in liquids.",
-        "For hooke's law, it means that elastic deformation is always permanent.",
-        "For hooke's law, it means that elastic deformation means no energy is stored.",
-        "For hooke's law, the option says that elastic deformation means the object returns to its original shape when the force is removed."
-      ],
-      "correctAnswer": "For hooke's law, the option says that elastic deformation means the object returns to its original shape when the force is removed.",
-      "correctIndex": 3,
-      "explanation": "4.5.3 targets: Describe elastic deformation. Focus area: Hooke's Law. For this question, Elastic deformation means the object returns to its original shape when the force is removed. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_deformation",
-      "distractorRationales": [
-        {
-          "text": "For hooke's law, it means that elastic deformation occurs only in liquids.",
-          "misconception": "Elastic deformation is always permanent."
-        },
-        {
-          "text": "For hooke's law, it means that elastic deformation is always permanent.",
-          "misconception": "Elastic deformation means no energy is stored."
-        },
-        {
-          "text": "For hooke's law, it means that elastic deformation means no energy is stored.",
-          "misconception": "Elastic deformation occurs only in liquids."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe elastic deformation."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_hookes_law_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_hookes_law",
-        "statement": "Use Hooke’s law. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
       "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.3:hookes_law:concept_discrimination",
-      "conceptFamily": "hookes_law",
-      "contextType": "a graph-reading task",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "practical_reasoning",
+      "patternId": "authored:aqa_forces_hookes_law_repeat_readings_016",
+      "conceptFamily": "explain_why_repeated_readings_improve_a_force_extension_practical",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "Which option best separates the correct hooke's law idea from a common mix-up? Use the wording carefully: this is about use Hooke’s law.",
-      "question": "Which option best separates the correct hooke's law idea from a common mix-up? Use the wording carefully: this is about use Hooke’s law.",
+      "stem": "A student repeats each extension reading three times in a spring practical. Why is this useful?",
+      "question": "A student repeats each extension reading three times in a spring practical. Why is this useful?",
       "options": [
-        "The claim for hooke's law is that force = spring constant ÷ extension.",
-        "For hooke's law: Hooke’s law applies after every spring is permanently deformed.",
-        "For hooke's law, it means that force = spring constant × extension, up to the limit of proportionality.",
-        "The claim for hooke's law is that extension is the original length of the spring."
+        "It helps identify anomalous readings and calculate a mean.",
+        "It makes the spring constant change each time.",
+        "It means no graph is needed.",
+        "It removes the need to measure force."
       ],
-      "correctAnswer": "For hooke's law, it means that force = spring constant × extension, up to the limit of proportionality.",
-      "correctIndex": 2,
-      "explanation": "4.5.3 targets: Use Hooke’s law. Focus area: Hooke's Law. For this question, Force = spring constant × extension, up to the limit of proportionality. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:hookes_law",
+      "correctAnswer": "It helps identify anomalous readings and calculate a mean.",
+      "correctIndex": 0,
+      "explanation": "Repeats improve reliability because anomalous results can be spotted and a mean extension can be calculated.",
+      "misconceptionTag": "repeat-readings-reliability",
       "distractorRationales": [
         {
-          "text": "The claim for hooke's law is that force = spring constant ÷ extension.",
-          "misconception": "Force = spring constant ÷ extension."
+          "text": "It makes the spring constant change each time.",
+          "misconception": "repetition confused with changing material property"
         },
         {
-          "text": "For hooke's law: Hooke’s law applies after every spring is permanently deformed.",
-          "misconception": "Hooke’s law applies after every spring is permanently deformed."
+          "text": "It means no graph is needed.",
+          "misconception": "repeat readings confused with analysis"
         },
         {
-          "text": "The claim for hooke's law is that extension is the original length of the spring.",
-          "misconception": "Extension is the original length of the spring."
+          "text": "It removes the need to measure force.",
+          "misconception": "control variable omitted"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use Hooke’s law."
+      "senNote": "Checks: Explain why repeated readings improve a force-extension practical."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_limit_proportionality_misconception_correction_017",
+      "id": "aqa_forces_hookes_law_choose_graph_017",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -1153,6 +1185,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -1163,56 +1196,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_limit_proportionality",
-        "statement": "Recognise the limit of proportionality. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_choose_graph_017_lo",
+        "statement": "Select the graph shape for direct proportionality in Hooke’s law.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.3:limit_proportionality:misconception_correction",
-      "conceptFamily": "limit_proportionality",
-      "contextType": "a comparison question",
+      "commandWord": "select",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_hookes_law_choose_graph_017",
+      "conceptFamily": "select_the_graph_shape_for_direct_proportionality_in_hookes_law",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "Which answer corrects a misconception about hooke's law? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
-      "question": "Which answer corrects a misconception about hooke's law? Choose the statement that fits this exact GCSE Physics idea: recognise the limit of proportionality.",
+      "stem": "Which graph shape would best show a spring obeying Hooke’s law over the whole range measured?",
+      "question": "Which graph shape would best show a spring obeying Hooke’s law over the whole range measured?",
       "options": [
-        "For hooke's law, this would mean that beyond the limit, the graph must stay straight.",
-        "The claim for hooke's law is that the limit means force is zero.",
-        "The claim for hooke's law is that the limit is the same as the spring length.",
-        "For hooke's law: Beyond the limit of proportionality, force and extension are no longer directly proportional."
+        "A straight line through the origin.",
+        "A horizontal line.",
+        "A curve that starts at a non-zero force.",
+        "A vertical line."
       ],
-      "correctAnswer": "For hooke's law: Beyond the limit of proportionality, force and extension are no longer directly proportional.",
-      "correctIndex": 3,
-      "explanation": "4.5.3 targets: Recognise the limit of proportionality. Focus area: Hooke's Law. For this question, Beyond the limit of proportionality, force and extension are no longer directly proportional. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:limit_proportionality",
+      "correctAnswer": "A straight line through the origin.",
+      "correctIndex": 0,
+      "explanation": "Direct proportionality is shown by a straight line through the origin.",
+      "misconceptionTag": "direct-proportion-graph",
       "distractorRationales": [
         {
-          "text": "The claim for hooke's law is that the limit means force is zero.",
-          "misconception": "Beyond the limit, the graph must stay straight."
+          "text": "A horizontal line.",
+          "misconception": "extension treated as constant"
         },
         {
-          "text": "The claim for hooke's law is that the limit is the same as the spring length.",
-          "misconception": "The limit means force is zero."
+          "text": "A curve that starts at a non-zero force.",
+          "misconception": "offset graph chosen"
         },
         {
-          "text": "For hooke's law, this would mean that beyond the limit, the graph must stay straight.",
-          "misconception": "The limit is the same as the spring length."
+          "text": "A vertical line.",
+          "misconception": "force changes without extension confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recognise the limit of proportionality."
+      "senNote": "Checks: Select the graph shape for direct proportionality in Hooke’s law."
     },
     {
-      "id": "aqa_4_5_3_hookes_law_extension_data_interpretation_018",
+      "id": "aqa_forces_hookes_law_unload_018",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -1224,6 +1258,7 @@
       "subtopicSlug": "hookes_law",
       "topicId": "hookes_law",
       "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
       "specStatement": "Forces and elasticity.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -1234,124 +1269,127 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_extension",
-        "statement": "Calculate extension. (Hooke's Law)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.3:extension:data_interpretation",
-      "conceptFamily": "extension",
-      "contextType": "a method-choice question",
-      "skill": "Hooke's Law practice",
-      "stem": "Which conclusion about hooke's law is supported by the evidence? Keep the answer focused on hooke's law: calculate extension.",
-      "question": "Which conclusion about hooke's law is supported by the evidence? Keep the answer focused on hooke's law: calculate extension.",
-      "options": [
-        "For hooke's law, this would mean that extension is measured in newtons.",
-        "For hooke's law, the option says that extension is original length plus stretched length.",
-        "For hooke's law, this would mean that extension is stretched length minus original length.",
-        "For hooke's law, it means that extension is the force on the spring."
-      ],
-      "correctAnswer": "For hooke's law, this would mean that extension is stretched length minus original length.",
-      "correctIndex": 2,
-      "explanation": "4.5.3 targets: Calculate extension. Focus area: Hooke's Law. For this question, Extension is stretched length minus original length. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:extension",
-      "distractorRationales": [
-        {
-          "text": "For hooke's law, this would mean that extension is measured in newtons.",
-          "misconception": "Extension is original length plus stretched length."
-        },
-        {
-          "text": "For hooke's law, the option says that extension is original length plus stretched length.",
-          "misconception": "Extension is the force on the spring."
-        },
-        {
-          "text": "For hooke's law, it means that extension is the force on the spring.",
-          "misconception": "Extension is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate extension."
-    },
-    {
-      "id": "aqa_4_5_3_hookes_law_graph_gradient_representation_interpretation_019",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Hooke's Law",
-      "topicSlug": "forces",
-      "subtopicSlug": "hookes_law",
-      "topicId": "hookes_law",
-      "specRef": "4.5.3",
-      "specStatement": "Forces and elasticity.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_3_hookes_law_graph_gradient",
-        "statement": "Interpret a force-extension graph. (Hooke's Law)",
+        "id": "aqa_forces_hookes_law_unload_018_lo",
+        "statement": "Use unloading evidence to identify elastic behaviour.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.3:graph_gradient:representation_interpretation",
-      "conceptFamily": "graph_gradient",
-      "contextType": "a results discussion",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "infer",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_forces_hookes_law_unload_018",
+      "conceptFamily": "use_unloading_evidence_to_identify_elastic_behaviour",
+      "contextType": "exam_style",
       "skill": "Hooke's Law practice",
-      "stem": "A representation of hooke's law is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
-      "question": "A representation of hooke's law is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: interpret a force-extension graph.",
+      "stem": "A spring is loaded and then unloaded. The final length is the same as the original length. What does this suggest?",
+      "question": "A spring is loaded and then unloaded. The final length is the same as the original length. What does this suggest?",
       "options": [
-        "For hooke's law, the option says that the gradient gives mass.",
-        "For hooke's law: The area under the graph gives spring constant directly.",
-        "For hooke's law: The y-intercept is always the limit of proportionality.",
-        "For hooke's law, this would mean that the gradient of the straight-line section gives the spring constant."
+        "The spring has not been permanently deformed.",
+        "The spring has lost all stored energy as mass.",
+        "The limit of proportionality must have been exceeded.",
+        "The force was always zero."
       ],
-      "correctAnswer": "For hooke's law, this would mean that the gradient of the straight-line section gives the spring constant.",
-      "correctIndex": 3,
-      "explanation": "4.5.3 targets: Interpret a force-extension graph. Focus area: Hooke's Law. For this question, The gradient of the straight-line section gives the spring constant. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:graph_gradient",
+      "correctAnswer": "The spring has not been permanently deformed.",
+      "correctIndex": 0,
+      "explanation": "Returning to the original length shows elastic behaviour, so there is no permanent deformation.",
+      "misconceptionTag": "unloading-elastic-behaviour",
       "distractorRationales": [
         {
-          "text": "For hooke's law: The area under the graph gives spring constant directly.",
-          "misconception": "The area under the graph gives spring constant directly."
+          "text": "The spring has lost all stored energy as mass.",
+          "misconception": "energy/mass confusion"
         },
         {
-          "text": "For hooke's law: The y-intercept is always the limit of proportionality.",
-          "misconception": "The y-intercept is always the limit of proportionality."
+          "text": "The limit of proportionality must have been exceeded.",
+          "misconception": "returning length confused with permanent deformation"
         },
         {
-          "text": "For hooke's law, the option says that the gradient gives mass.",
-          "misconception": "The gradient gives mass."
+          "text": "The force was always zero.",
+          "misconception": "load history ignored"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret a force-extension graph."
+      "senNote": "Checks: Use unloading evidence to identify elastic behaviour."
+    },
+    {
+      "id": "aqa_forces_hookes_law_energy_area_019",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Hooke's Law",
+      "topicSlug": "forces",
+      "subtopicSlug": "hookes_law",
+      "topicId": "hookes_law",
+      "specRef": "4.5.3",
+      "combinedSpecRef": "6.5.3",
+      "specStatement": "Forces and elasticity.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_hookes_law_energy_area_019_lo",
+        "statement": "Calculate work done from the area under a force-extension graph.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_hookes_law_energy_area_019",
+      "conceptFamily": "calculate_work_done_from_the_area_under_a_force_extension_graph",
+      "contextType": "exam_style",
+      "skill": "Hooke's Law practice",
+      "stem": "A force-extension graph is a straight line from 0 N at 0 m to 10 N at 0.20 m. What is the work done in stretching the spring?",
+      "question": "A force-extension graph is a straight line from 0 N at 0 m to 10 N at 0.20 m. What is the work done in stretching the spring?",
+      "options": [
+        "1.0 J",
+        "2.0 J",
+        "50 J",
+        "0.20 J"
+      ],
+      "correctAnswer": "1.0 J",
+      "correctIndex": 0,
+      "explanation": "The work done is the triangular area under the graph: \\(0.5 \\times 10 \\times 0.20 = 1.0\\,J\\).",
+      "misconceptionTag": "spring-work-area",
+      "distractorRationales": [
+        {
+          "text": "2.0 J",
+          "misconception": "rectangle area used instead of triangle area"
+        },
+        {
+          "text": "50 J",
+          "misconception": "force divided by extension"
+        },
+        {
+          "text": "0.20 J",
+          "misconception": "extension used without force"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate work done from the area under a force-extension graph."
     },
     {
       "id": "aqa_4_5_6_1_motion_speed_equation_direct_recall_001",

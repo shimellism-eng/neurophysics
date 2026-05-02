@@ -5,6 +5,29 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Hooke's Law authored
+- Fixed AQA `Hooke's Law`: 19/19 authored and passed.
+- Official anchor checked:
+  - AQA Physics 8463 `4.5.3`.
+  - AQA Combined Science 8464 Physics `6.5.3`.
+- Hidden spec metadata:
+  - `specRef`: `4.5.3`.
+  - `combinedSpecRef`: `6.5.3`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Runtime count: 19.
+  - Authored IDs: 19.
+  - Scaffold/answer leak count: 0.
+  - Covers `F = ke`, spring constant units, extension from original/stretched length, graph gradient, limit of proportionality, elastic/plastic deformation, repeat readings, and work done from force-extension graph area.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm run build` passes.
+
+### Next step
+- Continue AQA Forces:
+  - `Elasticity and Hooke's Law` / `Force and Extension Graphs` / required practical force-extension routes.
+
 ### Adaptive Practice maths rendering fixed across feedback paths
 - Fixed the raw LaTeX bug shown on iPhone where explanations displayed strings like `\(W = Fs\)` instead of textbook maths.
 - `PhysicsText` now renders:

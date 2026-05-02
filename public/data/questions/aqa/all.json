@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T09:01:43.071Z",
+  "generatedAt": "2026-05-02T09:09:39.012Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -12521,7 +12521,7 @@
       "senNote": "Checks: Relate appliance power rating to energy transferred over the same time."
     },
     {
-      "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_direct_recall_001",
+      "id": "aqa_energy_efficiency_equation_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12533,6 +12533,7 @@
       "subtopicSlug": "efficiency",
       "topicId": "efficiency",
       "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
       "specStatement": "Efficiency.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -12546,56 +12547,57 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_efficiency_ratio",
-        "statement": "Calculate efficiency from useful and total energy. (Efficiency)",
+        "id": "aqa_energy_efficiency_equation_001_lo",
+        "statement": "Recall the efficiency equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.2.2:efficiency_ratio:direct_recall",
-      "conceptFamily": "efficiency_ratio",
-      "contextType": "a safety decision",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "select",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_efficiency_equation_001",
+      "conceptFamily": "recall_the_efficiency_equation",
+      "contextType": "exam_style",
       "skill": "Efficiency practice",
-      "stem": "Which statement is correct for efficiency? Demand focus: calculate efficiency from useful and total energy.",
-      "question": "Which statement is correct for efficiency? Demand focus: calculate efficiency from useful and total energy.",
+      "stem": "Which equation can be used to calculate the efficiency of a device?",
+      "question": "Which equation can be used to calculate the efficiency of a device?",
       "options": [
-        "For efficiency, the answer claims that efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-        "For efficiency, the statement is that efficiency can be above 100% for a normal device.",
-        "For efficiency, the answer claims that efficiency is measured in joules.",
-        "For efficiency, it means that efficiency = total input ÷ useful output."
+        "efficiency = useful output energy transfer ÷ total input energy transfer",
+        "efficiency = total input energy transfer ÷ useful output energy transfer",
+        "efficiency = wasted energy transfer ÷ useful output energy transfer",
+        "efficiency = force ÷ distance"
       ],
-      "correctAnswer": "For efficiency, the answer claims that efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
+      "correctAnswer": "efficiency = useful output energy transfer ÷ total input energy transfer",
       "correctIndex": 0,
-      "explanation": "4.1.2.2 targets: Calculate efficiency from useful and total energy. Focus area: Efficiency. For this question, Efficiency = useful output energy ÷ total input energy, often multiplied by 100%. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:efficiency_ratio",
+      "explanation": "Efficiency is the useful output energy transfer divided by the total input energy transfer. It can be multiplied by 100 to give a percentage.",
+      "misconceptionTag": "efficiency-equation-ratio",
       "distractorRationales": [
         {
-          "text": "For efficiency, it means that efficiency = total input ÷ useful output.",
-          "misconception": "Efficiency = total input ÷ useful output."
+          "text": "efficiency = total input energy transfer ÷ useful output energy transfer",
+          "misconception": "ratio inverted"
         },
         {
-          "text": "For efficiency, the statement is that efficiency can be above 100% for a normal device.",
-          "misconception": "Efficiency can be above 100% for a normal device."
+          "text": "efficiency = wasted energy transfer ÷ useful output energy transfer",
+          "misconception": "wasted transfer used as numerator"
         },
         {
-          "text": "For efficiency, the answer claims that efficiency is measured in joules.",
-          "misconception": "Efficiency is measured in joules."
+          "text": "efficiency = force ÷ distance",
+          "misconception": "unrelated equation selected"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate efficiency from useful and total energy."
+      "senNote": "Checks: Recall the efficiency equation."
     },
     {
-      "id": "aqa_4_1_2_2_efficiency_sankey_width_concept_discrimination_002",
+      "id": "aqa_energy_efficiency_percentage_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12607,6 +12609,7 @@
       "subtopicSlug": "efficiency",
       "topicId": "efficiency",
       "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
       "specStatement": "Efficiency.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -12620,204 +12623,1197 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_sankey_width",
-        "statement": "Interpret a Sankey diagram. (Efficiency)",
+        "id": "aqa_energy_efficiency_percentage_002_lo",
+        "statement": "Calculate percentage efficiency from useful and total energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_percentage_002",
+      "conceptFamily": "calculate_percentage_efficiency_from_useful_and_total_energy",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A motor transfers 80 J of energy usefully from 200 J supplied. What is its efficiency?",
+      "question": "A motor transfers 80 J of energy usefully from 200 J supplied. What is its efficiency?",
+      "options": [
+        "40%",
+        "25%",
+        "120%",
+        "280%"
+      ],
+      "correctAnswer": "40%",
+      "correctIndex": 0,
+      "explanation": "Efficiency = useful output ÷ total input = 80 ÷ 200 = 0.40, which is 40%.",
+      "misconceptionTag": "percentage-efficiency",
+      "distractorRationales": [
+        {
+          "text": "25%",
+          "misconception": ""
+        },
+        {
+          "text": "120%",
+          "misconception": ""
+        },
+        {
+          "text": "280%",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate percentage efficiency from useful and total energy."
+    },
+    {
+      "id": "aqa_energy_efficiency_decimal_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_decimal_003_lo",
+        "statement": "Convert decimal efficiency to percentage efficiency.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "convert",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_decimal_003",
+      "conceptFamily": "convert_decimal_efficiency_to_percentage_efficiency",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A device has an efficiency of 0.65. What is this efficiency as a percentage?",
+      "question": "A device has an efficiency of 0.65. What is this efficiency as a percentage?",
+      "options": [
+        "65%",
+        "0.65%",
+        "6.5%",
+        "165%"
+      ],
+      "correctAnswer": "65%",
+      "correctIndex": 0,
+      "explanation": "To convert a decimal efficiency to a percentage, multiply by 100. 0.65 = 65%.",
+      "misconceptionTag": "decimal-to-percentage-efficiency",
+      "distractorRationales": [
+        {
+          "text": "0.65%",
+          "misconception": ""
+        },
+        {
+          "text": "6.5%",
+          "misconception": ""
+        },
+        {
+          "text": "165%",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Convert decimal efficiency to percentage efficiency."
+    },
+    {
+      "id": "aqa_energy_efficiency_useful_output_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_useful_output_004_lo",
+        "statement": "Calculate wasted energy from total and useful energy transfers.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_useful_output_004",
+      "conceptFamily": "calculate_wasted_energy_from_total_and_useful_energy_transfers",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A lamp receives 500 J of electrical energy and transfers 75 J as useful light. How much energy is wasted?",
+      "question": "A lamp receives 500 J of electrical energy and transfers 75 J as useful light. How much energy is wasted?",
+      "options": [
+        "425 J",
+        "75 J",
+        "575 J",
+        "6.7 J"
+      ],
+      "correctAnswer": "425 J",
+      "correctIndex": 0,
+      "explanation": "Wasted energy = total input energy - useful output energy = 500 - 75 = 425 J.",
+      "misconceptionTag": "wasted-energy-subtraction",
+      "distractorRationales": [
+        {
+          "text": "75 J",
+          "misconception": ""
+        },
+        {
+          "text": "575 J",
+          "misconception": ""
+        },
+        {
+          "text": "6.7 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate wasted energy from total and useful energy transfers."
+    },
+    {
+      "id": "aqa_energy_efficiency_output_from_percent_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_output_from_percent_005_lo",
+        "statement": "Calculate useful output energy from percentage efficiency.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_output_from_percent_005",
+      "conceptFamily": "calculate_useful_output_energy_from_percentage_efficiency",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A machine is 30% efficient. It receives 600 J of energy. How much energy is transferred usefully?",
+      "question": "A machine is 30% efficient. It receives 600 J of energy. How much energy is transferred usefully?",
+      "options": [
+        "180 J",
+        "20 J",
+        "420 J",
+        "630 J"
+      ],
+      "correctAnswer": "180 J",
+      "correctIndex": 0,
+      "explanation": "30% of 600 J is 0.30 x 600 = 180 J.",
+      "misconceptionTag": "useful-output-from-percentage",
+      "distractorRationales": [
+        {
+          "text": "20 J",
+          "misconception": ""
+        },
+        {
+          "text": "420 J",
+          "misconception": ""
+        },
+        {
+          "text": "630 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate useful output energy from percentage efficiency."
+    },
+    {
+      "id": "aqa_energy_efficiency_input_from_output_006",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_input_from_output_006_lo",
+        "statement": "Calculate input energy from useful output and efficiency.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_input_from_output_006",
+      "conceptFamily": "calculate_input_energy_from_useful_output_and_efficiency",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A pump is 50% efficient and transfers 300 J usefully. How much energy was supplied to the pump?",
+      "question": "A pump is 50% efficient and transfers 300 J usefully. How much energy was supplied to the pump?",
+      "options": [
+        "600 J",
+        "150 J",
+        "350 J",
+        "300 J"
+      ],
+      "correctAnswer": "600 J",
+      "correctIndex": 0,
+      "explanation": "Efficiency = useful output ÷ total input, so total input = 300 ÷ 0.50 = 600 J.",
+      "misconceptionTag": "input-from-efficiency",
+      "distractorRationales": [
+        {
+          "text": "150 J",
+          "misconception": ""
+        },
+        {
+          "text": "350 J",
+          "misconception": ""
+        },
+        {
+          "text": "300 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate input energy from useful output and efficiency."
+    },
+    {
+      "id": "aqa_energy_efficiency_not_over_100_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_not_over_100_007_lo",
+        "statement": "Explain why efficiency cannot exceed 100%.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_efficiency_not_over_100_007",
+      "conceptFamily": "explain_why_efficiency_cannot_exceed_100",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "Why can the efficiency of a normal energy transfer device not be greater than 100%?",
+      "question": "Why can the efficiency of a normal energy transfer device not be greater than 100%?",
+      "options": [
+        "The useful output energy cannot be greater than the total input energy.",
+        "All devices destroy their input energy.",
+        "Useful output energy is always zero.",
+        "Efficiency is measured in joules, so it has no upper limit."
+      ],
+      "correctAnswer": "The useful output energy cannot be greater than the total input energy.",
+      "correctIndex": 0,
+      "explanation": "Energy is conserved. A device cannot transfer more useful energy out than the total energy supplied to it.",
+      "misconceptionTag": "efficiency-over-100",
+      "distractorRationales": [
+        {
+          "text": "All devices destroy their input energy.",
+          "misconception": ""
+        },
+        {
+          "text": "Useful output energy is always zero.",
+          "misconception": ""
+        },
+        {
+          "text": "Efficiency is measured in joules, so it has no upper limit.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why efficiency cannot exceed 100%."
+    },
+    {
+      "id": "aqa_energy_efficiency_sankey_width_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_sankey_width_008_lo",
+        "statement": "Interpret arrow width in a Sankey diagram.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "state",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_energy_efficiency_sankey_width_008",
+      "conceptFamily": "interpret_arrow_width_in_a_sankey_diagram",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "In a Sankey diagram, what does the width of an arrow show?",
+      "question": "In a Sankey diagram, what does the width of an arrow show?",
+      "options": [
+        "The amount of energy transferred.",
+        "The speed of the energy transfer.",
+        "The temperature of the device.",
+        "The voltage across the device."
+      ],
+      "correctAnswer": "The amount of energy transferred.",
+      "correctIndex": 0,
+      "explanation": "In Sankey diagrams, arrow width represents the amount of energy transferred along that pathway.",
+      "misconceptionTag": "sankey-arrow-width",
+      "distractorRationales": [
+        {
+          "text": "The speed of the energy transfer.",
+          "misconception": ""
+        },
+        {
+          "text": "The temperature of the device.",
+          "misconception": ""
+        },
+        {
+          "text": "The voltage across the device.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret arrow width in a Sankey diagram."
+    },
+    {
+      "id": "aqa_energy_efficiency_sankey_calculation_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_sankey_calculation_009_lo",
+        "statement": "Calculate efficiency from values shown on a Sankey diagram.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_energy_efficiency_sankey_calculation_009",
+      "conceptFamily": "calculate_efficiency_from_values_shown_on_a_sankey_diagram",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A Sankey diagram shows 100 J input, 70 J useful output and 30 J wasted output. What is the efficiency?",
+      "question": "A Sankey diagram shows 100 J input, 70 J useful output and 30 J wasted output. What is the efficiency?",
+      "options": [
+        "70%",
+        "30%",
+        "43%",
+        "130%"
+      ],
+      "correctAnswer": "70%",
+      "correctIndex": 0,
+      "explanation": "Efficiency = useful output ÷ total input = 70 ÷ 100 = 0.70 = 70%.",
+      "misconceptionTag": "sankey-efficiency-calculation",
+      "distractorRationales": [
+        {
+          "text": "30%",
+          "misconception": ""
+        },
+        {
+          "text": "43%",
+          "misconception": ""
+        },
+        {
+          "text": "130%",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate efficiency from values shown on a Sankey diagram."
+    },
+    {
+      "id": "aqa_energy_efficiency_compare_devices_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_compare_devices_010_lo",
+        "statement": "Compare efficiencies of two devices.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_compare_devices_010",
+      "conceptFamily": "compare_efficiencies_of_two_devices",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "Device X transfers 40 J usefully from 100 J supplied. Device Y transfers 90 J usefully from 150 J supplied. Which device is more efficient?",
+      "question": "Device X transfers 40 J usefully from 100 J supplied. Device Y transfers 90 J usefully from 150 J supplied. Which device is more efficient?",
+      "options": [
+        "Device Y",
+        "Device X",
+        "Both have the same efficiency.",
+        "Neither transfers energy usefully."
+      ],
+      "correctAnswer": "Device Y",
+      "correctIndex": 0,
+      "explanation": "Device X is 40% efficient. Device Y is 90 ÷ 150 = 60% efficient, so Device Y is more efficient.",
+      "misconceptionTag": "compare-device-efficiency",
+      "distractorRationales": [
+        {
+          "text": "Device X",
+          "misconception": ""
+        },
+        {
+          "text": "Both have the same efficiency.",
+          "misconception": ""
+        },
+        {
+          "text": "Neither transfers energy usefully.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare efficiencies of two devices."
+    },
+    {
+      "id": "aqa_energy_efficiency_reduce_waste_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_reduce_waste_011_lo",
+        "statement": "Explain how reducing wasted transfers can improve efficiency.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_efficiency_reduce_waste_011",
+      "conceptFamily": "explain_how_reducing_wasted_transfers_can_improve_efficiency",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "Which change would usually increase the efficiency of a machine?",
+      "question": "Which change would usually increase the efficiency of a machine?",
+      "options": [
+        "Reducing wasted energy transfers to the surroundings.",
+        "Increasing unwanted heating in the machine.",
+        "Making the useful output smaller while keeping the input the same.",
+        "Adding friction to moving parts."
+      ],
+      "correctAnswer": "Reducing wasted energy transfers to the surroundings.",
+      "correctIndex": 0,
+      "explanation": "Efficiency increases when a larger fraction of the input energy is transferred usefully, often by reducing wasted transfers.",
+      "misconceptionTag": "reduce-wasted-transfers",
+      "distractorRationales": [
+        {
+          "text": "Increasing unwanted heating in the machine.",
+          "misconception": ""
+        },
+        {
+          "text": "Making the useful output smaller while keeping the input the same.",
+          "misconception": ""
+        },
+        {
+          "text": "Adding friction to moving parts.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain how reducing wasted transfers can improve efficiency."
+    },
+    {
+      "id": "aqa_energy_efficiency_lubrication_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_lubrication_012_lo",
+        "statement": "Explain how lubrication can improve efficiency.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_efficiency_lubrication_012",
+      "conceptFamily": "explain_how_lubrication_can_improve_efficiency",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "Why can lubricating the moving parts of a machine improve its efficiency?",
+      "question": "Why can lubricating the moving parts of a machine improve its efficiency?",
+      "options": [
+        "It reduces friction, so less energy is wasted by heating.",
+        "It creates extra energy in the machine.",
+        "It makes the input energy zero.",
+        "It changes wasted sound into voltage."
+      ],
+      "correctAnswer": "It reduces friction, so less energy is wasted by heating.",
+      "correctIndex": 0,
+      "explanation": "Lubrication reduces friction. Less energy is transferred by unwanted heating, so a greater fraction can be useful.",
+      "misconceptionTag": "lubrication-efficiency",
+      "distractorRationales": [
+        {
+          "text": "It creates extra energy in the machine.",
+          "misconception": ""
+        },
+        {
+          "text": "It makes the input energy zero.",
+          "misconception": ""
+        },
+        {
+          "text": "It changes wasted sound into voltage.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain how lubrication can improve efficiency."
+    },
+    {
+      "id": "aqa_energy_efficiency_insulation_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_insulation_013_lo",
+        "statement": "Explain how insulation reduces wasted energy transfer.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_efficiency_insulation_013",
+      "conceptFamily": "explain_how_insulation_reduces_wasted_energy_transfer",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A hot-water tank is insulated. How does this improve efficiency?",
+      "question": "A hot-water tank is insulated. How does this improve efficiency?",
+      "options": [
+        "Less energy is wasted by heating the surroundings.",
+        "More energy is destroyed inside the tank.",
+        "The tank no longer needs an energy input.",
+        "The water stops having a thermal store."
+      ],
+      "correctAnswer": "Less energy is wasted by heating the surroundings.",
+      "correctIndex": 0,
+      "explanation": "Insulation reduces unwanted energy transfer to the surroundings, so more of the supplied energy remains useful for heating the water.",
+      "misconceptionTag": "insulation-efficiency",
+      "distractorRationales": [
+        {
+          "text": "More energy is destroyed inside the tank.",
+          "misconception": ""
+        },
+        {
+          "text": "The tank no longer needs an energy input.",
+          "misconception": ""
+        },
+        {
+          "text": "The water stops having a thermal store.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain how insulation reduces wasted energy transfer."
+    },
+    {
+      "id": "aqa_energy_efficiency_unit_014",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_unit_014_lo",
+        "statement": "Recognise that efficiency is a ratio without a unit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "state",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_efficiency_unit_014",
+      "conceptFamily": "recognise_that_efficiency_is_a_ratio_without_a_unit",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "Which statement about efficiency is correct?",
+      "question": "Which statement about efficiency is correct?",
+      "options": [
+        "Efficiency has no unit because it is a ratio.",
+        "Efficiency is measured in joules.",
+        "Efficiency is measured in watts.",
+        "Efficiency is measured in metres per second."
+      ],
+      "correctAnswer": "Efficiency has no unit because it is a ratio.",
+      "correctIndex": 0,
+      "explanation": "Efficiency is a ratio of two energy transfers, so the units cancel. It may be given as a decimal or percentage.",
+      "misconceptionTag": "efficiency-no-unit",
+      "distractorRationales": [
+        {
+          "text": "Efficiency is measured in joules.",
+          "misconception": ""
+        },
+        {
+          "text": "Efficiency is measured in watts.",
+          "misconception": ""
+        },
+        {
+          "text": "Efficiency is measured in metres per second.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recognise that efficiency is a ratio without a unit."
+    },
+    {
+      "id": "aqa_energy_efficiency_wasted_from_efficiency_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_wasted_from_efficiency_015_lo",
+        "statement": "Find wasted percentage from efficiency percentage.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_wasted_from_efficiency_015",
+      "conceptFamily": "find_wasted_percentage_from_efficiency_percentage",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A device is 75% efficient. What percentage of its input energy is wasted?",
+      "question": "A device is 75% efficient. What percentage of its input energy is wasted?",
+      "options": [
+        "25%",
+        "75%",
+        "100%",
+        "175%"
+      ],
+      "correctAnswer": "25%",
+      "correctIndex": 0,
+      "explanation": "If 75% is useful, the remaining 25% is wasted because the total input is 100%.",
+      "misconceptionTag": "wasted-percentage",
+      "distractorRationales": [
+        {
+          "text": "75%",
+          "misconception": ""
+        },
+        {
+          "text": "100%",
+          "misconception": ""
+        },
+        {
+          "text": "175%",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Find wasted percentage from efficiency percentage."
+    },
+    {
+      "id": "aqa_energy_efficiency_graphical_sankey_016",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_graphical_sankey_016_lo",
+        "statement": "Compare useful and wasted transfers using Sankey arrow widths.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_energy_efficiency_graphical_sankey_016",
+      "conceptFamily": "compare_useful_and_wasted_transfers_using_sankey_arrow_widths",
+      "contextType": "exam_style",
+      "skill": "Efficiency practice",
+      "stem": "A Sankey diagram for a motor has a useful output arrow wider than the wasted output arrow. What does this show?",
+      "question": "A Sankey diagram for a motor has a useful output arrow wider than the wasted output arrow. What does this show?",
+      "options": [
+        "More energy is transferred usefully than is wasted.",
+        "The motor is exactly 100% efficient.",
+        "The wasted transfer is larger than the useful transfer.",
+        "The motor has no input energy."
+      ],
+      "correctAnswer": "More energy is transferred usefully than is wasted.",
+      "correctIndex": 0,
+      "explanation": "A wider arrow represents a larger energy transfer, so the useful transfer is larger than the wasted transfer.",
+      "misconceptionTag": "sankey-compare-widths",
+      "distractorRationales": [
+        {
+          "text": "The motor is exactly 100% efficient.",
+          "misconception": ""
+        },
+        {
+          "text": "The wasted transfer is larger than the useful transfer.",
+          "misconception": ""
+        },
+        {
+          "text": "The motor has no input energy.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare useful and wasted transfers using Sankey arrow widths."
+    },
+    {
+      "id": "aqa_energy_efficiency_useful_transfer_choice_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Efficiency",
+      "topicSlug": "energy",
+      "subtopicSlug": "efficiency",
+      "topicId": "efficiency",
+      "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
+      "specStatement": "Efficiency.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 1a",
+        "MS 3b"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_efficiency_useful_transfer_choice_017_lo",
+        "statement": "Identify useful output transfers for efficiency calculations.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.2.2:sankey_width:concept_discrimination",
-      "conceptFamily": "sankey_width",
-      "contextType": "a graph-reading task",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_efficiency_useful_transfer_choice_017",
+      "conceptFamily": "identify_useful_output_transfers_for_efficiency_calculations",
+      "contextType": "exam_style",
       "skill": "Efficiency practice",
-      "stem": "A student is comparing similar ideas in efficiency. Which statement is correct? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "question": "A student is comparing similar ideas in efficiency. Which statement is correct? Use the wording carefully: this is about interpret a Sankey diagram.",
+      "stem": "A kettle is designed to heat water. Which output transfer is useful?",
+      "question": "A kettle is designed to heat water. Which output transfer is useful?",
       "options": [
-        "The claim for efficiency is that arrow length alone gives efficiency.",
-        "In this item, it means that arrow colour always shows voltage.",
-        "In this item, it means that the smallest arrow is always useful energy.",
-        "For efficiency, the option says that in a Sankey diagram, arrow width represents the amount of energy transferred."
+        "Energy transferred to the thermal store of the water.",
+        "Energy transferred by sound to the room.",
+        "Energy transferred to heat the air around the kettle.",
+        "Energy transferred to warm the handle."
       ],
-      "correctAnswer": "For efficiency, the option says that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-      "correctIndex": 3,
-      "explanation": "4.1.2.2 targets: Interpret a Sankey diagram. Focus area: Efficiency. For this question, In a Sankey diagram, arrow width represents the amount of energy transferred. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:sankey_width",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that the smallest arrow is always useful energy.",
-          "misconception": "Arrow colour always shows voltage."
-        },
-        {
-          "text": "The claim for efficiency is that arrow length alone gives efficiency.",
-          "misconception": "The smallest arrow is always useful energy."
-        },
-        {
-          "text": "In this item, it means that arrow colour always shows voltage.",
-          "misconception": "Arrow length alone gives efficiency."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret a Sankey diagram."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_improve_efficiency_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_improve_efficiency",
-        "statement": "Explain how efficiency can improve. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.2.2:improve_efficiency:misconception_correction",
-      "conceptFamily": "improve_efficiency",
-      "contextType": "a comparison question",
-      "skill": "Efficiency practice",
-      "stem": "A revision note about efficiency contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "question": "A revision note about efficiency contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "options": [
-        "The answer for efficiency says that efficiency improves by increasing wasted heating.",
-        "In this efficiency item, efficiency improves when wasted energy transfers are reduced.",
-        "In this efficiency item, efficiency improves when useful output is zero.",
-        "In this efficiency item, efficiency improves by ignoring input energy."
-      ],
-      "correctAnswer": "In this efficiency item, efficiency improves when wasted energy transfers are reduced.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.2 targets: Explain how efficiency can improve. Focus area: Efficiency. For this question, Efficiency improves when wasted energy transfers are reduced. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:improve_efficiency",
-      "distractorRationales": [
-        {
-          "text": "In this efficiency item, efficiency improves when useful output is zero.",
-          "misconception": "Efficiency improves by increasing wasted heating."
-        },
-        {
-          "text": "The answer for efficiency says that efficiency improves by increasing wasted heating.",
-          "misconception": "Efficiency improves by ignoring input energy."
-        },
-        {
-          "text": "In this efficiency item, efficiency improves by ignoring input energy.",
-          "misconception": "Efficiency improves when useful output is zero."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain how efficiency can improve."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_percentage_limit_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_percentage_limit",
-        "statement": "Recognise the limit of efficiency. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.2.2:percentage_limit:data_interpretation",
-      "conceptFamily": "percentage_limit",
-      "contextType": "a method-choice question",
-      "skill": "Efficiency practice",
-      "stem": "A small data set about efficiency is being interpreted. Which conclusion is valid? Keep the answer focused on efficiency: recognise the limit of efficiency.",
-      "question": "A small data set about efficiency is being interpreted. Which conclusion is valid? Keep the answer focused on efficiency: recognise the limit of efficiency.",
-      "options": [
-        "For efficiency, the statement is that a real device cannot be more than 100% efficient because energy is conserved.",
-        "For efficiency, the answer claims that a device can be 200% efficient if it is powerful.",
-        "For efficiency, the answer claims that efficiency has no upper limit.",
-        "In this efficiency item, efficiency is always exactly 50%."
-      ],
-      "correctAnswer": "For efficiency, the statement is that a real device cannot be more than 100% efficient because energy is conserved.",
+      "correctAnswer": "Energy transferred to the thermal store of the water.",
       "correctIndex": 0,
-      "explanation": "4.1.2.2 targets: Recognise the limit of efficiency. Focus area: Efficiency. For this question, A real device cannot be more than 100% efficient because energy is conserved. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:percentage_limit",
+      "explanation": "The useful output of a kettle is the energy transferred to the thermal store of the water.",
+      "misconceptionTag": "useful-output-kettle",
       "distractorRationales": [
         {
-          "text": "For efficiency, the answer claims that a device can be 200% efficient if it is powerful.",
-          "misconception": "A device can be 200% efficient if it is powerful."
+          "text": "Energy transferred by sound to the room.",
+          "misconception": ""
         },
         {
-          "text": "For efficiency, the answer claims that efficiency has no upper limit.",
-          "misconception": "Efficiency has no upper limit."
+          "text": "Energy transferred to heat the air around the kettle.",
+          "misconception": ""
         },
         {
-          "text": "In this efficiency item, efficiency is always exactly 50%.",
-          "misconception": "Efficiency is always exactly 50%."
+          "text": "Energy transferred to warm the handle.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recognise the limit of efficiency."
+      "senNote": "Checks: Identify useful output transfers for efficiency calculations."
     },
     {
-      "id": "aqa_4_1_2_2_efficiency_compare_devices_representation_interpretation_005",
+      "id": "aqa_energy_efficiency_percentage_compare_018",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -12829,6 +13825,7 @@
       "subtopicSlug": "efficiency",
       "topicId": "efficiency",
       "specRef": "4.1.2.2",
+      "combinedSpecRef": "6.1.2.2",
       "specStatement": "Efficiency.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -12842,1015 +13839,54 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_compare_devices",
-        "statement": "Compare efficiencies. (Efficiency)",
+        "id": "aqa_energy_efficiency_percentage_compare_018_lo",
+        "statement": "Compare decimal and percentage efficiency values.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.2.2:compare_devices:representation_interpretation",
-      "conceptFamily": "compare_devices",
-      "contextType": "a results discussion",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_efficiency_percentage_compare_018",
+      "conceptFamily": "compare_decimal_and_percentage_efficiency_values",
+      "contextType": "exam_style",
       "skill": "Efficiency practice",
-      "stem": "Which option correctly reads the efficiency model or diagram idea? Keep the answer focused on efficiency: compare efficiencies.",
-      "question": "Which option correctly reads the efficiency model or diagram idea? Keep the answer focused on efficiency: compare efficiencies.",
+      "stem": "A fan is 35% efficient and a pump is 0.42 efficient. Which device has the higher efficiency?",
+      "question": "A fan is 35% efficient and a pump is 0.42 efficient. Which device has the higher efficiency?",
       "options": [
-        "The claim for efficiency is that for the same input, the device with greater useful output is more efficient.",
-        "In this item, it means that the device with greater waste is more efficient.",
-        "In this item, it means that a lower useful output always means higher efficiency.",
-        "In this item, it means that efficiency depends only on colour or size."
+        "The pump",
+        "The fan",
+        "They have the same efficiency.",
+        "It cannot be compared because one value is a decimal."
       ],
-      "correctAnswer": "The claim for efficiency is that for the same input, the device with greater useful output is more efficient.",
+      "correctAnswer": "The pump",
       "correctIndex": 0,
-      "explanation": "4.1.2.2 targets: Compare efficiencies. Focus area: Efficiency. For this question, For the same input, the device with greater useful output is more efficient. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:compare_devices",
+      "explanation": "0.42 is 42%, which is higher than 35%, so the pump has the higher efficiency.",
+      "misconceptionTag": "decimal-percentage-comparison",
       "distractorRationales": [
         {
-          "text": "In this item, it means that efficiency depends only on colour or size.",
-          "misconception": "The device with greater waste is more efficient."
+          "text": "The fan",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that a lower useful output always means higher efficiency.",
-          "misconception": "Efficiency depends only on colour or size."
+          "text": "They have the same efficiency.",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that the device with greater waste is more efficient.",
-          "misconception": "A lower useful output always means higher efficiency."
+          "text": "It cannot be compared because one value is a decimal.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.2.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare efficiencies."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_efficiency_ratio",
-        "statement": "Calculate efficiency from useful and total energy. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.2.2:efficiency_ratio:direct_recall",
-      "conceptFamily": "efficiency_ratio",
-      "contextType": "a classroom demonstration",
-      "skill": "Efficiency practice",
-      "stem": "Which answer matches this efficiency objective: Calculate efficiency from useful and total energy? Demand focus: calculate efficiency from useful and total energy.",
-      "question": "Which answer matches this efficiency objective: Calculate efficiency from useful and total energy? Demand focus: calculate efficiency from useful and total energy.",
-      "options": [
-        "In this item, it means that efficiency = total input ÷ useful output.",
-        "The claim for efficiency is that efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-        "The claim for efficiency is that efficiency can be above 100% for a normal device.",
-        "For efficiency, it means that efficiency is measured in joules."
-      ],
-      "correctAnswer": "The claim for efficiency is that efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.2 targets: Calculate efficiency from useful and total energy. Focus area: Efficiency. For this question, Efficiency = useful output energy ÷ total input energy, often multiplied by 100%. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:efficiency_ratio",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, it means that efficiency is measured in joules.",
-          "misconception": "Efficiency = total input ÷ useful output."
-        },
-        {
-          "text": "In this item, it means that efficiency = total input ÷ useful output.",
-          "misconception": "Efficiency can be above 100% for a normal device."
-        },
-        {
-          "text": "The claim for efficiency is that efficiency can be above 100% for a normal device.",
-          "misconception": "Efficiency is measured in joules."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate efficiency from useful and total energy."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_sankey_width_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_sankey_width",
-        "statement": "Interpret a Sankey diagram. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.2.2:sankey_width:applied_context",
-      "conceptFamily": "sankey_width",
-      "contextType": "a revision checkpoint",
-      "skill": "Efficiency practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "question": "In a revision checkpoint, which conclusion is correct for efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "options": [
-        "In this item, it means that the smallest arrow is always useful energy.",
-        "For efficiency: Arrow length alone gives efficiency.",
-        "For efficiency, this would mean that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-        "In this item, it means that arrow colour always shows voltage."
-      ],
-      "correctAnswer": "For efficiency, this would mean that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.2 targets: Interpret a Sankey diagram. Focus area: Efficiency. For this question, In a Sankey diagram, arrow width represents the amount of energy transferred. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:sankey_width",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that arrow colour always shows voltage.",
-          "misconception": "Arrow colour always shows voltage."
-        },
-        {
-          "text": "In this item, it means that the smallest arrow is always useful energy.",
-          "misconception": "The smallest arrow is always useful energy."
-        },
-        {
-          "text": "For efficiency: Arrow length alone gives efficiency.",
-          "misconception": "Arrow length alone gives efficiency."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret a Sankey diagram."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_improve_efficiency_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_improve_efficiency",
-        "statement": "Explain how efficiency can improve. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.2.2:improve_efficiency:misconception_correction",
-      "conceptFamily": "improve_efficiency",
-      "contextType": "an exam-style data table",
-      "skill": "Efficiency practice",
-      "stem": "Which answer corrects a misconception about efficiency? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "question": "Which answer corrects a misconception about efficiency? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "options": [
-        "For efficiency, this would mean that efficiency improves by increasing wasted heating.",
-        "For efficiency, the option says that efficiency improves when useful output is zero.",
-        "For efficiency, this would mean that efficiency improves by ignoring input energy.",
-        "For efficiency, this would mean that efficiency improves when wasted energy transfers are reduced."
-      ],
-      "correctAnswer": "For efficiency, this would mean that efficiency improves when wasted energy transfers are reduced.",
-      "correctIndex": 3,
-      "explanation": "4.1.2.2 targets: Explain how efficiency can improve. Focus area: Efficiency. For this question, Efficiency improves when wasted energy transfers are reduced. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:improve_efficiency",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, this would mean that efficiency improves by ignoring input energy.",
-          "misconception": "Efficiency improves by increasing wasted heating."
-        },
-        {
-          "text": "For efficiency, the option says that efficiency improves when useful output is zero.",
-          "misconception": "Efficiency improves by ignoring input energy."
-        },
-        {
-          "text": "For efficiency, this would mean that efficiency improves by increasing wasted heating.",
-          "misconception": "Efficiency improves when useful output is zero."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain how efficiency can improve."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_percentage_limit_exam_decision_009",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_percentage_limit",
-        "statement": "Recognise the limit of efficiency. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.2.2:percentage_limit:exam_decision",
-      "conceptFamily": "percentage_limit",
-      "contextType": "a required-practical notebook",
-      "skill": "Efficiency practice",
-      "stem": "The mark scheme is testing recognise the limit of efficiency. Which answer matches that point? Keep the answer focused on efficiency: recognise the limit of efficiency.",
-      "question": "The mark scheme is testing recognise the limit of efficiency. Which answer matches that point? Keep the answer focused on efficiency: recognise the limit of efficiency.",
-      "options": [
-        "For efficiency, the statement is that a device can be 200% efficient if it is powerful.",
-        "For efficiency, the answer claims that efficiency is always exactly 50%.",
-        "For efficiency, the answer claims that a real device cannot be more than 100% efficient because energy is conserved.",
-        "In this efficiency item, efficiency has no upper limit."
-      ],
-      "correctAnswer": "For efficiency, the answer claims that a real device cannot be more than 100% efficient because energy is conserved.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.2 targets: Recognise the limit of efficiency. Focus area: Efficiency. For this question, A real device cannot be more than 100% efficient because energy is conserved. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:percentage_limit",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, the answer claims that efficiency is always exactly 50%.",
-          "misconception": "A device can be 200% efficient if it is powerful."
-        },
-        {
-          "text": "For efficiency, the statement is that a device can be 200% efficient if it is powerful.",
-          "misconception": "Efficiency has no upper limit."
-        },
-        {
-          "text": "In this efficiency item, efficiency has no upper limit.",
-          "misconception": "Efficiency is always exactly 50%."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise the limit of efficiency."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_compare_devices_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_compare_devices",
-        "statement": "Compare efficiencies. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.2.2:compare_devices:representation_interpretation",
-      "conceptFamily": "compare_devices",
-      "contextType": "a technician report",
-      "skill": "Efficiency practice",
-      "stem": "A representation of efficiency is described in words. Which interpretation is correct? Keep the answer focused on efficiency: compare efficiencies.",
-      "question": "A representation of efficiency is described in words. Which interpretation is correct? Keep the answer focused on efficiency: compare efficiencies.",
-      "options": [
-        "For efficiency, the statement is that for the same input, the device with greater useful output is more efficient.",
-        "For efficiency, it means that the device with greater waste is more efficient.",
-        "For efficiency, it means that efficiency depends only on colour or size.",
-        "For efficiency, it means that a lower useful output always means higher efficiency."
-      ],
-      "correctAnswer": "For efficiency, the statement is that for the same input, the device with greater useful output is more efficient.",
-      "correctIndex": 0,
-      "explanation": "4.1.2.2 targets: Compare efficiencies. Focus area: Efficiency. For this question, For the same input, the device with greater useful output is more efficient. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:compare_devices",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, it means that the device with greater waste is more efficient.",
-          "misconception": "The device with greater waste is more efficient."
-        },
-        {
-          "text": "For efficiency, it means that efficiency depends only on colour or size.",
-          "misconception": "Efficiency depends only on colour or size."
-        },
-        {
-          "text": "For efficiency, it means that a lower useful output always means higher efficiency.",
-          "misconception": "A lower useful output always means higher efficiency."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare efficiencies."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_efficiency_ratio",
-        "statement": "Calculate efficiency from useful and total energy. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.2.2:efficiency_ratio:concept_discrimination",
-      "conceptFamily": "efficiency_ratio",
-      "contextType": "a labelled diagram",
-      "skill": "Efficiency practice",
-      "stem": "A student is comparing similar ideas in efficiency. Which statement is correct? Demand focus: calculate efficiency from useful and total energy.",
-      "question": "A student is comparing similar ideas in efficiency. Which statement is correct? Demand focus: calculate efficiency from useful and total energy.",
-      "options": [
-        "For efficiency: Efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-        "For efficiency, it means that efficiency = total input ÷ useful output.",
-        "For efficiency, it means that efficiency is measured in joules.",
-        "For efficiency, it means that efficiency can be above 100% for a normal device."
-      ],
-      "correctAnswer": "For efficiency: Efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-      "correctIndex": 0,
-      "explanation": "4.1.2.2 targets: Calculate efficiency from useful and total energy. Focus area: Efficiency. For this question, Efficiency = useful output energy ÷ total input energy, often multiplied by 100%. Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:efficiency_ratio",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, it means that efficiency can be above 100% for a normal device.",
-          "misconception": "Efficiency = total input ÷ useful output."
-        },
-        {
-          "text": "For efficiency, it means that efficiency is measured in joules.",
-          "misconception": "Efficiency can be above 100% for a normal device."
-        },
-        {
-          "text": "For efficiency, it means that efficiency = total input ÷ useful output.",
-          "misconception": "Efficiency is measured in joules."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate efficiency from useful and total energy."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_sankey_width_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_sankey_width",
-        "statement": "Interpret a Sankey diagram. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.2.2:sankey_width:applied_context",
-      "conceptFamily": "sankey_width",
-      "contextType": "a short calculation",
-      "skill": "Efficiency practice",
-      "stem": "A question set in a short calculation tests efficiency. Which answer applies the idea correctly? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "question": "A question set in a short calculation tests efficiency. Which answer applies the idea correctly? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "options": [
-        "For efficiency, it means that arrow colour always shows voltage.",
-        "For efficiency, the statement is that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-        "For efficiency, it means that arrow length alone gives efficiency.",
-        "For efficiency, the answer claims that the smallest arrow is always useful energy."
-      ],
-      "correctAnswer": "For efficiency, the statement is that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.2 targets: Interpret a Sankey diagram. Focus area: Efficiency. For this question, In a Sankey diagram, arrow width represents the amount of energy transferred. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:sankey_width",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, it means that arrow length alone gives efficiency.",
-          "misconception": "Arrow colour always shows voltage."
-        },
-        {
-          "text": "For efficiency, it means that arrow colour always shows voltage.",
-          "misconception": "The smallest arrow is always useful energy."
-        },
-        {
-          "text": "For efficiency, the answer claims that the smallest arrow is always useful energy.",
-          "misconception": "Arrow length alone gives efficiency."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret a Sankey diagram."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_improve_efficiency_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_improve_efficiency",
-        "statement": "Explain how efficiency can improve. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.2.2:improve_efficiency:data_interpretation",
-      "conceptFamily": "improve_efficiency",
-      "contextType": "a safety decision",
-      "skill": "Efficiency practice",
-      "stem": "A small data set about efficiency is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "question": "A small data set about efficiency is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "options": [
-        "For efficiency, it means that efficiency improves by increasing wasted heating.",
-        "In this item, it means that efficiency improves when wasted energy transfers are reduced.",
-        "The claim for efficiency is that efficiency improves when useful output is zero.",
-        "For efficiency, it means that efficiency improves by ignoring input energy."
-      ],
-      "correctAnswer": "In this item, it means that efficiency improves when wasted energy transfers are reduced.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.2 targets: Explain how efficiency can improve. Focus area: Efficiency. For this question, Efficiency improves when wasted energy transfers are reduced. Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:improve_efficiency",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, it means that efficiency improves by increasing wasted heating.",
-          "misconception": "Efficiency improves by increasing wasted heating."
-        },
-        {
-          "text": "For efficiency, it means that efficiency improves by ignoring input energy.",
-          "misconception": "Efficiency improves by ignoring input energy."
-        },
-        {
-          "text": "The claim for efficiency is that efficiency improves when useful output is zero.",
-          "misconception": "Efficiency improves when useful output is zero."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain how efficiency can improve."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_percentage_limit_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_percentage_limit",
-        "statement": "Recognise the limit of efficiency. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.2.2:percentage_limit:exam_decision",
-      "conceptFamily": "percentage_limit",
-      "contextType": "a graph-reading task",
-      "skill": "Efficiency practice",
-      "stem": "Which answer is the strongest GCSE Physics response for efficiency? Keep the answer focused on efficiency: recognise the limit of efficiency.",
-      "question": "Which answer is the strongest GCSE Physics response for efficiency? Keep the answer focused on efficiency: recognise the limit of efficiency.",
-      "options": [
-        "The claim for efficiency is that a real device cannot be more than 100% efficient because energy is conserved.",
-        "The claim for efficiency is that efficiency has no upper limit.",
-        "For efficiency: Efficiency is always exactly 50%.",
-        "For efficiency, this would mean that a device can be 200% efficient if it is powerful."
-      ],
-      "correctAnswer": "The claim for efficiency is that a real device cannot be more than 100% efficient because energy is conserved.",
-      "correctIndex": 0,
-      "explanation": "4.1.2.2 targets: Recognise the limit of efficiency. Focus area: Efficiency. For this question, A real device cannot be more than 100% efficient because energy is conserved. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:percentage_limit",
-      "distractorRationales": [
-        {
-          "text": "The claim for efficiency is that efficiency has no upper limit.",
-          "misconception": "A device can be 200% efficient if it is powerful."
-        },
-        {
-          "text": "For efficiency: Efficiency is always exactly 50%.",
-          "misconception": "Efficiency has no upper limit."
-        },
-        {
-          "text": "For efficiency, this would mean that a device can be 200% efficient if it is powerful.",
-          "misconception": "Efficiency is always exactly 50%."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recognise the limit of efficiency."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_compare_devices_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_compare_devices",
-        "statement": "Compare efficiencies. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.2.2:compare_devices:direct_recall",
-      "conceptFamily": "compare_devices",
-      "contextType": "a comparison question",
-      "skill": "Efficiency practice",
-      "stem": "Which answer matches this efficiency objective: Compare efficiencies? Keep the answer focused on efficiency: compare efficiencies.",
-      "question": "Which answer matches this efficiency objective: Compare efficiencies? Keep the answer focused on efficiency: compare efficiencies.",
-      "options": [
-        "For efficiency, the statement is that a lower useful output always means higher efficiency.",
-        "In this efficiency item, the device with greater waste is more efficient.",
-        "For efficiency, the statement is that for the same input, the device with greater useful output is more efficient.",
-        "The answer for efficiency says that efficiency depends only on colour or size."
-      ],
-      "correctAnswer": "For efficiency, the statement is that for the same input, the device with greater useful output is more efficient.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.2 targets: Compare efficiencies. Focus area: Efficiency. For this question, For the same input, the device with greater useful output is more efficient. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:compare_devices",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, the statement is that a lower useful output always means higher efficiency.",
-          "misconception": "The device with greater waste is more efficient."
-        },
-        {
-          "text": "In this efficiency item, the device with greater waste is more efficient.",
-          "misconception": "Efficiency depends only on colour or size."
-        },
-        {
-          "text": "The answer for efficiency says that efficiency depends only on colour or size.",
-          "misconception": "A lower useful output always means higher efficiency."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare efficiencies."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_efficiency_ratio",
-        "statement": "Calculate efficiency from useful and total energy. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.2.2:efficiency_ratio:concept_discrimination",
-      "conceptFamily": "efficiency_ratio",
-      "contextType": "a method-choice question",
-      "skill": "Efficiency practice",
-      "stem": "Which option best separates the correct efficiency idea from a common mix-up? Demand focus: calculate efficiency from useful and total energy.",
-      "question": "Which option best separates the correct efficiency idea from a common mix-up? Demand focus: calculate efficiency from useful and total energy.",
-      "options": [
-        "The answer for efficiency says that efficiency is measured in joules.",
-        "The answer for efficiency says that efficiency can be above 100% for a normal device.",
-        "For efficiency, the answer claims that efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-        "The answer for efficiency says that efficiency = total input ÷ useful output."
-      ],
-      "correctAnswer": "For efficiency, the answer claims that efficiency = useful output energy ÷ total input energy, often multiplied by 100%.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.2 targets: Calculate efficiency from useful and total energy. Focus area: Efficiency. For this question, Efficiency = useful output energy ÷ total input energy, often multiplied by 100%. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:efficiency_ratio",
-      "distractorRationales": [
-        {
-          "text": "The answer for efficiency says that efficiency = total input ÷ useful output.",
-          "misconception": "Efficiency = total input ÷ useful output."
-        },
-        {
-          "text": "The answer for efficiency says that efficiency can be above 100% for a normal device.",
-          "misconception": "Efficiency can be above 100% for a normal device."
-        },
-        {
-          "text": "The answer for efficiency says that efficiency is measured in joules.",
-          "misconception": "Efficiency is measured in joules."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate efficiency from useful and total energy."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_sankey_width_misconception_correction_017",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_sankey_width",
-        "statement": "Interpret a Sankey diagram. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.2.2:sankey_width:misconception_correction",
-      "conceptFamily": "sankey_width",
-      "contextType": "a results discussion",
-      "skill": "Efficiency practice",
-      "stem": "Which answer corrects a misconception about efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "question": "Which answer corrects a misconception about efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
-      "options": [
-        "For efficiency, it means that the smallest arrow is always useful energy.",
-        "For efficiency, the answer claims that arrow colour always shows voltage.",
-        "For efficiency, the answer claims that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-        "For efficiency, the statement is that arrow length alone gives efficiency."
-      ],
-      "correctAnswer": "For efficiency, the answer claims that in a Sankey diagram, arrow width represents the amount of energy transferred.",
-      "correctIndex": 2,
-      "explanation": "4.1.2.2 targets: Interpret a Sankey diagram. Focus area: Efficiency. For this question, In a Sankey diagram, arrow width represents the amount of energy transferred. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:sankey_width",
-      "distractorRationales": [
-        {
-          "text": "For efficiency, it means that the smallest arrow is always useful energy.",
-          "misconception": "Arrow colour always shows voltage."
-        },
-        {
-          "text": "For efficiency, the statement is that arrow length alone gives efficiency.",
-          "misconception": "The smallest arrow is always useful energy."
-        },
-        {
-          "text": "For efficiency, the answer claims that arrow colour always shows voltage.",
-          "misconception": "Arrow length alone gives efficiency."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret a Sankey diagram."
-    },
-    {
-      "id": "aqa_4_1_2_2_efficiency_improve_efficiency_data_interpretation_018",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Efficiency",
-      "topicSlug": "energy",
-      "subtopicSlug": "efficiency",
-      "topicId": "efficiency",
-      "specRef": "4.1.2.2",
-      "specStatement": "Efficiency.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 1a",
-        "MS 3b"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_2_2_efficiency_improve_efficiency",
-        "statement": "Explain how efficiency can improve. (Efficiency)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.2.2:improve_efficiency:data_interpretation",
-      "conceptFamily": "improve_efficiency",
-      "contextType": "a classroom demonstration",
-      "skill": "Efficiency practice",
-      "stem": "Which conclusion about efficiency is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "question": "Which conclusion about efficiency is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
-      "options": [
-        "The answer for efficiency says that efficiency improves when useful output is zero.",
-        "For efficiency, it means that efficiency improves when wasted energy transfers are reduced.",
-        "For efficiency, the statement is that efficiency improves by ignoring input energy.",
-        "The answer for efficiency says that efficiency improves by increasing wasted heating."
-      ],
-      "correctAnswer": "For efficiency, it means that efficiency improves when wasted energy transfers are reduced.",
-      "correctIndex": 1,
-      "explanation": "4.1.2.2 targets: Explain how efficiency can improve. Focus area: Efficiency. For this question, Efficiency improves when wasted energy transfers are reduced. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:improve_efficiency",
-      "distractorRationales": [
-        {
-          "text": "The answer for efficiency says that efficiency improves when useful output is zero.",
-          "misconception": "Efficiency improves by increasing wasted heating."
-        },
-        {
-          "text": "The answer for efficiency says that efficiency improves by increasing wasted heating.",
-          "misconception": "Efficiency improves by ignoring input energy."
-        },
-        {
-          "text": "For efficiency, the statement is that efficiency improves by ignoring input energy.",
-          "misconception": "Efficiency improves when useful output is zero."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.2.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain how efficiency can improve."
+      "senNote": "Checks: Compare decimal and percentage efficiency values."
     },
     {
       "id": "aqa_energy_stores_list_001",

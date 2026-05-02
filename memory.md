@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Efficiency authored
+- Fixed AQA `Efficiency`: 18/18 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.1.2.2`.
+  - AQA Combined Science `combinedSpecRef`: `6.1.2.2`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Efficiency runtime count: 18.
+  - Authored IDs: 18.
+  - Bad scaffold/answer phrase count: 0.
+  - Covers efficiency equation, percentage calculations, Sankey interpretation, and reducing wasted transfers.
+- Current Energy good-to-go count after this fix:
+  - AQA: 37/94 good to go.
+  - Edexcel: 0/94 good to go.
+  - Combined Energy: 37/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - Exact AQA Efficiency route was shown live in Simulator.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue AQA Energy:
+  - AQA `Insulation`: 19 authored exam-style questions.
+
 ### Adaptive Practice AQA Energy Stores authored
 - Started the Energy topic rebuild and added the new authored Energy source file.
 - Fixed AQA `Energy Stores`: 19/19 authored and passed.

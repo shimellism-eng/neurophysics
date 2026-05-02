@@ -1,15 +1,17 @@
 {
-  "version": 1,
-  "generatedAt": "2026-05-02T01:06:14.197Z",
+  "generatedAt": "2026-05-02T02:06:28.747Z",
+  "source": "scripts/regenerate_adaptive_questions.mjs",
   "counts": {
     "total": 1650,
-    "byBoard": {
+    "boards": {
       "aqa": 900,
       "edexcel": 750
     }
   },
   "boards": {
     "aqa": {
+      "name": "AQA",
+      "qualification": "AQA GCSE Physics 8463",
       "all": "/data/questions/aqa/all.json",
       "count": 900,
       "topics": {
@@ -24,6 +26,8 @@
       }
     },
     "edexcel": {
+      "name": "Edexcel",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
       "all": "/data/questions/edexcel/all.json",
       "count": 750,
       "topics": {

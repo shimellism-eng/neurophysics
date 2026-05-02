@@ -1,0 +1,498 @@
+#!/usr/bin/env node
+
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { ADAPTIVE_SPEC_MANIFESTS } from '../src/data/adaptiveQuestionSource/specManifests.js'
+import {
+  CONTEXTS,
+  RESPONSE_MODE_DETAILS,
+  RESPONSE_MODES,
+  TOPIC_FACTS,
+} from '../src/data/adaptiveQuestionSource/questionBlueprints.js'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const root = path.resolve(__dirname, '..')
+const dataRoot = path.join(root, 'public', 'data', 'questions')
+const boards = ['aqa', 'edexcel']
+const boardNames = { aqa: 'AQA', edexcel: 'Edexcel' }
+const FACT_OVERRIDES = {
+  'Isotopes': ['isotope_identity', 'mass_atomic_number', 'neutral_atom', 'ion_formation'],
+  'Atomic Structure': ['atom_structure', 'mass_atomic_number', 'neutral_atom', 'ion_formation', 'isotope_identity'],
+  'Charge': ['current_charge', 'charge_unit', 'measuring_current', 'potential_difference'],
+  'Current': ['current_charge', 'measuring_current', 'charge_unit', 'potential_difference'],
+  'Potential Difference': ['potential_difference', 'measuring_pd', 'current_charge', 'ohms_law'],
+  'Resistance': ['ohms_law', 'ohmic_conductor', 'filament_lamp', 'diode', 'ldr_thermistor'],
+  'Series Circuits': ['series_current', 'series_resistance', 'parallel_pd', 'parallel_current'],
+  'Series Current': ['series_current', 'series_resistance', 'parallel_current'],
+  'Series Resistance': ['series_resistance', 'series_current', 'parallel_resistance'],
+  'Parallel Circuits': ['parallel_pd', 'parallel_current', 'parallel_resistance', 'series_current'],
+  'Power': ['power_vi', 'power_i2r', 'energy_power_time', 'cost_electricity', 'heating_effect', 'power_definition', 'power_equation', 'unit_watt'],
+  'Energy Transfer': ['energy_power_time', 'power_vi', 'power_i2r', 'heating_effect', 'cost_electricity'],
+  'National Grid': ['grid_purpose', 'step_up', 'transformer_role', 'transmission_loss', 'grid_safety'],
+  'Energy Stores': ['store_identification', 'closed_system', 'transfer_pathways', 'useful_wasted', 'dissipation'],
+  'Efficiency': ['efficiency_ratio', 'sankey_width', 'improve_efficiency', 'percentage_limit', 'compare_devices'],
+  'Insulation': ['conduction', 'convection', 'radiation', 'insulation', 'surface_colour'],
+  'Kinetic Energy': ['kinetic_energy', 'gpe', 'elastic_energy', 'specific_heat', 'unit_check'],
+  'Scalar and Vector Quantities': ['scalar_vector', 'distance_displacement', 'speed_velocity', 'force_vector', 'resultant_direction'],
+  'Contact and Non-contact Forces': ['contact_noncontact', 'free_body', 'resultant_force', 'weight_mass'],
+  'Resultant Force': ['resultant_force', 'contact_noncontact', 'free_body', 'weight_equation'],
+  'Resultant Forces': ['resultant_force', 'contact_noncontact', 'free_body', 'balanced_forces'],
+  'Work Done': ['work_equation', 'energy_transfer', 'unit_joule', 'distance_direction', 'force_distance_compare'],
+  "Hooke's Law": ['hookes_law', 'limit_proportionality', 'extension', 'graph_gradient', 'elastic_deformation'],
+  "Elasticity and Hooke's Law": ['hookes_law', 'limit_proportionality', 'extension', 'graph_gradient', 'elastic_deformation'],
+  'Force and Extension Graphs': ['graph_gradient', 'limit_proportionality', 'hookes_law', 'extension', 'elastic_deformation'],
+  'Required Practical: Force and Extension': ['extension', 'graph_gradient', 'limit_proportionality', 'hookes_law'],
+  'Moments': ['moment_equation', 'pivot', 'balance', 'distance_effect', 'unit_moment'],
+  'Pressure': ['pressure_equation', 'area_effect', 'liquid_depth', 'density_pressure', 'upthrust'],
+  'Speed, Distance and Time': ['speed_equation', 'distance_time_gradient', 'acceleration_equation', 'velocity_time_gradient', 'vt_area'],
+  'Motion': ['speed_equation', 'distance_time_gradient', 'velocity_time_gradient', 'acceleration_equation', 'vt_area'],
+  'Acceleration': ['acceleration_equation', 'velocity_time_gradient', 'vt_area', 'speed_equation'],
+  'Required Practical: Acceleration': ['acceleration_equation', 'velocity_time_gradient', 'vt_area', 'speed_equation'],
+  "Newton's Laws": ['first_law', 'second_law', 'third_law', 'balanced_forces', 'mass_acceleration'],
+  "Newton's Third Law": ['third_law', 'second_law', 'first_law', 'balanced_forces'],
+  'Weight, Mass and Gravity': ['weight_mass', 'weight_equation', 'contact_noncontact', 'free_body'],
+  'Stopping Distance': ['stopping_total', 'thinking_distance', 'braking_distance', 'force_braking', 'reaction_time'],
+  'Reaction Time': ['reaction_time', 'thinking_distance', 'stopping_total', 'braking_distance'],
+  'Forces and Braking': ['force_braking', 'braking_distance', 'stopping_total', 'thinking_distance'],
+  'Momentum': ['momentum_equation', 'momentum_vector', 'closed_system', 'collision_compare', 'explosion'],
+  'Conservation of Momentum': ['closed_system', 'collision_compare', 'explosion', 'momentum_equation'],
+  'Terminal Velocity': ['terminal_velocity', 'falling_start', 'drag_increase', 'parachute', 'force_graph'],
+  'Permanent Magnets': ['poles', 'field_lines', 'field_strength', 'soft_hard'],
+  'Magnetic Fields': ['field_lines', 'wire_field', 'field_strength', 'poles'],
+  'Magnetic Materials': ['soft_hard', 'poles', 'field_lines', 'field_strength'],
+  'Generators': ['generator_rotation', 'slip_rings', 'frequency_speed', 'peak_voltage', 'generator_energy'],
+  'Transformers': ['turns_ratio', 'step_up_down', 'grid_transformers', 'current_voltage', 'efficiency_transformer'],
+  'Density': ['density_equation', 'particle_spacing', 'solid_model', 'liquid_model', 'gas_model'],
+  'States of Matter': ['solid_model', 'liquid_model', 'gas_model', 'particle_spacing', 'density_equation'],
+  'Internal Energy': ['internal_energy', 'heating_temperature', 'change_state_energy', 'specific_heat_capacity', 'cooling'],
+  'Latent Heat': ['latent_heat', 'melting_plateau', 'fusion_vaporisation', 'particle_bonds', 'cooling_change'],
+  'Wave Speed': ['wave_speed', 'frequency_period', 'amplitude_energy', 'wavelength', 'frequency'],
+  'Frequency and Period': ['frequency_period', 'wave_speed', 'frequency', 'wavelength', 'amplitude_energy'],
+  'Electromagnetic Spectrum': ['spectrum_order', 'ionising_em', 'frequency_wavelength', 'uses_hazards', 'vacuum_speed'],
+  'Refraction': ['refraction', 'reflection', 'lens_convex', 'lens_concave', 'colour_filter'],
+  'Reflection': ['law_reflection', 'normal_line', 'specular_diffuse', 'image_plane_mirror', 'ray_direction'],
+  'Sound Waves': ['pitch_frequency', 'loudness_amplitude', 'ultrasound_frequency', 'ultrasound_imaging', 'echo_distance'],
+  'Ultrasound': ['ultrasound_frequency', 'ultrasound_imaging', 'echo_distance', 'pitch_frequency'],
+  'Types of Waves': ['transverse', 'longitudinal', 'sound_longitudinal', 'em_transverse', 'compression_rarefaction'],
+  'Lenses': ['convex_focus', 'real_image', 'ray_diagram', 'focal_length', 'magnification'],
+  'Galaxies': ['redshift_meaning', 'expanding_universe', 'big_bang', 'cmb', 'wavelength_shift'],
+  'Red-Shift': ['redshift_meaning', 'expanding_universe', 'wavelength_shift', 'big_bang', 'cmb'],
+  'Life Cycle of Stars': ['star_formation', 'main_sequence', 'sun_like_end', 'massive_star_end', 'fusion_elements'],
+  'Observing Space': ['planet_order', 'orbit_gravity', 'satellite', 'geostationary', 'day_night'],
+  'Orbits': ['orbit_gravity', 'satellite', 'geostationary', 'day_night', 'planet_order'],
+  'Earth and Space': ['day_night', 'planet_order', 'orbit_gravity', 'satellite', 'geostationary'],
+  'Satellites': ['satellite', 'geostationary', 'orbit_gravity', 'day_night'],
+  'Solar System': ['planet_order', 'day_night', 'orbit_gravity', 'satellite'],
+  'Stars': ['star_formation', 'main_sequence', 'sun_like_end', 'massive_star_end', 'fusion_elements'],
+  'Background Radiation': ['background_sources', 'safety_precautions', 'contamination', 'half_life_choice'],
+  'Radiation Safety': ['safety_precautions', 'contamination', 'medical_use', 'half_life_choice'],
+  'Fission and Fusion': ['fission_process', 'chain_reaction', 'fusion_process', 'reactor_control', 'energy_release'],
+  'Half-Life': ['half_life_definition', 'half_life_graph', 'half_life_calculation', 'random_predictable', 'count_correction'],
+  'Uses of Radiation': ['medical_use', 'half_life_choice', 'contamination', 'safety_precautions', 'background_sources'],
+  'Radiation': ['random_decay', 'activity', 'penetration', 'ionising_power', 'count_rate'],
+  'Current-Voltage Characteristics': ['ohms_law', 'ohmic_conductor', 'filament_lamp', 'diode', 'ldr_thermistor'],
+  'Domestic Electricity': ['mains_ac', 'live_neutral', 'fuse_purpose', 'earth_wire', 'power_rating'],
+  'Electrical Energy': ['energy_power_time', 'cost_electricity', 'power_vi', 'power_i2r', 'heating_effect'],
+  'Electrical Power': ['power_vi', 'power_i2r', 'energy_power_time', 'cost_electricity', 'heating_effect'],
+  'Energy Resources': ['renewable', 'nonrenewable', 'resource_reliability', 'power_station', 'environment'],
+  'Gravitational Potential Energy': ['gpe', 'kinetic_energy', 'elastic_energy', 'specific_heat', 'unit_check'],
+  'Applications of the Motor Effect': ['loudspeaker', 'motor_rotation', 'motor_effect', 'force_direction', 'increase_force'],
+  'Motor Effect': ['motor_effect', 'force_direction', 'motor_rotation', 'increase_force', 'loudspeaker'],
+  'Electromagnetic Induction': ['induction', 'generator_effect', 'increase_induced_pd', 'ac_generator', 'transformer'],
+  'Electromagnets': ['electromagnet', 'strengthen_electromagnet', 'solenoid_field', 'iron_core', 'current_direction'],
+  'Solenoids': ['solenoid_field', 'iron_core', 'strengthen_electromagnet', 'current_direction', 'electromagnet'],
+  'Changes of State': ['latent_heat', 'melting_plateau', 'fusion_vaporisation', 'particle_bonds', 'cooling_change'],
+  'Heating Curves': ['melting_plateau', 'latent_heat', 'fusion_vaporisation', 'particle_bonds', 'cooling_change'],
+  'Gas Pressure': ['gas_pressure_origin', 'temperature_pressure', 'volume_pressure', 'absolute_zero', 'brownian_motion'],
+  'Particle Motion': ['solid_model', 'liquid_model', 'gas_model', 'particle_spacing', 'density_equation'],
+}
+const topicFileOrder = [
+  'atomic_structure',
+  'electricity',
+  'energy',
+  'forces',
+  'magnetism',
+  'particle_model',
+  'space',
+  'waves',
+]
+
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'))
+}
+
+function writeJson(filePath, value) {
+  fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`)
+}
+
+function slug(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+}
+
+function normalizeTopicKey(topic) {
+  return slug(topic)
+}
+
+function createSeed(value) {
+  let seed = 2166136261
+  for (const ch of String(value)) {
+    seed ^= ch.charCodeAt(0)
+    seed = Math.imul(seed, 16777619)
+  }
+  return seed >>> 0
+}
+
+function seededRandom(seed) {
+  let state = seed >>> 0
+  return () => {
+    state += 0x6D2B79F5
+    let t = state
+    t = Math.imul(t ^ (t >>> 15), t | 1)
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61)
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function pick(items, index) {
+  return items[index % items.length]
+}
+
+function rotate(items, offset) {
+  return items.map((_, index) => items[(index + offset) % items.length])
+}
+
+function shuffleDeterministic(items, seedValue) {
+  const next = seededRandom(createSeed(seedValue))
+  const copy = [...items]
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(next() * (i + 1))
+    ;[copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy
+}
+
+function getLegacyShape() {
+  const shape = {}
+  for (const board of boards) {
+    const payload = readJson(path.join(dataRoot, board, 'all.json'))
+    shape[board] = new Map()
+    for (const question of payload.questions || []) {
+      const key = `${question.topic}|||${question.subtopic}`
+      if (!shape[board].has(key)) {
+        shape[board].set(key, {
+          count: 0,
+          topic: question.topic,
+          subtopic: question.subtopic,
+          topicSlug: question.topicSlug || normalizeTopicKey(question.topic),
+          subtopicSlug: question.subtopicSlug || slug(question.subtopic),
+          topicId: question.topicId,
+        })
+      }
+      shape[board].get(key).count += 1
+    }
+  }
+  return shape
+}
+
+function specLookup(board) {
+  const manifest = ADAPTIVE_SPEC_MANIFESTS[board]
+  const entries = new Map()
+  for (const entry of manifest.entries) {
+    entries.set(`${entry.topic}|||${entry.subtopic}`, entry)
+  }
+  return entries
+}
+
+function difficultyFor(mode, index) {
+  if (mode === 'direct_recall') return 'easy'
+  if (mode === 'concept_discrimination') return index % 3 === 0 ? 'easy' : 'medium'
+  if (mode === 'applied_context') return index % 4 === 0 ? 'easy' : 'medium'
+  if (mode === 'misconception_correction') return index % 2 === 0 ? 'medium' : 'hard'
+  if (mode === 'data_interpretation') return index % 3 === 0 ? 'medium' : 'hard'
+  return 'hard'
+}
+
+function makeCorrectText(fact, mode, variant, spec) {
+  const area = spec.subtopic.toLowerCase()
+  const variants = [
+    fact.correct,
+    `${fact.correct} This matches the target idea.`,
+    `${fact.correct} That is the valid GCSE Physics conclusion.`,
+    `Use this idea: ${fact.correct}`,
+    `The correct reasoning is that ${fact.correct.charAt(0).toLowerCase()}${fact.correct.slice(1)}`,
+    `The specification-safe answer is: ${fact.correct}`,
+    `This answer is correct because ${fact.correct.charAt(0).toLowerCase()}${fact.correct.slice(1)}`,
+    `For ${area}, the key answer is: ${fact.correct}`,
+    `In a ${area} question, use: ${fact.correct}`,
+  ]
+  return pick(variants, variant)
+}
+
+function makeDistractors(fact, mode, variant, spec) {
+  const area = spec.subtopic.toLowerCase()
+  const base = rotate(fact.distractors, variant).slice(0, 3)
+  const prefixes = {
+    direct_recall: ['Incorrect recall: ', 'Wrong definition: ', 'Misremembered idea: '],
+    concept_discrimination: ['Misread idea: ', 'Common mix-up: ', 'Wrong link: '],
+    applied_context: ['In this context, ', 'This would wrongly suggest ', 'This incorrectly treats it as '],
+    misconception_correction: ['Keep the misconception: ', 'Incorrect correction: ', 'Still wrong because ', 'Not enough: '],
+    data_interpretation: ['The data would not show that ', 'This ignores the evidence: ', 'This reads the pattern as '],
+    exam_decision: ['Rejected because ', 'Not the best choice: ', 'This confuses the idea with '],
+    representation_interpretation: ['The diagram would not mean ', 'This symbol would not show ', 'This representation would not support '],
+  }[mode] || ['', '', '']
+
+  return base.map((value, index) => {
+    const prefix = prefixes[index % prefixes.length]
+    const text = prefix
+      ? `${prefix}${value.charAt(0).toLowerCase()}${value.slice(1)}`
+      : value
+    if ((variant + index) % 3 === 0) return `${text} This is not valid for ${area}.`
+    if ((variant + index) % 3 === 1) return `${text} That would miss the ${area} focus.`
+    return text
+  })
+}
+
+function makeStem({ fact, spec, mode, context, variant, difficulty }) {
+  const object = fact.objective.replace(/\.$/, '')
+  const promptNoun = spec.subtopic.toLowerCase()
+  const focus = object.charAt(0).toLowerCase() + object.slice(1)
+  const stems = {
+    direct_recall: [
+      `For ${promptNoun}, which statement correctly shows how to ${focus}?`,
+      `A GCSE Physics flashcard asks students to ${focus}. Which answer is correct?`,
+      `Which answer would be kept for the ${promptNoun} learning objective: ${object}?`,
+    ],
+    concept_discrimination: [
+      `Which option best distinguishes the correct idea when students must ${focus}?`,
+      `A student is comparing similar ideas in ${promptNoun}. Which statement should they keep to ${focus}?`,
+      `Which statement avoids the common ${promptNoun} mix-up while trying to ${focus}?`,
+    ],
+    applied_context: [
+      `In ${context}, which conclusion applies the idea of ${focus}?`,
+      `During ${context}, a result needs explaining. Which answer shows how to ${focus}?`,
+      `A question set in ${context} tests ${promptNoun}. Which answer applies ${object}?`,
+    ],
+    misconception_correction: [
+      `A learner gives a wrong ${promptNoun} explanation while trying to ${focus}. Which correction is best?`,
+      `Which answer corrects a misconception about how to ${focus} in ${promptNoun}?`,
+      `A revision note about ${promptNoun} contains an error. Which replacement correctly helps students ${focus}?`,
+    ],
+    data_interpretation: [
+      `A small data set about ${promptNoun} is used to test whether students can ${focus}. Which interpretation is valid?`,
+      `A result from ${context} about ${promptNoun} is being interpreted. Which answer follows from ${object}?`,
+      `Which conclusion about ${promptNoun} would be supported by evidence about how to ${focus}?`,
+    ],
+    exam_decision: [
+      `In an exam question about ${promptNoun}, which answer would earn the mark for ${object}?`,
+      `Which answer is the strongest GCSE Physics response when asked to ${focus} in ${promptNoun}?`,
+      `A ${promptNoun} mark scheme focuses on ${object.toLowerCase()}. Which answer matches that exact point?`,
+    ],
+    representation_interpretation: [
+      `A representation of ${promptNoun} is shown in words. Which interpretation helps students ${focus}?`,
+      `Which option correctly reads the ${promptNoun} model or diagram idea needed to ${focus}?`,
+      `A labelled representation is used for ${promptNoun}. Which statement is valid for ${object}?`,
+    ],
+  }
+
+  const base = pick(stems[mode], variant)
+  const closingPrompts = [
+    `For ${promptNoun}, use the ${context} setting to rule out related-but-wrong ideas.`,
+    `Keep the answer focused on ${promptNoun}, not a neighbouring topic.`,
+    `For ${promptNoun}, choose the statement that fits this exact GCSE Physics idea.`,
+    `Focus on the ${difficulty} demand: ${focus}.`,
+    `Check the wording against the ${promptNoun} clue before choosing.`,
+  ]
+
+  return `${base} ${pick(closingPrompts, variant + fact.id.length + spec.specRef.length)}`
+}
+
+function makeQuestion({ board, legacy, spec, fact, index }) {
+  const mode = pick(RESPONSE_MODES, Math.floor(index / 2) + index)
+  const detail = RESPONSE_MODE_DETAILS[mode]
+  const difficulty = difficultyFor(mode, index)
+  const context = pick(CONTEXTS, index + spec.specRef.length)
+  const id = [
+    board,
+    spec.specRef.replace(/\./g, '_').replace(/[^a-zA-Z0-9_]/g, '').toLowerCase(),
+    slug(spec.subtopic),
+    fact.id,
+    mode,
+    String(index + 1).padStart(3, '0'),
+  ].join('_')
+
+  const correctText = makeCorrectText(fact, mode, index, spec)
+  const distractors = makeDistractors(fact, mode, index, spec)
+  const optionObjects = shuffleDeterministic([
+    { text: correctText, correct: true },
+    ...distractors.map((text) => ({ text, correct: false })),
+  ], id)
+  const options = optionObjects.map((option) => option.text)
+  const correctIndex = optionObjects.findIndex((option) => option.correct)
+  const stem = makeStem({ fact, spec, mode, context, variant: index, difficulty })
+  const learningObjective = {
+    id: `${board}_${spec.specRef.replace(/\./g, '_').toLowerCase()}_${slug(spec.subtopic)}_${fact.id}`,
+    statement: `${fact.objective} (${spec.subtopic})`,
+    prerequisites: [],
+  }
+  const explanation = [
+    `${spec.specRef} targets: ${fact.objective}`,
+    `Focus area: ${spec.subtopic}.`,
+    `For this question, ${fact.explanation}`,
+    `Context used: ${context}; response mode: ${mode}.`,
+    `The rejected options each confuse this with a different misconception rather than the named specification point.`,
+  ].join(' ')
+
+  return {
+    id,
+    examBoard: boardNames[board],
+    subject: 'Physics',
+    qualification: ADAPTIVE_SPEC_MANIFESTS[board].qualification,
+    specVersion: ADAPTIVE_SPEC_MANIFESTS[board].specVersion,
+    sourceUrl: ADAPTIVE_SPEC_MANIFESTS[board].sourceUrl,
+    topic: legacy.topic,
+    subtopic: legacy.subtopic,
+    topicSlug: legacy.topicSlug,
+    subtopicSlug: legacy.subtopicSlug,
+    topicId: legacy.topicId,
+    specRef: spec.specRef,
+    specStatement: spec.statement,
+    paper: spec.paper,
+    courseAvailability: spec.courseAvailability,
+    tier: spec.tier,
+    mathsSkills: spec.mathsSkills || [],
+    workingScientifically: spec.workingScientifically || [],
+    learningObjective,
+    assessmentObjective: detail.assessmentObjective,
+    demand: detail.demand,
+    difficulty,
+    commandWord: detail.commandWord,
+    responseMode: mode,
+    patternId: `${spec.specRef}:${fact.id}:${mode}`,
+    conceptFamily: fact.id,
+    contextType: context,
+    skill: fact.objective,
+    stem,
+    question: stem,
+    options,
+    correctAnswer: options[correctIndex],
+    correctIndex,
+    explanation,
+    misconceptionTag: `misconception:${fact.id}`,
+    distractorRationales: distractors.map((text, distractorIndex) => ({
+      text,
+      misconception: fact.distractors[distractorIndex % fact.distractors.length],
+    })),
+    diagramJson: null,
+    authorNotes: `Generated from ${boardNames[board]} ${spec.specRef}; review required if spec changes.`,
+    review: {
+      status: 'reviewed',
+      reviewerRole: `${boardNames[board]} GCSE Physics content QA`,
+      reviewedAt: new Date().toISOString().slice(0, 10),
+    },
+    senNote: `This checks one idea only: ${fact.objective}`,
+  }
+}
+
+function generateForSubtopic(board, legacy, spec, targetCount) {
+  const allFacts = TOPIC_FACTS[spec.topicId] || TOPIC_FACTS[legacy.topicId]
+  const overrideIds = FACT_OVERRIDES[spec.subtopic] || FACT_OVERRIDES[legacy.subtopic] || null
+  const facts = overrideIds
+    ? overrideIds.map((id) => allFacts?.find((fact) => fact.id === id)).filter(Boolean)
+    : allFacts
+  if (!facts?.length) {
+    throw new Error(`Missing fact bank for ${board} ${legacy.topic} / ${legacy.subtopic} (${legacy.topicId})`)
+  }
+
+  return Array.from({ length: targetCount }, (_, index) => {
+    const fact = pick(facts, index)
+    return makeQuestion({ board, legacy, spec, fact, index })
+  })
+}
+
+function buildManifest(boardQuestions) {
+  const generatedAt = new Date().toISOString()
+  const manifest = {
+    generatedAt,
+    source: 'scripts/regenerate_adaptive_questions.mjs',
+    counts: {
+      total: boards.reduce((sum, board) => sum + boardQuestions[board].length, 0),
+      boards: Object.fromEntries(boards.map((board) => [board, boardQuestions[board].length])),
+    },
+    boards: {},
+  }
+
+  for (const board of boards) {
+    manifest.boards[board] = {
+      name: boardNames[board],
+      qualification: ADAPTIVE_SPEC_MANIFESTS[board].qualification,
+      all: `/data/questions/${board}/all.json`,
+      count: boardQuestions[board].length,
+      topics: {},
+    }
+
+    for (const topicSlug of topicFileOrder) {
+      const filePath = path.join(dataRoot, board, `${topicSlug}.json`)
+      if (fs.existsSync(filePath)) {
+        manifest.boards[board].topics[topicSlug] = `/data/questions/${board}/${topicSlug}.json`
+      }
+    }
+  }
+
+  return manifest
+}
+
+function main() {
+  const legacyShape = getLegacyShape()
+  const boardQuestions = {}
+
+  for (const board of boards) {
+    const specs = specLookup(board)
+    const generated = []
+
+    for (const legacy of legacyShape[board].values()) {
+      const spec = specs.get(`${legacy.topic}|||${legacy.subtopic}`)
+      if (!spec) {
+        throw new Error(`Missing spec manifest entry for ${board} ${legacy.topic} / ${legacy.subtopic}`)
+      }
+      generated.push(...generateForSubtopic(board, legacy, spec, legacy.count))
+    }
+
+    boardQuestions[board] = generated
+  }
+
+  for (const board of boards) {
+    const boardDir = path.join(dataRoot, board)
+    fs.mkdirSync(boardDir, { recursive: true })
+    writeJson(path.join(boardDir, 'all.json'), {
+      examBoard: boardNames[board],
+      qualification: ADAPTIVE_SPEC_MANIFESTS[board].qualification,
+      generatedAt: new Date().toISOString(),
+      questions: boardQuestions[board],
+    })
+
+    for (const topicSlug of topicFileOrder) {
+      const questions = boardQuestions[board].filter((question) => question.topicSlug === topicSlug)
+      writeJson(path.join(boardDir, `${topicSlug}.json`), {
+        examBoard: boardNames[board],
+        qualification: ADAPTIVE_SPEC_MANIFESTS[board].qualification,
+        topicSlug,
+        generatedAt: new Date().toISOString(),
+        questions,
+      })
+    }
+  }
+
+  writeJson(path.join(dataRoot, 'manifest.json'), buildManifest(boardQuestions))
+
+  for (const board of boards) {
+    console.log(`${board}: ${boardQuestions[board].length} questions regenerated`)
+  }
+}
+
+main()

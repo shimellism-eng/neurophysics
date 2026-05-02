@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice full regeneration from spec manifests
+- Rebuilt the Adaptive Practice bank for the locked AQA + Edexcel release scope.
+- Added source-of-truth inputs:
+  - `src/data/adaptiveQuestionSource/specManifests.js`
+  - `src/data/adaptiveQuestionSource/questionBlueprints.js`
+- Added deterministic regeneration:
+  - `scripts/regenerate_adaptive_questions.mjs`
+  - `npm run questions:regenerate`
+- Regenerated runtime JSON from the same source for:
+  - AQA: 900 questions
+  - Edexcel: 750 questions
+  - combined manifest: 1,650 questions
+- Each generated question now includes spec reference, spec statement, learning objective, AO, demand, command word, response mode, pattern ID, misconception tag, context type, distractor rationales, author notes, and review metadata.
+- Strengthened `npm run audit:questions` so it fails on missing quality metadata, duplicate exact stems, semantic near-duplicate stems, repeated option sets, repeated explanations, placeholder options, overused objective buckets, topic-file drift, or missing source-manifest coverage.
+- Added `docs/ADAPTIVE_QUESTION_REGENERATION.md` for the next developer.
+- Kept app behaviour untouched: no changes to Adaptive Practice selection logic, 9-step lesson flow, XP/streak, spaced repetition, board filtering, or question rendering.
+- Verification:
+  - `npm run questions:regenerate` passes
+  - `npm test` passes
+  - `npm run build` passes
+  - `git diff --check` passes
+  - `npx cap sync ios` passes
+  - iOS simulator build/run passes on iPhone 17 Pro Max simulator with `CODE_SIGNING_ALLOWED=NO`
+
+### Next step
+- Human sample-review the regenerated Adaptive Practice questions topic by topic, starting with Atomic Structure on AQA and Edexcel.
+- If the sample reads well, commit this as one Adaptive Practice regeneration checkpoint.
+- If any wording feels too mechanical, refine only `questionBlueprints.js` / generator phrasing and regenerate; do not hand-edit runtime JSON.
+
 ### Adaptive Practice question-quality repair
 - Audited Adaptive Practice runtime question data for both shipped boards.
 - AQA status:

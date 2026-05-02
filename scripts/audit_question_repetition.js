@@ -3,6 +3,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { ADAPTIVE_SPEC_MANIFESTS } from '../src/data/adaptiveQuestionSource/specManifests.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
@@ -15,9 +16,34 @@ const qualityRules = {
   nearDuplicateStems: 0,
   repeatedOptions: 0,
   correctAnswerMismatches: 0,
+  missingQualityMetadata: 0,
+  invalidReviewStatus: 0,
+  placeholderOptions: 0,
+  weakBoilerplateStems: 0,
+  overusedObjectiveBuckets: 0,
+  duplicateExplanations: 0,
+  missingSpecEntries: 0,
   missingFromAll: 0,
   changedVsAll: 0,
 }
+const requiredQualityKeys = [
+  'specRef',
+  'specStatement',
+  'paper',
+  'courseAvailability',
+  'tier',
+  'learningObjective',
+  'assessmentObjective',
+  'demand',
+  'commandWord',
+  'responseMode',
+  'patternId',
+  'conceptFamily',
+  'contextType',
+  'misconceptionTag',
+  'authorNotes',
+  'review',
+]
 const strictSchemaKeys = [
   'id',
   'examBoard',
@@ -93,9 +119,17 @@ function summarizeSchema(questions) {
     strict: 0,
     strictPlusRuntimeExtras: 0,
     missingStrictKeys: 0,
+    missingQualityMetadata: [],
+    invalidReviewStatus: [],
+    placeholderOptions: [],
+    weakBoilerplateStems: [],
+    overusedObjectiveBuckets: [],
+    duplicateExplanations: [],
     answerMismatches: [],
     optionLengths: new Map(),
   }
+  const objectiveBuckets = new Map()
+  const explanations = new Map()
 
   for (const question of questions) {
     const keys = Object.keys(question)
@@ -107,8 +141,42 @@ function summarizeSchema(questions) {
     if (!missing.length && extras.length) summary.strictPlusRuntimeExtras += 1
     if (missing.length) summary.missingStrictKeys += 1
 
+    const missingQuality = requiredQualityKeys.filter((key) => {
+      const value = question[key]
+      if (value == null || value === '') return true
+      if (key === 'courseAvailability') return !Array.isArray(value) || value.length === 0
+      if (key === 'learningObjective') return !value?.id || !value?.statement
+      if (key === 'review') return !value?.status
+      return false
+    })
+    if (missingQuality.length) {
+      summary.missingQualityMetadata.push(`${question.id}:${missingQuality.join(',')}`)
+    }
+
+    if (question.review?.status !== 'reviewed') {
+      summary.invalidReviewStatus.push(question.id)
+    }
+
+    const text = questionText(question)
+    if (/^\s*on a\b/i.test(text) || /\b(a learner uses|choose the best answer|test a common misconception)\b/i.test(text)) {
+      summary.weakBoilerplateStems.push(question.id)
+    }
+
+    const explanation = normalizeExact(question.explanation)
+    if (explanation) {
+      if (!explanations.has(explanation)) explanations.set(explanation, [])
+      explanations.get(explanation).push(question.id)
+    }
+
     if (Array.isArray(question.options)) {
       summary.optionLengths.set(question.options.length, (summary.optionLengths.get(question.options.length) || 0) + 1)
+      if (question.options.some((option) => (
+        option == null ||
+        String(option).trim() === '' ||
+        /different answer|all of these|none of these|joke option/i.test(String(option))
+      ))) {
+        summary.placeholderOptions.push(question.id)
+      }
       if (question.correctAnswer !== question.options[question.correctIndex]) {
         summary.answerMismatches.push(question.id)
       }
@@ -116,7 +184,25 @@ function summarizeSchema(questions) {
       summary.optionLengths.set('not-array', (summary.optionLengths.get('not-array') || 0) + 1)
       summary.answerMismatches.push(question.id)
     }
+
+    const objectiveBucket = [
+      question.examBoard,
+      question.specRef,
+      question.learningObjective?.id,
+      question.assessmentObjective,
+      question.demand,
+      question.responseMode,
+    ].join('|')
+    if (!objectiveBuckets.has(objectiveBucket)) objectiveBuckets.set(objectiveBucket, [])
+    objectiveBuckets.get(objectiveBucket).push(question.id)
   }
+
+  summary.overusedObjectiveBuckets = [...objectiveBuckets.entries()]
+    .filter(([, ids]) => ids.length > 3)
+    .map(([bucket, ids]) => `${bucket}:${ids.length}`)
+  summary.duplicateExplanations = [...explanations.entries()]
+    .filter(([, ids]) => ids.length > 1)
+    .map(([explanation, ids]) => `${ids.length}x:${ids.slice(0, 4).join(',')}:${explanation.slice(0, 80)}`)
 
   return {
     ...summary,
@@ -138,6 +224,12 @@ function summarizeQuestions(label, questions) {
   console.log(`near-duplicate stems: ${nearDuplicateStems.length}`)
   console.log(`repeated option sets: ${repeatedOptions.length}`)
   console.log(`correctAnswer mismatches: ${schema.answerMismatches.length}`)
+  console.log(`missing quality metadata: ${schema.missingQualityMetadata.length}`)
+  console.log(`invalid review status: ${schema.invalidReviewStatus.length}`)
+  console.log(`placeholder options: ${schema.placeholderOptions.length}`)
+  console.log(`weak boilerplate stems: ${schema.weakBoilerplateStems.length}`)
+  console.log(`overused objective buckets: ${schema.overusedObjectiveBuckets.length}`)
+  console.log(`duplicate explanations: ${schema.duplicateExplanations.length}`)
   console.log(`schema strict: ${schema.strict}`)
   console.log(`schema strict + runtime extras: ${schema.strictPlusRuntimeExtras}`)
   console.log(`schema missing strict keys: ${schema.missingStrictKeys}`)
@@ -171,6 +263,12 @@ function summarizeQuestions(label, questions) {
     nearDuplicateStems: nearDuplicateStems.length,
     repeatedOptions: repeatedOptions.length,
     correctAnswerMismatches: schema.answerMismatches.length,
+    missingQualityMetadata: schema.missingQualityMetadata.length,
+    invalidReviewStatus: schema.invalidReviewStatus.length,
+    placeholderOptions: schema.placeholderOptions.length,
+    weakBoilerplateStems: schema.weakBoilerplateStems.length,
+    overusedObjectiveBuckets: schema.overusedObjectiveBuckets.length,
+    duplicateExplanations: schema.duplicateExplanations.length,
   }
 }
 
@@ -213,6 +311,38 @@ function compareAllWithTopicFiles(manifest, boardId, allQuestions) {
   }
 }
 
+function compareSpecCoverage(boardId, allQuestions) {
+  const entries = ADAPTIVE_SPEC_MANIFESTS[boardId]?.entries || []
+  const missing = []
+  const counts = new Map()
+
+  for (const question of allQuestions) {
+    const key = `${question.topic}|||${question.subtopic}|||${question.specRef}`
+    counts.set(key, (counts.get(key) || 0) + 1)
+  }
+
+  for (const entry of entries) {
+    const key = `${entry.topic}|||${entry.subtopic}|||${entry.specRef}`
+    if (!counts.get(key)) missing.push(key)
+  }
+
+  const bySpec = countBy(allQuestions, (question) => question.specRef)
+  console.log(`\n## ${boardId}/spec coverage`)
+  console.log(`  source manifest entries: ${entries.length}`)
+  console.log(`  missing source entries: ${missing.length}`)
+  if (missing.length) {
+    console.log(`  missing sample: ${missing.slice(0, 8).join('; ')}`)
+  }
+  console.log('  top specRef coverage:')
+  for (const [specRef, count] of bySpec.slice(0, 10)) {
+    console.log(`    - ${specRef}: ${count}`)
+  }
+
+  return {
+    missingSpecEntries: missing.length,
+  }
+}
+
 function collectFailures(boardId, summary, topicFileSummary) {
   const failures = []
   const metrics = { ...summary, ...topicFileSummary }
@@ -240,7 +370,8 @@ function main() {
     const questionSummary = summarizeQuestions(`${boardId}/all.json`, allQuestions)
     console.log(`\n## ${boardId}/all.json vs topic files`)
     const topicFileSummary = compareAllWithTopicFiles(manifest, boardId, allQuestions)
-    failures.push(...collectFailures(boardId, questionSummary, topicFileSummary))
+    const specCoverageSummary = compareSpecCoverage(boardId, allQuestions)
+    failures.push(...collectFailures(boardId, questionSummary, { ...topicFileSummary, ...specCoverageSummary }))
   }
 
   if (failures.length) {

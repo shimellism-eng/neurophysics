@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Kinetic Energy authored
+- Fixed AQA `Kinetic Energy`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.1.1.2`.
+  - AQA Combined Science `combinedSpecRef`: `6.1.1.2`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Kinetic Energy runtime count: 19.
+  - Authored IDs: 19.
+  - Bad scaffold/answer phrase count: 0.
+  - Initial duplicate-gate failure caught one duplicate falling-object stem and one repeated option set before simulator; both were rewritten.
+  - Covers kinetic energy, gravitational potential energy, elastic potential energy, proportional reasoning, unit conversion, and store-transfer contexts.
+- Current Energy good-to-go count after this fix:
+  - AQA: 75/94 good to go.
+  - Edexcel: 0/94 good to go.
+  - Combined Energy: 75/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - Exact AQA Kinetic Energy route was shown live in Simulator at `/practice/energy_equations`.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue AQA Energy:
+  - AQA `Power`: 19 authored exam-style questions.
+
 ### Adaptive Practice AQA Insulation authored
 - Fixed AQA `Insulation`: 19/19 authored and passed.
 - Hidden spec metadata:

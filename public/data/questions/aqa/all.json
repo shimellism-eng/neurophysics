@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T09:19:14.725Z",
+  "generatedAt": "2026-05-02T09:28:20.227Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -16663,7 +16663,7 @@
       "senNote": "Checks: Choose a building change that reduces cooling rate."
     },
     {
-      "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy_direct_recall_001",
+      "id": "aqa_energy_kinetic_equation_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -16675,6 +16675,7 @@
       "subtopicSlug": "kinetic_energy",
       "topicId": "energy_equations",
       "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
       "specStatement": "Calculate changes in energy stores including kinetic energy.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -16688,56 +16689,57 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Kinetic Energy)",
+        "id": "aqa_energy_kinetic_equation_001_lo",
+        "statement": "Recall the kinetic energy equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.2:kinetic_energy:direct_recall",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a safety decision",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_kinetic_equation_001",
+      "conceptFamily": "recall_the_kinetic_energy_equation",
+      "contextType": "exam_style",
       "skill": "Kinetic Energy practice",
-      "stem": "Which statement is correct for kinetic energy? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "question": "Which statement is correct for kinetic energy? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
+      "stem": "Which equation is used to calculate the kinetic energy of a moving object?",
+      "question": "Which equation is used to calculate the kinetic energy of a moving object?",
       "options": [
-        "For kinetic energy, the answer claims that kinetic energy = mass × speed.",
-        "In this kinetic energy item, kinetic energy does not depend on speed.",
-        "For kinetic energy, the statement is that kinetic energy = weight × height.",
-        "For kinetic energy, it means that kinetic energy = 0.5 × mass × speed²."
+        "kinetic energy = 0.5 × mass × speed²",
+        "kinetic energy = mass × speed",
+        "kinetic energy = mass × gravitational field strength × height",
+        "kinetic energy = force × distance"
       ],
-      "correctAnswer": "For kinetic energy, it means that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 3,
-      "explanation": "4.1.1.2 targets: Use the kinetic energy equation. Focus area: Kinetic Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
+      "correctAnswer": "kinetic energy = 0.5 × mass × speed²",
+      "correctIndex": 0,
+      "explanation": "Kinetic energy is calculated using Eₖ = 0.5mv², where mass is in kg and speed is in m/s.",
+      "misconceptionTag": "kinetic-equation",
       "distractorRationales": [
         {
-          "text": "For kinetic energy, the answer claims that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy = mass × speed."
+          "text": "kinetic energy = mass × speed",
+          "misconception": "missing square and half factor"
         },
         {
-          "text": "For kinetic energy, the statement is that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy = weight × height."
+          "text": "kinetic energy = mass × gravitational field strength × height",
+          "misconception": ""
         },
         {
-          "text": "In this kinetic energy item, kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy does not depend on speed."
+          "text": "kinetic energy = force × distance",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
+      "senNote": "Checks: Recall the kinetic energy equation."
     },
     {
-      "id": "aqa_4_1_1_2_kinetic_energy_gpe_concept_discrimination_002",
+      "id": "aqa_energy_kinetic_calculate_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -16749,6 +16751,7 @@
       "subtopicSlug": "kinetic_energy",
       "topicId": "energy_equations",
       "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
       "specStatement": "Calculate changes in energy stores including kinetic energy.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -16762,56 +16765,1273 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_gpe",
-        "statement": "Use gravitational potential energy. (Kinetic Energy)",
+        "id": "aqa_energy_kinetic_calculate_002_lo",
+        "statement": "Calculate kinetic energy from mass and speed.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_kinetic_calculate_002",
+      "conceptFamily": "calculate_kinetic_energy_from_mass_and_speed",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A 2.0 kg trolley moves at 3.0 m/s. What is its kinetic energy?",
+      "question": "A 2.0 kg trolley moves at 3.0 m/s. What is its kinetic energy?",
+      "options": [
+        "9.0 J",
+        "6.0 J",
+        "18 J",
+        "1.5 J"
+      ],
+      "correctAnswer": "9.0 J",
+      "correctIndex": 0,
+      "explanation": "Eₖ = 0.5mv² = 0.5 × 2.0 × 3.0² = 9.0 J.",
+      "misconceptionTag": "kinetic-square-speed",
+      "distractorRationales": [
+        {
+          "text": "6.0 J",
+          "misconception": ""
+        },
+        {
+          "text": "18 J",
+          "misconception": ""
+        },
+        {
+          "text": "1.5 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate kinetic energy from mass and speed."
+    },
+    {
+      "id": "aqa_energy_kinetic_speed_squared_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_kinetic_speed_squared_003_lo",
+        "statement": "Describe the effect of speed on kinetic energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_kinetic_speed_squared_003",
+      "conceptFamily": "describe_the_effect_of_speed_on_kinetic_energy",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A car keeps the same mass but doubles its speed. What happens to its kinetic energy?",
+      "question": "A car keeps the same mass but doubles its speed. What happens to its kinetic energy?",
+      "options": [
+        "It becomes four times larger.",
+        "It becomes two times larger.",
+        "It stays the same.",
+        "It becomes half as large."
+      ],
+      "correctAnswer": "It becomes four times larger.",
+      "correctIndex": 0,
+      "explanation": "Kinetic energy depends on speed squared, so doubling speed makes the kinetic energy four times larger.",
+      "misconceptionTag": "speed-doubled-ke",
+      "distractorRationales": [
+        {
+          "text": "It becomes two times larger.",
+          "misconception": ""
+        },
+        {
+          "text": "It stays the same.",
+          "misconception": ""
+        },
+        {
+          "text": "It becomes half as large.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe the effect of speed on kinetic energy."
+    },
+    {
+      "id": "aqa_energy_kinetic_mass_effect_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_kinetic_mass_effect_004_lo",
+        "statement": "Relate mass to kinetic energy at constant speed.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_kinetic_mass_effect_004",
+      "conceptFamily": "relate_mass_to_kinetic_energy_at_constant_speed",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "Two objects move at the same speed. Object X has twice the mass of object Y. How does the kinetic energy of X compare with Y?",
+      "question": "Two objects move at the same speed. Object X has twice the mass of object Y. How does the kinetic energy of X compare with Y?",
+      "options": [
+        "X has twice the kinetic energy of Y.",
+        "X has four times the kinetic energy of Y.",
+        "X has half the kinetic energy of Y.",
+        "X has the same kinetic energy as Y."
+      ],
+      "correctAnswer": "X has twice the kinetic energy of Y.",
+      "correctIndex": 0,
+      "explanation": "For the same speed, kinetic energy is directly proportional to mass, so doubling mass doubles kinetic energy.",
+      "misconceptionTag": "mass-ke-proportional",
+      "distractorRationales": [
+        {
+          "text": "X has four times the kinetic energy of Y.",
+          "misconception": ""
+        },
+        {
+          "text": "X has half the kinetic energy of Y.",
+          "misconception": ""
+        },
+        {
+          "text": "X has the same kinetic energy as Y.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Relate mass to kinetic energy at constant speed."
+    },
+    {
+      "id": "aqa_energy_kinetic_units_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_kinetic_units_005_lo",
+        "statement": "Recall the unit of kinetic energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_kinetic_units_005",
+      "conceptFamily": "recall_the_unit_of_kinetic_energy",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "Which unit is used for the energy stored by a moving object?",
+      "question": "Which unit is used for the energy stored by a moving object?",
+      "options": [
+        "joule",
+        "watt",
+        "newton",
+        "metre per second"
+      ],
+      "correctAnswer": "joule",
+      "correctIndex": 0,
+      "explanation": "This is an energy store, so the unit is the joule.",
+      "misconceptionTag": "energy-unit",
+      "distractorRationales": [
+        {
+          "text": "watt",
+          "misconception": ""
+        },
+        {
+          "text": "newton",
+          "misconception": ""
+        },
+        {
+          "text": "metre per second",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the unit of kinetic energy."
+    },
+    {
+      "id": "aqa_energy_kinetic_rearrange_speed_006",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_kinetic_rearrange_speed_006_lo",
+        "statement": "Rearrange the kinetic energy equation to find speed.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_kinetic_rearrange_speed_006",
+      "conceptFamily": "rearrange_the_kinetic_energy_equation_to_find_speed",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A 4.0 kg object has 50 J of kinetic energy. Which calculation gives its speed?",
+      "question": "A 4.0 kg object has 50 J of kinetic energy. Which calculation gives its speed?",
+      "options": [
+        "√(2 × 50 ÷ 4.0)",
+        "50 ÷ 4.0",
+        "√(50 × 4.0 ÷ 2)",
+        "2 × 4.0 × 50"
+      ],
+      "correctAnswer": "√(2 × 50 ÷ 4.0)",
+      "correctIndex": 0,
+      "explanation": "From Eₖ = 0.5mv², v = √(2Eₖ ÷ m), so v = √(2 × 50 ÷ 4.0).",
+      "misconceptionTag": "kinetic-rearrange-speed",
+      "distractorRationales": [
+        {
+          "text": "50 ÷ 4.0",
+          "misconception": ""
+        },
+        {
+          "text": "√(50 × 4.0 ÷ 2)",
+          "misconception": ""
+        },
+        {
+          "text": "2 × 4.0 × 50",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the kinetic energy equation to find speed."
+    },
+    {
+      "id": "aqa_energy_gpe_equation_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_gpe_equation_007_lo",
+        "statement": "Recall the gravitational potential energy equation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_gpe_equation_007",
+      "conceptFamily": "recall_the_gravitational_potential_energy_equation",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "Which equation calculates the gravitational potential energy gained when an object is lifted?",
+      "question": "Which equation calculates the gravitational potential energy gained when an object is lifted?",
+      "options": [
+        "gravitational potential energy = mass × gravitational field strength × height",
+        "gravitational potential energy = 0.5 × mass × speed²",
+        "gravitational potential energy = force ÷ area",
+        "gravitational potential energy = current × time"
+      ],
+      "correctAnswer": "gravitational potential energy = mass × gravitational field strength × height",
+      "correctIndex": 0,
+      "explanation": "Gravitational potential energy gained is calculated using Eₚ = mgh.",
+      "misconceptionTag": "gpe-equation",
+      "distractorRationales": [
+        {
+          "text": "gravitational potential energy = 0.5 × mass × speed²",
+          "misconception": ""
+        },
+        {
+          "text": "gravitational potential energy = force ÷ area",
+          "misconception": ""
+        },
+        {
+          "text": "gravitational potential energy = current × time",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the gravitational potential energy equation."
+    },
+    {
+      "id": "aqa_energy_gpe_calculate_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_gpe_calculate_008_lo",
+        "statement": "Calculate gravitational potential energy gained.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_gpe_calculate_008",
+      "conceptFamily": "calculate_gravitational_potential_energy_gained",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A 5.0 kg box is lifted 2.0 m. The gravitational field strength is 10 N/kg. What is the increase in gravitational potential energy?",
+      "question": "A 5.0 kg box is lifted 2.0 m. The gravitational field strength is 10 N/kg. What is the increase in gravitational potential energy?",
+      "options": [
+        "100 J",
+        "25 J",
+        "10 J",
+        "250 J"
+      ],
+      "correctAnswer": "100 J",
+      "correctIndex": 0,
+      "explanation": "Eₚ = mgh = 5.0 × 10 × 2.0 = 100 J.",
+      "misconceptionTag": "gpe-mgh",
+      "distractorRationales": [
+        {
+          "text": "25 J",
+          "misconception": ""
+        },
+        {
+          "text": "10 J",
+          "misconception": ""
+        },
+        {
+          "text": "250 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate gravitational potential energy gained."
+    },
+    {
+      "id": "aqa_energy_gpe_height_compare_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_gpe_height_compare_009_lo",
+        "statement": "Relate height to gravitational potential energy gained.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_gpe_height_compare_009",
+      "conceptFamily": "relate_height_to_gravitational_potential_energy_gained",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A student lifts the same bag onto two shelves. Shelf B is twice as high as shelf A. How does the gravitational potential energy gained compare?",
+      "question": "A student lifts the same bag onto two shelves. Shelf B is twice as high as shelf A. How does the gravitational potential energy gained compare?",
+      "options": [
+        "The gain for shelf B is twice the gain for shelf A.",
+        "The gain for shelf B is four times the gain for shelf A.",
+        "The gain is the same for both shelves.",
+        "The gain for shelf B is half the gain for shelf A."
+      ],
+      "correctAnswer": "The gain for shelf B is twice the gain for shelf A.",
+      "correctIndex": 0,
+      "explanation": "For the same mass and gravitational field strength, gravitational potential energy gained is directly proportional to height.",
+      "misconceptionTag": "height-gpe-proportional",
+      "distractorRationales": [
+        {
+          "text": "The gain for shelf B is four times the gain for shelf A.",
+          "misconception": ""
+        },
+        {
+          "text": "The gain is the same for both shelves.",
+          "misconception": ""
+        },
+        {
+          "text": "The gain for shelf B is half the gain for shelf A.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Relate height to gravitational potential energy gained."
+    },
+    {
+      "id": "aqa_energy_gpe_to_ke_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_gpe_to_ke_010_lo",
+        "statement": "Describe energy transfer from GPE to kinetic energy during falling.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_gpe_to_ke_010",
+      "conceptFamily": "describe_energy_transfer_from_gpe_to_kinetic_energy_during_falling",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A stone is dropped from a bridge. Ignoring air resistance, why does its kinetic energy increase before it hits the water?",
+      "question": "A stone is dropped from a bridge. Ignoring air resistance, why does its kinetic energy increase before it hits the water?",
+      "options": [
+        "Its gravitational potential store decreases as its kinetic store increases.",
+        "Its kinetic store decreases as its gravitational potential store increases.",
+        "Its thermal store becomes the only energy store.",
+        "Its chemical store releases energy because it is falling."
+      ],
+      "correctAnswer": "Its gravitational potential store decreases as its kinetic store increases.",
+      "correctIndex": 0,
+      "explanation": "As the stone falls, its height decreases and its speed increases. Energy is transferred from the gravitational potential store to the kinetic store.",
+      "misconceptionTag": "falling-energy-transfer",
+      "distractorRationales": [
+        {
+          "text": "Its kinetic store decreases as its gravitational potential store increases.",
+          "misconception": ""
+        },
+        {
+          "text": "Its thermal store becomes the only energy store.",
+          "misconception": ""
+        },
+        {
+          "text": "Its chemical store releases energy because it is falling.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe energy transfer from GPE to kinetic energy during falling."
+    },
+    {
+      "id": "aqa_energy_elastic_equation_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_elastic_equation_011_lo",
+        "statement": "Recall the elastic potential energy equation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_elastic_equation_011",
+      "conceptFamily": "recall_the_elastic_potential_energy_equation",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "Which equation calculates the elastic potential energy stored in a stretched spring?",
+      "question": "Which equation calculates the elastic potential energy stored in a stretched spring?",
+      "options": [
+        "elastic potential energy = 0.5 × spring constant × extension²",
+        "elastic potential energy = spring constant × extension",
+        "elastic potential energy = mass × gravitational field strength × height",
+        "elastic potential energy = voltage × current"
+      ],
+      "correctAnswer": "elastic potential energy = 0.5 × spring constant × extension²",
+      "correctIndex": 0,
+      "explanation": "Elastic potential energy is Eₑ = 0.5ke², provided the limit of proportionality has not been exceeded.",
+      "misconceptionTag": "elastic-equation",
+      "distractorRationales": [
+        {
+          "text": "elastic potential energy = spring constant × extension",
+          "misconception": ""
+        },
+        {
+          "text": "elastic potential energy = mass × gravitational field strength × height",
+          "misconception": ""
+        },
+        {
+          "text": "elastic potential energy = voltage × current",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the elastic potential energy equation."
+    },
+    {
+      "id": "aqa_energy_elastic_calculate_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_elastic_calculate_012_lo",
+        "statement": "Calculate elastic potential energy stored in a spring.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_elastic_calculate_012",
+      "conceptFamily": "calculate_elastic_potential_energy_stored_in_a_spring",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A spring with spring constant 80 N/m is stretched by 0.20 m. What is the elastic potential energy stored?",
+      "question": "A spring with spring constant 80 N/m is stretched by 0.20 m. What is the elastic potential energy stored?",
+      "options": [
+        "1.6 J",
+        "16 J",
+        "8.0 J",
+        "0.80 J"
+      ],
+      "correctAnswer": "1.6 J",
+      "correctIndex": 0,
+      "explanation": "Eₑ = 0.5ke² = 0.5 × 80 × 0.20² = 1.6 J.",
+      "misconceptionTag": "elastic-extension-squared",
+      "distractorRationales": [
+        {
+          "text": "16 J",
+          "misconception": ""
+        },
+        {
+          "text": "8.0 J",
+          "misconception": ""
+        },
+        {
+          "text": "0.80 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate elastic potential energy stored in a spring."
+    },
+    {
+      "id": "aqa_energy_elastic_extension_squared_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_elastic_extension_squared_013_lo",
+        "statement": "Describe the effect of extension on elastic potential energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_elastic_extension_squared_013",
+      "conceptFamily": "describe_the_effect_of_extension_on_elastic_potential_energy",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A spring is stretched twice as far while the spring constant stays the same. What happens to the elastic potential energy stored?",
+      "question": "A spring is stretched twice as far while the spring constant stays the same. What happens to the elastic potential energy stored?",
+      "options": [
+        "It becomes four times larger because extension is squared.",
+        "It becomes two times larger because extension is doubled.",
+        "It stays the same because the spring constant is unchanged.",
+        "It becomes smaller because the spring has been stretched further."
+      ],
+      "correctAnswer": "It becomes four times larger because extension is squared.",
+      "correctIndex": 0,
+      "explanation": "Elastic potential energy depends on extension squared, so doubling extension makes the stored energy four times larger.",
+      "misconceptionTag": "extension-squared-epe",
+      "distractorRationales": [
+        {
+          "text": "It becomes two times larger because extension is doubled.",
+          "misconception": ""
+        },
+        {
+          "text": "It stays the same because the spring constant is unchanged.",
+          "misconception": ""
+        },
+        {
+          "text": "It becomes smaller because the spring has been stretched further.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe the effect of extension on elastic potential energy."
+    },
+    {
+      "id": "aqa_energy_elastic_limit_014",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_elastic_limit_014_lo",
+        "statement": "State when the elastic potential energy equation applies.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "state",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_elastic_limit_014",
+      "conceptFamily": "state_when_the_elastic_potential_energy_equation_applies",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "The equation Eₑ = 0.5ke² is used for a spring. Which condition must apply?",
+      "question": "The equation Eₑ = 0.5ke² is used for a spring. Which condition must apply?",
+      "options": [
+        "The spring has not exceeded its limit of proportionality.",
+        "The spring must be moving at constant speed.",
+        "The spring must be heated until it glows.",
+        "The spring must have zero extension."
+      ],
+      "correctAnswer": "The spring has not exceeded its limit of proportionality.",
+      "correctIndex": 0,
+      "explanation": "The elastic potential energy equation applies for a spring when the limit of proportionality has not been exceeded.",
+      "misconceptionTag": "elastic-limit-proportionality",
+      "distractorRationales": [
+        {
+          "text": "The spring must be moving at constant speed.",
+          "misconception": ""
+        },
+        {
+          "text": "The spring must be heated until it glows.",
+          "misconception": ""
+        },
+        {
+          "text": "The spring must have zero extension.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: State when the elastic potential energy equation applies."
+    },
+    {
+      "id": "aqa_energy_ke_gpe_speed_from_height_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_ke_gpe_speed_from_height_015_lo",
+        "statement": "Explain speed increase using energy store transfers.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_ke_gpe_speed_from_height_015",
+      "conceptFamily": "explain_speed_increase_using_energy_store_transfers",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A toy car rolls down a ramp. Ignoring friction, why does its speed increase?",
+      "question": "A toy car rolls down a ramp. Ignoring friction, why does its speed increase?",
+      "options": [
+        "Energy is transferred from its gravitational potential store to its kinetic store.",
+        "Energy is created by the ramp.",
+        "Energy is transferred from its kinetic store to its gravitational potential store.",
+        "The car loses mass as it moves down the ramp."
+      ],
+      "correctAnswer": "Energy is transferred from its gravitational potential store to its kinetic store.",
+      "correctIndex": 0,
+      "explanation": "As the car loses height, energy is transferred from its gravitational potential store to its kinetic store, increasing its speed.",
+      "misconceptionTag": "ramp-energy-transfer",
+      "distractorRationales": [
+        {
+          "text": "Energy is created by the ramp.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy is transferred from its kinetic store to its gravitational potential store.",
+          "misconception": ""
+        },
+        {
+          "text": "The car loses mass as it moves down the ramp.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain speed increase using energy store transfers."
+    },
+    {
+      "id": "aqa_energy_ke_with_friction_016",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_ke_with_friction_016_lo",
+        "statement": "Describe energy dissipation when a moving object slows down.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_ke_with_friction_016",
+      "conceptFamily": "describe_energy_dissipation_when_a_moving_object_slows_down",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "A skateboard slows down on a rough surface. Where is most of the decrease in kinetic energy transferred?",
+      "question": "A skateboard slows down on a rough surface. Where is most of the decrease in kinetic energy transferred?",
+      "options": [
+        "To the thermal stores of the skateboard, ground and surroundings.",
+        "To the nuclear store of the ground.",
+        "To the gravitational potential store of the skateboard only.",
+        "It is destroyed by friction."
+      ],
+      "correctAnswer": "To the thermal stores of the skateboard, ground and surroundings.",
+      "correctIndex": 0,
+      "explanation": "Friction transfers energy from the kinetic store to thermal stores of the objects and surroundings. The energy is not destroyed.",
+      "misconceptionTag": "friction-destroys-energy",
+      "distractorRationales": [
+        {
+          "text": "To the nuclear store of the ground.",
+          "misconception": ""
+        },
+        {
+          "text": "To the gravitational potential store of the skateboard only.",
+          "misconception": ""
+        },
+        {
+          "text": "It is destroyed by friction.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe energy dissipation when a moving object slows down."
+    },
+    {
+      "id": "aqa_energy_ke_graph_compare_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_ke_graph_compare_017_lo",
+        "statement": "Compare kinetic energies for objects with equal mass.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_energy_ke_graph_compare_017",
+      "conceptFamily": "compare_kinetic_energies_for_objects_with_equal_mass",
+      "contextType": "exam_style",
+      "skill": "Kinetic Energy practice",
+      "stem": "Two identical trolleys move along a track. Trolley A moves at 2 m/s and trolley B moves at 4 m/s. Which trolley has the greater kinetic energy?",
+      "question": "Two identical trolleys move along a track. Trolley A moves at 2 m/s and trolley B moves at 4 m/s. Which trolley has the greater kinetic energy?",
+      "options": [
+        "Trolley B, because it has the greater speed.",
+        "Trolley A, because it has the lower speed.",
+        "Both trolleys have the same kinetic energy because their masses are the same.",
+        "Neither trolley has kinetic energy unless it is lifted."
+      ],
+      "correctAnswer": "Trolley B, because it has the greater speed.",
+      "correctIndex": 0,
+      "explanation": "The trolleys have the same mass, so the faster trolley has more kinetic energy.",
+      "misconceptionTag": "same-mass-same-ke",
+      "distractorRationales": [
+        {
+          "text": "Trolley A, because it has the lower speed.",
+          "misconception": ""
+        },
+        {
+          "text": "Both trolleys have the same kinetic energy because their masses are the same.",
+          "misconception": ""
+        },
+        {
+          "text": "Neither trolley has kinetic energy unless it is lifted.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare kinetic energies for objects with equal mass."
+    },
+    {
+      "id": "aqa_energy_gpe_missing_g_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Kinetic Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "kinetic_energy",
+      "topicId": "energy_equations",
+      "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
+      "specStatement": "Calculate changes in energy stores including kinetic energy.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [
+        "MS 3b",
+        "MS 3c"
+      ],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_gpe_missing_g_018_lo",
+        "statement": "Identify quantities needed for a GPE calculation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.2:gpe:concept_discrimination",
-      "conceptFamily": "gpe",
-      "contextType": "a graph-reading task",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_gpe_missing_g_018",
+      "conceptFamily": "identify_quantities_needed_for_a_gpe_calculation",
+      "contextType": "exam_style",
       "skill": "Kinetic Energy practice",
-      "stem": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "question": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use gravitational potential energy.",
+      "stem": "The mass and height of a raised object are given. What extra value is needed to calculate its gravitational potential energy?",
+      "question": "The mass and height of a raised object are given. What extra value is needed to calculate its gravitational potential energy?",
       "options": [
-        "For kinetic energy, it means that gravitational potential energy = mass × gravitational field strength × height.",
-        "For kinetic energy, the statement is that gPE = mass ÷ height.",
-        "For kinetic energy, the statement is that gPE is measured in newtons.",
-        "For kinetic energy, the statement is that gPE depends only on speed."
+        "gravitational field strength",
+        "speed",
+        "current",
+        "spring constant"
       ],
-      "correctAnswer": "For kinetic energy, it means that gravitational potential energy = mass × gravitational field strength × height.",
+      "correctAnswer": "gravitational field strength",
       "correctIndex": 0,
-      "explanation": "4.1.1.2 targets: Use gravitational potential energy. Focus area: Kinetic Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
+      "explanation": "Use Eₚ = mgh, so gravitational field strength is needed as well as mass and height.",
+      "misconceptionTag": "gpe-required-quantity",
       "distractorRationales": [
         {
-          "text": "For kinetic energy, the statement is that gPE depends only on speed.",
-          "misconception": "GPE = mass ÷ height."
+          "text": "speed",
+          "misconception": ""
         },
         {
-          "text": "For kinetic energy, the statement is that gPE is measured in newtons.",
-          "misconception": "GPE depends only on speed."
+          "text": "current",
+          "misconception": ""
         },
         {
-          "text": "For kinetic energy, the statement is that gPE = mass ÷ height.",
-          "misconception": "GPE is measured in newtons."
+          "text": "spring constant",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
+      "senNote": "Checks: Identify quantities needed for a GPE calculation."
     },
     {
-      "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy_misconception_correction_003",
+      "id": "aqa_energy_ke_unit_conversion_019",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -16823,6 +18043,7 @@
       "subtopicSlug": "kinetic_energy",
       "topicId": "energy_equations",
       "specRef": "4.1.1.2",
+      "combinedSpecRef": "6.1.1.2",
       "specStatement": "Calculate changes in energy stores including kinetic energy.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -16836,1237 +18057,54 @@
       ],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Kinetic Energy)",
+        "id": "aqa_energy_ke_unit_conversion_019_lo",
+        "statement": "Convert mass to kilograms before using the kinetic energy equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.2:elastic_energy:misconception_correction",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a comparison question",
-      "skill": "Kinetic Energy practice",
-      "stem": "A revision note about kinetic energy contains an error. Which replacement is correct? Demand focus: use elastic potential energy.",
-      "question": "A revision note about kinetic energy contains an error. Which replacement is correct? Demand focus: use elastic potential energy.",
-      "options": [
-        "For kinetic energy, the option says that elastic energy = spring constant × extension.",
-        "For kinetic energy, the option says that elastic energy is measured in kilograms.",
-        "For kinetic energy, it means that elastic potential energy = 0.5 × spring constant × extension².",
-        "In this item, it means that elastic energy is independent of extension."
-      ],
-      "correctAnswer": "For kinetic energy, it means that elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 2,
-      "explanation": "4.1.1.2 targets: Use elastic potential energy. Focus area: Kinetic Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the option says that elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy = spring constant × extension."
-        },
-        {
-          "text": "For kinetic energy, the option says that elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy is independent of extension."
-        },
-        {
-          "text": "In this item, it means that elastic energy is independent of extension.",
-          "misconception": "Elastic energy is measured in kilograms."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_specific_heat_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.2:specific_heat:data_interpretation",
-      "conceptFamily": "specific_heat",
-      "contextType": "a method-choice question",
-      "skill": "Kinetic Energy practice",
-      "stem": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
-      "question": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
-      "options": [
-        "For kinetic energy, the answer claims that energy change = mass × specific heat capacity × temperature change.",
-        "For kinetic energy, the statement is that temperature change is ignored in heating calculations.",
-        "For kinetic energy, the statement is that specific heat capacity is energy per second.",
-        "For kinetic energy, the statement is that specific heat capacity is measured in newtons per metre."
-      ],
-      "correctAnswer": "For kinetic energy, the answer claims that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 0,
-      "explanation": "4.1.1.2 targets: Use specific heat capacity. Focus area: Kinetic Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the statement is that specific heat capacity is energy per second.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "For kinetic energy, the statement is that temperature change is ignored in heating calculations.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For kinetic energy, the statement is that specific heat capacity is measured in newtons per metre.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_unit_check_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_unit_check",
-        "statement": "Check energy calculation units. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.2:unit_check:representation_interpretation",
-      "conceptFamily": "unit_check",
-      "contextType": "a results discussion",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which option correctly reads the kinetic energy model or diagram idea? Keep the answer focused on kinetic energy: check energy calculation units.",
-      "question": "Which option correctly reads the kinetic energy model or diagram idea? Keep the answer focused on kinetic energy: check energy calculation units.",
-      "options": [
-        "For kinetic energy, it means that energy is measured in pascals.",
-        "The answer for kinetic energy says that energy calculated from these equations is measured in joules.",
-        "The answer for kinetic energy says that energy is measured in amperes.",
-        "The answer for kinetic energy says that energy is measured in hertz."
-      ],
-      "correctAnswer": "The answer for kinetic energy says that energy calculated from these equations is measured in joules.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.2 targets: Check energy calculation units. Focus area: Kinetic Energy. For this question, Energy calculated from these equations is measured in joules. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_check",
-      "distractorRationales": [
-        {
-          "text": "The answer for kinetic energy says that energy is measured in hertz.",
-          "misconception": "Energy is measured in amperes."
-        },
-        {
-          "text": "For kinetic energy, it means that energy is measured in pascals.",
-          "misconception": "Energy is measured in hertz."
-        },
-        {
-          "text": "The answer for kinetic energy says that energy is measured in amperes.",
-          "misconception": "Energy is measured in pascals."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Check energy calculation units."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.2:kinetic_energy:direct_recall",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a classroom demonstration",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which answer matches this kinetic energy objective: Use the kinetic energy equation? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "question": "Which answer matches this kinetic energy objective: Use the kinetic energy equation? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "options": [
-        "The claim for kinetic energy is that kinetic energy does not depend on speed.",
-        "For kinetic energy, this would mean that kinetic energy = weight × height.",
-        "For kinetic energy: Kinetic energy = mass × speed.",
-        "For kinetic energy, it means that kinetic energy = 0.5 × mass × speed²."
-      ],
-      "correctAnswer": "For kinetic energy, it means that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 3,
-      "explanation": "4.1.1.2 targets: Use the kinetic energy equation. Focus area: Kinetic Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
-      "distractorRationales": [
-        {
-          "text": "The claim for kinetic energy is that kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy = mass × speed."
-        },
-        {
-          "text": "For kinetic energy: Kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy = weight × height."
-        },
-        {
-          "text": "For kinetic energy, this would mean that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy does not depend on speed."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_gpe_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_gpe",
-        "statement": "Use gravitational potential energy. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.1.2:gpe:applied_context",
-      "conceptFamily": "gpe",
-      "contextType": "a revision checkpoint",
-      "skill": "Kinetic Energy practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "question": "In a revision checkpoint, which conclusion is correct for kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "options": [
-        "The answer for kinetic energy says that gravitational potential energy = mass × gravitational field strength × height.",
-        "For kinetic energy, the statement is that gPE is measured in newtons.",
-        "For kinetic energy, the answer claims that gPE depends only on speed.",
-        "For kinetic energy, the statement is that gPE = mass ÷ height."
-      ],
-      "correctAnswer": "The answer for kinetic energy says that gravitational potential energy = mass × gravitational field strength × height.",
-      "correctIndex": 0,
-      "explanation": "4.1.1.2 targets: Use gravitational potential energy. Focus area: Kinetic Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the statement is that gPE = mass ÷ height.",
-          "misconception": "GPE = mass ÷ height."
-        },
-        {
-          "text": "For kinetic energy, the answer claims that gPE depends only on speed.",
-          "misconception": "GPE depends only on speed."
-        },
-        {
-          "text": "For kinetic energy, the statement is that gPE is measured in newtons.",
-          "misconception": "GPE is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.2:elastic_energy:misconception_correction",
-      "conceptFamily": "elastic_energy",
-      "contextType": "an exam-style data table",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which answer corrects a misconception about kinetic energy? Demand focus: use elastic potential energy.",
-      "question": "Which answer corrects a misconception about kinetic energy? Demand focus: use elastic potential energy.",
-      "options": [
-        "The answer for kinetic energy says that elastic potential energy = 0.5 × spring constant × extension².",
-        "In this kinetic energy item, elastic energy is independent of extension.",
-        "For kinetic energy, it means that elastic energy = spring constant × extension.",
-        "In this kinetic energy item, elastic energy is measured in kilograms."
-      ],
-      "correctAnswer": "The answer for kinetic energy says that elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 0,
-      "explanation": "4.1.1.2 targets: Use elastic potential energy. Focus area: Kinetic Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
-      "distractorRationales": [
-        {
-          "text": "In this kinetic energy item, elastic energy is independent of extension.",
-          "misconception": "Elastic energy = spring constant × extension."
-        },
-        {
-          "text": "In this kinetic energy item, elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy is independent of extension."
-        },
-        {
-          "text": "For kinetic energy, it means that elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy is measured in kilograms."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_specific_heat_exam_decision_009",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.1.2:specific_heat:exam_decision",
-      "conceptFamily": "specific_heat",
-      "contextType": "a required-practical notebook",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_energy_ke_unit_conversion_019",
+      "conceptFamily": "convert_mass_to_kilograms_before_using_the_kinetic_energy_equation",
+      "contextType": "exam_style",
       "skill": "Kinetic Energy practice",
-      "stem": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
-      "question": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
+      "stem": "A 500 g model car moves at 4.0 m/s. Which mass should be used in the kinetic energy equation?",
+      "question": "A 500 g model car moves at 4.0 m/s. Which mass should be used in the kinetic energy equation?",
       "options": [
-        "In this kinetic energy item, specific heat capacity is energy per second.",
-        "For kinetic energy, the statement is that energy change = mass × specific heat capacity × temperature change.",
-        "For kinetic energy, the statement is that specific heat capacity is measured in newtons per metre.",
-        "For kinetic energy, the statement is that temperature change is ignored in heating calculations."
+        "0.50 kg",
+        "500 kg",
+        "4.0 kg",
+        "2000 kg"
       ],
-      "correctAnswer": "For kinetic energy, the statement is that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.2 targets: Use specific heat capacity. Focus area: Kinetic Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the statement is that specific heat capacity is measured in newtons per metre.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "In this kinetic energy item, specific heat capacity is energy per second.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For kinetic energy, the statement is that temperature change is ignored in heating calculations.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_unit_check_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_unit_check",
-        "statement": "Check energy calculation units. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.2:unit_check:representation_interpretation",
-      "conceptFamily": "unit_check",
-      "contextType": "a technician report",
-      "skill": "Kinetic Energy practice",
-      "stem": "A representation of kinetic energy is described in words. Which interpretation is correct? Keep the answer focused on kinetic energy: check energy calculation units.",
-      "question": "A representation of kinetic energy is described in words. Which interpretation is correct? Keep the answer focused on kinetic energy: check energy calculation units.",
-      "options": [
-        "For kinetic energy, the option says that energy is measured in pascals.",
-        "For kinetic energy, the option says that energy is measured in amperes.",
-        "For kinetic energy, the option says that energy calculated from these equations is measured in joules.",
-        "For kinetic energy, it means that energy is measured in hertz."
-      ],
-      "correctAnswer": "For kinetic energy, the option says that energy calculated from these equations is measured in joules.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.2 targets: Check energy calculation units. Focus area: Kinetic Energy. For this question, Energy calculated from these equations is measured in joules. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_check",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the option says that energy is measured in amperes.",
-          "misconception": "Energy is measured in amperes."
-        },
-        {
-          "text": "For kinetic energy, it means that energy is measured in hertz.",
-          "misconception": "Energy is measured in hertz."
-        },
-        {
-          "text": "For kinetic energy, the option says that energy is measured in pascals.",
-          "misconception": "Energy is measured in pascals."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Check energy calculation units."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.2:kinetic_energy:concept_discrimination",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a labelled diagram",
-      "skill": "Kinetic Energy practice",
-      "stem": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "question": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "options": [
-        "For kinetic energy, this would mean that kinetic energy does not depend on speed.",
-        "For kinetic energy, this would mean that kinetic energy = weight × height.",
-        "For kinetic energy, this would mean that kinetic energy = mass × speed.",
-        "In this item, it means that kinetic energy = 0.5 × mass × speed²."
-      ],
-      "correctAnswer": "In this item, it means that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 3,
-      "explanation": "4.1.1.2 targets: Use the kinetic energy equation. Focus area: Kinetic Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, this would mean that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy = mass × speed."
-        },
-        {
-          "text": "For kinetic energy, this would mean that kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy = weight × height."
-        },
-        {
-          "text": "For kinetic energy, this would mean that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy does not depend on speed."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_gpe_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_gpe",
-        "statement": "Use gravitational potential energy. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.1.2:gpe:applied_context",
-      "conceptFamily": "gpe",
-      "contextType": "a short calculation",
-      "skill": "Kinetic Energy practice",
-      "stem": "A question set in a short calculation tests kinetic energy. Which answer applies the idea correctly? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "question": "A question set in a short calculation tests kinetic energy. Which answer applies the idea correctly? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "options": [
-        "For kinetic energy, the option says that gravitational potential energy = mass × gravitational field strength × height.",
-        "The claim for kinetic energy is that gPE = mass ÷ height.",
-        "In this item, it means that gPE is measured in newtons.",
-        "For kinetic energy: GPE depends only on speed."
-      ],
-      "correctAnswer": "For kinetic energy, the option says that gravitational potential energy = mass × gravitational field strength × height.",
+      "correctAnswer": "0.50 kg",
       "correctIndex": 0,
-      "explanation": "4.1.1.2 targets: Use gravitational potential energy. Focus area: Kinetic Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
+      "explanation": "Mass must be in kilograms. 500 g = 0.50 kg.",
+      "misconceptionTag": "mass-unit-conversion",
       "distractorRationales": [
         {
-          "text": "In this item, it means that gPE is measured in newtons.",
-          "misconception": "GPE = mass ÷ height."
+          "text": "500 kg",
+          "misconception": ""
         },
         {
-          "text": "The claim for kinetic energy is that gPE = mass ÷ height.",
-          "misconception": "GPE depends only on speed."
+          "text": "4.0 kg",
+          "misconception": ""
         },
         {
-          "text": "For kinetic energy: GPE depends only on speed.",
-          "misconception": "GPE is measured in newtons."
+          "text": "2000 kg",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.2:elastic_energy:data_interpretation",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a safety decision",
-      "skill": "Kinetic Energy practice",
-      "stem": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use elastic potential energy.",
-      "question": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use elastic potential energy.",
-      "options": [
-        "For kinetic energy, it means that elastic potential energy = 0.5 × spring constant × extension².",
-        "For kinetic energy, it means that elastic energy = spring constant × extension.",
-        "For kinetic energy, the answer claims that elastic energy is measured in kilograms.",
-        "For kinetic energy, the statement is that elastic energy is independent of extension."
-      ],
-      "correctAnswer": "For kinetic energy, it means that elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 0,
-      "explanation": "4.1.1.2 targets: Use elastic potential energy. Focus area: Kinetic Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, it means that elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy = spring constant × extension."
-        },
-        {
-          "text": "For kinetic energy, the statement is that elastic energy is independent of extension.",
-          "misconception": "Elastic energy is independent of extension."
-        },
-        {
-          "text": "For kinetic energy, the answer claims that elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy is measured in kilograms."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_specific_heat_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.1.2:specific_heat:exam_decision",
-      "conceptFamily": "specific_heat",
-      "contextType": "a graph-reading task",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which answer is the strongest GCSE Physics response for kinetic energy? Demand focus: use specific heat capacity.",
-      "question": "Which answer is the strongest GCSE Physics response for kinetic energy? Demand focus: use specific heat capacity.",
-      "options": [
-        "For kinetic energy: Specific heat capacity is energy per second.",
-        "For kinetic energy: Temperature change is ignored in heating calculations.",
-        "For kinetic energy: Energy change = mass × specific heat capacity × temperature change.",
-        "For kinetic energy, this would mean that specific heat capacity is measured in newtons per metre."
-      ],
-      "correctAnswer": "For kinetic energy: Energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.2 targets: Use specific heat capacity. Focus area: Kinetic Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy: Temperature change is ignored in heating calculations.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "For kinetic energy, this would mean that specific heat capacity is measured in newtons per metre.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For kinetic energy: Specific heat capacity is energy per second.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_unit_check_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_unit_check",
-        "statement": "Check energy calculation units. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.2:unit_check:direct_recall",
-      "conceptFamily": "unit_check",
-      "contextType": "a comparison question",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which answer matches this kinetic energy objective: Check energy calculation units? Keep the answer focused on kinetic energy: check energy calculation units.",
-      "question": "Which answer matches this kinetic energy objective: Check energy calculation units? Keep the answer focused on kinetic energy: check energy calculation units.",
-      "options": [
-        "For kinetic energy: Energy is measured in amperes.",
-        "For kinetic energy: Energy is measured in pascals.",
-        "The claim for kinetic energy is that energy calculated from these equations is measured in joules.",
-        "For kinetic energy, the option says that energy is measured in hertz."
-      ],
-      "correctAnswer": "The claim for kinetic energy is that energy calculated from these equations is measured in joules.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.2 targets: Check energy calculation units. Focus area: Kinetic Energy. For this question, Energy calculated from these equations is measured in joules. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_check",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy: Energy is measured in pascals.",
-          "misconception": "Energy is measured in amperes."
-        },
-        {
-          "text": "For kinetic energy: Energy is measured in amperes.",
-          "misconception": "Energy is measured in hertz."
-        },
-        {
-          "text": "For kinetic energy, the option says that energy is measured in hertz.",
-          "misconception": "Energy is measured in pascals."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Check energy calculation units."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.2:kinetic_energy:concept_discrimination",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a method-choice question",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which option best separates the correct kinetic energy idea from a common mix-up? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "question": "Which option best separates the correct kinetic energy idea from a common mix-up? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
-      "options": [
-        "For kinetic energy, the statement is that kinetic energy = mass × speed.",
-        "For kinetic energy, it means that kinetic energy = 0.5 × mass × speed².",
-        "For kinetic energy, the statement is that kinetic energy = weight × height.",
-        "For kinetic energy, the statement is that kinetic energy does not depend on speed."
-      ],
-      "correctAnswer": "For kinetic energy, it means that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 1,
-      "explanation": "4.1.1.2 targets: Use the kinetic energy equation. Focus area: Kinetic Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the statement is that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy = mass × speed."
-        },
-        {
-          "text": "For kinetic energy, the statement is that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy = weight × height."
-        },
-        {
-          "text": "For kinetic energy, the statement is that kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy does not depend on speed."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_gpe_misconception_correction_017",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_gpe",
-        "statement": "Use gravitational potential energy. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.2:gpe:misconception_correction",
-      "conceptFamily": "gpe",
-      "contextType": "a results discussion",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which answer corrects a misconception about kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "question": "Which answer corrects a misconception about kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
-      "options": [
-        "In this item, it means that gPE depends only on speed.",
-        "For kinetic energy, it means that gravitational potential energy = mass × gravitational field strength × height.",
-        "In this item, it means that gPE is measured in newtons.",
-        "In this item, it means that gPE = mass ÷ height."
-      ],
-      "correctAnswer": "For kinetic energy, it means that gravitational potential energy = mass × gravitational field strength × height.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.2 targets: Use gravitational potential energy. Focus area: Kinetic Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that gPE depends only on speed.",
-          "misconception": "GPE = mass ÷ height."
-        },
-        {
-          "text": "In this item, it means that gPE is measured in newtons.",
-          "misconception": "GPE depends only on speed."
-        },
-        {
-          "text": "In this item, it means that gPE = mass ÷ height.",
-          "misconception": "GPE is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy_data_interpretation_018",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.2:elastic_energy:data_interpretation",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a classroom demonstration",
-      "skill": "Kinetic Energy practice",
-      "stem": "Which conclusion about kinetic energy is supported by the evidence? Demand focus: use elastic potential energy.",
-      "question": "Which conclusion about kinetic energy is supported by the evidence? Demand focus: use elastic potential energy.",
-      "options": [
-        "The claim for kinetic energy is that elastic energy is independent of extension.",
-        "For kinetic energy, it means that elastic energy is measured in kilograms.",
-        "For kinetic energy, it means that elastic potential energy = 0.5 × spring constant × extension².",
-        "In this item, it means that elastic energy = spring constant × extension."
-      ],
-      "correctAnswer": "For kinetic energy, it means that elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 2,
-      "explanation": "4.1.1.2 targets: Use elastic potential energy. Focus area: Kinetic Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, it means that elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy = spring constant × extension."
-        },
-        {
-          "text": "In this item, it means that elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy is independent of extension."
-        },
-        {
-          "text": "The claim for kinetic energy is that elastic energy is independent of extension.",
-          "misconception": "Elastic energy is measured in kilograms."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "aqa_4_1_1_2_kinetic_energy_specific_heat_representation_interpretation_019",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Kinetic Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "kinetic_energy",
-      "topicId": "energy_equations",
-      "specRef": "4.1.1.2",
-      "specStatement": "Calculate changes in energy stores including kinetic energy.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [
-        "MS 3b",
-        "MS 3c"
-      ],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_2_kinetic_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Kinetic Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.2:specific_heat:representation_interpretation",
-      "conceptFamily": "specific_heat",
-      "contextType": "a revision checkpoint",
-      "skill": "Kinetic Energy practice",
-      "stem": "A representation of kinetic energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
-      "question": "A representation of kinetic energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
-      "options": [
-        "For kinetic energy, the statement is that specific heat capacity is energy per second.",
-        "For kinetic energy, the statement is that energy change = mass × specific heat capacity × temperature change.",
-        "For kinetic energy, the answer claims that temperature change is ignored in heating calculations.",
-        "For kinetic energy, the statement is that specific heat capacity is measured in newtons per metre."
-      ],
-      "correctAnswer": "For kinetic energy, the statement is that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.2 targets: Use specific heat capacity. Focus area: Kinetic Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "For kinetic energy, the statement is that specific heat capacity is energy per second.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "For kinetic energy, the answer claims that temperature change is ignored in heating calculations.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For kinetic energy, the statement is that specific heat capacity is measured in newtons per metre.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
+      "senNote": "Checks: Convert mass to kilograms before using the kinetic energy equation."
     },
     {
       "id": "aqa_4_1_1_4_power_power_definition_direct_recall_001",

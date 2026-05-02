@@ -20,12 +20,16 @@ const qualityRules = {
   invalidReviewStatus: 0,
   placeholderOptions: 0,
   weakBoilerplateStems: 0,
+  scaffoldedAuthoredText: 0,
   overusedObjectiveBuckets: 0,
+  overusedAuthoredCorrectObjectiveBuckets: 0,
+  duplicateAuthoredDiagramStemPatterns: 0,
   duplicateExplanations: 0,
   missingSpecEntries: 0,
   missingFromAll: 0,
   changedVsAll: 0,
 }
+const scaffoldedTextPattern = /learning objective|common mix-up|demand focus|use the wording carefully|which option best separates|this exact GCSE Physics idea|the mark scheme is testing|\bfor [^:,.?!]+[:,]\s*(it means|this would mean|the statement|the option|the answer|the claim)|\bmisconception\b/i
 const requiredQualityKeys = [
   'specRef',
   'specStatement',
@@ -123,15 +127,21 @@ function summarizeSchema(questions) {
     invalidReviewStatus: [],
     placeholderOptions: [],
     weakBoilerplateStems: [],
+    scaffoldedAuthoredText: [],
     overusedObjectiveBuckets: [],
+    overusedAuthoredCorrectObjectiveBuckets: [],
+    duplicateAuthoredDiagramStemPatterns: [],
     duplicateExplanations: [],
     answerMismatches: [],
     optionLengths: new Map(),
   }
   const objectiveBuckets = new Map()
+  const authoredCorrectObjectiveBuckets = new Map()
+  const authoredDiagramStemPatterns = new Map()
   const explanations = new Map()
 
   for (const question of questions) {
+    const isAuthored = question.review?.source === 'authored' || String(question.patternId || '').startsWith('authored:')
     const keys = Object.keys(question)
     const missing = strictSchemaKeys.filter((key) => !(key in question))
     const extras = keys.filter((key) => !strictSchemaKeys.includes(key))
@@ -158,8 +168,17 @@ function summarizeSchema(questions) {
     }
 
     const text = questionText(question)
-    if (/^\s*on a\b/i.test(text) || /\b(a learner uses|choose the best answer|test a common misconception)\b/i.test(text)) {
+    if (/\b(a learner uses|choose the best answer|test a common misconception)\b/i.test(text)) {
       summary.weakBoilerplateStems.push(question.id)
+    }
+    if (isAuthored) {
+      const visibleText = [
+        text,
+        ...(Array.isArray(question.options) ? question.options : []),
+      ].join(' ')
+      if (scaffoldedTextPattern.test(visibleText)) {
+        summary.scaffoldedAuthoredText.push(question.id)
+      }
     }
 
     const explanation = normalizeExact(question.explanation)
@@ -195,10 +214,37 @@ function summarizeSchema(questions) {
     ].join('|')
     if (!objectiveBuckets.has(objectiveBucket)) objectiveBuckets.set(objectiveBucket, [])
     objectiveBuckets.get(objectiveBucket).push(question.id)
+
+    if (isAuthored) {
+      const authoredCorrectObjectiveBucket = [
+        question.examBoard,
+        question.learningObjective?.statement,
+        question.correctAnswer,
+      ].join('|')
+      if (!authoredCorrectObjectiveBuckets.has(authoredCorrectObjectiveBucket)) {
+        authoredCorrectObjectiveBuckets.set(authoredCorrectObjectiveBucket, [])
+      }
+      authoredCorrectObjectiveBuckets.get(authoredCorrectObjectiveBucket).push(question.id)
+
+      if (question.diagramJson) {
+        const diagramStemBucket = [
+          JSON.stringify(question.diagramJson),
+          normalizeNear(text),
+        ].join('|')
+        if (!authoredDiagramStemPatterns.has(diagramStemBucket)) authoredDiagramStemPatterns.set(diagramStemBucket, [])
+        authoredDiagramStemPatterns.get(diagramStemBucket).push(question.id)
+      }
+    }
   }
 
   summary.overusedObjectiveBuckets = [...objectiveBuckets.entries()]
     .filter(([, ids]) => ids.length > 3)
+    .map(([bucket, ids]) => `${bucket}:${ids.length}`)
+  summary.overusedAuthoredCorrectObjectiveBuckets = [...authoredCorrectObjectiveBuckets.entries()]
+    .filter(([, ids]) => ids.length > 3)
+    .map(([bucket, ids]) => `${bucket}:${ids.length}`)
+  summary.duplicateAuthoredDiagramStemPatterns = [...authoredDiagramStemPatterns.entries()]
+    .filter(([, ids]) => ids.length > 1)
     .map(([bucket, ids]) => `${bucket}:${ids.length}`)
   summary.duplicateExplanations = [...explanations.entries()]
     .filter(([, ids]) => ids.length > 1)
@@ -228,7 +274,10 @@ function summarizeQuestions(label, questions) {
   console.log(`invalid review status: ${schema.invalidReviewStatus.length}`)
   console.log(`placeholder options: ${schema.placeholderOptions.length}`)
   console.log(`weak boilerplate stems: ${schema.weakBoilerplateStems.length}`)
+  console.log(`scaffolded authored text: ${schema.scaffoldedAuthoredText.length}`)
   console.log(`overused objective buckets: ${schema.overusedObjectiveBuckets.length}`)
+  console.log(`overused authored correct-objective buckets: ${schema.overusedAuthoredCorrectObjectiveBuckets.length}`)
+  console.log(`duplicate authored diagram/stem patterns: ${schema.duplicateAuthoredDiagramStemPatterns.length}`)
   console.log(`duplicate explanations: ${schema.duplicateExplanations.length}`)
   console.log(`schema strict: ${schema.strict}`)
   console.log(`schema strict + runtime extras: ${schema.strictPlusRuntimeExtras}`)
@@ -267,7 +316,10 @@ function summarizeQuestions(label, questions) {
     invalidReviewStatus: schema.invalidReviewStatus.length,
     placeholderOptions: schema.placeholderOptions.length,
     weakBoilerplateStems: schema.weakBoilerplateStems.length,
+    scaffoldedAuthoredText: schema.scaffoldedAuthoredText.length,
     overusedObjectiveBuckets: schema.overusedObjectiveBuckets.length,
+    overusedAuthoredCorrectObjectiveBuckets: schema.overusedAuthoredCorrectObjectiveBuckets.length,
+    duplicateAuthoredDiagramStemPatterns: schema.duplicateAuthoredDiagramStemPatterns.length,
     duplicateExplanations: schema.duplicateExplanations.length,
   }
 }

@@ -3,6 +3,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { AUTHORED_ATOMIC_STRUCTURE_ITEMS } from '../src/data/adaptiveQuestionSource/authoredAtomicStructure.js'
 import { ADAPTIVE_SPEC_MANIFESTS } from '../src/data/adaptiveQuestionSource/specManifests.js'
 import {
   CONTEXTS,
@@ -16,6 +17,16 @@ const root = path.resolve(__dirname, '..')
 const dataRoot = path.join(root, 'public', 'data', 'questions')
 const boards = ['aqa', 'edexcel']
 const boardNames = { aqa: 'AQA', edexcel: 'Edexcel' }
+const SCAFFOLDING_PHRASES = [
+  /learning objective/i,
+  /common mix-up/i,
+  /demand focus/i,
+  /use the wording carefully/i,
+  /which option best separates/i,
+  /this exact GCSE Physics idea/i,
+  /the mark scheme is testing/i,
+  /\bfor [^:,.?!]+[:,]\s*(it means|this would mean|the statement|the option|the answer|the claim)/i,
+]
 const FACT_OVERRIDES = {
   'Isotopes': ['isotope_identity', 'mass_atomic_number', 'neutral_atom', 'ion_formation'],
   'Atomic Structure': ['atom_structure', 'mass_atomic_number', 'neutral_atom', 'ion_formation', 'isotope_identity'],
@@ -240,6 +251,152 @@ function specLookup(board) {
   return entries
 }
 
+function authoredKey(board, topic, subtopic) {
+  return `${board}|||${topic}|||${subtopic}`
+}
+
+function buildAuthoredLookup() {
+  const lookup = new Map()
+  for (const item of AUTHORED_ATOMIC_STRUCTURE_ITEMS) {
+    const key = authoredKey(item.board, item.topic, item.subtopic)
+    if (!lookup.has(key)) lookup.set(key, [])
+    lookup.get(key).push(item)
+  }
+  return lookup
+}
+
+const authoredLookup = buildAuthoredLookup()
+
+function assertNoScaffolding(text, itemId, fieldName) {
+  for (const phrase of SCAFFOLDING_PHRASES) {
+    if (phrase.test(String(text || ''))) {
+      throw new Error(`Authored question ${itemId} has scaffold wording in ${fieldName}: ${text}`)
+    }
+  }
+}
+
+function validateAuthoredItem(item) {
+  const required = [
+    'id',
+    'board',
+    'topic',
+    'subtopic',
+    'specRef',
+    'question',
+    'options',
+    'correctIndex',
+    'explanation',
+    'learningObjective',
+    'assessmentObjective',
+    'demand',
+    'commandWord',
+    'responseMode',
+    'contextType',
+    'misconceptionTag',
+    'courseAvailability',
+    'tier',
+  ]
+  const missing = required.filter((key) => {
+    const value = item[key]
+    if (Array.isArray(value)) return value.length === 0
+    return value == null || value === ''
+  })
+  if (missing.length) {
+    throw new Error(`Authored question ${item.id || 'unknown'} missing: ${missing.join(', ')}`)
+  }
+  if (!Array.isArray(item.options) || item.options.length !== 4) {
+    throw new Error(`Authored question ${item.id} must have exactly 4 options`)
+  }
+  if (!Number.isInteger(item.correctIndex) || item.correctIndex < 0 || item.correctIndex >= item.options.length) {
+    throw new Error(`Authored question ${item.id} has invalid correctIndex`)
+  }
+
+  assertNoScaffolding(item.question, item.id, 'question')
+  assertNoScaffolding(item.explanation, item.id, 'explanation')
+  for (const [index, option] of item.options.entries()) {
+    const text = typeof option === 'string' ? option : option?.text
+    if (!text || /different answer|all of these|none of these|joke option/i.test(text)) {
+      throw new Error(`Authored question ${item.id} has placeholder option ${index + 1}`)
+    }
+    assertNoScaffolding(text, item.id, `option ${index + 1}`)
+  }
+}
+
+function demandToDifficulty(demand) {
+  if (demand === 'low') return 'easy'
+  if (demand === 'high') return 'hard'
+  return 'medium'
+}
+
+function makeAuthoredQuestion({ board, legacy, spec, item }) {
+  validateAuthoredItem(item)
+
+  if (item.specRef !== spec.specRef) {
+    throw new Error(`Authored question ${item.id} uses ${item.specRef}, expected ${spec.specRef}`)
+  }
+
+  const optionObjects = item.options.map((option) => (
+    typeof option === 'string'
+      ? { text: option, misconception: '' }
+      : { text: option.text, misconception: option.misconception || '' }
+  ))
+  const options = optionObjects.map((option) => option.text)
+
+  return {
+    id: item.id,
+    examBoard: boardNames[board],
+    subject: 'Physics',
+    qualification: ADAPTIVE_SPEC_MANIFESTS[board].qualification,
+    specVersion: ADAPTIVE_SPEC_MANIFESTS[board].specVersion,
+    sourceUrl: ADAPTIVE_SPEC_MANIFESTS[board].sourceUrl,
+    topic: legacy.topic,
+    subtopic: legacy.subtopic,
+    topicSlug: legacy.topicSlug,
+    subtopicSlug: legacy.subtopicSlug,
+    topicId: legacy.topicId,
+    specRef: spec.specRef,
+    specStatement: spec.statement,
+    paper: spec.paper,
+    courseAvailability: item.courseAvailability || spec.courseAvailability,
+    tier: item.tier || spec.tier,
+    mathsSkills: spec.mathsSkills || [],
+    workingScientifically: spec.workingScientifically || [],
+    learningObjective: {
+      id: `${item.id}_lo`,
+      statement: item.learningObjective,
+      prerequisites: [],
+    },
+    assessmentObjective: item.assessmentObjective,
+    demand: item.demand,
+    difficulty: demandToDifficulty(item.demand),
+    commandWord: item.commandWord,
+    responseMode: item.responseMode,
+    patternId: `authored:${item.id}`,
+    conceptFamily: slug(item.learningObjective),
+    contextType: item.contextType,
+    skill: item.learningObjective,
+    stem: item.question,
+    question: item.question,
+    options,
+    correctAnswer: options[item.correctIndex],
+    correctIndex: item.correctIndex,
+    explanation: item.explanation,
+    misconceptionTag: item.misconceptionTag,
+    distractorRationales: optionObjects
+      .map((option, index) => ({ text: option.text, misconception: index === item.correctIndex ? '' : option.misconception }))
+      .filter((option, index) => index !== item.correctIndex),
+    diagramJson: item.diagramJson || null,
+    authorNotes: `Authored exam-style item for ${boardNames[board]} ${spec.specRef}.`,
+    review: {
+      status: 'reviewed',
+      reviewerRole: `${boardNames[board]} GCSE Physics content QA`,
+      reviewedAt: '2026-05-02',
+      source: 'authored',
+    },
+    senNote: `Checks: ${item.learningObjective}`,
+  }
+}
+
 function difficultyFor(mode, index) {
   if (mode === 'direct_recall') return 'easy'
   if (mode === 'concept_discrimination') return index % 3 === 0 ? 'easy' : 'medium'
@@ -400,6 +557,11 @@ function makeQuestion({ board, legacy, spec, fact, index }) {
 }
 
 function generateForSubtopic(board, legacy, spec, targetCount) {
+  const authoredItems = authoredLookup.get(authoredKey(board, legacy.topic, legacy.subtopic))
+  if (authoredItems?.length) {
+    return authoredItems.map((item) => makeAuthoredQuestion({ board, legacy, spec, item }))
+  }
+
   const allFacts = TOPIC_FACTS[spec.topicId] || TOPIC_FACTS[legacy.topicId]
   const overrideIds = FACT_OVERRIDES[spec.subtopic] || FACT_OVERRIDES[legacy.subtopic] || null
   const facts = overrideIds

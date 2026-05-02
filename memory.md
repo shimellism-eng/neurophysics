@@ -5,6 +5,48 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice authored Atomic Structure checkpoint
+- Replaced the learner-facing Atomic Structure bank with authored exam-style questions for AQA and Edexcel.
+- Added `src/data/adaptiveQuestionSource/authoredAtomicStructure.js` as the source of truth for this checkpoint:
+  - AQA Atomic Structure: 25 reviewed authored questions.
+  - Edexcel Atomic Structure: 25 reviewed authored questions.
+- Each authored item keeps hidden quality metadata:
+  - `specRef`
+  - `learningObjective`
+  - `assessmentObjective`
+  - `demand`
+  - `commandWord`
+  - `misconceptionTag`
+  - `review.status`
+- Updated `scripts/regenerate_adaptive_questions.mjs` so Atomic Structure uses authored items instead of generated student-facing wording.
+- Added audit gates to block scaffold/meta wording in authored learner-facing text:
+  - no "learning objective" wording
+  - no "common mix-up" wording
+  - no "demand focus" wording
+  - no "Which option best separates..." wording
+  - no "For isotopes..." answer wrappers
+- Kept app behaviour untouched:
+  - 9-step lesson flow unchanged.
+  - Adaptive selection logic unchanged.
+  - XP/streak/spaced repetition unchanged.
+  - board filtering unchanged.
+- Runtime counts after Atomic replacement:
+  - AQA: 832 questions total, Atomic Structure now 25 authored items.
+  - Edexcel: 681 questions total, Atomic Structure now 25 authored items.
+- Verification:
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `git diff --check` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator launch passes; fresh install lands on the auth screen, and synced iOS JSON contains the authored Atomic questions.
+
+### Next step
+- Visually review Atomic Structure on-device using AQA and Edexcel.
+- If the Atomic sample is approved, repeat the same authored-source approach topic by topic, starting with Electricity.
+- Do not deploy this content checkpoint until the Atomic on-device sample is approved.
+
 ### Adaptive Practice full regeneration from spec manifests
 - Rebuilt the Adaptive Practice bank for the locked AQA + Edexcel release scope.
 - Added source-of-truth inputs:

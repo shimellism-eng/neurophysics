@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-02T05:26:55.788Z",
+  "generatedAt": "2026-05-02T05:55:11.824Z",
   "source": "scripts/regenerate_adaptive_questions.mjs",
   "counts": {
-    "total": 1650,
+    "total": 1513,
     "boards": {
-      "aqa": 900,
-      "edexcel": 750
+      "aqa": 832,
+      "edexcel": 681
     }
   },
   "boards": {
@@ -13,7 +13,7 @@
       "name": "AQA",
       "qualification": "AQA GCSE Physics 8463",
       "all": "/data/questions/aqa/all.json",
-      "count": 900,
+      "count": 832,
       "topics": {
         "atomic_structure": "/data/questions/aqa/atomic_structure.json",
         "electricity": "/data/questions/aqa/electricity.json",
@@ -29,7 +29,7 @@
       "name": "Edexcel",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
       "all": "/data/questions/edexcel/all.json",
-      "count": 750,
+      "count": 681,
       "topics": {
         "atomic_structure": "/data/questions/edexcel/atomic_structure.json",
         "electricity": "/data/questions/edexcel/electricity.json",

@@ -5,6 +5,32 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice textbook maths + AQA Work Done authored
+- Added `PhysicsText` for Adaptive Practice question and option rendering.
+  - Supports inline LaTeX delimiters like `\(W = Fs\)` and `$W = Fs$`.
+  - Uses KaTeX so physics equations render like textbook maths rather than plain strings.
+  - The KaTeX bundle is loaded with the lazy Adaptive Practice screen, not the main app shell.
+- Fixed AQA `Work Done`: 24/24 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.5.2`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Work Done runtime count: 24.
+  - Authored IDs: 24.
+  - Official question audit scaffold/answer leak count: 0.
+  - Covers `W = Fs`, joules/newton metres, direction of force, zero-distance cases, friction energy transfer, lifting, force-distance graphs, data tables, ramps, net force, and unit conversion.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm run build` passes.
+  - Exact AQA Work Done route was shown live in Simulator at `/practice/work_done`.
+  - Screenshot saved at `/tmp/neurophysics-aqa-work-done-latex.png`.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt cleanly.
+
+### Next step
+- Continue AQA Forces:
+  - AQA `Resultant Forces`: authored exam-style questions.
+
 ### Adaptive Practice Edexcel Energy completed
 - Fixed Edexcel `Internal Energy`: 19/19 authored and passed.
 - Hidden spec metadata:

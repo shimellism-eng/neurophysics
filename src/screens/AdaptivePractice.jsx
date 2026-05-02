@@ -18,6 +18,7 @@ import { useAdaptiveRuntime } from '../hooks/useAdaptiveRuntime'
 import { checkAnswer, getQuestions } from '../lib/questionRepository'
 import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import PageHeader from '../components/PageHeader'
+import PhysicsText from '../components/PhysicsText'
 
 const MODULE_TOPIC_NAME_MAP = {
   'Magnetism & Electromagnetism': 'Magnetism',
@@ -89,7 +90,7 @@ function MCQQuestion({ question, review, onSubmit }) {
               <span className="font-bold mr-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
                 {String.fromCharCode(65 + index)}
               </span>
-              {option}
+              <PhysicsText>{option}</PhysicsText>
             </motion.button>
           )
         })}
@@ -541,9 +542,9 @@ export default function AdaptivePractice() {
                 ) : null}
               </div>
 
-              <p className="text-base font-semibold leading-snug mb-4" style={{ color: '#f8fafc' }}>
+              <PhysicsText as="p" className="text-base font-semibold leading-snug mb-4" style={{ color: '#f8fafc' }}>
                 {currentQuestion.question}
-              </p>
+              </PhysicsText>
 
               <MCQQuestion question={currentQuestion} review={answerReview} onSubmit={handleOptionSubmit} />
 

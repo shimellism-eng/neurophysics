@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "forces",
-  "generatedAt": "2026-05-02T10:02:57.796Z",
+  "generatedAt": "2026-05-02T10:10:11.374Z",
   "questions": [
     {
       "id": "aqa_4_5_3_hookes_law_hookes_law_direct_recall_001",
@@ -5330,7 +5330,7 @@
       "senNote": "This checks one idea only: Identify forces on an object."
     },
     {
-      "id": "aqa_4_5_2_work_done_work_equation_direct_recall_001",
+      "id": "aqa_forces_work_done_equation_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -5352,56 +5352,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_work_equation",
-        "statement": "Use work done. (Work Done)",
+        "id": "aqa_forces_work_done_equation_001_lo",
+        "statement": "Recall the work done equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.2:work_equation:direct_recall",
-      "conceptFamily": "work_equation",
-      "contextType": "a labelled diagram",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_work_done_equation_001",
+      "conceptFamily": "recall_the_work_done_equation",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "Which statement is correct for work done? Demand focus: use work done.",
-      "question": "Which statement is correct for work done? Demand focus: use work done.",
+      "stem": "Which equation is used to calculate work done when a force moves an object?",
+      "question": "Which equation is used to calculate work done when a force moves an object?",
       "options": [
-        "For work done, the option says that work done = force × distance moved in the direction of the force.",
-        "The claim for work done is that work done = force ÷ distance.",
-        "For work done, this would mean that distance perpendicular to the force is always used.",
-        "The claim for work done is that work done is measured in watts."
+        "\\(W = Fs\\)",
+        "\\(W = F \\div s\\)",
+        "\\(W = mgh\\)",
+        "\\(W = \\frac{1}{2}mv^2\\)"
       ],
-      "correctAnswer": "For work done, the option says that work done = force × distance moved in the direction of the force.",
+      "correctAnswer": "\\(W = Fs\\)",
       "correctIndex": 0,
-      "explanation": "4.5.2 targets: Use work done. Focus area: Work Done. For this question, Work done = force × distance moved in the direction of the force. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:work_equation",
+      "explanation": "Work done is calculated from force multiplied by distance moved in the direction of the force: \\(W = Fs\\).",
+      "misconceptionTag": "work-equation",
       "distractorRationales": [
         {
-          "text": "The claim for work done is that work done = force ÷ distance.",
-          "misconception": "Work done = force ÷ distance."
+          "text": "\\(W = F \\div s\\)",
+          "misconception": "division used instead of multiplication"
         },
         {
-          "text": "The claim for work done is that work done is measured in watts.",
-          "misconception": "Work done is measured in watts."
+          "text": "\\(W = mgh\\)",
+          "misconception": "gravitational potential energy equation selected"
         },
         {
-          "text": "For work done, this would mean that distance perpendicular to the force is always used.",
-          "misconception": "Distance perpendicular to the force is always used."
+          "text": "\\(W = \\frac{1}{2}mv^2\\)",
+          "misconception": "kinetic energy equation selected"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use work done."
+      "senNote": "Checks: Recall the work done equation."
     },
     {
-      "id": "aqa_4_5_2_work_done_energy_transfer_concept_discrimination_002",
+      "id": "aqa_forces_work_done_calculation_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -5423,553 +5424,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_energy_transfer",
-        "statement": "Link work done to energy transfer. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.2:energy_transfer:concept_discrimination",
-      "conceptFamily": "energy_transfer",
-      "contextType": "a short calculation",
-      "skill": "Work Done practice",
-      "stem": "A student is comparing similar ideas in work done. Which statement is correct? Keep the answer focused on work done: link work done to energy transfer.",
-      "question": "A student is comparing similar ideas in work done. Which statement is correct? Keep the answer focused on work done: link work done to energy transfer.",
-      "options": [
-        "In this item, it means that work done happens without any force.",
-        "In this item, it means that work done destroys energy.",
-        "The claim for work done is that work done is unrelated to energy.",
-        "For work done, the option says that when work is done, energy is transferred."
-      ],
-      "correctAnswer": "For work done, the option says that when work is done, energy is transferred.",
-      "correctIndex": 3,
-      "explanation": "4.5.2 targets: Link work done to energy transfer. Focus area: Work Done. For this question, When work is done, energy is transferred. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_transfer",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that work done happens without any force.",
-          "misconception": "Work done destroys energy."
-        },
-        {
-          "text": "The claim for work done is that work done is unrelated to energy.",
-          "misconception": "Work done happens without any force."
-        },
-        {
-          "text": "In this item, it means that work done destroys energy.",
-          "misconception": "Work done is unrelated to energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link work done to energy transfer."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_unit_joule_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_unit_joule",
-        "statement": "Recall the unit of work done. (Work Done)",
+        "id": "aqa_forces_work_done_calculation_002_lo",
+        "statement": "Calculate work done from force and distance.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.2:unit_joule:misconception_correction",
-      "conceptFamily": "unit_joule",
-      "contextType": "a safety decision",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_calculation_002",
+      "conceptFamily": "calculate_work_done_from_force_and_distance",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A revision note about work done contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "question": "A revision note about work done contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
+      "stem": "A student pushes a box with a force of 40 N for 3.0 m in the direction of the force. How much work is done?",
+      "question": "A student pushes a box with a force of 40 N for 3.0 m in the direction of the force. How much work is done?",
       "options": [
-        "The answer for work done says that work done is measured in tesla.",
-        "For work done, the statement is that work done is measured in hertz.",
-        "For work done, it means that work done is measured in amperes.",
-        "The answer for work done says that work done is measured in joules."
+        "120 J",
+        "13 J",
+        "43 J",
+        "40 J"
       ],
-      "correctAnswer": "The answer for work done says that work done is measured in joules.",
-      "correctIndex": 3,
-      "explanation": "4.5.2 targets: Recall the unit of work done. Focus area: Work Done. For this question, Work done is measured in joules. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_joule",
-      "distractorRationales": [
-        {
-          "text": "The answer for work done says that work done is measured in tesla.",
-          "misconception": "Work done is measured in amperes."
-        },
-        {
-          "text": "For work done, it means that work done is measured in amperes.",
-          "misconception": "Work done is measured in hertz."
-        },
-        {
-          "text": "For work done, the statement is that work done is measured in hertz.",
-          "misconception": "Work done is measured in tesla."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the unit of work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_distance_direction_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_distance_direction",
-        "statement": "Choose the correct distance. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.2:distance_direction:data_interpretation",
-      "conceptFamily": "distance_direction",
-      "contextType": "a graph-reading task",
-      "skill": "Work Done practice",
-      "stem": "A small data set about work done is being interpreted. Which conclusion is valid? Keep the answer focused on work done: choose the correct distance.",
-      "question": "A small data set about work done is being interpreted. Which conclusion is valid? Keep the answer focused on work done: choose the correct distance.",
-      "options": [
-        "For work done, it means that use the total path length even if sideways.",
-        "In this item, it means that use the height only for every problem.",
-        "For work done, it means that use time instead of distance.",
-        "For work done, it means that use the distance moved in the direction of the force."
-      ],
-      "correctAnswer": "For work done, it means that use the distance moved in the direction of the force.",
-      "correctIndex": 3,
-      "explanation": "4.5.2 targets: Choose the correct distance. Focus area: Work Done. For this question, Use the distance moved in the direction of the force. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:distance_direction",
-      "distractorRationales": [
-        {
-          "text": "For work done, it means that use the total path length even if sideways.",
-          "misconception": "Use the total path length even if sideways."
-        },
-        {
-          "text": "In this item, it means that use the height only for every problem.",
-          "misconception": "Use the height only for every problem."
-        },
-        {
-          "text": "For work done, it means that use time instead of distance.",
-          "misconception": "Use time instead of distance."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Choose the correct distance."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_force_distance_compare_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_force_distance_compare",
-        "statement": "Compare work done. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.2:force_distance_compare:representation_interpretation",
-      "conceptFamily": "force_distance_compare",
-      "contextType": "a comparison question",
-      "skill": "Work Done practice",
-      "stem": "Which option correctly reads the work done model or diagram idea? Keep the answer focused on work done: compare work done.",
-      "question": "Which option correctly reads the work done model or diagram idea? Keep the answer focused on work done: compare work done.",
-      "options": [
-        "For work done: For the same force, larger distance means less work.",
-        "For work done: Only mass decides work done.",
-        "For work done, it means that for the same force, a larger distance means more work done.",
-        "For work done: Distance has no effect on work done."
-      ],
-      "correctAnswer": "For work done, it means that for the same force, a larger distance means more work done.",
-      "correctIndex": 2,
-      "explanation": "4.5.2 targets: Compare work done. Focus area: Work Done. For this question, For the same force, a larger distance means more work done. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_distance_compare",
-      "distractorRationales": [
-        {
-          "text": "For work done: Distance has no effect on work done.",
-          "misconception": "For the same force, larger distance means less work."
-        },
-        {
-          "text": "For work done: Only mass decides work done.",
-          "misconception": "Distance has no effect on work done."
-        },
-        {
-          "text": "For work done: For the same force, larger distance means less work.",
-          "misconception": "Only mass decides work done."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_work_equation_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_work_equation",
-        "statement": "Use work done. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.2:work_equation:direct_recall",
-      "conceptFamily": "work_equation",
-      "contextType": "a method-choice question",
-      "skill": "Work Done practice",
-      "stem": "Which answer matches this work done objective: Use work done? Demand focus: use work done.",
-      "question": "Which answer matches this work done objective: Use work done? Demand focus: use work done.",
-      "options": [
-        "For work done, the statement is that work done is measured in watts.",
-        "In this work done item, work done = force × distance moved in the direction of the force.",
-        "For work done, the statement is that work done = force ÷ distance.",
-        "For work done, the statement is that distance perpendicular to the force is always used."
-      ],
-      "correctAnswer": "In this work done item, work done = force × distance moved in the direction of the force.",
-      "correctIndex": 1,
-      "explanation": "4.5.2 targets: Use work done. Focus area: Work Done. For this question, Work done = force × distance moved in the direction of the force. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:work_equation",
-      "distractorRationales": [
-        {
-          "text": "For work done, the statement is that distance perpendicular to the force is always used.",
-          "misconception": "Work done = force ÷ distance."
-        },
-        {
-          "text": "For work done, the statement is that work done = force ÷ distance.",
-          "misconception": "Work done is measured in watts."
-        },
-        {
-          "text": "For work done, the statement is that work done is measured in watts.",
-          "misconception": "Distance perpendicular to the force is always used."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_energy_transfer_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_energy_transfer",
-        "statement": "Link work done to energy transfer. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.5.2:energy_transfer:applied_context",
-      "conceptFamily": "energy_transfer",
-      "contextType": "a results discussion",
-      "skill": "Work Done practice",
-      "stem": "In a results discussion, which conclusion is correct for work done? Keep the answer focused on work done: link work done to energy transfer.",
-      "question": "In a results discussion, which conclusion is correct for work done? Keep the answer focused on work done: link work done to energy transfer.",
-      "options": [
-        "For work done: Work done is unrelated to energy.",
-        "In this item, it means that work done happens without any force.",
-        "In this item, it means that work done destroys energy.",
-        "For work done, it means that when work is done, energy is transferred."
-      ],
-      "correctAnswer": "For work done, it means that when work is done, energy is transferred.",
-      "correctIndex": 3,
-      "explanation": "4.5.2 targets: Link work done to energy transfer. Focus area: Work Done. For this question, When work is done, energy is transferred. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_transfer",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that work done destroys energy.",
-          "misconception": "Work done destroys energy."
-        },
-        {
-          "text": "In this item, it means that work done happens without any force.",
-          "misconception": "Work done happens without any force."
-        },
-        {
-          "text": "For work done: Work done is unrelated to energy.",
-          "misconception": "Work done is unrelated to energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link work done to energy transfer."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_unit_joule_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_unit_joule",
-        "statement": "Recall the unit of work done. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.2:unit_joule:misconception_correction",
-      "conceptFamily": "unit_joule",
-      "contextType": "a classroom demonstration",
-      "skill": "Work Done practice",
-      "stem": "Which answer corrects a misconception about work done? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "question": "Which answer corrects a misconception about work done? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "options": [
-        "For work done, the option says that work done is measured in hertz.",
-        "For work done, it means that work done is measured in tesla.",
-        "For work done, the option says that work done is measured in joules.",
-        "In this item, it means that work done is measured in amperes."
-      ],
-      "correctAnswer": "For work done, the option says that work done is measured in joules.",
-      "correctIndex": 2,
-      "explanation": "4.5.2 targets: Recall the unit of work done. Focus area: Work Done. For this question, Work done is measured in joules. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_joule",
-      "distractorRationales": [
-        {
-          "text": "For work done, the option says that work done is measured in hertz.",
-          "misconception": "Work done is measured in amperes."
-        },
-        {
-          "text": "For work done, it means that work done is measured in tesla.",
-          "misconception": "Work done is measured in hertz."
-        },
-        {
-          "text": "In this item, it means that work done is measured in amperes.",
-          "misconception": "Work done is measured in tesla."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the unit of work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_distance_direction_exam_decision_009",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_distance_direction",
-        "statement": "Choose the correct distance. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.2:distance_direction:exam_decision",
-      "conceptFamily": "distance_direction",
-      "contextType": "a revision checkpoint",
-      "skill": "Work Done practice",
-      "stem": "The mark scheme is testing choose the correct distance. Which answer matches that point? Keep the answer focused on work done: choose the correct distance.",
-      "question": "The mark scheme is testing choose the correct distance. Which answer matches that point? Keep the answer focused on work done: choose the correct distance.",
-      "options": [
-        "For work done, this would mean that use the distance moved in the direction of the force.",
-        "In this item, it means that use the height only for every problem.",
-        "In this item, it means that use the total path length even if sideways.",
-        "In this item, it means that use time instead of distance."
-      ],
-      "correctAnswer": "For work done, this would mean that use the distance moved in the direction of the force.",
+      "correctAnswer": "120 J",
       "correctIndex": 0,
-      "explanation": "4.5.2 targets: Choose the correct distance. Focus area: Work Done. For this question, Use the distance moved in the direction of the force. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:distance_direction",
+      "explanation": "Use \\(W = Fs\\). The work done is \\(40 \\times 3.0 = 120\\,J\\).",
+      "misconceptionTag": "work-multiply",
       "distractorRationales": [
         {
-          "text": "In this item, it means that use time instead of distance.",
-          "misconception": "Use the total path length even if sideways."
+          "text": "13 J",
+          "misconception": "force divided by distance"
         },
         {
-          "text": "In this item, it means that use the total path length even if sideways.",
-          "misconception": "Use the height only for every problem."
+          "text": "43 J",
+          "misconception": "force and distance added"
         },
         {
-          "text": "In this item, it means that use the height only for every problem.",
-          "misconception": "Use time instead of distance."
+          "text": "40 J",
+          "misconception": "distance ignored"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Choose the correct distance."
+      "senNote": "Checks: Calculate work done from force and distance."
     },
     {
-      "id": "aqa_4_5_2_work_done_force_distance_compare_representation_interpretation_010",
+      "id": "aqa_forces_work_done_unit_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -5991,127 +5496,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_force_distance_compare",
-        "statement": "Compare work done. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.2:force_distance_compare:representation_interpretation",
-      "conceptFamily": "force_distance_compare",
-      "contextType": "an exam-style data table",
-      "skill": "Work Done practice",
-      "stem": "A representation of work done is described in words. Which interpretation is correct? Keep the answer focused on work done: compare work done.",
-      "question": "A representation of work done is described in words. Which interpretation is correct? Keep the answer focused on work done: compare work done.",
-      "options": [
-        "For work done, the answer claims that for the same force, larger distance means less work.",
-        "The answer for work done says that for the same force, a larger distance means more work done.",
-        "For work done, the answer claims that distance has no effect on work done.",
-        "For work done, the answer claims that only mass decides work done."
-      ],
-      "correctAnswer": "The answer for work done says that for the same force, a larger distance means more work done.",
-      "correctIndex": 1,
-      "explanation": "4.5.2 targets: Compare work done. Focus area: Work Done. For this question, For the same force, a larger distance means more work done. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_distance_compare",
-      "distractorRationales": [
-        {
-          "text": "For work done, the answer claims that for the same force, larger distance means less work.",
-          "misconception": "For the same force, larger distance means less work."
-        },
-        {
-          "text": "For work done, the answer claims that distance has no effect on work done.",
-          "misconception": "Distance has no effect on work done."
-        },
-        {
-          "text": "For work done, the answer claims that only mass decides work done.",
-          "misconception": "Only mass decides work done."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_work_equation_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_work_equation",
-        "statement": "Use work done. (Work Done)",
+        "id": "aqa_forces_work_done_unit_003_lo",
+        "statement": "Identify the unit of work done.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.2:work_equation:concept_discrimination",
-      "conceptFamily": "work_equation",
-      "contextType": "a required-practical notebook",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_work_done_unit_003",
+      "conceptFamily": "identify_the_unit_of_work_done",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A student is comparing similar ideas in work done. Which statement is correct? Demand focus: use work done.",
-      "question": "A student is comparing similar ideas in work done. Which statement is correct? Demand focus: use work done.",
+      "stem": "Which unit is used for work done?",
+      "question": "Which unit is used for work done?",
       "options": [
-        "For work done, the statement is that work done = force × distance moved in the direction of the force.",
-        "For work done, the statement is that work done = force ÷ distance.",
-        "For work done, the answer claims that distance perpendicular to the force is always used.",
-        "For work done, the statement is that work done is measured in watts."
+        "joule",
+        "watt",
+        "newton",
+        "pascal"
       ],
-      "correctAnswer": "For work done, the statement is that work done = force × distance moved in the direction of the force.",
+      "correctAnswer": "joule",
       "correctIndex": 0,
-      "explanation": "4.5.2 targets: Use work done. Focus area: Work Done. For this question, Work done = force × distance moved in the direction of the force. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:work_equation",
+      "explanation": "This quantity is an energy transfer, so it is measured in joules.",
+      "misconceptionTag": "work-unit",
       "distractorRationales": [
         {
-          "text": "For work done, the statement is that work done is measured in watts.",
-          "misconception": "Work done = force ÷ distance."
+          "text": "watt",
+          "misconception": "power confused with work done"
         },
         {
-          "text": "For work done, the answer claims that distance perpendicular to the force is always used.",
-          "misconception": "Work done is measured in watts."
+          "text": "newton",
+          "misconception": "force confused with work done"
         },
         {
-          "text": "For work done, the statement is that work done = force ÷ distance.",
-          "misconception": "Distance perpendicular to the force is always used."
+          "text": "pascal",
+          "misconception": "pressure confused with work done"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use work done."
+      "senNote": "Checks: Identify the unit of work done."
     },
     {
-      "id": "aqa_4_5_2_work_done_energy_transfer_applied_context_012",
+      "id": "aqa_forces_work_done_energy_transfer_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6133,269 +5568,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_energy_transfer",
-        "statement": "Link work done to energy transfer. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.5.2:energy_transfer:applied_context",
-      "conceptFamily": "energy_transfer",
-      "contextType": "a technician report",
-      "skill": "Work Done practice",
-      "stem": "A question set in a technician report tests work done. Which answer applies the idea correctly? Keep the answer focused on work done: link work done to energy transfer.",
-      "question": "A question set in a technician report tests work done. Which answer applies the idea correctly? Keep the answer focused on work done: link work done to energy transfer.",
-      "options": [
-        "For work done, the answer claims that work done happens without any force.",
-        "For work done, it means that work done destroys energy.",
-        "The answer for work done says that when work is done, energy is transferred.",
-        "For work done, it means that work done is unrelated to energy."
-      ],
-      "correctAnswer": "The answer for work done says that when work is done, energy is transferred.",
-      "correctIndex": 2,
-      "explanation": "4.5.2 targets: Link work done to energy transfer. Focus area: Work Done. For this question, When work is done, energy is transferred. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_transfer",
-      "distractorRationales": [
-        {
-          "text": "For work done, it means that work done is unrelated to energy.",
-          "misconception": "Work done destroys energy."
-        },
-        {
-          "text": "For work done, it means that work done destroys energy.",
-          "misconception": "Work done happens without any force."
-        },
-        {
-          "text": "For work done, the answer claims that work done happens without any force.",
-          "misconception": "Work done is unrelated to energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link work done to energy transfer."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_unit_joule_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_unit_joule",
-        "statement": "Recall the unit of work done. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.2:unit_joule:data_interpretation",
-      "conceptFamily": "unit_joule",
-      "contextType": "a labelled diagram",
-      "skill": "Work Done practice",
-      "stem": "A small data set about work done is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "question": "A small data set about work done is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "options": [
-        "The claim for work done is that work done is measured in joules.",
-        "In this item, it means that work done is measured in tesla.",
-        "In this item, it means that work done is measured in hertz.",
-        "In this item, it means that work done is measured in amperes."
-      ],
-      "correctAnswer": "The claim for work done is that work done is measured in joules.",
-      "correctIndex": 0,
-      "explanation": "4.5.2 targets: Recall the unit of work done. Focus area: Work Done. For this question, Work done is measured in joules. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_joule",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that work done is measured in amperes.",
-          "misconception": "Work done is measured in amperes."
-        },
-        {
-          "text": "In this item, it means that work done is measured in hertz.",
-          "misconception": "Work done is measured in hertz."
-        },
-        {
-          "text": "In this item, it means that work done is measured in tesla.",
-          "misconception": "Work done is measured in tesla."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the unit of work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_distance_direction_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_distance_direction",
-        "statement": "Choose the correct distance. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.2:distance_direction:exam_decision",
-      "conceptFamily": "distance_direction",
-      "contextType": "a short calculation",
-      "skill": "Work Done practice",
-      "stem": "Which answer is the strongest GCSE Physics response for work done? Keep the answer focused on work done: choose the correct distance.",
-      "question": "Which answer is the strongest GCSE Physics response for work done? Keep the answer focused on work done: choose the correct distance.",
-      "options": [
-        "For work done, the statement is that use the distance moved in the direction of the force.",
-        "For work done, it means that use the height only for every problem.",
-        "For work done, it means that use time instead of distance.",
-        "For work done, it means that use the total path length even if sideways."
-      ],
-      "correctAnswer": "For work done, the statement is that use the distance moved in the direction of the force.",
-      "correctIndex": 0,
-      "explanation": "4.5.2 targets: Choose the correct distance. Focus area: Work Done. For this question, Use the distance moved in the direction of the force. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:distance_direction",
-      "distractorRationales": [
-        {
-          "text": "For work done, it means that use the height only for every problem.",
-          "misconception": "Use the total path length even if sideways."
-        },
-        {
-          "text": "For work done, it means that use time instead of distance.",
-          "misconception": "Use the height only for every problem."
-        },
-        {
-          "text": "For work done, it means that use the total path length even if sideways.",
-          "misconception": "Use time instead of distance."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Choose the correct distance."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_force_distance_compare_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_force_distance_compare",
-        "statement": "Compare work done. (Work Done)",
+        "id": "aqa_forces_work_done_energy_transfer_004_lo",
+        "statement": "Link work done to energy transfer.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.2:force_distance_compare:direct_recall",
-      "conceptFamily": "force_distance_compare",
-      "contextType": "a safety decision",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_energy_transfer_004",
+      "conceptFamily": "link_work_done_to_energy_transfer",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "Which answer matches this work done objective: Compare work done? Keep the answer focused on work done: compare work done.",
-      "question": "Which answer matches this work done objective: Compare work done? Keep the answer focused on work done: compare work done.",
+      "stem": "A force acts on a crate and the crate moves in the direction of the force. What happens when work is done on the crate?",
+      "question": "A force acts on a crate and the crate moves in the direction of the force. What happens when work is done on the crate?",
       "options": [
-        "For work done, it means that for the same force, larger distance means less work.",
-        "For work done, the statement is that for the same force, a larger distance means more work done.",
-        "For work done, the statement is that distance has no effect on work done.",
-        "The answer for work done says that only mass decides work done."
+        "Energy is transferred to the crate.",
+        "Energy is destroyed by the force.",
+        "The crate must lose all of its energy.",
+        "No energy transfer can happen unless the crate is stationary."
       ],
-      "correctAnswer": "For work done, the statement is that for the same force, a larger distance means more work done.",
-      "correctIndex": 1,
-      "explanation": "4.5.2 targets: Compare work done. Focus area: Work Done. For this question, For the same force, a larger distance means more work done. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_distance_compare",
+      "correctAnswer": "Energy is transferred to the crate.",
+      "correctIndex": 0,
+      "explanation": "When work is done on an object, energy is transferred to that object.",
+      "misconceptionTag": "work-energy-transfer",
       "distractorRationales": [
         {
-          "text": "The answer for work done says that only mass decides work done.",
-          "misconception": "For the same force, larger distance means less work."
+          "text": "Energy is destroyed by the force.",
+          "misconception": "energy conservation misconception"
         },
         {
-          "text": "For work done, it means that for the same force, larger distance means less work.",
-          "misconception": "Distance has no effect on work done."
+          "text": "The crate must lose all of its energy.",
+          "misconception": "direction of transfer confused"
         },
         {
-          "text": "For work done, the statement is that distance has no effect on work done.",
-          "misconception": "Only mass decides work done."
+          "text": "No energy transfer can happen unless the crate is stationary.",
+          "misconception": "movement condition reversed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare work done."
+      "senNote": "Checks: Link work done to energy transfer."
     },
     {
-      "id": "aqa_4_5_2_work_done_work_equation_concept_discrimination_016",
+      "id": "aqa_forces_work_done_direction_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6417,56 +5640,633 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_work_equation",
-        "statement": "Use work done. (Work Done)",
+        "id": "aqa_forces_work_done_direction_005_lo",
+        "statement": "Choose the distance in the direction of the force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_work_done_direction_005",
+      "conceptFamily": "choose_the_distance_in_the_direction_of_the_force",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A suitcase is pulled horizontally for 12 m. Which distance should be used to calculate the work done by the horizontal pulling force?",
+      "question": "A suitcase is pulled horizontally for 12 m. Which distance should be used to calculate the work done by the horizontal pulling force?",
+      "options": [
+        "12 m",
+        "the vertical height of the handle",
+        "0 m because the force is horizontal",
+        "the total time taken"
+      ],
+      "correctAnswer": "12 m",
+      "correctIndex": 0,
+      "explanation": "The distance used is the distance moved in the direction of the force.",
+      "misconceptionTag": "distance-direction",
+      "distractorRationales": [
+        {
+          "text": "the vertical height of the handle",
+          "misconception": "wrong direction used"
+        },
+        {
+          "text": "0 m because the force is horizontal",
+          "misconception": "horizontal force rejected incorrectly"
+        },
+        {
+          "text": "the total time taken",
+          "misconception": "time confused with distance"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose the distance in the direction of the force."
+    },
+    {
+      "id": "aqa_forces_work_done_find_force_006",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_find_force_006_lo",
+        "statement": "Rearrange the work done equation to find force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_find_force_006",
+      "conceptFamily": "rearrange_the_work_done_equation_to_find_force",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A force does 300 J of work while moving an object 6.0 m. What is the force?",
+      "question": "A force does 300 J of work while moving an object 6.0 m. What is the force?",
+      "options": [
+        "50 N",
+        "1800 N",
+        "306 N",
+        "0.020 N"
+      ],
+      "correctAnswer": "50 N",
+      "correctIndex": 0,
+      "explanation": "Rearrange \\(W = Fs\\) to \\(F = W \\div s\\). The force is \\(300 \\div 6.0 = 50\\,N\\).",
+      "misconceptionTag": "work-rearrange-force",
+      "distractorRationales": [
+        {
+          "text": "1800 N",
+          "misconception": "multiplies work by distance"
+        },
+        {
+          "text": "306 N",
+          "misconception": "adds values"
+        },
+        {
+          "text": "0.020 N",
+          "misconception": "inverts the division"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the work done equation to find force."
+    },
+    {
+      "id": "aqa_forces_work_done_find_distance_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_find_distance_007_lo",
+        "statement": "Rearrange the work done equation to find distance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_find_distance_007",
+      "conceptFamily": "rearrange_the_work_done_equation_to_find_distance",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A constant force of 75 N does 600 J of work. How far does the object move in the direction of the force?",
+      "question": "A constant force of 75 N does 600 J of work. How far does the object move in the direction of the force?",
+      "options": [
+        "8.0 m",
+        "45 000 m",
+        "525 m",
+        "0.125 m"
+      ],
+      "correctAnswer": "8.0 m",
+      "correctIndex": 0,
+      "explanation": "Rearrange \\(W = Fs\\) to \\(s = W \\div F\\). The distance is \\(600 \\div 75 = 8.0\\,m\\).",
+      "misconceptionTag": "work-rearrange-distance",
+      "distractorRationales": [
+        {
+          "text": "45 000 m",
+          "misconception": "multiplies force by work"
+        },
+        {
+          "text": "525 m",
+          "misconception": "subtracts force from work"
+        },
+        {
+          "text": "0.125 m",
+          "misconception": "uses force divided by work"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the work done equation to find distance."
+    },
+    {
+      "id": "aqa_forces_work_done_zero_distance_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_zero_distance_008_lo",
+        "statement": "Explain why zero distance means zero work done by a force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_zero_distance_008",
+      "conceptFamily": "explain_why_zero_distance_means_zero_work_done_by_a_force",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A student holds a heavy box still above the floor. Why is no work done on the box by the upward holding force?",
+      "question": "A student holds a heavy box still above the floor. Why is no work done on the box by the upward holding force?",
+      "options": [
+        "The box does not move in the direction of the force.",
+        "The force is too large to do work.",
+        "The box has no weight while it is held.",
+        "Work is done only by moving objects with engines."
+      ],
+      "correctAnswer": "The box does not move in the direction of the force.",
+      "correctIndex": 0,
+      "explanation": "For work to be done by a force, the object must move through a distance in the direction of that force.",
+      "misconceptionTag": "zero-distance",
+      "distractorRationales": [
+        {
+          "text": "The force is too large to do work.",
+          "misconception": "force magnitude misconception"
+        },
+        {
+          "text": "The box has no weight while it is held.",
+          "misconception": "weight misconception"
+        },
+        {
+          "text": "Work is done only by moving objects with engines.",
+          "misconception": "limited context misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why zero distance means zero work done by a force."
+    },
+    {
+      "id": "aqa_forces_work_done_compare_distance_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_compare_distance_009_lo",
+        "statement": "Compare work done when distance changes.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_compare_distance_009",
+      "conceptFamily": "compare_work_done_when_distance_changes",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "The same force is used to pull two trolleys. Trolley A moves 2 m and trolley B moves 5 m. Which trolley has more work done on it?",
+      "question": "The same force is used to pull two trolleys. Trolley A moves 2 m and trolley B moves 5 m. Which trolley has more work done on it?",
+      "options": [
+        "Trolley B",
+        "Trolley A",
+        "Both have the same work done",
+        "Neither, because trolleys cannot have work done on them"
+      ],
+      "correctAnswer": "Trolley B",
+      "correctIndex": 0,
+      "explanation": "For the same force, a larger distance means more work done.",
+      "misconceptionTag": "distance-ignored",
+      "distractorRationales": [
+        {
+          "text": "Trolley A",
+          "misconception": "shorter distance chosen"
+        },
+        {
+          "text": "Both have the same work done",
+          "misconception": "distance ignored"
+        },
+        {
+          "text": "Neither, because trolleys cannot have work done on them",
+          "misconception": "context misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare work done when distance changes."
+    },
+    {
+      "id": "aqa_forces_work_done_compare_force_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_compare_force_010_lo",
+        "statement": "Compare work done when force changes.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_compare_force_010",
+      "conceptFamily": "compare_work_done_when_force_changes",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "Two boxes are moved the same distance. Box A is pulled with 20 N and box B with 50 N. Which has more work done on it?",
+      "question": "Two boxes are moved the same distance. Box A is pulled with 20 N and box B with 50 N. Which has more work done on it?",
+      "options": [
+        "Box B",
+        "Box A",
+        "Both, because distance is the same",
+        "Neither, because the boxes are not lifted"
+      ],
+      "correctAnswer": "Box B",
+      "correctIndex": 0,
+      "explanation": "For the same distance, a larger force means more work done.",
+      "misconceptionTag": "force-ignored",
+      "distractorRationales": [
+        {
+          "text": "Box A",
+          "misconception": "smaller force chosen"
+        },
+        {
+          "text": "Both, because distance is the same",
+          "misconception": "force ignored"
+        },
+        {
+          "text": "Neither, because the boxes are not lifted",
+          "misconception": "work only as lifting misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare work done when force changes."
+    },
+    {
+      "id": "aqa_forces_work_done_friction_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_friction_011_lo",
+        "statement": "Describe energy transfer when work is done against friction.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_work_done_friction_011",
+      "conceptFamily": "describe_energy_transfer_when_work_is_done_against_friction",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A cyclist brakes and comes to a stop. What energy transfer is mainly caused by the work done against friction?",
+      "question": "A cyclist brakes and comes to a stop. What energy transfer is mainly caused by the work done against friction?",
+      "options": [
+        "Energy is transferred from the kinetic store to thermal stores.",
+        "Energy is transferred from thermal stores to the kinetic store.",
+        "Energy is destroyed by the brakes.",
+        "Energy is transferred only to a magnetic store."
+      ],
+      "correctAnswer": "Energy is transferred from the kinetic store to thermal stores.",
+      "correctIndex": 0,
+      "explanation": "Friction does work that transfers energy from the cyclist’s kinetic store to thermal stores in the brakes and surroundings.",
+      "misconceptionTag": "friction-energy-destroyed",
+      "distractorRationales": [
+        {
+          "text": "Energy is transferred from thermal stores to the kinetic store.",
+          "misconception": "transfer direction reversed"
+        },
+        {
+          "text": "Energy is destroyed by the brakes.",
+          "misconception": "energy destruction misconception"
+        },
+        {
+          "text": "Energy is transferred only to a magnetic store.",
+          "misconception": "wrong store"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe energy transfer when work is done against friction."
+    },
+    {
+      "id": "aqa_forces_work_done_lifting_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_lifting_012_lo",
+        "statement": "Calculate work done against gravity.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_lifting_012",
+      "conceptFamily": "calculate_work_done_against_gravity",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A 100 N weight is lifted vertically by 1.5 m. How much work is done against gravity?",
+      "question": "A 100 N weight is lifted vertically by 1.5 m. How much work is done against gravity?",
+      "options": [
+        "150 J",
+        "67 J",
+        "101.5 J",
+        "15 J"
+      ],
+      "correctAnswer": "150 J",
+      "correctIndex": 0,
+      "explanation": "Work done against gravity is force × vertical distance: \\(100 \\times 1.5 = 150\\,J\\).",
+      "misconceptionTag": "lifting-work",
+      "distractorRationales": [
+        {
+          "text": "67 J",
+          "misconception": "divides force by distance"
+        },
+        {
+          "text": "101.5 J",
+          "misconception": "adds force and distance"
+        },
+        {
+          "text": "15 J",
+          "misconception": "place-value error"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate work done against gravity."
+    },
+    {
+      "id": "aqa_forces_work_done_spring_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_spring_013_lo",
+        "statement": "Link work done on a spring to elastic potential energy.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.2:work_equation:concept_discrimination",
-      "conceptFamily": "work_equation",
-      "contextType": "a graph-reading task",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_spring_013",
+      "conceptFamily": "link_work_done_on_a_spring_to_elastic_potential_energy",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "Which option best separates the correct work done idea from a common mix-up? Demand focus: use work done.",
-      "question": "Which option best separates the correct work done idea from a common mix-up? Demand focus: use work done.",
+      "stem": "A student stretches a spring. Which store increases because work is done on the spring?",
+      "question": "A student stretches a spring. Which store increases because work is done on the spring?",
       "options": [
-        "For work done: Distance perpendicular to the force is always used.",
-        "In this item, it means that work done = force ÷ distance.",
-        "In this item, it means that work done = force × distance moved in the direction of the force.",
-        "The claim for work done is that work done is measured in watts."
+        "Elastic potential store.",
+        "Nuclear store.",
+        "Gravitational potential store only.",
+        "Magnetic store only."
       ],
-      "correctAnswer": "In this item, it means that work done = force × distance moved in the direction of the force.",
-      "correctIndex": 2,
-      "explanation": "4.5.2 targets: Use work done. Focus area: Work Done. For this question, Work done = force × distance moved in the direction of the force. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:work_equation",
+      "correctAnswer": "Elastic potential store.",
+      "correctIndex": 0,
+      "explanation": "Stretching a spring transfers energy to its elastic potential store.",
+      "misconceptionTag": "spring-store",
       "distractorRationales": [
         {
-          "text": "In this item, it means that work done = force ÷ distance.",
-          "misconception": "Work done = force ÷ distance."
+          "text": "Nuclear store.",
+          "misconception": "wrong store"
         },
         {
-          "text": "The claim for work done is that work done is measured in watts.",
-          "misconception": "Work done is measured in watts."
+          "text": "Gravitational potential store only.",
+          "misconception": "height confused with stretch"
         },
         {
-          "text": "For work done: Distance perpendicular to the force is always used.",
-          "misconception": "Distance perpendicular to the force is always used."
+          "text": "Magnetic store only.",
+          "misconception": "field store chosen without magnetism"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use work done."
+      "senNote": "Checks: Link work done on a spring to elastic potential energy."
     },
     {
-      "id": "aqa_4_5_2_work_done_energy_transfer_misconception_correction_017",
+      "id": "aqa_forces_work_done_force_distance_graph_014",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6488,56 +6288,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_energy_transfer",
-        "statement": "Link work done to energy transfer. (Work Done)",
+        "id": "aqa_forces_work_done_force_distance_graph_014_lo",
+        "statement": "Calculate work done from a constant force-distance graph.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.2:energy_transfer:misconception_correction",
-      "conceptFamily": "energy_transfer",
-      "contextType": "a comparison question",
+      "commandWord": "calculate",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_work_done_force_distance_graph_014",
+      "conceptFamily": "calculate_work_done_from_a_constant_force_distance_graph",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "Which answer corrects a misconception about work done? Keep the answer focused on work done: link work done to energy transfer.",
-      "question": "Which answer corrects a misconception about work done? Keep the answer focused on work done: link work done to energy transfer.",
+      "stem": "A force-distance graph has a constant force of 30 N from 0 m to 4 m. What is the work done?",
+      "question": "A force-distance graph has a constant force of 30 N from 0 m to 4 m. What is the work done?",
       "options": [
-        "For work done, the answer claims that when work is done, energy is transferred.",
-        "For work done, the answer claims that work done happens without any force.",
-        "For work done, the statement is that work done is unrelated to energy.",
-        "In this work done item, work done destroys energy."
+        "120 J",
+        "34 J",
+        "7.5 J",
+        "30 J"
       ],
-      "correctAnswer": "For work done, the answer claims that when work is done, energy is transferred.",
+      "correctAnswer": "120 J",
       "correctIndex": 0,
-      "explanation": "4.5.2 targets: Link work done to energy transfer. Focus area: Work Done. For this question, When work is done, energy is transferred. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_transfer",
+      "explanation": "For a constant force, work done is the area under the force-distance graph: \\(30 \\times 4 = 120\\,J\\).",
+      "misconceptionTag": "force-distance-graph-area",
       "distractorRationales": [
         {
-          "text": "For work done, the answer claims that work done happens without any force.",
-          "misconception": "Work done destroys energy."
+          "text": "34 J",
+          "misconception": "adds force and distance"
         },
         {
-          "text": "For work done, the statement is that work done is unrelated to energy.",
-          "misconception": "Work done happens without any force."
+          "text": "7.5 J",
+          "misconception": "divides force by distance"
         },
         {
-          "text": "In this work done item, work done destroys energy.",
-          "misconception": "Work done is unrelated to energy."
+          "text": "30 J",
+          "misconception": "ignores distance"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Link work done to energy transfer."
+      "senNote": "Checks: Calculate work done from a constant force-distance graph."
     },
     {
-      "id": "aqa_4_5_2_work_done_unit_joule_data_interpretation_018",
+      "id": "aqa_forces_work_done_table_015",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6559,127 +6360,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_unit_joule",
-        "statement": "Recall the unit of work done. (Work Done)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.2:unit_joule:data_interpretation",
-      "conceptFamily": "unit_joule",
-      "contextType": "a method-choice question",
-      "skill": "Work Done practice",
-      "stem": "Which conclusion about work done is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "question": "Which conclusion about work done is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "options": [
-        "For work done, the statement is that work done is measured in joules.",
-        "For work done, it means that work done is measured in hertz.",
-        "For work done, it means that work done is measured in amperes.",
-        "For work done, it means that work done is measured in tesla."
-      ],
-      "correctAnswer": "For work done, the statement is that work done is measured in joules.",
-      "correctIndex": 0,
-      "explanation": "4.5.2 targets: Recall the unit of work done. Focus area: Work Done. For this question, Work done is measured in joules. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_joule",
-      "distractorRationales": [
-        {
-          "text": "For work done, it means that work done is measured in tesla.",
-          "misconception": "Work done is measured in amperes."
-        },
-        {
-          "text": "For work done, it means that work done is measured in amperes.",
-          "misconception": "Work done is measured in hertz."
-        },
-        {
-          "text": "For work done, it means that work done is measured in hertz.",
-          "misconception": "Work done is measured in tesla."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Recall the unit of work done."
-    },
-    {
-      "id": "aqa_4_5_2_work_done_distance_direction_representation_interpretation_019",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Work Done",
-      "topicSlug": "forces",
-      "subtopicSlug": "work_done",
-      "topicId": "work_done",
-      "specRef": "4.5.2",
-      "specStatement": "Work done and energy transfer.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_2_work_done_distance_direction",
-        "statement": "Choose the correct distance. (Work Done)",
+        "id": "aqa_forces_work_done_table_015_lo",
+        "statement": "Compare work done values from force and distance data.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.2:distance_direction:representation_interpretation",
-      "conceptFamily": "distance_direction",
-      "contextType": "a results discussion",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_forces_work_done_table_015",
+      "conceptFamily": "compare_work_done_values_from_force_and_distance_data",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A representation of work done is described in words. Which interpretation is correct? Keep the answer focused on work done: choose the correct distance.",
-      "question": "A representation of work done is described in words. Which interpretation is correct? Keep the answer focused on work done: choose the correct distance.",
+      "stem": "A table shows: trial 1 uses 10 N for 4 m; trial 2 uses 20 N for 3 m; trial 3 uses 15 N for 5 m. Which trial has the greatest work done?",
+      "question": "A table shows: trial 1 uses 10 N for 4 m; trial 2 uses 20 N for 3 m; trial 3 uses 15 N for 5 m. Which trial has the greatest work done?",
       "options": [
-        "For work done: Use the total path length even if sideways.",
-        "The claim for work done is that use the distance moved in the direction of the force.",
-        "For work done: Use the height only for every problem.",
-        "For work done, the option says that use time instead of distance."
+        "Trial 3",
+        "Trial 1",
+        "Trial 2",
+        "All are equal"
       ],
-      "correctAnswer": "The claim for work done is that use the distance moved in the direction of the force.",
-      "correctIndex": 1,
-      "explanation": "4.5.2 targets: Choose the correct distance. Focus area: Work Done. For this question, Use the distance moved in the direction of the force. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:distance_direction",
+      "correctAnswer": "Trial 3",
+      "correctIndex": 0,
+      "explanation": "The work done values are 40 J, 60 J and 75 J, so trial 3 is greatest.",
+      "misconceptionTag": "largest-force-only",
       "distractorRationales": [
         {
-          "text": "For work done: Use the total path length even if sideways.",
-          "misconception": "Use the total path length even if sideways."
+          "text": "Trial 1",
+          "misconception": "uses first row without calculating"
         },
         {
-          "text": "For work done: Use the height only for every problem.",
-          "misconception": "Use the height only for every problem."
+          "text": "Trial 2",
+          "misconception": "largest force only"
         },
         {
-          "text": "For work done, the option says that use time instead of distance.",
-          "misconception": "Use time instead of distance."
+          "text": "All are equal",
+          "misconception": "values not compared"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Choose the correct distance."
+      "senNote": "Checks: Compare work done values from force and distance data."
     },
     {
-      "id": "aqa_4_5_2_work_done_force_distance_compare_direct_recall_020",
+      "id": "aqa_forces_work_done_ramp_016",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6701,56 +6432,201 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_force_distance_compare",
-        "statement": "Compare work done. (Work Done)",
+        "id": "aqa_forces_work_done_ramp_016_lo",
+        "statement": "Choose the correct distance for work done on a ramp.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_work_done_ramp_016",
+      "conceptFamily": "choose_the_correct_distance_for_work_done_on_a_ramp",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A box is pulled up a ramp. The pulling force acts along the ramp. Which distance should be used for the work done by the pulling force?",
+      "question": "A box is pulled up a ramp. The pulling force acts along the ramp. Which distance should be used for the work done by the pulling force?",
+      "options": [
+        "The distance moved along the ramp.",
+        "Only the vertical height gained.",
+        "The width of the ramp.",
+        "The time taken to reach the top."
+      ],
+      "correctAnswer": "The distance moved along the ramp.",
+      "correctIndex": 0,
+      "explanation": "The work done by a force uses the distance moved in the direction of that force, which is along the ramp.",
+      "misconceptionTag": "ramp-distance",
+      "distractorRationales": [
+        {
+          "text": "Only the vertical height gained.",
+          "misconception": "vertical distance used for ramp force"
+        },
+        {
+          "text": "The width of the ramp.",
+          "misconception": "perpendicular distance used"
+        },
+        {
+          "text": "The time taken to reach the top.",
+          "misconception": "time used instead of distance"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose the correct distance for work done on a ramp."
+    },
+    {
+      "id": "aqa_forces_work_done_no_movement_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_no_movement_017_lo",
+        "statement": "Calculate work done when distance is zero.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_no_movement_017",
+      "conceptFamily": "calculate_work_done_when_distance_is_zero",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A wall is pushed with a force of 200 N but the wall does not move. How much work is done on the wall?",
+      "question": "A wall is pushed with a force of 200 N but the wall does not move. How much work is done on the wall?",
+      "options": [
+        "0 J",
+        "200 J",
+        "400 J",
+        "20 000 J"
+      ],
+      "correctAnswer": "0 J",
+      "correctIndex": 0,
+      "explanation": "The wall does not move, so the distance in the direction of the force is zero and no work is done on it.",
+      "misconceptionTag": "force-without-distance",
+      "distractorRationales": [
+        {
+          "text": "200 J",
+          "misconception": "force used as work"
+        },
+        {
+          "text": "400 J",
+          "misconception": "arbitrary multiplication"
+        },
+        {
+          "text": "20 000 J",
+          "misconception": "force treated as distance"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate work done when distance is zero."
+    },
+    {
+      "id": "aqa_forces_work_done_units_equivalent_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_units_equivalent_018_lo",
+        "statement": "Recognise joule as a newton metre for work done.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.2:force_distance_compare:direct_recall",
-      "conceptFamily": "force_distance_compare",
-      "contextType": "a classroom demonstration",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recognise",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_work_done_units_equivalent_018",
+      "conceptFamily": "recognise_joule_as_a_newton_metre_for_work_done",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A student is revising work done. Which statement should they keep? Keep the answer focused on work done: compare work done.",
-      "question": "A student is revising work done. Which statement should they keep? Keep the answer focused on work done: compare work done.",
+      "stem": "Which unit is equivalent to one joule of work done?",
+      "question": "Which unit is equivalent to one joule of work done?",
       "options": [
-        "For work done, it means that only mass decides work done.",
-        "In this item, it means that for the same force, larger distance means less work.",
-        "For work done, the option says that distance has no effect on work done.",
-        "In this item, it means that for the same force, a larger distance means more work done."
+        "1 N m",
+        "1 N/m",
+        "1 kg/m³",
+        "1 W/s"
       ],
-      "correctAnswer": "In this item, it means that for the same force, a larger distance means more work done.",
-      "correctIndex": 3,
-      "explanation": "4.5.2 targets: Compare work done. Focus area: Work Done. For this question, For the same force, a larger distance means more work done. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_distance_compare",
+      "correctAnswer": "1 N m",
+      "correctIndex": 0,
+      "explanation": "Since work done = force × distance, one joule is equivalent to one newton metre.",
+      "misconceptionTag": "joule-newton-metre",
       "distractorRationales": [
         {
-          "text": "For work done, the option says that distance has no effect on work done.",
-          "misconception": "For the same force, larger distance means less work."
+          "text": "1 N/m",
+          "misconception": "spring constant unit confused"
         },
         {
-          "text": "For work done, it means that only mass decides work done.",
-          "misconception": "Distance has no effect on work done."
+          "text": "1 kg/m³",
+          "misconception": "density unit confused"
         },
         {
-          "text": "In this item, it means that for the same force, larger distance means less work.",
-          "misconception": "Only mass decides work done."
+          "text": "1 W/s",
+          "misconception": "power-time relationship confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare work done."
+      "senNote": "Checks: Recognise joule as a newton metre for work done."
     },
     {
-      "id": "aqa_4_5_2_work_done_work_equation_applied_context_021",
+      "id": "aqa_forces_work_done_positive_transfer_019",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6772,56 +6648,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_work_equation",
-        "statement": "Use work done. (Work Done)",
+        "id": "aqa_forces_work_done_positive_transfer_019_lo",
+        "statement": "Describe useful energy transfer when work is done lifting a load.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "apply",
+      "difficulty": "medium",
+      "commandWord": "describe",
       "responseMode": "applied_context",
-      "patternId": "4.5.2:work_equation:applied_context",
-      "conceptFamily": "work_equation",
-      "contextType": "a revision checkpoint",
+      "patternId": "authored:aqa_forces_work_done_positive_transfer_019",
+      "conceptFamily": "describe_useful_energy_transfer_when_work_is_done_lifting_a_load",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A question set in a revision checkpoint tests work done. Which answer applies the idea correctly? Demand focus: use work done.",
-      "question": "A question set in a revision checkpoint tests work done. Which answer applies the idea correctly? Demand focus: use work done.",
+      "stem": "A motor lifts a load at a steady speed. What is the useful energy transfer?",
+      "question": "A motor lifts a load at a steady speed. What is the useful energy transfer?",
       "options": [
-        "For work done: Work done = force ÷ distance.",
-        "For work done: Work done is measured in watts.",
-        "The claim for work done is that work done = force × distance moved in the direction of the force.",
-        "For work done: Distance perpendicular to the force is always used."
+        "Energy is transferred to the gravitational potential store of the load.",
+        "Energy is transferred only to the kinetic store because speed is steady.",
+        "Energy is destroyed by the motor.",
+        "Energy is transferred from the load to the motor only."
       ],
-      "correctAnswer": "The claim for work done is that work done = force × distance moved in the direction of the force.",
-      "correctIndex": 2,
-      "explanation": "4.5.2 targets: Use work done. Focus area: Work Done. For this question, Work done = force × distance moved in the direction of the force. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:work_equation",
+      "correctAnswer": "Energy is transferred to the gravitational potential store of the load.",
+      "correctIndex": 0,
+      "explanation": "Lifting the load increases its gravitational potential energy store.",
+      "misconceptionTag": "lifting-useful-transfer",
       "distractorRationales": [
         {
-          "text": "For work done: Distance perpendicular to the force is always used.",
-          "misconception": "Work done = force ÷ distance."
+          "text": "Energy is transferred only to the kinetic store because speed is steady.",
+          "misconception": "steady speed store misconception"
         },
         {
-          "text": "For work done: Work done = force ÷ distance.",
-          "misconception": "Work done is measured in watts."
+          "text": "Energy is destroyed by the motor.",
+          "misconception": "energy destruction misconception"
         },
         {
-          "text": "For work done: Work done is measured in watts.",
-          "misconception": "Distance perpendicular to the force is always used."
+          "text": "Energy is transferred from the load to the motor only.",
+          "misconception": "transfer direction reversed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use work done."
+      "senNote": "Checks: Describe useful energy transfer when work is done lifting a load."
     },
     {
-      "id": "aqa_4_5_2_work_done_energy_transfer_misconception_correction_022",
+      "id": "aqa_forces_work_done_more_than_one_force_020",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6843,56 +6720,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_energy_transfer",
-        "statement": "Link work done to energy transfer. (Work Done)",
+        "id": "aqa_forces_work_done_more_than_one_force_020_lo",
+        "statement": "Calculate work done by a specified force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.2:energy_transfer:misconception_correction",
-      "conceptFamily": "energy_transfer",
-      "contextType": "an exam-style data table",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_more_than_one_force_020",
+      "conceptFamily": "calculate_work_done_by_a_specified_force",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A learner gives a wrong explanation for work done. Which correction is best? Keep the answer focused on work done: link work done to energy transfer.",
-      "question": "A learner gives a wrong explanation for work done. Which correction is best? Keep the answer focused on work done: link work done to energy transfer.",
+      "stem": "A 60 N pulling force moves a trolley 5.0 m. A 10 N friction force acts backwards. How much work is done by the pulling force?",
+      "question": "A 60 N pulling force moves a trolley 5.0 m. A 10 N friction force acts backwards. How much work is done by the pulling force?",
       "options": [
-        "The claim for work done is that work done destroys energy.",
-        "The claim for work done is that when work is done, energy is transferred.",
-        "For work done: Work done happens without any force.",
-        "For work done, this would mean that work done is unrelated to energy."
+        "300 J",
+        "50 J",
+        "250 J",
+        "12 J"
       ],
-      "correctAnswer": "The claim for work done is that when work is done, energy is transferred.",
-      "correctIndex": 1,
-      "explanation": "4.5.2 targets: Link work done to energy transfer. Focus area: Work Done. For this question, When work is done, energy is transferred. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:energy_transfer",
+      "correctAnswer": "300 J",
+      "correctIndex": 0,
+      "explanation": "The question asks about the pulling force only, so use \\(60 \\times 5.0 = 300\\,J\\).",
+      "misconceptionTag": "specified-force",
       "distractorRationales": [
         {
-          "text": "The claim for work done is that work done destroys energy.",
-          "misconception": "Work done destroys energy."
+          "text": "50 J",
+          "misconception": "net force used when asked for pulling force"
         },
         {
-          "text": "For work done: Work done happens without any force.",
-          "misconception": "Work done happens without any force."
+          "text": "250 J",
+          "misconception": "friction subtracted first"
         },
         {
-          "text": "For work done, this would mean that work done is unrelated to energy.",
-          "misconception": "Work done is unrelated to energy."
+          "text": "12 J",
+          "misconception": "force divided by distance"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Link work done to energy transfer."
+      "senNote": "Checks: Calculate work done by a specified force."
     },
     {
-      "id": "aqa_4_5_2_work_done_unit_joule_exam_decision_023",
+      "id": "aqa_forces_work_done_net_force_021",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6914,56 +6792,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_unit_joule",
-        "statement": "Recall the unit of work done. (Work Done)",
+        "id": "aqa_forces_work_done_net_force_021_lo",
+        "statement": "Calculate work done by a resultant force.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.2:unit_joule:exam_decision",
-      "conceptFamily": "unit_joule",
-      "contextType": "a required-practical notebook",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_net_force_021",
+      "conceptFamily": "calculate_work_done_by_a_resultant_force",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "Which answer is the strongest GCSE Physics response for work done? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
-      "question": "Which answer is the strongest GCSE Physics response for work done? Choose the statement that fits this exact GCSE Physics idea: recall the unit of work done.",
+      "stem": "A 60 N pull and a 10 N friction force act on a trolley moving 5.0 m in the direction of the pull. What is the work done by the resultant force?",
+      "question": "A 60 N pull and a 10 N friction force act on a trolley moving 5.0 m in the direction of the pull. What is the work done by the resultant force?",
       "options": [
-        "For work done, the answer claims that work done is measured in hertz.",
-        "For work done, the answer claims that work done is measured in amperes.",
-        "For work done, the statement is that work done is measured in tesla.",
-        "In this work done item, work done is measured in joules."
+        "250 J",
+        "300 J",
+        "50 J",
+        "350 J"
       ],
-      "correctAnswer": "In this work done item, work done is measured in joules.",
-      "correctIndex": 3,
-      "explanation": "4.5.2 targets: Recall the unit of work done. Focus area: Work Done. For this question, Work done is measured in joules. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_joule",
+      "correctAnswer": "250 J",
+      "correctIndex": 0,
+      "explanation": "The resultant force is 50 N, so the work done by the resultant force is \\(50 \\times 5.0 = 250\\,J\\).",
+      "misconceptionTag": "resultant-work",
       "distractorRationales": [
         {
-          "text": "For work done, the answer claims that work done is measured in hertz.",
-          "misconception": "Work done is measured in amperes."
+          "text": "300 J",
+          "misconception": "uses pull only"
         },
         {
-          "text": "For work done, the statement is that work done is measured in tesla.",
-          "misconception": "Work done is measured in hertz."
+          "text": "50 J",
+          "misconception": "uses resultant force but ignores distance"
         },
         {
-          "text": "For work done, the answer claims that work done is measured in amperes.",
-          "misconception": "Work done is measured in tesla."
+          "text": "350 J",
+          "misconception": "adds opposing force"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the unit of work done."
+      "senNote": "Checks: Calculate work done by a resultant force."
     },
     {
-      "id": "aqa_4_5_2_work_done_distance_direction_representation_interpretation_024",
+      "id": "aqa_forces_work_done_decimal_distance_022",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -6985,53 +6864,198 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_2_work_done_distance_direction",
-        "statement": "Choose the correct distance. (Work Done)",
+        "id": "aqa_forces_work_done_decimal_distance_022_lo",
+        "statement": "Use decimal distances in work done calculations.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.2:distance_direction:representation_interpretation",
-      "conceptFamily": "distance_direction",
-      "contextType": "a technician report",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_decimal_distance_022",
+      "conceptFamily": "use_decimal_distances_in_work_done_calculations",
+      "contextType": "exam_style",
       "skill": "Work Done practice",
-      "stem": "A labelled representation is used for work done. Which statement is valid? Keep the answer focused on work done: choose the correct distance.",
-      "question": "A labelled representation is used for work done. Which statement is valid? Keep the answer focused on work done: choose the correct distance.",
+      "stem": "A 12 N force moves an object 0.50 m. What is the work done?",
+      "question": "A 12 N force moves an object 0.50 m. What is the work done?",
       "options": [
-        "For work done, the answer claims that use the total path length even if sideways.",
-        "For work done, the statement is that use the distance moved in the direction of the force.",
-        "For work done, the answer claims that use time instead of distance.",
-        "In this work done item, use the height only for every problem."
+        "6.0 J",
+        "24 J",
+        "12.5 J",
+        "0.042 J"
       ],
-      "correctAnswer": "For work done, the statement is that use the distance moved in the direction of the force.",
-      "correctIndex": 1,
-      "explanation": "4.5.2 targets: Choose the correct distance. Focus area: Work Done. For this question, Use the distance moved in the direction of the force. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:distance_direction",
+      "correctAnswer": "6.0 J",
+      "correctIndex": 0,
+      "explanation": "Use \\(W = Fs\\). The work done is \\(12 \\times 0.50 = 6.0\\,J\\).",
+      "misconceptionTag": "decimal-distance",
       "distractorRationales": [
         {
-          "text": "For work done, the answer claims that use time instead of distance.",
-          "misconception": "Use the total path length even if sideways."
+          "text": "24 J",
+          "misconception": "divides by 0.50"
         },
         {
-          "text": "For work done, the answer claims that use the total path length even if sideways.",
-          "misconception": "Use the height only for every problem."
+          "text": "12.5 J",
+          "misconception": "adds force and distance"
         },
         {
-          "text": "In this work done item, use the height only for every problem.",
-          "misconception": "Use time instead of distance."
+          "text": "0.042 J",
+          "misconception": "uses distance divided by force"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Choose the correct distance."
+      "senNote": "Checks: Use decimal distances in work done calculations."
+    },
+    {
+      "id": "aqa_forces_work_done_kilometres_023",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_kilometres_023_lo",
+        "statement": "Convert kilometres to metres before calculating work done.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "convert",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_work_done_kilometres_023",
+      "conceptFamily": "convert_kilometres_to_metres_before_calculating_work_done",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A constant driving force of 800 N moves a car 0.20 km. Which distance should be substituted into \\(W = Fs\\)?",
+      "question": "A constant driving force of 800 N moves a car 0.20 km. Which distance should be substituted into \\(W = Fs\\)?",
+      "options": [
+        "200 m",
+        "0.20 m",
+        "20 m",
+        "800 m"
+      ],
+      "correctAnswer": "200 m",
+      "correctIndex": 0,
+      "explanation": "The equation uses distance in metres. \\(0.20\\,km = 200\\,m\\).",
+      "misconceptionTag": "km-to-m",
+      "distractorRationales": [
+        {
+          "text": "0.20 m",
+          "misconception": "kilometres not converted"
+        },
+        {
+          "text": "20 m",
+          "misconception": "conversion factor error"
+        },
+        {
+          "text": "800 m",
+          "misconception": "force copied as distance"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Convert kilometres to metres before calculating work done."
+    },
+    {
+      "id": "aqa_forces_work_done_exam_reasoning_024",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Work Done",
+      "topicSlug": "forces",
+      "subtopicSlug": "work_done",
+      "topicId": "work_done",
+      "specRef": "4.5.2",
+      "specStatement": "Work done and energy transfer.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_work_done_exam_reasoning_024_lo",
+        "statement": "Evaluate a statement about force and work done.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "evaluate",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_work_done_exam_reasoning_024",
+      "conceptFamily": "evaluate_a_statement_about_force_and_work_done",
+      "contextType": "exam_style",
+      "skill": "Work Done practice",
+      "stem": "A student writes: “A large force always means a large amount of work is done.” Which response is correct?",
+      "question": "A student writes: “A large force always means a large amount of work is done.” Which response is correct?",
+      "options": [
+        "Not always, because work done also depends on the distance moved in the direction of the force.",
+        "Always true, because distance is not part of the work done equation.",
+        "Always true, because force and work done have the same unit.",
+        "Not true, because forces can never transfer energy."
+      ],
+      "correctAnswer": "Not always, because work done also depends on the distance moved in the direction of the force.",
+      "correctIndex": 0,
+      "explanation": "Work done depends on both force and distance moved in the direction of the force.",
+      "misconceptionTag": "force-alone",
+      "distractorRationales": [
+        {
+          "text": "Always true, because distance is not part of the work done equation.",
+          "misconception": "distance ignored"
+        },
+        {
+          "text": "Always true, because force and work done have the same unit.",
+          "misconception": "unit misconception"
+        },
+        {
+          "text": "Not true, because forces can never transfer energy.",
+          "misconception": "work-energy misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Evaluate a statement about force and work done."
     },
     {
       "id": "aqa_4_5_1_1_scalar_and_vector_quantities_scalar_vector_direct_recall_001",

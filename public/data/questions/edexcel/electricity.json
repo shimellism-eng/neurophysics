@@ -13,7 +13,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "easy",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a filament lamp graph to check the key physics idea. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance falls to zero because the lamp glows.",
         "Its resistance stays constant because it is ohmic.",
@@ -37,7 +37,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "easy",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a component test circuit to check the key physics idea. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance stays constant because it is ohmic.",
         "Its resistance changes only if the potential difference is zero.",
@@ -61,7 +61,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "easy",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a I-V practical result to check the key physics idea. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance changes only if the potential difference is zero.",
         "Its resistance increases because the filament gets hotter.",
@@ -85,7 +85,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "easy",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a current sensor trace to check the key physics idea. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance increases because the filament gets hotter.",
         "Its resistance falls to zero because the lamp glows.",
@@ -109,7 +109,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "easy",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a filament lamp graph to prepare for an exam-style question. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance falls to zero because the lamp glows.",
         "Its resistance stays constant because it is ohmic.",
@@ -133,7 +133,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "easy",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a component test circuit to prepare for an exam-style question. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance stays constant because it is ohmic.",
         "Its resistance changes only if the potential difference is zero.",
@@ -157,7 +157,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a I-V practical result to prepare for an exam-style question. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance falls to zero because the lamp glows.",
         "Its resistance stays constant because it is ohmic.",
@@ -181,7 +181,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a current sensor trace to prepare for an exam-style question. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance stays constant because it is ohmic.",
         "Its resistance changes only if the potential difference is zero.",
@@ -205,7 +205,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a filament lamp graph to test a common misconception. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance changes only if the potential difference is zero.",
         "Its resistance increases because the filament gets hotter.",
@@ -229,7 +229,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a component test circuit to test a common misconception. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance increases because the filament gets hotter.",
         "Its resistance falls to zero because the lamp glows.",
@@ -253,7 +253,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a I-V practical result to test a common misconception. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance falls to zero because the lamp glows.",
         "Its resistance stays constant because it is ohmic.",
@@ -277,7 +277,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a current sensor trace to test a common misconception. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance stays constant because it is ohmic.",
         "Its resistance changes only if the potential difference is zero.",
@@ -301,7 +301,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "hard",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a filament lamp graph to link the context to the GCSE model. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance changes only if the potential difference is zero.",
         "Its resistance increases because the filament gets hotter.",
@@ -325,7 +325,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "medium",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a component test circuit to link the context to the GCSE model. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance changes only if the potential difference is zero.",
         "Its resistance increases because the filament gets hotter.",
@@ -349,7 +349,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "medium",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a I-V practical result to link the context to the GCSE model. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance increases because the filament gets hotter.",
         "Its resistance falls to zero because the lamp glows.",
@@ -373,7 +373,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "medium",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a current sensor trace to link the context to the GCSE model. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance falls to zero because the lamp glows.",
         "Its resistance stays constant because it is ohmic.",
@@ -397,7 +397,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "medium",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases?",
+      "question": "A learner uses a filament lamp graph to review the evidence in the setup. What happens to the resistance of a filament lamp when the current through it increases?",
       "options": [
         "Its resistance stays constant because it is ohmic.",
         "Its resistance changes only if the potential difference is zero.",
@@ -421,7 +421,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "medium",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a component test circuit to review the evidence in the setup. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance changes only if the potential difference is zero.",
         "Its resistance increases because the filament gets hotter.",
@@ -445,7 +445,7 @@
       "subtopicSlug": "current-voltage_characteristics",
       "difficulty": "medium",
       "skill": "Describe the resistance of a filament lamp",
-      "question": "What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
+      "question": "A learner uses a I-V practical result to review the evidence in the setup. What happens to the resistance of a filament lamp when the current through it increases? Choose the best answer.",
       "options": [
         "Its resistance increases because the filament gets hotter.",
         "Its resistance falls to zero because the lamp glows.",
@@ -469,7 +469,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "easy",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a three-pin plug diagram to check the key physics idea. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It increases the current to start the appliance.",
         "It stores charge so the appliance works longer.",
@@ -493,7 +493,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "easy",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a home wiring safety check to check the key physics idea. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It stores charge so the appliance works longer.",
         "It keeps the neutral wire at a higher potential difference.",
@@ -517,7 +517,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "easy",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a fuse-rating explanation to check the key physics idea. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It keeps the neutral wire at a higher potential difference.",
         "It melts and breaks the circuit if the current becomes too large.",
@@ -541,7 +541,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "easy",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a appliance fault scenario to check the key physics idea. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It melts and breaks the circuit if the current becomes too large.",
         "It increases the current to start the appliance.",
@@ -565,7 +565,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "easy",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a three-pin plug diagram to prepare for an exam-style question. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It increases the current to start the appliance.",
         "It stores charge so the appliance works longer.",
@@ -589,7 +589,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "easy",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a home wiring safety check to prepare for an exam-style question. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It stores charge so the appliance works longer.",
         "It keeps the neutral wire at a higher potential difference.",
@@ -613,7 +613,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "hard",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a fuse-rating explanation to prepare for an exam-style question. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It stores charge so the appliance works longer.",
         "It keeps the neutral wire at a higher potential difference.",
@@ -637,7 +637,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "hard",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a appliance fault scenario to prepare for an exam-style question. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It keeps the neutral wire at a higher potential difference.",
         "It melts and breaks the circuit if the current becomes too large.",
@@ -661,7 +661,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "hard",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a three-pin plug diagram to test a common misconception. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It melts and breaks the circuit if the current becomes too large.",
         "It increases the current to start the appliance.",
@@ -685,7 +685,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "hard",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a home wiring safety check to test a common misconception. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It increases the current to start the appliance.",
         "It stores charge so the appliance works longer.",
@@ -709,7 +709,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "hard",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a fuse-rating explanation to test a common misconception. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It stores charge so the appliance works longer.",
         "It keeps the neutral wire at a higher potential difference.",
@@ -733,7 +733,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "hard",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a appliance fault scenario to test a common misconception. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It keeps the neutral wire at a higher potential difference.",
         "It melts and breaks the circuit if the current becomes too large.",
@@ -757,7 +757,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a three-pin plug diagram to link the context to the GCSE model. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It keeps the neutral wire at a higher potential difference.",
         "It melts and breaks the circuit if the current becomes too large.",
@@ -781,7 +781,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a home wiring safety check to link the context to the GCSE model. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It melts and breaks the circuit if the current becomes too large.",
         "It increases the current to start the appliance.",
@@ -805,7 +805,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a fuse-rating explanation to link the context to the GCSE model. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It increases the current to start the appliance.",
         "It stores charge so the appliance works longer.",
@@ -829,7 +829,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug?",
+      "question": "A learner uses a appliance fault scenario to link the context to the GCSE model. Why is a fuse placed in the live wire of a plug?",
       "options": [
         "It stores charge so the appliance works longer.",
         "It keeps the neutral wire at a higher potential difference.",
@@ -853,7 +853,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a three-pin plug diagram to review the evidence in the setup. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It keeps the neutral wire at a higher potential difference.",
         "It melts and breaks the circuit if the current becomes too large.",
@@ -877,7 +877,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a home wiring safety check to review the evidence in the setup. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It melts and breaks the circuit if the current becomes too large.",
         "It increases the current to start the appliance.",
@@ -901,7 +901,7 @@
       "subtopicSlug": "domestic_electricity",
       "difficulty": "medium",
       "skill": "Explain the purpose of a fuse",
-      "question": "Why is a fuse placed in the live wire of a plug? Choose the best answer.",
+      "question": "A learner uses a fuse-rating explanation to review the evidence in the setup. Why is a fuse placed in the live wire of a plug? Choose the best answer.",
       "options": [
         "It increases the current to start the appliance.",
         "It stores charge so the appliance works longer.",
@@ -925,7 +925,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "easy",
       "skill": "Calculate the cost of electricity",
-      "question": "A 2 kW heater runs for 3 hours. Electricity costs 25 p per kWh. What is the cost?",
+      "question": "A learner uses a household energy bill to check the key physics idea. A 2 kW heater runs for 3 hours. Electricity costs 25 p per kWh. What is the cost?",
       "options": [
         "30 p",
         "8.33 p",
@@ -949,7 +949,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "easy",
       "skill": "Calculate the cost of electricity",
-      "question": "A 3 kW heater runs for 4 hours. Electricity costs 26 p per kWh. What is the cost?",
+      "question": "A learner uses a portable heater use case to check the key physics idea. A 3 kW heater runs for 4 hours. Electricity costs 26 p per kWh. What is the cost?",
       "options": [
         "6.5 p",
         "338 p",
@@ -973,7 +973,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "easy",
       "skill": "Calculate the cost of electricity",
-      "question": "A 1 kW heater runs for 5 hours. Electricity costs 27 p per kWh. What is the cost?",
+      "question": "A learner uses a kitchen appliance meter reading to check the key physics idea. A 1 kW heater runs for 5 hours. Electricity costs 27 p per kWh. What is the cost?",
       "options": [
         "162 p",
         "135 p",
@@ -997,7 +997,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "easy",
       "skill": "Calculate the cost of electricity",
-      "question": "A 2 kW heater runs for 2 hours. Electricity costs 28 p per kWh. What is the cost?",
+      "question": "A learner uses a revision cost calculation to check the key physics idea. A 2 kW heater runs for 2 hours. Electricity costs 28 p per kWh. What is the cost?",
       "options": [
         "112 p",
         "32 p",
@@ -1021,7 +1021,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "easy",
       "skill": "Calculate the cost of electricity",
-      "question": "A 3 kW heater runs for 3 hours. Electricity costs 29 p per kWh. What is the cost?",
+      "question": "A learner uses a household energy bill to prepare for an exam-style question. A 3 kW heater runs for 3 hours. Electricity costs 29 p per kWh. What is the cost?",
       "options": [
         "35 p",
         "9.67 p",
@@ -1045,7 +1045,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "easy",
       "skill": "Calculate the cost of electricity",
-      "question": "A 1 kW heater runs for 4 hours. Electricity costs 30 p per kWh. What is the cost?",
+      "question": "A learner uses a portable heater use case to prepare for an exam-style question. A 1 kW heater runs for 4 hours. Electricity costs 30 p per kWh. What is the cost?",
       "options": [
         "7.5 p",
         "150 p",
@@ -1069,7 +1069,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "hard",
       "skill": "Calculate the cost of electricity",
-      "question": "A 2 kW heater runs for 3 hours. Electricity costs 29 p per kWh. What is the cost?",
+      "question": "A learner uses a kitchen appliance meter reading to prepare for an exam-style question. A 2 kW heater runs for 3 hours. Electricity costs 29 p per kWh. What is the cost?",
       "options": [
         "34 p",
         "9.67 p",
@@ -1093,7 +1093,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "hard",
       "skill": "Calculate the cost of electricity",
-      "question": "A 3 kW heater runs for 4 hours. Electricity costs 30 p per kWh. What is the cost?",
+      "question": "A learner uses a revision cost calculation to prepare for an exam-style question. A 3 kW heater runs for 4 hours. Electricity costs 30 p per kWh. What is the cost?",
       "options": [
         "7.5 p",
         "390 p",
@@ -1117,7 +1117,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "hard",
       "skill": "Calculate the cost of electricity",
-      "question": "A 1 kW heater runs for 5 hours. Electricity costs 31 p per kWh. What is the cost?",
+      "question": "A learner uses a household energy bill to test a common misconception. A 1 kW heater runs for 5 hours. Electricity costs 31 p per kWh. What is the cost?",
       "options": [
         "186 p",
         "155 p",
@@ -1141,7 +1141,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "hard",
       "skill": "Calculate the cost of electricity",
-      "question": "A 2 kW heater runs for 2 hours. Electricity costs 24 p per kWh. What is the cost?",
+      "question": "A learner uses a portable heater use case to test a common misconception. A 2 kW heater runs for 2 hours. Electricity costs 24 p per kWh. What is the cost?",
       "options": [
         "96 p",
         "28 p",
@@ -1165,7 +1165,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "hard",
       "skill": "Calculate the cost of electricity",
-      "question": "A 3 kW heater runs for 3 hours. Electricity costs 25 p per kWh. What is the cost?",
+      "question": "A learner uses a kitchen appliance meter reading to test a common misconception. A 3 kW heater runs for 3 hours. Electricity costs 25 p per kWh. What is the cost?",
       "options": [
         "31 p",
         "8.33 p",
@@ -1189,7 +1189,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "hard",
       "skill": "Calculate the cost of electricity",
-      "question": "A 1 kW heater runs for 4 hours. Electricity costs 26 p per kWh. What is the cost?",
+      "question": "A learner uses a revision cost calculation to test a common misconception. A 1 kW heater runs for 4 hours. Electricity costs 26 p per kWh. What is the cost?",
       "options": [
         "6.5 p",
         "130 p",
@@ -1213,7 +1213,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "medium",
       "skill": "Calculate the cost of electricity",
-      "question": "A 2 kW heater runs for 5 hours. Electricity costs 31 p per kWh. What is the cost?",
+      "question": "A learner uses a household energy bill to link the context to the GCSE model. A 2 kW heater runs for 5 hours. Electricity costs 31 p per kWh. What is the cost?",
       "options": [
         "341 p",
         "310 p",
@@ -1237,7 +1237,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "medium",
       "skill": "Calculate the cost of electricity",
-      "question": "A 3 kW heater runs for 2 hours. Electricity costs 24 p per kWh. What is the cost?",
+      "question": "A learner uses a portable heater use case to link the context to the GCSE model. A 3 kW heater runs for 2 hours. Electricity costs 24 p per kWh. What is the cost?",
       "options": [
         "144 p",
         "29 p",
@@ -1261,7 +1261,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "medium",
       "skill": "Calculate the cost of electricity",
-      "question": "A 1 kW heater runs for 3 hours. Electricity costs 25 p per kWh. What is the cost?",
+      "question": "A learner uses a kitchen appliance meter reading to link the context to the GCSE model. A 1 kW heater runs for 3 hours. Electricity costs 25 p per kWh. What is the cost?",
       "options": [
         "29 p",
         "8.33 p",
@@ -1285,7 +1285,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "medium",
       "skill": "Calculate the cost of electricity",
-      "question": "A 2 kW heater runs for 4 hours. Electricity costs 26 p per kWh. What is the cost?",
+      "question": "A learner uses a revision cost calculation to link the context to the GCSE model. A 2 kW heater runs for 4 hours. Electricity costs 26 p per kWh. What is the cost?",
       "options": [
         "6.5 p",
         "234 p",
@@ -1309,7 +1309,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "medium",
       "skill": "Calculate the cost of electricity",
-      "question": "A 3 kW heater runs for 5 hours. Electricity costs 27 p per kWh. What is the cost?",
+      "question": "A learner uses a household energy bill to review the evidence in the setup. A 3 kW heater runs for 5 hours. Electricity costs 27 p per kWh. What is the cost?",
       "options": [
         "432 p",
         "405 p",
@@ -1333,7 +1333,7 @@
       "subtopicSlug": "electrical_energy",
       "difficulty": "medium",
       "skill": "Calculate the cost of electricity",
-      "question": "A 1 kW heater runs for 2 hours. Electricity costs 28 p per kWh. What is the cost?",
+      "question": "A learner uses a portable heater use case to review the evidence in the setup. A 1 kW heater runs for 2 hours. Electricity costs 28 p per kWh. What is the cost?",
       "options": [
         "56 p",
         "31 p",
@@ -1357,7 +1357,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "easy",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 14 V and 2 A. What is its power?",
+      "question": "A learner uses a phone charger label to check the key physics idea. An appliance works at 14 V and 2 A. What is its power?",
       "options": [
         "16 W",
         "7 W",
@@ -1381,7 +1381,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "easy",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 16 V and 3 A. What is its power?",
+      "question": "A learner uses a desk lamp rating plate to check the key physics idea. An appliance works at 16 V and 3 A. What is its power?",
       "options": [
         "5.33 W",
         "52 W",
@@ -1405,7 +1405,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "easy",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 18 V and 4 A. What is its power?",
+      "question": "A learner uses a small fan test to check the key physics idea. An appliance works at 18 V and 4 A. What is its power?",
       "options": [
         "76 W",
         "72 W",
@@ -1429,7 +1429,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "easy",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 20 V and 1 A. What is its power?",
+      "question": "A learner uses a heater circuit reading to check the key physics idea. An appliance works at 20 V and 1 A. What is its power?",
       "options": [
         "20 W",
         "21 W",
@@ -1453,7 +1453,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "easy",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 22 V and 2 A. What is its power?",
+      "question": "A learner uses a phone charger label to prepare for an exam-style question. An appliance works at 22 V and 2 A. What is its power?",
       "options": [
         "24 W",
         "11 W",
@@ -1477,7 +1477,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "easy",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 12 V and 3 A. What is its power?",
+      "question": "A learner uses a desk lamp rating plate to prepare for an exam-style question. An appliance works at 12 V and 3 A. What is its power?",
       "options": [
         "4 W",
         "40 W",
@@ -1501,7 +1501,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "hard",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 16 V and 3 A. What is its power?",
+      "question": "A learner uses a small fan test to prepare for an exam-style question. An appliance works at 16 V and 3 A. What is its power?",
       "options": [
         "5.33 W",
         "52 W",
@@ -1525,7 +1525,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "hard",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 18 V and 4 A. What is its power?",
+      "question": "A learner uses a heater circuit reading to prepare for an exam-style question. An appliance works at 18 V and 4 A. What is its power?",
       "options": [
         "76 W",
         "72 W",
@@ -1549,7 +1549,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "hard",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 20 V and 1 A. What is its power?",
+      "question": "A learner uses a phone charger label to test a common misconception. An appliance works at 20 V and 1 A. What is its power?",
       "options": [
         "20 W",
         "21 W",
@@ -1573,7 +1573,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "hard",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 22 V and 2 A. What is its power?",
+      "question": "A learner uses a desk lamp rating plate to test a common misconception. An appliance works at 22 V and 2 A. What is its power?",
       "options": [
         "24 W",
         "11 W",
@@ -1597,7 +1597,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "hard",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 12 V and 3 A. What is its power?",
+      "question": "A learner uses a small fan test to test a common misconception. An appliance works at 12 V and 3 A. What is its power?",
       "options": [
         "4 W",
         "40 W",
@@ -1621,7 +1621,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "hard",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 14 V and 4 A. What is its power?",
+      "question": "A learner uses a heater circuit reading to test a common misconception. An appliance works at 14 V and 4 A. What is its power?",
       "options": [
         "60 W",
         "56 W",
@@ -1645,7 +1645,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 14 V and 4 A. What is its power?",
+      "question": "A learner uses a phone charger label to link the context to the GCSE model. An appliance works at 14 V and 4 A. What is its power?",
       "options": [
         "60 W",
         "56 W",
@@ -1669,7 +1669,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 16 V and 1 A. What is its power?",
+      "question": "A learner uses a desk lamp rating plate to link the context to the GCSE model. An appliance works at 16 V and 1 A. What is its power?",
       "options": [
         "16 W",
         "17 W",
@@ -1693,7 +1693,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 18 V and 2 A. What is its power?",
+      "question": "A learner uses a small fan test to link the context to the GCSE model. An appliance works at 18 V and 2 A. What is its power?",
       "options": [
         "20 W",
         "9 W",
@@ -1717,7 +1717,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 20 V and 3 A. What is its power?",
+      "question": "A learner uses a heater circuit reading to link the context to the GCSE model. An appliance works at 20 V and 3 A. What is its power?",
       "options": [
         "6.67 W",
         "64 W",
@@ -1741,7 +1741,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 22 V and 4 A. What is its power?",
+      "question": "A learner uses a phone charger label to review the evidence in the setup. An appliance works at 22 V and 4 A. What is its power?",
       "options": [
         "92 W",
         "88 W",
@@ -1765,7 +1765,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 12 V and 1 A. What is its power?",
+      "question": "A learner uses a desk lamp rating plate to review the evidence in the setup. An appliance works at 12 V and 1 A. What is its power?",
       "options": [
         "12 W",
         "13 W",
@@ -1789,7 +1789,7 @@
       "subtopicSlug": "electrical_power",
       "difficulty": "medium",
       "skill": "Use power = potential difference x current",
-      "question": "An appliance works at 14 V and 2 A. What is its power?",
+      "question": "A learner uses a small fan test to review the evidence in the setup. An appliance works at 14 V and 2 A. What is its power?",
       "options": [
         "16 W",
         "7 W",
@@ -1813,7 +1813,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a parallel lamp circuit to check the key physics idea. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The current is the same in each branch because the potential difference changes.",
         "The potential difference is shared equally only in a series circuit.",
@@ -1837,7 +1837,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a two-branch circuit diagram to check the key physics idea. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The potential difference is shared equally only in a series circuit.",
         "The supply potential difference becomes zero in each branch.",
@@ -1861,7 +1861,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a potential difference measurement to check the key physics idea. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The supply potential difference becomes zero in each branch.",
         "The potential difference across each branch is the same as the supply.",
@@ -1885,7 +1885,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a circuit board check to check the key physics idea. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The potential difference across each branch is the same as the supply.",
         "The current is the same in each branch because the potential difference changes.",
@@ -1909,7 +1909,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a parallel lamp circuit to prepare for an exam-style question. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The current is the same in each branch because the potential difference changes.",
         "The potential difference is shared equally only in a series circuit.",
@@ -1933,7 +1933,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a two-branch circuit diagram to prepare for an exam-style question. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The potential difference is shared equally only in a series circuit.",
         "The supply potential difference becomes zero in each branch.",
@@ -1957,7 +1957,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "easy",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a potential difference measurement to prepare for an exam-style question. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The supply potential difference becomes zero in each branch.",
         "The potential difference across each branch is the same as the supply.",
@@ -1981,7 +1981,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "hard",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a circuit board check to prepare for an exam-style question. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The potential difference is shared equally only in a series circuit.",
         "The supply potential difference becomes zero in each branch.",
@@ -2005,7 +2005,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "hard",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a parallel lamp circuit to test a common misconception. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The supply potential difference becomes zero in each branch.",
         "The potential difference across each branch is the same as the supply.",
@@ -2029,7 +2029,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "hard",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a two-branch circuit diagram to test a common misconception. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The potential difference across each branch is the same as the supply.",
         "The current is the same in each branch because the potential difference changes.",
@@ -2053,7 +2053,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "hard",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a potential difference measurement to test a common misconception. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The current is the same in each branch because the potential difference changes.",
         "The potential difference is shared equally only in a series circuit.",
@@ -2077,7 +2077,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "hard",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a circuit board check to test a common misconception. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The potential difference is shared equally only in a series circuit.",
         "The supply potential difference becomes zero in each branch.",
@@ -2101,7 +2101,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "hard",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a parallel lamp circuit to link the context to the GCSE model. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The supply potential difference becomes zero in each branch.",
         "The potential difference across each branch is the same as the supply.",
@@ -2125,7 +2125,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "medium",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a two-branch circuit diagram to link the context to the GCSE model. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The potential difference across each branch is the same as the supply.",
         "The current is the same in each branch because the potential difference changes.",
@@ -2149,7 +2149,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "medium",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a potential difference measurement to link the context to the GCSE model. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The current is the same in each branch because the potential difference changes.",
         "The potential difference is shared equally only in a series circuit.",
@@ -2173,7 +2173,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "medium",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a circuit board check to link the context to the GCSE model. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The potential difference is shared equally only in a series circuit.",
         "The supply potential difference becomes zero in each branch.",
@@ -2197,7 +2197,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "medium",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct?",
+      "question": "A learner uses a parallel lamp circuit to review the evidence in the setup. Which statement about potential difference in a parallel circuit is correct?",
       "options": [
         "The supply potential difference becomes zero in each branch.",
         "The potential difference across each branch is the same as the supply.",
@@ -2221,7 +2221,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "medium",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a two-branch circuit diagram to review the evidence in the setup. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The potential difference across each branch is the same as the supply.",
         "The current is the same in each branch because the potential difference changes.",
@@ -2245,7 +2245,7 @@
       "subtopicSlug": "parallel_circuits",
       "difficulty": "medium",
       "skill": "Recall potential difference in a parallel circuit",
-      "question": "Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
+      "question": "A learner uses a potential difference measurement to review the evidence in the setup. Which statement about potential difference in a parallel circuit is correct? Choose the best answer.",
       "options": [
         "The current is the same in each branch because the potential difference changes.",
         "The potential difference is shared equally only in a series circuit.",

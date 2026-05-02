@@ -1,7 +1,39 @@
 # NeuroPhysics — Session Memory
 
 ## Last Updated
-2026-05-01
+2026-05-02
+
+## What Was Just Done (latest — 2026-05-02)
+
+### Adaptive Practice question-quality repair
+- Audited Adaptive Practice runtime question data for both shipped boards.
+- AQA status:
+  - 900 runtime rows
+  - 900 unique exact question texts
+  - 0 duplicate IDs
+  - 0 exact duplicate stems
+  - 0 near/template duplicate stems
+- Edexcel before repair:
+  - 750 runtime rows
+  - 233 unique exact question texts
+  - 93 exact duplicate-stem groups
+  - 74 near/template duplicate-stem groups
+- Added `npm run audit:questions` and wired it into `npm test`.
+- Added `scripts/repair_edexcel_question_variety.mjs`, a deterministic/idempotent Edexcel-only prompt repair script.
+- Repaired Edexcel runtime prompts in:
+  - `public/data/questions/edexcel/all.json`
+  - all Edexcel topic JSON files
+  - `public/data/questions/manifest.json`
+- The repair preserves IDs, topics, subtopics, difficulty, skill, options, correct answers, explanations, board filtering, Adaptive Practice logic, and the 9-step lesson flow.
+- Verification after repair:
+  - `npm run audit:questions` passes
+  - `npm test` passes
+  - `npm run build` passes
+  - `git diff --check` passes
+
+### Next step
+- Review/commit the Edexcel prompt repair as one content-quality checkpoint.
+- Next quality pass should inspect repeated option sets/distractors, because the current gate removes repeated stems/templates but still reports repeated option sets for both boards.
 
 ## What Was Just Done (latest — 2026-05-01)
 

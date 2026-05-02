@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Board-specific spec ordering and course filtering aligned
+- Added a board-specific curriculum ordering layer in `src/features/curriculum/curriculumOrder.js`.
+- AQA now follows the broad AQA Physics specification order:
+  - Energy, Electricity, Particle Model, Atomic Structure, Forces, Waves, Magnetism, Space.
+- Edexcel now follows the Pearson 1PH0 topic sequence:
+  - Topic 1 Key Concepts through Topic 15 Forces and Matter.
+- Applied the ordering layer to:
+  - Home next-step selection.
+  - Learn screen topic browser.
+  - Practice Hub / Adaptive Practice topic browser.
+  - Specification Checklist.
+- Course filtering stays enforced through `getVisibleTopicIdsForSelection`, so:
+  - Combined Science excludes Physics-only topics.
+  - Physics Only includes shared + Physics-only topics.
+  - AQA and Edexcel see their own available topic order.
+- Added curriculum audit checks for:
+  - duplicate topics in the ordered curriculum.
+  - empty board/course curriculum routes.
+  - AQA starting with Energy.
+  - Edexcel starting with Topic 1 Key Concepts.
+- Verification:
+  - `npm run audit:curriculum` passes.
+  - `npm test` passes, including adaptive course filter smoke.
+  - `npm run build` passes.
+
+### Next step
+- Continue Adaptive Practice content quality:
+  - next highest-impact fix is AQA Forces `Newton's Laws` / `Newton's Third Law` exam-style authored questions.
+
 ### Adaptive Practice AQA Hooke's Law authored
 - Fixed AQA `Hooke's Law`: 19/19 authored and passed.
 - Official anchor checked:

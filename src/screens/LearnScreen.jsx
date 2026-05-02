@@ -6,6 +6,7 @@ import { MODULES, TOPICS } from '../data/topics'
 import { useProgress } from '../hooks/useProgress'
 import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection, isTopicAvailableForSelection } from '../utils/curriculumFilters'
+import { getCurriculumModules } from '../features/curriculum/curriculumOrder'
 
 function TopicRow({ topic, state, onTap, isLast }) {
   const label = state === 'mastered' ? 'Review' : state === 'started' ? 'Continue' : 'Start'
@@ -137,7 +138,8 @@ export default function LearnScreen() {
     }
   }, [])
 
-  const boardModules = MODULES.filter(module => isModuleAvailableForSelection(module, selectedBoard.id, selectedCourse))
+  const boardModules = getCurriculumModules(MODULES, selectedBoard.id, selectedCourse)
+    .filter(module => isModuleAvailableForSelection(module, selectedBoard.id, selectedCourse))
 
   const [openModule, setOpenModule] = useState(() => {
     try {

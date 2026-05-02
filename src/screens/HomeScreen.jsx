@@ -6,6 +6,7 @@ import { useProgress } from '../hooks/useProgress'
 import { useStudyPlan } from '../hooks/useStudyPlan'
 import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection } from '../utils/curriculumFilters'
+import { getCurriculumModules } from '../features/curriculum/curriculumOrder'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 
 function getGreeting() {
@@ -53,7 +54,7 @@ export default function HomeScreen() {
     catch { return null }
   })()
 
-  const visibleModules = MODULES.filter(m => isModuleAvailableForSelection(m, board.id, course))
+  const visibleModules = getCurriculumModules(MODULES, board.id, course).filter(m => isModuleAvailableForSelection(m, board.id, course))
   const allTopicIds = visibleModules.flatMap(m => getVisibleTopicIdsForSelection(m.topics, board.id, course).filter(id => TOPICS[id]))
   const activeTopicId = todayTopicId || allTopicIds.find(id => !progress[id]?.mastered) || null
   const activeTopic = activeTopicId ? TOPICS[activeTopicId] : null

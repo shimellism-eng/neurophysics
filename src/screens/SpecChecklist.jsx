@@ -9,6 +9,7 @@ import { CaretDown, CaretRight, CheckCircle, Circle } from '@phosphor-icons/reac
 import { MODULES, TOPICS } from '../data/topics'
 import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection } from '../utils/curriculumFilters'
+import { getCurriculumModules } from '../features/curriculum/curriculumOrder'
 import { useProgress } from '../hooks/useProgress'
 import PageHeader from '../components/PageHeader'
 
@@ -184,7 +185,8 @@ export default function SpecChecklist() {
   const { progress } = useProgress()
 
   // Filter modules by board
-  const visibleModules = MODULES.filter(mod => isModuleAvailableForSelection(mod, boardId, course))
+  const visibleModules = getCurriculumModules(MODULES, boardId, course)
+    .filter(mod => isModuleAvailableForSelection(mod, boardId, course))
 
   // Build topic list per module, also filter by course + board
   function getModuleTopics(mod) {

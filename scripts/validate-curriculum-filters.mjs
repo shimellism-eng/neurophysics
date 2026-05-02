@@ -28,6 +28,7 @@ try {
     examIndex,
     boardConfig,
     filters,
+    curriculumOrder,
     coverageMatrixModule,
     practicalCoverageModule,
   ] = await Promise.all([
@@ -36,6 +37,7 @@ try {
     server.ssrLoadModule('/src/data/examIndex.js'),
     server.ssrLoadModule('/src/utils/boardConfig.js'),
     server.ssrLoadModule('/src/utils/curriculumFilters.js'),
+    server.ssrLoadModule('/src/features/curriculum/curriculumOrder.js'),
     server.ssrLoadModule('/src/data/curriculumCoverageMatrix.js'),
     server.ssrLoadModule('/src/data/practicalCoverageMatrix.js'),
   ])
@@ -44,6 +46,7 @@ try {
   const { getExamQuestions, getGrade9Questions, getTimedPaperQuestions } = examIndex
   const { BOARD_ORDER } = boardConfig
   const { BOARD_COURSE_TOPIC_OVERRIDES, getVisibleTopicIdsForSelection, isQuestionAvailableForSelection, normalizeCourseValue } = filters
+  const { getCurriculumModules } = curriculumOrder
   const { COVERAGE_STATUSES, CURRICULUM_COVERAGE_MATRIX } = coverageMatrixModule
   const { PRACTICAL_COVERAGE_MATRIX } = practicalCoverageModule
 
@@ -158,6 +161,18 @@ try {
 
   for (const boardId of BOARD_ORDER) {
     for (const course of ['combined', 'physics_only']) {
+      const curriculumModules = getCurriculumModules(MODULES, boardId, course)
+      const curriculumTopicIds = curriculumModules.flatMap((module) => module.topics)
+      const duplicateTopicIds = curriculumTopicIds.filter((topicId, index) => curriculumTopicIds.indexOf(topicId) !== index)
+      assert(duplicateTopicIds.length === 0, `Curriculum order duplicates topics for board ${boardId} ${course}: ${duplicateTopicIds.join(', ')}`)
+      assert(curriculumModules.length > 0, `Curriculum order has no visible modules for board ${boardId} ${course}`)
+      if (boardId === 'aqa') {
+        assert(curriculumModules[0]?.name === 'Energy', `AQA curriculum order should start with Energy for ${course}`)
+      }
+      if (boardId === 'edexcel') {
+        assert(curriculumModules[0]?.name === 'Topic 1: Key Concepts of Physics', `Edexcel curriculum order should start with Topic 1 for ${course}`)
+      }
+
       const visibleTopics = getVisibleTopicIdsForSelection(Object.keys(TOPICS), boardId, course)
       const leakedPhysicsOnly = visibleTopics.filter((topicId) => {
         if (course !== 'combined') return false

@@ -6,6 +6,7 @@ import SafeAreaPage from '../components/ui/SafeAreaPage'
 import { MODULES, TOPICS } from '../data/topics'
 import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import { getVisibleTopicIdsForSelection, isModuleAvailableForSelection } from '../utils/curriculumFilters'
+import { getCurriculumModules } from '../features/curriculum/curriculumOrder'
 
 const RUNTIME_ADAPTIVE_TOPIC_IDS_BY_BOARD = {
   aqa: new Set([
@@ -138,7 +139,7 @@ export default function PracticeHubScreen() {
   }, [location.state, navigate])
 
   const adaptiveModules = useMemo(() => (
-    MODULES
+    getCurriculumModules(MODULES, board.id, course)
       .filter((module) => isModuleAvailableForSelection(module, board.id, course))
       .map((module) => ({
         ...module,

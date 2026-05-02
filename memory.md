@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Resistance authored
+- Fixed the next AQA Electricity slice with authored exam-style questions:
+  - AQA `Resistance`: 42/42 authored and passed.
+  - Covered AQA Physics `specRef`: `4.2.1.3` and `4.2.1.4`.
+  - Covered AQA Combined Science `combinedSpecRef`: `6.2.1.3` and `6.2.1.4`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Resistance runtime count: 42.
+  - Authored IDs: 42.
+  - Bad scaffold phrase count: 0.
+  - No leaked objective/answer wording in the top label.
+- Current Electricity good-to-go count after this fix:
+  - AQA: 120/144 good to go.
+  - Edexcel: 94/94 good to go.
+  - Combined Electricity: 214/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator install/launch passes; exact AQA Resistance route was shown live.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue AQA Electricity:
+  - AQA `National Grid`: 24 authored exam-style questions.
+
 ### Adaptive Practice AQA Series Circuits scaffold wording removed
 - Mamo spotted a live Series Circuits question still using failed scaffold wording:
   - "Which answer matches this ... objective..."

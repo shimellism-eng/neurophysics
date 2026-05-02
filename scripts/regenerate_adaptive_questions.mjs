@@ -340,8 +340,9 @@ function demandToDifficulty(demand) {
 function makeAuthoredQuestion({ board, legacy, spec, item }) {
   validateAuthoredItem(item)
 
-  if (item.specRef !== spec.specRef) {
-    throw new Error(`Authored question ${item.id} uses ${item.specRef}, expected ${spec.specRef}`)
+  const allowedSpecRefs = spec.specRefs || [spec.specRef]
+  if (!allowedSpecRefs.includes(item.specRef)) {
+    throw new Error(`Authored question ${item.id} uses ${item.specRef}, expected one of ${allowedSpecRefs.join(', ')}`)
   }
 
   const optionObjects = item.options.map((option) => (
@@ -363,7 +364,7 @@ function makeAuthoredQuestion({ board, legacy, spec, item }) {
     topicSlug: legacy.topicSlug,
     subtopicSlug: legacy.subtopicSlug,
     topicId: legacy.topicId,
-    specRef: spec.specRef,
+    specRef: item.specRef,
     ...(item.combinedSpecRef ? { combinedSpecRef: item.combinedSpecRef } : {}),
     specStatement: spec.statement,
     paper: spec.paper,
@@ -396,7 +397,7 @@ function makeAuthoredQuestion({ board, legacy, spec, item }) {
       .map((option, index) => ({ text: option.text, misconception: index === item.correctIndex ? '' : option.misconception }))
       .filter((option, index) => index !== item.correctIndex),
     diagramJson: item.diagramJson || null,
-    authorNotes: `Authored exam-style item for ${boardNames[board]} ${spec.specRef}.`,
+    authorNotes: `Authored exam-style item for ${boardNames[board]} ${item.specRef}.`,
     review: {
       status: 'reviewed',
       reviewerRole: `${boardNames[board]} GCSE Physics content QA`,

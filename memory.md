@@ -5,6 +5,35 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Energy Stores authored
+- Started the Energy topic rebuild and added the new authored Energy source file.
+- Fixed AQA `Energy Stores`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.1.1.1`.
+  - AQA Combined Science `combinedSpecRef`: `6.1.1.1`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Energy Stores runtime count: 19.
+  - Bad scaffold/answer phrase count: 0.
+  - No visible objective wording, no "answer claims" wording, no answer leaked in top text.
+- Current Energy good-to-go count after this fix:
+  - AQA: 19/94 good to go.
+  - Edexcel: 0/94 good to go.
+  - Combined Energy: 19/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - Exact AQA Energy Stores route was shown live in Simulator.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue AQA Energy:
+  - AQA `Efficiency`: 18 authored exam-style questions.
+
 ### Adaptive Practice AQA National Grid authored
 - Fixed the final AQA Electricity slice with authored exam-style questions:
   - AQA `National Grid`: 24/24 authored and passed.

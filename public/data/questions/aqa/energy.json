@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "energy",
-  "generatedAt": "2026-05-02T08:52:03.147Z",
+  "generatedAt": "2026-05-02T09:01:43.084Z",
   "questions": [
     {
       "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_direct_recall_001",
@@ -1337,7 +1337,7 @@
       "senNote": "This checks one idea only: Explain how efficiency can improve."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_store_identification_direct_recall_001",
+      "id": "aqa_energy_stores_list_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -1349,6 +1349,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -1359,198 +1360,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_store_identification",
-        "statement": "Identify energy stores. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.1:store_identification:direct_recall",
-      "conceptFamily": "store_identification",
-      "contextType": "a safety decision",
-      "skill": "Energy Stores practice",
-      "stem": "Which statement is correct for energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "question": "Which statement is correct for energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "options": [
-        "In this energy stores item, energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-        "In this energy stores item, energy can be created by naming a new store.",
-        "For energy stores, the statement is that energy is a substance used up inside appliances.",
-        "For energy stores, the answer claims that energy is stored only in moving objects."
-      ],
-      "correctAnswer": "In this energy stores item, energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-      "correctIndex": 0,
-      "explanation": "4.1.1.1 targets: Identify energy stores. Focus area: Energy Stores. For this question, Energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:store_identification",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, the answer claims that energy is stored only in moving objects.",
-          "misconception": "Energy is stored only in moving objects."
-        },
-        {
-          "text": "For energy stores, the statement is that energy is a substance used up inside appliances.",
-          "misconception": "Energy is a substance used up inside appliances."
-        },
-        {
-          "text": "In this energy stores item, energy can be created by naming a new store.",
-          "misconception": "Energy can be created by naming a new store."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify energy stores."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_closed_system_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_closed_system",
-        "statement": "Apply conservation of energy. (Energy Stores)",
+        "id": "aqa_energy_stores_list_001_lo",
+        "statement": "Identify named energy stores.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.1:closed_system:concept_discrimination",
-      "conceptFamily": "closed_system",
-      "contextType": "a graph-reading task",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_list_001",
+      "conceptFamily": "identify_named_energy_stores",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "A student is comparing similar ideas in energy stores. Which statement is correct? Keep the answer focused on energy stores: apply conservation of energy.",
-      "question": "A student is comparing similar ideas in energy stores. Which statement is correct? Keep the answer focused on energy stores: apply conservation of energy.",
+      "stem": "Which row gives only energy stores?",
+      "question": "Which row gives only energy stores?",
       "options": [
-        "For energy stores, it means that conservation means useful energy always increases.",
-        "For energy stores, it means that energy is destroyed whenever a device warms up.",
-        "For energy stores, it means that a closed system loses all energy instantly.",
-        "The answer for energy stores says that in a closed system, total energy is conserved even when it is transferred between stores."
+        "kinetic, thermal, chemical",
+        "heating, radiation, electrical work",
+        "force, current, voltage",
+        "conduction, convection, evaporation"
       ],
-      "correctAnswer": "The answer for energy stores says that in a closed system, total energy is conserved even when it is transferred between stores.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.1 targets: Apply conservation of energy. Focus area: Energy Stores. For this question, In a closed system, total energy is conserved even when it is transferred between stores. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:closed_system",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, it means that a closed system loses all energy instantly.",
-          "misconception": "Energy is destroyed whenever a device warms up."
-        },
-        {
-          "text": "For energy stores, it means that conservation means useful energy always increases.",
-          "misconception": "A closed system loses all energy instantly."
-        },
-        {
-          "text": "For energy stores, it means that energy is destroyed whenever a device warms up.",
-          "misconception": "Conservation means useful energy always increases."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Apply conservation of energy."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_transfer_pathways_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_transfer_pathways",
-        "statement": "Identify energy transfer pathways. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.1:transfer_pathways:misconception_correction",
-      "conceptFamily": "transfer_pathways",
-      "contextType": "a comparison question",
-      "skill": "Energy Stores practice",
-      "stem": "A revision note about energy stores contains an error. Which replacement is correct? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "question": "A revision note about energy stores contains an error. Which replacement is correct? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "options": [
-        "For energy stores, the statement is that energy is transferred mechanically, electrically, by heating, or by radiation.",
-        "In this energy stores item, energy transfers by mass disappearing.",
-        "The answer for energy stores says that energy transfers only by sound.",
-        "For energy stores, the statement is that energy pathways are the same as energy stores."
-      ],
-      "correctAnswer": "For energy stores, the statement is that energy is transferred mechanically, electrically, by heating, or by radiation.",
+      "correctAnswer": "kinetic, thermal, chemical",
       "correctIndex": 0,
-      "explanation": "4.1.1.1 targets: Identify energy transfer pathways. Focus area: Energy Stores. For this question, Energy is transferred mechanically, electrically, by heating, or by radiation. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transfer_pathways",
+      "explanation": "Kinetic, thermal and chemical are energy stores. Heating, radiation and electrical work are pathways by which energy is transferred.",
+      "misconceptionTag": "stores-vs-pathways",
       "distractorRationales": [
         {
-          "text": "For energy stores, the statement is that energy pathways are the same as energy stores.",
-          "misconception": "Energy transfers by mass disappearing."
+          "text": "heating, radiation, electrical work",
+          "misconception": "transfer pathways confused with stores"
         },
         {
-          "text": "In this energy stores item, energy transfers by mass disappearing.",
-          "misconception": "Energy transfers only by sound."
+          "text": "force, current, voltage",
+          "misconception": "physical quantities confused with stores"
         },
         {
-          "text": "The answer for energy stores says that energy transfers only by sound.",
-          "misconception": "Energy pathways are the same as energy stores."
+          "text": "conduction, convection, evaporation",
+          "misconception": "processes confused with stores"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify energy transfer pathways."
+      "senNote": "Checks: Identify named energy stores."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_useful_wasted_data_interpretation_004",
+      "id": "aqa_energy_stores_moving_car_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -1562,6 +1422,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -1572,411 +1433,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_useful_wasted",
-        "statement": "Distinguish useful and wasted transfers. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.1:useful_wasted:data_interpretation",
-      "conceptFamily": "useful_wasted",
-      "contextType": "a method-choice question",
-      "skill": "Energy Stores practice",
-      "stem": "A small data set about energy stores is being interpreted. Which conclusion is valid? Demand focus: distinguish useful and wasted transfers.",
-      "question": "A small data set about energy stores is being interpreted. Which conclusion is valid? Demand focus: distinguish useful and wasted transfers.",
-      "options": [
-        "In this energy stores item, useful energy must always be thermal.",
-        "For energy stores, it means that a device with waste transfers no energy.",
-        "The answer for energy stores says that useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
-        "In this energy stores item, wasted energy is destroyed."
-      ],
-      "correctAnswer": "The answer for energy stores says that useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Distinguish useful and wasted transfers. Focus area: Energy Stores. For this question, Useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:useful_wasted",
-      "distractorRationales": [
-        {
-          "text": "In this energy stores item, wasted energy is destroyed.",
-          "misconception": "Wasted energy is destroyed."
-        },
-        {
-          "text": "In this energy stores item, useful energy must always be thermal.",
-          "misconception": "Useful energy must always be thermal."
-        },
-        {
-          "text": "For energy stores, it means that a device with waste transfers no energy.",
-          "misconception": "A device with waste transfers no energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Distinguish useful and wasted transfers."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_dissipation_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_dissipation",
-        "statement": "Explain dissipation. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.1:dissipation:representation_interpretation",
-      "conceptFamily": "dissipation",
-      "contextType": "a results discussion",
-      "skill": "Energy Stores practice",
-      "stem": "Which option correctly reads the energy stores model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
-      "question": "Which option correctly reads the energy stores model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
-      "options": [
-        "For energy stores, the statement is that dissipation concentrates energy in one store.",
-        "For energy stores, the statement is that dissipation creates extra energy.",
-        "The answer for energy stores says that dissipation spreads energy into thermal stores of the surroundings, making it less useful.",
-        "For energy stores, the answer claims that dissipation only happens in magnets."
-      ],
-      "correctAnswer": "The answer for energy stores says that dissipation spreads energy into thermal stores of the surroundings, making it less useful.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Explain dissipation. Focus area: Energy Stores. For this question, Dissipation spreads energy into thermal stores of the surroundings, making it less useful. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:dissipation",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, the statement is that dissipation creates extra energy.",
-          "misconception": "Dissipation concentrates energy in one store."
-        },
-        {
-          "text": "For energy stores, the answer claims that dissipation only happens in magnets.",
-          "misconception": "Dissipation creates extra energy."
-        },
-        {
-          "text": "For energy stores, the statement is that dissipation concentrates energy in one store.",
-          "misconception": "Dissipation only happens in magnets."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain dissipation."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_store_identification_direct_recall_006",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_store_identification",
-        "statement": "Identify energy stores. (Energy Stores)",
+        "id": "aqa_energy_stores_moving_car_002_lo",
+        "statement": "Choose the kinetic store for a moving object.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.1:store_identification:direct_recall",
-      "conceptFamily": "store_identification",
-      "contextType": "a classroom demonstration",
-      "skill": "Energy Stores practice",
-      "stem": "Which answer matches this energy stores objective: Identify energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "question": "Which answer matches this energy stores objective: Identify energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "options": [
-        "For energy stores: Energy is stored only in moving objects.",
-        "For energy stores, this would mean that energy is a substance used up inside appliances.",
-        "For energy stores, this would mean that energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-        "The claim for energy stores is that energy can be created by naming a new store."
-      ],
-      "correctAnswer": "For energy stores, this would mean that energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Identify energy stores. Focus area: Energy Stores. For this question, Energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:store_identification",
-      "distractorRationales": [
-        {
-          "text": "The claim for energy stores is that energy can be created by naming a new store.",
-          "misconception": "Energy is stored only in moving objects."
-        },
-        {
-          "text": "For energy stores: Energy is stored only in moving objects.",
-          "misconception": "Energy is a substance used up inside appliances."
-        },
-        {
-          "text": "For energy stores, this would mean that energy is a substance used up inside appliances.",
-          "misconception": "Energy can be created by naming a new store."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify energy stores."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_closed_system_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_closed_system",
-        "statement": "Apply conservation of energy. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.1.1:closed_system:applied_context",
-      "conceptFamily": "closed_system",
-      "contextType": "a revision checkpoint",
-      "skill": "Energy Stores practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
-      "question": "In a revision checkpoint, which conclusion is correct for energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
-      "options": [
-        "For energy stores, the statement is that a closed system loses all energy instantly.",
-        "For energy stores, it means that in a closed system, total energy is conserved even when it is transferred between stores.",
-        "For energy stores, it means that energy is destroyed whenever a device warms up.",
-        "For energy stores, it means that conservation means useful energy always increases."
-      ],
-      "correctAnswer": "For energy stores, it means that in a closed system, total energy is conserved even when it is transferred between stores.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.1 targets: Apply conservation of energy. Focus area: Energy Stores. For this question, In a closed system, total energy is conserved even when it is transferred between stores. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:closed_system",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, it means that energy is destroyed whenever a device warms up.",
-          "misconception": "Energy is destroyed whenever a device warms up."
-        },
-        {
-          "text": "For energy stores, the statement is that a closed system loses all energy instantly.",
-          "misconception": "A closed system loses all energy instantly."
-        },
-        {
-          "text": "For energy stores, it means that conservation means useful energy always increases.",
-          "misconception": "Conservation means useful energy always increases."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Apply conservation of energy."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_transfer_pathways_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_transfer_pathways",
-        "statement": "Identify energy transfer pathways. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.1:transfer_pathways:misconception_correction",
-      "conceptFamily": "transfer_pathways",
-      "contextType": "an exam-style data table",
-      "skill": "Energy Stores practice",
-      "stem": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "question": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "options": [
-        "For energy stores, the option says that energy transfers by mass disappearing.",
-        "For energy stores, this would mean that energy pathways are the same as energy stores.",
-        "For energy stores: Energy transfers only by sound.",
-        "For energy stores: Energy is transferred mechanically, electrically, by heating, or by radiation."
-      ],
-      "correctAnswer": "For energy stores: Energy is transferred mechanically, electrically, by heating, or by radiation.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.1 targets: Identify energy transfer pathways. Focus area: Energy Stores. For this question, Energy is transferred mechanically, electrically, by heating, or by radiation. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transfer_pathways",
-      "distractorRationales": [
-        {
-          "text": "For energy stores: Energy transfers only by sound.",
-          "misconception": "Energy transfers by mass disappearing."
-        },
-        {
-          "text": "For energy stores, this would mean that energy pathways are the same as energy stores.",
-          "misconception": "Energy transfers only by sound."
-        },
-        {
-          "text": "For energy stores, the option says that energy transfers by mass disappearing.",
-          "misconception": "Energy pathways are the same as energy stores."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify energy transfer pathways."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_useful_wasted_exam_decision_009",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_useful_wasted",
-        "statement": "Distinguish useful and wasted transfers. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.1.1:useful_wasted:exam_decision",
-      "conceptFamily": "useful_wasted",
-      "contextType": "a required-practical notebook",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_moving_car_002",
+      "conceptFamily": "choose_the_kinetic_store_for_a_moving_object",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "The mark scheme is testing distinguish useful and wasted transfers. Which answer matches that point? Demand focus: distinguish useful and wasted transfers.",
-      "question": "The mark scheme is testing distinguish useful and wasted transfers. Which answer matches that point? Demand focus: distinguish useful and wasted transfers.",
+      "stem": "A car is moving along a level road at a steady speed. Which energy store is associated with its motion?",
+      "question": "A car is moving along a level road at a steady speed. Which energy store is associated with its motion?",
       "options": [
-        "For energy stores, the answer claims that useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
-        "The answer for energy stores says that wasted energy is destroyed.",
-        "In this energy stores item, a device with waste transfers no energy.",
-        "For energy stores, it means that useful energy must always be thermal."
+        "kinetic store",
+        "gravitational potential store",
+        "elastic potential store",
+        "nuclear store"
       ],
-      "correctAnswer": "For energy stores, the answer claims that useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
+      "correctAnswer": "kinetic store",
       "correctIndex": 0,
-      "explanation": "4.1.1.1 targets: Distinguish useful and wasted transfers. Focus area: Energy Stores. For this question, Useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:useful_wasted",
+      "explanation": "An object that is moving has energy in its kinetic store.",
+      "misconceptionTag": "kinetic-store-motion",
       "distractorRationales": [
         {
-          "text": "In this energy stores item, a device with waste transfers no energy.",
-          "misconception": "Wasted energy is destroyed."
+          "text": "gravitational potential store",
+          "misconception": "height confused with motion"
         },
         {
-          "text": "The answer for energy stores says that wasted energy is destroyed.",
-          "misconception": "Useful energy must always be thermal."
+          "text": "elastic potential store",
+          "misconception": "stretching confused with motion"
         },
         {
-          "text": "For energy stores, it means that useful energy must always be thermal.",
-          "misconception": "A device with waste transfers no energy."
+          "text": "nuclear store",
+          "misconception": "nuclear fuel confused with movement"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Distinguish useful and wasted transfers."
+      "senNote": "Checks: Choose the kinetic store for a moving object."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_dissipation_representation_interpretation_010",
+      "id": "aqa_energy_stores_lifted_box_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -1988,6 +1495,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -1998,269 +1506,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_dissipation",
-        "statement": "Explain dissipation. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.1:dissipation:representation_interpretation",
-      "conceptFamily": "dissipation",
-      "contextType": "a technician report",
-      "skill": "Energy Stores practice",
-      "stem": "A representation of energy stores is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
-      "question": "A representation of energy stores is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
-      "options": [
-        "In this item, it means that dissipation only happens in magnets.",
-        "For energy stores, the option says that dissipation spreads energy into thermal stores of the surroundings, making it less useful.",
-        "In this item, it means that dissipation concentrates energy in one store.",
-        "The claim for energy stores is that dissipation creates extra energy."
-      ],
-      "correctAnswer": "For energy stores, the option says that dissipation spreads energy into thermal stores of the surroundings, making it less useful.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.1 targets: Explain dissipation. Focus area: Energy Stores. For this question, Dissipation spreads energy into thermal stores of the surroundings, making it less useful. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:dissipation",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that dissipation concentrates energy in one store.",
-          "misconception": "Dissipation concentrates energy in one store."
-        },
-        {
-          "text": "The claim for energy stores is that dissipation creates extra energy.",
-          "misconception": "Dissipation creates extra energy."
-        },
-        {
-          "text": "In this item, it means that dissipation only happens in magnets.",
-          "misconception": "Dissipation only happens in magnets."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain dissipation."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_store_identification_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_store_identification",
-        "statement": "Identify energy stores. (Energy Stores)",
+        "id": "aqa_energy_stores_lifted_box_003_lo",
+        "statement": "Identify gravitational potential energy store changes.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.1:store_identification:concept_discrimination",
-      "conceptFamily": "store_identification",
-      "contextType": "a labelled diagram",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_lifted_box_003",
+      "conceptFamily": "identify_gravitational_potential_energy_store_changes",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "A student is comparing similar ideas in energy stores. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "question": "A student is comparing similar ideas in energy stores. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
+      "stem": "A box is lifted from the floor onto a shelf. Which energy store of the box increases?",
+      "question": "A box is lifted from the floor onto a shelf. Which energy store of the box increases?",
       "options": [
-        "For energy stores, it means that energy is a substance used up inside appliances.",
-        "For energy stores, it means that energy can be created by naming a new store.",
-        "For energy stores, the option says that energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-        "For energy stores, it means that energy is stored only in moving objects."
+        "gravitational potential store",
+        "chemical store",
+        "magnetic store",
+        "electrostatic store"
       ],
-      "correctAnswer": "For energy stores, the option says that energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Identify energy stores. Focus area: Energy Stores. For this question, Energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores. Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:store_identification",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, it means that energy is a substance used up inside appliances.",
-          "misconception": "Energy is stored only in moving objects."
-        },
-        {
-          "text": "For energy stores, it means that energy can be created by naming a new store.",
-          "misconception": "Energy is a substance used up inside appliances."
-        },
-        {
-          "text": "For energy stores, it means that energy is stored only in moving objects.",
-          "misconception": "Energy can be created by naming a new store."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify energy stores."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_closed_system_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_closed_system",
-        "statement": "Apply conservation of energy. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.1.1.1:closed_system:applied_context",
-      "conceptFamily": "closed_system",
-      "contextType": "a short calculation",
-      "skill": "Energy Stores practice",
-      "stem": "A question set in a short calculation tests energy stores. Which answer applies the idea correctly? Keep the answer focused on energy stores: apply conservation of energy.",
-      "question": "A question set in a short calculation tests energy stores. Which answer applies the idea correctly? Keep the answer focused on energy stores: apply conservation of energy.",
-      "options": [
-        "For energy stores, it means that a closed system loses all energy instantly.",
-        "For energy stores, it means that in a closed system, total energy is conserved even when it is transferred between stores.",
-        "For energy stores, it means that conservation means useful energy always increases.",
-        "In this item, it means that energy is destroyed whenever a device warms up."
-      ],
-      "correctAnswer": "For energy stores, it means that in a closed system, total energy is conserved even when it is transferred between stores.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.1 targets: Apply conservation of energy. Focus area: Energy Stores. For this question, In a closed system, total energy is conserved even when it is transferred between stores. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:closed_system",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, it means that conservation means useful energy always increases.",
-          "misconception": "Energy is destroyed whenever a device warms up."
-        },
-        {
-          "text": "In this item, it means that energy is destroyed whenever a device warms up.",
-          "misconception": "A closed system loses all energy instantly."
-        },
-        {
-          "text": "For energy stores, it means that a closed system loses all energy instantly.",
-          "misconception": "Conservation means useful energy always increases."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Apply conservation of energy."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_transfer_pathways_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_transfer_pathways",
-        "statement": "Identify energy transfer pathways. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.1:transfer_pathways:data_interpretation",
-      "conceptFamily": "transfer_pathways",
-      "contextType": "a safety decision",
-      "skill": "Energy Stores practice",
-      "stem": "A small data set about energy stores is being interpreted. Which conclusion is valid? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "question": "A small data set about energy stores is being interpreted. Which conclusion is valid? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "options": [
-        "For energy stores, this would mean that energy is transferred mechanically, electrically, by heating, or by radiation.",
-        "In this item, it means that energy transfers only by sound.",
-        "In this item, it means that energy pathways are the same as energy stores.",
-        "In this item, it means that energy transfers by mass disappearing."
-      ],
-      "correctAnswer": "For energy stores, this would mean that energy is transferred mechanically, electrically, by heating, or by radiation.",
+      "correctAnswer": "gravitational potential store",
       "correctIndex": 0,
-      "explanation": "4.1.1.1 targets: Identify energy transfer pathways. Focus area: Energy Stores. For this question, Energy is transferred mechanically, electrically, by heating, or by radiation. Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transfer_pathways",
+      "explanation": "Lifting the box increases its height, so energy is transferred to its gravitational potential store.",
+      "misconceptionTag": "gpe-height",
       "distractorRationales": [
         {
-          "text": "In this item, it means that energy transfers by mass disappearing.",
-          "misconception": "Energy transfers by mass disappearing."
+          "text": "chemical store",
+          "misconception": "food/fuel confused with height"
         },
         {
-          "text": "In this item, it means that energy transfers only by sound.",
-          "misconception": "Energy transfers only by sound."
+          "text": "magnetic store",
+          "misconception": "field store confused with lifting"
         },
         {
-          "text": "In this item, it means that energy pathways are the same as energy stores.",
-          "misconception": "Energy pathways are the same as energy stores."
+          "text": "electrostatic store",
+          "misconception": "charge separation confused with height"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify energy transfer pathways."
+      "senNote": "Checks: Identify gravitational potential energy store changes."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_useful_wasted_exam_decision_014",
+      "id": "aqa_energy_stores_stretched_spring_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2272,6 +1568,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -2282,127 +1579,568 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_useful_wasted",
-        "statement": "Distinguish useful and wasted transfers. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.1.1.1:useful_wasted:exam_decision",
-      "conceptFamily": "useful_wasted",
-      "contextType": "a graph-reading task",
-      "skill": "Energy Stores practice",
-      "stem": "Which answer is the strongest GCSE Physics response for energy stores? Demand focus: distinguish useful and wasted transfers.",
-      "question": "Which answer is the strongest GCSE Physics response for energy stores? Demand focus: distinguish useful and wasted transfers.",
-      "options": [
-        "For energy stores, this would mean that useful energy must always be thermal.",
-        "For energy stores, it means that wasted energy is destroyed.",
-        "The claim for energy stores is that useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
-        "For energy stores, the option says that a device with waste transfers no energy."
-      ],
-      "correctAnswer": "The claim for energy stores is that useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Distinguish useful and wasted transfers. Focus area: Energy Stores. For this question, Useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:useful_wasted",
-      "distractorRationales": [
-        {
-          "text": "For energy stores, this would mean that useful energy must always be thermal.",
-          "misconception": "Wasted energy is destroyed."
-        },
-        {
-          "text": "For energy stores, the option says that a device with waste transfers no energy.",
-          "misconception": "Useful energy must always be thermal."
-        },
-        {
-          "text": "For energy stores, it means that wasted energy is destroyed.",
-          "misconception": "A device with waste transfers no energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Distinguish useful and wasted transfers."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_dissipation_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_dissipation",
-        "statement": "Explain dissipation. (Energy Stores)",
+        "id": "aqa_energy_stores_stretched_spring_004_lo",
+        "statement": "Identify the elastic potential store in a stretched object.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_stretched_spring_004",
+      "conceptFamily": "identify_the_elastic_potential_store_in_a_stretched_object",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A spring is stretched and held still. Which energy store has increased?",
+      "question": "A spring is stretched and held still. Which energy store has increased?",
+      "options": [
+        "elastic potential store",
+        "kinetic store",
+        "thermal store",
+        "nuclear store"
+      ],
+      "correctAnswer": "elastic potential store",
+      "correctIndex": 0,
+      "explanation": "A stretched spring stores energy in its elastic potential store.",
+      "misconceptionTag": "elastic-store-stretch",
+      "distractorRationales": [
+        {
+          "text": "kinetic store",
+          "misconception": "motion confused with stretch"
+        },
+        {
+          "text": "thermal store",
+          "misconception": "stretching confused with heating"
+        },
+        {
+          "text": "nuclear store",
+          "misconception": "nuclear store selected without nuclear change"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify the elastic potential store in a stretched object."
+    },
+    {
+      "id": "aqa_energy_stores_hot_water_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_hot_water_005_lo",
+        "statement": "Identify thermal store increases when temperature rises.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_hot_water_005",
+      "conceptFamily": "identify_thermal_store_increases_when_temperature_rises",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "Water in a kettle becomes hotter. Which energy store of the water increases?",
+      "question": "Water in a kettle becomes hotter. Which energy store of the water increases?",
+      "options": [
+        "thermal store",
+        "kinetic store of the kettle as a whole",
+        "gravitational potential store",
+        "magnetic store"
+      ],
+      "correctAnswer": "thermal store",
+      "correctIndex": 0,
+      "explanation": "When the water temperature rises, energy is transferred to the thermal store of the water.",
+      "misconceptionTag": "thermal-store-temperature",
+      "distractorRationales": [
+        {
+          "text": "kinetic store of the kettle as a whole",
+          "misconception": "temperature confused with object motion"
+        },
+        {
+          "text": "gravitational potential store",
+          "misconception": ""
+        },
+        {
+          "text": "magnetic store",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify thermal store increases when temperature rises."
+    },
+    {
+      "id": "aqa_energy_stores_battery_lamp_006",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_battery_lamp_006_lo",
+        "statement": "Identify the chemical store in a battery-powered circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_battery_lamp_006",
+      "conceptFamily": "identify_the_chemical_store_in_a_battery_powered_circuit",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A battery lights a lamp. Which store decreases in the battery?",
+      "question": "A battery lights a lamp. Which store decreases in the battery?",
+      "options": [
+        "chemical store",
+        "gravitational potential store",
+        "elastic potential store",
+        "magnetic store"
+      ],
+      "correctAnswer": "chemical store",
+      "correctIndex": 0,
+      "explanation": "The battery transfers energy from its chemical store to the circuit.",
+      "misconceptionTag": "battery-chemical-store",
+      "distractorRationales": [
+        {
+          "text": "gravitational potential store",
+          "misconception": "height store chosen without height change"
+        },
+        {
+          "text": "elastic potential store",
+          "misconception": "stretch store chosen without deformation"
+        },
+        {
+          "text": "magnetic store",
+          "misconception": "magnetism confused with electrical circuit"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify the chemical store in a battery-powered circuit."
+    },
+    {
+      "id": "aqa_energy_stores_transfer_pathway_electric_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_transfer_pathway_electric_007_lo",
+        "statement": "Identify electrical working as an energy transfer pathway.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_transfer_pathway_electric_007",
+      "conceptFamily": "identify_electrical_working_as_an_energy_transfer_pathway",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "An electric motor lifts a load. Which pathway transfers energy to the motor?",
+      "question": "An electric motor lifts a load. Which pathway transfers energy to the motor?",
+      "options": [
+        "electrically",
+        "by radiation",
+        "mechanically from the battery",
+        "by sound only"
+      ],
+      "correctAnswer": "electrically",
+      "correctIndex": 0,
+      "explanation": "The motor receives energy electrically from the circuit before transferring energy mechanically to lift the load.",
+      "misconceptionTag": "electrical-transfer-pathway",
+      "distractorRationales": [
+        {
+          "text": "by radiation",
+          "misconception": "radiation selected for a circuit transfer"
+        },
+        {
+          "text": "mechanically from the battery",
+          "misconception": "mechanical transfer confused with motor output"
+        },
+        {
+          "text": "by sound only",
+          "misconception": "sound treated as main pathway"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify electrical working as an energy transfer pathway."
+    },
+    {
+      "id": "aqa_energy_stores_transfer_pathway_heating_008",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_transfer_pathway_heating_008_lo",
+        "statement": "Identify heating as an energy transfer pathway.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_transfer_pathway_heating_008",
+      "conceptFamily": "identify_heating_as_an_energy_transfer_pathway",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A metal pan warms up on a hob. Which pathway transfers energy into the pan?",
+      "question": "A metal pan warms up on a hob. Which pathway transfers energy into the pan?",
+      "options": [
+        "heating",
+        "electrical working through the pan only",
+        "nuclear transfer",
+        "magnetic working"
+      ],
+      "correctAnswer": "heating",
+      "correctIndex": 0,
+      "explanation": "Energy is transferred to the pan by heating because there is a temperature difference between the hob and the pan.",
+      "misconceptionTag": "heating-transfer-pathway",
+      "distractorRationales": [
+        {
+          "text": "electrical working through the pan only",
+          "misconception": "electrical transfer overgeneralised"
+        },
+        {
+          "text": "nuclear transfer",
+          "misconception": ""
+        },
+        {
+          "text": "magnetic working",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify heating as an energy transfer pathway."
+    },
+    {
+      "id": "aqa_energy_stores_transfer_pathway_mechanical_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_transfer_pathway_mechanical_009_lo",
+        "statement": "Identify mechanical working as an energy transfer pathway.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_transfer_pathway_mechanical_009",
+      "conceptFamily": "identify_mechanical_working_as_an_energy_transfer_pathway",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A student pulls a trolley along the floor with a rope. Which pathway transfers energy to the trolley?",
+      "question": "A student pulls a trolley along the floor with a rope. Which pathway transfers energy to the trolley?",
+      "options": [
+        "mechanically",
+        "by radiation",
+        "chemically through the rope",
+        "electrostatically because the trolley moves"
+      ],
+      "correctAnswer": "mechanically",
+      "correctIndex": 0,
+      "explanation": "A force moves the trolley through a distance, so energy is transferred mechanically.",
+      "misconceptionTag": "mechanical-transfer-pathway",
+      "distractorRationales": [
+        {
+          "text": "by radiation",
+          "misconception": ""
+        },
+        {
+          "text": "chemically through the rope",
+          "misconception": "store confused with transfer pathway"
+        },
+        {
+          "text": "electrostatically because the trolley moves",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify mechanical working as an energy transfer pathway."
+    },
+    {
+      "id": "aqa_energy_stores_transfer_pathway_radiation_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_transfer_pathway_radiation_010_lo",
+        "statement": "Identify radiation as an energy transfer pathway.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_transfer_pathway_radiation_010",
+      "conceptFamily": "identify_radiation_as_an_energy_transfer_pathway",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "Sunlight warms a dark surface. Which pathway transfers energy from the Sun to the surface?",
+      "question": "Sunlight warms a dark surface. Which pathway transfers energy from the Sun to the surface?",
+      "options": [
+        "radiation",
+        "mechanical working",
+        "electrical working",
+        "conduction through empty space"
+      ],
+      "correctAnswer": "radiation",
+      "correctIndex": 0,
+      "explanation": "Energy from the Sun is transferred by radiation. It can travel through space without particles.",
+      "misconceptionTag": "radiation-transfer-pathway",
+      "distractorRationales": [
+        {
+          "text": "mechanical working",
+          "misconception": ""
+        },
+        {
+          "text": "electrical working",
+          "misconception": ""
+        },
+        {
+          "text": "conduction through empty space",
+          "misconception": "conduction incorrectly used through space"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify radiation as an energy transfer pathway."
+    },
+    {
+      "id": "aqa_energy_stores_closed_system_011",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_closed_system_011_lo",
+        "statement": "State conservation of energy in a closed system.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.1.1.1:dissipation:direct_recall",
-      "conceptFamily": "dissipation",
-      "contextType": "a comparison question",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_closed_system_011",
+      "conceptFamily": "state_conservation_of_energy_in_a_closed_system",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "Which answer matches this energy stores objective: Explain dissipation? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
-      "question": "Which answer matches this energy stores objective: Explain dissipation? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
+      "stem": "In a closed system, what happens to the total energy?",
+      "question": "In a closed system, what happens to the total energy?",
       "options": [
-        "For energy stores, the option says that dissipation only happens in magnets.",
-        "The claim for energy stores is that dissipation spreads energy into thermal stores of the surroundings, making it less useful.",
-        "For energy stores, the option says that dissipation concentrates energy in one store.",
-        "In this item, it means that dissipation creates extra energy."
+        "It stays the same.",
+        "It always increases.",
+        "It is destroyed when objects slow down.",
+        "It becomes only useful energy."
       ],
-      "correctAnswer": "The claim for energy stores is that dissipation spreads energy into thermal stores of the surroundings, making it less useful.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.1 targets: Explain dissipation. Focus area: Energy Stores. For this question, Dissipation spreads energy into thermal stores of the surroundings, making it less useful. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:dissipation",
+      "correctAnswer": "It stays the same.",
+      "correctIndex": 0,
+      "explanation": "Energy is conserved in a closed system. It can be transferred between stores, but the total amount stays the same.",
+      "misconceptionTag": "closed-system-conservation",
       "distractorRationales": [
         {
-          "text": "For energy stores, the option says that dissipation only happens in magnets.",
-          "misconception": "Dissipation concentrates energy in one store."
+          "text": "It always increases.",
+          "misconception": ""
         },
         {
-          "text": "For energy stores, the option says that dissipation concentrates energy in one store.",
-          "misconception": "Dissipation creates extra energy."
+          "text": "It is destroyed when objects slow down.",
+          "misconception": "dissipation confused with destruction"
         },
         {
-          "text": "In this item, it means that dissipation creates extra energy.",
-          "misconception": "Dissipation only happens in magnets."
+          "text": "It becomes only useful energy.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain dissipation."
+      "senNote": "Checks: State conservation of energy in a closed system."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_store_identification_concept_discrimination_016",
+      "id": "aqa_energy_stores_falling_ball_012",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2414,6 +2152,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -2424,127 +2163,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_store_identification",
-        "statement": "Identify energy stores. (Energy Stores)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.1.1.1:store_identification:concept_discrimination",
-      "conceptFamily": "store_identification",
-      "contextType": "a method-choice question",
-      "skill": "Energy Stores practice",
-      "stem": "Which option best separates the correct energy stores idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "question": "Which option best separates the correct energy stores idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
-      "options": [
-        "The answer for energy stores says that energy is stored only in moving objects.",
-        "The answer for energy stores says that energy can be created by naming a new store.",
-        "In this energy stores item, energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-        "The answer for energy stores says that energy is a substance used up inside appliances."
-      ],
-      "correctAnswer": "In this energy stores item, energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Identify energy stores. Focus area: Energy Stores. For this question, Energy can be stored in kinetic, thermal, chemical, elastic, gravitational, magnetic, electrostatic and nuclear stores. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:store_identification",
-      "distractorRationales": [
-        {
-          "text": "The answer for energy stores says that energy is stored only in moving objects.",
-          "misconception": "Energy is stored only in moving objects."
-        },
-        {
-          "text": "The answer for energy stores says that energy is a substance used up inside appliances.",
-          "misconception": "Energy is a substance used up inside appliances."
-        },
-        {
-          "text": "The answer for energy stores says that energy can be created by naming a new store.",
-          "misconception": "Energy can be created by naming a new store."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify energy stores."
-    },
-    {
-      "id": "aqa_4_1_1_1_energy_stores_closed_system_misconception_correction_017",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Energy",
-      "subtopic": "Energy Stores",
-      "topicSlug": "energy",
-      "subtopicSlug": "energy_stores",
-      "topicId": "energy_stores",
-      "specRef": "4.1.1.1",
-      "specStatement": "Energy stores and systems.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_closed_system",
-        "statement": "Apply conservation of energy. (Energy Stores)",
+        "id": "aqa_energy_stores_falling_ball_012_lo",
+        "statement": "Describe energy transfers for a falling object.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.1.1.1:closed_system:misconception_correction",
-      "conceptFamily": "closed_system",
-      "contextType": "a results discussion",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_stores_falling_ball_012",
+      "conceptFamily": "describe_energy_transfers_for_a_falling_object",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
-      "question": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
+      "stem": "A ball falls freely from rest. Ignoring air resistance, which energy transfer happens as it falls?",
+      "question": "A ball falls freely from rest. Ignoring air resistance, which energy transfer happens as it falls?",
       "options": [
-        "The claim for energy stores is that conservation means useful energy always increases.",
-        "For energy stores, this would mean that energy is destroyed whenever a device warms up.",
-        "For energy stores: In a closed system, total energy is conserved even when it is transferred between stores.",
-        "The claim for energy stores is that a closed system loses all energy instantly."
+        "From gravitational potential store to kinetic store.",
+        "From kinetic store to chemical store.",
+        "From thermal store to elastic potential store.",
+        "From nuclear store to magnetic store."
       ],
-      "correctAnswer": "For energy stores: In a closed system, total energy is conserved even when it is transferred between stores.",
-      "correctIndex": 2,
-      "explanation": "4.1.1.1 targets: Apply conservation of energy. Focus area: Energy Stores. For this question, In a closed system, total energy is conserved even when it is transferred between stores. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:closed_system",
+      "correctAnswer": "From gravitational potential store to kinetic store.",
+      "correctIndex": 0,
+      "explanation": "As the ball falls, its height decreases and its speed increases, so energy transfers from the gravitational potential store to the kinetic store.",
+      "misconceptionTag": "falling-object-transfer",
       "distractorRationales": [
         {
-          "text": "The claim for energy stores is that a closed system loses all energy instantly.",
-          "misconception": "Energy is destroyed whenever a device warms up."
+          "text": "From kinetic store to chemical store.",
+          "misconception": ""
         },
         {
-          "text": "The claim for energy stores is that conservation means useful energy always increases.",
-          "misconception": "A closed system loses all energy instantly."
+          "text": "From thermal store to elastic potential store.",
+          "misconception": ""
         },
         {
-          "text": "For energy stores, this would mean that energy is destroyed whenever a device warms up.",
-          "misconception": "Conservation means useful energy always increases."
+          "text": "From nuclear store to magnetic store.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Apply conservation of energy."
+      "senNote": "Checks: Describe energy transfers for a falling object."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_transfer_pathways_data_interpretation_018",
+      "id": "aqa_energy_stores_bouncing_ball_013",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2556,6 +2225,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -2566,56 +2236,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_transfer_pathways",
-        "statement": "Identify energy transfer pathways. (Energy Stores)",
+        "id": "aqa_energy_stores_bouncing_ball_013_lo",
+        "statement": "Explain why a bouncing object reaches a lower height.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.1.1.1:transfer_pathways:data_interpretation",
-      "conceptFamily": "transfer_pathways",
-      "contextType": "a classroom demonstration",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_energy_stores_bouncing_ball_013",
+      "conceptFamily": "explain_why_a_bouncing_object_reaches_a_lower_height",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "Which conclusion about energy stores is supported by the evidence? Keep the answer focused on energy stores: identify energy transfer pathways.",
-      "question": "Which conclusion about energy stores is supported by the evidence? Keep the answer focused on energy stores: identify energy transfer pathways.",
+      "stem": "A ball bounces and reaches a lower height after each bounce. What has happened to some of its energy?",
+      "question": "A ball bounces and reaches a lower height after each bounce. What has happened to some of its energy?",
       "options": [
-        "For energy stores, it means that energy transfers by mass disappearing.",
-        "For energy stores, the statement is that energy is transferred mechanically, electrically, by heating, or by radiation.",
-        "For energy stores, it means that energy pathways are the same as energy stores.",
-        "For energy stores, it means that energy transfers only by sound."
+        "It has been transferred to the thermal stores of the ball and surroundings.",
+        "It has been destroyed during the impact.",
+        "It has changed into mass.",
+        "It has become gravitational potential energy in the ground."
       ],
-      "correctAnswer": "For energy stores, the statement is that energy is transferred mechanically, electrically, by heating, or by radiation.",
-      "correctIndex": 1,
-      "explanation": "4.1.1.1 targets: Identify energy transfer pathways. Focus area: Energy Stores. For this question, Energy is transferred mechanically, electrically, by heating, or by radiation. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transfer_pathways",
+      "correctAnswer": "It has been transferred to the thermal stores of the ball and surroundings.",
+      "correctIndex": 0,
+      "explanation": "Some energy is dissipated by heating and sound during each bounce, so less energy remains in the ball’s mechanical stores.",
+      "misconceptionTag": "bounce-dissipation",
       "distractorRationales": [
         {
-          "text": "For energy stores, it means that energy pathways are the same as energy stores.",
-          "misconception": "Energy transfers by mass disappearing."
+          "text": "It has been destroyed during the impact.",
+          "misconception": "energy destruction misconception"
         },
         {
-          "text": "For energy stores, it means that energy transfers by mass disappearing.",
-          "misconception": "Energy transfers only by sound."
+          "text": "It has changed into mass.",
+          "misconception": ""
         },
         {
-          "text": "For energy stores, it means that energy transfers only by sound.",
-          "misconception": "Energy pathways are the same as energy stores."
+          "text": "It has become gravitational potential energy in the ground.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify energy transfer pathways."
+      "senNote": "Checks: Explain why a bouncing object reaches a lower height."
     },
     {
-      "id": "aqa_4_1_1_1_energy_stores_useful_wasted_representation_interpretation_019",
+      "id": "aqa_energy_stores_braking_car_014",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -2627,6 +2298,7 @@
       "subtopicSlug": "energy_stores",
       "topicId": "energy_stores",
       "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
       "specStatement": "Energy stores and systems.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -2637,53 +2309,419 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_1_1_1_energy_stores_useful_wasted",
-        "statement": "Distinguish useful and wasted transfers. (Energy Stores)",
+        "id": "aqa_energy_stores_braking_car_014_lo",
+        "statement": "Identify the kinetic store decrease when a vehicle slows down.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.1.1.1:useful_wasted:representation_interpretation",
-      "conceptFamily": "useful_wasted",
-      "contextType": "a revision checkpoint",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_braking_car_014",
+      "conceptFamily": "identify_the_kinetic_store_decrease_when_a_vehicle_slows_down",
+      "contextType": "exam_style",
       "skill": "Energy Stores practice",
-      "stem": "A representation of energy stores is described in words. Which interpretation is correct? Demand focus: distinguish useful and wasted transfers.",
-      "question": "A representation of energy stores is described in words. Which interpretation is correct? Demand focus: distinguish useful and wasted transfers.",
+      "stem": "A car slows down when the brakes are applied. Which store decreases?",
+      "question": "A car slows down when the brakes are applied. Which store decreases?",
       "options": [
-        "For energy stores, the answer claims that a device with waste transfers no energy.",
-        "For energy stores, the answer claims that wasted energy is destroyed.",
-        "For energy stores, the statement is that useful energy must always be thermal.",
-        "In this energy stores item, useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores."
+        "kinetic store of the car",
+        "chemical store of the road",
+        "nuclear store of the brakes",
+        "gravitational potential store of the car on a level road"
       ],
-      "correctAnswer": "In this energy stores item, useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores.",
-      "correctIndex": 3,
-      "explanation": "4.1.1.1 targets: Distinguish useful and wasted transfers. Focus area: Energy Stores. For this question, Useful transfers match the intended purpose; wasted transfers are dissipated to less useful stores. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:useful_wasted",
+      "correctAnswer": "kinetic store of the car",
+      "correctIndex": 0,
+      "explanation": "The car’s speed decreases, so energy is transferred away from its kinetic store, mainly to thermal stores in the brakes and surroundings.",
+      "misconceptionTag": "braking-kinetic-store",
       "distractorRationales": [
         {
-          "text": "For energy stores, the answer claims that wasted energy is destroyed.",
-          "misconception": "Wasted energy is destroyed."
+          "text": "chemical store of the road",
+          "misconception": ""
         },
         {
-          "text": "For energy stores, the statement is that useful energy must always be thermal.",
-          "misconception": "Useful energy must always be thermal."
+          "text": "nuclear store of the brakes",
+          "misconception": ""
         },
         {
-          "text": "For energy stores, the answer claims that a device with waste transfers no energy.",
-          "misconception": "A device with waste transfers no energy."
+          "text": "gravitational potential store of the car on a level road",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.1.1.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Distinguish useful and wasted transfers."
+      "senNote": "Checks: Identify the kinetic store decrease when a vehicle slows down."
+    },
+    {
+      "id": "aqa_energy_stores_useful_wasted_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_useful_wasted_015_lo",
+        "statement": "Identify the useful energy transfer in a device.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_stores_useful_wasted_015",
+      "conceptFamily": "identify_the_useful_energy_transfer_in_a_device",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "An electric drill is used to make a hole in wood. Which energy transfer is useful?",
+      "question": "An electric drill is used to make a hole in wood. Which energy transfer is useful?",
+      "options": [
+        "Energy transferred mechanically to rotate the drill bit.",
+        "Energy transferred by heating to the surroundings.",
+        "Energy transferred by sound to the room.",
+        "Energy transferred to warm the casing only."
+      ],
+      "correctAnswer": "Energy transferred mechanically to rotate the drill bit.",
+      "correctIndex": 0,
+      "explanation": "The useful transfer is the mechanical transfer that rotates the drill bit and does work on the wood.",
+      "misconceptionTag": "useful-transfer-device",
+      "distractorRationales": [
+        {
+          "text": "Energy transferred by heating to the surroundings.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy transferred by sound to the room.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy transferred to warm the casing only.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify the useful energy transfer in a device."
+    },
+    {
+      "id": "aqa_energy_stores_wasted_lamp_016",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_wasted_lamp_016_lo",
+        "statement": "Identify wasted energy transfers in a device.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_wasted_lamp_016",
+      "conceptFamily": "identify_wasted_energy_transfers_in_a_device",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A lamp is designed to produce visible light but it also becomes warm. Which transfer is wasted?",
+      "question": "A lamp is designed to produce visible light but it also becomes warm. Which transfer is wasted?",
+      "options": [
+        "Energy transferred by heating to the surroundings.",
+        "Energy transferred by radiation as visible light.",
+        "Energy transferred electrically to the lamp.",
+        "Energy transferred from the chemical store of the power station fuel."
+      ],
+      "correctAnswer": "Energy transferred by heating to the surroundings.",
+      "correctIndex": 0,
+      "explanation": "For a lamp, visible light is useful. Heating of the surroundings is unwanted, so that transfer is wasted.",
+      "misconceptionTag": "wasted-transfer-lamp",
+      "distractorRationales": [
+        {
+          "text": "Energy transferred by radiation as visible light.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy transferred electrically to the lamp.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy transferred from the chemical store of the power station fuel.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify wasted energy transfers in a device."
+    },
+    {
+      "id": "aqa_energy_stores_dissipation_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_dissipation_017_lo",
+        "statement": "Explain the meaning of energy dissipation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_energy_stores_dissipation_017",
+      "conceptFamily": "explain_the_meaning_of_energy_dissipation",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "What does it mean when energy is dissipated?",
+      "question": "What does it mean when energy is dissipated?",
+      "options": [
+        "Energy is spread out to the surroundings in less useful ways.",
+        "Energy is destroyed and no longer exists.",
+        "Energy is stored only in a battery.",
+        "Energy changes into force."
+      ],
+      "correctAnswer": "Energy is spread out to the surroundings in less useful ways.",
+      "correctIndex": 0,
+      "explanation": "Dissipated energy has been transferred to the surroundings, usually making it less useful, but it has not been destroyed.",
+      "misconceptionTag": "dissipation-not-destruction",
+      "distractorRationales": [
+        {
+          "text": "Energy is destroyed and no longer exists.",
+          "misconception": "dissipation confused with destruction"
+        },
+        {
+          "text": "Energy is stored only in a battery.",
+          "misconception": ""
+        },
+        {
+          "text": "Energy changes into force.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain the meaning of energy dissipation."
+    },
+    {
+      "id": "aqa_energy_stores_phone_charging_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_phone_charging_018_lo",
+        "statement": "Identify the store increased when a rechargeable battery is charged.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_energy_stores_phone_charging_018",
+      "conceptFamily": "identify_the_store_increased_when_a_rechargeable_battery_is_charged",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A phone battery is being charged from the mains. Which store in the phone increases?",
+      "question": "A phone battery is being charged from the mains. Which store in the phone increases?",
+      "options": [
+        "chemical store",
+        "gravitational potential store",
+        "elastic potential store",
+        "kinetic store of the phone"
+      ],
+      "correctAnswer": "chemical store",
+      "correctIndex": 0,
+      "explanation": "Charging transfers energy to the chemical store of the phone battery.",
+      "misconceptionTag": "charging-chemical-store",
+      "distractorRationales": [
+        {
+          "text": "gravitational potential store",
+          "misconception": ""
+        },
+        {
+          "text": "elastic potential store",
+          "misconception": ""
+        },
+        {
+          "text": "kinetic store of the phone",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify the store increased when a rechargeable battery is charged."
+    },
+    {
+      "id": "aqa_energy_stores_sankey_basic_019",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Energy",
+      "subtopic": "Energy Stores",
+      "topicSlug": "energy",
+      "subtopicSlug": "energy_stores",
+      "topicId": "energy_stores",
+      "specRef": "4.1.1.1",
+      "combinedSpecRef": "6.1.1.1",
+      "specStatement": "Energy stores and systems.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_energy_stores_sankey_basic_019_lo",
+        "statement": "Interpret total output energy on a Sankey diagram.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_energy_stores_sankey_basic_019",
+      "conceptFamily": "interpret_total_output_energy_on_a_sankey_diagram",
+      "contextType": "exam_style",
+      "skill": "Energy Stores practice",
+      "stem": "A Sankey diagram for a device has one thick arrow entering and two arrows leaving. What does the total width of the two output arrows represent?",
+      "question": "A Sankey diagram for a device has one thick arrow entering and two arrows leaving. What does the total width of the two output arrows represent?",
+      "options": [
+        "The total energy transferred out of the device.",
+        "Only the useful energy transferred out.",
+        "Only the energy destroyed by the device.",
+        "The force applied by the device."
+      ],
+      "correctAnswer": "The total energy transferred out of the device.",
+      "correctIndex": 0,
+      "explanation": "In a Sankey diagram, the output arrows together represent all the energy transferred out, including useful and wasted transfers.",
+      "misconceptionTag": "sankey-total-output",
+      "distractorRationales": [
+        {
+          "text": "Only the useful energy transferred out.",
+          "misconception": ""
+        },
+        {
+          "text": "Only the energy destroyed by the device.",
+          "misconception": ""
+        },
+        {
+          "text": "The force applied by the device.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.1.1.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret total output energy on a Sankey diagram."
     },
     {
       "id": "aqa_4_1_2_1_insulation_conduction_direct_recall_001",

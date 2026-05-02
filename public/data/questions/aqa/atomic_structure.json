@@ -15,9 +15,9 @@
       "skill": "Define isotope",
       "question": "What is an isotope?",
       "options": [
-        "Atoms with different numbers of protons but the same number of neutrons.",
-        "Atoms with the same number of neutrons and electrons only.",
-        "Atoms that have lost all of their electrons.",
+        "Atoms with no nucleus.",
+        "Atoms with no electrons.",
+        "Molecules with the same formula.",
         "Atoms of the same element with different numbers of neutrons."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
@@ -39,10 +39,10 @@
       "skill": "Define isotope",
       "question": "On a clinic worksheet, a learner checks: a display label says two atoms are the same element but have different mass numbers. Which idea explains this?",
       "options": [
+        "Atoms with no nucleus.",
         "Atoms with no electrons.",
-        "Atoms with identical neutron numbers only.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms that have split in half."
+        "Atoms with different proton numbers."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 2,
@@ -74,10 +74,10 @@
       "skill": "Define isotope",
       "question": "On a museum label, a visitor reads: a teacher notices two atoms have equal protons but unequal neutrons. Which term fits this pair?",
       "options": [
-        "Atoms from different elements.",
+        "Atoms with no nucleus.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Molecules with the same formula.",
-        "Atoms with no nucleus."
+        "Atoms with no electrons.",
+        "Atoms from different elements."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 1,
@@ -110,9 +110,9 @@
       "question": "On a school lab card, a pupil answers: during factory revision, an atom pair has matching atomic number but different neutron number. What name is used?",
       "options": [
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms with identical neutron numbers only.",
-        "Ions with opposite charges.",
-        "Atoms with different proton numbers."
+        "Atoms with no nucleus.",
+        "Atoms with no electrons.",
+        "Ions with opposite charges."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 0,
@@ -144,9 +144,9 @@
       "skill": "Define isotope",
       "question": "On a factory safety note, an apprentice reviews: a training screen shows chlorine-35 and chlorine-37. Why are they isotopes?",
       "options": [
-        "Molecules with the same formula.",
-        "Atoms that have split in half.",
+        "Atoms with no nucleus.",
         "Atoms with no electrons.",
+        "Atoms with identical neutron numbers only.",
         "Atoms of the same element with different numbers of neutrons."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
@@ -179,10 +179,10 @@
       "skill": "Define isotope",
       "question": "On a space centre display, a guide explains: which statement would help a learner recognise isotopes of the same element?",
       "options": [
-        "Ions with opposite charges.",
         "Atoms with no nucleus.",
+        "Atoms with no electrons.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms from different elements."
+        "Atoms that have split in half."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 2,
@@ -214,10 +214,10 @@
       "skill": "Define isotope",
       "question": "On a revision flashcard, a student practises: a radiographer compares two carbon atoms with the same proton number but different neutron numbers. What are they called?",
       "options": [
-        "Atoms that have split in half.",
+        "Atoms with no nucleus.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms with different proton numbers.",
-        "Atoms with identical neutron numbers only."
+        "Atoms with no electrons.",
+        "Atoms with the same neutron number but different proton numbers."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 1,
@@ -252,7 +252,7 @@
         "Atoms with no nucleus.",
         "Atoms with no electrons.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Molecules with the same formula."
+        "Atoms that have gained extra electrons only."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 2,
@@ -284,10 +284,10 @@
       "skill": "Define isotope",
       "question": "On a observatory data sheet, an astronomer reviews: a group notices two atoms have equal protons but unequal neutrons. Which term fits this pair?",
       "options": [
-        "Atoms with different proton numbers.",
+        "Atoms with no nucleus.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms from different elements.",
-        "Ions with opposite charges."
+        "Atoms with no electrons.",
+        "Molecules made from different elements."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 1,
@@ -320,9 +320,9 @@
       "question": "On a classroom board, a group discusses: during workshop revision, an atom pair has matching atomic number but different neutron number. What name is used?",
       "options": [
         "Atoms of the same element with different numbers of neutrons.",
+        "Atoms with no nucleus.",
         "Atoms with no electrons.",
-        "Atoms with identical neutron numbers only.",
-        "Atoms that have split in half."
+        "Atoms with no mass number."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 0,
@@ -354,9 +354,9 @@
       "skill": "Define isotope",
       "question": "On a workshop checklist, an engineer checks: a notebook shows chlorine-35 and chlorine-37. Why are they isotopes?",
       "options": [
-        "Atoms from different elements.",
-        "Molecules with the same formula.",
         "Atoms with no nucleus.",
+        "Molecules with the same formula.",
+        "Atoms with different proton numbers.",
         "Atoms of the same element with different numbers of neutrons."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
@@ -389,10 +389,10 @@
       "skill": "Define isotope",
       "question": "On a field trip notebook, a pupil records: which statement would help a team recognise isotopes of the same element?",
       "options": [
-        "Atoms with identical neutron numbers only.",
-        "Ions with opposite charges.",
+        "Atoms with no nucleus.",
+        "Molecules with the same formula.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms with different proton numbers."
+        "Atoms from different elements."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 2,
@@ -424,10 +424,10 @@
       "skill": "Define isotope",
       "question": "On a science fair poster, a team explains: a candidate compares two carbon atoms with the same proton number but different neutron numbers. What are they called?",
       "options": [
-        "Molecules with the same formula.",
+        "Atoms with no nucleus.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms that have split in half.",
-        "Atoms with no electrons."
+        "Molecules with the same formula.",
+        "Ions with opposite charges."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 1,
@@ -460,9 +460,9 @@
       "question": "On a exam practice page, a candidate works: a question card says two atoms are the same element but have different mass numbers. Which idea explains this?",
       "options": [
         "Atoms of the same element with different numbers of neutrons.",
-        "Ions with opposite charges.",
         "Atoms with no nucleus.",
-        "Atoms from different elements."
+        "Molecules with the same formula.",
+        "Atoms with identical neutron numbers only."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 0,
@@ -494,9 +494,9 @@
       "skill": "Define isotope",
       "question": "On a home study card, a learner revises: a assistant notices two atoms have equal protons but unequal neutrons. Which term fits this pair?",
       "options": [
+        "Atoms with no nucleus.",
+        "Molecules with the same formula.",
         "Atoms that have split in half.",
-        "Atoms with different proton numbers.",
-        "Atoms with identical neutron numbers only.",
         "Atoms of the same element with different numbers of neutrons."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
@@ -530,9 +530,9 @@
       "question": "On a research log book, an assistant notes: during planetarium revision, an atom pair has matching atomic number but different neutron number. What name is used?",
       "options": [
         "Atoms with no nucleus.",
-        "Atoms with no electrons.",
+        "Molecules with the same formula.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Molecules with the same formula."
+        "Atoms with the same neutron number but different proton numbers."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 2,
@@ -564,10 +564,10 @@
       "skill": "Define isotope",
       "question": "On a planetarium screen, a visitor chooses: a sound desk shows chlorine-35 and chlorine-37. Why are they isotopes?",
       "options": [
-        "Atoms with different proton numbers.",
+        "Atoms with no nucleus.",
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms from different elements.",
-        "Ions with opposite charges."
+        "Molecules with the same formula.",
+        "Atoms that have gained extra electrons only."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 1,
@@ -600,9 +600,9 @@
       "question": "On a radio studio demo, a presenter explains: which statement would help a surveyor recognise isotopes of the same element?",
       "options": [
         "Atoms of the same element with different numbers of neutrons.",
-        "Atoms with no electrons.",
-        "Atoms with identical neutron numbers only.",
-        "Atoms that have split in half."
+        "Atoms with no nucleus.",
+        "Molecules with the same formula.",
+        "Molecules made from different elements."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
       "correctIndex": 0,
@@ -634,9 +634,9 @@
       "skill": "Define isotope",
       "question": "On a energy survey report, a surveyor writes: a technician compares two carbon atoms with the same proton number but different neutron numbers. What are they called?",
       "options": [
-        "Atoms from different elements.",
-        "Molecules with the same formula.",
         "Atoms with no nucleus.",
+        "Molecules with the same formula.",
+        "Atoms with no mass number.",
         "Atoms of the same element with different numbers of neutrons."
       ],
       "correctAnswer": "Atoms of the same element with different numbers of neutrons.",
@@ -1977,9 +1977,9 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "Why are isotopes of carbon useful in archaeology?",
       "options": [
-        "They always emit visible light when ancient objects are found.",
-        "Their protons change into electrons over time in a predictable way.",
-        "They are the only atoms that can be found in fossils.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
+        "It turns microbes into steam.",
         "Their half-lives allow the age of once-living materials to be estimated."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
@@ -2001,10 +2001,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a clinic worksheet, a learner checks: carbon dating is used on a bone sample. What makes the method work?",
       "options": [
-        "It counts living cells.",
-        "It checks the object mass only.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It finds the melting point."
+        "It makes packaging magnetic."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 2,
@@ -2036,10 +2036,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a museum label, a visitor reads: a results table explains that activity falls at a steady rate. How does this help dating?",
       "options": [
-        "It measures temperature change.",
+        "It blocks all radiation.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It uses magnet strength.",
-        "It measures air pressure."
+        "It cools the equipment.",
+        "It removes gravity from microbes."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 1,
@@ -2072,9 +2072,9 @@
       "question": "On a school lab card, a pupil answers: why can half-life data help estimate when a once-living object died?",
       "options": [
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It checks the object mass only.",
-        "It compares sound waves.",
-        "It measures colour fading."
+        "It blocks all radiation.",
+        "It cools the equipment.",
+        "It washes the equipment with water."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 0,
@@ -2106,9 +2106,9 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a factory safety note, an apprentice reviews: a fossil sample contains less radioactive carbon than a fresh sample. What can this show?",
       "options": [
-        "It uses magnet strength.",
-        "It finds the melting point.",
-        "It counts living cells.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
+        "It lowers the room pressure.",
         "Their half-lives allow the age of once-living materials to be estimated."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
@@ -2141,10 +2141,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a space centre display, a guide explains: which reason explains the use of radioactive isotopes for dating old remains?",
       "options": [
-        "It compares sound waves.",
-        "It measures air pressure.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It measures temperature change."
+        "It changes metal into plastic."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 2,
@@ -2176,8 +2176,8 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a revision flashcard, a student practises: a radiographer wants to estimate the age of old wood. Why is radioactive dating useful?",
       "options": [
-        "It finds the melting point.",
-        "It measures colour fading.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "It checks the object mass only.",
         "Their half-lives allow the age of once-living materials to be estimated."
       ],
@@ -2211,10 +2211,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a hospital training card, a trainee checks: carbon dating is used on a bone sample. What makes the method work?",
       "options": [
-        "It measures air pressure.",
-        "It counts living cells.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It uses magnet strength."
+        "It finds the melting point."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 2,
@@ -2246,10 +2246,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard explains that activity falls at a steady rate. How does this help dating?",
       "options": [
-        "It measures colour fading.",
+        "It blocks all radiation.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It measures temperature change.",
-        "It compares sound waves."
+        "It cools the equipment.",
+        "It measures colour fading."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 1,
@@ -2282,9 +2282,9 @@
       "question": "On a classroom board, a group discusses: why can half-life data help estimate when a once-living object died?",
       "options": [
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It counts living cells.",
-        "It checks the object mass only.",
-        "It finds the melting point."
+        "It blocks all radiation.",
+        "It cools the equipment.",
+        "It compares sound waves."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 0,
@@ -2316,9 +2316,9 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a workshop checklist, an engineer checks: a fossil sample contains less radioactive carbon than a fresh sample. What can this show?",
       "options": [
-        "It measures temperature change.",
-        "It uses magnet strength.",
-        "It measures air pressure.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
+        "It counts living cells.",
         "Their half-lives allow the age of once-living materials to be estimated."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
@@ -2351,10 +2351,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a field trip notebook, a pupil records: which reason explains the use of radioactive isotopes for dating old remains?",
       "options": [
-        "It checks the object mass only.",
-        "It compares sound waves.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It measures colour fading."
+        "It uses magnet strength."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 2,
@@ -2386,10 +2386,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a science fair poster, a team explains: a candidate wants to estimate the age of old wood. Why is radioactive dating useful?",
       "options": [
-        "It uses magnet strength.",
+        "It blocks all radiation.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It finds the melting point.",
-        "It counts living cells."
+        "It cools the equipment.",
+        "It measures air pressure."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 1,
@@ -2422,8 +2422,8 @@
       "question": "On a exam practice page, a candidate works: carbon dating is used on a bone sample. What makes the method work?",
       "options": [
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It compares sound waves.",
-        "It measures air pressure.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "It measures temperature change."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
@@ -2456,9 +2456,9 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a home study card, a learner revises: a log book explains that activity falls at a steady rate. How does this help dating?",
       "options": [
-        "It finds the melting point.",
-        "It measures colour fading.",
-        "It checks the object mass only.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
+        "It stops all ionising radiation from existing.",
         "Their half-lives allow the age of once-living materials to be estimated."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
@@ -2491,10 +2491,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a research log book, an assistant notes: why can half-life data help estimate when a once-living object died?",
       "options": [
-        "It measures air pressure.",
-        "It counts living cells.",
+        "It blocks all radiation.",
+        "It cools the equipment.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It uses magnet strength."
+        "It makes the object radioactive forever."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 2,
@@ -2526,10 +2526,10 @@
       "skill": "Explain one use of radioactive isotopes",
       "question": "On a planetarium screen, a visitor chooses: a fossil sample contains less radioactive carbon than a fresh sample. What can this show?",
       "options": [
-        "It measures colour fading.",
+        "It blocks all radiation.",
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It measures temperature change.",
-        "It compares sound waves."
+        "It turns microbes into steam.",
+        "It makes packaging magnetic."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 1,
@@ -2562,9 +2562,9 @@
       "question": "On a radio studio demo, a presenter explains: which reason explains the use of radioactive isotopes for dating old remains?",
       "options": [
         "Their half-lives allow the age of once-living materials to be estimated.",
-        "It counts living cells.",
-        "It checks the object mass only.",
-        "It finds the melting point."
+        "It blocks all radiation.",
+        "It turns microbes into steam.",
+        "It removes gravity from microbes."
       ],
       "correctAnswer": "Their half-lives allow the age of once-living materials to be estimated.",
       "correctIndex": 0,
@@ -2596,9 +2596,9 @@
       "skill": "Explain a medical use of radiation",
       "question": "Why is gamma radiation useful for sterilising medical equipment?",
       "options": [
-        "It has a large mass and can be stored safely in plastic.",
-        "It can be seen with the human eye during treatment.",
-        "It always makes the equipment radioactive afterwards.",
+        "It blocks all radiation.",
+        "It turns microbes into steam.",
+        "It washes the equipment with water.",
         "It kills microorganisms and can penetrate packaging."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
@@ -2620,10 +2620,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a clinic worksheet, a learner checks: a student needs to kill microbes on equipment without opening the packet. Why use radiation?",
       "options": [
-        "It makes packaging magnetic.",
+        "It blocks all radiation.",
         "It turns microbes into steam.",
         "It kills microorganisms and can penetrate packaging.",
-        "It blocks all radiation."
+        "It lowers the room pressure."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 2,
@@ -2655,10 +2655,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a museum label, a visitor reads: a results table says gamma can sterilise medical tools through packaging. Why?",
       "options": [
-        "It removes gravity from microbes.",
+        "It blocks all radiation.",
         "It kills microorganisms and can penetrate packaging.",
-        "It changes metal into plastic.",
-        "It lowers the room pressure."
+        "It turns microbes into steam.",
+        "It changes metal into plastic."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 1,
@@ -2691,9 +2691,9 @@
       "question": "On a school lab card, a pupil answers: why can ionising radiation help make packaged medical equipment safe?",
       "options": [
         "It kills microorganisms and can penetrate packaging.",
+        "It blocks all radiation.",
         "It turns microbes into steam.",
-        "It washes the equipment with water.",
-        "It cools the equipment."
+        "It checks the object mass only."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 0,
@@ -2725,9 +2725,9 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a factory safety note, an apprentice reviews: a box of surgical gloves is treated before use. Which reason explains gamma sterilisation?",
       "options": [
-        "It changes metal into plastic.",
         "It blocks all radiation.",
-        "It makes packaging magnetic.",
+        "It turns microbes into steam.",
+        "It finds the melting point.",
         "It kills microorganisms and can penetrate packaging."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
@@ -2760,10 +2760,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a space centre display, a guide explains: in medical sterilising, why is penetrating radiation chosen for sealed equipment?",
       "options": [
-        "It washes the equipment with water.",
-        "It lowers the room pressure.",
+        "It blocks all radiation.",
+        "It turns microbes into steam.",
         "It kills microorganisms and can penetrate packaging.",
-        "It removes gravity from microbes."
+        "It measures colour fading."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 2,
@@ -2796,8 +2796,8 @@
       "question": "On a revision flashcard, a student practises: a hospital sterilises sealed syringes using gamma radiation. Why is this useful?",
       "options": [
         "It blocks all radiation.",
-        "It cools the equipment.",
         "It turns microbes into steam.",
+        "It compares sound waves.",
         "It kills microorganisms and can penetrate packaging."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
@@ -2830,10 +2830,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a hospital training card, a trainee checks: a astronomer needs to kill microbes on equipment without opening the packet. Why use radiation?",
       "options": [
-        "It lowers the room pressure.",
-        "It makes packaging magnetic.",
+        "It blocks all radiation.",
+        "It turns microbes into steam.",
         "It kills microorganisms and can penetrate packaging.",
-        "It changes metal into plastic."
+        "It counts living cells."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 2,
@@ -2865,10 +2865,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says gamma can sterilise medical tools through packaging. Why?",
       "options": [
-        "It cools the equipment.",
+        "It blocks all radiation.",
         "It kills microorganisms and can penetrate packaging.",
-        "It removes gravity from microbes.",
-        "It washes the equipment with water."
+        "It turns microbes into steam.",
+        "It uses magnet strength."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 1,
@@ -2901,9 +2901,9 @@
       "question": "On a classroom board, a group discusses: why can ionising radiation help make packaged medical equipment safe?",
       "options": [
         "It kills microorganisms and can penetrate packaging.",
-        "It makes packaging magnetic.",
+        "It blocks all radiation.",
         "It turns microbes into steam.",
-        "It blocks all radiation."
+        "It measures air pressure."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 0,
@@ -2935,9 +2935,9 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a workshop checklist, an engineer checks: a box of surgical gloves is treated before use. Which reason explains gamma sterilisation?",
       "options": [
-        "It removes gravity from microbes.",
-        "It changes metal into plastic.",
-        "It lowers the room pressure.",
+        "It blocks all radiation.",
+        "It turns microbes into steam.",
+        "It measures temperature change.",
         "It kills microorganisms and can penetrate packaging."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
@@ -2970,10 +2970,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a field trip notebook, a pupil records: in medical sterilising, why is penetrating radiation chosen for sealed equipment?",
       "options": [
+        "It blocks all radiation.",
         "It turns microbes into steam.",
-        "It washes the equipment with water.",
         "It kills microorganisms and can penetrate packaging.",
-        "It cools the equipment."
+        "It stops all ionising radiation from existing."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 2,
@@ -3005,10 +3005,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a science fair poster, a team explains: a exam practice sterilises sealed syringes using gamma radiation. Why is this useful?",
       "options": [
-        "It changes metal into plastic.",
-        "It kills microorganisms and can penetrate packaging.",
         "It blocks all radiation.",
-        "It makes packaging magnetic."
+        "It kills microorganisms and can penetrate packaging.",
+        "It turns microbes into steam.",
+        "It makes the object radioactive forever."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 1,
@@ -3041,8 +3041,8 @@
       "question": "On a exam practice page, a candidate works: a parent needs to kill microbes on equipment without opening the packet. Why use radiation?",
       "options": [
         "It kills microorganisms and can penetrate packaging.",
-        "It washes the equipment with water.",
-        "It lowers the room pressure.",
+        "It blocks all radiation.",
+        "It makes packaging magnetic.",
         "It removes gravity from microbes."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
@@ -3076,8 +3076,8 @@
       "question": "On a home study card, a learner revises: a log book says gamma can sterilise medical tools through packaging. Why?",
       "options": [
         "It blocks all radiation.",
-        "It cools the equipment.",
-        "It turns microbes into steam.",
+        "It makes packaging magnetic.",
+        "It washes the equipment with water.",
         "It kills microorganisms and can penetrate packaging."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
@@ -3110,10 +3110,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a research log book, an assistant notes: why can ionising radiation help make packaged medical equipment safe?",
       "options": [
-        "It lowers the room pressure.",
+        "It blocks all radiation.",
         "It makes packaging magnetic.",
         "It kills microorganisms and can penetrate packaging.",
-        "It changes metal into plastic."
+        "It lowers the room pressure."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 2,
@@ -3145,10 +3145,10 @@
       "skill": "Explain a medical use of radiation",
       "question": "On a planetarium screen, a visitor chooses: a box of surgical gloves is treated before use. Which reason explains gamma sterilisation?",
       "options": [
-        "It cools the equipment.",
+        "It blocks all radiation.",
         "It kills microorganisms and can penetrate packaging.",
-        "It removes gravity from microbes.",
-        "It washes the equipment with water."
+        "It makes packaging magnetic.",
+        "It changes metal into plastic."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 1,
@@ -3181,9 +3181,9 @@
       "question": "On a radio studio demo, a presenter explains: in medical sterilising, why is penetrating radiation chosen for sealed equipment?",
       "options": [
         "It kills microorganisms and can penetrate packaging.",
+        "It blocks all radiation.",
         "It makes packaging magnetic.",
-        "It turns microbes into steam.",
-        "It blocks all radiation."
+        "It checks the object mass only."
       ],
       "correctAnswer": "It kills microorganisms and can penetrate packaging.",
       "correctIndex": 0,

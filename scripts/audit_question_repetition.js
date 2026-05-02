@@ -13,6 +13,7 @@ const qualityRules = {
   duplicateIds: 0,
   duplicateExactStems: 0,
   nearDuplicateStems: 0,
+  repeatedOptions: 0,
   correctAnswerMismatches: 0,
   missingFromAll: 0,
   changedVsAll: 0,

@@ -15,9 +15,9 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Earth rotation model to check the key physics idea. What causes day and night on Earth?",
       "options": [
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
+        "The Moon blocks the Sun every night.",
         "Earth rotates on its axis."
       ],
       "correctAnswer": "Earth rotates on its axis.",
@@ -39,10 +39,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a day-night classroom globe to check the key physics idea. What causes day and night on Earth?",
       "options": [
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun."
+        "Earth stops spinning during the night."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Sun-Earth diagram to check the key physics idea. What causes day and night on Earth?",
       "options": [
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours."
+        "Earth moves closer to and further from the Sun each day.",
+        "Clouds cover the Sun on the night side."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A learner uses a astronomy revision note to check the key physics idea. What causes day and night on Earth?",
       "options": [
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space."
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
+        "The stars push Earth into shadow."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Earth rotation model to prepare for an exam-style question. What causes day and night on Earth? Choose the best answer.",
       "options": [
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
+        "The atmosphere switches sunlight off.",
         "Earth rotates on its axis."
       ],
       "correctAnswer": "Earth rotates on its axis.",
@@ -135,10 +135,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a day-night classroom globe to prepare for an exam-style question. What causes day and night on Earth? Choose the best answer.",
       "options": [
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun."
+        "Earth changes direction every twelve hours."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 2,
@@ -159,9 +159,9 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Sun-Earth diagram to prepare for an exam-style question. What causes day and night on Earth?",
       "options": [
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
+        "The Sun gives out light only in daytime.",
         "Earth rotates on its axis."
       ],
       "correctAnswer": "Earth rotates on its axis.",
@@ -183,10 +183,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a astronomy revision note to prepare for an exam-style question. What causes day and night on Earth?",
       "options": [
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun."
+        "The Moon produces darkness by reflection."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 2,
@@ -207,10 +207,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Earth rotation model to test a common misconception. What causes day and night on Earth?",
       "options": [
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours."
+        "Earth moves closer to and further from the Sun each day.",
+        "Earth orbits the Moon once per day."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 1,
@@ -232,9 +232,9 @@
       "question": "A learner uses a day-night classroom globe to test a common misconception. What causes day and night on Earth?",
       "options": [
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space."
+        "The Sun moves around Earth once per day.",
+        "Earth moves closer to and further from the Sun each day.",
+        "The Solar System rotates around Earth daily."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 0,
@@ -255,9 +255,9 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Sun-Earth diagram to test a common misconception. What causes day and night on Earth? Choose the best answer.",
       "options": [
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "The Moon blocks the Sun every night.",
+        "Earth stops spinning during the night.",
         "Earth rotates on its axis."
       ],
       "correctAnswer": "Earth rotates on its axis.",
@@ -279,10 +279,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a astronomy revision note to test a common misconception. What causes day and night on Earth? Choose the best answer.",
       "options": [
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "The Moon blocks the Sun every night.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun."
+        "Clouds cover the Sun on the night side."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 2,
@@ -303,10 +303,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Earth rotation model to link the context to the GCSE model. What causes day and night on Earth?",
       "options": [
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours."
+        "The Moon blocks the Sun every night.",
+        "The stars push Earth into shadow."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 1,
@@ -328,9 +328,9 @@
       "question": "A learner uses a day-night classroom globe to link the context to the GCSE model. What causes day and night on Earth?",
       "options": [
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space."
+        "The Sun moves around Earth once per day.",
+        "The Moon blocks the Sun every night.",
+        "The atmosphere switches sunlight off."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 0,
@@ -351,9 +351,9 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Sun-Earth diagram to link the context to the GCSE model. What causes day and night on Earth?",
       "options": [
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "The Moon blocks the Sun every night.",
+        "Earth changes direction every twelve hours.",
         "Earth rotates on its axis."
       ],
       "correctAnswer": "Earth rotates on its axis.",
@@ -375,10 +375,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a astronomy revision note to link the context to the GCSE model. What causes day and night on Earth?",
       "options": [
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
+        "The Moon blocks the Sun every night.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun."
+        "The Sun gives out light only in daytime."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 2,
@@ -399,10 +399,10 @@
       "skill": "Explain day and night",
       "question": "A learner uses a Earth rotation model to review the evidence in the setup. What causes day and night on Earth? Choose the best answer.",
       "options": [
-        "Cloud cover changes the amount of sunlight in space.",
+        "The Sun moves around Earth once per day.",
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours."
+        "The Moon blocks the Sun every night.",
+        "The Moon produces darkness by reflection."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 1,
@@ -424,9 +424,9 @@
       "question": "A learner uses a day-night classroom globe to review the evidence in the setup. What causes day and night on Earth? Choose the best answer.",
       "options": [
         "Earth rotates on its axis.",
-        "Earth moves closer to and further from the Sun.",
-        "The Moon passes in front of the Sun every 24 hours.",
-        "Cloud cover changes the amount of sunlight in space."
+        "The Sun moves around Earth once per day.",
+        "The Moon blocks the Sun every night.",
+        "Earth orbits the Moon once per day."
       ],
       "correctAnswer": "Earth rotates on its axis.",
       "correctIndex": 0,
@@ -447,9 +447,9 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a satellite orbit diagram to check the key physics idea. Why does a satellite stay in orbit around Earth?",
       "options": [
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
         "The satellite engine must keep firing all the time to hold the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
@@ -474,7 +474,7 @@
         "Air resistance above Earth pushes the satellite around the orbit.",
         "The satellite engine must keep firing all the time to hold the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line."
+        "Magnetism from Earth keeps every satellite moving."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 2,
@@ -495,10 +495,10 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a spacecraft path model to check the key physics idea. Why does a satellite stay in orbit around Earth?",
       "options": [
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line.",
-        "Air resistance above Earth pushes the satellite around the orbit."
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite is pulled outward by gravity."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 1,
@@ -520,9 +520,9 @@
       "question": "A learner uses a centripetal-force note to check the key physics idea. Why does a satellite stay in orbit around Earth?",
       "options": [
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit."
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The Moon pushes the satellite around Earth."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 0,
@@ -543,9 +543,9 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a satellite orbit diagram to prepare for an exam-style question. Why does a satellite stay in orbit around Earth? Choose the best answer.",
       "options": [
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
         "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite has no mass while in orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
@@ -570,7 +570,7 @@
         "Air resistance above Earth pushes the satellite around the orbit.",
         "The satellite engine must keep firing all the time to hold the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line."
+        "The orbit is caused by friction with the atmosphere."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 2,
@@ -594,7 +594,7 @@
         "Air resistance above Earth pushes the satellite around the orbit.",
         "The satellite engine must keep firing all the time to hold the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line."
+        "The satellite stops moving forward in orbit."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 2,
@@ -615,10 +615,10 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a centripetal-force note to prepare for an exam-style question. Why does a satellite stay in orbit around Earth?",
       "options": [
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line.",
-        "Air resistance above Earth pushes the satellite around the orbit."
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The engine cancels all gravitational force."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 1,
@@ -640,9 +640,9 @@
       "question": "A learner uses a satellite orbit diagram to test a common misconception. Why does a satellite stay in orbit around Earth?",
       "options": [
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit."
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite is outside all fields."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 0,
@@ -663,9 +663,9 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a Earth-orbit explanation to test a common misconception. Why does a satellite stay in orbit around Earth?",
       "options": [
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
         "The satellite engine must keep firing all the time to hold the orbit.",
+        "The Sun pulls every satellite into a circle around Earth.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
@@ -688,9 +688,9 @@
       "question": "A learner uses a spacecraft path model to test a common misconception. Why does a satellite stay in orbit around Earth? Choose the best answer.",
       "options": [
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line."
+        "Magnetism from Earth keeps every satellite moving."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 2,
@@ -711,10 +711,10 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a centripetal-force note to test a common misconception. Why does a satellite stay in orbit around Earth? Choose the best answer.",
       "options": [
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
         "There is no gravity in space, so the satellite floats in a straight line.",
-        "Air resistance above Earth pushes the satellite around the orbit."
+        "The satellite is pulled outward by gravity."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 1,
@@ -735,10 +735,10 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a satellite orbit diagram to link the context to the GCSE model. Why does a satellite stay in orbit around Earth?",
       "options": [
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
         "There is no gravity in space, so the satellite floats in a straight line.",
-        "Air resistance above Earth pushes the satellite around the orbit."
+        "The Moon pushes the satellite around Earth."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 1,
@@ -760,9 +760,9 @@
       "question": "A learner uses a Earth-orbit explanation to link the context to the GCSE model. Why does a satellite stay in orbit around Earth?",
       "options": [
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit."
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The satellite has no mass while in orbit."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 0,
@@ -783,9 +783,9 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a spacecraft path model to link the context to the GCSE model. Why does a satellite stay in orbit around Earth?",
       "options": [
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The orbit is caused by friction with the atmosphere.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
@@ -808,9 +808,9 @@
       "question": "A learner uses a centripetal-force note to link the context to the GCSE model. Why does a satellite stay in orbit around Earth?",
       "options": [
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line."
+        "The satellite stops moving forward in orbit."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 2,
@@ -831,10 +831,10 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a satellite orbit diagram to review the evidence in the setup. Why does a satellite stay in orbit around Earth? Choose the best answer.",
       "options": [
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
         "There is no gravity in space, so the satellite floats in a straight line.",
-        "Air resistance above Earth pushes the satellite around the orbit."
+        "The engine cancels all gravitational force."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 1,
@@ -856,9 +856,9 @@
       "question": "A learner uses a Earth-orbit explanation to review the evidence in the setup. Why does a satellite stay in orbit around Earth? Choose the best answer.",
       "options": [
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit."
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The satellite is outside all fields."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
       "correctIndex": 0,
@@ -879,9 +879,9 @@
       "skill": "Explain why satellites stay in orbit",
       "question": "A learner uses a spacecraft path model to review the evidence in the setup. Why does a satellite stay in orbit around Earth? Choose the best answer.",
       "options": [
-        "There is no gravity in space, so the satellite floats in a straight line.",
         "Air resistance above Earth pushes the satellite around the orbit.",
-        "The satellite engine must keep firing all the time to hold the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The Sun pulls every satellite into a circle around Earth.",
         "Gravity provides the centripetal force needed to keep the satellite moving in a curved path."
       ],
       "correctAnswer": "Gravity provides the centripetal force needed to keep the satellite moving in a curved path.",
@@ -903,9 +903,9 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a communications satellite case to check the key physics idea. Which is a common use of geostationary satellites?",
       "options": [
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
+        "To make planets move faster.",
         "Satellite television and communications"
       ],
       "correctAnswer": "Satellite television and communications",
@@ -927,10 +927,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a weather satellite example to check the key physics idea. Which is a common use of geostationary satellites?",
       "options": [
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies"
+        "To remove the need for radio waves."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 2,
@@ -951,10 +951,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a geostationary orbit note to check the key physics idea. Which is a common use of geostationary satellites?",
       "options": [
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly"
+        "To stop gravity acting on objects.",
+        "To change day length on Earth."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 1,
@@ -976,9 +976,9 @@
       "question": "A learner uses a space technology briefing to check the key physics idea. Which is a common use of geostationary satellites?",
       "options": [
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core"
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
+        "To heat the upper atmosphere only."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 0,
@@ -999,9 +999,9 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a communications satellite case to prepare for an exam-style question. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
+        "To reflect all sunlight away from Earth.",
         "Satellite television and communications"
       ],
       "correctAnswer": "Satellite television and communications",
@@ -1023,10 +1023,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a weather satellite example to prepare for an exam-style question. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies"
+        "To keep aircraft from needing engines."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 2,
@@ -1047,9 +1047,9 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a geostationary orbit note to prepare for an exam-style question. Which is a common use of geostationary satellites?",
       "options": [
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
+        "To create tides without the Moon.",
         "Satellite television and communications"
       ],
       "correctAnswer": "Satellite television and communications",
@@ -1071,10 +1071,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a space technology briefing to prepare for an exam-style question. Which is a common use of geostationary satellites?",
       "options": [
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies"
+        "To make stars easier to see in daylight."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 2,
@@ -1095,10 +1095,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a communications satellite case to test a common misconception. Which is a common use of geostationary satellites?",
       "options": [
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly"
+        "To stop gravity acting on objects.",
+        "To block cosmic radiation completely."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 1,
@@ -1120,9 +1120,9 @@
       "question": "A learner uses a weather satellite example to test a common misconception. Which is a common use of geostationary satellites?",
       "options": [
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core"
+        "To measure the mass of atoms in the air.",
+        "To stop gravity acting on objects.",
+        "To generate gravity for buildings."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 0,
@@ -1143,9 +1143,9 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a geostationary orbit note to test a common misconception. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To make planets move faster.",
+        "To remove the need for radio waves.",
         "Satellite television and communications"
       ],
       "correctAnswer": "Satellite television and communications",
@@ -1167,10 +1167,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a space technology briefing to test a common misconception. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To make planets move faster.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies"
+        "To change day length on Earth."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 2,
@@ -1191,10 +1191,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a communications satellite case to link the context to the GCSE model. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly"
+        "To make planets move faster.",
+        "To heat the upper atmosphere only."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 1,
@@ -1215,10 +1215,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a weather satellite example to link the context to the GCSE model. Which is a common use of geostationary satellites?",
       "options": [
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly"
+        "To make planets move faster.",
+        "To reflect all sunlight away from Earth."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 1,
@@ -1240,9 +1240,9 @@
       "question": "A learner uses a geostationary orbit note to link the context to the GCSE model. Which is a common use of geostationary satellites?",
       "options": [
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core"
+        "To measure the mass of atoms in the air.",
+        "To make planets move faster.",
+        "To keep aircraft from needing engines."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 0,
@@ -1263,9 +1263,9 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a space technology briefing to link the context to the GCSE model. Which is a common use of geostationary satellites?",
       "options": [
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To make planets move faster.",
+        "To create tides without the Moon.",
         "Satellite television and communications"
       ],
       "correctAnswer": "Satellite television and communications",
@@ -1287,10 +1287,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a communications satellite case to review the evidence in the setup. Which is a common use of geostationary satellites?",
       "options": [
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
+        "To make planets move faster.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies"
+        "To make stars easier to see in daylight."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 2,
@@ -1311,10 +1311,10 @@
       "skill": "Identify a use of geostationary satellites",
       "question": "A learner uses a weather satellite example to review the evidence in the setup. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
-        "Measuring the magnetic field inside Earth's core",
+        "To measure the mass of atoms in the air.",
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly"
+        "To make planets move faster.",
+        "To block cosmic radiation completely."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 1,
@@ -1336,9 +1336,9 @@
       "question": "A learner uses a geostationary orbit note to review the evidence in the setup. Which is a common use of geostationary satellites? Choose the best answer.",
       "options": [
         "Satellite television and communications",
-        "Studying close-up images of distant galaxies",
-        "Exploring the surface of Mars directly",
-        "Measuring the magnetic field inside Earth's core"
+        "To measure the mass of atoms in the air.",
+        "To make planets move faster.",
+        "To generate gravity for buildings."
       ],
       "correctAnswer": "Satellite television and communications",
       "correctIndex": 0,
@@ -1383,10 +1383,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a planet order revision card to check the key physics idea. Which object is closest to the Sun?",
       "options": [
+        "Earth",
         "Mars",
-        "Jupiter",
         "Mercury",
-        "Earth"
+        "Saturn"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 2,
@@ -1407,10 +1407,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a astronomy classroom diagram to check the key physics idea. Which object is closest to the Sun?",
       "options": [
-        "Jupiter",
-        "Mercury",
         "Earth",
-        "Mars"
+        "Mercury",
+        "Mars",
+        "Neptune"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 1,
@@ -1434,7 +1434,7 @@
         "Mercury",
         "Earth",
         "Mars",
-        "Jupiter"
+        "Uranus"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 0,
@@ -1457,7 +1457,7 @@
       "options": [
         "Earth",
         "Mars",
-        "Jupiter",
+        "The Moon",
         "Mercury"
       ],
       "correctAnswer": "Mercury",
@@ -1479,10 +1479,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a planet order revision card to prepare for an exam-style question. Which object is closest to the Sun? Choose the best answer.",
       "options": [
+        "Earth",
         "Mars",
-        "Jupiter",
         "Mercury",
-        "Earth"
+        "An asteroid belt object"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 2,
@@ -1503,10 +1503,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a astronomy classroom diagram to prepare for an exam-style question. Which object is closest to the Sun? Choose the best answer.",
       "options": [
-        "Jupiter",
-        "Mercury",
         "Earth",
-        "Mars"
+        "Mercury",
+        "Mars",
+        "A comet in the outer Solar System"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 1,
@@ -1527,10 +1527,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a orbit map question to prepare for an exam-style question. Which object is closest to the Sun?",
       "options": [
+        "Earth",
         "Mars",
-        "Jupiter",
         "Mercury",
-        "Earth"
+        "A geostationary satellite"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 2,
@@ -1551,10 +1551,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a solar system model to test a common misconception. Which object is closest to the Sun?",
       "options": [
-        "Jupiter",
-        "Mercury",
         "Earth",
-        "Mars"
+        "Mercury",
+        "Mars",
+        "A distant galaxy"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 1,
@@ -1578,7 +1578,7 @@
         "Mercury",
         "Earth",
         "Mars",
-        "Jupiter"
+        "A red giant star"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 0,
@@ -1600,8 +1600,8 @@
       "question": "A learner uses a astronomy classroom diagram to test a common misconception. Which object is closest to the Sun?",
       "options": [
         "Earth",
-        "Mars",
         "Jupiter",
+        "Saturn",
         "Mercury"
       ],
       "correctAnswer": "Mercury",
@@ -1623,10 +1623,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a orbit map question to test a common misconception. Which object is closest to the Sun? Choose the best answer.",
       "options": [
-        "Mars",
+        "Earth",
         "Jupiter",
         "Mercury",
-        "Earth"
+        "Neptune"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 2,
@@ -1647,10 +1647,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a solar system model to link the context to the GCSE model. Which object is closest to the Sun? Choose the best answer.",
       "options": [
-        "Jupiter",
-        "Mercury",
         "Earth",
-        "Mars"
+        "Mercury",
+        "Jupiter",
+        "Uranus"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 1,
@@ -1673,8 +1673,8 @@
       "options": [
         "Mercury",
         "Earth",
-        "Mars",
-        "Jupiter"
+        "Jupiter",
+        "The Moon"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 0,
@@ -1696,8 +1696,8 @@
       "question": "A learner uses a astronomy classroom diagram to link the context to the GCSE model. Which object is closest to the Sun?",
       "options": [
         "Earth",
-        "Mars",
         "Jupiter",
+        "An asteroid belt object",
         "Mercury"
       ],
       "correctAnswer": "Mercury",
@@ -1719,10 +1719,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a orbit map question to link the context to the GCSE model. Which object is closest to the Sun?",
       "options": [
-        "Mars",
+        "Earth",
         "Jupiter",
         "Mercury",
-        "Earth"
+        "A comet in the outer Solar System"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 2,
@@ -1743,10 +1743,10 @@
       "skill": "Recall the order of planets",
       "question": "A learner uses a solar system model to review the evidence in the setup. Which object is closest to the Sun?",
       "options": [
-        "Jupiter",
-        "Mercury",
         "Earth",
-        "Mars"
+        "Mercury",
+        "Jupiter",
+        "A geostationary satellite"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 1,
@@ -1769,8 +1769,8 @@
       "options": [
         "Mercury",
         "Earth",
-        "Mars",
-        "Jupiter"
+        "Jupiter",
+        "A distant galaxy"
       ],
       "correctAnswer": "Mercury",
       "correctIndex": 0,
@@ -1792,8 +1792,8 @@
       "question": "A learner uses a astronomy classroom diagram to review the evidence in the setup. Which object is closest to the Sun? Choose the best answer.",
       "options": [
         "Earth",
-        "Mars",
         "Jupiter",
+        "A red giant star",
         "Mercury"
       ],
       "correctAnswer": "Mercury",
@@ -1815,9 +1815,9 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a star colour chart to check the key physics idea. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Red",
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
+        "All stars have the same surface temperature.",
         "Blue"
       ],
       "correctAnswer": "Blue",
@@ -1839,10 +1839,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a surface temperature comparison to check the key physics idea. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
         "Blue",
-        "Red"
+        "Blue stars are usually the coolest."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 2,
@@ -1863,10 +1863,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a stellar classification note to check the key physics idea. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Orange",
+        "Red stars are usually the hottest.",
         "Blue",
-        "Red",
-        "Yellow"
+        "Yellow stars always have the highest surface temperature.",
+        "Star colour tells us only the star mass."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 1,
@@ -1888,9 +1888,9 @@
       "question": "A learner uses a telescope observation table to check the key physics idea. Which colour of star usually shows the highest surface temperature?",
       "options": [
         "Blue",
-        "Red",
-        "Yellow",
-        "Orange"
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
+        "White stars must be colder than red stars."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 0,
@@ -1911,9 +1911,9 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a star colour chart to prepare for an exam-style question. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
-        "Red",
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
+        "Temperature cannot affect the light from a star.",
         "Blue"
       ],
       "correctAnswer": "Blue",
@@ -1935,10 +1935,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a surface temperature comparison to prepare for an exam-style question. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
         "Blue",
-        "Red"
+        "A hotter star always looks darker."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 2,
@@ -1959,9 +1959,9 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a stellar classification note to prepare for an exam-style question. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Red",
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
+        "Surface temperature is measured from orbit speed only.",
         "Blue"
       ],
       "correctAnswer": "Blue",
@@ -1983,10 +1983,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a telescope observation table to prepare for an exam-style question. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
         "Blue",
-        "Red"
+        "Colour depends only on distance from Earth."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 2,
@@ -2007,10 +2007,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a star colour chart to test a common misconception. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Orange",
+        "Red stars are usually the hottest.",
         "Blue",
-        "Red",
-        "Yellow"
+        "Yellow stars always have the highest surface temperature.",
+        "Every star changes colour once per day."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 1,
@@ -2032,9 +2032,9 @@
       "question": "A learner uses a surface temperature comparison to test a common misconception. Which colour of star usually shows the highest surface temperature?",
       "options": [
         "Blue",
-        "Red",
-        "Yellow",
-        "Orange"
+        "Red stars are usually the hottest.",
+        "Yellow stars always have the highest surface temperature.",
+        "A cool star gives out no light."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 0,
@@ -2055,9 +2055,9 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a stellar classification note to test a common misconception. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
-        "Red",
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "All stars have the same surface temperature.",
+        "Blue stars are usually the coolest.",
         "Blue"
       ],
       "correctAnswer": "Blue",
@@ -2079,10 +2079,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a telescope observation table to test a common misconception. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "All stars have the same surface temperature.",
         "Blue",
-        "Red"
+        "Star colour tells us only the star mass."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 2,
@@ -2103,10 +2103,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a star colour chart to link the context to the GCSE model. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
-        "Orange",
+        "Red stars are usually the hottest.",
         "Blue",
-        "Red",
-        "Yellow"
+        "All stars have the same surface temperature.",
+        "White stars must be colder than red stars."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 1,
@@ -2127,10 +2127,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a surface temperature comparison to link the context to the GCSE model. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Orange",
+        "Red stars are usually the hottest.",
         "Blue",
-        "Red",
-        "Yellow"
+        "All stars have the same surface temperature.",
+        "Temperature cannot affect the light from a star."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 1,
@@ -2152,9 +2152,9 @@
       "question": "A learner uses a stellar classification note to link the context to the GCSE model. Which colour of star usually shows the highest surface temperature?",
       "options": [
         "Blue",
-        "Red",
-        "Yellow",
-        "Orange"
+        "Red stars are usually the hottest.",
+        "All stars have the same surface temperature.",
+        "A hotter star always looks darker."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 0,
@@ -2175,9 +2175,9 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a telescope observation table to link the context to the GCSE model. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Red",
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "All stars have the same surface temperature.",
+        "Surface temperature is measured from orbit speed only.",
         "Blue"
       ],
       "correctAnswer": "Blue",
@@ -2199,10 +2199,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a star colour chart to review the evidence in the setup. Which colour of star usually shows the highest surface temperature?",
       "options": [
-        "Yellow",
-        "Orange",
+        "Red stars are usually the hottest.",
+        "All stars have the same surface temperature.",
         "Blue",
-        "Red"
+        "Colour depends only on distance from Earth."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 2,
@@ -2223,10 +2223,10 @@
       "skill": "Link star colour to temperature",
       "question": "A learner uses a surface temperature comparison to review the evidence in the setup. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
-        "Orange",
+        "Red stars are usually the hottest.",
         "Blue",
-        "Red",
-        "Yellow"
+        "All stars have the same surface temperature.",
+        "Every star changes colour once per day."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 1,
@@ -2248,9 +2248,9 @@
       "question": "A learner uses a stellar classification note to review the evidence in the setup. Which colour of star usually shows the highest surface temperature? Choose the best answer.",
       "options": [
         "Blue",
-        "Red",
-        "Yellow",
-        "Orange"
+        "Red stars are usually the hottest.",
+        "All stars have the same surface temperature.",
+        "A cool star gives out no light."
       ],
       "correctAnswer": "Blue",
       "correctIndex": 0,

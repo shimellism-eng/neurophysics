@@ -15,9 +15,9 @@
       "skill": "Use Hooke's law",
       "question": "In a spring practical, a 20 N/m spring extends by 3 cm. What force is needed?",
       "options": [
-        "60 N",
         "0.15 N",
-        "1.6 N",
+        "0.9 N",
+        "0.39 N",
         "0.6 N"
       ],
       "correctAnswer": "0.6 N",
@@ -39,10 +39,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring in a force meter stretches by 2 cm. Its spring constant is 50 N/m. Which force is needed?",
       "options": [
-        "0.16 N",
+        "0.4 N",
         "2 N",
         "1 N",
-        "100 N"
+        "1.21 N"
       ],
       "correctAnswer": "1 N",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Use Hooke's law",
       "question": "For a rubber cord in a lab test, extension is 3 cm and k is 50 N/m. What does F = k x e give?",
       "options": [
-        "2.5 N",
+        "0.83 N",
         "1.5 N",
-        "150 N",
-        "0.17 N"
+        "3.75 N",
+        "1.58 N"
       ],
       "correctAnswer": "1.5 N",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A student converts 4 cm to metres before using a spring on a trolley. Which force matches k = 52.5 N/m?",
       "options": [
         "2.1 N",
-        "210 N",
-        "0.17 N",
-        "3.1 N"
+        "1.47 N",
+        "3.57 N",
+        "1.87 N"
       ],
       "correctAnswer": "2.1 N",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Use Hooke's law",
       "question": "On a force-extension graph for a metal spring in a clamp stand, the gradient is 56 N/m. What force gives 5 cm extension?",
       "options": [
-        "280 N",
-        "0.17 N",
-        "3.8 N",
+        "0.84 N",
+        "6.16 N",
+        "2.04 N",
         "2.8 N"
       ],
       "correctAnswer": "2.8 N",
@@ -135,10 +135,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring used to hang masses is still proportional. Choose the force for k = 20 N/m and extension 6 cm.",
       "options": [
-        "0.53 N",
-        "2.2 N",
+        "0.54 N",
+        "3.24 N",
         "1.2 N",
-        "120 N"
+        "1.55 N"
       ],
       "correctAnswer": "1.2 N",
       "correctIndex": 2,
@@ -159,9 +159,9 @@
       "skill": "Use Hooke's law",
       "question": "A student forgets to convert centimetres when using Hooke's law. A spring has k = 20 N/m and extension = 8 cm. What is the correct force?",
       "options": [
-        "160 N",
-        "0.4 N",
-        "2.6 N",
+        "0.96 N",
+        "3.04 N",
+        "1.81 N",
         "1.6 N"
       ],
       "correctAnswer": "1.6 N",
@@ -183,10 +183,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring in a classroom practical stretches by 8 cm. Its spring constant is 6.25 N/m. Which force is needed?",
       "options": [
-        "0.08 N",
-        "1.5 N",
+        "0.38 N",
+        "1.2 N",
         "0.5 N",
-        "50 N"
+        "0.48 N"
       ],
       "correctAnswer": "0.5 N",
       "correctIndex": 2,
@@ -207,10 +207,10 @@
       "skill": "Use Hooke's law",
       "question": "For a elastic cord before its limit, extension is 10 cm and k is 9 N/m. What does F = k x e give?",
       "options": [
-        "1.9 N",
+        "0.32 N",
         "0.9 N",
-        "90 N",
-        "0.1 N"
+        "1.44 N",
+        "0.73 N"
       ],
       "correctAnswer": "0.9 N",
       "correctIndex": 1,
@@ -232,9 +232,9 @@
       "question": "A student converts 2 cm to metres before using a spring in a Newton meter. Which force matches k = 70 N/m?",
       "options": [
         "1.4 N",
-        "140 N",
-        "0.11 N",
-        "2.4 N"
+        "0.7 N",
+        "2.94 N",
+        "0.91 N"
       ],
       "correctAnswer": "1.4 N",
       "correctIndex": 0,
@@ -255,9 +255,9 @@
       "skill": "Use Hooke's law",
       "question": "On a force-extension graph for a test spring on a bench, the gradient is 66.67 N/m. What force gives 3 cm extension?",
       "options": [
-        "200 N",
-        "0.12 N",
-        "3 N",
+        "1.3 N",
+        "5.2 N",
+        "2.42 N",
         "2 N"
       ],
       "correctAnswer": "2 N",
@@ -279,10 +279,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring attached to a ruler is still proportional. Choose the force for k = 22.5 N/m and extension 4 cm.",
       "options": [
-        "0.4 N",
-        "1.9 N",
+        "0.23 N",
+        "1.62 N",
         "0.9 N",
-        "90 N"
+        "0.95 N"
       ],
       "correctAnswer": "0.9 N",
       "correctIndex": 2,
@@ -303,10 +303,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring in a graph experiment stretches by 5 cm. Its spring constant is 28 N/m. Which force is needed?",
       "options": [
-        "2.4 N",
+        "0.56 N",
         "1.4 N",
-        "140 N",
-        "0.35 N"
+        "3.22 N",
+        "1.25 N"
       ],
       "correctAnswer": "1.4 N",
       "correctIndex": 1,
@@ -327,10 +327,10 @@
       "skill": "Use Hooke's law",
       "question": "For a spring with a mass hanger, extension is 6 cm and k is 6.67 N/m. What does F = k x e give?",
       "options": [
-        "1.4 N",
+        "0.22 N",
         "0.4 N",
-        "40 N",
-        "0.1 N"
+        "0.6 N",
+        "0.29 N"
       ],
       "correctAnswer": "0.4 N",
       "correctIndex": 1,
@@ -352,9 +352,9 @@
       "question": "A student converts 8 cm to metres before using a spring in an extension test. Which force matches k = 9.38 N/m?",
       "options": [
         "0.75 N",
-        "75 N",
-        "0.12 N",
-        "1.75 N"
+        "0.52 N",
+        "1.5 N",
+        "0.97 N"
       ],
       "correctAnswer": "0.75 N",
       "correctIndex": 0,
@@ -375,9 +375,9 @@
       "skill": "Use Hooke's law",
       "question": "On a force-extension graph for a coil spring in a demo, the gradient is 12 N/m. What force gives 10 cm extension?",
       "options": [
-        "120 N",
-        "0.13 N",
-        "2.2 N",
+        "0.36 N",
+        "3 N",
+        "1.36 N",
         "1.2 N"
       ],
       "correctAnswer": "1.2 N",
@@ -399,10 +399,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring in a measuring device is still proportional. Choose the force for k = 87.5 N/m and extension 2 cm.",
       "options": [
-        "0.14 N",
-        "2.75 N",
+        "0.79 N",
+        "2.98 N",
         "1.75 N",
-        "175 N"
+        "1.7 N"
       ],
       "correctAnswer": "1.75 N",
       "correctIndex": 2,
@@ -423,10 +423,10 @@
       "skill": "Use Hooke's law",
       "question": "A spring being calibrated stretches by 3 cm. Its spring constant is 80 N/m. Which force is needed?",
       "options": [
-        "3.4 N",
+        "1.44 N",
         "2.4 N",
-        "240 N",
-        "0.15 N"
+        "5.28 N",
+        "1.94 N"
       ],
       "correctAnswer": "2.4 N",
       "correctIndex": 1,
@@ -448,9 +448,9 @@
       "question": "For a spring under a small load, extension is 4 cm and k is 26.25 N/m. What does F = k x e give?",
       "options": [
         "1.05 N",
-        "105 N",
-        "0.47 N",
-        "2.05 N"
+        "0.79 N",
+        "2.84 N",
+        "0.68 N"
       ],
       "correctAnswer": "1.05 N",
       "correctIndex": 0,
@@ -471,9 +471,9 @@
       "skill": "Calculate speed",
       "question": "A runner covers 35.01 m in 3 s. Which average speed is correct?",
       "options": [
-        "420 m/s",
-        "0.09 m/s",
-        "13.67 m/s",
+        "2.92 m/s",
+        "17.5 m/s",
+        "7.59 m/s",
         "11.67 m/s"
       ],
       "correctAnswer": "11.67 m/s",
@@ -495,10 +495,10 @@
       "skill": "Calculate speed",
       "question": "A distance-time graph for a toy car rises by 45.72 m over 4 s. What is the gradient?",
       "options": [
-        "0.09 m/s",
-        "13.43 m/s",
+        "4.57 m/s",
+        "22.86 m/s",
         "11.43 m/s",
-        "560 m/s"
+        "13.83 m/s"
       ],
       "correctAnswer": "11.43 m/s",
       "correctIndex": 2,
@@ -519,10 +519,10 @@
       "skill": "Calculate speed",
       "question": "During a practical, a trolley travels 56.25 m and takes 5 s. Choose the speed.",
       "options": [
-        "13.25 m/s",
+        "6.19 m/s",
         "11.25 m/s",
-        "720 m/s",
-        "0.09 m/s"
+        "28.13 m/s",
+        "11.81 m/s"
       ],
       "correctAnswer": "11.25 m/s",
       "correctIndex": 1,
@@ -544,9 +544,9 @@
       "question": "Use speed = distance / time for a skater: 66.66 m divided by 6 s. Which answer fits?",
       "options": [
         "11.11 m/s",
-        "900 m/s",
-        "0.09 m/s",
-        "13.11 m/s"
+        "7.78 m/s",
+        "18.89 m/s",
+        "9.89 m/s"
       ],
       "correctAnswer": "11.11 m/s",
       "correctIndex": 0,
@@ -567,9 +567,9 @@
       "skill": "Calculate speed",
       "question": "A timer records 7 s for a model train to move 77 m. What speed should be written down?",
       "options": [
-        "1100 m/s",
-        "0.09 m/s",
-        "13 m/s",
+        "3.3 m/s",
+        "24.2 m/s",
+        "8.03 m/s",
         "11 m/s"
       ],
       "correctAnswer": "11 m/s",
@@ -591,10 +591,10 @@
       "skill": "Calculate speed",
       "question": "A cyclist on a track covers 192 m in 8 s. Which average speed is correct?",
       "options": [
-        "0.04 m/s",
-        "26 m/s",
+        "10.8 m/s",
+        "64.8 m/s",
         "24 m/s",
-        "600 m/s"
+        "30.96 m/s"
       ],
       "correctAnswer": "24 m/s",
       "correctIndex": 2,
@@ -615,10 +615,10 @@
       "skill": "Calculate speed",
       "question": "A distance-time graph for a robot buggy rises by 195.03 m over 9 s. What is the gradient?",
       "options": [
-        "23.67 m/s",
+        "13 m/s",
         "21.67 m/s",
-        "780 m/s",
-        "0.05 m/s"
+        "41.17 m/s",
+        "24.49 m/s"
       ],
       "correctAnswer": "21.67 m/s",
       "correctIndex": 1,
@@ -639,10 +639,10 @@
       "skill": "Calculate speed",
       "question": "A cyclist in a race covers 80 m in 7 s. Which speed is closest to the cyclist's average speed?",
       "options": [
-        "0.09 m/s",
-        "13.43 m/s",
+        "8.57 m/s",
+        "27.43 m/s",
         "11.43 m/s",
-        "560 m/s"
+        "11.09 m/s"
       ],
       "correctAnswer": "11.43 m/s",
       "correctIndex": 2,
@@ -663,10 +663,10 @@
       "skill": "Calculate speed",
       "question": "During a practical, a remote-control car travels 112.5 m and takes 10 s. Choose the speed.",
       "options": [
-        "13.25 m/s",
+        "3.94 m/s",
         "11.25 m/s",
-        "720 m/s",
-        "0.09 m/s"
+        "18 m/s",
+        "9.11 m/s"
       ],
       "correctAnswer": "11.25 m/s",
       "correctIndex": 1,
@@ -688,9 +688,9 @@
       "question": "Use speed = distance / time for a walking student: 33.33 m divided by 3 s. Which answer fits?",
       "options": [
         "11.11 m/s",
-        "900 m/s",
-        "0.09 m/s",
-        "13.11 m/s"
+        "5.55 m/s",
+        "23.33 m/s",
+        "7.22 m/s"
       ],
       "correctAnswer": "11.11 m/s",
       "correctIndex": 0,
@@ -711,9 +711,9 @@
       "skill": "Calculate speed",
       "question": "A timer records 4 s for a glider on an air track to move 44 m. What speed should be written down?",
       "options": [
-        "1100 m/s",
-        "0.09 m/s",
-        "13 m/s",
+        "7.15 m/s",
+        "28.6 m/s",
+        "13.31 m/s",
         "11 m/s"
       ],
       "correctAnswer": "11 m/s",
@@ -735,10 +735,10 @@
       "skill": "Calculate speed",
       "question": "A sprint athlete covers 120 m in 5 s. Which average speed is correct?",
       "options": [
-        "0.04 m/s",
-        "26 m/s",
+        "6 m/s",
+        "43.2 m/s",
         "24 m/s",
-        "600 m/s"
+        "25.2 m/s"
       ],
       "correctAnswer": "24 m/s",
       "correctIndex": 2,
@@ -759,10 +759,10 @@
       "skill": "Calculate speed",
       "question": "A distance-time graph for a bike wheel marker rises by 130.02 m over 6 s. What is the gradient?",
       "options": [
-        "23.67 m/s",
+        "8.67 m/s",
         "21.67 m/s",
-        "780 m/s",
-        "0.05 m/s"
+        "49.84 m/s",
+        "19.29 m/s"
       ],
       "correctAnswer": "21.67 m/s",
       "correctIndex": 1,
@@ -784,9 +784,9 @@
       "question": "During a practical, a laboratory cart travels 140 m and takes 7 s. Choose the speed.",
       "options": [
         "20 m/s",
-        "980 m/s",
-        "0.05 m/s",
-        "22 m/s"
+        "11 m/s",
+        "30 m/s",
+        "14.6 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 0,
@@ -807,9 +807,9 @@
       "skill": "Calculate speed",
       "question": "Use speed = distance / time for a sports drone: 150 m divided by 8 s. Which answer fits?",
       "options": [
-        "1200 m/s",
-        "0.05 m/s",
-        "20.75 m/s",
+        "13.13 m/s",
+        "37.5 m/s",
+        "24.19 m/s",
         "18.75 m/s"
       ],
       "correctAnswer": "18.75 m/s",
@@ -831,10 +831,10 @@
       "skill": "Calculate speed",
       "question": "A timer records 9 s for a train model to move 160.02 m. What speed should be written down?",
       "options": [
-        "0.06 m/s",
-        "19.78 m/s",
+        "5.33 m/s",
+        "44.45 m/s",
         "17.78 m/s",
-        "1440 m/s"
+        "20.09 m/s"
       ],
       "correctAnswer": "17.78 m/s",
       "correctIndex": 2,
@@ -855,10 +855,10 @@
       "skill": "Calculate speed",
       "question": "A ball rolling along a bench covers 170 m in 10 s. Which average speed is correct?",
       "options": [
-        "19 m/s",
+        "7.65 m/s",
         "17 m/s",
-        "1700 m/s",
-        "0.06 m/s"
+        "28.9 m/s",
+        "16.49 m/s"
       ],
       "correctAnswer": "17 m/s",
       "correctIndex": 1,
@@ -880,9 +880,9 @@
       "question": "A distance-time graph for a student on a scooter rises by 36 m over 3 s. What is the gradient?",
       "options": [
         "12 m/s",
-        "300 m/s",
-        "0.08 m/s",
-        "14 m/s"
+        "7.2 m/s",
+        "26.4 m/s",
+        "9.72 m/s"
       ],
       "correctAnswer": "12 m/s",
       "correctIndex": 0,
@@ -903,9 +903,9 @@
       "skill": "Calculate speed",
       "question": "During a practical, a timing trolley travels 46.68 m and takes 4 s. Choose the speed.",
       "options": [
-        "420 m/s",
-        "0.09 m/s",
-        "13.67 m/s",
+        "8.75 m/s",
+        "31.51 m/s",
+        "7.59 m/s",
         "11.67 m/s"
       ],
       "correctAnswer": "11.67 m/s",
@@ -927,9 +927,9 @@
       "skill": "Recognise action-reaction pairs",
       "question": "When a rocket pushes gas downwards, which answer shows Newton's third law?",
       "options": [
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
+        "The forces act in the same direction.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
@@ -951,10 +951,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "When a swimmer pushes water backwards, which answer shows Newton's third law?",
       "options": [
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
         "The water pushes the swimmer forwards.",
-        "Only the larger object experiences a force."
+        "One force happens later than the other."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
@@ -975,10 +975,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "When a skateboarder pushes the ground backwards, which answer shows Newton's third law?",
       "options": [
-        "The second force only appears if the object speeds up.",
+        "The larger object always exerts the larger force.",
         "The ground pushes the skateboarder forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction."
+        "The forces act on the same object.",
+        "Only moving objects can exert force pairs."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
@@ -1000,9 +1000,9 @@
       "question": "When a person jumps off a boat, which answer shows Newton's third law?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up."
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
+        "The smaller object has no effect."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
@@ -1023,9 +1023,9 @@
       "skill": "Recognise action-reaction pairs",
       "question": "When a rocket pushes gas downwards, which answer shows Newton's third law? Choose the best answer.",
       "options": [
-        "Only the larger object experiences a force.",
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
+        "The forces cancel because they act on one object.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
@@ -1047,10 +1047,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "When a swimmer pushes water backwards, which answer shows Newton's third law? Choose the best answer.",
       "options": [
-        "Both forces act on the same object in the same direction.",
-        "The second force only appears if the object speeds up.",
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
         "The water pushes the swimmer forwards.",
-        "Only the larger object experiences a force."
+        "The force pair needs contact in every case."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
@@ -1071,9 +1071,9 @@
       "skill": "Recognise action-reaction pairs",
       "question": "Rocket exhaust is forced downward during launch. Which force acts back on the rocket?",
       "options": [
-        "Both forces act on the same object.",
-        "The smaller object is the only one with a force.",
-        "The reaction force happens after a delay.",
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
+        "Gravity cannot form a force pair.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
@@ -1095,10 +1095,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "A swimmer pushes water behind them at the pool wall. Which force pushes the swimmer?",
       "options": [
-        "Both forces act on the same object.",
-        "The smaller object is the only one with a force.",
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
         "The water pushes the swimmer forwards.",
-        "The water pushes the swimmer forwards."
+        "The reaction force is always friction."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
@@ -1119,10 +1119,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "A skateboarder pushes backward on a pavement. Which force starts the motion?",
       "options": [
-        "Both forces act on the same object.",
+        "The larger object always exerts the larger force.",
         "The ground pushes the skateboarder forwards.",
-        "The reaction force happens after a delay.",
-        "The ground pushes the skateboarder forwards."
+        "The forces act on the same object.",
+        "The action force is always larger."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
@@ -1144,9 +1144,9 @@
       "question": "A person jumps forward from a small boat. Which motion shows the reaction force?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "The smaller object is the only one with a force.",
-        "The reaction force happens after a delay.",
-        "The boat moves backwards as the person moves forwards."
+        "The larger object always exerts the larger force.",
+        "The forces act on the same object.",
+        "The forces have different sizes."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
@@ -1167,9 +1167,9 @@
       "skill": "Recognise action-reaction pairs",
       "question": "A rocket pushes hot gas toward the ground. What is the equal and opposite force?",
       "options": [
-        "The paired forces point the same way.",
-        "Only the faster object feels a force.",
-        "The forces cancel because both are on one object.",
+        "The larger object always exerts the larger force.",
+        "The forces act in the same direction.",
+        "One force happens later than the other.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
@@ -1191,10 +1191,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "During a swimming stroke, water is driven backwards. Which reaction force acts forwards?",
       "options": [
-        "The paired forces point the same way.",
-        "Only the faster object feels a force.",
+        "The larger object always exerts the larger force.",
+        "The forces act in the same direction.",
         "The water pushes the swimmer forwards.",
-        "The water pushes the swimmer forwards."
+        "Only moving objects can exert force pairs."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
@@ -1215,10 +1215,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "A rider pushes the ground behind the skateboard. What is the reaction force?",
       "options": [
-        "The paired forces point the same way.",
+        "The larger object always exerts the larger force.",
         "The ground pushes the skateboarder forwards.",
-        "The forces cancel because both are on one object.",
-        "The ground pushes the skateboarder forwards."
+        "The forces act in the same direction.",
+        "The smaller object has no effect."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
@@ -1240,9 +1240,9 @@
       "question": "Someone pushes a boat backward while stepping onto a jetty. What should the boat do?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "Only the faster object feels a force.",
-        "The forces cancel because both are on one object.",
-        "The boat moves backwards as the person moves forwards."
+        "The larger object always exerts the larger force.",
+        "The forces act in the same direction.",
+        "The forces cancel because they act on one object."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
@@ -1263,9 +1263,9 @@
       "skill": "Recognise action-reaction pairs",
       "question": "In a rocket launch, gas moves down from the engine. Which reaction force is correct?",
       "options": [
-        "The second force appears only if acceleration is zero.",
-        "The bigger object has no force on it.",
-        "The forces are not a pair because the masses differ.",
+        "The larger object always exerts the larger force.",
+        "The forces act in the same direction.",
+        "The force pair needs contact in every case.",
         "The rocket is pushed upwards by the gas."
       ],
       "correctAnswer": "The rocket is pushed upwards by the gas.",
@@ -1287,10 +1287,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "A swimmer’s hands push water back. What force does the water exert?",
       "options": [
-        "The second force appears only if acceleration is zero.",
-        "The bigger object has no force on it.",
+        "The larger object always exerts the larger force.",
+        "The forces act in the same direction.",
         "The water pushes the swimmer forwards.",
-        "The water pushes the swimmer forwards."
+        "Gravity cannot form a force pair."
       ],
       "correctAnswer": "The water pushes the swimmer forwards.",
       "correctIndex": 2,
@@ -1311,10 +1311,10 @@
       "skill": "Recognise action-reaction pairs",
       "question": "A skateboarder uses one foot to push the road backward. Which force moves them forward?",
       "options": [
-        "The second force appears only if acceleration is zero.",
+        "The larger object always exerts the larger force.",
         "The ground pushes the skateboarder forwards.",
-        "The forces are not a pair because the masses differ.",
-        "The ground pushes the skateboarder forwards."
+        "The forces act in the same direction.",
+        "The reaction force is always friction."
       ],
       "correctAnswer": "The ground pushes the skateboarder forwards.",
       "correctIndex": 1,
@@ -1336,9 +1336,9 @@
       "question": "A person leaves a canoe by pushing it away. Which option shows Newton’s third law?",
       "options": [
         "The boat moves backwards as the person moves forwards.",
-        "The bigger object has no force on it.",
-        "The forces are not a pair because the masses differ.",
-        "The boat moves backwards as the person moves forwards."
+        "The larger object always exerts the larger force.",
+        "The forces act in the same direction.",
+        "The action force is always larger."
       ],
       "correctAnswer": "The boat moves backwards as the person moves forwards.",
       "correctIndex": 0,
@@ -1359,9 +1359,9 @@
       "skill": "Calculate resultant force",
       "question": "Two pupils pull a rope in opposite directions. One pulls with 23 N to the right and the other pulls with 15 N to the left. What is the resultant force?",
       "options": [
-        "38 N to the right",
-        "8 N to the left",
-        "15 N to the right",
+        "2 N to the right",
+        "12 N to the right",
+        "5.2 N to the right",
         "8 N to the right"
       ],
       "correctAnswer": "8 N to the right",
@@ -1383,10 +1383,10 @@
       "skill": "Calculate resultant force",
       "question": "A crate is pulled 16 N right and 6 N left. What is the resultant force?",
       "options": [
-        "10 N to the left",
-        "18 N to the right",
+        "4 N to the right",
+        "20 N to the right",
         "10 N to the right",
-        "46 N to the right"
+        "12.1 N to the right"
       ],
       "correctAnswer": "10 N to the right",
       "correctIndex": 2,
@@ -1407,10 +1407,10 @@
       "skill": "Calculate resultant force",
       "question": "Two opposite horizontal forces act on a sledge: 20 N forwards and 8 N backwards. Which result is correct?",
       "options": [
-        "21 N to the right",
+        "6.6 N to the right",
         "12 N to the right",
-        "54 N to the right",
-        "12 N to the left"
+        "30 N to the right",
+        "12.6 N to the right"
       ],
       "correctAnswer": "12 N to the right",
       "correctIndex": 1,
@@ -1432,9 +1432,9 @@
       "question": "A free-body diagram for a trolley shows 24 N right and 10 N left. Choose the overall force.",
       "options": [
         "14 N to the right",
-        "62 N to the right",
-        "14 N to the left",
-        "24 N to the right"
+        "9.8 N to the right",
+        "23.8 N to the right",
+        "12.46 N to the right"
       ],
       "correctAnswer": "14 N to the right",
       "correctIndex": 0,
@@ -1455,9 +1455,9 @@
       "skill": "Calculate resultant force",
       "question": "A student subtracts the smaller force from the larger for a go-kart. What resultant comes from 28 N right and 12 N left?",
       "options": [
-        "70 N to the right",
-        "16 N to the left",
-        "27 N to the right",
+        "4.8 N to the right",
+        "35.2 N to the right",
+        "11.68 N to the right",
         "16 N to the right"
       ],
       "correctAnswer": "16 N to the right",
@@ -1479,10 +1479,10 @@
       "skill": "Calculate resultant force",
       "question": "The forces on a box on a bench are unbalanced: 32 N to the right and 14 N to the left. Which statement is correct?",
       "options": [
-        "18 N to the left",
-        "30 N to the right",
+        "8.1 N to the right",
+        "48.6 N to the right",
         "18 N to the right",
-        "78 N to the right"
+        "23.22 N to the right"
       ],
       "correctAnswer": "18 N to the right",
       "correctIndex": 2,
@@ -1503,10 +1503,10 @@
       "skill": "Calculate resultant force",
       "question": "A shopping cart is pulled 36 N right and 16 N left. What is the resultant force?",
       "options": [
-        "33 N to the right",
+        "12 N to the right",
         "20 N to the right",
-        "86 N to the right",
-        "20 N to the left"
+        "38 N to the right",
+        "22.6 N to the right"
       ],
       "correctAnswer": "20 N to the right",
       "correctIndex": 1,
@@ -1527,10 +1527,10 @@
       "skill": "Calculate resultant force",
       "question": "A trolley has a 43 N driving force to the right and a 14 N friction force to the left. Which result is correct?",
       "options": [
-        "29 N to the left",
-        "14 N to the right",
+        "21.75 N to the right",
+        "69.6 N to the right",
         "29 N to the right",
-        "57 N to the right"
+        "28.13 N to the right"
       ],
       "correctAnswer": "29 N to the right",
       "correctIndex": 2,
@@ -1551,10 +1551,10 @@
       "skill": "Calculate resultant force",
       "question": "Two opposite horizontal forces act on a training sled: 49 N forwards and 18 N backwards. Which result is correct?",
       "options": [
-        "17 N to the right",
+        "10.85 N to the right",
         "31 N to the right",
-        "65 N to the right",
-        "31 N to the left"
+        "49.6 N to the right",
+        "25.11 N to the right"
       ],
       "correctAnswer": "31 N to the right",
       "correctIndex": 1,
@@ -1576,9 +1576,9 @@
       "question": "A free-body diagram for a model car shows 53 N right and 20 N left. Choose the overall force.",
       "options": [
         "33 N to the right",
-        "73 N to the right",
-        "33 N to the left",
-        "20 N to the right"
+        "16.5 N to the right",
+        "69.3 N to the right",
+        "21.45 N to the right"
       ],
       "correctAnswer": "33 N to the right",
       "correctIndex": 0,
@@ -1599,9 +1599,9 @@
       "skill": "Calculate resultant force",
       "question": "A student subtracts the smaller force from the larger for a equipment case. What resultant comes from 41 N right and 6 N left?",
       "options": [
-        "81 N to the right",
-        "35 N to the left",
-        "23 N to the right",
+        "22.75 N to the right",
+        "91 N to the right",
+        "42.35 N to the right",
         "35 N to the right"
       ],
       "correctAnswer": "35 N to the right",
@@ -1623,10 +1623,10 @@
       "skill": "Calculate resultant force",
       "question": "The forces on a low-friction cart are unbalanced: 16 N to the right and 8 N to the left. Which statement is correct?",
       "options": [
-        "8 N to the right",
-        "18 N to the left",
+        "2 N to the left",
+        "14.4 N to the left",
         "8 N to the left",
-        "44 N to the left"
+        "8.4 N to the left"
       ],
       "correctAnswer": "8 N to the left",
       "correctIndex": 2,
@@ -1647,10 +1647,10 @@
       "skill": "Calculate resultant force",
       "question": "A table tennis ball launcher is pulled 16 N right and 10 N left. What is the resultant force?",
       "options": [
-        "23 N to the left",
+        "2.4 N to the left",
         "6 N to the left",
-        "52 N to the left",
-        "6 N to the right"
+        "13.8 N to the left",
+        "5.34 N to the left"
       ],
       "correctAnswer": "6 N to the left",
       "correctIndex": 1,
@@ -1672,9 +1672,9 @@
       "question": "Two opposite horizontal forces act on a rope marker: 34 N forwards and 12 N backwards. Which result is correct?",
       "options": [
         "22 N to the right",
-        "94 N to the right",
-        "22 N to the left",
-        "36 N to the right"
+        "12.1 N to the right",
+        "33 N to the right",
+        "16.06 N to the right"
       ],
       "correctAnswer": "22 N to the right",
       "correctIndex": 0,
@@ -1695,9 +1695,9 @@
       "skill": "Calculate resultant force",
       "question": "A free-body diagram for a lab block shows 35 N right and 14 N left. Choose the overall force.",
       "options": [
-        "57 N to the left",
-        "21 N to the right",
-        "18 N to the left",
+        "14.7 N to the left",
+        "42 N to the left",
+        "27.09 N to the left",
         "21 N to the left"
       ],
       "correctAnswer": "21 N to the left",
@@ -1719,10 +1719,10 @@
       "skill": "Calculate resultant force",
       "question": "A student subtracts the smaller force from the larger for a toolbox. What resultant comes from 35 N right and 16 N left?",
       "options": [
-        "19 N to the right",
-        "23 N to the left",
+        "5.7 N to the left",
+        "47.5 N to the left",
         "19 N to the left",
-        "65 N to the left"
+        "21.47 N to the left"
       ],
       "correctAnswer": "19 N to the left",
       "correctIndex": 2,
@@ -1743,10 +1743,10 @@
       "skill": "Calculate resultant force",
       "question": "The forces on a sports bag are unbalanced: 35 N to the right and 18 N to the left. Which statement is correct?",
       "options": [
-        "28 N to the left",
+        "7.65 N to the left",
         "17 N to the left",
-        "73 N to the left",
-        "17 N to the right"
+        "28.9 N to the left",
+        "16.49 N to the left"
       ],
       "correctAnswer": "17 N to the left",
       "correctIndex": 1,
@@ -1768,9 +1768,9 @@
       "question": "A wheeled platform is pulled 35 N right and 20 N left. What is the resultant force?",
       "options": [
         "15 N to the left",
-        "81 N to the left",
-        "15 N to the right",
-        "33 N to the left"
+        "9 N to the left",
+        "33 N to the left",
+        "12.15 N to the left"
       ],
       "correctAnswer": "15 N to the left",
       "correctIndex": 0,
@@ -1791,9 +1791,9 @@
       "skill": "Calculate resultant force",
       "question": "Two opposite horizontal forces act on a school desk: 19 N forwards and 6 N backwards. Which result is correct?",
       "options": [
-        "89 N to the left",
-        "13 N to the right",
-        "38 N to the left",
+        "9.75 N to the left",
+        "35.1 N to the left",
+        "8.45 N to the left",
         "13 N to the left"
       ],
       "correctAnswer": "13 N to the left",
@@ -1815,9 +1815,9 @@
       "skill": "Calculate work done",
       "question": "A student pushes a crate with a steady 20 N force along the floor for 3 m. How much work is done on the crate?",
       "options": [
-        "23 J",
-        "6.67 J",
-        "63 J",
+        "15 J",
+        "90 J",
+        "39 J",
         "60 J"
       ],
       "correctAnswer": "60 J",
@@ -1839,10 +1839,10 @@
       "skill": "Calculate work done",
       "question": "A trolley is pulled 2 m by a force of 50 N. How much work is done?",
       "options": [
-        "6.25 J",
-        "104 J",
+        "40 J",
+        "200 J",
         "100 J",
-        "29 J"
+        "121 J"
       ],
       "correctAnswer": "100 J",
       "correctIndex": 2,
@@ -1863,10 +1863,10 @@
       "skill": "Calculate work done",
       "question": "A student moves a crate using 50 N over 3 m. Which work done value is correct?",
       "options": [
-        "155 J",
+        "82.5 J",
         "150 J",
-        "35 J",
-        "6 J"
+        "375 J",
+        "158 J"
       ],
       "correctAnswer": "150 J",
       "correctIndex": 1,
@@ -1888,9 +1888,9 @@
       "question": "A force-distance graph for a sledge is a rectangle: 52.5 N for 4 m. What is the area?",
       "options": [
         "210 J",
-        "41 J",
-        "5.83 J",
-        "216 J"
+        "147 J",
+        "357 J",
+        "187 J"
       ],
       "correctAnswer": "210 J",
       "correctIndex": 0,
@@ -1911,9 +1911,9 @@
       "skill": "Calculate work done",
       "question": "Energy is transferred when a sports bag moves 5 m under a 56 N force. Choose the work done.",
       "options": [
-        "47 J",
-        "5.71 J",
-        "287 J",
+        "84 J",
+        "616 J",
+        "204 J",
         "280 J"
       ],
       "correctAnswer": "280 J",
@@ -1935,10 +1935,10 @@
       "skill": "Calculate work done",
       "question": "Use W = F x d for a toolbox: 60 N multiplied by 6 m. Which answer is right?",
       "options": [
-        "5.62 J",
-        "368 J",
+        "162 J",
+        "972 J",
         "360 J",
-        "53 J"
+        "464 J"
       ],
       "correctAnswer": "360 J",
       "correctIndex": 2,
@@ -1959,10 +1959,10 @@
       "skill": "Calculate work done",
       "question": "A 45 N force moves a box 2 m in the same direction as the force. Which answer shows the work done and avoids adding the numbers?",
       "options": [
-        "22.5 J",
-        "92 J",
+        "54 J",
+        "171 J",
         "90 J",
-        "47 J"
+        "102 J"
       ],
       "correctAnswer": "90 J",
       "correctIndex": 2,
@@ -1983,10 +1983,10 @@
       "skill": "Calculate work done",
       "question": "A lab cart is pulled 8 m by a force of 18.75 N. How much work is done?",
       "options": [
-        "153 J",
+        "113 J",
         "150 J",
-        "53 J",
-        "16.67 J"
+        "360 J",
+        "146 J"
       ],
       "correctAnswer": "150 J",
       "correctIndex": 1,
@@ -2008,9 +2008,9 @@
       "question": "A student moves a box of books using 6 N over 10 m. Which work done value is correct?",
       "options": [
         "60 J",
-        "19 J",
-        "3.75 J",
-        "64 J"
+        "21 J",
+        "96 J",
+        "48.6 J"
       ],
       "correctAnswer": "60 J",
       "correctIndex": 0,
@@ -2031,9 +2031,9 @@
       "skill": "Calculate work done",
       "question": "A force-distance graph for a wheeled case is a rectangle: 50 N for 2 m. What is the area?",
       "options": [
-        "25 J",
-        "4 J",
-        "105 J",
+        "50 J",
+        "210 J",
+        "65 J",
         "100 J"
       ],
       "correctAnswer": "100 J",
@@ -2055,10 +2055,10 @@
       "skill": "Calculate work done",
       "question": "Energy is transferred when a desk drawer moves 3 m under a 50 N force. Choose the work done.",
       "options": [
-        "4.17 J",
-        "156 J",
+        "97.5 J",
+        "390 J",
         "150 J",
-        "31 J"
+        "182 J"
       ],
       "correctAnswer": "150 J",
       "correctIndex": 2,
@@ -2079,10 +2079,10 @@
       "skill": "Calculate work done",
       "question": "Use W = F x d for a training sled: 52.5 N multiplied by 4 m. Which answer is right?",
       "options": [
-        "217 J",
+        "52.5 J",
         "210 J",
-        "37 J",
-        "4.29 J"
+        "378 J",
+        "221 J"
       ],
       "correctAnswer": "210 J",
       "correctIndex": 1,
@@ -2103,10 +2103,10 @@
       "skill": "Calculate work done",
       "question": "A equipment trolley is pulled 5 m by a force of 20 N. How much work is done?",
       "options": [
-        "102 J",
+        "40 J",
         "100 J",
-        "52 J",
-        "25 J"
+        "230 J",
+        "89 J"
       ],
       "correctAnswer": "100 J",
       "correctIndex": 1,
@@ -2128,9 +2128,9 @@
       "question": "A student moves a loaded tray using 7.5 N over 6 m. Which work done value is correct?",
       "options": [
         "45 J",
-        "18 J",
-        "5 J",
-        "48 J"
+        "24.75 J",
+        "67.5 J",
+        "32.85 J"
       ],
       "correctAnswer": "45 J",
       "correctIndex": 0,
@@ -2151,9 +2151,9 @@
       "skill": "Calculate work done",
       "question": "A force-distance graph for a wooden block is a rectangle: 10 N for 8 m. What is the area?",
       "options": [
-        "24 J",
-        "5 J",
-        "84 J",
+        "56 J",
+        "160 J",
+        "103 J",
         "80 J"
       ],
       "correctAnswer": "80 J",
@@ -2175,10 +2175,10 @@
       "skill": "Calculate work done",
       "question": "Energy is transferred when a model lift moves 10 m under a 12.5 N force. Choose the work done.",
       "options": [
-        "5 J",
-        "130 J",
+        "37.5 J",
+        "313 J",
         "125 J",
-        "30 J"
+        "141 J"
       ],
       "correctAnswer": "125 J",
       "correctIndex": 2,
@@ -2199,10 +2199,10 @@
       "skill": "Calculate work done",
       "question": "Use W = F x d for a stack of mats: 90 N multiplied by 2 m. Which answer is right?",
       "options": [
-        "186 J",
+        "81 J",
         "180 J",
-        "36 J",
-        "5 J"
+        "306 J",
+        "175 J"
       ],
       "correctAnswer": "180 J",
       "correctIndex": 1,
@@ -2224,9 +2224,9 @@
       "question": "A storage box is pulled 3 m by a force of 81.67 N. How much work is done?",
       "options": [
         "245 J",
-        "42 J",
-        "5 J",
-        "252 J"
+        "147 J",
+        "539 J",
+        "198 J"
       ],
       "correctAnswer": "245 J",
       "correctIndex": 0,
@@ -2247,9 +2247,9 @@
       "skill": "Calculate work done",
       "question": "A student moves a small cart using 80 N over 4 m. Which work done value is correct?",
       "options": [
-        "48 J",
-        "5 J",
-        "328 J",
+        "240 J",
+        "864 J",
+        "208 J",
         "320 J"
       ],
       "correctAnswer": "320 J",
@@ -2676,9 +2676,9 @@
       "stem": "Two people push a box to the right with forces of 20 N and 15 N. What is the resultant force?",
       "options": [
         "35 N to the right",
-        "5 N to the right",
-        "35 N to the left",
-        "300 N to the right"
+        "8.75 N to the right",
+        "52.5 N to the right",
+        "22.75 N to the right"
       ],
       "correctAnswer": "35 N to the right",
       "correctIndex": 0,
@@ -2756,9 +2756,9 @@
       "stem": "A trolley is pulled forwards with 50 N. Friction acts backwards with 18 N. What is the resultant force?",
       "options": [
         "32 N forwards",
-        "68 N forwards",
-        "32 N backwards",
-        "900 N forwards"
+        "17.6 N forwards",
+        "80 N forwards",
+        "33.6 N forwards"
       ],
       "correctAnswer": "32 N forwards",
       "correctIndex": 0,
@@ -2916,9 +2916,9 @@
       "stem": "A force of 10 N moves a box 3 m. How much work is done?",
       "options": [
         "30 J",
-        "13 J",
-        "3.3 J",
-        "7 J"
+        "10.5 J",
+        "57 J",
+        "36.3 J"
       ],
       "correctAnswer": "30 J",
       "correctIndex": 0,
@@ -2956,9 +2956,9 @@
       "stem": "A worker does 240 J of work by pushing with a force of 60 N. How far does the object move?",
       "options": [
         "4 m",
-        "14400 m",
-        "180 m",
-        "0.25 m"
+        "2 m",
+        "9.6 m",
+        "4.2 m"
       ],
       "correctAnswer": "4 m",
       "correctIndex": 0,
@@ -3156,9 +3156,9 @@
       "stem": "A spring has a spring constant of 40 N/m and an extension of 0.2 m. What force is applied?",
       "options": [
         "8 N",
-        "200 N",
-        "40.2 N",
-        "0.005 N"
+        "2 N",
+        "12 N",
+        "5.2 N"
       ],
       "correctAnswer": "8 N",
       "correctIndex": 0,
@@ -3356,9 +3356,9 @@
       "stem": "A 12 N force acts 0.5 m from a pivot. What is the moment?",
       "options": [
         "6 Nm",
-        "24 Nm",
-        "12.5 Nm",
-        "0.04 Nm"
+        "1.5 Nm",
+        "9 Nm",
+        "3.9 Nm"
       ],
       "correctAnswer": "6 Nm",
       "correctIndex": 0,
@@ -3436,9 +3436,9 @@
       "stem": "A 4 N weight is 0.3 m from a pivot. What force is needed 0.6 m on the other side to balance it?",
       "options": [
         "2 N",
-        "8 N",
-        "4.9 N",
-        "0.45 N"
+        "0.8 N",
+        "4 N",
+        "2.42 N"
       ],
       "correctAnswer": "2 N",
       "correctIndex": 0,
@@ -3556,9 +3556,9 @@
       "stem": "A box exerts a force of 200 N over an area of 4 m2. What pressure does it exert?",
       "options": [
         "50 Pa",
-        "800 Pa",
-        "204 Pa",
-        "0.02 Pa"
+        "12.5 Pa",
+        "75 Pa",
+        "32.5 Pa"
       ],
       "correctAnswer": "50 Pa",
       "correctIndex": 0,
@@ -3716,9 +3716,9 @@
       "stem": "A cyclist travels 60 m in 12 s. What is the cyclist's speed?",
       "options": [
         "5 m/s",
-        "72 m/s",
-        "720 m/s",
-        "0.2 m/s"
+        "1.25 m/s",
+        "7.5 m/s",
+        "3.25 m/s"
       ],
       "correctAnswer": "5 m/s",
       "correctIndex": 0,
@@ -3756,9 +3756,9 @@
       "stem": "A car travels at 20 m/s for 15 s. How far does it travel?",
       "options": [
         "300 m",
-        "35 m",
-        "1.3 m",
-        "5 m"
+        "120 m",
+        "600 m",
+        "363 m"
       ],
       "correctAnswer": "300 m",
       "correctIndex": 0,
@@ -3836,9 +3836,9 @@
       "stem": "A runner travels 120 m in 20 s, then 80 m in 20 s. What is the average speed for the whole run?",
       "options": [
         "5 m/s",
-        "4 m/s",
-        "6 m/s",
-        "10 m/s"
+        "2.75 m/s",
+        "12.5 m/s",
+        "5.25 m/s"
       ],
       "correctAnswer": "5 m/s",
       "correctIndex": 0,
@@ -3956,9 +3956,9 @@
       "stem": "A car increases its velocity from 4 m/s to 16 m/s in 6 s. What is its acceleration?",
       "options": [
         "2 m/s2",
-        "3.3 m/s2",
-        "20 m/s2",
-        "96 m/s2"
+        "0.5 m/s2",
+        "3 m/s2",
+        "1.3 m/s2"
       ],
       "correctAnswer": "2 m/s2",
       "correctIndex": 0,
@@ -4156,9 +4156,9 @@
       "stem": "A 5 kg object accelerates at 3 m/s2. What is the resultant force?",
       "options": [
         "15 N",
-        "8 N",
-        "1.7 N",
-        "45 N"
+        "3.75 N",
+        "22.5 N",
+        "9.75 N"
       ],
       "correctAnswer": "15 N",
       "correctIndex": 0,
@@ -4356,9 +4356,9 @@
       "stem": "A bag has a mass of 6 kg. The gravitational field strength is 10 N/kg. What is its weight?",
       "options": [
         "60 N",
-        "16 N",
-        "0.6 N",
-        "6 N"
+        "15 N",
+        "90 N",
+        "39 N"
       ],
       "correctAnswer": "60 N",
       "correctIndex": 0,
@@ -4476,9 +4476,9 @@
       "stem": "What is stopping distance?",
       "options": [
         "The thinking distance plus the braking distance.",
-        "The braking distance minus the thinking distance.",
-        "Only the distance travelled while braking.",
-        "Only the distance travelled before the driver reacts."
+        "Only thinking distance changes; braking distance is fixed.",
+        "The car stops instantly when the driver sees danger.",
+        "Wet roads reduce stopping distance in every case."
       ],
       "correctAnswer": "The thinking distance plus the braking distance.",
       "correctIndex": 0,
@@ -4516,9 +4516,9 @@
       "stem": "What happens to stopping distance when a car travels faster?",
       "options": [
         "It increases.",
-        "It decreases to zero.",
-        "It always stays the same.",
-        "It becomes equal to the car's mass."
+        "Only thinking distance changes; braking distance is fixed.",
+        "The car stops instantly when the driver sees danger.",
+        "Higher speed always reduces braking distance."
       ],
       "correctAnswer": "It increases.",
       "correctIndex": 0,
@@ -4556,9 +4556,9 @@
       "stem": "A car has a thinking distance of 12 m and a braking distance of 28 m. What is the stopping distance?",
       "options": [
         "40 m",
-        "16 m",
-        "336 m",
-        "28 m"
+        "22 m",
+        "100 m",
+        "42 m"
       ],
       "correctAnswer": "40 m",
       "correctIndex": 0,
@@ -4596,9 +4596,9 @@
       "stem": "Why does an icy road increase a car's stopping distance?",
       "options": [
         "There is less friction, so the braking distance increases.",
-        "There is more friction, so the braking distance increases.",
-        "The driver's reaction time becomes zero.",
-        "The car's mass becomes smaller."
+        "Only thinking distance changes; braking distance is fixed.",
+        "The car stops instantly when the driver sees danger.",
+        "Reaction time has no effect on stopping distance."
       ],
       "correctAnswer": "There is less friction, so the braking distance increases.",
       "correctIndex": 0,
@@ -4636,9 +4636,9 @@
       "stem": "A student says, \"Stopping distance only depends on the brakes.\" Which response is best?",
       "options": [
         "That is not correct, because thinking distance also affects stopping distance.",
-        "That is correct, because reaction time is not part of stopping.",
-        "That is correct, because braking distance is always zero.",
-        "That is not correct, because stopping distance depends only on mass."
+        "Only thinking distance changes; braking distance is fixed.",
+        "The car stops instantly when the driver sees danger.",
+        "The brakes remove the need for friction."
       ],
       "correctAnswer": "That is not correct, because thinking distance also affects stopping distance.",
       "correctIndex": 0,
@@ -4756,9 +4756,9 @@
       "stem": "A car travels at 15 m/s. The driver's reaction time is 0.8 s. What is the thinking distance?",
       "options": [
         "12 m",
-        "18.75 m",
-        "15.8 m",
-        "0.05 m"
+        "3 m",
+        "18 m",
+        "7.8 m"
       ],
       "correctAnswer": "12 m",
       "correctIndex": 0,
@@ -4956,9 +4956,9 @@
       "stem": "A 3 kg object moves at 4 m/s. What is its momentum?",
       "options": [
         "12 kg m/s",
-        "7 kg m/s",
-        "0.75 kg m/s",
-        "1 kg m/s"
+        "3 kg m/s",
+        "18 kg m/s",
+        "7.8 kg m/s"
       ],
       "correctAnswer": "12 kg m/s",
       "correctIndex": 0,
@@ -5156,9 +5156,9 @@
       "stem": "A 2 kg trolley moving at 3 m/s sticks to a 1 kg trolley at rest. What is their speed after the collision?",
       "options": [
         "2 m/s",
+        "0.5 m/s",
         "3 m/s",
-        "6 m/s",
-        "1 m/s"
+        "1.3 m/s"
       ],
       "correctAnswer": "2 m/s",
       "correctIndex": 0,
@@ -5756,9 +5756,9 @@
       "stem": "A graph shows a force of 5 N gives an extension of 0.10 m. What is the spring constant?",
       "options": [
         "50 N/m",
-        "0.5 N/m",
-        "5.1 N/m",
-        "0.02 N/m"
+        "12.5 N/m",
+        "75 N/m",
+        "32.5 N/m"
       ],
       "correctAnswer": "50 N/m",
       "correctIndex": 0,
@@ -5956,9 +5956,9 @@
       "stem": "A spring is 0.12 m long at the start and 0.18 m long after a force is added. What is the extension?",
       "options": [
         "0.06 m",
-        "0.30 m",
-        "0.18 m",
-        "0.12 m"
+        "0.01 m",
+        "0.09 m",
+        "0.04 m"
       ],
       "correctAnswer": "0.06 m",
       "correctIndex": 0,
@@ -6156,9 +6156,9 @@
       "stem": "A trolley's velocity increases from 0.4 m/s to 1.6 m/s in 3 s. What is its acceleration?",
       "options": [
         "0.4 m/s2",
-        "0.67 m/s2",
-        "2.0 m/s2",
-        "4.8 m/s2"
+        "0.1 m/s2",
+        "0.6 m/s2",
+        "0.26 m/s2"
       ],
       "correctAnswer": "0.4 m/s2",
       "correctIndex": 0,

@@ -15,9 +15,9 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a melting ice particle model to check the key physics idea. What happens during melting?",
       "options": [
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The particles become a different element.",
+        "The mass disappears during melting.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
@@ -39,10 +39,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a solid-to-liquid explanation to check the key physics idea. What happens during melting?",
       "options": [
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The particles become a different element.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on."
+        "The particles lose all their energy."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a heated substance diagram to check the key physics idea. What happens during melting?",
       "options": [
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear."
+        "The particles become a different element.",
+        "The temperature must keep rising during the change."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A learner uses a state-change revision card to check the key physics idea. What happens during melting?",
       "options": [
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted."
+        "The particles stop moving completely.",
+        "The particles become a different element.",
+        "The particles become fixed closer together like a solid."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a melting ice particle model to prepare for an exam-style question. What happens during melting? Choose the best answer.",
       "options": [
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The particles become a different element.",
+        "The substance becomes radioactive.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
@@ -135,10 +135,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a solid-to-liquid explanation to prepare for an exam-style question. What happens during melting? Choose the best answer.",
       "options": [
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The particles become a different element.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on."
+        "The particles turn into light energy only."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 2,
@@ -159,10 +159,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a heated substance diagram to prepare for an exam-style question. What happens during melting?",
       "options": [
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The particles become a different element.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on."
+        "The bonds form a stronger solid lattice."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 2,
@@ -183,10 +183,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a state-change revision card to prepare for an exam-style question. What happens during melting?",
       "options": [
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear."
+        "The particles become a different element.",
+        "The particles stop attracting each other forever."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 1,
@@ -208,9 +208,9 @@
       "question": "A learner uses a melting ice particle model to test a common misconception. What happens during melting?",
       "options": [
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted."
+        "The particles stop moving completely.",
+        "The particles become a different element.",
+        "The material changes its proton number."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 0,
@@ -231,9 +231,9 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a solid-to-liquid explanation to test a common misconception. What happens during melting?",
       "options": [
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The particles become a different element.",
+        "The molecules split into separate atoms only.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
@@ -255,10 +255,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a heated substance diagram to test a common misconception. What happens during melting? Choose the best answer.",
       "options": [
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The mass disappears during melting.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on."
+        "The particles lose all their energy."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 2,
@@ -279,10 +279,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a state-change revision card to test a common misconception. What happens during melting? Choose the best answer.",
       "options": [
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear."
+        "The mass disappears during melting.",
+        "The temperature must keep rising during the change."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 1,
@@ -303,10 +303,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a melting ice particle model to link the context to the GCSE model. What happens during melting?",
       "options": [
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear."
+        "The mass disappears during melting.",
+        "The particles become fixed closer together like a solid."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 1,
@@ -328,9 +328,9 @@
       "question": "A learner uses a solid-to-liquid explanation to link the context to the GCSE model. What happens during melting?",
       "options": [
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted."
+        "The particles stop moving completely.",
+        "The mass disappears during melting.",
+        "The substance becomes radioactive."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 0,
@@ -351,9 +351,9 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a heated substance diagram to link the context to the GCSE model. What happens during melting?",
       "options": [
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The mass disappears during melting.",
+        "The particles turn into light energy only.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
@@ -375,10 +375,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a state-change revision card to link the context to the GCSE model. What happens during melting?",
       "options": [
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The mass disappears during melting.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on."
+        "The bonds form a stronger solid lattice."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 2,
@@ -399,10 +399,10 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a melting ice particle model to review the evidence in the setup. What happens during melting? Choose the best answer.",
       "options": [
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear."
+        "The mass disappears during melting.",
+        "The particles stop attracting each other forever."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 1,
@@ -424,9 +424,9 @@
       "question": "A learner uses a solid-to-liquid explanation to review the evidence in the setup. What happens during melting? Choose the best answer.",
       "options": [
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted."
+        "The particles stop moving completely.",
+        "The mass disappears during melting.",
+        "The material changes its proton number."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
       "correctIndex": 0,
@@ -447,9 +447,9 @@
       "skill": "Describe melting using the particle model",
       "question": "A learner uses a heated substance diagram to review the evidence in the setup. What happens during melting? Choose the best answer.",
       "options": [
-        "The particles become colder as soon as the heater is turned on.",
-        "The mass of the substance decreases because particles disappear.",
-        "The particles stop moving completely until all the solid has melted.",
+        "The particles stop moving completely.",
+        "The mass disappears during melting.",
+        "The molecules split into separate atoms only.",
         "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts."
       ],
       "correctAnswer": "Energy is used to weaken bonds between particles, so temperature stays constant while the substance melts.",
@@ -471,9 +471,9 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a gas syringe compression to check the key physics idea. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
+        "The number of particles must decrease.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
@@ -495,10 +495,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a sealed container heating to check the key physics idea. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller."
+        "The particles lose all kinetic energy."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 2,
@@ -519,10 +519,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a particle collision explanation to check the key physics idea. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change."
+        "The particles stop colliding with the walls.",
+        "The container walls become softer."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 1,
@@ -544,9 +544,9 @@
       "question": "A learner uses a pressure sensor reading to check the key physics idea. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move."
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
+        "The particles are pulled to one side by gravity only."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 0,
@@ -567,9 +567,9 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a gas syringe compression to prepare for an exam-style question. A gas is trapped in a syringe and compressed. What happens to the pressure? Choose the best answer.",
       "options": [
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
+        "The particles turn into a liquid immediately.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
@@ -591,10 +591,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a sealed container heating to prepare for an exam-style question. A gas is trapped in a syringe and compressed. What happens to the pressure? Choose the best answer.",
       "options": [
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller."
+        "The gas pressure is always zero in a syringe."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 2,
@@ -615,9 +615,9 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a particle collision explanation to prepare for an exam-style question. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
+        "The particles collide with the walls less often.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
@@ -639,10 +639,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a pressure sensor reading to prepare for an exam-style question. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller."
+        "The particles disappear from the container."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 2,
@@ -663,10 +663,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a gas syringe compression to test a common misconception. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change."
+        "The particles stop colliding with the walls.",
+        "The gas molecules become solid particles."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 1,
@@ -688,9 +688,9 @@
       "question": "A learner uses a sealed container heating to test a common misconception. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move."
+        "The gas particles become heavier.",
+        "The particles stop colliding with the walls.",
+        "The particles only move when heated by light."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 0,
@@ -711,9 +711,9 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a particle collision explanation to test a common misconception. A gas is trapped in a syringe and compressed. What happens to the pressure? Choose the best answer.",
       "options": [
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
+        "The particles lose all kinetic energy.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
@@ -735,10 +735,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a pressure sensor reading to test a common misconception. A gas is trapped in a syringe and compressed. What happens to the pressure? Choose the best answer.",
       "options": [
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller."
+        "The container walls become softer."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 2,
@@ -759,10 +759,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a gas syringe compression to link the context to the GCSE model. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change."
+        "The number of particles must decrease.",
+        "The particles are pulled to one side by gravity only."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 1,
@@ -784,9 +784,9 @@
       "question": "A learner uses a sealed container heating to link the context to the GCSE model. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move."
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
+        "The particles turn into a liquid immediately."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 0,
@@ -807,9 +807,9 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a particle collision explanation to link the context to the GCSE model. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
+        "The gas pressure is always zero in a syringe.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
@@ -831,10 +831,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a pressure sensor reading to link the context to the GCSE model. A gas is trapped in a syringe and compressed. What happens to the pressure?",
       "options": [
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller."
+        "The particles collide with the walls less often."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 2,
@@ -855,10 +855,10 @@
       "skill": "Explain the effect of reducing volume on gas pressure",
       "question": "A learner uses a gas syringe compression to review the evidence in the setup. A gas is trapped in a syringe and compressed. What happens to the pressure? Choose the best answer.",
       "options": [
-        "The pressure becomes zero because the gas cannot move.",
+        "The gas particles become heavier.",
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change."
+        "The number of particles must decrease.",
+        "The particles disappear from the container."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 1,
@@ -880,9 +880,9 @@
       "question": "A learner uses a sealed container heating to review the evidence in the setup. A gas is trapped in a syringe and compressed. What happens to the pressure? Choose the best answer.",
       "options": [
         "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
-        "The pressure falls because particles get smaller.",
-        "The pressure stays constant because mass does not change.",
-        "The pressure becomes zero because the gas cannot move."
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
+        "The gas molecules become solid particles."
       ],
       "correctAnswer": "The pressure increases because the same number of particles collide with the walls in a smaller volume.",
       "correctIndex": 0,
@@ -903,9 +903,9 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a particle collision explanation to review the evidence in the setup. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The number of particles must decrease.",
+        "The particles only move when heated by light.",
         "The pressure increases because the particles move faster and hit the walls more often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
@@ -927,10 +927,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a pressure sensor reading to review the evidence in the setup. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The particles lose all kinetic energy.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass."
+        "The container walls become softer."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 2,
@@ -951,10 +951,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a gas syringe compression to practise choosing the best explanation. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change."
+        "The particles lose all kinetic energy.",
+        "The particles are pulled to one side by gravity only."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 1,
@@ -976,9 +976,9 @@
       "question": "A learner uses a sealed container heating to practise choosing the best explanation. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out."
+        "The gas particles become heavier.",
+        "The particles lose all kinetic energy.",
+        "The particles turn into a liquid immediately."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 0,
@@ -999,9 +999,9 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a particle collision explanation to practise choosing the best explanation. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The particles lose all kinetic energy.",
+        "The gas pressure is always zero in a syringe.",
         "The pressure increases because the particles move faster and hit the walls more often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
@@ -1023,10 +1023,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a pressure sensor reading to practise choosing the best explanation. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The particles lose all kinetic energy.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass."
+        "The particles collide with the walls less often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 2,
@@ -1047,10 +1047,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a gas syringe compression to focus on the relationship being tested. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change."
+        "The particles lose all kinetic energy.",
+        "The particles disappear from the container."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 1,
@@ -1071,10 +1071,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a sealed container heating to focus on the relationship being tested. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The particles lose all kinetic energy.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass."
+        "The gas molecules become solid particles."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 2,
@@ -1095,10 +1095,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a particle collision explanation to focus on the relationship being tested. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change."
+        "The particles lose all kinetic energy.",
+        "The particles only move when heated by light."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 1,
@@ -1120,9 +1120,9 @@
       "question": "A learner uses a pressure sensor reading to focus on the relationship being tested. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out."
+        "The gas particles become heavier.",
+        "The container walls become softer.",
+        "The particles are pulled to one side by gravity only."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 0,
@@ -1143,9 +1143,9 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a gas syringe compression to decide what the data shows. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The container walls become softer.",
+        "The particles turn into a liquid immediately.",
         "The pressure increases because the particles move faster and hit the walls more often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
@@ -1167,10 +1167,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a sealed container heating to decide what the data shows. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The container walls become softer.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass."
+        "The gas pressure is always zero in a syringe."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 2,
@@ -1191,10 +1191,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a particle collision explanation to decide what the data shows. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change."
+        "The container walls become softer.",
+        "The particles collide with the walls less often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 1,
@@ -1216,9 +1216,9 @@
       "question": "A learner uses a pressure sensor reading to decide what the data shows. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out."
+        "The gas particles become heavier.",
+        "The container walls become softer.",
+        "The particles disappear from the container."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 0,
@@ -1239,9 +1239,9 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a gas syringe compression to connect the example to the correct rule. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The container walls become softer.",
+        "The gas molecules become solid particles.",
         "The pressure increases because the particles move faster and hit the walls more often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
@@ -1263,10 +1263,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a sealed container heating to connect the example to the correct rule. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The container walls become softer.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass."
+        "The particles only move when heated by light."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 2,
@@ -1287,10 +1287,10 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a particle collision explanation to connect the example to the correct rule. What happens to the gas pressure in a sealed container when the temperature rises?",
       "options": [
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change."
+        "The particles are pulled to one side by gravity only.",
+        "The particles turn into a liquid immediately."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 1,
@@ -1312,9 +1312,9 @@
       "question": "A learner uses a pressure sensor reading to connect the example to the correct rule. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
         "The pressure increases because the particles move faster and hit the walls more often.",
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out."
+        "The gas particles become heavier.",
+        "The particles are pulled to one side by gravity only.",
+        "The gas pressure is always zero in a syringe."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
       "correctIndex": 0,
@@ -1335,9 +1335,9 @@
       "skill": "Explain why gas pressure changes with temperature",
       "question": "A learner uses a gas syringe compression to spot the answer an examiner would accept. What happens to the gas pressure in a sealed container when the temperature rises? Choose the best answer.",
       "options": [
-        "The pressure falls because the particles lose mass.",
-        "The pressure stays the same because the number of particles does not change.",
-        "The pressure becomes zero because the particles spread out.",
+        "The gas particles become heavier.",
+        "The particles are pulled to one side by gravity only.",
+        "The particles collide with the walls less often.",
         "The pressure increases because the particles move faster and hit the walls more often."
       ],
       "correctAnswer": "The pressure increases because the particles move faster and hit the walls more often.",
@@ -1359,9 +1359,9 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a boiling-water graph to check the key physics idea. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
+        "The particles stop moving during boiling.",
         "The temperature stays constant while energy is transferred to separate the particles."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
@@ -1383,10 +1383,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a heating curve worksheet to check the key physics idea. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed."
+        "The energy is used only to increase kinetic energy."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 2,
@@ -1407,10 +1407,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a state-change graph section to check the key physics idea. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed."
+        "The substance becomes colder while it boils.",
+        "The mass of the substance increases during boiling."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 1,
@@ -1432,9 +1432,9 @@
       "question": "A learner uses a temperature-time practical to check the key physics idea. On a heating curve, what happens while the substance is boiling?",
       "options": [
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas."
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
+        "The substance changes into a different element."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 0,
@@ -1455,9 +1455,9 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a boiling-water graph to prepare for an exam-style question. On a heating curve, what happens while the substance is boiling? Choose the best answer.",
       "options": [
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
+        "The graph line must slope downwards at boiling.",
         "The temperature stays constant while energy is transferred to separate the particles."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
@@ -1479,10 +1479,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a heating curve worksheet to prepare for an exam-style question. On a heating curve, what happens while the substance is boiling? Choose the best answer.",
       "options": [
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed."
+        "The particles lose all potential energy."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 2,
@@ -1503,9 +1503,9 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a state-change graph section to prepare for an exam-style question. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
+        "The heater stops transferring energy.",
         "The temperature stays constant while energy is transferred to separate the particles."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
@@ -1527,10 +1527,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a temperature-time practical to prepare for an exam-style question. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed."
+        "The temperature becomes zero during boiling."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 2,
@@ -1551,10 +1551,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a boiling-water graph to test a common misconception. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed."
+        "The substance becomes colder while it boils.",
+        "The bonds get stronger without energy transfer."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 1,
@@ -1576,9 +1576,9 @@
       "question": "A learner uses a heating curve worksheet to test a common misconception. On a heating curve, what happens while the substance is boiling?",
       "options": [
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas."
+        "The temperature rises quickly throughout boiling.",
+        "The substance becomes colder while it boils.",
+        "The particles form a solid lattice."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 0,
@@ -1599,9 +1599,9 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a state-change graph section to test a common misconception. On a heating curve, what happens while the substance is boiling? Choose the best answer.",
       "options": [
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The particles stop moving during boiling.",
+        "The energy is used only to increase kinetic energy.",
         "The temperature stays constant while energy is transferred to separate the particles."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
@@ -1623,10 +1623,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a temperature-time practical to test a common misconception. On a heating curve, what happens while the substance is boiling? Choose the best answer.",
       "options": [
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The particles stop moving during boiling.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed."
+        "The mass of the substance increases during boiling."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 2,
@@ -1647,10 +1647,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a boiling-water graph to link the context to the GCSE model. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed."
+        "The particles stop moving during boiling.",
+        "The substance changes into a different element."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 1,
@@ -1672,9 +1672,9 @@
       "question": "A learner uses a heating curve worksheet to link the context to the GCSE model. On a heating curve, what happens while the substance is boiling?",
       "options": [
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas."
+        "The temperature rises quickly throughout boiling.",
+        "The particles stop moving during boiling.",
+        "The graph line must slope downwards at boiling."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 0,
@@ -1695,9 +1695,9 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a state-change graph section to link the context to the GCSE model. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The particles stop moving during boiling.",
+        "The particles lose all potential energy.",
         "The temperature stays constant while energy is transferred to separate the particles."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
@@ -1719,10 +1719,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a temperature-time practical to link the context to the GCSE model. On a heating curve, what happens while the substance is boiling?",
       "options": [
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
+        "The particles stop moving during boiling.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed."
+        "The heater stops transferring energy."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 2,
@@ -1743,10 +1743,10 @@
       "skill": "Interpret a heating curve",
       "question": "A learner uses a boiling-water graph to review the evidence in the setup. On a heating curve, what happens while the substance is boiling? Choose the best answer.",
       "options": [
-        "The particles stop moving while the liquid changes into gas.",
+        "The temperature rises quickly throughout boiling.",
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed."
+        "The particles stop moving during boiling.",
+        "The temperature becomes zero during boiling."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 1,
@@ -1768,9 +1768,9 @@
       "question": "A learner uses a heating curve worksheet to review the evidence in the setup. On a heating curve, what happens while the substance is boiling? Choose the best answer.",
       "options": [
         "The temperature stays constant while energy is transferred to separate the particles.",
-        "The temperature rises quickly because all the energy increases particle speed.",
-        "The mass doubles because bubbles are formed.",
-        "The particles stop moving while the liquid changes into gas."
+        "The temperature rises quickly throughout boiling.",
+        "The particles stop moving during boiling.",
+        "The bonds get stronger without energy transfer."
       ],
       "correctAnswer": "The temperature stays constant while energy is transferred to separate the particles.",
       "correctIndex": 0,
@@ -1791,7 +1791,7 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a smoke-cell observation to check the key physics idea. Why does Brownian motion happen?",
       "options": [
-        "The particles are pulled by magnetic fields in the air.",
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
         "The particles only move when light shines on them.",
         "Small visible particles are hit unevenly by moving molecules."
@@ -1815,10 +1815,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a Brownian motion video to check the key physics idea. Why does Brownian motion happen?",
       "options": [
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air."
+        "The visible particles move because they are alive."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 2,
@@ -1839,10 +1839,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a pollen grain microscope view to check the key physics idea. Why does Brownian motion happen?",
       "options": [
-        "The particles only move when light shines on them.",
+        "The particles are pulled by fields in the air.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly."
+        "The particles are heavy so they stop moving quickly.",
+        "The liquid has no molecules between the visible particles."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 1,
@@ -1864,9 +1864,9 @@
       "question": "A learner uses a random particle motion model to check the key physics idea. Why does Brownian motion happen?",
       "options": [
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them."
+        "Gravity pushes each particle in a random direction."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 0,
@@ -1887,9 +1887,9 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a smoke-cell observation to prepare for an exam-style question. Why does Brownian motion happen? Choose the best answer.",
       "options": [
-        "The particles are pulled by magnetic fields in the air.",
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them.",
+        "The particles move only because the microscope vibrates.",
         "Small visible particles are hit unevenly by moving molecules."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
@@ -1911,10 +1911,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a Brownian motion video to prepare for an exam-style question. Why does Brownian motion happen? Choose the best answer.",
       "options": [
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air."
+        "The visible particles are hit evenly from every side at once."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 2,
@@ -1935,9 +1935,9 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a pollen grain microscope view to prepare for an exam-style question. Why does Brownian motion happen?",
       "options": [
-        "The particles are pulled by magnetic fields in the air.",
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them.",
+        "The particles move because they are magnetic.",
         "Small visible particles are hit unevenly by moving molecules."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
@@ -1959,10 +1959,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a random particle motion model to prepare for an exam-style question. Why does Brownian motion happen?",
       "options": [
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air."
+        "The liquid molecules are completely still."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 2,
@@ -1983,10 +1983,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a smoke-cell observation to test a common misconception. Why does Brownian motion happen?",
       "options": [
-        "The particles only move when light shines on them.",
+        "The particles are pulled by fields in the air.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly."
+        "The particles are heavy so they stop moving quickly.",
+        "The motion proves there are no small particles."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 1,
@@ -2008,9 +2008,9 @@
       "question": "A learner uses a Brownian motion video to test a common misconception. Why does Brownian motion happen?",
       "options": [
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
+        "The particles are pulled by fields in the air.",
         "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them."
+        "The particles travel in identical straight lines."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 0,
@@ -2031,9 +2031,9 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a pollen grain microscope view to test a common misconception. Why does Brownian motion happen? Choose the best answer.",
       "options": [
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly.",
+        "The particles are pulled by fields in the air.",
         "The particles only move when light shines on them.",
+        "The visible particles move because they are alive.",
         "Small visible particles are hit unevenly by moving molecules."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
@@ -2055,10 +2055,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a random particle motion model to test a common misconception. Why does Brownian motion happen? Choose the best answer.",
       "options": [
-        "The particles are heavy so they stop moving quickly.",
+        "The particles are pulled by fields in the air.",
         "The particles only move when light shines on them.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air."
+        "The liquid has no molecules between the visible particles."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 2,
@@ -2079,10 +2079,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a smoke-cell observation to link the context to the GCSE model. Why does Brownian motion happen? Choose the best answer.",
       "options": [
-        "The particles only move when light shines on them.",
+        "The particles are pulled by fields in the air.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly."
+        "The particles only move when light shines on them.",
+        "Gravity pushes each particle in a random direction."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 1,
@@ -2103,10 +2103,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a Brownian motion video to link the context to the GCSE model. Why does Brownian motion happen?",
       "options": [
-        "The particles only move when light shines on them.",
+        "The particles are pulled by fields in the air.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly."
+        "The particles only move when light shines on them.",
+        "The particles move only because the microscope vibrates."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 1,
@@ -2128,9 +2128,9 @@
       "question": "A learner uses a pollen grain microscope view to link the context to the GCSE model. Why does Brownian motion happen?",
       "options": [
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them."
+        "The particles are pulled by fields in the air.",
+        "The particles only move when light shines on them.",
+        "The visible particles are hit evenly from every side at once."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 0,
@@ -2151,9 +2151,9 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a random particle motion model to link the context to the GCSE model. Why does Brownian motion happen?",
       "options": [
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly.",
+        "The particles are pulled by fields in the air.",
         "The particles only move when light shines on them.",
+        "The particles move because they are magnetic.",
         "Small visible particles are hit unevenly by moving molecules."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
@@ -2175,10 +2175,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a smoke-cell observation to review the evidence in the setup. Why does Brownian motion happen?",
       "options": [
-        "The particles are heavy so they stop moving quickly.",
+        "The particles are pulled by fields in the air.",
         "The particles only move when light shines on them.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air."
+        "The liquid molecules are completely still."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 2,
@@ -2199,10 +2199,10 @@
       "skill": "Explain Brownian motion",
       "question": "A learner uses a Brownian motion video to review the evidence in the setup. Why does Brownian motion happen? Choose the best answer.",
       "options": [
-        "The particles only move when light shines on them.",
+        "The particles are pulled by fields in the air.",
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly."
+        "The particles only move when light shines on them.",
+        "The motion proves there are no small particles."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 1,
@@ -2224,9 +2224,9 @@
       "question": "A learner uses a pollen grain microscope view to review the evidence in the setup. Why does Brownian motion happen? Choose the best answer.",
       "options": [
         "Small visible particles are hit unevenly by moving molecules.",
-        "The particles are pulled by magnetic fields in the air.",
-        "The particles are heavy so they stop moving quickly.",
-        "The particles only move when light shines on them."
+        "The particles are pulled by fields in the air.",
+        "The particles only move when light shines on them.",
+        "The particles travel in identical straight lines."
       ],
       "correctAnswer": "Small visible particles are hit unevenly by moving molecules.",
       "correctIndex": 0,

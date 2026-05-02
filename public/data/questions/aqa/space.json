@@ -669,9 +669,9 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "What happens to a star like the Sun after the red giant stage?",
       "options": [
-        "It becomes a supernova and then a neutron star.",
-        "It turns straight into a black hole.",
-        "It becomes a main-sequence star again.",
+        "It stops all nuclear change instantly.",
+        "It turns into a planet.",
+        "It changes into a galaxy.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
@@ -693,10 +693,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a clinic worksheet, a learner checks: a student orders the life cycle of a star like the Sun. What comes after red giant?",
       "options": [
+        "It stops all nuclear change instantly.",
         "It turns into a planet.",
-        "It becomes a comet.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a moon."
+        "It becomes a black hole at once."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
@@ -728,10 +728,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a museum label, a visitor reads: a results table shows red giant, then planetary nebula. What final object forms?",
       "options": [
-        "It stays red forever.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It changes into a galaxy.",
-        "It stops all nuclear change instantly."
+        "It turns into a planet.",
+        "It stays red forever."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
@@ -764,9 +764,9 @@
       "question": "On a school lab card, a pupil answers: what happens near the end of the life of a star with about the Sun's mass?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a comet.",
-        "It explodes as every type of supernova.",
-        "It becomes a black hole at once."
+        "It stops all nuclear change instantly.",
+        "It turns into a planet.",
+        "It explodes as every type of supernova."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
@@ -798,9 +798,9 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a factory safety note, an apprentice reviews: a low-mass star reaches the red giant stage. Which later outcome is correct?",
       "options": [
-        "It changes into a galaxy.",
-        "It becomes a moon.",
+        "It stops all nuclear change instantly.",
         "It turns into a planet.",
+        "It becomes a comet.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
@@ -833,10 +833,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a space centre display, a guide explains: which sequence is right for a Sun-like star after the red giant stage?",
       "options": [
-        "It explodes as every type of supernova.",
         "It stops all nuclear change instantly.",
+        "It turns into a planet.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It stays red forever."
+        "It becomes a moon."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
@@ -868,10 +868,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a revision flashcard, a student practises: a Sun-like star has become a red giant. What stage comes after it sheds outer layers?",
       "options": [
-        "It becomes a moon.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a black hole at once.",
-        "It becomes a comet."
+        "It turns into a planet.",
+        "It turns into a solar system."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
@@ -906,7 +906,7 @@
         "It stops all nuclear change instantly.",
         "It turns into a planet.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It changes into a galaxy."
+        "It becomes a meteorite."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
@@ -938,10 +938,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows red giant, then planetary nebula. What final object forms?",
       "options": [
-        "It becomes a black hole at once.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It stays red forever.",
-        "It explodes as every type of supernova."
+        "It turns into a planet.",
+        "It cools into an asteroid immediately."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
@@ -974,9 +974,9 @@
       "question": "On a classroom board, a group discusses: what happens near the end of the life of a star with about the Sun's mass?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
+        "It stops all nuclear change instantly.",
         "It turns into a planet.",
-        "It becomes a comet.",
-        "It becomes a moon."
+        "It stops giving out energy but remains unchanged."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
@@ -1008,9 +1008,9 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a workshop checklist, an engineer checks: a low-mass star reaches the red giant stage. Which later outcome is correct?",
       "options": [
-        "It stays red forever.",
-        "It changes into a galaxy.",
         "It stops all nuclear change instantly.",
+        "It changes into a galaxy.",
+        "It becomes a black hole at once.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
@@ -1043,10 +1043,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a field trip notebook, a pupil records: which sequence is right for a Sun-like star after the red giant stage?",
       "options": [
-        "It becomes a comet.",
-        "It explodes as every type of supernova.",
+        "It stops all nuclear change instantly.",
+        "It changes into a galaxy.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a black hole at once."
+        "It stays red forever."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
@@ -1078,10 +1078,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a science fair poster, a team explains: a Sun-like star has become a red giant. What stage comes after it sheds outer layers?",
       "options": [
-        "It changes into a galaxy.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It becomes a moon.",
-        "It turns into a planet."
+        "It changes into a galaxy.",
+        "It explodes as every type of supernova."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
@@ -1114,9 +1114,9 @@
       "question": "On a exam practice page, a candidate works: a parent orders the life cycle of a star like the Sun. What comes after red giant?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It explodes as every type of supernova.",
         "It stops all nuclear change instantly.",
-        "It stays red forever."
+        "It changes into a galaxy.",
+        "It becomes a comet."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
@@ -1148,9 +1148,9 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a home study card, a learner revises: a log book shows red giant, then planetary nebula. What final object forms?",
       "options": [
+        "It stops all nuclear change instantly.",
+        "It changes into a galaxy.",
         "It becomes a moon.",
-        "It becomes a black hole at once.",
-        "It becomes a comet.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
@@ -1184,9 +1184,9 @@
       "question": "On a research log book, an assistant notes: what happens near the end of the life of a star with about the Sun's mass?",
       "options": [
         "It stops all nuclear change instantly.",
-        "It turns into a planet.",
+        "It changes into a galaxy.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It changes into a galaxy."
+        "It turns into a solar system."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 2,
@@ -1218,10 +1218,10 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a planetarium screen, a visitor chooses: a low-mass star reaches the red giant stage. Which later outcome is correct?",
       "options": [
-        "It becomes a black hole at once.",
+        "It stops all nuclear change instantly.",
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It stays red forever.",
-        "It explodes as every type of supernova."
+        "It changes into a galaxy.",
+        "It becomes a meteorite."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 1,
@@ -1254,9 +1254,9 @@
       "question": "On a radio studio demo, a presenter explains: which sequence is right for a Sun-like star after the red giant stage?",
       "options": [
         "It forms a planetary nebula and then becomes a white dwarf.",
-        "It turns into a planet.",
-        "It becomes a comet.",
-        "It becomes a moon."
+        "It stops all nuclear change instantly.",
+        "It changes into a galaxy.",
+        "It cools into an asteroid immediately."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
       "correctIndex": 0,
@@ -1288,9 +1288,9 @@
       "skill": "Recall the life cycle of a Sun-like star",
       "question": "On a energy survey report, a surveyor writes: a Sun-like star has become a red giant. What stage comes after it sheds outer layers?",
       "options": [
-        "It stays red forever.",
-        "It changes into a galaxy.",
         "It stops all nuclear change instantly.",
+        "It changes into a galaxy.",
+        "It stops giving out energy but remains unchanged.",
         "It forms a planetary nebula and then becomes a white dwarf."
       ],
       "correctAnswer": "It forms a planetary nebula and then becomes a white dwarf.",
@@ -1323,9 +1323,9 @@
       "skill": "Explain where telescopes are placed",
       "question": "Why are optical telescopes often placed on mountains or in space?",
       "options": [
-        "Gravity is weaker there so the telescopes can see further.",
-        "The telescopes need warmer temperatures to work properly.",
-        "There is more sound in the air to carry the signals.",
+        "Space removes the need for detectors.",
+        "Stars become closer.",
+        "Mirrors stop reflecting.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
@@ -1347,10 +1347,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a clinic worksheet, a learner checks: a student compares ground and space telescopes. Why is space clearer?",
       "options": [
-        "Lenses become weightless.",
-        "Mirrors stop reflecting.",
+        "Space removes the need for detectors.",
+        "Stars become closer.",
         "There is less atmosphere to distort or absorb the light.",
-        "Space removes the need for detectors."
+        "The Sun powers every image."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
@@ -1382,10 +1382,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a museum label, a visitor reads: a results table says some wavelengths are absorbed by air. Why place a telescope in orbit?",
       "options": [
-        "Gravity bends no light at all.",
+        "Space removes the need for detectors.",
         "There is less atmosphere to distort or absorb the light.",
-        "The telescope makes its own stars.",
-        "The Sun powers every image."
+        "Stars become closer.",
+        "Lenses become weightless."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
@@ -1418,9 +1418,9 @@
       "question": "On a school lab card, a pupil answers: why do space telescopes avoid much of the blurring caused by the atmosphere?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Mirrors stop reflecting.",
-        "The Moon blocks all clouds.",
-        "Stars become closer."
+        "Space removes the need for detectors.",
+        "Stars become closer.",
+        "The telescope makes its own stars."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
@@ -1452,9 +1452,9 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a factory safety note, an apprentice reviews: a satellite telescope observes faint galaxies. What advantage does its position give?",
       "options": [
-        "The telescope makes its own stars.",
         "Space removes the need for detectors.",
-        "Lenses become weightless.",
+        "Stars become closer.",
+        "Gravity bends no light at all.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
@@ -1487,10 +1487,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a space centre display, a guide explains: which reason explains why some telescopes are launched into space?",
       "options": [
-        "The Moon blocks all clouds.",
-        "The Sun powers every image.",
+        "Space removes the need for detectors.",
+        "Stars become closer.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity bends no light at all."
+        "The Moon blocks all clouds."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
@@ -1524,7 +1524,7 @@
       "options": [
         "Space removes the need for detectors.",
         "Stars become closer.",
-        "Mirrors stop reflecting.",
+        "Telescopes work only in daylight.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
@@ -1557,10 +1557,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a hospital training card, a trainee checks: a astronomer compares ground and space telescopes. Why is space clearer?",
       "options": [
-        "The Sun powers every image.",
-        "Lenses become weightless.",
+        "Space removes the need for detectors.",
+        "Stars become closer.",
         "There is less atmosphere to distort or absorb the light.",
-        "The telescope makes its own stars."
+        "The atmosphere creates all telescope images."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
@@ -1592,10 +1592,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says some wavelengths are absorbed by air. Why place a telescope in orbit?",
       "options": [
-        "Stars become closer.",
+        "Space removes the need for detectors.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity bends no light at all.",
-        "The Moon blocks all clouds."
+        "Stars become closer.",
+        "A telescope changes radio waves into planets."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
@@ -1628,9 +1628,9 @@
       "question": "On a classroom board, a group discusses: why do space telescopes avoid much of the blurring caused by the atmosphere?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Lenses become weightless.",
-        "Mirrors stop reflecting.",
-        "Space removes the need for detectors."
+        "Space removes the need for detectors.",
+        "Stars become closer.",
+        "Every telescope must use visible light only."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
@@ -1662,8 +1662,8 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a workshop checklist, an engineer checks: a satellite telescope observes faint galaxies. What advantage does its position give?",
       "options": [
-        "Gravity bends no light at all.",
-        "The telescope makes its own stars.",
+        "Space removes the need for detectors.",
+        "Mirrors stop reflecting.",
         "The Sun powers every image.",
         "There is less atmosphere to distort or absorb the light."
       ],
@@ -1697,10 +1697,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a field trip notebook, a pupil records: which reason explains why some telescopes are launched into space?",
       "options": [
+        "Space removes the need for detectors.",
         "Mirrors stop reflecting.",
-        "The Moon blocks all clouds.",
         "There is less atmosphere to distort or absorb the light.",
-        "Stars become closer."
+        "Lenses become weightless."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
@@ -1732,10 +1732,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a science fair poster, a team explains: a telescope is put above Earth's atmosphere. Why can this improve its images?",
       "options": [
-        "The telescope makes its own stars.",
-        "There is less atmosphere to distort or absorb the light.",
         "Space removes the need for detectors.",
-        "Lenses become weightless."
+        "There is less atmosphere to distort or absorb the light.",
+        "Mirrors stop reflecting.",
+        "The telescope makes its own stars."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
@@ -1768,8 +1768,8 @@
       "question": "On a exam practice page, a candidate works: a parent compares ground and space telescopes. Why is space clearer?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "The Moon blocks all clouds.",
-        "The Sun powers every image.",
+        "Space removes the need for detectors.",
+        "Mirrors stop reflecting.",
         "Gravity bends no light at all."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
@@ -1803,8 +1803,8 @@
       "question": "On a home study card, a learner revises: a log book says some wavelengths are absorbed by air. Why place a telescope in orbit?",
       "options": [
         "Space removes the need for detectors.",
-        "Stars become closer.",
         "Mirrors stop reflecting.",
+        "The Moon blocks all clouds.",
         "There is less atmosphere to distort or absorb the light."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
@@ -1837,10 +1837,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a research log book, an assistant notes: why do space telescopes avoid much of the blurring caused by the atmosphere?",
       "options": [
-        "The Sun powers every image.",
-        "Lenses become weightless.",
+        "Space removes the need for detectors.",
+        "Mirrors stop reflecting.",
         "There is less atmosphere to distort or absorb the light.",
-        "The telescope makes its own stars."
+        "Telescopes work only in daylight."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 2,
@@ -1872,10 +1872,10 @@
       "skill": "Explain where telescopes are placed",
       "question": "On a planetarium screen, a visitor chooses: a satellite telescope observes faint galaxies. What advantage does its position give?",
       "options": [
-        "Stars become closer.",
+        "Space removes the need for detectors.",
         "There is less atmosphere to distort or absorb the light.",
-        "Gravity bends no light at all.",
-        "The Moon blocks all clouds."
+        "Mirrors stop reflecting.",
+        "The atmosphere creates all telescope images."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 1,
@@ -1908,9 +1908,9 @@
       "question": "On a radio studio demo, a presenter explains: which reason explains why some telescopes are launched into space?",
       "options": [
         "There is less atmosphere to distort or absorb the light.",
-        "Lenses become weightless.",
+        "Space removes the need for detectors.",
         "Mirrors stop reflecting.",
-        "Space removes the need for detectors."
+        "A telescope changes radio waves into planets."
       ],
       "correctAnswer": "There is less atmosphere to distort or absorb the light.",
       "correctIndex": 0,
@@ -1942,9 +1942,9 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "Why do astronauts appear weightless in orbit?",
       "options": [
-        "There is no gravity at all where satellites orbit.",
-        "Their masses become zero once they leave the atmosphere.",
-        "The spacecraft pushes them upwards harder than Earth pulls them down.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
@@ -1966,10 +1966,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a clinic worksheet, a learner checks: a student in orbit is still pulled by Earth's gravity. Why do they seem to float?",
       "options": [
-        "Their mass is zero.",
-        "Air pushes them upward.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "The Moon pulls harder than Earth."
+        "Magnetism from Earth keeps every satellite moving."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
@@ -2001,10 +2001,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a museum label, a visitor reads: a results table says the spacecraft and astronaut fall around Earth together. What does this cause?",
       "options": [
-        "The spacecraft cancels gravity.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "Magnets pull them from the floor.",
-        "They stop moving forwards."
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite is pulled outward by gravity."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
@@ -2037,9 +2037,9 @@
       "question": "On a school lab card, a pupil answers: why is apparent weightlessness felt by astronauts moving around Earth?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "Air pushes them upward.",
-        "They are outside the Universe.",
-        "There is no gravity in orbit."
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The Moon pushes the satellite around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
@@ -2071,9 +2071,9 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a factory safety note, an apprentice reviews: in orbit, gravity provides the curved path. Why does the crew not feel normal weight?",
       "options": [
-        "Magnets pull them from the floor.",
-        "The Moon pulls harder than Earth.",
-        "Their mass is zero.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite has no mass while in orbit.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
@@ -2106,10 +2106,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a space centre display, a guide explains: which explanation fits an astronaut in continuous free fall around Earth?",
       "options": [
-        "They are outside the Universe.",
-        "They stop moving forwards.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "The spacecraft cancels gravity."
+        "The orbit is caused by friction with the atmosphere."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
@@ -2141,9 +2141,9 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a revision flashcard, a student practises: astronauts float inside an orbiting spacecraft. Why do they feel weightless?",
       "options": [
-        "The Moon pulls harder than Earth.",
-        "There is no gravity in orbit.",
-        "Air pushes them upward.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite stops moving forward in orbit.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
@@ -2176,10 +2176,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a hospital training card, a trainee checks: a astronomer in orbit is still pulled by Earth's gravity. Why do they seem to float?",
       "options": [
-        "They stop moving forwards.",
-        "Their mass is zero.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "Magnets pull them from the floor."
+        "The engine cancels all gravitational force."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
@@ -2211,10 +2211,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says the spacecraft and astronaut fall around Earth together. What does this cause?",
       "options": [
-        "There is no gravity in orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "The spacecraft cancels gravity.",
-        "They are outside the Universe."
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The satellite is outside all fields."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
@@ -2247,9 +2247,9 @@
       "question": "On a classroom board, a group discusses: why is apparent weightlessness felt by astronauts moving around Earth?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "Their mass is zero.",
-        "Air pushes them upward.",
-        "The Moon pulls harder than Earth."
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "The satellite engine must keep firing all the time to hold the orbit.",
+        "The Sun pulls every satellite into a circle around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
@@ -2281,9 +2281,9 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a workshop checklist, an engineer checks: in orbit, gravity provides the curved path. Why does the crew not feel normal weight?",
       "options": [
-        "The spacecraft cancels gravity.",
-        "Magnets pull them from the floor.",
-        "They stop moving forwards.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "Magnetism from Earth keeps every satellite moving.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
@@ -2316,10 +2316,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a field trip notebook, a pupil records: which explanation fits an astronaut in continuous free fall around Earth?",
       "options": [
-        "Air pushes them upward.",
-        "They are outside the Universe.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
         "They are in free-fall while moving forwards around Earth.",
-        "There is no gravity in orbit."
+        "The satellite is pulled outward by gravity."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
@@ -2351,10 +2351,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a science fair poster, a team explains: astronauts float inside an orbiting spacecraft. Why do they feel weightless?",
       "options": [
-        "Magnets pull them from the floor.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "The Moon pulls harder than Earth.",
-        "Their mass is zero."
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The Moon pushes the satellite around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
@@ -2387,9 +2387,9 @@
       "question": "On a exam practice page, a candidate works: a parent in orbit is still pulled by Earth's gravity. Why do they seem to float?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "They are outside the Universe.",
-        "They stop moving forwards.",
-        "The spacecraft cancels gravity."
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The satellite has no mass while in orbit."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,
@@ -2421,9 +2421,9 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a home study card, a learner revises: a log book says the spacecraft and astronaut fall around Earth together. What does this cause?",
       "options": [
-        "The Moon pulls harder than Earth.",
-        "There is no gravity in orbit.",
-        "Air pushes them upward.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The orbit is caused by friction with the atmosphere.",
         "They are in free-fall while moving forwards around Earth."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
@@ -2456,10 +2456,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a research log book, an assistant notes: why is apparent weightlessness felt by astronauts moving around Earth?",
       "options": [
-        "They stop moving forwards.",
-        "Their mass is zero.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
         "They are in free-fall while moving forwards around Earth.",
-        "Magnets pull them from the floor."
+        "The satellite stops moving forward in orbit."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 2,
@@ -2491,10 +2491,10 @@
       "skill": "Explain apparent weightlessness in orbit",
       "question": "On a planetarium screen, a visitor chooses: in orbit, gravity provides the curved path. Why does the crew not feel normal weight?",
       "options": [
-        "There is no gravity in orbit.",
+        "Air resistance above Earth pushes the satellite around the orbit.",
         "They are in free-fall while moving forwards around Earth.",
-        "The spacecraft cancels gravity.",
-        "They are outside the Universe."
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The engine cancels all gravitational force."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 1,
@@ -2527,9 +2527,9 @@
       "question": "On a radio studio demo, a presenter explains: which explanation fits an astronaut in continuous free fall around Earth?",
       "options": [
         "They are in free-fall while moving forwards around Earth.",
-        "Their mass is zero.",
-        "Air pushes them upward.",
-        "The Moon pulls harder than Earth."
+        "Air resistance above Earth pushes the satellite around the orbit.",
+        "There is no gravity in space, so the satellite floats in a straight line.",
+        "The satellite is outside all fields."
       ],
       "correctAnswer": "They are in free-fall while moving forwards around Earth.",
       "correctIndex": 0,

@@ -634,9 +634,9 @@
       "skill": "Calculate density",
       "question": "A block has a mass of 40 g and a volume of 6 cm^3. What is its density?",
       "options": [
-        "240 g/cm^3",
-        "0.15 g/cm^3",
-        "7.67 g/cm^3",
+        "1.67 g/cm^3",
+        "10 g/cm^3",
+        "4.34 g/cm^3",
         "6.67 g/cm^3"
       ],
       "correctAnswer": "6.67 g/cm^3",
@@ -658,10 +658,10 @@
       "skill": "Calculate density",
       "question": "On a clinic worksheet, a learner checks: a student divides mass by volume and gets 7.14 g/cm^3. What density should be recorded?",
       "options": [
-        "14.28 g/cm^",
-        "3.57 g/cm^",
+        "2.86 g/cm^3",
+        "14.28 g/cm^3",
         "7.14 g/cm^3",
-        "10.14 g/cm^"
+        "8.64 g/cm^3"
       ],
       "correctAnswer": "7.14 g/cm^3",
       "correctIndex": 2,
@@ -693,10 +693,10 @@
       "skill": "Calculate density",
       "question": "On a museum label, a visitor reads: a small cube's density calculation gives 7.5 g/cm^3. Which option matches?",
       "options": [
-        "15 g/cm^",
+        "4.13 g/cm^3",
         "7.5 g/cm^3",
-        "3.75 g/cm^",
-        "11.5 g/cm^"
+        "18.75 g/cm^3",
+        "7.88 g/cm^3"
       ],
       "correctAnswer": "7.5 g/cm^3",
       "correctIndex": 1,
@@ -729,9 +729,9 @@
       "question": "On a school lab card, a pupil answers: the result of rho = m/V for a sample is 7.78 g/cm^3. Choose the density.",
       "options": [
         "7.78 g/cm^3",
-        "15.56 g/cm^",
-        "3.89 g/cm^",
-        "12.78 g/cm^"
+        "5.45 g/cm^3",
+        "13.23 g/cm^3",
+        "6.92 g/cm^3"
       ],
       "correctAnswer": "7.78 g/cm^3",
       "correctIndex": 0,
@@ -763,9 +763,9 @@
       "skill": "Calculate density",
       "question": "On a factory safety note, an apprentice reviews: a training screen shows the final density answer as 8 g/cm^3. Which is right?",
       "options": [
-        "16 g/cm^",
-        "4 g/cm^",
-        "14 g/cm^",
+        "2.4 g/cm^3",
+        "17.6 g/cm^3",
+        "5.84 g/cm^3",
         "8 g/cm^3"
       ],
       "correctAnswer": "8 g/cm^3",
@@ -798,10 +798,10 @@
       "skill": "Calculate density",
       "question": "On a space centre display, a guide explains: which value should be written when the density calculation gives 18 g/cm^3?",
       "options": [
-        "36 g/cm^",
-        "9 g/cm^",
+        "8.1 g/cm^3",
+        "48.6 g/cm^3",
         "18 g/cm^3",
-        "20 g/cm^"
+        "23.22 g/cm^3"
       ],
       "correctAnswer": "18 g/cm^3",
       "correctIndex": 2,
@@ -833,10 +833,10 @@
       "skill": "Calculate density",
       "question": "On a revision flashcard, a student practises: a hospital block has a calculated density of 16.67 g/cm^3. Which value is correct?",
       "options": [
-        "33.34 g/cm^",
+        "10 g/cm^3",
         "16.67 g/cm^3",
-        "8.34 g/cm^",
-        "19.67 g/cm^"
+        "31.67 g/cm^3",
+        "18.84 g/cm^3"
       ],
       "correctAnswer": "16.67 g/cm^3",
       "correctIndex": 1,
@@ -869,9 +869,9 @@
       "question": "On a hospital training card, a trainee checks: a astronomer divides mass by volume and gets 9 g/cm^3. What density should be recorded?",
       "options": [
         "9 g/cm^3",
-        "18 g/cm^",
-        "4.5 g/cm^",
-        "13 g/cm^"
+        "6.75 g/cm^3",
+        "21.6 g/cm^3",
+        "8.73 g/cm^3"
       ],
       "correctAnswer": "9 g/cm^3",
       "correctIndex": 0,
@@ -1114,9 +1114,9 @@
       "question": "On a home study card, a learner revises: a small cube's density calculation gives 5 g/cm^3. Which option matches?",
       "options": [
         "5 g/cm^3",
-        "10 g/cm^",
-        "2.5 g/cm^",
-        "11 g/cm^"
+        "1.75 g/cm^3",
+        "8 g/cm^3",
+        "4.05 g/cm^3"
       ],
       "correctAnswer": "5 g/cm^3",
       "correctIndex": 0,
@@ -1149,9 +1149,9 @@
       "question": "On a research log book, an assistant notes: the result of rho = m/V for a sample is 5.56 g/cm^3. Choose the density.",
       "options": [
         "5.56 g/cm^3",
-        "11.12 g/cm^",
-        "2.78 g/cm^",
-        "7.56 g/cm^"
+        "2.78 g/cm^3",
+        "11.68 g/cm^3",
+        "3.61 g/cm^3"
       ],
       "correctAnswer": "5.56 g/cm^3",
       "correctIndex": 0,
@@ -1184,9 +1184,9 @@
       "question": "On a planetarium screen, a visitor chooses: a sound desk shows the final density answer as 6 g/cm^3. Which is right?",
       "options": [
         "6 g/cm^3",
-        "12 g/cm^",
-        "3 g/cm^",
-        "9 g/cm^"
+        "3.9 g/cm^3",
+        "15.6 g/cm^3",
+        "7.26 g/cm^3"
       ],
       "correctAnswer": "6 g/cm^3",
       "correctIndex": 0,
@@ -1219,9 +1219,9 @@
       "question": "On a radio studio demo, a presenter explains: which value should be written when the density calculation gives 14 g/cm^3?",
       "options": [
         "14 g/cm^3",
-        "28 g/cm^",
-        "7 g/cm^",
-        "18 g/cm^"
+        "3.5 g/cm^3",
+        "25.2 g/cm^3",
+        "14.7 g/cm^3"
       ],
       "correctAnswer": "14 g/cm^3",
       "correctIndex": 0,
@@ -1253,9 +1253,9 @@
       "skill": "Calculate density",
       "question": "On a energy survey report, a surveyor writes: a clinic block has a calculated density of 13.33 g/cm^3. Which value is correct?",
       "options": [
-        "26.66 g/cm^",
-        "6.67 g/cm^",
-        "18.33 g/cm^",
+        "5.33 g/cm^3",
+        "30.66 g/cm^3",
+        "11.86 g/cm^3",
         "13.33 g/cm^3"
       ],
       "correctAnswer": "13.33 g/cm^3",
@@ -1288,9 +1288,9 @@
       "skill": "Define internal energy",
       "question": "Which statement best describes internal energy?",
       "options": [
-        "It is only the energy stored in chemical bonds.",
-        "It is the same as gravitational potential energy only.",
-        "It is zero whenever a substance is not moving through space.",
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "The particles become a different element.",
         "It is the total kinetic energy and potential energy of the particles in a system."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
@@ -1312,10 +1312,10 @@
       "skill": "Define internal energy",
       "question": "On a clinic worksheet, a learner checks: a student heats a block and asks what energy store has increased. Which definition is correct?",
       "options": [
-        "Only chemical energy.",
-        "Only the temperature reading.",
+        "The particles lose mass.",
+        "The particles stop moving.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only energy outside the object."
+        "The substance loses all potential energy."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 2,
@@ -1347,10 +1347,10 @@
       "skill": "Define internal energy",
       "question": "On a museum label, a visitor reads: a results table says internal energy depends on particles. What does it include?",
       "options": [
-        "Only nuclear energy.",
+        "The particles lose mass.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only gravitational potential energy.",
-        "Only energy from magnets."
+        "The particles stop moving.",
+        "The particles become fixed in a perfect lattice."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 1,
@@ -1383,9 +1383,9 @@
       "question": "On a school lab card, a pupil answers: which statement describes the internal energy of a system?",
       "options": [
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only the temperature reading.",
-        "Only sound energy.",
-        "Only energy of the whole object moving."
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "Heating removes kinetic energy from the particles."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 0,
@@ -1417,9 +1417,9 @@
       "skill": "Define internal energy",
       "question": "On a factory safety note, an apprentice reviews: particles have kinetic and potential energy. What is their total called?",
       "options": [
-        "Only gravitational potential energy.",
-        "Only energy outside the object.",
-        "Only chemical energy.",
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "The atoms split into smaller nuclei.",
         "It is the total kinetic energy and potential energy of the particles in a system."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
@@ -1452,10 +1452,10 @@
       "skill": "Define internal energy",
       "question": "On a space centre display, a guide explains: a teacher asks for internal energy, not the motion of the whole object. Which answer fits?",
       "options": [
-        "Only sound energy.",
-        "Only energy from magnets.",
+        "The particles lose mass.",
+        "The particles stop moving.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only nuclear energy."
+        "The temperature falls whenever energy is transferred in."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 2,
@@ -1488,9 +1488,9 @@
       "question": "On a revision flashcard, a student practises: what is internal energy in the particle model?",
       "options": [
         "The hot spoon has more internal energy because its particles have more kinetic energy.",
-        "Only energy outside the object.",
-        "Only energy of the whole object moving.",
-        "Only the temperature reading."
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "The particles stop colliding with each other."
       ],
       "correctAnswer": "The hot spoon has more internal energy because its particles have more kinetic energy.",
       "correctIndex": 0,
@@ -1523,9 +1523,9 @@
       "question": "On a hospital training card, a trainee checks: a astronomer heats a block and asks what energy store has increased. Which definition is correct?",
       "options": [
         "It is the total kinetic and potential energy of the particles.",
-        "Only energy from magnets.",
-        "Only chemical energy.",
-        "Only gravitational potential energy."
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "The material becomes radioactive."
       ],
       "correctAnswer": "It is the total kinetic and potential energy of the particles.",
       "correctIndex": 0,
@@ -1558,9 +1558,9 @@
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard says internal energy depends on particles. What does it include?",
       "options": [
         "Both blocks gain internal energy, but Block B gains it without a temperature rise during melting.",
-        "Only energy of the whole object moving.",
-        "Only nuclear energy.",
-        "Only sound energy."
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "The particles turn into electrons only."
       ],
       "correctAnswer": "Both blocks gain internal energy, but Block B gains it without a temperature rise during melting.",
       "correctIndex": 0,
@@ -1593,9 +1593,9 @@
       "question": "On a classroom board, a group discusses: which statement describes the internal energy of a system?",
       "options": [
         "That is not correct because internal energy includes potential energy as well as the kinetic energy linked to temperature.",
-        "Only chemical energy.",
-        "Only the temperature reading.",
-        "Only energy outside the object."
+        "The particles lose mass.",
+        "The particles stop moving.",
+        "The bonds disappear without any energy transfer."
       ],
       "correctAnswer": "That is not correct because internal energy includes potential energy as well as the kinetic energy linked to temperature.",
       "correctIndex": 0,
@@ -1628,9 +1628,9 @@
       "question": "On a workshop checklist, an engineer checks: particles have kinetic and potential energy. What is their total called?",
       "options": [
         "The internal energy of the tea decreases as energy is transferred to the surroundings.",
-        "Only nuclear energy.",
-        "Only gravitational potential energy.",
-        "Only energy from magnets."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "The substance loses all potential energy."
       ],
       "correctAnswer": "The internal energy of the tea decreases as energy is transferred to the surroundings.",
       "correctIndex": 0,
@@ -1663,9 +1663,9 @@
       "question": "On a field trip notebook, a pupil records: a teacher asks for internal energy, not the motion of the whole object. Which answer fits?",
       "options": [
         "The warmer ball has greater internal energy because its particles have more kinetic energy on average.",
-        "Only the temperature reading.",
-        "Only sound energy.",
-        "Only energy of the whole object moving."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "The particles become fixed in a perfect lattice."
       ],
       "correctAnswer": "The warmer ball has greater internal energy because its particles have more kinetic energy on average.",
       "correctIndex": 0,
@@ -1698,9 +1698,9 @@
       "question": "On a science fair poster, a team explains: what is internal energy in the particle model?",
       "options": [
         "It depends on the energy stored in the particles, not on whether the whole object is moving.",
-        "Only gravitational potential energy.",
-        "Only energy outside the object.",
-        "Only chemical energy."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "Heating removes kinetic energy from the particles."
       ],
       "correctAnswer": "It depends on the energy stored in the particles, not on whether the whole object is moving.",
       "correctIndex": 0,
@@ -1733,9 +1733,9 @@
       "question": "On a exam practice page, a candidate works: a parent heats a block and asks what energy store has increased. Which definition is correct?",
       "options": [
         "The internal energy of the water increases because energy is transferred to its particles.",
-        "Only sound energy.",
-        "Only energy from magnets.",
-        "Only nuclear energy."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "The atoms split into smaller nuclei."
       ],
       "correctAnswer": "The internal energy of the water increases because energy is transferred to its particles.",
       "correctIndex": 0,
@@ -1768,9 +1768,9 @@
       "question": "On a home study card, a learner revises: a log book says internal energy depends on particles. What does it include?",
       "options": [
         "The book can still have internal energy when it is at rest.",
-        "Only energy outside the object.",
-        "Only energy of the whole object moving.",
-        "Only the temperature reading."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "The temperature falls whenever energy is transferred in."
       ],
       "correctAnswer": "The book can still have internal energy when it is at rest.",
       "correctIndex": 0,
@@ -1803,9 +1803,9 @@
       "question": "On a research log book, an assistant notes: which statement describes the internal energy of a system?",
       "options": [
         "It includes kinetic energy because the particles vibrate, and potential energy because forces act between them.",
-        "Only energy from magnets.",
-        "Only chemical energy.",
-        "Only gravitational potential energy."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "The particles stop colliding with each other."
       ],
       "correctAnswer": "It includes kinetic energy because the particles vibrate, and potential energy because forces act between them.",
       "correctIndex": 0,
@@ -1837,10 +1837,10 @@
       "skill": "Define internal energy",
       "question": "On a planetarium screen, a visitor chooses: particles have kinetic and potential energy. What is their total called?",
       "options": [
-        "Only energy of the whole object moving.",
-        "Only nuclear energy.",
+        "The particles lose mass.",
+        "The particles become a different element.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only sound energy."
+        "The material becomes radioactive."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 2,
@@ -1872,10 +1872,10 @@
       "skill": "Define internal energy",
       "question": "On a radio studio demo, a presenter explains: a teacher asks for internal energy, not the motion of the whole object. Which answer fits?",
       "options": [
-        "Only chemical energy.",
+        "The particles lose mass.",
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only the temperature reading.",
-        "Only energy outside the object."
+        "The particles become a different element.",
+        "The particles turn into electrons only."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 1,
@@ -1908,9 +1908,9 @@
       "question": "On a energy survey report, a surveyor writes: what is internal energy in the particle model?",
       "options": [
         "It is the total kinetic energy and potential energy of the particles in a system.",
-        "Only nuclear energy.",
-        "Only gravitational potential energy.",
-        "Only energy from magnets."
+        "The particles lose mass.",
+        "The particles become a different element.",
+        "The bonds disappear without any energy transfer."
       ],
       "correctAnswer": "It is the total kinetic energy and potential energy of the particles in a system.",
       "correctIndex": 0,
@@ -1942,9 +1942,9 @@
       "skill": "Use specific latent heat",
       "question": "A sample of ice has a mass of 0.3 kg. The specific latent heat of fusion is 334000 J/kg. How much energy is needed to melt it?",
       "options": [
-        "334000.3 J",
-        "1113333.33 J",
-        "101200 J",
+        "25050 J",
+        "150300 J",
+        "65130 J",
         "100200 J"
       ],
       "correctAnswer": "100200 J",
@@ -1966,10 +1966,10 @@
       "skill": "Use specific latent heat",
       "question": "On a clinic worksheet, a learner checks: a student uses E = mL and gets 133600 J. What should they write?",
       "options": [
+        "53440 J",
         "267200 J",
-        "66800 J",
         "133600 J",
-        "133603 J"
+        "161656 J"
       ],
       "correctAnswer": "133600 J",
       "correctIndex": 2,
@@ -2001,10 +2001,10 @@
       "skill": "Use specific latent heat",
       "question": "On a museum label, a visitor reads: a sample changes state and the latent heat calculation is 167000 J. Which option matches?",
       "options": [
-        "334000 J",
+        "91850 J",
         "167000 J",
-        "83500 J",
-        "167004 J"
+        "417500 J",
+        "175350 J"
       ],
       "correctAnswer": "167000 J",
       "correctIndex": 1,
@@ -2037,9 +2037,9 @@
       "question": "On a school lab card, a pupil answers: the energy needed for a change of state is worked out as 200400 J. Choose it.",
       "options": [
         "200400 J",
-        "400800 J",
-        "100200 J",
-        "200405 J"
+        "140280 J",
+        "340680 J",
+        "178356 J"
       ],
       "correctAnswer": "200400 J",
       "correctIndex": 0,
@@ -2071,9 +2071,9 @@
       "skill": "Use specific latent heat",
       "question": "On a factory safety note, an apprentice reviews: a training screen shows E = mass x latent heat = 233800 J. What is E?",
       "options": [
-        "467600 J",
-        "116900 J",
-        "233806 J",
+        "70140 J",
+        "514360 J",
+        "170674 J",
         "233800 J"
       ],
       "correctAnswer": "233800 J",
@@ -2106,10 +2106,10 @@
       "skill": "Use specific latent heat",
       "question": "On a space centre display, a guide explains: which value is correct for the latent heat energy calculation result 66800 J?",
       "options": [
-        "133600 J",
-        "33400 J",
+        "30060 J",
+        "180360 J",
         "66800 J",
-        "66802 J"
+        "86172 J"
       ],
       "correctAnswer": "66800 J",
       "correctIndex": 2,
@@ -2142,9 +2142,9 @@
       "question": "On a revision flashcard, a student practises: a hospital melting calculation gives 66800 J. Which energy is correct?",
       "options": [
         "66800 J",
-        "133600 J",
-        "33400 J",
-        "66803 J"
+        "40080 J",
+        "126920 J",
+        "75484 J"
       ],
       "correctAnswer": "66800 J",
       "correctIndex": 0,
@@ -2422,9 +2422,9 @@
       "question": "On a home study card, a learner revises: a log book shows a flat section during melting. What is the transferred energy doing?",
       "options": [
         "0.20 kg",
-        "0.4 kg",
-        "0.1 kg",
-        "6.2 kg"
+        "0.15 kg",
+        "0.48 kg",
+        "0.19 kg"
       ],
       "correctAnswer": "0.20 kg",
       "correctIndex": 0,
@@ -2491,10 +2491,10 @@
       "skill": "Use specific latent heat",
       "question": "On a planetarium screen, a visitor chooses: a sound desk shows E = mass x latent heat = 200400 J. What is E?",
       "options": [
-        "400800 J",
-        "100200 J",
+        "70140 J",
+        "320640 J",
         "200400 J",
-        "200403 J"
+        "162324 J"
       ],
       "correctAnswer": "200400 J",
       "correctIndex": 2,
@@ -2526,10 +2526,10 @@
       "skill": "Use specific latent heat",
       "question": "On a radio studio demo, a presenter explains: which value is correct for the latent heat energy calculation result 233800 J?",
       "options": [
-        "467600 J",
-        "233800 J",
         "116900 J",
-        "233804 J"
+        "233800 J",
+        "490980 J",
+        "151970 J"
       ],
       "correctAnswer": "233800 J",
       "correctIndex": 1,
@@ -2562,9 +2562,9 @@
       "question": "On a energy survey report, a surveyor writes: a clinic melting calculation gives 66800 J. Which energy is correct?",
       "options": [
         "66800 J",
-        "133600 J",
-        "33400 J",
-        "66805 J"
+        "43420 J",
+        "173680 J",
+        "80828 J"
       ],
       "correctAnswer": "66800 J",
       "correctIndex": 0,

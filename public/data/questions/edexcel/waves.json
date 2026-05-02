@@ -15,9 +15,9 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a oscilloscope trace to check the key physics idea. A wave has a period of 0.3 s. What is its frequency?",
       "options": [
-        "0.3 Hz",
-        "3 Hz",
-        "4.33 Hz",
+        "0.83 Hz",
+        "5 Hz",
+        "2.16 Hz",
         "3.33 Hz"
       ],
       "correctAnswer": "3.33 Hz",
@@ -39,10 +39,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a wave period measurement to check the key physics idea. A wave has a period of 0.4 s. What is its frequency?",
       "options": [
-        "4 Hz",
-        "3.5 Hz",
+        "1 Hz",
+        "5 Hz",
         "2.5 Hz",
-        "0.4 Hz"
+        "3.02 Hz"
       ],
       "correctAnswer": "2.5 Hz",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a ripple tank observation to check the key physics idea. A wave has a period of 0.5 s. What is its frequency?",
       "options": [
-        "3 Hz",
+        "1.1 Hz",
         "2 Hz",
-        "0.5 Hz",
-        "5 Hz"
+        "5 Hz",
+        "2.1 Hz"
       ],
       "correctAnswer": "2 Hz",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A learner uses a signal timing calculation to check the key physics idea. A wave has a period of 0.6 s. What is its frequency?",
       "options": [
         "1.67 Hz",
-        "0.6 Hz",
-        "6 Hz",
-        "2.67 Hz"
+        "1.17 Hz",
+        "2.84 Hz",
+        "1.49 Hz"
       ],
       "correctAnswer": "1.67 Hz",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a oscilloscope trace to prepare for an exam-style question. A wave has a period of 0.7 s. What is its frequency?",
       "options": [
-        "0.7 Hz",
-        "7 Hz",
-        "2.43 Hz",
+        "0.43 Hz",
+        "3.15 Hz",
+        "1.04 Hz",
         "1.43 Hz"
       ],
       "correctAnswer": "1.43 Hz",
@@ -135,10 +135,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a wave period measurement to prepare for an exam-style question. A wave has a period of 0.8 s. What is its frequency?",
       "options": [
-        "8 Hz",
-        "2.25 Hz",
+        "0.56 Hz",
+        "3.38 Hz",
         "1.25 Hz",
-        "0.8 Hz"
+        "1.61 Hz"
       ],
       "correctAnswer": "1.25 Hz",
       "correctIndex": 2,
@@ -159,10 +159,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a ripple tank observation to prepare for an exam-style question. A wave has a period of 0.2 s. What is its frequency?",
       "options": [
-        "6 Hz",
+        "3 Hz",
         "5 Hz",
-        "0.2 Hz",
-        "2 Hz"
+        "9.5 Hz",
+        "5.65 Hz"
       ],
       "correctAnswer": "5 Hz",
       "correctIndex": 1,
@@ -183,10 +183,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a signal timing calculation to prepare for an exam-style question. A wave has a period of 0.2 s. What is its frequency?",
       "options": [
-        "2 Hz",
-        "6 Hz",
+        "3.75 Hz",
+        "12 Hz",
         "5 Hz",
-        "0.2 Hz"
+        "4.85 Hz"
       ],
       "correctAnswer": "5 Hz",
       "correctIndex": 2,
@@ -207,10 +207,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a oscilloscope trace to test a common misconception. A wave has a period of 0.3 s. What is its frequency?",
       "options": [
-        "4.33 Hz",
+        "1.17 Hz",
         "3.33 Hz",
-        "0.3 Hz",
-        "3 Hz"
+        "5.33 Hz",
+        "2.7 Hz"
       ],
       "correctAnswer": "3.33 Hz",
       "correctIndex": 1,
@@ -232,9 +232,9 @@
       "question": "A learner uses a wave period measurement to test a common misconception. A wave has a period of 0.4 s. What is its frequency?",
       "options": [
         "2.5 Hz",
-        "0.4 Hz",
-        "4 Hz",
-        "3.5 Hz"
+        "1.25 Hz",
+        "5.25 Hz",
+        "1.63 Hz"
       ],
       "correctAnswer": "2.5 Hz",
       "correctIndex": 0,
@@ -255,9 +255,9 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a ripple tank observation to test a common misconception. A wave has a period of 0.5 s. What is its frequency?",
       "options": [
-        "0.5 Hz",
-        "5 Hz",
-        "3 Hz",
+        "1.3 Hz",
+        "5.2 Hz",
+        "2.42 Hz",
         "2 Hz"
       ],
       "correctAnswer": "2 Hz",
@@ -279,10 +279,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a signal timing calculation to test a common misconception. A wave has a period of 0.6 s. What is its frequency?",
       "options": [
-        "6 Hz",
-        "2.67 Hz",
+        "0.42 Hz",
+        "3.01 Hz",
         "1.67 Hz",
-        "0.6 Hz"
+        "1.75 Hz"
       ],
       "correctAnswer": "1.67 Hz",
       "correctIndex": 2,
@@ -303,10 +303,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a oscilloscope trace to link the context to the GCSE model. A wave has a period of 0.7 s. What is its frequency?",
       "options": [
-        "2.43 Hz",
+        "0.57 Hz",
         "1.43 Hz",
-        "0.7 Hz",
-        "7 Hz"
+        "3.29 Hz",
+        "1.27 Hz"
       ],
       "correctAnswer": "1.43 Hz",
       "correctIndex": 1,
@@ -328,9 +328,9 @@
       "question": "A learner uses a wave period measurement to link the context to the GCSE model. A wave has a period of 0.3 s. What is its frequency?",
       "options": [
         "3.33 Hz",
-        "0.3 Hz",
-        "3 Hz",
-        "4.33 Hz"
+        "1.83 Hz",
+        "5 Hz",
+        "2.43 Hz"
       ],
       "correctAnswer": "3.33 Hz",
       "correctIndex": 0,
@@ -351,9 +351,9 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a ripple tank observation to link the context to the GCSE model. A wave has a period of 0.4 s. What is its frequency?",
       "options": [
-        "0.4 Hz",
-        "4 Hz",
-        "3.5 Hz",
+        "1.75 Hz",
+        "5 Hz",
+        "3.23 Hz",
         "2.5 Hz"
       ],
       "correctAnswer": "2.5 Hz",
@@ -375,10 +375,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a signal timing calculation to link the context to the GCSE model. A wave has a period of 0.5 s. What is its frequency?",
       "options": [
+        "0.6 Hz",
         "5 Hz",
-        "3 Hz",
         "2 Hz",
-        "0.5 Hz"
+        "2.26 Hz"
       ],
       "correctAnswer": "2 Hz",
       "correctIndex": 2,
@@ -399,10 +399,10 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a oscilloscope trace to review the evidence in the setup. A wave has a period of 0.6 s. What is its frequency?",
       "options": [
-        "2.67 Hz",
+        "0.75 Hz",
         "1.67 Hz",
-        "0.6 Hz",
-        "6 Hz"
+        "2.84 Hz",
+        "1.62 Hz"
       ],
       "correctAnswer": "1.67 Hz",
       "correctIndex": 1,
@@ -424,9 +424,9 @@
       "question": "A learner uses a wave period measurement to review the evidence in the setup. A wave has a period of 0.7 s. What is its frequency?",
       "options": [
         "1.43 Hz",
-        "0.7 Hz",
-        "7 Hz",
-        "2.43 Hz"
+        "0.86 Hz",
+        "3.15 Hz",
+        "1.16 Hz"
       ],
       "correctAnswer": "1.43 Hz",
       "correctIndex": 0,
@@ -447,9 +447,9 @@
       "skill": "Calculate frequency from period",
       "question": "A learner uses a ripple tank observation to review the evidence in the setup. A wave has a period of 0.8 s. What is its frequency?",
       "options": [
-        "0.8 Hz",
-        "8 Hz",
-        "2.25 Hz",
+        "0.94 Hz",
+        "3.38 Hz",
+        "0.81 Hz",
         "1.25 Hz"
       ],
       "correctAnswer": "1.25 Hz",
@@ -471,9 +471,9 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a convex lens ray diagram to check the key physics idea. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
+        "The focal point is on the same side as the object.",
         "The image is real and can be focused onto a screen."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
@@ -495,10 +495,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a camera lens explanation to check the key physics idea. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright."
+        "A convex lens always spreads parallel rays apart."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 2,
@@ -519,10 +519,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a distant-object image practical to check the key physics idea. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object."
+        "The rays never meet after passing through the lens.",
+        "The image forms only if the object touches the lens."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 1,
@@ -544,9 +544,9 @@
       "question": "A learner uses a focal point demonstration to check the key physics idea. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction."
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
+        "The lens changes light into sound."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 0,
@@ -567,9 +567,9 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a convex lens ray diagram to prepare for an exam-style question. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
+        "The image is formed by reflection from the lens surface only.",
         "The image is real and can be focused onto a screen."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
@@ -591,10 +591,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a camera lens explanation to prepare for an exam-style question. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright."
+        "Parallel rays pass through without changing direction."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 2,
@@ -615,9 +615,9 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a distant-object image practical to prepare for an exam-style question. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
+        "The lens has no focal length.",
         "The image is real and can be focused onto a screen."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
@@ -639,10 +639,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a focal point demonstration to prepare for an exam-style question. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright."
+        "The image is always larger than the object."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 2,
@@ -663,10 +663,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a convex lens ray diagram to test a common misconception. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object."
+        "The rays never meet after passing through the lens.",
+        "The rays meet at the centre of the lens material."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 1,
@@ -688,9 +688,9 @@
       "question": "A learner uses a camera lens explanation to test a common misconception. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction."
+        "The image is always virtual and behind the lens.",
+        "The rays never meet after passing through the lens.",
+        "The lens blocks all rays except the central ray."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 0,
@@ -711,9 +711,9 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a distant-object image practical to test a common misconception. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The focal point is on the same side as the object.",
+        "A convex lens always spreads parallel rays apart.",
         "The image is real and can be focused onto a screen."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
@@ -735,10 +735,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a focal point demonstration to test a common misconception. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The focal point is on the same side as the object.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright."
+        "The image forms only if the object touches the lens."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 2,
@@ -759,10 +759,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a convex lens ray diagram to link the context to the GCSE model. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object."
+        "The focal point is on the same side as the object.",
+        "The lens changes light into sound."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 1,
@@ -783,10 +783,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a camera lens explanation to link the context to the GCSE model. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object."
+        "The focal point is on the same side as the object.",
+        "The image is formed by reflection from the lens surface only."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 1,
@@ -808,9 +808,9 @@
       "question": "A learner uses a distant-object image practical to link the context to the GCSE model. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction."
+        "The image is always virtual and behind the lens.",
+        "The focal point is on the same side as the object.",
+        "Parallel rays pass through without changing direction."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 0,
@@ -831,9 +831,9 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a focal point demonstration to link the context to the GCSE model. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The focal point is on the same side as the object.",
+        "The lens has no focal length.",
         "The image is real and can be focused onto a screen."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
@@ -855,10 +855,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a convex lens ray diagram to review the evidence in the setup. A convex lens forms an image of a distant object. Which description is correct?",
       "options": [
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
+        "The focal point is on the same side as the object.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright."
+        "The image is always larger than the object."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 2,
@@ -879,10 +879,10 @@
       "skill": "Describe the image formed by a convex lens",
       "question": "A learner uses a camera lens explanation to review the evidence in the setup. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
-        "The image cannot be formed by refraction.",
+        "The image is always virtual and behind the lens.",
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object."
+        "The focal point is on the same side as the object.",
+        "The rays meet at the centre of the lens material."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 1,
@@ -904,9 +904,9 @@
       "question": "A learner uses a distant-object image practical to review the evidence in the setup. A convex lens forms an image of a distant object. Which description is correct? Choose the best answer.",
       "options": [
         "The image is real and can be focused onto a screen.",
-        "The image is virtual and upright.",
-        "The image is always larger than the object.",
-        "The image cannot be formed by refraction."
+        "The image is always virtual and behind the lens.",
+        "The focal point is on the same side as the object.",
+        "The lens blocks all rays except the central ray."
       ],
       "correctAnswer": "The image is real and can be focused onto a screen.",
       "correctIndex": 0,
@@ -927,9 +927,9 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a plane mirror ray diagram to check the key physics idea. A ray of light hits a mirror at an angle of incidence of 25°. What is the angle of reflection?",
       "options": [
-        "12°",
-        "50°",
-        "65°",
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
+        "The angle is measured from the mirror surface only.",
         "25°"
       ],
       "correctAnswer": "25°",
@@ -951,10 +951,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a light ray practical to check the key physics idea. A ray of light hits a mirror at an angle of incidence of 30°. What is the angle of reflection?",
       "options": [
-        "60°",
-        "60° (1)",
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
         "30°",
-        "15°"
+        "The reflected ray travels back along the normal."
       ],
       "correctAnswer": "30°",
       "correctIndex": 2,
@@ -975,10 +975,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a reflection law worksheet to check the key physics idea. A ray of light hits a mirror at an angle of incidence of 35°. What is the angle of reflection?",
       "options": [
-        "55°",
+        "The angle of reflection is always zero.",
         "35°",
-        "17°",
-        "70°"
+        "The angle of reflection is twice the angle of incidence.",
+        "The angle of incidence changes the mirror into a lens."
       ],
       "correctAnswer": "35°",
       "correctIndex": 1,
@@ -1000,9 +1000,9 @@
       "question": "A learner uses a mirror angle measurement to check the key physics idea. A ray of light hits a mirror at an angle of incidence of 40°. What is the angle of reflection?",
       "options": [
         "40°",
-        "20°",
-        "80°",
-        "50°"
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
+        "The normal is parallel to the mirror surface."
       ],
       "correctAnswer": "40°",
       "correctIndex": 0,
@@ -1023,9 +1023,9 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a plane mirror ray diagram to prepare for an exam-style question. A ray of light hits a mirror at an angle of incidence of 45°. What is the angle of reflection?",
       "options": [
-        "22°",
-        "90°",
-        "45° (1)",
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
+        "The angle of reflection is half the incidence angle.",
         "45°"
       ],
       "correctAnswer": "45°",
@@ -1047,10 +1047,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a light ray practical to prepare for an exam-style question. A ray of light hits a mirror at an angle of incidence of 50°. What is the angle of reflection?",
       "options": [
-        "100°",
-        "40°",
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
         "50°",
-        "25°"
+        "The ray is absorbed instead of reflected."
       ],
       "correctAnswer": "50°",
       "correctIndex": 2,
@@ -1071,10 +1071,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a reflection law worksheet to prepare for an exam-style question. A ray of light hits a mirror at an angle of incidence of 50°. What is the angle of reflection?",
       "options": [
-        "100°",
-        "40°",
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
         "50°",
-        "25°"
+        "The reflected ray must bend towards the normal."
       ],
       "correctAnswer": "50°",
       "correctIndex": 2,
@@ -1095,10 +1095,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a mirror angle measurement to prepare for an exam-style question. A ray of light hits a mirror at an angle of incidence of 55°. What is the angle of reflection?",
       "options": [
-        "35°",
+        "The angle of reflection is always zero.",
         "55°",
-        "27°",
-        "110°"
+        "The angle of reflection is twice the angle of incidence.",
+        "The angle depends only on the colour of light."
       ],
       "correctAnswer": "55°",
       "correctIndex": 1,
@@ -1120,9 +1120,9 @@
       "question": "A learner uses a plane mirror ray diagram to test a common misconception. A ray of light hits a mirror at an angle of incidence of 20°. What is the angle of reflection?",
       "options": [
         "20°",
-        "10°",
-        "40°",
-        "70°"
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
+        "The mirror changes the wave speed in air."
       ],
       "correctAnswer": "20°",
       "correctIndex": 0,
@@ -1143,9 +1143,9 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a light ray practical to test a common misconception. A ray of light hits a mirror at an angle of incidence of 25°. What is the angle of reflection?",
       "options": [
-        "12°",
-        "50°",
-        "65°",
+        "The angle of reflection is always zero.",
+        "The angle of reflection is twice the angle of incidence.",
+        "The reflected ray has no direction.",
         "25°"
       ],
       "correctAnswer": "25°",
@@ -1167,10 +1167,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a reflection law worksheet to test a common misconception. A ray of light hits a mirror at an angle of incidence of 30°. What is the angle of reflection?",
       "options": [
-        "60°",
-        "60° (1)",
+        "The angle of reflection is always zero.",
+        "The angle is measured from the mirror surface only.",
         "30°",
-        "15°"
+        "The reflected ray travels back along the normal."
       ],
       "correctAnswer": "30°",
       "correctIndex": 2,
@@ -1191,10 +1191,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a mirror angle measurement to test a common misconception. A ray of light hits a mirror at an angle of incidence of 35°. What is the angle of reflection?",
       "options": [
-        "55°",
+        "The angle of reflection is always zero.",
         "35°",
-        "17°",
-        "70°"
+        "The angle is measured from the mirror surface only.",
+        "The angle of incidence changes the mirror into a lens."
       ],
       "correctAnswer": "35°",
       "correctIndex": 1,
@@ -1215,10 +1215,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a plane mirror ray diagram to link the context to the GCSE model. A ray of light hits a mirror at an angle of incidence of 55°. What is the angle of reflection?",
       "options": [
-        "35°",
+        "The angle of reflection is always zero.",
         "55°",
-        "27°",
-        "110°"
+        "The angle is measured from the mirror surface only.",
+        "The normal is parallel to the mirror surface."
       ],
       "correctAnswer": "55°",
       "correctIndex": 1,
@@ -1240,9 +1240,9 @@
       "question": "A learner uses a light ray practical to link the context to the GCSE model. A ray of light hits a mirror at an angle of incidence of 20°. What is the angle of reflection?",
       "options": [
         "20°",
-        "10°",
-        "40°",
-        "70°"
+        "The angle of reflection is always zero.",
+        "The angle is measured from the mirror surface only.",
+        "The angle of reflection is half the incidence angle."
       ],
       "correctAnswer": "20°",
       "correctIndex": 0,
@@ -1263,9 +1263,9 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a reflection law worksheet to link the context to the GCSE model. A ray of light hits a mirror at an angle of incidence of 25°. What is the angle of reflection?",
       "options": [
-        "12°",
-        "50°",
-        "65°",
+        "The angle of reflection is always zero.",
+        "The angle is measured from the mirror surface only.",
+        "The ray is absorbed instead of reflected.",
         "25°"
       ],
       "correctAnswer": "25°",
@@ -1287,10 +1287,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a mirror angle measurement to link the context to the GCSE model. A ray of light hits a mirror at an angle of incidence of 30°. What is the angle of reflection?",
       "options": [
-        "60°",
-        "60° (1)",
+        "The angle of reflection is always zero.",
+        "The angle is measured from the mirror surface only.",
         "30°",
-        "15°"
+        "The reflected ray must bend towards the normal."
       ],
       "correctAnswer": "30°",
       "correctIndex": 2,
@@ -1311,10 +1311,10 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a plane mirror ray diagram to review the evidence in the setup. A ray of light hits a mirror at an angle of incidence of 35°. What is the angle of reflection?",
       "options": [
-        "55°",
+        "The angle of reflection is always zero.",
         "35°",
-        "17°",
-        "70°"
+        "The angle is measured from the mirror surface only.",
+        "The angle depends only on the colour of light."
       ],
       "correctAnswer": "35°",
       "correctIndex": 1,
@@ -1336,9 +1336,9 @@
       "question": "A learner uses a light ray practical to review the evidence in the setup. A ray of light hits a mirror at an angle of incidence of 40°. What is the angle of reflection?",
       "options": [
         "40°",
-        "20°",
-        "80°",
-        "50°"
+        "The angle of reflection is always zero.",
+        "The angle is measured from the mirror surface only.",
+        "The mirror changes the wave speed in air."
       ],
       "correctAnswer": "40°",
       "correctIndex": 0,
@@ -1359,9 +1359,9 @@
       "skill": "Apply the law of reflection",
       "question": "A learner uses a reflection law worksheet to review the evidence in the setup. A ray of light hits a mirror at an angle of incidence of 45°. What is the angle of reflection?",
       "options": [
-        "22°",
-        "90°",
-        "45° (1)",
+        "The angle of reflection is always zero.",
+        "The angle is measured from the mirror surface only.",
+        "The reflected ray has no direction.",
         "45°"
       ],
       "correctAnswer": "45°",
@@ -1383,9 +1383,9 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a speaker amplitude demonstration to check the key physics idea. Which change makes a sound louder?",
       "options": [
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Increase the wavelength only.",
         "Increasing the amplitude of the wave"
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
@@ -1407,10 +1407,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a sound sensor trace to check the key physics idea. Which change makes a sound louder?",
       "options": [
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only"
+        "Change the wave from longitudinal to transverse."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 2,
@@ -1431,10 +1431,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a volume comparison example to check the key physics idea. Which change makes a sound louder?",
       "options": [
-        "Making the speed zero",
+        "Decrease the amplitude.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency"
+        "Decrease the frequency.",
+        "Remove the particles from the medium."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 1,
@@ -1456,9 +1456,9 @@
       "question": "A learner uses a oscilloscope sound display to check the key physics idea. Which change makes a sound louder?",
       "options": [
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero"
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Lower the energy carried by the wave."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 0,
@@ -1479,9 +1479,9 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a speaker amplitude demonstration to prepare for an exam-style question. Which change makes a sound louder? Choose the best answer.",
       "options": [
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Make the period longer only.",
         "Increasing the amplitude of the wave"
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
@@ -1503,10 +1503,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a sound sensor trace to prepare for an exam-style question. Which change makes a sound louder? Choose the best answer.",
       "options": [
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only"
+        "Stop the source vibrating."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 2,
@@ -1527,9 +1527,9 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a volume comparison example to prepare for an exam-style question. Which change makes a sound louder?",
       "options": [
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Make the sound travel through a vacuum.",
         "Increasing the amplitude of the wave"
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
@@ -1551,10 +1551,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a oscilloscope sound display to prepare for an exam-style question. Which change makes a sound louder?",
       "options": [
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only"
+        "Reduce the vibration size."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 2,
@@ -1575,10 +1575,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a speaker amplitude demonstration to test a common misconception. Which change makes a sound louder?",
       "options": [
-        "Making the speed zero",
+        "Decrease the amplitude.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency"
+        "Decrease the frequency.",
+        "Make the oscilloscope trace shorter vertically."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 1,
@@ -1600,9 +1600,9 @@
       "question": "A learner uses a sound sensor trace to test a common misconception. Which change makes a sound louder?",
       "options": [
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero"
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Use a smaller pressure variation."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 0,
@@ -1623,9 +1623,9 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a volume comparison example to test a common misconception. Which change makes a sound louder? Choose the best answer.",
       "options": [
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Change the wave from longitudinal to transverse.",
         "Increasing the amplitude of the wave"
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
@@ -1647,10 +1647,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a oscilloscope sound display to test a common misconception. Which change makes a sound louder? Choose the best answer.",
       "options": [
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only"
+        "Remove the particles from the medium."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 2,
@@ -1671,10 +1671,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a speaker amplitude demonstration to link the context to the GCSE model. Which change makes a sound louder? Choose the best answer.",
       "options": [
-        "Making the speed zero",
+        "Decrease the amplitude.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency"
+        "Increase the wavelength only.",
+        "Lower the energy carried by the wave."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 1,
@@ -1695,10 +1695,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a sound sensor trace to link the context to the GCSE model. Which change makes a sound louder?",
       "options": [
-        "Making the speed zero",
+        "Decrease the amplitude.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency"
+        "Increase the wavelength only.",
+        "Make the period longer only."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 1,
@@ -1720,9 +1720,9 @@
       "question": "A learner uses a volume comparison example to link the context to the GCSE model. Which change makes a sound louder?",
       "options": [
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero"
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Stop the source vibrating."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 0,
@@ -1743,9 +1743,9 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a oscilloscope sound display to link the context to the GCSE model. Which change makes a sound louder?",
       "options": [
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Make the sound travel through a vacuum.",
         "Increasing the amplitude of the wave"
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
@@ -1767,10 +1767,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a speaker amplitude demonstration to review the evidence in the setup. Which change makes a sound louder?",
       "options": [
-        "Reducing the frequency",
-        "Making the speed zero",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only"
+        "Reduce the vibration size."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 2,
@@ -1791,10 +1791,10 @@
       "skill": "Link amplitude to loudness",
       "question": "A learner uses a sound sensor trace to review the evidence in the setup. Which change makes a sound louder? Choose the best answer.",
       "options": [
-        "Making the speed zero",
+        "Decrease the amplitude.",
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency"
+        "Increase the wavelength only.",
+        "Make the oscilloscope trace shorter vertically."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 1,
@@ -1816,9 +1816,9 @@
       "question": "A learner uses a volume comparison example to review the evidence in the setup. Which change makes a sound louder? Choose the best answer.",
       "options": [
         "Increasing the amplitude of the wave",
-        "Increasing the wavelength only",
-        "Reducing the frequency",
-        "Making the speed zero"
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Use a smaller pressure variation."
       ],
       "correctAnswer": "Increasing the amplitude of the wave",
       "correctIndex": 0,
@@ -1863,10 +1863,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a sound and light comparison to check the key physics idea. Which statement about transverse and longitudinal waves is correct?",
       "options": [
+        "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them.",
         "Light waves are transverse, but sound waves in air are longitudinal.",
-        "All waves are transverse in air."
+        "All waves must travel through a solid."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 2,
@@ -1887,10 +1887,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a wave-type sorting task to check the key physics idea. Which statement about transverse and longitudinal waves is correct?",
       "options": [
-        "Light waves need particles to carry them.",
-        "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal."
+        "Light waves are transverse, but sound waves in air are longitudinal.",
+        "Sound waves are transverse and light waves are longitudinal.",
+        "Longitudinal waves have vibrations at right angles to travel."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 1,
@@ -1914,7 +1914,7 @@
         "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them."
+        "Transverse waves vibrate parallel to their direction of travel."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 0,
@@ -1937,7 +1937,7 @@
       "options": [
         "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them.",
+        "Sound in air can travel through a vacuum.",
         "Light waves are transverse, but sound waves in air are longitudinal."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
@@ -1959,10 +1959,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a sound and light comparison to prepare for an exam-style question. Which statement about transverse and longitudinal waves is correct? Choose the best answer.",
       "options": [
+        "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them.",
         "Light waves are transverse, but sound waves in air are longitudinal.",
-        "All waves are transverse in air."
+        "Light is a longitudinal pressure wave."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 2,
@@ -1985,7 +1985,7 @@
       "options": [
         "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them.",
+        "Water waves prove all waves are identical.",
         "Light waves are transverse, but sound waves in air are longitudinal."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
@@ -2007,10 +2007,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a transverse-longitudinal model to prepare for an exam-style question. Which statement about transverse and longitudinal waves is correct?",
       "options": [
+        "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them.",
         "Light waves are transverse, but sound waves in air are longitudinal.",
-        "All waves are transverse in air."
+        "The direction of vibration never matters."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 2,
@@ -2031,10 +2031,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a slinky wave demonstration to test a common misconception. Which statement about transverse and longitudinal waves is correct?",
       "options": [
-        "Light waves need particles to carry them.",
-        "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal."
+        "Light waves are transverse, but sound waves in air are longitudinal.",
+        "Sound waves are transverse and light waves are longitudinal.",
+        "Mechanical waves need no medium."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 1,
@@ -2058,7 +2058,7 @@
         "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
         "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them."
+        "Electromagnetic waves need air particles."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 0,
@@ -2080,8 +2080,8 @@
       "question": "A learner uses a wave-type sorting task to test a common misconception. Which statement about transverse and longitudinal waves is correct? Choose the best answer.",
       "options": [
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal.",
         "Light waves need particles to carry them.",
+        "All waves must travel through a solid.",
         "Light waves are transverse, but sound waves in air are longitudinal."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
@@ -2103,10 +2103,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a transverse-longitudinal model to test a common misconception. Which statement about transverse and longitudinal waves is correct? Choose the best answer.",
       "options": [
-        "Sound waves are transverse and light waves are longitudinal.",
+        "All waves are transverse in air.",
         "Light waves need particles to carry them.",
         "Light waves are transverse, but sound waves in air are longitudinal.",
-        "All waves are transverse in air."
+        "Longitudinal waves have vibrations at right angles to travel."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 2,
@@ -2127,10 +2127,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a slinky wave demonstration to link the context to the GCSE model. Which statement about transverse and longitudinal waves is correct?",
       "options": [
-        "Light waves need particles to carry them.",
-        "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal."
+        "Light waves are transverse, but sound waves in air are longitudinal.",
+        "Light waves need particles to carry them.",
+        "Transverse waves vibrate parallel to their direction of travel."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 1,
@@ -2153,8 +2153,8 @@
       "options": [
         "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them."
+        "Light waves need particles to carry them.",
+        "Sound in air can travel through a vacuum."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 0,
@@ -2176,8 +2176,8 @@
       "question": "A learner uses a wave-type sorting task to link the context to the GCSE model. Which statement about transverse and longitudinal waves is correct?",
       "options": [
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal.",
         "Light waves need particles to carry them.",
+        "Light is a longitudinal pressure wave.",
         "Light waves are transverse, but sound waves in air are longitudinal."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
@@ -2199,10 +2199,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a transverse-longitudinal model to link the context to the GCSE model. Which statement about transverse and longitudinal waves is correct?",
       "options": [
-        "Sound waves are transverse and light waves are longitudinal.",
+        "All waves are transverse in air.",
         "Light waves need particles to carry them.",
         "Light waves are transverse, but sound waves in air are longitudinal.",
-        "All waves are transverse in air."
+        "Water waves prove all waves are identical."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 2,
@@ -2223,10 +2223,10 @@
       "skill": "Distinguish transverse and longitudinal waves",
       "question": "A learner uses a slinky wave demonstration to review the evidence in the setup. Which statement about transverse and longitudinal waves is correct? Choose the best answer.",
       "options": [
-        "Light waves need particles to carry them.",
-        "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal."
+        "Light waves are transverse, but sound waves in air are longitudinal.",
+        "Light waves need particles to carry them.",
+        "The direction of vibration never matters."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 1,
@@ -2249,8 +2249,8 @@
       "options": [
         "Light waves are transverse, but sound waves in air are longitudinal.",
         "All waves are transverse in air.",
-        "Sound waves are transverse and light waves are longitudinal.",
-        "Light waves need particles to carry them."
+        "Light waves need particles to carry them.",
+        "Mechanical waves need no medium."
       ],
       "correctAnswer": "Light waves are transverse, but sound waves in air are longitudinal.",
       "correctIndex": 0,

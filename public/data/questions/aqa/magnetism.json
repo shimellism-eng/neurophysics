@@ -15,9 +15,9 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "What is the purpose of the slip rings in an AC generator?",
       "options": [
-        "They store charge so the output stays direct current.",
-        "They make the magnetic field disappear every half turn.",
-        "They increase the resistance of the coil to zero.",
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
+        "The magnet is heated until current appears.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
@@ -39,10 +39,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a clinic worksheet, a learner checks: a student labels the slip rings on a generator. What is their job?",
       "options": [
-        "They turn AC into DC.",
-        "They cool the wire.",
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They block current completely."
+        "Chemical energy directly creates alternating current."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
@@ -74,10 +74,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a museum label, a visitor reads: a results table shows a rotating coil joined to slip rings. Why are they needed?",
       "options": [
-        "They remove the magnet.",
+        "The generator stores charge without moving parts.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge like a battery.",
-        "They reverse gravity."
+        "The coil must stay still in a magnetic field.",
+        "The field lines are destroyed by the coil."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
@@ -110,9 +110,9 @@
       "question": "On a school lab card, a pupil answers: what is the role of slip rings in a simple AC generator?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They cool the wire.",
-        "They make the coil heavier.",
-        "They stop the coil moving."
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
+        "A generator works only with plastic coils."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
@@ -144,9 +144,9 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a factory safety note, an apprentice reviews: during generator revision, which part keeps contact with a turning coil?",
       "options": [
-        "They store charge like a battery.",
-        "They block current completely.",
-        "They turn AC into DC.",
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
+        "The current is caused by friction with air.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
@@ -179,10 +179,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a space centre display, a guide explains: a generator output alternates as the coil turns. How do slip rings help this happen?",
       "options": [
-        "They make the coil heavier.",
-        "They reverse gravity.",
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They remove the magnet."
+        "The coil becomes radioactive."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
@@ -214,9 +214,9 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a revision flashcard, a student practises: the coil spins while connected to an external circuit. What do slip rings allow?",
       "options": [
-        "They block current completely.",
-        "They stop the coil moving.",
-        "They cool the wire.",
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
+        "There is no energy transfer in a generator.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
@@ -249,10 +249,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a hospital training card, a trainee checks: a astronomer labels the slip rings on a generator. What is their job?",
       "options": [
-        "They reverse gravity.",
-        "They turn AC into DC.",
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge like a battery."
+        "The output is unrelated to motion."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
@@ -284,10 +284,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows a rotating coil joined to slip rings. Why are they needed?",
       "options": [
-        "They stop the coil moving.",
+        "The generator stores charge without moving parts.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They remove the magnet.",
-        "They make the coil heavier."
+        "The coil must stay still in a magnetic field.",
+        "The generator removes resistance from the circuit."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
@@ -320,9 +320,9 @@
       "question": "On a classroom board, a group discusses: what is the role of slip rings in a simple AC generator?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They turn AC into DC.",
-        "They cool the wire.",
-        "They block current completely."
+        "The generator stores charge without moving parts.",
+        "The coil must stay still in a magnetic field.",
+        "The magnet must touch both ends of the wire."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
@@ -354,9 +354,9 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a workshop checklist, an engineer checks: during generator revision, which part keeps contact with a turning coil?",
       "options": [
-        "They remove the magnet.",
-        "They store charge like a battery.",
-        "They reverse gravity.",
+        "The generator stores charge without moving parts.",
+        "The magnet is heated until current appears.",
+        "Chemical energy directly creates alternating current.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
@@ -389,10 +389,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a field trip notebook, a pupil records: a generator output alternates as the coil turns. How do slip rings help this happen?",
       "options": [
-        "They cool the wire.",
-        "They make the coil heavier.",
+        "The generator stores charge without moving parts.",
+        "The magnet is heated until current appears.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They stop the coil moving."
+        "The field lines are destroyed by the coil."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
@@ -424,10 +424,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a science fair poster, a team explains: the coil spins while connected to an external circuit. What do slip rings allow?",
       "options": [
-        "They store charge like a battery.",
+        "The generator stores charge without moving parts.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They block current completely.",
-        "They turn AC into DC."
+        "The magnet is heated until current appears.",
+        "A generator works only with plastic coils."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
@@ -460,9 +460,9 @@
       "question": "On a exam practice page, a candidate works: a parent labels the slip rings on a generator. What is their job?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They make the coil heavier.",
-        "They reverse gravity.",
-        "They remove the magnet."
+        "The generator stores charge without moving parts.",
+        "The magnet is heated until current appears.",
+        "The current is caused by friction with air."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
@@ -494,9 +494,9 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a home study card, a learner revises: a log book shows a rotating coil joined to slip rings. Why are they needed?",
       "options": [
-        "They block current completely.",
-        "They stop the coil moving.",
-        "They cool the wire.",
+        "The generator stores charge without moving parts.",
+        "The magnet is heated until current appears.",
+        "The coil becomes radioactive.",
         "They allow the coil to keep rotating while the output alternates."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
@@ -529,10 +529,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a research log book, an assistant notes: what is the role of slip rings in a simple AC generator?",
       "options": [
-        "They reverse gravity.",
-        "They turn AC into DC.",
+        "The generator stores charge without moving parts.",
+        "The magnet is heated until current appears.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They store charge like a battery."
+        "There is no energy transfer in a generator."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 2,
@@ -564,10 +564,10 @@
       "skill": "Describe the role of slip rings in an AC generator",
       "question": "On a planetarium screen, a visitor chooses: during generator revision, which part keeps contact with a turning coil?",
       "options": [
-        "They stop the coil moving.",
+        "The generator stores charge without moving parts.",
         "They allow the coil to keep rotating while the output alternates.",
-        "They remove the magnet.",
-        "They make the coil heavier."
+        "The magnet is heated until current appears.",
+        "The output is unrelated to motion."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 1,
@@ -600,9 +600,9 @@
       "question": "On a radio studio demo, a presenter explains: a generator output alternates as the coil turns. How do slip rings help this happen?",
       "options": [
         "They allow the coil to keep rotating while the output alternates.",
-        "They turn AC into DC.",
-        "They cool the wire.",
-        "They block current completely."
+        "The generator stores charge without moving parts.",
+        "The magnet is heated until current appears.",
+        "The generator removes resistance from the circuit."
       ],
       "correctAnswer": "They allow the coil to keep rotating while the output alternates.",
       "correctIndex": 0,
@@ -634,9 +634,9 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "What is the shape of the magnetic field around a straight current-carrying wire?",
       "options": [
-        "Straight lines pointing away from the wire",
-        "A single line only above the wire",
-        "A field that is always zero outside the wire",
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
+        "The field exists only inside the magnet.",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
@@ -658,10 +658,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a clinic worksheet, a learner checks: compasses are placed around a current-carrying wire. What pattern do they show?",
       "options": [
-        "No field around the wire",
-        "Random dots with no pattern",
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
         "Concentric circles around the wire",
-        "Square loops around the wire"
+        "A compass points randomly in a magnetic field."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
@@ -693,10 +693,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a museum label, a visitor reads: a results table shows field lines around a vertical wire. Which shape is correct?",
       "options": [
-        "One line above the wire only",
+        "Field lines cross each other at the poles.",
         "Concentric circles around the wire",
-        "Parallel lines through the wire",
-        "Lines that point only downward"
+        "Field lines point from south to north outside the magnet.",
+        "The field is strongest halfway between the poles."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
@@ -729,9 +729,9 @@
       "question": "On a school lab card, a pupil answers: how are magnetic field lines arranged around a straight wire with current?",
       "options": [
         "Concentric circles around the wire",
-        "Random dots with no pattern",
-        "A field only at the battery",
-        "Straight lines away from the wire"
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
+        "The field disappears near the poles."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
@@ -763,9 +763,9 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a factory safety note, an apprentice reviews: a guide sprinkles iron filings near a live wire. What pattern should appear?",
       "options": [
-        "Parallel lines through the wire",
-        "Square loops around the wire",
-        "No field around the wire",
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
+        "Field lines show the path of electric current.",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
@@ -798,10 +798,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a space centre display, a guide explains: which diagram would show the magnetic field around a current-carrying wire?",
       "options": [
-        "A field only at the battery",
-        "Lines that point only downward",
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
         "Concentric circles around the wire",
-        "One line above the wire only"
+        "Only plastic objects can show field patterns."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
@@ -833,10 +833,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a revision flashcard, a student practises: a current flows in a straight wire. What shape is the magnetic field around it?",
       "options": [
-        "Square loops around the wire",
+        "Field lines cross each other at the poles.",
         "Concentric circles around the wire",
-        "Straight lines away from the wire",
-        "Random dots with no pattern"
+        "Field lines point from south to north outside the magnet.",
+        "The field has no direction."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
@@ -868,10 +868,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a hospital training card, a trainee checks: compasses are placed around a current-carrying wire. What pattern do they show?",
       "options": [
-        "Lines that point only downward",
-        "No field around the wire",
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
         "Concentric circles around the wire",
-        "Parallel lines through the wire"
+        "Field lines are physical wires."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
@@ -903,10 +903,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows field lines around a vertical wire. Which shape is correct?",
       "options": [
-        "Straight lines away from the wire",
+        "Field lines cross each other at the poles.",
         "Concentric circles around the wire",
-        "One line above the wire only",
-        "A field only at the battery"
+        "Field lines point from south to north outside the magnet.",
+        "The magnetic field is caused by gravity only."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
@@ -939,9 +939,9 @@
       "question": "On a classroom board, a group discusses: how are magnetic field lines arranged around a straight wire with current?",
       "options": [
         "Concentric circles around the wire",
-        "No field around the wire",
-        "Random dots with no pattern",
-        "Square loops around the wire"
+        "Field lines cross each other at the poles.",
+        "Field lines point from south to north outside the magnet.",
+        "The poles have no effect on the field."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
@@ -973,9 +973,9 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a workshop checklist, an engineer checks: a pupil sprinkles iron filings near a live wire. What pattern should appear?",
       "options": [
-        "One line above the wire only",
-        "Parallel lines through the wire",
-        "Lines that point only downward",
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
+        "A compass points randomly in a magnetic field.",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
@@ -1008,10 +1008,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a field trip notebook, a pupil records: which diagram would show the magnetic field around a current-carrying wire?",
       "options": [
-        "Random dots with no pattern",
-        "A field only at the battery",
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
         "Concentric circles around the wire",
-        "Straight lines away from the wire"
+        "The field is strongest halfway between the poles."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
@@ -1043,10 +1043,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a science fair poster, a team explains: a current flows in a straight wire. What shape is the magnetic field around it?",
       "options": [
-        "Parallel lines through the wire",
+        "Field lines cross each other at the poles.",
         "Concentric circles around the wire",
-        "Square loops around the wire",
-        "No field around the wire"
+        "The field exists only inside the magnet.",
+        "The field disappears near the poles."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
@@ -1079,9 +1079,9 @@
       "question": "On a exam practice page, a candidate works: compasses are placed around a current-carrying wire. What pattern do they show?",
       "options": [
         "Concentric circles around the wire",
-        "A field only at the battery",
-        "Lines that point only downward",
-        "One line above the wire only"
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
+        "Field lines show the path of electric current."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
@@ -1113,9 +1113,9 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a home study card, a learner revises: a log book shows field lines around a vertical wire. Which shape is correct?",
       "options": [
-        "Square loops around the wire",
-        "Straight lines away from the wire",
-        "Random dots with no pattern",
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
+        "Only plastic objects can show field patterns.",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
@@ -1148,10 +1148,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a research log book, an assistant notes: how are magnetic field lines arranged around a straight wire with current?",
       "options": [
-        "Lines that point only downward",
-        "No field around the wire",
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
         "Concentric circles around the wire",
-        "Parallel lines through the wire"
+        "The field has no direction."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 2,
@@ -1183,10 +1183,10 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a planetarium screen, a visitor chooses: a presenter sprinkles iron filings near a live wire. What pattern should appear?",
       "options": [
-        "Straight lines away from the wire",
+        "Field lines cross each other at the poles.",
         "Concentric circles around the wire",
-        "One line above the wire only",
-        "A field only at the battery"
+        "The field exists only inside the magnet.",
+        "Field lines are physical wires."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 1,
@@ -1219,9 +1219,9 @@
       "question": "On a radio studio demo, a presenter explains: which diagram would show the magnetic field around a current-carrying wire?",
       "options": [
         "Concentric circles around the wire",
-        "No field around the wire",
-        "Random dots with no pattern",
-        "Square loops around the wire"
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
+        "The magnetic field is caused by gravity only."
       ],
       "correctAnswer": "Concentric circles around the wire",
       "correctIndex": 0,
@@ -1253,9 +1253,9 @@
       "skill": "Describe the field around a current-carrying wire",
       "question": "On a energy survey report, a surveyor writes: a current flows in a straight wire. What shape is the magnetic field around it?",
       "options": [
-        "One line above the wire only",
-        "Parallel lines through the wire",
-        "Lines that point only downward",
+        "Field lines cross each other at the poles.",
+        "The field exists only inside the magnet.",
+        "The poles have no effect on the field.",
         "Concentric circles around the wire"
       ],
       "correctAnswer": "Concentric circles around the wire",
@@ -1942,9 +1942,9 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "What happens when the north pole of one magnet is brought near the north pole of another magnet?",
       "options": [
-        "They attract each other strongly.",
-        "One magnet loses all its magnetism at once.",
-        "They join together and make a neutral magnet.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
+        "A permanent magnet is made only from copper.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
@@ -1966,10 +1966,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a clinic worksheet, a learner checks: a student pushes like poles together. What happens?",
       "options": [
-        "They do nothing.",
-        "They become electric charges.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
         "They repel each other.",
-        "They make a spark."
+        "A permanent magnet has no north or south pole."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
@@ -2001,10 +2001,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a museum label, a visitor reads: a results table shows north facing north. Which result is correct?",
       "options": [
-        "They cancel gravity.",
+        "A permanent magnet needs a current all the time.",
         "They repel each other.",
-        "They swap into south poles instantly.",
-        "They fuse together."
+        "A permanent magnet loses its field as soon as it is moved.",
+        "It becomes magnetic only when heated."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
@@ -2037,9 +2037,9 @@
       "question": "On a school lab card, a pupil answers: what happens when the same poles of two magnets are near each other?",
       "options": [
         "They repel each other.",
-        "They become electric charges.",
-        "They demagnetise every nearby object.",
-        "They attract."
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
+        "Its domains are always completely random."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
@@ -2071,9 +2071,9 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a factory safety note, an apprentice reviews: a bar magnet's north pole is near another north pole. What should be felt?",
       "options": [
-        "They swap into south poles instantly.",
-        "They make a spark.",
-        "They do nothing.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
+        "It works because it stores electric charge.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
@@ -2106,10 +2106,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a space centre display, a guide explains: which prediction is correct for two like magnetic poles?",
       "options": [
-        "They demagnetise every nearby object.",
-        "They fuse together.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
         "They repel each other.",
-        "They cancel gravity."
+        "It attracts every material equally."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
@@ -2141,10 +2141,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a revision flashcard, a student practises: two north poles are brought close together. What force acts between them?",
       "options": [
-        "They make a spark.",
+        "A permanent magnet needs a current all the time.",
         "They repel each other.",
-        "They attract.",
-        "They become electric charges."
+        "A permanent magnet loses its field as soon as it is moved.",
+        "It has a field only when touching iron."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
@@ -2176,10 +2176,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a hospital training card, a trainee checks: a astronomer pushes like poles together. What happens?",
       "options": [
-        "They fuse together.",
-        "They do nothing.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
         "They repel each other.",
-        "They swap into south poles instantly."
+        "It is the same as an electromagnet."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
@@ -2211,10 +2211,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows north facing north. Which result is correct?",
       "options": [
-        "They attract.",
+        "A permanent magnet needs a current all the time.",
         "They repel each other.",
-        "They cancel gravity.",
-        "They demagnetise every nearby object."
+        "A permanent magnet loses its field as soon as it is moved.",
+        "It cannot repel another magnet."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
@@ -2247,9 +2247,9 @@
       "question": "On a classroom board, a group discusses: what happens when the same poles of two magnets are near each other?",
       "options": [
         "They repel each other.",
-        "They do nothing.",
-        "They become electric charges.",
-        "They make a spark."
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet loses its field as soon as it is moved.",
+        "It needs a battery to keep its field."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
@@ -2281,9 +2281,9 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a workshop checklist, an engineer checks: a bar magnet's north pole is near another north pole. What should be felt?",
       "options": [
-        "They cancel gravity.",
-        "They swap into south poles instantly.",
-        "They fuse together.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
+        "A permanent magnet has no north or south pole.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
@@ -2316,10 +2316,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a field trip notebook, a pupil records: which prediction is correct for two like magnetic poles?",
       "options": [
-        "They become electric charges.",
-        "They demagnetise every nearby object.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
         "They repel each other.",
-        "They attract."
+        "It becomes magnetic only when heated."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
@@ -2351,10 +2351,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a science fair poster, a team explains: two north poles are brought close together. What force acts between them?",
       "options": [
-        "They swap into south poles instantly.",
+        "A permanent magnet needs a current all the time.",
         "They repel each other.",
-        "They make a spark.",
-        "They do nothing."
+        "A permanent magnet is made only from copper.",
+        "Its domains are always completely random."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
@@ -2387,9 +2387,9 @@
       "question": "On a exam practice page, a candidate works: a parent pushes like poles together. What happens?",
       "options": [
         "They repel each other.",
-        "They demagnetise every nearby object.",
-        "They fuse together.",
-        "They cancel gravity."
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
+        "It works because it stores electric charge."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
@@ -2421,9 +2421,9 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a home study card, a learner revises: a log book shows north facing north. Which result is correct?",
       "options": [
-        "They make a spark.",
-        "They attract.",
-        "They become electric charges.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
+        "It attracts every material equally.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
@@ -2456,10 +2456,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a research log book, an assistant notes: what happens when the same poles of two magnets are near each other?",
       "options": [
-        "They fuse together.",
-        "They do nothing.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
         "They repel each other.",
-        "They swap into south poles instantly."
+        "It has a field only when touching iron."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 2,
@@ -2491,10 +2491,10 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a planetarium screen, a visitor chooses: a bar magnet's north pole is near another north pole. What should be felt?",
       "options": [
-        "They attract.",
+        "A permanent magnet needs a current all the time.",
         "They repel each other.",
-        "They cancel gravity.",
-        "They demagnetise every nearby object."
+        "A permanent magnet is made only from copper.",
+        "It is the same as an electromagnet."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 1,
@@ -2527,9 +2527,9 @@
       "question": "On a radio studio demo, a presenter explains: which prediction is correct for two like magnetic poles?",
       "options": [
         "They repel each other.",
-        "They do nothing.",
-        "They become electric charges.",
-        "They make a spark."
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
+        "It cannot repel another magnet."
       ],
       "correctAnswer": "They repel each other.",
       "correctIndex": 0,
@@ -2561,9 +2561,9 @@
       "skill": "Predict attraction and repulsion between poles",
       "question": "On a energy survey report, a surveyor writes: two north poles are brought close together. What force acts between them?",
       "options": [
-        "They cancel gravity.",
-        "They swap into south poles instantly.",
-        "They fuse together.",
+        "A permanent magnet needs a current all the time.",
+        "A permanent magnet is made only from copper.",
+        "It needs a battery to keep its field.",
         "They repel each other."
       ],
       "correctAnswer": "They repel each other.",
@@ -2596,9 +2596,9 @@
       "skill": "Use the transformer turns ratio",
       "question": "A transformer has 220 turns on the primary coil and 60 turns on the secondary coil. The primary voltage is 140 V. What is the secondary voltage?",
       "options": [
-        "200 V",
-        "513.33 V",
-        "48.18 V",
+        "9.54 V",
+        "57.27 V",
+        "24.82 V",
         "38.18 V"
       ],
       "correctAnswer": "38.18 V",
@@ -2620,10 +2620,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a clinic worksheet, a learner checks: a student uses the turns ratio and gets 46.67 V. What should be recorded?",
       "options": [
+        "18.67 V",
         "93.34 V",
-        "23.34 V",
         "46.67 V",
-        "49.67 V"
+        "56.47 V"
       ],
       "correctAnswer": "46.67 V",
       "correctIndex": 2,
@@ -2655,10 +2655,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a museum label, a visitor reads: the primary and secondary coil ratio gives an output of 55.38 V. Which value is right?",
       "options": [
-        "110.76 V",
+        "30.46 V",
         "55.38 V",
-        "27.69 V",
-        "59.38 V"
+        "138 V",
+        "58.15 V"
       ],
       "correctAnswer": "55.38 V",
       "correctIndex": 1,
@@ -2691,9 +2691,9 @@
       "question": "On a school lab card, a pupil answers: a safety note shows a transformer answer of 64.29 V. Which option has the correct voltage?",
       "options": [
         "64.29 V",
-        "128.58 V",
-        "32.15 V",
-        "69.29 V"
+        "45 V",
+        "109 V",
+        "57.22 V"
       ],
       "correctAnswer": "64.29 V",
       "correctIndex": 0,
@@ -2725,9 +2725,9 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a factory safety note, an apprentice reviews: in transformer practice, the calculated secondary potential difference is 73.33 V. Choose it.",
       "options": [
-        "146.66 V",
-        "36.66 V",
-        "79.33 V",
+        "22 V",
+        "161 V",
+        "53.53 V",
         "73.33 V"
       ],
       "correctAnswer": "73.33 V",
@@ -2760,10 +2760,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a space centre display, a guide explains: a step-down transformer result has been worked out as 41.25 V. What is the output?",
       "options": [
-        "82.5 V",
-        "20.63 V",
+        "18.56 V",
+        "111 V",
         "41.25 V",
-        "43.25 V"
+        "53.21 V"
       ],
       "correctAnswer": "41.25 V",
       "correctIndex": 2,
@@ -2795,10 +2795,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a revision flashcard, a student practises: a transformer calculation for a hospital supply gives 25 V. Which secondary voltage is correct?",
       "options": [
-        "50 V",
-        "12.5 V",
+        "15 V",
+        "47.5 V",
         "25 V",
-        "28 V"
+        "28.25 V"
       ],
       "correctAnswer": "25 V",
       "correctIndex": 2,
@@ -2830,10 +2830,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a hospital training card, a trainee checks: a astronomer uses the turns ratio and gets 31.76 V. What should be recorded?",
       "options": [
-        "63.52 V",
+        "23.82 V",
         "31.76 V",
-        "15.88 V",
-        "35.76 V"
+        "76.22 V",
+        "30.81 V"
       ],
       "correctAnswer": "31.76 V",
       "correctIndex": 1,
@@ -2866,9 +2866,9 @@
       "question": "On a observatory data sheet, an astronomer reviews: the primary and secondary coil ratio gives an output of 70 V. Which value is right?",
       "options": [
         "70 V",
-        "140 V",
-        "35 V",
-        "75 V"
+        "24.5 V",
+        "112 V",
+        "56.7 V"
       ],
       "correctAnswer": "70 V",
       "correctIndex": 0,
@@ -2900,9 +2900,9 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a classroom board, a group discusses: a checklist shows a transformer answer of 80 V. Which option has the correct voltage?",
       "options": [
-        "160 V",
         "40 V",
-        "86 V",
+        "168 V",
+        "52 V",
         "80 V"
       ],
       "correctAnswer": "80 V",
@@ -2935,10 +2935,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a workshop checklist, an engineer checks: in transformer practice, the calculated secondary potential difference is 45 V. Choose it.",
       "options": [
-        "90 V",
-        "22.5 V",
+        "29.25 V",
+        "117 V",
         "45 V",
-        "47 V"
+        "54.45 V"
       ],
       "correctAnswer": "45 V",
       "correctIndex": 2,
@@ -2970,10 +2970,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a field trip notebook, a pupil records: a step-down transformer result has been worked out as 53.85 V. What is the output?",
       "options": [
-        "107.7 V",
+        "13.46 V",
         "53.85 V",
-        "26.93 V",
-        "56.85 V"
+        "96.93 V",
+        "56.54 V"
       ],
       "correctAnswer": "53.85 V",
       "correctIndex": 1,
@@ -3005,10 +3005,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a science fair poster, a team explains: a transformer calculation for a exam practice supply gives 20.59 V. Which secondary voltage is correct?",
       "options": [
-        "41.18 V",
+        "8.24 V",
         "20.59 V",
-        "10.29 V",
-        "24.59 V"
+        "47.36 V",
+        "18.33 V"
       ],
       "correctAnswer": "20.59 V",
       "correctIndex": 1,
@@ -3041,9 +3041,9 @@
       "question": "On a exam practice page, a candidate works: a parent uses the turns ratio and gets 48 V. What should be recorded?",
       "options": [
         "48 V",
-        "96 V",
-        "24 V",
-        "53 V"
+        "26.4 V",
+        "72 V",
+        "35.04 V"
       ],
       "correctAnswer": "48 V",
       "correctIndex": 0,
@@ -3075,9 +3075,9 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a home study card, a learner revises: the primary and secondary coil ratio gives an output of 57.27 V. Which value is right?",
       "options": [
-        "114.54 V",
-        "28.64 V",
-        "63.27 V",
+        "40.09 V",
+        "115 V",
+        "73.88 V",
         "57.27 V"
       ],
       "correctAnswer": "57.27 V",
@@ -3110,10 +3110,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a research log book, an assistant notes: a touch screen shows a transformer answer of 66.67 V. Which option has the correct voltage?",
       "options": [
-        "133.34 V",
-        "33.34 V",
+        "20 V",
+        "167 V",
         "66.67 V",
-        "68.67 V"
+        "75.34 V"
       ],
       "correctAnswer": "66.67 V",
       "correctIndex": 2,
@@ -3145,10 +3145,10 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a planetarium screen, a visitor chooses: in transformer practice, the calculated secondary potential difference is 76.15 V. Choose it.",
       "options": [
-        "152.3 V",
+        "34.27 V",
         "76.15 V",
-        "38.08 V",
-        "79.15 V"
+        "129 V",
+        "73.87 V"
       ],
       "correctAnswer": "76.15 V",
       "correctIndex": 1,
@@ -3181,9 +3181,9 @@
       "question": "On a radio studio demo, a presenter explains: a step-down transformer result has been worked out as 42.86 V. What is the output?",
       "options": [
         "42.86 V",
-        "85.72 V",
-        "21.43 V",
-        "46.86 V"
+        "25.72 V",
+        "94.29 V",
+        "34.72 V"
       ],
       "correctAnswer": "42.86 V",
       "correctIndex": 0,
@@ -3215,9 +3215,9 @@
       "skill": "Use the transformer turns ratio",
       "question": "On a energy survey report, a surveyor writes: a transformer calculation for a clinic supply gives 51.33 V. Which secondary voltage is correct?",
       "options": [
-        "102.66 V",
-        "25.66 V",
-        "56.33 V",
+        "38.5 V",
+        "139 V",
+        "33.36 V",
         "51.33 V"
       ],
       "correctAnswer": "51.33 V",

@@ -107,14 +107,17 @@ function replacementWrongOptions(question, rowIndex) {
   const pool = distractorsBySubtopic[question.subtopic]
   if (!pool) return question.options.filter((option) => option !== question.correctAnswer)
 
-  const wrong = []
-  let offset = rowIndex % pool.length
-  while (wrong.length < 3) {
-    const option = pool[offset % pool.length]
-    if (option !== question.correctAnswer && !wrong.includes(option)) wrong.push(option)
-    offset += 1
+  const valid = pool.filter((option) => option !== question.correctAnswer)
+  const combinations = []
+  for (let a = 0; a < valid.length; a += 1) {
+    for (let b = a + 1; b < valid.length; b += 1) {
+      for (let c = b + 1; c < valid.length; c += 1) {
+        combinations.push([valid[a], valid[b], valid[c]])
+      }
+    }
   }
-  return wrong
+
+  return combinations[rowIndex % combinations.length] || []
 }
 
 function repairQuestion(question, rowIndex) {

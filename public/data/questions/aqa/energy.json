@@ -15,9 +15,9 @@
       "skill": "Interpret a Sankey diagram",
       "question": "A Sankey diagram shows a wide useful arrow and a narrow wasted arrow. What does this mean?",
       "options": [
-        "The device has zero energy input.",
-        "The device destroys most of the energy.",
-        "The device does no useful work.",
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
+        "Use wasted energy divided by useful energy.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
@@ -39,10 +39,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a clinic worksheet, a learner checks: a student compares the useful and wasted arrows on a Sankey diagram. What conclusion fits?",
       "options": [
-        "No energy is transferred.",
-        "The diagram shows mass.",
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
         "The device is fairly efficient.",
-        "The device is impossible."
+        "Efficiency is always 100%."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
@@ -74,10 +74,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a museum label, a visitor reads: a results table shows most input energy leaving by the useful pathway. What does that mean?",
       "options": [
-        "Input energy is zero.",
+        "Use total input divided by useful output.",
         "The device is fairly efficient.",
-        "The useful output is tiny.",
-        "The wasted store is largest."
+        "Add useful output to wasted output.",
+        "Efficiency is measured in joules."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
@@ -110,9 +110,9 @@
       "question": "On a school lab card, a pupil answers: what does a wide useful output arrow show on a Sankey diagram?",
       "options": [
         "The device is fairly efficient.",
-        "The diagram shows mass.",
-        "The arrows show speed.",
-        "Most energy is wasted."
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
+        "Use power multiplied by time."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
@@ -144,9 +144,9 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a factory safety note, an apprentice reviews: a device's Sankey diagram has only a narrow wasted branch. What can be inferred?",
       "options": [
-        "The useful output is tiny.",
-        "The device is impossible.",
-        "No energy is transferred.",
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
+        "Ignore wasted energy completely.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
@@ -179,10 +179,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a space centre display, a guide explains: which statement matches a Sankey diagram with more useful than wasted output?",
       "options": [
-        "The arrows show speed.",
-        "The wasted store is largest.",
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
         "The device is fairly efficient.",
-        "Input energy is zero."
+        "Use useful output minus total input."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
@@ -214,9 +214,9 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a revision flashcard, a student practises: a Sankey diagram has a large useful arrow and a small wasted arrow. What does this show?",
       "options": [
-        "The device is impossible.",
-        "Most energy is wasted.",
-        "The diagram shows mass.",
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
+        "Efficiency is unrelated to energy transfers.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
@@ -249,10 +249,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a hospital training card, a trainee checks: a astronomer compares the useful and wasted arrows on a Sankey diagram. What conclusion fits?",
       "options": [
-        "The wasted store is largest.",
-        "No energy is transferred.",
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
         "The device is fairly efficient.",
-        "The useful output is tiny."
+        "Use the largest number as the percentage."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
@@ -284,10 +284,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows most input energy leaving by the useful pathway. What does that mean?",
       "options": [
-        "Most energy is wasted.",
+        "Use total input divided by useful output.",
         "The device is fairly efficient.",
-        "Input energy is zero.",
-        "The arrows show speed."
+        "Add useful output to wasted output.",
+        "Efficiency cannot be written as a percentage."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
@@ -320,9 +320,9 @@
       "question": "On a classroom board, a group discusses: what does a wide useful output arrow show on a Sankey diagram?",
       "options": [
         "The device is fairly efficient.",
-        "No energy is transferred.",
-        "The diagram shows mass.",
-        "The device is impossible."
+        "Use total input divided by useful output.",
+        "Add useful output to wasted output.",
+        "Use mass divided by volume."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
@@ -354,9 +354,9 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a workshop checklist, an engineer checks: a device's Sankey diagram has only a narrow wasted branch. What can be inferred?",
       "options": [
-        "Input energy is zero.",
-        "The useful output is tiny.",
-        "The wasted store is largest.",
+        "Use total input divided by useful output.",
+        "Use wasted energy divided by useful energy.",
+        "Efficiency is always 100%.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
@@ -389,10 +389,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a field trip notebook, a pupil records: which statement matches a Sankey diagram with more useful than wasted output?",
       "options": [
-        "The diagram shows mass.",
-        "The arrows show speed.",
+        "Use total input divided by useful output.",
+        "Use wasted energy divided by useful energy.",
         "The device is fairly efficient.",
-        "Most energy is wasted."
+        "Efficiency is measured in joules."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
@@ -424,10 +424,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a science fair poster, a team explains: a Sankey diagram has a large useful arrow and a small wasted arrow. What does this show?",
       "options": [
-        "The useful output is tiny.",
+        "Use total input divided by useful output.",
         "The device is fairly efficient.",
-        "The device is impossible.",
-        "No energy is transferred."
+        "Use wasted energy divided by useful energy.",
+        "Use power multiplied by time."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
@@ -460,9 +460,9 @@
       "question": "On a exam practice page, a candidate works: a parent compares the useful and wasted arrows on a Sankey diagram. What conclusion fits?",
       "options": [
         "The device is fairly efficient.",
-        "The arrows show speed.",
-        "The wasted store is largest.",
-        "Input energy is zero."
+        "Use total input divided by useful output.",
+        "Use wasted energy divided by useful energy.",
+        "Ignore wasted energy completely."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
@@ -494,9 +494,9 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a home study card, a learner revises: a log book shows most input energy leaving by the useful pathway. What does that mean?",
       "options": [
-        "The device is impossible.",
-        "Most energy is wasted.",
-        "The diagram shows mass.",
+        "Use total input divided by useful output.",
+        "Use wasted energy divided by useful energy.",
+        "Use useful output minus total input.",
         "The device is fairly efficient."
       ],
       "correctAnswer": "The device is fairly efficient.",
@@ -529,10 +529,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a research log book, an assistant notes: what does a wide useful output arrow show on a Sankey diagram?",
       "options": [
-        "The wasted store is largest.",
-        "No energy is transferred.",
+        "Use total input divided by useful output.",
+        "Use wasted energy divided by useful energy.",
         "The device is fairly efficient.",
-        "The useful output is tiny."
+        "Efficiency is unrelated to energy transfers."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 2,
@@ -564,10 +564,10 @@
       "skill": "Interpret a Sankey diagram",
       "question": "On a planetarium screen, a visitor chooses: a device's Sankey diagram has only a narrow wasted branch. What can be inferred?",
       "options": [
-        "Most energy is wasted.",
+        "Use total input divided by useful output.",
         "The device is fairly efficient.",
-        "Input energy is zero.",
-        "The arrows show speed."
+        "Use wasted energy divided by useful energy.",
+        "Use the largest number as the percentage."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 1,
@@ -600,9 +600,9 @@
       "question": "On a radio studio demo, a presenter explains: which statement matches a Sankey diagram with more useful than wasted output?",
       "options": [
         "The device is fairly efficient.",
-        "No energy is transferred.",
-        "The diagram shows mass.",
-        "The device is impossible."
+        "Use total input divided by useful output.",
+        "Use wasted energy divided by useful energy.",
+        "Efficiency cannot be written as a percentage."
       ],
       "correctAnswer": "The device is fairly efficient.",
       "correctIndex": 0,
@@ -1942,9 +1942,9 @@
       "skill": "Calculate kinetic energy",
       "question": "A 3 kg trolley moves at 3 m/s. What is its kinetic energy?",
       "options": [
-        "9 J",
-        "10 J",
-        "16.5 J",
+        "3.38 J",
+        "20.25 J",
+        "8.78 J",
         "13.5 J"
       ],
       "correctAnswer": "13.5 J",
@@ -1966,10 +1966,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a clinic worksheet, a learner checks: a student substitutes values into E_k = 1/2mv^2 and gets 32 J. What should they choose?",
       "options": [
+        "12.8 J",
         "64 J",
-        "16 J",
         "32 J",
-        "35 J"
+        "38.72 J"
       ],
       "correctAnswer": "32 J",
       "correctIndex": 2,
@@ -2001,10 +2001,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a museum label, a visitor reads: a moving ball's kinetic energy is calculated as 62.5 J. Which option matches?",
       "options": [
-        "125 J",
+        "34.38 J",
         "62.5 J",
-        "31.25 J",
-        "66.5 J"
+        "156 J",
+        "65.63 J"
       ],
       "correctAnswer": "62.5 J",
       "correctIndex": 1,
@@ -2037,9 +2037,9 @@
       "question": "On a school lab card, a pupil answers: the worked answer for a moving cart is 108 J. What is its kinetic energy?",
       "options": [
         "108 J",
-        "216 J",
-        "54 J",
-        "113 J"
+        "75.6 J",
+        "184 J",
+        "96.12 J"
       ],
       "correctAnswer": "108 J",
       "correctIndex": 0,
@@ -2071,9 +2071,9 @@
       "skill": "Calculate kinetic energy",
       "question": "On a factory safety note, an apprentice reviews: a training screen shows the final line of a kinetic energy calculation as 171.5 J. Pick the result.",
       "options": [
-        "343 J",
-        "85.75 J",
-        "177.5 J",
+        "51.45 J",
+        "377 J",
+        "125 J",
         "171.5 J"
       ],
       "correctAnswer": "171.5 J",
@@ -2106,10 +2106,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a space centre display, a guide explains: which value should be written when the kinetic energy calculation gives 64 J?",
       "options": [
-        "128 J",
-        "32 J",
+        "28.8 J",
+        "173 J",
         "64 J",
-        "66 J"
+        "82.56 J"
       ],
       "correctAnswer": "64 J",
       "correctIndex": 2,
@@ -2141,10 +2141,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a revision flashcard, a student practises: a hospital trolley calculation gives a kinetic energy of 6 J. Which answer is correct?",
       "options": [
-        "12 J",
+        "3.6 J",
         "6 J",
-        "3 J",
-        "9 J"
+        "11.4 J",
+        "6.78 J"
       ],
       "correctAnswer": "6 J",
       "correctIndex": 1,
@@ -2176,10 +2176,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a hospital training card, a trainee checks: a astronomer substitutes values into E_k = 1/2mv^2 and gets 8 J. What should they choose?",
       "options": [
-        "16 J",
-        "4 J",
+        "6 J",
+        "19.2 J",
         "8 J",
-        "12 J"
+        "7.76 J"
       ],
       "correctAnswer": "8 J",
       "correctIndex": 2,
@@ -2211,10 +2211,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a observatory data sheet, an astronomer reviews: a moving ball's kinetic energy is calculated as 22.5 J. Which option matches?",
       "options": [
-        "45 J",
+        "7.87 J",
         "22.5 J",
-        "11.25 J",
-        "27.5 J"
+        "36 J",
+        "18.23 J"
       ],
       "correctAnswer": "22.5 J",
       "correctIndex": 1,
@@ -2247,9 +2247,9 @@
       "question": "On a classroom board, a group discusses: the worked answer for a moving cart is 48 J. What is its kinetic energy?",
       "options": [
         "48 J",
-        "96 J",
         "24 J",
-        "54 J"
+        "101 J",
+        "31.2 J"
       ],
       "correctAnswer": "48 J",
       "correctIndex": 0,
@@ -2281,9 +2281,9 @@
       "skill": "Calculate kinetic energy",
       "question": "On a workshop checklist, an engineer checks: a notebook shows the final line of a kinetic energy calculation as 87.5 J. Pick the result.",
       "options": [
-        "175 J",
-        "43.75 J",
-        "89.5 J",
+        "56.88 J",
+        "228 J",
+        "106 J",
         "87.5 J"
       ],
       "correctAnswer": "87.5 J",
@@ -2316,10 +2316,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a field trip notebook, a pupil records: which value should be written when the kinetic energy calculation gives 36 J?",
       "options": [
-        "72 J",
-        "18 J",
+        "9 J",
+        "64.8 J",
         "36 J",
-        "39 J"
+        "37.8 J"
       ],
       "correctAnswer": "36 J",
       "correctIndex": 2,
@@ -2351,10 +2351,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a science fair poster, a team explains: a exam practice trolley calculation gives a kinetic energy of 73.5 J. Which answer is correct?",
       "options": [
-        "147 J",
+        "29.4 J",
         "73.5 J",
-        "36.75 J",
-        "77.5 J"
+        "169 J",
+        "65.42 J"
       ],
       "correctAnswer": "73.5 J",
       "correctIndex": 1,
@@ -2387,9 +2387,9 @@
       "question": "On a exam practice page, a candidate works: a parent substitutes values into E_k = 1/2mv^2 and gets 18 J. What should they choose?",
       "options": [
         "18 J",
-        "36 J",
-        "9 J",
-        "23 J"
+        "9.9 J",
+        "27 J",
+        "13.14 J"
       ],
       "correctAnswer": "18 J",
       "correctIndex": 0,
@@ -2421,9 +2421,9 @@
       "skill": "Calculate kinetic energy",
       "question": "On a home study card, a learner revises: a moving ball's kinetic energy is calculated as 40 J. Which option matches?",
       "options": [
+        "28 J",
         "80 J",
-        "20 J",
-        "46 J",
+        "51.6 J",
         "40 J"
       ],
       "correctAnswer": "40 J",
@@ -2456,10 +2456,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a research log book, an assistant notes: the worked answer for a moving cart is 75 J. What is its kinetic energy?",
       "options": [
-        "150 J",
-        "37.5 J",
+        "22.5 J",
+        "188 J",
         "75 J",
-        "77 J"
+        "84.75 J"
       ],
       "correctAnswer": "75 J",
       "correctIndex": 2,
@@ -2491,10 +2491,10 @@
       "skill": "Calculate kinetic energy",
       "question": "On a planetarium screen, a visitor chooses: a sound desk shows the final line of a kinetic energy calculation as 126 J. Pick the result.",
       "options": [
-        "252 J",
+        "56.7 J",
         "126 J",
-        "63 J",
-        "129 J"
+        "214 J",
+        "122 J"
       ],
       "correctAnswer": "126 J",
       "correctIndex": 1,
@@ -2527,9 +2527,9 @@
       "question": "On a radio studio demo, a presenter explains: which value should be written when the kinetic energy calculation gives 49 J?",
       "options": [
         "49 J",
-        "98 J",
-        "24.5 J",
-        "53 J"
+        "29.4 J",
+        "108 J",
+        "39.69 J"
       ],
       "correctAnswer": "49 J",
       "correctIndex": 0,
@@ -2561,9 +2561,9 @@
       "skill": "Calculate kinetic energy",
       "question": "On a energy survey report, a surveyor writes: a clinic trolley calculation gives a kinetic energy of 96 J. Which answer is correct?",
       "options": [
-        "192 J",
-        "48 J",
-        "101 J",
+        "72 J",
+        "259 J",
+        "62.4 J",
         "96 J"
       ],
       "correctAnswer": "96 J",
@@ -2596,9 +2596,9 @@
       "skill": "Calculate power from energy and time",
       "question": "An electric heater transfers 650 J of energy in 25 s. What is its power?",
       "options": [
-        "16250 W",
-        "0.04 W",
-        "31 W",
+        "6.5 W",
+        "39 W",
+        "16.9 W",
         "26 W"
       ],
       "correctAnswer": "26 W",
@@ -2620,10 +2620,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a clinic worksheet, a learner checks: a student finds energy transferred per second is 23.33 W. What power is this?",
       "options": [
+        "9.33 W",
         "46.66 W",
-        "11.66 W",
         "23.33 W",
-        "26.33 W"
+        "28.23 W"
       ],
       "correctAnswer": "23.33 W",
       "correctIndex": 2,
@@ -2655,10 +2655,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a museum label, a visitor reads: a heater's energy transfer rate is 21.43 W. Which power value matches?",
       "options": [
-        "42.86 W",
+        "11.79 W",
         "21.43 W",
-        "10.71 W",
-        "25.43 W"
+        "53.58 W",
+        "22.5 W"
       ],
       "correctAnswer": "21.43 W",
       "correctIndex": 1,
@@ -2691,9 +2691,9 @@
       "question": "On a school lab card, a pupil answers: the power calculation for a lamp gives 20 W. Which answer should be selected?",
       "options": [
         "20 W",
-        "40 W",
-        "10 W",
-        "25 W"
+        "14 W",
+        "34 W",
+        "17.8 W"
       ],
       "correctAnswer": "20 W",
       "correctIndex": 0,
@@ -2725,9 +2725,9 @@
       "skill": "Calculate power from energy and time",
       "question": "On a factory safety note, an apprentice reviews: a training screen shows P = E/t and the result is 18.89 W. What is P?",
       "options": [
-        "37.78 W",
-        "9.45 W",
-        "24.89 W",
+        "5.67 W",
+        "41.56 W",
+        "13.79 W",
         "18.89 W"
       ],
       "correctAnswer": "18.89 W",
@@ -2760,10 +2760,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a space centre display, a guide explains: which value is correct if a device transfers energy at a rate of 45 W?",
       "options": [
-        "90 W",
-        "22.5 W",
+        "20.25 W",
+        "122 W",
         "45 W",
-        "47 W"
+        "58.05 W"
       ],
       "correctAnswer": "45 W",
       "correctIndex": 2,
@@ -2795,10 +2795,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a revision flashcard, a student practises: a hospital device transfers 30 J each second. What is the power?",
       "options": [
-        "60 W",
-        "15 W",
+        "18 W",
+        "57 W",
         "30 W",
-        "33 W"
+        "33.9 W"
       ],
       "correctAnswer": "30 W",
       "correctIndex": 2,
@@ -2830,10 +2830,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a hospital training card, a trainee checks: a astronomer finds energy transferred per second is 27.14 W. What power is this?",
       "options": [
-        "54.28 W",
+        "20.36 W",
         "27.14 W",
-        "13.57 W",
-        "31.14 W"
+        "65.14 W",
+        "26.33 W"
       ],
       "correctAnswer": "27.14 W",
       "correctIndex": 1,
@@ -2866,9 +2866,9 @@
       "question": "On a observatory data sheet, an astronomer reviews: a heater's energy transfer rate is 15 W. Which power value matches?",
       "options": [
         "15 W",
-        "30 W",
-        "7.5 W",
-        "20 W"
+        "5.25 W",
+        "24 W",
+        "12.15 W"
       ],
       "correctAnswer": "15 W",
       "correctIndex": 0,
@@ -2900,9 +2900,9 @@
       "skill": "Calculate power from energy and time",
       "question": "On a classroom board, a group discusses: the power calculation for a lamp gives 14.44 W. Which answer should be selected?",
       "options": [
-        "28.88 W",
         "7.22 W",
-        "20.44 W",
+        "30.32 W",
+        "9.39 W",
         "14.44 W"
       ],
       "correctAnswer": "14.44 W",
@@ -2935,10 +2935,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a workshop checklist, an engineer checks: a notebook shows P = E/t and the result is 35 W. What is P?",
       "options": [
-        "70 W",
-        "17.5 W",
+        "22.75 W",
+        "91 W",
         "35 W",
-        "37 W"
+        "42.35 W"
       ],
       "correctAnswer": "35 W",
       "correctIndex": 2,
@@ -2970,10 +2970,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a field trip notebook, a pupil records: which value is correct if a device transfers energy at a rate of 30 W?",
       "options": [
-        "60 W",
+        "7.5 W",
         "30 W",
-        "15 W",
-        "33 W"
+        "54 W",
+        "31.5 W"
       ],
       "correctAnswer": "30 W",
       "correctIndex": 1,
@@ -3005,10 +3005,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a science fair poster, a team explains: a exam practice device transfers 38 J each second. What is the power?",
       "options": [
-        "76 W",
+        "15.2 W",
         "38 W",
-        "19 W",
-        "42 W"
+        "87.4 W",
+        "33.82 W"
       ],
       "correctAnswer": "38 W",
       "correctIndex": 1,
@@ -3041,9 +3041,9 @@
       "question": "On a exam practice page, a candidate works: a parent finds energy transferred per second is 20 W. What power is this?",
       "options": [
         "20 W",
-        "40 W",
-        "10 W",
-        "25 W"
+        "11 W",
+        "30 W",
+        "14.6 W"
       ],
       "correctAnswer": "20 W",
       "correctIndex": 0,
@@ -3075,9 +3075,9 @@
       "skill": "Calculate power from energy and time",
       "question": "On a home study card, a learner revises: a heater's energy transfer rate is 18.57 W. Which power value matches?",
       "options": [
+        "13 W",
         "37.14 W",
-        "9.29 W",
-        "24.57 W",
+        "23.96 W",
         "18.57 W"
       ],
       "correctAnswer": "18.57 W",
@@ -3110,10 +3110,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a research log book, an assistant notes: the power calculation for a lamp gives 17.5 W. Which answer should be selected?",
       "options": [
-        "35 W",
-        "8.75 W",
+        "5.25 W",
+        "43.75 W",
         "17.5 W",
-        "19.5 W"
+        "19.77 W"
       ],
       "correctAnswer": "17.5 W",
       "correctIndex": 2,
@@ -3145,10 +3145,10 @@
       "skill": "Calculate power from energy and time",
       "question": "On a planetarium screen, a visitor chooses: a sound desk shows P = E/t and the result is 16.67 W. What is P?",
       "options": [
-        "33.34 W",
+        "7.5 W",
         "16.67 W",
-        "8.34 W",
-        "19.67 W"
+        "28.34 W",
+        "16.17 W"
       ],
       "correctAnswer": "16.67 W",
       "correctIndex": 1,
@@ -3181,9 +3181,9 @@
       "question": "On a radio studio demo, a presenter explains: which value is correct if a device transfers energy at a rate of 40 W?",
       "options": [
         "40 W",
-        "80 W",
-        "20 W",
-        "44 W"
+        "24 W",
+        "88 W",
+        "32.4 W"
       ],
       "correctAnswer": "40 W",
       "correctIndex": 0,
@@ -3215,9 +3215,9 @@
       "skill": "Calculate power from energy and time",
       "question": "On a energy survey report, a surveyor writes: a clinic device transfers 34 J each second. What is the power?",
       "options": [
-        "68 W",
-        "17 W",
-        "39 W",
+        "25.5 W",
+        "91.8 W",
+        "22.1 W",
         "34 W"
       ],
       "correctAnswer": "34 W",

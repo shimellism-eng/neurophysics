@@ -15,9 +15,9 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a energy-transfer machine to check the key physics idea. A machine gives 45 J of useful energy output from 70 J of total energy input. What is its efficiency?",
       "options": [
-        "155.56 %",
-        "25 %",
-        "74.29 %",
+        "16.07 %",
+        "96.44 %",
+        "41.79 %",
         "64.29 %"
       ],
       "correctAnswer": "64.29 %",
@@ -39,10 +39,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a electric motor test to check the key physics idea. A machine gives 50 J of useful energy output from 80 J of total energy input. What is its efficiency?",
       "options": [
-        "30 %",
-        "72.5 %",
+        "25 %",
+        "125 %",
         "62.5 %",
-        "160 %"
+        "75.63 %"
       ],
       "correctAnswer": "62.5 %",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a lifting device calculation to check the key physics idea. A machine gives 55 J of useful energy output from 90 J of total energy input. What is its efficiency?",
       "options": [
-        "71.11 %",
+        "33.61 %",
         "61.11 %",
-        "163.64 %",
-        "35 %"
+        "153 %",
+        "64.17 %"
       ],
       "correctAnswer": "61.11 %",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A learner uses a useful-output comparison to check the key physics idea. A machine gives 60 J of useful energy output from 100 J of total energy input. What is its efficiency?",
       "options": [
         "60 %",
-        "166.67 %",
-        "40 %",
-        "70 %"
+        "42 %",
+        "102 %",
+        "53.4 %"
       ],
       "correctAnswer": "60 %",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a energy-transfer machine to prepare for an exam-style question. A machine gives 65 J of useful energy output from 85 J of total energy input. What is its efficiency?",
       "options": [
-        "130.77 %",
-        "20 %",
-        "86.47 %",
+        "22.94 %",
+        "168 %",
+        "55.82 %",
         "76.47 %"
       ],
       "correctAnswer": "76.47 %",
@@ -135,10 +135,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a electric motor test to prepare for an exam-style question. A machine gives 70 J of useful energy output from 95 J of total energy input. What is its efficiency?",
       "options": [
-        "25 %",
-        "83.68 %",
+        "33.16 %",
+        "199 %",
         "73.68 %",
-        "135.71 %"
+        "95.05 %"
       ],
       "correctAnswer": "73.68 %",
       "correctIndex": 2,
@@ -159,10 +159,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a lifting device calculation to prepare for an exam-style question. A machine gives 70 J of useful energy output from 110 J of total energy input. What is its efficiency?",
       "options": [
-        "40 %",
-        "73.64 %",
+        "38.18 %",
+        "121 %",
         "63.64 %",
-        "157.14 %"
+        "71.91 %"
       ],
       "correctAnswer": "63.64 %",
       "correctIndex": 2,
@@ -183,10 +183,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a useful-output comparison to prepare for an exam-style question. A machine gives 75 J of useful energy output from 95 J of total energy input. What is its efficiency?",
       "options": [
-        "88.95 %",
+        "59.21 %",
         "78.95 %",
-        "126.67 %",
-        "20 %"
+        "189 %",
+        "76.58 %"
       ],
       "correctAnswer": "78.95 %",
       "correctIndex": 1,
@@ -208,9 +208,9 @@
       "question": "A learner uses a energy-transfer machine to test a common misconception. A machine gives 40 J of useful energy output from 65 J of total energy input. What is its efficiency?",
       "options": [
         "61.54 %",
-        "162.5 %",
-        "25 %",
-        "71.54 %"
+        "21.54 %",
+        "98.46 %",
+        "49.85 %"
       ],
       "correctAnswer": "61.54 %",
       "correctIndex": 0,
@@ -231,9 +231,9 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a electric motor test to test a common misconception. A machine gives 45 J of useful energy output from 75 J of total energy input. What is its efficiency?",
       "options": [
-        "166.67 %",
         "30 %",
-        "70 %",
+        "126 %",
+        "39 %",
         "60 %"
       ],
       "correctAnswer": "60 %",
@@ -255,10 +255,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a lifting device calculation to test a common misconception. A machine gives 50 J of useful energy output from 85 J of total energy input. What is its efficiency?",
       "options": [
-        "35 %",
-        "68.82 %",
+        "38.23 %",
+        "153 %",
         "58.82 %",
-        "170 %"
+        "71.17 %"
       ],
       "correctAnswer": "58.82 %",
       "correctIndex": 2,
@@ -279,10 +279,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a useful-output comparison to test a common misconception. A machine gives 55 J of useful energy output from 95 J of total energy input. What is its efficiency?",
       "options": [
-        "67.89 %",
+        "14.47 %",
         "57.89 %",
-        "172.73 %",
-        "40 %"
+        "104 %",
+        "60.78 %"
       ],
       "correctAnswer": "57.89 %",
       "correctIndex": 1,
@@ -303,10 +303,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a energy-transfer machine to link the context to the GCSE model. A machine gives 75 J of useful energy output from 105 J of total energy input. What is its efficiency?",
       "options": [
-        "81.43 %",
+        "28.57 %",
         "71.43 %",
-        "140 %",
-        "30 %"
+        "164 %",
+        "63.57 %"
       ],
       "correctAnswer": "71.43 %",
       "correctIndex": 1,
@@ -328,9 +328,9 @@
       "question": "A learner uses a electric motor test to link the context to the GCSE model. A machine gives 40 J of useful energy output from 75 J of total energy input. What is its efficiency?",
       "options": [
         "53.33 %",
-        "187.5 %",
-        "35 %",
-        "63.33 %"
+        "29.33 %",
+        "80 %",
+        "38.93 %"
       ],
       "correctAnswer": "53.33 %",
       "correctIndex": 0,
@@ -351,9 +351,9 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a lifting device calculation to link the context to the GCSE model. A machine gives 45 J of useful energy output from 85 J of total energy input. What is its efficiency?",
       "options": [
-        "188.89 %",
-        "40 %",
-        "62.94 %",
+        "37.06 %",
+        "106 %",
+        "68.29 %",
         "52.94 %"
       ],
       "correctAnswer": "52.94 %",
@@ -375,10 +375,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a useful-output comparison to link the context to the GCSE model. A machine gives 50 J of useful energy output from 70 J of total energy input. What is its efficiency?",
       "options": [
-        "20 %",
-        "81.43 %",
+        "21.43 %",
+        "179 %",
         "71.43 %",
-        "140 %"
+        "80.72 %"
       ],
       "correctAnswer": "71.43 %",
       "correctIndex": 2,
@@ -399,10 +399,10 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a energy-transfer machine to review the evidence in the setup. A machine gives 55 J of useful energy output from 80 J of total energy input. What is its efficiency?",
       "options": [
-        "78.75 %",
+        "30.94 %",
         "68.75 %",
-        "145.45 %",
-        "25 %"
+        "117 %",
+        "66.69 %"
       ],
       "correctAnswer": "68.75 %",
       "correctIndex": 1,
@@ -424,9 +424,9 @@
       "question": "A learner uses a electric motor test to review the evidence in the setup. A machine gives 60 J of useful energy output from 90 J of total energy input. What is its efficiency?",
       "options": [
         "66.67 %",
-        "150 %",
-        "30 %",
-        "76.67 %"
+        "40 %",
+        "147 %",
+        "54 %"
       ],
       "correctAnswer": "66.67 %",
       "correctIndex": 0,
@@ -447,9 +447,9 @@
       "skill": "Calculate efficiency",
       "question": "A learner uses a lifting device calculation to review the evidence in the setup. A machine gives 65 J of useful energy output from 100 J of total energy input. What is its efficiency?",
       "options": [
-        "153.85 %",
-        "35 %",
-        "75 %",
+        "48.75 %",
+        "176 %",
+        "42.25 %",
         "65 %"
       ],
       "correctAnswer": "65 %",
@@ -495,10 +495,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a national grid planning meeting to check the key physics idea. Which choice gives a good reason for using a renewable energy resource in the future?",
       "options": [
+        "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
         "It is less likely to run out.",
-        "It always gives the same power output."
+        "It produces no environmental impact anywhere."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 2,
@@ -519,10 +519,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a future energy source comparison to check the key physics idea. Which choice gives a good reason for using a renewable energy resource in the future?",
       "options": [
-        "It can be used without any cost at all.",
-        "It is less likely to run out.",
         "It always gives the same power output.",
-        "It never needs any equipment."
+        "It is less likely to run out.",
+        "It never needs any equipment.",
+        "It works only when fossil fuels are burned."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 1,
@@ -546,7 +546,7 @@
         "It is less likely to run out.",
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all."
+        "It stores unlimited energy without losses."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 0,
@@ -569,7 +569,7 @@
       "options": [
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
+        "It is guaranteed to be available every second.",
         "It is less likely to run out."
       ],
       "correctAnswer": "It is less likely to run out.",
@@ -591,10 +591,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a national grid planning meeting to prepare for an exam-style question. Which choice gives a good reason for using a renewable energy resource in the future? Choose the best answer.",
       "options": [
+        "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
         "It is less likely to run out.",
-        "It always gives the same power output."
+        "It changes chemical energy directly into sound."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 2,
@@ -617,7 +617,7 @@
       "options": [
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
+        "It removes the need for a national grid.",
         "It is less likely to run out."
       ],
       "correctAnswer": "It is less likely to run out.",
@@ -639,10 +639,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a low-carbon electricity briefing to prepare for an exam-style question. Which choice gives a good reason for using a renewable energy resource in the future?",
       "options": [
+        "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
         "It is less likely to run out.",
-        "It always gives the same power output."
+        "It can never affect habitats or land use."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 2,
@@ -663,10 +663,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a renewable energy debate to test a common misconception. Which choice gives a good reason for using a renewable energy resource in the future?",
       "options": [
-        "It can be used without any cost at all.",
-        "It is less likely to run out.",
         "It always gives the same power output.",
-        "It never needs any equipment."
+        "It is less likely to run out.",
+        "It never needs any equipment.",
+        "It produces electricity without any energy transfer."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 1,
@@ -690,7 +690,7 @@
         "It is less likely to run out.",
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all."
+        "It is always cheaper than every non-renewable source."
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 0,
@@ -713,7 +713,7 @@
       "options": [
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
+        "Coal",
         "It is less likely to run out."
       ],
       "correctAnswer": "It is less likely to run out.",
@@ -735,10 +735,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a low-carbon electricity briefing to test a common misconception. Which choice gives a good reason for using a renewable energy resource in the future? Choose the best answer.",
       "options": [
+        "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
         "It is less likely to run out.",
-        "It always gives the same power output."
+        "Natural gas"
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 2,
@@ -759,10 +759,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a renewable energy debate to link the context to the GCSE model. Which choice gives a good reason for using a renewable energy resource in the future?",
       "options": [
-        "It can be used without any cost at all.",
-        "It is less likely to run out.",
         "It always gives the same power output.",
-        "It never needs any equipment."
+        "It is less likely to run out.",
+        "It never needs any equipment.",
+        "Oil"
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 1,
@@ -786,7 +786,7 @@
         "It is less likely to run out.",
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all."
+        "Petrol"
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 0,
@@ -809,7 +809,7 @@
       "options": [
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
+        "Diesel",
         "It is less likely to run out."
       ],
       "correctAnswer": "It is less likely to run out.",
@@ -831,10 +831,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a low-carbon electricity briefing to link the context to the GCSE model. Which choice gives a good reason for using a renewable energy resource in the future?",
       "options": [
+        "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all.",
         "It is less likely to run out.",
-        "It always gives the same power output."
+        "Uranium fuel"
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 2,
@@ -855,10 +855,10 @@
       "skill": "Evaluate energy resource choices",
       "question": "A learner uses a renewable energy debate to review the evidence in the setup. Which choice gives a good reason for using a renewable energy resource in the future? Choose the best answer.",
       "options": [
-        "It can be used without any cost at all.",
-        "It is less likely to run out.",
         "It always gives the same power output.",
-        "It never needs any equipment."
+        "It is less likely to run out.",
+        "It never needs any equipment.",
+        "A gas-fired power station"
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 1,
@@ -882,7 +882,7 @@
         "It is less likely to run out.",
         "It always gives the same power output.",
         "It never needs any equipment.",
-        "It can be used without any cost at all."
+        "A coal-fired power station"
       ],
       "correctAnswer": "It is less likely to run out.",
       "correctIndex": 0,
@@ -904,8 +904,8 @@
       "question": "A learner uses a future energy source comparison to review the evidence in the setup. Which energy resource is renewable?",
       "options": [
         "Coal",
-        "Natural gas",
-        "Oil",
+        "Uranium fuel",
+        "A gas-fired power station",
         "Wind"
       ],
       "correctAnswer": "Wind",
@@ -927,10 +927,10 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a low-carbon electricity briefing to review the evidence in the setup. Which energy resource is renewable?",
       "options": [
-        "Natural gas",
-        "Oil",
+        "Coal",
+        "Uranium fuel",
         "Wind",
-        "Coal"
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 2,
@@ -951,10 +951,10 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a renewable energy debate to practise choosing the best explanation. Which energy resource is renewable?",
       "options": [
-        "Oil",
-        "Wind",
         "Coal",
-        "Natural gas"
+        "Wind",
+        "A gas-fired power station",
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 1,
@@ -976,9 +976,9 @@
       "question": "A learner uses a national grid planning meeting to practise choosing the best explanation. Which energy resource is renewable?",
       "options": [
         "Wind",
-        "Coal",
         "Natural gas",
-        "Oil"
+        "Oil",
+        "Petrol"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 0,
@@ -999,9 +999,9 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a future energy source comparison to practise choosing the best explanation. Which energy resource is renewable? Choose the best answer.",
       "options": [
-        "Coal",
         "Natural gas",
         "Oil",
+        "Diesel",
         "Wind"
       ],
       "correctAnswer": "Wind",
@@ -1026,7 +1026,7 @@
         "Natural gas",
         "Oil",
         "Wind",
-        "Coal"
+        "Uranium fuel"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 2,
@@ -1047,9 +1047,9 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a renewable energy debate to focus on the relationship being tested. Which energy resource is renewable?",
       "options": [
-        "Coal",
         "Natural gas",
         "Oil",
+        "A gas-fired power station",
         "Wind"
       ],
       "correctAnswer": "Wind",
@@ -1074,7 +1074,7 @@
         "Natural gas",
         "Oil",
         "Wind",
-        "Coal"
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 2,
@@ -1095,10 +1095,10 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a future energy source comparison to focus on the relationship being tested. Which energy resource is renewable?",
       "options": [
-        "Oil",
+        "Natural gas",
         "Wind",
-        "Coal",
-        "Natural gas"
+        "Petrol",
+        "Diesel"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 1,
@@ -1120,9 +1120,9 @@
       "question": "A learner uses a low-carbon electricity briefing to focus on the relationship being tested. Which energy resource is renewable?",
       "options": [
         "Wind",
-        "Coal",
         "Natural gas",
-        "Oil"
+        "Petrol",
+        "Uranium fuel"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 0,
@@ -1143,9 +1143,9 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a renewable energy debate to decide what the data shows. Which energy resource is renewable? Choose the best answer.",
       "options": [
-        "Coal",
         "Natural gas",
-        "Oil",
+        "Petrol",
+        "A gas-fired power station",
         "Wind"
       ],
       "correctAnswer": "Wind",
@@ -1168,9 +1168,9 @@
       "question": "A learner uses a national grid planning meeting to decide what the data shows. Which energy resource is renewable? Choose the best answer.",
       "options": [
         "Natural gas",
-        "Oil",
+        "Petrol",
         "Wind",
-        "Coal"
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 2,
@@ -1191,10 +1191,10 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a future energy source comparison to decide what the data shows. Which energy resource is renewable? Choose the best answer.",
       "options": [
-        "Oil",
+        "Natural gas",
         "Wind",
-        "Coal",
-        "Natural gas"
+        "Diesel",
+        "Uranium fuel"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 1,
@@ -1215,10 +1215,10 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a low-carbon electricity briefing to decide what the data shows. Which energy resource is renewable?",
       "options": [
-        "Oil",
+        "Natural gas",
         "Wind",
-        "Coal",
-        "Natural gas"
+        "Diesel",
+        "A gas-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 1,
@@ -1240,9 +1240,9 @@
       "question": "A learner uses a renewable energy debate to connect the example to the correct rule. Which energy resource is renewable?",
       "options": [
         "Wind",
-        "Coal",
         "Natural gas",
-        "Oil"
+        "Diesel",
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 0,
@@ -1263,9 +1263,9 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a national grid planning meeting to connect the example to the correct rule. Which energy resource is renewable?",
       "options": [
-        "Coal",
         "Natural gas",
-        "Oil",
+        "Uranium fuel",
+        "A gas-fired power station",
         "Wind"
       ],
       "correctAnswer": "Wind",
@@ -1288,9 +1288,9 @@
       "question": "A learner uses a future energy source comparison to connect the example to the correct rule. Which energy resource is renewable?",
       "options": [
         "Natural gas",
-        "Oil",
+        "Uranium fuel",
         "Wind",
-        "Coal"
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 2,
@@ -1311,10 +1311,10 @@
       "skill": "Identify renewable energy resources",
       "question": "A learner uses a low-carbon electricity briefing to connect the example to the correct rule. Which energy resource is renewable? Choose the best answer.",
       "options": [
-        "Oil",
+        "Natural gas",
         "Wind",
-        "Coal",
-        "Natural gas"
+        "A gas-fired power station",
+        "A coal-fired power station"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 1,
@@ -1336,9 +1336,9 @@
       "question": "A learner uses a renewable energy debate to spot the answer an examiner would accept. Which energy resource is renewable? Choose the best answer.",
       "options": [
         "Wind",
-        "Coal",
-        "Natural gas",
-        "Oil"
+        "Oil",
+        "Petrol",
+        "Diesel"
       ],
       "correctAnswer": "Wind",
       "correctIndex": 0,
@@ -1360,8 +1360,8 @@
       "question": "A learner uses a school bag lift to check the key physics idea. A 2 kg bag is lifted by 3 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
         "15 J",
-        "6 J",
-        "63 J",
+        "90 J",
+        "39 J",
         "60 J"
       ],
       "correctAnswer": "60 J",
@@ -1383,10 +1383,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a crate raised on a platform to check the key physics idea. A 3 kg bag is lifted by 4 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "12 J",
-        "124 J",
+        "48 J",
+        "240 J",
         "120 J",
-        "17 J"
+        "145 J"
       ],
       "correctAnswer": "120 J",
       "correctIndex": 2,
@@ -1407,10 +1407,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a book lifted to a shelf to check the key physics idea. A 4 kg bag is lifted by 5 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "205 J",
+        "110 J",
         "200 J",
-        "19 J",
-        "20 J"
+        "500 J",
+        "210 J"
       ],
       "correctAnswer": "200 J",
       "correctIndex": 1,
@@ -1432,9 +1432,9 @@
       "question": "A learner uses a climbing-wall calculation to check the key physics idea. A 5 kg bag is lifted by 6 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
         "300 J",
-        "21 J",
-        "30 J",
-        "306 J"
+        "210 J",
+        "510 J",
+        "267 J"
       ],
       "correctAnswer": "300 J",
       "correctIndex": 0,
@@ -1455,9 +1455,9 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a school bag lift to prepare for an exam-style question. A 6 kg bag is lifted by 7 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "23 J",
-        "42 J",
-        "427 J",
+        "126 J",
+        "924 J",
+        "307 J",
         "420 J"
       ],
       "correctAnswer": "420 J",
@@ -1479,10 +1479,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a crate raised on a platform to prepare for an exam-style question. A 7 kg bag is lifted by 8 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "56 J",
-        "568 J",
+        "252 J",
+        "1512 J",
         "560 J",
-        "25 J"
+        "722 J"
       ],
       "correctAnswer": "560 J",
       "correctIndex": 2,
@@ -1503,10 +1503,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a book lifted to a shelf to prepare for an exam-style question. A 8 kg bag is lifted by 9 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "729 J",
+        "432 J",
         "720 J",
-        "27 J",
-        "72 J"
+        "1368 J",
+        "814 J"
       ],
       "correctAnswer": "720 J",
       "correctIndex": 1,
@@ -1527,10 +1527,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a climbing-wall calculation to prepare for an exam-style question. A 6 kg bag is lifted by 8 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "48 J",
-        "488 J",
+        "360 J",
+        "1152 J",
         "480 J",
-        "24 J"
+        "466 J"
       ],
       "correctAnswer": "480 J",
       "correctIndex": 2,
@@ -1551,10 +1551,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a school bag lift to test a common misconception. A 7 kg bag is lifted by 9 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "639 J",
+        "221 J",
         "630 J",
-        "26 J",
-        "63 J"
+        "1008 J",
+        "510 J"
       ],
       "correctAnswer": "630 J",
       "correctIndex": 1,
@@ -1576,9 +1576,9 @@
       "question": "A learner uses a crate raised on a platform to test a common misconception. A 8 kg bag is lifted by 2 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
         "160 J",
-        "20 J",
-        "16 J",
-        "162 J"
+        "80 J",
+        "336 J",
+        "104 J"
       ],
       "correctAnswer": "160 J",
       "correctIndex": 0,
@@ -1599,9 +1599,9 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a book lifted to a shelf to test a common misconception. A 9 kg bag is lifted by 3 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "22 J",
-        "27 J",
-        "273 J",
+        "176 J",
+        "702 J",
+        "327 J",
         "270 J"
       ],
       "correctAnswer": "270 J",
@@ -1623,10 +1623,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a climbing-wall calculation to test a common misconception. A 1 kg bag is lifted by 4 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "4 J",
-        "44 J",
+        "10 J",
+        "72 J",
         "40 J",
-        "15 J"
+        "42 J"
       ],
       "correctAnswer": "40 J",
       "correctIndex": 2,
@@ -1647,10 +1647,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a school bag lift to link the context to the GCSE model. A 2 kg bag is lifted by 5 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "105 J",
+        "40 J",
         "100 J",
-        "17 J",
-        "10 J"
+        "230 J",
+        "89 J"
       ],
       "correctAnswer": "100 J",
       "correctIndex": 1,
@@ -1672,9 +1672,9 @@
       "question": "A learner uses a crate raised on a platform to link the context to the GCSE model. A 9 kg bag is lifted by 2 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
         "180 J",
-        "21 J",
-        "18 J",
-        "182 J"
+        "99 J",
+        "270 J",
+        "131 J"
       ],
       "correctAnswer": "180 J",
       "correctIndex": 0,
@@ -1695,9 +1695,9 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a book lifted to a shelf to link the context to the GCSE model. A 1 kg bag is lifted by 3 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "14 J",
-        "3 J",
-        "33 J",
+        "21 J",
+        "60 J",
+        "38.7 J",
         "30 J"
       ],
       "correctAnswer": "30 J",
@@ -1719,10 +1719,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a climbing-wall calculation to link the context to the GCSE model. A 2 kg bag is lifted by 4 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "8 J",
-        "84 J",
+        "24 J",
+        "200 J",
         "80 J",
-        "16 J"
+        "90.4 J"
       ],
       "correctAnswer": "80 J",
       "correctIndex": 2,
@@ -1743,10 +1743,10 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a school bag lift to review the evidence in the setup. A 3 kg bag is lifted by 5 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "155 J",
+        "67.5 J",
         "150 J",
-        "18 J",
-        "15 J"
+        "255 J",
+        "146 J"
       ],
       "correctAnswer": "150 J",
       "correctIndex": 1,
@@ -1768,9 +1768,9 @@
       "question": "A learner uses a crate raised on a platform to review the evidence in the setup. A 4 kg bag is lifted by 6 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
         "240 J",
-        "20 J",
-        "24 J",
-        "246 J"
+        "144 J",
+        "528 J",
+        "194 J"
       ],
       "correctAnswer": "240 J",
       "correctIndex": 0,
@@ -1791,9 +1791,9 @@
       "skill": "Calculate gravitational potential energy",
       "question": "A learner uses a book lifted to a shelf to review the evidence in the setup. A 5 kg bag is lifted by 7 m. Using g = 10 N/kg, what is the gain in gravitational potential energy?",
       "options": [
-        "22 J",
-        "35 J",
-        "357 J",
+        "263 J",
+        "945 J",
+        "228 J",
         "350 J"
       ],
       "correctAnswer": "350 J",
@@ -1839,10 +1839,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a particle model description to check the key physics idea. Why does heating a substance increase its internal energy?",
       "options": [
+        "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element.",
         "The particles gain kinetic and potential energy.",
-        "The particles lose mass."
+        "The substance loses all potential energy."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 2,
@@ -1863,10 +1863,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a thermal energy lesson to check the key physics idea. Why does heating a substance increase its internal energy?",
       "options": [
-        "The particles become a different element.",
-        "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving."
+        "The particles gain kinetic and potential energy.",
+        "The particles stop moving.",
+        "The particles become fixed in a perfect lattice."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 1,
@@ -1890,7 +1890,7 @@
         "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element."
+        "Heating removes kinetic energy from the particles."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 0,
@@ -1913,7 +1913,7 @@
       "options": [
         "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element.",
+        "The atoms split into smaller nuclei.",
         "The particles gain kinetic and potential energy."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
@@ -1935,10 +1935,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a particle model description to prepare for an exam-style question. Why does heating a substance increase its internal energy? Choose the best answer.",
       "options": [
+        "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element.",
         "The particles gain kinetic and potential energy.",
-        "The particles lose mass."
+        "The temperature falls whenever energy is transferred in."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 2,
@@ -1961,7 +1961,7 @@
       "options": [
         "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element.",
+        "The particles stop colliding with each other.",
         "The particles gain kinetic and potential energy."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
@@ -1983,10 +1983,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a temperature-change discussion to prepare for an exam-style question. Why does heating a substance increase its internal energy?",
       "options": [
+        "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element.",
         "The particles gain kinetic and potential energy.",
-        "The particles lose mass."
+        "The material becomes radioactive."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 2,
@@ -2007,10 +2007,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a heated beaker explanation to test a common misconception. Why does heating a substance increase its internal energy?",
       "options": [
-        "The particles become a different element.",
-        "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving."
+        "The particles gain kinetic and potential energy.",
+        "The particles stop moving.",
+        "The particles turn into electrons only."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 1,
@@ -2034,7 +2034,7 @@
         "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
         "The particles stop moving.",
-        "The particles become a different element."
+        "The bonds disappear without any energy transfer."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 0,
@@ -2056,8 +2056,8 @@
       "question": "A learner uses a thermal energy lesson to test a common misconception. Why does heating a substance increase its internal energy? Choose the best answer.",
       "options": [
         "The particles lose mass.",
-        "The particles stop moving.",
         "The particles become a different element.",
+        "The substance loses all potential energy.",
         "The particles gain kinetic and potential energy."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
@@ -2079,10 +2079,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a temperature-change discussion to test a common misconception. Why does heating a substance increase its internal energy? Choose the best answer.",
       "options": [
-        "The particles stop moving.",
+        "The particles lose mass.",
         "The particles become a different element.",
         "The particles gain kinetic and potential energy.",
-        "The particles lose mass."
+        "The particles become fixed in a perfect lattice."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 2,
@@ -2103,10 +2103,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a heated beaker explanation to link the context to the GCSE model. Why does heating a substance increase its internal energy? Choose the best answer.",
       "options": [
-        "The particles become a different element.",
-        "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving."
+        "The particles gain kinetic and potential energy.",
+        "The particles become a different element.",
+        "Heating removes kinetic energy from the particles."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 1,
@@ -2127,10 +2127,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a particle model description to link the context to the GCSE model. Why does heating a substance increase its internal energy?",
       "options": [
-        "The particles become a different element.",
-        "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving."
+        "The particles gain kinetic and potential energy.",
+        "The particles become a different element.",
+        "The atoms split into smaller nuclei."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 1,
@@ -2153,8 +2153,8 @@
       "options": [
         "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving.",
-        "The particles become a different element."
+        "The particles become a different element.",
+        "The temperature falls whenever energy is transferred in."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 0,
@@ -2176,8 +2176,8 @@
       "question": "A learner uses a temperature-change discussion to link the context to the GCSE model. Why does heating a substance increase its internal energy?",
       "options": [
         "The particles lose mass.",
-        "The particles stop moving.",
         "The particles become a different element.",
+        "The particles stop colliding with each other.",
         "The particles gain kinetic and potential energy."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
@@ -2199,10 +2199,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a heated beaker explanation to review the evidence in the setup. Why does heating a substance increase its internal energy?",
       "options": [
-        "The particles stop moving.",
+        "The particles lose mass.",
         "The particles become a different element.",
         "The particles gain kinetic and potential energy.",
-        "The particles lose mass."
+        "The material becomes radioactive."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 2,
@@ -2223,10 +2223,10 @@
       "skill": "Describe internal energy",
       "question": "A learner uses a particle model description to review the evidence in the setup. Why does heating a substance increase its internal energy? Choose the best answer.",
       "options": [
-        "The particles become a different element.",
-        "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving."
+        "The particles gain kinetic and potential energy.",
+        "The particles become a different element.",
+        "The particles turn into electrons only."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 1,
@@ -2249,8 +2249,8 @@
       "options": [
         "The particles gain kinetic and potential energy.",
         "The particles lose mass.",
-        "The particles stop moving.",
-        "The particles become a different element."
+        "The particles become a different element.",
+        "The bonds disappear without any energy transfer."
       ],
       "correctAnswer": "The particles gain kinetic and potential energy.",
       "correctIndex": 0,

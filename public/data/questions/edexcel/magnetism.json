@@ -15,9 +15,9 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a loudspeaker cross-section to check the key physics idea. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
+        "The magnet switches off and on by itself.",
         "The current in the coil changes direction, so the force on the coil also changes direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
@@ -39,10 +39,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a speaker cone motion explanation to check the key physics idea. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only."
+        "Gravity pulls the cone backwards and forwards."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a audio driver diagram to check the key physics idea. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically."
+        "The coil heats up and expands without a force.",
+        "The current turns the paper cone into a permanent magnet."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A learner uses a coil-in-field example to check the key physics idea. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed."
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
+        "The sound wave pushes electrons around the coil."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a loudspeaker cross-section to prepare for an exam-style question. Why does a loudspeaker cone move backwards and forwards? Choose the best answer.",
       "options": [
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
+        "The coil moves because it is in a magnetic field.",
         "The current in the coil changes direction, so the force on the coil also changes direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
@@ -135,10 +135,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a speaker cone motion explanation to prepare for an exam-style question. Why does a loudspeaker cone move backwards and forwards? Choose the best answer.",
       "options": [
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only."
+        "The cone moves only when there is no current."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 2,
@@ -159,9 +159,9 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a audio driver diagram to prepare for an exam-style question. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
+        "The speaker works by nuclear radiation.",
         "The current in the coil changes direction, so the force on the coil also changes direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
@@ -183,10 +183,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a coil-in-field example to prepare for an exam-style question. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only."
+        "The alternating current has no effect on force direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 2,
@@ -207,10 +207,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a loudspeaker cross-section to test a common misconception. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically."
+        "The coil heats up and expands without a force.",
+        "The magnetic field removes all resistance."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 1,
@@ -232,9 +232,9 @@
       "question": "A learner uses a speaker cone motion explanation to test a common misconception. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed."
+        "The cone moves because air pressure charges the coil.",
+        "The coil heats up and expands without a force.",
+        "The cone vibrates because the wire melts repeatedly."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 0,
@@ -255,9 +255,9 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a audio driver diagram to test a common misconception. Why does a loudspeaker cone move backwards and forwards? Choose the best answer.",
       "options": [
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The magnet switches off and on by itself.",
+        "Gravity pulls the cone backwards and forwards.",
         "The current in the coil changes direction, so the force on the coil also changes direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
@@ -279,10 +279,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a coil-in-field example to test a common misconception. Why does a loudspeaker cone move backwards and forwards? Choose the best answer.",
       "options": [
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The magnet switches off and on by itself.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only."
+        "The current turns the paper cone into a permanent magnet."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 2,
@@ -303,10 +303,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a loudspeaker cross-section to link the context to the GCSE model. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically."
+        "The magnet switches off and on by itself.",
+        "The sound wave pushes electrons around the coil."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 1,
@@ -328,9 +328,9 @@
       "question": "A learner uses a speaker cone motion explanation to link the context to the GCSE model. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed."
+        "The cone moves because air pressure charges the coil.",
+        "The magnet switches off and on by itself.",
+        "The coil moves because it is in a magnetic field."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 0,
@@ -351,9 +351,9 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a audio driver diagram to link the context to the GCSE model. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The magnet switches off and on by itself.",
+        "The cone moves only when there is no current.",
         "The current in the coil changes direction, so the force on the coil also changes direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
@@ -375,10 +375,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a coil-in-field example to link the context to the GCSE model. Why does a loudspeaker cone move backwards and forwards?",
       "options": [
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
+        "The magnet switches off and on by itself.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only."
+        "The speaker works by nuclear radiation."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 2,
@@ -399,10 +399,10 @@
       "skill": "Explain how a loudspeaker works",
       "question": "A learner uses a loudspeaker cross-section to review the evidence in the setup. Why does a loudspeaker cone move backwards and forwards? Choose the best answer.",
       "options": [
-        "The wire stops producing a magnetic field whenever sound is needed.",
+        "The cone moves because air pressure charges the coil.",
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically."
+        "The magnet switches off and on by itself.",
+        "The alternating current has no effect on force direction."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 1,
@@ -424,9 +424,9 @@
       "question": "A learner uses a speaker cone motion explanation to review the evidence in the setup. Why does a loudspeaker cone move backwards and forwards? Choose the best answer.",
       "options": [
         "The current in the coil changes direction, so the force on the coil also changes direction.",
-        "The permanent magnet becomes hotter and pushes the cone outwards only.",
-        "The cone stores charge and releases it mechanically.",
-        "The wire stops producing a magnetic field whenever sound is needed."
+        "The cone moves because air pressure charges the coil.",
+        "The magnet switches off and on by itself.",
+        "The magnetic field removes all resistance."
       ],
       "correctAnswer": "The current in the coil changes direction, so the force on the coil also changes direction.",
       "correctIndex": 0,
@@ -447,9 +447,9 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a generator demonstration to check the key physics idea. What is electromagnetic induction?",
       "options": [
+        "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A current is made by heating a wire until it glows.",
         "A magnetic field is destroyed when iron is placed near it.",
-        "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A potential difference is produced when a conductor cuts through magnetic field lines."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
@@ -471,10 +471,10 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a moving magnet and coil setup to check the key physics idea. What is electromagnetic induction?",
       "options": [
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A current is made by heating a wire until it glows.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows."
+        "A potential difference is made only when the conductor is stationary."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 2,
@@ -498,7 +498,7 @@
         "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
         "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it."
+        "The coil produces charge without any energy transfer."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 1,
@@ -520,9 +520,9 @@
       "question": "A learner uses a induction practical trace to check the key physics idea. What is electromagnetic induction?",
       "options": [
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
+        "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it.",
-        "A conductor becomes a permanent magnet whenever a battery is removed."
+        "The magnet must touch the wire for a voltage to appear."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 0,
@@ -543,9 +543,9 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a generator demonstration to prepare for an exam-style question. What is electromagnetic induction? Choose the best answer.",
       "options": [
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A current is made by heating a wire until it glows.",
+        "The field lines are used up by the moving conductor.",
         "A potential difference is produced when a conductor cuts through magnetic field lines."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
@@ -567,10 +567,10 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a moving magnet and coil setup to prepare for an exam-style question. What is electromagnetic induction? Choose the best answer.",
       "options": [
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A current is made by heating a wire until it glows.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows."
+        "The conductor becomes radioactive when it moves."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 2,
@@ -591,9 +591,9 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a bike dynamo explanation to prepare for an exam-style question. What is electromagnetic induction?",
       "options": [
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A current is made by heating a wire until it glows.",
+        "The current is caused by gravity pulling electrons down.",
         "A potential difference is produced when a conductor cuts through magnetic field lines."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
@@ -615,10 +615,10 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a induction practical trace to prepare for an exam-style question. What is electromagnetic induction?",
       "options": [
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A current is made by heating a wire until it glows.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows."
+        "A voltage appears only if the wire is plastic."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 2,
@@ -642,7 +642,7 @@
         "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
         "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it."
+        "The coil stops all magnetic fields passing through it."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 1,
@@ -664,9 +664,9 @@
       "question": "A learner uses a moving magnet and coil setup to test a common misconception. What is electromagnetic induction?",
       "options": [
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
+        "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it.",
-        "A conductor becomes a permanent magnet whenever a battery is removed."
+        "The induced potential difference is unrelated to motion."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 0,
@@ -687,9 +687,9 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a bike dynamo explanation to test a common misconception. What is electromagnetic induction? Choose the best answer.",
       "options": [
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A magnetic field is destroyed when iron is placed near it.",
+        "A potential difference is made only when the conductor is stationary.",
         "A potential difference is produced when a conductor cuts through magnetic field lines."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
@@ -711,10 +711,10 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a induction practical trace to test a common misconception. What is electromagnetic induction? Choose the best answer.",
       "options": [
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A magnetic field is destroyed when iron is placed near it.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows."
+        "The coil produces charge without any energy transfer."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 2,
@@ -737,8 +737,8 @@
       "options": [
         "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it."
+        "A magnetic field is destroyed when iron is placed near it.",
+        "The magnet must touch the wire for a voltage to appear."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 1,
@@ -761,8 +761,8 @@
       "options": [
         "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it."
+        "A magnetic field is destroyed when iron is placed near it.",
+        "The field lines are used up by the moving conductor."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 1,
@@ -784,9 +784,9 @@
       "question": "A learner uses a bike dynamo explanation to link the context to the GCSE model. What is electromagnetic induction?",
       "options": [
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows.",
+        "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A magnetic field is destroyed when iron is placed near it.",
-        "A conductor becomes a permanent magnet whenever a battery is removed."
+        "The conductor becomes radioactive when it moves."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 0,
@@ -807,9 +807,9 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a induction practical trace to link the context to the GCSE model. What is electromagnetic induction?",
       "options": [
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A magnetic field is destroyed when iron is placed near it.",
+        "The current is caused by gravity pulling electrons down.",
         "A potential difference is produced when a conductor cuts through magnetic field lines."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
@@ -831,10 +831,10 @@
       "skill": "Define electromagnetic induction",
       "question": "A learner uses a generator demonstration to review the evidence in the setup. What is electromagnetic induction?",
       "options": [
-        "A magnetic field is destroyed when iron is placed near it.",
         "A conductor becomes a permanent magnet whenever a battery is removed.",
+        "A magnetic field is destroyed when iron is placed near it.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows."
+        "A voltage appears only if the wire is plastic."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 2,
@@ -857,8 +857,8 @@
       "options": [
         "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows.",
-        "A magnetic field is destroyed when iron is placed near it."
+        "A magnetic field is destroyed when iron is placed near it.",
+        "The coil stops all magnetic fields passing through it."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 1,
@@ -880,9 +880,9 @@
       "question": "A learner uses a bike dynamo explanation to review the evidence in the setup. What is electromagnetic induction? Choose the best answer.",
       "options": [
         "A potential difference is produced when a conductor cuts through magnetic field lines.",
-        "A current is made by heating a wire until it glows.",
+        "A conductor becomes a permanent magnet whenever a battery is removed.",
         "A magnetic field is destroyed when iron is placed near it.",
-        "A conductor becomes a permanent magnet whenever a battery is removed."
+        "The induced potential difference is unrelated to motion."
       ],
       "correctAnswer": "A potential difference is produced when a conductor cuts through magnetic field lines.",
       "correctIndex": 0,
@@ -903,9 +903,9 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a scrapyard electromagnet to check the key physics idea. How can the strength of an electromagnet be increased?",
       "options": [
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
+        "Decrease the current in the coil.",
         "Increase the current in the coil."
       ],
       "correctAnswer": "Increase the current in the coil.",
@@ -927,10 +927,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a school solenoid practical to check the key physics idea. How can the strength of an electromagnet be increased?",
       "options": [
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil."
+        "Replace the core with plastic."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 2,
@@ -951,10 +951,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a relay switch example to check the key physics idea. How can the strength of an electromagnet be increased?",
       "options": [
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre."
+        "Remove the iron core.",
+        "Disconnect the power supply."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 1,
@@ -976,9 +976,9 @@
       "question": "A learner uses a coil-and-core demonstration to check the key physics idea. How can the strength of an electromagnet be increased?",
       "options": [
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current."
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
+        "Make the wire insulation thicker only."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 0,
@@ -999,9 +999,9 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a scrapyard electromagnet to prepare for an exam-style question. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
+        "Use a non-magnetic aluminium core.",
         "Increase the current in the coil."
       ],
       "correctAnswer": "Increase the current in the coil.",
@@ -1023,10 +1023,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a school solenoid practical to prepare for an exam-style question. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil."
+        "Reduce the number of cells."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 2,
@@ -1047,10 +1047,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a relay switch example to prepare for an exam-style question. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre."
+        "Remove the iron core.",
+        "Put the coil further from the core."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 1,
@@ -1071,10 +1071,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a coil-and-core demonstration to prepare for an exam-style question. How can the strength of an electromagnet be increased?",
       "options": [
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil."
+        "Reverse the battery once then remove it."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 2,
@@ -1095,10 +1095,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a scrapyard electromagnet to test a common misconception. How can the strength of an electromagnet be increased?",
       "options": [
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre."
+        "Remove the iron core.",
+        "Cool the wire until no current flows."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 1,
@@ -1120,9 +1120,9 @@
       "question": "A learner uses a school solenoid practical to test a common misconception. How can the strength of an electromagnet be increased?",
       "options": [
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current."
+        "Use fewer turns on the coil.",
+        "Remove the iron core.",
+        "Use a shorter coil with no turns."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 0,
@@ -1143,9 +1143,9 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a relay switch example to test a common misconception. How can the strength of an electromagnet be increased?",
       "options": [
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
+        "Replace the core with plastic.",
         "Increase the current in the coil."
       ],
       "correctAnswer": "Increase the current in the coil.",
@@ -1167,10 +1167,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a coil-and-core demonstration to test a common misconception. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil."
+        "Disconnect the power supply."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 2,
@@ -1191,10 +1191,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a scrapyard electromagnet to link the context to the GCSE model. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre."
+        "Decrease the current in the coil.",
+        "Make the wire insulation thicker only."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 1,
@@ -1216,9 +1216,9 @@
       "question": "A learner uses a school solenoid practical to link the context to the GCSE model. How can the strength of an electromagnet be increased?",
       "options": [
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current."
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
+        "Use a non-magnetic aluminium core."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 0,
@@ -1239,9 +1239,9 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a relay switch example to link the context to the GCSE model. How can the strength of an electromagnet be increased?",
       "options": [
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
+        "Reduce the number of cells.",
         "Increase the current in the coil."
       ],
       "correctAnswer": "Increase the current in the coil.",
@@ -1263,10 +1263,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a coil-and-core demonstration to link the context to the GCSE model. How can the strength of an electromagnet be increased?",
       "options": [
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil."
+        "Put the coil further from the core."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 2,
@@ -1287,10 +1287,10 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a scrapyard electromagnet to review the evidence in the setup. How can the strength of an electromagnet be increased?",
       "options": [
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre."
+        "Decrease the current in the coil.",
+        "Reverse the battery once then remove it."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 1,
@@ -1312,9 +1312,9 @@
       "question": "A learner uses a school solenoid practical to review the evidence in the setup. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
         "Increase the current in the coil.",
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current."
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
+        "Cool the wire until no current flows."
       ],
       "correctAnswer": "Increase the current in the coil.",
       "correctIndex": 0,
@@ -1335,9 +1335,9 @@
       "skill": "Describe how to strengthen an electromagnet",
       "question": "A learner uses a relay switch example to review the evidence in the setup. How can the strength of an electromagnet be increased? Choose the best answer.",
       "options": [
-        "Use fewer turns of wire in the coil.",
-        "Remove the iron core from the centre.",
-        "Reduce the number of cells to lower the current.",
+        "Use fewer turns on the coil.",
+        "Decrease the current in the coil.",
+        "Use a shorter coil with no turns.",
         "Increase the current in the coil."
       ],
       "correctAnswer": "Increase the current in the coil.",
@@ -1359,9 +1359,9 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a simple motor diagram to check the key physics idea. What causes the motor effect?",
       "options": [
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
         "The conductor gains mass when current passes through it.",
+        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A current-carrying conductor experiences a force in a magnetic field."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
@@ -1386,7 +1386,7 @@
         "A magnetic field always stops current flowing in a conductor.",
         "The conductor gains mass when current passes through it.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity."
+        "The force is caused only by heating the wire."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 2,
@@ -1407,10 +1407,10 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a loudspeaker coil explanation to check the key physics idea. What causes the motor effect?",
       "options": [
-        "The conductor gains mass when current passes through it.",
+        "A magnetic field always stops current flowing in a conductor.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity.",
-        "A magnetic field always stops current flowing in a conductor."
+        "The conductor gains mass when current passes through it.",
+        "The wire moves because electrons become protons."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 1,
@@ -1432,9 +1432,9 @@
       "question": "A learner uses a magnetic force practical to check the key physics idea. What causes the motor effect?",
       "options": [
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it."
+        "The conductor gains mass when current passes through it.",
+        "The field disappears when the current starts."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 0,
@@ -1455,9 +1455,9 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a simple motor diagram to prepare for an exam-style question. What causes the motor effect? Choose the best answer.",
       "options": [
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
         "The conductor gains mass when current passes through it.",
+        "The conductor is pulled only by Earth gravity.",
         "A current-carrying conductor experiences a force in a magnetic field."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
@@ -1482,7 +1482,7 @@
         "A magnetic field always stops current flowing in a conductor.",
         "The conductor gains mass when current passes through it.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity."
+        "The motor effect happens without a magnetic field."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 2,
@@ -1506,7 +1506,7 @@
         "A magnetic field always stops current flowing in a conductor.",
         "The conductor gains mass when current passes through it.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity."
+        "Current makes the wire radioactive."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 2,
@@ -1527,10 +1527,10 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a magnetic force practical to prepare for an exam-style question. What causes the motor effect?",
       "options": [
-        "The conductor gains mass when current passes through it.",
+        "A magnetic field always stops current flowing in a conductor.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity.",
-        "A magnetic field always stops current flowing in a conductor."
+        "The conductor gains mass when current passes through it.",
+        "The force is always zero when current flows."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 1,
@@ -1552,9 +1552,9 @@
       "question": "A learner uses a simple motor diagram to test a common misconception. What causes the motor effect?",
       "options": [
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it."
+        "The conductor gains mass when current passes through it.",
+        "The wire must be made of plastic to move."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 0,
@@ -1575,9 +1575,9 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a current-carrying wire demo to test a common misconception. What causes the motor effect?",
       "options": [
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
         "The conductor gains mass when current passes through it.",
+        "The battery pushes the wire mechanically.",
         "A current-carrying conductor experiences a force in a magnetic field."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
@@ -1600,9 +1600,9 @@
       "question": "A learner uses a loudspeaker coil explanation to test a common misconception. What causes the motor effect? Choose the best answer.",
       "options": [
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it.",
+        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity."
+        "The force is caused only by heating the wire."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 2,
@@ -1623,10 +1623,10 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a magnetic force practical to test a common misconception. What causes the motor effect? Choose the best answer.",
       "options": [
-        "The conductor gains mass when current passes through it.",
+        "A magnetic field always stops current flowing in a conductor.",
         "A current-carrying conductor experiences a force in a magnetic field.",
         "A stationary conductor produces no magnetic field and so creates gravity.",
-        "A magnetic field always stops current flowing in a conductor."
+        "The wire moves because electrons become protons."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 1,
@@ -1647,10 +1647,10 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a simple motor diagram to link the context to the GCSE model. What causes the motor effect?",
       "options": [
-        "The conductor gains mass when current passes through it.",
+        "A magnetic field always stops current flowing in a conductor.",
         "A current-carrying conductor experiences a force in a magnetic field.",
         "A stationary conductor produces no magnetic field and so creates gravity.",
-        "A magnetic field always stops current flowing in a conductor."
+        "The field disappears when the current starts."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 1,
@@ -1672,9 +1672,9 @@
       "question": "A learner uses a current-carrying wire demo to link the context to the GCSE model. What causes the motor effect?",
       "options": [
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it."
+        "A stationary conductor produces no magnetic field and so creates gravity.",
+        "The conductor is pulled only by Earth gravity."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 0,
@@ -1695,9 +1695,9 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a loudspeaker coil explanation to link the context to the GCSE model. What causes the motor effect?",
       "options": [
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it.",
+        "A stationary conductor produces no magnetic field and so creates gravity.",
+        "The motor effect happens without a magnetic field.",
         "A current-carrying conductor experiences a force in a magnetic field."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
@@ -1720,9 +1720,9 @@
       "question": "A learner uses a magnetic force practical to link the context to the GCSE model. What causes the motor effect?",
       "options": [
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it.",
+        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity."
+        "Current makes the wire radioactive."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 2,
@@ -1743,10 +1743,10 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a simple motor diagram to review the evidence in the setup. What causes the motor effect? Choose the best answer.",
       "options": [
-        "The conductor gains mass when current passes through it.",
+        "A magnetic field always stops current flowing in a conductor.",
         "A current-carrying conductor experiences a force in a magnetic field.",
         "A stationary conductor produces no magnetic field and so creates gravity.",
-        "A magnetic field always stops current flowing in a conductor."
+        "The force is always zero when current flows."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 1,
@@ -1768,9 +1768,9 @@
       "question": "A learner uses a current-carrying wire demo to review the evidence in the setup. What causes the motor effect? Choose the best answer.",
       "options": [
         "A current-carrying conductor experiences a force in a magnetic field.",
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it."
+        "A stationary conductor produces no magnetic field and so creates gravity.",
+        "The wire must be made of plastic to move."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
       "correctIndex": 0,
@@ -1791,9 +1791,9 @@
       "skill": "Describe the motor effect",
       "question": "A learner uses a loudspeaker coil explanation to review the evidence in the setup. What causes the motor effect? Choose the best answer.",
       "options": [
-        "A stationary conductor produces no magnetic field and so creates gravity.",
         "A magnetic field always stops current flowing in a conductor.",
-        "The conductor gains mass when current passes through it.",
+        "A stationary conductor produces no magnetic field and so creates gravity.",
+        "The battery pushes the wire mechanically.",
         "A current-carrying conductor experiences a force in a magnetic field."
       ],
       "correctAnswer": "A current-carrying conductor experiences a force in a magnetic field.",
@@ -1815,9 +1815,9 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a solenoid field pattern to check the key physics idea. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
+        "The core removes current from the coil.",
         "The core becomes magnetised and increases the magnetic field."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
@@ -1839,10 +1839,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a iron-core coil test to check the key physics idea. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil."
+        "The solenoid becomes an electric insulator."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 2,
@@ -1863,10 +1863,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a electromagnet design note to check the key physics idea. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil."
+        "The field is weaker because iron is non-magnetic.",
+        "The field lines disappear inside the coil."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 1,
@@ -1888,9 +1888,9 @@
       "question": "A learner uses a field-strength comparison to check the key physics idea. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid."
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
+        "The iron core makes the coil colder only."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 0,
@@ -1911,9 +1911,9 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a solenoid field pattern to prepare for an exam-style question. Why does adding an iron core to a solenoid make the field stronger? Choose the best answer.",
       "options": [
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
+        "The core turns the current into sound.",
         "The core becomes magnetised and increases the magnetic field."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
@@ -1935,10 +1935,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a iron-core coil test to prepare for an exam-style question. Why does adding an iron core to a solenoid make the field stronger? Choose the best answer.",
       "options": [
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil."
+        "The magnetic domains become completely random."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 2,
@@ -1959,9 +1959,9 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a electromagnet design note to prepare for an exam-style question. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
+        "The field exists only outside the solenoid.",
         "The core becomes magnetised and increases the magnetic field."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
@@ -1983,10 +1983,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a field-strength comparison to prepare for an exam-style question. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil."
+        "The core cancels the battery voltage."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 2,
@@ -2007,10 +2007,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a solenoid field pattern to test a common misconception. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil."
+        "The field is weaker because iron is non-magnetic.",
+        "The turns of wire stop acting together."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 1,
@@ -2032,9 +2032,9 @@
       "question": "A learner uses a iron-core coil test to test a common misconception. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid."
+        "The iron core blocks the magnetic field.",
+        "The field is weaker because iron is non-magnetic.",
+        "The solenoid works only without a core."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 0,
@@ -2055,9 +2055,9 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a electromagnet design note to test a common misconception. Why does adding an iron core to a solenoid make the field stronger? Choose the best answer.",
       "options": [
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The core removes current from the coil.",
+        "The solenoid becomes an electric insulator.",
         "The core becomes magnetised and increases the magnetic field."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
@@ -2079,10 +2079,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a field-strength comparison to test a common misconception. Why does adding an iron core to a solenoid make the field stronger? Choose the best answer.",
       "options": [
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The core removes current from the coil.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil."
+        "The field lines disappear inside the coil."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 2,
@@ -2103,10 +2103,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a solenoid field pattern to link the context to the GCSE model. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil."
+        "The core removes current from the coil.",
+        "The iron core makes the coil colder only."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 1,
@@ -2128,9 +2128,9 @@
       "question": "A learner uses a iron-core coil test to link the context to the GCSE model. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid."
+        "The iron core blocks the magnetic field.",
+        "The core removes current from the coil.",
+        "The core turns the current into sound."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 0,
@@ -2151,9 +2151,9 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a electromagnet design note to link the context to the GCSE model. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The core removes current from the coil.",
+        "The magnetic domains become completely random.",
         "The core becomes magnetised and increases the magnetic field."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
@@ -2175,10 +2175,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a field-strength comparison to link the context to the GCSE model. Why does adding an iron core to a solenoid make the field stronger?",
       "options": [
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
+        "The core removes current from the coil.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil."
+        "The field exists only outside the solenoid."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 2,
@@ -2199,10 +2199,10 @@
       "skill": "Explain why an iron core strengthens a solenoid",
       "question": "A learner uses a solenoid field pattern to review the evidence in the setup. Why does adding an iron core to a solenoid make the field stronger? Choose the best answer.",
       "options": [
-        "The core reduces the number of turns in the solenoid.",
+        "The iron core blocks the magnetic field.",
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil."
+        "The core removes current from the coil.",
+        "The core cancels the battery voltage."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 1,
@@ -2224,9 +2224,9 @@
       "question": "A learner uses a iron-core coil test to review the evidence in the setup. Why does adding an iron core to a solenoid make the field stronger? Choose the best answer.",
       "options": [
         "The core becomes magnetised and increases the magnetic field.",
-        "The core stops the current from flowing through the coil.",
-        "The core removes all magnetic poles from the coil.",
-        "The core reduces the number of turns in the solenoid."
+        "The iron core blocks the magnetic field.",
+        "The core removes current from the coil.",
+        "The turns of wire stop acting together."
       ],
       "correctAnswer": "The core becomes magnetised and increases the magnetic field.",
       "correctIndex": 0,

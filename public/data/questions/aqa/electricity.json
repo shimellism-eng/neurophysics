@@ -15,9 +15,9 @@
       "skill": "Use charge = current x time",
       "question": "A current of 3 A flows for 15 s. How much charge passes a point in the circuit?",
       "options": [
-        "18 C",
-        "5 C",
-        "50 C",
+        "11.25 C",
+        "67.5 C",
+        "29.25 C",
         "45 C"
       ],
       "correctAnswer": "45 C",
@@ -39,10 +39,10 @@
       "skill": "Use charge = current x time",
       "question": "During a test of an emergency torch, the current is 1 A for 80 s. Which charge is transferred?",
       "options": [
-        "5 C",
-        "85 C",
+        "32 C",
+        "160 C",
         "80 C",
-        "24 C"
+        "96.8 C"
       ],
       "correctAnswer": "80 C",
       "correctIndex": 2,
@@ -63,10 +63,10 @@
       "skill": "Use charge = current x time",
       "question": "A meter on a bicycle light shows 2 A flowing for 62.5 s. What charge should be recorded?",
       "options": [
-        "130 C",
+        "68.75 C",
         "125 C",
-        "30 C",
-        "5 C"
+        "313 C",
+        "131 C"
       ],
       "correctAnswer": "125 C",
       "correctIndex": 1,
@@ -88,9 +88,9 @@
       "question": "A doorbell circuit runs steadily at 3 A. After 60 s, what charge has passed?",
       "options": [
         "180 C",
-        "36 C",
-        "5 C",
-        "185 C"
+        "126 C",
+        "306 C",
+        "160 C"
       ],
       "correctAnswer": "180 C",
       "correctIndex": 0,
@@ -111,9 +111,9 @@
       "skill": "Use charge = current x time",
       "question": "A student checks a phone charging lead using Q = I x t. If I is 4 A and t is 17.5 s, which result is right?",
       "options": [
-        "37 C",
-        "17.5 C",
-        "75 C",
+        "21 C",
+        "154 C",
+        "51.1 C",
         "70 C"
       ],
       "correctAnswer": "70 C",
@@ -135,10 +135,10 @@
       "skill": "Use charge = current x time",
       "question": "For a model railway motor, charge is found from current multiplied by time. Which answer matches 5 A for 24 s?",
       "options": [
-        "13.33 C",
-        "125 C",
+        "54 C",
+        "324 C",
         "120 C",
-        "43 C"
+        "155 C"
       ],
       "correctAnswer": "120 C",
       "correctIndex": 2,
@@ -159,10 +159,10 @@
       "skill": "Use charge = current x time",
       "question": "During a test of a cooling fan, the current is 6 A for 40 s. Which charge is transferred?",
       "options": [
-        "4 C",
-        "24 C",
+        "144 C",
+        "456 C",
         "240 C",
-        "600 C"
+        "271 C"
       ],
       "correctAnswer": "240 C",
       "correctIndex": 2,
@@ -183,10 +183,10 @@
       "skill": "Rearrange charge = current x time",
       "question": "A meter on a security sensor shows 0.5 A flowing for 4 s. What charge should be recorded?",
       "options": [
-        "0.5 A",
+        "1.5 A",
         "2 A",
-        "45 A",
-        "135 A"
+        "4.8 A",
+        "1.94 A"
       ],
       "correctAnswer": "2 A",
       "correctIndex": 1,
@@ -207,10 +207,10 @@
       "skill": "Rearrange charge = current x time",
       "question": "A small buzzer runs steadily at 1.5 A. After 2 s, what charge has passed?",
       "options": [
-        "0.33 A",
+        "1.05 A",
         "3 A",
-        "20 A",
-        "40 A"
+        "4.8 A",
+        "2.43 A"
       ],
       "correctAnswer": "3 A",
       "correctIndex": 1,
@@ -280,9 +280,9 @@
       "question": "During a test of an LED strip, the current is 2 A for 3 s. Which charge is transferred?",
       "options": [
         "6 A",
-        "125 A",
         "3 A",
-        "175 A"
+        "12.6 A",
+        "3.9 A"
       ],
       "correctAnswer": "6 A",
       "correctIndex": 0,
@@ -303,10 +303,10 @@
       "skill": "Use charge = current x time",
       "question": "A meter on a timer circuit shows 3 A flowing for 60 s. What charge should be recorded?",
       "options": [
-        "3 C",
-        "30 C",
+        "117 C",
+        "468 C",
         "180 C",
-        "300 C"
+        "218 C"
       ],
       "correctAnswer": "180 C",
       "correctIndex": 2,
@@ -327,9 +327,9 @@
       "skill": "Use charge = current x time",
       "question": "A portable speaker runs steadily at 4 A. After 12.5 s, what charge has passed?",
       "options": [
-        "0.8 C",
-        "5 C",
-        "40 C",
+        "12.5 C",
+        "90 C",
+        "52.5 C",
         "50 C"
       ],
       "correctAnswer": "50 C",
@@ -351,10 +351,10 @@
       "skill": "Use charge = current x time",
       "question": "A student checks a hand warmer using Q = I x t. If I is 5 A and t is 18 s, which result is right?",
       "options": [
-        "30 C",
-        "60 C",
+        "36 C",
+        "207 C",
         "90 C",
-        "110 C"
+        "80.1 C"
       ],
       "correctAnswer": "90 C",
       "correctIndex": 2,
@@ -375,10 +375,10 @@
       "skill": "Use charge = current x time",
       "question": "For a battery tester, charge is found from current multiplied by time. Which answer matches 6 A for 6.67 s?",
       "options": [
-        "0.4 C",
-        "4 C",
+        "22 C",
+        "60 C",
         "40 C",
-        "400 C"
+        "29.2 C"
       ],
       "correctAnswer": "40 C",
       "correctIndex": 2,
@@ -399,10 +399,10 @@
       "skill": "Use charge = current x time",
       "question": "During a test of a garden light, the current is 0.5 A for 150 s. Which charge is transferred?",
       "options": [
-        "0.075 C",
+        "52.5 C",
         "75 C",
-        "83 C",
-        "550 C"
+        "150 C",
+        "96.75 C"
       ],
       "correctAnswer": "75 C",
       "correctIndex": 1,
@@ -423,10 +423,10 @@
       "skill": "Use charge = current x time",
       "question": "A meter on a radio circuit shows 1.5 A flowing for 80 s. What charge should be recorded?",
       "options": [
-        "34 C",
+        "36 C",
         "120 C",
-        "125 C",
-        "240 C"
+        "300 C",
+        "136 C"
       ],
       "correctAnswer": "120 C",
       "correctIndex": 1,
@@ -447,10 +447,10 @@
       "skill": "Use charge = current x time",
       "question": "An emergency torch runs steadily at 2.5 A. After 70 s, what charge has passed?",
       "options": [
-        "28 C",
-        "72.5 C",
+        "78.75 C",
+        "298 C",
         "175 C",
-        "700 C"
+        "170 C"
       ],
       "correctAnswer": "175 C",
       "correctIndex": 2,
@@ -927,9 +927,9 @@
       "skill": "Use resistance = potential difference / current",
       "question": "A resistor has a potential difference of 7 V and a current of 2 A. What is its resistance?",
       "options": [
-        "14 ohm",
-        "0.29 ohm",
-        "4.5 ohm",
+        "0.88 ohm",
+        "5.25 ohm",
+        "2.27 ohm",
         "3.5 ohm"
       ],
       "correctAnswer": "3.5 ohm",
@@ -951,10 +951,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "A fixed resistor has 2.67 V across it while 1 A flows. Which resistance is correct?",
       "options": [
-        "0.38 ohm",
-        "3.67 ohm",
+        "1.07 ohm",
+        "5.34 ohm",
         "2.67 ohm",
-        "24 ohm"
+        "3.23 ohm"
       ],
       "correctAnswer": "2.67 ohm",
       "correctIndex": 2,
@@ -975,10 +975,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "For a filament lamp at one reading, the voltmeter reads 4.5 V and the ammeter reads 2 A. Choose R.",
       "options": [
-        "3.25 ohm",
+        "1.24 ohm",
         "2.25 ohm",
-        "36 ohm",
-        "0.44 ohm"
+        "5.63 ohm",
+        "2.36 ohm"
       ],
       "correctAnswer": "2.25 ohm",
       "correctIndex": 1,
@@ -1000,9 +1000,9 @@
       "question": "One point on the I-V data for a length of resistance wire is current 3 A at potential difference 6 V. What is R?",
       "options": [
         "2 ohm",
-        "50 ohm",
-        "0.5 ohm",
-        "3 ohm"
+        "1.4 ohm",
+        "3.4 ohm",
+        "1.78 ohm"
       ],
       "correctAnswer": "2 ohm",
       "correctIndex": 0,
@@ -1023,9 +1023,9 @@
       "skill": "Use resistance = potential difference / current",
       "question": "A student tests a thermistor at room temperature: V = 44 V and I = 4 A. Which resistance should they write down?",
       "options": [
-        "12 ohm",
-        "0.09 ohm",
-        "13 ohm",
+        "3.3 ohm",
+        "24.2 ohm",
+        "8.03 ohm",
         "11 ohm"
       ],
       "correctAnswer": "11 ohm",
@@ -1047,10 +1047,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "Using R = V / I for a motor coil, which option matches 30 V divided by 5 A?",
       "options": [
-        "0.17 ohm",
-        "7 ohm",
+        "2.7 ohm",
+        "16.2 ohm",
         "6 ohm",
-        "24 ohm"
+        "7.74 ohm"
       ],
       "correctAnswer": "6 ohm",
       "correctIndex": 2,
@@ -1071,10 +1071,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "A heating element has 1 V across it while 0.5 A flows. Which resistance is correct?",
       "options": [
-        "3 ohm",
+        "1.2 ohm",
         "2 ohm",
-        "18 ohm",
-        "0.5 ohm"
+        "3.8 ohm",
+        "2.26 ohm"
       ],
       "correctAnswer": "2 ohm",
       "correctIndex": 1,
@@ -1096,9 +1096,9 @@
       "question": "For a graph point for a diode, the voltmeter reads 1.8 V and the ammeter reads 1.5 A. Choose R.",
       "options": [
         "1.2 ohm",
-        "5 ohm",
-        "11 ohm",
-        "30 ohm"
+        "0.9 ohm",
+        "2.88 ohm",
+        "1.16 ohm"
       ],
       "correctAnswer": "1.2 ohm",
       "correctIndex": 0,
@@ -1144,9 +1144,9 @@
       "question": "A student tests a wire sample: V = 4 V and I = 1 A. Which resistance should they write down?",
       "options": [
         "4 ohm",
-        "16 ohm",
-        "0.25 ohm",
-        "6 ohm"
+        "1.4 ohm",
+        "6.4 ohm",
+        "3.24 ohm"
       ],
       "correctAnswer": "4 ohm",
       "correctIndex": 0,
@@ -1167,10 +1167,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "Using R = V / I for a component on a circuit board, which option matches 6 V divided by 2 A?",
       "options": [
-        "27 ohm",
+        "1.5 ohm",
         "3 ohm",
-        "0.33 ohm",
-        "6 ohm"
+        "6.3 ohm",
+        "1.95 ohm"
       ],
       "correctAnswer": "3 ohm",
       "correctIndex": 1,
@@ -1240,9 +1240,9 @@
       "question": "One point on the I-V data for a resistor in a practical is current 5 A at potential difference 8.75 V. What is R?",
       "options": [
         "1.75 ohm",
-        "28 ohm",
-        "0.57 ohm",
-        "2.75 ohm"
+        "1.14 ohm",
+        "4.55 ohm",
+        "2.12 ohm"
       ],
       "correctAnswer": "1.75 ohm",
       "correctIndex": 0,
@@ -1265,8 +1265,8 @@
       "options": [
         "4 ohm",
         "16 ohm",
-        "40 ohm",
-        "1.6 ohm"
+        "28.8 ohm",
+        "16.8 ohm"
       ],
       "correctAnswer": "16 ohm",
       "correctIndex": 1,
@@ -1287,10 +1287,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "Using R = V / I for a lamp holder, which option matches 13.5 V divided by 1.5 A?",
       "options": [
-        "0.11 ohm",
+        "3.6 ohm",
         "9 ohm",
-        "10 ohm",
-        "18 ohm"
+        "20.7 ohm",
+        "8.01 ohm"
       ],
       "correctAnswer": "9 ohm",
       "correctIndex": 1,
@@ -1311,10 +1311,10 @@
       "skill": "Use resistance = potential difference / current",
       "question": "A small motor has 12.5 V across it while 2.5 A flows. Which resistance is correct?",
       "options": [
-        "20 ohm",
+        "2.75 ohm",
         "5 ohm",
-        "2 ohm",
-        "0.2 ohm"
+        "7.5 ohm",
+        "3.65 ohm"
       ],
       "correctAnswer": "5 ohm",
       "correctIndex": 1,
@@ -1336,9 +1336,9 @@
       "question": "For a circuit component, the voltmeter reads 3.67 V and the ammeter reads 1 A. Choose R.",
       "options": [
         "3.67 ohm",
-        "33 ohm",
-        "0.27 ohm",
-        "8 ohm"
+        "2.57 ohm",
+        "7.34 ohm",
+        "4.73 ohm"
       ],
       "correctAnswer": "3.67 ohm",
       "correctIndex": 0,
@@ -1383,9 +1383,9 @@
       "skill": "Add resistors in series",
       "question": "Two resistors of 3 ohm and 4 ohm are connected in series. What is the total resistance?",
       "options": [
-        "1 ohm",
-        "12 ohm",
-        "8 ohm",
+        "2.1 ohm",
+        "17.5 ohm",
+        "7.91 ohm",
         "7 ohm"
       ],
       "correctAnswer": "7 ohm",
@@ -1407,10 +1407,10 @@
       "skill": "Add resistors in series",
       "question": "In a torch circuit, two resistors are in series: 2 ohm then 7 ohm. What is the total resistance?",
       "options": [
-        "20 ohm",
-        "10 ohm",
+        "4.05 ohm",
+        "15.3 ohm",
         "9 ohm",
-        "1 ohm"
+        "8.73 ohm"
       ],
       "correctAnswer": "9 ohm",
       "correctIndex": 2,
@@ -1431,10 +1431,10 @@
       "skill": "Add resistors in series",
       "question": "A fairy light string has no branches. The resistor values are 3 ohm and 8 ohm. Choose the combined resistance.",
       "options": [
-        "12 ohm",
+        "6.6 ohm",
         "11 ohm",
-        "1 ohm",
-        "30 ohm"
+        "24.2 ohm",
+        "8.91 ohm"
       ],
       "correctAnswer": "11 ohm",
       "correctIndex": 1,
@@ -1456,9 +1456,9 @@
       "question": "A student adds the two series resistors in a model car circuit: 4 ohm plus 9 ohm. Which total is correct?",
       "options": [
         "13 ohm",
-        "1 ohm",
-        "42 ohm",
-        "14 ohm"
+        "9.75 ohm",
+        "35.1 ohm",
+        "8.45 ohm"
       ],
       "correctAnswer": "13 ohm",
       "correctIndex": 0,
@@ -1479,9 +1479,9 @@
       "skill": "Add resistors in series",
       "question": "The current passes through a 5 ohm resistor and then a 5 ohm resistor in a test board. What is R total?",
       "options": [
-        "6 ohm",
-        "16 ohm",
-        "11 ohm",
+        "3.5 ohm",
+        "19 ohm",
+        "12.1 ohm",
         "10 ohm"
       ],
       "correctAnswer": "10 ohm",
@@ -1503,10 +1503,10 @@
       "skill": "Add resistors in series",
       "question": "For a series chain, the series resistance is found by adding 6 ohm and 0 ohm. Which answer fits?",
       "options": [
-        "9 ohm",
-        "7 ohm",
+        "3 ohm",
+        "14.4 ohm",
         "6 ohm",
-        "0 ohm"
+        "6.3 ohm"
       ],
       "correctAnswer": "6 ohm",
       "correctIndex": 2,
@@ -1528,9 +1528,9 @@
       "question": "In a classroom circuit, two resistors are in series: 7 ohm then 2 ohm. What is the total resistance?",
       "options": [
         "9 ohm",
-        "20 ohm",
-        "4.5 ohm",
-        "5 ohm"
+        "5.85 ohm",
+        "14.4 ohm",
+        "8.01 ohm"
       ],
       "correctAnswer": "9 ohm",
       "correctIndex": 0,
@@ -1552,9 +1552,9 @@
       "question": "A alarm circuit has no branches. The resistor values are 8 ohm and 3 ohm. Choose the combined resistance.",
       "options": [
         "11 ohm",
-        "1 ohm",
-        "30 ohm",
-        "5.5 ohm"
+        "2.75 ohm",
+        "23.1 ohm",
+        "8.03 ohm"
       ],
       "correctAnswer": "11 ohm",
       "correctIndex": 0,
@@ -1648,9 +1648,9 @@
       "question": "In a robot sensor circuit, two resistors are in series: 4 ohm then 4 ohm. What is the total resistance?",
       "options": [
         "8 ohm",
-        "15 ohm",
-        "4 ohm",
-        "3 ohm"
+        "3.2 ohm",
+        "20.8 ohm",
+        "10.32 ohm"
       ],
       "correctAnswer": "8 ohm",
       "correctIndex": 0,
@@ -1696,9 +1696,9 @@
       "question": "A student adds the two series resistors in a training circuit: 6 ohm plus 4 ohm. Which total is correct?",
       "options": [
         "10 ohm",
-        "25 ohm",
-        "5 ohm",
-        "2.5 ohm"
+        "5.5 ohm",
+        "18 ohm",
+        "11.3 ohm"
       ],
       "correctAnswer": "10 ohm",
       "correctIndex": 0,
@@ -1744,9 +1744,9 @@
       "question": "For a fan circuit, the series resistance is found by adding 8 ohm and 1 ohm. Which answer fits?",
       "options": [
         "9 ohm",
-        "14 ohm",
-        "5 ohm",
-        "2 ohm"
+        "6.3 ohm",
+        "20.7 ohm",
+        "8.73 ohm"
       ],
       "correctAnswer": "9 ohm",
       "correctIndex": 0,
@@ -1767,10 +1767,10 @@
       "skill": "Add resistors in series",
       "question": "In a LED display, two resistors are in series: 9 ohm then 2 ohm. What is the total resistance?",
       "options": [
-        "12 ohm",
+        "3.3 ohm",
         "11 ohm",
-        "5 ohm",
-        "24 ohm"
+        "16.5 ohm",
+        "8.91 ohm"
       ],
       "correctAnswer": "11 ohm",
       "correctIndex": 1,
@@ -1792,9 +1792,9 @@
       "question": "A switch circuit has no branches. The resistor values are 2 ohm and 5 ohm. Choose the combined resistance.",
       "options": [
         "7 ohm",
-        "1 ohm",
-        "12 ohm",
-        "8 ohm"
+        "3.15 ohm",
+        "14 ohm",
+        "4.55 ohm"
       ],
       "correctAnswer": "7 ohm",
       "correctIndex": 0,
@@ -1815,9 +1815,9 @@
       "skill": "Recall current in a series circuit",
       "question": "Which statement about current in a series circuit is correct?",
       "options": [
-        "The current is used up by each component.",
-        "The current is largest next to the cell only.",
-        "The current becomes zero after the lamp.",
+        "Current is used up by each component.",
+        "Current becomes zero after the first lamp.",
+        "The current is different in every part of a series circuit.",
         "The current is the same at all points."
       ],
       "correctAnswer": "The current is the same at all points.",
@@ -1840,9 +1840,9 @@
       "question": "Two lamps are connected in one loop with an ammeter before each lamp. What should the ammeters show?",
       "options": [
         "Current is used up by each component.",
-        "Current is largest beside the cell only.",
+        "Current becomes zero after the first lamp.",
         "The current is the same at all points.",
-        "The current is the same at all points."
+        "Each component receives a completely separate current supply."
       ],
       "correctAnswer": "The current is the same at all points.",
       "correctIndex": 2,
@@ -1866,7 +1866,7 @@
         "Current is used up by each component.",
         "The current is the same at all points.",
         "Current becomes zero after the first lamp.",
-        "The current is the same at all points."
+        "The battery sends more current to the final component."
       ],
       "correctAnswer": "The current is the same at all points.",
       "correctIndex": 1,
@@ -1888,9 +1888,9 @@
       "question": "Charge has only one path through a cell and two bulbs. Which statement about current is correct?",
       "options": [
         "The current is the same at all points.",
-        "Current is largest beside the cell only.",
+        "Current is used up by each component.",
         "Current becomes zero after the first lamp.",
-        "The current is the same at all points."
+        "Current is shared equally only in parallel circuits."
       ],
       "correctAnswer": "The current is the same at all points.",
       "correctIndex": 0,
@@ -1911,9 +1911,9 @@
       "skill": "Recall current in a series circuit",
       "question": "Which statement about current in a series circuit is correct? Choose the best answer.",
       "options": [
-        "The current is used up by each component.",
-        "The current is largest next to the cell only.",
-        "The current becomes zero after the lamp.",
+        "Current is used up by each component.",
+        "Current becomes zero after the first lamp.",
+        "The current depends only on the wire colour.",
         "The current is the same at all points."
       ],
       "correctAnswer": "The current is the same at all points.",
@@ -1936,9 +1936,9 @@
       "question": "A bulb is placed after another bulb in series. How does the current compare in both bulbs?",
       "options": [
         "Current is used up by each component.",
-        "Current is largest beside the cell only.",
+        "Current becomes zero after the first lamp.",
         "The current is the same at all points.",
-        "The current is the same at all points."
+        "The first component stores all the charge."
       ],
       "correctAnswer": "The current is the same at all points.",
       "correctIndex": 2,
@@ -1962,7 +1962,7 @@
         "Current is used up by each component.",
         "The current is the same at all points.",
         "Current becomes zero after the first lamp.",
-        "The current is the same at all points."
+        "Current flows only before the first resistor."
       ],
       "correctAnswer": "The current is the same at all points.",
       "correctIndex": 1,
@@ -1983,10 +1983,10 @@
       "skill": "Interpret current in a series circuit",
       "question": "Three ammeters are placed at different points in a simple series circuit with one lamp. If ammeter A reads 0.40 A, what should ammeter B read?",
       "options": [
-        "0.20 A",
+        "0.3 A",
         "0.40 A",
-        "0 A",
-        "0.80 A"
+        "0.96 A",
+        "0.39 A"
       ],
       "correctAnswer": "0.40 A",
       "correctIndex": 1,
@@ -2008,9 +2008,9 @@
       "question": "A student says the current after a lamp is smaller because some current is used by the lamp. Which response is correct?",
       "options": [
         "The student is wrong because the current stays the same all round a series circuit.",
-        "The student is right because current is shared out between the components.",
-        "The student is right because the lamp turns some current into light.",
-        "The student is wrong because the current becomes larger after the lamp."
+        "Current is used up by each component.",
+        "Current becomes zero after the first lamp.",
+        "The last lamp creates extra charge."
       ],
       "correctAnswer": "The student is wrong because the current stays the same all round a series circuit.",
       "correctIndex": 0,
@@ -2032,9 +2032,9 @@
       "question": "Circuit X and Circuit Y are both series circuits. Circuit X contains one lamp. Circuit Y contains two lamps in series. An ammeter is placed at two different points in each circuit. Which conclusion can be drawn?",
       "options": [
         "In each separate circuit, the current is the same at all points, but the current in Circuit X does not have to equal the current in Circuit Y.",
-        "The current is larger after each lamp because energy has been transferred.",
-        "The current is the same at all points in both circuits and must also be identical in value in Circuit X and Circuit Y.",
-        "The current in Circuit Y becomes zero after the first lamp."
+        "Current is used up by each component.",
+        "Current becomes zero after the first lamp.",
+        "The current reverses after each component."
       ],
       "correctAnswer": "In each separate circuit, the current is the same at all points, but the current in Circuit X does not have to equal the current in Circuit Y.",
       "correctIndex": 0,
@@ -2055,10 +2055,10 @@
       "skill": "Use current readings to identify a fault in a series circuit",
       "question": "In a series circuit, an ammeter before a lamp reads 0.30 A and an ammeter after the lamp reads 0 A. Which is the best conclusion?",
       "options": [
-        "The readings are consistent with normal operation in a series circuit.",
-        "Current has been used up by the lamp.",
+        "Current is used up by each component.",
+        "The current is different in every part of a series circuit.",
         "There is likely to be a break or faulty connection between the two ammeters.",
-        "The cell must be increasing the current before the lamp."
+        "Each component receives a completely separate current supply."
       ],
       "correctAnswer": "There is likely to be a break or faulty connection between the two ammeters.",
       "correctIndex": 2,
@@ -2080,9 +2080,9 @@
       "question": "A current of 0.25 A is measured before a buzzer in a series circuit. What current should be measured after the buzzer if the circuit is working normally?",
       "options": [
         "0.25 A",
-        "0.12 A",
-        "0 A",
-        "0.50 A"
+        "0.06 A",
+        "0.45 A",
+        "0.26 A"
       ],
       "correctAnswer": "0.25 A",
       "correctIndex": 0,
@@ -2103,10 +2103,10 @@
       "skill": "Interpret current in a series circuit",
       "question": "Which statement is correct for a working series circuit with two components?",
       "options": [
-        "The current is greatest nearest the cell.",
+        "Current is used up by each component.",
         "The current is the same in each component.",
-        "The current falls after the first component.",
-        "The current changes into charge after the second component."
+        "The current is different in every part of a series circuit.",
+        "Current is shared equally only in parallel circuits."
       ],
       "correctAnswer": "The current is the same in each component.",
       "correctIndex": 1,
@@ -2127,10 +2127,10 @@
       "skill": "Interpret current in a series circuit",
       "question": "A series circuit has three identical ammeters at different points. Which result should they give?",
       "options": [
-        "Current is used up by each component.",
+        "0.33 A",
         "0.60 A",
-        "Current becomes zero after the first lamp.",
-        "0.60 A"
+        "0.9 A",
+        "0.44 A"
       ],
       "correctAnswer": "0.60 A",
       "correctIndex": 1,
@@ -2152,9 +2152,9 @@
       "question": "A learner says current gets smaller after every component. Which option corrects the mistake?",
       "options": [
         "The readings fit the rule for current in a series circuit.",
-        "Current is largest beside the cell only.",
-        "Current becomes zero after the first lamp.",
-        "The readings fit the rule for current in a series circuit."
+        "Current is used up by each component.",
+        "The current is different in every part of a series circuit.",
+        "The first component stores all the charge."
       ],
       "correctAnswer": "The readings fit the rule for current in a series circuit.",
       "correctIndex": 0,
@@ -2176,9 +2176,9 @@
       "question": "One wire loop contains a cell, switch and lamp. What is true about current in the loop?",
       "options": [
         "Current is the same all round the circuit.",
-        "Current is largest beside the cell only.",
-        "Current becomes zero after the first lamp.",
-        "Current is the same all round the circuit."
+        "Current is used up by each component.",
+        "The current is different in every part of a series circuit.",
+        "Current flows only before the first resistor."
       ],
       "correctAnswer": "Current is the same all round the circuit.",
       "correctIndex": 0,
@@ -2199,10 +2199,10 @@
       "skill": "Use current readings to compare points in a series circuit",
       "question": "In a series circuit, an ammeter is moved closer to the cell. What should happen to its reading?",
       "options": [
-        "Current is used up by each component.",
+        "0.08 A",
         "0.18 A",
-        "Current becomes zero after the first lamp.",
-        "0.18 A"
+        "0.31 A",
+        "0.17 A"
       ],
       "correctAnswer": "0.18 A",
       "correctIndex": 1,
@@ -2224,9 +2224,9 @@
       "question": "A circuit has no branches. Which current statement is correct?",
       "options": [
         "The current is the same at all points.",
-        "Current is largest beside the cell only.",
-        "Current becomes zero after the first lamp.",
-        "The current is the same at all points."
+        "Current is used up by each component.",
+        "The current is different in every part of a series circuit.",
+        "The last lamp creates extra charge."
       ],
       "correctAnswer": "The current is the same at all points.",
       "correctIndex": 0,
@@ -2247,9 +2247,9 @@
       "skill": "Recall current in a series circuit",
       "question": "A series circuit has two lamps and no branches. Three ammeters are placed around the loop. What should they show?",
       "options": [
-        "Current is used up by the first lamp.",
-        "Current is largest near the positive terminal.",
-        "Current is zero after the second lamp.",
+        "Current is used up by each component.",
+        "The current is different in every part of a series circuit.",
+        "The current reverses after each component.",
         "The current is the same at all points."
       ],
       "correctAnswer": "The current is the same at all points.",
@@ -2316,9 +2316,9 @@
       "stem": "A current of 4 A flows for 6 s. How much charge is transferred?",
       "options": [
         "24 C",
-        "10 C",
-        "1.5 C",
-        "2 C"
+        "14.4 C",
+        "52.8 C",
+        "19.44 C"
       ],
       "correctAnswer": "24 C",
       "correctIndex": 0,
@@ -2356,9 +2356,9 @@
       "stem": "A tablet transfers 90 C of charge with a current of 3 A. How long does this take?",
       "options": [
         "30 s",
-        "270 s",
-        "93 s",
-        "0.03 s"
+        "22.5 s",
+        "81 s",
+        "19.5 s"
       ],
       "correctAnswer": "30 s",
       "correctIndex": 0,
@@ -2556,9 +2556,9 @@
       "stem": "A meter shows that 36 C of charge passes in 12 s. What is the current?",
       "options": [
         "3 A",
-        "432 A",
-        "24 A",
-        "0.33 A"
+        "0.75 A",
+        "4.5 A",
+        "1.95 A"
       ],
       "correctAnswer": "3 A",
       "correctIndex": 0,
@@ -2916,9 +2916,9 @@
       "stem": "A resistor has 10 V across it and a resistance of 5 ohm. What current flows?",
       "options": [
         "2 A",
-        "50 A",
-        "15 A",
-        "0.5 A"
+        "1.2 A",
+        "5 A",
+        "2.42 A"
       ],
       "correctAnswer": "2 A",
       "correctIndex": 0,
@@ -2956,9 +2956,9 @@
       "stem": "A voltmeter reads 8 V and an ammeter reads 0.4 A for a component. What is the resistance?",
       "options": [
         "20 ohm",
-        "3.2 ohm",
-        "8.4 ohm",
-        "0.05 ohm"
+        "15 ohm",
+        "34 ohm",
+        "21 ohm"
       ],
       "correctAnswer": "20 ohm",
       "correctIndex": 0,
@@ -3116,9 +3116,9 @@
       "stem": "An ammeter near the cell in a series circuit reads 0.9 A. What should an ammeter after the second lamp read?",
       "options": [
         "0.9 A",
-        "0.45 A",
-        "1.8 A",
-        "0 A"
+        "0.23 A",
+        "1.35 A",
+        "0.59 A"
       ],
       "correctAnswer": "0.9 A",
       "correctIndex": 0,
@@ -3316,9 +3316,9 @@
       "stem": "A 6 ohm resistor and an 11 ohm resistor are connected in series. What is the total resistance?",
       "options": [
         "17 ohm",
-        "66 ohm",
-        "5 ohm",
-        "1.8 ohm"
+        "4.25 ohm",
+        "25.5 ohm",
+        "11.05 ohm"
       ],
       "correctAnswer": "17 ohm",
       "correctIndex": 0,
@@ -3356,9 +3356,9 @@
       "stem": "Three resistors of 4 ohm, 9 ohm and 13 ohm are connected in series. What is the total resistance?",
       "options": [
         "26 ohm",
-        "468 ohm",
-        "13 ohm",
-        "8.7 ohm"
+        "10.4 ohm",
+        "52 ohm",
+        "31.46 ohm"
       ],
       "correctAnswer": "26 ohm",
       "correctIndex": 0,
@@ -3436,9 +3436,9 @@
       "stem": "A series circuit has a total resistance of 32 ohm. Two resistors are 7 ohm and 18 ohm. What is the resistance of the third resistor?",
       "options": [
         "7 ohm",
-        "57 ohm",
-        "25 ohm",
-        "10.7 ohm"
+        "3.85 ohm",
+        "17.5 ohm",
+        "7.35 ohm"
       ],
       "correctAnswer": "7 ohm",
       "correctIndex": 0,
@@ -3476,9 +3476,9 @@
       "stem": "Which statement describes a parallel circuit?",
       "options": [
         "It has more than one path for current.",
-        "It has only one path for current.",
-        "It cannot contain lamps.",
-        "It has no potential difference."
+        "The supply voltage becomes zero in each branch.",
+        "The current is the same in each branch because the voltage changes.",
+        "The voltage is shared equally only in a series circuit."
       ],
       "correctAnswer": "It has more than one path for current.",
       "correctIndex": 0,
@@ -3516,9 +3516,9 @@
       "stem": "Two lamps are connected in parallel. One branch is switched off. What can happen to the other lamp?",
       "options": [
         "It can stay on.",
-        "It must switch off.",
-        "It must become a resistor.",
-        "It must get no voltage."
+        "The supply voltage becomes zero in each branch.",
+        "The current is the same in each branch because the voltage changes.",
+        "Each branch receives half the supply voltage automatically."
       ],
       "correctAnswer": "It can stay on.",
       "correctIndex": 0,
@@ -3556,9 +3556,9 @@
       "stem": "A parallel circuit has branch currents of 0.2 A, 0.5 A and 0.8 A. What is the total current?",
       "options": [
         "1.5 A",
-        "0.8 A",
-        "0.3 A",
-        "0.5 A"
+        "0.83 A",
+        "3.75 A",
+        "1.58 A"
       ],
       "correctAnswer": "1.5 A",
       "correctIndex": 0,
@@ -3596,9 +3596,9 @@
       "stem": "A 6 V cell is connected to three branches in parallel. What is the potential difference across each branch?",
       "options": [
         "6 V",
-        "2 V",
-        "18 V",
-        "0 V"
+        "4.2 V",
+        "10.2 V",
+        "5.34 V"
       ],
       "correctAnswer": "6 V",
       "correctIndex": 0,
@@ -3636,9 +3636,9 @@
       "stem": "A student says, \"Current must split equally in all parallel branches.\" Which response is best?",
       "options": [
         "That is not always correct, because branch resistance can be different.",
-        "That is always correct, because parallel branches are identical.",
-        "That is always correct, because current cannot change.",
-        "That is not correct, because parallel circuits have no current."
+        "The supply voltage becomes zero in each branch.",
+        "The current is the same in each branch because the voltage changes.",
+        "The battery current is zero when branches are added."
       ],
       "correctAnswer": "That is not always correct, because branch resistance can be different.",
       "correctIndex": 0,
@@ -3676,9 +3676,9 @@
       "stem": "What does power mean?",
       "options": [
         "The rate of energy transfer",
-        "The total charge transferred",
-        "The resistance of a wire",
-        "The time taken for charge to stop"
+        "Add the energy and time.",
+        "Multiply energy by time.",
+        "Divide time by energy."
       ],
       "correctAnswer": "The rate of energy transfer",
       "correctIndex": 0,
@@ -3716,9 +3716,9 @@
       "stem": "Which unit is used for power?",
       "options": [
         "W",
-        "J",
-        "C",
-        "s"
+        "Add the energy and time.",
+        "Multiply energy by time.",
+        "Use force divided by distance."
       ],
       "correctAnswer": "W",
       "correctIndex": 0,
@@ -3756,9 +3756,9 @@
       "stem": "A radio transfers 600 J of energy in 20 s. What is its power?",
       "options": [
         "30 W",
-        "12000 W",
-        "580 W",
-        "0.03 W"
+        "16.5 W",
+        "75 W",
+        "31.5 W"
       ],
       "correctAnswer": "30 W",
       "correctIndex": 0,
@@ -3796,9 +3796,9 @@
       "stem": "Two drills transfer the same amount of energy. Drill A takes 15 s and Drill B takes 45 s. Which drill has the greater power?",
       "options": [
         "Drill A",
-        "Drill B",
-        "They have the same power.",
-        "Power cannot be compared without resistance."
+        "Add the energy and time.",
+        "Multiply energy by time.",
+        "Use mass multiplied by acceleration."
       ],
       "correctAnswer": "Drill A",
       "correctIndex": 0,
@@ -3836,9 +3836,9 @@
       "stem": "A student says, \"An appliance with a higher power always transfers more energy.\" Which response is best?",
       "options": [
         "That is not always correct, because the time it is used for also matters.",
-        "That is always correct, because power and energy are the same.",
-        "That is always correct, because time does not affect energy.",
-        "That is not correct, because power is measured in coulombs."
+        "Add the energy and time.",
+        "Multiply energy by time.",
+        "Subtract time from energy."
       ],
       "correctAnswer": "That is not always correct, because the time it is used for also matters.",
       "correctIndex": 0,
@@ -3956,9 +3956,9 @@
       "stem": "A 25 W lamp is on for 80 s. How much energy is transferred?",
       "options": [
         "2000 J",
-        "105 J",
-        "3.2 J",
-        "55 J"
+        "500 J",
+        "3000 J",
+        "1300 J"
       ],
       "correctAnswer": "2000 J",
       "correctIndex": 0,

@@ -15,9 +15,9 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "Which electromagnetic wave has the highest frequency?",
       "options": [
+        "Water waves",
         "Microwaves",
-        "Infrared",
-        "Radio waves",
+        "Ultraviolet",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
@@ -39,10 +39,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a clinic worksheet, a learner checks: a student orders the EM spectrum from low to high frequency. Which is at the high end?",
       "options": [
+        "Water waves",
         "Microwaves",
-        "Visible light",
         "Gamma rays",
-        "Sound waves"
+        "Radio waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
@@ -74,10 +74,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a museum label, a visitor reads: a results table lists radio, infrared, ultraviolet and gamma. Which has the highest frequency?",
       "options": [
-        "Infrared",
+        "Water waves",
         "Gamma rays",
-        "Ultraviolet",
-        "Water waves"
+        "Microwaves",
+        "Infrared"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
@@ -110,9 +110,9 @@
       "question": "On a school lab card, a pupil answers: which electromagnetic radiation has the shortest wavelength and highest frequency?",
       "options": [
         "Gamma rays",
-        "Visible light",
-        "X-rays",
-        "Radio waves"
+        "Water waves",
+        "Microwaves",
+        "X-rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
@@ -144,9 +144,9 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a factory safety note, an apprentice reviews: in the EM spectrum, which wave is beyond X-rays at the high-frequency end?",
       "options": [
-        "Ultraviolet",
-        "Sound waves",
+        "Water waves",
         "Microwaves",
+        "Sound waves",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
@@ -179,10 +179,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a space centre display, a guide explains: a detector is set up for the most energetic EM radiation. Which type is this?",
       "options": [
-        "X-rays",
         "Water waves",
+        "Microwaves",
         "Gamma rays",
-        "Infrared"
+        "Seismic P-waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
@@ -214,10 +214,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a revision flashcard, a student practises: a hospital needs the electromagnetic wave with the highest frequency. Which wave is it?",
       "options": [
-        "Sound waves",
+        "Water waves",
         "Gamma rays",
-        "Radio waves",
-        "Visible light"
+        "Microwaves",
+        "Ripples on water"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
@@ -252,7 +252,7 @@
         "Water waves",
         "Microwaves",
         "Gamma rays",
-        "Ultraviolet"
+        "A stretched spring wave"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
@@ -284,10 +284,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard lists radio, infrared, ultraviolet and gamma. Which has the highest frequency?",
       "options": [
-        "Radio waves",
+        "Water waves",
         "Gamma rays",
-        "Infrared",
-        "X-rays"
+        "Microwaves",
+        "A pressure wave in air"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
@@ -320,9 +320,9 @@
       "question": "On a classroom board, a group discusses: which electromagnetic radiation has the shortest wavelength and highest frequency?",
       "options": [
         "Gamma rays",
+        "Water waves",
         "Microwaves",
-        "Visible light",
-        "Sound waves"
+        "A wave on a rope"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
@@ -354,9 +354,9 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a workshop checklist, an engineer checks: in the EM spectrum, which wave is beyond X-rays at the high-frequency end?",
       "options": [
-        "Infrared",
-        "Ultraviolet",
         "Water waves",
+        "Ultraviolet",
+        "Radio waves",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
@@ -389,10 +389,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a field trip notebook, a pupil records: a detector is set up for the most energetic EM radiation. Which type is this?",
       "options": [
-        "Visible light",
-        "X-rays",
+        "Water waves",
+        "Ultraviolet",
         "Gamma rays",
-        "Radio waves"
+        "Infrared"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
@@ -424,10 +424,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a science fair poster, a team explains: a exam practice needs the electromagnetic wave with the highest frequency. Which wave is it?",
       "options": [
-        "Ultraviolet",
+        "Water waves",
         "Gamma rays",
-        "Sound waves",
-        "Microwaves"
+        "Ultraviolet",
+        "X-rays"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
@@ -460,9 +460,9 @@
       "question": "On a exam practice page, a candidate works: a parent orders the EM spectrum from low to high frequency. Which is at the high end?",
       "options": [
         "Gamma rays",
-        "X-rays",
         "Water waves",
-        "Infrared"
+        "Ultraviolet",
+        "Sound waves"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
@@ -494,9 +494,9 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a home study card, a learner revises: a log book lists radio, infrared, ultraviolet and gamma. Which has the highest frequency?",
       "options": [
-        "Sound waves",
-        "Radio waves",
-        "Visible light",
+        "Water waves",
+        "Ultraviolet",
+        "Seismic P-waves",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
@@ -530,9 +530,9 @@
       "question": "On a research log book, an assistant notes: which electromagnetic radiation has the shortest wavelength and highest frequency?",
       "options": [
         "Water waves",
-        "Microwaves",
+        "Ultraviolet",
         "Gamma rays",
-        "Ultraviolet"
+        "Ripples on water"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 2,
@@ -564,10 +564,10 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a planetarium screen, a visitor chooses: in the EM spectrum, which wave is beyond X-rays at the high-frequency end?",
       "options": [
-        "Radio waves",
+        "Water waves",
         "Gamma rays",
-        "Infrared",
-        "X-rays"
+        "Ultraviolet",
+        "A stretched spring wave"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 1,
@@ -600,9 +600,9 @@
       "question": "On a radio studio demo, a presenter explains: a detector is set up for the most energetic EM radiation. Which type is this?",
       "options": [
         "Gamma rays",
-        "Microwaves",
-        "Visible light",
-        "Sound waves"
+        "Water waves",
+        "Ultraviolet",
+        "A pressure wave in air"
       ],
       "correctAnswer": "Gamma rays",
       "correctIndex": 0,
@@ -634,9 +634,9 @@
       "skill": "Recall the order of electromagnetic waves",
       "question": "On a energy survey report, a surveyor writes: a clinic needs the electromagnetic wave with the highest frequency. Which wave is it?",
       "options": [
-        "Infrared",
-        "Ultraviolet",
         "Water waves",
+        "Ultraviolet",
+        "A wave on a rope",
         "Gamma rays"
       ],
       "correctAnswer": "Gamma rays",
@@ -1323,9 +1323,9 @@
       "skill": "Link frequency to pitch",
       "question": "Which change makes a sound higher in pitch?",
       "options": [
-        "Increasing the amplitude of the wave",
-        "Reducing the speed of sound",
-        "Reducing the energy transferred",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Increase the wavelength only.",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
@@ -1347,10 +1347,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a clinic worksheet, a learner checks: a student tightens a string and the note is higher. What changed?",
       "options": [
-        "Longer wavelength only",
-        "No vibration",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
         "Increasing the frequency of the wave",
-        "A quieter sound only"
+        "Change the wave from longitudinal to transverse."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
@@ -1382,10 +1382,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a museum label, a visitor reads: a results table compares two sound waves. Which change gives a higher pitch?",
       "options": [
-        "Lower amplitude",
+        "Decrease the amplitude.",
         "Increasing the frequency of the wave",
-        "Lower speed in air",
-        "A longer string with no change in frequency"
+        "Decrease the frequency.",
+        "Remove the particles from the medium."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
@@ -1418,9 +1418,9 @@
       "question": "On a school lab card, a pupil answers: what must increase for a sound wave to be heard as a higher note?",
       "options": [
         "Increasing the frequency of the wave",
-        "No vibration",
-        "More echoes",
-        "Lower frequency"
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Lower the energy carried by the wave."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
@@ -1452,9 +1452,9 @@
       "skill": "Link frequency to pitch",
       "question": "On a factory safety note, an apprentice reviews: a tuning fork makes a higher pitch than another. Which wave feature is greater?",
       "options": [
-        "Lower speed in air",
-        "A quieter sound only",
-        "Longer wavelength only",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Make the period longer only.",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
@@ -1487,10 +1487,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a space centre display, a guide explains: which change in vibration makes a sound higher in pitch?",
       "options": [
-        "More echoes",
-        "A longer string with no change in frequency",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
         "Increasing the frequency of the wave",
-        "Lower amplitude"
+        "Stop the source vibrating."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
@@ -1522,9 +1522,9 @@
       "skill": "Link frequency to pitch",
       "question": "On a revision flashcard, a student practises: a sound from a speaker becomes higher pitched. Which wave property increased?",
       "options": [
-        "A quieter sound only",
-        "Lower frequency",
-        "No vibration",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Make the sound travel through a vacuum.",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
@@ -1557,10 +1557,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a hospital training card, a trainee checks: a astronomer tightens a string and the note is higher. What changed?",
       "options": [
-        "A longer string with no change in frequency",
-        "Longer wavelength only",
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
         "Increasing the frequency of the wave",
-        "Lower speed in air"
+        "Reduce the vibration size."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
@@ -1592,10 +1592,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard compares two sound waves. Which change gives a higher pitch?",
       "options": [
-        "Lower frequency",
+        "Decrease the amplitude.",
         "Increasing the frequency of the wave",
-        "Lower amplitude",
-        "More echoes"
+        "Decrease the frequency.",
+        "Make the oscilloscope trace shorter vertically."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
@@ -1628,9 +1628,9 @@
       "question": "On a classroom board, a group discusses: what must increase for a sound wave to be heard as a higher note?",
       "options": [
         "Increasing the frequency of the wave",
-        "Longer wavelength only",
-        "No vibration",
-        "A quieter sound only"
+        "Decrease the amplitude.",
+        "Decrease the frequency.",
+        "Use a smaller pressure variation."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
@@ -1662,9 +1662,9 @@
       "skill": "Link frequency to pitch",
       "question": "On a workshop checklist, an engineer checks: a tuning fork makes a higher pitch than another. Which wave feature is greater?",
       "options": [
-        "Lower amplitude",
-        "Lower speed in air",
-        "A longer string with no change in frequency",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Change the wave from longitudinal to transverse.",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
@@ -1697,10 +1697,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a field trip notebook, a pupil records: which change in vibration makes a sound higher in pitch?",
       "options": [
-        "No vibration",
-        "More echoes",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
         "Increasing the frequency of the wave",
-        "Lower frequency"
+        "Remove the particles from the medium."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
@@ -1732,10 +1732,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a science fair poster, a team explains: a sound from a speaker becomes higher pitched. Which wave property increased?",
       "options": [
-        "Lower speed in air",
+        "Decrease the amplitude.",
         "Increasing the frequency of the wave",
-        "A quieter sound only",
-        "Longer wavelength only"
+        "Increase the wavelength only.",
+        "Lower the energy carried by the wave."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
@@ -1767,10 +1767,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a exam practice page, a candidate works: a parent tightens a string and the note is higher. What changed?",
       "options": [
-        "More echoes",
+        "Decrease the amplitude.",
         "Increasing the frequency of the wave",
-        "A longer string with no change in frequency",
-        "Lower amplitude"
+        "Increase the wavelength only.",
+        "Make the period longer only."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
@@ -1803,9 +1803,9 @@
       "question": "On a home study card, a learner revises: a log book compares two sound waves. Which change gives a higher pitch?",
       "options": [
         "Increasing the frequency of the wave",
-        "A quieter sound only",
-        "Lower frequency",
-        "No vibration"
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Stop the source vibrating."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
@@ -1837,9 +1837,9 @@
       "skill": "Link frequency to pitch",
       "question": "On a research log book, an assistant notes: what must increase for a sound wave to be heard as a higher note?",
       "options": [
-        "A longer string with no change in frequency",
-        "Longer wavelength only",
-        "Lower speed in air",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Make the sound travel through a vacuum.",
         "Increasing the frequency of the wave"
       ],
       "correctAnswer": "Increasing the frequency of the wave",
@@ -1872,10 +1872,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a planetarium screen, a visitor chooses: a tuning fork makes a higher pitch than another. Which wave feature is greater?",
       "options": [
-        "Lower frequency",
-        "Lower amplitude",
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
         "Increasing the frequency of the wave",
-        "More echoes"
+        "Reduce the vibration size."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 2,
@@ -1907,10 +1907,10 @@
       "skill": "Link frequency to pitch",
       "question": "On a radio studio demo, a presenter explains: which change in vibration makes a sound higher in pitch?",
       "options": [
-        "Longer wavelength only",
+        "Decrease the amplitude.",
         "Increasing the frequency of the wave",
-        "No vibration",
-        "A quieter sound only"
+        "Increase the wavelength only.",
+        "Make the oscilloscope trace shorter vertically."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 1,
@@ -1943,9 +1943,9 @@
       "question": "On a energy survey report, a surveyor writes: a sound from a speaker becomes higher pitched. Which wave property increased?",
       "options": [
         "Increasing the frequency of the wave",
-        "Lower amplitude",
-        "Lower speed in air",
-        "A longer string with no change in frequency"
+        "Decrease the amplitude.",
+        "Increase the wavelength only.",
+        "Use a smaller pressure variation."
       ],
       "correctAnswer": "Increasing the frequency of the wave",
       "correctIndex": 0,
@@ -1977,9 +1977,9 @@
       "skill": "Explain one use of ultrasound",
       "question": "Why is ultrasound useful for scanning inside the human body?",
       "options": [
-        "It is ionising so it passes through all tissue.",
-        "It travels only through a vacuum.",
-        "It always carries more energy than X-rays.",
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
+        "It uses visible light.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
@@ -2001,10 +2001,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a clinic worksheet, a learner checks: a student explains a pregnancy scan. Why can ultrasound be used instead of ionising radiation?",
       "options": [
-        "It only travels in a vacuum.",
-        "It uses visible light.",
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
         "It can be reflected to make images and it is non-ionising.",
-        "It needs radioactive tracer."
+        "It changes tissue into bone."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
@@ -2036,10 +2036,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a museum label, a visitor reads: a results table shows echoes from boundaries inside the body. What makes ultrasound useful?",
       "options": [
-        "It changes tissue into bone.",
+        "It needs radioactive tracer.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is too low for humans to hear.",
-        "It destroys the detector."
+        "It is ionising gamma radiation.",
+        "It makes no reflections."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
@@ -2072,9 +2072,9 @@
       "question": "On a school lab card, a pupil answers: why can ultrasound make medical images without using ionising radiation?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It uses visible light.",
-        "It makes no reflections.",
-        "It is ionising gamma radiation."
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
+        "It can only travel through a vacuum."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
@@ -2106,9 +2106,9 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a factory safety note, an apprentice reviews: a scanner sends high-frequency sound into the body. How can this produce an image?",
       "options": [
-        "It is too low for humans to hear.",
         "It needs radioactive tracer.",
-        "It only travels in a vacuum.",
+        "It is ionising gamma radiation.",
+        "It is below the range of human hearing.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
@@ -2141,10 +2141,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a space centre display, a guide explains: which reason explains a safe use of ultrasound in medical scanning?",
       "options": [
-        "It makes no reflections.",
-        "It destroys the detector.",
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
         "It can be reflected to make images and it is non-ionising.",
-        "It changes tissue into bone."
+        "It works by nuclear fission."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
@@ -2178,7 +2178,7 @@
       "options": [
         "It needs radioactive tracer.",
         "It is ionising gamma radiation.",
-        "It uses visible light.",
+        "It uses ultraviolet radiation.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
@@ -2211,10 +2211,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a hospital training card, a trainee checks: a astronomer explains a pregnancy scan. Why can ultrasound be used instead of ionising radiation?",
       "options": [
-        "It destroys the detector.",
-        "It only travels in a vacuum.",
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is too low for humans to hear."
+        "It cannot travel through soft tissue."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
@@ -2246,10 +2246,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a observatory data sheet, an astronomer reviews: a whiteboard shows echoes from boundaries inside the body. What makes ultrasound useful?",
       "options": [
-        "It is ionising gamma radiation.",
+        "It needs radioactive tracer.",
         "It can be reflected to make images and it is non-ionising.",
-        "It changes tissue into bone.",
-        "It makes no reflections."
+        "It is ionising gamma radiation.",
+        "It always damages DNA."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
@@ -2282,9 +2282,9 @@
       "question": "On a classroom board, a group discusses: why can ultrasound make medical images without using ionising radiation?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It only travels in a vacuum.",
-        "It uses visible light.",
-        "It needs radioactive tracer."
+        "It needs radioactive tracer.",
+        "It is ionising gamma radiation.",
+        "It measures magnetic field strength only."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
@@ -2316,9 +2316,9 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a workshop checklist, an engineer checks: a scanner sends high-frequency sound into the body. How can this produce an image?",
       "options": [
+        "It needs radioactive tracer.",
+        "It uses visible light.",
         "It changes tissue into bone.",
-        "It is too low for humans to hear.",
-        "It destroys the detector.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
@@ -2351,10 +2351,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a field trip notebook, a pupil records: which reason explains a safe use of ultrasound in medical scanning?",
       "options": [
+        "It needs radioactive tracer.",
         "It uses visible light.",
-        "It makes no reflections.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is ionising gamma radiation."
+        "It makes no reflections."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
@@ -2386,10 +2386,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a science fair poster, a team explains: a exam practice uses ultrasound to form an image of soft tissue. Why is it suitable?",
       "options": [
-        "It is too low for humans to hear.",
-        "It can be reflected to make images and it is non-ionising.",
         "It needs radioactive tracer.",
-        "It only travels in a vacuum."
+        "It can be reflected to make images and it is non-ionising.",
+        "It uses visible light.",
+        "It can only travel through a vacuum."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
@@ -2422,9 +2422,9 @@
       "question": "On a exam practice page, a candidate works: a parent explains a pregnancy scan. Why can ultrasound be used instead of ionising radiation?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It makes no reflections.",
-        "It destroys the detector.",
-        "It changes tissue into bone."
+        "It needs radioactive tracer.",
+        "It uses visible light.",
+        "It is below the range of human hearing."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
@@ -2457,8 +2457,8 @@
       "question": "On a home study card, a learner revises: a log book shows echoes from boundaries inside the body. What makes ultrasound useful?",
       "options": [
         "It needs radioactive tracer.",
-        "It is ionising gamma radiation.",
         "It uses visible light.",
+        "It works by nuclear fission.",
         "It can be reflected to make images and it is non-ionising."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
@@ -2491,10 +2491,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a research log book, an assistant notes: why can ultrasound make medical images without using ionising radiation?",
       "options": [
-        "It destroys the detector.",
-        "It only travels in a vacuum.",
+        "It needs radioactive tracer.",
+        "It uses visible light.",
         "It can be reflected to make images and it is non-ionising.",
-        "It is too low for humans to hear."
+        "It uses ultraviolet radiation."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 2,
@@ -2526,10 +2526,10 @@
       "skill": "Explain one use of ultrasound",
       "question": "On a planetarium screen, a visitor chooses: a scanner sends high-frequency sound into the body. How can this produce an image?",
       "options": [
-        "It is ionising gamma radiation.",
+        "It needs radioactive tracer.",
         "It can be reflected to make images and it is non-ionising.",
-        "It changes tissue into bone.",
-        "It makes no reflections."
+        "It uses visible light.",
+        "It cannot travel through soft tissue."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 1,
@@ -2562,9 +2562,9 @@
       "question": "On a radio studio demo, a presenter explains: which reason explains a safe use of ultrasound in medical scanning?",
       "options": [
         "It can be reflected to make images and it is non-ionising.",
-        "It only travels in a vacuum.",
+        "It needs radioactive tracer.",
         "It uses visible light.",
-        "It needs radioactive tracer."
+        "It always damages DNA."
       ],
       "correctAnswer": "It can be reflected to make images and it is non-ionising.",
       "correctIndex": 0,
@@ -2596,9 +2596,9 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "A wave has a frequency of 15 Hz and a wavelength of 0.6 m. What is the wave speed?",
       "options": [
-        "15.6 m/s",
-        "25 m/s",
-        "14 m/s",
+        "2.25 m/s",
+        "13.5 m/s",
+        "5.85 m/s",
         "9 m/s"
       ],
       "correctAnswer": "9 m/s",
@@ -2620,10 +2620,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a clinic worksheet, a learner checks: a student uses v = f x lambda. If f is 3 Hz and wavelength is 4.67 m, what is v?",
       "options": [
+        "5.6 m/s",
         "28 m/s",
-        "7 m/s",
         "14 m/s",
-        "17 m/s"
+        "16.94 m/s"
       ],
       "correctAnswer": "14 m/s",
       "correctIndex": 2,
@@ -2655,10 +2655,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a museum label, a visitor reads: a ripple travels with wavelength 5 m and frequency 4 Hz. Which speed is correct?",
       "options": [
-        "40 m/s",
+        "11 m/s",
         "20 m/s",
-        "10 m/s",
-        "24 m/s"
+        "50 m/s",
+        "21 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 1,
@@ -2691,9 +2691,9 @@
       "question": "On a school lab card, a pupil answers: 5 waves pass each second and each wave is 5.4 m long. Find the speed.",
       "options": [
         "27 m/s",
-        "54 m/s",
-        "13.5 m/s",
-        "32 m/s"
+        "18.9 m/s",
+        "45.9 m/s",
+        "24.03 m/s"
       ],
       "correctAnswer": "27 m/s",
       "correctIndex": 0,
@@ -2725,9 +2725,9 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a factory safety note, an apprentice reviews: a training screen gives f = 2 Hz and lambda = 17.5 m. What speed should be written?",
       "options": [
-        "70 m/s",
-        "17.5 m/s",
-        "41 m/s",
+        "10.5 m/s",
+        "77 m/s",
+        "25.55 m/s",
         "35 m/s"
       ],
       "correctAnswer": "35 m/s",
@@ -2760,10 +2760,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a space centre display, a guide explains: which answer matches 3 Hz multiplied by 6.67 m for wave speed?",
       "options": [
-        "40 m/s",
-        "10 m/s",
+        "9 m/s",
+        "54 m/s",
         "20 m/s",
-        "22 m/s"
+        "25.8 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 2,
@@ -2795,10 +2795,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a revision flashcard, a student practises: a hospital wave has frequency 4 Hz and wavelength 6.75 m. What is its speed?",
       "options": [
-        "54 m/s",
+        "16.2 m/s",
         "27 m/s",
-        "13.5 m/s",
-        "30 m/s"
+        "51.3 m/s",
+        "30.51 m/s"
       ],
       "correctAnswer": "27 m/s",
       "correctIndex": 1,
@@ -2830,10 +2830,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a hospital training card, a trainee checks: a astronomer uses v = f x lambda. If f is 5 Hz and wavelength is 4.9 m, what is v?",
       "options": [
-        "49 m/s",
-        "12.25 m/s",
+        "18.38 m/s",
+        "58.8 m/s",
         "24.5 m/s",
-        "28.5 m/s"
+        "23.77 m/s"
       ],
       "correctAnswer": "24.5 m/s",
       "correctIndex": 2,
@@ -2865,10 +2865,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a observatory data sheet, an astronomer reviews: a ripple travels with wavelength 16 m and frequency 2 Hz. Which speed is correct?",
       "options": [
-        "64 m/s",
+        "11.2 m/s",
         "32 m/s",
-        "16 m/s",
-        "37 m/s"
+        "51.2 m/s",
+        "25.92 m/s"
       ],
       "correctAnswer": "32 m/s",
       "correctIndex": 1,
@@ -2901,9 +2901,9 @@
       "question": "On a classroom board, a group discusses: 3 waves pass each second and each wave is 13.5 m long. Find the speed.",
       "options": [
         "40.5 m/s",
-        "81 m/s",
         "20.25 m/s",
-        "46.5 m/s"
+        "85.05 m/s",
+        "26.32 m/s"
       ],
       "correctAnswer": "40.5 m/s",
       "correctIndex": 0,
@@ -2935,9 +2935,9 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a workshop checklist, an engineer checks: a notebook gives f = 4 Hz and lambda = 12.5 m. What speed should be written?",
       "options": [
-        "100 m/s",
-        "25 m/s",
-        "52 m/s",
+        "32.5 m/s",
+        "130 m/s",
+        "60.5 m/s",
         "50 m/s"
       ],
       "correctAnswer": "50 m/s",
@@ -2970,10 +2970,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a field trip notebook, a pupil records: which answer matches 5 Hz multiplied by 1 m for wave speed?",
       "options": [
-        "10 m/s",
-        "2.5 m/s",
+        "1.25 m/s",
+        "9 m/s",
         "5 m/s",
-        "8 m/s"
+        "5.25 m/s"
       ],
       "correctAnswer": "5 m/s",
       "correctIndex": 2,
@@ -3005,10 +3005,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a science fair poster, a team explains: a exam practice wave has frequency 2 Hz and wavelength 4.5 m. What is its speed?",
       "options": [
-        "18 m/s",
+        "3.6 m/s",
         "9 m/s",
-        "4.5 m/s",
-        "13 m/s"
+        "20.7 m/s",
+        "8.01 m/s"
       ],
       "correctAnswer": "9 m/s",
       "correctIndex": 1,
@@ -3041,9 +3041,9 @@
       "question": "On a exam practice page, a candidate works: a parent uses v = f x lambda. If f is 3 Hz and wavelength is 11.67 m, what is v?",
       "options": [
         "35 m/s",
-        "70 m/s",
-        "17.5 m/s",
-        "40 m/s"
+        "19.25 m/s",
+        "52.5 m/s",
+        "25.55 m/s"
       ],
       "correctAnswer": "35 m/s",
       "correctIndex": 0,
@@ -3075,9 +3075,9 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a home study card, a learner revises: a ripple travels with wavelength 2 m and frequency 4 Hz. Which speed is correct?",
       "options": [
+        "5.6 m/s",
         "16 m/s",
-        "4 m/s",
-        "14 m/s",
+        "10.32 m/s",
         "8 m/s"
       ],
       "correctAnswer": "8 m/s",
@@ -3110,10 +3110,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a research log book, an assistant notes: 5 waves pass each second and each wave is 2.7 m long. Find the speed.",
       "options": [
-        "27 m/s",
-        "6.75 m/s",
+        "4.05 m/s",
+        "33.75 m/s",
         "13.5 m/s",
-        "15.5 m/s"
+        "15.25 m/s"
       ],
       "correctAnswer": "13.5 m/s",
       "correctIndex": 2,
@@ -3145,10 +3145,10 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a planetarium screen, a visitor chooses: a sound desk gives f = 2 Hz and lambda = 10 m. What speed should be written?",
       "options": [
-        "40 m/s",
+        "9 m/s",
         "20 m/s",
-        "10 m/s",
-        "23 m/s"
+        "34 m/s",
+        "19.4 m/s"
       ],
       "correctAnswer": "20 m/s",
       "correctIndex": 1,
@@ -3181,9 +3181,9 @@
       "question": "On a radio studio demo, a presenter explains: which answer matches 3 Hz multiplied by 4.17 m for wave speed?",
       "options": [
         "12.5 m/s",
-        "25 m/s",
-        "6.25 m/s",
-        "16.5 m/s"
+        "7.5 m/s",
+        "27.5 m/s",
+        "10.13 m/s"
       ],
       "correctAnswer": "12.5 m/s",
       "correctIndex": 0,
@@ -3215,9 +3215,9 @@
       "skill": "Use wave speed = frequency x wavelength",
       "question": "On a energy survey report, a surveyor writes: a clinic wave has frequency 4 Hz and wavelength 4.5 m. What is its speed?",
       "options": [
-        "36 m/s",
-        "9 m/s",
-        "23 m/s",
+        "13.5 m/s",
+        "48.6 m/s",
+        "11.7 m/s",
         "18 m/s"
       ],
       "correctAnswer": "18 m/s",

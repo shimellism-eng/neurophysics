@@ -41,6 +41,24 @@
 - `npm test`, `npm run build`, `npm run audit:questions`, and `git diff --check` passed after the atomic distractor batch.
 - Remaining repeated option sets are mostly outside Edexcel Atomic Structure, especially Magnetism, Space, Waves, Energy, Electricity, and some AQA calculation pairs.
 
+### Remaining Adaptive Practice distractor cleanup
+- Repaired repeated answer-option sets across the remaining AQA and Edexcel runtime question files.
+- Added curated wrong-answer pools for the remaining repeated-option topics and kept numerical distractors generated from the existing correct answer values.
+- Final question-quality state:
+  - AQA duplicate IDs: 0
+  - AQA exact duplicate stems: 0
+  - AQA near/template duplicate stems: 0
+  - AQA repeated option sets: 0
+  - Edexcel duplicate IDs: 0
+  - Edexcel exact duplicate stems: 0
+  - Edexcel near/template duplicate stems: 0
+  - Edexcel repeated option sets: 0
+- Verification after remaining cleanup:
+  - `npm run audit:questions` passes
+  - `npm test` passes
+  - `npm run build` passes
+  - `git diff --check` passes
+
 ## What Was Just Done (latest — 2026-05-01)
 
 ### Auth, consent, onboarding cleanup

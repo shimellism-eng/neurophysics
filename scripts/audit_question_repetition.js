@@ -25,6 +25,7 @@ const qualityRules = {
   overusedAuthoredCorrectObjectiveBuckets: 0,
   duplicateAuthoredDiagramStemPatterns: 0,
   duplicateExplanations: 0,
+  leakedSkillHints: 0,
   missingSpecEntries: 0,
   missingFromAll: 0,
   changedVsAll: 0,
@@ -132,6 +133,7 @@ function summarizeSchema(questions) {
     overusedAuthoredCorrectObjectiveBuckets: [],
     duplicateAuthoredDiagramStemPatterns: [],
     duplicateExplanations: [],
+    leakedSkillHints: [],
     answerMismatches: [],
     optionLengths: new Map(),
   }
@@ -165,6 +167,20 @@ function summarizeSchema(questions) {
 
     if (question.review?.status !== 'reviewed') {
       summary.invalidReviewStatus.push(question.id)
+    }
+
+    const visibleSkill = normalizeExact(question.skill)
+    const hiddenObjective = normalizeExact(question.learningObjective?.statement)
+    const correctAnswer = normalizeExact(question.correctAnswer)
+    if (
+      visibleSkill &&
+      (
+        visibleSkill === hiddenObjective ||
+        (hiddenObjective && visibleSkill.includes(hiddenObjective)) ||
+        (correctAnswer && visibleSkill.includes(correctAnswer))
+      )
+    ) {
+      summary.leakedSkillHints.push(question.id)
     }
 
     const text = questionText(question)
@@ -279,6 +295,7 @@ function summarizeQuestions(label, questions) {
   console.log(`overused authored correct-objective buckets: ${schema.overusedAuthoredCorrectObjectiveBuckets.length}`)
   console.log(`duplicate authored diagram/stem patterns: ${schema.duplicateAuthoredDiagramStemPatterns.length}`)
   console.log(`duplicate explanations: ${schema.duplicateExplanations.length}`)
+  console.log(`leaked skill hints: ${schema.leakedSkillHints.length}`)
   console.log(`schema strict: ${schema.strict}`)
   console.log(`schema strict + runtime extras: ${schema.strictPlusRuntimeExtras}`)
   console.log(`schema missing strict keys: ${schema.missingStrictKeys}`)
@@ -321,6 +338,7 @@ function summarizeQuestions(label, questions) {
     overusedAuthoredCorrectObjectiveBuckets: schema.overusedAuthoredCorrectObjectiveBuckets.length,
     duplicateAuthoredDiagramStemPatterns: schema.duplicateAuthoredDiagramStemPatterns.length,
     duplicateExplanations: schema.duplicateExplanations.length,
+    leakedSkillHints: schema.leakedSkillHints.length,
   }
 }
 

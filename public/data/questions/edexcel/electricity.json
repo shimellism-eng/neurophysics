@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "electricity",
-  "generatedAt": "2026-05-02T07:04:48.182Z",
+  "generatedAt": "2026-05-02T07:16:14.021Z",
   "questions": [
     {
       "id": "edexcel_electricity_cv_resistance_calculation_001",
@@ -39,7 +39,7 @@
       "patternId": "authored:edexcel_electricity_cv_resistance_calculation_001",
       "conceptFamily": "calculate_resistance_using_potential_difference_and_current",
       "contextType": "exam_style",
-      "skill": "Calculate resistance using potential difference and current.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A resistor has a potential difference of 6.0 V across it and a current of 0.30 A through it. What is its resistance?",
       "question": "A resistor has a potential difference of 6.0 V across it and a current of 0.30 A through it. What is its resistance?",
       "options": [
@@ -111,7 +111,7 @@
       "patternId": "authored:edexcel_electricity_cv_ohmic_graph_002",
       "conceptFamily": "identify_the_i_v_graph_for_an_ohmic_conductor",
       "contextType": "exam_style",
-      "skill": "Identify the I-V graph for an ohmic conductor.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Which graph would show an ohmic conductor at constant temperature?",
       "question": "Which graph would show an ohmic conductor at constant temperature?",
       "options": [
@@ -183,7 +183,7 @@
       "patternId": "authored:edexcel_electricity_cv_ohmic_temperature_003",
       "conceptFamily": "apply_direct_proportionality_for_an_ohmic_conductor",
       "contextType": "exam_style",
-      "skill": "Apply direct proportionality for an ohmic conductor.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A fixed resistor is kept at constant temperature. The potential difference across it is doubled. What happens to the current?",
       "question": "A fixed resistor is kept at constant temperature. The potential difference across it is doubled. What happens to the current?",
       "options": [
@@ -255,7 +255,7 @@
       "patternId": "authored:edexcel_electricity_cv_filament_lamp_shape_004",
       "conceptFamily": "explain_the_shape_of_a_filament_lamp_i_v_graph",
       "contextType": "exam_style",
-      "skill": "Explain the shape of a filament lamp I-V graph.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "The I-V graph for a filament lamp curves as the potential difference increases. Why does the graph curve?",
       "question": "The I-V graph for a filament lamp curves as the potential difference increases. Why does the graph curve?",
       "options": [
@@ -327,7 +327,7 @@
       "patternId": "authored:edexcel_electricity_cv_diode_direction_005",
       "conceptFamily": "describe_the_current_voltage_characteristic_of_a_diode",
       "contextType": "exam_style",
-      "skill": "Describe the current-voltage characteristic of a diode.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Which statement about a diode is correct?",
       "question": "Which statement about a diode is correct?",
       "options": [
@@ -399,7 +399,7 @@
       "patternId": "authored:edexcel_electricity_cv_diode_reverse_006",
       "conceptFamily": "interpret_reverse_bias_behaviour_for_a_diode",
       "contextType": "exam_style",
-      "skill": "Interpret reverse-bias behaviour for a diode.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A diode is connected in reverse bias. What current would you expect?",
       "question": "A diode is connected in reverse bias. What current would you expect?",
       "options": [
@@ -471,7 +471,7 @@
       "patternId": "authored:edexcel_electricity_cv_filament_table_007",
       "conceptFamily": "use_data_to_decide_whether_a_component_is_ohmic",
       "contextType": "exam_style",
-      "skill": "Use data to decide whether a component is ohmic.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A lamp has a current of 0.20 A at 2.0 V and 0.32 A at 4.0 V. What does this show?",
       "question": "A lamp has a current of 0.20 A at 2.0 V and 0.32 A at 4.0 V. What does this show?",
       "options": [
@@ -543,7 +543,7 @@
       "patternId": "authored:edexcel_electricity_cv_voltmeter_ammeter_008",
       "conceptFamily": "choose_meter_connections_for_an_i_v_practical",
       "contextType": "exam_style",
-      "skill": "Choose meter connections for an I-V practical.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "In an I-V investigation, how should the meters be connected to test a resistor?",
       "question": "In an I-V investigation, how should the meters be connected to test a resistor?",
       "options": [
@@ -615,7 +615,7 @@
       "patternId": "authored:edexcel_electricity_cv_variable_resistor_009",
       "conceptFamily": "describe_the_purpose_of_a_variable_resistor_in_an_i_v_practical",
       "contextType": "exam_style",
-      "skill": "Describe the purpose of a variable resistor in an I-V practical.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Why is a variable resistor used in an I-V characteristics experiment?",
       "question": "Why is a variable resistor used in an I-V characteristics experiment?",
       "options": [
@@ -687,7 +687,7 @@
       "patternId": "authored:edexcel_electricity_cv_repeat_readings_010",
       "conceptFamily": "explain_why_repeat_readings_improve_an_i_v_investigation",
       "contextType": "exam_style",
-      "skill": "Explain why repeat readings improve an I-V investigation.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A student repeats each current reading three times in an I-V investigation. Why is this useful?",
       "question": "A student repeats each current reading three times in an I-V investigation. Why is this useful?",
       "options": [
@@ -759,7 +759,7 @@
       "patternId": "authored:edexcel_electricity_cv_graph_compare_011",
       "conceptFamily": "compare_resistance_from_i_v_graph_data",
       "contextType": "exam_style",
-      "skill": "Compare resistance from I-V graph data.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Two straight I-V graphs pass through the origin. At 4 V, component X has a larger current than component Y. Which component has the lower resistance?",
       "question": "Two straight I-V graphs pass through the origin. At 4 V, component X has a larger current than component Y. Which component has the lower resistance?",
       "options": [
@@ -831,7 +831,7 @@
       "patternId": "authored:edexcel_electricity_cv_resistance_from_table_012",
       "conceptFamily": "calculate_resistance_from_one_point_on_an_i_v_graph",
       "contextType": "exam_style",
-      "skill": "Calculate resistance from one point on an I-V graph.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A component has a current of 0.25 A when the potential difference is 5.0 V. What is its resistance?",
       "question": "A component has a current of 0.25 A when the potential difference is 5.0 V. What is its resistance?",
       "options": [
@@ -903,7 +903,7 @@
       "patternId": "authored:edexcel_electricity_cv_constant_temperature_013",
       "conceptFamily": "explain_why_temperature_is_controlled_in_an_ohmic_conductor_investigation",
       "contextType": "exam_style",
-      "skill": "Explain why temperature is controlled in an ohmic conductor investigation.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Why is constant temperature important when testing whether a conductor is ohmic?",
       "question": "Why is constant temperature important when testing whether a conductor is ohmic?",
       "options": [
@@ -975,7 +975,7 @@
       "patternId": "authored:edexcel_electricity_cv_lamp_resistance_014",
       "conceptFamily": "describe_how_filament_lamp_resistance_changes_with_temperature",
       "contextType": "exam_style",
-      "skill": "Describe how filament lamp resistance changes with temperature.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A filament lamp is connected to a larger potential difference. What happens to the resistance of the filament?",
       "question": "A filament lamp is connected to a larger potential difference. What happens to the resistance of the filament?",
       "options": [
@@ -1047,7 +1047,7 @@
       "patternId": "authored:edexcel_electricity_cv_diode_graph_015",
       "conceptFamily": "recognise_the_i_v_graph_feature_of_a_reverse_biased_diode",
       "contextType": "exam_style",
-      "skill": "Recognise the I-V graph feature of a reverse-biased diode.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Which feature would you expect on the I-V graph for a diode?",
       "question": "Which feature would you expect on the I-V graph for a diode?",
       "options": [
@@ -1119,7 +1119,7 @@
       "patternId": "authored:edexcel_electricity_cv_component_choice_016",
       "conceptFamily": "identify_a_component_that_follows_ohms_law",
       "contextType": "exam_style",
-      "skill": "Identify a component that follows Ohm’s law.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A component has the same resistance for a range of potential differences, provided its temperature is constant. Which component is this most likely to be?",
       "question": "A component has the same resistance for a range of potential differences, provided its temperature is constant. Which component is this most likely to be?",
       "options": [
@@ -1191,7 +1191,7 @@
       "patternId": "authored:edexcel_electricity_cv_anomalous_reading_017",
       "conceptFamily": "respond_appropriately_to_an_anomalous_i_v_reading",
       "contextType": "exam_style",
-      "skill": "Respond appropriately to an anomalous I-V reading.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "In an I-V practical, one current reading is much higher than the pattern of the other readings. What should the student do first?",
       "question": "In an I-V practical, one current reading is much higher than the pattern of the other readings. What should the student do first?",
       "options": [
@@ -1263,7 +1263,7 @@
       "patternId": "authored:edexcel_electricity_cv_safe_setup_018",
       "conceptFamily": "explain_a_method_choice_in_a_filament_lamp_i_v_practical",
       "contextType": "exam_style",
-      "skill": "Explain a method choice in a filament lamp I-V practical.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "Why should the switch be opened between readings when testing a filament lamp?",
       "question": "Why should the switch be opened between readings when testing a filament lamp?",
       "options": [
@@ -1335,7 +1335,7 @@
       "patternId": "authored:edexcel_electricity_cv_prediction_019",
       "conceptFamily": "predict_current_for_an_ohmic_conductor_using_proportionality",
       "contextType": "exam_style",
-      "skill": "Predict current for an ohmic conductor using proportionality.",
+      "skill": "Current-Voltage Characteristics practice",
       "stem": "A resistor has a current of 0.10 A at 2.0 V and behaves ohmically. What current is expected at 6.0 V?",
       "question": "A resistor has a current of 0.10 A at 2.0 V and behaves ohmically. What current is expected at 6.0 V?",
       "options": [
@@ -1407,7 +1407,7 @@
       "patternId": "authored:edexcel_electricity_domestic_live_wire_001",
       "conceptFamily": "identify_the_live_wire_as_the_dangerous_high_potential_wire",
       "contextType": "exam_style",
-      "skill": "Identify the live wire as the dangerous high-potential wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "Which wire in a mains cable is at a high potential difference compared with earth?",
       "question": "Which wire in a mains cable is at a high potential difference compared with earth?",
       "options": [
@@ -1479,7 +1479,7 @@
       "patternId": "authored:edexcel_electricity_domestic_neutral_wire_002",
       "conceptFamily": "describe_the_function_of_the_neutral_wire",
       "contextType": "exam_style",
-      "skill": "Describe the function of the neutral wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "What is the function of the neutral wire in a domestic mains circuit?",
       "question": "What is the function of the neutral wire in a domestic mains circuit?",
       "options": [
@@ -1551,7 +1551,7 @@
       "patternId": "authored:edexcel_electricity_domestic_earth_wire_003",
       "conceptFamily": "explain_how_the_earth_wire_helps_protect_users",
       "contextType": "exam_style",
-      "skill": "Explain how the earth wire helps protect users.",
+      "skill": "Domestic Electricity practice",
       "stem": "A metal-cased appliance has an earth wire. What is the purpose of the earth wire?",
       "question": "A metal-cased appliance has an earth wire. What is the purpose of the earth wire?",
       "options": [
@@ -1623,7 +1623,7 @@
       "patternId": "authored:edexcel_electricity_domestic_fuse_live_004",
       "conceptFamily": "explain_why_a_fuse_is_placed_in_the_live_wire",
       "contextType": "exam_style",
-      "skill": "Explain why a fuse is placed in the live wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "Why should a fuse be connected in the live wire of a plug?",
       "question": "Why should a fuse be connected in the live wire of a plug?",
       "options": [
@@ -1695,7 +1695,7 @@
       "patternId": "authored:edexcel_electricity_domestic_switch_live_005",
       "conceptFamily": "explain_why_switches_are_fitted_in_the_live_wire",
       "contextType": "exam_style",
-      "skill": "Explain why switches are fitted in the live wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "Why should a switch in a mains circuit be connected in the live wire?",
       "question": "Why should a switch in a mains circuit be connected in the live wire?",
       "options": [
@@ -1767,7 +1767,7 @@
       "patternId": "authored:edexcel_electricity_domestic_fuse_rating_006",
       "conceptFamily": "choose_a_suitable_fuse_rating_for_an_appliance",
       "contextType": "exam_style",
-      "skill": "Choose a suitable fuse rating for an appliance.",
+      "skill": "Domestic Electricity practice",
       "stem": "An appliance normally takes a current of 2.2 A. Which fuse rating is most suitable?",
       "question": "An appliance normally takes a current of 2.2 A. Which fuse rating is most suitable?",
       "options": [
@@ -1839,7 +1839,7 @@
       "patternId": "authored:edexcel_electricity_domestic_fault_current_007",
       "conceptFamily": "describe_what_happens_during_a_live_to_case_fault_in_an_earthed_appliance",
       "contextType": "exam_style",
-      "skill": "Describe what happens during a live-to-case fault in an earthed appliance.",
+      "skill": "Domestic Electricity practice",
       "stem": "A fault causes the live wire to touch the metal case of an earthed appliance. What happens next?",
       "question": "A fault causes the live wire to touch the metal case of an earthed appliance. What happens next?",
       "options": [
@@ -1911,7 +1911,7 @@
       "patternId": "authored:edexcel_electricity_domestic_double_insulated_008",
       "conceptFamily": "explain_why_double_insulated_appliances_do_not_need_an_earth_wire",
       "contextType": "exam_style",
-      "skill": "Explain why double-insulated appliances do not need an earth wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "Why does a double-insulated appliance not need an earth wire?",
       "question": "Why does a double-insulated appliance not need an earth wire?",
       "options": [
@@ -1983,7 +1983,7 @@
       "patternId": "authored:edexcel_electricity_domestic_mains_values_009",
       "conceptFamily": "recall_the_approximate_uk_mains_voltage_and_frequency",
       "contextType": "exam_style",
-      "skill": "Recall the approximate UK mains voltage and frequency.",
+      "skill": "Domestic Electricity practice",
       "stem": "What are the approximate voltage and frequency of the UK mains supply?",
       "question": "What are the approximate voltage and frequency of the UK mains supply?",
       "options": [
@@ -2055,7 +2055,7 @@
       "patternId": "authored:edexcel_electricity_domestic_ac_supply_010",
       "conceptFamily": "describe_alternating_current_in_the_domestic_mains_supply",
       "contextType": "exam_style",
-      "skill": "Describe alternating current in the domestic mains supply.",
+      "skill": "Domestic Electricity practice",
       "stem": "What does it mean when the mains supply is described as alternating current?",
       "question": "What does it mean when the mains supply is described as alternating current?",
       "options": [
@@ -2127,7 +2127,7 @@
       "patternId": "authored:edexcel_electricity_domestic_live_earth_danger_011",
       "conceptFamily": "explain_the_danger_of_a_live_to_earth_connection_through_a_person",
       "contextType": "exam_style",
-      "skill": "Explain the danger of a live-to-earth connection through a person.",
+      "skill": "Domestic Electricity practice",
       "stem": "Why is it dangerous for a person to touch the live wire while also connected to earth?",
       "question": "Why is it dangerous for a person to touch the live wire while also connected to earth?",
       "options": [
@@ -2199,7 +2199,7 @@
       "patternId": "authored:edexcel_electricity_domestic_open_switch_danger_012",
       "conceptFamily": "explain_why_switching_the_neutral_wire_does_not_make_an_appliance_fully_safe",
       "contextType": "exam_style",
-      "skill": "Explain why switching the neutral wire does not make an appliance fully safe.",
+      "skill": "Domestic Electricity practice",
       "stem": "An appliance is switched off, but the switch is in the neutral wire. Why can this still be dangerous?",
       "question": "An appliance is switched off, but the switch is in the neutral wire. Why can this still be dangerous?",
       "options": [
@@ -2271,7 +2271,7 @@
       "patternId": "authored:edexcel_electricity_domestic_wire_colours_013",
       "conceptFamily": "identify_the_colour_of_the_earth_wire",
       "contextType": "exam_style",
-      "skill": "Identify the colour of the earth wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "Which colour identifies the earth wire in a modern UK plug?",
       "question": "Which colour identifies the earth wire in a modern UK plug?",
       "options": [
@@ -2343,7 +2343,7 @@
       "patternId": "authored:edexcel_electricity_domestic_live_colour_014",
       "conceptFamily": "identify_the_colour_of_the_live_wire",
       "contextType": "exam_style",
-      "skill": "Identify the colour of the live wire.",
+      "skill": "Domestic Electricity practice",
       "stem": "Which wire in a modern UK plug is brown?",
       "question": "Which wire in a modern UK plug is brown?",
       "options": [
@@ -2415,7 +2415,7 @@
       "patternId": "authored:edexcel_electricity_domestic_case_fault_015",
       "conceptFamily": "analyse_the_risk_when_the_earth_wire_is_missing_during_a_live_case_fault",
       "contextType": "exam_style",
-      "skill": "Analyse the risk when the earth wire is missing during a live-case fault.",
+      "skill": "Domestic Electricity practice",
       "stem": "A metal kettle has a damaged live wire touching its case, but the earth wire is broken. What is the main danger?",
       "question": "A metal kettle has a damaged live wire touching its case, but the earth wire is broken. What is the main danger?",
       "options": [
@@ -2487,7 +2487,7 @@
       "patternId": "authored:edexcel_electricity_domestic_circuit_breaker_016",
       "conceptFamily": "describe_the_safety_function_of_a_circuit_breaker",
       "contextType": "exam_style",
-      "skill": "Describe the safety function of a circuit breaker.",
+      "skill": "Domestic Electricity practice",
       "stem": "What is the safety role of a circuit breaker?",
       "question": "What is the safety role of a circuit breaker?",
       "options": [
@@ -2559,7 +2559,7 @@
       "patternId": "authored:edexcel_electricity_domestic_power_rating_017",
       "conceptFamily": "relate_appliance_power_rating_to_rate_of_energy_transfer",
       "contextType": "exam_style",
-      "skill": "Relate appliance power rating to rate of energy transfer.",
+      "skill": "Domestic Electricity practice",
       "stem": "Two kettles are used for the same time. Kettle X has a power rating of 3.0 kW and kettle Y has a power rating of 1.5 kW. Which statement is correct?",
       "question": "Two kettles are used for the same time. Kettle X has a power rating of 3.0 kW and kettle Y has a power rating of 1.5 kW. Which statement is correct?",
       "options": [
@@ -2631,7 +2631,7 @@
       "patternId": "authored:edexcel_electricity_domestic_fuse_current_calc_018",
       "conceptFamily": "calculate_operating_current_from_power_and_mains_voltage",
       "contextType": "exam_style",
-      "skill": "Calculate operating current from power and mains voltage.",
+      "skill": "Domestic Electricity practice",
       "stem": "A 690 W appliance is connected to the 230 V mains. What current does it normally take?",
       "question": "A 690 W appliance is connected to the 230 V mains. What current does it normally take?",
       "options": [
@@ -2703,7 +2703,7 @@
       "patternId": "authored:edexcel_electricity_domestic_plug_safety_019",
       "conceptFamily": "apply_domestic_electricity_safety_rules_to_damaged_insulation",
       "contextType": "exam_style",
-      "skill": "Apply domestic electricity safety rules to damaged insulation.",
+      "skill": "Domestic Electricity practice",
       "stem": "A plug has cracked insulation so that bare copper from the live wire can be touched. What should be done?",
       "question": "A plug has cracked insulation so that bare copper from the live wire can be touched. What should be done?",
       "options": [
@@ -2775,7 +2775,7 @@
       "patternId": "authored:edexcel_electricity_energy_definition_001",
       "conceptFamily": "describe_an_electrical_energy_transfer_in_an_appliance",
       "contextType": "exam_style",
-      "skill": "Describe an electrical energy transfer in an appliance.",
+      "skill": "Electrical Energy practice",
       "stem": "An electric heater is switched on. Which statement describes the useful energy transfer?",
       "question": "An electric heater is switched on. Which statement describes the useful energy transfer?",
       "options": [
@@ -2847,7 +2847,7 @@
       "patternId": "authored:edexcel_electricity_energy_unit_002",
       "conceptFamily": "recall_the_unit_of_energy_transferred",
       "contextType": "exam_style",
-      "skill": "Recall the unit of energy transferred.",
+      "skill": "Electrical Energy practice",
       "stem": "Which unit is used for energy transferred?",
       "question": "Which unit is used for energy transferred?",
       "options": [
@@ -2919,7 +2919,7 @@
       "patternId": "authored:edexcel_electricity_energy_power_time_003",
       "conceptFamily": "calculate_energy_transferred_using_power_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred using power and time.",
+      "skill": "Electrical Energy practice",
       "stem": "A 40 W fan is used for 300 s. How much energy is transferred?",
       "question": "A 40 W fan is used for 300 s. How much energy is transferred?",
       "options": [
@@ -2991,7 +2991,7 @@
       "patternId": "authored:edexcel_electricity_energy_find_time_004",
       "conceptFamily": "calculate_time_from_energy_transferred_and_power",
       "contextType": "exam_style",
-      "skill": "Calculate time from energy transferred and power.",
+      "skill": "Electrical Energy practice",
       "stem": "A lamp transfers 900 J of energy at a power of 15 W. For how long is it switched on?",
       "question": "A lamp transfers 900 J of energy at a power of 15 W. For how long is it switched on?",
       "options": [
@@ -3063,7 +3063,7 @@
       "patternId": "authored:edexcel_electricity_energy_find_power_005",
       "conceptFamily": "calculate_power_from_energy_transferred_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate power from energy transferred and time.",
+      "skill": "Electrical Energy practice",
       "stem": "A small motor transfers 2400 J of energy in 80 s. What is its power?",
       "question": "A small motor transfers 2400 J of energy in 80 s. What is its power?",
       "options": [
@@ -3135,7 +3135,7 @@
       "patternId": "authored:edexcel_electricity_energy_charge_pd_006",
       "conceptFamily": "calculate_energy_transferred_using_charge_and_potential_difference",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred using charge and potential difference.",
+      "skill": "Electrical Energy practice",
       "stem": "A charge of 5 C passes through a component with a potential difference of 12 V. How much energy is transferred?",
       "question": "A charge of 5 C passes through a component with a potential difference of 12 V. How much energy is transferred?",
       "options": [
@@ -3207,7 +3207,7 @@
       "patternId": "authored:edexcel_electricity_energy_charge_007",
       "conceptFamily": "calculate_charge_from_energy_transferred_and_potential_difference",
       "contextType": "exam_style",
-      "skill": "Calculate charge from energy transferred and potential difference.",
+      "skill": "Electrical Energy practice",
       "stem": "A component transfers 72 J of energy when connected across 9 V. How much charge passes through it?",
       "question": "A component transfers 72 J of energy when connected across 9 V. How much charge passes through it?",
       "options": [
@@ -3279,7 +3279,7 @@
       "patternId": "authored:edexcel_electricity_energy_potential_difference_008",
       "conceptFamily": "calculate_potential_difference_using_energy_transferred_and_charge",
       "contextType": "exam_style",
-      "skill": "Calculate potential difference using energy transferred and charge.",
+      "skill": "Electrical Energy practice",
       "stem": "A charge of 4 C transfers 48 J of energy in a component. What is the potential difference across the component?",
       "question": "A charge of 4 C transfers 48 J of energy in a component. What is the potential difference across the component?",
       "options": [
@@ -3351,7 +3351,7 @@
       "patternId": "authored:edexcel_electricity_energy_kwh_009",
       "conceptFamily": "calculate_energy_transferred_in_kilowatt_hours",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred in kilowatt-hours.",
+      "skill": "Electrical Energy practice",
       "stem": "A 0.8 kW microwave is used for 0.25 hours. How much energy does it transfer?",
       "question": "A 0.8 kW microwave is used for 0.25 hours. How much energy does it transfer?",
       "options": [
@@ -3423,7 +3423,7 @@
       "patternId": "authored:edexcel_electricity_energy_cost_010",
       "conceptFamily": "calculate_the_cost_of_electrical_energy_use",
       "contextType": "exam_style",
-      "skill": "Calculate the cost of electrical energy use.",
+      "skill": "Electrical Energy practice",
       "stem": "A washing machine uses 1.8 kWh. Electricity costs 30 p per kWh. What is the cost of using the washing machine?",
       "question": "A washing machine uses 1.8 kWh. Electricity costs 30 p per kWh. What is the cost of using the washing machine?",
       "options": [
@@ -3495,7 +3495,7 @@
       "patternId": "authored:edexcel_electricity_energy_compare_appliances_011",
       "conceptFamily": "compare_energy_transferred_using_power_ratings",
       "contextType": "exam_style",
-      "skill": "Compare energy transferred using power ratings.",
+      "skill": "Electrical Energy practice",
       "stem": "A 1 kW heater and a 2 kW heater are each used for 30 minutes. Which heater transfers more energy?",
       "question": "A 1 kW heater and a 2 kW heater are each used for 30 minutes. Which heater transfers more energy?",
       "options": [
@@ -3567,7 +3567,7 @@
       "patternId": "authored:edexcel_electricity_energy_efficiency_context_012",
       "conceptFamily": "explain_wasted_energy_in_an_electrical_device",
       "contextType": "exam_style",
-      "skill": "Explain wasted energy in an electrical device.",
+      "skill": "Electrical Energy practice",
       "stem": "A phone charger transfers 18000 J from the mains. The phone battery gains 12600 J. What has happened to the remaining energy?",
       "question": "A phone charger transfers 18000 J from the mains. The phone battery gains 12600 J. What has happened to the remaining energy?",
       "options": [
@@ -3639,7 +3639,7 @@
       "patternId": "authored:edexcel_electricity_energy_low_power_choice_013",
       "conceptFamily": "explain_how_power_affects_energy_cost_over_time",
       "contextType": "exam_style",
-      "skill": "Explain how power affects energy cost over time.",
+      "skill": "Electrical Energy practice",
       "stem": "Why does a lower-power lamp usually cost less to run for the same number of hours?",
       "question": "Why does a lower-power lamp usually cost less to run for the same number of hours?",
       "options": [
@@ -3711,7 +3711,7 @@
       "patternId": "authored:edexcel_electricity_energy_bill_units_014",
       "conceptFamily": "interpret_the_meaning_of_a_kilowatt_hour",
       "contextType": "exam_style",
-      "skill": "Interpret the meaning of a kilowatt-hour.",
+      "skill": "Electrical Energy practice",
       "stem": "Electricity bills often measure energy in kilowatt-hours. What does one kilowatt-hour mean?",
       "question": "Electricity bills often measure energy in kilowatt-hours. What does one kilowatt-hour mean?",
       "options": [
@@ -3783,7 +3783,7 @@
       "patternId": "authored:edexcel_electricity_energy_joule_to_kwh_015",
       "conceptFamily": "convert_one_kilowatt_hour_into_joules",
       "contextType": "exam_style",
-      "skill": "Convert one kilowatt-hour into joules.",
+      "skill": "Electrical Energy practice",
       "stem": "Which energy transfer is equal to 1 kWh?",
       "question": "Which energy transfer is equal to 1 kWh?",
       "options": [
@@ -3855,7 +3855,7 @@
       "patternId": "authored:edexcel_electricity_energy_table_016",
       "conceptFamily": "choose_the_correct_time_unit_for_kwh_calculations",
       "contextType": "exam_style",
-      "skill": "Choose the correct time unit for kWh calculations.",
+      "skill": "Electrical Energy practice",
       "stem": "A toaster is labelled 1.2 kW and is used for 5 minutes. Which calculation gives the energy transferred in kWh?",
       "question": "A toaster is labelled 1.2 kW and is used for 5 minutes. Which calculation gives the energy transferred in kWh?",
       "options": [
@@ -3927,7 +3927,7 @@
       "patternId": "authored:edexcel_electricity_energy_battery_017",
       "conceptFamily": "relate_potential_difference_to_energy_transferred_per_unit_charge",
       "contextType": "exam_style",
-      "skill": "Relate potential difference to energy transferred per unit charge.",
+      "skill": "Electrical Energy practice",
       "stem": "A battery transfers energy to charges in a circuit. Which quantity tells you the energy transferred per coulomb of charge?",
       "question": "A battery transfers energy to charges in a circuit. Which quantity tells you the energy transferred per coulomb of charge?",
       "options": [
@@ -3999,7 +3999,7 @@
       "patternId": "authored:edexcel_electricity_energy_conservation_018",
       "conceptFamily": "apply_conservation_of_energy_to_an_electrical_appliance",
       "contextType": "exam_style",
-      "skill": "Apply conservation of energy to an electrical appliance.",
+      "skill": "Electrical Energy practice",
       "stem": "An electrical appliance is not 100% efficient. Which statement is correct?",
       "question": "An electrical appliance is not 100% efficient. Which statement is correct?",
       "options": [
@@ -4071,7 +4071,7 @@
       "patternId": "authored:edexcel_electricity_power_definition_001",
       "conceptFamily": "state_power_as_the_rate_of_energy_transfer",
       "contextType": "exam_style",
-      "skill": "State power as the rate of energy transfer.",
+      "skill": "Electrical Power practice",
       "stem": "What does the power rating of an electrical appliance tell you?",
       "question": "What does the power rating of an electrical appliance tell you?",
       "options": [
@@ -4143,7 +4143,7 @@
       "patternId": "authored:edexcel_electricity_power_unit_002",
       "conceptFamily": "recall_the_unit_of_electrical_power",
       "contextType": "exam_style",
-      "skill": "Recall the unit of electrical power.",
+      "skill": "Electrical Power practice",
       "stem": "Which unit is used for electrical power?",
       "question": "Which unit is used for electrical power?",
       "options": [
@@ -4215,7 +4215,7 @@
       "patternId": "authored:edexcel_electricity_power_vi_003",
       "conceptFamily": "calculate_power_using_potential_difference_and_current",
       "contextType": "exam_style",
-      "skill": "Calculate power using potential difference and current.",
+      "skill": "Electrical Power practice",
       "stem": "A motor has a potential difference of 12 V across it and a current of 3 A through it. What is its power?",
       "question": "A motor has a potential difference of 12 V across it and a current of 3 A through it. What is its power?",
       "options": [
@@ -4287,7 +4287,7 @@
       "patternId": "authored:edexcel_electricity_power_current_004",
       "conceptFamily": "calculate_current_from_power_and_potential_difference",
       "contextType": "exam_style",
-      "skill": "Calculate current from power and potential difference.",
+      "skill": "Electrical Power practice",
       "stem": "A 60 W lamp is connected to a 12 V supply. What current flows through the lamp?",
       "question": "A 60 W lamp is connected to a 12 V supply. What current flows through the lamp?",
       "options": [
@@ -4359,7 +4359,7 @@
       "patternId": "authored:edexcel_electricity_power_pd_005",
       "conceptFamily": "calculate_potential_difference_from_power_and_current",
       "contextType": "exam_style",
-      "skill": "Calculate potential difference from power and current.",
+      "skill": "Electrical Power practice",
       "stem": "A heater transfers energy at 920 W when the current is 4 A. What is the potential difference across the heater?",
       "question": "A heater transfers energy at 920 W when the current is 4 A. What is the potential difference across the heater?",
       "options": [
@@ -4431,7 +4431,7 @@
       "patternId": "authored:edexcel_electricity_power_i2r_006",
       "conceptFamily": "calculate_power_using_current_and_resistance",
       "contextType": "exam_style",
-      "skill": "Calculate power using current and resistance.",
+      "skill": "Electrical Power practice",
       "stem": "A resistor has a resistance of 5 ohms and a current of 2 A. What is the power transferred by the resistor?",
       "question": "A resistor has a resistance of 5 ohms and a current of 2 A. What is the power transferred by the resistor?",
       "options": [
@@ -4503,7 +4503,7 @@
       "patternId": "authored:edexcel_electricity_power_resistance_007",
       "conceptFamily": "rearrange_the_power_equation_involving_resistance",
       "contextType": "exam_style",
-      "skill": "Rearrange the power equation involving resistance.",
+      "skill": "Electrical Power practice",
       "stem": "A component transfers 45 W of power when the current is 3 A. What is its resistance?",
       "question": "A component transfers 45 W of power when the current is 3 A. What is its resistance?",
       "options": [
@@ -4575,7 +4575,7 @@
       "patternId": "authored:edexcel_electricity_power_energy_time_008",
       "conceptFamily": "calculate_power_from_energy_transferred_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate power from energy transferred and time.",
+      "skill": "Electrical Power practice",
       "stem": "A device transfers 1800 J of energy in 30 s. What is its power?",
       "question": "A device transfers 1800 J of energy in 30 s. What is its power?",
       "options": [
@@ -4647,7 +4647,7 @@
       "patternId": "authored:edexcel_electricity_power_kilowatt_009",
       "conceptFamily": "convert_kilowatts_to_watts",
       "contextType": "exam_style",
-      "skill": "Convert kilowatts to watts.",
+      "skill": "Electrical Power practice",
       "stem": "An electric kettle has a power rating of 2.4 kW. What is this power in watts?",
       "question": "An electric kettle has a power rating of 2.4 kW. What is this power in watts?",
       "options": [
@@ -4719,7 +4719,7 @@
       "patternId": "authored:edexcel_electricity_power_higher_rating_010",
       "conceptFamily": "compare_appliances_using_power_ratings",
       "contextType": "exam_style",
-      "skill": "Compare appliances using power ratings.",
+      "skill": "Electrical Power practice",
       "stem": "Two lamps are connected to the same potential difference. Lamp A is rated at 20 W and lamp B is rated at 60 W. Which lamp transfers energy faster?",
       "question": "Two lamps are connected to the same potential difference. Lamp A is rated at 20 W and lamp B is rated at 60 W. Which lamp transfers energy faster?",
       "options": [
@@ -4791,7 +4791,7 @@
       "patternId": "authored:edexcel_electricity_power_fuse_choice_011",
       "conceptFamily": "choose_a_fuse_rating_using_power_and_potential_difference",
       "contextType": "exam_style",
-      "skill": "Choose a fuse rating using power and potential difference.",
+      "skill": "Electrical Power practice",
       "stem": "A 690 W appliance is used on a 230 V supply. Which fuse rating is most suitable?",
       "question": "A 690 W appliance is used on a 230 V supply. Which fuse rating is most suitable?",
       "options": [
@@ -4863,7 +4863,7 @@
       "patternId": "authored:edexcel_electricity_power_energy_cost_012",
       "conceptFamily": "calculate_energy_transferred_in_kilowatt_hours",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred in kilowatt-hours.",
+      "skill": "Electrical Power practice",
       "stem": "A 1.5 kW heater is used for 2 hours. How much energy is transferred in kilowatt-hours?",
       "question": "A 1.5 kW heater is used for 2 hours. How much energy is transferred in kilowatt-hours?",
       "options": [
@@ -4935,7 +4935,7 @@
       "patternId": "authored:edexcel_electricity_power_cost_013",
       "conceptFamily": "calculate_the_cost_of_electrical_energy",
       "contextType": "exam_style",
-      "skill": "Calculate the cost of electrical energy.",
+      "skill": "Electrical Power practice",
       "stem": "Electricity costs 28 p per kWh. A heater uses 3 kWh. What is the cost?",
       "question": "Electricity costs 28 p per kWh. A heater uses 3 kWh. What is the cost?",
       "options": [
@@ -5007,7 +5007,7 @@
       "patternId": "authored:edexcel_electricity_power_low_energy_014",
       "conceptFamily": "explain_why_lower_power_appliances_use_less_energy_for_the_same_time",
       "contextType": "exam_style",
-      "skill": "Explain why lower-power appliances use less energy for the same time.",
+      "skill": "Electrical Power practice",
       "stem": "Why does replacing a 60 W filament lamp with a 9 W LED reduce energy use for the same time switched on?",
       "question": "Why does replacing a 60 W filament lamp with a 9 W LED reduce energy use for the same time switched on?",
       "options": [
@@ -5079,7 +5079,7 @@
       "patternId": "authored:edexcel_electricity_power_current_limit_015",
       "conceptFamily": "calculate_maximum_power_from_supply_limits",
       "contextType": "exam_style",
-      "skill": "Calculate maximum power from supply limits.",
+      "skill": "Electrical Power practice",
       "stem": "A power supply can safely provide a maximum current of 2 A at 12 V. What is the maximum power it can provide?",
       "question": "A power supply can safely provide a maximum current of 2 A at 12 V. What is the maximum power it can provide?",
       "options": [
@@ -5151,7 +5151,7 @@
       "patternId": "authored:edexcel_electricity_power_graph_area_016",
       "conceptFamily": "use_a_power_time_graph_to_calculate_energy_transferred",
       "contextType": "exam_style",
-      "skill": "Use a power-time graph to calculate energy transferred.",
+      "skill": "Electrical Power practice",
       "stem": "A power-time graph is horizontal at 40 W for 5 s. How much energy is transferred?",
       "question": "A power-time graph is horizontal at 40 W for 5 s. How much energy is transferred?",
       "options": [
@@ -5227,7 +5227,7 @@
       "patternId": "authored:edexcel_electricity_power_resistor_heating_017",
       "conceptFamily": "describe_the_heating_effect_of_a_current_in_a_resistor",
       "contextType": "exam_style",
-      "skill": "Describe the heating effect of a current in a resistor.",
+      "skill": "Electrical Power practice",
       "stem": "A resistor gets warmer when a current passes through it. What energy transfer is taking place?",
       "question": "A resistor gets warmer when a current passes through it. What energy transfer is taking place?",
       "options": [
@@ -5299,7 +5299,7 @@
       "patternId": "authored:edexcel_electricity_power_compare_time_018",
       "conceptFamily": "compare_energy_transfer_using_power_and_time",
       "contextType": "exam_style",
-      "skill": "Compare energy transfer using power and time.",
+      "skill": "Electrical Power practice",
       "stem": "A 100 W device and a 200 W device are each used for 10 s. Which device transfers more energy?",
       "question": "A 100 W device and a 200 W device are each used for 10 s. Which device transfers more energy?",
       "options": [
@@ -5371,7 +5371,7 @@
       "patternId": "authored:edexcel_electricity_power_overload_019",
       "conceptFamily": "explain_an_overload_risk_using_current_and_power",
       "contextType": "exam_style",
-      "skill": "Explain an overload risk using current and power.",
+      "skill": "Electrical Power practice",
       "stem": "Why can using too many high-power appliances on one extension lead be dangerous?",
       "question": "Why can using too many high-power appliances on one extension lead be dangerous?",
       "options": [
@@ -5443,7 +5443,7 @@
       "patternId": "authored:edexcel_electricity_parallel_define_001",
       "conceptFamily": "describe_the_structure_of_a_parallel_circuit",
       "contextType": "exam_style",
-      "skill": "Describe the structure of a parallel circuit.",
+      "skill": "Parallel Circuits practice",
       "stem": "Which circuit has components connected in parallel?",
       "question": "Which circuit has components connected in parallel?",
       "options": [
@@ -5515,7 +5515,7 @@
       "patternId": "authored:edexcel_electricity_parallel_pd_same_002",
       "conceptFamily": "recall_that_potential_difference_is_the_same_across_parallel_branches",
       "contextType": "exam_style",
-      "skill": "Recall that potential difference is the same across parallel branches.",
+      "skill": "Parallel Circuits practice",
       "stem": "Two lamps are connected in parallel to a 6 V battery. What is the potential difference across each lamp?",
       "question": "Two lamps are connected in parallel to a 6 V battery. What is the potential difference across each lamp?",
       "options": [
@@ -5587,7 +5587,7 @@
       "patternId": "authored:edexcel_electricity_parallel_current_split_003",
       "conceptFamily": "use_conservation_of_current_at_a_junction",
       "contextType": "exam_style",
-      "skill": "Use conservation of current at a junction.",
+      "skill": "Parallel Circuits practice",
       "stem": "A current of 0.60 A reaches a junction. One branch has a current of 0.20 A. What is the current in the other branch?",
       "question": "A current of 0.60 A reaches a junction. One branch has a current of 0.20 A. What is the current in the other branch?",
       "options": [
@@ -5659,7 +5659,7 @@
       "patternId": "authored:edexcel_electricity_parallel_total_current_004",
       "conceptFamily": "calculate_total_current_in_a_parallel_circuit",
       "contextType": "exam_style",
-      "skill": "Calculate total current in a parallel circuit.",
+      "skill": "Parallel Circuits practice",
       "stem": "A parallel circuit has branch currents of 0.30 A and 0.45 A. What is the total current from the cell?",
       "question": "A parallel circuit has branch currents of 0.30 A and 0.45 A. What is the total current from the cell?",
       "options": [
@@ -5731,7 +5731,7 @@
       "patternId": "authored:edexcel_electricity_parallel_resistance_decrease_005",
       "conceptFamily": "describe_how_adding_a_parallel_resistor_affects_total_resistance",
       "contextType": "exam_style",
-      "skill": "Describe how adding a parallel resistor affects total resistance.",
+      "skill": "Parallel Circuits practice",
       "stem": "A second identical resistor is added in parallel with the first. What happens to the total resistance of the circuit?",
       "question": "A second identical resistor is added in parallel with the first. What happens to the total resistance of the circuit?",
       "options": [
@@ -5803,7 +5803,7 @@
       "patternId": "authored:edexcel_electricity_parallel_lamp_fault_006",
       "conceptFamily": "predict_the_effect_of_a_broken_branch_in_a_parallel_circuit",
       "contextType": "exam_style",
-      "skill": "Predict the effect of a broken branch in a parallel circuit.",
+      "skill": "Parallel Circuits practice",
       "stem": "Two lamps are connected in parallel. One lamp breaks. What happens to the other lamp?",
       "question": "Two lamps are connected in parallel. One lamp breaks. What happens to the other lamp?",
       "options": [
@@ -5875,7 +5875,7 @@
       "patternId": "authored:edexcel_electricity_parallel_series_compare_007",
       "conceptFamily": "compare_the_structure_of_series_and_parallel_circuits",
       "contextType": "exam_style",
-      "skill": "Compare the structure of series and parallel circuits.",
+      "skill": "Parallel Circuits practice",
       "stem": "Which statement correctly compares series and parallel circuits?",
       "question": "Which statement correctly compares series and parallel circuits?",
       "options": [
@@ -5947,7 +5947,7 @@
       "patternId": "authored:edexcel_electricity_parallel_branch_resistance_008",
       "conceptFamily": "relate_branch_resistance_to_branch_current_in_parallel",
       "contextType": "exam_style",
-      "skill": "Relate branch resistance to branch current in parallel.",
+      "skill": "Parallel Circuits practice",
       "stem": "Two parallel branches are connected to the same battery. Branch X has a lower resistance than branch Y. Which branch has the larger current?",
       "question": "Two parallel branches are connected to the same battery. Branch X has a lower resistance than branch Y. Which branch has the larger current?",
       "options": [
@@ -6019,7 +6019,7 @@
       "patternId": "authored:edexcel_electricity_parallel_meter_current_009",
       "conceptFamily": "choose_where_to_connect_an_ammeter_in_a_parallel_branch",
       "contextType": "exam_style",
-      "skill": "Choose where to connect an ammeter in a parallel branch.",
+      "skill": "Parallel Circuits practice",
       "stem": "Where should an ammeter be placed to measure the current in one branch of a parallel circuit?",
       "question": "Where should an ammeter be placed to measure the current in one branch of a parallel circuit?",
       "options": [
@@ -6091,7 +6091,7 @@
       "patternId": "authored:edexcel_electricity_parallel_meter_pd_010",
       "conceptFamily": "choose_where_to_connect_a_voltmeter_in_a_parallel_circuit",
       "contextType": "exam_style",
-      "skill": "Choose where to connect a voltmeter in a parallel circuit.",
+      "skill": "Parallel Circuits practice",
       "stem": "How should a voltmeter be connected to measure the potential difference across one branch?",
       "question": "How should a voltmeter be connected to measure the potential difference across one branch?",
       "options": [
@@ -6163,7 +6163,7 @@
       "patternId": "authored:edexcel_electricity_parallel_practical_setup_011",
       "conceptFamily": "identify_evidence_for_equal_potential_difference_across_parallel_branches",
       "contextType": "exam_style",
-      "skill": "Identify evidence for equal potential difference across parallel branches.",
+      "skill": "Parallel Circuits practice",
       "stem": "In a practical, a student tests two resistors in parallel. Which measurement would show that the branches have the same potential difference?",
       "question": "In a practical, a student tests two resistors in parallel. Which measurement would show that the branches have the same potential difference?",
       "options": [
@@ -6235,7 +6235,7 @@
       "patternId": "authored:edexcel_electricity_parallel_current_conservation_012",
       "conceptFamily": "apply_current_conservation_to_a_three_branch_parallel_circuit",
       "contextType": "exam_style",
-      "skill": "Apply current conservation to a three-branch parallel circuit.",
+      "skill": "Parallel Circuits practice",
       "stem": "A current of 1.2 A leaves a cell and splits into three branches. Two branch currents are 0.50 A and 0.30 A. What is the third branch current?",
       "question": "A current of 1.2 A leaves a cell and splits into three branches. Two branch currents are 0.50 A and 0.30 A. What is the third branch current?",
       "options": [
@@ -6307,7 +6307,7 @@
       "patternId": "authored:edexcel_electricity_parallel_more_branches_013",
       "conceptFamily": "predict_total_current_when_another_parallel_branch_is_added",
       "contextType": "exam_style",
-      "skill": "Predict total current when another parallel branch is added.",
+      "skill": "Parallel Circuits practice",
       "stem": "A third lamp is added in parallel to two lamps already connected to a battery. What happens to the total current from the battery?",
       "question": "A third lamp is added in parallel to two lamps already connected to a battery. What happens to the total current from the battery?",
       "options": [
@@ -6379,7 +6379,7 @@
       "patternId": "authored:edexcel_electricity_parallel_resistance_compare_014",
       "conceptFamily": "compare_total_parallel_resistance_with_individual_branch_resistance",
       "contextType": "exam_style",
-      "skill": "Compare total parallel resistance with individual branch resistance.",
+      "skill": "Parallel Circuits practice",
       "stem": "Two 10 ohm resistors are connected in parallel. How does their total resistance compare with 10 ohms?",
       "question": "Two 10 ohm resistors are connected in parallel. How does their total resistance compare with 10 ohms?",
       "options": [
@@ -6451,7 +6451,7 @@
       "patternId": "authored:edexcel_electricity_parallel_branch_open_015",
       "conceptFamily": "predict_the_current_in_an_open_parallel_branch",
       "contextType": "exam_style",
-      "skill": "Predict the current in an open parallel branch.",
+      "skill": "Parallel Circuits practice",
       "stem": "A switch opens one branch of a parallel circuit. What happens to the current in that open branch?",
       "question": "A switch opens one branch of a parallel circuit. What happens to the current in that open branch?",
       "options": [
@@ -6523,7 +6523,7 @@
       "patternId": "authored:edexcel_electricity_parallel_equal_lamps_016",
       "conceptFamily": "describe_potential_difference_across_identical_parallel_lamps",
       "contextType": "exam_style",
-      "skill": "Describe potential difference across identical parallel lamps.",
+      "skill": "Parallel Circuits practice",
       "stem": "Two identical lamps are connected in parallel to the same cell. Which statement is correct?",
       "question": "Two identical lamps are connected in parallel to the same cell. Which statement is correct?",
       "options": [
@@ -6595,7 +6595,7 @@
       "patternId": "authored:edexcel_electricity_parallel_series_pd_compare_017",
       "conceptFamily": "choose_a_circuit_arrangement_that_gives_full_supply_p_d_to_each_component",
       "contextType": "exam_style",
-      "skill": "Choose a circuit arrangement that gives full supply p.d. to each component.",
+      "skill": "Parallel Circuits practice",
       "stem": "A 12 V supply is connected to two identical lamps. Which arrangement gives each lamp 12 V across it?",
       "question": "A 12 V supply is connected to two identical lamps. Which arrangement gives each lamp 12 V across it?",
       "options": [
@@ -6667,7 +6667,7 @@
       "patternId": "authored:edexcel_electricity_parallel_house_lighting_018",
       "conceptFamily": "apply_parallel_circuit_ideas_to_domestic_lighting",
       "contextType": "exam_style",
-      "skill": "Apply parallel circuit ideas to domestic lighting.",
+      "skill": "Parallel Circuits practice",
       "stem": "Why are lamps in a house normally connected in parallel rather than all in series?",
       "question": "Why are lamps in a house normally connected in parallel rather than all in series?",
       "options": [
@@ -6739,7 +6739,7 @@
       "patternId": "authored:edexcel_electricity_parallel_fault_diagnosis_019",
       "conceptFamily": "evaluate_parallel_circuit_readings_using_current_conservation",
       "contextType": "exam_style",
-      "skill": "Evaluate parallel circuit readings using current conservation.",
+      "skill": "Parallel Circuits practice",
       "stem": "In a parallel circuit, ammeter A before the junction reads 0.90 A. Branch ammeters read 0.30 A and 0.60 A. What does this show?",
       "question": "In a parallel circuit, ammeter A before the junction reads 0.90 A. Branch ammeters read 0.30 A and 0.60 A. What does this show?",
       "options": [

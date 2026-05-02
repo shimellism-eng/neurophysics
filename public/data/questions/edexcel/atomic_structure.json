@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "atomic_structure",
-  "generatedAt": "2026-05-02T05:55:11.817Z",
+  "generatedAt": "2026-05-02T07:16:14.021Z",
   "questions": [
     {
       "id": "edexcel_atomic_structure_nucleus_001",
@@ -39,7 +39,7 @@
       "patternId": "authored:edexcel_atomic_structure_nucleus_001",
       "conceptFamily": "describe_the_nuclear_model_of_the_atom",
       "contextType": "exam_style",
-      "skill": "Describe the nuclear model of the atom.",
+      "skill": "Atomic Structure practice",
       "stem": "Which statement describes the structure of an atom?",
       "question": "Which statement describes the structure of an atom?",
       "options": [
@@ -111,7 +111,7 @@
       "patternId": "authored:edexcel_atomic_structure_relative_charge_002",
       "conceptFamily": "recall_the_relative_charge_of_subatomic_particles",
       "contextType": "exam_style",
-      "skill": "Recall the relative charge of subatomic particles.",
+      "skill": "Atomic Structure practice",
       "stem": "Which particle has a relative charge of -1?",
       "question": "Which particle has a relative charge of -1?",
       "options": [
@@ -183,7 +183,7 @@
       "patternId": "authored:edexcel_atomic_structure_mass_number_003",
       "conceptFamily": "calculate_mass_number_from_protons_and_neutrons",
       "contextType": "exam_style",
-      "skill": "Calculate mass number from protons and neutrons.",
+      "skill": "Atomic Structure practice",
       "stem": "An atom has 9 protons and 10 neutrons. What is its mass number?",
       "question": "An atom has 9 protons and 10 neutrons. What is its mass number?",
       "options": [
@@ -255,7 +255,7 @@
       "patternId": "authored:edexcel_atomic_structure_electrons_neutral_004",
       "conceptFamily": "find_electron_number_for_a_neutral_atom",
       "contextType": "exam_style",
-      "skill": "Find electron number for a neutral atom.",
+      "skill": "Atomic Structure practice",
       "stem": "A neutral atom has 13 protons. How many electrons does it have?",
       "question": "A neutral atom has 13 protons. How many electrons does it have?",
       "options": [
@@ -327,7 +327,7 @@
       "patternId": "authored:edexcel_atomic_structure_isotope_005",
       "conceptFamily": "describe_isotopes_using_proton_number",
       "contextType": "exam_style",
-      "skill": "Describe isotopes using proton number.",
+      "skill": "Atomic Structure practice",
       "stem": "Two atoms are isotopes of the same element. Which statement must be true?",
       "question": "Two atoms are isotopes of the same element. Which statement must be true?",
       "options": [
@@ -399,7 +399,7 @@
       "patternId": "authored:edexcel_atomic_structure_positive_ion_006",
       "conceptFamily": "explain_how_positive_ions_form",
       "contextType": "exam_style",
-      "skill": "Explain how positive ions form.",
+      "skill": "Atomic Structure practice",
       "stem": "An atom forms a positive ion. Which change has happened?",
       "question": "An atom forms a positive ion. Which change has happened?",
       "options": [
@@ -471,7 +471,7 @@
       "patternId": "authored:edexcel_background_sources_007",
       "conceptFamily": "identify_natural_sources_of_background_radiation",
       "contextType": "exam_style",
-      "skill": "Identify natural sources of background radiation.",
+      "skill": "Background Radiation practice",
       "stem": "Which is a natural source of background radiation?",
       "question": "Which is a natural source of background radiation?",
       "options": [
@@ -543,7 +543,7 @@
       "patternId": "authored:edexcel_background_rocks_008",
       "conceptFamily": "explain_why_background_radiation_varies_by_location",
       "contextType": "exam_style",
-      "skill": "Explain why background radiation varies by location.",
+      "skill": "Background Radiation practice",
       "stem": "A house is built in an area with granite rocks. Why might background radiation be higher there?",
       "question": "A house is built in an area with granite rocks. Why might background radiation be higher there?",
       "options": [
@@ -615,7 +615,7 @@
       "patternId": "authored:edexcel_background_count_subtract_009",
       "conceptFamily": "subtract_background_radiation_from_a_measured_count_rate",
       "contextType": "exam_style",
-      "skill": "Subtract background radiation from a measured count rate.",
+      "skill": "Background Radiation practice",
       "stem": "A detector records 64 counts per minute near a source. The background count is 18 counts per minute. What is the corrected count rate for the source?",
       "question": "A detector records 64 counts per minute near a source. The background count is 18 counts per minute. What is the corrected count rate for the source?",
       "options": [
@@ -687,7 +687,7 @@
       "patternId": "authored:edexcel_background_variation_010",
       "conceptFamily": "describe_why_background_radiation_varies",
       "contextType": "exam_style",
-      "skill": "Describe why background radiation varies.",
+      "skill": "Background Radiation practice",
       "stem": "Why is background radiation not exactly the same everywhere?",
       "question": "Why is background radiation not exactly the same everywhere?",
       "options": [
@@ -759,7 +759,7 @@
       "patternId": "authored:edexcel_background_detector_011",
       "conceptFamily": "explain_why_background_count_is_measured",
       "contextType": "exam_style",
-      "skill": "Explain why background count is measured.",
+      "skill": "Background Radiation practice",
       "stem": "Why should background radiation be measured before testing a radioactive source?",
       "question": "Why should background radiation be measured before testing a radioactive source?",
       "options": [
@@ -830,7 +830,7 @@
       "patternId": "authored:edexcel_fission_definition_012",
       "conceptFamily": "describe_nuclear_fission",
       "contextType": "exam_style",
-      "skill": "Describe nuclear fission.",
+      "skill": "Fission and Fusion practice",
       "stem": "What happens during nuclear fission?",
       "question": "What happens during nuclear fission?",
       "options": [
@@ -901,7 +901,7 @@
       "patternId": "authored:edexcel_fission_neutron_013",
       "conceptFamily": "state_how_fission_can_be_triggered",
       "contextType": "exam_style",
-      "skill": "State how fission can be triggered.",
+      "skill": "Fission and Fusion practice",
       "stem": "In a nuclear reactor, what can trigger the fission of a uranium nucleus?",
       "question": "In a nuclear reactor, what can trigger the fission of a uranium nucleus?",
       "options": [
@@ -972,7 +972,7 @@
       "patternId": "authored:edexcel_fission_chain_014",
       "conceptFamily": "explain_a_fission_chain_reaction",
       "contextType": "exam_style",
-      "skill": "Explain a fission chain reaction.",
+      "skill": "Fission and Fusion practice",
       "stem": "Why can nuclear fission lead to a chain reaction?",
       "question": "Why can nuclear fission lead to a chain reaction?",
       "options": [
@@ -1043,7 +1043,7 @@
       "patternId": "authored:edexcel_fusion_definition_015",
       "conceptFamily": "describe_nuclear_fusion",
       "contextType": "exam_style",
-      "skill": "Describe nuclear fusion.",
+      "skill": "Fission and Fusion practice",
       "stem": "What happens during nuclear fusion?",
       "question": "What happens during nuclear fusion?",
       "options": [
@@ -1114,7 +1114,7 @@
       "patternId": "authored:edexcel_fission_control_rods_016",
       "conceptFamily": "explain_how_control_rods_affect_a_chain_reaction",
       "contextType": "exam_style",
-      "skill": "Explain how control rods affect a chain reaction.",
+      "skill": "Fission and Fusion practice",
       "stem": "What is the purpose of control rods in a nuclear reactor?",
       "question": "What is the purpose of control rods in a nuclear reactor?",
       "options": [
@@ -1186,7 +1186,7 @@
       "patternId": "authored:edexcel_half_life_definition_017",
       "conceptFamily": "define_half_life",
       "contextType": "exam_style",
-      "skill": "Define half-life.",
+      "skill": "Half-Life practice",
       "stem": "What is meant by the half-life of a radioactive isotope?",
       "question": "What is meant by the half-life of a radioactive isotope?",
       "options": [
@@ -1258,7 +1258,7 @@
       "patternId": "authored:edexcel_half_life_calculation_018",
       "conceptFamily": "calculate_activity_after_whole_numbers_of_half_lives",
       "contextType": "exam_style",
-      "skill": "Calculate activity after whole numbers of half-lives.",
+      "skill": "Half-Life practice",
       "stem": "A sample has an activity of 800 Bq. Its half-life is 5 minutes. What is its activity after 10 minutes?",
       "question": "A sample has an activity of 800 Bq. Its half-life is 5 minutes. What is its activity after 10 minutes?",
       "options": [
@@ -1330,7 +1330,7 @@
       "patternId": "authored:edexcel_half_life_graph_019",
       "conceptFamily": "find_half_life_from_count_rate_data",
       "contextType": "exam_style",
-      "skill": "Find half-life from count-rate data.",
+      "skill": "Half-Life practice",
       "stem": "On a decay graph, the count rate falls from 120 counts per second to 60 counts per second in 8 minutes. What is the half-life?",
       "question": "On a decay graph, the count rate falls from 120 counts per second to 60 counts per second in 8 minutes. What is the half-life?",
       "options": [
@@ -1402,7 +1402,7 @@
       "patternId": "authored:edexcel_half_life_random_020",
       "conceptFamily": "link_random_decay_to_half_life_patterns",
       "contextType": "exam_style",
-      "skill": "Link random decay to half-life patterns.",
+      "skill": "Half-Life practice",
       "stem": "Which statement links half-life and radioactive decay correctly?",
       "question": "Which statement links half-life and radioactive decay correctly?",
       "options": [
@@ -1474,7 +1474,7 @@
       "patternId": "authored:edexcel_half_life_tracer_021",
       "conceptFamily": "choose_a_suitable_half_life_for_a_medical_tracer",
       "contextType": "exam_style",
-      "skill": "Choose a suitable half-life for a medical tracer.",
+      "skill": "Half-Life practice",
       "stem": "Why should a medical tracer not have a very long half-life?",
       "question": "Why should a medical tracer not have a very long half-life?",
       "options": [
@@ -1546,7 +1546,7 @@
       "patternId": "authored:edexcel_safety_irradiation_022",
       "conceptFamily": "distinguish_irradiation_from_contamination",
       "contextType": "exam_style",
-      "skill": "Distinguish irradiation from contamination.",
+      "skill": "Radiation Safety practice",
       "stem": "What is irradiation?",
       "question": "What is irradiation?",
       "options": [
@@ -1618,7 +1618,7 @@
       "patternId": "authored:edexcel_safety_distance_023",
       "conceptFamily": "choose_a_safety_precaution_for_handling_radioactive_sources",
       "contextType": "exam_style",
-      "skill": "Choose a safety precaution for handling radioactive sources.",
+      "skill": "Radiation Safety practice",
       "stem": "Which action reduces the risk from handling a radioactive source?",
       "question": "Which action reduces the risk from handling a radioactive source?",
       "options": [
@@ -1690,7 +1690,7 @@
       "patternId": "authored:edexcel_safety_shielding_024",
       "conceptFamily": "choose_suitable_shielding_for_gamma_radiation",
       "contextType": "exam_style",
-      "skill": "Choose suitable shielding for gamma radiation.",
+      "skill": "Radiation Safety practice",
       "stem": "Which material is most suitable for reducing exposure to gamma radiation?",
       "question": "Which material is most suitable for reducing exposure to gamma radiation?",
       "options": [
@@ -1762,7 +1762,7 @@
       "patternId": "authored:edexcel_safety_contamination_025",
       "conceptFamily": "explain_the_risk_from_internal_alpha_contamination",
       "contextType": "exam_style",
-      "skill": "Explain the risk from internal alpha contamination.",
+      "skill": "Radiation Safety practice",
       "stem": "Why is alpha contamination inside the body dangerous?",
       "question": "Why is alpha contamination inside the body dangerous?",
       "options": [

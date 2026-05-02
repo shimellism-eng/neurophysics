@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "waves",
-  "generatedAt": "2026-05-02T05:26:55.770Z",
+  "generatedAt": "2026-05-02T07:16:14.009Z",
   "questions": [
     {
       "id": "aqa_4_6_2_1_electromagnetic_spectrum_spectrum_order_direct_recall_001",
@@ -39,7 +39,7 @@
       "patternId": "4.6.2.1:spectrum_order:direct_recall",
       "conceptFamily": "spectrum_order",
       "contextType": "a safety decision",
-      "skill": "Recall the electromagnetic spectrum order.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which statement is correct for electromagnetic spectrum? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "question": "Which statement is correct for electromagnetic spectrum? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "options": [
@@ -110,7 +110,7 @@
       "patternId": "4.6.2.1:ionising_em:concept_discrimination",
       "conceptFamily": "ionising_em",
       "contextType": "a graph-reading task",
-      "skill": "Identify ionising electromagnetic waves.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A student is comparing similar ideas in electromagnetic spectrum. Which statement is correct? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "question": "A student is comparing similar ideas in electromagnetic spectrum. Which statement is correct? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "options": [
@@ -181,7 +181,7 @@
       "patternId": "4.6.2.1:frequency_wavelength:misconception_correction",
       "conceptFamily": "frequency_wavelength",
       "contextType": "a comparison question",
-      "skill": "Link frequency and wavelength.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A revision note about electromagnetic spectrum contains an error. Which replacement is correct? Check the clue before choosing: Link frequency and wavelength.",
       "question": "A revision note about electromagnetic spectrum contains an error. Which replacement is correct? Check the clue before choosing: Link frequency and wavelength.",
       "options": [
@@ -252,7 +252,7 @@
       "patternId": "4.6.2.1:uses_hazards:data_interpretation",
       "conceptFamily": "uses_hazards",
       "contextType": "a method-choice question",
-      "skill": "Link EM uses to properties.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A small data set about electromagnetic spectrum is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "question": "A small data set about electromagnetic spectrum is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "options": [
@@ -323,7 +323,7 @@
       "patternId": "4.6.2.1:vacuum_speed:representation_interpretation",
       "conceptFamily": "vacuum_speed",
       "contextType": "a results discussion",
-      "skill": "Recall EM wave speed.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which option correctly reads the electromagnetic spectrum model or diagram idea? Demand focus: recall EM wave speed.",
       "question": "Which option correctly reads the electromagnetic spectrum model or diagram idea? Demand focus: recall EM wave speed.",
       "options": [
@@ -394,7 +394,7 @@
       "patternId": "4.6.2.1:spectrum_order:direct_recall",
       "conceptFamily": "spectrum_order",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the electromagnetic spectrum order.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which answer matches this electromagnetic spectrum objective: Recall the electromagnetic spectrum order? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "question": "Which answer matches this electromagnetic spectrum objective: Recall the electromagnetic spectrum order? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "options": [
@@ -465,7 +465,7 @@
       "patternId": "4.6.2.1:ionising_em:applied_context",
       "conceptFamily": "ionising_em",
       "contextType": "a revision checkpoint",
-      "skill": "Identify ionising electromagnetic waves.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "In a revision checkpoint, which conclusion is correct for electromagnetic spectrum? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "question": "In a revision checkpoint, which conclusion is correct for electromagnetic spectrum? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "options": [
@@ -536,7 +536,7 @@
       "patternId": "4.6.2.1:frequency_wavelength:misconception_correction",
       "conceptFamily": "frequency_wavelength",
       "contextType": "an exam-style data table",
-      "skill": "Link frequency and wavelength.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which answer corrects a misconception about electromagnetic spectrum? Check the clue before choosing: Link frequency and wavelength.",
       "question": "Which answer corrects a misconception about electromagnetic spectrum? Check the clue before choosing: Link frequency and wavelength.",
       "options": [
@@ -607,7 +607,7 @@
       "patternId": "4.6.2.1:uses_hazards:exam_decision",
       "conceptFamily": "uses_hazards",
       "contextType": "a required-practical notebook",
-      "skill": "Link EM uses to properties.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "The mark scheme is testing link EM uses to properties. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "question": "The mark scheme is testing link EM uses to properties. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "options": [
@@ -678,7 +678,7 @@
       "patternId": "4.6.2.1:vacuum_speed:representation_interpretation",
       "conceptFamily": "vacuum_speed",
       "contextType": "a technician report",
-      "skill": "Recall EM wave speed.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A representation of electromagnetic spectrum is described in words. Which interpretation is correct? Demand focus: recall EM wave speed.",
       "question": "A representation of electromagnetic spectrum is described in words. Which interpretation is correct? Demand focus: recall EM wave speed.",
       "options": [
@@ -749,7 +749,7 @@
       "patternId": "4.6.2.1:spectrum_order:concept_discrimination",
       "conceptFamily": "spectrum_order",
       "contextType": "a labelled diagram",
-      "skill": "Recall the electromagnetic spectrum order.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A student is comparing similar ideas in electromagnetic spectrum. Which statement is correct? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "question": "A student is comparing similar ideas in electromagnetic spectrum. Which statement is correct? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "options": [
@@ -820,7 +820,7 @@
       "patternId": "4.6.2.1:ionising_em:applied_context",
       "conceptFamily": "ionising_em",
       "contextType": "a short calculation",
-      "skill": "Identify ionising electromagnetic waves.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A question set in a short calculation tests electromagnetic spectrum. Which answer applies the idea correctly? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "question": "A question set in a short calculation tests electromagnetic spectrum. Which answer applies the idea correctly? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "options": [
@@ -891,7 +891,7 @@
       "patternId": "4.6.2.1:frequency_wavelength:data_interpretation",
       "conceptFamily": "frequency_wavelength",
       "contextType": "a safety decision",
-      "skill": "Link frequency and wavelength.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A small data set about electromagnetic spectrum is being interpreted. Which conclusion is valid? Check the clue before choosing: Link frequency and wavelength.",
       "question": "A small data set about electromagnetic spectrum is being interpreted. Which conclusion is valid? Check the clue before choosing: Link frequency and wavelength.",
       "options": [
@@ -962,7 +962,7 @@
       "patternId": "4.6.2.1:uses_hazards:exam_decision",
       "conceptFamily": "uses_hazards",
       "contextType": "a graph-reading task",
-      "skill": "Link EM uses to properties.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which answer is the strongest GCSE Physics response for electromagnetic spectrum? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "question": "Which answer is the strongest GCSE Physics response for electromagnetic spectrum? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "options": [
@@ -1033,7 +1033,7 @@
       "patternId": "4.6.2.1:vacuum_speed:direct_recall",
       "conceptFamily": "vacuum_speed",
       "contextType": "a comparison question",
-      "skill": "Recall EM wave speed.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which answer matches this electromagnetic spectrum objective: Recall EM wave speed? Demand focus: recall EM wave speed.",
       "question": "Which answer matches this electromagnetic spectrum objective: Recall EM wave speed? Demand focus: recall EM wave speed.",
       "options": [
@@ -1104,7 +1104,7 @@
       "patternId": "4.6.2.1:spectrum_order:concept_discrimination",
       "conceptFamily": "spectrum_order",
       "contextType": "a method-choice question",
-      "skill": "Recall the electromagnetic spectrum order.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which option best separates the correct electromagnetic spectrum idea from a common mix-up? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "question": "Which option best separates the correct electromagnetic spectrum idea from a common mix-up? Keep the answer focused on electromagnetic spectrum: recall the electromagnetic spectrum order.",
       "options": [
@@ -1175,7 +1175,7 @@
       "patternId": "4.6.2.1:ionising_em:misconception_correction",
       "conceptFamily": "ionising_em",
       "contextType": "a results discussion",
-      "skill": "Identify ionising electromagnetic waves.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which answer corrects a misconception about electromagnetic spectrum? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "question": "Which answer corrects a misconception about electromagnetic spectrum? Check the clue before choosing: Identify ionising electromagnetic waves.",
       "options": [
@@ -1246,7 +1246,7 @@
       "patternId": "4.6.2.1:frequency_wavelength:data_interpretation",
       "conceptFamily": "frequency_wavelength",
       "contextType": "a classroom demonstration",
-      "skill": "Link frequency and wavelength.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "Which conclusion about electromagnetic spectrum is supported by the evidence? Check the clue before choosing: Link frequency and wavelength.",
       "question": "Which conclusion about electromagnetic spectrum is supported by the evidence? Check the clue before choosing: Link frequency and wavelength.",
       "options": [
@@ -1317,7 +1317,7 @@
       "patternId": "4.6.2.1:uses_hazards:representation_interpretation",
       "conceptFamily": "uses_hazards",
       "contextType": "a revision checkpoint",
-      "skill": "Link EM uses to properties.",
+      "skill": "Electromagnetic Spectrum practice",
       "stem": "A representation of electromagnetic spectrum is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "question": "A representation of electromagnetic spectrum is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: link EM uses to properties.",
       "options": [
@@ -1388,7 +1388,7 @@
       "patternId": "4.6.2.2:refraction:direct_recall",
       "conceptFamily": "refraction",
       "contextType": "a safety decision",
-      "skill": "Describe refraction into a denser medium.",
+      "skill": "Refraction practice",
       "stem": "Which statement is correct for refraction? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "question": "Which statement is correct for refraction? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "options": [
@@ -1459,7 +1459,7 @@
       "patternId": "4.6.2.2:reflection:concept_discrimination",
       "conceptFamily": "reflection",
       "contextType": "a graph-reading task",
-      "skill": "Apply reflection.",
+      "skill": "Refraction practice",
       "stem": "A student is comparing similar ideas in refraction. Which statement is correct? Demand focus: apply reflection.",
       "question": "A student is comparing similar ideas in refraction. Which statement is correct? Demand focus: apply reflection.",
       "options": [
@@ -1530,7 +1530,7 @@
       "patternId": "4.6.2.2:lens_convex:misconception_correction",
       "conceptFamily": "lens_convex",
       "contextType": "a comparison question",
-      "skill": "Describe a convex lens.",
+      "skill": "Refraction practice",
       "stem": "A revision note about refraction contains an error. Which replacement is correct? Use the wording carefully: this is about describe a convex lens.",
       "question": "A revision note about refraction contains an error. Which replacement is correct? Use the wording carefully: this is about describe a convex lens.",
       "options": [
@@ -1601,7 +1601,7 @@
       "patternId": "4.6.2.2:lens_concave:data_interpretation",
       "conceptFamily": "lens_concave",
       "contextType": "a method-choice question",
-      "skill": "Describe a concave lens.",
+      "skill": "Refraction practice",
       "stem": "A small data set about refraction is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "question": "A small data set about refraction is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "options": [
@@ -1672,7 +1672,7 @@
       "patternId": "4.6.2.2:colour_filter:representation_interpretation",
       "conceptFamily": "colour_filter",
       "contextType": "a results discussion",
-      "skill": "Explain colour filters.",
+      "skill": "Refraction practice",
       "stem": "Which option correctly reads the refraction model or diagram idea? Check the clue before choosing: Explain colour filters.",
       "question": "Which option correctly reads the refraction model or diagram idea? Check the clue before choosing: Explain colour filters.",
       "options": [
@@ -1743,7 +1743,7 @@
       "patternId": "4.6.2.2:refraction:direct_recall",
       "conceptFamily": "refraction",
       "contextType": "a classroom demonstration",
-      "skill": "Describe refraction into a denser medium.",
+      "skill": "Refraction practice",
       "stem": "Which answer matches this refraction objective: Describe refraction into a denser medium? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "question": "Which answer matches this refraction objective: Describe refraction into a denser medium? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "options": [
@@ -1814,7 +1814,7 @@
       "patternId": "4.6.2.2:reflection:applied_context",
       "conceptFamily": "reflection",
       "contextType": "a revision checkpoint",
-      "skill": "Apply reflection.",
+      "skill": "Refraction practice",
       "stem": "In a revision checkpoint, which conclusion is correct for refraction? Demand focus: apply reflection.",
       "question": "In a revision checkpoint, which conclusion is correct for refraction? Demand focus: apply reflection.",
       "options": [
@@ -1885,7 +1885,7 @@
       "patternId": "4.6.2.2:lens_convex:misconception_correction",
       "conceptFamily": "lens_convex",
       "contextType": "an exam-style data table",
-      "skill": "Describe a convex lens.",
+      "skill": "Refraction practice",
       "stem": "Which answer corrects a misconception about refraction? Use the wording carefully: this is about describe a convex lens.",
       "question": "Which answer corrects a misconception about refraction? Use the wording carefully: this is about describe a convex lens.",
       "options": [
@@ -1956,7 +1956,7 @@
       "patternId": "4.6.2.2:lens_concave:exam_decision",
       "conceptFamily": "lens_concave",
       "contextType": "a required-practical notebook",
-      "skill": "Describe a concave lens.",
+      "skill": "Refraction practice",
       "stem": "The mark scheme is testing describe a concave lens. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "question": "The mark scheme is testing describe a concave lens. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "options": [
@@ -2027,7 +2027,7 @@
       "patternId": "4.6.2.2:colour_filter:representation_interpretation",
       "conceptFamily": "colour_filter",
       "contextType": "a technician report",
-      "skill": "Explain colour filters.",
+      "skill": "Refraction practice",
       "stem": "A representation of refraction is described in words. Which interpretation is correct? Check the clue before choosing: Explain colour filters.",
       "question": "A representation of refraction is described in words. Which interpretation is correct? Check the clue before choosing: Explain colour filters.",
       "options": [
@@ -2098,7 +2098,7 @@
       "patternId": "4.6.2.2:refraction:concept_discrimination",
       "conceptFamily": "refraction",
       "contextType": "a labelled diagram",
-      "skill": "Describe refraction into a denser medium.",
+      "skill": "Refraction practice",
       "stem": "A student is comparing similar ideas in refraction. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "question": "A student is comparing similar ideas in refraction. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "options": [
@@ -2169,7 +2169,7 @@
       "patternId": "4.6.2.2:reflection:applied_context",
       "conceptFamily": "reflection",
       "contextType": "a short calculation",
-      "skill": "Apply reflection.",
+      "skill": "Refraction practice",
       "stem": "A question set in a short calculation tests refraction. Which answer applies the idea correctly? Demand focus: apply reflection.",
       "question": "A question set in a short calculation tests refraction. Which answer applies the idea correctly? Demand focus: apply reflection.",
       "options": [
@@ -2240,7 +2240,7 @@
       "patternId": "4.6.2.2:lens_convex:data_interpretation",
       "conceptFamily": "lens_convex",
       "contextType": "a safety decision",
-      "skill": "Describe a convex lens.",
+      "skill": "Refraction practice",
       "stem": "A small data set about refraction is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe a convex lens.",
       "question": "A small data set about refraction is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe a convex lens.",
       "options": [
@@ -2311,7 +2311,7 @@
       "patternId": "4.6.2.2:lens_concave:exam_decision",
       "conceptFamily": "lens_concave",
       "contextType": "a graph-reading task",
-      "skill": "Describe a concave lens.",
+      "skill": "Refraction practice",
       "stem": "Which answer is the strongest GCSE Physics response for refraction? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "question": "Which answer is the strongest GCSE Physics response for refraction? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "options": [
@@ -2382,7 +2382,7 @@
       "patternId": "4.6.2.2:colour_filter:direct_recall",
       "conceptFamily": "colour_filter",
       "contextType": "a comparison question",
-      "skill": "Explain colour filters.",
+      "skill": "Refraction practice",
       "stem": "Which answer matches this refraction objective: Explain colour filters? Check the clue before choosing: Explain colour filters.",
       "question": "Which answer matches this refraction objective: Explain colour filters? Check the clue before choosing: Explain colour filters.",
       "options": [
@@ -2453,7 +2453,7 @@
       "patternId": "4.6.2.2:refraction:concept_discrimination",
       "conceptFamily": "refraction",
       "contextType": "a method-choice question",
-      "skill": "Describe refraction into a denser medium.",
+      "skill": "Refraction practice",
       "stem": "Which option best separates the correct refraction idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "question": "Which option best separates the correct refraction idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: describe refraction into a denser medium.",
       "options": [
@@ -2524,7 +2524,7 @@
       "patternId": "4.6.2.2:reflection:misconception_correction",
       "conceptFamily": "reflection",
       "contextType": "a results discussion",
-      "skill": "Apply reflection.",
+      "skill": "Refraction practice",
       "stem": "Which answer corrects a misconception about refraction? Demand focus: apply reflection.",
       "question": "Which answer corrects a misconception about refraction? Demand focus: apply reflection.",
       "options": [
@@ -2595,7 +2595,7 @@
       "patternId": "4.6.2.2:lens_convex:data_interpretation",
       "conceptFamily": "lens_convex",
       "contextType": "a classroom demonstration",
-      "skill": "Describe a convex lens.",
+      "skill": "Refraction practice",
       "stem": "Which conclusion about refraction is supported by the evidence? Use the wording carefully: this is about describe a convex lens.",
       "question": "Which conclusion about refraction is supported by the evidence? Use the wording carefully: this is about describe a convex lens.",
       "options": [
@@ -2666,7 +2666,7 @@
       "patternId": "4.6.2.2:lens_concave:representation_interpretation",
       "conceptFamily": "lens_concave",
       "contextType": "a revision checkpoint",
-      "skill": "Describe a concave lens.",
+      "skill": "Refraction practice",
       "stem": "A representation of refraction is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "question": "A representation of refraction is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: describe a concave lens.",
       "options": [
@@ -2737,7 +2737,7 @@
       "patternId": "4.6.1.1:pitch_frequency:direct_recall",
       "conceptFamily": "pitch_frequency",
       "contextType": "a safety decision",
-      "skill": "Link pitch to frequency.",
+      "skill": "Sound Waves practice",
       "stem": "Which statement is correct for sound waves? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "question": "Which statement is correct for sound waves? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "options": [
@@ -2808,7 +2808,7 @@
       "patternId": "4.6.1.1:loudness_amplitude:concept_discrimination",
       "conceptFamily": "loudness_amplitude",
       "contextType": "a graph-reading task",
-      "skill": "Link loudness to amplitude.",
+      "skill": "Sound Waves practice",
       "stem": "A student is comparing similar ideas in sound waves. Which statement is correct? Keep the answer focused on sound waves: link loudness to amplitude.",
       "question": "A student is comparing similar ideas in sound waves. Which statement is correct? Keep the answer focused on sound waves: link loudness to amplitude.",
       "options": [
@@ -2879,7 +2879,7 @@
       "patternId": "4.6.1.1:ultrasound_frequency:misconception_correction",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a comparison question",
-      "skill": "Define ultrasound.",
+      "skill": "Sound Waves practice",
       "stem": "A revision note about sound waves contains an error. Which replacement is correct? Check the clue before choosing: Define ultrasound.",
       "question": "A revision note about sound waves contains an error. Which replacement is correct? Check the clue before choosing: Define ultrasound.",
       "options": [
@@ -2950,7 +2950,7 @@
       "patternId": "4.6.1.1:ultrasound_imaging:data_interpretation",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a method-choice question",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Sound Waves practice",
       "stem": "A small data set about sound waves is being interpreted. Which conclusion is valid? Demand focus: explain ultrasound imaging.",
       "question": "A small data set about sound waves is being interpreted. Which conclusion is valid? Demand focus: explain ultrasound imaging.",
       "options": [
@@ -3021,7 +3021,7 @@
       "patternId": "4.6.1.1:echo_distance:representation_interpretation",
       "conceptFamily": "echo_distance",
       "contextType": "a results discussion",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Sound Waves practice",
       "stem": "Which option correctly reads the sound waves model or diagram idea? Check the clue before choosing: Use echoes to measure distance.",
       "question": "Which option correctly reads the sound waves model or diagram idea? Check the clue before choosing: Use echoes to measure distance.",
       "options": [
@@ -3092,7 +3092,7 @@
       "patternId": "4.6.1.1:pitch_frequency:direct_recall",
       "conceptFamily": "pitch_frequency",
       "contextType": "a classroom demonstration",
-      "skill": "Link pitch to frequency.",
+      "skill": "Sound Waves practice",
       "stem": "Which answer matches this sound waves objective: Link pitch to frequency? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "question": "Which answer matches this sound waves objective: Link pitch to frequency? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "options": [
@@ -3163,7 +3163,7 @@
       "patternId": "4.6.1.1:loudness_amplitude:applied_context",
       "conceptFamily": "loudness_amplitude",
       "contextType": "a revision checkpoint",
-      "skill": "Link loudness to amplitude.",
+      "skill": "Sound Waves practice",
       "stem": "In a revision checkpoint, which conclusion is correct for sound waves? Keep the answer focused on sound waves: link loudness to amplitude.",
       "question": "In a revision checkpoint, which conclusion is correct for sound waves? Keep the answer focused on sound waves: link loudness to amplitude.",
       "options": [
@@ -3234,7 +3234,7 @@
       "patternId": "4.6.1.1:ultrasound_frequency:misconception_correction",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "an exam-style data table",
-      "skill": "Define ultrasound.",
+      "skill": "Sound Waves practice",
       "stem": "Which answer corrects a misconception about sound waves? Check the clue before choosing: Define ultrasound.",
       "question": "Which answer corrects a misconception about sound waves? Check the clue before choosing: Define ultrasound.",
       "options": [
@@ -3305,7 +3305,7 @@
       "patternId": "4.6.1.1:ultrasound_imaging:exam_decision",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a required-practical notebook",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Sound Waves practice",
       "stem": "The mark scheme is testing explain ultrasound imaging. Which answer matches that point? Demand focus: explain ultrasound imaging.",
       "question": "The mark scheme is testing explain ultrasound imaging. Which answer matches that point? Demand focus: explain ultrasound imaging.",
       "options": [
@@ -3376,7 +3376,7 @@
       "patternId": "4.6.1.1:echo_distance:representation_interpretation",
       "conceptFamily": "echo_distance",
       "contextType": "a technician report",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Sound Waves practice",
       "stem": "A representation of sound waves is described in words. Which interpretation is correct? Check the clue before choosing: Use echoes to measure distance.",
       "question": "A representation of sound waves is described in words. Which interpretation is correct? Check the clue before choosing: Use echoes to measure distance.",
       "options": [
@@ -3447,7 +3447,7 @@
       "patternId": "4.6.1.1:pitch_frequency:concept_discrimination",
       "conceptFamily": "pitch_frequency",
       "contextType": "a labelled diagram",
-      "skill": "Link pitch to frequency.",
+      "skill": "Sound Waves practice",
       "stem": "A student is comparing similar ideas in sound waves. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "question": "A student is comparing similar ideas in sound waves. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "options": [
@@ -3518,7 +3518,7 @@
       "patternId": "4.6.1.1:loudness_amplitude:applied_context",
       "conceptFamily": "loudness_amplitude",
       "contextType": "a short calculation",
-      "skill": "Link loudness to amplitude.",
+      "skill": "Sound Waves practice",
       "stem": "A question set in a short calculation tests sound waves. Which answer applies the idea correctly? Keep the answer focused on sound waves: link loudness to amplitude.",
       "question": "A question set in a short calculation tests sound waves. Which answer applies the idea correctly? Keep the answer focused on sound waves: link loudness to amplitude.",
       "options": [
@@ -3589,7 +3589,7 @@
       "patternId": "4.6.1.1:ultrasound_frequency:data_interpretation",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a safety decision",
-      "skill": "Define ultrasound.",
+      "skill": "Sound Waves practice",
       "stem": "A small data set about sound waves is being interpreted. Which conclusion is valid? Check the clue before choosing: Define ultrasound.",
       "question": "A small data set about sound waves is being interpreted. Which conclusion is valid? Check the clue before choosing: Define ultrasound.",
       "options": [
@@ -3660,7 +3660,7 @@
       "patternId": "4.6.1.1:ultrasound_imaging:exam_decision",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a graph-reading task",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Sound Waves practice",
       "stem": "Which answer is the strongest GCSE Physics response for sound waves? Demand focus: explain ultrasound imaging.",
       "question": "Which answer is the strongest GCSE Physics response for sound waves? Demand focus: explain ultrasound imaging.",
       "options": [
@@ -3731,7 +3731,7 @@
       "patternId": "4.6.1.1:echo_distance:direct_recall",
       "conceptFamily": "echo_distance",
       "contextType": "a comparison question",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Sound Waves practice",
       "stem": "Which answer matches this sound waves objective: Use echoes to measure distance? Check the clue before choosing: Use echoes to measure distance.",
       "question": "Which answer matches this sound waves objective: Use echoes to measure distance? Check the clue before choosing: Use echoes to measure distance.",
       "options": [
@@ -3802,7 +3802,7 @@
       "patternId": "4.6.1.1:pitch_frequency:concept_discrimination",
       "conceptFamily": "pitch_frequency",
       "contextType": "a method-choice question",
-      "skill": "Link pitch to frequency.",
+      "skill": "Sound Waves practice",
       "stem": "Which option best separates the correct sound waves idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "question": "Which option best separates the correct sound waves idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "options": [
@@ -3873,7 +3873,7 @@
       "patternId": "4.6.1.1:loudness_amplitude:misconception_correction",
       "conceptFamily": "loudness_amplitude",
       "contextType": "a results discussion",
-      "skill": "Link loudness to amplitude.",
+      "skill": "Sound Waves practice",
       "stem": "Which answer corrects a misconception about sound waves? Keep the answer focused on sound waves: link loudness to amplitude.",
       "question": "Which answer corrects a misconception about sound waves? Keep the answer focused on sound waves: link loudness to amplitude.",
       "options": [
@@ -3944,7 +3944,7 @@
       "patternId": "4.6.1.1:ultrasound_frequency:data_interpretation",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a classroom demonstration",
-      "skill": "Define ultrasound.",
+      "skill": "Sound Waves practice",
       "stem": "Which conclusion about sound waves is supported by the evidence? Check the clue before choosing: Define ultrasound.",
       "question": "Which conclusion about sound waves is supported by the evidence? Check the clue before choosing: Define ultrasound.",
       "options": [
@@ -4015,7 +4015,7 @@
       "patternId": "4.6.1.1:ultrasound_imaging:representation_interpretation",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a revision checkpoint",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Sound Waves practice",
       "stem": "A representation of sound waves is described in words. Which interpretation is correct? Demand focus: explain ultrasound imaging.",
       "question": "A representation of sound waves is described in words. Which interpretation is correct? Demand focus: explain ultrasound imaging.",
       "options": [
@@ -4085,7 +4085,7 @@
       "patternId": "4.6.1.5:ultrasound_frequency:direct_recall",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a safety decision",
-      "skill": "Define ultrasound.",
+      "skill": "Ultrasound practice",
       "stem": "Which statement is correct for ultrasound? Choose the statement that fits this exact GCSE Physics idea: define ultrasound.",
       "question": "Which statement is correct for ultrasound? Choose the statement that fits this exact GCSE Physics idea: define ultrasound.",
       "options": [
@@ -4155,7 +4155,7 @@
       "patternId": "4.6.1.5:ultrasound_imaging:concept_discrimination",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a graph-reading task",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Ultrasound practice",
       "stem": "A student is comparing similar ideas in ultrasound. Which statement is correct? Keep the answer focused on ultrasound: explain ultrasound imaging.",
       "question": "A student is comparing similar ideas in ultrasound. Which statement is correct? Keep the answer focused on ultrasound: explain ultrasound imaging.",
       "options": [
@@ -4225,7 +4225,7 @@
       "patternId": "4.6.1.5:echo_distance:misconception_correction",
       "conceptFamily": "echo_distance",
       "contextType": "a comparison question",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Ultrasound practice",
       "stem": "A revision note about ultrasound contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: use echoes to measure distance.",
       "question": "A revision note about ultrasound contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: use echoes to measure distance.",
       "options": [
@@ -4295,7 +4295,7 @@
       "patternId": "4.6.1.5:pitch_frequency:data_interpretation",
       "conceptFamily": "pitch_frequency",
       "contextType": "a method-choice question",
-      "skill": "Link pitch to frequency.",
+      "skill": "Ultrasound practice",
       "stem": "A small data set about ultrasound is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link pitch to frequency.",
       "question": "A small data set about ultrasound is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link pitch to frequency.",
       "options": [
@@ -4365,7 +4365,7 @@
       "patternId": "4.6.1.5:ultrasound_frequency:representation_interpretation",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a results discussion",
-      "skill": "Define ultrasound.",
+      "skill": "Ultrasound practice",
       "stem": "Which option correctly reads the ultrasound model or diagram idea? Keep the answer focused on ultrasound: define ultrasound.",
       "question": "Which option correctly reads the ultrasound model or diagram idea? Keep the answer focused on ultrasound: define ultrasound.",
       "options": [
@@ -4435,7 +4435,7 @@
       "patternId": "4.6.1.5:ultrasound_imaging:direct_recall",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a classroom demonstration",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Ultrasound practice",
       "stem": "Which answer matches this ultrasound objective: Explain ultrasound imaging? Use the wording carefully: this is about explain ultrasound imaging.",
       "question": "Which answer matches this ultrasound objective: Explain ultrasound imaging? Use the wording carefully: this is about explain ultrasound imaging.",
       "options": [
@@ -4505,7 +4505,7 @@
       "patternId": "4.6.1.5:echo_distance:applied_context",
       "conceptFamily": "echo_distance",
       "contextType": "a revision checkpoint",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Ultrasound practice",
       "stem": "In a revision checkpoint, which conclusion is correct for ultrasound? Keep the answer focused on ultrasound: use echoes to measure distance.",
       "question": "In a revision checkpoint, which conclusion is correct for ultrasound? Keep the answer focused on ultrasound: use echoes to measure distance.",
       "options": [
@@ -4575,7 +4575,7 @@
       "patternId": "4.6.1.5:pitch_frequency:misconception_correction",
       "conceptFamily": "pitch_frequency",
       "contextType": "an exam-style data table",
-      "skill": "Link pitch to frequency.",
+      "skill": "Ultrasound practice",
       "stem": "Which answer corrects a misconception about ultrasound? Check the clue before choosing: Link pitch to frequency.",
       "question": "Which answer corrects a misconception about ultrasound? Check the clue before choosing: Link pitch to frequency.",
       "options": [
@@ -4645,7 +4645,7 @@
       "patternId": "4.6.1.5:ultrasound_frequency:exam_decision",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a required-practical notebook",
-      "skill": "Define ultrasound.",
+      "skill": "Ultrasound practice",
       "stem": "The mark scheme is testing define ultrasound. Which answer matches that point? Use the wording carefully: this is about define ultrasound.",
       "question": "The mark scheme is testing define ultrasound. Which answer matches that point? Use the wording carefully: this is about define ultrasound.",
       "options": [
@@ -4715,7 +4715,7 @@
       "patternId": "4.6.1.5:ultrasound_imaging:representation_interpretation",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a technician report",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Ultrasound practice",
       "stem": "A representation of ultrasound is described in words. Which interpretation is correct? Check the clue before choosing: Explain ultrasound imaging.",
       "question": "A representation of ultrasound is described in words. Which interpretation is correct? Check the clue before choosing: Explain ultrasound imaging.",
       "options": [
@@ -4785,7 +4785,7 @@
       "patternId": "4.6.1.5:echo_distance:concept_discrimination",
       "conceptFamily": "echo_distance",
       "contextType": "a labelled diagram",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Ultrasound practice",
       "stem": "A student is comparing similar ideas in ultrasound. Which statement is correct? Use the wording carefully: this is about use echoes to measure distance.",
       "question": "A student is comparing similar ideas in ultrasound. Which statement is correct? Use the wording carefully: this is about use echoes to measure distance.",
       "options": [
@@ -4855,7 +4855,7 @@
       "patternId": "4.6.1.5:pitch_frequency:applied_context",
       "conceptFamily": "pitch_frequency",
       "contextType": "a short calculation",
-      "skill": "Link pitch to frequency.",
+      "skill": "Ultrasound practice",
       "stem": "A question set in a short calculation tests ultrasound. Which answer applies the idea correctly? Demand focus: link pitch to frequency.",
       "question": "A question set in a short calculation tests ultrasound. Which answer applies the idea correctly? Demand focus: link pitch to frequency.",
       "options": [
@@ -4925,7 +4925,7 @@
       "patternId": "4.6.1.5:ultrasound_frequency:data_interpretation",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a safety decision",
-      "skill": "Define ultrasound.",
+      "skill": "Ultrasound practice",
       "stem": "A small data set about ultrasound is being interpreted. Which conclusion is valid? Check the clue before choosing: Define ultrasound.",
       "question": "A small data set about ultrasound is being interpreted. Which conclusion is valid? Check the clue before choosing: Define ultrasound.",
       "options": [
@@ -4995,7 +4995,7 @@
       "patternId": "4.6.1.5:ultrasound_imaging:exam_decision",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a graph-reading task",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Ultrasound practice",
       "stem": "Which answer is the strongest GCSE Physics response for ultrasound? Demand focus: explain ultrasound imaging.",
       "question": "Which answer is the strongest GCSE Physics response for ultrasound? Demand focus: explain ultrasound imaging.",
       "options": [
@@ -5065,7 +5065,7 @@
       "patternId": "4.6.1.5:echo_distance:direct_recall",
       "conceptFamily": "echo_distance",
       "contextType": "a comparison question",
-      "skill": "Use echoes to measure distance.",
+      "skill": "Ultrasound practice",
       "stem": "Which answer matches this ultrasound objective: Use echoes to measure distance? Check the clue before choosing: Use echoes to measure distance.",
       "question": "Which answer matches this ultrasound objective: Use echoes to measure distance? Check the clue before choosing: Use echoes to measure distance.",
       "options": [
@@ -5135,7 +5135,7 @@
       "patternId": "4.6.1.5:pitch_frequency:concept_discrimination",
       "conceptFamily": "pitch_frequency",
       "contextType": "a method-choice question",
-      "skill": "Link pitch to frequency.",
+      "skill": "Ultrasound practice",
       "stem": "Which option best separates the correct ultrasound idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "question": "Which option best separates the correct ultrasound idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: link pitch to frequency.",
       "options": [
@@ -5205,7 +5205,7 @@
       "patternId": "4.6.1.5:ultrasound_frequency:misconception_correction",
       "conceptFamily": "ultrasound_frequency",
       "contextType": "a results discussion",
-      "skill": "Define ultrasound.",
+      "skill": "Ultrasound practice",
       "stem": "Which answer corrects a misconception about ultrasound? Demand focus: define ultrasound.",
       "question": "Which answer corrects a misconception about ultrasound? Demand focus: define ultrasound.",
       "options": [
@@ -5275,7 +5275,7 @@
       "patternId": "4.6.1.5:ultrasound_imaging:data_interpretation",
       "conceptFamily": "ultrasound_imaging",
       "contextType": "a classroom demonstration",
-      "skill": "Explain ultrasound imaging.",
+      "skill": "Ultrasound practice",
       "stem": "Which conclusion about ultrasound is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain ultrasound imaging.",
       "question": "Which conclusion about ultrasound is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain ultrasound imaging.",
       "options": [
@@ -5346,7 +5346,7 @@
       "patternId": "4.6.1.2:wave_speed:direct_recall",
       "conceptFamily": "wave_speed",
       "contextType": "a safety decision",
-      "skill": "Use the wave speed equation.",
+      "skill": "Wave Speed practice",
       "stem": "Which statement is correct for wave speed? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "question": "Which statement is correct for wave speed? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "options": [
@@ -5417,7 +5417,7 @@
       "patternId": "4.6.1.2:frequency_period:concept_discrimination",
       "conceptFamily": "frequency_period",
       "contextType": "a graph-reading task",
-      "skill": "Use frequency and period.",
+      "skill": "Wave Speed practice",
       "stem": "A student is comparing similar ideas in wave speed. Which statement is correct? Check the clue before choosing: Use frequency and period.",
       "question": "A student is comparing similar ideas in wave speed. Which statement is correct? Check the clue before choosing: Use frequency and period.",
       "options": [
@@ -5488,7 +5488,7 @@
       "patternId": "4.6.1.2:amplitude_energy:misconception_correction",
       "conceptFamily": "amplitude_energy",
       "contextType": "a comparison question",
-      "skill": "Link amplitude to energy.",
+      "skill": "Wave Speed practice",
       "stem": "A revision note about wave speed contains an error. Which replacement is correct? Use the wording carefully: this is about link amplitude to energy.",
       "question": "A revision note about wave speed contains an error. Which replacement is correct? Use the wording carefully: this is about link amplitude to energy.",
       "options": [
@@ -5559,7 +5559,7 @@
       "patternId": "4.6.1.2:wavelength:data_interpretation",
       "conceptFamily": "wavelength",
       "contextType": "a method-choice question",
-      "skill": "Identify wavelength.",
+      "skill": "Wave Speed practice",
       "stem": "A small data set about wave speed is being interpreted. Which conclusion is valid? Use the wording carefully: this is about identify wavelength.",
       "question": "A small data set about wave speed is being interpreted. Which conclusion is valid? Use the wording carefully: this is about identify wavelength.",
       "options": [
@@ -5630,7 +5630,7 @@
       "patternId": "4.6.1.2:frequency:representation_interpretation",
       "conceptFamily": "frequency",
       "contextType": "a results discussion",
-      "skill": "Recall frequency.",
+      "skill": "Wave Speed practice",
       "stem": "Which option correctly reads the wave speed model or diagram idea? Use the wording carefully: this is about recall frequency.",
       "question": "Which option correctly reads the wave speed model or diagram idea? Use the wording carefully: this is about recall frequency.",
       "options": [
@@ -5701,7 +5701,7 @@
       "patternId": "4.6.1.2:wave_speed:direct_recall",
       "conceptFamily": "wave_speed",
       "contextType": "a classroom demonstration",
-      "skill": "Use the wave speed equation.",
+      "skill": "Wave Speed practice",
       "stem": "Which answer matches this wave speed objective: Use the wave speed equation? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "question": "Which answer matches this wave speed objective: Use the wave speed equation? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "options": [
@@ -5772,7 +5772,7 @@
       "patternId": "4.6.1.2:frequency_period:applied_context",
       "conceptFamily": "frequency_period",
       "contextType": "a revision checkpoint",
-      "skill": "Use frequency and period.",
+      "skill": "Wave Speed practice",
       "stem": "In a revision checkpoint, which conclusion is correct for wave speed? Check the clue before choosing: Use frequency and period.",
       "question": "In a revision checkpoint, which conclusion is correct for wave speed? Check the clue before choosing: Use frequency and period.",
       "options": [
@@ -5843,7 +5843,7 @@
       "patternId": "4.6.1.2:amplitude_energy:misconception_correction",
       "conceptFamily": "amplitude_energy",
       "contextType": "an exam-style data table",
-      "skill": "Link amplitude to energy.",
+      "skill": "Wave Speed practice",
       "stem": "Which answer corrects a misconception about wave speed? Use the wording carefully: this is about link amplitude to energy.",
       "question": "Which answer corrects a misconception about wave speed? Use the wording carefully: this is about link amplitude to energy.",
       "options": [
@@ -5914,7 +5914,7 @@
       "patternId": "4.6.1.2:wavelength:exam_decision",
       "conceptFamily": "wavelength",
       "contextType": "a required-practical notebook",
-      "skill": "Identify wavelength.",
+      "skill": "Wave Speed practice",
       "stem": "The mark scheme is testing identify wavelength. Which answer matches that point? Use the wording carefully: this is about identify wavelength.",
       "question": "The mark scheme is testing identify wavelength. Which answer matches that point? Use the wording carefully: this is about identify wavelength.",
       "options": [
@@ -5985,7 +5985,7 @@
       "patternId": "4.6.1.2:frequency:representation_interpretation",
       "conceptFamily": "frequency",
       "contextType": "a technician report",
-      "skill": "Recall frequency.",
+      "skill": "Wave Speed practice",
       "stem": "A representation of wave speed is described in words. Which interpretation is correct? Use the wording carefully: this is about recall frequency.",
       "question": "A representation of wave speed is described in words. Which interpretation is correct? Use the wording carefully: this is about recall frequency.",
       "options": [
@@ -6056,7 +6056,7 @@
       "patternId": "4.6.1.2:wave_speed:concept_discrimination",
       "conceptFamily": "wave_speed",
       "contextType": "a labelled diagram",
-      "skill": "Use the wave speed equation.",
+      "skill": "Wave Speed practice",
       "stem": "A student is comparing similar ideas in wave speed. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "question": "A student is comparing similar ideas in wave speed. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "options": [
@@ -6127,7 +6127,7 @@
       "patternId": "4.6.1.2:frequency_period:applied_context",
       "conceptFamily": "frequency_period",
       "contextType": "a short calculation",
-      "skill": "Use frequency and period.",
+      "skill": "Wave Speed practice",
       "stem": "A question set in a short calculation tests wave speed. Which answer applies the idea correctly? Check the clue before choosing: Use frequency and period.",
       "question": "A question set in a short calculation tests wave speed. Which answer applies the idea correctly? Check the clue before choosing: Use frequency and period.",
       "options": [
@@ -6198,7 +6198,7 @@
       "patternId": "4.6.1.2:amplitude_energy:data_interpretation",
       "conceptFamily": "amplitude_energy",
       "contextType": "a safety decision",
-      "skill": "Link amplitude to energy.",
+      "skill": "Wave Speed practice",
       "stem": "A small data set about wave speed is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link amplitude to energy.",
       "question": "A small data set about wave speed is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link amplitude to energy.",
       "options": [
@@ -6269,7 +6269,7 @@
       "patternId": "4.6.1.2:wavelength:exam_decision",
       "conceptFamily": "wavelength",
       "contextType": "a graph-reading task",
-      "skill": "Identify wavelength.",
+      "skill": "Wave Speed practice",
       "stem": "Which answer is the strongest GCSE Physics response for wave speed? Use the wording carefully: this is about identify wavelength.",
       "question": "Which answer is the strongest GCSE Physics response for wave speed? Use the wording carefully: this is about identify wavelength.",
       "options": [
@@ -6340,7 +6340,7 @@
       "patternId": "4.6.1.2:frequency:direct_recall",
       "conceptFamily": "frequency",
       "contextType": "a comparison question",
-      "skill": "Recall frequency.",
+      "skill": "Wave Speed practice",
       "stem": "Which answer matches this wave speed objective: Recall frequency? Use the wording carefully: this is about recall frequency.",
       "question": "Which answer matches this wave speed objective: Recall frequency? Use the wording carefully: this is about recall frequency.",
       "options": [
@@ -6411,7 +6411,7 @@
       "patternId": "4.6.1.2:wave_speed:concept_discrimination",
       "conceptFamily": "wave_speed",
       "contextType": "a method-choice question",
-      "skill": "Use the wave speed equation.",
+      "skill": "Wave Speed practice",
       "stem": "Which option best separates the correct wave speed idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "question": "Which option best separates the correct wave speed idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: use the wave speed equation.",
       "options": [
@@ -6482,7 +6482,7 @@
       "patternId": "4.6.1.2:frequency_period:misconception_correction",
       "conceptFamily": "frequency_period",
       "contextType": "a results discussion",
-      "skill": "Use frequency and period.",
+      "skill": "Wave Speed practice",
       "stem": "Which answer corrects a misconception about wave speed? Check the clue before choosing: Use frequency and period.",
       "question": "Which answer corrects a misconception about wave speed? Check the clue before choosing: Use frequency and period.",
       "options": [
@@ -6553,7 +6553,7 @@
       "patternId": "4.6.1.2:amplitude_energy:data_interpretation",
       "conceptFamily": "amplitude_energy",
       "contextType": "a classroom demonstration",
-      "skill": "Link amplitude to energy.",
+      "skill": "Wave Speed practice",
       "stem": "Which conclusion about wave speed is supported by the evidence? Use the wording carefully: this is about link amplitude to energy.",
       "question": "Which conclusion about wave speed is supported by the evidence? Use the wording carefully: this is about link amplitude to energy.",
       "options": [
@@ -6624,7 +6624,7 @@
       "patternId": "4.6.1.2:wavelength:representation_interpretation",
       "conceptFamily": "wavelength",
       "contextType": "a revision checkpoint",
-      "skill": "Identify wavelength.",
+      "skill": "Wave Speed practice",
       "stem": "A representation of wave speed is described in words. Which interpretation is correct? Use the wording carefully: this is about identify wavelength.",
       "question": "A representation of wave speed is described in words. Which interpretation is correct? Use the wording carefully: this is about identify wavelength.",
       "options": [

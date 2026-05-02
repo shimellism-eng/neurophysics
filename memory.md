@@ -5,6 +5,28 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice visible answer-hint leak fixed
+- Mamo found a serious issue in Adaptive Practice: the grey label above the question was showing the hidden learning objective, which could reveal the answer or heavily hint it.
+- Root cause:
+  - Runtime `skill` was being filled from `learningObjective` / generator objective text.
+  - `AdaptivePractice.jsx` displays `currentQuestion.skill` to learners, so hidden audit metadata leaked into the UI.
+- Fixed globally:
+  - `scripts/regenerate_adaptive_questions.mjs` now sets visible `skill` to neutral text: `${subtopic} practice`.
+  - Hidden metadata still keeps `learningObjective.statement` for audits and spec coverage.
+  - Regenerated all runtime question JSON for AQA and Edexcel.
+- Added a permanent audit gate:
+  - `scripts/audit_question_repetition.js` now fails if visible `skill` equals/includes the hidden learning objective or includes the correct answer.
+- Verification:
+  - `npm run audit:questions` passes.
+  - AQA `leaked skill hints`: 0.
+  - Edexcel `leaked skill hints`: 0.
+  - Direct runtime scan of `public/data/questions/aqa/all.json` and `public/data/questions/edexcel/all.json`: 0 visible skill leaks.
+
+### Next step
+- Continue AQA Electricity:
+  - AQA `Series Resistance`: 5/5 authored.
+  - AQA `Parallel Circuits`: 5/5 authored.
+
 ### Adaptive Practice AQA Energy Transfer + Series Current correction
 - Checked spec anchors before authoring:
   - AQA `Series Current`: `4.2.2`, current in series circuits.

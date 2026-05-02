@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "energy",
-  "generatedAt": "2026-05-02T05:26:55.783Z",
+  "generatedAt": "2026-05-02T07:16:14.022Z",
   "questions": [
     {
       "id": "edexcel_3_12_efficiency_efficiency_ratio_direct_recall_001",
@@ -39,7 +39,7 @@
       "patternId": "3.12:efficiency_ratio:direct_recall",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a technician report",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "Which statement is correct for efficiency? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "question": "Which statement is correct for efficiency? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "options": [
@@ -110,7 +110,7 @@
       "patternId": "3.12:sankey_width:concept_discrimination",
       "conceptFamily": "sankey_width",
       "contextType": "a labelled diagram",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "A student is comparing similar ideas in efficiency. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "question": "A student is comparing similar ideas in efficiency. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "options": [
@@ -181,7 +181,7 @@
       "patternId": "3.12:improve_efficiency:misconception_correction",
       "conceptFamily": "improve_efficiency",
       "contextType": "a short calculation",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "A revision note about efficiency contains an error. Which replacement is correct? Check the clue before choosing: Explain how efficiency can improve.",
       "question": "A revision note about efficiency contains an error. Which replacement is correct? Check the clue before choosing: Explain how efficiency can improve.",
       "options": [
@@ -252,7 +252,7 @@
       "patternId": "3.12:percentage_limit:data_interpretation",
       "conceptFamily": "percentage_limit",
       "contextType": "a safety decision",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "A small data set about efficiency is being interpreted. Which conclusion is valid? Demand focus: recognise the limit of efficiency.",
       "question": "A small data set about efficiency is being interpreted. Which conclusion is valid? Demand focus: recognise the limit of efficiency.",
       "options": [
@@ -323,7 +323,7 @@
       "patternId": "3.12:compare_devices:representation_interpretation",
       "conceptFamily": "compare_devices",
       "contextType": "a graph-reading task",
-      "skill": "Compare efficiencies.",
+      "skill": "Efficiency practice",
       "stem": "Which option correctly reads the efficiency model or diagram idea? Demand focus: compare efficiencies.",
       "question": "Which option correctly reads the efficiency model or diagram idea? Demand focus: compare efficiencies.",
       "options": [
@@ -394,7 +394,7 @@
       "patternId": "3.12:efficiency_ratio:direct_recall",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a comparison question",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "Which answer matches this efficiency objective: Calculate efficiency from useful and total energy? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "question": "Which answer matches this efficiency objective: Calculate efficiency from useful and total energy? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "options": [
@@ -465,7 +465,7 @@
       "patternId": "3.12:sankey_width:applied_context",
       "conceptFamily": "sankey_width",
       "contextType": "a method-choice question",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "In a method-choice question, which conclusion is correct for efficiency? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "question": "In a method-choice question, which conclusion is correct for efficiency? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "options": [
@@ -536,7 +536,7 @@
       "patternId": "3.12:improve_efficiency:misconception_correction",
       "conceptFamily": "improve_efficiency",
       "contextType": "a results discussion",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "Which answer corrects a misconception about efficiency? Check the clue before choosing: Explain how efficiency can improve.",
       "question": "Which answer corrects a misconception about efficiency? Check the clue before choosing: Explain how efficiency can improve.",
       "options": [
@@ -607,7 +607,7 @@
       "patternId": "3.12:percentage_limit:exam_decision",
       "conceptFamily": "percentage_limit",
       "contextType": "a classroom demonstration",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "The mark scheme is testing recognise the limit of efficiency. Which answer matches that point? Demand focus: recognise the limit of efficiency.",
       "question": "The mark scheme is testing recognise the limit of efficiency. Which answer matches that point? Demand focus: recognise the limit of efficiency.",
       "options": [
@@ -678,7 +678,7 @@
       "patternId": "3.12:compare_devices:representation_interpretation",
       "conceptFamily": "compare_devices",
       "contextType": "a revision checkpoint",
-      "skill": "Compare efficiencies.",
+      "skill": "Efficiency practice",
       "stem": "A representation of efficiency is described in words. Which interpretation is correct? Demand focus: compare efficiencies.",
       "question": "A representation of efficiency is described in words. Which interpretation is correct? Demand focus: compare efficiencies.",
       "options": [
@@ -749,7 +749,7 @@
       "patternId": "3.12:efficiency_ratio:concept_discrimination",
       "conceptFamily": "efficiency_ratio",
       "contextType": "an exam-style data table",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "A student is comparing similar ideas in efficiency. Which statement is correct? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "question": "A student is comparing similar ideas in efficiency. Which statement is correct? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "options": [
@@ -820,7 +820,7 @@
       "patternId": "3.12:sankey_width:applied_context",
       "conceptFamily": "sankey_width",
       "contextType": "a required-practical notebook",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "A question set in a required-practical notebook tests efficiency. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "question": "A question set in a required-practical notebook tests efficiency. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "options": [
@@ -891,7 +891,7 @@
       "patternId": "3.12:improve_efficiency:data_interpretation",
       "conceptFamily": "improve_efficiency",
       "contextType": "a technician report",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "A small data set about efficiency is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain how efficiency can improve.",
       "question": "A small data set about efficiency is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain how efficiency can improve.",
       "options": [
@@ -962,7 +962,7 @@
       "patternId": "3.12:percentage_limit:exam_decision",
       "conceptFamily": "percentage_limit",
       "contextType": "a labelled diagram",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "Which answer is the strongest GCSE Physics response for efficiency? Demand focus: recognise the limit of efficiency.",
       "question": "Which answer is the strongest GCSE Physics response for efficiency? Demand focus: recognise the limit of efficiency.",
       "options": [
@@ -1033,7 +1033,7 @@
       "patternId": "3.12:compare_devices:direct_recall",
       "conceptFamily": "compare_devices",
       "contextType": "a short calculation",
-      "skill": "Compare efficiencies.",
+      "skill": "Efficiency practice",
       "stem": "Which answer matches this efficiency objective: Compare efficiencies? Demand focus: compare efficiencies.",
       "question": "Which answer matches this efficiency objective: Compare efficiencies? Demand focus: compare efficiencies.",
       "options": [
@@ -1104,7 +1104,7 @@
       "patternId": "3.12:efficiency_ratio:concept_discrimination",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a safety decision",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "Which option best separates the correct efficiency idea from a common mix-up? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "question": "Which option best separates the correct efficiency idea from a common mix-up? Use the wording carefully: this is about calculate efficiency from useful and total energy.",
       "options": [
@@ -1175,7 +1175,7 @@
       "patternId": "3.12:sankey_width:misconception_correction",
       "conceptFamily": "sankey_width",
       "contextType": "a graph-reading task",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "Which answer corrects a misconception about efficiency? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "question": "Which answer corrects a misconception about efficiency? Choose the statement that fits this exact GCSE Physics idea: interpret a Sankey diagram.",
       "options": [
@@ -1246,7 +1246,7 @@
       "patternId": "3.12:improve_efficiency:data_interpretation",
       "conceptFamily": "improve_efficiency",
       "contextType": "a comparison question",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "Which conclusion about efficiency is supported by the evidence? Check the clue before choosing: Explain how efficiency can improve.",
       "question": "Which conclusion about efficiency is supported by the evidence? Check the clue before choosing: Explain how efficiency can improve.",
       "options": [
@@ -1317,7 +1317,7 @@
       "patternId": "3.12:percentage_limit:representation_interpretation",
       "conceptFamily": "percentage_limit",
       "contextType": "a method-choice question",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "A representation of efficiency is described in words. Which interpretation is correct? Demand focus: recognise the limit of efficiency.",
       "question": "A representation of efficiency is described in words. Which interpretation is correct? Demand focus: recognise the limit of efficiency.",
       "options": [
@@ -1388,7 +1388,7 @@
       "patternId": "3.8:renewable:direct_recall",
       "conceptFamily": "renewable",
       "contextType": "a required-practical notebook",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which statement is correct for energy resources? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "Which statement is correct for energy resources? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -1459,7 +1459,7 @@
       "patternId": "3.8:nonrenewable:concept_discrimination",
       "conceptFamily": "nonrenewable",
       "contextType": "a technician report",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "A student is comparing similar ideas in energy resources. Which statement is correct? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "A student is comparing similar ideas in energy resources. Which statement is correct? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -1530,7 +1530,7 @@
       "patternId": "3.8:resource_reliability:misconception_correction",
       "conceptFamily": "resource_reliability",
       "contextType": "a labelled diagram",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A revision note about energy resources contains an error. Which replacement is correct? Use the wording carefully: this is about evaluate energy resources.",
       "question": "A revision note about energy resources contains an error. Which replacement is correct? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -1601,7 +1601,7 @@
       "patternId": "3.8:power_station:data_interpretation",
       "conceptFamily": "power_station",
       "contextType": "a short calculation",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "A small data set about energy resources is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "A small data set about energy resources is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -1672,7 +1672,7 @@
       "patternId": "3.8:environment:representation_interpretation",
       "conceptFamily": "environment",
       "contextType": "a safety decision",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "Which option correctly reads the energy resources model or diagram idea? Demand focus: compare environmental impacts.",
       "question": "Which option correctly reads the energy resources model or diagram idea? Demand focus: compare environmental impacts.",
       "options": [
@@ -1743,7 +1743,7 @@
       "patternId": "3.8:renewable:direct_recall",
       "conceptFamily": "renewable",
       "contextType": "a graph-reading task",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which answer matches this energy resources objective: Identify renewable energy resources? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "Which answer matches this energy resources objective: Identify renewable energy resources? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -1814,7 +1814,7 @@
       "patternId": "3.8:nonrenewable:applied_context",
       "conceptFamily": "nonrenewable",
       "contextType": "a comparison question",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "In a comparison question, which conclusion is correct for energy resources? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "In a comparison question, which conclusion is correct for energy resources? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -1885,7 +1885,7 @@
       "patternId": "3.8:resource_reliability:misconception_correction",
       "conceptFamily": "resource_reliability",
       "contextType": "a method-choice question",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which answer corrects a misconception about energy resources? Use the wording carefully: this is about evaluate energy resources.",
       "question": "Which answer corrects a misconception about energy resources? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -1956,7 +1956,7 @@
       "patternId": "3.8:power_station:exam_decision",
       "conceptFamily": "power_station",
       "contextType": "a results discussion",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "The mark scheme is testing describe fossil-fuel power stations. Which answer matches that point? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "The mark scheme is testing describe fossil-fuel power stations. Which answer matches that point? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -2027,7 +2027,7 @@
       "patternId": "3.8:environment:representation_interpretation",
       "conceptFamily": "environment",
       "contextType": "a classroom demonstration",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "A representation of energy resources is described in words. Which interpretation is correct? Demand focus: compare environmental impacts.",
       "question": "A representation of energy resources is described in words. Which interpretation is correct? Demand focus: compare environmental impacts.",
       "options": [
@@ -2098,7 +2098,7 @@
       "patternId": "3.8:renewable:concept_discrimination",
       "conceptFamily": "renewable",
       "contextType": "a revision checkpoint",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A student is comparing similar ideas in energy resources. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "A student is comparing similar ideas in energy resources. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -2169,7 +2169,7 @@
       "patternId": "3.8:nonrenewable:applied_context",
       "conceptFamily": "nonrenewable",
       "contextType": "an exam-style data table",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "A question set in an exam-style data table tests energy resources. Which answer applies the idea correctly? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "A question set in an exam-style data table tests energy resources. Which answer applies the idea correctly? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -2240,7 +2240,7 @@
       "patternId": "3.8:resource_reliability:data_interpretation",
       "conceptFamily": "resource_reliability",
       "contextType": "a required-practical notebook",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A small data set about energy resources is being interpreted. Which conclusion is valid? Use the wording carefully: this is about evaluate energy resources.",
       "question": "A small data set about energy resources is being interpreted. Which conclusion is valid? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -2311,7 +2311,7 @@
       "patternId": "3.8:power_station:exam_decision",
       "conceptFamily": "power_station",
       "contextType": "a technician report",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "Which answer is the strongest GCSE Physics response for energy resources? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "Which answer is the strongest GCSE Physics response for energy resources? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -2382,7 +2382,7 @@
       "patternId": "3.8:environment:direct_recall",
       "conceptFamily": "environment",
       "contextType": "a labelled diagram",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "Which answer matches this energy resources objective: Compare environmental impacts? Demand focus: compare environmental impacts.",
       "question": "Which answer matches this energy resources objective: Compare environmental impacts? Demand focus: compare environmental impacts.",
       "options": [
@@ -2453,7 +2453,7 @@
       "patternId": "3.8:renewable:concept_discrimination",
       "conceptFamily": "renewable",
       "contextType": "a short calculation",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which option best separates the correct energy resources idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "Which option best separates the correct energy resources idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -2524,7 +2524,7 @@
       "patternId": "3.8:nonrenewable:misconception_correction",
       "conceptFamily": "nonrenewable",
       "contextType": "a safety decision",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which answer corrects a misconception about energy resources? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "Which answer corrects a misconception about energy resources? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -2595,7 +2595,7 @@
       "patternId": "3.8:resource_reliability:data_interpretation",
       "conceptFamily": "resource_reliability",
       "contextType": "a graph-reading task",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which conclusion about energy resources is supported by the evidence? Use the wording carefully: this is about evaluate energy resources.",
       "question": "Which conclusion about energy resources is supported by the evidence? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -2666,7 +2666,7 @@
       "patternId": "3.8:power_station:representation_interpretation",
       "conceptFamily": "power_station",
       "contextType": "a comparison question",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "A representation of energy resources is described in words. Which interpretation is correct? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "A representation of energy resources is described in words. Which interpretation is correct? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -2737,7 +2737,7 @@
       "patternId": "3.8:environment:direct_recall",
       "conceptFamily": "environment",
       "contextType": "a method-choice question",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "A student is revising energy resources. Which statement should they keep? Demand focus: compare environmental impacts.",
       "question": "A student is revising energy resources. Which statement should they keep? Demand focus: compare environmental impacts.",
       "options": [
@@ -2808,7 +2808,7 @@
       "patternId": "3.8:renewable:applied_context",
       "conceptFamily": "renewable",
       "contextType": "a results discussion",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A question set in a results discussion tests energy resources. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "A question set in a results discussion tests energy resources. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -2879,7 +2879,7 @@
       "patternId": "3.8:nonrenewable:misconception_correction",
       "conceptFamily": "nonrenewable",
       "contextType": "a classroom demonstration",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "A learner gives a wrong explanation for energy resources. Which correction is best? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "A learner gives a wrong explanation for energy resources. Which correction is best? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -2950,7 +2950,7 @@
       "patternId": "3.8:resource_reliability:exam_decision",
       "conceptFamily": "resource_reliability",
       "contextType": "a revision checkpoint",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which answer is the strongest GCSE Physics response for energy resources? Use the wording carefully: this is about evaluate energy resources.",
       "question": "Which answer is the strongest GCSE Physics response for energy resources? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -3021,7 +3021,7 @@
       "patternId": "3.8:power_station:representation_interpretation",
       "conceptFamily": "power_station",
       "contextType": "an exam-style data table",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "A labelled representation is used for energy resources. Which statement is valid? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "A labelled representation is used for energy resources. Which statement is valid? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -3092,7 +3092,7 @@
       "patternId": "3.8:environment:concept_discrimination",
       "conceptFamily": "environment",
       "contextType": "a required-practical notebook",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "Which option best separates the correct energy resources idea from a common mix-up? Demand focus: compare environmental impacts.",
       "question": "Which option best separates the correct energy resources idea from a common mix-up? Demand focus: compare environmental impacts.",
       "options": [
@@ -3163,7 +3163,7 @@
       "patternId": "3.8:renewable:applied_context",
       "conceptFamily": "renewable",
       "contextType": "a technician report",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "During a technician report, a result needs explaining. Which answer is best? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "During a technician report, a result needs explaining. Which answer is best? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -3234,7 +3234,7 @@
       "patternId": "3.8:nonrenewable:data_interpretation",
       "conceptFamily": "nonrenewable",
       "contextType": "a labelled diagram",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "Which conclusion about energy resources is supported by the evidence? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "Which conclusion about energy resources is supported by the evidence? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -3305,7 +3305,7 @@
       "patternId": "3.8:resource_reliability:exam_decision",
       "conceptFamily": "resource_reliability",
       "contextType": "a short calculation",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "In an exam question about energy resources, which answer would earn the mark? Use the wording carefully: this is about evaluate energy resources.",
       "question": "In an exam question about energy resources, which answer would earn the mark? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -3376,7 +3376,7 @@
       "patternId": "3.8:power_station:direct_recall",
       "conceptFamily": "power_station",
       "contextType": "a safety decision",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "A student is revising energy resources. Which statement should they keep? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "A student is revising energy resources. Which statement should they keep? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -3447,7 +3447,7 @@
       "patternId": "3.8:environment:concept_discrimination",
       "conceptFamily": "environment",
       "contextType": "a graph-reading task",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "Which statement avoids the common energy resources mistake? Demand focus: compare environmental impacts.",
       "question": "Which statement avoids the common energy resources mistake? Demand focus: compare environmental impacts.",
       "options": [
@@ -3518,7 +3518,7 @@
       "patternId": "3.8:renewable:misconception_correction",
       "conceptFamily": "renewable",
       "contextType": "a comparison question",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A learner gives a wrong explanation for energy resources. Which correction is best? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "A learner gives a wrong explanation for energy resources. Which correction is best? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -3589,7 +3589,7 @@
       "patternId": "3.8:nonrenewable:data_interpretation",
       "conceptFamily": "nonrenewable",
       "contextType": "a method-choice question",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "A result from a method-choice question about energy resources is being interpreted. Which answer follows? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "A result from a method-choice question about energy resources is being interpreted. Which answer follows? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -3660,7 +3660,7 @@
       "patternId": "3.8:resource_reliability:representation_interpretation",
       "conceptFamily": "resource_reliability",
       "contextType": "a results discussion",
-      "skill": "Evaluate energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A labelled representation is used for energy resources. Which statement is valid? Use the wording carefully: this is about evaluate energy resources.",
       "question": "A labelled representation is used for energy resources. Which statement is valid? Use the wording carefully: this is about evaluate energy resources.",
       "options": [
@@ -3731,7 +3731,7 @@
       "patternId": "3.8:power_station:direct_recall",
       "conceptFamily": "power_station",
       "contextType": "a classroom demonstration",
-      "skill": "Describe fossil-fuel power stations.",
+      "skill": "Energy Resources practice",
       "stem": "Which statement is correct for energy resources? Check the clue before choosing: Describe fossil-fuel power stations.",
       "question": "Which statement is correct for energy resources? Check the clue before choosing: Describe fossil-fuel power stations.",
       "options": [
@@ -3802,7 +3802,7 @@
       "patternId": "3.8:environment:applied_context",
       "conceptFamily": "environment",
       "contextType": "a revision checkpoint",
-      "skill": "Compare environmental impacts.",
+      "skill": "Energy Resources practice",
       "stem": "During a revision checkpoint, a result needs explaining. Which answer is best? Demand focus: compare environmental impacts.",
       "question": "During a revision checkpoint, a result needs explaining. Which answer is best? Demand focus: compare environmental impacts.",
       "options": [
@@ -3873,7 +3873,7 @@
       "patternId": "3.8:renewable:misconception_correction",
       "conceptFamily": "renewable",
       "contextType": "an exam-style data table",
-      "skill": "Identify renewable energy resources.",
+      "skill": "Energy Resources practice",
       "stem": "A revision note about energy resources contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "question": "A revision note about energy resources contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: identify renewable energy resources.",
       "options": [
@@ -3944,7 +3944,7 @@
       "patternId": "3.8:nonrenewable:exam_decision",
       "conceptFamily": "nonrenewable",
       "contextType": "a required-practical notebook",
-      "skill": "Identify non-renewable resources.",
+      "skill": "Energy Resources practice",
       "stem": "In an exam question about energy resources, which answer would earn the mark? Keep the answer focused on energy resources: identify non-renewable resources.",
       "question": "In an exam question about energy resources, which answer would earn the mark? Keep the answer focused on energy resources: identify non-renewable resources.",
       "options": [
@@ -4015,7 +4015,7 @@
       "patternId": "8.3:gpe:direct_recall",
       "conceptFamily": "gpe",
       "contextType": "a required-practical notebook",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which statement is correct for gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "question": "Which statement is correct for gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "options": [
@@ -4086,7 +4086,7 @@
       "patternId": "8.3:kinetic_energy:concept_discrimination",
       "conceptFamily": "kinetic_energy",
       "contextType": "a technician report",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Demand focus: use the kinetic energy equation.",
       "question": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Demand focus: use the kinetic energy equation.",
       "options": [
@@ -4157,7 +4157,7 @@
       "patternId": "8.3:elastic_energy:misconception_correction",
       "conceptFamily": "elastic_energy",
       "contextType": "a labelled diagram",
-      "skill": "Use elastic potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A revision note about gravitational potential energy contains an error. Which replacement is correct? Check the clue before choosing: Use elastic potential energy.",
       "question": "A revision note about gravitational potential energy contains an error. Which replacement is correct? Check the clue before choosing: Use elastic potential energy.",
       "options": [
@@ -4228,7 +4228,7 @@
       "patternId": "8.3:specific_heat:data_interpretation",
       "conceptFamily": "specific_heat",
       "contextType": "a short calculation",
-      "skill": "Use specific heat capacity.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use specific heat capacity.",
       "question": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use specific heat capacity.",
       "options": [
@@ -4299,7 +4299,7 @@
       "patternId": "8.3:unit_check:representation_interpretation",
       "conceptFamily": "unit_check",
       "contextType": "a safety decision",
-      "skill": "Check energy calculation units.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which option correctly reads the gravitational potential energy model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
       "question": "Which option correctly reads the gravitational potential energy model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
       "options": [
@@ -4370,7 +4370,7 @@
       "patternId": "8.3:gpe:direct_recall",
       "conceptFamily": "gpe",
       "contextType": "a graph-reading task",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which answer matches this gravitational potential energy objective: Use gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "question": "Which answer matches this gravitational potential energy objective: Use gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "options": [
@@ -4441,7 +4441,7 @@
       "patternId": "8.3:kinetic_energy:applied_context",
       "conceptFamily": "kinetic_energy",
       "contextType": "a comparison question",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "In a comparison question, which conclusion is correct for gravitational potential energy? Demand focus: use the kinetic energy equation.",
       "question": "In a comparison question, which conclusion is correct for gravitational potential energy? Demand focus: use the kinetic energy equation.",
       "options": [
@@ -4512,7 +4512,7 @@
       "patternId": "8.3:elastic_energy:misconception_correction",
       "conceptFamily": "elastic_energy",
       "contextType": "a method-choice question",
-      "skill": "Use elastic potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which answer corrects a misconception about gravitational potential energy? Check the clue before choosing: Use elastic potential energy.",
       "question": "Which answer corrects a misconception about gravitational potential energy? Check the clue before choosing: Use elastic potential energy.",
       "options": [
@@ -4583,7 +4583,7 @@
       "patternId": "8.3:specific_heat:exam_decision",
       "conceptFamily": "specific_heat",
       "contextType": "a results discussion",
-      "skill": "Use specific heat capacity.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Check the clue before choosing: Use specific heat capacity.",
       "question": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Check the clue before choosing: Use specific heat capacity.",
       "options": [
@@ -4654,7 +4654,7 @@
       "patternId": "8.3:unit_check:representation_interpretation",
       "conceptFamily": "unit_check",
       "contextType": "a classroom demonstration",
-      "skill": "Check energy calculation units.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
       "question": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
       "options": [
@@ -4725,7 +4725,7 @@
       "patternId": "8.3:gpe:concept_discrimination",
       "conceptFamily": "gpe",
       "contextType": "a revision checkpoint",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "question": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "options": [
@@ -4796,7 +4796,7 @@
       "patternId": "8.3:kinetic_energy:applied_context",
       "conceptFamily": "kinetic_energy",
       "contextType": "an exam-style data table",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A question set in an exam-style data table tests gravitational potential energy. Which answer applies the idea correctly? Demand focus: use the kinetic energy equation.",
       "question": "A question set in an exam-style data table tests gravitational potential energy. Which answer applies the idea correctly? Demand focus: use the kinetic energy equation.",
       "options": [
@@ -4867,7 +4867,7 @@
       "patternId": "8.3:elastic_energy:data_interpretation",
       "conceptFamily": "elastic_energy",
       "contextType": "a required-practical notebook",
-      "skill": "Use elastic potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use elastic potential energy.",
       "question": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use elastic potential energy.",
       "options": [
@@ -4938,7 +4938,7 @@
       "patternId": "8.3:specific_heat:exam_decision",
       "conceptFamily": "specific_heat",
       "contextType": "a technician report",
-      "skill": "Use specific heat capacity.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which answer is the strongest GCSE Physics response for gravitational potential energy? Check the clue before choosing: Use specific heat capacity.",
       "question": "Which answer is the strongest GCSE Physics response for gravitational potential energy? Check the clue before choosing: Use specific heat capacity.",
       "options": [
@@ -5009,7 +5009,7 @@
       "patternId": "8.3:unit_check:direct_recall",
       "conceptFamily": "unit_check",
       "contextType": "a labelled diagram",
-      "skill": "Check energy calculation units.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which answer matches this gravitational potential energy objective: Check energy calculation units? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
       "question": "Which answer matches this gravitational potential energy objective: Check energy calculation units? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
       "options": [
@@ -5080,7 +5080,7 @@
       "patternId": "8.3:gpe:concept_discrimination",
       "conceptFamily": "gpe",
       "contextType": "a short calculation",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which option best separates the correct gravitational potential energy idea from a common mix-up? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "question": "Which option best separates the correct gravitational potential energy idea from a common mix-up? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
       "options": [
@@ -5151,7 +5151,7 @@
       "patternId": "8.3:kinetic_energy:misconception_correction",
       "conceptFamily": "kinetic_energy",
       "contextType": "a safety decision",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which answer corrects a misconception about gravitational potential energy? Demand focus: use the kinetic energy equation.",
       "question": "Which answer corrects a misconception about gravitational potential energy? Demand focus: use the kinetic energy equation.",
       "options": [
@@ -5222,7 +5222,7 @@
       "patternId": "8.3:elastic_energy:data_interpretation",
       "conceptFamily": "elastic_energy",
       "contextType": "a graph-reading task",
-      "skill": "Use elastic potential energy.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "Which conclusion about gravitational potential energy is supported by the evidence? Check the clue before choosing: Use elastic potential energy.",
       "question": "Which conclusion about gravitational potential energy is supported by the evidence? Check the clue before choosing: Use elastic potential energy.",
       "options": [
@@ -5293,7 +5293,7 @@
       "patternId": "8.3:specific_heat:representation_interpretation",
       "conceptFamily": "specific_heat",
       "contextType": "a comparison question",
-      "skill": "Use specific heat capacity.",
+      "skill": "Gravitational Potential Energy practice",
       "stem": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Check the clue before choosing: Use specific heat capacity.",
       "question": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Check the clue before choosing: Use specific heat capacity.",
       "options": [
@@ -5364,7 +5364,7 @@
       "patternId": "3.1:internal_energy:direct_recall",
       "conceptFamily": "internal_energy",
       "contextType": "a required-practical notebook",
-      "skill": "Describe internal energy.",
+      "skill": "Internal Energy practice",
       "stem": "Which statement is correct for internal energy? Demand focus: describe internal energy.",
       "question": "Which statement is correct for internal energy? Demand focus: describe internal energy.",
       "options": [
@@ -5435,7 +5435,7 @@
       "patternId": "3.1:heating_temperature:concept_discrimination",
       "conceptFamily": "heating_temperature",
       "contextType": "a technician report",
-      "skill": "Explain temperature increase.",
+      "skill": "Internal Energy practice",
       "stem": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: explain temperature increase.",
       "question": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: explain temperature increase.",
       "options": [
@@ -5506,7 +5506,7 @@
       "patternId": "3.1:change_state_energy:misconception_correction",
       "conceptFamily": "change_state_energy",
       "contextType": "a labelled diagram",
-      "skill": "Explain energy during change of state.",
+      "skill": "Internal Energy practice",
       "stem": "A revision note about internal energy contains an error. Which replacement is correct? Check the clue before choosing: Explain energy during change of state.",
       "question": "A revision note about internal energy contains an error. Which replacement is correct? Check the clue before choosing: Explain energy during change of state.",
       "options": [
@@ -5577,7 +5577,7 @@
       "patternId": "3.1:specific_heat_capacity:data_interpretation",
       "conceptFamily": "specific_heat_capacity",
       "contextType": "a short calculation",
-      "skill": "Use specific heat capacity.",
+      "skill": "Internal Energy practice",
       "stem": "A small data set about internal energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
       "question": "A small data set about internal energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
       "options": [
@@ -5648,7 +5648,7 @@
       "patternId": "3.1:cooling:representation_interpretation",
       "conceptFamily": "cooling",
       "contextType": "a safety decision",
-      "skill": "Explain cooling.",
+      "skill": "Internal Energy practice",
       "stem": "Which option correctly reads the internal energy model or diagram idea? Check the clue before choosing: Explain cooling.",
       "question": "Which option correctly reads the internal energy model or diagram idea? Check the clue before choosing: Explain cooling.",
       "options": [
@@ -5719,7 +5719,7 @@
       "patternId": "3.1:internal_energy:direct_recall",
       "conceptFamily": "internal_energy",
       "contextType": "a graph-reading task",
-      "skill": "Describe internal energy.",
+      "skill": "Internal Energy practice",
       "stem": "Which answer matches this internal energy objective: Describe internal energy? Demand focus: describe internal energy.",
       "question": "Which answer matches this internal energy objective: Describe internal energy? Demand focus: describe internal energy.",
       "options": [
@@ -5790,7 +5790,7 @@
       "patternId": "3.1:heating_temperature:applied_context",
       "conceptFamily": "heating_temperature",
       "contextType": "a comparison question",
-      "skill": "Explain temperature increase.",
+      "skill": "Internal Energy practice",
       "stem": "In a comparison question, which conclusion is correct for internal energy? Demand focus: explain temperature increase.",
       "question": "In a comparison question, which conclusion is correct for internal energy? Demand focus: explain temperature increase.",
       "options": [
@@ -5861,7 +5861,7 @@
       "patternId": "3.1:change_state_energy:misconception_correction",
       "conceptFamily": "change_state_energy",
       "contextType": "a method-choice question",
-      "skill": "Explain energy during change of state.",
+      "skill": "Internal Energy practice",
       "stem": "Which answer corrects a misconception about internal energy? Check the clue before choosing: Explain energy during change of state.",
       "question": "Which answer corrects a misconception about internal energy? Check the clue before choosing: Explain energy during change of state.",
       "options": [
@@ -5932,7 +5932,7 @@
       "patternId": "3.1:specific_heat_capacity:exam_decision",
       "conceptFamily": "specific_heat_capacity",
       "contextType": "a results discussion",
-      "skill": "Use specific heat capacity.",
+      "skill": "Internal Energy practice",
       "stem": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
       "question": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
       "options": [
@@ -6003,7 +6003,7 @@
       "patternId": "3.1:cooling:representation_interpretation",
       "conceptFamily": "cooling",
       "contextType": "a classroom demonstration",
-      "skill": "Explain cooling.",
+      "skill": "Internal Energy practice",
       "stem": "A representation of internal energy is described in words. Which interpretation is correct? Check the clue before choosing: Explain cooling.",
       "question": "A representation of internal energy is described in words. Which interpretation is correct? Check the clue before choosing: Explain cooling.",
       "options": [
@@ -6074,7 +6074,7 @@
       "patternId": "3.1:internal_energy:concept_discrimination",
       "conceptFamily": "internal_energy",
       "contextType": "a revision checkpoint",
-      "skill": "Describe internal energy.",
+      "skill": "Internal Energy practice",
       "stem": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: describe internal energy.",
       "question": "A student is comparing similar ideas in internal energy. Which statement is correct? Demand focus: describe internal energy.",
       "options": [
@@ -6145,7 +6145,7 @@
       "patternId": "3.1:heating_temperature:applied_context",
       "conceptFamily": "heating_temperature",
       "contextType": "an exam-style data table",
-      "skill": "Explain temperature increase.",
+      "skill": "Internal Energy practice",
       "stem": "A question set in an exam-style data table tests internal energy. Which answer applies the idea correctly? Demand focus: explain temperature increase.",
       "question": "A question set in an exam-style data table tests internal energy. Which answer applies the idea correctly? Demand focus: explain temperature increase.",
       "options": [
@@ -6216,7 +6216,7 @@
       "patternId": "3.1:change_state_energy:data_interpretation",
       "conceptFamily": "change_state_energy",
       "contextType": "a required-practical notebook",
-      "skill": "Explain energy during change of state.",
+      "skill": "Internal Energy practice",
       "stem": "A small data set about internal energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain energy during change of state.",
       "question": "A small data set about internal energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain energy during change of state.",
       "options": [
@@ -6287,7 +6287,7 @@
       "patternId": "3.1:specific_heat_capacity:exam_decision",
       "conceptFamily": "specific_heat_capacity",
       "contextType": "a technician report",
-      "skill": "Use specific heat capacity.",
+      "skill": "Internal Energy practice",
       "stem": "Which answer is the strongest GCSE Physics response for internal energy? Demand focus: use specific heat capacity.",
       "question": "Which answer is the strongest GCSE Physics response for internal energy? Demand focus: use specific heat capacity.",
       "options": [
@@ -6358,7 +6358,7 @@
       "patternId": "3.1:cooling:direct_recall",
       "conceptFamily": "cooling",
       "contextType": "a labelled diagram",
-      "skill": "Explain cooling.",
+      "skill": "Internal Energy practice",
       "stem": "Which answer matches this internal energy objective: Explain cooling? Check the clue before choosing: Explain cooling.",
       "question": "Which answer matches this internal energy objective: Explain cooling? Check the clue before choosing: Explain cooling.",
       "options": [
@@ -6429,7 +6429,7 @@
       "patternId": "3.1:internal_energy:concept_discrimination",
       "conceptFamily": "internal_energy",
       "contextType": "a short calculation",
-      "skill": "Describe internal energy.",
+      "skill": "Internal Energy practice",
       "stem": "Which option best separates the correct internal energy idea from a common mix-up? Demand focus: describe internal energy.",
       "question": "Which option best separates the correct internal energy idea from a common mix-up? Demand focus: describe internal energy.",
       "options": [
@@ -6500,7 +6500,7 @@
       "patternId": "3.1:heating_temperature:misconception_correction",
       "conceptFamily": "heating_temperature",
       "contextType": "a safety decision",
-      "skill": "Explain temperature increase.",
+      "skill": "Internal Energy practice",
       "stem": "Which answer corrects a misconception about internal energy? Demand focus: explain temperature increase.",
       "question": "Which answer corrects a misconception about internal energy? Demand focus: explain temperature increase.",
       "options": [
@@ -6571,7 +6571,7 @@
       "patternId": "3.1:change_state_energy:data_interpretation",
       "conceptFamily": "change_state_energy",
       "contextType": "a graph-reading task",
-      "skill": "Explain energy during change of state.",
+      "skill": "Internal Energy practice",
       "stem": "Which conclusion about internal energy is supported by the evidence? Check the clue before choosing: Explain energy during change of state.",
       "question": "Which conclusion about internal energy is supported by the evidence? Check the clue before choosing: Explain energy during change of state.",
       "options": [
@@ -6642,7 +6642,7 @@
       "patternId": "3.1:specific_heat_capacity:representation_interpretation",
       "conceptFamily": "specific_heat_capacity",
       "contextType": "a comparison question",
-      "skill": "Use specific heat capacity.",
+      "skill": "Internal Energy practice",
       "stem": "A representation of internal energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
       "question": "A representation of internal energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
       "options": [

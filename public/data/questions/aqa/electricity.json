@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "electricity",
-  "generatedAt": "2026-05-02T07:09:40.317Z",
+  "generatedAt": "2026-05-02T07:16:13.999Z",
   "questions": [
     {
       "id": "aqa_electricity_charge_current_definition_001",
@@ -42,7 +42,7 @@
       "patternId": "authored:aqa_electricity_charge_current_definition_001",
       "conceptFamily": "state_current_as_the_rate_of_flow_of_charge",
       "contextType": "exam_style",
-      "skill": "State current as the rate of flow of charge.",
+      "skill": "Charge practice",
       "stem": "Which statement describes electric current in a metal wire?",
       "question": "Which statement describes electric current in a metal wire?",
       "options": [
@@ -117,7 +117,7 @@
       "patternId": "authored:aqa_electricity_charge_unit_002",
       "conceptFamily": "recall_the_unit_of_electric_charge",
       "contextType": "exam_style",
-      "skill": "Recall the unit of electric charge.",
+      "skill": "Charge practice",
       "stem": "What is the unit of electric charge?",
       "question": "What is the unit of electric charge?",
       "options": [
@@ -192,7 +192,7 @@
       "patternId": "authored:aqa_electricity_charge_equation_003",
       "conceptFamily": "calculate_charge_using_current_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate charge using current and time.",
+      "skill": "Charge practice",
       "stem": "A current of 3 A flows for 20 s. How much charge passes a point in the circuit?",
       "question": "A current of 3 A flows for 20 s. How much charge passes a point in the circuit?",
       "options": [
@@ -267,7 +267,7 @@
       "patternId": "authored:aqa_electricity_charge_current_from_charge_004",
       "conceptFamily": "calculate_current_from_charge_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate current from charge and time.",
+      "skill": "Charge practice",
       "stem": "A charge of 48 C passes a point in 12 s. What is the current?",
       "question": "A charge of 48 C passes a point in 12 s. What is the current?",
       "options": [
@@ -342,7 +342,7 @@
       "patternId": "authored:aqa_electricity_charge_time_from_charge_005",
       "conceptFamily": "calculate_time_using_charge_and_current",
       "contextType": "exam_style",
-      "skill": "Calculate time using charge and current.",
+      "skill": "Charge practice",
       "stem": "A current of 0.5 A transfers 30 C of charge. For how long did the current flow?",
       "question": "A current of 0.5 A transfers 30 C of charge. For how long did the current flow?",
       "options": [
@@ -417,7 +417,7 @@
       "patternId": "authored:aqa_electricity_charge_ammeter_position_006",
       "conceptFamily": "describe_how_to_connect_an_ammeter",
       "contextType": "exam_style",
-      "skill": "Describe how to connect an ammeter.",
+      "skill": "Charge practice",
       "stem": "How should an ammeter be connected to measure the current through a lamp?",
       "question": "How should an ammeter be connected to measure the current through a lamp?",
       "options": [
@@ -492,7 +492,7 @@
       "patternId": "authored:aqa_electricity_charge_cell_push_007",
       "conceptFamily": "link_potential_difference_to_current_in_a_fixed_resistor",
       "contextType": "exam_style",
-      "skill": "Link potential difference to current in a fixed resistor.",
+      "skill": "Charge practice",
       "stem": "A cell is added in series with another identical cell. What happens to the current in a simple circuit with a fixed resistor?",
       "question": "A cell is added in series with another identical cell. What happens to the current in a simple circuit with a fixed resistor?",
       "options": [
@@ -567,7 +567,7 @@
       "patternId": "authored:aqa_electricity_charge_open_switch_008",
       "conceptFamily": "explain_why_current_needs_a_complete_circuit",
       "contextType": "exam_style",
-      "skill": "Explain why current needs a complete circuit.",
+      "skill": "Charge practice",
       "stem": "A switch is open in a series circuit. What is the current in the circuit?",
       "question": "A switch is open in a series circuit. What is the current in the circuit?",
       "options": [
@@ -642,7 +642,7 @@
       "patternId": "authored:aqa_electricity_charge_same_series_current_009",
       "conceptFamily": "recall_that_current_is_the_same_in_a_series_circuit",
       "contextType": "exam_style",
-      "skill": "Recall that current is the same in a series circuit.",
+      "skill": "Charge practice",
       "stem": "Two lamps are connected in series. The current through the first lamp is 0.20 A. What is the current through the second lamp?",
       "question": "Two lamps are connected in series. The current through the first lamp is 0.20 A. What is the current through the second lamp?",
       "options": [
@@ -717,7 +717,7 @@
       "patternId": "authored:aqa_electricity_charge_electron_flow_010",
       "conceptFamily": "identify_electrons_as_the_charge_carriers_in_metals",
       "contextType": "exam_style",
-      "skill": "Identify electrons as the charge carriers in metals.",
+      "skill": "Charge practice",
       "stem": "What carries charge through a metal wire?",
       "question": "What carries charge through a metal wire?",
       "options": [
@@ -792,7 +792,7 @@
       "patternId": "authored:aqa_electricity_charge_coulomb_meaning_011",
       "conceptFamily": "relate_amperes_to_coulombs_per_second",
       "contextType": "exam_style",
-      "skill": "Relate amperes to coulombs per second.",
+      "skill": "Charge practice",
       "stem": "A charge of 1 C passes a point in a wire each second. What is the current?",
       "question": "A charge of 1 C passes a point in a wire each second. What is the current?",
       "options": [
@@ -867,7 +867,7 @@
       "patternId": "authored:aqa_electricity_charge_double_time_012",
       "conceptFamily": "describe_the_proportional_relationship_between_charge_and_time",
       "contextType": "exam_style",
-      "skill": "Describe the proportional relationship between charge and time.",
+      "skill": "Charge practice",
       "stem": "The current in a circuit is constant. What happens to the charge transferred if the time is doubled?",
       "question": "The current in a circuit is constant. What happens to the charge transferred if the time is doubled?",
       "options": [
@@ -942,7 +942,7 @@
       "patternId": "authored:aqa_electricity_charge_compare_currents_013",
       "conceptFamily": "compare_currents_using_charge_transferred_per_second",
       "contextType": "exam_style",
-      "skill": "Compare currents using charge transferred per second.",
+      "skill": "Charge practice",
       "stem": "Circuit X transfers 24 C in 8 s. Circuit Y transfers 24 C in 4 s. Which circuit has the larger current?",
       "question": "Circuit X transfers 24 C in 8 s. Circuit Y transfers 24 C in 4 s. Which circuit has the larger current?",
       "options": [
@@ -1017,7 +1017,7 @@
       "patternId": "authored:aqa_electricity_charge_meter_reading_014",
       "conceptFamily": "interpret_an_ammeter_reading_as_charge_flow_per_second",
       "contextType": "exam_style",
-      "skill": "Interpret an ammeter reading as charge flow per second.",
+      "skill": "Charge practice",
       "stem": "An ammeter reads 0.35 A. What does this reading mean?",
       "question": "An ammeter reads 0.35 A. What does this reading mean?",
       "options": [
@@ -1092,7 +1092,7 @@
       "patternId": "authored:aqa_electricity_charge_series_add_lamp_015",
       "conceptFamily": "explain_the_effect_of_adding_resistance_in_series",
       "contextType": "exam_style",
-      "skill": "Explain the effect of adding resistance in series.",
+      "skill": "Charge practice",
       "stem": "A second lamp is added in series to a simple lamp circuit. What usually happens to the current?",
       "question": "A second lamp is added in series to a simple lamp circuit. What usually happens to the current?",
       "options": [
@@ -1167,7 +1167,7 @@
       "patternId": "authored:aqa_electricity_charge_parallel_branch_016",
       "conceptFamily": "calculate_branch_current_in_a_parallel_circuit",
       "contextType": "exam_style",
-      "skill": "Calculate branch current in a parallel circuit.",
+      "skill": "Charge practice",
       "stem": "A parallel circuit has two branches. The current in the supply is 0.60 A and one branch has 0.25 A. What is the current in the other branch?",
       "question": "A parallel circuit has two branches. The current in the supply is 0.60 A and one branch has 0.25 A. What is the current in the other branch?",
       "options": [
@@ -1242,7 +1242,7 @@
       "patternId": "authored:aqa_electricity_charge_circuit_direction_017",
       "conceptFamily": "avoid_the_idea_that_current_is_used_up",
       "contextType": "exam_style",
-      "skill": "Avoid the idea that current is used up.",
+      "skill": "Charge practice",
       "stem": "Which statement about current in a complete series circuit is correct?",
       "question": "Which statement about current in a complete series circuit is correct?",
       "options": [
@@ -1317,7 +1317,7 @@
       "patternId": "authored:aqa_electricity_charge_current_time_graph_018",
       "conceptFamily": "use_a_current_time_graph_to_find_transferred_charge",
       "contextType": "exam_style",
-      "skill": "Use a current-time graph to find transferred charge.",
+      "skill": "Charge practice",
       "stem": "A current-time graph is horizontal at 2 A for 6 s. What charge is transferred?",
       "question": "A current-time graph is horizontal at 2 A for 6 s. What charge is transferred?",
       "options": [
@@ -1396,7 +1396,7 @@
       "patternId": "authored:aqa_electricity_charge_microamp_019",
       "conceptFamily": "convert_between_amperes_and_milliamperes",
       "contextType": "exam_style",
-      "skill": "Convert between amperes and milliamperes.",
+      "skill": "Charge practice",
       "stem": "A small sensor has a current of 0.002 A. Which value is the same current?",
       "question": "A small sensor has a current of 0.002 A. Which value is the same current?",
       "options": [
@@ -1471,7 +1471,7 @@
       "patternId": "authored:aqa_electricity_charge_conventional_current_020",
       "conceptFamily": "state_the_direction_of_conventional_current",
       "contextType": "exam_style",
-      "skill": "State the direction of conventional current.",
+      "skill": "Charge practice",
       "stem": "In circuit diagrams, what direction is conventional current shown?",
       "question": "In circuit diagrams, what direction is conventional current shown?",
       "options": [
@@ -1546,7 +1546,7 @@
       "patternId": "authored:aqa_electricity_charge_battery_role_021",
       "conceptFamily": "explain_why_a_supply_is_needed_for_current",
       "contextType": "exam_style",
-      "skill": "Explain why a supply is needed for current.",
+      "skill": "Charge practice",
       "stem": "What is the role of a battery in a simple circuit?",
       "question": "What is the role of a battery in a simple circuit?",
       "options": [
@@ -1621,7 +1621,7 @@
       "patternId": "authored:aqa_electricity_charge_insulator_022",
       "conceptFamily": "identify_the_safety_role_of_an_insulator",
       "contextType": "exam_style",
-      "skill": "Identify the safety role of an insulator.",
+      "skill": "Charge practice",
       "stem": "Why is plastic used around the metal wires in a cable?",
       "question": "Why is plastic used around the metal wires in a cable?",
       "options": [
@@ -1696,7 +1696,7 @@
       "patternId": "authored:aqa_electricity_charge_high_current_023",
       "conceptFamily": "interpret_a_larger_current_as_a_greater_rate_of_charge_flow",
       "contextType": "exam_style",
-      "skill": "Interpret a larger current as a greater rate of charge flow.",
+      "skill": "Charge practice",
       "stem": "A wire carries a larger current than before. Which statement must be true?",
       "question": "A wire carries a larger current than before. Which statement must be true?",
       "options": [
@@ -1771,7 +1771,7 @@
       "patternId": "authored:aqa_electricity_charge_practical_check_024",
       "conceptFamily": "choose_the_correct_instrument_for_measuring_current",
       "contextType": "exam_style",
-      "skill": "Choose the correct instrument for measuring current.",
+      "skill": "Charge practice",
       "stem": "A student wants to measure how current changes when resistance changes. Which instrument measures the current?",
       "question": "A student wants to measure how current changes when resistance changes. Which instrument measures the current?",
       "options": [
@@ -1843,7 +1843,7 @@
       "patternId": "4.2.4.3:grid_purpose:direct_recall",
       "conceptFamily": "grid_purpose",
       "contextType": "a safety decision",
-      "skill": "Describe the purpose of the National Grid.",
+      "skill": "National Grid practice",
       "stem": "Which statement is correct for national grid? Check the clue before choosing: Describe the purpose of the National Grid.",
       "question": "Which statement is correct for national grid? Check the clue before choosing: Describe the purpose of the National Grid.",
       "options": [
@@ -1914,7 +1914,7 @@
       "patternId": "4.2.4.3:step_up:concept_discrimination",
       "conceptFamily": "step_up",
       "contextType": "a graph-reading task",
-      "skill": "Explain why potential difference is stepped up.",
+      "skill": "National Grid practice",
       "stem": "A student is comparing similar ideas in national grid. Which statement is correct? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "question": "A student is comparing similar ideas in national grid. Which statement is correct? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "options": [
@@ -1985,7 +1985,7 @@
       "patternId": "4.2.4.3:transformer_role:misconception_correction",
       "conceptFamily": "transformer_role",
       "contextType": "a comparison question",
-      "skill": "Compare step-up and step-down transformers.",
+      "skill": "National Grid practice",
       "stem": "A revision note about national grid contains an error. Which replacement is correct? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "question": "A revision note about national grid contains an error. Which replacement is correct? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "options": [
@@ -2056,7 +2056,7 @@
       "patternId": "4.2.4.3:transmission_loss:data_interpretation",
       "conceptFamily": "transmission_loss",
       "contextType": "a method-choice question",
-      "skill": "Link cable losses to current.",
+      "skill": "National Grid practice",
       "stem": "A small data set about national grid is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "question": "A small data set about national grid is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "options": [
@@ -2127,7 +2127,7 @@
       "patternId": "4.2.4.3:grid_safety:representation_interpretation",
       "conceptFamily": "grid_safety",
       "contextType": "a results discussion",
-      "skill": "Explain why domestic voltage is lower.",
+      "skill": "National Grid practice",
       "stem": "Which option correctly reads the national grid model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "question": "Which option correctly reads the national grid model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "options": [
@@ -2198,7 +2198,7 @@
       "patternId": "4.2.4.3:grid_purpose:direct_recall",
       "conceptFamily": "grid_purpose",
       "contextType": "a classroom demonstration",
-      "skill": "Describe the purpose of the National Grid.",
+      "skill": "National Grid practice",
       "stem": "Which answer matches this national grid objective: Describe the purpose of the National Grid? Check the clue before choosing: Describe the purpose of the National Grid.",
       "question": "Which answer matches this national grid objective: Describe the purpose of the National Grid? Check the clue before choosing: Describe the purpose of the National Grid.",
       "options": [
@@ -2269,7 +2269,7 @@
       "patternId": "4.2.4.3:step_up:applied_context",
       "conceptFamily": "step_up",
       "contextType": "a revision checkpoint",
-      "skill": "Explain why potential difference is stepped up.",
+      "skill": "National Grid practice",
       "stem": "In a revision checkpoint, which conclusion is correct for national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "question": "In a revision checkpoint, which conclusion is correct for national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "options": [
@@ -2340,7 +2340,7 @@
       "patternId": "4.2.4.3:transformer_role:misconception_correction",
       "conceptFamily": "transformer_role",
       "contextType": "an exam-style data table",
-      "skill": "Compare step-up and step-down transformers.",
+      "skill": "National Grid practice",
       "stem": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "question": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "options": [
@@ -2411,7 +2411,7 @@
       "patternId": "4.2.4.3:transmission_loss:exam_decision",
       "conceptFamily": "transmission_loss",
       "contextType": "a required-practical notebook",
-      "skill": "Link cable losses to current.",
+      "skill": "National Grid practice",
       "stem": "The mark scheme is testing link cable losses to current. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "question": "The mark scheme is testing link cable losses to current. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "options": [
@@ -2482,7 +2482,7 @@
       "patternId": "4.2.4.3:grid_safety:representation_interpretation",
       "conceptFamily": "grid_safety",
       "contextType": "a technician report",
-      "skill": "Explain why domestic voltage is lower.",
+      "skill": "National Grid practice",
       "stem": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "question": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "options": [
@@ -2553,7 +2553,7 @@
       "patternId": "4.2.4.3:grid_purpose:concept_discrimination",
       "conceptFamily": "grid_purpose",
       "contextType": "a labelled diagram",
-      "skill": "Describe the purpose of the National Grid.",
+      "skill": "National Grid practice",
       "stem": "A student is comparing similar ideas in national grid. Which statement is correct? Check the clue before choosing: Describe the purpose of the National Grid.",
       "question": "A student is comparing similar ideas in national grid. Which statement is correct? Check the clue before choosing: Describe the purpose of the National Grid.",
       "options": [
@@ -2624,7 +2624,7 @@
       "patternId": "4.2.4.3:step_up:applied_context",
       "conceptFamily": "step_up",
       "contextType": "a short calculation",
-      "skill": "Explain why potential difference is stepped up.",
+      "skill": "National Grid practice",
       "stem": "A question set in a short calculation tests national grid. Which answer applies the idea correctly? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "question": "A question set in a short calculation tests national grid. Which answer applies the idea correctly? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "options": [
@@ -2695,7 +2695,7 @@
       "patternId": "4.2.4.3:transformer_role:data_interpretation",
       "conceptFamily": "transformer_role",
       "contextType": "a safety decision",
-      "skill": "Compare step-up and step-down transformers.",
+      "skill": "National Grid practice",
       "stem": "A small data set about national grid is being interpreted. Which conclusion is valid? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "question": "A small data set about national grid is being interpreted. Which conclusion is valid? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "options": [
@@ -2766,7 +2766,7 @@
       "patternId": "4.2.4.3:transmission_loss:exam_decision",
       "conceptFamily": "transmission_loss",
       "contextType": "a graph-reading task",
-      "skill": "Link cable losses to current.",
+      "skill": "National Grid practice",
       "stem": "Which answer is the strongest GCSE Physics response for national grid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "question": "Which answer is the strongest GCSE Physics response for national grid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "options": [
@@ -2837,7 +2837,7 @@
       "patternId": "4.2.4.3:grid_safety:direct_recall",
       "conceptFamily": "grid_safety",
       "contextType": "a comparison question",
-      "skill": "Explain why domestic voltage is lower.",
+      "skill": "National Grid practice",
       "stem": "Which answer matches this national grid objective: Explain why domestic voltage is lower? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "question": "Which answer matches this national grid objective: Explain why domestic voltage is lower? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "options": [
@@ -2908,7 +2908,7 @@
       "patternId": "4.2.4.3:grid_purpose:concept_discrimination",
       "conceptFamily": "grid_purpose",
       "contextType": "a method-choice question",
-      "skill": "Describe the purpose of the National Grid.",
+      "skill": "National Grid practice",
       "stem": "Which option best separates the correct national grid idea from a common mix-up? Check the clue before choosing: Describe the purpose of the National Grid.",
       "question": "Which option best separates the correct national grid idea from a common mix-up? Check the clue before choosing: Describe the purpose of the National Grid.",
       "options": [
@@ -2979,7 +2979,7 @@
       "patternId": "4.2.4.3:step_up:misconception_correction",
       "conceptFamily": "step_up",
       "contextType": "a results discussion",
-      "skill": "Explain why potential difference is stepped up.",
+      "skill": "National Grid practice",
       "stem": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "question": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "options": [
@@ -3050,7 +3050,7 @@
       "patternId": "4.2.4.3:transformer_role:data_interpretation",
       "conceptFamily": "transformer_role",
       "contextType": "a classroom demonstration",
-      "skill": "Compare step-up and step-down transformers.",
+      "skill": "National Grid practice",
       "stem": "Which conclusion about national grid is supported by the evidence? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "question": "Which conclusion about national grid is supported by the evidence? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "options": [
@@ -3121,7 +3121,7 @@
       "patternId": "4.2.4.3:transmission_loss:representation_interpretation",
       "conceptFamily": "transmission_loss",
       "contextType": "a revision checkpoint",
-      "skill": "Link cable losses to current.",
+      "skill": "National Grid practice",
       "stem": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "question": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "options": [
@@ -3192,7 +3192,7 @@
       "patternId": "4.2.4.3:grid_safety:direct_recall",
       "conceptFamily": "grid_safety",
       "contextType": "an exam-style data table",
-      "skill": "Explain why domestic voltage is lower.",
+      "skill": "National Grid practice",
       "stem": "A student is revising national grid. Which statement should they keep? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "question": "A student is revising national grid. Which statement should they keep? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
       "options": [
@@ -3263,7 +3263,7 @@
       "patternId": "4.2.4.3:grid_purpose:applied_context",
       "conceptFamily": "grid_purpose",
       "contextType": "a required-practical notebook",
-      "skill": "Describe the purpose of the National Grid.",
+      "skill": "National Grid practice",
       "stem": "A question set in a required-practical notebook tests national grid. Which answer applies the idea correctly? Check the clue before choosing: Describe the purpose of the National Grid.",
       "question": "A question set in a required-practical notebook tests national grid. Which answer applies the idea correctly? Check the clue before choosing: Describe the purpose of the National Grid.",
       "options": [
@@ -3334,7 +3334,7 @@
       "patternId": "4.2.4.3:step_up:misconception_correction",
       "conceptFamily": "step_up",
       "contextType": "a technician report",
-      "skill": "Explain why potential difference is stepped up.",
+      "skill": "National Grid practice",
       "stem": "A learner gives a wrong explanation for national grid. Which correction is best? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "question": "A learner gives a wrong explanation for national grid. Which correction is best? Use the wording carefully: this is about explain why potential difference is stepped up.",
       "options": [
@@ -3405,7 +3405,7 @@
       "patternId": "4.2.4.3:transformer_role:exam_decision",
       "conceptFamily": "transformer_role",
       "contextType": "a labelled diagram",
-      "skill": "Compare step-up and step-down transformers.",
+      "skill": "National Grid practice",
       "stem": "Which answer is the strongest GCSE Physics response for national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "question": "Which answer is the strongest GCSE Physics response for national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
       "options": [
@@ -3476,7 +3476,7 @@
       "patternId": "4.2.4.3:transmission_loss:representation_interpretation",
       "conceptFamily": "transmission_loss",
       "contextType": "a short calculation",
-      "skill": "Link cable losses to current.",
+      "skill": "National Grid practice",
       "stem": "A labelled representation is used for national grid. Which statement is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "question": "A labelled representation is used for national grid. Which statement is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
       "options": [
@@ -3550,7 +3550,7 @@
       "patternId": "4.2.1.3:ohms_law:direct_recall",
       "conceptFamily": "ohms_law",
       "contextType": "a safety decision",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "Which statement is correct for resistance? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "Which statement is correct for resistance? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -3624,7 +3624,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:concept_discrimination",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a graph-reading task",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "A student is comparing similar ideas in resistance. Which statement is correct? Demand focus: interpret an ohmic conductor.",
       "question": "A student is comparing similar ideas in resistance. Which statement is correct? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -3698,7 +3698,7 @@
       "patternId": "4.2.1.3:filament_lamp:misconception_correction",
       "conceptFamily": "filament_lamp",
       "contextType": "a comparison question",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "A revision note about resistance contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "A revision note about resistance contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -3772,7 +3772,7 @@
       "patternId": "4.2.1.3:diode:data_interpretation",
       "conceptFamily": "diode",
       "contextType": "a method-choice question",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "A small data set about resistance is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe diode behaviour.",
       "question": "A small data set about resistance is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -3846,7 +3846,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:representation_interpretation",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a results discussion",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "Which option correctly reads the resistance model or diagram idea? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "Which option correctly reads the resistance model or diagram idea? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -3920,7 +3920,7 @@
       "patternId": "4.2.1.3:ohms_law:direct_recall",
       "conceptFamily": "ohms_law",
       "contextType": "a classroom demonstration",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "Which answer matches this resistance objective: Use the relationship between potential difference, current and resistance? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "Which answer matches this resistance objective: Use the relationship between potential difference, current and resistance? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -3994,7 +3994,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:applied_context",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a revision checkpoint",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "In a revision checkpoint, which conclusion is correct for resistance? Demand focus: interpret an ohmic conductor.",
       "question": "In a revision checkpoint, which conclusion is correct for resistance? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -4068,7 +4068,7 @@
       "patternId": "4.2.1.3:filament_lamp:misconception_correction",
       "conceptFamily": "filament_lamp",
       "contextType": "an exam-style data table",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "Which answer corrects a misconception about resistance? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "Which answer corrects a misconception about resistance? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -4142,7 +4142,7 @@
       "patternId": "4.2.1.3:diode:exam_decision",
       "conceptFamily": "diode",
       "contextType": "a required-practical notebook",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "The mark scheme is testing describe diode behaviour. Which answer matches that point? Use the wording carefully: this is about describe diode behaviour.",
       "question": "The mark scheme is testing describe diode behaviour. Which answer matches that point? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -4216,7 +4216,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:representation_interpretation",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a technician report",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "A representation of resistance is described in words. Which interpretation is correct? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "A representation of resistance is described in words. Which interpretation is correct? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -4290,7 +4290,7 @@
       "patternId": "4.2.1.3:ohms_law:concept_discrimination",
       "conceptFamily": "ohms_law",
       "contextType": "a labelled diagram",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "A student is comparing similar ideas in resistance. Which statement is correct? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "A student is comparing similar ideas in resistance. Which statement is correct? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -4364,7 +4364,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:applied_context",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a short calculation",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "A question set in a short calculation tests resistance. Which answer applies the idea correctly? Demand focus: interpret an ohmic conductor.",
       "question": "A question set in a short calculation tests resistance. Which answer applies the idea correctly? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -4438,7 +4438,7 @@
       "patternId": "4.2.1.3:filament_lamp:data_interpretation",
       "conceptFamily": "filament_lamp",
       "contextType": "a safety decision",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "A small data set about resistance is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "A small data set about resistance is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -4512,7 +4512,7 @@
       "patternId": "4.2.1.3:diode:exam_decision",
       "conceptFamily": "diode",
       "contextType": "a graph-reading task",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "Which answer is the strongest GCSE Physics response for resistance? Use the wording carefully: this is about describe diode behaviour.",
       "question": "Which answer is the strongest GCSE Physics response for resistance? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -4586,7 +4586,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:direct_recall",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a comparison question",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "Which answer matches this resistance objective: Describe sensors in circuits? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "Which answer matches this resistance objective: Describe sensors in circuits? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -4660,7 +4660,7 @@
       "patternId": "4.2.1.3:ohms_law:concept_discrimination",
       "conceptFamily": "ohms_law",
       "contextType": "a method-choice question",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "Which option best separates the correct resistance idea from a common mix-up? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "Which option best separates the correct resistance idea from a common mix-up? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -4734,7 +4734,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:misconception_correction",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a results discussion",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "Which answer corrects a misconception about resistance? Demand focus: interpret an ohmic conductor.",
       "question": "Which answer corrects a misconception about resistance? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -4808,7 +4808,7 @@
       "patternId": "4.2.1.3:filament_lamp:data_interpretation",
       "conceptFamily": "filament_lamp",
       "contextType": "a classroom demonstration",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "Which conclusion about resistance is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "Which conclusion about resistance is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -4882,7 +4882,7 @@
       "patternId": "4.2.1.3:diode:representation_interpretation",
       "conceptFamily": "diode",
       "contextType": "a revision checkpoint",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "A representation of resistance is described in words. Which interpretation is correct? Use the wording carefully: this is about describe diode behaviour.",
       "question": "A representation of resistance is described in words. Which interpretation is correct? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -4956,7 +4956,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:direct_recall",
       "conceptFamily": "ldr_thermistor",
       "contextType": "an exam-style data table",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "A student is revising resistance. Which statement should they keep? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "A student is revising resistance. Which statement should they keep? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -5030,7 +5030,7 @@
       "patternId": "4.2.1.3:ohms_law:applied_context",
       "conceptFamily": "ohms_law",
       "contextType": "a required-practical notebook",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "A question set in a required-practical notebook tests resistance. Which answer applies the idea correctly? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "A question set in a required-practical notebook tests resistance. Which answer applies the idea correctly? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -5104,7 +5104,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:misconception_correction",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a technician report",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "A learner gives a wrong explanation for resistance. Which correction is best? Demand focus: interpret an ohmic conductor.",
       "question": "A learner gives a wrong explanation for resistance. Which correction is best? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -5178,7 +5178,7 @@
       "patternId": "4.2.1.3:filament_lamp:exam_decision",
       "conceptFamily": "filament_lamp",
       "contextType": "a labelled diagram",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "Which answer is the strongest GCSE Physics response for resistance? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "Which answer is the strongest GCSE Physics response for resistance? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -5252,7 +5252,7 @@
       "patternId": "4.2.1.3:diode:representation_interpretation",
       "conceptFamily": "diode",
       "contextType": "a short calculation",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "A labelled representation is used for resistance. Which statement is valid? Use the wording carefully: this is about describe diode behaviour.",
       "question": "A labelled representation is used for resistance. Which statement is valid? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -5326,7 +5326,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:concept_discrimination",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a safety decision",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "Which option best separates the correct resistance idea from a common mix-up? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "Which option best separates the correct resistance idea from a common mix-up? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -5400,7 +5400,7 @@
       "patternId": "4.2.1.3:ohms_law:applied_context",
       "conceptFamily": "ohms_law",
       "contextType": "a graph-reading task",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "During a graph-reading task, a result needs explaining. Which answer is best? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "During a graph-reading task, a result needs explaining. Which answer is best? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -5474,7 +5474,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:data_interpretation",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a comparison question",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "Which conclusion about resistance is supported by the evidence? Demand focus: interpret an ohmic conductor.",
       "question": "Which conclusion about resistance is supported by the evidence? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -5548,7 +5548,7 @@
       "patternId": "4.2.1.3:filament_lamp:exam_decision",
       "conceptFamily": "filament_lamp",
       "contextType": "a method-choice question",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "In an exam question about resistance, which answer would earn the mark? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "In an exam question about resistance, which answer would earn the mark? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -5622,7 +5622,7 @@
       "patternId": "4.2.1.3:diode:direct_recall",
       "conceptFamily": "diode",
       "contextType": "a results discussion",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "A student is revising resistance. Which statement should they keep? Use the wording carefully: this is about describe diode behaviour.",
       "question": "A student is revising resistance. Which statement should they keep? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -5696,7 +5696,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:concept_discrimination",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a classroom demonstration",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "Which statement avoids the common resistance mistake? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "Which statement avoids the common resistance mistake? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -5770,7 +5770,7 @@
       "patternId": "4.2.1.3:ohms_law:misconception_correction",
       "conceptFamily": "ohms_law",
       "contextType": "a revision checkpoint",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "A learner gives a wrong explanation for resistance. Which correction is best? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "A learner gives a wrong explanation for resistance. Which correction is best? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -5844,7 +5844,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:data_interpretation",
       "conceptFamily": "ohmic_conductor",
       "contextType": "an exam-style data table",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "A result from an exam-style data table about resistance is being interpreted. Which answer follows? Demand focus: interpret an ohmic conductor.",
       "question": "A result from an exam-style data table about resistance is being interpreted. Which answer follows? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -5918,7 +5918,7 @@
       "patternId": "4.2.1.3:filament_lamp:representation_interpretation",
       "conceptFamily": "filament_lamp",
       "contextType": "a required-practical notebook",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "A labelled representation is used for resistance. Which statement is valid? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "A labelled representation is used for resistance. Which statement is valid? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -5992,7 +5992,7 @@
       "patternId": "4.2.1.3:diode:direct_recall",
       "conceptFamily": "diode",
       "contextType": "a technician report",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "Which statement is correct for resistance? Use the wording carefully: this is about describe diode behaviour.",
       "question": "Which statement is correct for resistance? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -6066,7 +6066,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:applied_context",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a labelled diagram",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "During a labelled diagram, a result needs explaining. Which answer is best? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "During a labelled diagram, a result needs explaining. Which answer is best? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -6140,7 +6140,7 @@
       "patternId": "4.2.1.3:ohms_law:misconception_correction",
       "conceptFamily": "ohms_law",
       "contextType": "a short calculation",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "A revision note about resistance contains an error. Which replacement is correct? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "A revision note about resistance contains an error. Which replacement is correct? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -6214,7 +6214,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:exam_decision",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a safety decision",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "In an exam question about resistance, which answer would earn the mark? Demand focus: interpret an ohmic conductor.",
       "question": "In an exam question about resistance, which answer would earn the mark? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -6288,7 +6288,7 @@
       "patternId": "4.2.1.3:filament_lamp:representation_interpretation",
       "conceptFamily": "filament_lamp",
       "contextType": "a graph-reading task",
-      "skill": "Explain filament lamp resistance.",
+      "skill": "Resistance practice",
       "stem": "Which option correctly reads the resistance model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "question": "Which option correctly reads the resistance model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain filament lamp resistance.",
       "options": [
@@ -6362,7 +6362,7 @@
       "patternId": "4.2.1.3:diode:concept_discrimination",
       "conceptFamily": "diode",
       "contextType": "a comparison question",
-      "skill": "Describe diode behaviour.",
+      "skill": "Resistance practice",
       "stem": "Which statement avoids the common resistance mistake? Use the wording carefully: this is about describe diode behaviour.",
       "question": "Which statement avoids the common resistance mistake? Use the wording carefully: this is about describe diode behaviour.",
       "options": [
@@ -6436,7 +6436,7 @@
       "patternId": "4.2.1.3:ldr_thermistor:applied_context",
       "conceptFamily": "ldr_thermistor",
       "contextType": "a method-choice question",
-      "skill": "Describe sensors in circuits.",
+      "skill": "Resistance practice",
       "stem": "In a method-choice question, which conclusion is correct for resistance? Use the wording carefully: this is about describe sensors in circuits.",
       "question": "In a method-choice question, which conclusion is correct for resistance? Use the wording carefully: this is about describe sensors in circuits.",
       "options": [
@@ -6510,7 +6510,7 @@
       "patternId": "4.2.1.3:ohms_law:data_interpretation",
       "conceptFamily": "ohms_law",
       "contextType": "a results discussion",
-      "skill": "Use the relationship between potential difference, current and resistance.",
+      "skill": "Resistance practice",
       "stem": "A result from a results discussion about resistance is being interpreted. Which answer follows? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "question": "A result from a results discussion about resistance is being interpreted. Which answer follows? Use the wording carefully: this is about use the relationship between potential difference, current and resistance.",
       "options": [
@@ -6584,7 +6584,7 @@
       "patternId": "4.2.1.3:ohmic_conductor:exam_decision",
       "conceptFamily": "ohmic_conductor",
       "contextType": "a classroom demonstration",
-      "skill": "Interpret an ohmic conductor.",
+      "skill": "Resistance practice",
       "stem": "The mark scheme is testing interpret an ohmic conductor. Which answer matches that point? Demand focus: interpret an ohmic conductor.",
       "question": "The mark scheme is testing interpret an ohmic conductor. Which answer matches that point? Demand focus: interpret an ohmic conductor.",
       "options": [
@@ -6655,7 +6655,7 @@
       "patternId": "4.2.2:series_current:direct_recall",
       "conceptFamily": "series_current",
       "contextType": "a labelled diagram",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Circuits practice",
       "stem": "Which statement is correct for series circuits? Check the clue before choosing: Describe current in a series circuit.",
       "question": "Which statement is correct for series circuits? Check the clue before choosing: Describe current in a series circuit.",
       "options": [
@@ -6726,7 +6726,7 @@
       "patternId": "4.2.2:series_resistance:concept_discrimination",
       "conceptFamily": "series_resistance",
       "contextType": "a short calculation",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Circuits practice",
       "stem": "A student is comparing similar ideas in series circuits. Which statement is correct? Demand focus: calculate total resistance in series.",
       "question": "A student is comparing similar ideas in series circuits. Which statement is correct? Demand focus: calculate total resistance in series.",
       "options": [
@@ -6797,7 +6797,7 @@
       "patternId": "4.2.2:parallel_pd:misconception_correction",
       "conceptFamily": "parallel_pd",
       "contextType": "a safety decision",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "A revision note about series circuits contains an error. Which replacement is correct? Demand focus: describe potential difference in parallel.",
       "question": "A revision note about series circuits contains an error. Which replacement is correct? Demand focus: describe potential difference in parallel.",
       "options": [
@@ -6868,7 +6868,7 @@
       "patternId": "4.2.2:parallel_current:data_interpretation",
       "conceptFamily": "parallel_current",
       "contextType": "a graph-reading task",
-      "skill": "Describe current in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "A small data set about series circuits is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe current in parallel.",
       "question": "A small data set about series circuits is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe current in parallel.",
       "options": [
@@ -6939,7 +6939,7 @@
       "patternId": "4.2.2:series_current:representation_interpretation",
       "conceptFamily": "series_current",
       "contextType": "a comparison question",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Circuits practice",
       "stem": "Which option correctly reads the series circuits model or diagram idea? Demand focus: describe current in a series circuit.",
       "question": "Which option correctly reads the series circuits model or diagram idea? Demand focus: describe current in a series circuit.",
       "options": [
@@ -7010,7 +7010,7 @@
       "patternId": "4.2.2:series_resistance:direct_recall",
       "conceptFamily": "series_resistance",
       "contextType": "a method-choice question",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Circuits practice",
       "stem": "Which answer matches this series circuits objective: Calculate total resistance in series? Choose the statement that fits this exact GCSE Physics idea: calculate total resistance in series.",
       "question": "Which answer matches this series circuits objective: Calculate total resistance in series? Choose the statement that fits this exact GCSE Physics idea: calculate total resistance in series.",
       "options": [
@@ -7081,7 +7081,7 @@
       "patternId": "4.2.2:parallel_pd:applied_context",
       "conceptFamily": "parallel_pd",
       "contextType": "a results discussion",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "In a results discussion, which conclusion is correct for series circuits? Choose the statement that fits this exact GCSE Physics idea: describe potential difference in parallel.",
       "question": "In a results discussion, which conclusion is correct for series circuits? Choose the statement that fits this exact GCSE Physics idea: describe potential difference in parallel.",
       "options": [
@@ -7152,7 +7152,7 @@
       "patternId": "4.2.2:parallel_current:misconception_correction",
       "conceptFamily": "parallel_current",
       "contextType": "a classroom demonstration",
-      "skill": "Describe current in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "Which answer corrects a misconception about series circuits? Demand focus: describe current in parallel.",
       "question": "Which answer corrects a misconception about series circuits? Demand focus: describe current in parallel.",
       "options": [
@@ -7223,7 +7223,7 @@
       "patternId": "4.2.2:series_current:exam_decision",
       "conceptFamily": "series_current",
       "contextType": "a revision checkpoint",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Circuits practice",
       "stem": "The mark scheme is testing describe current in a series circuit. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
       "question": "The mark scheme is testing describe current in a series circuit. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
       "options": [
@@ -7294,7 +7294,7 @@
       "patternId": "4.2.2:series_resistance:representation_interpretation",
       "conceptFamily": "series_resistance",
       "contextType": "an exam-style data table",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Circuits practice",
       "stem": "A representation of series circuits is described in words. Which interpretation is correct? Keep the answer focused on series circuits: calculate total resistance in series.",
       "question": "A representation of series circuits is described in words. Which interpretation is correct? Keep the answer focused on series circuits: calculate total resistance in series.",
       "options": [
@@ -7365,7 +7365,7 @@
       "patternId": "4.2.2:parallel_pd:concept_discrimination",
       "conceptFamily": "parallel_pd",
       "contextType": "a required-practical notebook",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "A student is comparing similar ideas in series circuits. Which statement is correct? Keep the answer focused on series circuits: describe potential difference in parallel.",
       "question": "A student is comparing similar ideas in series circuits. Which statement is correct? Keep the answer focused on series circuits: describe potential difference in parallel.",
       "options": [
@@ -7436,7 +7436,7 @@
       "patternId": "4.2.2:parallel_current:applied_context",
       "conceptFamily": "parallel_current",
       "contextType": "a technician report",
-      "skill": "Describe current in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "A question set in a technician report tests series circuits. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
       "question": "A question set in a technician report tests series circuits. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
       "options": [
@@ -7507,7 +7507,7 @@
       "patternId": "4.2.2:series_current:data_interpretation",
       "conceptFamily": "series_current",
       "contextType": "a labelled diagram",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Circuits practice",
       "stem": "A small data set about series circuits is being interpreted. Which conclusion is valid? Keep the answer focused on series circuits: describe current in a series circuit.",
       "question": "A small data set about series circuits is being interpreted. Which conclusion is valid? Keep the answer focused on series circuits: describe current in a series circuit.",
       "options": [
@@ -7578,7 +7578,7 @@
       "patternId": "4.2.2:series_resistance:exam_decision",
       "conceptFamily": "series_resistance",
       "contextType": "a short calculation",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Circuits practice",
       "stem": "Which answer is the strongest GCSE Physics response for series circuits? Use the wording carefully: this is about calculate total resistance in series.",
       "question": "Which answer is the strongest GCSE Physics response for series circuits? Use the wording carefully: this is about calculate total resistance in series.",
       "options": [
@@ -7649,7 +7649,7 @@
       "patternId": "4.2.2:parallel_pd:direct_recall",
       "conceptFamily": "parallel_pd",
       "contextType": "a safety decision",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "Which answer matches this series circuits objective: Describe potential difference in parallel? Use the wording carefully: this is about describe potential difference in parallel.",
       "question": "Which answer matches this series circuits objective: Describe potential difference in parallel? Use the wording carefully: this is about describe potential difference in parallel.",
       "options": [
@@ -7720,7 +7720,7 @@
       "patternId": "4.2.2:parallel_current:concept_discrimination",
       "conceptFamily": "parallel_current",
       "contextType": "a graph-reading task",
-      "skill": "Describe current in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "Which option best separates the correct series circuits idea from a common mix-up? Keep the answer focused on series circuits: describe current in parallel.",
       "question": "Which option best separates the correct series circuits idea from a common mix-up? Keep the answer focused on series circuits: describe current in parallel.",
       "options": [
@@ -7791,7 +7791,7 @@
       "patternId": "4.2.2:series_current:misconception_correction",
       "conceptFamily": "series_current",
       "contextType": "a comparison question",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Circuits practice",
       "stem": "Which answer corrects a misconception about series circuits? Use the wording carefully: this is about describe current in a series circuit.",
       "question": "Which answer corrects a misconception about series circuits? Use the wording carefully: this is about describe current in a series circuit.",
       "options": [
@@ -7862,7 +7862,7 @@
       "patternId": "4.2.2:series_resistance:data_interpretation",
       "conceptFamily": "series_resistance",
       "contextType": "a method-choice question",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Circuits practice",
       "stem": "Which conclusion about series circuits is supported by the evidence? Check the clue before choosing: Calculate total resistance in series.",
       "question": "Which conclusion about series circuits is supported by the evidence? Check the clue before choosing: Calculate total resistance in series.",
       "options": [
@@ -7933,7 +7933,7 @@
       "patternId": "4.2.2:parallel_pd:representation_interpretation",
       "conceptFamily": "parallel_pd",
       "contextType": "a results discussion",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Series Circuits practice",
       "stem": "A representation of series circuits is described in words. Which interpretation is correct? Check the clue before choosing: Describe potential difference in parallel.",
       "question": "A representation of series circuits is described in words. Which interpretation is correct? Check the clue before choosing: Describe potential difference in parallel.",
       "options": [
@@ -8004,7 +8004,7 @@
       "patternId": "authored:aqa_electricity_current_rate_of_flow_001",
       "conceptFamily": "state_current_as_the_rate_of_flow_of_charge",
       "contextType": "exam_style",
-      "skill": "State current as the rate of flow of charge.",
+      "skill": "Current practice",
       "stem": "Which statement describes the current in a wire?",
       "question": "Which statement describes the current in a wire?",
       "options": [
@@ -8076,7 +8076,7 @@
       "patternId": "authored:aqa_electricity_current_ammeter_002",
       "conceptFamily": "choose_how_to_measure_current_in_a_circuit",
       "contextType": "exam_style",
-      "skill": "Choose how to measure current in a circuit.",
+      "skill": "Current practice",
       "stem": "A student wants to measure the current through a lamp. How should the ammeter be connected?",
       "question": "A student wants to measure the current through a lamp. How should the ammeter be connected?",
       "options": [
@@ -8148,7 +8148,7 @@
       "patternId": "authored:aqa_electricity_current_charge_calculation_003",
       "conceptFamily": "calculate_charge_using_current_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate charge using current and time.",
+      "skill": "Current practice",
       "stem": "A current of 0.40 A flows through a lamp for 30 s. How much charge passes through the lamp?",
       "question": "A current of 0.40 A flows through a lamp for 30 s. How much charge passes through the lamp?",
       "options": [
@@ -8220,7 +8220,7 @@
       "patternId": "authored:aqa_electricity_current_from_charge_004",
       "conceptFamily": "calculate_current_from_charge_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate current from charge and time.",
+      "skill": "Current practice",
       "stem": "A charge of 180 C passes a point in a circuit in 60 s. What is the current?",
       "question": "A charge of 180 C passes a point in a circuit in 60 s. What is the current?",
       "options": [
@@ -8292,7 +8292,7 @@
       "patternId": "authored:aqa_electricity_current_series_005",
       "conceptFamily": "describe_current_in_a_series_circuit",
       "contextType": "exam_style",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Current practice",
       "stem": "Two lamps are connected in series with a cell. Which statement about the current is correct?",
       "question": "Two lamps are connected in series with a cell. Which statement about the current is correct?",
       "options": [
@@ -8364,7 +8364,7 @@
       "patternId": "authored:aqa_electricity_pd_energy_per_charge_001",
       "conceptFamily": "describe_potential_difference_as_energy_transferred_per_unit_charge",
       "contextType": "exam_style",
-      "skill": "Describe potential difference as energy transferred per unit charge.",
+      "skill": "Potential Difference practice",
       "stem": "What is meant by the potential difference across a component?",
       "question": "What is meant by the potential difference across a component?",
       "options": [
@@ -8436,7 +8436,7 @@
       "patternId": "authored:aqa_electricity_pd_unit_002",
       "conceptFamily": "recall_the_unit_of_potential_difference",
       "contextType": "exam_style",
-      "skill": "Recall the unit of potential difference.",
+      "skill": "Potential Difference practice",
       "stem": "Which unit is used for potential difference?",
       "question": "Which unit is used for potential difference?",
       "options": [
@@ -8508,7 +8508,7 @@
       "patternId": "authored:aqa_electricity_pd_resistance_current_003",
       "conceptFamily": "calculate_potential_difference_from_current_and_resistance",
       "contextType": "exam_style",
-      "skill": "Calculate potential difference from current and resistance.",
+      "skill": "Potential Difference practice",
       "stem": "A resistor has a resistance of 8 ohms and a current of 0.50 A. What is the potential difference across it?",
       "question": "A resistor has a resistance of 8 ohms and a current of 0.50 A. What is the potential difference across it?",
       "options": [
@@ -8580,7 +8580,7 @@
       "patternId": "authored:aqa_electricity_pd_current_effect_004",
       "conceptFamily": "predict_how_changing_potential_difference_affects_current_for_a_fixed_resistor",
       "contextType": "exam_style",
-      "skill": "Predict how changing potential difference affects current for a fixed resistor.",
+      "skill": "Potential Difference practice",
       "stem": "A fixed resistor is connected to a supply. What happens to the current if the potential difference is increased?",
       "question": "A fixed resistor is connected to a supply. What happens to the current if the potential difference is increased?",
       "options": [
@@ -8652,7 +8652,7 @@
       "patternId": "authored:aqa_electricity_pd_voltmeter_005",
       "conceptFamily": "choose_how_to_measure_potential_difference_across_a_component",
       "contextType": "exam_style",
-      "skill": "Choose how to measure potential difference across a component.",
+      "skill": "Potential Difference practice",
       "stem": "A student wants to measure the potential difference across a lamp. How should the voltmeter be connected?",
       "question": "A student wants to measure the potential difference across a lamp. How should the voltmeter be connected?",
       "options": [
@@ -8724,7 +8724,7 @@
       "patternId": "authored:aqa_electricity_series_current_same_001",
       "conceptFamily": "recall_that_current_is_the_same_at_all_points_in_a_series_circuit",
       "contextType": "exam_style",
-      "skill": "Recall that current is the same at all points in a series circuit.",
+      "skill": "Series Current practice",
       "stem": "Three lamps are connected in series with a cell. An ammeter before the first lamp reads 0.40 A. What is the current after the third lamp?",
       "question": "Three lamps are connected in series with a cell. An ammeter before the first lamp reads 0.40 A. What is the current after the third lamp?",
       "options": [
@@ -8796,7 +8796,7 @@
       "patternId": "authored:aqa_electricity_series_current_not_used_up_002",
       "conceptFamily": "correct_the_misconception_that_current_is_used_up_in_a_series_circuit",
       "contextType": "exam_style",
-      "skill": "Correct the misconception that current is used up in a series circuit.",
+      "skill": "Series Current practice",
       "stem": "A student says, “The current is smaller after the first lamp because the lamp uses up some current.” What is wrong with this statement?",
       "question": "A student says, “The current is smaller after the first lamp because the lamp uses up some current.” What is wrong with this statement?",
       "options": [
@@ -8868,7 +8868,7 @@
       "patternId": "authored:aqa_electricity_series_current_single_path_003",
       "conceptFamily": "explain_series_current_using_the_single_path_model",
       "contextType": "exam_style",
-      "skill": "Explain series current using the single-path model.",
+      "skill": "Series Current practice",
       "stem": "Why is the current the same through all components in a series circuit?",
       "question": "Why is the current the same through all components in a series circuit?",
       "options": [
@@ -8940,7 +8940,7 @@
       "patternId": "authored:aqa_electricity_series_current_two_ammeter_004",
       "conceptFamily": "interpret_ammeter_readings_in_a_series_circuit",
       "contextType": "exam_style",
-      "skill": "Interpret ammeter readings in a series circuit.",
+      "skill": "Series Current practice",
       "stem": "A series circuit contains two resistors. Ammeter A reads 0.25 A before the first resistor. What should ammeter B read between the two resistors?",
       "question": "A series circuit contains two resistors. Ammeter A reads 0.25 A before the first resistor. What should ammeter B read between the two resistors?",
       "options": [
@@ -9012,7 +9012,7 @@
       "patternId": "authored:aqa_electricity_series_current_open_switch_005",
       "conceptFamily": "predict_current_in_an_open_series_circuit",
       "contextType": "exam_style",
-      "skill": "Predict current in an open series circuit.",
+      "skill": "Series Current practice",
       "stem": "A switch is opened in a series circuit. What happens to the current through every component?",
       "question": "A switch is opened in a series circuit. What happens to the current through every component?",
       "options": [
@@ -9084,7 +9084,7 @@
       "patternId": "4.2.2:series_resistance:direct_recall",
       "conceptFamily": "series_resistance",
       "contextType": "a labelled diagram",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Resistance practice",
       "stem": "Which statement is correct for series resistance? Choose the statement that fits this exact GCSE Physics idea: calculate total resistance in series.",
       "question": "Which statement is correct for series resistance? Choose the statement that fits this exact GCSE Physics idea: calculate total resistance in series.",
       "options": [
@@ -9155,7 +9155,7 @@
       "patternId": "4.2.2:series_current:concept_discrimination",
       "conceptFamily": "series_current",
       "contextType": "a short calculation",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Resistance practice",
       "stem": "A student is comparing similar ideas in series resistance. Which statement is correct? Use the wording carefully: this is about describe current in a series circuit.",
       "question": "A student is comparing similar ideas in series resistance. Which statement is correct? Use the wording carefully: this is about describe current in a series circuit.",
       "options": [
@@ -9226,7 +9226,7 @@
       "patternId": "4.2.2:parallel_resistance:misconception_correction",
       "conceptFamily": "parallel_resistance",
       "contextType": "a safety decision",
-      "skill": "Compare total resistance in parallel.",
+      "skill": "Series Resistance practice",
       "stem": "A revision note about series resistance contains an error. Which replacement is correct? Keep the answer focused on series resistance: compare total resistance in parallel.",
       "question": "A revision note about series resistance contains an error. Which replacement is correct? Keep the answer focused on series resistance: compare total resistance in parallel.",
       "options": [
@@ -9297,7 +9297,7 @@
       "patternId": "4.2.2:series_resistance:data_interpretation",
       "conceptFamily": "series_resistance",
       "contextType": "a graph-reading task",
-      "skill": "Calculate total resistance in series.",
+      "skill": "Series Resistance practice",
       "stem": "A small data set about series resistance is being interpreted. Which conclusion is valid? Use the wording carefully: this is about calculate total resistance in series.",
       "question": "A small data set about series resistance is being interpreted. Which conclusion is valid? Use the wording carefully: this is about calculate total resistance in series.",
       "options": [
@@ -9368,7 +9368,7 @@
       "patternId": "4.2.2:series_current:representation_interpretation",
       "conceptFamily": "series_current",
       "contextType": "a comparison question",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Series Resistance practice",
       "stem": "Which option correctly reads the series resistance model or diagram idea? Demand focus: describe current in a series circuit.",
       "question": "Which option correctly reads the series resistance model or diagram idea? Demand focus: describe current in a series circuit.",
       "options": [
@@ -9439,7 +9439,7 @@
       "patternId": "4.2.2:parallel_pd:direct_recall",
       "conceptFamily": "parallel_pd",
       "contextType": "a labelled diagram",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Parallel Circuits practice",
       "stem": "Which statement is correct for parallel circuits? Keep the answer focused on parallel circuits: describe potential difference in parallel.",
       "question": "Which statement is correct for parallel circuits? Keep the answer focused on parallel circuits: describe potential difference in parallel.",
       "options": [
@@ -9510,7 +9510,7 @@
       "patternId": "4.2.2:parallel_current:concept_discrimination",
       "conceptFamily": "parallel_current",
       "contextType": "a short calculation",
-      "skill": "Describe current in parallel.",
+      "skill": "Parallel Circuits practice",
       "stem": "A student is comparing similar ideas in parallel circuits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
       "question": "A student is comparing similar ideas in parallel circuits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe current in parallel.",
       "options": [
@@ -9581,7 +9581,7 @@
       "patternId": "4.2.2:parallel_resistance:misconception_correction",
       "conceptFamily": "parallel_resistance",
       "contextType": "a safety decision",
-      "skill": "Compare total resistance in parallel.",
+      "skill": "Parallel Circuits practice",
       "stem": "A revision note about parallel circuits contains an error. Which replacement is correct? Keep the answer focused on parallel circuits: compare total resistance in parallel.",
       "question": "A revision note about parallel circuits contains an error. Which replacement is correct? Keep the answer focused on parallel circuits: compare total resistance in parallel.",
       "options": [
@@ -9652,7 +9652,7 @@
       "patternId": "4.2.2:series_current:data_interpretation",
       "conceptFamily": "series_current",
       "contextType": "a graph-reading task",
-      "skill": "Describe current in a series circuit.",
+      "skill": "Parallel Circuits practice",
       "stem": "A small data set about parallel circuits is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
       "question": "A small data set about parallel circuits is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe current in a series circuit.",
       "options": [
@@ -9723,7 +9723,7 @@
       "patternId": "4.2.2:parallel_pd:representation_interpretation",
       "conceptFamily": "parallel_pd",
       "contextType": "a comparison question",
-      "skill": "Describe potential difference in parallel.",
+      "skill": "Parallel Circuits practice",
       "stem": "Which option correctly reads the parallel circuits model or diagram idea? Use the wording carefully: this is about describe potential difference in parallel.",
       "question": "Which option correctly reads the parallel circuits model or diagram idea? Use the wording carefully: this is about describe potential difference in parallel.",
       "options": [
@@ -9797,7 +9797,7 @@
       "patternId": "authored:aqa_electricity_power_definition_001",
       "conceptFamily": "state_power_as_the_rate_of_energy_transfer",
       "contextType": "exam_style",
-      "skill": "State power as the rate of energy transfer.",
+      "skill": "Power practice",
       "stem": "What does the power of an electrical appliance tell you?",
       "question": "What does the power of an electrical appliance tell you?",
       "options": [
@@ -9872,7 +9872,7 @@
       "patternId": "authored:aqa_electricity_power_vi_002",
       "conceptFamily": "calculate_electrical_power_using_potential_difference_and_current",
       "contextType": "exam_style",
-      "skill": "Calculate electrical power using potential difference and current.",
+      "skill": "Power practice",
       "stem": "A motor has a potential difference of 12 V across it and a current of 2.0 A through it. What is the power of the motor?",
       "question": "A motor has a potential difference of 12 V across it and a current of 2.0 A through it. What is the power of the motor?",
       "options": [
@@ -9947,7 +9947,7 @@
       "patternId": "authored:aqa_electricity_power_i2r_003",
       "conceptFamily": "calculate_power_using_current_and_resistance",
       "contextType": "exam_style",
-      "skill": "Calculate power using current and resistance.",
+      "skill": "Power practice",
       "stem": "A current of 3.0 A flows through a 4.0 ohm resistor. What power is transferred by the resistor?",
       "question": "A current of 3.0 A flows through a 4.0 ohm resistor. What power is transferred by the resistor?",
       "options": [
@@ -10022,7 +10022,7 @@
       "patternId": "authored:aqa_electricity_power_compare_appliances_004",
       "conceptFamily": "compare_power_when_current_changes_at_the_same_potential_difference",
       "contextType": "exam_style",
-      "skill": "Compare power when current changes at the same potential difference.",
+      "skill": "Power practice",
       "stem": "Two lamps are connected to the same potential difference. Lamp X has twice the current of lamp Y. Which statement is correct?",
       "question": "Two lamps are connected to the same potential difference. Lamp X has twice the current of lamp Y. Which statement is correct?",
       "options": [
@@ -10097,7 +10097,7 @@
       "patternId": "authored:aqa_electricity_power_energy_time_005",
       "conceptFamily": "calculate_energy_transferred_using_power_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred using power and time.",
+      "skill": "Power practice",
       "stem": "A 60 W lamp is switched on for 120 s. How much energy is transferred?",
       "question": "A 60 W lamp is switched on for 120 s. How much energy is transferred?",
       "options": [
@@ -10169,7 +10169,7 @@
       "patternId": "authored:aqa_electricity_energy_transfer_appliance_001",
       "conceptFamily": "describe_energy_transfers_in_a_domestic_electrical_appliance",
       "contextType": "exam_style",
-      "skill": "Describe energy transfers in a domestic electrical appliance.",
+      "skill": "Energy Transfer practice",
       "stem": "A hair dryer is connected to the mains supply. Which useful energy transfer is it designed to make?",
       "question": "A hair dryer is connected to the mains supply. Which useful energy transfer is it designed to make?",
       "options": [
@@ -10241,7 +10241,7 @@
       "patternId": "authored:aqa_electricity_energy_transfer_power_time_002",
       "conceptFamily": "calculate_energy_transferred_using_power_and_time",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred using power and time.",
+      "skill": "Energy Transfer practice",
       "stem": "A 900 W microwave is used for 120 s. How much energy is transferred?",
       "question": "A 900 W microwave is used for 120 s. How much energy is transferred?",
       "options": [
@@ -10313,7 +10313,7 @@
       "patternId": "authored:aqa_electricity_energy_transfer_charge_pd_003",
       "conceptFamily": "calculate_energy_transferred_using_charge_and_potential_difference",
       "contextType": "exam_style",
-      "skill": "Calculate energy transferred using charge and potential difference.",
+      "skill": "Energy Transfer practice",
       "stem": "A charge of 40 C passes through a motor with a potential difference of 6.0 V across it. How much energy is transferred?",
       "question": "A charge of 40 C passes through a motor with a potential difference of 6.0 V across it. How much energy is transferred?",
       "options": [
@@ -10385,7 +10385,7 @@
       "patternId": "authored:aqa_electricity_energy_transfer_duration_004",
       "conceptFamily": "compare_energy_transferred_when_power_is_constant_and_time_changes",
       "contextType": "exam_style",
-      "skill": "Compare energy transferred when power is constant and time changes.",
+      "skill": "Energy Transfer practice",
       "stem": "Two identical heaters have the same power. Heater X is switched on for twice as long as heater Y. Which statement is correct?",
       "question": "Two identical heaters have the same power. Heater X is switched on for twice as long as heater Y. Which statement is correct?",
       "options": [
@@ -10457,7 +10457,7 @@
       "patternId": "authored:aqa_electricity_energy_transfer_power_rating_005",
       "conceptFamily": "relate_appliance_power_rating_to_energy_transferred_over_the_same_time",
       "contextType": "exam_style",
-      "skill": "Relate appliance power rating to energy transferred over the same time.",
+      "skill": "Energy Transfer practice",
       "stem": "A 2.0 kW kettle and a 1.0 kW heater are each used for 5 minutes. Which appliance transfers more energy?",
       "question": "A 2.0 kW kettle and a 1.0 kW heater are each used for 5 minutes. Which appliance transfers more energy?",
       "options": [

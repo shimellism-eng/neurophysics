@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "energy",
-  "generatedAt": "2026-05-02T05:26:55.762Z",
+  "generatedAt": "2026-05-02T07:16:14.002Z",
   "questions": [
     {
       "id": "aqa_4_1_2_2_efficiency_efficiency_ratio_direct_recall_001",
@@ -42,7 +42,7 @@
       "patternId": "4.1.2.2:efficiency_ratio:direct_recall",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a safety decision",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "Which statement is correct for efficiency? Demand focus: calculate efficiency from useful and total energy.",
       "question": "Which statement is correct for efficiency? Demand focus: calculate efficiency from useful and total energy.",
       "options": [
@@ -116,7 +116,7 @@
       "patternId": "4.1.2.2:sankey_width:concept_discrimination",
       "conceptFamily": "sankey_width",
       "contextType": "a graph-reading task",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "A student is comparing similar ideas in efficiency. Which statement is correct? Use the wording carefully: this is about interpret a Sankey diagram.",
       "question": "A student is comparing similar ideas in efficiency. Which statement is correct? Use the wording carefully: this is about interpret a Sankey diagram.",
       "options": [
@@ -190,7 +190,7 @@
       "patternId": "4.1.2.2:improve_efficiency:misconception_correction",
       "conceptFamily": "improve_efficiency",
       "contextType": "a comparison question",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "A revision note about efficiency contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "question": "A revision note about efficiency contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "options": [
@@ -264,7 +264,7 @@
       "patternId": "4.1.2.2:percentage_limit:data_interpretation",
       "conceptFamily": "percentage_limit",
       "contextType": "a method-choice question",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "A small data set about efficiency is being interpreted. Which conclusion is valid? Keep the answer focused on efficiency: recognise the limit of efficiency.",
       "question": "A small data set about efficiency is being interpreted. Which conclusion is valid? Keep the answer focused on efficiency: recognise the limit of efficiency.",
       "options": [
@@ -338,7 +338,7 @@
       "patternId": "4.1.2.2:compare_devices:representation_interpretation",
       "conceptFamily": "compare_devices",
       "contextType": "a results discussion",
-      "skill": "Compare efficiencies.",
+      "skill": "Efficiency practice",
       "stem": "Which option correctly reads the efficiency model or diagram idea? Keep the answer focused on efficiency: compare efficiencies.",
       "question": "Which option correctly reads the efficiency model or diagram idea? Keep the answer focused on efficiency: compare efficiencies.",
       "options": [
@@ -412,7 +412,7 @@
       "patternId": "4.1.2.2:efficiency_ratio:direct_recall",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a classroom demonstration",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "Which answer matches this efficiency objective: Calculate efficiency from useful and total energy? Demand focus: calculate efficiency from useful and total energy.",
       "question": "Which answer matches this efficiency objective: Calculate efficiency from useful and total energy? Demand focus: calculate efficiency from useful and total energy.",
       "options": [
@@ -486,7 +486,7 @@
       "patternId": "4.1.2.2:sankey_width:applied_context",
       "conceptFamily": "sankey_width",
       "contextType": "a revision checkpoint",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "In a revision checkpoint, which conclusion is correct for efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
       "question": "In a revision checkpoint, which conclusion is correct for efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
       "options": [
@@ -560,7 +560,7 @@
       "patternId": "4.1.2.2:improve_efficiency:misconception_correction",
       "conceptFamily": "improve_efficiency",
       "contextType": "an exam-style data table",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "Which answer corrects a misconception about efficiency? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "question": "Which answer corrects a misconception about efficiency? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "options": [
@@ -634,7 +634,7 @@
       "patternId": "4.1.2.2:percentage_limit:exam_decision",
       "conceptFamily": "percentage_limit",
       "contextType": "a required-practical notebook",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "The mark scheme is testing recognise the limit of efficiency. Which answer matches that point? Keep the answer focused on efficiency: recognise the limit of efficiency.",
       "question": "The mark scheme is testing recognise the limit of efficiency. Which answer matches that point? Keep the answer focused on efficiency: recognise the limit of efficiency.",
       "options": [
@@ -708,7 +708,7 @@
       "patternId": "4.1.2.2:compare_devices:representation_interpretation",
       "conceptFamily": "compare_devices",
       "contextType": "a technician report",
-      "skill": "Compare efficiencies.",
+      "skill": "Efficiency practice",
       "stem": "A representation of efficiency is described in words. Which interpretation is correct? Keep the answer focused on efficiency: compare efficiencies.",
       "question": "A representation of efficiency is described in words. Which interpretation is correct? Keep the answer focused on efficiency: compare efficiencies.",
       "options": [
@@ -782,7 +782,7 @@
       "patternId": "4.1.2.2:efficiency_ratio:concept_discrimination",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a labelled diagram",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "A student is comparing similar ideas in efficiency. Which statement is correct? Demand focus: calculate efficiency from useful and total energy.",
       "question": "A student is comparing similar ideas in efficiency. Which statement is correct? Demand focus: calculate efficiency from useful and total energy.",
       "options": [
@@ -856,7 +856,7 @@
       "patternId": "4.1.2.2:sankey_width:applied_context",
       "conceptFamily": "sankey_width",
       "contextType": "a short calculation",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "A question set in a short calculation tests efficiency. Which answer applies the idea correctly? Use the wording carefully: this is about interpret a Sankey diagram.",
       "question": "A question set in a short calculation tests efficiency. Which answer applies the idea correctly? Use the wording carefully: this is about interpret a Sankey diagram.",
       "options": [
@@ -930,7 +930,7 @@
       "patternId": "4.1.2.2:improve_efficiency:data_interpretation",
       "conceptFamily": "improve_efficiency",
       "contextType": "a safety decision",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "A small data set about efficiency is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "question": "A small data set about efficiency is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "options": [
@@ -1004,7 +1004,7 @@
       "patternId": "4.1.2.2:percentage_limit:exam_decision",
       "conceptFamily": "percentage_limit",
       "contextType": "a graph-reading task",
-      "skill": "Recognise the limit of efficiency.",
+      "skill": "Efficiency practice",
       "stem": "Which answer is the strongest GCSE Physics response for efficiency? Keep the answer focused on efficiency: recognise the limit of efficiency.",
       "question": "Which answer is the strongest GCSE Physics response for efficiency? Keep the answer focused on efficiency: recognise the limit of efficiency.",
       "options": [
@@ -1078,7 +1078,7 @@
       "patternId": "4.1.2.2:compare_devices:direct_recall",
       "conceptFamily": "compare_devices",
       "contextType": "a comparison question",
-      "skill": "Compare efficiencies.",
+      "skill": "Efficiency practice",
       "stem": "Which answer matches this efficiency objective: Compare efficiencies? Keep the answer focused on efficiency: compare efficiencies.",
       "question": "Which answer matches this efficiency objective: Compare efficiencies? Keep the answer focused on efficiency: compare efficiencies.",
       "options": [
@@ -1152,7 +1152,7 @@
       "patternId": "4.1.2.2:efficiency_ratio:concept_discrimination",
       "conceptFamily": "efficiency_ratio",
       "contextType": "a method-choice question",
-      "skill": "Calculate efficiency from useful and total energy.",
+      "skill": "Efficiency practice",
       "stem": "Which option best separates the correct efficiency idea from a common mix-up? Demand focus: calculate efficiency from useful and total energy.",
       "question": "Which option best separates the correct efficiency idea from a common mix-up? Demand focus: calculate efficiency from useful and total energy.",
       "options": [
@@ -1226,7 +1226,7 @@
       "patternId": "4.1.2.2:sankey_width:misconception_correction",
       "conceptFamily": "sankey_width",
       "contextType": "a results discussion",
-      "skill": "Interpret a Sankey diagram.",
+      "skill": "Efficiency practice",
       "stem": "Which answer corrects a misconception about efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
       "question": "Which answer corrects a misconception about efficiency? Use the wording carefully: this is about interpret a Sankey diagram.",
       "options": [
@@ -1300,7 +1300,7 @@
       "patternId": "4.1.2.2:improve_efficiency:data_interpretation",
       "conceptFamily": "improve_efficiency",
       "contextType": "a classroom demonstration",
-      "skill": "Explain how efficiency can improve.",
+      "skill": "Efficiency practice",
       "stem": "Which conclusion about efficiency is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "question": "Which conclusion about efficiency is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: explain how efficiency can improve.",
       "options": [
@@ -1371,7 +1371,7 @@
       "patternId": "4.1.1.1:store_identification:direct_recall",
       "conceptFamily": "store_identification",
       "contextType": "a safety decision",
-      "skill": "Identify energy stores.",
+      "skill": "Energy Stores practice",
       "stem": "Which statement is correct for energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "question": "Which statement is correct for energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "options": [
@@ -1442,7 +1442,7 @@
       "patternId": "4.1.1.1:closed_system:concept_discrimination",
       "conceptFamily": "closed_system",
       "contextType": "a graph-reading task",
-      "skill": "Apply conservation of energy.",
+      "skill": "Energy Stores practice",
       "stem": "A student is comparing similar ideas in energy stores. Which statement is correct? Keep the answer focused on energy stores: apply conservation of energy.",
       "question": "A student is comparing similar ideas in energy stores. Which statement is correct? Keep the answer focused on energy stores: apply conservation of energy.",
       "options": [
@@ -1513,7 +1513,7 @@
       "patternId": "4.1.1.1:transfer_pathways:misconception_correction",
       "conceptFamily": "transfer_pathways",
       "contextType": "a comparison question",
-      "skill": "Identify energy transfer pathways.",
+      "skill": "Energy Stores practice",
       "stem": "A revision note about energy stores contains an error. Which replacement is correct? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "question": "A revision note about energy stores contains an error. Which replacement is correct? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "options": [
@@ -1584,7 +1584,7 @@
       "patternId": "4.1.1.1:useful_wasted:data_interpretation",
       "conceptFamily": "useful_wasted",
       "contextType": "a method-choice question",
-      "skill": "Distinguish useful and wasted transfers.",
+      "skill": "Energy Stores practice",
       "stem": "A small data set about energy stores is being interpreted. Which conclusion is valid? Demand focus: distinguish useful and wasted transfers.",
       "question": "A small data set about energy stores is being interpreted. Which conclusion is valid? Demand focus: distinguish useful and wasted transfers.",
       "options": [
@@ -1655,7 +1655,7 @@
       "patternId": "4.1.1.1:dissipation:representation_interpretation",
       "conceptFamily": "dissipation",
       "contextType": "a results discussion",
-      "skill": "Explain dissipation.",
+      "skill": "Energy Stores practice",
       "stem": "Which option correctly reads the energy stores model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
       "question": "Which option correctly reads the energy stores model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
       "options": [
@@ -1726,7 +1726,7 @@
       "patternId": "4.1.1.1:store_identification:direct_recall",
       "conceptFamily": "store_identification",
       "contextType": "a classroom demonstration",
-      "skill": "Identify energy stores.",
+      "skill": "Energy Stores practice",
       "stem": "Which answer matches this energy stores objective: Identify energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "question": "Which answer matches this energy stores objective: Identify energy stores? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "options": [
@@ -1797,7 +1797,7 @@
       "patternId": "4.1.1.1:closed_system:applied_context",
       "conceptFamily": "closed_system",
       "contextType": "a revision checkpoint",
-      "skill": "Apply conservation of energy.",
+      "skill": "Energy Stores practice",
       "stem": "In a revision checkpoint, which conclusion is correct for energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
       "question": "In a revision checkpoint, which conclusion is correct for energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
       "options": [
@@ -1868,7 +1868,7 @@
       "patternId": "4.1.1.1:transfer_pathways:misconception_correction",
       "conceptFamily": "transfer_pathways",
       "contextType": "an exam-style data table",
-      "skill": "Identify energy transfer pathways.",
+      "skill": "Energy Stores practice",
       "stem": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "question": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "options": [
@@ -1939,7 +1939,7 @@
       "patternId": "4.1.1.1:useful_wasted:exam_decision",
       "conceptFamily": "useful_wasted",
       "contextType": "a required-practical notebook",
-      "skill": "Distinguish useful and wasted transfers.",
+      "skill": "Energy Stores practice",
       "stem": "The mark scheme is testing distinguish useful and wasted transfers. Which answer matches that point? Demand focus: distinguish useful and wasted transfers.",
       "question": "The mark scheme is testing distinguish useful and wasted transfers. Which answer matches that point? Demand focus: distinguish useful and wasted transfers.",
       "options": [
@@ -2010,7 +2010,7 @@
       "patternId": "4.1.1.1:dissipation:representation_interpretation",
       "conceptFamily": "dissipation",
       "contextType": "a technician report",
-      "skill": "Explain dissipation.",
+      "skill": "Energy Stores practice",
       "stem": "A representation of energy stores is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
       "question": "A representation of energy stores is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
       "options": [
@@ -2081,7 +2081,7 @@
       "patternId": "4.1.1.1:store_identification:concept_discrimination",
       "conceptFamily": "store_identification",
       "contextType": "a labelled diagram",
-      "skill": "Identify energy stores.",
+      "skill": "Energy Stores practice",
       "stem": "A student is comparing similar ideas in energy stores. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "question": "A student is comparing similar ideas in energy stores. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "options": [
@@ -2152,7 +2152,7 @@
       "patternId": "4.1.1.1:closed_system:applied_context",
       "conceptFamily": "closed_system",
       "contextType": "a short calculation",
-      "skill": "Apply conservation of energy.",
+      "skill": "Energy Stores practice",
       "stem": "A question set in a short calculation tests energy stores. Which answer applies the idea correctly? Keep the answer focused on energy stores: apply conservation of energy.",
       "question": "A question set in a short calculation tests energy stores. Which answer applies the idea correctly? Keep the answer focused on energy stores: apply conservation of energy.",
       "options": [
@@ -2223,7 +2223,7 @@
       "patternId": "4.1.1.1:transfer_pathways:data_interpretation",
       "conceptFamily": "transfer_pathways",
       "contextType": "a safety decision",
-      "skill": "Identify energy transfer pathways.",
+      "skill": "Energy Stores practice",
       "stem": "A small data set about energy stores is being interpreted. Which conclusion is valid? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "question": "A small data set about energy stores is being interpreted. Which conclusion is valid? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "options": [
@@ -2294,7 +2294,7 @@
       "patternId": "4.1.1.1:useful_wasted:exam_decision",
       "conceptFamily": "useful_wasted",
       "contextType": "a graph-reading task",
-      "skill": "Distinguish useful and wasted transfers.",
+      "skill": "Energy Stores practice",
       "stem": "Which answer is the strongest GCSE Physics response for energy stores? Demand focus: distinguish useful and wasted transfers.",
       "question": "Which answer is the strongest GCSE Physics response for energy stores? Demand focus: distinguish useful and wasted transfers.",
       "options": [
@@ -2365,7 +2365,7 @@
       "patternId": "4.1.1.1:dissipation:direct_recall",
       "conceptFamily": "dissipation",
       "contextType": "a comparison question",
-      "skill": "Explain dissipation.",
+      "skill": "Energy Stores practice",
       "stem": "Which answer matches this energy stores objective: Explain dissipation? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
       "question": "Which answer matches this energy stores objective: Explain dissipation? Choose the statement that fits this exact GCSE Physics idea: explain dissipation.",
       "options": [
@@ -2436,7 +2436,7 @@
       "patternId": "4.1.1.1:store_identification:concept_discrimination",
       "conceptFamily": "store_identification",
       "contextType": "a method-choice question",
-      "skill": "Identify energy stores.",
+      "skill": "Energy Stores practice",
       "stem": "Which option best separates the correct energy stores idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "question": "Which option best separates the correct energy stores idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: identify energy stores.",
       "options": [
@@ -2507,7 +2507,7 @@
       "patternId": "4.1.1.1:closed_system:misconception_correction",
       "conceptFamily": "closed_system",
       "contextType": "a results discussion",
-      "skill": "Apply conservation of energy.",
+      "skill": "Energy Stores practice",
       "stem": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
       "question": "Which answer corrects a misconception about energy stores? Keep the answer focused on energy stores: apply conservation of energy.",
       "options": [
@@ -2578,7 +2578,7 @@
       "patternId": "4.1.1.1:transfer_pathways:data_interpretation",
       "conceptFamily": "transfer_pathways",
       "contextType": "a classroom demonstration",
-      "skill": "Identify energy transfer pathways.",
+      "skill": "Energy Stores practice",
       "stem": "Which conclusion about energy stores is supported by the evidence? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "question": "Which conclusion about energy stores is supported by the evidence? Keep the answer focused on energy stores: identify energy transfer pathways.",
       "options": [
@@ -2649,7 +2649,7 @@
       "patternId": "4.1.1.1:useful_wasted:representation_interpretation",
       "conceptFamily": "useful_wasted",
       "contextType": "a revision checkpoint",
-      "skill": "Distinguish useful and wasted transfers.",
+      "skill": "Energy Stores practice",
       "stem": "A representation of energy stores is described in words. Which interpretation is correct? Demand focus: distinguish useful and wasted transfers.",
       "question": "A representation of energy stores is described in words. Which interpretation is correct? Demand focus: distinguish useful and wasted transfers.",
       "options": [
@@ -2720,7 +2720,7 @@
       "patternId": "4.1.2.1:conduction:direct_recall",
       "conceptFamily": "conduction",
       "contextType": "a safety decision",
-      "skill": "Explain conduction in solids.",
+      "skill": "Insulation practice",
       "stem": "Which statement is correct for insulation? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "question": "Which statement is correct for insulation? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "options": [
@@ -2791,7 +2791,7 @@
       "patternId": "4.1.2.1:convection:concept_discrimination",
       "conceptFamily": "convection",
       "contextType": "a graph-reading task",
-      "skill": "Explain convection in fluids.",
+      "skill": "Insulation practice",
       "stem": "A student is comparing similar ideas in insulation. Which statement is correct? Demand focus: explain convection in fluids.",
       "question": "A student is comparing similar ideas in insulation. Which statement is correct? Demand focus: explain convection in fluids.",
       "options": [
@@ -2862,7 +2862,7 @@
       "patternId": "4.1.2.1:radiation:misconception_correction",
       "conceptFamily": "radiation",
       "contextType": "a comparison question",
-      "skill": "Describe thermal radiation.",
+      "skill": "Insulation practice",
       "stem": "A revision note about insulation contains an error. Which replacement is correct? Demand focus: describe thermal radiation.",
       "question": "A revision note about insulation contains an error. Which replacement is correct? Demand focus: describe thermal radiation.",
       "options": [
@@ -2933,7 +2933,7 @@
       "patternId": "4.1.2.1:insulation:data_interpretation",
       "conceptFamily": "insulation",
       "contextType": "a method-choice question",
-      "skill": "Explain how insulation reduces transfer.",
+      "skill": "Insulation practice",
       "stem": "A small data set about insulation is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "question": "A small data set about insulation is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "options": [
@@ -3004,7 +3004,7 @@
       "patternId": "4.1.2.1:surface_colour:representation_interpretation",
       "conceptFamily": "surface_colour",
       "contextType": "a results discussion",
-      "skill": "Compare emission and absorption.",
+      "skill": "Insulation practice",
       "stem": "Which option correctly reads the insulation model or diagram idea? Use the wording carefully: this is about compare emission and absorption.",
       "question": "Which option correctly reads the insulation model or diagram idea? Use the wording carefully: this is about compare emission and absorption.",
       "options": [
@@ -3075,7 +3075,7 @@
       "patternId": "4.1.2.1:conduction:direct_recall",
       "conceptFamily": "conduction",
       "contextType": "a classroom demonstration",
-      "skill": "Explain conduction in solids.",
+      "skill": "Insulation practice",
       "stem": "Which answer matches this insulation objective: Explain conduction in solids? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "question": "Which answer matches this insulation objective: Explain conduction in solids? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "options": [
@@ -3146,7 +3146,7 @@
       "patternId": "4.1.2.1:convection:applied_context",
       "conceptFamily": "convection",
       "contextType": "a revision checkpoint",
-      "skill": "Explain convection in fluids.",
+      "skill": "Insulation practice",
       "stem": "In a revision checkpoint, which conclusion is correct for insulation? Demand focus: explain convection in fluids.",
       "question": "In a revision checkpoint, which conclusion is correct for insulation? Demand focus: explain convection in fluids.",
       "options": [
@@ -3217,7 +3217,7 @@
       "patternId": "4.1.2.1:radiation:misconception_correction",
       "conceptFamily": "radiation",
       "contextType": "an exam-style data table",
-      "skill": "Describe thermal radiation.",
+      "skill": "Insulation practice",
       "stem": "Which answer corrects a misconception about insulation? Demand focus: describe thermal radiation.",
       "question": "Which answer corrects a misconception about insulation? Demand focus: describe thermal radiation.",
       "options": [
@@ -3288,7 +3288,7 @@
       "patternId": "4.1.2.1:insulation:exam_decision",
       "conceptFamily": "insulation",
       "contextType": "a required-practical notebook",
-      "skill": "Explain how insulation reduces transfer.",
+      "skill": "Insulation practice",
       "stem": "The mark scheme is testing explain how insulation reduces transfer. Which answer matches that point? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "question": "The mark scheme is testing explain how insulation reduces transfer. Which answer matches that point? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "options": [
@@ -3359,7 +3359,7 @@
       "patternId": "4.1.2.1:surface_colour:representation_interpretation",
       "conceptFamily": "surface_colour",
       "contextType": "a technician report",
-      "skill": "Compare emission and absorption.",
+      "skill": "Insulation practice",
       "stem": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about compare emission and absorption.",
       "question": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about compare emission and absorption.",
       "options": [
@@ -3430,7 +3430,7 @@
       "patternId": "4.1.2.1:conduction:concept_discrimination",
       "conceptFamily": "conduction",
       "contextType": "a labelled diagram",
-      "skill": "Explain conduction in solids.",
+      "skill": "Insulation practice",
       "stem": "A student is comparing similar ideas in insulation. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "question": "A student is comparing similar ideas in insulation. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "options": [
@@ -3501,7 +3501,7 @@
       "patternId": "4.1.2.1:convection:applied_context",
       "conceptFamily": "convection",
       "contextType": "a short calculation",
-      "skill": "Explain convection in fluids.",
+      "skill": "Insulation practice",
       "stem": "A question set in a short calculation tests insulation. Which answer applies the idea correctly? Demand focus: explain convection in fluids.",
       "question": "A question set in a short calculation tests insulation. Which answer applies the idea correctly? Demand focus: explain convection in fluids.",
       "options": [
@@ -3572,7 +3572,7 @@
       "patternId": "4.1.2.1:radiation:data_interpretation",
       "conceptFamily": "radiation",
       "contextType": "a safety decision",
-      "skill": "Describe thermal radiation.",
+      "skill": "Insulation practice",
       "stem": "A small data set about insulation is being interpreted. Which conclusion is valid? Demand focus: describe thermal radiation.",
       "question": "A small data set about insulation is being interpreted. Which conclusion is valid? Demand focus: describe thermal radiation.",
       "options": [
@@ -3643,7 +3643,7 @@
       "patternId": "4.1.2.1:insulation:exam_decision",
       "conceptFamily": "insulation",
       "contextType": "a graph-reading task",
-      "skill": "Explain how insulation reduces transfer.",
+      "skill": "Insulation practice",
       "stem": "Which answer is the strongest GCSE Physics response for insulation? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "question": "Which answer is the strongest GCSE Physics response for insulation? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "options": [
@@ -3714,7 +3714,7 @@
       "patternId": "4.1.2.1:surface_colour:direct_recall",
       "conceptFamily": "surface_colour",
       "contextType": "a comparison question",
-      "skill": "Compare emission and absorption.",
+      "skill": "Insulation practice",
       "stem": "Which answer matches this insulation objective: Compare emission and absorption? Use the wording carefully: this is about compare emission and absorption.",
       "question": "Which answer matches this insulation objective: Compare emission and absorption? Use the wording carefully: this is about compare emission and absorption.",
       "options": [
@@ -3785,7 +3785,7 @@
       "patternId": "4.1.2.1:conduction:concept_discrimination",
       "conceptFamily": "conduction",
       "contextType": "a method-choice question",
-      "skill": "Explain conduction in solids.",
+      "skill": "Insulation practice",
       "stem": "Which option best separates the correct insulation idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "question": "Which option best separates the correct insulation idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain conduction in solids.",
       "options": [
@@ -3856,7 +3856,7 @@
       "patternId": "4.1.2.1:convection:misconception_correction",
       "conceptFamily": "convection",
       "contextType": "a results discussion",
-      "skill": "Explain convection in fluids.",
+      "skill": "Insulation practice",
       "stem": "Which answer corrects a misconception about insulation? Demand focus: explain convection in fluids.",
       "question": "Which answer corrects a misconception about insulation? Demand focus: explain convection in fluids.",
       "options": [
@@ -3927,7 +3927,7 @@
       "patternId": "4.1.2.1:radiation:data_interpretation",
       "conceptFamily": "radiation",
       "contextType": "a classroom demonstration",
-      "skill": "Describe thermal radiation.",
+      "skill": "Insulation practice",
       "stem": "Which conclusion about insulation is supported by the evidence? Demand focus: describe thermal radiation.",
       "question": "Which conclusion about insulation is supported by the evidence? Demand focus: describe thermal radiation.",
       "options": [
@@ -3998,7 +3998,7 @@
       "patternId": "4.1.2.1:insulation:representation_interpretation",
       "conceptFamily": "insulation",
       "contextType": "a revision checkpoint",
-      "skill": "Explain how insulation reduces transfer.",
+      "skill": "Insulation practice",
       "stem": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "question": "A representation of insulation is described in words. Which interpretation is correct? Use the wording carefully: this is about explain how insulation reduces transfer.",
       "options": [
@@ -4072,7 +4072,7 @@
       "patternId": "4.1.1.2:kinetic_energy:direct_recall",
       "conceptFamily": "kinetic_energy",
       "contextType": "a safety decision",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which statement is correct for kinetic energy? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "question": "Which statement is correct for kinetic energy? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "options": [
@@ -4146,7 +4146,7 @@
       "patternId": "4.1.1.2:gpe:concept_discrimination",
       "conceptFamily": "gpe",
       "contextType": "a graph-reading task",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "question": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "options": [
@@ -4220,7 +4220,7 @@
       "patternId": "4.1.1.2:elastic_energy:misconception_correction",
       "conceptFamily": "elastic_energy",
       "contextType": "a comparison question",
-      "skill": "Use elastic potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "A revision note about kinetic energy contains an error. Which replacement is correct? Demand focus: use elastic potential energy.",
       "question": "A revision note about kinetic energy contains an error. Which replacement is correct? Demand focus: use elastic potential energy.",
       "options": [
@@ -4294,7 +4294,7 @@
       "patternId": "4.1.1.2:specific_heat:data_interpretation",
       "conceptFamily": "specific_heat",
       "contextType": "a method-choice question",
-      "skill": "Use specific heat capacity.",
+      "skill": "Kinetic Energy practice",
       "stem": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
       "question": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use specific heat capacity.",
       "options": [
@@ -4368,7 +4368,7 @@
       "patternId": "4.1.1.2:unit_check:representation_interpretation",
       "conceptFamily": "unit_check",
       "contextType": "a results discussion",
-      "skill": "Check energy calculation units.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which option correctly reads the kinetic energy model or diagram idea? Keep the answer focused on kinetic energy: check energy calculation units.",
       "question": "Which option correctly reads the kinetic energy model or diagram idea? Keep the answer focused on kinetic energy: check energy calculation units.",
       "options": [
@@ -4442,7 +4442,7 @@
       "patternId": "4.1.1.2:kinetic_energy:direct_recall",
       "conceptFamily": "kinetic_energy",
       "contextType": "a classroom demonstration",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which answer matches this kinetic energy objective: Use the kinetic energy equation? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "question": "Which answer matches this kinetic energy objective: Use the kinetic energy equation? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "options": [
@@ -4516,7 +4516,7 @@
       "patternId": "4.1.1.2:gpe:applied_context",
       "conceptFamily": "gpe",
       "contextType": "a revision checkpoint",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "In a revision checkpoint, which conclusion is correct for kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "question": "In a revision checkpoint, which conclusion is correct for kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "options": [
@@ -4590,7 +4590,7 @@
       "patternId": "4.1.1.2:elastic_energy:misconception_correction",
       "conceptFamily": "elastic_energy",
       "contextType": "an exam-style data table",
-      "skill": "Use elastic potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which answer corrects a misconception about kinetic energy? Demand focus: use elastic potential energy.",
       "question": "Which answer corrects a misconception about kinetic energy? Demand focus: use elastic potential energy.",
       "options": [
@@ -4664,7 +4664,7 @@
       "patternId": "4.1.1.2:specific_heat:exam_decision",
       "conceptFamily": "specific_heat",
       "contextType": "a required-practical notebook",
-      "skill": "Use specific heat capacity.",
+      "skill": "Kinetic Energy practice",
       "stem": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
       "question": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Demand focus: use specific heat capacity.",
       "options": [
@@ -4738,7 +4738,7 @@
       "patternId": "4.1.1.2:unit_check:representation_interpretation",
       "conceptFamily": "unit_check",
       "contextType": "a technician report",
-      "skill": "Check energy calculation units.",
+      "skill": "Kinetic Energy practice",
       "stem": "A representation of kinetic energy is described in words. Which interpretation is correct? Keep the answer focused on kinetic energy: check energy calculation units.",
       "question": "A representation of kinetic energy is described in words. Which interpretation is correct? Keep the answer focused on kinetic energy: check energy calculation units.",
       "options": [
@@ -4812,7 +4812,7 @@
       "patternId": "4.1.1.2:kinetic_energy:concept_discrimination",
       "conceptFamily": "kinetic_energy",
       "contextType": "a labelled diagram",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Kinetic Energy practice",
       "stem": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "question": "A student is comparing similar ideas in kinetic energy. Which statement is correct? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "options": [
@@ -4886,7 +4886,7 @@
       "patternId": "4.1.1.2:gpe:applied_context",
       "conceptFamily": "gpe",
       "contextType": "a short calculation",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "A question set in a short calculation tests kinetic energy. Which answer applies the idea correctly? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "question": "A question set in a short calculation tests kinetic energy. Which answer applies the idea correctly? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "options": [
@@ -4960,7 +4960,7 @@
       "patternId": "4.1.1.2:elastic_energy:data_interpretation",
       "conceptFamily": "elastic_energy",
       "contextType": "a safety decision",
-      "skill": "Use elastic potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use elastic potential energy.",
       "question": "A small data set about kinetic energy is being interpreted. Which conclusion is valid? Demand focus: use elastic potential energy.",
       "options": [
@@ -5034,7 +5034,7 @@
       "patternId": "4.1.1.2:specific_heat:exam_decision",
       "conceptFamily": "specific_heat",
       "contextType": "a graph-reading task",
-      "skill": "Use specific heat capacity.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which answer is the strongest GCSE Physics response for kinetic energy? Demand focus: use specific heat capacity.",
       "question": "Which answer is the strongest GCSE Physics response for kinetic energy? Demand focus: use specific heat capacity.",
       "options": [
@@ -5108,7 +5108,7 @@
       "patternId": "4.1.1.2:unit_check:direct_recall",
       "conceptFamily": "unit_check",
       "contextType": "a comparison question",
-      "skill": "Check energy calculation units.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which answer matches this kinetic energy objective: Check energy calculation units? Keep the answer focused on kinetic energy: check energy calculation units.",
       "question": "Which answer matches this kinetic energy objective: Check energy calculation units? Keep the answer focused on kinetic energy: check energy calculation units.",
       "options": [
@@ -5182,7 +5182,7 @@
       "patternId": "4.1.1.2:kinetic_energy:concept_discrimination",
       "conceptFamily": "kinetic_energy",
       "contextType": "a method-choice question",
-      "skill": "Use the kinetic energy equation.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which option best separates the correct kinetic energy idea from a common mix-up? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "question": "Which option best separates the correct kinetic energy idea from a common mix-up? Keep the answer focused on kinetic energy: use the kinetic energy equation.",
       "options": [
@@ -5256,7 +5256,7 @@
       "patternId": "4.1.1.2:gpe:misconception_correction",
       "conceptFamily": "gpe",
       "contextType": "a results discussion",
-      "skill": "Use gravitational potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which answer corrects a misconception about kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "question": "Which answer corrects a misconception about kinetic energy? Keep the answer focused on kinetic energy: use gravitational potential energy.",
       "options": [
@@ -5330,7 +5330,7 @@
       "patternId": "4.1.1.2:elastic_energy:data_interpretation",
       "conceptFamily": "elastic_energy",
       "contextType": "a classroom demonstration",
-      "skill": "Use elastic potential energy.",
+      "skill": "Kinetic Energy practice",
       "stem": "Which conclusion about kinetic energy is supported by the evidence? Demand focus: use elastic potential energy.",
       "question": "Which conclusion about kinetic energy is supported by the evidence? Demand focus: use elastic potential energy.",
       "options": [
@@ -5404,7 +5404,7 @@
       "patternId": "4.1.1.2:specific_heat:representation_interpretation",
       "conceptFamily": "specific_heat",
       "contextType": "a revision checkpoint",
-      "skill": "Use specific heat capacity.",
+      "skill": "Kinetic Energy practice",
       "stem": "A representation of kinetic energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
       "question": "A representation of kinetic energy is described in words. Which interpretation is correct? Demand focus: use specific heat capacity.",
       "options": [
@@ -5475,7 +5475,7 @@
       "patternId": "4.1.1.4:power_definition:direct_recall",
       "conceptFamily": "power_definition",
       "contextType": "a safety decision",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "Which statement is correct for power? Demand focus: recall the meaning of power.",
       "question": "Which statement is correct for power? Demand focus: recall the meaning of power.",
       "options": [
@@ -5546,7 +5546,7 @@
       "patternId": "4.1.1.4:power_equation:concept_discrimination",
       "conceptFamily": "power_equation",
       "contextType": "a graph-reading task",
-      "skill": "Use power = energy transferred ÷ time.",
+      "skill": "Power practice",
       "stem": "A student is comparing similar ideas in power. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
       "question": "A student is comparing similar ideas in power. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
       "options": [
@@ -5617,7 +5617,7 @@
       "patternId": "4.1.1.4:unit_watt:misconception_correction",
       "conceptFamily": "unit_watt",
       "contextType": "a comparison question",
-      "skill": "Recall the watt.",
+      "skill": "Power practice",
       "stem": "A revision note about power contains an error. Which replacement is correct? Demand focus: recall the watt.",
       "question": "A revision note about power contains an error. Which replacement is correct? Demand focus: recall the watt.",
       "options": [
@@ -5688,7 +5688,7 @@
       "patternId": "4.1.1.4:power_definition:data_interpretation",
       "conceptFamily": "power_definition",
       "contextType": "a method-choice question",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "A small data set about power is being interpreted. Which conclusion is valid? Keep the answer focused on power: recall the meaning of power.",
       "question": "A small data set about power is being interpreted. Which conclusion is valid? Keep the answer focused on power: recall the meaning of power.",
       "options": [
@@ -5759,7 +5759,7 @@
       "patternId": "4.1.1.4:power_equation:representation_interpretation",
       "conceptFamily": "power_equation",
       "contextType": "a results discussion",
-      "skill": "Use power = energy transferred ÷ time.",
+      "skill": "Power practice",
       "stem": "Which option correctly reads the power model or diagram idea? Use the wording carefully: this is about use power = energy transferred ÷ time.",
       "question": "Which option correctly reads the power model or diagram idea? Use the wording carefully: this is about use power = energy transferred ÷ time.",
       "options": [
@@ -5830,7 +5830,7 @@
       "patternId": "4.1.1.4:unit_watt:direct_recall",
       "conceptFamily": "unit_watt",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the watt.",
+      "skill": "Power practice",
       "stem": "Which answer matches this power objective: Recall the watt? Keep the answer focused on power: recall the watt.",
       "question": "Which answer matches this power objective: Recall the watt? Keep the answer focused on power: recall the watt.",
       "options": [
@@ -5901,7 +5901,7 @@
       "patternId": "4.1.1.4:power_definition:applied_context",
       "conceptFamily": "power_definition",
       "contextType": "a revision checkpoint",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "In a revision checkpoint, which conclusion is correct for power? Check the clue before choosing: Recall the meaning of power.",
       "question": "In a revision checkpoint, which conclusion is correct for power? Check the clue before choosing: Recall the meaning of power.",
       "options": [
@@ -5972,7 +5972,7 @@
       "patternId": "4.1.1.4:power_equation:misconception_correction",
       "conceptFamily": "power_equation",
       "contextType": "an exam-style data table",
-      "skill": "Use power = energy transferred ÷ time.",
+      "skill": "Power practice",
       "stem": "Which answer corrects a misconception about power? Demand focus: use power = energy transferred ÷ time.",
       "question": "Which answer corrects a misconception about power? Demand focus: use power = energy transferred ÷ time.",
       "options": [
@@ -6043,7 +6043,7 @@
       "patternId": "4.1.1.4:unit_watt:exam_decision",
       "conceptFamily": "unit_watt",
       "contextType": "a required-practical notebook",
-      "skill": "Recall the watt.",
+      "skill": "Power practice",
       "stem": "The mark scheme is testing recall the watt. Which answer matches that point? Check the clue before choosing: Recall the watt.",
       "question": "The mark scheme is testing recall the watt. Which answer matches that point? Check the clue before choosing: Recall the watt.",
       "options": [
@@ -6114,7 +6114,7 @@
       "patternId": "4.1.1.4:power_definition:representation_interpretation",
       "conceptFamily": "power_definition",
       "contextType": "a technician report",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "A representation of power is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: recall the meaning of power.",
       "question": "A representation of power is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: recall the meaning of power.",
       "options": [
@@ -6185,7 +6185,7 @@
       "patternId": "4.1.1.4:power_equation:concept_discrimination",
       "conceptFamily": "power_equation",
       "contextType": "a labelled diagram",
-      "skill": "Use power = energy transferred ÷ time.",
+      "skill": "Power practice",
       "stem": "A student is comparing similar ideas in power. Which statement is correct? Keep the answer focused on power: use power = energy transferred ÷ time.",
       "question": "A student is comparing similar ideas in power. Which statement is correct? Keep the answer focused on power: use power = energy transferred ÷ time.",
       "options": [
@@ -6256,7 +6256,7 @@
       "patternId": "4.1.1.4:unit_watt:applied_context",
       "conceptFamily": "unit_watt",
       "contextType": "a short calculation",
-      "skill": "Recall the watt.",
+      "skill": "Power practice",
       "stem": "A question set in a short calculation tests power. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recall the watt.",
       "question": "A question set in a short calculation tests power. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recall the watt.",
       "options": [
@@ -6327,7 +6327,7 @@
       "patternId": "4.1.1.4:power_definition:data_interpretation",
       "conceptFamily": "power_definition",
       "contextType": "a safety decision",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "A small data set about power is being interpreted. Which conclusion is valid? Use the wording carefully: this is about recall the meaning of power.",
       "question": "A small data set about power is being interpreted. Which conclusion is valid? Use the wording carefully: this is about recall the meaning of power.",
       "options": [
@@ -6398,7 +6398,7 @@
       "patternId": "4.1.1.4:power_equation:exam_decision",
       "conceptFamily": "power_equation",
       "contextType": "a graph-reading task",
-      "skill": "Use power = energy transferred ÷ time.",
+      "skill": "Power practice",
       "stem": "Which answer is the strongest GCSE Physics response for power? Check the clue before choosing: Use power = energy transferred ÷ time.",
       "question": "Which answer is the strongest GCSE Physics response for power? Check the clue before choosing: Use power = energy transferred ÷ time.",
       "options": [
@@ -6469,7 +6469,7 @@
       "patternId": "4.1.1.4:unit_watt:direct_recall",
       "conceptFamily": "unit_watt",
       "contextType": "a comparison question",
-      "skill": "Recall the watt.",
+      "skill": "Power practice",
       "stem": "Which answer matches this power objective: Recall the watt? Use the wording carefully: this is about recall the watt.",
       "question": "Which answer matches this power objective: Recall the watt? Use the wording carefully: this is about recall the watt.",
       "options": [
@@ -6540,7 +6540,7 @@
       "patternId": "4.1.1.4:power_definition:concept_discrimination",
       "conceptFamily": "power_definition",
       "contextType": "a method-choice question",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "Which option best separates the correct power idea from a common mix-up? Demand focus: recall the meaning of power.",
       "question": "Which option best separates the correct power idea from a common mix-up? Demand focus: recall the meaning of power.",
       "options": [
@@ -6611,7 +6611,7 @@
       "patternId": "4.1.1.4:power_equation:misconception_correction",
       "conceptFamily": "power_equation",
       "contextType": "a results discussion",
-      "skill": "Use power = energy transferred ÷ time.",
+      "skill": "Power practice",
       "stem": "Which answer corrects a misconception about power? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
       "question": "Which answer corrects a misconception about power? Choose the statement that fits this exact GCSE Physics idea: use power = energy transferred ÷ time.",
       "options": [
@@ -6682,7 +6682,7 @@
       "patternId": "4.1.1.4:unit_watt:data_interpretation",
       "conceptFamily": "unit_watt",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the watt.",
+      "skill": "Power practice",
       "stem": "Which conclusion about power is supported by the evidence? Demand focus: recall the watt.",
       "question": "Which conclusion about power is supported by the evidence? Demand focus: recall the watt.",
       "options": [
@@ -6753,7 +6753,7 @@
       "patternId": "4.1.1.4:power_definition:representation_interpretation",
       "conceptFamily": "power_definition",
       "contextType": "a revision checkpoint",
-      "skill": "Recall the meaning of power.",
+      "skill": "Power practice",
       "stem": "A representation of power is described in words. Which interpretation is correct? Keep the answer focused on power: recall the meaning of power.",
       "question": "A representation of power is described in words. Which interpretation is correct? Keep the answer focused on power: recall the meaning of power.",
       "options": [

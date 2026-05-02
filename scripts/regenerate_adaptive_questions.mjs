@@ -148,6 +148,10 @@ function slug(value) {
     .replace(/^_+|_+$/g, '')
 }
 
+function displaySkill(spec) {
+  return `${spec.subtopic} practice`
+}
+
 function normalizeTopicKey(topic) {
   return slug(topic)
 }
@@ -379,7 +383,7 @@ function makeAuthoredQuestion({ board, legacy, spec, item }) {
     patternId: `authored:${item.id}`,
     conceptFamily: slug(item.learningObjective),
     contextType: item.contextType,
-    skill: item.learningObjective,
+    skill: displaySkill(spec),
     stem: item.question,
     question: item.question,
     options,
@@ -538,7 +542,7 @@ function makeQuestion({ board, legacy, spec, fact, index }) {
     patternId: `${spec.specRef}:${fact.id}:${mode}`,
     conceptFamily: fact.id,
     contextType: context,
-    skill: fact.objective,
+    skill: displaySkill(spec),
     stem,
     question: stem,
     options,

@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "space",
-  "generatedAt": "2026-05-02T05:26:55.786Z",
+  "generatedAt": "2026-05-02T07:16:14.026Z",
   "questions": [
     {
       "id": "edexcel_7_1p_earth_and_space_day_night_direct_recall_001",
@@ -38,7 +38,7 @@
       "patternId": "7.1P:day_night:direct_recall",
       "conceptFamily": "day_night",
       "contextType": "a technician report",
-      "skill": "Explain day and night.",
+      "skill": "Earth and Space practice",
       "stem": "Which statement is correct for earth and space? Demand focus: explain day and night.",
       "question": "Which statement is correct for earth and space? Demand focus: explain day and night.",
       "options": [
@@ -108,7 +108,7 @@
       "patternId": "7.1P:planet_order:concept_discrimination",
       "conceptFamily": "planet_order",
       "contextType": "a labelled diagram",
-      "skill": "Recall the order of planets.",
+      "skill": "Earth and Space practice",
       "stem": "A student is comparing similar ideas in earth and space. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "question": "A student is comparing similar ideas in earth and space. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "options": [
@@ -178,7 +178,7 @@
       "patternId": "7.1P:orbit_gravity:misconception_correction",
       "conceptFamily": "orbit_gravity",
       "contextType": "a short calculation",
-      "skill": "Explain orbital motion.",
+      "skill": "Earth and Space practice",
       "stem": "A revision note about earth and space contains an error. Which replacement is correct? Check the clue before choosing: Explain orbital motion.",
       "question": "A revision note about earth and space contains an error. Which replacement is correct? Check the clue before choosing: Explain orbital motion.",
       "options": [
@@ -248,7 +248,7 @@
       "patternId": "7.1P:satellite:data_interpretation",
       "conceptFamily": "satellite",
       "contextType": "a safety decision",
-      "skill": "Describe satellites.",
+      "skill": "Earth and Space practice",
       "stem": "A small data set about earth and space is being interpreted. Which conclusion is valid? Keep the answer focused on earth and space: describe satellites.",
       "question": "A small data set about earth and space is being interpreted. Which conclusion is valid? Keep the answer focused on earth and space: describe satellites.",
       "options": [
@@ -318,7 +318,7 @@
       "patternId": "7.1P:geostationary:representation_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a graph-reading task",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Earth and Space practice",
       "stem": "Which option correctly reads the earth and space model or diagram idea? Keep the answer focused on earth and space: describe geostationary satellites.",
       "question": "Which option correctly reads the earth and space model or diagram idea? Keep the answer focused on earth and space: describe geostationary satellites.",
       "options": [
@@ -388,7 +388,7 @@
       "patternId": "7.1P:day_night:direct_recall",
       "conceptFamily": "day_night",
       "contextType": "a comparison question",
-      "skill": "Explain day and night.",
+      "skill": "Earth and Space practice",
       "stem": "Which answer matches this earth and space objective: Explain day and night? Demand focus: explain day and night.",
       "question": "Which answer matches this earth and space objective: Explain day and night? Demand focus: explain day and night.",
       "options": [
@@ -458,7 +458,7 @@
       "patternId": "7.1P:planet_order:applied_context",
       "conceptFamily": "planet_order",
       "contextType": "a method-choice question",
-      "skill": "Recall the order of planets.",
+      "skill": "Earth and Space practice",
       "stem": "In a method-choice question, which conclusion is correct for earth and space? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "question": "In a method-choice question, which conclusion is correct for earth and space? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "options": [
@@ -528,7 +528,7 @@
       "patternId": "7.1P:orbit_gravity:misconception_correction",
       "conceptFamily": "orbit_gravity",
       "contextType": "a results discussion",
-      "skill": "Explain orbital motion.",
+      "skill": "Earth and Space practice",
       "stem": "Which answer corrects a misconception about earth and space? Check the clue before choosing: Explain orbital motion.",
       "question": "Which answer corrects a misconception about earth and space? Check the clue before choosing: Explain orbital motion.",
       "options": [
@@ -598,7 +598,7 @@
       "patternId": "7.1P:satellite:exam_decision",
       "conceptFamily": "satellite",
       "contextType": "a classroom demonstration",
-      "skill": "Describe satellites.",
+      "skill": "Earth and Space practice",
       "stem": "The mark scheme is testing describe satellites. Which answer matches that point? Keep the answer focused on earth and space: describe satellites.",
       "question": "The mark scheme is testing describe satellites. Which answer matches that point? Keep the answer focused on earth and space: describe satellites.",
       "options": [
@@ -668,7 +668,7 @@
       "patternId": "7.1P:geostationary:representation_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a revision checkpoint",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Earth and Space practice",
       "stem": "A representation of earth and space is described in words. Which interpretation is correct? Keep the answer focused on earth and space: describe geostationary satellites.",
       "question": "A representation of earth and space is described in words. Which interpretation is correct? Keep the answer focused on earth and space: describe geostationary satellites.",
       "options": [
@@ -738,7 +738,7 @@
       "patternId": "7.1P:day_night:concept_discrimination",
       "conceptFamily": "day_night",
       "contextType": "an exam-style data table",
-      "skill": "Explain day and night.",
+      "skill": "Earth and Space practice",
       "stem": "A student is comparing similar ideas in earth and space. Which statement is correct? Demand focus: explain day and night.",
       "question": "A student is comparing similar ideas in earth and space. Which statement is correct? Demand focus: explain day and night.",
       "options": [
@@ -808,7 +808,7 @@
       "patternId": "7.1P:planet_order:applied_context",
       "conceptFamily": "planet_order",
       "contextType": "a required-practical notebook",
-      "skill": "Recall the order of planets.",
+      "skill": "Earth and Space practice",
       "stem": "A question set in a required-practical notebook tests earth and space. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "question": "A question set in a required-practical notebook tests earth and space. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "options": [
@@ -878,7 +878,7 @@
       "patternId": "7.1P:orbit_gravity:data_interpretation",
       "conceptFamily": "orbit_gravity",
       "contextType": "a technician report",
-      "skill": "Explain orbital motion.",
+      "skill": "Earth and Space practice",
       "stem": "A small data set about earth and space is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain orbital motion.",
       "question": "A small data set about earth and space is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain orbital motion.",
       "options": [
@@ -948,7 +948,7 @@
       "patternId": "7.1P:satellite:exam_decision",
       "conceptFamily": "satellite",
       "contextType": "a labelled diagram",
-      "skill": "Describe satellites.",
+      "skill": "Earth and Space practice",
       "stem": "Which answer is the strongest GCSE Physics response for earth and space? Keep the answer focused on earth and space: describe satellites.",
       "question": "Which answer is the strongest GCSE Physics response for earth and space? Keep the answer focused on earth and space: describe satellites.",
       "options": [
@@ -1018,7 +1018,7 @@
       "patternId": "7.1P:geostationary:direct_recall",
       "conceptFamily": "geostationary",
       "contextType": "a short calculation",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Earth and Space practice",
       "stem": "Which answer matches this earth and space objective: Describe geostationary satellites? Keep the answer focused on earth and space: describe geostationary satellites.",
       "question": "Which answer matches this earth and space objective: Describe geostationary satellites? Keep the answer focused on earth and space: describe geostationary satellites.",
       "options": [
@@ -1088,7 +1088,7 @@
       "patternId": "7.1P:day_night:concept_discrimination",
       "conceptFamily": "day_night",
       "contextType": "a safety decision",
-      "skill": "Explain day and night.",
+      "skill": "Earth and Space practice",
       "stem": "Which option best separates the correct earth and space idea from a common mix-up? Demand focus: explain day and night.",
       "question": "Which option best separates the correct earth and space idea from a common mix-up? Demand focus: explain day and night.",
       "options": [
@@ -1158,7 +1158,7 @@
       "patternId": "7.1P:planet_order:misconception_correction",
       "conceptFamily": "planet_order",
       "contextType": "a graph-reading task",
-      "skill": "Recall the order of planets.",
+      "skill": "Earth and Space practice",
       "stem": "Which answer corrects a misconception about earth and space? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "question": "Which answer corrects a misconception about earth and space? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "options": [
@@ -1228,7 +1228,7 @@
       "patternId": "7.1P:orbit_gravity:data_interpretation",
       "conceptFamily": "orbit_gravity",
       "contextType": "a comparison question",
-      "skill": "Explain orbital motion.",
+      "skill": "Earth and Space practice",
       "stem": "Which conclusion about earth and space is supported by the evidence? Check the clue before choosing: Explain orbital motion.",
       "question": "Which conclusion about earth and space is supported by the evidence? Check the clue before choosing: Explain orbital motion.",
       "options": [
@@ -1298,7 +1298,7 @@
       "patternId": "7.8P:orbit_gravity:direct_recall",
       "conceptFamily": "orbit_gravity",
       "contextType": "a technician report",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "Which statement is correct for orbits? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "question": "Which statement is correct for orbits? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "options": [
@@ -1368,7 +1368,7 @@
       "patternId": "7.8P:satellite:concept_discrimination",
       "conceptFamily": "satellite",
       "contextType": "a labelled diagram",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "A student is comparing similar ideas in orbits. Which statement is correct? Check the clue before choosing: Describe satellites.",
       "question": "A student is comparing similar ideas in orbits. Which statement is correct? Check the clue before choosing: Describe satellites.",
       "options": [
@@ -1438,7 +1438,7 @@
       "patternId": "7.8P:geostationary:misconception_correction",
       "conceptFamily": "geostationary",
       "contextType": "a short calculation",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "A revision note about orbits contains an error. Which replacement is correct? Check the clue before choosing: Describe geostationary satellites.",
       "question": "A revision note about orbits contains an error. Which replacement is correct? Check the clue before choosing: Describe geostationary satellites.",
       "options": [
@@ -1508,7 +1508,7 @@
       "patternId": "7.8P:day_night:data_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a safety decision",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "A small data set about orbits is being interpreted. Which conclusion is valid? Keep the answer focused on orbits: explain day and night.",
       "question": "A small data set about orbits is being interpreted. Which conclusion is valid? Keep the answer focused on orbits: explain day and night.",
       "options": [
@@ -1578,7 +1578,7 @@
       "patternId": "7.8P:planet_order:representation_interpretation",
       "conceptFamily": "planet_order",
       "contextType": "a graph-reading task",
-      "skill": "Recall the order of planets.",
+      "skill": "Orbits practice",
       "stem": "Which option correctly reads the orbits model or diagram idea? Use the wording carefully: this is about recall the order of planets.",
       "question": "Which option correctly reads the orbits model or diagram idea? Use the wording carefully: this is about recall the order of planets.",
       "options": [
@@ -1648,7 +1648,7 @@
       "patternId": "7.8P:orbit_gravity:direct_recall",
       "conceptFamily": "orbit_gravity",
       "contextType": "a comparison question",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "Which answer matches this orbits objective: Explain orbital motion? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "question": "Which answer matches this orbits objective: Explain orbital motion? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "options": [
@@ -1718,7 +1718,7 @@
       "patternId": "7.8P:satellite:applied_context",
       "conceptFamily": "satellite",
       "contextType": "a method-choice question",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "In a method-choice question, which conclusion is correct for orbits? Check the clue before choosing: Describe satellites.",
       "question": "In a method-choice question, which conclusion is correct for orbits? Check the clue before choosing: Describe satellites.",
       "options": [
@@ -1788,7 +1788,7 @@
       "patternId": "7.8P:geostationary:misconception_correction",
       "conceptFamily": "geostationary",
       "contextType": "a results discussion",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "Which answer corrects a misconception about orbits? Check the clue before choosing: Describe geostationary satellites.",
       "question": "Which answer corrects a misconception about orbits? Check the clue before choosing: Describe geostationary satellites.",
       "options": [
@@ -1858,7 +1858,7 @@
       "patternId": "7.8P:day_night:exam_decision",
       "conceptFamily": "day_night",
       "contextType": "a classroom demonstration",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "The mark scheme is testing explain day and night. Which answer matches that point? Keep the answer focused on orbits: explain day and night.",
       "question": "The mark scheme is testing explain day and night. Which answer matches that point? Keep the answer focused on orbits: explain day and night.",
       "options": [
@@ -1928,7 +1928,7 @@
       "patternId": "7.8P:planet_order:representation_interpretation",
       "conceptFamily": "planet_order",
       "contextType": "a revision checkpoint",
-      "skill": "Recall the order of planets.",
+      "skill": "Orbits practice",
       "stem": "A representation of orbits is described in words. Which interpretation is correct? Use the wording carefully: this is about recall the order of planets.",
       "question": "A representation of orbits is described in words. Which interpretation is correct? Use the wording carefully: this is about recall the order of planets.",
       "options": [
@@ -1998,7 +1998,7 @@
       "patternId": "7.8P:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "an exam-style data table",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "A student is comparing similar ideas in orbits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "question": "A student is comparing similar ideas in orbits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "options": [
@@ -2068,7 +2068,7 @@
       "patternId": "7.8P:satellite:applied_context",
       "conceptFamily": "satellite",
       "contextType": "a required-practical notebook",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "A question set in a required-practical notebook tests orbits. Which answer applies the idea correctly? Check the clue before choosing: Describe satellites.",
       "question": "A question set in a required-practical notebook tests orbits. Which answer applies the idea correctly? Check the clue before choosing: Describe satellites.",
       "options": [
@@ -2138,7 +2138,7 @@
       "patternId": "7.8P:geostationary:data_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a technician report",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "A small data set about orbits is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe geostationary satellites.",
       "question": "A small data set about orbits is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe geostationary satellites.",
       "options": [
@@ -2208,7 +2208,7 @@
       "patternId": "7.8P:day_night:exam_decision",
       "conceptFamily": "day_night",
       "contextType": "a labelled diagram",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "Which answer is the strongest GCSE Physics response for orbits? Keep the answer focused on orbits: explain day and night.",
       "question": "Which answer is the strongest GCSE Physics response for orbits? Keep the answer focused on orbits: explain day and night.",
       "options": [
@@ -2278,7 +2278,7 @@
       "patternId": "7.8P:planet_order:direct_recall",
       "conceptFamily": "planet_order",
       "contextType": "a short calculation",
-      "skill": "Recall the order of planets.",
+      "skill": "Orbits practice",
       "stem": "Which answer matches this orbits objective: Recall the order of planets? Use the wording carefully: this is about recall the order of planets.",
       "question": "Which answer matches this orbits objective: Recall the order of planets? Use the wording carefully: this is about recall the order of planets.",
       "options": [
@@ -2348,7 +2348,7 @@
       "patternId": "7.8P:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "a safety decision",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "Which option best separates the correct orbits idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "question": "Which option best separates the correct orbits idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "options": [
@@ -2418,7 +2418,7 @@
       "patternId": "7.8P:satellite:misconception_correction",
       "conceptFamily": "satellite",
       "contextType": "a graph-reading task",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "Which answer corrects a misconception about orbits? Check the clue before choosing: Describe satellites.",
       "question": "Which answer corrects a misconception about orbits? Check the clue before choosing: Describe satellites.",
       "options": [
@@ -2488,7 +2488,7 @@
       "patternId": "7.8P:geostationary:data_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a comparison question",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "Which conclusion about orbits is supported by the evidence? Check the clue before choosing: Describe geostationary satellites.",
       "question": "Which conclusion about orbits is supported by the evidence? Check the clue before choosing: Describe geostationary satellites.",
       "options": [
@@ -2558,7 +2558,7 @@
       "patternId": "7.8P:day_night:representation_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a method-choice question",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "A representation of orbits is described in words. Which interpretation is correct? Keep the answer focused on orbits: explain day and night.",
       "question": "A representation of orbits is described in words. Which interpretation is correct? Keep the answer focused on orbits: explain day and night.",
       "options": [
@@ -2628,7 +2628,7 @@
       "patternId": "7.10P:satellite:direct_recall",
       "conceptFamily": "satellite",
       "contextType": "a labelled diagram",
-      "skill": "Describe satellites.",
+      "skill": "Satellites practice",
       "stem": "Which statement is correct for satellites? Check the clue before choosing: Describe satellites.",
       "question": "Which statement is correct for satellites? Check the clue before choosing: Describe satellites.",
       "options": [
@@ -2698,7 +2698,7 @@
       "patternId": "7.10P:geostationary:concept_discrimination",
       "conceptFamily": "geostationary",
       "contextType": "a short calculation",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Satellites practice",
       "stem": "A student is comparing similar ideas in satellites. Which statement is correct? Check the clue before choosing: Describe geostationary satellites.",
       "question": "A student is comparing similar ideas in satellites. Which statement is correct? Check the clue before choosing: Describe geostationary satellites.",
       "options": [
@@ -2768,7 +2768,7 @@
       "patternId": "7.10P:orbit_gravity:misconception_correction",
       "conceptFamily": "orbit_gravity",
       "contextType": "a safety decision",
-      "skill": "Explain orbital motion.",
+      "skill": "Satellites practice",
       "stem": "A revision note about satellites contains an error. Which replacement is correct? Use the wording carefully: this is about explain orbital motion.",
       "question": "A revision note about satellites contains an error. Which replacement is correct? Use the wording carefully: this is about explain orbital motion.",
       "options": [
@@ -2838,7 +2838,7 @@
       "patternId": "7.10P:day_night:data_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a graph-reading task",
-      "skill": "Explain day and night.",
+      "skill": "Satellites practice",
       "stem": "A small data set about satellites is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain day and night.",
       "question": "A small data set about satellites is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain day and night.",
       "options": [
@@ -2908,7 +2908,7 @@
       "patternId": "7.10P:satellite:representation_interpretation",
       "conceptFamily": "satellite",
       "contextType": "a comparison question",
-      "skill": "Describe satellites.",
+      "skill": "Satellites practice",
       "stem": "Which option correctly reads the satellites model or diagram idea? Demand focus: describe satellites.",
       "question": "Which option correctly reads the satellites model or diagram idea? Demand focus: describe satellites.",
       "options": [
@@ -2978,7 +2978,7 @@
       "patternId": "7.10P:geostationary:direct_recall",
       "conceptFamily": "geostationary",
       "contextType": "a method-choice question",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Satellites practice",
       "stem": "Which answer matches this satellites objective: Describe geostationary satellites? Demand focus: describe geostationary satellites.",
       "question": "Which answer matches this satellites objective: Describe geostationary satellites? Demand focus: describe geostationary satellites.",
       "options": [
@@ -3048,7 +3048,7 @@
       "patternId": "7.10P:orbit_gravity:applied_context",
       "conceptFamily": "orbit_gravity",
       "contextType": "a results discussion",
-      "skill": "Explain orbital motion.",
+      "skill": "Satellites practice",
       "stem": "In a results discussion, which conclusion is correct for satellites? Check the clue before choosing: Explain orbital motion.",
       "question": "In a results discussion, which conclusion is correct for satellites? Check the clue before choosing: Explain orbital motion.",
       "options": [
@@ -3118,7 +3118,7 @@
       "patternId": "7.10P:day_night:misconception_correction",
       "conceptFamily": "day_night",
       "contextType": "a classroom demonstration",
-      "skill": "Explain day and night.",
+      "skill": "Satellites practice",
       "stem": "Which answer corrects a misconception about satellites? Keep the answer focused on satellites: explain day and night.",
       "question": "Which answer corrects a misconception about satellites? Keep the answer focused on satellites: explain day and night.",
       "options": [
@@ -3188,7 +3188,7 @@
       "patternId": "7.10P:satellite:exam_decision",
       "conceptFamily": "satellite",
       "contextType": "a revision checkpoint",
-      "skill": "Describe satellites.",
+      "skill": "Satellites practice",
       "stem": "The mark scheme is testing describe satellites. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "question": "The mark scheme is testing describe satellites. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "options": [
@@ -3258,7 +3258,7 @@
       "patternId": "7.10P:geostationary:representation_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "an exam-style data table",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Satellites practice",
       "stem": "A representation of satellites is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "question": "A representation of satellites is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "options": [
@@ -3328,7 +3328,7 @@
       "patternId": "7.10P:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "a required-practical notebook",
-      "skill": "Explain orbital motion.",
+      "skill": "Satellites practice",
       "stem": "A student is comparing similar ideas in satellites. Which statement is correct? Demand focus: explain orbital motion.",
       "question": "A student is comparing similar ideas in satellites. Which statement is correct? Demand focus: explain orbital motion.",
       "options": [
@@ -3398,7 +3398,7 @@
       "patternId": "7.10P:day_night:applied_context",
       "conceptFamily": "day_night",
       "contextType": "a technician report",
-      "skill": "Explain day and night.",
+      "skill": "Satellites practice",
       "stem": "A question set in a technician report tests satellites. Which answer applies the idea correctly? Use the wording carefully: this is about explain day and night.",
       "question": "A question set in a technician report tests satellites. Which answer applies the idea correctly? Use the wording carefully: this is about explain day and night.",
       "options": [
@@ -3468,7 +3468,7 @@
       "patternId": "7.10P:satellite:data_interpretation",
       "conceptFamily": "satellite",
       "contextType": "a labelled diagram",
-      "skill": "Describe satellites.",
+      "skill": "Satellites practice",
       "stem": "A small data set about satellites is being interpreted. Which conclusion is valid? Keep the answer focused on satellites: describe satellites.",
       "question": "A small data set about satellites is being interpreted. Which conclusion is valid? Keep the answer focused on satellites: describe satellites.",
       "options": [
@@ -3538,7 +3538,7 @@
       "patternId": "7.10P:geostationary:exam_decision",
       "conceptFamily": "geostationary",
       "contextType": "a short calculation",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Satellites practice",
       "stem": "Which answer is the strongest GCSE Physics response for satellites? Keep the answer focused on satellites: describe geostationary satellites.",
       "question": "Which answer is the strongest GCSE Physics response for satellites? Keep the answer focused on satellites: describe geostationary satellites.",
       "options": [
@@ -3608,7 +3608,7 @@
       "patternId": "7.10P:orbit_gravity:direct_recall",
       "conceptFamily": "orbit_gravity",
       "contextType": "a safety decision",
-      "skill": "Explain orbital motion.",
+      "skill": "Satellites practice",
       "stem": "Which answer matches this satellites objective: Explain orbital motion? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "question": "Which answer matches this satellites objective: Explain orbital motion? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "options": [
@@ -3678,7 +3678,7 @@
       "patternId": "7.10P:day_night:concept_discrimination",
       "conceptFamily": "day_night",
       "contextType": "a graph-reading task",
-      "skill": "Explain day and night.",
+      "skill": "Satellites practice",
       "stem": "Which option best separates the correct satellites idea from a common mix-up? Check the clue before choosing: Explain day and night.",
       "question": "Which option best separates the correct satellites idea from a common mix-up? Check the clue before choosing: Explain day and night.",
       "options": [
@@ -3748,7 +3748,7 @@
       "patternId": "7.10P:satellite:misconception_correction",
       "conceptFamily": "satellite",
       "contextType": "a comparison question",
-      "skill": "Describe satellites.",
+      "skill": "Satellites practice",
       "stem": "Which answer corrects a misconception about satellites? Use the wording carefully: this is about describe satellites.",
       "question": "Which answer corrects a misconception about satellites? Use the wording carefully: this is about describe satellites.",
       "options": [
@@ -3818,7 +3818,7 @@
       "patternId": "7.10P:geostationary:data_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a method-choice question",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Satellites practice",
       "stem": "Which conclusion about satellites is supported by the evidence? Use the wording carefully: this is about describe geostationary satellites.",
       "question": "Which conclusion about satellites is supported by the evidence? Use the wording carefully: this is about describe geostationary satellites.",
       "options": [
@@ -3888,7 +3888,7 @@
       "patternId": "7.10P:orbit_gravity:representation_interpretation",
       "conceptFamily": "orbit_gravity",
       "contextType": "a results discussion",
-      "skill": "Explain orbital motion.",
+      "skill": "Satellites practice",
       "stem": "A representation of satellites is described in words. Which interpretation is correct? Keep the answer focused on satellites: explain orbital motion.",
       "question": "A representation of satellites is described in words. Which interpretation is correct? Keep the answer focused on satellites: explain orbital motion.",
       "options": [
@@ -3958,7 +3958,7 @@
       "patternId": "7.2P:planet_order:direct_recall",
       "conceptFamily": "planet_order",
       "contextType": "a technician report",
-      "skill": "Recall the order of planets.",
+      "skill": "Solar System practice",
       "stem": "Which statement is correct for solar system? Keep the answer focused on solar system: recall the order of planets.",
       "question": "Which statement is correct for solar system? Keep the answer focused on solar system: recall the order of planets.",
       "options": [
@@ -4028,7 +4028,7 @@
       "patternId": "7.2P:day_night:concept_discrimination",
       "conceptFamily": "day_night",
       "contextType": "a labelled diagram",
-      "skill": "Explain day and night.",
+      "skill": "Solar System practice",
       "stem": "A student is comparing similar ideas in solar system. Which statement is correct? Check the clue before choosing: Explain day and night.",
       "question": "A student is comparing similar ideas in solar system. Which statement is correct? Check the clue before choosing: Explain day and night.",
       "options": [
@@ -4098,7 +4098,7 @@
       "patternId": "7.2P:orbit_gravity:misconception_correction",
       "conceptFamily": "orbit_gravity",
       "contextType": "a short calculation",
-      "skill": "Explain orbital motion.",
+      "skill": "Solar System practice",
       "stem": "A revision note about solar system contains an error. Which replacement is correct? Check the clue before choosing: Explain orbital motion.",
       "question": "A revision note about solar system contains an error. Which replacement is correct? Check the clue before choosing: Explain orbital motion.",
       "options": [
@@ -4168,7 +4168,7 @@
       "patternId": "7.2P:satellite:data_interpretation",
       "conceptFamily": "satellite",
       "contextType": "a safety decision",
-      "skill": "Describe satellites.",
+      "skill": "Solar System practice",
       "stem": "A small data set about solar system is being interpreted. Which conclusion is valid? Keep the answer focused on solar system: describe satellites.",
       "question": "A small data set about solar system is being interpreted. Which conclusion is valid? Keep the answer focused on solar system: describe satellites.",
       "options": [
@@ -4238,7 +4238,7 @@
       "patternId": "7.2P:planet_order:representation_interpretation",
       "conceptFamily": "planet_order",
       "contextType": "a graph-reading task",
-      "skill": "Recall the order of planets.",
+      "skill": "Solar System practice",
       "stem": "Which option correctly reads the solar system model or diagram idea? Use the wording carefully: this is about recall the order of planets.",
       "question": "Which option correctly reads the solar system model or diagram idea? Use the wording carefully: this is about recall the order of planets.",
       "options": [
@@ -4308,7 +4308,7 @@
       "patternId": "7.2P:day_night:direct_recall",
       "conceptFamily": "day_night",
       "contextType": "a comparison question",
-      "skill": "Explain day and night.",
+      "skill": "Solar System practice",
       "stem": "Which answer matches this solar system objective: Explain day and night? Demand focus: explain day and night.",
       "question": "Which answer matches this solar system objective: Explain day and night? Demand focus: explain day and night.",
       "options": [
@@ -4378,7 +4378,7 @@
       "patternId": "7.2P:orbit_gravity:applied_context",
       "conceptFamily": "orbit_gravity",
       "contextType": "a method-choice question",
-      "skill": "Explain orbital motion.",
+      "skill": "Solar System practice",
       "stem": "In a method-choice question, which conclusion is correct for solar system? Demand focus: explain orbital motion.",
       "question": "In a method-choice question, which conclusion is correct for solar system? Demand focus: explain orbital motion.",
       "options": [
@@ -4448,7 +4448,7 @@
       "patternId": "7.2P:satellite:misconception_correction",
       "conceptFamily": "satellite",
       "contextType": "a results discussion",
-      "skill": "Describe satellites.",
+      "skill": "Solar System practice",
       "stem": "Which answer corrects a misconception about solar system? Use the wording carefully: this is about describe satellites.",
       "question": "Which answer corrects a misconception about solar system? Use the wording carefully: this is about describe satellites.",
       "options": [
@@ -4518,7 +4518,7 @@
       "patternId": "7.2P:planet_order:exam_decision",
       "conceptFamily": "planet_order",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the order of planets.",
+      "skill": "Solar System practice",
       "stem": "The mark scheme is testing recall the order of planets. Which answer matches that point? Check the clue before choosing: Recall the order of planets.",
       "question": "The mark scheme is testing recall the order of planets. Which answer matches that point? Check the clue before choosing: Recall the order of planets.",
       "options": [
@@ -4588,7 +4588,7 @@
       "patternId": "7.2P:day_night:representation_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a revision checkpoint",
-      "skill": "Explain day and night.",
+      "skill": "Solar System practice",
       "stem": "A representation of solar system is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain day and night.",
       "question": "A representation of solar system is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain day and night.",
       "options": [
@@ -4658,7 +4658,7 @@
       "patternId": "7.2P:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "an exam-style data table",
-      "skill": "Explain orbital motion.",
+      "skill": "Solar System practice",
       "stem": "A student is comparing similar ideas in solar system. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "question": "A student is comparing similar ideas in solar system. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain orbital motion.",
       "options": [
@@ -4728,7 +4728,7 @@
       "patternId": "7.2P:satellite:applied_context",
       "conceptFamily": "satellite",
       "contextType": "a required-practical notebook",
-      "skill": "Describe satellites.",
+      "skill": "Solar System practice",
       "stem": "A question set in a required-practical notebook tests solar system. Which answer applies the idea correctly? Check the clue before choosing: Describe satellites.",
       "question": "A question set in a required-practical notebook tests solar system. Which answer applies the idea correctly? Check the clue before choosing: Describe satellites.",
       "options": [
@@ -4798,7 +4798,7 @@
       "patternId": "7.2P:planet_order:data_interpretation",
       "conceptFamily": "planet_order",
       "contextType": "a technician report",
-      "skill": "Recall the order of planets.",
+      "skill": "Solar System practice",
       "stem": "A small data set about solar system is being interpreted. Which conclusion is valid? Demand focus: recall the order of planets.",
       "question": "A small data set about solar system is being interpreted. Which conclusion is valid? Demand focus: recall the order of planets.",
       "options": [
@@ -4868,7 +4868,7 @@
       "patternId": "7.2P:day_night:exam_decision",
       "conceptFamily": "day_night",
       "contextType": "a labelled diagram",
-      "skill": "Explain day and night.",
+      "skill": "Solar System practice",
       "stem": "Which answer is the strongest GCSE Physics response for solar system? Keep the answer focused on solar system: explain day and night.",
       "question": "Which answer is the strongest GCSE Physics response for solar system? Keep the answer focused on solar system: explain day and night.",
       "options": [
@@ -4938,7 +4938,7 @@
       "patternId": "7.2P:orbit_gravity:direct_recall",
       "conceptFamily": "orbit_gravity",
       "contextType": "a short calculation",
-      "skill": "Explain orbital motion.",
+      "skill": "Solar System practice",
       "stem": "Which answer matches this solar system objective: Explain orbital motion? Keep the answer focused on solar system: explain orbital motion.",
       "question": "Which answer matches this solar system objective: Explain orbital motion? Keep the answer focused on solar system: explain orbital motion.",
       "options": [
@@ -5008,7 +5008,7 @@
       "patternId": "7.2P:satellite:concept_discrimination",
       "conceptFamily": "satellite",
       "contextType": "a safety decision",
-      "skill": "Describe satellites.",
+      "skill": "Solar System practice",
       "stem": "Which option best separates the correct solar system idea from a common mix-up? Demand focus: describe satellites.",
       "question": "Which option best separates the correct solar system idea from a common mix-up? Demand focus: describe satellites.",
       "options": [
@@ -5078,7 +5078,7 @@
       "patternId": "7.2P:planet_order:misconception_correction",
       "conceptFamily": "planet_order",
       "contextType": "a graph-reading task",
-      "skill": "Recall the order of planets.",
+      "skill": "Solar System practice",
       "stem": "Which answer corrects a misconception about solar system? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "question": "Which answer corrects a misconception about solar system? Choose the statement that fits this exact GCSE Physics idea: recall the order of planets.",
       "options": [
@@ -5148,7 +5148,7 @@
       "patternId": "7.2P:day_night:data_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a comparison question",
-      "skill": "Explain day and night.",
+      "skill": "Solar System practice",
       "stem": "Which conclusion about solar system is supported by the evidence? Use the wording carefully: this is about explain day and night.",
       "question": "Which conclusion about solar system is supported by the evidence? Use the wording carefully: this is about explain day and night.",
       "options": [
@@ -5218,7 +5218,7 @@
       "patternId": "7.2P:orbit_gravity:representation_interpretation",
       "conceptFamily": "orbit_gravity",
       "contextType": "a method-choice question",
-      "skill": "Explain orbital motion.",
+      "skill": "Solar System practice",
       "stem": "A representation of solar system is described in words. Which interpretation is correct? Use the wording carefully: this is about explain orbital motion.",
       "question": "A representation of solar system is described in words. Which interpretation is correct? Use the wording carefully: this is about explain orbital motion.",
       "options": [
@@ -5288,7 +5288,7 @@
       "patternId": "7.13P:star_formation:direct_recall",
       "conceptFamily": "star_formation",
       "contextType": "a labelled diagram",
-      "skill": "Describe star formation.",
+      "skill": "Stars practice",
       "stem": "Which statement is correct for stars? Check the clue before choosing: Describe star formation.",
       "question": "Which statement is correct for stars? Check the clue before choosing: Describe star formation.",
       "options": [
@@ -5358,7 +5358,7 @@
       "patternId": "7.13P:main_sequence:concept_discrimination",
       "conceptFamily": "main_sequence",
       "contextType": "a short calculation",
-      "skill": "Describe a main sequence star.",
+      "skill": "Stars practice",
       "stem": "A student is comparing similar ideas in stars. Which statement is correct? Check the clue before choosing: Describe a main sequence star.",
       "question": "A student is comparing similar ideas in stars. Which statement is correct? Check the clue before choosing: Describe a main sequence star.",
       "options": [
@@ -5428,7 +5428,7 @@
       "patternId": "7.13P:sun_like_end:misconception_correction",
       "conceptFamily": "sun_like_end",
       "contextType": "a safety decision",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Stars practice",
       "stem": "A revision note about stars contains an error. Which replacement is correct? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "question": "A revision note about stars contains an error. Which replacement is correct? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "options": [
@@ -5498,7 +5498,7 @@
       "patternId": "7.13P:massive_star_end:data_interpretation",
       "conceptFamily": "massive_star_end",
       "contextType": "a graph-reading task",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Stars practice",
       "stem": "A small data set about stars is being interpreted. Which conclusion is valid? Check the clue before choosing: Recall the life cycle of a massive star.",
       "question": "A small data set about stars is being interpreted. Which conclusion is valid? Check the clue before choosing: Recall the life cycle of a massive star.",
       "options": [
@@ -5568,7 +5568,7 @@
       "patternId": "7.13P:fusion_elements:representation_interpretation",
       "conceptFamily": "fusion_elements",
       "contextType": "a comparison question",
-      "skill": "Link fusion to elements.",
+      "skill": "Stars practice",
       "stem": "Which option correctly reads the stars model or diagram idea? Check the clue before choosing: Link fusion to elements.",
       "question": "Which option correctly reads the stars model or diagram idea? Check the clue before choosing: Link fusion to elements.",
       "options": [
@@ -5638,7 +5638,7 @@
       "patternId": "7.13P:star_formation:direct_recall",
       "conceptFamily": "star_formation",
       "contextType": "a method-choice question",
-      "skill": "Describe star formation.",
+      "skill": "Stars practice",
       "stem": "Which answer matches this stars objective: Describe star formation? Check the clue before choosing: Describe star formation.",
       "question": "Which answer matches this stars objective: Describe star formation? Check the clue before choosing: Describe star formation.",
       "options": [
@@ -5708,7 +5708,7 @@
       "patternId": "7.13P:main_sequence:applied_context",
       "conceptFamily": "main_sequence",
       "contextType": "a results discussion",
-      "skill": "Describe a main sequence star.",
+      "skill": "Stars practice",
       "stem": "In a results discussion, which conclusion is correct for stars? Check the clue before choosing: Describe a main sequence star.",
       "question": "In a results discussion, which conclusion is correct for stars? Check the clue before choosing: Describe a main sequence star.",
       "options": [
@@ -5778,7 +5778,7 @@
       "patternId": "7.13P:sun_like_end:misconception_correction",
       "conceptFamily": "sun_like_end",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Stars practice",
       "stem": "Which answer corrects a misconception about stars? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "question": "Which answer corrects a misconception about stars? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "options": [
@@ -5848,7 +5848,7 @@
       "patternId": "7.13P:massive_star_end:exam_decision",
       "conceptFamily": "massive_star_end",
       "contextType": "a revision checkpoint",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Stars practice",
       "stem": "The mark scheme is testing recall the life cycle of a massive star. Which answer matches that point? Check the clue before choosing: Recall the life cycle of a massive star.",
       "question": "The mark scheme is testing recall the life cycle of a massive star. Which answer matches that point? Check the clue before choosing: Recall the life cycle of a massive star.",
       "options": [
@@ -5918,7 +5918,7 @@
       "patternId": "7.13P:fusion_elements:representation_interpretation",
       "conceptFamily": "fusion_elements",
       "contextType": "an exam-style data table",
-      "skill": "Link fusion to elements.",
+      "skill": "Stars practice",
       "stem": "A representation of stars is described in words. Which interpretation is correct? Check the clue before choosing: Link fusion to elements.",
       "question": "A representation of stars is described in words. Which interpretation is correct? Check the clue before choosing: Link fusion to elements.",
       "options": [
@@ -5988,7 +5988,7 @@
       "patternId": "7.13P:star_formation:concept_discrimination",
       "conceptFamily": "star_formation",
       "contextType": "a required-practical notebook",
-      "skill": "Describe star formation.",
+      "skill": "Stars practice",
       "stem": "A student is comparing similar ideas in stars. Which statement is correct? Check the clue before choosing: Describe star formation.",
       "question": "A student is comparing similar ideas in stars. Which statement is correct? Check the clue before choosing: Describe star formation.",
       "options": [
@@ -6058,7 +6058,7 @@
       "patternId": "7.13P:main_sequence:applied_context",
       "conceptFamily": "main_sequence",
       "contextType": "a technician report",
-      "skill": "Describe a main sequence star.",
+      "skill": "Stars practice",
       "stem": "A question set in a technician report tests stars. Which answer applies the idea correctly? Check the clue before choosing: Describe a main sequence star.",
       "question": "A question set in a technician report tests stars. Which answer applies the idea correctly? Check the clue before choosing: Describe a main sequence star.",
       "options": [
@@ -6128,7 +6128,7 @@
       "patternId": "7.13P:sun_like_end:data_interpretation",
       "conceptFamily": "sun_like_end",
       "contextType": "a labelled diagram",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Stars practice",
       "stem": "A small data set about stars is being interpreted. Which conclusion is valid? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "question": "A small data set about stars is being interpreted. Which conclusion is valid? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "options": [
@@ -6198,7 +6198,7 @@
       "patternId": "7.13P:massive_star_end:exam_decision",
       "conceptFamily": "massive_star_end",
       "contextType": "a short calculation",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Stars practice",
       "stem": "Which answer is the strongest GCSE Physics response for stars? Check the clue before choosing: Recall the life cycle of a massive star.",
       "question": "Which answer is the strongest GCSE Physics response for stars? Check the clue before choosing: Recall the life cycle of a massive star.",
       "options": [
@@ -6268,7 +6268,7 @@
       "patternId": "7.13P:fusion_elements:direct_recall",
       "conceptFamily": "fusion_elements",
       "contextType": "a safety decision",
-      "skill": "Link fusion to elements.",
+      "skill": "Stars practice",
       "stem": "Which answer matches this stars objective: Link fusion to elements? Check the clue before choosing: Link fusion to elements.",
       "question": "Which answer matches this stars objective: Link fusion to elements? Check the clue before choosing: Link fusion to elements.",
       "options": [
@@ -6338,7 +6338,7 @@
       "patternId": "7.13P:star_formation:concept_discrimination",
       "conceptFamily": "star_formation",
       "contextType": "a graph-reading task",
-      "skill": "Describe star formation.",
+      "skill": "Stars practice",
       "stem": "Which option best separates the correct stars idea from a common mix-up? Check the clue before choosing: Describe star formation.",
       "question": "Which option best separates the correct stars idea from a common mix-up? Check the clue before choosing: Describe star formation.",
       "options": [
@@ -6408,7 +6408,7 @@
       "patternId": "7.13P:main_sequence:misconception_correction",
       "conceptFamily": "main_sequence",
       "contextType": "a comparison question",
-      "skill": "Describe a main sequence star.",
+      "skill": "Stars practice",
       "stem": "Which answer corrects a misconception about stars? Check the clue before choosing: Describe a main sequence star.",
       "question": "Which answer corrects a misconception about stars? Check the clue before choosing: Describe a main sequence star.",
       "options": [
@@ -6478,7 +6478,7 @@
       "patternId": "7.13P:sun_like_end:data_interpretation",
       "conceptFamily": "sun_like_end",
       "contextType": "a method-choice question",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Stars practice",
       "stem": "Which conclusion about stars is supported by the evidence? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "question": "Which conclusion about stars is supported by the evidence? Check the clue before choosing: Recall the life cycle of a Sun-like star.",
       "options": [
@@ -6548,7 +6548,7 @@
       "patternId": "7.13P:massive_star_end:representation_interpretation",
       "conceptFamily": "massive_star_end",
       "contextType": "a results discussion",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Stars practice",
       "stem": "A representation of stars is described in words. Which interpretation is correct? Check the clue before choosing: Recall the life cycle of a massive star.",
       "question": "A representation of stars is described in words. Which interpretation is correct? Check the clue before choosing: Recall the life cycle of a massive star.",
       "options": [

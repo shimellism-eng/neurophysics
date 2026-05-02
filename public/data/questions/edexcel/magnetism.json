@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "magnetism",
-  "generatedAt": "2026-05-02T05:26:55.784Z",
+  "generatedAt": "2026-05-02T07:16:14.024Z",
   "questions": [
     {
       "id": "edexcel_12_14p_applications_of_the_motor_effect_loudspeaker_direct_recall_001",
@@ -38,7 +38,7 @@
       "patternId": "12.14P:loudspeaker:direct_recall",
       "conceptFamily": "loudspeaker",
       "contextType": "a short calculation",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which statement is correct for applications of the motor effect? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "question": "Which statement is correct for applications of the motor effect? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "options": [
@@ -108,7 +108,7 @@
       "patternId": "12.14P:motor_rotation:concept_discrimination",
       "conceptFamily": "motor_rotation",
       "contextType": "a safety decision",
-      "skill": "Explain motor rotation.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A student is comparing similar ideas in applications of the motor effect. Which statement is correct? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "question": "A student is comparing similar ideas in applications of the motor effect. Which statement is correct? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "options": [
@@ -178,7 +178,7 @@
       "patternId": "12.14P:motor_effect:misconception_correction",
       "conceptFamily": "motor_effect",
       "contextType": "a graph-reading task",
-      "skill": "Describe the motor effect.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A revision note about applications of the motor effect contains an error. Which replacement is correct? Use the wording carefully: this is about describe the motor effect.",
       "question": "A revision note about applications of the motor effect contains an error. Which replacement is correct? Use the wording carefully: this is about describe the motor effect.",
       "options": [
@@ -248,7 +248,7 @@
       "patternId": "12.14P:force_direction:data_interpretation",
       "conceptFamily": "force_direction",
       "contextType": "a comparison question",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A small data set about applications of the motor effect is being interpreted. Which conclusion is valid? Check the clue before choosing: Use Fleming’s left-hand rule.",
       "question": "A small data set about applications of the motor effect is being interpreted. Which conclusion is valid? Check the clue before choosing: Use Fleming’s left-hand rule.",
       "options": [
@@ -318,7 +318,7 @@
       "patternId": "12.14P:increase_force:representation_interpretation",
       "conceptFamily": "increase_force",
       "contextType": "a method-choice question",
-      "skill": "Increase motor-effect force.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which option correctly reads the applications of the motor effect model or diagram idea? Check the clue before choosing: Increase motor-effect force.",
       "question": "Which option correctly reads the applications of the motor effect model or diagram idea? Check the clue before choosing: Increase motor-effect force.",
       "options": [
@@ -388,7 +388,7 @@
       "patternId": "12.14P:loudspeaker:direct_recall",
       "conceptFamily": "loudspeaker",
       "contextType": "a results discussion",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which answer matches this applications of the motor effect objective: Explain a loudspeaker? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "question": "Which answer matches this applications of the motor effect objective: Explain a loudspeaker? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "options": [
@@ -458,7 +458,7 @@
       "patternId": "12.14P:motor_rotation:applied_context",
       "conceptFamily": "motor_rotation",
       "contextType": "a classroom demonstration",
-      "skill": "Explain motor rotation.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "In a classroom demonstration, which conclusion is correct for applications of the motor effect? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "question": "In a classroom demonstration, which conclusion is correct for applications of the motor effect? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "options": [
@@ -528,7 +528,7 @@
       "patternId": "12.14P:motor_effect:misconception_correction",
       "conceptFamily": "motor_effect",
       "contextType": "a revision checkpoint",
-      "skill": "Describe the motor effect.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which answer corrects a misconception about applications of the motor effect? Use the wording carefully: this is about describe the motor effect.",
       "question": "Which answer corrects a misconception about applications of the motor effect? Use the wording carefully: this is about describe the motor effect.",
       "options": [
@@ -598,7 +598,7 @@
       "patternId": "12.14P:force_direction:exam_decision",
       "conceptFamily": "force_direction",
       "contextType": "an exam-style data table",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "The mark scheme is testing use Fleming’s left-hand rule. Which answer matches that point? Check the clue before choosing: Use Fleming’s left-hand rule.",
       "question": "The mark scheme is testing use Fleming’s left-hand rule. Which answer matches that point? Check the clue before choosing: Use Fleming’s left-hand rule.",
       "options": [
@@ -668,7 +668,7 @@
       "patternId": "12.14P:increase_force:representation_interpretation",
       "conceptFamily": "increase_force",
       "contextType": "a required-practical notebook",
-      "skill": "Increase motor-effect force.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A representation of applications of the motor effect is described in words. Which interpretation is correct? Check the clue before choosing: Increase motor-effect force.",
       "question": "A representation of applications of the motor effect is described in words. Which interpretation is correct? Check the clue before choosing: Increase motor-effect force.",
       "options": [
@@ -738,7 +738,7 @@
       "patternId": "12.14P:loudspeaker:concept_discrimination",
       "conceptFamily": "loudspeaker",
       "contextType": "a technician report",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A student is comparing similar ideas in applications of the motor effect. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "question": "A student is comparing similar ideas in applications of the motor effect. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "options": [
@@ -808,7 +808,7 @@
       "patternId": "12.14P:motor_rotation:applied_context",
       "conceptFamily": "motor_rotation",
       "contextType": "a labelled diagram",
-      "skill": "Explain motor rotation.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A question set in a labelled diagram tests applications of the motor effect. Which answer applies the idea correctly? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "question": "A question set in a labelled diagram tests applications of the motor effect. Which answer applies the idea correctly? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "options": [
@@ -878,7 +878,7 @@
       "patternId": "12.14P:motor_effect:data_interpretation",
       "conceptFamily": "motor_effect",
       "contextType": "a short calculation",
-      "skill": "Describe the motor effect.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "A small data set about applications of the motor effect is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe the motor effect.",
       "question": "A small data set about applications of the motor effect is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe the motor effect.",
       "options": [
@@ -948,7 +948,7 @@
       "patternId": "12.14P:force_direction:exam_decision",
       "conceptFamily": "force_direction",
       "contextType": "a safety decision",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which answer is the strongest GCSE Physics response for applications of the motor effect? Check the clue before choosing: Use Fleming’s left-hand rule.",
       "question": "Which answer is the strongest GCSE Physics response for applications of the motor effect? Check the clue before choosing: Use Fleming’s left-hand rule.",
       "options": [
@@ -1018,7 +1018,7 @@
       "patternId": "12.14P:increase_force:direct_recall",
       "conceptFamily": "increase_force",
       "contextType": "a graph-reading task",
-      "skill": "Increase motor-effect force.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which answer matches this applications of the motor effect objective: Increase motor-effect force? Check the clue before choosing: Increase motor-effect force.",
       "question": "Which answer matches this applications of the motor effect objective: Increase motor-effect force? Check the clue before choosing: Increase motor-effect force.",
       "options": [
@@ -1088,7 +1088,7 @@
       "patternId": "12.14P:loudspeaker:concept_discrimination",
       "conceptFamily": "loudspeaker",
       "contextType": "a comparison question",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which option best separates the correct applications of the motor effect idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "question": "Which option best separates the correct applications of the motor effect idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: explain a loudspeaker.",
       "options": [
@@ -1158,7 +1158,7 @@
       "patternId": "12.14P:motor_rotation:misconception_correction",
       "conceptFamily": "motor_rotation",
       "contextType": "a method-choice question",
-      "skill": "Explain motor rotation.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which answer corrects a misconception about applications of the motor effect? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "question": "Which answer corrects a misconception about applications of the motor effect? Keep the answer focused on applications of the motor effect: explain motor rotation.",
       "options": [
@@ -1228,7 +1228,7 @@
       "patternId": "12.14P:motor_effect:data_interpretation",
       "conceptFamily": "motor_effect",
       "contextType": "a results discussion",
-      "skill": "Describe the motor effect.",
+      "skill": "Applications of the Motor Effect practice",
       "stem": "Which conclusion about applications of the motor effect is supported by the evidence? Use the wording carefully: this is about describe the motor effect.",
       "question": "Which conclusion about applications of the motor effect is supported by the evidence? Use the wording carefully: this is about describe the motor effect.",
       "options": [
@@ -1299,7 +1299,7 @@
       "patternId": "13.2:induction:direct_recall",
       "conceptFamily": "induction",
       "contextType": "a technician report",
-      "skill": "Define electromagnetic induction.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which statement is correct for electromagnetic induction? Demand focus: define electromagnetic induction.",
       "question": "Which statement is correct for electromagnetic induction? Demand focus: define electromagnetic induction.",
       "options": [
@@ -1370,7 +1370,7 @@
       "patternId": "13.2:generator_effect:concept_discrimination",
       "conceptFamily": "generator_effect",
       "contextType": "a labelled diagram",
-      "skill": "Describe the generator effect.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A student is comparing similar ideas in electromagnetic induction. Which statement is correct? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "question": "A student is comparing similar ideas in electromagnetic induction. Which statement is correct? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "options": [
@@ -1441,7 +1441,7 @@
       "patternId": "13.2:increase_induced_pd:misconception_correction",
       "conceptFamily": "increase_induced_pd",
       "contextType": "a short calculation",
-      "skill": "Increase induced potential difference.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A revision note about electromagnetic induction contains an error. Which replacement is correct? Use the wording carefully: this is about increase induced potential difference.",
       "question": "A revision note about electromagnetic induction contains an error. Which replacement is correct? Use the wording carefully: this is about increase induced potential difference.",
       "options": [
@@ -1512,7 +1512,7 @@
       "patternId": "13.2:ac_generator:data_interpretation",
       "conceptFamily": "ac_generator",
       "contextType": "a safety decision",
-      "skill": "Describe an AC generator.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A small data set about electromagnetic induction is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe an AC generator.",
       "question": "A small data set about electromagnetic induction is being interpreted. Which conclusion is valid? Check the clue before choosing: Describe an AC generator.",
       "options": [
@@ -1583,7 +1583,7 @@
       "patternId": "13.2:transformer:representation_interpretation",
       "conceptFamily": "transformer",
       "contextType": "a graph-reading task",
-      "skill": "Use transformer ideas.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which option correctly reads the electromagnetic induction model or diagram idea? Check the clue before choosing: Use transformer ideas.",
       "question": "Which option correctly reads the electromagnetic induction model or diagram idea? Check the clue before choosing: Use transformer ideas.",
       "options": [
@@ -1654,7 +1654,7 @@
       "patternId": "13.2:induction:direct_recall",
       "conceptFamily": "induction",
       "contextType": "a comparison question",
-      "skill": "Define electromagnetic induction.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which answer matches this electromagnetic induction objective: Define electromagnetic induction? Demand focus: define electromagnetic induction.",
       "question": "Which answer matches this electromagnetic induction objective: Define electromagnetic induction? Demand focus: define electromagnetic induction.",
       "options": [
@@ -1725,7 +1725,7 @@
       "patternId": "13.2:generator_effect:applied_context",
       "conceptFamily": "generator_effect",
       "contextType": "a method-choice question",
-      "skill": "Describe the generator effect.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "In a method-choice question, which conclusion is correct for electromagnetic induction? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "question": "In a method-choice question, which conclusion is correct for electromagnetic induction? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "options": [
@@ -1796,7 +1796,7 @@
       "patternId": "13.2:increase_induced_pd:misconception_correction",
       "conceptFamily": "increase_induced_pd",
       "contextType": "a results discussion",
-      "skill": "Increase induced potential difference.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which answer corrects a misconception about electromagnetic induction? Use the wording carefully: this is about increase induced potential difference.",
       "question": "Which answer corrects a misconception about electromagnetic induction? Use the wording carefully: this is about increase induced potential difference.",
       "options": [
@@ -1867,7 +1867,7 @@
       "patternId": "13.2:ac_generator:exam_decision",
       "conceptFamily": "ac_generator",
       "contextType": "a classroom demonstration",
-      "skill": "Describe an AC generator.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "The mark scheme is testing describe an AC generator. Which answer matches that point? Check the clue before choosing: Describe an AC generator.",
       "question": "The mark scheme is testing describe an AC generator. Which answer matches that point? Check the clue before choosing: Describe an AC generator.",
       "options": [
@@ -1938,7 +1938,7 @@
       "patternId": "13.2:transformer:representation_interpretation",
       "conceptFamily": "transformer",
       "contextType": "a revision checkpoint",
-      "skill": "Use transformer ideas.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A representation of electromagnetic induction is described in words. Which interpretation is correct? Check the clue before choosing: Use transformer ideas.",
       "question": "A representation of electromagnetic induction is described in words. Which interpretation is correct? Check the clue before choosing: Use transformer ideas.",
       "options": [
@@ -2009,7 +2009,7 @@
       "patternId": "13.2:induction:concept_discrimination",
       "conceptFamily": "induction",
       "contextType": "an exam-style data table",
-      "skill": "Define electromagnetic induction.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A student is comparing similar ideas in electromagnetic induction. Which statement is correct? Demand focus: define electromagnetic induction.",
       "question": "A student is comparing similar ideas in electromagnetic induction. Which statement is correct? Demand focus: define electromagnetic induction.",
       "options": [
@@ -2080,7 +2080,7 @@
       "patternId": "13.2:generator_effect:applied_context",
       "conceptFamily": "generator_effect",
       "contextType": "a required-practical notebook",
-      "skill": "Describe the generator effect.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A question set in a required-practical notebook tests electromagnetic induction. Which answer applies the idea correctly? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "question": "A question set in a required-practical notebook tests electromagnetic induction. Which answer applies the idea correctly? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "options": [
@@ -2151,7 +2151,7 @@
       "patternId": "13.2:increase_induced_pd:data_interpretation",
       "conceptFamily": "increase_induced_pd",
       "contextType": "a technician report",
-      "skill": "Increase induced potential difference.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A small data set about electromagnetic induction is being interpreted. Which conclusion is valid? Use the wording carefully: this is about increase induced potential difference.",
       "question": "A small data set about electromagnetic induction is being interpreted. Which conclusion is valid? Use the wording carefully: this is about increase induced potential difference.",
       "options": [
@@ -2222,7 +2222,7 @@
       "patternId": "13.2:ac_generator:exam_decision",
       "conceptFamily": "ac_generator",
       "contextType": "a labelled diagram",
-      "skill": "Describe an AC generator.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which answer is the strongest GCSE Physics response for electromagnetic induction? Check the clue before choosing: Describe an AC generator.",
       "question": "Which answer is the strongest GCSE Physics response for electromagnetic induction? Check the clue before choosing: Describe an AC generator.",
       "options": [
@@ -2293,7 +2293,7 @@
       "patternId": "13.2:transformer:direct_recall",
       "conceptFamily": "transformer",
       "contextType": "a short calculation",
-      "skill": "Use transformer ideas.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which answer matches this electromagnetic induction objective: Use transformer ideas? Check the clue before choosing: Use transformer ideas.",
       "question": "Which answer matches this electromagnetic induction objective: Use transformer ideas? Check the clue before choosing: Use transformer ideas.",
       "options": [
@@ -2364,7 +2364,7 @@
       "patternId": "13.2:induction:concept_discrimination",
       "conceptFamily": "induction",
       "contextType": "a safety decision",
-      "skill": "Define electromagnetic induction.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which option best separates the correct electromagnetic induction idea from a common mix-up? Demand focus: define electromagnetic induction.",
       "question": "Which option best separates the correct electromagnetic induction idea from a common mix-up? Demand focus: define electromagnetic induction.",
       "options": [
@@ -2435,7 +2435,7 @@
       "patternId": "13.2:generator_effect:misconception_correction",
       "conceptFamily": "generator_effect",
       "contextType": "a graph-reading task",
-      "skill": "Describe the generator effect.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which answer corrects a misconception about electromagnetic induction? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "question": "Which answer corrects a misconception about electromagnetic induction? Keep the answer focused on electromagnetic induction: describe the generator effect.",
       "options": [
@@ -2506,7 +2506,7 @@
       "patternId": "13.2:increase_induced_pd:data_interpretation",
       "conceptFamily": "increase_induced_pd",
       "contextType": "a comparison question",
-      "skill": "Increase induced potential difference.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "Which conclusion about electromagnetic induction is supported by the evidence? Use the wording carefully: this is about increase induced potential difference.",
       "question": "Which conclusion about electromagnetic induction is supported by the evidence? Use the wording carefully: this is about increase induced potential difference.",
       "options": [
@@ -2577,7 +2577,7 @@
       "patternId": "13.2:ac_generator:representation_interpretation",
       "conceptFamily": "ac_generator",
       "contextType": "a method-choice question",
-      "skill": "Describe an AC generator.",
+      "skill": "Electromagnetic Induction practice",
       "stem": "A representation of electromagnetic induction is described in words. Which interpretation is correct? Check the clue before choosing: Describe an AC generator.",
       "question": "A representation of electromagnetic induction is described in words. Which interpretation is correct? Check the clue before choosing: Describe an AC generator.",
       "options": [
@@ -2648,7 +2648,7 @@
       "patternId": "12.7:electromagnet:direct_recall",
       "conceptFamily": "electromagnet",
       "contextType": "a technician report",
-      "skill": "Describe an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "Which statement is correct for electromagnets? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "question": "Which statement is correct for electromagnets? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "options": [
@@ -2719,7 +2719,7 @@
       "patternId": "12.7:strengthen_electromagnet:concept_discrimination",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a labelled diagram",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "A student is comparing similar ideas in electromagnets. Which statement is correct? Check the clue before choosing: Strengthen an electromagnet.",
       "question": "A student is comparing similar ideas in electromagnets. Which statement is correct? Check the clue before choosing: Strengthen an electromagnet.",
       "options": [
@@ -2790,7 +2790,7 @@
       "patternId": "12.7:solenoid_field:misconception_correction",
       "conceptFamily": "solenoid_field",
       "contextType": "a short calculation",
-      "skill": "Describe a solenoid field.",
+      "skill": "Electromagnets practice",
       "stem": "A revision note about electromagnets contains an error. Which replacement is correct? Use the wording carefully: this is about describe a solenoid field.",
       "question": "A revision note about electromagnets contains an error. Which replacement is correct? Use the wording carefully: this is about describe a solenoid field.",
       "options": [
@@ -2861,7 +2861,7 @@
       "patternId": "12.7:iron_core:data_interpretation",
       "conceptFamily": "iron_core",
       "contextType": "a safety decision",
-      "skill": "Explain the iron core effect.",
+      "skill": "Electromagnets practice",
       "stem": "A small data set about electromagnets is being interpreted. Which conclusion is valid? Keep the answer focused on electromagnets: explain the iron core effect.",
       "question": "A small data set about electromagnets is being interpreted. Which conclusion is valid? Keep the answer focused on electromagnets: explain the iron core effect.",
       "options": [
@@ -2932,7 +2932,7 @@
       "patternId": "12.7:current_direction:representation_interpretation",
       "conceptFamily": "current_direction",
       "contextType": "a graph-reading task",
-      "skill": "Link current direction to field direction.",
+      "skill": "Electromagnets practice",
       "stem": "Which option correctly reads the electromagnets model or diagram idea? Use the wording carefully: this is about link current direction to field direction.",
       "question": "Which option correctly reads the electromagnets model or diagram idea? Use the wording carefully: this is about link current direction to field direction.",
       "options": [
@@ -3003,7 +3003,7 @@
       "patternId": "12.7:electromagnet:direct_recall",
       "conceptFamily": "electromagnet",
       "contextType": "a comparison question",
-      "skill": "Describe an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "Which answer matches this electromagnets objective: Describe an electromagnet? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "question": "Which answer matches this electromagnets objective: Describe an electromagnet? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "options": [
@@ -3074,7 +3074,7 @@
       "patternId": "12.7:strengthen_electromagnet:applied_context",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a method-choice question",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "In a method-choice question, which conclusion is correct for electromagnets? Check the clue before choosing: Strengthen an electromagnet.",
       "question": "In a method-choice question, which conclusion is correct for electromagnets? Check the clue before choosing: Strengthen an electromagnet.",
       "options": [
@@ -3145,7 +3145,7 @@
       "patternId": "12.7:solenoid_field:misconception_correction",
       "conceptFamily": "solenoid_field",
       "contextType": "a results discussion",
-      "skill": "Describe a solenoid field.",
+      "skill": "Electromagnets practice",
       "stem": "Which answer corrects a misconception about electromagnets? Use the wording carefully: this is about describe a solenoid field.",
       "question": "Which answer corrects a misconception about electromagnets? Use the wording carefully: this is about describe a solenoid field.",
       "options": [
@@ -3216,7 +3216,7 @@
       "patternId": "12.7:iron_core:exam_decision",
       "conceptFamily": "iron_core",
       "contextType": "a classroom demonstration",
-      "skill": "Explain the iron core effect.",
+      "skill": "Electromagnets practice",
       "stem": "The mark scheme is testing explain the iron core effect. Which answer matches that point? Keep the answer focused on electromagnets: explain the iron core effect.",
       "question": "The mark scheme is testing explain the iron core effect. Which answer matches that point? Keep the answer focused on electromagnets: explain the iron core effect.",
       "options": [
@@ -3287,7 +3287,7 @@
       "patternId": "12.7:current_direction:representation_interpretation",
       "conceptFamily": "current_direction",
       "contextType": "a revision checkpoint",
-      "skill": "Link current direction to field direction.",
+      "skill": "Electromagnets practice",
       "stem": "A representation of electromagnets is described in words. Which interpretation is correct? Use the wording carefully: this is about link current direction to field direction.",
       "question": "A representation of electromagnets is described in words. Which interpretation is correct? Use the wording carefully: this is about link current direction to field direction.",
       "options": [
@@ -3358,7 +3358,7 @@
       "patternId": "12.7:electromagnet:concept_discrimination",
       "conceptFamily": "electromagnet",
       "contextType": "an exam-style data table",
-      "skill": "Describe an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "A student is comparing similar ideas in electromagnets. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "question": "A student is comparing similar ideas in electromagnets. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "options": [
@@ -3429,7 +3429,7 @@
       "patternId": "12.7:strengthen_electromagnet:applied_context",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a required-practical notebook",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "A question set in a required-practical notebook tests electromagnets. Which answer applies the idea correctly? Check the clue before choosing: Strengthen an electromagnet.",
       "question": "A question set in a required-practical notebook tests electromagnets. Which answer applies the idea correctly? Check the clue before choosing: Strengthen an electromagnet.",
       "options": [
@@ -3500,7 +3500,7 @@
       "patternId": "12.7:solenoid_field:data_interpretation",
       "conceptFamily": "solenoid_field",
       "contextType": "a technician report",
-      "skill": "Describe a solenoid field.",
+      "skill": "Electromagnets practice",
       "stem": "A small data set about electromagnets is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe a solenoid field.",
       "question": "A small data set about electromagnets is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe a solenoid field.",
       "options": [
@@ -3571,7 +3571,7 @@
       "patternId": "12.7:iron_core:exam_decision",
       "conceptFamily": "iron_core",
       "contextType": "a labelled diagram",
-      "skill": "Explain the iron core effect.",
+      "skill": "Electromagnets practice",
       "stem": "Which answer is the strongest GCSE Physics response for electromagnets? Keep the answer focused on electromagnets: explain the iron core effect.",
       "question": "Which answer is the strongest GCSE Physics response for electromagnets? Keep the answer focused on electromagnets: explain the iron core effect.",
       "options": [
@@ -3642,7 +3642,7 @@
       "patternId": "12.7:current_direction:direct_recall",
       "conceptFamily": "current_direction",
       "contextType": "a short calculation",
-      "skill": "Link current direction to field direction.",
+      "skill": "Electromagnets practice",
       "stem": "Which answer matches this electromagnets objective: Link current direction to field direction? Use the wording carefully: this is about link current direction to field direction.",
       "question": "Which answer matches this electromagnets objective: Link current direction to field direction? Use the wording carefully: this is about link current direction to field direction.",
       "options": [
@@ -3713,7 +3713,7 @@
       "patternId": "12.7:electromagnet:concept_discrimination",
       "conceptFamily": "electromagnet",
       "contextType": "a safety decision",
-      "skill": "Describe an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "Which option best separates the correct electromagnets idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "question": "Which option best separates the correct electromagnets idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: describe an electromagnet.",
       "options": [
@@ -3784,7 +3784,7 @@
       "patternId": "12.7:strengthen_electromagnet:misconception_correction",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a graph-reading task",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Electromagnets practice",
       "stem": "Which answer corrects a misconception about electromagnets? Check the clue before choosing: Strengthen an electromagnet.",
       "question": "Which answer corrects a misconception about electromagnets? Check the clue before choosing: Strengthen an electromagnet.",
       "options": [
@@ -3855,7 +3855,7 @@
       "patternId": "12.7:solenoid_field:data_interpretation",
       "conceptFamily": "solenoid_field",
       "contextType": "a comparison question",
-      "skill": "Describe a solenoid field.",
+      "skill": "Electromagnets practice",
       "stem": "Which conclusion about electromagnets is supported by the evidence? Use the wording carefully: this is about describe a solenoid field.",
       "question": "Which conclusion about electromagnets is supported by the evidence? Use the wording carefully: this is about describe a solenoid field.",
       "options": [
@@ -3926,7 +3926,7 @@
       "patternId": "12.7:iron_core:representation_interpretation",
       "conceptFamily": "iron_core",
       "contextType": "a method-choice question",
-      "skill": "Explain the iron core effect.",
+      "skill": "Electromagnets practice",
       "stem": "A representation of electromagnets is described in words. Which interpretation is correct? Keep the answer focused on electromagnets: explain the iron core effect.",
       "question": "A representation of electromagnets is described in words. Which interpretation is correct? Keep the answer focused on electromagnets: explain the iron core effect.",
       "options": [
@@ -3997,7 +3997,7 @@
       "patternId": "12.13:motor_effect:direct_recall",
       "conceptFamily": "motor_effect",
       "contextType": "a labelled diagram",
-      "skill": "Describe the motor effect.",
+      "skill": "Motor Effect practice",
       "stem": "Which statement is correct for motor effect? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "question": "Which statement is correct for motor effect? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "options": [
@@ -4068,7 +4068,7 @@
       "patternId": "12.13:force_direction:concept_discrimination",
       "conceptFamily": "force_direction",
       "contextType": "a short calculation",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Motor Effect practice",
       "stem": "A student is comparing similar ideas in motor effect. Which statement is correct? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "question": "A student is comparing similar ideas in motor effect. Which statement is correct? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "options": [
@@ -4139,7 +4139,7 @@
       "patternId": "12.13:motor_rotation:misconception_correction",
       "conceptFamily": "motor_rotation",
       "contextType": "a safety decision",
-      "skill": "Explain motor rotation.",
+      "skill": "Motor Effect practice",
       "stem": "A revision note about motor effect contains an error. Which replacement is correct? Keep the answer focused on motor effect: explain motor rotation.",
       "question": "A revision note about motor effect contains an error. Which replacement is correct? Keep the answer focused on motor effect: explain motor rotation.",
       "options": [
@@ -4210,7 +4210,7 @@
       "patternId": "12.13:increase_force:data_interpretation",
       "conceptFamily": "increase_force",
       "contextType": "a graph-reading task",
-      "skill": "Increase motor-effect force.",
+      "skill": "Motor Effect practice",
       "stem": "A small data set about motor effect is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "question": "A small data set about motor effect is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "options": [
@@ -4281,7 +4281,7 @@
       "patternId": "12.13:loudspeaker:representation_interpretation",
       "conceptFamily": "loudspeaker",
       "contextType": "a comparison question",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Motor Effect practice",
       "stem": "Which option correctly reads the motor effect model or diagram idea? Use the wording carefully: this is about explain a loudspeaker.",
       "question": "Which option correctly reads the motor effect model or diagram idea? Use the wording carefully: this is about explain a loudspeaker.",
       "options": [
@@ -4352,7 +4352,7 @@
       "patternId": "12.13:motor_effect:direct_recall",
       "conceptFamily": "motor_effect",
       "contextType": "a method-choice question",
-      "skill": "Describe the motor effect.",
+      "skill": "Motor Effect practice",
       "stem": "Which answer matches this motor effect objective: Describe the motor effect? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "question": "Which answer matches this motor effect objective: Describe the motor effect? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "options": [
@@ -4423,7 +4423,7 @@
       "patternId": "12.13:force_direction:applied_context",
       "conceptFamily": "force_direction",
       "contextType": "a results discussion",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Motor Effect practice",
       "stem": "In a results discussion, which conclusion is correct for motor effect? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "question": "In a results discussion, which conclusion is correct for motor effect? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "options": [
@@ -4494,7 +4494,7 @@
       "patternId": "12.13:motor_rotation:misconception_correction",
       "conceptFamily": "motor_rotation",
       "contextType": "a classroom demonstration",
-      "skill": "Explain motor rotation.",
+      "skill": "Motor Effect practice",
       "stem": "Which answer corrects a misconception about motor effect? Keep the answer focused on motor effect: explain motor rotation.",
       "question": "Which answer corrects a misconception about motor effect? Keep the answer focused on motor effect: explain motor rotation.",
       "options": [
@@ -4565,7 +4565,7 @@
       "patternId": "12.13:increase_force:exam_decision",
       "conceptFamily": "increase_force",
       "contextType": "a revision checkpoint",
-      "skill": "Increase motor-effect force.",
+      "skill": "Motor Effect practice",
       "stem": "The mark scheme is testing increase motor-effect force. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "question": "The mark scheme is testing increase motor-effect force. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "options": [
@@ -4636,7 +4636,7 @@
       "patternId": "12.13:loudspeaker:representation_interpretation",
       "conceptFamily": "loudspeaker",
       "contextType": "an exam-style data table",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Motor Effect practice",
       "stem": "A representation of motor effect is described in words. Which interpretation is correct? Use the wording carefully: this is about explain a loudspeaker.",
       "question": "A representation of motor effect is described in words. Which interpretation is correct? Use the wording carefully: this is about explain a loudspeaker.",
       "options": [
@@ -4707,7 +4707,7 @@
       "patternId": "12.13:motor_effect:concept_discrimination",
       "conceptFamily": "motor_effect",
       "contextType": "a required-practical notebook",
-      "skill": "Describe the motor effect.",
+      "skill": "Motor Effect practice",
       "stem": "A student is comparing similar ideas in motor effect. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "question": "A student is comparing similar ideas in motor effect. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "options": [
@@ -4778,7 +4778,7 @@
       "patternId": "12.13:force_direction:applied_context",
       "conceptFamily": "force_direction",
       "contextType": "a technician report",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Motor Effect practice",
       "stem": "A question set in a technician report tests motor effect. Which answer applies the idea correctly? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "question": "A question set in a technician report tests motor effect. Which answer applies the idea correctly? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "options": [
@@ -4849,7 +4849,7 @@
       "patternId": "12.13:motor_rotation:data_interpretation",
       "conceptFamily": "motor_rotation",
       "contextType": "a labelled diagram",
-      "skill": "Explain motor rotation.",
+      "skill": "Motor Effect practice",
       "stem": "A small data set about motor effect is being interpreted. Which conclusion is valid? Keep the answer focused on motor effect: explain motor rotation.",
       "question": "A small data set about motor effect is being interpreted. Which conclusion is valid? Keep the answer focused on motor effect: explain motor rotation.",
       "options": [
@@ -4920,7 +4920,7 @@
       "patternId": "12.13:increase_force:exam_decision",
       "conceptFamily": "increase_force",
       "contextType": "a short calculation",
-      "skill": "Increase motor-effect force.",
+      "skill": "Motor Effect practice",
       "stem": "Which answer is the strongest GCSE Physics response for motor effect? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "question": "Which answer is the strongest GCSE Physics response for motor effect? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "options": [
@@ -4991,7 +4991,7 @@
       "patternId": "12.13:loudspeaker:direct_recall",
       "conceptFamily": "loudspeaker",
       "contextType": "a safety decision",
-      "skill": "Explain a loudspeaker.",
+      "skill": "Motor Effect practice",
       "stem": "Which answer matches this motor effect objective: Explain a loudspeaker? Use the wording carefully: this is about explain a loudspeaker.",
       "question": "Which answer matches this motor effect objective: Explain a loudspeaker? Use the wording carefully: this is about explain a loudspeaker.",
       "options": [
@@ -5062,7 +5062,7 @@
       "patternId": "12.13:motor_effect:concept_discrimination",
       "conceptFamily": "motor_effect",
       "contextType": "a graph-reading task",
-      "skill": "Describe the motor effect.",
+      "skill": "Motor Effect practice",
       "stem": "Which option best separates the correct motor effect idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "question": "Which option best separates the correct motor effect idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: describe the motor effect.",
       "options": [
@@ -5133,7 +5133,7 @@
       "patternId": "12.13:force_direction:misconception_correction",
       "conceptFamily": "force_direction",
       "contextType": "a comparison question",
-      "skill": "Use Fleming’s left-hand rule.",
+      "skill": "Motor Effect practice",
       "stem": "Which answer corrects a misconception about motor effect? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "question": "Which answer corrects a misconception about motor effect? Keep the answer focused on motor effect: use Fleming’s left-hand rule.",
       "options": [
@@ -5204,7 +5204,7 @@
       "patternId": "12.13:motor_rotation:data_interpretation",
       "conceptFamily": "motor_rotation",
       "contextType": "a method-choice question",
-      "skill": "Explain motor rotation.",
+      "skill": "Motor Effect practice",
       "stem": "Which conclusion about motor effect is supported by the evidence? Keep the answer focused on motor effect: explain motor rotation.",
       "question": "Which conclusion about motor effect is supported by the evidence? Keep the answer focused on motor effect: explain motor rotation.",
       "options": [
@@ -5275,7 +5275,7 @@
       "patternId": "12.13:increase_force:representation_interpretation",
       "conceptFamily": "increase_force",
       "contextType": "a results discussion",
-      "skill": "Increase motor-effect force.",
+      "skill": "Motor Effect practice",
       "stem": "A representation of motor effect is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "question": "A representation of motor effect is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: increase motor-effect force.",
       "options": [
@@ -5346,7 +5346,7 @@
       "patternId": "12.8:solenoid_field:direct_recall",
       "conceptFamily": "solenoid_field",
       "contextType": "a technician report",
-      "skill": "Describe a solenoid field.",
+      "skill": "Solenoids practice",
       "stem": "Which statement is correct for solenoids? Demand focus: describe a solenoid field.",
       "question": "Which statement is correct for solenoids? Demand focus: describe a solenoid field.",
       "options": [
@@ -5417,7 +5417,7 @@
       "patternId": "12.8:iron_core:concept_discrimination",
       "conceptFamily": "iron_core",
       "contextType": "a labelled diagram",
-      "skill": "Explain the iron core effect.",
+      "skill": "Solenoids practice",
       "stem": "A student is comparing similar ideas in solenoids. Which statement is correct? Check the clue before choosing: Explain the iron core effect.",
       "question": "A student is comparing similar ideas in solenoids. Which statement is correct? Check the clue before choosing: Explain the iron core effect.",
       "options": [
@@ -5488,7 +5488,7 @@
       "patternId": "12.8:strengthen_electromagnet:misconception_correction",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a short calculation",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "A revision note about solenoids contains an error. Which replacement is correct? Use the wording carefully: this is about strengthen an electromagnet.",
       "question": "A revision note about solenoids contains an error. Which replacement is correct? Use the wording carefully: this is about strengthen an electromagnet.",
       "options": [
@@ -5559,7 +5559,7 @@
       "patternId": "12.8:current_direction:data_interpretation",
       "conceptFamily": "current_direction",
       "contextType": "a safety decision",
-      "skill": "Link current direction to field direction.",
+      "skill": "Solenoids practice",
       "stem": "A small data set about solenoids is being interpreted. Which conclusion is valid? Check the clue before choosing: Link current direction to field direction.",
       "question": "A small data set about solenoids is being interpreted. Which conclusion is valid? Check the clue before choosing: Link current direction to field direction.",
       "options": [
@@ -5630,7 +5630,7 @@
       "patternId": "12.8:electromagnet:representation_interpretation",
       "conceptFamily": "electromagnet",
       "contextType": "a graph-reading task",
-      "skill": "Describe an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "Which option correctly reads the solenoids model or diagram idea? Keep the answer focused on solenoids: describe an electromagnet.",
       "question": "Which option correctly reads the solenoids model or diagram idea? Keep the answer focused on solenoids: describe an electromagnet.",
       "options": [
@@ -5701,7 +5701,7 @@
       "patternId": "12.8:solenoid_field:direct_recall",
       "conceptFamily": "solenoid_field",
       "contextType": "a comparison question",
-      "skill": "Describe a solenoid field.",
+      "skill": "Solenoids practice",
       "stem": "Which answer matches this solenoids objective: Describe a solenoid field? Demand focus: describe a solenoid field.",
       "question": "Which answer matches this solenoids objective: Describe a solenoid field? Demand focus: describe a solenoid field.",
       "options": [
@@ -5772,7 +5772,7 @@
       "patternId": "12.8:iron_core:applied_context",
       "conceptFamily": "iron_core",
       "contextType": "a method-choice question",
-      "skill": "Explain the iron core effect.",
+      "skill": "Solenoids practice",
       "stem": "In a method-choice question, which conclusion is correct for solenoids? Check the clue before choosing: Explain the iron core effect.",
       "question": "In a method-choice question, which conclusion is correct for solenoids? Check the clue before choosing: Explain the iron core effect.",
       "options": [
@@ -5843,7 +5843,7 @@
       "patternId": "12.8:strengthen_electromagnet:misconception_correction",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a results discussion",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "Which answer corrects a misconception about solenoids? Use the wording carefully: this is about strengthen an electromagnet.",
       "question": "Which answer corrects a misconception about solenoids? Use the wording carefully: this is about strengthen an electromagnet.",
       "options": [
@@ -5914,7 +5914,7 @@
       "patternId": "12.8:current_direction:exam_decision",
       "conceptFamily": "current_direction",
       "contextType": "a classroom demonstration",
-      "skill": "Link current direction to field direction.",
+      "skill": "Solenoids practice",
       "stem": "The mark scheme is testing link current direction to field direction. Which answer matches that point? Check the clue before choosing: Link current direction to field direction.",
       "question": "The mark scheme is testing link current direction to field direction. Which answer matches that point? Check the clue before choosing: Link current direction to field direction.",
       "options": [
@@ -5985,7 +5985,7 @@
       "patternId": "12.8:electromagnet:representation_interpretation",
       "conceptFamily": "electromagnet",
       "contextType": "a revision checkpoint",
-      "skill": "Describe an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "A representation of solenoids is described in words. Which interpretation is correct? Keep the answer focused on solenoids: describe an electromagnet.",
       "question": "A representation of solenoids is described in words. Which interpretation is correct? Keep the answer focused on solenoids: describe an electromagnet.",
       "options": [
@@ -6056,7 +6056,7 @@
       "patternId": "12.8:solenoid_field:concept_discrimination",
       "conceptFamily": "solenoid_field",
       "contextType": "an exam-style data table",
-      "skill": "Describe a solenoid field.",
+      "skill": "Solenoids practice",
       "stem": "A student is comparing similar ideas in solenoids. Which statement is correct? Demand focus: describe a solenoid field.",
       "question": "A student is comparing similar ideas in solenoids. Which statement is correct? Demand focus: describe a solenoid field.",
       "options": [
@@ -6127,7 +6127,7 @@
       "patternId": "12.8:iron_core:applied_context",
       "conceptFamily": "iron_core",
       "contextType": "a required-practical notebook",
-      "skill": "Explain the iron core effect.",
+      "skill": "Solenoids practice",
       "stem": "A question set in a required-practical notebook tests solenoids. Which answer applies the idea correctly? Check the clue before choosing: Explain the iron core effect.",
       "question": "A question set in a required-practical notebook tests solenoids. Which answer applies the idea correctly? Check the clue before choosing: Explain the iron core effect.",
       "options": [
@@ -6198,7 +6198,7 @@
       "patternId": "12.8:strengthen_electromagnet:data_interpretation",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a technician report",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "A small data set about solenoids is being interpreted. Which conclusion is valid? Use the wording carefully: this is about strengthen an electromagnet.",
       "question": "A small data set about solenoids is being interpreted. Which conclusion is valid? Use the wording carefully: this is about strengthen an electromagnet.",
       "options": [
@@ -6269,7 +6269,7 @@
       "patternId": "12.8:current_direction:exam_decision",
       "conceptFamily": "current_direction",
       "contextType": "a labelled diagram",
-      "skill": "Link current direction to field direction.",
+      "skill": "Solenoids practice",
       "stem": "Which answer is the strongest GCSE Physics response for solenoids? Check the clue before choosing: Link current direction to field direction.",
       "question": "Which answer is the strongest GCSE Physics response for solenoids? Check the clue before choosing: Link current direction to field direction.",
       "options": [
@@ -6340,7 +6340,7 @@
       "patternId": "12.8:electromagnet:direct_recall",
       "conceptFamily": "electromagnet",
       "contextType": "a short calculation",
-      "skill": "Describe an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "Which answer matches this solenoids objective: Describe an electromagnet? Keep the answer focused on solenoids: describe an electromagnet.",
       "question": "Which answer matches this solenoids objective: Describe an electromagnet? Keep the answer focused on solenoids: describe an electromagnet.",
       "options": [
@@ -6411,7 +6411,7 @@
       "patternId": "12.8:solenoid_field:concept_discrimination",
       "conceptFamily": "solenoid_field",
       "contextType": "a safety decision",
-      "skill": "Describe a solenoid field.",
+      "skill": "Solenoids practice",
       "stem": "Which option best separates the correct solenoids idea from a common mix-up? Demand focus: describe a solenoid field.",
       "question": "Which option best separates the correct solenoids idea from a common mix-up? Demand focus: describe a solenoid field.",
       "options": [
@@ -6482,7 +6482,7 @@
       "patternId": "12.8:iron_core:misconception_correction",
       "conceptFamily": "iron_core",
       "contextType": "a graph-reading task",
-      "skill": "Explain the iron core effect.",
+      "skill": "Solenoids practice",
       "stem": "Which answer corrects a misconception about solenoids? Check the clue before choosing: Explain the iron core effect.",
       "question": "Which answer corrects a misconception about solenoids? Check the clue before choosing: Explain the iron core effect.",
       "options": [
@@ -6553,7 +6553,7 @@
       "patternId": "12.8:strengthen_electromagnet:data_interpretation",
       "conceptFamily": "strengthen_electromagnet",
       "contextType": "a comparison question",
-      "skill": "Strengthen an electromagnet.",
+      "skill": "Solenoids practice",
       "stem": "Which conclusion about solenoids is supported by the evidence? Use the wording carefully: this is about strengthen an electromagnet.",
       "question": "Which conclusion about solenoids is supported by the evidence? Use the wording carefully: this is about strengthen an electromagnet.",
       "options": [

@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "space",
-  "generatedAt": "2026-05-02T05:26:55.769Z",
+  "generatedAt": "2026-05-02T07:16:14.008Z",
   "questions": [
     {
       "id": "aqa_4_8_2_galaxies_redshift_meaning_direct_recall_001",
@@ -38,7 +38,7 @@
       "patternId": "4.8.2:redshift_meaning:direct_recall",
       "conceptFamily": "redshift_meaning",
       "contextType": "a labelled diagram",
-      "skill": "Interpret red-shift.",
+      "skill": "Galaxies practice",
       "stem": "Which statement is correct for galaxies? Keep the answer focused on galaxies: interpret red-shift.",
       "question": "Which statement is correct for galaxies? Keep the answer focused on galaxies: interpret red-shift.",
       "options": [
@@ -108,7 +108,7 @@
       "patternId": "4.8.2:expanding_universe:concept_discrimination",
       "conceptFamily": "expanding_universe",
       "contextType": "a short calculation",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Galaxies practice",
       "stem": "A student is comparing similar ideas in galaxies. Which statement is correct? Check the clue before choosing: Link red-shift to expansion.",
       "question": "A student is comparing similar ideas in galaxies. Which statement is correct? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -178,7 +178,7 @@
       "patternId": "4.8.2:big_bang:misconception_correction",
       "conceptFamily": "big_bang",
       "contextType": "a safety decision",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Galaxies practice",
       "stem": "A revision note about galaxies contains an error. Which replacement is correct? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "question": "A revision note about galaxies contains an error. Which replacement is correct? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "options": [
@@ -248,7 +248,7 @@
       "patternId": "4.8.2:cmb:data_interpretation",
       "conceptFamily": "cmb",
       "contextType": "a graph-reading task",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Galaxies practice",
       "stem": "A small data set about galaxies is being interpreted. Which conclusion is valid? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "question": "A small data set about galaxies is being interpreted. Which conclusion is valid? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "options": [
@@ -318,7 +318,7 @@
       "patternId": "4.8.2:wavelength_shift:representation_interpretation",
       "conceptFamily": "wavelength_shift",
       "contextType": "a comparison question",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Galaxies practice",
       "stem": "Which option correctly reads the galaxies model or diagram idea? Use the wording carefully: this is about compare red-shift and blue-shift.",
       "question": "Which option correctly reads the galaxies model or diagram idea? Use the wording carefully: this is about compare red-shift and blue-shift.",
       "options": [
@@ -388,7 +388,7 @@
       "patternId": "4.8.2:redshift_meaning:direct_recall",
       "conceptFamily": "redshift_meaning",
       "contextType": "a method-choice question",
-      "skill": "Interpret red-shift.",
+      "skill": "Galaxies practice",
       "stem": "Which answer matches this galaxies objective: Interpret red-shift? Keep the answer focused on galaxies: interpret red-shift.",
       "question": "Which answer matches this galaxies objective: Interpret red-shift? Keep the answer focused on galaxies: interpret red-shift.",
       "options": [
@@ -458,7 +458,7 @@
       "patternId": "4.8.2:expanding_universe:applied_context",
       "conceptFamily": "expanding_universe",
       "contextType": "a results discussion",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Galaxies practice",
       "stem": "In a results discussion, which conclusion is correct for galaxies? Check the clue before choosing: Link red-shift to expansion.",
       "question": "In a results discussion, which conclusion is correct for galaxies? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -528,7 +528,7 @@
       "patternId": "4.8.2:big_bang:misconception_correction",
       "conceptFamily": "big_bang",
       "contextType": "a classroom demonstration",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Galaxies practice",
       "stem": "Which answer corrects a misconception about galaxies? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "question": "Which answer corrects a misconception about galaxies? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "options": [
@@ -598,7 +598,7 @@
       "patternId": "4.8.2:cmb:exam_decision",
       "conceptFamily": "cmb",
       "contextType": "a revision checkpoint",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Galaxies practice",
       "stem": "The mark scheme is testing identify cosmic microwave background radiation. Which answer matches that point? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "question": "The mark scheme is testing identify cosmic microwave background radiation. Which answer matches that point? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "options": [
@@ -668,7 +668,7 @@
       "patternId": "4.8.2:wavelength_shift:representation_interpretation",
       "conceptFamily": "wavelength_shift",
       "contextType": "an exam-style data table",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Galaxies practice",
       "stem": "A representation of galaxies is described in words. Which interpretation is correct? Use the wording carefully: this is about compare red-shift and blue-shift.",
       "question": "A representation of galaxies is described in words. Which interpretation is correct? Use the wording carefully: this is about compare red-shift and blue-shift.",
       "options": [
@@ -738,7 +738,7 @@
       "patternId": "4.8.2:redshift_meaning:concept_discrimination",
       "conceptFamily": "redshift_meaning",
       "contextType": "a required-practical notebook",
-      "skill": "Interpret red-shift.",
+      "skill": "Galaxies practice",
       "stem": "A student is comparing similar ideas in galaxies. Which statement is correct? Keep the answer focused on galaxies: interpret red-shift.",
       "question": "A student is comparing similar ideas in galaxies. Which statement is correct? Keep the answer focused on galaxies: interpret red-shift.",
       "options": [
@@ -808,7 +808,7 @@
       "patternId": "4.8.2:expanding_universe:applied_context",
       "conceptFamily": "expanding_universe",
       "contextType": "a technician report",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Galaxies practice",
       "stem": "A question set in a technician report tests galaxies. Which answer applies the idea correctly? Check the clue before choosing: Link red-shift to expansion.",
       "question": "A question set in a technician report tests galaxies. Which answer applies the idea correctly? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -878,7 +878,7 @@
       "patternId": "4.8.2:big_bang:data_interpretation",
       "conceptFamily": "big_bang",
       "contextType": "a labelled diagram",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Galaxies practice",
       "stem": "A small data set about galaxies is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "question": "A small data set about galaxies is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "options": [
@@ -948,7 +948,7 @@
       "patternId": "4.8.2:cmb:exam_decision",
       "conceptFamily": "cmb",
       "contextType": "a short calculation",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Galaxies practice",
       "stem": "Which answer is the strongest GCSE Physics response for galaxies? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "question": "Which answer is the strongest GCSE Physics response for galaxies? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "options": [
@@ -1018,7 +1018,7 @@
       "patternId": "4.8.2:wavelength_shift:direct_recall",
       "conceptFamily": "wavelength_shift",
       "contextType": "a safety decision",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Galaxies practice",
       "stem": "Which answer matches this galaxies objective: Compare red-shift and blue-shift? Use the wording carefully: this is about compare red-shift and blue-shift.",
       "question": "Which answer matches this galaxies objective: Compare red-shift and blue-shift? Use the wording carefully: this is about compare red-shift and blue-shift.",
       "options": [
@@ -1088,7 +1088,7 @@
       "patternId": "4.8.2:redshift_meaning:concept_discrimination",
       "conceptFamily": "redshift_meaning",
       "contextType": "a graph-reading task",
-      "skill": "Interpret red-shift.",
+      "skill": "Galaxies practice",
       "stem": "Which option best separates the correct galaxies idea from a common mix-up? Keep the answer focused on galaxies: interpret red-shift.",
       "question": "Which option best separates the correct galaxies idea from a common mix-up? Keep the answer focused on galaxies: interpret red-shift.",
       "options": [
@@ -1158,7 +1158,7 @@
       "patternId": "4.8.2:expanding_universe:misconception_correction",
       "conceptFamily": "expanding_universe",
       "contextType": "a comparison question",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Galaxies practice",
       "stem": "Which answer corrects a misconception about galaxies? Check the clue before choosing: Link red-shift to expansion.",
       "question": "Which answer corrects a misconception about galaxies? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -1228,7 +1228,7 @@
       "patternId": "4.8.2:big_bang:data_interpretation",
       "conceptFamily": "big_bang",
       "contextType": "a method-choice question",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Galaxies practice",
       "stem": "Which conclusion about galaxies is supported by the evidence? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "question": "Which conclusion about galaxies is supported by the evidence? Use the wording carefully: this is about link expansion to the Big Bang model.",
       "options": [
@@ -1298,7 +1298,7 @@
       "patternId": "4.8.2:cmb:representation_interpretation",
       "conceptFamily": "cmb",
       "contextType": "a results discussion",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Galaxies practice",
       "stem": "A representation of galaxies is described in words. Which interpretation is correct? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "question": "A representation of galaxies is described in words. Which interpretation is correct? Keep the answer focused on galaxies: identify cosmic microwave background radiation.",
       "options": [
@@ -1368,7 +1368,7 @@
       "patternId": "4.8.1.2:star_formation:direct_recall",
       "conceptFamily": "star_formation",
       "contextType": "a safety decision",
-      "skill": "Describe star formation.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which statement is correct for life cycle of stars? Keep the answer focused on life cycle of stars: describe star formation.",
       "question": "Which statement is correct for life cycle of stars? Keep the answer focused on life cycle of stars: describe star formation.",
       "options": [
@@ -1438,7 +1438,7 @@
       "patternId": "4.8.1.2:main_sequence:concept_discrimination",
       "conceptFamily": "main_sequence",
       "contextType": "a graph-reading task",
-      "skill": "Describe a main sequence star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A student is comparing similar ideas in life cycle of stars. Which statement is correct? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "question": "A student is comparing similar ideas in life cycle of stars. Which statement is correct? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "options": [
@@ -1508,7 +1508,7 @@
       "patternId": "4.8.1.2:sun_like_end:misconception_correction",
       "conceptFamily": "sun_like_end",
       "contextType": "a comparison question",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A revision note about life cycle of stars contains an error. Which replacement is correct? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "question": "A revision note about life cycle of stars contains an error. Which replacement is correct? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "options": [
@@ -1578,7 +1578,7 @@
       "patternId": "4.8.1.2:massive_star_end:data_interpretation",
       "conceptFamily": "massive_star_end",
       "contextType": "a method-choice question",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A small data set about life cycle of stars is being interpreted. Which conclusion is valid? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "question": "A small data set about life cycle of stars is being interpreted. Which conclusion is valid? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "options": [
@@ -1648,7 +1648,7 @@
       "patternId": "4.8.1.2:fusion_elements:representation_interpretation",
       "conceptFamily": "fusion_elements",
       "contextType": "a results discussion",
-      "skill": "Link fusion to elements.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which option correctly reads the life cycle of stars model or diagram idea? Keep the answer focused on life cycle of stars: link fusion to elements.",
       "question": "Which option correctly reads the life cycle of stars model or diagram idea? Keep the answer focused on life cycle of stars: link fusion to elements.",
       "options": [
@@ -1718,7 +1718,7 @@
       "patternId": "4.8.1.2:star_formation:direct_recall",
       "conceptFamily": "star_formation",
       "contextType": "a classroom demonstration",
-      "skill": "Describe star formation.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which answer matches this life cycle of stars objective: Describe star formation? Keep the answer focused on life cycle of stars: describe star formation.",
       "question": "Which answer matches this life cycle of stars objective: Describe star formation? Keep the answer focused on life cycle of stars: describe star formation.",
       "options": [
@@ -1788,7 +1788,7 @@
       "patternId": "4.8.1.2:main_sequence:applied_context",
       "conceptFamily": "main_sequence",
       "contextType": "a revision checkpoint",
-      "skill": "Describe a main sequence star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "In a revision checkpoint, which conclusion is correct for life cycle of stars? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "question": "In a revision checkpoint, which conclusion is correct for life cycle of stars? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "options": [
@@ -1858,7 +1858,7 @@
       "patternId": "4.8.1.2:sun_like_end:misconception_correction",
       "conceptFamily": "sun_like_end",
       "contextType": "an exam-style data table",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which answer corrects a misconception about life cycle of stars? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "question": "Which answer corrects a misconception about life cycle of stars? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "options": [
@@ -1928,7 +1928,7 @@
       "patternId": "4.8.1.2:massive_star_end:exam_decision",
       "conceptFamily": "massive_star_end",
       "contextType": "a required-practical notebook",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "The mark scheme is testing recall the life cycle of a massive star. Which answer matches that point? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "question": "The mark scheme is testing recall the life cycle of a massive star. Which answer matches that point? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "options": [
@@ -1998,7 +1998,7 @@
       "patternId": "4.8.1.2:fusion_elements:representation_interpretation",
       "conceptFamily": "fusion_elements",
       "contextType": "a technician report",
-      "skill": "Link fusion to elements.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A representation of life cycle of stars is described in words. Which interpretation is correct? Keep the answer focused on life cycle of stars: link fusion to elements.",
       "question": "A representation of life cycle of stars is described in words. Which interpretation is correct? Keep the answer focused on life cycle of stars: link fusion to elements.",
       "options": [
@@ -2068,7 +2068,7 @@
       "patternId": "4.8.1.2:star_formation:concept_discrimination",
       "conceptFamily": "star_formation",
       "contextType": "a labelled diagram",
-      "skill": "Describe star formation.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A student is comparing similar ideas in life cycle of stars. Which statement is correct? Keep the answer focused on life cycle of stars: describe star formation.",
       "question": "A student is comparing similar ideas in life cycle of stars. Which statement is correct? Keep the answer focused on life cycle of stars: describe star formation.",
       "options": [
@@ -2138,7 +2138,7 @@
       "patternId": "4.8.1.2:main_sequence:applied_context",
       "conceptFamily": "main_sequence",
       "contextType": "a short calculation",
-      "skill": "Describe a main sequence star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A question set in a short calculation tests life cycle of stars. Which answer applies the idea correctly? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "question": "A question set in a short calculation tests life cycle of stars. Which answer applies the idea correctly? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "options": [
@@ -2208,7 +2208,7 @@
       "patternId": "4.8.1.2:sun_like_end:data_interpretation",
       "conceptFamily": "sun_like_end",
       "contextType": "a safety decision",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A small data set about life cycle of stars is being interpreted. Which conclusion is valid? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "question": "A small data set about life cycle of stars is being interpreted. Which conclusion is valid? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "options": [
@@ -2278,7 +2278,7 @@
       "patternId": "4.8.1.2:massive_star_end:exam_decision",
       "conceptFamily": "massive_star_end",
       "contextType": "a graph-reading task",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which answer is the strongest GCSE Physics response for life cycle of stars? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "question": "Which answer is the strongest GCSE Physics response for life cycle of stars? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "options": [
@@ -2348,7 +2348,7 @@
       "patternId": "4.8.1.2:fusion_elements:direct_recall",
       "conceptFamily": "fusion_elements",
       "contextType": "a comparison question",
-      "skill": "Link fusion to elements.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which answer matches this life cycle of stars objective: Link fusion to elements? Keep the answer focused on life cycle of stars: link fusion to elements.",
       "question": "Which answer matches this life cycle of stars objective: Link fusion to elements? Keep the answer focused on life cycle of stars: link fusion to elements.",
       "options": [
@@ -2418,7 +2418,7 @@
       "patternId": "4.8.1.2:star_formation:concept_discrimination",
       "conceptFamily": "star_formation",
       "contextType": "a method-choice question",
-      "skill": "Describe star formation.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which option best separates the correct life cycle of stars idea from a common mix-up? Keep the answer focused on life cycle of stars: describe star formation.",
       "question": "Which option best separates the correct life cycle of stars idea from a common mix-up? Keep the answer focused on life cycle of stars: describe star formation.",
       "options": [
@@ -2488,7 +2488,7 @@
       "patternId": "4.8.1.2:main_sequence:misconception_correction",
       "conceptFamily": "main_sequence",
       "contextType": "a results discussion",
-      "skill": "Describe a main sequence star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which answer corrects a misconception about life cycle of stars? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "question": "Which answer corrects a misconception about life cycle of stars? Keep the answer focused on life cycle of stars: describe a main sequence star.",
       "options": [
@@ -2558,7 +2558,7 @@
       "patternId": "4.8.1.2:sun_like_end:data_interpretation",
       "conceptFamily": "sun_like_end",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the life cycle of a Sun-like star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "Which conclusion about life cycle of stars is supported by the evidence? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "question": "Which conclusion about life cycle of stars is supported by the evidence? Keep the answer focused on life cycle of stars: recall the life cycle of a Sun-like star.",
       "options": [
@@ -2628,7 +2628,7 @@
       "patternId": "4.8.1.2:massive_star_end:representation_interpretation",
       "conceptFamily": "massive_star_end",
       "contextType": "a revision checkpoint",
-      "skill": "Recall the life cycle of a massive star.",
+      "skill": "Life Cycle of Stars practice",
       "stem": "A representation of life cycle of stars is described in words. Which interpretation is correct? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "question": "A representation of life cycle of stars is described in words. Which interpretation is correct? Keep the answer focused on life cycle of stars: recall the life cycle of a massive star.",
       "options": [
@@ -2698,7 +2698,7 @@
       "patternId": "4.8.1.1:planet_order:direct_recall",
       "conceptFamily": "planet_order",
       "contextType": "a safety decision",
-      "skill": "Recall the order of planets.",
+      "skill": "Observing Space practice",
       "stem": "Which statement is correct for observing space? Check the clue before choosing: Recall the order of planets.",
       "question": "Which statement is correct for observing space? Check the clue before choosing: Recall the order of planets.",
       "options": [
@@ -2768,7 +2768,7 @@
       "patternId": "4.8.1.1:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "a graph-reading task",
-      "skill": "Explain orbital motion.",
+      "skill": "Observing Space practice",
       "stem": "A student is comparing similar ideas in observing space. Which statement is correct? Keep the answer focused on observing space: explain orbital motion.",
       "question": "A student is comparing similar ideas in observing space. Which statement is correct? Keep the answer focused on observing space: explain orbital motion.",
       "options": [
@@ -2838,7 +2838,7 @@
       "patternId": "4.8.1.1:satellite:misconception_correction",
       "conceptFamily": "satellite",
       "contextType": "a comparison question",
-      "skill": "Describe satellites.",
+      "skill": "Observing Space practice",
       "stem": "A revision note about observing space contains an error. Which replacement is correct? Demand focus: describe satellites.",
       "question": "A revision note about observing space contains an error. Which replacement is correct? Demand focus: describe satellites.",
       "options": [
@@ -2908,7 +2908,7 @@
       "patternId": "4.8.1.1:geostationary:data_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a method-choice question",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Observing Space practice",
       "stem": "A small data set about observing space is being interpreted. Which conclusion is valid? Demand focus: describe geostationary satellites.",
       "question": "A small data set about observing space is being interpreted. Which conclusion is valid? Demand focus: describe geostationary satellites.",
       "options": [
@@ -2978,7 +2978,7 @@
       "patternId": "4.8.1.1:day_night:representation_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a results discussion",
-      "skill": "Explain day and night.",
+      "skill": "Observing Space practice",
       "stem": "Which option correctly reads the observing space model or diagram idea? Use the wording carefully: this is about explain day and night.",
       "question": "Which option correctly reads the observing space model or diagram idea? Use the wording carefully: this is about explain day and night.",
       "options": [
@@ -3048,7 +3048,7 @@
       "patternId": "4.8.1.1:planet_order:direct_recall",
       "conceptFamily": "planet_order",
       "contextType": "a classroom demonstration",
-      "skill": "Recall the order of planets.",
+      "skill": "Observing Space practice",
       "stem": "Which answer matches this observing space objective: Recall the order of planets? Check the clue before choosing: Recall the order of planets.",
       "question": "Which answer matches this observing space objective: Recall the order of planets? Check the clue before choosing: Recall the order of planets.",
       "options": [
@@ -3118,7 +3118,7 @@
       "patternId": "4.8.1.1:orbit_gravity:applied_context",
       "conceptFamily": "orbit_gravity",
       "contextType": "a revision checkpoint",
-      "skill": "Explain orbital motion.",
+      "skill": "Observing Space practice",
       "stem": "In a revision checkpoint, which conclusion is correct for observing space? Keep the answer focused on observing space: explain orbital motion.",
       "question": "In a revision checkpoint, which conclusion is correct for observing space? Keep the answer focused on observing space: explain orbital motion.",
       "options": [
@@ -3188,7 +3188,7 @@
       "patternId": "4.8.1.1:satellite:misconception_correction",
       "conceptFamily": "satellite",
       "contextType": "an exam-style data table",
-      "skill": "Describe satellites.",
+      "skill": "Observing Space practice",
       "stem": "Which answer corrects a misconception about observing space? Demand focus: describe satellites.",
       "question": "Which answer corrects a misconception about observing space? Demand focus: describe satellites.",
       "options": [
@@ -3258,7 +3258,7 @@
       "patternId": "4.8.1.1:geostationary:exam_decision",
       "conceptFamily": "geostationary",
       "contextType": "a required-practical notebook",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Observing Space practice",
       "stem": "The mark scheme is testing describe geostationary satellites. Which answer matches that point? Demand focus: describe geostationary satellites.",
       "question": "The mark scheme is testing describe geostationary satellites. Which answer matches that point? Demand focus: describe geostationary satellites.",
       "options": [
@@ -3328,7 +3328,7 @@
       "patternId": "4.8.1.1:day_night:representation_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a technician report",
-      "skill": "Explain day and night.",
+      "skill": "Observing Space practice",
       "stem": "A representation of observing space is described in words. Which interpretation is correct? Use the wording carefully: this is about explain day and night.",
       "question": "A representation of observing space is described in words. Which interpretation is correct? Use the wording carefully: this is about explain day and night.",
       "options": [
@@ -3398,7 +3398,7 @@
       "patternId": "4.8.1.1:planet_order:concept_discrimination",
       "conceptFamily": "planet_order",
       "contextType": "a labelled diagram",
-      "skill": "Recall the order of planets.",
+      "skill": "Observing Space practice",
       "stem": "A student is comparing similar ideas in observing space. Which statement is correct? Check the clue before choosing: Recall the order of planets.",
       "question": "A student is comparing similar ideas in observing space. Which statement is correct? Check the clue before choosing: Recall the order of planets.",
       "options": [
@@ -3468,7 +3468,7 @@
       "patternId": "4.8.1.1:orbit_gravity:applied_context",
       "conceptFamily": "orbit_gravity",
       "contextType": "a short calculation",
-      "skill": "Explain orbital motion.",
+      "skill": "Observing Space practice",
       "stem": "A question set in a short calculation tests observing space. Which answer applies the idea correctly? Keep the answer focused on observing space: explain orbital motion.",
       "question": "A question set in a short calculation tests observing space. Which answer applies the idea correctly? Keep the answer focused on observing space: explain orbital motion.",
       "options": [
@@ -3538,7 +3538,7 @@
       "patternId": "4.8.1.1:satellite:data_interpretation",
       "conceptFamily": "satellite",
       "contextType": "a safety decision",
-      "skill": "Describe satellites.",
+      "skill": "Observing Space practice",
       "stem": "A small data set about observing space is being interpreted. Which conclusion is valid? Demand focus: describe satellites.",
       "question": "A small data set about observing space is being interpreted. Which conclusion is valid? Demand focus: describe satellites.",
       "options": [
@@ -3608,7 +3608,7 @@
       "patternId": "4.8.1.1:geostationary:exam_decision",
       "conceptFamily": "geostationary",
       "contextType": "a graph-reading task",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Observing Space practice",
       "stem": "Which answer is the strongest GCSE Physics response for observing space? Demand focus: describe geostationary satellites.",
       "question": "Which answer is the strongest GCSE Physics response for observing space? Demand focus: describe geostationary satellites.",
       "options": [
@@ -3678,7 +3678,7 @@
       "patternId": "4.8.1.1:day_night:direct_recall",
       "conceptFamily": "day_night",
       "contextType": "a comparison question",
-      "skill": "Explain day and night.",
+      "skill": "Observing Space practice",
       "stem": "Which answer matches this observing space objective: Explain day and night? Use the wording carefully: this is about explain day and night.",
       "question": "Which answer matches this observing space objective: Explain day and night? Use the wording carefully: this is about explain day and night.",
       "options": [
@@ -3748,7 +3748,7 @@
       "patternId": "4.8.1.1:planet_order:concept_discrimination",
       "conceptFamily": "planet_order",
       "contextType": "a method-choice question",
-      "skill": "Recall the order of planets.",
+      "skill": "Observing Space practice",
       "stem": "Which option best separates the correct observing space idea from a common mix-up? Check the clue before choosing: Recall the order of planets.",
       "question": "Which option best separates the correct observing space idea from a common mix-up? Check the clue before choosing: Recall the order of planets.",
       "options": [
@@ -3818,7 +3818,7 @@
       "patternId": "4.8.1.1:orbit_gravity:misconception_correction",
       "conceptFamily": "orbit_gravity",
       "contextType": "a results discussion",
-      "skill": "Explain orbital motion.",
+      "skill": "Observing Space practice",
       "stem": "Which answer corrects a misconception about observing space? Keep the answer focused on observing space: explain orbital motion.",
       "question": "Which answer corrects a misconception about observing space? Keep the answer focused on observing space: explain orbital motion.",
       "options": [
@@ -3888,7 +3888,7 @@
       "patternId": "4.8.1.1:satellite:data_interpretation",
       "conceptFamily": "satellite",
       "contextType": "a classroom demonstration",
-      "skill": "Describe satellites.",
+      "skill": "Observing Space practice",
       "stem": "Which conclusion about observing space is supported by the evidence? Demand focus: describe satellites.",
       "question": "Which conclusion about observing space is supported by the evidence? Demand focus: describe satellites.",
       "options": [
@@ -3958,7 +3958,7 @@
       "patternId": "4.8.1.3:orbit_gravity:direct_recall",
       "conceptFamily": "orbit_gravity",
       "contextType": "a safety decision",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "Which statement is correct for orbits? Use the wording carefully: this is about explain orbital motion.",
       "question": "Which statement is correct for orbits? Use the wording carefully: this is about explain orbital motion.",
       "options": [
@@ -4028,7 +4028,7 @@
       "patternId": "4.8.1.3:satellite:concept_discrimination",
       "conceptFamily": "satellite",
       "contextType": "a graph-reading task",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "A student is comparing similar ideas in orbits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "question": "A student is comparing similar ideas in orbits. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "options": [
@@ -4098,7 +4098,7 @@
       "patternId": "4.8.1.3:geostationary:misconception_correction",
       "conceptFamily": "geostationary",
       "contextType": "a comparison question",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "A revision note about orbits contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "question": "A revision note about orbits contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "options": [
@@ -4168,7 +4168,7 @@
       "patternId": "4.8.1.3:day_night:data_interpretation",
       "conceptFamily": "day_night",
       "contextType": "a method-choice question",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "A small data set about orbits is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain day and night.",
       "question": "A small data set about orbits is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain day and night.",
       "options": [
@@ -4238,7 +4238,7 @@
       "patternId": "4.8.1.3:planet_order:representation_interpretation",
       "conceptFamily": "planet_order",
       "contextType": "a results discussion",
-      "skill": "Recall the order of planets.",
+      "skill": "Orbits practice",
       "stem": "Which option correctly reads the orbits model or diagram idea? Demand focus: recall the order of planets.",
       "question": "Which option correctly reads the orbits model or diagram idea? Demand focus: recall the order of planets.",
       "options": [
@@ -4308,7 +4308,7 @@
       "patternId": "4.8.1.3:orbit_gravity:direct_recall",
       "conceptFamily": "orbit_gravity",
       "contextType": "a classroom demonstration",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "Which answer matches this orbits objective: Explain orbital motion? Use the wording carefully: this is about explain orbital motion.",
       "question": "Which answer matches this orbits objective: Explain orbital motion? Use the wording carefully: this is about explain orbital motion.",
       "options": [
@@ -4378,7 +4378,7 @@
       "patternId": "4.8.1.3:satellite:applied_context",
       "conceptFamily": "satellite",
       "contextType": "a revision checkpoint",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "In a revision checkpoint, which conclusion is correct for orbits? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "question": "In a revision checkpoint, which conclusion is correct for orbits? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "options": [
@@ -4448,7 +4448,7 @@
       "patternId": "4.8.1.3:geostationary:misconception_correction",
       "conceptFamily": "geostationary",
       "contextType": "an exam-style data table",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "Which answer corrects a misconception about orbits? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "question": "Which answer corrects a misconception about orbits? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "options": [
@@ -4518,7 +4518,7 @@
       "patternId": "4.8.1.3:day_night:exam_decision",
       "conceptFamily": "day_night",
       "contextType": "a required-practical notebook",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "The mark scheme is testing explain day and night. Which answer matches that point? Check the clue before choosing: Explain day and night.",
       "question": "The mark scheme is testing explain day and night. Which answer matches that point? Check the clue before choosing: Explain day and night.",
       "options": [
@@ -4588,7 +4588,7 @@
       "patternId": "4.8.1.3:planet_order:representation_interpretation",
       "conceptFamily": "planet_order",
       "contextType": "a technician report",
-      "skill": "Recall the order of planets.",
+      "skill": "Orbits practice",
       "stem": "A representation of orbits is described in words. Which interpretation is correct? Demand focus: recall the order of planets.",
       "question": "A representation of orbits is described in words. Which interpretation is correct? Demand focus: recall the order of planets.",
       "options": [
@@ -4658,7 +4658,7 @@
       "patternId": "4.8.1.3:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "a labelled diagram",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "A student is comparing similar ideas in orbits. Which statement is correct? Use the wording carefully: this is about explain orbital motion.",
       "question": "A student is comparing similar ideas in orbits. Which statement is correct? Use the wording carefully: this is about explain orbital motion.",
       "options": [
@@ -4728,7 +4728,7 @@
       "patternId": "4.8.1.3:satellite:applied_context",
       "conceptFamily": "satellite",
       "contextType": "a short calculation",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "A question set in a short calculation tests orbits. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "question": "A question set in a short calculation tests orbits. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "options": [
@@ -4798,7 +4798,7 @@
       "patternId": "4.8.1.3:geostationary:data_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a safety decision",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "A small data set about orbits is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "question": "A small data set about orbits is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "options": [
@@ -4868,7 +4868,7 @@
       "patternId": "4.8.1.3:day_night:exam_decision",
       "conceptFamily": "day_night",
       "contextType": "a graph-reading task",
-      "skill": "Explain day and night.",
+      "skill": "Orbits practice",
       "stem": "Which answer is the strongest GCSE Physics response for orbits? Check the clue before choosing: Explain day and night.",
       "question": "Which answer is the strongest GCSE Physics response for orbits? Check the clue before choosing: Explain day and night.",
       "options": [
@@ -4938,7 +4938,7 @@
       "patternId": "4.8.1.3:planet_order:direct_recall",
       "conceptFamily": "planet_order",
       "contextType": "a comparison question",
-      "skill": "Recall the order of planets.",
+      "skill": "Orbits practice",
       "stem": "Which answer matches this orbits objective: Recall the order of planets? Demand focus: recall the order of planets.",
       "question": "Which answer matches this orbits objective: Recall the order of planets? Demand focus: recall the order of planets.",
       "options": [
@@ -5008,7 +5008,7 @@
       "patternId": "4.8.1.3:orbit_gravity:concept_discrimination",
       "conceptFamily": "orbit_gravity",
       "contextType": "a method-choice question",
-      "skill": "Explain orbital motion.",
+      "skill": "Orbits practice",
       "stem": "Which option best separates the correct orbits idea from a common mix-up? Use the wording carefully: this is about explain orbital motion.",
       "question": "Which option best separates the correct orbits idea from a common mix-up? Use the wording carefully: this is about explain orbital motion.",
       "options": [
@@ -5078,7 +5078,7 @@
       "patternId": "4.8.1.3:satellite:misconception_correction",
       "conceptFamily": "satellite",
       "contextType": "a results discussion",
-      "skill": "Describe satellites.",
+      "skill": "Orbits practice",
       "stem": "Which answer corrects a misconception about orbits? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "question": "Which answer corrects a misconception about orbits? Choose the statement that fits this exact GCSE Physics idea: describe satellites.",
       "options": [
@@ -5148,7 +5148,7 @@
       "patternId": "4.8.1.3:geostationary:data_interpretation",
       "conceptFamily": "geostationary",
       "contextType": "a classroom demonstration",
-      "skill": "Describe geostationary satellites.",
+      "skill": "Orbits practice",
       "stem": "Which conclusion about orbits is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "question": "Which conclusion about orbits is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: describe geostationary satellites.",
       "options": [
@@ -5218,7 +5218,7 @@
       "patternId": "4.8.2:redshift_meaning:direct_recall",
       "conceptFamily": "redshift_meaning",
       "contextType": "a labelled diagram",
-      "skill": "Interpret red-shift.",
+      "skill": "Red-Shift practice",
       "stem": "Which statement is correct for red-shift? Keep the answer focused on red-shift: interpret red-shift.",
       "question": "Which statement is correct for red-shift? Keep the answer focused on red-shift: interpret red-shift.",
       "options": [
@@ -5288,7 +5288,7 @@
       "patternId": "4.8.2:expanding_universe:concept_discrimination",
       "conceptFamily": "expanding_universe",
       "contextType": "a short calculation",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Red-Shift practice",
       "stem": "A student is comparing similar ideas in red-shift. Which statement is correct? Check the clue before choosing: Link red-shift to expansion.",
       "question": "A student is comparing similar ideas in red-shift. Which statement is correct? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -5358,7 +5358,7 @@
       "patternId": "4.8.2:wavelength_shift:misconception_correction",
       "conceptFamily": "wavelength_shift",
       "contextType": "a safety decision",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Red-Shift practice",
       "stem": "A revision note about red-shift contains an error. Which replacement is correct? Demand focus: compare red-shift and blue-shift.",
       "question": "A revision note about red-shift contains an error. Which replacement is correct? Demand focus: compare red-shift and blue-shift.",
       "options": [
@@ -5428,7 +5428,7 @@
       "patternId": "4.8.2:big_bang:data_interpretation",
       "conceptFamily": "big_bang",
       "contextType": "a graph-reading task",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Red-Shift practice",
       "stem": "A small data set about red-shift is being interpreted. Which conclusion is valid? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "question": "A small data set about red-shift is being interpreted. Which conclusion is valid? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "options": [
@@ -5498,7 +5498,7 @@
       "patternId": "4.8.2:cmb:representation_interpretation",
       "conceptFamily": "cmb",
       "contextType": "a comparison question",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Red-Shift practice",
       "stem": "Which option correctly reads the red-shift model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: identify cosmic microwave background radiation.",
       "question": "Which option correctly reads the red-shift model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: identify cosmic microwave background radiation.",
       "options": [
@@ -5568,7 +5568,7 @@
       "patternId": "4.8.2:redshift_meaning:direct_recall",
       "conceptFamily": "redshift_meaning",
       "contextType": "a method-choice question",
-      "skill": "Interpret red-shift.",
+      "skill": "Red-Shift practice",
       "stem": "Which answer matches this red-shift objective: Interpret red-shift? Keep the answer focused on red-shift: interpret red-shift.",
       "question": "Which answer matches this red-shift objective: Interpret red-shift? Keep the answer focused on red-shift: interpret red-shift.",
       "options": [
@@ -5638,7 +5638,7 @@
       "patternId": "4.8.2:expanding_universe:applied_context",
       "conceptFamily": "expanding_universe",
       "contextType": "a results discussion",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Red-Shift practice",
       "stem": "In a results discussion, which conclusion is correct for red-shift? Check the clue before choosing: Link red-shift to expansion.",
       "question": "In a results discussion, which conclusion is correct for red-shift? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -5708,7 +5708,7 @@
       "patternId": "4.8.2:wavelength_shift:misconception_correction",
       "conceptFamily": "wavelength_shift",
       "contextType": "a classroom demonstration",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Red-Shift practice",
       "stem": "Which answer corrects a misconception about red-shift? Demand focus: compare red-shift and blue-shift.",
       "question": "Which answer corrects a misconception about red-shift? Demand focus: compare red-shift and blue-shift.",
       "options": [
@@ -5778,7 +5778,7 @@
       "patternId": "4.8.2:big_bang:exam_decision",
       "conceptFamily": "big_bang",
       "contextType": "a revision checkpoint",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Red-Shift practice",
       "stem": "The mark scheme is testing link expansion to the Big Bang model. Which answer matches that point? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "question": "The mark scheme is testing link expansion to the Big Bang model. Which answer matches that point? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "options": [
@@ -5848,7 +5848,7 @@
       "patternId": "4.8.2:cmb:representation_interpretation",
       "conceptFamily": "cmb",
       "contextType": "an exam-style data table",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Red-Shift practice",
       "stem": "A representation of red-shift is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: identify cosmic microwave background radiation.",
       "question": "A representation of red-shift is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: identify cosmic microwave background radiation.",
       "options": [
@@ -5918,7 +5918,7 @@
       "patternId": "4.8.2:redshift_meaning:concept_discrimination",
       "conceptFamily": "redshift_meaning",
       "contextType": "a required-practical notebook",
-      "skill": "Interpret red-shift.",
+      "skill": "Red-Shift practice",
       "stem": "A student is comparing similar ideas in red-shift. Which statement is correct? Keep the answer focused on red-shift: interpret red-shift.",
       "question": "A student is comparing similar ideas in red-shift. Which statement is correct? Keep the answer focused on red-shift: interpret red-shift.",
       "options": [
@@ -5988,7 +5988,7 @@
       "patternId": "4.8.2:expanding_universe:applied_context",
       "conceptFamily": "expanding_universe",
       "contextType": "a technician report",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Red-Shift practice",
       "stem": "A question set in a technician report tests red-shift. Which answer applies the idea correctly? Check the clue before choosing: Link red-shift to expansion.",
       "question": "A question set in a technician report tests red-shift. Which answer applies the idea correctly? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -6058,7 +6058,7 @@
       "patternId": "4.8.2:wavelength_shift:data_interpretation",
       "conceptFamily": "wavelength_shift",
       "contextType": "a labelled diagram",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Red-Shift practice",
       "stem": "A small data set about red-shift is being interpreted. Which conclusion is valid? Demand focus: compare red-shift and blue-shift.",
       "question": "A small data set about red-shift is being interpreted. Which conclusion is valid? Demand focus: compare red-shift and blue-shift.",
       "options": [
@@ -6128,7 +6128,7 @@
       "patternId": "4.8.2:big_bang:exam_decision",
       "conceptFamily": "big_bang",
       "contextType": "a short calculation",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Red-Shift practice",
       "stem": "Which answer is the strongest GCSE Physics response for red-shift? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "question": "Which answer is the strongest GCSE Physics response for red-shift? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "options": [
@@ -6198,7 +6198,7 @@
       "patternId": "4.8.2:cmb:direct_recall",
       "conceptFamily": "cmb",
       "contextType": "a safety decision",
-      "skill": "Identify cosmic microwave background radiation.",
+      "skill": "Red-Shift practice",
       "stem": "Which answer matches this red-shift objective: Identify cosmic microwave background radiation? Choose the statement that fits this exact GCSE Physics idea: identify cosmic microwave background radiation.",
       "question": "Which answer matches this red-shift objective: Identify cosmic microwave background radiation? Choose the statement that fits this exact GCSE Physics idea: identify cosmic microwave background radiation.",
       "options": [
@@ -6268,7 +6268,7 @@
       "patternId": "4.8.2:redshift_meaning:concept_discrimination",
       "conceptFamily": "redshift_meaning",
       "contextType": "a graph-reading task",
-      "skill": "Interpret red-shift.",
+      "skill": "Red-Shift practice",
       "stem": "Which option best separates the correct red-shift idea from a common mix-up? Keep the answer focused on red-shift: interpret red-shift.",
       "question": "Which option best separates the correct red-shift idea from a common mix-up? Keep the answer focused on red-shift: interpret red-shift.",
       "options": [
@@ -6338,7 +6338,7 @@
       "patternId": "4.8.2:expanding_universe:misconception_correction",
       "conceptFamily": "expanding_universe",
       "contextType": "a comparison question",
-      "skill": "Link red-shift to expansion.",
+      "skill": "Red-Shift practice",
       "stem": "Which answer corrects a misconception about red-shift? Check the clue before choosing: Link red-shift to expansion.",
       "question": "Which answer corrects a misconception about red-shift? Check the clue before choosing: Link red-shift to expansion.",
       "options": [
@@ -6408,7 +6408,7 @@
       "patternId": "4.8.2:wavelength_shift:data_interpretation",
       "conceptFamily": "wavelength_shift",
       "contextType": "a method-choice question",
-      "skill": "Compare red-shift and blue-shift.",
+      "skill": "Red-Shift practice",
       "stem": "Which conclusion about red-shift is supported by the evidence? Demand focus: compare red-shift and blue-shift.",
       "question": "Which conclusion about red-shift is supported by the evidence? Demand focus: compare red-shift and blue-shift.",
       "options": [
@@ -6478,7 +6478,7 @@
       "patternId": "4.8.2:big_bang:representation_interpretation",
       "conceptFamily": "big_bang",
       "contextType": "a results discussion",
-      "skill": "Link expansion to the Big Bang model.",
+      "skill": "Red-Shift practice",
       "stem": "A representation of red-shift is described in words. Which interpretation is correct? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "question": "A representation of red-shift is described in words. Which interpretation is correct? Keep the answer focused on red-shift: link expansion to the Big Bang model.",
       "options": [

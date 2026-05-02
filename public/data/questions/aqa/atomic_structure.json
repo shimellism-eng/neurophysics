@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "atomic_structure",
-  "generatedAt": "2026-05-02T05:55:11.796Z",
+  "generatedAt": "2026-05-02T07:16:13.999Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -41,7 +41,7 @@
       "patternId": "authored:aqa_atomic_isotopes_positive_ion_001",
       "conceptFamily": "explain_how_a_positive_ion_forms",
       "contextType": "exam_style",
-      "skill": "Explain how a positive ion forms.",
+      "skill": "Isotopes practice",
       "stem": "An atom becomes a positive ion. What has happened to the atom?",
       "question": "An atom becomes a positive ion. What has happened to the atom?",
       "options": [
@@ -115,7 +115,7 @@
       "patternId": "authored:aqa_atomic_isotopes_definition_002",
       "conceptFamily": "define_isotopes_using_protons_and_neutrons",
       "contextType": "exam_style",
-      "skill": "Define isotopes using protons and neutrons.",
+      "skill": "Isotopes practice",
       "stem": "Which statement describes isotopes of the same element?",
       "question": "Which statement describes isotopes of the same element?",
       "options": [
@@ -189,7 +189,7 @@
       "patternId": "authored:aqa_atomic_isotopes_carbon_particles_003",
       "conceptFamily": "use_atomic_number_and_mass_number_to_find_particle_numbers",
       "contextType": "exam_style",
-      "skill": "Use atomic number and mass number to find particle numbers.",
+      "skill": "Isotopes practice",
       "stem": "A neutral atom of carbon-14 has atomic number 6. How many protons, neutrons and electrons does it contain?",
       "question": "A neutral atom of carbon-14 has atomic number 6. How many protons, neutrons and electrons does it contain?",
       "options": [
@@ -268,7 +268,7 @@
       "patternId": "authored:aqa_atomic_isotopes_magnesium_compare_004",
       "conceptFamily": "compare_isotopes_of_the_same_element",
       "contextType": "exam_style",
-      "skill": "Compare isotopes of the same element.",
+      "skill": "Isotopes practice",
       "stem": "Magnesium-24 and magnesium-26 are isotopes. What is different in their nuclei?",
       "question": "Magnesium-24 and magnesium-26 are isotopes. What is different in their nuclei?",
       "options": [
@@ -342,7 +342,7 @@
       "patternId": "authored:aqa_atomic_isotopes_neutral_atom_005",
       "conceptFamily": "relate_proton_number_and_electron_number_in_a_neutral_atom",
       "contextType": "exam_style",
-      "skill": "Relate proton number and electron number in a neutral atom.",
+      "skill": "Isotopes practice",
       "stem": "A neutral atom has 17 protons. How many electrons does it have?",
       "question": "A neutral atom has 17 protons. How many electrons does it have?",
       "options": [
@@ -416,7 +416,7 @@
       "patternId": "authored:aqa_atomic_isotopes_element_identity_006",
       "conceptFamily": "identify_the_particle_that_defines_an_element",
       "contextType": "exam_style",
-      "skill": "Identify the particle that defines an element.",
+      "skill": "Isotopes practice",
       "stem": "Two atoms are atoms of the same element. Which particle number must be the same in both atoms?",
       "question": "Two atoms are atoms of the same element. Which particle number must be the same in both atoms?",
       "options": [
@@ -490,7 +490,7 @@
       "patternId": "authored:aqa_atomic_isotopes_ion_vs_isotope_007",
       "conceptFamily": "distinguish_ions_from_isotopes",
       "contextType": "exam_style",
-      "skill": "Distinguish ions from isotopes.",
+      "skill": "Isotopes practice",
       "stem": "Which change would make a neutral atom into an ion but not change it into a different isotope?",
       "question": "Which change would make a neutral atom into an ion but not change it into a different isotope?",
       "options": [
@@ -565,7 +565,7 @@
       "patternId": "authored:aqa_atomic_nuclear_alpha_008",
       "conceptFamily": "predict_the_nuclear_change_caused_by_alpha_decay",
       "contextType": "exam_style",
-      "skill": "Predict the nuclear change caused by alpha decay.",
+      "skill": "Nuclear Equations practice",
       "stem": "A nucleus emits an alpha particle. What happens to its mass number and atomic number?",
       "question": "A nucleus emits an alpha particle. What happens to its mass number and atomic number?",
       "options": [
@@ -640,7 +640,7 @@
       "patternId": "authored:aqa_atomic_nuclear_beta_009",
       "conceptFamily": "predict_the_nuclear_change_caused_by_beta_minus_decay",
       "contextType": "exam_style",
-      "skill": "Predict the nuclear change caused by beta-minus decay.",
+      "skill": "Nuclear Equations practice",
       "stem": "A nucleus emits beta-minus radiation. What happens to the atomic number of the nucleus?",
       "question": "A nucleus emits beta-minus radiation. What happens to the atomic number of the nucleus?",
       "options": [
@@ -715,7 +715,7 @@
       "patternId": "authored:aqa_atomic_nuclear_gamma_010",
       "conceptFamily": "state_the_effect_of_gamma_emission_on_a_nucleus",
       "contextType": "exam_style",
-      "skill": "State the effect of gamma emission on a nucleus.",
+      "skill": "Nuclear Equations practice",
       "stem": "A nucleus emits gamma radiation only. What happens to its mass number and atomic number?",
       "question": "A nucleus emits gamma radiation only. What happens to its mass number and atomic number?",
       "options": [
@@ -790,7 +790,7 @@
       "patternId": "authored:aqa_atomic_nuclear_balance_011",
       "conceptFamily": "balance_nuclear_equations_using_mass_number_and_atomic_number",
       "contextType": "exam_style",
-      "skill": "Balance nuclear equations using mass number and atomic number.",
+      "skill": "Nuclear Equations practice",
       "stem": "In a balanced nuclear equation, which quantities must balance on both sides?",
       "question": "In a balanced nuclear equation, which quantities must balance on both sides?",
       "options": [
@@ -865,7 +865,7 @@
       "patternId": "authored:aqa_atomic_nuclear_alpha_product_012",
       "conceptFamily": "calculate_a_daughter_mass_number_after_alpha_decay",
       "contextType": "exam_style",
-      "skill": "Calculate a daughter mass number after alpha decay.",
+      "skill": "Nuclear Equations practice",
       "stem": "Uranium-238 emits an alpha particle. What is the mass number of the daughter nucleus?",
       "question": "Uranium-238 emits an alpha particle. What is the mass number of the daughter nucleus?",
       "options": [
@@ -940,7 +940,7 @@
       "patternId": "authored:aqa_atomic_nuclear_beta_product_013",
       "conceptFamily": "calculate_a_daughter_atomic_number_after_beta_minus_decay",
       "contextType": "exam_style",
-      "skill": "Calculate a daughter atomic number after beta-minus decay.",
+      "skill": "Nuclear Equations practice",
       "stem": "Carbon-14 has atomic number 6. It emits beta-minus radiation. What is the atomic number of the daughter nucleus?",
       "question": "Carbon-14 has atomic number 6. It emits beta-minus radiation. What is the atomic number of the daughter nucleus?",
       "options": [
@@ -1012,7 +1012,7 @@
       "patternId": "authored:aqa_atomic_radiation_random_014",
       "conceptFamily": "describe_radioactive_decay_as_random",
       "contextType": "exam_style",
-      "skill": "Describe radioactive decay as random.",
+      "skill": "Radiation practice",
       "stem": "Which statement about radioactive decay is correct?",
       "question": "Which statement about radioactive decay is correct?",
       "options": [
@@ -1084,7 +1084,7 @@
       "patternId": "authored:aqa_atomic_radiation_penetration_015",
       "conceptFamily": "compare_the_penetration_of_alpha_beta_and_gamma_radiation",
       "contextType": "exam_style",
-      "skill": "Compare the penetration of alpha, beta and gamma radiation.",
+      "skill": "Radiation practice",
       "stem": "Which row gives the correct order of penetrating power, from least to greatest?",
       "question": "Which row gives the correct order of penetrating power, from least to greatest?",
       "options": [
@@ -1156,7 +1156,7 @@
       "patternId": "authored:aqa_atomic_radiation_ionising_016",
       "conceptFamily": "compare_ionising_power_of_nuclear_radiation",
       "contextType": "exam_style",
-      "skill": "Compare ionising power of nuclear radiation.",
+      "skill": "Radiation practice",
       "stem": "Which type of nuclear radiation is the most strongly ionising?",
       "question": "Which type of nuclear radiation is the most strongly ionising?",
       "options": [
@@ -1228,7 +1228,7 @@
       "patternId": "authored:aqa_atomic_radiation_activity_017",
       "conceptFamily": "recall_the_meaning_of_activity",
       "contextType": "exam_style",
-      "skill": "Recall the meaning of activity.",
+      "skill": "Radiation practice",
       "stem": "What is activity a measure of?",
       "question": "What is activity a measure of?",
       "options": [
@@ -1300,7 +1300,7 @@
       "patternId": "authored:aqa_atomic_radiation_detector_018",
       "conceptFamily": "calculate_count_rate_from_detector_data",
       "contextType": "exam_style",
-      "skill": "Calculate count rate from detector data.",
+      "skill": "Radiation practice",
       "stem": "A detector records 180 counts in 60 seconds. What is the count rate?",
       "question": "A detector records 180 counts in 60 seconds. What is the count rate?",
       "options": [
@@ -1372,7 +1372,7 @@
       "patternId": "authored:aqa_atomic_radiation_background_019",
       "conceptFamily": "correct_count_rate_for_background_radiation",
       "contextType": "exam_style",
-      "skill": "Correct count rate for background radiation.",
+      "skill": "Radiation practice",
       "stem": "A source gives a measured count rate of 42 counts per second. The background count rate is 8 counts per second. What is the corrected count rate for the source?",
       "question": "A source gives a measured count rate of 42 counts per second. The background count rate is 8 counts per second. What is the corrected count rate for the source?",
       "options": [
@@ -1444,7 +1444,7 @@
       "patternId": "authored:aqa_atomic_uses_contamination_020",
       "conceptFamily": "distinguish_contamination_from_irradiation",
       "contextType": "exam_style",
-      "skill": "Distinguish contamination from irradiation.",
+      "skill": "Uses of Radiation practice",
       "stem": "What does radioactive contamination mean?",
       "question": "What does radioactive contamination mean?",
       "options": [
@@ -1516,7 +1516,7 @@
       "patternId": "authored:aqa_atomic_uses_tracer_half_life_021",
       "conceptFamily": "choose_a_suitable_half_life_for_a_radioactive_tracer",
       "contextType": "exam_style",
-      "skill": "Choose a suitable half-life for a radioactive tracer.",
+      "skill": "Uses of Radiation practice",
       "stem": "A radioactive tracer is used inside the body. Which half-life is usually most suitable?",
       "question": "A radioactive tracer is used inside the body. Which half-life is usually most suitable?",
       "options": [
@@ -1588,7 +1588,7 @@
       "patternId": "authored:aqa_atomic_uses_smoke_alarm_022",
       "conceptFamily": "explain_the_use_of_alpha_radiation_in_smoke_alarms",
       "contextType": "exam_style",
-      "skill": "Explain the use of alpha radiation in smoke alarms.",
+      "skill": "Uses of Radiation practice",
       "stem": "Why is alpha radiation suitable for use in some smoke alarms?",
       "question": "Why is alpha radiation suitable for use in some smoke alarms?",
       "options": [
@@ -1660,7 +1660,7 @@
       "patternId": "authored:aqa_atomic_uses_safety_023",
       "conceptFamily": "choose_safety_precautions_for_ionising_radiation",
       "contextType": "exam_style",
-      "skill": "Choose safety precautions for ionising radiation.",
+      "skill": "Uses of Radiation practice",
       "stem": "Which action reduces the dose received from an ionising radiation source?",
       "question": "Which action reduces the dose received from an ionising radiation source?",
       "options": [
@@ -1732,7 +1732,7 @@
       "patternId": "authored:aqa_atomic_uses_sterilisation_024",
       "conceptFamily": "explain_why_gamma_radiation_can_sterilise_medical_equipment",
       "contextType": "exam_style",
-      "skill": "Explain why gamma radiation can sterilise medical equipment.",
+      "skill": "Uses of Radiation practice",
       "stem": "Medical equipment can be sterilised using gamma radiation. Why is gamma radiation useful for this?",
       "question": "Medical equipment can be sterilised using gamma radiation. Why is gamma radiation useful for this?",
       "options": [
@@ -1804,7 +1804,7 @@
       "patternId": "authored:aqa_atomic_uses_risk_025",
       "conceptFamily": "explain_why_ionising_radiation_can_be_hazardous",
       "contextType": "exam_style",
-      "skill": "Explain why ionising radiation can be hazardous.",
+      "skill": "Uses of Radiation practice",
       "stem": "Why can ionising radiation increase the risk of cancer?",
       "question": "Why can ionising radiation increase the risk of cancer?",
       "options": [

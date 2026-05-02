@@ -2,7 +2,7 @@
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
   "topicSlug": "forces",
-  "generatedAt": "2026-05-02T05:26:55.784Z",
+  "generatedAt": "2026-05-02T07:16:14.023Z",
   "questions": [
     {
       "id": "edexcel_2_9_acceleration_acceleration_equation_direct_recall_001",
@@ -39,7 +39,7 @@
       "patternId": "2.9:acceleration_equation:direct_recall",
       "conceptFamily": "acceleration_equation",
       "contextType": "a required-practical notebook",
-      "skill": "Use acceleration.",
+      "skill": "Acceleration practice",
       "stem": "Which statement is correct for acceleration? Check the clue before choosing: Use acceleration.",
       "question": "Which statement is correct for acceleration? Check the clue before choosing: Use acceleration.",
       "options": [
@@ -110,7 +110,7 @@
       "patternId": "2.9:velocity_time_gradient:concept_discrimination",
       "conceptFamily": "velocity_time_gradient",
       "contextType": "a technician report",
-      "skill": "Interpret velocity-time graphs.",
+      "skill": "Acceleration practice",
       "stem": "A student is comparing similar ideas in acceleration. Which statement is correct? Keep the answer focused on acceleration: interpret velocity-time graphs.",
       "question": "A student is comparing similar ideas in acceleration. Which statement is correct? Keep the answer focused on acceleration: interpret velocity-time graphs.",
       "options": [
@@ -181,7 +181,7 @@
       "patternId": "2.9:vt_area:misconception_correction",
       "conceptFamily": "vt_area",
       "contextType": "a labelled diagram",
-      "skill": "Use a velocity-time graph.",
+      "skill": "Acceleration practice",
       "stem": "A revision note about acceleration contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: use a velocity-time graph.",
       "question": "A revision note about acceleration contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: use a velocity-time graph.",
       "options": [
@@ -252,7 +252,7 @@
       "patternId": "2.9:speed_equation:data_interpretation",
       "conceptFamily": "speed_equation",
       "contextType": "a short calculation",
-      "skill": "Use speed, distance and time.",
+      "skill": "Acceleration practice",
       "stem": "A small data set about acceleration is being interpreted. Which conclusion is valid? Use the wording carefully: this is about use speed, distance and time.",
       "question": "A small data set about acceleration is being interpreted. Which conclusion is valid? Use the wording carefully: this is about use speed, distance and time.",
       "options": [
@@ -323,7 +323,7 @@
       "patternId": "2.9:acceleration_equation:representation_interpretation",
       "conceptFamily": "acceleration_equation",
       "contextType": "a safety decision",
-      "skill": "Use acceleration.",
+      "skill": "Acceleration practice",
       "stem": "Which option correctly reads the acceleration model or diagram idea? Demand focus: use acceleration.",
       "question": "Which option correctly reads the acceleration model or diagram idea? Demand focus: use acceleration.",
       "options": [
@@ -394,7 +394,7 @@
       "patternId": "2.9:velocity_time_gradient:direct_recall",
       "conceptFamily": "velocity_time_gradient",
       "contextType": "a graph-reading task",
-      "skill": "Interpret velocity-time graphs.",
+      "skill": "Acceleration practice",
       "stem": "Which answer matches this acceleration objective: Interpret velocity-time graphs? Use the wording carefully: this is about interpret velocity-time graphs.",
       "question": "Which answer matches this acceleration objective: Interpret velocity-time graphs? Use the wording carefully: this is about interpret velocity-time graphs.",
       "options": [
@@ -465,7 +465,7 @@
       "patternId": "2.9:vt_area:applied_context",
       "conceptFamily": "vt_area",
       "contextType": "a comparison question",
-      "skill": "Use a velocity-time graph.",
+      "skill": "Acceleration practice",
       "stem": "In a comparison question, which conclusion is correct for acceleration? Keep the answer focused on acceleration: use a velocity-time graph.",
       "question": "In a comparison question, which conclusion is correct for acceleration? Keep the answer focused on acceleration: use a velocity-time graph.",
       "options": [
@@ -536,7 +536,7 @@
       "patternId": "2.9:speed_equation:misconception_correction",
       "conceptFamily": "speed_equation",
       "contextType": "a method-choice question",
-      "skill": "Use speed, distance and time.",
+      "skill": "Acceleration practice",
       "stem": "Which answer corrects a misconception about acceleration? Check the clue before choosing: Use speed, distance and time.",
       "question": "Which answer corrects a misconception about acceleration? Check the clue before choosing: Use speed, distance and time.",
       "options": [
@@ -607,7 +607,7 @@
       "patternId": "2.9:acceleration_equation:exam_decision",
       "conceptFamily": "acceleration_equation",
       "contextType": "a results discussion",
-      "skill": "Use acceleration.",
+      "skill": "Acceleration practice",
       "stem": "The mark scheme is testing use acceleration. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: use acceleration.",
       "question": "The mark scheme is testing use acceleration. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: use acceleration.",
       "options": [
@@ -678,7 +678,7 @@
       "patternId": "2.9:velocity_time_gradient:representation_interpretation",
       "conceptFamily": "velocity_time_gradient",
       "contextType": "a classroom demonstration",
-      "skill": "Interpret velocity-time graphs.",
+      "skill": "Acceleration practice",
       "stem": "A representation of acceleration is described in words. Which interpretation is correct? Check the clue before choosing: Interpret velocity-time graphs.",
       "question": "A representation of acceleration is described in words. Which interpretation is correct? Check the clue before choosing: Interpret velocity-time graphs.",
       "options": [
@@ -749,7 +749,7 @@
       "patternId": "2.9:vt_area:concept_discrimination",
       "conceptFamily": "vt_area",
       "contextType": "a revision checkpoint",
-      "skill": "Use a velocity-time graph.",
+      "skill": "Acceleration practice",
       "stem": "A student is comparing similar ideas in acceleration. Which statement is correct? Use the wording carefully: this is about use a velocity-time graph.",
       "question": "A student is comparing similar ideas in acceleration. Which statement is correct? Use the wording carefully: this is about use a velocity-time graph.",
       "options": [
@@ -820,7 +820,7 @@
       "patternId": "2.9:speed_equation:applied_context",
       "conceptFamily": "speed_equation",
       "contextType": "an exam-style data table",
-      "skill": "Use speed, distance and time.",
+      "skill": "Acceleration practice",
       "stem": "A question set in an exam-style data table tests acceleration. Which answer applies the idea correctly? Demand focus: use speed, distance and time.",
       "question": "A question set in an exam-style data table tests acceleration. Which answer applies the idea correctly? Demand focus: use speed, distance and time.",
       "options": [
@@ -891,7 +891,7 @@
       "patternId": "2.9:acceleration_equation:data_interpretation",
       "conceptFamily": "acceleration_equation",
       "contextType": "a required-practical notebook",
-      "skill": "Use acceleration.",
+      "skill": "Acceleration practice",
       "stem": "A small data set about acceleration is being interpreted. Which conclusion is valid? Keep the answer focused on acceleration: use acceleration.",
       "question": "A small data set about acceleration is being interpreted. Which conclusion is valid? Keep the answer focused on acceleration: use acceleration.",
       "options": [
@@ -962,7 +962,7 @@
       "patternId": "2.9:velocity_time_gradient:exam_decision",
       "conceptFamily": "velocity_time_gradient",
       "contextType": "a technician report",
-      "skill": "Interpret velocity-time graphs.",
+      "skill": "Acceleration practice",
       "stem": "Which answer is the strongest GCSE Physics response for acceleration? Demand focus: interpret velocity-time graphs.",
       "question": "Which answer is the strongest GCSE Physics response for acceleration? Demand focus: interpret velocity-time graphs.",
       "options": [
@@ -1033,7 +1033,7 @@
       "patternId": "2.9:vt_area:direct_recall",
       "conceptFamily": "vt_area",
       "contextType": "a labelled diagram",
-      "skill": "Use a velocity-time graph.",
+      "skill": "Acceleration practice",
       "stem": "Which answer matches this acceleration objective: Use a velocity-time graph? Check the clue before choosing: Use a velocity-time graph.",
       "question": "Which answer matches this acceleration objective: Use a velocity-time graph? Check the clue before choosing: Use a velocity-time graph.",
       "options": [
@@ -1104,7 +1104,7 @@
       "patternId": "2.9:speed_equation:concept_discrimination",
       "conceptFamily": "speed_equation",
       "contextType": "a short calculation",
-      "skill": "Use speed, distance and time.",
+      "skill": "Acceleration practice",
       "stem": "Which option best separates the correct acceleration idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: use speed, distance and time.",
       "question": "Which option best separates the correct acceleration idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: use speed, distance and time.",
       "options": [
@@ -1175,7 +1175,7 @@
       "patternId": "2.9:acceleration_equation:misconception_correction",
       "conceptFamily": "acceleration_equation",
       "contextType": "a safety decision",
-      "skill": "Use acceleration.",
+      "skill": "Acceleration practice",
       "stem": "Which answer corrects a misconception about acceleration? Use the wording carefully: this is about use acceleration.",
       "question": "Which answer corrects a misconception about acceleration? Use the wording carefully: this is about use acceleration.",
       "options": [
@@ -1246,7 +1246,7 @@
       "patternId": "2.9:velocity_time_gradient:data_interpretation",
       "conceptFamily": "velocity_time_gradient",
       "contextType": "a graph-reading task",
-      "skill": "Interpret velocity-time graphs.",
+      "skill": "Acceleration practice",
       "stem": "Which conclusion about acceleration is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: interpret velocity-time graphs.",
       "question": "Which conclusion about acceleration is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: interpret velocity-time graphs.",
       "options": [
@@ -1317,7 +1317,7 @@
       "patternId": "2.9:vt_area:representation_interpretation",
       "conceptFamily": "vt_area",
       "contextType": "a comparison question",
-      "skill": "Use a velocity-time graph.",
+      "skill": "Acceleration practice",
       "stem": "A representation of acceleration is described in words. Which interpretation is correct? Demand focus: use a velocity-time graph.",
       "question": "A representation of acceleration is described in words. Which interpretation is correct? Demand focus: use a velocity-time graph.",
       "options": [
@@ -1387,7 +1387,7 @@
       "patternId": "9.6P:moment_equation:direct_recall",
       "conceptFamily": "moment_equation",
       "contextType": "a technician report",
-      "skill": "Use the moment equation.",
+      "skill": "Moments practice",
       "stem": "Which statement is correct for moments? Check the clue before choosing: Use the moment equation.",
       "question": "Which statement is correct for moments? Check the clue before choosing: Use the moment equation.",
       "options": [
@@ -1457,7 +1457,7 @@
       "patternId": "9.6P:pivot:concept_discrimination",
       "conceptFamily": "pivot",
       "contextType": "a labelled diagram",
-      "skill": "Recognise the pivot.",
+      "skill": "Moments practice",
       "stem": "A student is comparing similar ideas in moments. Which statement is correct? Use the wording carefully: this is about recognise the pivot.",
       "question": "A student is comparing similar ideas in moments. Which statement is correct? Use the wording carefully: this is about recognise the pivot.",
       "options": [
@@ -1527,7 +1527,7 @@
       "patternId": "9.6P:balance:misconception_correction",
       "conceptFamily": "balance",
       "contextType": "a short calculation",
-      "skill": "Use moments to decide balance.",
+      "skill": "Moments practice",
       "stem": "A revision note about moments contains an error. Which replacement is correct? Demand focus: use moments to decide balance.",
       "question": "A revision note about moments contains an error. Which replacement is correct? Demand focus: use moments to decide balance.",
       "options": [
@@ -1597,7 +1597,7 @@
       "patternId": "9.6P:distance_effect:data_interpretation",
       "conceptFamily": "distance_effect",
       "contextType": "a safety decision",
-      "skill": "Explain distance effect on moment.",
+      "skill": "Moments practice",
       "stem": "A small data set about moments is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "question": "A small data set about moments is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "options": [
@@ -1667,7 +1667,7 @@
       "patternId": "9.6P:unit_moment:representation_interpretation",
       "conceptFamily": "unit_moment",
       "contextType": "a graph-reading task",
-      "skill": "Recall the unit of moment.",
+      "skill": "Moments practice",
       "stem": "Which option correctly reads the moments model or diagram idea? Check the clue before choosing: Recall the unit of moment.",
       "question": "Which option correctly reads the moments model or diagram idea? Check the clue before choosing: Recall the unit of moment.",
       "options": [
@@ -1737,7 +1737,7 @@
       "patternId": "9.6P:moment_equation:direct_recall",
       "conceptFamily": "moment_equation",
       "contextType": "a comparison question",
-      "skill": "Use the moment equation.",
+      "skill": "Moments practice",
       "stem": "Which answer matches this moments objective: Use the moment equation? Check the clue before choosing: Use the moment equation.",
       "question": "Which answer matches this moments objective: Use the moment equation? Check the clue before choosing: Use the moment equation.",
       "options": [
@@ -1807,7 +1807,7 @@
       "patternId": "9.6P:pivot:applied_context",
       "conceptFamily": "pivot",
       "contextType": "a method-choice question",
-      "skill": "Recognise the pivot.",
+      "skill": "Moments practice",
       "stem": "In a method-choice question, which conclusion is correct for moments? Use the wording carefully: this is about recognise the pivot.",
       "question": "In a method-choice question, which conclusion is correct for moments? Use the wording carefully: this is about recognise the pivot.",
       "options": [
@@ -1877,7 +1877,7 @@
       "patternId": "9.6P:balance:misconception_correction",
       "conceptFamily": "balance",
       "contextType": "a results discussion",
-      "skill": "Use moments to decide balance.",
+      "skill": "Moments practice",
       "stem": "Which answer corrects a misconception about moments? Demand focus: use moments to decide balance.",
       "question": "Which answer corrects a misconception about moments? Demand focus: use moments to decide balance.",
       "options": [
@@ -1947,7 +1947,7 @@
       "patternId": "9.6P:distance_effect:exam_decision",
       "conceptFamily": "distance_effect",
       "contextType": "a classroom demonstration",
-      "skill": "Explain distance effect on moment.",
+      "skill": "Moments practice",
       "stem": "The mark scheme is testing explain distance effect on moment. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "question": "The mark scheme is testing explain distance effect on moment. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "options": [
@@ -2017,7 +2017,7 @@
       "patternId": "9.6P:unit_moment:representation_interpretation",
       "conceptFamily": "unit_moment",
       "contextType": "a revision checkpoint",
-      "skill": "Recall the unit of moment.",
+      "skill": "Moments practice",
       "stem": "A representation of moments is described in words. Which interpretation is correct? Check the clue before choosing: Recall the unit of moment.",
       "question": "A representation of moments is described in words. Which interpretation is correct? Check the clue before choosing: Recall the unit of moment.",
       "options": [
@@ -2087,7 +2087,7 @@
       "patternId": "9.6P:moment_equation:concept_discrimination",
       "conceptFamily": "moment_equation",
       "contextType": "an exam-style data table",
-      "skill": "Use the moment equation.",
+      "skill": "Moments practice",
       "stem": "A student is comparing similar ideas in moments. Which statement is correct? Check the clue before choosing: Use the moment equation.",
       "question": "A student is comparing similar ideas in moments. Which statement is correct? Check the clue before choosing: Use the moment equation.",
       "options": [
@@ -2157,7 +2157,7 @@
       "patternId": "9.6P:pivot:applied_context",
       "conceptFamily": "pivot",
       "contextType": "a required-practical notebook",
-      "skill": "Recognise the pivot.",
+      "skill": "Moments practice",
       "stem": "A question set in a required-practical notebook tests moments. Which answer applies the idea correctly? Use the wording carefully: this is about recognise the pivot.",
       "question": "A question set in a required-practical notebook tests moments. Which answer applies the idea correctly? Use the wording carefully: this is about recognise the pivot.",
       "options": [
@@ -2227,7 +2227,7 @@
       "patternId": "9.6P:balance:data_interpretation",
       "conceptFamily": "balance",
       "contextType": "a technician report",
-      "skill": "Use moments to decide balance.",
+      "skill": "Moments practice",
       "stem": "A small data set about moments is being interpreted. Which conclusion is valid? Demand focus: use moments to decide balance.",
       "question": "A small data set about moments is being interpreted. Which conclusion is valid? Demand focus: use moments to decide balance.",
       "options": [
@@ -2297,7 +2297,7 @@
       "patternId": "9.6P:distance_effect:exam_decision",
       "conceptFamily": "distance_effect",
       "contextType": "a labelled diagram",
-      "skill": "Explain distance effect on moment.",
+      "skill": "Moments practice",
       "stem": "Which answer is the strongest GCSE Physics response for moments? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "question": "Which answer is the strongest GCSE Physics response for moments? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "options": [
@@ -2367,7 +2367,7 @@
       "patternId": "9.6P:unit_moment:direct_recall",
       "conceptFamily": "unit_moment",
       "contextType": "a short calculation",
-      "skill": "Recall the unit of moment.",
+      "skill": "Moments practice",
       "stem": "Which answer matches this moments objective: Recall the unit of moment? Check the clue before choosing: Recall the unit of moment.",
       "question": "Which answer matches this moments objective: Recall the unit of moment? Check the clue before choosing: Recall the unit of moment.",
       "options": [
@@ -2437,7 +2437,7 @@
       "patternId": "9.6P:moment_equation:concept_discrimination",
       "conceptFamily": "moment_equation",
       "contextType": "a safety decision",
-      "skill": "Use the moment equation.",
+      "skill": "Moments practice",
       "stem": "Which option best separates the correct moments idea from a common mix-up? Check the clue before choosing: Use the moment equation.",
       "question": "Which option best separates the correct moments idea from a common mix-up? Check the clue before choosing: Use the moment equation.",
       "options": [
@@ -2507,7 +2507,7 @@
       "patternId": "9.6P:pivot:misconception_correction",
       "conceptFamily": "pivot",
       "contextType": "a graph-reading task",
-      "skill": "Recognise the pivot.",
+      "skill": "Moments practice",
       "stem": "Which answer corrects a misconception about moments? Use the wording carefully: this is about recognise the pivot.",
       "question": "Which answer corrects a misconception about moments? Use the wording carefully: this is about recognise the pivot.",
       "options": [
@@ -2577,7 +2577,7 @@
       "patternId": "9.6P:balance:data_interpretation",
       "conceptFamily": "balance",
       "contextType": "a comparison question",
-      "skill": "Use moments to decide balance.",
+      "skill": "Moments practice",
       "stem": "Which conclusion about moments is supported by the evidence? Demand focus: use moments to decide balance.",
       "question": "Which conclusion about moments is supported by the evidence? Demand focus: use moments to decide balance.",
       "options": [
@@ -2647,7 +2647,7 @@
       "patternId": "9.6P:distance_effect:representation_interpretation",
       "conceptFamily": "distance_effect",
       "contextType": "a method-choice question",
-      "skill": "Explain distance effect on moment.",
+      "skill": "Moments practice",
       "stem": "A representation of moments is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "question": "A representation of moments is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain distance effect on moment.",
       "options": [
@@ -2718,7 +2718,7 @@
       "patternId": "2.20:momentum_equation:direct_recall",
       "conceptFamily": "momentum_equation",
       "contextType": "a technician report",
-      "skill": "Use momentum.",
+      "skill": "Momentum practice",
       "stem": "Which statement is correct for momentum? Keep the answer focused on momentum: use momentum.",
       "question": "Which statement is correct for momentum? Keep the answer focused on momentum: use momentum.",
       "options": [
@@ -2789,7 +2789,7 @@
       "patternId": "2.20:momentum_vector:concept_discrimination",
       "conceptFamily": "momentum_vector",
       "contextType": "a labelled diagram",
-      "skill": "Recognise momentum as a vector.",
+      "skill": "Momentum practice",
       "stem": "A student is comparing similar ideas in momentum. Which statement is correct? Use the wording carefully: this is about recognise momentum as a vector.",
       "question": "A student is comparing similar ideas in momentum. Which statement is correct? Use the wording carefully: this is about recognise momentum as a vector.",
       "options": [
@@ -2860,7 +2860,7 @@
       "patternId": "2.20:closed_system:misconception_correction",
       "conceptFamily": "closed_system",
       "contextType": "a short calculation",
-      "skill": "Apply conservation of momentum.",
+      "skill": "Momentum practice",
       "stem": "A revision note about momentum contains an error. Which replacement is correct? Check the clue before choosing: Apply conservation of momentum.",
       "question": "A revision note about momentum contains an error. Which replacement is correct? Check the clue before choosing: Apply conservation of momentum.",
       "options": [
@@ -2931,7 +2931,7 @@
       "patternId": "2.20:collision_compare:data_interpretation",
       "conceptFamily": "collision_compare",
       "contextType": "a safety decision",
-      "skill": "Compare momentum in collisions.",
+      "skill": "Momentum practice",
       "stem": "A small data set about momentum is being interpreted. Which conclusion is valid? Check the clue before choosing: Compare momentum in collisions.",
       "question": "A small data set about momentum is being interpreted. Which conclusion is valid? Check the clue before choosing: Compare momentum in collisions.",
       "options": [
@@ -3002,7 +3002,7 @@
       "patternId": "2.20:explosion:representation_interpretation",
       "conceptFamily": "explosion",
       "contextType": "a graph-reading task",
-      "skill": "Interpret momentum in an explosion.",
+      "skill": "Momentum practice",
       "stem": "Which option correctly reads the momentum model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: interpret momentum in an explosion.",
       "question": "Which option correctly reads the momentum model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: interpret momentum in an explosion.",
       "options": [
@@ -3073,7 +3073,7 @@
       "patternId": "2.20:momentum_equation:direct_recall",
       "conceptFamily": "momentum_equation",
       "contextType": "a comparison question",
-      "skill": "Use momentum.",
+      "skill": "Momentum practice",
       "stem": "Which answer matches this momentum objective: Use momentum? Keep the answer focused on momentum: use momentum.",
       "question": "Which answer matches this momentum objective: Use momentum? Keep the answer focused on momentum: use momentum.",
       "options": [
@@ -3144,7 +3144,7 @@
       "patternId": "2.20:momentum_vector:applied_context",
       "conceptFamily": "momentum_vector",
       "contextType": "a method-choice question",
-      "skill": "Recognise momentum as a vector.",
+      "skill": "Momentum practice",
       "stem": "In a method-choice question, which conclusion is correct for momentum? Use the wording carefully: this is about recognise momentum as a vector.",
       "question": "In a method-choice question, which conclusion is correct for momentum? Use the wording carefully: this is about recognise momentum as a vector.",
       "options": [
@@ -3215,7 +3215,7 @@
       "patternId": "2.20:closed_system:misconception_correction",
       "conceptFamily": "closed_system",
       "contextType": "a results discussion",
-      "skill": "Apply conservation of momentum.",
+      "skill": "Momentum practice",
       "stem": "Which answer corrects a misconception about momentum? Check the clue before choosing: Apply conservation of momentum.",
       "question": "Which answer corrects a misconception about momentum? Check the clue before choosing: Apply conservation of momentum.",
       "options": [
@@ -3286,7 +3286,7 @@
       "patternId": "2.20:collision_compare:exam_decision",
       "conceptFamily": "collision_compare",
       "contextType": "a classroom demonstration",
-      "skill": "Compare momentum in collisions.",
+      "skill": "Momentum practice",
       "stem": "The mark scheme is testing compare momentum in collisions. Which answer matches that point? Check the clue before choosing: Compare momentum in collisions.",
       "question": "The mark scheme is testing compare momentum in collisions. Which answer matches that point? Check the clue before choosing: Compare momentum in collisions.",
       "options": [
@@ -3357,7 +3357,7 @@
       "patternId": "2.20:explosion:representation_interpretation",
       "conceptFamily": "explosion",
       "contextType": "a revision checkpoint",
-      "skill": "Interpret momentum in an explosion.",
+      "skill": "Momentum practice",
       "stem": "A representation of momentum is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: interpret momentum in an explosion.",
       "question": "A representation of momentum is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: interpret momentum in an explosion.",
       "options": [
@@ -3428,7 +3428,7 @@
       "patternId": "2.20:momentum_equation:concept_discrimination",
       "conceptFamily": "momentum_equation",
       "contextType": "an exam-style data table",
-      "skill": "Use momentum.",
+      "skill": "Momentum practice",
       "stem": "A student is comparing similar ideas in momentum. Which statement is correct? Keep the answer focused on momentum: use momentum.",
       "question": "A student is comparing similar ideas in momentum. Which statement is correct? Keep the answer focused on momentum: use momentum.",
       "options": [
@@ -3499,7 +3499,7 @@
       "patternId": "2.20:momentum_vector:applied_context",
       "conceptFamily": "momentum_vector",
       "contextType": "a required-practical notebook",
-      "skill": "Recognise momentum as a vector.",
+      "skill": "Momentum practice",
       "stem": "A question set in a required-practical notebook tests momentum. Which answer applies the idea correctly? Use the wording carefully: this is about recognise momentum as a vector.",
       "question": "A question set in a required-practical notebook tests momentum. Which answer applies the idea correctly? Use the wording carefully: this is about recognise momentum as a vector.",
       "options": [
@@ -3570,7 +3570,7 @@
       "patternId": "2.20:closed_system:data_interpretation",
       "conceptFamily": "closed_system",
       "contextType": "a technician report",
-      "skill": "Apply conservation of momentum.",
+      "skill": "Momentum practice",
       "stem": "A small data set about momentum is being interpreted. Which conclusion is valid? Check the clue before choosing: Apply conservation of momentum.",
       "question": "A small data set about momentum is being interpreted. Which conclusion is valid? Check the clue before choosing: Apply conservation of momentum.",
       "options": [
@@ -3641,7 +3641,7 @@
       "patternId": "2.20:collision_compare:exam_decision",
       "conceptFamily": "collision_compare",
       "contextType": "a labelled diagram",
-      "skill": "Compare momentum in collisions.",
+      "skill": "Momentum practice",
       "stem": "Which answer is the strongest GCSE Physics response for momentum? Check the clue before choosing: Compare momentum in collisions.",
       "question": "Which answer is the strongest GCSE Physics response for momentum? Check the clue before choosing: Compare momentum in collisions.",
       "options": [
@@ -3712,7 +3712,7 @@
       "patternId": "2.20:explosion:direct_recall",
       "conceptFamily": "explosion",
       "contextType": "a short calculation",
-      "skill": "Interpret momentum in an explosion.",
+      "skill": "Momentum practice",
       "stem": "Which answer matches this momentum objective: Interpret momentum in an explosion? Choose the statement that fits this exact GCSE Physics idea: interpret momentum in an explosion.",
       "question": "Which answer matches this momentum objective: Interpret momentum in an explosion? Choose the statement that fits this exact GCSE Physics idea: interpret momentum in an explosion.",
       "options": [
@@ -3783,7 +3783,7 @@
       "patternId": "2.20:momentum_equation:concept_discrimination",
       "conceptFamily": "momentum_equation",
       "contextType": "a safety decision",
-      "skill": "Use momentum.",
+      "skill": "Momentum practice",
       "stem": "Which option best separates the correct momentum idea from a common mix-up? Keep the answer focused on momentum: use momentum.",
       "question": "Which option best separates the correct momentum idea from a common mix-up? Keep the answer focused on momentum: use momentum.",
       "options": [
@@ -3854,7 +3854,7 @@
       "patternId": "2.20:momentum_vector:misconception_correction",
       "conceptFamily": "momentum_vector",
       "contextType": "a graph-reading task",
-      "skill": "Recognise momentum as a vector.",
+      "skill": "Momentum practice",
       "stem": "Which answer corrects a misconception about momentum? Use the wording carefully: this is about recognise momentum as a vector.",
       "question": "Which answer corrects a misconception about momentum? Use the wording carefully: this is about recognise momentum as a vector.",
       "options": [
@@ -3925,7 +3925,7 @@
       "patternId": "2.20:closed_system:data_interpretation",
       "conceptFamily": "closed_system",
       "contextType": "a comparison question",
-      "skill": "Apply conservation of momentum.",
+      "skill": "Momentum practice",
       "stem": "Which conclusion about momentum is supported by the evidence? Check the clue before choosing: Apply conservation of momentum.",
       "question": "Which conclusion about momentum is supported by the evidence? Check the clue before choosing: Apply conservation of momentum.",
       "options": [
@@ -3995,7 +3995,7 @@
       "patternId": "15.10P:pressure_equation:direct_recall",
       "conceptFamily": "pressure_equation",
       "contextType": "a short calculation",
-      "skill": "Use pressure, force and area.",
+      "skill": "Pressure practice",
       "stem": "Which statement is correct for pressure? Demand focus: use pressure, force and area.",
       "question": "Which statement is correct for pressure? Demand focus: use pressure, force and area.",
       "options": [
@@ -4065,7 +4065,7 @@
       "patternId": "15.10P:area_effect:concept_discrimination",
       "conceptFamily": "area_effect",
       "contextType": "a safety decision",
-      "skill": "Explain area effect on pressure.",
+      "skill": "Pressure practice",
       "stem": "A student is comparing similar ideas in pressure. Which statement is correct? Demand focus: explain area effect on pressure.",
       "question": "A student is comparing similar ideas in pressure. Which statement is correct? Demand focus: explain area effect on pressure.",
       "options": [
@@ -4135,7 +4135,7 @@
       "patternId": "15.10P:liquid_depth:misconception_correction",
       "conceptFamily": "liquid_depth",
       "contextType": "a graph-reading task",
-      "skill": "Describe pressure in liquids.",
+      "skill": "Pressure practice",
       "stem": "A revision note about pressure contains an error. Which replacement is correct? Use the wording carefully: this is about describe pressure in liquids.",
       "question": "A revision note about pressure contains an error. Which replacement is correct? Use the wording carefully: this is about describe pressure in liquids.",
       "options": [
@@ -4205,7 +4205,7 @@
       "patternId": "15.10P:density_pressure:data_interpretation",
       "conceptFamily": "density_pressure",
       "contextType": "a comparison question",
-      "skill": "Link density to fluid pressure.",
+      "skill": "Pressure practice",
       "stem": "A small data set about pressure is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link density to fluid pressure.",
       "question": "A small data set about pressure is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link density to fluid pressure.",
       "options": [
@@ -4275,7 +4275,7 @@
       "patternId": "15.10P:upthrust:representation_interpretation",
       "conceptFamily": "upthrust",
       "contextType": "a method-choice question",
-      "skill": "Explain upthrust.",
+      "skill": "Pressure practice",
       "stem": "Which option correctly reads the pressure model or diagram idea? Demand focus: explain upthrust.",
       "question": "Which option correctly reads the pressure model or diagram idea? Demand focus: explain upthrust.",
       "options": [
@@ -4345,7 +4345,7 @@
       "patternId": "15.10P:pressure_equation:direct_recall",
       "conceptFamily": "pressure_equation",
       "contextType": "a results discussion",
-      "skill": "Use pressure, force and area.",
+      "skill": "Pressure practice",
       "stem": "Which answer matches this pressure objective: Use pressure, force and area? Demand focus: use pressure, force and area.",
       "question": "Which answer matches this pressure objective: Use pressure, force and area? Demand focus: use pressure, force and area.",
       "options": [
@@ -4415,7 +4415,7 @@
       "patternId": "15.10P:area_effect:applied_context",
       "conceptFamily": "area_effect",
       "contextType": "a classroom demonstration",
-      "skill": "Explain area effect on pressure.",
+      "skill": "Pressure practice",
       "stem": "In a classroom demonstration, which conclusion is correct for pressure? Demand focus: explain area effect on pressure.",
       "question": "In a classroom demonstration, which conclusion is correct for pressure? Demand focus: explain area effect on pressure.",
       "options": [
@@ -4485,7 +4485,7 @@
       "patternId": "15.10P:liquid_depth:misconception_correction",
       "conceptFamily": "liquid_depth",
       "contextType": "a revision checkpoint",
-      "skill": "Describe pressure in liquids.",
+      "skill": "Pressure practice",
       "stem": "Which answer corrects a misconception about pressure? Use the wording carefully: this is about describe pressure in liquids.",
       "question": "Which answer corrects a misconception about pressure? Use the wording carefully: this is about describe pressure in liquids.",
       "options": [
@@ -4555,7 +4555,7 @@
       "patternId": "15.10P:density_pressure:exam_decision",
       "conceptFamily": "density_pressure",
       "contextType": "an exam-style data table",
-      "skill": "Link density to fluid pressure.",
+      "skill": "Pressure practice",
       "stem": "The mark scheme is testing link density to fluid pressure. Which answer matches that point? Use the wording carefully: this is about link density to fluid pressure.",
       "question": "The mark scheme is testing link density to fluid pressure. Which answer matches that point? Use the wording carefully: this is about link density to fluid pressure.",
       "options": [
@@ -4625,7 +4625,7 @@
       "patternId": "15.10P:upthrust:representation_interpretation",
       "conceptFamily": "upthrust",
       "contextType": "a required-practical notebook",
-      "skill": "Explain upthrust.",
+      "skill": "Pressure practice",
       "stem": "A representation of pressure is described in words. Which interpretation is correct? Demand focus: explain upthrust.",
       "question": "A representation of pressure is described in words. Which interpretation is correct? Demand focus: explain upthrust.",
       "options": [
@@ -4695,7 +4695,7 @@
       "patternId": "15.10P:pressure_equation:concept_discrimination",
       "conceptFamily": "pressure_equation",
       "contextType": "a technician report",
-      "skill": "Use pressure, force and area.",
+      "skill": "Pressure practice",
       "stem": "A student is comparing similar ideas in pressure. Which statement is correct? Demand focus: use pressure, force and area.",
       "question": "A student is comparing similar ideas in pressure. Which statement is correct? Demand focus: use pressure, force and area.",
       "options": [
@@ -4765,7 +4765,7 @@
       "patternId": "15.10P:area_effect:applied_context",
       "conceptFamily": "area_effect",
       "contextType": "a labelled diagram",
-      "skill": "Explain area effect on pressure.",
+      "skill": "Pressure practice",
       "stem": "A question set in a labelled diagram tests pressure. Which answer applies the idea correctly? Demand focus: explain area effect on pressure.",
       "question": "A question set in a labelled diagram tests pressure. Which answer applies the idea correctly? Demand focus: explain area effect on pressure.",
       "options": [
@@ -4835,7 +4835,7 @@
       "patternId": "15.10P:liquid_depth:data_interpretation",
       "conceptFamily": "liquid_depth",
       "contextType": "a short calculation",
-      "skill": "Describe pressure in liquids.",
+      "skill": "Pressure practice",
       "stem": "A small data set about pressure is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe pressure in liquids.",
       "question": "A small data set about pressure is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe pressure in liquids.",
       "options": [
@@ -4905,7 +4905,7 @@
       "patternId": "15.10P:density_pressure:exam_decision",
       "conceptFamily": "density_pressure",
       "contextType": "a safety decision",
-      "skill": "Link density to fluid pressure.",
+      "skill": "Pressure practice",
       "stem": "Which answer is the strongest GCSE Physics response for pressure? Use the wording carefully: this is about link density to fluid pressure.",
       "question": "Which answer is the strongest GCSE Physics response for pressure? Use the wording carefully: this is about link density to fluid pressure.",
       "options": [
@@ -4975,7 +4975,7 @@
       "patternId": "15.10P:upthrust:direct_recall",
       "conceptFamily": "upthrust",
       "contextType": "a graph-reading task",
-      "skill": "Explain upthrust.",
+      "skill": "Pressure practice",
       "stem": "Which answer matches this pressure objective: Explain upthrust? Demand focus: explain upthrust.",
       "question": "Which answer matches this pressure objective: Explain upthrust? Demand focus: explain upthrust.",
       "options": [
@@ -5045,7 +5045,7 @@
       "patternId": "15.10P:pressure_equation:concept_discrimination",
       "conceptFamily": "pressure_equation",
       "contextType": "a comparison question",
-      "skill": "Use pressure, force and area.",
+      "skill": "Pressure practice",
       "stem": "Which option best separates the correct pressure idea from a common mix-up? Demand focus: use pressure, force and area.",
       "question": "Which option best separates the correct pressure idea from a common mix-up? Demand focus: use pressure, force and area.",
       "options": [
@@ -5115,7 +5115,7 @@
       "patternId": "15.10P:area_effect:misconception_correction",
       "conceptFamily": "area_effect",
       "contextType": "a method-choice question",
-      "skill": "Explain area effect on pressure.",
+      "skill": "Pressure practice",
       "stem": "Which answer corrects a misconception about pressure? Demand focus: explain area effect on pressure.",
       "question": "Which answer corrects a misconception about pressure? Demand focus: explain area effect on pressure.",
       "options": [
@@ -5185,7 +5185,7 @@
       "patternId": "15.10P:liquid_depth:data_interpretation",
       "conceptFamily": "liquid_depth",
       "contextType": "a results discussion",
-      "skill": "Describe pressure in liquids.",
+      "skill": "Pressure practice",
       "stem": "Which conclusion about pressure is supported by the evidence? Use the wording carefully: this is about describe pressure in liquids.",
       "question": "Which conclusion about pressure is supported by the evidence? Use the wording carefully: this is about describe pressure in liquids.",
       "options": [
@@ -5255,7 +5255,7 @@
       "patternId": "15.10P:density_pressure:representation_interpretation",
       "conceptFamily": "density_pressure",
       "contextType": "a classroom demonstration",
-      "skill": "Link density to fluid pressure.",
+      "skill": "Pressure practice",
       "stem": "A representation of pressure is described in words. Which interpretation is correct? Use the wording carefully: this is about link density to fluid pressure.",
       "question": "A representation of pressure is described in words. Which interpretation is correct? Use the wording carefully: this is about link density to fluid pressure.",
       "options": [
@@ -5326,7 +5326,7 @@
       "patternId": "2.17:stopping_total:direct_recall",
       "conceptFamily": "stopping_total",
       "contextType": "a technician report",
-      "skill": "Define stopping distance.",
+      "skill": "Stopping Distance practice",
       "stem": "Which statement is correct for stopping distance? Demand focus: define stopping distance.",
       "question": "Which statement is correct for stopping distance? Demand focus: define stopping distance.",
       "options": [
@@ -5397,7 +5397,7 @@
       "patternId": "2.17:thinking_distance:concept_discrimination",
       "conceptFamily": "thinking_distance",
       "contextType": "a labelled diagram",
-      "skill": "Identify factors affecting thinking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "A student is comparing similar ideas in stopping distance. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "question": "A student is comparing similar ideas in stopping distance. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "options": [
@@ -5468,7 +5468,7 @@
       "patternId": "2.17:braking_distance:misconception_correction",
       "conceptFamily": "braking_distance",
       "contextType": "a short calculation",
-      "skill": "Identify factors affecting braking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "A revision note about stopping distance contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "question": "A revision note about stopping distance contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "options": [
@@ -5539,7 +5539,7 @@
       "patternId": "2.17:force_braking:data_interpretation",
       "conceptFamily": "force_braking",
       "contextType": "a safety decision",
-      "skill": "Explain braking force effects.",
+      "skill": "Stopping Distance practice",
       "stem": "A small data set about stopping distance is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain braking force effects.",
       "question": "A small data set about stopping distance is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain braking force effects.",
       "options": [
@@ -5610,7 +5610,7 @@
       "patternId": "2.17:reaction_time:representation_interpretation",
       "conceptFamily": "reaction_time",
       "contextType": "a graph-reading task",
-      "skill": "Choose a reaction-time method.",
+      "skill": "Stopping Distance practice",
       "stem": "Which option correctly reads the stopping distance model or diagram idea? Keep the answer focused on stopping distance: choose a reaction-time method.",
       "question": "Which option correctly reads the stopping distance model or diagram idea? Keep the answer focused on stopping distance: choose a reaction-time method.",
       "options": [
@@ -5681,7 +5681,7 @@
       "patternId": "2.17:stopping_total:direct_recall",
       "conceptFamily": "stopping_total",
       "contextType": "a comparison question",
-      "skill": "Define stopping distance.",
+      "skill": "Stopping Distance practice",
       "stem": "Which answer matches this stopping distance objective: Define stopping distance? Demand focus: define stopping distance.",
       "question": "Which answer matches this stopping distance objective: Define stopping distance? Demand focus: define stopping distance.",
       "options": [
@@ -5752,7 +5752,7 @@
       "patternId": "2.17:thinking_distance:applied_context",
       "conceptFamily": "thinking_distance",
       "contextType": "a method-choice question",
-      "skill": "Identify factors affecting thinking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "In a method-choice question, which conclusion is correct for stopping distance? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "question": "In a method-choice question, which conclusion is correct for stopping distance? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "options": [
@@ -5823,7 +5823,7 @@
       "patternId": "2.17:braking_distance:misconception_correction",
       "conceptFamily": "braking_distance",
       "contextType": "a results discussion",
-      "skill": "Identify factors affecting braking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "Which answer corrects a misconception about stopping distance? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "question": "Which answer corrects a misconception about stopping distance? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "options": [
@@ -5894,7 +5894,7 @@
       "patternId": "2.17:force_braking:exam_decision",
       "conceptFamily": "force_braking",
       "contextType": "a classroom demonstration",
-      "skill": "Explain braking force effects.",
+      "skill": "Stopping Distance practice",
       "stem": "The mark scheme is testing explain braking force effects. Which answer matches that point? Use the wording carefully: this is about explain braking force effects.",
       "question": "The mark scheme is testing explain braking force effects. Which answer matches that point? Use the wording carefully: this is about explain braking force effects.",
       "options": [
@@ -5965,7 +5965,7 @@
       "patternId": "2.17:reaction_time:representation_interpretation",
       "conceptFamily": "reaction_time",
       "contextType": "a revision checkpoint",
-      "skill": "Choose a reaction-time method.",
+      "skill": "Stopping Distance practice",
       "stem": "A representation of stopping distance is described in words. Which interpretation is correct? Keep the answer focused on stopping distance: choose a reaction-time method.",
       "question": "A representation of stopping distance is described in words. Which interpretation is correct? Keep the answer focused on stopping distance: choose a reaction-time method.",
       "options": [
@@ -6036,7 +6036,7 @@
       "patternId": "2.17:stopping_total:concept_discrimination",
       "conceptFamily": "stopping_total",
       "contextType": "an exam-style data table",
-      "skill": "Define stopping distance.",
+      "skill": "Stopping Distance practice",
       "stem": "A student is comparing similar ideas in stopping distance. Which statement is correct? Demand focus: define stopping distance.",
       "question": "A student is comparing similar ideas in stopping distance. Which statement is correct? Demand focus: define stopping distance.",
       "options": [
@@ -6107,7 +6107,7 @@
       "patternId": "2.17:thinking_distance:applied_context",
       "conceptFamily": "thinking_distance",
       "contextType": "a required-practical notebook",
-      "skill": "Identify factors affecting thinking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "A question set in a required-practical notebook tests stopping distance. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "question": "A question set in a required-practical notebook tests stopping distance. Which answer applies the idea correctly? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "options": [
@@ -6178,7 +6178,7 @@
       "patternId": "2.17:braking_distance:data_interpretation",
       "conceptFamily": "braking_distance",
       "contextType": "a technician report",
-      "skill": "Identify factors affecting braking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "A small data set about stopping distance is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "question": "A small data set about stopping distance is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "options": [
@@ -6249,7 +6249,7 @@
       "patternId": "2.17:force_braking:exam_decision",
       "conceptFamily": "force_braking",
       "contextType": "a labelled diagram",
-      "skill": "Explain braking force effects.",
+      "skill": "Stopping Distance practice",
       "stem": "Which answer is the strongest GCSE Physics response for stopping distance? Use the wording carefully: this is about explain braking force effects.",
       "question": "Which answer is the strongest GCSE Physics response for stopping distance? Use the wording carefully: this is about explain braking force effects.",
       "options": [
@@ -6320,7 +6320,7 @@
       "patternId": "2.17:reaction_time:direct_recall",
       "conceptFamily": "reaction_time",
       "contextType": "a short calculation",
-      "skill": "Choose a reaction-time method.",
+      "skill": "Stopping Distance practice",
       "stem": "Which answer matches this stopping distance objective: Choose a reaction-time method? Keep the answer focused on stopping distance: choose a reaction-time method.",
       "question": "Which answer matches this stopping distance objective: Choose a reaction-time method? Keep the answer focused on stopping distance: choose a reaction-time method.",
       "options": [
@@ -6391,7 +6391,7 @@
       "patternId": "2.17:stopping_total:concept_discrimination",
       "conceptFamily": "stopping_total",
       "contextType": "a safety decision",
-      "skill": "Define stopping distance.",
+      "skill": "Stopping Distance practice",
       "stem": "Which option best separates the correct stopping distance idea from a common mix-up? Demand focus: define stopping distance.",
       "question": "Which option best separates the correct stopping distance idea from a common mix-up? Demand focus: define stopping distance.",
       "options": [
@@ -6462,7 +6462,7 @@
       "patternId": "2.17:thinking_distance:misconception_correction",
       "conceptFamily": "thinking_distance",
       "contextType": "a graph-reading task",
-      "skill": "Identify factors affecting thinking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "Which answer corrects a misconception about stopping distance? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "question": "Which answer corrects a misconception about stopping distance? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting thinking distance.",
       "options": [
@@ -6533,7 +6533,7 @@
       "patternId": "2.17:braking_distance:data_interpretation",
       "conceptFamily": "braking_distance",
       "contextType": "a comparison question",
-      "skill": "Identify factors affecting braking distance.",
+      "skill": "Stopping Distance practice",
       "stem": "Which conclusion about stopping distance is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "question": "Which conclusion about stopping distance is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: identify factors affecting braking distance.",
       "options": [
@@ -6604,7 +6604,7 @@
       "patternId": "2.17:force_braking:representation_interpretation",
       "conceptFamily": "force_braking",
       "contextType": "a method-choice question",
-      "skill": "Explain braking force effects.",
+      "skill": "Stopping Distance practice",
       "stem": "A representation of stopping distance is described in words. Which interpretation is correct? Use the wording carefully: this is about explain braking force effects.",
       "question": "A representation of stopping distance is described in words. Which interpretation is correct? Use the wording carefully: this is about explain braking force effects.",
       "options": [

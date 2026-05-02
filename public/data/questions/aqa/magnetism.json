@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "magnetism",
-  "generatedAt": "2026-05-02T05:26:55.766Z",
+  "generatedAt": "2026-05-02T07:16:14.005Z",
   "questions": [
     {
       "id": "aqa_4_7_3_2_generators_generator_rotation_direct_recall_001",
@@ -38,7 +38,7 @@
       "patternId": "4.7.3.2:generator_rotation:direct_recall",
       "conceptFamily": "generator_rotation",
       "contextType": "a safety decision",
-      "skill": "Describe generator rotation.",
+      "skill": "Generators practice",
       "stem": "Which statement is correct for generators? Use the wording carefully: this is about describe generator rotation.",
       "question": "Which statement is correct for generators? Use the wording carefully: this is about describe generator rotation.",
       "options": [
@@ -108,7 +108,7 @@
       "patternId": "4.7.3.2:slip_rings:concept_discrimination",
       "conceptFamily": "slip_rings",
       "contextType": "a graph-reading task",
-      "skill": "Describe slip rings.",
+      "skill": "Generators practice",
       "stem": "A student is comparing similar ideas in generators. Which statement is correct? Demand focus: describe slip rings.",
       "question": "A student is comparing similar ideas in generators. Which statement is correct? Demand focus: describe slip rings.",
       "options": [
@@ -178,7 +178,7 @@
       "patternId": "4.7.3.2:frequency_speed:misconception_correction",
       "conceptFamily": "frequency_speed",
       "contextType": "a comparison question",
-      "skill": "Link rotation speed to output.",
+      "skill": "Generators practice",
       "stem": "A revision note about generators contains an error. Which replacement is correct? Check the clue before choosing: Link rotation speed to output.",
       "question": "A revision note about generators contains an error. Which replacement is correct? Check the clue before choosing: Link rotation speed to output.",
       "options": [
@@ -248,7 +248,7 @@
       "patternId": "4.7.3.2:peak_voltage:data_interpretation",
       "conceptFamily": "peak_voltage",
       "contextType": "a method-choice question",
-      "skill": "Increase peak output.",
+      "skill": "Generators practice",
       "stem": "A small data set about generators is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: increase peak output.",
       "question": "A small data set about generators is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: increase peak output.",
       "options": [
@@ -318,7 +318,7 @@
       "patternId": "4.7.3.2:generator_energy:representation_interpretation",
       "conceptFamily": "generator_energy",
       "contextType": "a results discussion",
-      "skill": "Identify energy transfers in a generator.",
+      "skill": "Generators practice",
       "stem": "Which option correctly reads the generators model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: identify energy transfers in a generator.",
       "question": "Which option correctly reads the generators model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: identify energy transfers in a generator.",
       "options": [
@@ -388,7 +388,7 @@
       "patternId": "4.7.3.2:generator_rotation:direct_recall",
       "conceptFamily": "generator_rotation",
       "contextType": "a classroom demonstration",
-      "skill": "Describe generator rotation.",
+      "skill": "Generators practice",
       "stem": "Which answer matches this generators objective: Describe generator rotation? Use the wording carefully: this is about describe generator rotation.",
       "question": "Which answer matches this generators objective: Describe generator rotation? Use the wording carefully: this is about describe generator rotation.",
       "options": [
@@ -458,7 +458,7 @@
       "patternId": "4.7.3.2:slip_rings:applied_context",
       "conceptFamily": "slip_rings",
       "contextType": "a revision checkpoint",
-      "skill": "Describe slip rings.",
+      "skill": "Generators practice",
       "stem": "In a revision checkpoint, which conclusion is correct for generators? Demand focus: describe slip rings.",
       "question": "In a revision checkpoint, which conclusion is correct for generators? Demand focus: describe slip rings.",
       "options": [
@@ -528,7 +528,7 @@
       "patternId": "4.7.3.2:frequency_speed:misconception_correction",
       "conceptFamily": "frequency_speed",
       "contextType": "an exam-style data table",
-      "skill": "Link rotation speed to output.",
+      "skill": "Generators practice",
       "stem": "Which answer corrects a misconception about generators? Check the clue before choosing: Link rotation speed to output.",
       "question": "Which answer corrects a misconception about generators? Check the clue before choosing: Link rotation speed to output.",
       "options": [
@@ -598,7 +598,7 @@
       "patternId": "4.7.3.2:peak_voltage:exam_decision",
       "conceptFamily": "peak_voltage",
       "contextType": "a required-practical notebook",
-      "skill": "Increase peak output.",
+      "skill": "Generators practice",
       "stem": "The mark scheme is testing increase peak output. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: increase peak output.",
       "question": "The mark scheme is testing increase peak output. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: increase peak output.",
       "options": [
@@ -668,7 +668,7 @@
       "patternId": "4.7.3.2:generator_energy:representation_interpretation",
       "conceptFamily": "generator_energy",
       "contextType": "a technician report",
-      "skill": "Identify energy transfers in a generator.",
+      "skill": "Generators practice",
       "stem": "A representation of generators is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: identify energy transfers in a generator.",
       "question": "A representation of generators is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: identify energy transfers in a generator.",
       "options": [
@@ -738,7 +738,7 @@
       "patternId": "4.7.3.2:generator_rotation:concept_discrimination",
       "conceptFamily": "generator_rotation",
       "contextType": "a labelled diagram",
-      "skill": "Describe generator rotation.",
+      "skill": "Generators practice",
       "stem": "A student is comparing similar ideas in generators. Which statement is correct? Use the wording carefully: this is about describe generator rotation.",
       "question": "A student is comparing similar ideas in generators. Which statement is correct? Use the wording carefully: this is about describe generator rotation.",
       "options": [
@@ -808,7 +808,7 @@
       "patternId": "4.7.3.2:slip_rings:applied_context",
       "conceptFamily": "slip_rings",
       "contextType": "a short calculation",
-      "skill": "Describe slip rings.",
+      "skill": "Generators practice",
       "stem": "A question set in a short calculation tests generators. Which answer applies the idea correctly? Demand focus: describe slip rings.",
       "question": "A question set in a short calculation tests generators. Which answer applies the idea correctly? Demand focus: describe slip rings.",
       "options": [
@@ -878,7 +878,7 @@
       "patternId": "4.7.3.2:frequency_speed:data_interpretation",
       "conceptFamily": "frequency_speed",
       "contextType": "a safety decision",
-      "skill": "Link rotation speed to output.",
+      "skill": "Generators practice",
       "stem": "A small data set about generators is being interpreted. Which conclusion is valid? Check the clue before choosing: Link rotation speed to output.",
       "question": "A small data set about generators is being interpreted. Which conclusion is valid? Check the clue before choosing: Link rotation speed to output.",
       "options": [
@@ -948,7 +948,7 @@
       "patternId": "4.7.3.2:peak_voltage:exam_decision",
       "conceptFamily": "peak_voltage",
       "contextType": "a graph-reading task",
-      "skill": "Increase peak output.",
+      "skill": "Generators practice",
       "stem": "Which answer is the strongest GCSE Physics response for generators? Choose the statement that fits this exact GCSE Physics idea: increase peak output.",
       "question": "Which answer is the strongest GCSE Physics response for generators? Choose the statement that fits this exact GCSE Physics idea: increase peak output.",
       "options": [
@@ -1018,7 +1018,7 @@
       "patternId": "4.7.3.2:generator_energy:direct_recall",
       "conceptFamily": "generator_energy",
       "contextType": "a comparison question",
-      "skill": "Identify energy transfers in a generator.",
+      "skill": "Generators practice",
       "stem": "Which answer matches this generators objective: Identify energy transfers in a generator? Choose the statement that fits this exact GCSE Physics idea: identify energy transfers in a generator.",
       "question": "Which answer matches this generators objective: Identify energy transfers in a generator? Choose the statement that fits this exact GCSE Physics idea: identify energy transfers in a generator.",
       "options": [
@@ -1088,7 +1088,7 @@
       "patternId": "4.7.3.2:generator_rotation:concept_discrimination",
       "conceptFamily": "generator_rotation",
       "contextType": "a method-choice question",
-      "skill": "Describe generator rotation.",
+      "skill": "Generators practice",
       "stem": "Which option best separates the correct generators idea from a common mix-up? Use the wording carefully: this is about describe generator rotation.",
       "question": "Which option best separates the correct generators idea from a common mix-up? Use the wording carefully: this is about describe generator rotation.",
       "options": [
@@ -1158,7 +1158,7 @@
       "patternId": "4.7.3.2:slip_rings:misconception_correction",
       "conceptFamily": "slip_rings",
       "contextType": "a results discussion",
-      "skill": "Describe slip rings.",
+      "skill": "Generators practice",
       "stem": "Which answer corrects a misconception about generators? Demand focus: describe slip rings.",
       "question": "Which answer corrects a misconception about generators? Demand focus: describe slip rings.",
       "options": [
@@ -1228,7 +1228,7 @@
       "patternId": "4.7.3.2:frequency_speed:data_interpretation",
       "conceptFamily": "frequency_speed",
       "contextType": "a classroom demonstration",
-      "skill": "Link rotation speed to output.",
+      "skill": "Generators practice",
       "stem": "Which conclusion about generators is supported by the evidence? Check the clue before choosing: Link rotation speed to output.",
       "question": "Which conclusion about generators is supported by the evidence? Check the clue before choosing: Link rotation speed to output.",
       "options": [
@@ -1299,7 +1299,7 @@
       "patternId": "4.7.1.2:field_lines:direct_recall",
       "conceptFamily": "field_lines",
       "contextType": "a safety decision",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which statement is correct for magnetic fields? Demand focus: describe magnetic field lines.",
       "question": "Which statement is correct for magnetic fields? Demand focus: describe magnetic field lines.",
       "options": [
@@ -1370,7 +1370,7 @@
       "patternId": "4.7.1.2:wire_field:concept_discrimination",
       "conceptFamily": "wire_field",
       "contextType": "a graph-reading task",
-      "skill": "Describe the field around a current-carrying wire.",
+      "skill": "Magnetic Fields practice",
       "stem": "A student is comparing similar ideas in magnetic fields. Which statement is correct? Demand focus: describe the field around a current-carrying wire.",
       "question": "A student is comparing similar ideas in magnetic fields. Which statement is correct? Demand focus: describe the field around a current-carrying wire.",
       "options": [
@@ -1441,7 +1441,7 @@
       "patternId": "4.7.1.2:field_strength:misconception_correction",
       "conceptFamily": "field_strength",
       "contextType": "a comparison question",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Fields practice",
       "stem": "A revision note about magnetic fields contains an error. Which replacement is correct? Demand focus: identify stronger magnetic fields.",
       "question": "A revision note about magnetic fields contains an error. Which replacement is correct? Demand focus: identify stronger magnetic fields.",
       "options": [
@@ -1512,7 +1512,7 @@
       "patternId": "4.7.1.2:poles:data_interpretation",
       "conceptFamily": "poles",
       "contextType": "a method-choice question",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Fields practice",
       "stem": "A small data set about magnetic fields is being interpreted. Which conclusion is valid? Use the wording carefully: this is about predict attraction and repulsion.",
       "question": "A small data set about magnetic fields is being interpreted. Which conclusion is valid? Use the wording carefully: this is about predict attraction and repulsion.",
       "options": [
@@ -1583,7 +1583,7 @@
       "patternId": "4.7.1.2:field_lines:representation_interpretation",
       "conceptFamily": "field_lines",
       "contextType": "a results discussion",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which option correctly reads the magnetic fields model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: describe magnetic field lines.",
       "question": "Which option correctly reads the magnetic fields model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: describe magnetic field lines.",
       "options": [
@@ -1654,7 +1654,7 @@
       "patternId": "4.7.1.2:wire_field:direct_recall",
       "conceptFamily": "wire_field",
       "contextType": "a classroom demonstration",
-      "skill": "Describe the field around a current-carrying wire.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which answer matches this magnetic fields objective: Describe the field around a current-carrying wire? Choose the statement that fits this exact GCSE Physics idea: describe the field around a current-carrying wire.",
       "question": "Which answer matches this magnetic fields objective: Describe the field around a current-carrying wire? Choose the statement that fits this exact GCSE Physics idea: describe the field around a current-carrying wire.",
       "options": [
@@ -1725,7 +1725,7 @@
       "patternId": "4.7.1.2:field_strength:applied_context",
       "conceptFamily": "field_strength",
       "contextType": "a revision checkpoint",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Fields practice",
       "stem": "In a revision checkpoint, which conclusion is correct for magnetic fields? Choose the statement that fits this exact GCSE Physics idea: identify stronger magnetic fields.",
       "question": "In a revision checkpoint, which conclusion is correct for magnetic fields? Choose the statement that fits this exact GCSE Physics idea: identify stronger magnetic fields.",
       "options": [
@@ -1796,7 +1796,7 @@
       "patternId": "4.7.1.2:poles:misconception_correction",
       "conceptFamily": "poles",
       "contextType": "an exam-style data table",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which answer corrects a misconception about magnetic fields? Check the clue before choosing: Predict attraction and repulsion.",
       "question": "Which answer corrects a misconception about magnetic fields? Check the clue before choosing: Predict attraction and repulsion.",
       "options": [
@@ -1867,7 +1867,7 @@
       "patternId": "4.7.1.2:field_lines:exam_decision",
       "conceptFamily": "field_lines",
       "contextType": "a required-practical notebook",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Fields practice",
       "stem": "The mark scheme is testing describe magnetic field lines. Which answer matches that point? Keep the answer focused on magnetic fields: describe magnetic field lines.",
       "question": "The mark scheme is testing describe magnetic field lines. Which answer matches that point? Keep the answer focused on magnetic fields: describe magnetic field lines.",
       "options": [
@@ -1938,7 +1938,7 @@
       "patternId": "4.7.1.2:wire_field:representation_interpretation",
       "conceptFamily": "wire_field",
       "contextType": "a technician report",
-      "skill": "Describe the field around a current-carrying wire.",
+      "skill": "Magnetic Fields practice",
       "stem": "A representation of magnetic fields is described in words. Which interpretation is correct? Keep the answer focused on magnetic fields: describe the field around a current-carrying wire.",
       "question": "A representation of magnetic fields is described in words. Which interpretation is correct? Keep the answer focused on magnetic fields: describe the field around a current-carrying wire.",
       "options": [
@@ -2009,7 +2009,7 @@
       "patternId": "4.7.1.2:field_strength:concept_discrimination",
       "conceptFamily": "field_strength",
       "contextType": "a labelled diagram",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Fields practice",
       "stem": "A student is comparing similar ideas in magnetic fields. Which statement is correct? Keep the answer focused on magnetic fields: identify stronger magnetic fields.",
       "question": "A student is comparing similar ideas in magnetic fields. Which statement is correct? Keep the answer focused on magnetic fields: identify stronger magnetic fields.",
       "options": [
@@ -2080,7 +2080,7 @@
       "patternId": "4.7.1.2:poles:applied_context",
       "conceptFamily": "poles",
       "contextType": "a short calculation",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Fields practice",
       "stem": "A question set in a short calculation tests magnetic fields. Which answer applies the idea correctly? Demand focus: predict attraction and repulsion.",
       "question": "A question set in a short calculation tests magnetic fields. Which answer applies the idea correctly? Demand focus: predict attraction and repulsion.",
       "options": [
@@ -2151,7 +2151,7 @@
       "patternId": "4.7.1.2:field_lines:data_interpretation",
       "conceptFamily": "field_lines",
       "contextType": "a safety decision",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Fields practice",
       "stem": "A small data set about magnetic fields is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe magnetic field lines.",
       "question": "A small data set about magnetic fields is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe magnetic field lines.",
       "options": [
@@ -2222,7 +2222,7 @@
       "patternId": "4.7.1.2:wire_field:exam_decision",
       "conceptFamily": "wire_field",
       "contextType": "a graph-reading task",
-      "skill": "Describe the field around a current-carrying wire.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which answer is the strongest GCSE Physics response for magnetic fields? Use the wording carefully: this is about describe the field around a current-carrying wire.",
       "question": "Which answer is the strongest GCSE Physics response for magnetic fields? Use the wording carefully: this is about describe the field around a current-carrying wire.",
       "options": [
@@ -2293,7 +2293,7 @@
       "patternId": "4.7.1.2:field_strength:direct_recall",
       "conceptFamily": "field_strength",
       "contextType": "a comparison question",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which answer matches this magnetic fields objective: Identify stronger magnetic fields? Use the wording carefully: this is about identify stronger magnetic fields.",
       "question": "Which answer matches this magnetic fields objective: Identify stronger magnetic fields? Use the wording carefully: this is about identify stronger magnetic fields.",
       "options": [
@@ -2364,7 +2364,7 @@
       "patternId": "4.7.1.2:poles:concept_discrimination",
       "conceptFamily": "poles",
       "contextType": "a method-choice question",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which option best separates the correct magnetic fields idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: predict attraction and repulsion.",
       "question": "Which option best separates the correct magnetic fields idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: predict attraction and repulsion.",
       "options": [
@@ -2435,7 +2435,7 @@
       "patternId": "4.7.1.2:field_lines:misconception_correction",
       "conceptFamily": "field_lines",
       "contextType": "a results discussion",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which answer corrects a misconception about magnetic fields? Check the clue before choosing: Describe magnetic field lines.",
       "question": "Which answer corrects a misconception about magnetic fields? Check the clue before choosing: Describe magnetic field lines.",
       "options": [
@@ -2506,7 +2506,7 @@
       "patternId": "4.7.1.2:wire_field:data_interpretation",
       "conceptFamily": "wire_field",
       "contextType": "a classroom demonstration",
-      "skill": "Describe the field around a current-carrying wire.",
+      "skill": "Magnetic Fields practice",
       "stem": "Which conclusion about magnetic fields is supported by the evidence? Check the clue before choosing: Describe the field around a current-carrying wire.",
       "question": "Which conclusion about magnetic fields is supported by the evidence? Check the clue before choosing: Describe the field around a current-carrying wire.",
       "options": [
@@ -2577,7 +2577,7 @@
       "patternId": "4.7.1.2:field_strength:representation_interpretation",
       "conceptFamily": "field_strength",
       "contextType": "a revision checkpoint",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Fields practice",
       "stem": "A representation of magnetic fields is described in words. Which interpretation is correct? Check the clue before choosing: Identify stronger magnetic fields.",
       "question": "A representation of magnetic fields is described in words. Which interpretation is correct? Check the clue before choosing: Identify stronger magnetic fields.",
       "options": [
@@ -2648,7 +2648,7 @@
       "patternId": "4.7.1:soft_hard:direct_recall",
       "conceptFamily": "soft_hard",
       "contextType": "a labelled diagram",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which statement is correct for magnetic materials? Check the clue before choosing: Compare soft and hard magnetic materials.",
       "question": "Which statement is correct for magnetic materials? Check the clue before choosing: Compare soft and hard magnetic materials.",
       "options": [
@@ -2719,7 +2719,7 @@
       "patternId": "4.7.1:poles:concept_discrimination",
       "conceptFamily": "poles",
       "contextType": "a short calculation",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Materials practice",
       "stem": "A student is comparing similar ideas in magnetic materials. Which statement is correct? Keep the answer focused on magnetic materials: predict attraction and repulsion.",
       "question": "A student is comparing similar ideas in magnetic materials. Which statement is correct? Keep the answer focused on magnetic materials: predict attraction and repulsion.",
       "options": [
@@ -2790,7 +2790,7 @@
       "patternId": "4.7.1:field_lines:misconception_correction",
       "conceptFamily": "field_lines",
       "contextType": "a safety decision",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Materials practice",
       "stem": "A revision note about magnetic materials contains an error. Which replacement is correct? Demand focus: describe magnetic field lines.",
       "question": "A revision note about magnetic materials contains an error. Which replacement is correct? Demand focus: describe magnetic field lines.",
       "options": [
@@ -2861,7 +2861,7 @@
       "patternId": "4.7.1:field_strength:data_interpretation",
       "conceptFamily": "field_strength",
       "contextType": "a graph-reading task",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Materials practice",
       "stem": "A small data set about magnetic materials is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: identify stronger magnetic fields.",
       "question": "A small data set about magnetic materials is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: identify stronger magnetic fields.",
       "options": [
@@ -2932,7 +2932,7 @@
       "patternId": "4.7.1:soft_hard:representation_interpretation",
       "conceptFamily": "soft_hard",
       "contextType": "a comparison question",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which option correctly reads the magnetic materials model or diagram idea? Demand focus: compare soft and hard magnetic materials.",
       "question": "Which option correctly reads the magnetic materials model or diagram idea? Demand focus: compare soft and hard magnetic materials.",
       "options": [
@@ -3003,7 +3003,7 @@
       "patternId": "4.7.1:poles:direct_recall",
       "conceptFamily": "poles",
       "contextType": "a method-choice question",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which answer matches this magnetic materials objective: Predict attraction and repulsion? Use the wording carefully: this is about predict attraction and repulsion.",
       "question": "Which answer matches this magnetic materials objective: Predict attraction and repulsion? Use the wording carefully: this is about predict attraction and repulsion.",
       "options": [
@@ -3074,7 +3074,7 @@
       "patternId": "4.7.1:field_lines:applied_context",
       "conceptFamily": "field_lines",
       "contextType": "a results discussion",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Materials practice",
       "stem": "In a results discussion, which conclusion is correct for magnetic materials? Choose the statement that fits this exact GCSE Physics idea: describe magnetic field lines.",
       "question": "In a results discussion, which conclusion is correct for magnetic materials? Choose the statement that fits this exact GCSE Physics idea: describe magnetic field lines.",
       "options": [
@@ -3145,7 +3145,7 @@
       "patternId": "4.7.1:field_strength:misconception_correction",
       "conceptFamily": "field_strength",
       "contextType": "a classroom demonstration",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which answer corrects a misconception about magnetic materials? Keep the answer focused on magnetic materials: identify stronger magnetic fields.",
       "question": "Which answer corrects a misconception about magnetic materials? Keep the answer focused on magnetic materials: identify stronger magnetic fields.",
       "options": [
@@ -3216,7 +3216,7 @@
       "patternId": "4.7.1:soft_hard:exam_decision",
       "conceptFamily": "soft_hard",
       "contextType": "a revision checkpoint",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Magnetic Materials practice",
       "stem": "The mark scheme is testing compare soft and hard magnetic materials. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: compare soft and hard magnetic materials.",
       "question": "The mark scheme is testing compare soft and hard magnetic materials. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: compare soft and hard magnetic materials.",
       "options": [
@@ -3287,7 +3287,7 @@
       "patternId": "4.7.1:poles:representation_interpretation",
       "conceptFamily": "poles",
       "contextType": "an exam-style data table",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Materials practice",
       "stem": "A representation of magnetic materials is described in words. Which interpretation is correct? Check the clue before choosing: Predict attraction and repulsion.",
       "question": "A representation of magnetic materials is described in words. Which interpretation is correct? Check the clue before choosing: Predict attraction and repulsion.",
       "options": [
@@ -3358,7 +3358,7 @@
       "patternId": "4.7.1:field_lines:concept_discrimination",
       "conceptFamily": "field_lines",
       "contextType": "a required-practical notebook",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Materials practice",
       "stem": "A student is comparing similar ideas in magnetic materials. Which statement is correct? Keep the answer focused on magnetic materials: describe magnetic field lines.",
       "question": "A student is comparing similar ideas in magnetic materials. Which statement is correct? Keep the answer focused on magnetic materials: describe magnetic field lines.",
       "options": [
@@ -3429,7 +3429,7 @@
       "patternId": "4.7.1:field_strength:applied_context",
       "conceptFamily": "field_strength",
       "contextType": "a technician report",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Materials practice",
       "stem": "A question set in a technician report tests magnetic materials. Which answer applies the idea correctly? Use the wording carefully: this is about identify stronger magnetic fields.",
       "question": "A question set in a technician report tests magnetic materials. Which answer applies the idea correctly? Use the wording carefully: this is about identify stronger magnetic fields.",
       "options": [
@@ -3500,7 +3500,7 @@
       "patternId": "4.7.1:soft_hard:data_interpretation",
       "conceptFamily": "soft_hard",
       "contextType": "a labelled diagram",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Magnetic Materials practice",
       "stem": "A small data set about magnetic materials is being interpreted. Which conclusion is valid? Keep the answer focused on magnetic materials: compare soft and hard magnetic materials.",
       "question": "A small data set about magnetic materials is being interpreted. Which conclusion is valid? Keep the answer focused on magnetic materials: compare soft and hard magnetic materials.",
       "options": [
@@ -3571,7 +3571,7 @@
       "patternId": "4.7.1:poles:exam_decision",
       "conceptFamily": "poles",
       "contextType": "a short calculation",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which answer is the strongest GCSE Physics response for magnetic materials? Demand focus: predict attraction and repulsion.",
       "question": "Which answer is the strongest GCSE Physics response for magnetic materials? Demand focus: predict attraction and repulsion.",
       "options": [
@@ -3642,7 +3642,7 @@
       "patternId": "4.7.1:field_lines:direct_recall",
       "conceptFamily": "field_lines",
       "contextType": "a safety decision",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which answer matches this magnetic materials objective: Describe magnetic field lines? Use the wording carefully: this is about describe magnetic field lines.",
       "question": "Which answer matches this magnetic materials objective: Describe magnetic field lines? Use the wording carefully: this is about describe magnetic field lines.",
       "options": [
@@ -3713,7 +3713,7 @@
       "patternId": "4.7.1:field_strength:concept_discrimination",
       "conceptFamily": "field_strength",
       "contextType": "a graph-reading task",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which option best separates the correct magnetic materials idea from a common mix-up? Check the clue before choosing: Identify stronger magnetic fields.",
       "question": "Which option best separates the correct magnetic materials idea from a common mix-up? Check the clue before choosing: Identify stronger magnetic fields.",
       "options": [
@@ -3784,7 +3784,7 @@
       "patternId": "4.7.1:soft_hard:misconception_correction",
       "conceptFamily": "soft_hard",
       "contextType": "a comparison question",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which answer corrects a misconception about magnetic materials? Use the wording carefully: this is about compare soft and hard magnetic materials.",
       "question": "Which answer corrects a misconception about magnetic materials? Use the wording carefully: this is about compare soft and hard magnetic materials.",
       "options": [
@@ -3855,7 +3855,7 @@
       "patternId": "4.7.1:poles:data_interpretation",
       "conceptFamily": "poles",
       "contextType": "a method-choice question",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Magnetic Materials practice",
       "stem": "Which conclusion about magnetic materials is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: predict attraction and repulsion.",
       "question": "Which conclusion about magnetic materials is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: predict attraction and repulsion.",
       "options": [
@@ -3926,7 +3926,7 @@
       "patternId": "4.7.1:field_lines:representation_interpretation",
       "conceptFamily": "field_lines",
       "contextType": "a results discussion",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Magnetic Materials practice",
       "stem": "A representation of magnetic materials is described in words. Which interpretation is correct? Check the clue before choosing: Describe magnetic field lines.",
       "question": "A representation of magnetic materials is described in words. Which interpretation is correct? Check the clue before choosing: Describe magnetic field lines.",
       "options": [
@@ -3997,7 +3997,7 @@
       "patternId": "4.7.1:poles:direct_recall",
       "conceptFamily": "poles",
       "contextType": "a labelled diagram",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which statement is correct for permanent magnets? Use the wording carefully: this is about predict attraction and repulsion.",
       "question": "Which statement is correct for permanent magnets? Use the wording carefully: this is about predict attraction and repulsion.",
       "options": [
@@ -4068,7 +4068,7 @@
       "patternId": "4.7.1:field_lines:concept_discrimination",
       "conceptFamily": "field_lines",
       "contextType": "a short calculation",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Permanent Magnets practice",
       "stem": "A student is comparing similar ideas in permanent magnets. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe magnetic field lines.",
       "question": "A student is comparing similar ideas in permanent magnets. Which statement is correct? Choose the statement that fits this exact GCSE Physics idea: describe magnetic field lines.",
       "options": [
@@ -4139,7 +4139,7 @@
       "patternId": "4.7.1:field_strength:misconception_correction",
       "conceptFamily": "field_strength",
       "contextType": "a safety decision",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Permanent Magnets practice",
       "stem": "A revision note about permanent magnets contains an error. Which replacement is correct? Keep the answer focused on permanent magnets: identify stronger magnetic fields.",
       "question": "A revision note about permanent magnets contains an error. Which replacement is correct? Keep the answer focused on permanent magnets: identify stronger magnetic fields.",
       "options": [
@@ -4210,7 +4210,7 @@
       "patternId": "4.7.1:soft_hard:data_interpretation",
       "conceptFamily": "soft_hard",
       "contextType": "a graph-reading task",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Permanent Magnets practice",
       "stem": "A small data set about permanent magnets is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: compare soft and hard magnetic materials.",
       "question": "A small data set about permanent magnets is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: compare soft and hard magnetic materials.",
       "options": [
@@ -4281,7 +4281,7 @@
       "patternId": "4.7.1:poles:representation_interpretation",
       "conceptFamily": "poles",
       "contextType": "a comparison question",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which option correctly reads the permanent magnets model or diagram idea? Check the clue before choosing: Predict attraction and repulsion.",
       "question": "Which option correctly reads the permanent magnets model or diagram idea? Check the clue before choosing: Predict attraction and repulsion.",
       "options": [
@@ -4352,7 +4352,7 @@
       "patternId": "4.7.1:field_lines:direct_recall",
       "conceptFamily": "field_lines",
       "contextType": "a method-choice question",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which answer matches this permanent magnets objective: Describe magnetic field lines? Keep the answer focused on permanent magnets: describe magnetic field lines.",
       "question": "Which answer matches this permanent magnets objective: Describe magnetic field lines? Keep the answer focused on permanent magnets: describe magnetic field lines.",
       "options": [
@@ -4423,7 +4423,7 @@
       "patternId": "4.7.1:field_strength:applied_context",
       "conceptFamily": "field_strength",
       "contextType": "a results discussion",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Permanent Magnets practice",
       "stem": "In a results discussion, which conclusion is correct for permanent magnets? Use the wording carefully: this is about identify stronger magnetic fields.",
       "question": "In a results discussion, which conclusion is correct for permanent magnets? Use the wording carefully: this is about identify stronger magnetic fields.",
       "options": [
@@ -4494,7 +4494,7 @@
       "patternId": "4.7.1:soft_hard:misconception_correction",
       "conceptFamily": "soft_hard",
       "contextType": "a classroom demonstration",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which answer corrects a misconception about permanent magnets? Keep the answer focused on permanent magnets: compare soft and hard magnetic materials.",
       "question": "Which answer corrects a misconception about permanent magnets? Keep the answer focused on permanent magnets: compare soft and hard magnetic materials.",
       "options": [
@@ -4565,7 +4565,7 @@
       "patternId": "4.7.1:poles:exam_decision",
       "conceptFamily": "poles",
       "contextType": "a revision checkpoint",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Permanent Magnets practice",
       "stem": "The mark scheme is testing predict attraction and repulsion. Which answer matches that point? Demand focus: predict attraction and repulsion.",
       "question": "The mark scheme is testing predict attraction and repulsion. Which answer matches that point? Demand focus: predict attraction and repulsion.",
       "options": [
@@ -4636,7 +4636,7 @@
       "patternId": "4.7.1:field_lines:representation_interpretation",
       "conceptFamily": "field_lines",
       "contextType": "an exam-style data table",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Permanent Magnets practice",
       "stem": "A representation of permanent magnets is described in words. Which interpretation is correct? Use the wording carefully: this is about describe magnetic field lines.",
       "question": "A representation of permanent magnets is described in words. Which interpretation is correct? Use the wording carefully: this is about describe magnetic field lines.",
       "options": [
@@ -4707,7 +4707,7 @@
       "patternId": "4.7.1:field_strength:concept_discrimination",
       "conceptFamily": "field_strength",
       "contextType": "a required-practical notebook",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Permanent Magnets practice",
       "stem": "A student is comparing similar ideas in permanent magnets. Which statement is correct? Check the clue before choosing: Identify stronger magnetic fields.",
       "question": "A student is comparing similar ideas in permanent magnets. Which statement is correct? Check the clue before choosing: Identify stronger magnetic fields.",
       "options": [
@@ -4778,7 +4778,7 @@
       "patternId": "4.7.1:soft_hard:applied_context",
       "conceptFamily": "soft_hard",
       "contextType": "a technician report",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Permanent Magnets practice",
       "stem": "A question set in a technician report tests permanent magnets. Which answer applies the idea correctly? Use the wording carefully: this is about compare soft and hard magnetic materials.",
       "question": "A question set in a technician report tests permanent magnets. Which answer applies the idea correctly? Use the wording carefully: this is about compare soft and hard magnetic materials.",
       "options": [
@@ -4849,7 +4849,7 @@
       "patternId": "4.7.1:poles:data_interpretation",
       "conceptFamily": "poles",
       "contextType": "a labelled diagram",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Permanent Magnets practice",
       "stem": "A small data set about permanent magnets is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: predict attraction and repulsion.",
       "question": "A small data set about permanent magnets is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: predict attraction and repulsion.",
       "options": [
@@ -4920,7 +4920,7 @@
       "patternId": "4.7.1:field_lines:exam_decision",
       "conceptFamily": "field_lines",
       "contextType": "a short calculation",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which answer is the strongest GCSE Physics response for permanent magnets? Check the clue before choosing: Describe magnetic field lines.",
       "question": "Which answer is the strongest GCSE Physics response for permanent magnets? Check the clue before choosing: Describe magnetic field lines.",
       "options": [
@@ -4991,7 +4991,7 @@
       "patternId": "4.7.1:field_strength:direct_recall",
       "conceptFamily": "field_strength",
       "contextType": "a safety decision",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which answer matches this permanent magnets objective: Identify stronger magnetic fields? Demand focus: identify stronger magnetic fields.",
       "question": "Which answer matches this permanent magnets objective: Identify stronger magnetic fields? Demand focus: identify stronger magnetic fields.",
       "options": [
@@ -5062,7 +5062,7 @@
       "patternId": "4.7.1:soft_hard:concept_discrimination",
       "conceptFamily": "soft_hard",
       "contextType": "a graph-reading task",
-      "skill": "Compare soft and hard magnetic materials.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which option best separates the correct permanent magnets idea from a common mix-up? Check the clue before choosing: Compare soft and hard magnetic materials.",
       "question": "Which option best separates the correct permanent magnets idea from a common mix-up? Check the clue before choosing: Compare soft and hard magnetic materials.",
       "options": [
@@ -5133,7 +5133,7 @@
       "patternId": "4.7.1:poles:misconception_correction",
       "conceptFamily": "poles",
       "contextType": "a comparison question",
-      "skill": "Predict attraction and repulsion.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which answer corrects a misconception about permanent magnets? Keep the answer focused on permanent magnets: predict attraction and repulsion.",
       "question": "Which answer corrects a misconception about permanent magnets? Keep the answer focused on permanent magnets: predict attraction and repulsion.",
       "options": [
@@ -5204,7 +5204,7 @@
       "patternId": "4.7.1:field_lines:data_interpretation",
       "conceptFamily": "field_lines",
       "contextType": "a method-choice question",
-      "skill": "Describe magnetic field lines.",
+      "skill": "Permanent Magnets practice",
       "stem": "Which conclusion about permanent magnets is supported by the evidence? Demand focus: describe magnetic field lines.",
       "question": "Which conclusion about permanent magnets is supported by the evidence? Demand focus: describe magnetic field lines.",
       "options": [
@@ -5275,7 +5275,7 @@
       "patternId": "4.7.1:field_strength:representation_interpretation",
       "conceptFamily": "field_strength",
       "contextType": "a results discussion",
-      "skill": "Identify stronger magnetic fields.",
+      "skill": "Permanent Magnets practice",
       "stem": "A representation of permanent magnets is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: identify stronger magnetic fields.",
       "question": "A representation of permanent magnets is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: identify stronger magnetic fields.",
       "options": [
@@ -5346,7 +5346,7 @@
       "patternId": "4.7.3.4:turns_ratio:direct_recall",
       "conceptFamily": "turns_ratio",
       "contextType": "a safety decision",
-      "skill": "Use transformer turns ratio.",
+      "skill": "Transformers practice",
       "stem": "Which statement is correct for transformers? Demand focus: use transformer turns ratio.",
       "question": "Which statement is correct for transformers? Demand focus: use transformer turns ratio.",
       "options": [
@@ -5417,7 +5417,7 @@
       "patternId": "4.7.3.4:step_up_down:concept_discrimination",
       "conceptFamily": "step_up_down",
       "contextType": "a graph-reading task",
-      "skill": "Identify step-up and step-down transformers.",
+      "skill": "Transformers practice",
       "stem": "A student is comparing similar ideas in transformers. Which statement is correct? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "question": "A student is comparing similar ideas in transformers. Which statement is correct? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "options": [
@@ -5488,7 +5488,7 @@
       "patternId": "4.7.3.4:grid_transformers:misconception_correction",
       "conceptFamily": "grid_transformers",
       "contextType": "a comparison question",
-      "skill": "Explain transformers in the National Grid.",
+      "skill": "Transformers practice",
       "stem": "A revision note about transformers contains an error. Which replacement is correct? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "question": "A revision note about transformers contains an error. Which replacement is correct? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "options": [
@@ -5559,7 +5559,7 @@
       "patternId": "4.7.3.4:current_voltage:data_interpretation",
       "conceptFamily": "current_voltage",
       "contextType": "a method-choice question",
-      "skill": "Link transformer voltage and current.",
+      "skill": "Transformers practice",
       "stem": "A small data set about transformers is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link transformer voltage and current.",
       "question": "A small data set about transformers is being interpreted. Which conclusion is valid? Use the wording carefully: this is about link transformer voltage and current.",
       "options": [
@@ -5630,7 +5630,7 @@
       "patternId": "4.7.3.4:efficiency_transformer:representation_interpretation",
       "conceptFamily": "efficiency_transformer",
       "contextType": "a results discussion",
-      "skill": "Describe ideal transformer energy transfer.",
+      "skill": "Transformers practice",
       "stem": "Which option correctly reads the transformers model or diagram idea? Demand focus: describe ideal transformer energy transfer.",
       "question": "Which option correctly reads the transformers model or diagram idea? Demand focus: describe ideal transformer energy transfer.",
       "options": [
@@ -5701,7 +5701,7 @@
       "patternId": "4.7.3.4:turns_ratio:direct_recall",
       "conceptFamily": "turns_ratio",
       "contextType": "a classroom demonstration",
-      "skill": "Use transformer turns ratio.",
+      "skill": "Transformers practice",
       "stem": "Which answer matches this transformers objective: Use transformer turns ratio? Demand focus: use transformer turns ratio.",
       "question": "Which answer matches this transformers objective: Use transformer turns ratio? Demand focus: use transformer turns ratio.",
       "options": [
@@ -5772,7 +5772,7 @@
       "patternId": "4.7.3.4:step_up_down:applied_context",
       "conceptFamily": "step_up_down",
       "contextType": "a revision checkpoint",
-      "skill": "Identify step-up and step-down transformers.",
+      "skill": "Transformers practice",
       "stem": "In a revision checkpoint, which conclusion is correct for transformers? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "question": "In a revision checkpoint, which conclusion is correct for transformers? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "options": [
@@ -5843,7 +5843,7 @@
       "patternId": "4.7.3.4:grid_transformers:misconception_correction",
       "conceptFamily": "grid_transformers",
       "contextType": "an exam-style data table",
-      "skill": "Explain transformers in the National Grid.",
+      "skill": "Transformers practice",
       "stem": "Which answer corrects a misconception about transformers? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "question": "Which answer corrects a misconception about transformers? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "options": [
@@ -5914,7 +5914,7 @@
       "patternId": "4.7.3.4:current_voltage:exam_decision",
       "conceptFamily": "current_voltage",
       "contextType": "a required-practical notebook",
-      "skill": "Link transformer voltage and current.",
+      "skill": "Transformers practice",
       "stem": "The mark scheme is testing link transformer voltage and current. Which answer matches that point? Use the wording carefully: this is about link transformer voltage and current.",
       "question": "The mark scheme is testing link transformer voltage and current. Which answer matches that point? Use the wording carefully: this is about link transformer voltage and current.",
       "options": [
@@ -5985,7 +5985,7 @@
       "patternId": "4.7.3.4:efficiency_transformer:representation_interpretation",
       "conceptFamily": "efficiency_transformer",
       "contextType": "a technician report",
-      "skill": "Describe ideal transformer energy transfer.",
+      "skill": "Transformers practice",
       "stem": "A representation of transformers is described in words. Which interpretation is correct? Demand focus: describe ideal transformer energy transfer.",
       "question": "A representation of transformers is described in words. Which interpretation is correct? Demand focus: describe ideal transformer energy transfer.",
       "options": [
@@ -6056,7 +6056,7 @@
       "patternId": "4.7.3.4:turns_ratio:concept_discrimination",
       "conceptFamily": "turns_ratio",
       "contextType": "a labelled diagram",
-      "skill": "Use transformer turns ratio.",
+      "skill": "Transformers practice",
       "stem": "A student is comparing similar ideas in transformers. Which statement is correct? Demand focus: use transformer turns ratio.",
       "question": "A student is comparing similar ideas in transformers. Which statement is correct? Demand focus: use transformer turns ratio.",
       "options": [
@@ -6127,7 +6127,7 @@
       "patternId": "4.7.3.4:step_up_down:applied_context",
       "conceptFamily": "step_up_down",
       "contextType": "a short calculation",
-      "skill": "Identify step-up and step-down transformers.",
+      "skill": "Transformers practice",
       "stem": "A question set in a short calculation tests transformers. Which answer applies the idea correctly? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "question": "A question set in a short calculation tests transformers. Which answer applies the idea correctly? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "options": [
@@ -6198,7 +6198,7 @@
       "patternId": "4.7.3.4:grid_transformers:data_interpretation",
       "conceptFamily": "grid_transformers",
       "contextType": "a safety decision",
-      "skill": "Explain transformers in the National Grid.",
+      "skill": "Transformers practice",
       "stem": "A small data set about transformers is being interpreted. Which conclusion is valid? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "question": "A small data set about transformers is being interpreted. Which conclusion is valid? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "options": [
@@ -6269,7 +6269,7 @@
       "patternId": "4.7.3.4:current_voltage:exam_decision",
       "conceptFamily": "current_voltage",
       "contextType": "a graph-reading task",
-      "skill": "Link transformer voltage and current.",
+      "skill": "Transformers practice",
       "stem": "Which answer is the strongest GCSE Physics response for transformers? Use the wording carefully: this is about link transformer voltage and current.",
       "question": "Which answer is the strongest GCSE Physics response for transformers? Use the wording carefully: this is about link transformer voltage and current.",
       "options": [
@@ -6340,7 +6340,7 @@
       "patternId": "4.7.3.4:efficiency_transformer:direct_recall",
       "conceptFamily": "efficiency_transformer",
       "contextType": "a comparison question",
-      "skill": "Describe ideal transformer energy transfer.",
+      "skill": "Transformers practice",
       "stem": "Which answer matches this transformers objective: Describe ideal transformer energy transfer? Demand focus: describe ideal transformer energy transfer.",
       "question": "Which answer matches this transformers objective: Describe ideal transformer energy transfer? Demand focus: describe ideal transformer energy transfer.",
       "options": [
@@ -6411,7 +6411,7 @@
       "patternId": "4.7.3.4:turns_ratio:concept_discrimination",
       "conceptFamily": "turns_ratio",
       "contextType": "a method-choice question",
-      "skill": "Use transformer turns ratio.",
+      "skill": "Transformers practice",
       "stem": "Which option best separates the correct transformers idea from a common mix-up? Demand focus: use transformer turns ratio.",
       "question": "Which option best separates the correct transformers idea from a common mix-up? Demand focus: use transformer turns ratio.",
       "options": [
@@ -6482,7 +6482,7 @@
       "patternId": "4.7.3.4:step_up_down:misconception_correction",
       "conceptFamily": "step_up_down",
       "contextType": "a results discussion",
-      "skill": "Identify step-up and step-down transformers.",
+      "skill": "Transformers practice",
       "stem": "Which answer corrects a misconception about transformers? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "question": "Which answer corrects a misconception about transformers? Use the wording carefully: this is about identify step-up and step-down transformers.",
       "options": [
@@ -6553,7 +6553,7 @@
       "patternId": "4.7.3.4:grid_transformers:data_interpretation",
       "conceptFamily": "grid_transformers",
       "contextType": "a classroom demonstration",
-      "skill": "Explain transformers in the National Grid.",
+      "skill": "Transformers practice",
       "stem": "Which conclusion about transformers is supported by the evidence? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "question": "Which conclusion about transformers is supported by the evidence? Keep the answer focused on transformers: explain transformers in the National Grid.",
       "options": [
@@ -6624,7 +6624,7 @@
       "patternId": "4.7.3.4:current_voltage:representation_interpretation",
       "conceptFamily": "current_voltage",
       "contextType": "a revision checkpoint",
-      "skill": "Link transformer voltage and current.",
+      "skill": "Transformers practice",
       "stem": "A representation of transformers is described in words. Which interpretation is correct? Use the wording carefully: this is about link transformer voltage and current.",
       "question": "A representation of transformers is described in words. Which interpretation is correct? Use the wording carefully: this is about link transformer voltage and current.",
       "options": [

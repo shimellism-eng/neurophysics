@@ -5,6 +5,25 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Stale Adaptive Practice question cache fixed
+- Simulator showed an old generated/scaffolded Newton question even though:
+  - `dist/data/questions/aqa/forces.json` had the authored Newton questions.
+  - `ios/App/App/public/data/questions/aqa/forces.json` also had the authored Newton questions.
+- Root cause was stale question JSON being served from WebView/browser/service-worker cache.
+- Added a tiny cache-bust in `src/lib/questionRepository.js`:
+  - Browser/native fetches now request question JSON with a per-launch `?v=...` value.
+  - Fetch uses `cache: 'no-store'` in browser/native runtime.
+  - Node smoke tests still use the raw path so file-backed test fetches keep working.
+- Verification:
+  - `node scripts/smoke-adaptive-course-filter.mjs` passes.
+  - `node scripts/smoke-topic-routing.mjs` passes.
+  - `npm run build` passes.
+  - `git diff --check` passes.
+
+### Next step
+- Rebuild/sync iOS and confirm the simulator shows authored Newton questions, not old scaffolded wording.
+- Then continue AQA Forces: `Weight, Mass and Gravity` / `Terminal Velocity`.
+
 ### Adaptive Practice AQA Newton's Laws authored
 - Fixed AQA `Newton's Laws`: 5/5 authored and passed.
 - Fixed AQA `Newton's Third Law`: 18/18 authored and passed.

@@ -1,5 +1,6 @@
 const BASE_PATH = '/data/questions'
 const SRS_STORAGE_KEY = 'np_srs'
+const DATA_REQUEST_VERSION = Date.now().toString(36)
 
 import { filterQuestionsForSelection } from '../utils/curriculumFilters'
 
@@ -114,7 +115,12 @@ function readSrsStore() {
 
 async function fetchJson(path) {
   if (!fileCache.has(path)) {
-    fileCache.set(path, fetch(path).then(async (response) => {
+    const shouldBypassDataCache = typeof window !== 'undefined'
+    const requestPath = shouldBypassDataCache
+      ? `${path}${path.includes('?') ? '&' : '?'}v=${DATA_REQUEST_VERSION}`
+      : path
+    const fetchOptions = shouldBypassDataCache ? { cache: 'no-store' } : undefined
+    fileCache.set(path, fetch(requestPath, fetchOptions).then(async (response) => {
       if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`)
       return response.json()
     }))

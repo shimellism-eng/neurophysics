@@ -17,6 +17,7 @@ const root = path.resolve(__dirname, '..')
 const dataRoot = path.join(root, 'public', 'data', 'questions')
 const boards = ['aqa', 'edexcel']
 const boardNames = { aqa: 'AQA', edexcel: 'Edexcel' }
+const MINIMUM_RELEASE_QUESTION_COUNT = 1500
 const SCAFFOLDING_PHRASES = [
   /learning objective/i,
   /common mix-up/i,
@@ -626,6 +627,11 @@ function main() {
     }
 
     boardQuestions[board] = generated
+  }
+
+  const totalQuestionCount = boards.reduce((sum, board) => sum + boardQuestions[board].length, 0)
+  if (totalQuestionCount < MINIMUM_RELEASE_QUESTION_COUNT) {
+    throw new Error(`Adaptive Practice bank has ${totalQuestionCount} questions; release floor is ${MINIMUM_RELEASE_QUESTION_COUNT}. Add authored items before regenerating.`)
   }
 
   for (const board of boards) {

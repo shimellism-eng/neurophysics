@@ -47,6 +47,23 @@
 - If the Atomic sample is approved, repeat the same authored-source approach topic by topic, starting with Electricity.
 - Do not deploy this content checkpoint until the Atomic on-device sample is approved.
 
+### Adaptive Practice release-count guard
+- Mamo approved the first 4 Atomic Structure questions on both boards as acceptable for the first authored checkpoint.
+- Added a regeneration safety rail: Adaptive Practice cannot regenerate below 1,500 total runtime questions.
+- Current runtime count remains 1,513:
+  - AQA: 832
+  - Edexcel: 681
+- This prevents later topic replacement from accidentally shrinking the product while we rebuild the remaining topics.
+- Verification:
+  - `npm run questions:regenerate` passes at 1,513 questions.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `git diff --check` passes.
+
+### Next step
+- Build the authored Electricity source while preserving the 1,500+ total bank requirement.
+- Replace Electricity only when AQA + Edexcel authored Electricity coverage is dense enough to pass the count guard and quality gates.
+
 ### Adaptive Practice full regeneration from spec manifests
 - Rebuilt the Adaptive Practice bank for the locked AQA + Edexcel release scope.
 - Added source-of-truth inputs:

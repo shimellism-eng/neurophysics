@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T10:10:11.357Z",
+  "generatedAt": "2026-05-02T10:18:46.365Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -23470,7 +23470,7 @@
       "senNote": "This checks one idea only: Use Newton’s second law."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_resultant_force_direct_recall_001",
+      "id": "aqa_forces_resultant_force_definition_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -23492,56 +23492,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_definition_001_lo",
+        "statement": "Define resultant force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.1.4:resultant_force:direct_recall",
-      "conceptFamily": "resultant_force",
-      "contextType": "a safety decision",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "define",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_resultant_force_definition_001",
+      "conceptFamily": "define_resultant_force",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "Which statement is correct for resultant force? Choose the statement that fits this exact GCSE Physics idea: calculate resultant force.",
-      "question": "Which statement is correct for resultant force? Choose the statement that fits this exact GCSE Physics idea: calculate resultant force.",
+      "stem": "What is meant by the resultant force on an object?",
+      "question": "What is meant by the resultant force on an object?",
       "options": [
-        "For resultant force, it means that resultant force ignores direction.",
-        "The answer for resultant force says that resultant force is measured in joules.",
-        "For resultant force, the statement is that resultant force is the single force with the same effect as all forces combined.",
-        "The answer for resultant force says that resultant force is always the largest force only."
+        "A single force that has the same effect as all the forces acting on the object.",
+        "The largest force acting on the object.",
+        "The force due to gravity only.",
+        "The force that always acts upwards."
       ],
-      "correctAnswer": "For resultant force, the statement is that resultant force is the single force with the same effect as all forces combined.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Force. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
+      "correctAnswer": "A single force that has the same effect as all the forces acting on the object.",
+      "correctIndex": 0,
+      "explanation": "The resultant force is the overall force after all forces have been combined, taking direction into account.",
+      "misconceptionTag": "resultant-definition",
       "distractorRationales": [
         {
-          "text": "The answer for resultant force says that resultant force is always the largest force only.",
-          "misconception": "Resultant force is always the largest force only."
+          "text": "The largest force acting on the object.",
+          "misconception": "largest force confused with resultant"
         },
         {
-          "text": "For resultant force, it means that resultant force ignores direction.",
-          "misconception": "Resultant force ignores direction."
+          "text": "The force due to gravity only.",
+          "misconception": "weight confused with resultant"
         },
         {
-          "text": "The answer for resultant force says that resultant force is measured in joules.",
-          "misconception": "Resultant force is measured in joules."
+          "text": "The force that always acts upwards.",
+          "misconception": "direction misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate resultant force."
+      "senNote": "Checks: Define resultant force."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_contact_noncontact_concept_discrimination_002",
+      "id": "aqa_forces_resultant_force_opposite_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -23563,269 +23564,201 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_opposite_002_lo",
+        "statement": "Calculate resultant force for opposite forces.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_force_opposite_002",
+      "conceptFamily": "calculate_resultant_force_for_opposite_forces",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A 12 N force acts to the right and a 5 N force acts to the left. What is the resultant force?",
+      "question": "A 12 N force acts to the right and a 5 N force acts to the left. What is the resultant force?",
+      "options": [
+        "7 N to the right",
+        "17 N to the right",
+        "7 N to the left",
+        "12 N to the right"
+      ],
+      "correctAnswer": "7 N to the right",
+      "correctIndex": 0,
+      "explanation": "The forces act in opposite directions, so subtract them: \\(12 - 5 = 7\\,N\\), in the direction of the larger force.",
+      "misconceptionTag": "opposite-forces-add",
+      "distractorRationales": [
+        {
+          "text": "17 N to the right",
+          "misconception": "opposite forces added"
+        },
+        {
+          "text": "7 N to the left",
+          "misconception": "direction reversed"
+        },
+        {
+          "text": "12 N to the right",
+          "misconception": "smaller force ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resultant force for opposite forces."
+    },
+    {
+      "id": "aqa_forces_resultant_force_same_direction_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_same_direction_003_lo",
+        "statement": "Calculate resultant force for forces in the same direction.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_force_same_direction_003",
+      "conceptFamily": "calculate_resultant_force_for_forces_in_the_same_direction",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "Two students push a trolley in the same direction with forces of 30 N and 25 N. What is the resultant force?",
+      "question": "Two students push a trolley in the same direction with forces of 30 N and 25 N. What is the resultant force?",
+      "options": [
+        "55 N in the direction of the pushes",
+        "5 N in the direction of the larger push",
+        "30 N only",
+        "0 N because two forces act"
+      ],
+      "correctAnswer": "55 N in the direction of the pushes",
+      "correctIndex": 0,
+      "explanation": "Forces in the same direction are added, so the resultant force is \\(30 + 25 = 55\\,N\\).",
+      "misconceptionTag": "same-direction-subtract",
+      "distractorRationales": [
+        {
+          "text": "5 N in the direction of the larger push",
+          "misconception": "same-direction forces subtracted"
+        },
+        {
+          "text": "30 N only",
+          "misconception": "one force ignored"
+        },
+        {
+          "text": "0 N because two forces act",
+          "misconception": "balanced force misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resultant force for forces in the same direction."
+    },
+    {
+      "id": "aqa_forces_resultant_force_balanced_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_balanced_004_lo",
+        "statement": "Identify zero resultant force for balanced forces.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.1.4:contact_noncontact:concept_discrimination",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a graph-reading task",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_force_balanced_004",
+      "conceptFamily": "identify_zero_resultant_force_for_balanced_forces",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "A student is comparing similar ideas in resultant force. Which statement is correct? Keep the answer focused on resultant force: classify contact and non-contact forces.",
-      "question": "A student is comparing similar ideas in resultant force. Which statement is correct? Keep the answer focused on resultant force: classify contact and non-contact forces.",
+      "stem": "A book rests on a table. Its weight is 8 N downward and the table pushes up with 8 N. What is the resultant force on the book?",
+      "question": "A book rests on a table. Its weight is 8 N downward and the table pushes up with 8 N. What is the resultant force on the book?",
       "options": [
-        "For resultant force, it means that magnetic forces require objects to touch.",
-        "For resultant force, it means that friction acts without contact.",
-        "For resultant force, the statement is that friction is a contact force; gravity and magnetic force can act without contact.",
-        "For resultant force, it means that gravity needs touching surfaces."
+        "0 N",
+        "16 N upward",
+        "8 N downward",
+        "8 N upward"
       ],
-      "correctAnswer": "For resultant force, the statement is that friction is a contact force; gravity and magnetic force can act without contact.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Force. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, it means that friction acts without contact.",
-          "misconception": "Gravity needs touching surfaces."
-        },
-        {
-          "text": "For resultant force, it means that magnetic forces require objects to touch.",
-          "misconception": "Friction acts without contact."
-        },
-        {
-          "text": "For resultant force, it means that gravity needs touching surfaces.",
-          "misconception": "Magnetic forces require objects to touch."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_free_body_misconception_correction_003",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_free_body",
-        "statement": "Identify forces on an object. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.1.4:free_body:misconception_correction",
-      "conceptFamily": "free_body",
-      "contextType": "a comparison question",
-      "skill": "Resultant Force practice",
-      "stem": "A revision note about resultant force contains an error. Which replacement is correct? Demand focus: identify forces on an object.",
-      "question": "A revision note about resultant force contains an error. Which replacement is correct? Demand focus: identify forces on an object.",
-      "options": [
-        "The answer for resultant force says that every object must have exactly two forces.",
-        "For resultant force, the statement is that a force diagram should show forces with arrows in their correct directions.",
-        "In this resultant force item, force arrows show energy stores.",
-        "For resultant force, the statement is that forces are drawn without direction."
-      ],
-      "correctAnswer": "For resultant force, the statement is that a force diagram should show forces with arrows in their correct directions.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Identify forces on an object. Focus area: Resultant Force. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, the statement is that forces are drawn without direction.",
-          "misconception": "Force arrows show energy stores."
-        },
-        {
-          "text": "In this resultant force item, force arrows show energy stores.",
-          "misconception": "Every object must have exactly two forces."
-        },
-        {
-          "text": "The answer for resultant force says that every object must have exactly two forces.",
-          "misconception": "Forces are drawn without direction."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify forces on an object."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_weight_equation_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_weight_equation",
-        "statement": "Use weight = mass × gravitational field strength. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.1.4:weight_equation:data_interpretation",
-      "conceptFamily": "weight_equation",
-      "contextType": "a method-choice question",
-      "skill": "Resultant Force practice",
-      "stem": "A small data set about resultant force is being interpreted. Which conclusion is valid? Use the wording carefully: this is about use weight = mass × gravitational field strength.",
-      "question": "A small data set about resultant force is being interpreted. Which conclusion is valid? Use the wording carefully: this is about use weight = mass × gravitational field strength.",
-      "options": [
-        "The answer for resultant force says that gravitational field strength has no unit.",
-        "The answer for resultant force says that weight = mass ÷ gravitational field strength.",
-        "For resultant force, it means that weight = mass × gravitational field strength.",
-        "The answer for resultant force says that weight is measured in kilograms."
-      ],
-      "correctAnswer": "For resultant force, it means that weight = mass × gravitational field strength.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Use weight = mass × gravitational field strength. Focus area: Resultant Force. For this question, Weight = mass × gravitational field strength. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_equation",
-      "distractorRationales": [
-        {
-          "text": "The answer for resultant force says that weight = mass ÷ gravitational field strength.",
-          "misconception": "Weight = mass ÷ gravitational field strength."
-        },
-        {
-          "text": "The answer for resultant force says that weight is measured in kilograms.",
-          "misconception": "Weight is measured in kilograms."
-        },
-        {
-          "text": "The answer for resultant force says that gravitational field strength has no unit.",
-          "misconception": "Gravitational field strength has no unit."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use weight = mass × gravitational field strength."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_resultant_force_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.1.4:resultant_force:representation_interpretation",
-      "conceptFamily": "resultant_force",
-      "contextType": "a results discussion",
-      "skill": "Resultant Force practice",
-      "stem": "Which option correctly reads the resultant force model or diagram idea? Keep the answer focused on resultant force: calculate resultant force.",
-      "question": "Which option correctly reads the resultant force model or diagram idea? Keep the answer focused on resultant force: calculate resultant force.",
-      "options": [
-        "For resultant force: Resultant force is the single force with the same effect as all forces combined.",
-        "The claim for resultant force is that resultant force is measured in joules.",
-        "The claim for resultant force is that resultant force ignores direction.",
-        "For resultant force, this would mean that resultant force is always the largest force only."
-      ],
-      "correctAnswer": "For resultant force: Resultant force is the single force with the same effect as all forces combined.",
+      "correctAnswer": "0 N",
       "correctIndex": 0,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Force. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
+      "explanation": "The upward and downward forces are equal and opposite, so they are balanced and the resultant force is zero.",
+      "misconceptionTag": "balanced-force-add",
       "distractorRationales": [
         {
-          "text": "The claim for resultant force is that resultant force ignores direction.",
-          "misconception": "Resultant force is always the largest force only."
+          "text": "16 N upward",
+          "misconception": "opposite balanced forces added"
         },
         {
-          "text": "The claim for resultant force is that resultant force is measured in joules.",
-          "misconception": "Resultant force ignores direction."
+          "text": "8 N downward",
+          "misconception": "support force ignored"
         },
         {
-          "text": "For resultant force, this would mean that resultant force is always the largest force only.",
-          "misconception": "Resultant force is measured in joules."
+          "text": "8 N upward",
+          "misconception": "weight ignored"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate resultant force."
+      "senNote": "Checks: Identify zero resultant force for balanced forces."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_contact_noncontact_direct_recall_006",
+      "id": "aqa_forces_resultant_force_unbalanced_motion_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -23847,340 +23780,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.1.4:contact_noncontact:direct_recall",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a classroom demonstration",
-      "skill": "Resultant Force practice",
-      "stem": "Which answer matches this resultant force objective: Classify contact and non-contact forces? Use the wording carefully: this is about classify contact and non-contact forces.",
-      "question": "Which answer matches this resultant force objective: Classify contact and non-contact forces? Use the wording carefully: this is about classify contact and non-contact forces.",
-      "options": [
-        "For resultant force, the option says that gravity needs touching surfaces.",
-        "For resultant force, this would mean that magnetic forces require objects to touch.",
-        "The claim for resultant force is that friction is a contact force; gravity and magnetic force can act without contact.",
-        "For resultant force, it means that friction acts without contact."
-      ],
-      "correctAnswer": "The claim for resultant force is that friction is a contact force; gravity and magnetic force can act without contact.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Force. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, this would mean that magnetic forces require objects to touch.",
-          "misconception": "Gravity needs touching surfaces."
-        },
-        {
-          "text": "For resultant force, the option says that gravity needs touching surfaces.",
-          "misconception": "Friction acts without contact."
-        },
-        {
-          "text": "For resultant force, it means that friction acts without contact.",
-          "misconception": "Magnetic forces require objects to touch."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_free_body_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_free_body",
-        "statement": "Identify forces on an object. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_unbalanced_motion_005_lo",
+        "statement": "Calculate resultant force in a vehicle context.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
+      "commandWord": "calculate",
       "responseMode": "applied_context",
-      "patternId": "4.5.1.4:free_body:applied_context",
-      "conceptFamily": "free_body",
-      "contextType": "a revision checkpoint",
+      "patternId": "authored:aqa_forces_resultant_force_unbalanced_motion_005",
+      "conceptFamily": "calculate_resultant_force_in_a_vehicle_context",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for resultant force? Choose the statement that fits this exact GCSE Physics idea: identify forces on an object.",
-      "question": "In a revision checkpoint, which conclusion is correct for resultant force? Choose the statement that fits this exact GCSE Physics idea: identify forces on an object.",
+      "stem": "A car has a forward driving force of 900 N and a backward resistive force of 650 N. What is the resultant force?",
+      "question": "A car has a forward driving force of 900 N and a backward resistive force of 650 N. What is the resultant force?",
       "options": [
-        "For resultant force, the option says that every object must have exactly two forces.",
-        "For resultant force, this would mean that a force diagram should show forces with arrows in their correct directions.",
-        "For resultant force, the option says that force arrows show energy stores.",
-        "In this item, it means that forces are drawn without direction."
+        "250 N forwards",
+        "1550 N forwards",
+        "250 N backwards",
+        "650 N backwards"
       ],
-      "correctAnswer": "For resultant force, this would mean that a force diagram should show forces with arrows in their correct directions.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Identify forces on an object. Focus area: Resultant Force. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, the option says that force arrows show energy stores.",
-          "misconception": "Force arrows show energy stores."
-        },
-        {
-          "text": "For resultant force, the option says that every object must have exactly two forces.",
-          "misconception": "Every object must have exactly two forces."
-        },
-        {
-          "text": "In this item, it means that forces are drawn without direction.",
-          "misconception": "Forces are drawn without direction."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify forces on an object."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_weight_equation_misconception_correction_008",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_weight_equation",
-        "statement": "Use weight = mass × gravitational field strength. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.1.4:weight_equation:misconception_correction",
-      "conceptFamily": "weight_equation",
-      "contextType": "an exam-style data table",
-      "skill": "Resultant Force practice",
-      "stem": "Which answer corrects a misconception about resultant force? Check the clue before choosing: Use weight = mass × gravitational field strength.",
-      "question": "Which answer corrects a misconception about resultant force? Check the clue before choosing: Use weight = mass × gravitational field strength.",
-      "options": [
-        "For resultant force, this would mean that gravitational field strength has no unit.",
-        "For resultant force: Weight = mass × gravitational field strength.",
-        "For resultant force, the option says that weight = mass ÷ gravitational field strength.",
-        "For resultant force: Weight is measured in kilograms."
-      ],
-      "correctAnswer": "For resultant force: Weight = mass × gravitational field strength.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Use weight = mass × gravitational field strength. Focus area: Resultant Force. For this question, Weight = mass × gravitational field strength. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_equation",
-      "distractorRationales": [
-        {
-          "text": "For resultant force: Weight is measured in kilograms.",
-          "misconception": "Weight = mass ÷ gravitational field strength."
-        },
-        {
-          "text": "For resultant force, this would mean that gravitational field strength has no unit.",
-          "misconception": "Weight is measured in kilograms."
-        },
-        {
-          "text": "For resultant force, the option says that weight = mass ÷ gravitational field strength.",
-          "misconception": "Gravitational field strength has no unit."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use weight = mass × gravitational field strength."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_resultant_force_exam_decision_009",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.1.4:resultant_force:exam_decision",
-      "conceptFamily": "resultant_force",
-      "contextType": "a required-practical notebook",
-      "skill": "Resultant Force practice",
-      "stem": "The mark scheme is testing calculate resultant force. Which answer matches that point? Use the wording carefully: this is about calculate resultant force.",
-      "question": "The mark scheme is testing calculate resultant force. Which answer matches that point? Use the wording carefully: this is about calculate resultant force.",
-      "options": [
-        "For resultant force, the option says that resultant force is measured in joules.",
-        "For resultant force, the option says that resultant force is always the largest force only.",
-        "The claim for resultant force is that resultant force is the single force with the same effect as all forces combined.",
-        "For resultant force, the option says that resultant force ignores direction."
-      ],
-      "correctAnswer": "The claim for resultant force is that resultant force is the single force with the same effect as all forces combined.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Force. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, the option says that resultant force is measured in joules.",
-          "misconception": "Resultant force is always the largest force only."
-        },
-        {
-          "text": "For resultant force, the option says that resultant force is always the largest force only.",
-          "misconception": "Resultant force ignores direction."
-        },
-        {
-          "text": "For resultant force, the option says that resultant force ignores direction.",
-          "misconception": "Resultant force is measured in joules."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate resultant force."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_contact_noncontact_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.1.4:contact_noncontact:representation_interpretation",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a technician report",
-      "skill": "Resultant Force practice",
-      "stem": "A representation of resultant force is described in words. Which interpretation is correct? Check the clue before choosing: Classify contact and non-contact forces.",
-      "question": "A representation of resultant force is described in words. Which interpretation is correct? Check the clue before choosing: Classify contact and non-contact forces.",
-      "options": [
-        "For resultant force, the statement is that friction is a contact force; gravity and magnetic force can act without contact.",
-        "In this resultant force item, gravity needs touching surfaces.",
-        "In this resultant force item, friction acts without contact.",
-        "In this resultant force item, magnetic forces require objects to touch."
-      ],
-      "correctAnswer": "For resultant force, the statement is that friction is a contact force; gravity and magnetic force can act without contact.",
+      "correctAnswer": "250 N forwards",
       "correctIndex": 0,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Force. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
+      "explanation": "Subtract the backward force from the forward force: \\(900 - 650 = 250\\,N\\) forwards.",
+      "misconceptionTag": "vehicle-resultant",
       "distractorRationales": [
         {
-          "text": "In this resultant force item, gravity needs touching surfaces.",
-          "misconception": "Gravity needs touching surfaces."
+          "text": "1550 N forwards",
+          "misconception": "opposite forces added"
         },
         {
-          "text": "In this resultant force item, friction acts without contact.",
-          "misconception": "Friction acts without contact."
+          "text": "250 N backwards",
+          "misconception": "direction reversed"
         },
         {
-          "text": "In this resultant force item, magnetic forces require objects to touch.",
-          "misconception": "Magnetic forces require objects to touch."
+          "text": "650 N backwards",
+          "misconception": "driving force ignored"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
+      "senNote": "Checks: Calculate resultant force in a vehicle context."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_free_body_concept_discrimination_011",
+      "id": "aqa_forces_resultant_force_direction_006",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -24202,340 +23852,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_free_body",
-        "statement": "Identify forces on an object. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.1.4:free_body:concept_discrimination",
-      "conceptFamily": "free_body",
-      "contextType": "a labelled diagram",
-      "skill": "Resultant Force practice",
-      "stem": "A student is comparing similar ideas in resultant force. Which statement is correct? Keep the answer focused on resultant force: identify forces on an object.",
-      "question": "A student is comparing similar ideas in resultant force. Which statement is correct? Keep the answer focused on resultant force: identify forces on an object.",
-      "options": [
-        "For resultant force, it means that force arrows show energy stores.",
-        "For resultant force, it means that every object must have exactly two forces.",
-        "For resultant force, the statement is that forces are drawn without direction.",
-        "For resultant force, it means that a force diagram should show forces with arrows in their correct directions."
-      ],
-      "correctAnswer": "For resultant force, it means that a force diagram should show forces with arrows in their correct directions.",
-      "correctIndex": 3,
-      "explanation": "4.5.1.4 targets: Identify forces on an object. Focus area: Resultant Force. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, it means that every object must have exactly two forces.",
-          "misconception": "Force arrows show energy stores."
-        },
-        {
-          "text": "For resultant force, the statement is that forces are drawn without direction.",
-          "misconception": "Every object must have exactly two forces."
-        },
-        {
-          "text": "For resultant force, it means that force arrows show energy stores.",
-          "misconception": "Forces are drawn without direction."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify forces on an object."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_weight_equation_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_weight_equation",
-        "statement": "Use weight = mass × gravitational field strength. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_direction_006_lo",
+        "statement": "State both size and direction of a resultant force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.5.1.4:weight_equation:applied_context",
-      "conceptFamily": "weight_equation",
-      "contextType": "a short calculation",
-      "skill": "Resultant Force practice",
-      "stem": "A question set in a short calculation tests resultant force. Which answer applies the idea correctly? Demand focus: use weight = mass × gravitational field strength.",
-      "question": "A question set in a short calculation tests resultant force. Which answer applies the idea correctly? Demand focus: use weight = mass × gravitational field strength.",
-      "options": [
-        "For resultant force, it means that gravitational field strength has no unit.",
-        "The answer for resultant force says that weight = mass × gravitational field strength.",
-        "For resultant force, the answer claims that weight is measured in kilograms.",
-        "For resultant force, it means that weight = mass ÷ gravitational field strength."
-      ],
-      "correctAnswer": "The answer for resultant force says that weight = mass × gravitational field strength.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Use weight = mass × gravitational field strength. Focus area: Resultant Force. For this question, Weight = mass × gravitational field strength. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_equation",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, it means that gravitational field strength has no unit.",
-          "misconception": "Weight = mass ÷ gravitational field strength."
-        },
-        {
-          "text": "For resultant force, it means that weight = mass ÷ gravitational field strength.",
-          "misconception": "Weight is measured in kilograms."
-        },
-        {
-          "text": "For resultant force, the answer claims that weight is measured in kilograms.",
-          "misconception": "Gravitational field strength has no unit."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use weight = mass × gravitational field strength."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_resultant_force_data_interpretation_013",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.1.4:resultant_force:data_interpretation",
-      "conceptFamily": "resultant_force",
-      "contextType": "a safety decision",
-      "skill": "Resultant Force practice",
-      "stem": "A small data set about resultant force is being interpreted. Which conclusion is valid? Check the clue before choosing: Calculate resultant force.",
-      "question": "A small data set about resultant force is being interpreted. Which conclusion is valid? Check the clue before choosing: Calculate resultant force.",
-      "options": [
-        "For resultant force, the answer claims that resultant force ignores direction.",
-        "For resultant force, the statement is that resultant force is the single force with the same effect as all forces combined.",
-        "For resultant force, the statement is that resultant force is always the largest force only.",
-        "For resultant force, the statement is that resultant force is measured in joules."
-      ],
-      "correctAnswer": "For resultant force, the statement is that resultant force is the single force with the same effect as all forces combined.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Force. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, the statement is that resultant force is always the largest force only.",
-          "misconception": "Resultant force is always the largest force only."
-        },
-        {
-          "text": "For resultant force, the answer claims that resultant force ignores direction.",
-          "misconception": "Resultant force ignores direction."
-        },
-        {
-          "text": "For resultant force, the statement is that resultant force is measured in joules.",
-          "misconception": "Resultant force is measured in joules."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Calculate resultant force."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_contact_noncontact_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.5.1.4:contact_noncontact:exam_decision",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a graph-reading task",
-      "skill": "Resultant Force practice",
-      "stem": "Which answer is the strongest GCSE Physics response for resultant force? Demand focus: classify contact and non-contact forces.",
-      "question": "Which answer is the strongest GCSE Physics response for resultant force? Demand focus: classify contact and non-contact forces.",
-      "options": [
-        "For resultant force, the statement is that gravity needs touching surfaces.",
-        "For resultant force, the statement is that magnetic forces require objects to touch.",
-        "In this resultant force item, friction is a contact force; gravity and magnetic force can act without contact.",
-        "For resultant force, the statement is that friction acts without contact."
-      ],
-      "correctAnswer": "In this resultant force item, friction is a contact force; gravity and magnetic force can act without contact.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Force. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
-      "distractorRationales": [
-        {
-          "text": "For resultant force, the statement is that friction acts without contact.",
-          "misconception": "Gravity needs touching surfaces."
-        },
-        {
-          "text": "For resultant force, the statement is that magnetic forces require objects to touch.",
-          "misconception": "Friction acts without contact."
-        },
-        {
-          "text": "For resultant force, the statement is that gravity needs touching surfaces.",
-          "misconception": "Magnetic forces require objects to touch."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_force_free_body_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Force",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_force",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_free_body",
-        "statement": "Identify forces on an object. (Resultant Force)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
       "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.1.4:free_body:direct_recall",
-      "conceptFamily": "free_body",
-      "contextType": "a comparison question",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_force_direction_006",
+      "conceptFamily": "state_both_size_and_direction_of_a_resultant_force",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "Which answer matches this resultant force objective: Identify forces on an object? Use the wording carefully: this is about identify forces on an object.",
-      "question": "Which answer matches this resultant force objective: Identify forces on an object? Use the wording carefully: this is about identify forces on an object.",
+      "stem": "A box has a 20 N force to the left and a 45 N force to the right. Which statement is correct?",
+      "question": "A box has a 20 N force to the left and a 45 N force to the right. Which statement is correct?",
       "options": [
-        "For resultant force, the option says that a force diagram should show forces with arrows in their correct directions.",
-        "The claim for resultant force is that every object must have exactly two forces.",
-        "The claim for resultant force is that forces are drawn without direction.",
-        "The claim for resultant force is that force arrows show energy stores."
+        "The resultant force is 25 N to the right.",
+        "The resultant force is 25 N to the left.",
+        "The resultant force is 65 N to the right.",
+        "The resultant force is zero."
       ],
-      "correctAnswer": "For resultant force, the option says that a force diagram should show forces with arrows in their correct directions.",
+      "correctAnswer": "The resultant force is 25 N to the right.",
       "correctIndex": 0,
-      "explanation": "4.5.1.4 targets: Identify forces on an object. Focus area: Resultant Force. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
+      "explanation": "The rightward force is larger, so the resultant is \\(45 - 20 = 25\\,N\\) to the right.",
+      "misconceptionTag": "resultant-direction",
       "distractorRationales": [
         {
-          "text": "The claim for resultant force is that forces are drawn without direction.",
-          "misconception": "Force arrows show energy stores."
+          "text": "The resultant force is 25 N to the left.",
+          "misconception": "larger force direction ignored"
         },
         {
-          "text": "The claim for resultant force is that force arrows show energy stores.",
-          "misconception": "Every object must have exactly two forces."
+          "text": "The resultant force is 65 N to the right.",
+          "misconception": "opposite forces added"
         },
         {
-          "text": "The claim for resultant force is that every object must have exactly two forces.",
-          "misconception": "Forces are drawn without direction."
+          "text": "The resultant force is zero.",
+          "misconception": "unbalanced forces treated as balanced"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify forces on an object."
+      "senNote": "Checks: State both size and direction of a resultant force."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_weight_equation_concept_discrimination_016",
+      "id": "aqa_forces_resultant_force_equilibrium_007",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -24557,56 +23924,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_weight_equation",
-        "statement": "Use weight = mass × gravitational field strength. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_equilibrium_007_lo",
+        "statement": "Link equilibrium to zero resultant force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.1.4:weight_equation:concept_discrimination",
-      "conceptFamily": "weight_equation",
-      "contextType": "a method-choice question",
+      "difficulty": "medium",
+      "commandWord": "state",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_resultant_force_equilibrium_007",
+      "conceptFamily": "link_equilibrium_to_zero_resultant_force",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "Which option best separates the correct resultant force idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: use weight = mass × gravitational field strength.",
-      "question": "Which option best separates the correct resultant force idea from a common mix-up? Choose the statement that fits this exact GCSE Physics idea: use weight = mass × gravitational field strength.",
+      "stem": "An object is in equilibrium. What must be true about the resultant force on it?",
+      "question": "An object is in equilibrium. What must be true about the resultant force on it?",
       "options": [
-        "For resultant force: Weight is measured in kilograms.",
-        "For resultant force, this would mean that weight = mass × gravitational field strength.",
-        "The claim for resultant force is that gravitational field strength has no unit.",
-        "The claim for resultant force is that weight = mass ÷ gravitational field strength."
+        "The resultant force is zero.",
+        "The resultant force is the largest force on the object.",
+        "The resultant force acts only downwards.",
+        "The resultant force is equal to the object’s mass."
       ],
-      "correctAnswer": "For resultant force, this would mean that weight = mass × gravitational field strength.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Use weight = mass × gravitational field strength. Focus area: Resultant Force. For this question, Weight = mass × gravitational field strength. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_equation",
+      "correctAnswer": "The resultant force is zero.",
+      "correctIndex": 0,
+      "explanation": "In equilibrium, the forces are balanced and the resultant force is zero.",
+      "misconceptionTag": "equilibrium",
       "distractorRationales": [
         {
-          "text": "The claim for resultant force is that weight = mass ÷ gravitational field strength.",
-          "misconception": "Weight = mass ÷ gravitational field strength."
+          "text": "The resultant force is the largest force on the object.",
+          "misconception": "largest force misconception"
         },
         {
-          "text": "For resultant force: Weight is measured in kilograms.",
-          "misconception": "Weight is measured in kilograms."
+          "text": "The resultant force acts only downwards.",
+          "misconception": "fixed direction misconception"
         },
         {
-          "text": "The claim for resultant force is that gravitational field strength has no unit.",
-          "misconception": "Gravitational field strength has no unit."
+          "text": "The resultant force is equal to the object’s mass.",
+          "misconception": "mass-force confusion"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use weight = mass × gravitational field strength."
+      "senNote": "Checks: Link equilibrium to zero resultant force."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_resultant_force_misconception_correction_017",
+      "id": "aqa_forces_resultant_force_free_body_008",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -24628,56 +23996,201 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_free_body_008_lo",
+        "statement": "Interpret force arrows on a free-body diagram.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_forces_resultant_force_free_body_008",
+      "conceptFamily": "interpret_force_arrows_on_a_free_body_diagram",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "What should force arrows on a free-body diagram show?",
+      "question": "What should force arrows on a free-body diagram show?",
+      "options": [
+        "The direction and relative size of the forces acting on the object.",
+        "Only the path the object has already travelled.",
+        "The energy stores inside the object.",
+        "Only forces that are larger than the weight."
+      ],
+      "correctAnswer": "The direction and relative size of the forces acting on the object.",
+      "correctIndex": 0,
+      "explanation": "A force diagram uses arrows to show the direction and size of forces acting on an object.",
+      "misconceptionTag": "force-arrows-energy",
+      "distractorRationales": [
+        {
+          "text": "Only the path the object has already travelled.",
+          "misconception": "path confused with force"
+        },
+        {
+          "text": "The energy stores inside the object.",
+          "misconception": "energy store confused with force diagram"
+        },
+        {
+          "text": "Only forces that are larger than the weight.",
+          "misconception": "smaller forces ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Interpret force arrows on a free-body diagram."
+    },
+    {
+      "id": "aqa_forces_resultant_force_table_009",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_table_009_lo",
+        "statement": "Use data to identify balanced forces.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_forces_resultant_force_table_009",
+      "conceptFamily": "use_data_to_identify_balanced_forces",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A table shows three objects. Object A: 6 N left and 6 N right. Object B: 10 N left and 4 N right. Object C: 5 N right and 9 N right. Which object has zero resultant force?",
+      "question": "A table shows three objects. Object A: 6 N left and 6 N right. Object B: 10 N left and 4 N right. Object C: 5 N right and 9 N right. Which object has zero resultant force?",
+      "options": [
+        "Object A",
+        "Object B",
+        "Object C",
+        "All three"
+      ],
+      "correctAnswer": "Object A",
+      "correctIndex": 0,
+      "explanation": "Object A has equal forces in opposite directions, so its resultant force is zero.",
+      "misconceptionTag": "table-balanced-forces",
+      "distractorRationales": [
+        {
+          "text": "Object B",
+          "misconception": "unequal opposite forces chosen"
+        },
+        {
+          "text": "Object C",
+          "misconception": "same-direction forces treated as cancelling"
+        },
+        {
+          "text": "All three",
+          "misconception": "all pairs treated as balanced"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use data to identify balanced forces."
+    },
+    {
+      "id": "aqa_forces_resultant_force_stationary_010",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_stationary_010_lo",
+        "statement": "Describe motion when resultant force is zero.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.1.4:resultant_force:misconception_correction",
-      "conceptFamily": "resultant_force",
-      "contextType": "a results discussion",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_force_stationary_010",
+      "conceptFamily": "describe_motion_when_resultant_force_is_zero",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "Which answer corrects a misconception about resultant force? Demand focus: calculate resultant force.",
-      "question": "Which answer corrects a misconception about resultant force? Demand focus: calculate resultant force.",
+      "stem": "A stationary object has a zero resultant force. What can be concluded about its motion at that instant?",
+      "question": "A stationary object has a zero resultant force. What can be concluded about its motion at that instant?",
       "options": [
-        "For resultant force: Resultant force is always the largest force only.",
-        "For resultant force: Resultant force is measured in joules.",
-        "For resultant force, it means that resultant force is the single force with the same effect as all forces combined.",
-        "For resultant force: Resultant force ignores direction."
+        "It remains stationary unless the resultant force changes.",
+        "It must start accelerating immediately.",
+        "It must move upwards.",
+        "It must lose all of its mass."
       ],
-      "correctAnswer": "For resultant force, it means that resultant force is the single force with the same effect as all forces combined.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Force. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
+      "correctAnswer": "It remains stationary unless the resultant force changes.",
+      "correctIndex": 0,
+      "explanation": "A stationary object with zero resultant force will remain stationary unless the forces become unbalanced.",
+      "misconceptionTag": "zero-force-motion",
       "distractorRationales": [
         {
-          "text": "For resultant force: Resultant force ignores direction.",
-          "misconception": "Resultant force is always the largest force only."
+          "text": "It must start accelerating immediately.",
+          "misconception": "zero resultant force causes acceleration"
         },
         {
-          "text": "For resultant force: Resultant force is measured in joules.",
-          "misconception": "Resultant force ignores direction."
+          "text": "It must move upwards.",
+          "misconception": "fixed direction misconception"
         },
         {
-          "text": "For resultant force: Resultant force is always the largest force only.",
-          "misconception": "Resultant force is measured in joules."
+          "text": "It must lose all of its mass.",
+          "misconception": "mass-force misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate resultant force."
+      "senNote": "Checks: Describe motion when resultant force is zero."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_contact_noncontact_data_interpretation_018",
+      "id": "aqa_forces_resultant_force_constant_velocity_011",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -24699,56 +24212,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_constant_velocity_011_lo",
+        "statement": "Link constant velocity to zero resultant force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.1.4:contact_noncontact:data_interpretation",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a classroom demonstration",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "infer",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_force_constant_velocity_011",
+      "conceptFamily": "link_constant_velocity_to_zero_resultant_force",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "Which conclusion about resultant force is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: classify contact and non-contact forces.",
-      "question": "Which conclusion about resultant force is supported by the evidence? Choose the statement that fits this exact GCSE Physics idea: classify contact and non-contact forces.",
+      "stem": "A cyclist moves at constant velocity on a level road. What is the resultant force on the cyclist?",
+      "question": "A cyclist moves at constant velocity on a level road. What is the resultant force on the cyclist?",
       "options": [
-        "For resultant force, it means that friction is a contact force; gravity and magnetic force can act without contact.",
-        "For resultant force, this would mean that friction acts without contact.",
-        "For resultant force: Gravity needs touching surfaces.",
-        "The claim for resultant force is that magnetic forces require objects to touch."
+        "0 N",
+        "A forward force larger than air resistance.",
+        "A backward force larger than the driving force.",
+        "Equal to the cyclist’s speed."
       ],
-      "correctAnswer": "For resultant force, it means that friction is a contact force; gravity and magnetic force can act without contact.",
+      "correctAnswer": "0 N",
       "correctIndex": 0,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Force. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
+      "explanation": "Constant velocity means no acceleration, so the resultant force is zero.",
+      "misconceptionTag": "constant-velocity-force",
       "distractorRationales": [
         {
-          "text": "The claim for resultant force is that magnetic forces require objects to touch.",
-          "misconception": "Gravity needs touching surfaces."
+          "text": "A forward force larger than air resistance.",
+          "misconception": "constant velocity confused with acceleration"
         },
         {
-          "text": "For resultant force: Gravity needs touching surfaces.",
-          "misconception": "Friction acts without contact."
+          "text": "A backward force larger than the driving force.",
+          "misconception": "would slow down"
         },
         {
-          "text": "For resultant force, this would mean that friction acts without contact.",
-          "misconception": "Magnetic forces require objects to touch."
+          "text": "Equal to the cyclist’s speed.",
+          "misconception": "speed-force unit confusion"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
+      "senNote": "Checks: Link constant velocity to zero resultant force."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_force_free_body_representation_interpretation_019",
+      "id": "aqa_forces_resultant_force_acceleration_012",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -24770,53 +24284,558 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_force_free_body",
-        "statement": "Identify forces on an object. (Resultant Force)",
+        "id": "aqa_forces_resultant_force_acceleration_012_lo",
+        "statement": "Describe the effect of a non-zero resultant force.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.1.4:free_body:representation_interpretation",
-      "conceptFamily": "free_body",
-      "contextType": "a revision checkpoint",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_force_acceleration_012",
+      "conceptFamily": "describe_the_effect_of_a_non_zero_resultant_force",
+      "contextType": "exam_style",
       "skill": "Resultant Force practice",
-      "stem": "A representation of resultant force is described in words. Which interpretation is correct? Check the clue before choosing: Identify forces on an object.",
-      "question": "A representation of resultant force is described in words. Which interpretation is correct? Check the clue before choosing: Identify forces on an object.",
+      "stem": "A trolley has a resultant force acting to the right. What happens to its velocity?",
+      "question": "A trolley has a resultant force acting to the right. What happens to its velocity?",
       "options": [
-        "For resultant force, the answer claims that every object must have exactly two forces.",
-        "For resultant force, the statement is that forces are drawn without direction.",
-        "For resultant force, the statement is that force arrows show energy stores.",
-        "For resultant force, the statement is that a force diagram should show forces with arrows in their correct directions."
+        "It accelerates to the right.",
+        "It must move at constant velocity.",
+        "It accelerates to the left.",
+        "It instantly stops."
       ],
-      "correctAnswer": "For resultant force, the statement is that a force diagram should show forces with arrows in their correct directions.",
-      "correctIndex": 3,
-      "explanation": "4.5.1.4 targets: Identify forces on an object. Focus area: Resultant Force. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
+      "correctAnswer": "It accelerates to the right.",
+      "correctIndex": 0,
+      "explanation": "An object accelerates in the direction of the resultant force.",
+      "misconceptionTag": "resultant-acceleration-direction",
       "distractorRationales": [
         {
-          "text": "For resultant force, the statement is that force arrows show energy stores.",
-          "misconception": "Force arrows show energy stores."
+          "text": "It must move at constant velocity.",
+          "misconception": "unbalanced force ignored"
         },
         {
-          "text": "For resultant force, the answer claims that every object must have exactly two forces.",
-          "misconception": "Every object must have exactly two forces."
+          "text": "It accelerates to the left.",
+          "misconception": "direction reversed"
         },
         {
-          "text": "For resultant force, the statement is that forces are drawn without direction.",
-          "misconception": "Forces are drawn without direction."
+          "text": "It instantly stops.",
+          "misconception": "force effect misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify forces on an object."
+      "senNote": "Checks: Describe the effect of a non-zero resultant force."
+    },
+    {
+      "id": "aqa_forces_resultant_force_units_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_units_013_lo",
+        "statement": "Identify the unit of resultant force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_resultant_force_units_013",
+      "conceptFamily": "identify_the_unit_of_resultant_force",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "Which unit is used for resultant force?",
+      "question": "Which unit is used for resultant force?",
+      "options": [
+        "newton",
+        "joule",
+        "watt",
+        "kilogram"
+      ],
+      "correctAnswer": "newton",
+      "correctIndex": 0,
+      "explanation": "Resultant force is a force, so it is measured in newtons.",
+      "misconceptionTag": "force-unit",
+      "distractorRationales": [
+        {
+          "text": "joule",
+          "misconception": "energy unit confused with force"
+        },
+        {
+          "text": "watt",
+          "misconception": "power unit confused with force"
+        },
+        {
+          "text": "kilogram",
+          "misconception": "mass unit confused with force"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify the unit of resultant force."
+    },
+    {
+      "id": "aqa_forces_resultant_force_diagonal_not_required_014",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_diagonal_not_required_014_lo",
+        "statement": "Calculate resultant force for equal opposite forces.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_force_diagonal_not_required_014",
+      "conceptFamily": "calculate_resultant_force_for_equal_opposite_forces",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A 15 N force acts north and a 15 N force acts south on a model boat. What is the resultant force?",
+      "question": "A 15 N force acts north and a 15 N force acts south on a model boat. What is the resultant force?",
+      "options": [
+        "0 N",
+        "30 N north",
+        "15 N north",
+        "30 N south"
+      ],
+      "correctAnswer": "0 N",
+      "correctIndex": 0,
+      "explanation": "Equal forces in opposite directions cancel, so the resultant force is zero.",
+      "misconceptionTag": "equal-opposite-cancel",
+      "distractorRationales": [
+        {
+          "text": "30 N north",
+          "misconception": "opposite forces added"
+        },
+        {
+          "text": "15 N north",
+          "misconception": "one force ignored"
+        },
+        {
+          "text": "30 N south",
+          "misconception": "direction added incorrectly"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resultant force for equal opposite forces."
+    },
+    {
+      "id": "aqa_forces_resultant_force_lift_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_lift_015_lo",
+        "statement": "Calculate resultant force in a lift context.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_resultant_force_lift_015",
+      "conceptFamily": "calculate_resultant_force_in_a_lift_context",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A lift has a weight of 5000 N downward and a cable tension of 6200 N upward. What is the resultant force on the lift?",
+      "question": "A lift has a weight of 5000 N downward and a cable tension of 6200 N upward. What is the resultant force on the lift?",
+      "options": [
+        "1200 N upward",
+        "11 200 N upward",
+        "1200 N downward",
+        "5000 N downward"
+      ],
+      "correctAnswer": "1200 N upward",
+      "correctIndex": 0,
+      "explanation": "The upward tension is larger, so the resultant force is \\(6200 - 5000 = 1200\\,N\\) upward.",
+      "misconceptionTag": "lift-resultant",
+      "distractorRationales": [
+        {
+          "text": "11 200 N upward",
+          "misconception": "opposite forces added"
+        },
+        {
+          "text": "1200 N downward",
+          "misconception": "direction reversed"
+        },
+        {
+          "text": "5000 N downward",
+          "misconception": "tension ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resultant force in a lift context."
+    },
+    {
+      "id": "aqa_forces_resultant_force_parachutist_016",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_parachutist_016_lo",
+        "statement": "Identify balanced forces in a parachuting context.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_resultant_force_parachutist_016",
+      "conceptFamily": "identify_balanced_forces_in_a_parachuting_context",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A parachutist has a weight of 700 N and air resistance of 700 N upward. What is the resultant force?",
+      "question": "A parachutist has a weight of 700 N and air resistance of 700 N upward. What is the resultant force?",
+      "options": [
+        "0 N",
+        "1400 N downward",
+        "700 N downward",
+        "700 N upward"
+      ],
+      "correctAnswer": "0 N",
+      "correctIndex": 0,
+      "explanation": "The upward and downward forces are equal, so the resultant force is zero.",
+      "misconceptionTag": "parachutist-balanced",
+      "distractorRationales": [
+        {
+          "text": "1400 N downward",
+          "misconception": "opposite forces added"
+        },
+        {
+          "text": "700 N downward",
+          "misconception": "air resistance ignored"
+        },
+        {
+          "text": "700 N upward",
+          "misconception": "weight ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify balanced forces in a parachuting context."
+    },
+    {
+      "id": "aqa_forces_resultant_force_rocket_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_rocket_017_lo",
+        "statement": "Determine resultant force direction from unequal vertical forces.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "determine",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_force_rocket_017",
+      "conceptFamily": "determine_resultant_force_direction_from_unequal_vertical_forces",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A rocket has an upward thrust greater than its weight. What is the direction of the resultant force?",
+      "question": "A rocket has an upward thrust greater than its weight. What is the direction of the resultant force?",
+      "options": [
+        "upwards",
+        "downwards",
+        "sideways",
+        "zero"
+      ],
+      "correctAnswer": "upwards",
+      "correctIndex": 0,
+      "explanation": "The larger force is upward, so the resultant force is upward.",
+      "misconceptionTag": "larger-force-direction",
+      "distractorRationales": [
+        {
+          "text": "downwards",
+          "misconception": "weight assumed always larger"
+        },
+        {
+          "text": "sideways",
+          "misconception": "unsupported direction"
+        },
+        {
+          "text": "zero",
+          "misconception": "unequal forces treated as balanced"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Determine resultant force direction from unequal vertical forces."
+    },
+    {
+      "id": "aqa_forces_resultant_force_resultant_symbol_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_resultant_symbol_018_lo",
+        "statement": "Select a calculation for resultant force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "select",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_force_resultant_symbol_018",
+      "conceptFamily": "select_a_calculation_for_resultant_force",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "Forces of 18 N right and 11 N left act on a toy car. Which calculation gives the resultant force?",
+      "question": "Forces of 18 N right and 11 N left act on a toy car. Which calculation gives the resultant force?",
+      "options": [
+        "\\(F_{resultant} = 18 - 11\\)",
+        "\\(F_{resultant} = 18 + 11\\)",
+        "\\(F_{resultant} = 18 \\div 11\\)",
+        "\\(F_{resultant} = 11 - 18\\) to the right"
+      ],
+      "correctAnswer": "\\(F_{resultant} = 18 - 11\\)",
+      "correctIndex": 0,
+      "explanation": "Opposite forces are subtracted, with direction given by the larger force.",
+      "misconceptionTag": "resultant-calculation-selection",
+      "distractorRationales": [
+        {
+          "text": "\\(F_{resultant} = 18 + 11\\)",
+          "misconception": "opposite forces added"
+        },
+        {
+          "text": "\\(F_{resultant} = 18 \\div 11\\)",
+          "misconception": "division used incorrectly"
+        },
+        {
+          "text": "\\(F_{resultant} = 11 - 18\\) to the right",
+          "misconception": "direction/sign reversed"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Select a calculation for resultant force."
+    },
+    {
+      "id": "aqa_forces_resultant_force_reasoning_019",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Force",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_force",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_force_reasoning_019_lo",
+        "statement": "Evaluate a statement about motion and resultant force.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "evaluate",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_force_reasoning_019",
+      "conceptFamily": "evaluate_a_statement_about_motion_and_resultant_force",
+      "contextType": "exam_style",
+      "skill": "Resultant Force practice",
+      "stem": "A student says, “If an object is moving, there must be a resultant force on it.” Which response is correct?",
+      "question": "A student says, “If an object is moving, there must be a resultant force on it.” Which response is correct?",
+      "options": [
+        "Not always; an object can move at constant velocity with zero resultant force.",
+        "Always true; moving objects cannot have balanced forces.",
+        "Always true; resultant force is another name for speed.",
+        "Not true; forces cannot act on moving objects."
+      ],
+      "correctAnswer": "Not always; an object can move at constant velocity with zero resultant force.",
+      "correctIndex": 0,
+      "explanation": "A non-zero resultant force changes velocity. Motion at constant velocity can happen with zero resultant force.",
+      "misconceptionTag": "moving-needs-resultant",
+      "distractorRationales": [
+        {
+          "text": "Always true; moving objects cannot have balanced forces.",
+          "misconception": "constant velocity misconception"
+        },
+        {
+          "text": "Always true; resultant force is another name for speed.",
+          "misconception": "speed-force confusion"
+        },
+        {
+          "text": "Not true; forces cannot act on moving objects.",
+          "misconception": "force-motion misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Evaluate a statement about motion and resultant force."
     },
     {
       "id": "aqa_forces_work_done_equation_001",
@@ -27257,7 +27276,7 @@
       "senNote": "This checks one idea only: Classify contact and non-contact forces."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_forces_resultant_force_direct_recall_001",
+      "id": "aqa_forces_resultant_forces_definition_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -27279,56 +27298,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_forces_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Forces)",
+        "id": "aqa_forces_resultant_forces_definition_001_lo",
+        "statement": "Describe resultant force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.1.4:resultant_force:direct_recall",
-      "conceptFamily": "resultant_force",
-      "contextType": "a safety decision",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_resultant_forces_definition_001",
+      "conceptFamily": "describe_resultant_force",
+      "contextType": "exam_style",
       "skill": "Resultant Forces practice",
-      "stem": "Which statement is correct for resultant forces? Choose the statement that fits this exact GCSE Physics idea: calculate resultant force.",
-      "question": "Which statement is correct for resultant forces? Choose the statement that fits this exact GCSE Physics idea: calculate resultant force.",
+      "stem": "Which statement correctly describes a resultant force?",
+      "question": "Which statement correctly describes a resultant force?",
       "options": [
-        "In this item, it means that resultant force ignores direction.",
-        "In this item, it means that resultant force is always the largest force only.",
-        "For resultant forces, it means that resultant force is the single force with the same effect as all forces combined.",
-        "In this item, it means that resultant force is measured in joules."
+        "It is the overall force after forces are combined with direction included.",
+        "It is always the smallest force on the object.",
+        "It is the mass of the object in kilograms.",
+        "It is only the force of gravity."
       ],
-      "correctAnswer": "For resultant forces, it means that resultant force is the single force with the same effect as all forces combined.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Forces. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
+      "correctAnswer": "It is the overall force after forces are combined with direction included.",
+      "correctIndex": 0,
+      "explanation": "A resultant force is the overall force produced by all the forces acting on an object.",
+      "misconceptionTag": "resultant-overall-force",
       "distractorRationales": [
         {
-          "text": "In this item, it means that resultant force is always the largest force only.",
-          "misconception": "Resultant force is always the largest force only."
+          "text": "It is always the smallest force on the object.",
+          "misconception": "smallest force misconception"
         },
         {
-          "text": "In this item, it means that resultant force ignores direction.",
-          "misconception": "Resultant force ignores direction."
+          "text": "It is the mass of the object in kilograms.",
+          "misconception": "mass-force confusion"
         },
         {
-          "text": "In this item, it means that resultant force is measured in joules.",
-          "misconception": "Resultant force is measured in joules."
+          "text": "It is only the force of gravity.",
+          "misconception": "weight confused with resultant"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate resultant force."
+      "senNote": "Checks: Describe resultant force."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_forces_contact_noncontact_concept_discrimination_002",
+      "id": "aqa_forces_resultant_forces_horizontal_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -27350,56 +27370,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_forces_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Forces)",
+        "id": "aqa_forces_resultant_forces_horizontal_002_lo",
+        "statement": "Calculate resultant force for horizontal opposite forces.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_forces_horizontal_002",
+      "conceptFamily": "calculate_resultant_force_for_horizontal_opposite_forces",
+      "contextType": "exam_style",
+      "skill": "Resultant Forces practice",
+      "stem": "A 40 N force acts east and a 25 N force acts west. What is the resultant force?",
+      "question": "A 40 N force acts east and a 25 N force acts west. What is the resultant force?",
+      "options": [
+        "15 N east",
+        "65 N east",
+        "15 N west",
+        "25 N west"
+      ],
+      "correctAnswer": "15 N east",
+      "correctIndex": 0,
+      "explanation": "The eastward force is larger, so the resultant force is \\(40 - 25 = 15\\,N\\) east.",
+      "misconceptionTag": "horizontal-resultant",
+      "distractorRationales": [
+        {
+          "text": "65 N east",
+          "misconception": "opposite forces added"
+        },
+        {
+          "text": "15 N west",
+          "misconception": "direction reversed"
+        },
+        {
+          "text": "25 N west",
+          "misconception": "larger force ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resultant force for horizontal opposite forces."
+    },
+    {
+      "id": "aqa_forces_resultant_forces_balanced_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Resultant Forces",
+      "topicSlug": "forces",
+      "subtopicSlug": "resultant_forces",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.4",
+      "specStatement": "Resultant forces.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_resultant_forces_balanced_003_lo",
+        "statement": "Identify balanced horizontal forces.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.1.4:contact_noncontact:concept_discrimination",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a graph-reading task",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_resultant_forces_balanced_003",
+      "conceptFamily": "identify_balanced_horizontal_forces",
+      "contextType": "exam_style",
       "skill": "Resultant Forces practice",
-      "stem": "A student is comparing similar ideas in resultant forces. Which statement is correct? Keep the answer focused on resultant forces: classify contact and non-contact forces.",
-      "question": "A student is comparing similar ideas in resultant forces. Which statement is correct? Keep the answer focused on resultant forces: classify contact and non-contact forces.",
+      "stem": "A crate is pulled left with 35 N and right with 35 N. What is the resultant force?",
+      "question": "A crate is pulled left with 35 N and right with 35 N. What is the resultant force?",
       "options": [
-        "The claim for resultant forces is that magnetic forces require objects to touch.",
-        "In this item, it means that friction is a contact force; gravity and magnetic force can act without contact.",
-        "In this item, it means that friction acts without contact.",
-        "In this item, it means that gravity needs touching surfaces."
+        "0 N",
+        "70 N left",
+        "35 N right",
+        "35 N left"
       ],
-      "correctAnswer": "In this item, it means that friction is a contact force; gravity and magnetic force can act without contact.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Forces. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
+      "correctAnswer": "0 N",
+      "correctIndex": 0,
+      "explanation": "Equal and opposite forces cancel, giving zero resultant force.",
+      "misconceptionTag": "balanced-horizontal",
       "distractorRationales": [
         {
-          "text": "In this item, it means that friction acts without contact.",
-          "misconception": "Gravity needs touching surfaces."
+          "text": "70 N left",
+          "misconception": "opposite equal forces added"
         },
         {
-          "text": "The claim for resultant forces is that magnetic forces require objects to touch.",
-          "misconception": "Friction acts without contact."
+          "text": "35 N right",
+          "misconception": "one force ignored"
         },
         {
-          "text": "In this item, it means that gravity needs touching surfaces.",
-          "misconception": "Magnetic forces require objects to touch."
+          "text": "35 N left",
+          "misconception": "one force ignored"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
+      "senNote": "Checks: Identify balanced horizontal forces."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_forces_free_body_misconception_correction_003",
+      "id": "aqa_forces_resultant_forces_constant_speed_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -27421,56 +27514,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_forces_free_body",
-        "statement": "Identify forces on an object. (Resultant Forces)",
+        "id": "aqa_forces_resultant_forces_constant_speed_004_lo",
+        "statement": "Infer resultant force from constant speed in a straight line.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.1.4:free_body:misconception_correction",
-      "conceptFamily": "free_body",
-      "contextType": "a comparison question",
+      "commandWord": "infer",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_resultant_forces_constant_speed_004",
+      "conceptFamily": "infer_resultant_force_from_constant_speed_in_a_straight_line",
+      "contextType": "exam_style",
       "skill": "Resultant Forces practice",
-      "stem": "A revision note about resultant forces contains an error. Which replacement is correct? Demand focus: identify forces on an object.",
-      "question": "A revision note about resultant forces contains an error. Which replacement is correct? Demand focus: identify forces on an object.",
+      "stem": "A train travels in a straight line at constant speed. What can be said about the resultant force on the train?",
+      "question": "A train travels in a straight line at constant speed. What can be said about the resultant force on the train?",
       "options": [
-        "For resultant forces, it means that every object must have exactly two forces.",
-        "For resultant forces, the option says that a force diagram should show forces with arrows in their correct directions.",
-        "For resultant forces, it means that forces are drawn without direction.",
-        "For resultant forces, it means that force arrows show energy stores."
+        "It is zero.",
+        "It acts forwards because the train is moving.",
+        "It acts backwards because air resistance exists.",
+        "It is equal to the train’s speed."
       ],
-      "correctAnswer": "For resultant forces, the option says that a force diagram should show forces with arrows in their correct directions.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.4 targets: Identify forces on an object. Focus area: Resultant Forces. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
+      "correctAnswer": "It is zero.",
+      "correctIndex": 0,
+      "explanation": "Constant speed in a straight line means constant velocity, so the resultant force is zero.",
+      "misconceptionTag": "constant-speed-resultant",
       "distractorRationales": [
         {
-          "text": "For resultant forces, it means that forces are drawn without direction.",
-          "misconception": "Force arrows show energy stores."
+          "text": "It acts forwards because the train is moving.",
+          "misconception": "motion confused with resultant force"
         },
         {
-          "text": "For resultant forces, it means that force arrows show energy stores.",
-          "misconception": "Every object must have exactly two forces."
+          "text": "It acts backwards because air resistance exists.",
+          "misconception": "driving force ignored"
         },
         {
-          "text": "For resultant forces, it means that every object must have exactly two forces.",
-          "misconception": "Forces are drawn without direction."
+          "text": "It is equal to the train’s speed.",
+          "misconception": "unit confusion"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Identify forces on an object."
+      "senNote": "Checks: Infer resultant force from constant speed in a straight line."
     },
     {
-      "id": "aqa_4_5_1_4_resultant_forces_resultant_force_data_interpretation_004",
+      "id": "aqa_forces_resultant_forces_force_diagram_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -27492,124 +27586,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_forces_resultant_force",
-        "statement": "Calculate resultant force. (Resultant Forces)",
+        "id": "aqa_forces_resultant_forces_force_diagram_005_lo",
+        "statement": "Interpret force arrow size and direction.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
       "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.1.4:resultant_force:data_interpretation",
-      "conceptFamily": "resultant_force",
-      "contextType": "a method-choice question",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_forces_resultant_forces_force_diagram_005",
+      "conceptFamily": "interpret_force_arrow_size_and_direction",
+      "contextType": "exam_style",
       "skill": "Resultant Forces practice",
-      "stem": "A small data set about resultant forces is being interpreted. Which conclusion is valid? Use the wording carefully: this is about calculate resultant force.",
-      "question": "A small data set about resultant forces is being interpreted. Which conclusion is valid? Use the wording carefully: this is about calculate resultant force.",
+      "stem": "A force diagram shows a longer arrow to the right than to the left. What does this show?",
+      "question": "A force diagram shows a longer arrow to the right than to the left. What does this show?",
       "options": [
-        "For resultant forces, the answer claims that resultant force is the single force with the same effect as all forces combined.",
-        "For resultant forces, the statement is that resultant force is measured in joules.",
-        "For resultant forces, the statement is that resultant force is always the largest force only.",
-        "For resultant forces, the statement is that resultant force ignores direction."
+        "The resultant force is to the right.",
+        "The resultant force is to the left.",
+        "The resultant force is zero.",
+        "The arrows show speed, not force."
       ],
-      "correctAnswer": "For resultant forces, the answer claims that resultant force is the single force with the same effect as all forces combined.",
+      "correctAnswer": "The resultant force is to the right.",
       "correctIndex": 0,
-      "explanation": "4.5.1.4 targets: Calculate resultant force. Focus area: Resultant Forces. For this question, Resultant force is the single force with the same effect as all forces combined. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:resultant_force",
+      "explanation": "A longer force arrow represents a larger force, so the resultant force is in that direction.",
+      "misconceptionTag": "arrow-size-direction",
       "distractorRationales": [
         {
-          "text": "For resultant forces, the statement is that resultant force is always the largest force only.",
-          "misconception": "Resultant force is always the largest force only."
+          "text": "The resultant force is to the left.",
+          "misconception": "shorter arrow chosen"
         },
         {
-          "text": "For resultant forces, the statement is that resultant force ignores direction.",
-          "misconception": "Resultant force ignores direction."
+          "text": "The resultant force is zero.",
+          "misconception": "unequal arrows treated as balanced"
         },
         {
-          "text": "For resultant forces, the statement is that resultant force is measured in joules.",
-          "misconception": "Resultant force is measured in joules."
+          "text": "The arrows show speed, not force.",
+          "misconception": "diagram meaning confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.4.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Calculate resultant force."
-    },
-    {
-      "id": "aqa_4_5_1_4_resultant_forces_contact_noncontact_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Resultant Forces",
-      "topicSlug": "forces",
-      "subtopicSlug": "resultant_forces",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.4",
-      "specStatement": "Resultant forces.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_4_resultant_forces_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Resultant Forces)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.1.4:contact_noncontact:representation_interpretation",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a results discussion",
-      "skill": "Resultant Forces practice",
-      "stem": "Which option correctly reads the resultant forces model or diagram idea? Check the clue before choosing: Classify contact and non-contact forces.",
-      "question": "Which option correctly reads the resultant forces model or diagram idea? Check the clue before choosing: Classify contact and non-contact forces.",
-      "options": [
-        "For resultant forces, it means that gravity needs touching surfaces.",
-        "In this resultant forces item, friction acts without contact.",
-        "For resultant forces, it means that friction is a contact force; gravity and magnetic force can act without contact.",
-        "The answer for resultant forces says that magnetic forces require objects to touch."
-      ],
-      "correctAnswer": "For resultant forces, it means that friction is a contact force; gravity and magnetic force can act without contact.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.4 targets: Classify contact and non-contact forces. Focus area: Resultant Forces. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
-      "distractorRationales": [
-        {
-          "text": "In this resultant forces item, friction acts without contact.",
-          "misconception": "Gravity needs touching surfaces."
-        },
-        {
-          "text": "The answer for resultant forces says that magnetic forces require objects to touch.",
-          "misconception": "Friction acts without contact."
-        },
-        {
-          "text": "For resultant forces, it means that gravity needs touching surfaces.",
-          "misconception": "Magnetic forces require objects to touch."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.4; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
+      "senNote": "Checks: Interpret force arrow size and direction."
     },
     {
       "id": "aqa_4_5_3_elasticity_and_hookes_law_hookes_law_direct_recall_001",

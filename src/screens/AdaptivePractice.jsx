@@ -558,11 +558,18 @@ export default function AdaptivePractice() {
                     }}
                   >
                     <div className="text-xs font-semibold mb-1" style={{ color: answerReview.isCorrect ? '#00bc7d' : '#fdc700' }}>
-                      {answerReview.isCorrect ? 'Nice work' : `Correct answer: ${answerReview.correctAnswer}`}
+                      {answerReview.isCorrect ? (
+                        'Nice work'
+                      ) : (
+                        <>
+                          <span>Correct answer: </span>
+                          <PhysicsText>{answerReview.correctAnswer}</PhysicsText>
+                        </>
+                      )}
                     </div>
-                    <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+                    <PhysicsText as="p" className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
                       {answerReview.explanation}
-                    </p>
+                    </PhysicsText>
                   </div>
 
                   {!answerReview.isCorrect && (

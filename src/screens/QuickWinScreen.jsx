@@ -15,6 +15,7 @@ import { checkAnswer, getRandomQuiz } from '../lib/questionRepository'
 import { navigateToTopicStudy } from '../features/lesson/routing'
 import SafeAreaPage from '../components/ui/SafeAreaPage'
 import PageHeader from '../components/PageHeader'
+import PhysicsText from '../components/PhysicsText'
 
 const QUICK_WIN_COUNT = 5
 
@@ -352,7 +353,7 @@ export default function QuickWinScreen() {
                     </div>
                     {!isCorrect && (
                       <div className="mt-1" style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)' }}>
-                        The answer is: <span style={{ color: '#4ade80', fontWeight: 600 }}>{q.options[q.correctIndex]}</span>
+                        The answer is: <PhysicsText as="span" style={{ color: '#4ade80', fontWeight: 600 }}>{q.options[q.correctIndex]}</PhysicsText>
                       </div>
                     )}
                   </div>
@@ -360,7 +361,7 @@ export default function QuickWinScreen() {
                   {/* Layer 2 — why (senNote as explanation) */}
                   {q.senNote && (
                     <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', paddingTop: 8, borderTop: '0.75px solid rgba(255,255,255,0.08)', lineHeight: 1.6 }}>
-                      {q.explanation}
+                      <PhysicsText>{q.explanation}</PhysicsText>
                     </div>
                   )}
 

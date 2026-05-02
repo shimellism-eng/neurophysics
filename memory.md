@@ -5,6 +5,42 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice maths rendering fixed across feedback paths
+- Fixed the raw LaTeX bug shown on iPhone where explanations displayed strings like `\(W = Fs\)` instead of textbook maths.
+- `PhysicsText` now renders:
+  - Adaptive Practice question feedback correct-answer label.
+  - Adaptive Practice explanations.
+  - Quick Win correct-answer labels and explanations.
+  - Mixed Revision correct-answer labels and explanations.
+  - Grade 9 challenge RPA explanations.
+  - Misconception feedback explanations.
+- Verification:
+  - `npm run build` passes.
+  - `npx cap sync ios` complete.
+  - iOS simulator build/install passed.
+- Simulator note:
+  - Screenshot saved at `/tmp/neurophysics-math-feedback-renderer.png`, but the simulator was at login after reinstall. Exact authenticated route still needs a quick visual re-check if needed.
+
+### Adaptive Practice AQA Resultant Force(s) authored
+- Fixed AQA `Resultant Force`: 19/19 authored and passed.
+- Fixed AQA `Resultant Forces`: 5/5 authored and passed.
+- Hidden spec metadata:
+  - AQA Physics `specRef`: `4.5.1.4`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Runtime count: 24.
+  - Authored IDs: 24.
+  - Official scaffold/answer leak count: 0.
+  - Covers balanced forces, same/opposite direction force addition/subtraction, equilibrium, constant velocity, acceleration direction, tables, force diagrams, and resultant-force calculations.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm run build` passes.
+
+### Next step
+- Continue AQA Forces:
+  - Next highest-impact subtopic: AQA `Hooke's Law` (19 authored exam-style questions).
+
 ### Adaptive Practice textbook maths + AQA Work Done authored
 - Added `PhysicsText` for Adaptive Practice question and option rendering.
   - Supports inline LaTeX delimiters like `\(W = Fs\)` and `$W = Fs$`.

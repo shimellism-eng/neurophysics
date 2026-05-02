@@ -5,6 +5,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Warning, CheckCircle, XCircle } from '@phosphor-icons/react'
+import PhysicsText from '../PhysicsText'
 
 export default function MisconceptionQuestion({ data, moduleColor, onComplete }) {
   if (!data) return null
@@ -124,9 +125,9 @@ export default function MisconceptionQuestion({ data, moduleColor, onComplete })
             <div className="text-xs font-semibold mb-1.5" style={{ color: userCorrect ? '#00bc7d' : '#f97316' }}>
               {userCorrect ? 'Well spotted!' : 'Not quite — here\'s why:'}
             </div>
-            <p className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
+            <PhysicsText as="p" className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>
               {explanation}
-            </p>
+            </PhysicsText>
           </motion.div>
         )}
       </AnimatePresence>

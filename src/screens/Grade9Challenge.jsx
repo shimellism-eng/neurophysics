@@ -9,6 +9,7 @@ import { ArrowLeft, Trophy, Star, CaretRight, ArrowCounterClockwise } from '@pho
 import { getGrade9Questions } from '../lib/questionRepository'
 import { saveQuizResult } from '../hooks/useInsights'
 import { getSelectedBoard } from '../utils/boardConfig'
+import PhysicsText from '../components/PhysicsText'
 
 const MODULE_COLOR = '#a855f7' // purple for Grade 9
 
@@ -173,7 +174,7 @@ function MCQChallengeQuestion({ data, onComplete }) {
           {data.explanation && (
             <div className="px-3 py-2 rounded-[10px]"
               style={{ background: 'rgba(0,188,125,0.06)', border: '0.75px solid rgba(0,188,125,0.15)' }}>
-              <span className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{data.explanation}</span>
+              <PhysicsText as="span" className="text-xs leading-relaxed" style={{ color: '#cad5e2' }}>{data.explanation}</PhysicsText>
             </div>
           )}
           {data.senNote && data.senNote !== data.explanation && (

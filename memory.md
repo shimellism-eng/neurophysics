@@ -5,6 +5,34 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice Edexcel Energy Resources authored
+- Fixed Edexcel `Energy Resources`: 37/37 authored and passed.
+- Hidden spec metadata:
+  - Pearson Edexcel GCSE Physics `specRef`: `3.8`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Energy Resources runtime count: 37.
+  - Authored IDs: 37.
+  - Bad scaffold/answer phrase count: 0.
+  - Covers renewable/non-renewable resources, fossil and nuclear generation, wind/solar/tidal/hydro reliability, environmental impacts, site choice, demand matching, energy mix decisions, and balanced evaluation.
+- Topic completion:
+  - AQA Energy: 94/94 good to go.
+  - Edexcel Energy: 56/94 good to go.
+  - Combined Energy: 150/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - Exact Edexcel Energy Resources route was shown live in Simulator at `/practice/energy_resources`.
+  - Screenshot saved at `/tmp/neurophysics-edexcel-energy-resources.png`.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue Edexcel Energy:
+  - Edexcel `Gravitational Potential Energy`: 19 authored exam-style questions.
+
 ### Adaptive Practice Edexcel Efficiency authored
 - Fixed Edexcel `Efficiency`: 19/19 authored and passed.
 - Hidden spec metadata:

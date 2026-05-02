@@ -23,13 +23,14 @@ function normalizeSkillLabel(skill = null) {
   return value
 }
 
-function filterQuestions(source, { topicId = null, subtopic = null, difficulty = null, skill = null } = {}) {
+function filterQuestions(source, { examBoard = null, course = 'all', topicId = null, subtopic = null, difficulty = null, skill = null } = {}) {
   const normalizedSkill = normalizeSkillLabel(skill)
   return source.filter((question) => {
     if (topicId && question.topicId !== topicId) return false
     if (subtopic && question.subtopic !== subtopic) return false
     if (difficulty && question.difficulty !== difficulty) return false
     if (normalizedSkill && normalizeSkillLabel(question.skill) !== normalizedSkill) return false
+    if (!filterQuestionsForSelection([question], examBoard, course).length) return false
     return true
   })
 }
@@ -140,14 +141,14 @@ async function loadBoardFile(boardId, topic = null) {
   return payload.questions || []
 }
 
-export async function getQuestions({ examBoard = 'aqa', topic = null, subtopic = null, difficulty = null } = {}) {
+export async function getQuestions({ examBoard = 'aqa', course = 'all', topic = null, subtopic = null, difficulty = null } = {}) {
   const source = await loadBoardFile(examBoard, normalizeTopicKey(topic))
-  return filterQuestions(source, { subtopic, difficulty })
+  return filterQuestions(source, { examBoard, course, subtopic, difficulty })
 }
 
-export async function getQuestionsByTopicId({ examBoard = 'aqa', topicId, subtopic = null, difficulty = null, skill = null } = {}) {
+export async function getQuestionsByTopicId({ examBoard = 'aqa', course = 'all', topicId, subtopic = null, difficulty = null, skill = null } = {}) {
   const source = await loadAllQuestionsForBoard(examBoard)
-  return filterQuestions(source, { topicId, subtopic, difficulty, skill })
+  return filterQuestions(source, { examBoard, course, topicId, subtopic, difficulty, skill })
 }
 
 export async function getRecallQuestions({ examBoard = 'aqa', topicId, shuffle: shouldShuffle = false } = {}) {
@@ -169,14 +170,12 @@ export async function getGrade9Questions({ examBoard = 'aqa', course = 'combined
 }
 
 export async function getExamQuestions({ examBoard = 'aqa', topicId, course = 'combined', difficulty = null, skill = null } = {}) {
-  void course
-  return getQuestionsByTopicId({ examBoard, topicId, difficulty, skill })
+  return getQuestionsByTopicId({ examBoard, course, topicId, difficulty, skill })
 }
 
 export async function getTimedPaperQuestions({ examBoard = 'aqa', course = 'combined', difficulty = null } = {}) {
-  void course
   const source = await loadAllQuestionsForBoard(examBoard)
-  return filterQuestions(source, { difficulty })
+  return filterQuestions(source, { examBoard, course, difficulty })
 }
 
 export async function getQuestionMap({ examBoard = 'aqa' } = {}) {
@@ -192,8 +191,9 @@ export async function getRandomQuiz({
   count = 10,
   excludeIds = [],
   maxPerTopic = null,
+  course = 'all',
 } = {}) {
-  const questions = await getQuestions({ examBoard, topic, subtopic, difficulty })
+  const questions = await getQuestions({ examBoard, course, topic, subtopic, difficulty })
   const exclude = new Set(excludeIds)
   const filtered = questions.filter((question) => !exclude.has(question.id))
   const srsStore = readSrsStore()

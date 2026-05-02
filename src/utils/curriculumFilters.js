@@ -35,6 +35,25 @@ export function isCourseAvailableForSelection(itemCourse, selectedCourse = 'comb
   return normalizedCourse === 'combined'
 }
 
+function isCourseAvailabilityArrayVisible(courseAvailability, selectedCourse = 'combined') {
+  if (!Array.isArray(courseAvailability) || courseAvailability.length === 0) return null
+  const normalizedSelection = normalizeCourseValue(selectedCourse)
+  const normalizedAvailability = courseAvailability.map(normalizeCourseValue)
+
+  if (normalizedSelection === 'all') return true
+  if (normalizedSelection === 'physics_only') {
+    return normalizedAvailability.includes('combined') || normalizedAvailability.includes('physics_only')
+  }
+  return normalizedAvailability.includes('combined')
+}
+
+function isQuestionBoardAvailable(question, boardId) {
+  if (!question || !boardId) return true
+  if (!isBoardAvailableForSelection(question.boards, boardId)) return false
+  if (!question.examBoard) return true
+  return String(question.examBoard).trim().toLowerCase() === String(boardId).trim().toLowerCase()
+}
+
 function getTopicMeta(topicOrId) {
   if (!topicOrId) return null
   if (typeof topicOrId === 'string') return TOPICS[topicOrId] || null
@@ -79,10 +98,13 @@ export function isModuleAvailableForSelection(module, boardId, course = 'combine
 
 export function isQuestionAvailableForSelection(question, boardId, course = 'combined') {
   if (!question) return false
-  if (!isBoardAvailableForSelection(question.boards, boardId)) return false
+  if (!isQuestionBoardAvailable(question, boardId)) return false
 
   const topic = getTopicMeta(question.topicId || question.topic)
   if (topic && !isTopicAvailableForSelection(topic, boardId, course)) return false
+  const explicitCourseAvailability = isCourseAvailabilityArrayVisible(question.courseAvailability, course)
+  if (explicitCourseAvailability != null) return explicitCourseAvailability
+
   const questionCourse = question.course ?? topic?.course
 
   return isCourseAvailableForSelection(questionCourse, course)

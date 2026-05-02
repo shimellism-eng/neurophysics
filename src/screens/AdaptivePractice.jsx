@@ -16,7 +16,7 @@ import {
 import { TOPICS, MODULES } from '../data/topics'
 import { useAdaptiveRuntime } from '../hooks/useAdaptiveRuntime'
 import { checkAnswer, getQuestions } from '../lib/questionRepository'
-import { getSelectedBoard } from '../utils/boardConfig'
+import { getSelectedBoard, getSelectedCourse } from '../utils/boardConfig'
 import PageHeader from '../components/PageHeader'
 
 const MODULE_TOPIC_NAME_MAP = {
@@ -124,6 +124,7 @@ export default function AdaptivePractice() {
   const moduleColor = topic?.moduleColor || mod?.color || '#6366f1'
   const repositoryTopic = MODULE_TOPIC_NAME_MAP[mod?.name] || mod?.name || null
   const boardId = getSelectedBoard().id
+  const course = getSelectedCourse()
 
   const { learnerState, recordAnswer, resetTopicState, selectQuestion } = useAdaptiveRuntime(topicId)
 
@@ -258,7 +259,7 @@ export default function AdaptivePractice() {
       setPoolLoading(true)
       setPoolError('')
       try {
-        const questions = await getQuestions({ examBoard: boardId, topic: repositoryTopic })
+        const questions = await getQuestions({ examBoard: boardId, course, topic: repositoryTopic })
         const filtered = questions.filter((question) => question.topicId === topicId)
         if (!cancelled) {
           setQuestionPool(filtered)
@@ -281,7 +282,7 @@ export default function AdaptivePractice() {
     return () => {
       cancelled = true
     }
-  }, [boardId, repositoryTopic, topicId])
+  }, [boardId, course, repositoryTopic, topicId])
 
   useEffect(() => {
     if (sessionCount <= 0) return

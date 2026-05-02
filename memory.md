@@ -5,6 +5,40 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice board/course filter hardening
+- Implemented the first part of the board-faithful/course-faithful Adaptive Practice plan.
+- Fixed runtime filtering:
+  - `AdaptivePractice.jsx` now reads both selected board and selected course.
+  - `questionRepository.js` now passes course into `getQuestions`, `getQuestionsByTopicId`, `getExamQuestions`, `getTimedPaperQuestions`, and `getRandomQuiz`.
+  - `curriculumFilters.js` now understands `courseAvailability` arrays from the generated runtime question bank.
+  - Combined Science now sees only questions with `courseAvailability` including `combined`.
+  - Physics Only now sees both `combined` and `physics_only` questions.
+  - Question-level `examBoard` is now checked, so AQA and Edexcel runtime banks cannot cross-leak.
+- Added permanent smoke test:
+  - `scripts/smoke-adaptive-course-filter.mjs`
+  - Added it to `npm test`.
+- Verified runtime counts:
+  - AQA Combined: 688 questions.
+  - AQA Physics Only mode: 832 questions.
+  - AQA Physics-only-only: 144 questions.
+  - Edexcel Combined: 451 questions.
+  - Edexcel Physics Only mode: 681 questions.
+  - Edexcel Physics-only-only: 230 questions.
+  - Space visible to Combined: 0 for both boards.
+- Verification:
+  - `node scripts/smoke-adaptive-course-filter.mjs` passes.
+  - `npm run audit:curriculum` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+
+### Next step
+- Continue premium authoring:
+  - AQA `Series Resistance`: 5 authored exam-style questions.
+  - AQA `Parallel Circuits`: 5 authored exam-style questions.
+  - Then continue AQA `Resistance`, `Series Circuits`, and `National Grid`.
+
 ### Adaptive Practice visible answer-hint leak fixed
 - Mamo found a serious issue in Adaptive Practice: the grey label above the question was showing the hidden learning objective, which could reveal the answer or heavily hint it.
 - Root cause:

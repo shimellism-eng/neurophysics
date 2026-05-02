@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "npm run audit:curriculum && npm run audit:questions && node scripts/smoke-timed-paper-scoring.mjs && node scripts/smoke-topic-routing.mjs && node scripts/smoke-settings-storage.mjs && node scripts/smoke-board-course-display.mjs",
+    "test": "npm run audit:curriculum && npm run audit:questions && node scripts/smoke-timed-paper-scoring.mjs && node scripts/smoke-topic-routing.mjs && node scripts/smoke-settings-storage.mjs && node scripts/smoke-board-course-display.mjs && node scripts/smoke-adaptive-course-filter.mjs",
     "audit:curriculum": "node scripts/validate-curriculum-filters.mjs",
     "audit:questions": "node scripts/audit_question_repetition.js",
     "questions:regenerate": "node scripts/regenerate_adaptive_questions.mjs",

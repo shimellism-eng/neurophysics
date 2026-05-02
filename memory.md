@@ -5,6 +5,31 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice Edexcel Gravitational Potential Energy authored
+- Fixed Edexcel `Gravitational Potential Energy`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - Pearson Edexcel GCSE Physics `specRef`: `8.3`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Gravitational Potential Energy runtime count: 19.
+  - Authored IDs: 19.
+  - Official question audit scaffold/answer leak count: 0.
+  - Covers GPE, kinetic energy, elastic potential energy, specific heat capacity, equation selection, unit use, and energy-transfer reasoning.
+- Topic completion:
+  - AQA Energy: 94/94 good to go.
+  - Edexcel Energy: 75/94 good to go.
+  - Combined Energy: 169/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm run build` passes.
+- Conserved checks:
+  - No simulator rebuild for this slice; previous Edexcel Energy slices were simulator-checked, and this slice touched authored data only.
+
+### Next step
+- Continue Edexcel Energy:
+  - Edexcel `Internal Energy`: 19 authored exam-style questions.
+
 ### Adaptive Practice Edexcel Energy Resources authored
 - Fixed Edexcel `Energy Resources`: 37/37 authored and passed.
 - Hidden spec metadata:

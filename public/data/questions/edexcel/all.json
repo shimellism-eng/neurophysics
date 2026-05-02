@@ -1,7 +1,7 @@
 {
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-  "generatedAt": "2026-05-02T09:51:19.629Z",
+  "generatedAt": "2026-05-02T09:58:18.277Z",
   "questions": [
     {
       "id": "edexcel_atomic_structure_nucleus_001",
@@ -12603,7 +12603,7 @@
       "senNote": "Checks: Recognise a balanced evaluation of an energy resource."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_gpe_direct_recall_001",
+      "id": "edexcel_energy_gpe_equation_001",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -12625,56 +12625,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_gpe",
-        "statement": "Use gravitational potential energy. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_gpe_equation_001_lo",
+        "statement": "Recall the gravitational potential energy equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "8.3:gpe:direct_recall",
-      "conceptFamily": "gpe",
-      "contextType": "a required-practical notebook",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_gpe_equation_001",
+      "conceptFamily": "recall_the_gravitational_potential_energy_equation",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "Which statement is correct for gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
-      "question": "Which statement is correct for gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
+      "stem": "Which equation is used to calculate the change in gravitational potential energy?",
+      "question": "Which equation is used to calculate the change in gravitational potential energy?",
       "options": [
-        "For gravitational potential energy, it means that gravitational potential energy = mass × gravitational field strength × height.",
-        "For gravitational potential energy, the option says that gPE depends only on speed.",
-        "For gravitational potential energy, the option says that gPE = mass ÷ height.",
-        "For gravitational potential energy, the option says that gPE is measured in newtons."
+        "change in GPE = mass × gravitational field strength × change in height",
+        "change in GPE = mass × speed² ÷ 2",
+        "change in GPE = force ÷ area",
+        "change in GPE = current × potential difference"
       ],
-      "correctAnswer": "For gravitational potential energy, it means that gravitational potential energy = mass × gravitational field strength × height.",
+      "correctAnswer": "change in GPE = mass × gravitational field strength × change in height",
       "correctIndex": 0,
-      "explanation": "8.3 targets: Use gravitational potential energy. Focus area: Gravitational Potential Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a required-practical notebook; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
+      "explanation": "Gravitational potential energy change is calculated using mass × gravitational field strength × change in height.",
+      "misconceptionTag": "gpe-equation",
       "distractorRationales": [
         {
-          "text": "For gravitational potential energy, the option says that gPE = mass ÷ height.",
-          "misconception": "GPE = mass ÷ height."
+          "text": "change in GPE = mass × speed² ÷ 2",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, the option says that gPE depends only on speed.",
-          "misconception": "GPE depends only on speed."
+          "text": "change in GPE = force ÷ area",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, the option says that gPE is measured in newtons.",
-          "misconception": "GPE is measured in newtons."
+          "text": "change in GPE = current × potential difference",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
+      "senNote": "Checks: Recall the gravitational potential energy equation."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy_concept_discrimination_002",
+      "id": "edexcel_energy_gpe_calculation_002",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -12696,56 +12697,201 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_gpe_calculation_002_lo",
+        "statement": "Calculate gravitational potential energy from mass, field strength and height.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_gpe_calculation_002",
+      "conceptFamily": "calculate_gravitational_potential_energy_from_mass_field_strength_and_height",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A 3.0 kg box is lifted 2.0 m. The gravitational field strength is 10 N/kg. What is the increase in gravitational potential energy?",
+      "question": "A 3.0 kg box is lifted 2.0 m. The gravitational field strength is 10 N/kg. What is the increase in gravitational potential energy?",
+      "options": [
+        "60 J",
+        "15 J",
+        "6 J",
+        "30 J"
+      ],
+      "correctAnswer": "60 J",
+      "correctIndex": 0,
+      "explanation": "Use ΔGPE = mgh = 3.0 × 10 × 2.0 = 60 J.",
+      "misconceptionTag": "multiply-mgh",
+      "distractorRationales": [
+        {
+          "text": "15 J",
+          "misconception": ""
+        },
+        {
+          "text": "6 J",
+          "misconception": ""
+        },
+        {
+          "text": "30 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate gravitational potential energy from mass, field strength and height."
+    },
+    {
+      "id": "edexcel_energy_gpe_find_height_003",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_gpe_find_height_003_lo",
+        "statement": "Rearrange the gravitational potential energy equation to find height.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_gpe_find_height_003",
+      "conceptFamily": "rearrange_the_gravitational_potential_energy_equation_to_find_height",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A 5.0 kg mass gains 250 J of gravitational potential energy. The gravitational field strength is 10 N/kg. How far was it lifted?",
+      "question": "A 5.0 kg mass gains 250 J of gravitational potential energy. The gravitational field strength is 10 N/kg. How far was it lifted?",
+      "options": [
+        "5.0 m",
+        "50 m",
+        "2.0 m",
+        "1250 m"
+      ],
+      "correctAnswer": "5.0 m",
+      "correctIndex": 0,
+      "explanation": "Rearrange ΔGPE = mgh to h = ΔGPE ÷ (mg) = 250 ÷ (5.0 × 10) = 5.0 m.",
+      "misconceptionTag": "gpe-rearrange-height",
+      "distractorRationales": [
+        {
+          "text": "50 m",
+          "misconception": ""
+        },
+        {
+          "text": "2.0 m",
+          "misconception": ""
+        },
+        {
+          "text": "1250 m",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the gravitational potential energy equation to find height."
+    },
+    {
+      "id": "edexcel_energy_gpe_unit_004",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_gpe_unit_004_lo",
+        "statement": "Identify the unit of gravitational potential energy.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "8.3:kinetic_energy:concept_discrimination",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a technician report",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_gpe_unit_004",
+      "conceptFamily": "identify_the_unit_of_gravitational_potential_energy",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Demand focus: use the kinetic energy equation.",
-      "question": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Demand focus: use the kinetic energy equation.",
+      "stem": "Which unit is used for gravitational potential energy?",
+      "question": "Which unit is used for gravitational potential energy?",
       "options": [
-        "The claim for gravitational potential energy is that kinetic energy does not depend on speed.",
-        "In this item, it means that kinetic energy = 0.5 × mass × speed².",
-        "In this item, it means that kinetic energy = weight × height.",
-        "In this item, it means that kinetic energy = mass × speed."
+        "joule",
+        "newton",
+        "kilogram",
+        "metre per second"
       ],
-      "correctAnswer": "In this item, it means that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 1,
-      "explanation": "8.3 targets: Use the kinetic energy equation. Focus area: Gravitational Potential Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a technician report; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
+      "correctAnswer": "joule",
+      "correctIndex": 0,
+      "explanation": "Gravitational potential energy is an energy, so it is measured in joules.",
+      "misconceptionTag": "gpe-unit",
       "distractorRationales": [
         {
-          "text": "In this item, it means that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy = mass × speed."
+          "text": "newton",
+          "misconception": ""
         },
         {
-          "text": "The claim for gravitational potential energy is that kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy = weight × height."
+          "text": "kilogram",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy does not depend on speed."
+          "text": "metre per second",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
+      "senNote": "Checks: Identify the unit of gravitational potential energy."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy_misconception_correction_003",
+      "id": "edexcel_energy_ke_equation_005",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -12767,56 +12913,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_ke_equation_005_lo",
+        "statement": "Recall the kinetic energy equation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_ke_equation_005",
+      "conceptFamily": "recall_the_kinetic_energy_equation",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "Which equation gives the kinetic energy of a moving object?",
+      "question": "Which equation gives the kinetic energy of a moving object?",
+      "options": [
+        "kinetic energy = 0.5 × mass × speed²",
+        "kinetic energy = mass × gravitational field strength × height",
+        "kinetic energy = force × area",
+        "kinetic energy = mass ÷ speed"
+      ],
+      "correctAnswer": "kinetic energy = 0.5 × mass × speed²",
+      "correctIndex": 0,
+      "explanation": "Kinetic energy is calculated using 0.5 × mass × speed².",
+      "misconceptionTag": "ke-equation",
+      "distractorRationales": [
+        {
+          "text": "kinetic energy = mass × gravitational field strength × height",
+          "misconception": ""
+        },
+        {
+          "text": "kinetic energy = force × area",
+          "misconception": ""
+        },
+        {
+          "text": "kinetic energy = mass ÷ speed",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the kinetic energy equation."
+    },
+    {
+      "id": "edexcel_energy_ke_calculation_006",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_ke_calculation_006_lo",
+        "statement": "Calculate kinetic energy from mass and speed.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "8.3:elastic_energy:misconception_correction",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a labelled diagram",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_ke_calculation_006",
+      "conceptFamily": "calculate_kinetic_energy_from_mass_and_speed",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "A revision note about gravitational potential energy contains an error. Which replacement is correct? Check the clue before choosing: Use elastic potential energy.",
-      "question": "A revision note about gravitational potential energy contains an error. Which replacement is correct? Check the clue before choosing: Use elastic potential energy.",
+      "stem": "A 2.0 kg trolley moves at 3.0 m/s. What is its kinetic energy?",
+      "question": "A 2.0 kg trolley moves at 3.0 m/s. What is its kinetic energy?",
       "options": [
-        "For gravitational potential energy, the statement is that elastic energy is measured in kilograms.",
-        "For gravitational potential energy, the answer claims that elastic energy = spring constant × extension.",
-        "For gravitational potential energy, the statement is that elastic potential energy = 0.5 × spring constant × extension².",
-        "For gravitational potential energy, the statement is that elastic energy is independent of extension."
+        "9.0 J",
+        "6.0 J",
+        "18 J",
+        "3.0 J"
       ],
-      "correctAnswer": "For gravitational potential energy, the statement is that elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 2,
-      "explanation": "8.3 targets: Use elastic potential energy. Focus area: Gravitational Potential Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a labelled diagram; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
+      "correctAnswer": "9.0 J",
+      "correctIndex": 0,
+      "explanation": "Use KE = 0.5mv² = 0.5 × 2.0 × 3.0² = 9.0 J.",
+      "misconceptionTag": "ke-square-speed",
       "distractorRationales": [
         {
-          "text": "For gravitational potential energy, the statement is that elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy = spring constant × extension."
+          "text": "6.0 J",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, the answer claims that elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy is independent of extension."
+          "text": "18 J",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, the statement is that elastic energy is independent of extension.",
-          "misconception": "Elastic energy is measured in kilograms."
+          "text": "3.0 J",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use elastic potential energy."
+      "senNote": "Checks: Calculate kinetic energy from mass and speed."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_specific_heat_data_interpretation_004",
+      "id": "edexcel_energy_ke_speed_doubling_007",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -12838,56 +13057,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_ke_speed_doubling_007_lo",
+        "statement": "Explain the effect of changing speed on kinetic energy.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "8.3:specific_heat:data_interpretation",
-      "conceptFamily": "specific_heat",
-      "contextType": "a short calculation",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_ke_speed_doubling_007",
+      "conceptFamily": "explain_the_effect_of_changing_speed_on_kinetic_energy",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use specific heat capacity.",
-      "question": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use specific heat capacity.",
+      "stem": "If the speed of a moving object doubles and its mass stays the same, what happens to its kinetic energy?",
+      "question": "If the speed of a moving object doubles and its mass stays the same, what happens to its kinetic energy?",
       "options": [
-        "For gravitational potential energy: Temperature change is ignored in heating calculations.",
-        "The claim for gravitational potential energy is that energy change = mass × specific heat capacity × temperature change.",
-        "The claim for gravitational potential energy is that specific heat capacity is energy per second.",
-        "The claim for gravitational potential energy is that specific heat capacity is measured in newtons per metre."
+        "It becomes four times as large.",
+        "It doubles.",
+        "It halves.",
+        "It stays the same."
       ],
-      "correctAnswer": "The claim for gravitational potential energy is that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 1,
-      "explanation": "8.3 targets: Use specific heat capacity. Focus area: Gravitational Potential Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a short calculation; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
+      "correctAnswer": "It becomes four times as large.",
+      "correctIndex": 0,
+      "explanation": "Kinetic energy depends on speed squared, so doubling speed makes the kinetic energy four times larger.",
+      "misconceptionTag": "ke-speed-linear",
       "distractorRationales": [
         {
-          "text": "The claim for gravitational potential energy is that specific heat capacity is energy per second.",
-          "misconception": "Specific heat capacity is energy per second."
+          "text": "It doubles.",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy: Temperature change is ignored in heating calculations.",
-          "misconception": "Temperature change is ignored in heating calculations."
+          "text": "It halves.",
+          "misconception": ""
         },
         {
-          "text": "The claim for gravitational potential energy is that specific heat capacity is measured in newtons per metre.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
+          "text": "It stays the same.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use specific heat capacity."
+      "senNote": "Checks: Explain the effect of changing speed on kinetic energy."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_unit_check_representation_interpretation_005",
+      "id": "edexcel_energy_ke_find_mass_008",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -12909,56 +13129,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_unit_check",
-        "statement": "Check energy calculation units. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_ke_find_mass_008_lo",
+        "statement": "Rearrange the kinetic energy equation to find mass.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "8.3:unit_check:representation_interpretation",
-      "conceptFamily": "unit_check",
-      "contextType": "a safety decision",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_ke_find_mass_008",
+      "conceptFamily": "rearrange_the_kinetic_energy_equation_to_find_mass",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "Which option correctly reads the gravitational potential energy model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
-      "question": "Which option correctly reads the gravitational potential energy model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
+      "stem": "A toy car has 16 J of kinetic energy at 4.0 m/s. What is its mass?",
+      "question": "A toy car has 16 J of kinetic energy at 4.0 m/s. What is its mass?",
       "options": [
-        "For gravitational potential energy, this would mean that energy is measured in pascals.",
-        "For gravitational potential energy, the option says that energy calculated from these equations is measured in joules.",
-        "For gravitational potential energy, it means that energy is measured in amperes.",
-        "For gravitational potential energy, this would mean that energy is measured in hertz."
+        "2.0 kg",
+        "1.0 kg",
+        "8.0 kg",
+        "32 kg"
       ],
-      "correctAnswer": "For gravitational potential energy, the option says that energy calculated from these equations is measured in joules.",
-      "correctIndex": 1,
-      "explanation": "8.3 targets: Check energy calculation units. Focus area: Gravitational Potential Energy. For this question, Energy calculated from these equations is measured in joules. Context used: a safety decision; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_check",
+      "correctAnswer": "2.0 kg",
+      "correctIndex": 0,
+      "explanation": "Rearrange KE = 0.5mv² to m = 2KE ÷ v² = 32 ÷ 16 = 2.0 kg.",
+      "misconceptionTag": "ke-rearrange-mass",
       "distractorRationales": [
         {
-          "text": "For gravitational potential energy, this would mean that energy is measured in hertz.",
-          "misconception": "Energy is measured in amperes."
+          "text": "1.0 kg",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, this would mean that energy is measured in pascals.",
-          "misconception": "Energy is measured in hertz."
+          "text": "8.0 kg",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, it means that energy is measured in amperes.",
-          "misconception": "Energy is measured in pascals."
+          "text": "32 kg",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Check energy calculation units."
+      "senNote": "Checks: Rearrange the kinetic energy equation to find mass."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_gpe_direct_recall_006",
+      "id": "edexcel_energy_elastic_equation_009",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -12980,56 +13201,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_gpe",
-        "statement": "Use gravitational potential energy. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_elastic_equation_009_lo",
+        "statement": "Recall the elastic potential energy equation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "8.3:gpe:direct_recall",
-      "conceptFamily": "gpe",
-      "contextType": "a graph-reading task",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_elastic_equation_009",
+      "conceptFamily": "recall_the_elastic_potential_energy_equation",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "Which answer matches this gravitational potential energy objective: Use gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
-      "question": "Which answer matches this gravitational potential energy objective: Use gravitational potential energy? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
+      "stem": "Which equation is used for elastic potential energy stored in a stretched spring?",
+      "question": "Which equation is used for elastic potential energy stored in a stretched spring?",
       "options": [
-        "In this gravitational potential energy item, gPE depends only on speed.",
-        "The answer for gravitational potential energy says that gravitational potential energy = mass × gravitational field strength × height.",
-        "In this gravitational potential energy item, gPE is measured in newtons.",
-        "In this gravitational potential energy item, gPE = mass ÷ height."
+        "elastic potential energy = 0.5 × spring constant × extension²",
+        "elastic potential energy = mass × gravitational field strength × height",
+        "elastic potential energy = current × time",
+        "elastic potential energy = pressure × volume"
       ],
-      "correctAnswer": "The answer for gravitational potential energy says that gravitational potential energy = mass × gravitational field strength × height.",
-      "correctIndex": 1,
-      "explanation": "8.3 targets: Use gravitational potential energy. Focus area: Gravitational Potential Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a graph-reading task; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
+      "correctAnswer": "elastic potential energy = 0.5 × spring constant × extension²",
+      "correctIndex": 0,
+      "explanation": "Elastic potential energy in a spring is calculated using 0.5 × spring constant × extension².",
+      "misconceptionTag": "elastic-equation",
       "distractorRationales": [
         {
-          "text": "In this gravitational potential energy item, gPE is measured in newtons.",
-          "misconception": "GPE = mass ÷ height."
+          "text": "elastic potential energy = mass × gravitational field strength × height",
+          "misconception": ""
         },
         {
-          "text": "In this gravitational potential energy item, gPE = mass ÷ height.",
-          "misconception": "GPE depends only on speed."
+          "text": "elastic potential energy = current × time",
+          "misconception": ""
         },
         {
-          "text": "In this gravitational potential energy item, gPE depends only on speed.",
-          "misconception": "GPE is measured in newtons."
+          "text": "elastic potential energy = pressure × volume",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
+      "senNote": "Checks: Recall the elastic potential energy equation."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy_applied_context_007",
+      "id": "edexcel_energy_elastic_calculation_010",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -13051,269 +13273,633 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_elastic_calculation_010_lo",
+        "statement": "Calculate elastic potential energy from spring constant and extension.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_elastic_calculation_010",
+      "conceptFamily": "calculate_elastic_potential_energy_from_spring_constant_and_extension",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A spring has a spring constant of 80 N/m and is stretched by 0.50 m. How much elastic potential energy is stored?",
+      "question": "A spring has a spring constant of 80 N/m and is stretched by 0.50 m. How much elastic potential energy is stored?",
+      "options": [
+        "10 J",
+        "20 J",
+        "40 J",
+        "160 J"
+      ],
+      "correctAnswer": "10 J",
+      "correctIndex": 0,
+      "explanation": "Use E = 0.5ke² = 0.5 × 80 × 0.50² = 10 J.",
+      "misconceptionTag": "elastic-square-extension",
+      "distractorRationales": [
+        {
+          "text": "20 J",
+          "misconception": ""
+        },
+        {
+          "text": "40 J",
+          "misconception": ""
+        },
+        {
+          "text": "160 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate elastic potential energy from spring constant and extension."
+    },
+    {
+      "id": "edexcel_energy_elastic_extension_doubling_011",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_elastic_extension_doubling_011_lo",
+        "statement": "Explain the squared relationship in elastic potential energy.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_elastic_extension_doubling_011",
+      "conceptFamily": "explain_the_squared_relationship_in_elastic_potential_energy",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A spring is stretched within its limit of proportionality. If the extension doubles, what happens to the elastic potential energy stored?",
+      "question": "A spring is stretched within its limit of proportionality. If the extension doubles, what happens to the elastic potential energy stored?",
+      "options": [
+        "It becomes four times as large.",
+        "It doubles.",
+        "It becomes half as large.",
+        "It stays the same."
+      ],
+      "correctAnswer": "It becomes four times as large.",
+      "correctIndex": 0,
+      "explanation": "Elastic potential energy depends on extension squared, so doubling extension makes the energy four times larger.",
+      "misconceptionTag": "elastic-extension-linear",
+      "distractorRationales": [
+        {
+          "text": "It doubles.",
+          "misconception": ""
+        },
+        {
+          "text": "It becomes half as large.",
+          "misconception": ""
+        },
+        {
+          "text": "It stays the same.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain the squared relationship in elastic potential energy."
+    },
+    {
+      "id": "edexcel_energy_specific_heat_equation_012",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_specific_heat_equation_012_lo",
+        "statement": "Recall the specific heat capacity equation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recall",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_specific_heat_equation_012",
+      "conceptFamily": "recall_the_specific_heat_capacity_equation",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "Which equation links energy change, mass, specific heat capacity and temperature change?",
+      "question": "Which equation links energy change, mass, specific heat capacity and temperature change?",
+      "options": [
+        "energy change = mass × specific heat capacity × temperature change",
+        "energy change = mass × gravitational field strength × height",
+        "energy change = 0.5 × mass × speed²",
+        "energy change = force ÷ extension"
+      ],
+      "correctAnswer": "energy change = mass × specific heat capacity × temperature change",
+      "correctIndex": 0,
+      "explanation": "Heating calculations use ΔE = mcΔθ, where c is specific heat capacity.",
+      "misconceptionTag": "specific-heat-equation",
+      "distractorRationales": [
+        {
+          "text": "energy change = mass × gravitational field strength × height",
+          "misconception": ""
+        },
+        {
+          "text": "energy change = 0.5 × mass × speed²",
+          "misconception": ""
+        },
+        {
+          "text": "energy change = force ÷ extension",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the specific heat capacity equation."
+    },
+    {
+      "id": "edexcel_energy_specific_heat_calculation_013",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_specific_heat_calculation_013_lo",
+        "statement": "Calculate energy transferred using specific heat capacity.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_specific_heat_calculation_013",
+      "conceptFamily": "calculate_energy_transferred_using_specific_heat_capacity",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A 0.50 kg block has a specific heat capacity of 900 J/kg °C. It warms by 4.0 °C. What is the energy transferred to it?",
+      "question": "A 0.50 kg block has a specific heat capacity of 900 J/kg °C. It warms by 4.0 °C. What is the energy transferred to it?",
+      "options": [
+        "1800 J",
+        "450 J",
+        "3600 J",
+        "112.5 J"
+      ],
+      "correctAnswer": "1800 J",
+      "correctIndex": 0,
+      "explanation": "Use ΔE = mcΔθ = 0.50 × 900 × 4.0 = 1800 J.",
+      "misconceptionTag": "specific-heat-multiply",
+      "distractorRationales": [
+        {
+          "text": "450 J",
+          "misconception": ""
+        },
+        {
+          "text": "3600 J",
+          "misconception": ""
+        },
+        {
+          "text": "112.5 J",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate energy transferred using specific heat capacity."
+    },
+    {
+      "id": "edexcel_energy_specific_heat_find_temperature_014",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_specific_heat_find_temperature_014_lo",
+        "statement": "Rearrange the specific heat capacity equation to find temperature change.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_energy_specific_heat_find_temperature_014",
+      "conceptFamily": "rearrange_the_specific_heat_capacity_equation_to_find_temperature_change",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A 2.0 kg object receives 1000 J of energy. Its specific heat capacity is 250 J/kg °C. What is its temperature rise?",
+      "question": "A 2.0 kg object receives 1000 J of energy. Its specific heat capacity is 250 J/kg °C. What is its temperature rise?",
+      "options": [
+        "2.0 °C",
+        "0.50 °C",
+        "4.0 °C",
+        "500 °C"
+      ],
+      "correctAnswer": "2.0 °C",
+      "correctIndex": 0,
+      "explanation": "Rearrange ΔE = mcΔθ to Δθ = ΔE ÷ (mc) = 1000 ÷ (2.0 × 250) = 2.0 °C.",
+      "misconceptionTag": "specific-heat-rearrange-temperature",
+      "distractorRationales": [
+        {
+          "text": "0.50 °C",
+          "misconception": ""
+        },
+        {
+          "text": "4.0 °C",
+          "misconception": ""
+        },
+        {
+          "text": "500 °C",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the specific heat capacity equation to find temperature change."
+    },
+    {
+      "id": "edexcel_energy_equation_selection_015",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_equation_selection_015_lo",
+        "statement": "Choose the correct energy equation from the quantities given.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_equation_selection_015",
+      "conceptFamily": "choose_the_correct_energy_equation_from_the_quantities_given",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A question gives mass, speed and asks for energy. Which equation should be used?",
+      "question": "A question gives mass, speed and asks for energy. Which equation should be used?",
+      "options": [
+        "kinetic energy = 0.5 × mass × speed²",
+        "change in GPE = mass × gravitational field strength × height",
+        "energy change = mass × specific heat capacity × temperature change",
+        "elastic potential energy = 0.5 × spring constant × extension²"
+      ],
+      "correctAnswer": "kinetic energy = 0.5 × mass × speed²",
+      "correctIndex": 0,
+      "explanation": "Mass and speed are the quantities needed for the kinetic energy equation.",
+      "misconceptionTag": "equation-selection",
+      "distractorRationales": [
+        {
+          "text": "change in GPE = mass × gravitational field strength × height",
+          "misconception": ""
+        },
+        {
+          "text": "energy change = mass × specific heat capacity × temperature change",
+          "misconception": ""
+        },
+        {
+          "text": "elastic potential energy = 0.5 × spring constant × extension²",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose the correct energy equation from the quantities given."
+    },
+    {
+      "id": "edexcel_energy_transfer_gpe_to_ke_016",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_transfer_gpe_to_ke_016_lo",
+        "statement": "Describe energy transfers for a falling object.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_transfer_gpe_to_ke_016",
+      "conceptFamily": "describe_energy_transfers_for_a_falling_object",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A ball falls from a shelf. Ignoring air resistance, which energy transfer happens as it falls?",
+      "question": "A ball falls from a shelf. Ignoring air resistance, which energy transfer happens as it falls?",
+      "options": [
+        "Gravitational potential energy decreases and kinetic energy increases.",
+        "Kinetic energy decreases and gravitational potential energy increases.",
+        "Elastic potential energy increases because the ball is not stretched.",
+        "Chemical energy increases because the ball is moving."
+      ],
+      "correctAnswer": "Gravitational potential energy decreases and kinetic energy increases.",
+      "correctIndex": 0,
+      "explanation": "As the ball falls, energy is transferred from its gravitational potential store to its kinetic store.",
+      "misconceptionTag": "falling-energy-transfer",
+      "distractorRationales": [
+        {
+          "text": "Kinetic energy decreases and gravitational potential energy increases.",
+          "misconception": ""
+        },
+        {
+          "text": "Elastic potential energy increases because the ball is not stretched.",
+          "misconception": ""
+        },
+        {
+          "text": "Chemical energy increases because the ball is moving.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe energy transfers for a falling object."
+    },
+    {
+      "id": "edexcel_energy_fair_test_heating_017",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_fair_test_heating_017_lo",
+        "statement": "Connect energy transferred by a heater to heating calculations.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "applied_context",
+      "patternId": "authored:edexcel_energy_fair_test_heating_017",
+      "conceptFamily": "connect_energy_transferred_by_a_heater_to_heating_calculations",
+      "contextType": "exam_style",
+      "skill": "Gravitational Potential Energy practice",
+      "stem": "A student compares how quickly two metal blocks warm up using the same heater. Which measurement is needed to calculate the energy transferred?",
+      "question": "A student compares how quickly two metal blocks warm up using the same heater. Which measurement is needed to calculate the energy transferred?",
+      "options": [
+        "The time the heater is on and the heater power.",
+        "Only the colour of each block.",
+        "Only the final temperature of the room.",
+        "The distance from the bench to the floor."
+      ],
+      "correctAnswer": "The time the heater is on and the heater power.",
+      "correctIndex": 0,
+      "explanation": "Energy transferred by a heater can be found from power × time before using heating equations.",
+      "misconceptionTag": "heater-energy",
+      "distractorRationales": [
+        {
+          "text": "Only the colour of each block.",
+          "misconception": ""
+        },
+        {
+          "text": "Only the final temperature of the room.",
+          "misconception": ""
+        },
+        {
+          "text": "The distance from the bench to the floor.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Connect energy transferred by a heater to heating calculations."
+    },
+    {
+      "id": "edexcel_energy_energy_conservation_drop_018",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Energy",
+      "subtopic": "Gravitational Potential Energy",
+      "topicSlug": "energy",
+      "subtopicSlug": "gravitational_potential_energy",
+      "topicId": "energy_equations",
+      "specRef": "8.3",
+      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_energy_energy_conservation_drop_018_lo",
+        "statement": "Apply conservation of energy to a falling object.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "8.3:kinetic_energy:applied_context",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a comparison question",
+      "responseMode": "concept",
+      "patternId": "authored:edexcel_energy_energy_conservation_drop_018",
+      "conceptFamily": "apply_conservation_of_energy_to_a_falling_object",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "In a comparison question, which conclusion is correct for gravitational potential energy? Demand focus: use the kinetic energy equation.",
-      "question": "In a comparison question, which conclusion is correct for gravitational potential energy? Demand focus: use the kinetic energy equation.",
+      "stem": "A 1.5 kg object loses 45 J of gravitational potential energy as it falls. Ignoring air resistance, what happens to its kinetic energy?",
+      "question": "A 1.5 kg object loses 45 J of gravitational potential energy as it falls. Ignoring air resistance, what happens to its kinetic energy?",
       "options": [
-        "For gravitational potential energy: Kinetic energy does not depend on speed.",
-        "In this item, it means that kinetic energy = weight × height.",
-        "In this item, it means that kinetic energy = mass × speed.",
-        "For gravitational potential energy, this would mean that kinetic energy = 0.5 × mass × speed²."
+        "It increases by about 45 J.",
+        "It decreases by 45 J.",
+        "It stays at zero.",
+        "It becomes 1.5 J."
       ],
-      "correctAnswer": "For gravitational potential energy, this would mean that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 3,
-      "explanation": "8.3 targets: Use the kinetic energy equation. Focus area: Gravitational Potential Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a comparison question; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy = mass × speed."
-        },
-        {
-          "text": "In this item, it means that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy = weight × height."
-        },
-        {
-          "text": "For gravitational potential energy: Kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy does not depend on speed."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy_misconception_correction_008",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "8.3:elastic_energy:misconception_correction",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a method-choice question",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "Which answer corrects a misconception about gravitational potential energy? Check the clue before choosing: Use elastic potential energy.",
-      "question": "Which answer corrects a misconception about gravitational potential energy? Check the clue before choosing: Use elastic potential energy.",
-      "options": [
-        "The claim for gravitational potential energy is that elastic energy is measured in kilograms.",
-        "For gravitational potential energy: Elastic energy = spring constant × extension.",
-        "In this item, it means that elastic energy is independent of extension.",
-        "For gravitational potential energy: Elastic potential energy = 0.5 × spring constant × extension²."
-      ],
-      "correctAnswer": "For gravitational potential energy: Elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 3,
-      "explanation": "8.3 targets: Use elastic potential energy. Focus area: Gravitational Potential Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a method-choice question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that elastic energy is independent of extension.",
-          "misconception": "Elastic energy = spring constant × extension."
-        },
-        {
-          "text": "The claim for gravitational potential energy is that elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy is independent of extension."
-        },
-        {
-          "text": "For gravitational potential energy: Elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy is measured in kilograms."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_specific_heat_exam_decision_009",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "8.3:specific_heat:exam_decision",
-      "conceptFamily": "specific_heat",
-      "contextType": "a results discussion",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Check the clue before choosing: Use specific heat capacity.",
-      "question": "The mark scheme is testing use specific heat capacity. Which answer matches that point? Check the clue before choosing: Use specific heat capacity.",
-      "options": [
-        "For gravitational potential energy: Specific heat capacity is energy per second.",
-        "For gravitational potential energy: Temperature change is ignored in heating calculations.",
-        "For gravitational potential energy, this would mean that energy change = mass × specific heat capacity × temperature change.",
-        "For gravitational potential energy: Specific heat capacity is measured in newtons per metre."
-      ],
-      "correctAnswer": "For gravitational potential energy, this would mean that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 2,
-      "explanation": "8.3 targets: Use specific heat capacity. Focus area: Gravitational Potential Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a results discussion; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy: Specific heat capacity is measured in newtons per metre.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "For gravitational potential energy: Specific heat capacity is energy per second.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For gravitational potential energy: Temperature change is ignored in heating calculations.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_unit_check_representation_interpretation_010",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_unit_check",
-        "statement": "Check energy calculation units. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "8.3:unit_check:representation_interpretation",
-      "conceptFamily": "unit_check",
-      "contextType": "a classroom demonstration",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
-      "question": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
-      "options": [
-        "In this gravitational potential energy item, energy calculated from these equations is measured in joules.",
-        "For gravitational potential energy, the statement is that energy is measured in amperes.",
-        "The answer for gravitational potential energy says that energy is measured in pascals.",
-        "For gravitational potential energy, the statement is that energy is measured in hertz."
-      ],
-      "correctAnswer": "In this gravitational potential energy item, energy calculated from these equations is measured in joules.",
+      "correctAnswer": "It increases by about 45 J.",
       "correctIndex": 0,
-      "explanation": "8.3 targets: Check energy calculation units. Focus area: Gravitational Potential Energy. For this question, Energy calculated from these equations is measured in joules. Context used: a classroom demonstration; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_check",
+      "explanation": "If air resistance is ignored, the lost gravitational potential energy is transferred to kinetic energy.",
+      "misconceptionTag": "energy-lost-destroyed",
       "distractorRationales": [
         {
-          "text": "For gravitational potential energy, the statement is that energy is measured in amperes.",
-          "misconception": "Energy is measured in amperes."
+          "text": "It decreases by 45 J.",
+          "misconception": ""
         },
         {
-          "text": "For gravitational potential energy, the statement is that energy is measured in hertz.",
-          "misconception": "Energy is measured in hertz."
+          "text": "It stays at zero.",
+          "misconception": ""
         },
         {
-          "text": "The answer for gravitational potential energy says that energy is measured in pascals.",
-          "misconception": "Energy is measured in pascals."
+          "text": "It becomes 1.5 J.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Check energy calculation units."
+      "senNote": "Checks: Apply conservation of energy to a falling object."
     },
     {
-      "id": "edexcel_8_3_gravitational_potential_energy_gpe_concept_discrimination_011",
+      "id": "edexcel_energy_units_equations_019",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -13335,621 +13921,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_gpe",
-        "statement": "Use gravitational potential energy. (Gravitational Potential Energy)",
+        "id": "edexcel_energy_units_equations_019_lo",
+        "statement": "Use correct units for energy calculations.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "8.3:gpe:concept_discrimination",
-      "conceptFamily": "gpe",
-      "contextType": "a revision checkpoint",
+      "responseMode": "recall",
+      "patternId": "authored:edexcel_energy_units_equations_019",
+      "conceptFamily": "use_correct_units_for_energy_calculations",
+      "contextType": "exam_style",
       "skill": "Gravitational Potential Energy practice",
-      "stem": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
-      "question": "A student is comparing similar ideas in gravitational potential energy. Which statement is correct? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
+      "stem": "Several energy equations are used in GCSE Physics. What unit should the calculated energy have in each case?",
+      "question": "Several energy equations are used in GCSE Physics. What unit should the calculated energy have in each case?",
       "options": [
-        "For gravitational potential energy, it means that gPE = mass ÷ height.",
-        "For gravitational potential energy, the statement is that gPE is measured in newtons.",
-        "In this gravitational potential energy item, gravitational potential energy = mass × gravitational field strength × height.",
-        "For gravitational potential energy, it means that gPE depends only on speed."
+        "J",
+        "N/kg",
+        "m/s",
+        "kg °C"
       ],
-      "correctAnswer": "In this gravitational potential energy item, gravitational potential energy = mass × gravitational field strength × height.",
-      "correctIndex": 2,
-      "explanation": "8.3 targets: Use gravitational potential energy. Focus area: Gravitational Potential Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a revision checkpoint; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, it means that gPE depends only on speed.",
-          "misconception": "GPE = mass ÷ height."
-        },
-        {
-          "text": "For gravitational potential energy, the statement is that gPE is measured in newtons.",
-          "misconception": "GPE depends only on speed."
-        },
-        {
-          "text": "For gravitational potential energy, it means that gPE = mass ÷ height.",
-          "misconception": "GPE is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy_applied_context_012",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "8.3:kinetic_energy:applied_context",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "an exam-style data table",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "A question set in an exam-style data table tests gravitational potential energy. Which answer applies the idea correctly? Demand focus: use the kinetic energy equation.",
-      "question": "A question set in an exam-style data table tests gravitational potential energy. Which answer applies the idea correctly? Demand focus: use the kinetic energy equation.",
-      "options": [
-        "For gravitational potential energy, it means that kinetic energy does not depend on speed.",
-        "For gravitational potential energy, it means that kinetic energy = mass × speed.",
-        "For gravitational potential energy, the answer claims that kinetic energy = weight × height.",
-        "For gravitational potential energy, the statement is that kinetic energy = 0.5 × mass × speed²."
-      ],
-      "correctAnswer": "For gravitational potential energy, the statement is that kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 3,
-      "explanation": "8.3 targets: Use the kinetic energy equation. Focus area: Gravitational Potential Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: an exam-style data table; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, it means that kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy = mass × speed."
-        },
-        {
-          "text": "For gravitational potential energy, it means that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy = weight × height."
-        },
-        {
-          "text": "For gravitational potential energy, the answer claims that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy does not depend on speed."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy_data_interpretation_013",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "8.3:elastic_energy:data_interpretation",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a required-practical notebook",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use elastic potential energy.",
-      "question": "A small data set about gravitational potential energy is being interpreted. Which conclusion is valid? Check the clue before choosing: Use elastic potential energy.",
-      "options": [
-        "For gravitational potential energy, the option says that elastic energy is independent of extension.",
-        "For gravitational potential energy, this would mean that elastic potential energy = 0.5 × spring constant × extension².",
-        "For gravitational potential energy, the option says that elastic energy = spring constant × extension.",
-        "For gravitational potential energy, the option says that elastic energy is measured in kilograms."
-      ],
-      "correctAnswer": "For gravitational potential energy, this would mean that elastic potential energy = 0.5 × spring constant × extension².",
-      "correctIndex": 1,
-      "explanation": "8.3 targets: Use elastic potential energy. Focus area: Gravitational Potential Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a required-practical notebook; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, the option says that elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy = spring constant × extension."
-        },
-        {
-          "text": "For gravitational potential energy, the option says that elastic energy is independent of extension.",
-          "misconception": "Elastic energy is independent of extension."
-        },
-        {
-          "text": "For gravitational potential energy, the option says that elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy is measured in kilograms."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_specific_heat_exam_decision_014",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "8.3:specific_heat:exam_decision",
-      "conceptFamily": "specific_heat",
-      "contextType": "a technician report",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "Which answer is the strongest GCSE Physics response for gravitational potential energy? Check the clue before choosing: Use specific heat capacity.",
-      "question": "Which answer is the strongest GCSE Physics response for gravitational potential energy? Check the clue before choosing: Use specific heat capacity.",
-      "options": [
-        "For gravitational potential energy, the answer claims that specific heat capacity is energy per second.",
-        "For gravitational potential energy, the answer claims that specific heat capacity is measured in newtons per metre.",
-        "For gravitational potential energy, the answer claims that temperature change is ignored in heating calculations.",
-        "For gravitational potential energy, the statement is that energy change = mass × specific heat capacity × temperature change."
-      ],
-      "correctAnswer": "For gravitational potential energy, the statement is that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 3,
-      "explanation": "8.3 targets: Use specific heat capacity. Focus area: Gravitational Potential Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a technician report; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, the answer claims that temperature change is ignored in heating calculations.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "For gravitational potential energy, the answer claims that specific heat capacity is measured in newtons per metre.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For gravitational potential energy, the answer claims that specific heat capacity is energy per second.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_unit_check_direct_recall_015",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_unit_check",
-        "statement": "Check energy calculation units. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "8.3:unit_check:direct_recall",
-      "conceptFamily": "unit_check",
-      "contextType": "a labelled diagram",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "Which answer matches this gravitational potential energy objective: Check energy calculation units? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
-      "question": "Which answer matches this gravitational potential energy objective: Check energy calculation units? Choose the statement that fits this exact GCSE Physics idea: check energy calculation units.",
-      "options": [
-        "For gravitational potential energy, the statement is that energy is measured in amperes.",
-        "For gravitational potential energy, the answer claims that energy is measured in hertz.",
-        "For gravitational potential energy, the answer claims that energy calculated from these equations is measured in joules.",
-        "For gravitational potential energy, the answer claims that energy is measured in pascals."
-      ],
-      "correctAnswer": "For gravitational potential energy, the answer claims that energy calculated from these equations is measured in joules.",
-      "correctIndex": 2,
-      "explanation": "8.3 targets: Check energy calculation units. Focus area: Gravitational Potential Energy. For this question, Energy calculated from these equations is measured in joules. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:unit_check",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, the answer claims that energy is measured in pascals.",
-          "misconception": "Energy is measured in amperes."
-        },
-        {
-          "text": "For gravitational potential energy, the statement is that energy is measured in amperes.",
-          "misconception": "Energy is measured in hertz."
-        },
-        {
-          "text": "For gravitational potential energy, the answer claims that energy is measured in hertz.",
-          "misconception": "Energy is measured in pascals."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Check energy calculation units."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_gpe_concept_discrimination_016",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_gpe",
-        "statement": "Use gravitational potential energy. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "8.3:gpe:concept_discrimination",
-      "conceptFamily": "gpe",
-      "contextType": "a short calculation",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "Which option best separates the correct gravitational potential energy idea from a common mix-up? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
-      "question": "Which option best separates the correct gravitational potential energy idea from a common mix-up? Keep the answer focused on gravitational potential energy: use gravitational potential energy.",
-      "options": [
-        "For gravitational potential energy, it means that gPE is measured in newtons.",
-        "In this item, it means that gPE depends only on speed.",
-        "For gravitational potential energy, this would mean that gravitational potential energy = mass × gravitational field strength × height.",
-        "For gravitational potential energy, it means that gPE = mass ÷ height."
-      ],
-      "correctAnswer": "For gravitational potential energy, this would mean that gravitational potential energy = mass × gravitational field strength × height.",
-      "correctIndex": 2,
-      "explanation": "8.3 targets: Use gravitational potential energy. Focus area: Gravitational Potential Energy. For this question, Gravitational potential energy = mass × gravitational field strength × height. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:gpe",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, it means that gPE = mass ÷ height.",
-          "misconception": "GPE = mass ÷ height."
-        },
-        {
-          "text": "In this item, it means that gPE depends only on speed.",
-          "misconception": "GPE depends only on speed."
-        },
-        {
-          "text": "For gravitational potential energy, it means that gPE is measured in newtons.",
-          "misconception": "GPE is measured in newtons."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use gravitational potential energy."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy_misconception_correction_017",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_kinetic_energy",
-        "statement": "Use the kinetic energy equation. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "8.3:kinetic_energy:misconception_correction",
-      "conceptFamily": "kinetic_energy",
-      "contextType": "a safety decision",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "Which answer corrects a misconception about gravitational potential energy? Demand focus: use the kinetic energy equation.",
-      "question": "Which answer corrects a misconception about gravitational potential energy? Demand focus: use the kinetic energy equation.",
-      "options": [
-        "For gravitational potential energy, the answer claims that kinetic energy = mass × speed.",
-        "In this gravitational potential energy item, kinetic energy = 0.5 × mass × speed².",
-        "For gravitational potential energy, the statement is that kinetic energy does not depend on speed.",
-        "For gravitational potential energy, it means that kinetic energy = weight × height."
-      ],
-      "correctAnswer": "In this gravitational potential energy item, kinetic energy = 0.5 × mass × speed².",
-      "correctIndex": 1,
-      "explanation": "8.3 targets: Use the kinetic energy equation. Focus area: Gravitational Potential Energy. For this question, Kinetic energy = 0.5 × mass × speed². Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:kinetic_energy",
-      "distractorRationales": [
-        {
-          "text": "For gravitational potential energy, it means that kinetic energy = weight × height.",
-          "misconception": "Kinetic energy = mass × speed."
-        },
-        {
-          "text": "For gravitational potential energy, the statement is that kinetic energy does not depend on speed.",
-          "misconception": "Kinetic energy = weight × height."
-        },
-        {
-          "text": "For gravitational potential energy, the answer claims that kinetic energy = mass × speed.",
-          "misconception": "Kinetic energy does not depend on speed."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the kinetic energy equation."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy_data_interpretation_018",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_elastic_energy",
-        "statement": "Use elastic potential energy. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "8.3:elastic_energy:data_interpretation",
-      "conceptFamily": "elastic_energy",
-      "contextType": "a graph-reading task",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "Which conclusion about gravitational potential energy is supported by the evidence? Check the clue before choosing: Use elastic potential energy.",
-      "question": "Which conclusion about gravitational potential energy is supported by the evidence? Check the clue before choosing: Use elastic potential energy.",
-      "options": [
-        "For gravitational potential energy, the statement is that elastic potential energy = 0.5 × spring constant × extension².",
-        "In this gravitational potential energy item, elastic energy is independent of extension.",
-        "In this gravitational potential energy item, elastic energy is measured in kilograms.",
-        "In this gravitational potential energy item, elastic energy = spring constant × extension."
-      ],
-      "correctAnswer": "For gravitational potential energy, the statement is that elastic potential energy = 0.5 × spring constant × extension².",
+      "correctAnswer": "J",
       "correctIndex": 0,
-      "explanation": "8.3 targets: Use elastic potential energy. Focus area: Gravitational Potential Energy. For this question, Elastic potential energy = 0.5 × spring constant × extension². Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:elastic_energy",
+      "explanation": "Gravitational, kinetic, elastic and thermal energy changes are all energies, so their unit is the joule, J.",
+      "misconceptionTag": "energy-unit-joule",
       "distractorRationales": [
         {
-          "text": "In this gravitational potential energy item, elastic energy is measured in kilograms.",
-          "misconception": "Elastic energy = spring constant × extension."
+          "text": "N/kg",
+          "misconception": ""
         },
         {
-          "text": "In this gravitational potential energy item, elastic energy = spring constant × extension.",
-          "misconception": "Elastic energy is independent of extension."
+          "text": "m/s",
+          "misconception": ""
         },
         {
-          "text": "In this gravitational potential energy item, elastic energy is independent of extension.",
-          "misconception": "Elastic energy is measured in kilograms."
+          "text": "kg °C",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 8.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use elastic potential energy."
-    },
-    {
-      "id": "edexcel_8_3_gravitational_potential_energy_specific_heat_representation_interpretation_019",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Energy",
-      "subtopic": "Gravitational Potential Energy",
-      "topicSlug": "energy",
-      "subtopicSlug": "gravitational_potential_energy",
-      "topicId": "energy_equations",
-      "specRef": "8.3",
-      "specStatement": "Use gravitational potential energy and kinetic energy equations.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_8_3_gravitational_potential_energy_specific_heat",
-        "statement": "Use specific heat capacity. (Gravitational Potential Energy)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "8.3:specific_heat:representation_interpretation",
-      "conceptFamily": "specific_heat",
-      "contextType": "a comparison question",
-      "skill": "Gravitational Potential Energy practice",
-      "stem": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Check the clue before choosing: Use specific heat capacity.",
-      "question": "A representation of gravitational potential energy is described in words. Which interpretation is correct? Check the clue before choosing: Use specific heat capacity.",
-      "options": [
-        "In this item, it means that temperature change is ignored in heating calculations.",
-        "In this item, it means that specific heat capacity is energy per second.",
-        "For gravitational potential energy: Specific heat capacity is measured in newtons per metre.",
-        "The claim for gravitational potential energy is that energy change = mass × specific heat capacity × temperature change."
-      ],
-      "correctAnswer": "The claim for gravitational potential energy is that energy change = mass × specific heat capacity × temperature change.",
-      "correctIndex": 3,
-      "explanation": "8.3 targets: Use specific heat capacity. Focus area: Gravitational Potential Energy. For this question, Energy change = mass × specific heat capacity × temperature change. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:specific_heat",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that specific heat capacity is energy per second.",
-          "misconception": "Specific heat capacity is energy per second."
-        },
-        {
-          "text": "In this item, it means that temperature change is ignored in heating calculations.",
-          "misconception": "Temperature change is ignored in heating calculations."
-        },
-        {
-          "text": "For gravitational potential energy: Specific heat capacity is measured in newtons per metre.",
-          "misconception": "Specific heat capacity is measured in newtons per metre."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 8.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use specific heat capacity."
+      "senNote": "Checks: Use correct units for energy calculations."
     },
     {
       "id": "edexcel_3_1_internal_energy_internal_energy_direct_recall_001",

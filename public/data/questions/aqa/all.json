@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T11:03:38.828Z",
+  "generatedAt": "2026-05-02T11:24:04.205Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -29845,7 +29845,7 @@
       "senNote": "Checks: Interpret inertial mass from a force-acceleration graph."
     },
     {
-      "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_mass_direct_recall_001",
+      "id": "aqa_forces_weight_mass_gravity_mass_weight_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -29857,6 +29857,7 @@
       "subtopicSlug": "weight_mass_and_gravity",
       "topicId": "force_interactions",
       "specRef": "4.5.1.3",
+      "combinedSpecRef": "6.5.1.3",
       "specStatement": "Gravity, mass and weight.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -29867,56 +29868,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_mass",
-        "statement": "Distinguish mass and weight. (Weight, Mass and Gravity)",
+        "id": "aqa_forces_weight_mass_gravity_mass_weight_001_lo",
+        "statement": "Distinguish mass from weight in a different gravitational field.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.1.3:weight_mass:direct_recall",
-      "conceptFamily": "weight_mass",
-      "contextType": "a safety decision",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_weight_mass_gravity_mass_weight_001",
+      "conceptFamily": "distinguish_mass_from_weight_in_a_different_gravitational_field",
+      "contextType": "exam_style",
       "skill": "Weight, Mass and Gravity practice",
-      "stem": "Which statement is correct for weight, mass and gravity? Demand focus: distinguish mass and weight.",
-      "question": "Which statement is correct for weight, mass and gravity? Demand focus: distinguish mass and weight.",
+      "stem": "An astronaut takes a 70 kg equipment case from Earth to the Moon. Which statement is correct?",
+      "question": "An astronaut takes a 70 kg equipment case from Earth to the Moon. Which statement is correct?",
       "options": [
-        "For weight, mass and gravity, the statement is that mass is the amount of matter; weight is the gravitational force on the mass.",
-        "For weight, mass and gravity, the statement is that mass and weight are identical quantities.",
-        "For weight, mass and gravity, the statement is that mass is measured in newtons.",
-        "In this weight, mass and gravity item, weight is unchanged on every planet."
+        "The case has the same mass but a smaller weight on the Moon.",
+        "The case has a smaller mass and the same weight on the Moon.",
+        "The case has no mass on the Moon.",
+        "The case has the same weight everywhere in space."
       ],
-      "correctAnswer": "For weight, mass and gravity, the statement is that mass is the amount of matter; weight is the gravitational force on the mass.",
+      "correctAnswer": "The case has the same mass but a smaller weight on the Moon.",
       "correctIndex": 0,
-      "explanation": "4.5.1.3 targets: Distinguish mass and weight. Focus area: Weight, Mass and Gravity. For this question, Mass is the amount of matter; weight is the gravitational force on the mass. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_mass",
+      "explanation": "Mass is the amount of matter and does not depend on location. Weight is a gravitational force, so it changes when gravitational field strength changes.",
+      "misconceptionTag": "mass-weight-location",
       "distractorRationales": [
         {
-          "text": "For weight, mass and gravity, the statement is that mass is measured in newtons.",
-          "misconception": "Mass is measured in newtons."
+          "text": "The case has a smaller mass and the same weight on the Moon.",
+          "misconception": "mass treated as changing with location"
         },
         {
-          "text": "In this weight, mass and gravity item, weight is unchanged on every planet.",
-          "misconception": "Weight is unchanged on every planet."
+          "text": "The case has no mass on the Moon.",
+          "misconception": "mass confused with weight"
         },
         {
-          "text": "For weight, mass and gravity, the statement is that mass and weight are identical quantities.",
-          "misconception": "Mass and weight are identical quantities."
+          "text": "The case has the same weight everywhere in space.",
+          "misconception": "weight treated as independent of gravity"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Distinguish mass and weight."
+      "senNote": "Checks: Distinguish mass from weight in a different gravitational field."
     },
     {
-      "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_equation_concept_discrimination_002",
+      "id": "aqa_forces_weight_mass_gravity_weight_calculation_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -29928,6 +29930,7 @@
       "subtopicSlug": "weight_mass_and_gravity",
       "topicId": "force_interactions",
       "specRef": "4.5.1.3",
+      "combinedSpecRef": "6.5.1.3",
       "specStatement": "Gravity, mass and weight.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -29938,56 +29941,203 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_equation",
-        "statement": "Use weight = mass × gravitational field strength. (Weight, Mass and Gravity)",
+        "id": "aqa_forces_weight_mass_gravity_weight_calculation_002_lo",
+        "statement": "Calculate weight from mass and gravitational field strength.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_weight_mass_gravity_weight_calculation_002",
+      "conceptFamily": "calculate_weight_from_mass_and_gravitational_field_strength",
+      "contextType": "exam_style",
+      "skill": "Weight, Mass and Gravity practice",
+      "stem": "A 12 kg bag is on Earth where the gravitational field strength is \\(9.8\\,N/kg\\). What is the weight of the bag?",
+      "question": "A 12 kg bag is on Earth where the gravitational field strength is \\(9.8\\,N/kg\\). What is the weight of the bag?",
+      "options": [
+        "118 N",
+        "1.2 N",
+        "21.8 N",
+        "12 N"
+      ],
+      "correctAnswer": "118 N",
+      "correctIndex": 0,
+      "explanation": "Use \\(W = mg\\). The weight is \\(12 \\times 9.8 = 117.6\\,N\\), which rounds to \\(118\\,N\\).",
+      "misconceptionTag": "weight-equation-multiply",
+      "distractorRationales": [
+        {
+          "text": "1.2 N",
+          "misconception": "mass divided by gravitational field strength"
+        },
+        {
+          "text": "21.8 N",
+          "misconception": "mass and gravitational field strength added"
+        },
+        {
+          "text": "12 N",
+          "misconception": "mass copied as weight"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate weight from mass and gravitational field strength."
+    },
+    {
+      "id": "aqa_forces_weight_mass_gravity_find_mass_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Weight, Mass and Gravity",
+      "topicSlug": "forces",
+      "subtopicSlug": "weight_mass_and_gravity",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.3",
+      "combinedSpecRef": "6.5.1.3",
+      "specStatement": "Gravity, mass and weight.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_weight_mass_gravity_find_mass_003_lo",
+        "statement": "Rearrange the weight equation to find mass.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_forces_weight_mass_gravity_find_mass_003",
+      "conceptFamily": "rearrange_the_weight_equation_to_find_mass",
+      "contextType": "exam_style",
+      "skill": "Weight, Mass and Gravity practice",
+      "stem": "A rock has a weight of 49 N on Earth. Take \\(g = 9.8\\,N/kg\\). What is the mass of the rock?",
+      "question": "A rock has a weight of 49 N on Earth. Take \\(g = 9.8\\,N/kg\\). What is the mass of the rock?",
+      "options": [
+        "5.0 kg",
+        "480 kg",
+        "58.8 kg",
+        "0.20 kg"
+      ],
+      "correctAnswer": "5.0 kg",
+      "correctIndex": 0,
+      "explanation": "Rearrange \\(W = mg\\) to \\(m = W \\div g\\). The mass is \\(49 \\div 9.8 = 5.0\\,kg\\).",
+      "misconceptionTag": "weight-equation-rearrange-mass",
+      "distractorRationales": [
+        {
+          "text": "480 kg",
+          "misconception": "weight multiplied by gravitational field strength"
+        },
+        {
+          "text": "58.8 kg",
+          "misconception": "weight and gravitational field strength added"
+        },
+        {
+          "text": "0.20 kg",
+          "misconception": "gravitational field strength divided by weight"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Rearrange the weight equation to find mass."
+    },
+    {
+      "id": "aqa_forces_weight_mass_gravity_non_contact_004",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Weight, Mass and Gravity",
+      "topicSlug": "forces",
+      "subtopicSlug": "weight_mass_and_gravity",
+      "topicId": "force_interactions",
+      "specRef": "4.5.1.3",
+      "combinedSpecRef": "6.5.1.3",
+      "specStatement": "Gravity, mass and weight.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_weight_mass_gravity_non_contact_004_lo",
+        "statement": "Classify weight as a non-contact force.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.1.3:weight_equation:concept_discrimination",
-      "conceptFamily": "weight_equation",
-      "contextType": "a graph-reading task",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_weight_mass_gravity_non_contact_004",
+      "conceptFamily": "classify_weight_as_a_non_contact_force",
+      "contextType": "exam_style",
       "skill": "Weight, Mass and Gravity practice",
-      "stem": "A student is comparing similar ideas in weight, mass and gravity. Which statement is correct? Demand focus: use weight = mass × gravitational field strength.",
-      "question": "A student is comparing similar ideas in weight, mass and gravity. Which statement is correct? Demand focus: use weight = mass × gravitational field strength.",
+      "stem": "A ball is falling through the air. Which statement correctly describes the gravitational force on the ball?",
+      "question": "A ball is falling through the air. Which statement correctly describes the gravitational force on the ball?",
       "options": [
-        "For weight, mass and gravity, the answer claims that gravitational field strength has no unit.",
-        "For weight, mass and gravity, the answer claims that weight is measured in kilograms.",
-        "For weight, mass and gravity, the statement is that weight = mass × gravitational field strength.",
-        "For weight, mass and gravity, the answer claims that weight = mass ÷ gravitational field strength."
+        "It acts without the Earth touching the ball.",
+        "Air resistance",
+        "Friction from the ground",
+        "Tension in a string"
       ],
-      "correctAnswer": "For weight, mass and gravity, the statement is that weight = mass × gravitational field strength.",
-      "correctIndex": 2,
-      "explanation": "4.5.1.3 targets: Use weight = mass × gravitational field strength. Focus area: Weight, Mass and Gravity. For this question, Weight = mass × gravitational field strength. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_equation",
+      "correctAnswer": "It acts without the Earth touching the ball.",
+      "correctIndex": 0,
+      "explanation": "The gravitational force acts at a distance, so it is a non-contact force. Air resistance, friction and tension are contact forces.",
+      "misconceptionTag": "weight-contact-force",
       "distractorRationales": [
         {
-          "text": "For weight, mass and gravity, the answer claims that weight is measured in kilograms.",
-          "misconception": "Weight = mass ÷ gravitational field strength."
+          "text": "Air resistance",
+          "misconception": "air resistance is a contact force from air particles"
         },
         {
-          "text": "For weight, mass and gravity, the answer claims that gravitational field strength has no unit.",
-          "misconception": "Weight is measured in kilograms."
+          "text": "Friction from the ground",
+          "misconception": "force from surface contact chosen"
         },
         {
-          "text": "For weight, mass and gravity, the answer claims that weight = mass ÷ gravitational field strength.",
-          "misconception": "Gravitational field strength has no unit."
+          "text": "Tension in a string",
+          "misconception": "contact force through a string chosen"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use weight = mass × gravitational field strength."
+      "senNote": "Checks: Classify weight as a non-contact force."
     },
     {
-      "id": "aqa_4_5_1_3_weight_mass_and_gravity_contact_noncontact_misconception_correction_003",
+      "id": "aqa_forces_weight_mass_gravity_graph_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -29999,6 +30149,7 @@
       "subtopicSlug": "weight_mass_and_gravity",
       "topicId": "force_interactions",
       "specRef": "4.5.1.3",
+      "combinedSpecRef": "6.5.1.3",
       "specStatement": "Gravity, mass and weight.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -30009,195 +30160,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_1_3_weight_mass_and_gravity_contact_noncontact",
-        "statement": "Classify contact and non-contact forces. (Weight, Mass and Gravity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.1.3:contact_noncontact:misconception_correction",
-      "conceptFamily": "contact_noncontact",
-      "contextType": "a comparison question",
-      "skill": "Weight, Mass and Gravity practice",
-      "stem": "A revision note about weight, mass and gravity contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: classify contact and non-contact forces.",
-      "question": "A revision note about weight, mass and gravity contains an error. Which replacement is correct? Choose the statement that fits this exact GCSE Physics idea: classify contact and non-contact forces.",
-      "options": [
-        "For weight, mass and gravity, the answer claims that magnetic forces require objects to touch.",
-        "For weight, mass and gravity, the answer claims that friction is a contact force; gravity and magnetic force can act without contact.",
-        "For weight, mass and gravity, the answer claims that friction acts without contact.",
-        "For weight, mass and gravity, the statement is that gravity needs touching surfaces."
-      ],
-      "correctAnswer": "For weight, mass and gravity, the answer claims that friction is a contact force; gravity and magnetic force can act without contact.",
-      "correctIndex": 1,
-      "explanation": "4.5.1.3 targets: Classify contact and non-contact forces. Focus area: Weight, Mass and Gravity. For this question, Friction is a contact force; gravity and magnetic force can act without contact. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:contact_noncontact",
-      "distractorRationales": [
-        {
-          "text": "For weight, mass and gravity, the answer claims that magnetic forces require objects to touch.",
-          "misconception": "Gravity needs touching surfaces."
-        },
-        {
-          "text": "For weight, mass and gravity, the statement is that gravity needs touching surfaces.",
-          "misconception": "Friction acts without contact."
-        },
-        {
-          "text": "For weight, mass and gravity, the answer claims that friction acts without contact.",
-          "misconception": "Magnetic forces require objects to touch."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Classify contact and non-contact forces."
-    },
-    {
-      "id": "aqa_4_5_1_3_weight_mass_and_gravity_free_body_data_interpretation_004",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Weight, Mass and Gravity",
-      "topicSlug": "forces",
-      "subtopicSlug": "weight_mass_and_gravity",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.3",
-      "specStatement": "Gravity, mass and weight.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_3_weight_mass_and_gravity_free_body",
-        "statement": "Identify forces on an object. (Weight, Mass and Gravity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.1.3:free_body:data_interpretation",
-      "conceptFamily": "free_body",
-      "contextType": "a method-choice question",
-      "skill": "Weight, Mass and Gravity practice",
-      "stem": "A small data set about weight, mass and gravity is being interpreted. Which conclusion is valid? Check the clue before choosing: Identify forces on an object.",
-      "question": "A small data set about weight, mass and gravity is being interpreted. Which conclusion is valid? Check the clue before choosing: Identify forces on an object.",
-      "options": [
-        "For weight, mass and gravity, this would mean that every object must have exactly two forces.",
-        "For weight, mass and gravity, the option says that forces are drawn without direction.",
-        "For weight, mass and gravity: Force arrows show energy stores.",
-        "In this item, it means that a force diagram should show forces with arrows in their correct directions."
-      ],
-      "correctAnswer": "In this item, it means that a force diagram should show forces with arrows in their correct directions.",
-      "correctIndex": 3,
-      "explanation": "4.5.1.3 targets: Identify forces on an object. Focus area: Weight, Mass and Gravity. For this question, A force diagram should show forces with arrows in their correct directions. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:free_body",
-      "distractorRationales": [
-        {
-          "text": "For weight, mass and gravity: Force arrows show energy stores.",
-          "misconception": "Force arrows show energy stores."
-        },
-        {
-          "text": "For weight, mass and gravity, this would mean that every object must have exactly two forces.",
-          "misconception": "Every object must have exactly two forces."
-        },
-        {
-          "text": "For weight, mass and gravity, the option says that forces are drawn without direction.",
-          "misconception": "Forces are drawn without direction."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Identify forces on an object."
-    },
-    {
-      "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_mass_representation_interpretation_005",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Weight, Mass and Gravity",
-      "topicSlug": "forces",
-      "subtopicSlug": "weight_mass_and_gravity",
-      "topicId": "force_interactions",
-      "specRef": "4.5.1.3",
-      "specStatement": "Gravity, mass and weight.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_1_3_weight_mass_and_gravity_weight_mass",
-        "statement": "Distinguish mass and weight. (Weight, Mass and Gravity)",
+        "id": "aqa_forces_weight_mass_gravity_graph_005_lo",
+        "statement": "Interpret gravitational field strength from a weight-mass graph.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
       "demand": "high",
       "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.1.3:weight_mass:representation_interpretation",
-      "conceptFamily": "weight_mass",
-      "contextType": "a results discussion",
+      "commandWord": "interpret",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_weight_mass_gravity_graph_005",
+      "conceptFamily": "interpret_gravitational_field_strength_from_a_weight_mass_graph",
+      "contextType": "exam_style",
       "skill": "Weight, Mass and Gravity practice",
-      "stem": "Which option correctly reads the weight, mass and gravity model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: distinguish mass and weight.",
-      "question": "Which option correctly reads the weight, mass and gravity model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: distinguish mass and weight.",
+      "stem": "A graph of weight against mass for objects on the same planet is a straight line through the origin. What does the gradient represent?",
+      "question": "A graph of weight against mass for objects on the same planet is a straight line through the origin. What does the gradient represent?",
       "options": [
-        "The claim for weight, mass and gravity is that mass is measured in newtons.",
-        "For weight, mass and gravity, it means that weight is unchanged on every planet.",
-        "For weight, mass and gravity, it means that mass and weight are identical quantities.",
-        "For weight, mass and gravity, the option says that mass is the amount of matter; weight is the gravitational force on the mass."
+        "Gravitational field strength.",
+        "The mass of each object.",
+        "The volume of each object.",
+        "The distance travelled by each object."
       ],
-      "correctAnswer": "For weight, mass and gravity, the option says that mass is the amount of matter; weight is the gravitational force on the mass.",
-      "correctIndex": 3,
-      "explanation": "4.5.1.3 targets: Distinguish mass and weight. Focus area: Weight, Mass and Gravity. For this question, Mass is the amount of matter; weight is the gravitational force on the mass. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:weight_mass",
+      "correctAnswer": "Gravitational field strength.",
+      "correctIndex": 0,
+      "explanation": "From \\(W = mg\\), a graph of weight against mass has gradient equal to \\(g\\), the gravitational field strength.",
+      "misconceptionTag": "weight-mass-gradient",
       "distractorRationales": [
         {
-          "text": "For weight, mass and gravity, it means that weight is unchanged on every planet.",
-          "misconception": "Mass is measured in newtons."
+          "text": "The mass of each object.",
+          "misconception": "axis variable confused with gradient"
         },
         {
-          "text": "For weight, mass and gravity, it means that mass and weight are identical quantities.",
-          "misconception": "Weight is unchanged on every planet."
+          "text": "The volume of each object.",
+          "misconception": "unrelated property chosen"
         },
         {
-          "text": "The claim for weight, mass and gravity is that mass is measured in newtons.",
-          "misconception": "Mass and weight are identical quantities."
+          "text": "The distance travelled by each object.",
+          "misconception": "motion graph rule transferred incorrectly"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.1.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.1.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Distinguish mass and weight."
+      "senNote": "Checks: Interpret gravitational field strength from a weight-mass graph."
     },
     {
       "id": "aqa_4_5_6_3_stopping_distance_stopping_total_direct_recall_001",
@@ -31965,7 +31975,7 @@
       "senNote": "This checks one idea only: Explain braking force effects."
     },
     {
-      "id": "aqa_4_5_6_2_1_terminal_velocity_terminal_velocity_direct_recall_001",
+      "id": "aqa_forces_terminal_velocity_start_fall_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -31977,6 +31987,7 @@
       "subtopicSlug": "terminal_velocity",
       "topicId": "terminal_velocity",
       "specRef": "4.5.6.2.1",
+      "combinedSpecRef": "6.5.4.2.1",
       "specStatement": "Newton's First Law and terminal velocity contexts.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -31987,127 +31998,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_1_terminal_velocity_terminal_velocity",
-        "statement": "Describe terminal velocity. (Terminal Velocity)",
+        "id": "aqa_forces_terminal_velocity_start_fall_001_lo",
+        "statement": "Explain why a falling object accelerates at the start of a fall.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.5.6.2.1:terminal_velocity:direct_recall",
-      "conceptFamily": "terminal_velocity",
-      "contextType": "a comparison question",
-      "skill": "Terminal Velocity practice",
-      "stem": "Which statement is correct for terminal velocity? Keep the answer focused on terminal velocity: describe terminal velocity.",
-      "question": "Which statement is correct for terminal velocity? Keep the answer focused on terminal velocity: describe terminal velocity.",
-      "options": [
-        "For terminal velocity, it means that terminal velocity means no forces act.",
-        "For terminal velocity, the statement is that terminal velocity occurs when weight and drag are balanced, so velocity is constant.",
-        "The answer for terminal velocity says that terminal velocity means acceleration is largest.",
-        "The answer for terminal velocity says that terminal velocity happens only when weight is zero."
-      ],
-      "correctAnswer": "For terminal velocity, the statement is that terminal velocity occurs when weight and drag are balanced, so velocity is constant.",
-      "correctIndex": 1,
-      "explanation": "4.5.6.2.1 targets: Describe terminal velocity. Focus area: Terminal Velocity. For this question, Terminal velocity occurs when weight and drag are balanced, so velocity is constant. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:terminal_velocity",
-      "distractorRationales": [
-        {
-          "text": "The answer for terminal velocity says that terminal velocity means acceleration is largest.",
-          "misconception": "Terminal velocity means acceleration is largest."
-        },
-        {
-          "text": "For terminal velocity, it means that terminal velocity means no forces act.",
-          "misconception": "Terminal velocity means no forces act."
-        },
-        {
-          "text": "The answer for terminal velocity says that terminal velocity happens only when weight is zero.",
-          "misconception": "Terminal velocity happens only when weight is zero."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.1; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe terminal velocity."
-    },
-    {
-      "id": "aqa_4_5_6_2_1_terminal_velocity_falling_start_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Forces",
-      "subtopic": "Terminal Velocity",
-      "topicSlug": "forces",
-      "subtopicSlug": "terminal_velocity",
-      "topicId": "terminal_velocity",
-      "specRef": "4.5.6.2.1",
-      "specStatement": "Newton's First Law and terminal velocity contexts.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_5_6_2_1_terminal_velocity_falling_start",
-        "statement": "Explain acceleration at the start of a fall. (Terminal Velocity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
+      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.5.6.2.1:falling_start:concept_discrimination",
-      "conceptFamily": "falling_start",
-      "contextType": "a method-choice question",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_terminal_velocity_start_fall_001",
+      "conceptFamily": "explain_why_a_falling_object_accelerates_at_the_start_of_a_fall",
+      "contextType": "exam_style",
       "skill": "Terminal Velocity practice",
-      "stem": "A student is comparing similar ideas in terminal velocity. Which statement is correct? Demand focus: explain acceleration at the start of a fall.",
-      "question": "A student is comparing similar ideas in terminal velocity. Which statement is correct? Demand focus: explain acceleration at the start of a fall.",
+      "stem": "A skydiver has just stepped out of a plane. Air resistance is very small at first. What happens to the skydiver?",
+      "question": "A skydiver has just stepped out of a plane. Air resistance is very small at first. What happens to the skydiver?",
       "options": [
-        "The answer for terminal velocity says that at first weight is greater than drag, so the object accelerates downward.",
-        "In this terminal velocity item, at first the object has no weight.",
-        "In this terminal velocity item, at first forces are always balanced.",
-        "In this terminal velocity item, at first drag is greater than weight."
+        "The skydiver accelerates downwards because weight is greater than air resistance.",
+        "The skydiver moves at terminal velocity immediately.",
+        "The skydiver accelerates upwards because air resistance is larger than weight.",
+        "The skydiver has no resultant force because they are moving."
       ],
-      "correctAnswer": "The answer for terminal velocity says that at first weight is greater than drag, so the object accelerates downward.",
+      "correctAnswer": "The skydiver accelerates downwards because weight is greater than air resistance.",
       "correctIndex": 0,
-      "explanation": "4.5.6.2.1 targets: Explain acceleration at the start of a fall. Focus area: Terminal Velocity. For this question, At first weight is greater than drag, so the object accelerates downward. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:falling_start",
+      "explanation": "At the start, weight is much larger than air resistance, so there is a downward resultant force and the skydiver accelerates downwards.",
+      "misconceptionTag": "terminal-start-force-balance",
       "distractorRationales": [
         {
-          "text": "In this terminal velocity item, at first forces are always balanced.",
-          "misconception": "At first drag is greater than weight."
+          "text": "The skydiver moves at terminal velocity immediately.",
+          "misconception": "terminal velocity assumed at the start"
         },
         {
-          "text": "In this terminal velocity item, at first the object has no weight.",
-          "misconception": "At first forces are always balanced."
+          "text": "The skydiver accelerates upwards because air resistance is larger than weight.",
+          "misconception": "force direction reversed"
         },
         {
-          "text": "In this terminal velocity item, at first drag is greater than weight.",
-          "misconception": "At first the object has no weight."
+          "text": "The skydiver has no resultant force because they are moving.",
+          "misconception": "motion confused with balanced forces"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain acceleration at the start of a fall."
+      "senNote": "Checks: Explain why a falling object accelerates at the start of a fall."
     },
     {
-      "id": "aqa_4_5_6_2_1_terminal_velocity_drag_increase_misconception_correction_003",
+      "id": "aqa_forces_terminal_velocity_force_balance_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -32119,6 +32060,7 @@
       "subtopicSlug": "terminal_velocity",
       "topicId": "terminal_velocity",
       "specRef": "4.5.6.2.1",
+      "combinedSpecRef": "6.5.4.2.1",
       "specStatement": "Newton's First Law and terminal velocity contexts.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -32129,56 +32071,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_1_terminal_velocity_drag_increase",
-        "statement": "Explain why drag changes. (Terminal Velocity)",
+        "id": "aqa_forces_terminal_velocity_force_balance_002_lo",
+        "statement": "Describe the force balance at terminal velocity.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "recall",
+      "patternId": "authored:aqa_forces_terminal_velocity_force_balance_002",
+      "conceptFamily": "describe_the_force_balance_at_terminal_velocity",
+      "contextType": "exam_style",
+      "skill": "Terminal Velocity practice",
+      "stem": "A falling object reaches terminal velocity. Which statement describes the forces on it?",
+      "question": "A falling object reaches terminal velocity. Which statement describes the forces on it?",
+      "options": [
+        "Air resistance is equal to weight.",
+        "Weight is zero.",
+        "Air resistance is zero.",
+        "Weight is greater than air resistance."
+      ],
+      "correctAnswer": "Air resistance is equal to weight.",
+      "correctIndex": 0,
+      "explanation": "At terminal velocity the forces are balanced, so the resultant force is zero and the speed is constant.",
+      "misconceptionTag": "terminal-velocity-balanced-forces",
+      "distractorRationales": [
+        {
+          "text": "Weight is zero.",
+          "misconception": "terminal velocity confused with weightlessness"
+        },
+        {
+          "text": "Air resistance is zero.",
+          "misconception": "air resistance ignored"
+        },
+        {
+          "text": "Weight is greater than air resistance.",
+          "misconception": "acceleration condition chosen"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.1.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe the force balance at terminal velocity."
+    },
+    {
+      "id": "aqa_forces_terminal_velocity_drag_increase_003",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Forces",
+      "subtopic": "Terminal Velocity",
+      "topicSlug": "forces",
+      "subtopicSlug": "terminal_velocity",
+      "topicId": "terminal_velocity",
+      "specRef": "4.5.6.2.1",
+      "combinedSpecRef": "6.5.4.2.1",
+      "specStatement": "Newton's First Law and terminal velocity contexts.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_forces_terminal_velocity_drag_increase_003_lo",
+        "statement": "Explain why drag increases with speed.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.5.6.2.1:drag_increase:misconception_correction",
-      "conceptFamily": "drag_increase",
-      "contextType": "a results discussion",
+      "commandWord": "explain",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_forces_terminal_velocity_drag_increase_003",
+      "conceptFamily": "explain_why_drag_increases_with_speed",
+      "contextType": "exam_style",
       "skill": "Terminal Velocity practice",
-      "stem": "A revision note about terminal velocity contains an error. Which replacement is correct? Check the clue before choosing: Explain why drag changes.",
-      "question": "A revision note about terminal velocity contains an error. Which replacement is correct? Check the clue before choosing: Explain why drag changes.",
+      "stem": "Why does air resistance increase as a cyclist goes faster?",
+      "question": "Why does air resistance increase as a cyclist goes faster?",
       "options": [
-        "In this terminal velocity item, drag decreases as speed increases.",
-        "For terminal velocity, the statement is that drag acts in the same direction as motion.",
-        "The answer for terminal velocity says that drag is independent of speed.",
-        "The answer for terminal velocity says that drag increases as speed increases."
+        "The cyclist collides with more air particles each second.",
+        "The cyclist’s weight increases with speed.",
+        "Gravity becomes stronger at higher speed.",
+        "The mass of the cyclist decreases."
       ],
-      "correctAnswer": "The answer for terminal velocity says that drag increases as speed increases.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.1 targets: Explain why drag changes. Focus area: Terminal Velocity. For this question, Drag increases as speed increases. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:drag_increase",
+      "correctAnswer": "The cyclist collides with more air particles each second.",
+      "correctIndex": 0,
+      "explanation": "At higher speed, more air is pushed aside each second, so the resistive force from the air increases.",
+      "misconceptionTag": "drag-speed-particles",
       "distractorRationales": [
         {
-          "text": "For terminal velocity, the statement is that drag acts in the same direction as motion.",
-          "misconception": "Drag decreases as speed increases."
+          "text": "The cyclist’s weight increases with speed.",
+          "misconception": "weight linked incorrectly to speed"
         },
         {
-          "text": "In this terminal velocity item, drag decreases as speed increases.",
-          "misconception": "Drag is independent of speed."
+          "text": "Gravity becomes stronger at higher speed.",
+          "misconception": "gravity-speed misconception"
         },
         {
-          "text": "The answer for terminal velocity says that drag is independent of speed.",
-          "misconception": "Drag acts in the same direction as motion."
+          "text": "The mass of the cyclist decreases.",
+          "misconception": "mass change invented"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why drag changes."
+      "senNote": "Checks: Explain why drag increases with speed."
     },
     {
-      "id": "aqa_4_5_6_2_1_terminal_velocity_parachute_data_interpretation_004",
+      "id": "aqa_forces_terminal_velocity_parachute_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -32190,6 +32206,7 @@
       "subtopicSlug": "terminal_velocity",
       "topicId": "terminal_velocity",
       "specRef": "4.5.6.2.1",
+      "combinedSpecRef": "6.5.4.2.1",
       "specStatement": "Newton's First Law and terminal velocity contexts.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -32200,56 +32217,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_1_terminal_velocity_parachute",
-        "statement": "Explain parachute effect. (Terminal Velocity)",
+        "id": "aqa_forces_terminal_velocity_parachute_004_lo",
+        "statement": "Explain the effect of opening a parachute on resultant force and speed.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.5.6.2.1:parachute:data_interpretation",
-      "conceptFamily": "parachute",
-      "contextType": "a classroom demonstration",
+      "commandWord": "explain",
+      "responseMode": "applied_context",
+      "patternId": "authored:aqa_forces_terminal_velocity_parachute_004",
+      "conceptFamily": "explain_the_effect_of_opening_a_parachute_on_resultant_force_and_speed",
+      "contextType": "exam_style",
       "skill": "Terminal Velocity practice",
-      "stem": "A small data set about terminal velocity is being interpreted. Which conclusion is valid? Keep the answer focused on terminal velocity: explain parachute effect.",
-      "question": "A small data set about terminal velocity is being interpreted. Which conclusion is valid? Keep the answer focused on terminal velocity: explain parachute effect.",
+      "stem": "A parachute opens while a skydiver is falling. What happens immediately after the parachute opens?",
+      "question": "A parachute opens while a skydiver is falling. What happens immediately after the parachute opens?",
       "options": [
-        "The answer for terminal velocity says that opening a parachute removes gravity.",
-        "The answer for terminal velocity says that opening a parachute makes drag zero.",
-        "For terminal velocity, the answer claims that opening a parachute increases drag, causing deceleration until a lower terminal velocity is reached.",
-        "The answer for terminal velocity says that opening a parachute increases weight."
+        "Air resistance becomes greater than weight, so the skydiver slows down.",
+        "Weight becomes zero, so the skydiver stops instantly.",
+        "Air resistance becomes smaller, so the skydiver speeds up.",
+        "The skydiver keeps the same speed because terminal velocity never changes."
       ],
-      "correctAnswer": "For terminal velocity, the answer claims that opening a parachute increases drag, causing deceleration until a lower terminal velocity is reached.",
-      "correctIndex": 2,
-      "explanation": "4.5.6.2.1 targets: Explain parachute effect. Focus area: Terminal Velocity. For this question, Opening a parachute increases drag, causing deceleration until a lower terminal velocity is reached. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:parachute",
+      "correctAnswer": "Air resistance becomes greater than weight, so the skydiver slows down.",
+      "correctIndex": 0,
+      "explanation": "Opening the parachute greatly increases air resistance. The upward force is then larger than weight, so the skydiver decelerates.",
+      "misconceptionTag": "parachute-deceleration",
       "distractorRationales": [
         {
-          "text": "The answer for terminal velocity says that opening a parachute increases weight.",
-          "misconception": "Opening a parachute increases weight."
+          "text": "Weight becomes zero, so the skydiver stops instantly.",
+          "misconception": "weight removed incorrectly"
         },
         {
-          "text": "The answer for terminal velocity says that opening a parachute removes gravity.",
-          "misconception": "Opening a parachute removes gravity."
+          "text": "Air resistance becomes smaller, so the skydiver speeds up.",
+          "misconception": "effect of parachute reversed"
         },
         {
-          "text": "The answer for terminal velocity says that opening a parachute makes drag zero.",
-          "misconception": "Opening a parachute makes drag zero."
+          "text": "The skydiver keeps the same speed because terminal velocity never changes.",
+          "misconception": "new lower terminal velocity missed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain parachute effect."
+      "senNote": "Checks: Explain the effect of opening a parachute on resultant force and speed."
     },
     {
-      "id": "aqa_4_5_6_2_1_terminal_velocity_force_graph_representation_interpretation_005",
+      "id": "aqa_forces_terminal_velocity_speed_time_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -32261,6 +32279,7 @@
       "subtopicSlug": "terminal_velocity",
       "topicId": "terminal_velocity",
       "specRef": "4.5.6.2.1",
+      "combinedSpecRef": "6.5.4.2.1",
       "specStatement": "Newton's First Law and terminal velocity contexts.",
       "paper": "Paper 2",
       "courseAvailability": [
@@ -32271,53 +32290,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_5_6_2_1_terminal_velocity_force_graph",
-        "statement": "Interpret force changes during falling. (Terminal Velocity)",
+        "id": "aqa_forces_terminal_velocity_speed_time_005_lo",
+        "statement": "Interpret terminal velocity from a speed-time graph.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.5.6.2.1:force_graph:representation_interpretation",
-      "conceptFamily": "force_graph",
-      "contextType": "a revision checkpoint",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "interpret",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:aqa_forces_terminal_velocity_speed_time_005",
+      "conceptFamily": "interpret_terminal_velocity_from_a_speed_time_graph",
+      "contextType": "exam_style",
       "skill": "Terminal Velocity practice",
-      "stem": "Which option correctly reads the terminal velocity model or diagram idea? Check the clue before choosing: Interpret force changes during falling.",
-      "question": "Which option correctly reads the terminal velocity model or diagram idea? Check the clue before choosing: Interpret force changes during falling.",
+      "stem": "A speed-time graph for a falling object becomes horizontal. What does the horizontal section show?",
+      "question": "A speed-time graph for a falling object becomes horizontal. What does the horizontal section show?",
       "options": [
-        "For terminal velocity, the option says that acceleration depends only on height.",
-        "For terminal velocity, the option says that balanced forces mean speed must be zero.",
-        "For terminal velocity, the option says that drag cannot affect acceleration.",
-        "For terminal velocity, it means that acceleration depends on the resultant force between weight and drag."
+        "The object is moving at constant speed.",
+        "The object is speeding up at a constant rate.",
+        "The object is stationary.",
+        "The object has no weight."
       ],
-      "correctAnswer": "For terminal velocity, it means that acceleration depends on the resultant force between weight and drag.",
-      "correctIndex": 3,
-      "explanation": "4.5.6.2.1 targets: Interpret force changes during falling. Focus area: Terminal Velocity. For this question, Acceleration depends on the resultant force between weight and drag. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:force_graph",
+      "correctAnswer": "The object is moving at constant speed.",
+      "correctIndex": 0,
+      "explanation": "A horizontal line on a speed-time graph means the speed is constant. For a falling object, this can show terminal velocity.",
+      "misconceptionTag": "terminal-velocity-horizontal-graph",
       "distractorRationales": [
         {
-          "text": "For terminal velocity, the option says that balanced forces mean speed must be zero.",
-          "misconception": "Acceleration depends only on height."
+          "text": "The object is speeding up at a constant rate.",
+          "misconception": "horizontal line confused with constant acceleration"
         },
         {
-          "text": "For terminal velocity, the option says that drag cannot affect acceleration.",
-          "misconception": "Balanced forces mean speed must be zero."
+          "text": "The object is stationary.",
+          "misconception": "zero gradient confused with zero speed"
         },
         {
-          "text": "For terminal velocity, the option says that acceleration depends only on height.",
-          "misconception": "Drag cannot affect acceleration."
+          "text": "The object has no weight.",
+          "misconception": "balanced forces confused with no weight"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.5.6.2.1; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.5.6.2.1.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret force changes during falling."
+      "senNote": "Checks: Interpret terminal velocity from a speed-time graph."
     },
     {
       "id": "aqa_4_5_3_force_and_extension_graphs_graph_gradient_direct_recall_001",

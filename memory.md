@@ -5,6 +5,27 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Forces weight/terminal velocity authored
+- Fixed AQA `Weight, Mass and Gravity`: 5/5 authored and passed.
+- Fixed AQA `Terminal Velocity`: 5/5 authored and passed.
+- Official anchors checked:
+  - AQA Physics 8463 `4.5.1.3` and `4.5.6.2.1`.
+  - AQA Combined Science 8464 Physics `6.5.1.3` and `6.5.4.2.1`.
+- Replaced scaffolded learner-facing wording with exam-style questions.
+- Added hidden metadata for each item:
+  - `specRef`, `combinedSpecRef`, `learningObjective`, `assessmentObjective`, `demand`, `misconceptionTag`, `review.status`.
+- Runtime quality checks:
+  - `Weight, Mass and Gravity`: 5 generated, 5 authored, 0 scaffold leaks.
+  - `Terminal Velocity`: 5 generated, 5 authored, 0 scaffold leaks.
+- Verification:
+  - `npm run audit:questions` passes.
+  - `node scripts/smoke-adaptive-course-filter.mjs` passes.
+  - `npm run build` passes.
+  - `npm test` passes.
+
+### Next step
+- Continue AQA Forces with `Stopping Distance`, `Reaction Time`, and `Forces and Braking`.
+
 ### Stale Adaptive Practice question cache fixed
 - Simulator showed an old generated/scaffolded Newton question even though:
   - `dist/data/questions/aqa/forces.json` had the authored Newton questions.

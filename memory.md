@@ -5,6 +5,32 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA Potential Difference + Edexcel Domestic Electricity correction
+- Checked official spec anchors before authoring:
+  - AQA `4.2.1.3` covers current, resistance and potential difference, including `V = I × R`, units, and measuring current/potential difference.
+  - Edexcel domestic electricity content includes mains a.c., live/neutral/earth wires, fuses/circuit breakers, live-wire switching, live-to-earth danger, and domestic appliance power ratings.
+- Fixed the next Electricity pair:
+  - AQA `Potential Difference`: 5/5 authored exam-style questions.
+  - Edexcel `Domestic Electricity`: 19/19 authored exam-style questions.
+- Kept learner-facing text exam-style only; no scaffold/meta phrases.
+- Current Electricity good-to-go count after this correction:
+  - AQA: 34/144 good to go.
+  - Edexcel: 75/94 good to go.
+  - Combined Electricity: 109/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - iOS simulator install/launch passes.
+
+### Next step
+- Continue Electricity with:
+  - AQA `Power`: 5/5 authored.
+  - Edexcel `Parallel Circuits`: 19/19 authored.
+
 ### Adaptive Practice AQA Current + Edexcel Current-Voltage correction
 - Fixed the next two Electricity screenshot areas:
   - AQA `Current`: 5/5 authored exam-style questions.

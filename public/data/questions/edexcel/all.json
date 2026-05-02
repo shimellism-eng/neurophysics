@@ -1,7 +1,7 @@
 {
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-  "generatedAt": "2026-05-02T06:48:59.723Z",
+  "generatedAt": "2026-05-02T06:56:16.756Z",
   "questions": [
     {
       "id": "edexcel_atomic_structure_nucleus_001",
@@ -3167,7 +3167,7 @@
       "senNote": "Checks: Predict current for an ohmic conductor using proportionality."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_mains_ac_direct_recall_001",
+      "id": "edexcel_electricity_domestic_live_wire_001",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3189,56 +3189,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_mains_ac",
-        "statement": "Describe mains electricity. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_live_wire_001_lo",
+        "statement": "Identify the live wire as the dangerous high-potential wire.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.39:mains_ac:direct_recall",
-      "conceptFamily": "mains_ac",
-      "contextType": "a labelled diagram",
-      "skill": "Describe mains electricity.",
-      "stem": "Which statement is correct for domestic electricity? Demand focus: describe mains electricity.",
-      "question": "Which statement is correct for domestic electricity? Demand focus: describe mains electricity.",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_live_wire_001",
+      "conceptFamily": "identify_the_live_wire_as_the_dangerous_high_potential_wire",
+      "contextType": "exam_style",
+      "skill": "Identify the live wire as the dangerous high-potential wire.",
+      "stem": "Which wire in a mains cable is at a high potential difference compared with earth?",
+      "question": "Which wire in a mains cable is at a high potential difference compared with earth?",
       "options": [
-        "In this domestic electricity item, mains potential difference is measured in amperes.",
-        "For domestic electricity, the statement is that mains electricity has no live wire.",
-        "For domestic electricity, the statement is that uK mains is alternating potential difference at about 230 V.",
-        "For domestic electricity, the statement is that uK mains is direct current at 12 V."
+        "live wire",
+        "neutral wire",
+        "earth wire",
+        "plastic insulation"
       ],
-      "correctAnswer": "For domestic electricity, the statement is that uK mains is alternating potential difference at about 230 V.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Describe mains electricity. Focus area: Domestic Electricity. For this question, UK mains is alternating potential difference at about 230 V. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:mains_ac",
+      "correctAnswer": "live wire",
+      "correctIndex": 0,
+      "explanation": "The live wire is at about 230 V compared with earth and can be dangerous.",
+      "misconceptionTag": "live-wire-potential",
       "distractorRationales": [
         {
-          "text": "For domestic electricity, the statement is that uK mains is direct current at 12 V.",
-          "misconception": "UK mains is direct current at 12 V."
+          "text": "neutral wire",
+          "misconception": ""
         },
         {
-          "text": "In this domestic electricity item, mains potential difference is measured in amperes.",
-          "misconception": "Mains potential difference is measured in amperes."
+          "text": "earth wire",
+          "misconception": ""
         },
         {
-          "text": "For domestic electricity, the statement is that mains electricity has no live wire.",
-          "misconception": "Mains electricity has no live wire."
+          "text": "plastic insulation",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe mains electricity."
+      "senNote": "Checks: Identify the live wire as the dangerous high-potential wire."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_live_neutral_concept_discrimination_002",
+      "id": "edexcel_electricity_domestic_neutral_wire_002",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3260,56 +3261,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_live_neutral",
-        "statement": "Compare live and neutral wires. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_neutral_wire_002_lo",
+        "statement": "Describe the function of the neutral wire.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.39:live_neutral:concept_discrimination",
-      "conceptFamily": "live_neutral",
-      "contextType": "a short calculation",
-      "skill": "Compare live and neutral wires.",
-      "stem": "A student is comparing similar ideas in domestic electricity. Which statement is correct? Demand focus: compare live and neutral wires.",
-      "question": "A student is comparing similar ideas in domestic electricity. Which statement is correct? Demand focus: compare live and neutral wires.",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_neutral_wire_002",
+      "conceptFamily": "describe_the_function_of_the_neutral_wire",
+      "contextType": "exam_style",
+      "skill": "Describe the function of the neutral wire.",
+      "stem": "What is the function of the neutral wire in a domestic mains circuit?",
+      "question": "What is the function of the neutral wire in a domestic mains circuit?",
       "options": [
-        "For domestic electricity, this would mean that both wires carry no energy.",
-        "In this item, it means that the live wire has an alternating potential difference; the neutral wire is close to 0 V.",
-        "For domestic electricity: The live wire is at 0 V all the time.",
-        "For domestic electricity: The neutral wire is always more dangerous than live."
+        "It completes the circuit and is close to earth potential.",
+        "It is the safety wire connected to the metal case.",
+        "It contains the fuse.",
+        "It is always at 230 V compared with earth."
       ],
-      "correctAnswer": "In this item, it means that the live wire has an alternating potential difference; the neutral wire is close to 0 V.",
-      "correctIndex": 1,
-      "explanation": "10.39 targets: Compare live and neutral wires. Focus area: Domestic Electricity. For this question, The live wire has an alternating potential difference; the neutral wire is close to 0 V. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:live_neutral",
+      "correctAnswer": "It completes the circuit and is close to earth potential.",
+      "correctIndex": 0,
+      "explanation": "The neutral wire completes the circuit and is normally close to 0 V compared with earth.",
+      "misconceptionTag": "neutral-wire-function",
       "distractorRationales": [
         {
-          "text": "For domestic electricity: The live wire is at 0 V all the time.",
-          "misconception": "The neutral wire is always more dangerous than live."
+          "text": "It is the safety wire connected to the metal case.",
+          "misconception": "earth wire confused with neutral"
         },
         {
-          "text": "For domestic electricity, this would mean that both wires carry no energy.",
-          "misconception": "The live wire is at 0 V all the time."
+          "text": "It contains the fuse.",
+          "misconception": "fuse position confused with neutral wire"
         },
         {
-          "text": "For domestic electricity: The neutral wire is always more dangerous than live.",
-          "misconception": "Both wires carry no energy."
+          "text": "It is always at 230 V compared with earth.",
+          "misconception": "live wire confused with neutral"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare live and neutral wires."
+      "senNote": "Checks: Describe the function of the neutral wire."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_fuse_purpose_misconception_correction_003",
+      "id": "edexcel_electricity_domestic_earth_wire_003",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3331,56 +3333,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_fuse_purpose",
-        "statement": "Explain the purpose of a fuse. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_earth_wire_003_lo",
+        "statement": "Explain how the earth wire helps protect users.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.39:fuse_purpose:misconception_correction",
-      "conceptFamily": "fuse_purpose",
-      "contextType": "a safety decision",
-      "skill": "Explain the purpose of a fuse.",
-      "stem": "A revision note about domestic electricity contains an error. Which replacement is correct? Check the clue before choosing: Explain the purpose of a fuse.",
-      "question": "A revision note about domestic electricity contains an error. Which replacement is correct? Check the clue before choosing: Explain the purpose of a fuse.",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_earth_wire_003",
+      "conceptFamily": "explain_how_the_earth_wire_helps_protect_users",
+      "contextType": "exam_style",
+      "skill": "Explain how the earth wire helps protect users.",
+      "stem": "A metal-cased appliance has an earth wire. What is the purpose of the earth wire?",
+      "question": "A metal-cased appliance has an earth wire. What is the purpose of the earth wire?",
       "options": [
-        "In this domestic electricity item, a fuse stores charge for later use.",
-        "The answer for domestic electricity says that a fuse increases current when the appliance is faulty.",
-        "For domestic electricity, it means that a fuse melts and breaks the circuit when current becomes too large.",
-        "In this domestic electricity item, a fuse protects by making the case live."
+        "It provides a low-resistance path to earth if the case becomes live.",
+        "It makes the appliance use less energy.",
+        "It replaces the live wire.",
+        "It makes the neutral wire 230 V."
       ],
-      "correctAnswer": "For domestic electricity, it means that a fuse melts and breaks the circuit when current becomes too large.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Explain the purpose of a fuse. Focus area: Domestic Electricity. For this question, A fuse melts and breaks the circuit when current becomes too large. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:fuse_purpose",
+      "correctAnswer": "It provides a low-resistance path to earth if the case becomes live.",
+      "correctIndex": 0,
+      "explanation": "If a fault makes the metal case live, the earth wire carries a large current to earth so the safety device can disconnect the supply.",
+      "misconceptionTag": "earth-wire-safety",
       "distractorRationales": [
         {
-          "text": "In this domestic electricity item, a fuse protects by making the case live.",
-          "misconception": "A fuse increases current when the appliance is faulty."
+          "text": "It makes the appliance use less energy.",
+          "misconception": "earthing confused with efficiency"
         },
         {
-          "text": "The answer for domestic electricity says that a fuse increases current when the appliance is faulty.",
-          "misconception": "A fuse stores charge for later use."
+          "text": "It replaces the live wire.",
+          "misconception": "earth wire confused with supply wire"
         },
         {
-          "text": "In this domestic electricity item, a fuse stores charge for later use.",
-          "misconception": "A fuse protects by making the case live."
+          "text": "It makes the neutral wire 230 V.",
+          "misconception": "neutral/live potential confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain the purpose of a fuse."
+      "senNote": "Checks: Explain how the earth wire helps protect users."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_earth_wire_data_interpretation_004",
+      "id": "edexcel_electricity_domestic_fuse_live_004",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3402,56 +3405,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_earth_wire",
-        "statement": "Explain earthing. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_fuse_live_004_lo",
+        "statement": "Explain why a fuse is placed in the live wire.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.39:earth_wire:data_interpretation",
-      "conceptFamily": "earth_wire",
-      "contextType": "a graph-reading task",
-      "skill": "Explain earthing.",
-      "stem": "A small data set about domestic electricity is being interpreted. Which conclusion is valid? Demand focus: explain earthing.",
-      "question": "A small data set about domestic electricity is being interpreted. Which conclusion is valid? Demand focus: explain earthing.",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_fuse_live_004",
+      "conceptFamily": "explain_why_a_fuse_is_placed_in_the_live_wire",
+      "contextType": "exam_style",
+      "skill": "Explain why a fuse is placed in the live wire.",
+      "stem": "Why should a fuse be connected in the live wire of a plug?",
+      "question": "Why should a fuse be connected in the live wire of a plug?",
       "options": [
-        "In this domestic electricity item, the earth wire replaces the live wire.",
-        "In this domestic electricity item, the earth wire powers the appliance.",
-        "For domestic electricity, the statement is that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-        "For domestic electricity, it means that the earth wire prevents all current in normal use."
+        "So melting the fuse disconnects the appliance from the live supply.",
+        "So the neutral wire becomes live.",
+        "So the earth wire carries current all the time.",
+        "So the appliance has a larger power rating."
       ],
-      "correctAnswer": "For domestic electricity, the statement is that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Explain earthing. Focus area: Domestic Electricity. For this question, The earth wire provides a low-resistance path to ground if a metal case becomes live. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:earth_wire",
+      "correctAnswer": "So melting the fuse disconnects the appliance from the live supply.",
+      "correctIndex": 0,
+      "explanation": "A fuse in the live wire breaks the live connection when the current is too large, making the appliance safer.",
+      "misconceptionTag": "fuse-in-live-wire",
       "distractorRationales": [
         {
-          "text": "In this domestic electricity item, the earth wire powers the appliance.",
-          "misconception": "The earth wire powers the appliance."
+          "text": "So the neutral wire becomes live.",
+          "misconception": "fuse action misunderstood"
         },
         {
-          "text": "In this domestic electricity item, the earth wire replaces the live wire.",
-          "misconception": "The earth wire replaces the live wire."
+          "text": "So the earth wire carries current all the time.",
+          "misconception": "earth wire normally carries no current"
         },
         {
-          "text": "For domestic electricity, it means that the earth wire prevents all current in normal use.",
-          "misconception": "The earth wire prevents all current in normal use."
+          "text": "So the appliance has a larger power rating.",
+          "misconception": "fuse confused with power source"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain earthing."
+      "senNote": "Checks: Explain why a fuse is placed in the live wire."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_power_rating_representation_interpretation_005",
+      "id": "edexcel_electricity_domestic_switch_live_005",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3473,56 +3477,561 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_power_rating",
-        "statement": "Use appliance power rating safely. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_switch_live_005_lo",
+        "statement": "Explain why switches are fitted in the live wire.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_switch_live_005",
+      "conceptFamily": "explain_why_switches_are_fitted_in_the_live_wire",
+      "contextType": "exam_style",
+      "skill": "Explain why switches are fitted in the live wire.",
+      "stem": "Why should a switch in a mains circuit be connected in the live wire?",
+      "question": "Why should a switch in a mains circuit be connected in the live wire?",
+      "options": [
+        "Opening the switch disconnects the appliance from the live supply.",
+        "Opening the switch makes the earth wire live.",
+        "The switch must carry current through the neutral wire only.",
+        "A switch in the live wire increases the mains voltage."
+      ],
+      "correctAnswer": "Opening the switch disconnects the appliance from the live supply.",
+      "correctIndex": 0,
+      "explanation": "A switch in the live wire disconnects the appliance from the dangerous high-potential wire when it is off.",
+      "misconceptionTag": "switch-in-live-wire",
+      "distractorRationales": [
+        {
+          "text": "Opening the switch makes the earth wire live.",
+          "misconception": "switch effect confused with fault"
+        },
+        {
+          "text": "The switch must carry current through the neutral wire only.",
+          "misconception": "neutral-side switch misconception"
+        },
+        {
+          "text": "A switch in the live wire increases the mains voltage.",
+          "misconception": "switch confused with transformer"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why switches are fitted in the live wire."
+    },
+    {
+      "id": "edexcel_electricity_domestic_fuse_rating_006",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_fuse_rating_006_lo",
+        "statement": "Choose a suitable fuse rating for an appliance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_domestic_fuse_rating_006",
+      "conceptFamily": "choose_a_suitable_fuse_rating_for_an_appliance",
+      "contextType": "exam_style",
+      "skill": "Choose a suitable fuse rating for an appliance.",
+      "stem": "An appliance normally takes a current of 2.2 A. Which fuse rating is most suitable?",
+      "question": "An appliance normally takes a current of 2.2 A. Which fuse rating is most suitable?",
+      "options": [
+        "3 A",
+        "1 A",
+        "13 A",
+        "30 A"
+      ],
+      "correctAnswer": "3 A",
+      "correctIndex": 0,
+      "explanation": "The fuse rating should be just above the normal current, so 3 A is the most suitable choice.",
+      "misconceptionTag": "fuse-rating-choice",
+      "distractorRationales": [
+        {
+          "text": "1 A",
+          "misconception": ""
+        },
+        {
+          "text": "13 A",
+          "misconception": ""
+        },
+        {
+          "text": "30 A",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose a suitable fuse rating for an appliance."
+    },
+    {
+      "id": "edexcel_electricity_domestic_fault_current_007",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_fault_current_007_lo",
+        "statement": "Describe what happens during a live-to-case fault in an earthed appliance.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_fault_current_007",
+      "conceptFamily": "describe_what_happens_during_a_live_to_case_fault_in_an_earthed_appliance",
+      "contextType": "exam_style",
+      "skill": "Describe what happens during a live-to-case fault in an earthed appliance.",
+      "stem": "A fault causes the live wire to touch the metal case of an earthed appliance. What happens next?",
+      "question": "A fault causes the live wire to touch the metal case of an earthed appliance. What happens next?",
+      "options": [
+        "A large current flows through the earth wire and the fuse melts.",
+        "The case stays live until someone touches it.",
+        "The neutral wire changes colour.",
+        "The appliance becomes double insulated automatically."
+      ],
+      "correctAnswer": "A large current flows through the earth wire and the fuse melts.",
+      "correctIndex": 0,
+      "explanation": "The earth wire provides a low-resistance path, causing a large current that melts the fuse and disconnects the live supply.",
+      "misconceptionTag": "earth-fault-current",
+      "distractorRationales": [
+        {
+          "text": "The case stays live until someone touches it.",
+          "misconception": "earthing protection ignored"
+        },
+        {
+          "text": "The neutral wire changes colour.",
+          "misconception": "wire colour confused with fault response"
+        },
+        {
+          "text": "The appliance becomes double insulated automatically.",
+          "misconception": "double insulation confused with earthing"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe what happens during a live-to-case fault in an earthed appliance."
+    },
+    {
+      "id": "edexcel_electricity_domestic_double_insulated_008",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_double_insulated_008_lo",
+        "statement": "Explain why double-insulated appliances do not need an earth wire.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_double_insulated_008",
+      "conceptFamily": "explain_why_double_insulated_appliances_do_not_need_an_earth_wire",
+      "contextType": "exam_style",
+      "skill": "Explain why double-insulated appliances do not need an earth wire.",
+      "stem": "Why does a double-insulated appliance not need an earth wire?",
+      "question": "Why does a double-insulated appliance not need an earth wire?",
+      "options": [
+        "It has an insulating case, so the user cannot touch a live metal case.",
+        "It has no live wire.",
+        "It uses direct current instead of mains electricity.",
+        "It has a neutral wire at 230 V."
+      ],
+      "correctAnswer": "It has an insulating case, so the user cannot touch a live metal case.",
+      "correctIndex": 0,
+      "explanation": "A double-insulated appliance has extra insulation and no exposed metal case that could become live.",
+      "misconceptionTag": "double-insulation-earth",
+      "distractorRationales": [
+        {
+          "text": "It has no live wire.",
+          "misconception": "double insulated appliances still use live supply"
+        },
+        {
+          "text": "It uses direct current instead of mains electricity.",
+          "misconception": "supply type confused with insulation"
+        },
+        {
+          "text": "It has a neutral wire at 230 V.",
+          "misconception": "neutral potential confused"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why double-insulated appliances do not need an earth wire."
+    },
+    {
+      "id": "edexcel_electricity_domestic_mains_values_009",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_mains_values_009_lo",
+        "statement": "Recall the approximate UK mains voltage and frequency.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "low",
+      "difficulty": "easy",
+      "commandWord": "recall",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_mains_values_009",
+      "conceptFamily": "recall_the_approximate_uk_mains_voltage_and_frequency",
+      "contextType": "exam_style",
+      "skill": "Recall the approximate UK mains voltage and frequency.",
+      "stem": "What are the approximate voltage and frequency of the UK mains supply?",
+      "question": "What are the approximate voltage and frequency of the UK mains supply?",
+      "options": [
+        "230 V and 50 Hz",
+        "50 V and 230 Hz",
+        "12 V and 50 Hz",
+        "230 V and 0 Hz"
+      ],
+      "correctAnswer": "230 V and 50 Hz",
+      "correctIndex": 0,
+      "explanation": "The UK mains supply is alternating current at about 230 V and 50 Hz.",
+      "misconceptionTag": "mains-voltage-frequency",
+      "distractorRationales": [
+        {
+          "text": "50 V and 230 Hz",
+          "misconception": ""
+        },
+        {
+          "text": "12 V and 50 Hz",
+          "misconception": ""
+        },
+        {
+          "text": "230 V and 0 Hz",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recall the approximate UK mains voltage and frequency."
+    },
+    {
+      "id": "edexcel_electricity_domestic_ac_supply_010",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_ac_supply_010_lo",
+        "statement": "Describe alternating current in the domestic mains supply.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_ac_supply_010",
+      "conceptFamily": "describe_alternating_current_in_the_domestic_mains_supply",
+      "contextType": "exam_style",
+      "skill": "Describe alternating current in the domestic mains supply.",
+      "stem": "What does it mean when the mains supply is described as alternating current?",
+      "question": "What does it mean when the mains supply is described as alternating current?",
+      "options": [
+        "The current repeatedly changes direction.",
+        "The current always flows in one direction.",
+        "The current is always zero.",
+        "The current is stored in the plug."
+      ],
+      "correctAnswer": "The current repeatedly changes direction.",
+      "correctIndex": 0,
+      "explanation": "In an alternating current supply, the current changes direction repeatedly.",
+      "misconceptionTag": "ac-direction-change",
+      "distractorRationales": [
+        {
+          "text": "The current always flows in one direction.",
+          "misconception": "direct current confused with alternating current"
+        },
+        {
+          "text": "The current is always zero.",
+          "misconception": "frequency misunderstood"
+        },
+        {
+          "text": "The current is stored in the plug.",
+          "misconception": "current storage misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe alternating current in the domestic mains supply."
+    },
+    {
+      "id": "edexcel_electricity_domestic_live_earth_danger_011",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_live_earth_danger_011_lo",
+        "statement": "Explain the danger of a live-to-earth connection through a person.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_live_earth_danger_011",
+      "conceptFamily": "explain_the_danger_of_a_live_to_earth_connection_through_a_person",
+      "contextType": "exam_style",
+      "skill": "Explain the danger of a live-to-earth connection through a person.",
+      "stem": "Why is it dangerous for a person to touch the live wire while also connected to earth?",
+      "question": "Why is it dangerous for a person to touch the live wire while also connected to earth?",
+      "options": [
+        "A current can pass through the person to earth.",
+        "The person becomes electrically neutral, so no current flows.",
+        "The live wire changes into a neutral wire.",
+        "The fuse rating becomes larger."
+      ],
+      "correctAnswer": "A current can pass through the person to earth.",
+      "correctIndex": 0,
+      "explanation": "Touching live while connected to earth can complete a path for current through the body.",
+      "misconceptionTag": "live-earth-shock",
+      "distractorRationales": [
+        {
+          "text": "The person becomes electrically neutral, so no current flows.",
+          "misconception": "earth connection misunderstood"
+        },
+        {
+          "text": "The live wire changes into a neutral wire.",
+          "misconception": "wire function confused"
+        },
+        {
+          "text": "The fuse rating becomes larger.",
+          "misconception": "fuse rating confused with shock risk"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain the danger of a live-to-earth connection through a person."
+    },
+    {
+      "id": "edexcel_electricity_domestic_open_switch_danger_012",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_open_switch_danger_012_lo",
+        "statement": "Explain why switching the neutral wire does not make an appliance fully safe.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.39:power_rating:representation_interpretation",
-      "conceptFamily": "power_rating",
-      "contextType": "a comparison question",
-      "skill": "Use appliance power rating safely.",
-      "stem": "Which option correctly reads the domestic electricity model or diagram idea? Keep the answer focused on domestic electricity: use appliance power rating safely.",
-      "question": "Which option correctly reads the domestic electricity model or diagram idea? Keep the answer focused on domestic electricity: use appliance power rating safely.",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_open_switch_danger_012",
+      "conceptFamily": "explain_why_switching_the_neutral_wire_does_not_make_an_appliance_fully_safe",
+      "contextType": "exam_style",
+      "skill": "Explain why switching the neutral wire does not make an appliance fully safe.",
+      "stem": "An appliance is switched off, but the switch is in the neutral wire. Why can this still be dangerous?",
+      "question": "An appliance is switched off, but the switch is in the neutral wire. Why can this still be dangerous?",
       "options": [
-        "For domestic electricity, it means that power is unrelated to energy transfer.",
-        "For domestic electricity, the option says that higher power appliances transfer more energy each second and draw larger currents.",
-        "The claim for domestic electricity is that power rating tells the mass of the appliance.",
-        "For domestic electricity, this would mean that higher power means lower current for the same voltage every time."
+        "Parts of the appliance may still be connected to the live wire.",
+        "The live wire becomes harmless whenever any switch is open.",
+        "The earth wire becomes the power supply.",
+        "The fuse cannot melt in any circuit."
       ],
-      "correctAnswer": "For domestic electricity, the option says that higher power appliances transfer more energy each second and draw larger currents.",
-      "correctIndex": 1,
-      "explanation": "10.39 targets: Use appliance power rating safely. Focus area: Domestic Electricity. For this question, Higher power appliances transfer more energy each second and draw larger currents. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_rating",
+      "correctAnswer": "Parts of the appliance may still be connected to the live wire.",
+      "correctIndex": 0,
+      "explanation": "If only the neutral wire is disconnected, parts of the appliance can remain connected to the live supply.",
+      "misconceptionTag": "neutral-switch-danger",
       "distractorRationales": [
         {
-          "text": "The claim for domestic electricity is that power rating tells the mass of the appliance.",
-          "misconception": "Higher power means lower current for the same voltage every time."
+          "text": "The live wire becomes harmless whenever any switch is open.",
+          "misconception": "neutral switch false safety"
         },
         {
-          "text": "For domestic electricity, it means that power is unrelated to energy transfer.",
-          "misconception": "Power rating tells the mass of the appliance."
+          "text": "The earth wire becomes the power supply.",
+          "misconception": "earth wire function confused"
         },
         {
-          "text": "For domestic electricity, this would mean that higher power means lower current for the same voltage every time.",
-          "misconception": "Power is unrelated to energy transfer."
+          "text": "The fuse cannot melt in any circuit.",
+          "misconception": "fuse action overgeneralised"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use appliance power rating safely."
+      "senNote": "Checks: Explain why switching the neutral wire does not make an appliance fully safe."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_mains_ac_direct_recall_006",
+      "id": "edexcel_electricity_domestic_wire_colours_013",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3544,56 +4053,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_mains_ac",
-        "statement": "Describe mains electricity. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_wire_colours_013_lo",
+        "statement": "Identify the colour of the earth wire.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.39:mains_ac:direct_recall",
-      "conceptFamily": "mains_ac",
-      "contextType": "a method-choice question",
-      "skill": "Describe mains electricity.",
-      "stem": "Which answer matches this domestic electricity objective: Describe mains electricity? Demand focus: describe mains electricity.",
-      "question": "Which answer matches this domestic electricity objective: Describe mains electricity? Demand focus: describe mains electricity.",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_wire_colours_013",
+      "conceptFamily": "identify_the_colour_of_the_earth_wire",
+      "contextType": "exam_style",
+      "skill": "Identify the colour of the earth wire.",
+      "stem": "Which colour identifies the earth wire in a modern UK plug?",
+      "question": "Which colour identifies the earth wire in a modern UK plug?",
       "options": [
-        "For domestic electricity, this would mean that uK mains is direct current at 12 V.",
-        "For domestic electricity: Mains potential difference is measured in amperes.",
-        "For domestic electricity: UK mains is alternating potential difference at about 230 V.",
-        "For domestic electricity: Mains electricity has no live wire."
+        "green and yellow stripes",
+        "brown",
+        "blue",
+        "black"
       ],
-      "correctAnswer": "For domestic electricity: UK mains is alternating potential difference at about 230 V.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Describe mains electricity. Focus area: Domestic Electricity. For this question, UK mains is alternating potential difference at about 230 V. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:mains_ac",
+      "correctAnswer": "green and yellow stripes",
+      "correctIndex": 0,
+      "explanation": "In modern UK wiring, the earth wire is green and yellow. The live wire is brown and the neutral wire is blue.",
+      "misconceptionTag": "earth-wire-colour",
       "distractorRationales": [
         {
-          "text": "For domestic electricity: Mains electricity has no live wire.",
-          "misconception": "UK mains is direct current at 12 V."
+          "text": "brown",
+          "misconception": ""
         },
         {
-          "text": "For domestic electricity, this would mean that uK mains is direct current at 12 V.",
-          "misconception": "Mains potential difference is measured in amperes."
+          "text": "blue",
+          "misconception": ""
         },
         {
-          "text": "For domestic electricity: Mains potential difference is measured in amperes.",
-          "misconception": "Mains electricity has no live wire."
+          "text": "black",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe mains electricity."
+      "senNote": "Checks: Identify the colour of the earth wire."
     },
     {
-      "id": "edexcel_10_39_domestic_electricity_live_neutral_applied_context_007",
+      "id": "edexcel_electricity_domestic_live_colour_014",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3615,905 +4125,414 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_live_neutral",
-        "statement": "Compare live and neutral wires. (Domestic Electricity)",
+        "id": "edexcel_electricity_domestic_live_colour_014_lo",
+        "statement": "Identify the colour of the live wire.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "low",
+      "difficulty": "easy",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_live_colour_014",
+      "conceptFamily": "identify_the_colour_of_the_live_wire",
+      "contextType": "exam_style",
+      "skill": "Identify the colour of the live wire.",
+      "stem": "Which wire in a modern UK plug is brown?",
+      "question": "Which wire in a modern UK plug is brown?",
+      "options": [
+        "live",
+        "neutral",
+        "earth",
+        "fuse"
+      ],
+      "correctAnswer": "live",
+      "correctIndex": 0,
+      "explanation": "The live wire is brown. The neutral wire is blue and the earth wire is green and yellow.",
+      "misconceptionTag": "live-wire-colour",
+      "distractorRationales": [
+        {
+          "text": "neutral",
+          "misconception": ""
+        },
+        {
+          "text": "earth",
+          "misconception": ""
+        },
+        {
+          "text": "fuse",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify the colour of the live wire."
+    },
+    {
+      "id": "edexcel_electricity_domestic_case_fault_015",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_case_fault_015_lo",
+        "statement": "Analyse the risk when the earth wire is missing during a live-case fault.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "analyse",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_case_fault_015",
+      "conceptFamily": "analyse_the_risk_when_the_earth_wire_is_missing_during_a_live_case_fault",
+      "contextType": "exam_style",
+      "skill": "Analyse the risk when the earth wire is missing during a live-case fault.",
+      "stem": "A metal kettle has a damaged live wire touching its case, but the earth wire is broken. What is the main danger?",
+      "question": "A metal kettle has a damaged live wire touching its case, but the earth wire is broken. What is the main danger?",
+      "options": [
+        "The metal case can remain live and give an electric shock.",
+        "The case becomes neutral and safe to touch.",
+        "The fuse must melt instantly without an earth path.",
+        "The kettle changes from a.c. to d.c."
+      ],
+      "correctAnswer": "The metal case can remain live and give an electric shock.",
+      "correctIndex": 0,
+      "explanation": "Without a working earth wire, the metal case may stay live because there may not be a large enough current to melt the fuse.",
+      "misconceptionTag": "broken-earth-fault",
+      "distractorRationales": [
+        {
+          "text": "The case becomes neutral and safe to touch.",
+          "misconception": "fault risk underestimated"
+        },
+        {
+          "text": "The fuse must melt instantly without an earth path.",
+          "misconception": "earth path needed for large fault current"
+        },
+        {
+          "text": "The kettle changes from a.c. to d.c.",
+          "misconception": "supply type confused with fault"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Analyse the risk when the earth wire is missing during a live-case fault."
+    },
+    {
+      "id": "edexcel_electricity_domestic_circuit_breaker_016",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_circuit_breaker_016_lo",
+        "statement": "Describe the safety function of a circuit breaker.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_circuit_breaker_016",
+      "conceptFamily": "describe_the_safety_function_of_a_circuit_breaker",
+      "contextType": "exam_style",
+      "skill": "Describe the safety function of a circuit breaker.",
+      "stem": "What is the safety role of a circuit breaker?",
+      "question": "What is the safety role of a circuit breaker?",
+      "options": [
+        "It disconnects the circuit when the current becomes too large.",
+        "It increases the current when an appliance starts.",
+        "It stores electrical energy for later use.",
+        "It changes a.c. into d.c. for every appliance."
+      ],
+      "correctAnswer": "It disconnects the circuit when the current becomes too large.",
+      "correctIndex": 0,
+      "explanation": "A circuit breaker opens the circuit when the current is too high, reducing the risk of overheating and shock.",
+      "misconceptionTag": "circuit-breaker-safety",
+      "distractorRationales": [
+        {
+          "text": "It increases the current when an appliance starts.",
+          "misconception": "breaker confused with supply booster"
+        },
+        {
+          "text": "It stores electrical energy for later use.",
+          "misconception": "breaker confused with battery"
+        },
+        {
+          "text": "It changes a.c. into d.c. for every appliance.",
+          "misconception": "breaker confused with converter"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe the safety function of a circuit breaker."
+    },
+    {
+      "id": "edexcel_electricity_domestic_power_rating_017",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_power_rating_017_lo",
+        "statement": "Relate appliance power rating to rate of energy transfer.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_power_rating_017",
+      "conceptFamily": "relate_appliance_power_rating_to_rate_of_energy_transfer",
+      "contextType": "exam_style",
+      "skill": "Relate appliance power rating to rate of energy transfer.",
+      "stem": "Two kettles are used for the same time. Kettle X has a power rating of 3.0 kW and kettle Y has a power rating of 1.5 kW. Which statement is correct?",
+      "question": "Two kettles are used for the same time. Kettle X has a power rating of 3.0 kW and kettle Y has a power rating of 1.5 kW. Which statement is correct?",
+      "options": [
+        "Kettle X transfers energy at twice the rate of kettle Y.",
+        "Kettle Y transfers energy at twice the rate of kettle X.",
+        "Both kettles transfer energy at the same rate.",
+        "Power rating tells you the mass of the kettle."
+      ],
+      "correctAnswer": "Kettle X transfers energy at twice the rate of kettle Y.",
+      "correctIndex": 0,
+      "explanation": "Power is the rate of energy transfer. 3.0 kW is twice 1.5 kW, so kettle X transfers energy twice as quickly.",
+      "misconceptionTag": "power-rating-rate",
+      "distractorRationales": [
+        {
+          "text": "Kettle Y transfers energy at twice the rate of kettle X.",
+          "misconception": "power ratio reversed"
+        },
+        {
+          "text": "Both kettles transfer energy at the same rate.",
+          "misconception": "different ratings ignored"
+        },
+        {
+          "text": "Power rating tells you the mass of the kettle.",
+          "misconception": "power meaning confused"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Relate appliance power rating to rate of energy transfer."
+    },
+    {
+      "id": "edexcel_electricity_domestic_fuse_current_calc_018",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_fuse_current_calc_018_lo",
+        "statement": "Calculate operating current from power and mains voltage.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_domestic_fuse_current_calc_018",
+      "conceptFamily": "calculate_operating_current_from_power_and_mains_voltage",
+      "contextType": "exam_style",
+      "skill": "Calculate operating current from power and mains voltage.",
+      "stem": "A 690 W appliance is connected to the 230 V mains. What current does it normally take?",
+      "question": "A 690 W appliance is connected to the 230 V mains. What current does it normally take?",
+      "options": [
+        "0.33 A",
+        "3.0 A",
+        "460 A",
+        "158 700 A"
+      ],
+      "correctAnswer": "3.0 A",
+      "correctIndex": 1,
+      "explanation": "Use P = V × I, so I = P ÷ V. I = 690 ÷ 230 = 3.0 A.",
+      "misconceptionTag": "domestic-current-from-power",
+      "distractorRationales": [
+        {
+          "text": "0.33 A",
+          "misconception": ""
+        },
+        {
+          "text": "460 A",
+          "misconception": ""
+        },
+        {
+          "text": "158 700 A",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate operating current from power and mains voltage."
+    },
+    {
+      "id": "edexcel_electricity_domestic_plug_safety_019",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Domestic Electricity",
+      "topicSlug": "electricity",
+      "subtopicSlug": "domestic_electricity",
+      "topicId": "domestic_electricity",
+      "specRef": "10.39",
+      "specStatement": "Explain mains electricity safety including fuses and earthing.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_domestic_plug_safety_019_lo",
+        "statement": "Apply domestic electricity safety rules to damaged insulation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.39:live_neutral:applied_context",
-      "conceptFamily": "live_neutral",
-      "contextType": "a results discussion",
-      "skill": "Compare live and neutral wires.",
-      "stem": "In a results discussion, which conclusion is correct for domestic electricity? Demand focus: compare live and neutral wires.",
-      "question": "In a results discussion, which conclusion is correct for domestic electricity? Demand focus: compare live and neutral wires.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_domestic_plug_safety_019",
+      "conceptFamily": "apply_domestic_electricity_safety_rules_to_damaged_insulation",
+      "contextType": "exam_style",
+      "skill": "Apply domestic electricity safety rules to damaged insulation.",
+      "stem": "A plug has cracked insulation so that bare copper from the live wire can be touched. What should be done?",
+      "question": "A plug has cracked insulation so that bare copper from the live wire can be touched. What should be done?",
       "options": [
-        "For domestic electricity: The neutral wire is always more dangerous than live.",
-        "For domestic electricity, this would mean that the live wire has an alternating potential difference; the neutral wire is close to 0 V.",
-        "For domestic electricity, the option says that both wires carry no energy.",
-        "For domestic electricity: The live wire is at 0 V all the time."
+        "Stop using the appliance until the plug or cable is repaired.",
+        "Use the appliance only when the switch is off.",
+        "Replace the earth wire with a thicker live wire.",
+        "Wrap the fuse in foil so it cannot melt."
       ],
-      "correctAnswer": "For domestic electricity, this would mean that the live wire has an alternating potential difference; the neutral wire is close to 0 V.",
-      "correctIndex": 1,
-      "explanation": "10.39 targets: Compare live and neutral wires. Focus area: Domestic Electricity. For this question, The live wire has an alternating potential difference; the neutral wire is close to 0 V. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:live_neutral",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity: The neutral wire is always more dangerous than live.",
-          "misconception": "The neutral wire is always more dangerous than live."
-        },
-        {
-          "text": "For domestic electricity: The live wire is at 0 V all the time.",
-          "misconception": "The live wire is at 0 V all the time."
-        },
-        {
-          "text": "For domestic electricity, the option says that both wires carry no energy.",
-          "misconception": "Both wires carry no energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare live and neutral wires."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_fuse_purpose_misconception_correction_008",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_fuse_purpose",
-        "statement": "Explain the purpose of a fuse. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.39:fuse_purpose:misconception_correction",
-      "conceptFamily": "fuse_purpose",
-      "contextType": "a classroom demonstration",
-      "skill": "Explain the purpose of a fuse.",
-      "stem": "Which answer corrects a misconception about domestic electricity? Check the clue before choosing: Explain the purpose of a fuse.",
-      "question": "Which answer corrects a misconception about domestic electricity? Check the clue before choosing: Explain the purpose of a fuse.",
-      "options": [
-        "For domestic electricity, this would mean that a fuse increases current when the appliance is faulty.",
-        "For domestic electricity, this would mean that a fuse stores charge for later use.",
-        "For domestic electricity, it means that a fuse melts and breaks the circuit when current becomes too large.",
-        "For domestic electricity, the option says that a fuse protects by making the case live."
-      ],
-      "correctAnswer": "For domestic electricity, it means that a fuse melts and breaks the circuit when current becomes too large.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Explain the purpose of a fuse. Focus area: Domestic Electricity. For this question, A fuse melts and breaks the circuit when current becomes too large. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:fuse_purpose",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, this would mean that a fuse stores charge for later use.",
-          "misconception": "A fuse increases current when the appliance is faulty."
-        },
-        {
-          "text": "For domestic electricity, the option says that a fuse protects by making the case live.",
-          "misconception": "A fuse stores charge for later use."
-        },
-        {
-          "text": "For domestic electricity, this would mean that a fuse increases current when the appliance is faulty.",
-          "misconception": "A fuse protects by making the case live."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain the purpose of a fuse."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_earth_wire_exam_decision_009",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_earth_wire",
-        "statement": "Explain earthing. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.39:earth_wire:exam_decision",
-      "conceptFamily": "earth_wire",
-      "contextType": "a revision checkpoint",
-      "skill": "Explain earthing.",
-      "stem": "The mark scheme is testing explain earthing. Which answer matches that point? Demand focus: explain earthing.",
-      "question": "The mark scheme is testing explain earthing. Which answer matches that point? Demand focus: explain earthing.",
-      "options": [
-        "For domestic electricity, the answer claims that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-        "For domestic electricity, the answer claims that the earth wire prevents all current in normal use.",
-        "For domestic electricity, the statement is that the earth wire powers the appliance.",
-        "In this domestic electricity item, the earth wire replaces the live wire."
-      ],
-      "correctAnswer": "For domestic electricity, the answer claims that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
+      "correctAnswer": "Stop using the appliance until the plug or cable is repaired.",
       "correctIndex": 0,
-      "explanation": "10.39 targets: Explain earthing. Focus area: Domestic Electricity. For this question, The earth wire provides a low-resistance path to ground if a metal case becomes live. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:earth_wire",
+      "explanation": "Damaged insulation can expose the live conductor and cause electric shock, so the appliance should not be used until repaired.",
+      "misconceptionTag": "damaged-insulation-safety",
       "distractorRationales": [
         {
-          "text": "For domestic electricity, the answer claims that the earth wire prevents all current in normal use.",
-          "misconception": "The earth wire powers the appliance."
+          "text": "Use the appliance only when the switch is off.",
+          "misconception": "live wire may still be dangerous"
         },
         {
-          "text": "For domestic electricity, the statement is that the earth wire powers the appliance.",
-          "misconception": "The earth wire replaces the live wire."
+          "text": "Replace the earth wire with a thicker live wire.",
+          "misconception": "unsafe wiring change"
         },
         {
-          "text": "In this domestic electricity item, the earth wire replaces the live wire.",
-          "misconception": "The earth wire prevents all current in normal use."
+          "text": "Wrap the fuse in foil so it cannot melt.",
+          "misconception": "bypassing fuse is dangerous"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.39.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain earthing."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_power_rating_representation_interpretation_010",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_power_rating",
-        "statement": "Use appliance power rating safely. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.39:power_rating:representation_interpretation",
-      "conceptFamily": "power_rating",
-      "contextType": "an exam-style data table",
-      "skill": "Use appliance power rating safely.",
-      "stem": "A representation of domestic electricity is described in words. Which interpretation is correct? Keep the answer focused on domestic electricity: use appliance power rating safely.",
-      "question": "A representation of domestic electricity is described in words. Which interpretation is correct? Keep the answer focused on domestic electricity: use appliance power rating safely.",
-      "options": [
-        "In this domestic electricity item, higher power appliances transfer more energy each second and draw larger currents.",
-        "For domestic electricity, the statement is that higher power means lower current for the same voltage every time.",
-        "The answer for domestic electricity says that power rating tells the mass of the appliance.",
-        "For domestic electricity, the statement is that power is unrelated to energy transfer."
-      ],
-      "correctAnswer": "In this domestic electricity item, higher power appliances transfer more energy each second and draw larger currents.",
-      "correctIndex": 0,
-      "explanation": "10.39 targets: Use appliance power rating safely. Focus area: Domestic Electricity. For this question, Higher power appliances transfer more energy each second and draw larger currents. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_rating",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, the statement is that higher power means lower current for the same voltage every time.",
-          "misconception": "Higher power means lower current for the same voltage every time."
-        },
-        {
-          "text": "The answer for domestic electricity says that power rating tells the mass of the appliance.",
-          "misconception": "Power rating tells the mass of the appliance."
-        },
-        {
-          "text": "For domestic electricity, the statement is that power is unrelated to energy transfer.",
-          "misconception": "Power is unrelated to energy transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use appliance power rating safely."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_mains_ac_concept_discrimination_011",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_mains_ac",
-        "statement": "Describe mains electricity. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.39:mains_ac:concept_discrimination",
-      "conceptFamily": "mains_ac",
-      "contextType": "a required-practical notebook",
-      "skill": "Describe mains electricity.",
-      "stem": "A student is comparing similar ideas in domestic electricity. Which statement is correct? Demand focus: describe mains electricity.",
-      "question": "A student is comparing similar ideas in domestic electricity. Which statement is correct? Demand focus: describe mains electricity.",
-      "options": [
-        "In this item, it means that mains electricity has no live wire.",
-        "For domestic electricity: UK mains is direct current at 12 V.",
-        "In this item, it means that mains potential difference is measured in amperes.",
-        "For domestic electricity, it means that uK mains is alternating potential difference at about 230 V."
-      ],
-      "correctAnswer": "For domestic electricity, it means that uK mains is alternating potential difference at about 230 V.",
-      "correctIndex": 3,
-      "explanation": "10.39 targets: Describe mains electricity. Focus area: Domestic Electricity. For this question, UK mains is alternating potential difference at about 230 V. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:mains_ac",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that mains potential difference is measured in amperes.",
-          "misconception": "UK mains is direct current at 12 V."
-        },
-        {
-          "text": "In this item, it means that mains electricity has no live wire.",
-          "misconception": "Mains potential difference is measured in amperes."
-        },
-        {
-          "text": "For domestic electricity: UK mains is direct current at 12 V.",
-          "misconception": "Mains electricity has no live wire."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe mains electricity."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_live_neutral_applied_context_012",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_live_neutral",
-        "statement": "Compare live and neutral wires. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.39:live_neutral:applied_context",
-      "conceptFamily": "live_neutral",
-      "contextType": "a technician report",
-      "skill": "Compare live and neutral wires.",
-      "stem": "A question set in a technician report tests domestic electricity. Which answer applies the idea correctly? Demand focus: compare live and neutral wires.",
-      "question": "A question set in a technician report tests domestic electricity. Which answer applies the idea correctly? Demand focus: compare live and neutral wires.",
-      "options": [
-        "In this domestic electricity item, the live wire is at 0 V all the time.",
-        "For domestic electricity, the answer claims that both wires carry no energy.",
-        "For domestic electricity, the answer claims that the neutral wire is always more dangerous than live.",
-        "For domestic electricity, the statement is that the live wire has an alternating potential difference; the neutral wire is close to 0 V."
-      ],
-      "correctAnswer": "For domestic electricity, the statement is that the live wire has an alternating potential difference; the neutral wire is close to 0 V.",
-      "correctIndex": 3,
-      "explanation": "10.39 targets: Compare live and neutral wires. Focus area: Domestic Electricity. For this question, The live wire has an alternating potential difference; the neutral wire is close to 0 V. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:live_neutral",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, the answer claims that both wires carry no energy.",
-          "misconception": "The neutral wire is always more dangerous than live."
-        },
-        {
-          "text": "For domestic electricity, the answer claims that the neutral wire is always more dangerous than live.",
-          "misconception": "The live wire is at 0 V all the time."
-        },
-        {
-          "text": "In this domestic electricity item, the live wire is at 0 V all the time.",
-          "misconception": "Both wires carry no energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare live and neutral wires."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_fuse_purpose_data_interpretation_013",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_fuse_purpose",
-        "statement": "Explain the purpose of a fuse. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.39:fuse_purpose:data_interpretation",
-      "conceptFamily": "fuse_purpose",
-      "contextType": "a labelled diagram",
-      "skill": "Explain the purpose of a fuse.",
-      "stem": "A small data set about domestic electricity is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain the purpose of a fuse.",
-      "question": "A small data set about domestic electricity is being interpreted. Which conclusion is valid? Check the clue before choosing: Explain the purpose of a fuse.",
-      "options": [
-        "For domestic electricity, this would mean that a fuse stores charge for later use.",
-        "For domestic electricity, this would mean that a fuse increases current when the appliance is faulty.",
-        "In this item, it means that a fuse melts and breaks the circuit when current becomes too large.",
-        "For domestic electricity, it means that a fuse protects by making the case live."
-      ],
-      "correctAnswer": "In this item, it means that a fuse melts and breaks the circuit when current becomes too large.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Explain the purpose of a fuse. Focus area: Domestic Electricity. For this question, A fuse melts and breaks the circuit when current becomes too large. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:fuse_purpose",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, this would mean that a fuse increases current when the appliance is faulty.",
-          "misconception": "A fuse increases current when the appliance is faulty."
-        },
-        {
-          "text": "For domestic electricity, this would mean that a fuse stores charge for later use.",
-          "misconception": "A fuse stores charge for later use."
-        },
-        {
-          "text": "For domestic electricity, it means that a fuse protects by making the case live.",
-          "misconception": "A fuse protects by making the case live."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain the purpose of a fuse."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_earth_wire_exam_decision_014",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_earth_wire",
-        "statement": "Explain earthing. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.39:earth_wire:exam_decision",
-      "conceptFamily": "earth_wire",
-      "contextType": "a short calculation",
-      "skill": "Explain earthing.",
-      "stem": "Which answer is the strongest GCSE Physics response for domestic electricity? Demand focus: explain earthing.",
-      "question": "Which answer is the strongest GCSE Physics response for domestic electricity? Demand focus: explain earthing.",
-      "options": [
-        "For domestic electricity: The earth wire prevents all current in normal use.",
-        "The claim for domestic electricity is that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-        "The claim for domestic electricity is that the earth wire replaces the live wire.",
-        "For domestic electricity, this would mean that the earth wire powers the appliance."
-      ],
-      "correctAnswer": "The claim for domestic electricity is that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-      "correctIndex": 1,
-      "explanation": "10.39 targets: Explain earthing. Focus area: Domestic Electricity. For this question, The earth wire provides a low-resistance path to ground if a metal case becomes live. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:earth_wire",
-      "distractorRationales": [
-        {
-          "text": "The claim for domestic electricity is that the earth wire replaces the live wire.",
-          "misconception": "The earth wire powers the appliance."
-        },
-        {
-          "text": "For domestic electricity: The earth wire prevents all current in normal use.",
-          "misconception": "The earth wire replaces the live wire."
-        },
-        {
-          "text": "For domestic electricity, this would mean that the earth wire powers the appliance.",
-          "misconception": "The earth wire prevents all current in normal use."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain earthing."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_power_rating_direct_recall_015",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_power_rating",
-        "statement": "Use appliance power rating safely. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.39:power_rating:direct_recall",
-      "conceptFamily": "power_rating",
-      "contextType": "a safety decision",
-      "skill": "Use appliance power rating safely.",
-      "stem": "Which answer matches this domestic electricity objective: Use appliance power rating safely? Keep the answer focused on domestic electricity: use appliance power rating safely.",
-      "question": "Which answer matches this domestic electricity objective: Use appliance power rating safely? Keep the answer focused on domestic electricity: use appliance power rating safely.",
-      "options": [
-        "For domestic electricity, it means that power is unrelated to energy transfer.",
-        "For domestic electricity, it means that power rating tells the mass of the appliance.",
-        "In this domestic electricity item, higher power appliances transfer more energy each second and draw larger currents.",
-        "For domestic electricity, the statement is that higher power means lower current for the same voltage every time."
-      ],
-      "correctAnswer": "In this domestic electricity item, higher power appliances transfer more energy each second and draw larger currents.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Use appliance power rating safely. Focus area: Domestic Electricity. For this question, Higher power appliances transfer more energy each second and draw larger currents. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:power_rating",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, it means that power is unrelated to energy transfer.",
-          "misconception": "Higher power means lower current for the same voltage every time."
-        },
-        {
-          "text": "For domestic electricity, the statement is that higher power means lower current for the same voltage every time.",
-          "misconception": "Power rating tells the mass of the appliance."
-        },
-        {
-          "text": "For domestic electricity, it means that power rating tells the mass of the appliance.",
-          "misconception": "Power is unrelated to energy transfer."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use appliance power rating safely."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_mains_ac_concept_discrimination_016",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_mains_ac",
-        "statement": "Describe mains electricity. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.39:mains_ac:concept_discrimination",
-      "conceptFamily": "mains_ac",
-      "contextType": "a graph-reading task",
-      "skill": "Describe mains electricity.",
-      "stem": "Which option best separates the correct domestic electricity idea from a common mix-up? Demand focus: describe mains electricity.",
-      "question": "Which option best separates the correct domestic electricity idea from a common mix-up? Demand focus: describe mains electricity.",
-      "options": [
-        "For domestic electricity, it means that uK mains is direct current at 12 V.",
-        "The answer for domestic electricity says that uK mains is alternating potential difference at about 230 V.",
-        "For domestic electricity, the answer claims that mains electricity has no live wire.",
-        "For domestic electricity, it means that mains potential difference is measured in amperes."
-      ],
-      "correctAnswer": "The answer for domestic electricity says that uK mains is alternating potential difference at about 230 V.",
-      "correctIndex": 1,
-      "explanation": "10.39 targets: Describe mains electricity. Focus area: Domestic Electricity. For this question, UK mains is alternating potential difference at about 230 V. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:mains_ac",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, it means that uK mains is direct current at 12 V.",
-          "misconception": "UK mains is direct current at 12 V."
-        },
-        {
-          "text": "For domestic electricity, it means that mains potential difference is measured in amperes.",
-          "misconception": "Mains potential difference is measured in amperes."
-        },
-        {
-          "text": "For domestic electricity, the answer claims that mains electricity has no live wire.",
-          "misconception": "Mains electricity has no live wire."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe mains electricity."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_live_neutral_misconception_correction_017",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_live_neutral",
-        "statement": "Compare live and neutral wires. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.39:live_neutral:misconception_correction",
-      "conceptFamily": "live_neutral",
-      "contextType": "a comparison question",
-      "skill": "Compare live and neutral wires.",
-      "stem": "Which answer corrects a misconception about domestic electricity? Demand focus: compare live and neutral wires.",
-      "question": "Which answer corrects a misconception about domestic electricity? Demand focus: compare live and neutral wires.",
-      "options": [
-        "In this domestic electricity item, the live wire is at 0 V all the time.",
-        "The answer for domestic electricity says that both wires carry no energy.",
-        "For domestic electricity, it means that the neutral wire is always more dangerous than live.",
-        "For domestic electricity, the answer claims that the live wire has an alternating potential difference; the neutral wire is close to 0 V."
-      ],
-      "correctAnswer": "For domestic electricity, the answer claims that the live wire has an alternating potential difference; the neutral wire is close to 0 V.",
-      "correctIndex": 3,
-      "explanation": "10.39 targets: Compare live and neutral wires. Focus area: Domestic Electricity. For this question, The live wire has an alternating potential difference; the neutral wire is close to 0 V. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:live_neutral",
-      "distractorRationales": [
-        {
-          "text": "In this domestic electricity item, the live wire is at 0 V all the time.",
-          "misconception": "The neutral wire is always more dangerous than live."
-        },
-        {
-          "text": "The answer for domestic electricity says that both wires carry no energy.",
-          "misconception": "The live wire is at 0 V all the time."
-        },
-        {
-          "text": "For domestic electricity, it means that the neutral wire is always more dangerous than live.",
-          "misconception": "Both wires carry no energy."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare live and neutral wires."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_fuse_purpose_data_interpretation_018",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_fuse_purpose",
-        "statement": "Explain the purpose of a fuse. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.39:fuse_purpose:data_interpretation",
-      "conceptFamily": "fuse_purpose",
-      "contextType": "a method-choice question",
-      "skill": "Explain the purpose of a fuse.",
-      "stem": "Which conclusion about domestic electricity is supported by the evidence? Check the clue before choosing: Explain the purpose of a fuse.",
-      "question": "Which conclusion about domestic electricity is supported by the evidence? Check the clue before choosing: Explain the purpose of a fuse.",
-      "options": [
-        "The answer for domestic electricity says that a fuse stores charge for later use.",
-        "For domestic electricity, the statement is that a fuse protects by making the case live.",
-        "For domestic electricity, it means that a fuse melts and breaks the circuit when current becomes too large.",
-        "For domestic electricity, the statement is that a fuse increases current when the appliance is faulty."
-      ],
-      "correctAnswer": "For domestic electricity, it means that a fuse melts and breaks the circuit when current becomes too large.",
-      "correctIndex": 2,
-      "explanation": "10.39 targets: Explain the purpose of a fuse. Focus area: Domestic Electricity. For this question, A fuse melts and breaks the circuit when current becomes too large. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:fuse_purpose",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, the statement is that a fuse protects by making the case live.",
-          "misconception": "A fuse increases current when the appliance is faulty."
-        },
-        {
-          "text": "For domestic electricity, the statement is that a fuse increases current when the appliance is faulty.",
-          "misconception": "A fuse stores charge for later use."
-        },
-        {
-          "text": "The answer for domestic electricity says that a fuse stores charge for later use.",
-          "misconception": "A fuse protects by making the case live."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain the purpose of a fuse."
-    },
-    {
-      "id": "edexcel_10_39_domestic_electricity_earth_wire_representation_interpretation_019",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Domestic Electricity",
-      "topicSlug": "electricity",
-      "subtopicSlug": "domestic_electricity",
-      "topicId": "domestic_electricity",
-      "specRef": "10.39",
-      "specStatement": "Explain mains electricity safety including fuses and earthing.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_39_domestic_electricity_earth_wire",
-        "statement": "Explain earthing. (Domestic Electricity)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.39:earth_wire:representation_interpretation",
-      "conceptFamily": "earth_wire",
-      "contextType": "a results discussion",
-      "skill": "Explain earthing.",
-      "stem": "A representation of domestic electricity is described in words. Which interpretation is correct? Demand focus: explain earthing.",
-      "question": "A representation of domestic electricity is described in words. Which interpretation is correct? Demand focus: explain earthing.",
-      "options": [
-        "For domestic electricity, it means that the earth wire powers the appliance.",
-        "For domestic electricity, it means that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-        "For domestic electricity, the statement is that the earth wire replaces the live wire.",
-        "For domestic electricity, it means that the earth wire prevents all current in normal use."
-      ],
-      "correctAnswer": "For domestic electricity, it means that the earth wire provides a low-resistance path to ground if a metal case becomes live.",
-      "correctIndex": 1,
-      "explanation": "10.39 targets: Explain earthing. Focus area: Domestic Electricity. For this question, The earth wire provides a low-resistance path to ground if a metal case becomes live. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:earth_wire",
-      "distractorRationales": [
-        {
-          "text": "For domestic electricity, it means that the earth wire powers the appliance.",
-          "misconception": "The earth wire powers the appliance."
-        },
-        {
-          "text": "For domestic electricity, the statement is that the earth wire replaces the live wire.",
-          "misconception": "The earth wire replaces the live wire."
-        },
-        {
-          "text": "For domestic electricity, it means that the earth wire prevents all current in normal use.",
-          "misconception": "The earth wire prevents all current in normal use."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.39; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain earthing."
+      "senNote": "Checks: Apply domestic electricity safety rules to damaged insulation."
     },
     {
       "id": "edexcel_electricity_energy_definition_001",

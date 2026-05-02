@@ -5,6 +5,34 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice Edexcel Efficiency authored
+- Fixed Edexcel `Efficiency`: 19/19 authored and passed.
+- Hidden spec metadata:
+  - Pearson Edexcel GCSE Physics `specRef`: `3.12`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - Efficiency runtime count: 19.
+  - Authored IDs: 19.
+  - Bad scaffold/answer phrase count: 0.
+  - Covers efficiency equations, percentage/decimal conversion, useful/wasted transfer, input/output power, Sankey interpretation, and reducing wasted transfer.
+- Topic completion:
+  - AQA Energy: 94/94 good to go.
+  - Edexcel Energy: 19/94 good to go.
+  - Combined Energy: 113/188 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - Exact Edexcel Efficiency route was shown live in Simulator at `/practice/efficiency`.
+  - Screenshot saved at `/tmp/neurophysics-edexcel-efficiency.png`.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Continue Edexcel Energy:
+  - Edexcel `Energy Resources`: 37 authored exam-style questions.
+
 ### Adaptive Practice AQA Energy completed
 - Fixed AQA `Power`: 19/19 authored and passed.
 - Hidden spec metadata:

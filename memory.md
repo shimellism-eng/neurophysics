@@ -34,6 +34,29 @@
 - If the sample reads well, commit this as one Adaptive Practice regeneration checkpoint.
 - If any wording feels too mechanical, refine only `questionBlueprints.js` / generator phrasing and regenerate; do not hand-edit runtime JSON.
 
+### Adaptive Practice wording polish
+- Sample-reviewed the regenerated AQA and Edexcel Atomic Structure questions after the structural regeneration.
+- Found the first generated wording was metadata-clean but too mechanical for learners.
+- Polished the generator so visible answer choices read as neutral multiple-choice claims instead of labels like "Incorrect recall".
+- Re-ran regeneration and kept all quality gates strict:
+  - duplicate IDs: 0
+  - duplicate exact stems: 0
+  - near/template duplicate stems: 0
+  - repeated option sets: 0
+  - placeholder options: 0
+  - missing spec/learning metadata: 0
+- Verification after polish:
+  - `npm test` passes
+  - `npm run build` passes
+  - `git diff --check` passes
+  - `npx cap sync ios` passes
+  - iOS simulator build/run passes with `CODE_SIGNING_ALLOWED=NO`
+
+### Next step
+- Continue sample review topic by topic, next with Electricity for AQA + Edexcel.
+- If Electricity reads clean, move to Energy, Forces, Magnetism, Particle Model, Waves, then Space.
+- Keep improving generator/source facts only; do not hand-edit runtime JSON.
+
 ### Adaptive Practice question-quality repair
 - Audited Adaptive Practice runtime question data for both shipped boards.
 - AQA status:

@@ -163,6 +163,37 @@ function pick(items, index) {
   return items[index % items.length]
 }
 
+function lowerFirst(value) {
+  const text = String(value || '')
+  return text ? `${text.charAt(0).toLowerCase()}${text.slice(1)}` : text
+}
+
+function sentence(value) {
+  const text = String(value || '').trim()
+  if (!text) return text
+  return /[.!?]$/.test(text) ? text : `${text}.`
+}
+
+function optionText(value, spec, variant) {
+  const clean = sentence(value)
+  const area = spec.subtopic.toLowerCase()
+  const variants = [
+    `For ${area}: ${clean}`,
+    `For ${area}, it means that ${lowerFirst(clean)}`,
+    `For ${area}, this would mean that ${lowerFirst(clean)}`,
+    `For ${area}, the statement is that ${lowerFirst(clean)}`,
+    `For ${area}, the option says that ${lowerFirst(clean)}`,
+    `For ${area}, the answer claims that ${lowerFirst(clean)}`,
+    `For ${area}, it means that ${lowerFirst(clean)}`,
+    `For ${area}, the statement is that ${lowerFirst(clean)}`,
+    `In this item, it means that ${lowerFirst(clean)}`,
+    `In this ${area} item, ${lowerFirst(clean)}`,
+    `The claim for ${area} is that ${lowerFirst(clean)}`,
+    `The answer for ${area} says that ${lowerFirst(clean)}`,
+  ]
+  return pick(variants, variant)
+}
+
 function rotate(items, offset) {
   return items.map((_, index) => items[(index + offset) % items.length])
 }
@@ -219,43 +250,12 @@ function difficultyFor(mode, index) {
 }
 
 function makeCorrectText(fact, mode, variant, spec) {
-  const area = spec.subtopic.toLowerCase()
-  const variants = [
-    fact.correct,
-    `${fact.correct} This matches the target idea.`,
-    `${fact.correct} That is the valid GCSE Physics conclusion.`,
-    `Use this idea: ${fact.correct}`,
-    `The correct reasoning is that ${fact.correct.charAt(0).toLowerCase()}${fact.correct.slice(1)}`,
-    `The specification-safe answer is: ${fact.correct}`,
-    `This answer is correct because ${fact.correct.charAt(0).toLowerCase()}${fact.correct.slice(1)}`,
-    `For ${area}, the key answer is: ${fact.correct}`,
-    `In a ${area} question, use: ${fact.correct}`,
-  ]
-  return pick(variants, variant)
+  return optionText(fact.correct, spec, variant + createSeed(`${spec.specRef}:${spec.subtopic}:${fact.id}:${mode}:correct`))
 }
 
 function makeDistractors(fact, mode, variant, spec) {
-  const area = spec.subtopic.toLowerCase()
   const base = rotate(fact.distractors, variant).slice(0, 3)
-  const prefixes = {
-    direct_recall: ['Incorrect recall: ', 'Wrong definition: ', 'Misremembered idea: '],
-    concept_discrimination: ['Misread idea: ', 'Common mix-up: ', 'Wrong link: '],
-    applied_context: ['In this context, ', 'This would wrongly suggest ', 'This incorrectly treats it as '],
-    misconception_correction: ['Keep the misconception: ', 'Incorrect correction: ', 'Still wrong because ', 'Not enough: '],
-    data_interpretation: ['The data would not show that ', 'This ignores the evidence: ', 'This reads the pattern as '],
-    exam_decision: ['Rejected because ', 'Not the best choice: ', 'This confuses the idea with '],
-    representation_interpretation: ['The diagram would not mean ', 'This symbol would not show ', 'This representation would not support '],
-  }[mode] || ['', '', '']
-
-  return base.map((value, index) => {
-    const prefix = prefixes[index % prefixes.length]
-    const text = prefix
-      ? `${prefix}${value.charAt(0).toLowerCase()}${value.slice(1)}`
-      : value
-    if ((variant + index) % 3 === 0) return `${text} This is not valid for ${area}.`
-    if ((variant + index) % 3 === 1) return `${text} That would miss the ${area} focus.`
-    return text
-  })
+  return base.map((value, index) => optionText(value, spec, variant + index + createSeed(`${spec.specRef}:${spec.subtopic}:${fact.id}:${mode}:d${index}`)))
 }
 
 function makeStem({ fact, spec, mode, context, variant, difficulty }) {
@@ -264,49 +264,49 @@ function makeStem({ fact, spec, mode, context, variant, difficulty }) {
   const focus = object.charAt(0).toLowerCase() + object.slice(1)
   const stems = {
     direct_recall: [
-      `For ${promptNoun}, which statement correctly shows how to ${focus}?`,
-      `A GCSE Physics flashcard asks students to ${focus}. Which answer is correct?`,
-      `Which answer would be kept for the ${promptNoun} learning objective: ${object}?`,
+      `Which statement is correct for ${promptNoun}?`,
+      `A student is revising ${promptNoun}. Which statement should they keep?`,
+      `Which answer matches this ${promptNoun} objective: ${object}?`,
     ],
     concept_discrimination: [
-      `Which option best distinguishes the correct idea when students must ${focus}?`,
-      `A student is comparing similar ideas in ${promptNoun}. Which statement should they keep to ${focus}?`,
-      `Which statement avoids the common ${promptNoun} mix-up while trying to ${focus}?`,
+      `Which option best separates the correct ${promptNoun} idea from a common mix-up?`,
+      `A student is comparing similar ideas in ${promptNoun}. Which statement is correct?`,
+      `Which statement avoids the common ${promptNoun} mistake?`,
     ],
     applied_context: [
-      `In ${context}, which conclusion applies the idea of ${focus}?`,
-      `During ${context}, a result needs explaining. Which answer shows how to ${focus}?`,
-      `A question set in ${context} tests ${promptNoun}. Which answer applies ${object}?`,
+      `In ${context}, which conclusion is correct for ${promptNoun}?`,
+      `During ${context}, a result needs explaining. Which answer is best?`,
+      `A question set in ${context} tests ${promptNoun}. Which answer applies the idea correctly?`,
     ],
     misconception_correction: [
-      `A learner gives a wrong ${promptNoun} explanation while trying to ${focus}. Which correction is best?`,
-      `Which answer corrects a misconception about how to ${focus} in ${promptNoun}?`,
-      `A revision note about ${promptNoun} contains an error. Which replacement correctly helps students ${focus}?`,
+      `A learner gives a wrong explanation for ${promptNoun}. Which correction is best?`,
+      `Which answer corrects a misconception about ${promptNoun}?`,
+      `A revision note about ${promptNoun} contains an error. Which replacement is correct?`,
     ],
     data_interpretation: [
-      `A small data set about ${promptNoun} is used to test whether students can ${focus}. Which interpretation is valid?`,
-      `A result from ${context} about ${promptNoun} is being interpreted. Which answer follows from ${object}?`,
-      `Which conclusion about ${promptNoun} would be supported by evidence about how to ${focus}?`,
+      `A small data set about ${promptNoun} is being interpreted. Which conclusion is valid?`,
+      `A result from ${context} about ${promptNoun} is being interpreted. Which answer follows?`,
+      `Which conclusion about ${promptNoun} is supported by the evidence?`,
     ],
     exam_decision: [
-      `In an exam question about ${promptNoun}, which answer would earn the mark for ${object}?`,
-      `Which answer is the strongest GCSE Physics response when asked to ${focus} in ${promptNoun}?`,
-      `A ${promptNoun} mark scheme focuses on ${object.toLowerCase()}. Which answer matches that exact point?`,
+      `In an exam question about ${promptNoun}, which answer would earn the mark?`,
+      `Which answer is the strongest GCSE Physics response for ${promptNoun}?`,
+      `The mark scheme is testing ${lowerFirst(object)}. Which answer matches that point?`,
     ],
     representation_interpretation: [
-      `A representation of ${promptNoun} is shown in words. Which interpretation helps students ${focus}?`,
-      `Which option correctly reads the ${promptNoun} model or diagram idea needed to ${focus}?`,
-      `A labelled representation is used for ${promptNoun}. Which statement is valid for ${object}?`,
+      `A representation of ${promptNoun} is described in words. Which interpretation is correct?`,
+      `Which option correctly reads the ${promptNoun} model or diagram idea?`,
+      `A labelled representation is used for ${promptNoun}. Which statement is valid?`,
     ],
   }
 
   const base = pick(stems[mode], variant)
   const closingPrompts = [
-    `For ${promptNoun}, use the ${context} setting to rule out related-but-wrong ideas.`,
-    `Keep the answer focused on ${promptNoun}, not a neighbouring topic.`,
-    `For ${promptNoun}, choose the statement that fits this exact GCSE Physics idea.`,
-    `Focus on the ${difficulty} demand: ${focus}.`,
-    `Check the wording against the ${promptNoun} clue before choosing.`,
+    `Use the wording carefully: this is about ${focus}.`,
+    `Keep the answer focused on ${promptNoun}: ${focus}.`,
+    `Choose the statement that fits this exact GCSE Physics idea: ${focus}.`,
+    `Demand focus: ${focus}.`,
+    `Check the clue before choosing: ${object}.`,
   ]
 
   return `${base} ${pick(closingPrompts, variant + fact.id.length + spec.specRef.length)}`

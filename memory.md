@@ -35,6 +35,12 @@
 - Review/commit the Edexcel prompt repair as one content-quality checkpoint.
 - Next quality pass should inspect repeated option sets/distractors, because the current gate removes repeated stems/templates but still reports repeated option sets for both boards.
 
+### Edexcel Atomic Structure distractor cleanup
+- Repaired distractor variety for Edexcel `atomic_structure` only, using curated GCSE-safe wrong-answer pools.
+- Preserved every correct answer exactly and kept existing question IDs, topics, difficulty, skills, explanations, and Adaptive Practice logic unchanged.
+- `npm test`, `npm run build`, `npm run audit:questions`, and `git diff --check` passed after the atomic distractor batch.
+- Remaining repeated option sets are mostly outside Edexcel Atomic Structure, especially Magnetism, Space, Waves, Energy, Electricity, and some AQA calculation pairs.
+
 ## What Was Just Done (latest — 2026-05-01)
 
 ### Auth, consent, onboarding cleanup

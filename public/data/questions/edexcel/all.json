@@ -41,7 +41,7 @@
         "Neutrons have a positive charge.",
         "The nucleus contains only electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus."
+        "Protons are found in shells around the nucleus."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 2,
@@ -64,8 +64,8 @@
       "options": [
         "The nucleus contains only electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge."
+        "Protons are found in shells around the nucleus.",
+        "Neutrons move around the outside of the atom."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 1,
@@ -87,9 +87,9 @@
       "question": "A learner uses a particle model sketch to check the key physics idea. Which statement about the structure of an atom is correct?",
       "options": [
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons."
+        "Protons are found in shells around the nucleus.",
+        "Neutrons move around the outside of the atom.",
+        "Electrons have the same positive charge as protons."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 0,
@@ -110,9 +110,9 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a classroom atom model to prepare for an exam-style question. Which statement about the structure of an atom is correct? Choose the best answer.",
       "options": [
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons.",
+        "Neutrons move around the outside of the atom.",
+        "Electrons have the same positive charge as protons.",
+        "The nucleus contains no mass compared with the electrons.",
         "Protons and neutrons are found in the nucleus."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
@@ -134,10 +134,10 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a revision diagram of a lithium atom to prepare for an exam-style question. Which statement about the structure of an atom is correct? Choose the best answer.",
       "options": [
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons.",
+        "Electrons have the same positive charge as protons.",
+        "The nucleus contains no mass compared with the electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus."
+        "Atoms contain no empty space between the nucleus and shells."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 2,
@@ -158,10 +158,10 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a student note about nuclei and shells to prepare for an exam-style question. Which statement about the structure of an atom is correct? Choose the best answer.",
       "options": [
-        "The nucleus contains only electrons.",
+        "The nucleus contains no mass compared with the electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge."
+        "Atoms contain no empty space between the nucleus and shells.",
+        "The electron shells contain protons and neutrons."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 1,
@@ -182,10 +182,10 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a particle model sketch to prepare for an exam-style question. Which statement about the structure of an atom is correct?",
       "options": [
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons.",
+        "Atoms contain no empty space between the nucleus and shells.",
+        "The electron shells contain protons and neutrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus."
+        "All particles in an atom have the same charge."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 2,
@@ -206,10 +206,10 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a classroom atom model to test a common misconception. Which statement about the structure of an atom is correct?",
       "options": [
-        "The nucleus contains only electrons.",
+        "The electron shells contain protons and neutrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge."
+        "All particles in an atom have the same charge.",
+        "Electrons are found inside protons in the nucleus."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 1,
@@ -231,9 +231,9 @@
       "question": "A learner uses a revision diagram of a lithium atom to test a common misconception. Which statement about the structure of an atom is correct?",
       "options": [
         "Protons and neutrons are found in the nucleus.",
+        "All particles in an atom have the same charge.",
         "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons."
+        "Neutrons have a positive charge."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 0,
@@ -281,7 +281,7 @@
         "Neutrons have a positive charge.",
         "The nucleus contains only electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus."
+        "Protons are found in shells around the nucleus."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 2,
@@ -304,8 +304,8 @@
       "options": [
         "The nucleus contains only electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge."
+        "Protons are found in shells around the nucleus.",
+        "Neutrons move around the outside of the atom."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 1,
@@ -327,9 +327,9 @@
       "question": "A learner uses a revision diagram of a lithium atom to link the context to the GCSE model. Which statement about the structure of an atom is correct?",
       "options": [
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons."
+        "Protons are found in shells around the nucleus.",
+        "Neutrons move around the outside of the atom.",
+        "Electrons have the same positive charge as protons."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 0,
@@ -350,9 +350,9 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a student note about nuclei and shells to link the context to the GCSE model. Which statement about the structure of an atom is correct?",
       "options": [
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons.",
+        "Neutrons move around the outside of the atom.",
+        "Electrons have the same positive charge as protons.",
+        "The nucleus contains no mass compared with the electrons.",
         "Protons and neutrons are found in the nucleus."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
@@ -374,10 +374,10 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a particle model sketch to link the context to the GCSE model. Which statement about the structure of an atom is correct?",
       "options": [
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons.",
+        "Electrons have the same positive charge as protons.",
+        "The nucleus contains no mass compared with the electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus."
+        "Atoms contain no empty space between the nucleus and shells."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 2,
@@ -398,10 +398,10 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a classroom atom model to review the evidence in the setup. Which statement about the structure of an atom is correct?",
       "options": [
-        "The nucleus contains only electrons.",
+        "The nucleus contains no mass compared with the electrons.",
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge."
+        "Atoms contain no empty space between the nucleus and shells.",
+        "The electron shells contain protons and neutrons."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 1,
@@ -423,9 +423,9 @@
       "question": "A learner uses a revision diagram of a lithium atom to review the evidence in the setup. Which statement about the structure of an atom is correct? Choose the best answer.",
       "options": [
         "Protons and neutrons are found in the nucleus.",
-        "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons."
+        "Atoms contain no empty space between the nucleus and shells.",
+        "The electron shells contain protons and neutrons.",
+        "All particles in an atom have the same charge."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
       "correctIndex": 0,
@@ -446,9 +446,9 @@
       "skill": "Describe the structure of an atom",
       "question": "A learner uses a student note about nuclei and shells to review the evidence in the setup. Which statement about the structure of an atom is correct? Choose the best answer.",
       "options": [
+        "The electron shells contain protons and neutrons.",
+        "All particles in an atom have the same charge.",
         "Electrons are found inside protons in the nucleus.",
-        "Neutrons have a positive charge.",
-        "The nucleus contains only electrons.",
         "Protons and neutrons are found in the nucleus."
       ],
       "correctAnswer": "Protons and neutrons are found in the nucleus.",
@@ -470,9 +470,9 @@
       "skill": "Define background radiation",
       "question": "A learner uses a Geiger counter demonstration to check the key physics idea. What is background radiation?",
       "options": [
+        "Radiation that means an object has become radioactive forever.",
         "Radiation produced only in nuclear power stations.",
         "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
         "The low level of radiation that is always present in the environment."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
@@ -494,10 +494,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a classroom radiation survey to check the key physics idea. What is background radiation?",
       "options": [
+        "Radiation produced only in nuclear power stations.",
         "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations."
+        "Radiation that can only be detected during a nuclear accident."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 2,
@@ -518,10 +518,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a hospital safety briefing to check the key physics idea. What is background radiation?",
       "options": [
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that exists only inside medical equipment.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment."
+        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that appears only when a source is switched on."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 1,
@@ -543,9 +543,9 @@
       "question": "A learner uses a background count-rate log to check the key physics idea. What is background radiation?",
       "options": [
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident."
+        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that appears only when a source is switched on.",
+        "Radiation made only by X-ray machines."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 0,
@@ -566,9 +566,9 @@
       "skill": "Define background radiation",
       "question": "A learner uses a Geiger counter demonstration to prepare for an exam-style question. What is background radiation? Choose the best answer.",
       "options": [
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that appears only when a source is switched on.",
+        "Radiation made only by X-ray machines.",
+        "Radiation that is always too dangerous to measure.",
         "The low level of radiation that is always present in the environment."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
@@ -590,10 +590,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a classroom radiation survey to prepare for an exam-style question. What is background radiation? Choose the best answer.",
       "options": [
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation made only by X-ray machines.",
+        "Radiation that is always too dangerous to measure.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations."
+        "Radiation that comes only from human-made sources."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 2,
@@ -614,9 +614,9 @@
       "skill": "Define background radiation",
       "question": "A learner uses a hospital safety briefing to prepare for an exam-style question. What is background radiation?",
       "options": [
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that is always too dangerous to measure.",
+        "Radiation that comes only from human-made sources.",
+        "Radiation that disappears completely outdoors.",
         "The low level of radiation that is always present in the environment."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
@@ -638,10 +638,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a background count-rate log to prepare for an exam-style question. What is background radiation?",
       "options": [
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that comes only from human-made sources.",
+        "Radiation that disappears completely outdoors.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations."
+        "Radiation that is present only in science laboratories."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 2,
@@ -662,10 +662,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a Geiger counter demonstration to test a common misconception. What is background radiation?",
       "options": [
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that disappears completely outdoors.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment."
+        "Radiation that is present only in science laboratories.",
+        "Radiation that means an object has become radioactive forever."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 1,
@@ -687,9 +687,9 @@
       "question": "A learner uses a classroom radiation survey to test a common misconception. What is background radiation?",
       "options": [
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident."
+        "Radiation that is present only in science laboratories.",
+        "Radiation that means an object has become radioactive forever.",
+        "Radiation produced only in nuclear power stations."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 0,
@@ -710,9 +710,9 @@
       "skill": "Define background radiation",
       "question": "A learner uses a hospital safety briefing to test a common misconception. What is background radiation? Choose the best answer.",
       "options": [
+        "Radiation that means an object has become radioactive forever.",
         "Radiation produced only in nuclear power stations.",
         "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
         "The low level of radiation that is always present in the environment."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
@@ -734,10 +734,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a background count-rate log to test a common misconception. What is background radiation? Choose the best answer.",
       "options": [
+        "Radiation produced only in nuclear power stations.",
         "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations."
+        "Radiation that can only be detected during a nuclear accident."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 2,
@@ -758,10 +758,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a Geiger counter demonstration to link the context to the GCSE model. What is background radiation? Choose the best answer.",
       "options": [
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that exists only inside medical equipment.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment."
+        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that appears only when a source is switched on."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 1,
@@ -784,8 +784,8 @@
       "options": [
         "Radiation that can only be detected during a nuclear accident.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment."
+        "Radiation that appears only when a source is switched on.",
+        "Radiation made only by X-ray machines."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 1,
@@ -807,9 +807,9 @@
       "question": "A learner uses a hospital safety briefing to link the context to the GCSE model. What is background radiation?",
       "options": [
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident."
+        "Radiation that appears only when a source is switched on.",
+        "Radiation made only by X-ray machines.",
+        "Radiation that is always too dangerous to measure."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 0,
@@ -830,9 +830,9 @@
       "skill": "Define background radiation",
       "question": "A learner uses a background count-rate log to link the context to the GCSE model. What is background radiation?",
       "options": [
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation made only by X-ray machines.",
+        "Radiation that is always too dangerous to measure.",
+        "Radiation that comes only from human-made sources.",
         "The low level of radiation that is always present in the environment."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
@@ -854,10 +854,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a Geiger counter demonstration to review the evidence in the setup. What is background radiation?",
       "options": [
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that is always too dangerous to measure.",
+        "Radiation that comes only from human-made sources.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations."
+        "Radiation that disappears completely outdoors."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 2,
@@ -878,10 +878,10 @@
       "skill": "Define background radiation",
       "question": "A learner uses a classroom radiation survey to review the evidence in the setup. What is background radiation? Choose the best answer.",
       "options": [
-        "Radiation that can only be detected during a nuclear accident.",
+        "Radiation that comes only from human-made sources.",
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment."
+        "Radiation that disappears completely outdoors.",
+        "Radiation that is present only in science laboratories."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 1,
@@ -903,9 +903,9 @@
       "question": "A learner uses a hospital safety briefing to review the evidence in the setup. What is background radiation? Choose the best answer.",
       "options": [
         "The low level of radiation that is always present in the environment.",
-        "Radiation produced only in nuclear power stations.",
-        "Radiation that exists only inside medical equipment.",
-        "Radiation that can only be detected during a nuclear accident."
+        "Radiation that disappears completely outdoors.",
+        "Radiation that is present only in science laboratories.",
+        "Radiation that means an object has become radioactive forever."
       ],
       "correctAnswer": "The low level of radiation that is always present in the environment.",
       "correctIndex": 0,
@@ -926,9 +926,9 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a nuclear power station diagram to check the key physics idea. Which statement about nuclear fission is correct?",
       "options": [
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "The nucleus loses all of its protons but stays the same element.",
+        "A magnetic field splits the electrons into smaller particles.",
+        "A small nucleus joins another small nucleus at low temperature without releasing energy.",
         "A large nucleus splits into smaller nuclei and releases energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
@@ -950,10 +950,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a star-energy explanation to check the key physics idea. Which statement about nuclear fission is correct?",
       "options": [
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A magnetic field splits the electrons into smaller particles.",
+        "A small nucleus joins another small nucleus at low temperature without releasing energy.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy."
+        "Electrons split out of atoms and cause chemical burning."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 2,
@@ -974,10 +974,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a reactor fuel description to check the key physics idea. Which statement about nuclear fission is correct?",
       "options": [
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A small nucleus joins another small nucleus at low temperature without releasing energy.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning."
+        "Electrons split out of atoms and cause chemical burning.",
+        "A neutral atom turns into a charged atom only because it gains heat."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 1,
@@ -999,9 +999,9 @@
       "question": "A learner uses a fusion research note to check the key physics idea. Which statement about nuclear fission is correct?",
       "options": [
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
         "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat."
+        "A neutral atom turns into a charged atom only because it gains heat.",
+        "Two large nuclei join together without changing mass."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 0,
@@ -1022,9 +1022,9 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a nuclear power station diagram to prepare for an exam-style question. Which statement about nuclear fission is correct? Choose the best answer.",
       "options": [
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
         "A neutral atom turns into a charged atom only because it gains heat.",
+        "Two large nuclei join together without changing mass.",
+        "A nucleus absorbs light and turns into an electron.",
         "A large nucleus splits into smaller nuclei and releases energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
@@ -1046,10 +1046,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a star-energy explanation to prepare for an exam-style question. Which statement about nuclear fission is correct? Choose the best answer.",
       "options": [
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "Two large nuclei join together without changing mass.",
+        "A nucleus absorbs light and turns into an electron.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy."
+        "The outer electron shells split and release gravitational energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 2,
@@ -1070,9 +1070,9 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a reactor fuel description to prepare for an exam-style question. Which statement about nuclear fission is correct?",
       "options": [
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A nucleus absorbs light and turns into an electron.",
+        "The outer electron shells split and release gravitational energy.",
+        "A large nucleus cools down and becomes chemically neutral.",
         "A large nucleus splits into smaller nuclei and releases energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
@@ -1094,10 +1094,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a fusion research note to prepare for an exam-style question. Which statement about nuclear fission is correct?",
       "options": [
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "The outer electron shells split and release gravitational energy.",
+        "A large nucleus cools down and becomes chemically neutral.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy."
+        "Two atoms rub together and release sound energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 2,
@@ -1118,10 +1118,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a nuclear power station diagram to test a common misconception. Which statement about nuclear fission is correct?",
       "options": [
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A large nucleus cools down and becomes chemically neutral.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning."
+        "Two atoms rub together and release sound energy.",
+        "The nucleus loses all of its protons but stays the same element."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 1,
@@ -1143,9 +1143,9 @@
       "question": "A learner uses a star-energy explanation to test a common misconception. Which statement about nuclear fission is correct?",
       "options": [
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat."
+        "Two atoms rub together and release sound energy.",
+        "The nucleus loses all of its protons but stays the same element.",
+        "A magnetic field splits the electrons into smaller particles."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 0,
@@ -1166,9 +1166,9 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a reactor fuel description to test a common misconception. Which statement about nuclear fission is correct? Choose the best answer.",
       "options": [
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "The nucleus loses all of its protons but stays the same element.",
+        "A magnetic field splits the electrons into smaller particles.",
+        "A small nucleus joins another small nucleus at low temperature without releasing energy.",
         "A large nucleus splits into smaller nuclei and releases energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
@@ -1190,10 +1190,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a fusion research note to test a common misconception. Which statement about nuclear fission is correct? Choose the best answer.",
       "options": [
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A magnetic field splits the electrons into smaller particles.",
+        "A small nucleus joins another small nucleus at low temperature without releasing energy.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy."
+        "Electrons split out of atoms and cause chemical burning."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 2,
@@ -1214,10 +1214,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a nuclear power station diagram to link the context to the GCSE model. Which statement about nuclear fission is correct?",
       "options": [
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A small nucleus joins another small nucleus at low temperature without releasing energy.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning."
+        "Electrons split out of atoms and cause chemical burning.",
+        "A neutral atom turns into a charged atom only because it gains heat."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 1,
@@ -1239,9 +1239,9 @@
       "question": "A learner uses a star-energy explanation to link the context to the GCSE model. Which statement about nuclear fission is correct?",
       "options": [
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
         "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat."
+        "A neutral atom turns into a charged atom only because it gains heat.",
+        "Two large nuclei join together without changing mass."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 0,
@@ -1262,9 +1262,9 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a reactor fuel description to link the context to the GCSE model. Which statement about nuclear fission is correct?",
       "options": [
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
         "A neutral atom turns into a charged atom only because it gains heat.",
+        "Two large nuclei join together without changing mass.",
+        "A nucleus absorbs light and turns into an electron.",
         "A large nucleus splits into smaller nuclei and releases energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
@@ -1286,10 +1286,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a fusion research note to link the context to the GCSE model. Which statement about nuclear fission is correct?",
       "options": [
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "Two large nuclei join together without changing mass.",
+        "A nucleus absorbs light and turns into an electron.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy."
+        "The outer electron shells split and release gravitational energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 2,
@@ -1310,10 +1310,10 @@
       "skill": "Describe nuclear fission",
       "question": "A learner uses a nuclear power station diagram to review the evidence in the setup. Which statement about nuclear fission is correct? Choose the best answer.",
       "options": [
-        "A neutral atom turns into a charged atom only because it gains heat.",
+        "A nucleus absorbs light and turns into an electron.",
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning."
+        "The outer electron shells split and release gravitational energy.",
+        "A large nucleus cools down and becomes chemically neutral."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 1,
@@ -1335,9 +1335,9 @@
       "question": "A learner uses a star-energy explanation to review the evidence in the setup. Which statement about nuclear fission is correct? Choose the best answer.",
       "options": [
         "A large nucleus splits into smaller nuclei and releases energy.",
-        "A small nucleus joins with another small nucleus at low temperature without releasing energy.",
-        "Electrons split out of atoms and cause chemical burning.",
-        "A neutral atom turns into a charged atom only because it gains heat."
+        "The outer electron shells split and release gravitational energy.",
+        "A large nucleus cools down and becomes chemically neutral.",
+        "Two atoms rub together and release sound energy."
       ],
       "correctAnswer": "A large nucleus splits into smaller nuclei and releases energy.",
       "correctIndex": 0,
@@ -1358,9 +1358,9 @@
       "skill": "Use half-life",
       "question": "A learner uses a decay practical data table to check the key physics idea. A radioactive sample starts with 180 counts per minute. After 3 half-lives, what count rate remains?",
       "options": [
-        "60 counts per minute",
-        "177 counts per minute",
         "45 counts per minute",
+        "90 counts per minute",
+        "11.25 counts per minute",
         "22.5 counts per minute"
       ],
       "correctAnswer": "22.5 counts per minute",
@@ -1382,10 +1382,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a medical tracer activity log to check the key physics idea. A radioactive sample starts with 200 counts per minute. After 4 half-lives, what count rate remains?",
       "options": [
-        "196 counts per minute",
-        "25 counts per minute",
+        "18.75 counts per minute",
+        "37.5 counts per minute",
         "12.5 counts per minute",
-        "50 counts per minute"
+        "9.38 counts per minute"
       ],
       "correctAnswer": "12.5 counts per minute",
       "correctIndex": 2,
@@ -1406,10 +1406,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a laboratory isotope sample to check the key physics idea. A radioactive sample starts with 220 counts per minute. After 5 half-lives, what count rate remains?",
       "options": [
-        "13.75 counts per minute",
+        "27.52 counts per minute",
         "6.88 counts per minute",
-        "44 counts per minute",
-        "215 counts per minute"
+        "1.72 counts per minute",
+        "17.2 counts per minute"
       ],
       "correctAnswer": "6.88 counts per minute",
       "correctIndex": 1,
@@ -1431,9 +1431,9 @@
       "question": "A learner uses a count-rate graph question to check the key physics idea. A radioactive sample starts with 240 counts per minute. After 2 half-lives, what count rate remains?",
       "options": [
         "60 counts per minute",
-        "120 counts per minute",
-        "238 counts per minute",
-        "121 counts per minute"
+        "75 counts per minute",
+        "135 counts per minute",
+        "36 counts per minute"
       ],
       "correctAnswer": "60 counts per minute",
       "correctIndex": 0,
@@ -1454,9 +1454,9 @@
       "skill": "Use half-life",
       "question": "A learner uses a decay practical data table to prepare for an exam-style question. A radioactive sample starts with 260 counts per minute. After 3 half-lives, what count rate remains?",
       "options": [
-        "86.67 counts per minute",
-        "257 counts per minute",
         "65 counts per minute",
+        "130 counts per minute",
+        "16.25 counts per minute",
         "32.5 counts per minute"
       ],
       "correctAnswer": "32.5 counts per minute",
@@ -1478,10 +1478,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a medical tracer activity log to prepare for an exam-style question. A radioactive sample starts with 160 counts per minute. After 4 half-lives, what count rate remains?",
       "options": [
-        "156 counts per minute",
-        "20 counts per minute",
+        "15 counts per minute",
+        "30 counts per minute",
         "10 counts per minute",
-        "40 counts per minute"
+        "7.5 counts per minute"
       ],
       "correctAnswer": "10 counts per minute",
       "correctIndex": 2,
@@ -1502,10 +1502,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a laboratory isotope sample to prepare for an exam-style question. A radioactive sample starts with 200 counts per minute. After 4 half-lives, what count rate remains?",
       "options": [
-        "196 counts per minute",
-        "25 counts per minute",
+        "50 counts per minute",
+        "3.13 counts per minute",
         "12.5 counts per minute",
-        "50 counts per minute"
+        "31.25 counts per minute"
       ],
       "correctAnswer": "12.5 counts per minute",
       "correctIndex": 2,
@@ -1526,10 +1526,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a count-rate graph question to prepare for an exam-style question. A radioactive sample starts with 220 counts per minute. After 5 half-lives, what count rate remains?",
       "options": [
-        "13.75 counts per minute",
+        "8.6 counts per minute",
         "6.88 counts per minute",
-        "44 counts per minute",
-        "215 counts per minute"
+        "15.48 counts per minute",
+        "4.13 counts per minute"
       ],
       "correctAnswer": "6.88 counts per minute",
       "correctIndex": 1,
@@ -1552,8 +1552,8 @@
       "options": [
         "60 counts per minute",
         "120 counts per minute",
-        "238 counts per minute",
-        "121 counts per minute"
+        "240 counts per minute",
+        "30 counts per minute"
       ],
       "correctAnswer": "60 counts per minute",
       "correctIndex": 0,
@@ -1574,9 +1574,9 @@
       "skill": "Use half-life",
       "question": "A learner uses a medical tracer activity log to test a common misconception. A radioactive sample starts with 260 counts per minute. After 3 half-lives, what count rate remains?",
       "options": [
-        "86.67 counts per minute",
-        "257 counts per minute",
-        "65 counts per minute",
+        "48.75 counts per minute",
+        "97.5 counts per minute",
+        "24.38 counts per minute",
         "32.5 counts per minute"
       ],
       "correctAnswer": "32.5 counts per minute",
@@ -1598,10 +1598,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a laboratory isotope sample to test a common misconception. A radioactive sample starts with 160 counts per minute. After 4 half-lives, what count rate remains?",
       "options": [
-        "156 counts per minute",
-        "20 counts per minute",
+        "40 counts per minute",
+        "2.5 counts per minute",
         "10 counts per minute",
-        "40 counts per minute"
+        "25 counts per minute"
       ],
       "correctAnswer": "10 counts per minute",
       "correctIndex": 2,
@@ -1622,10 +1622,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a count-rate graph question to test a common misconception. A radioactive sample starts with 180 counts per minute. After 5 half-lives, what count rate remains?",
       "options": [
-        "11.25 counts per minute",
+        "7.03 counts per minute",
         "5.62 counts per minute",
-        "36 counts per minute",
-        "175 counts per minute"
+        "12.64 counts per minute",
+        "3.37 counts per minute"
       ],
       "correctAnswer": "5.62 counts per minute",
       "correctIndex": 1,
@@ -1646,10 +1646,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a decay practical data table to link the context to the GCSE model. A radioactive sample starts with 180 counts per minute. After 5 half-lives, what count rate remains?",
       "options": [
-        "11.25 counts per minute",
+        "11.24 counts per minute",
         "5.62 counts per minute",
-        "36 counts per minute",
-        "175 counts per minute"
+        "22.48 counts per minute",
+        "2.81 counts per minute"
       ],
       "correctAnswer": "5.62 counts per minute",
       "correctIndex": 1,
@@ -1671,9 +1671,9 @@
       "question": "A learner uses a medical tracer activity log to link the context to the GCSE model. A radioactive sample starts with 200 counts per minute. After 2 half-lives, what count rate remains?",
       "options": [
         "50 counts per minute",
-        "100 counts per minute",
-        "198 counts per minute",
-        "101 counts per minute"
+        "75 counts per minute",
+        "150 counts per minute",
+        "37.5 counts per minute"
       ],
       "correctAnswer": "50 counts per minute",
       "correctIndex": 0,
@@ -1694,9 +1694,9 @@
       "skill": "Use half-life",
       "question": "A learner uses a laboratory isotope sample to link the context to the GCSE model. A radioactive sample starts with 220 counts per minute. After 3 half-lives, what count rate remains?",
       "options": [
-        "73.33 counts per minute",
-        "217 counts per minute",
-        "55 counts per minute",
+        "110 counts per minute",
+        "6.88 counts per minute",
+        "68.75 counts per minute",
         "27.5 counts per minute"
       ],
       "correctAnswer": "27.5 counts per minute",
@@ -1718,10 +1718,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a count-rate graph question to link the context to the GCSE model. A radioactive sample starts with 240 counts per minute. After 4 half-lives, what count rate remains?",
       "options": [
-        "236 counts per minute",
-        "30 counts per minute",
+        "18.75 counts per minute",
+        "33.75 counts per minute",
         "15 counts per minute",
-        "60 counts per minute"
+        "9 counts per minute"
       ],
       "correctAnswer": "15 counts per minute",
       "correctIndex": 2,
@@ -1742,10 +1742,10 @@
       "skill": "Use half-life",
       "question": "A learner uses a decay practical data table to review the evidence in the setup. A radioactive sample starts with 260 counts per minute. After 5 half-lives, what count rate remains?",
       "options": [
-        "16.25 counts per minute",
+        "16.24 counts per minute",
         "8.12 counts per minute",
-        "52 counts per minute",
-        "255 counts per minute"
+        "32.48 counts per minute",
+        "4.06 counts per minute"
       ],
       "correctAnswer": "8.12 counts per minute",
       "correctIndex": 1,
@@ -1767,9 +1767,9 @@
       "question": "A learner uses a medical tracer activity log to review the evidence in the setup. A radioactive sample starts with 160 counts per minute. After 2 half-lives, what count rate remains?",
       "options": [
         "40 counts per minute",
-        "80 counts per minute",
-        "158 counts per minute",
-        "81 counts per minute"
+        "60 counts per minute",
+        "120 counts per minute",
+        "30 counts per minute"
       ],
       "correctAnswer": "40 counts per minute",
       "correctIndex": 0,
@@ -1790,9 +1790,9 @@
       "skill": "Use half-life",
       "question": "A learner uses a laboratory isotope sample to review the evidence in the setup. A radioactive sample starts with 180 counts per minute. After 3 half-lives, what count rate remains?",
       "options": [
-        "60 counts per minute",
-        "177 counts per minute",
-        "45 counts per minute",
+        "90 counts per minute",
+        "5.63 counts per minute",
+        "56.25 counts per minute",
         "22.5 counts per minute"
       ],
       "correctAnswer": "22.5 counts per minute",
@@ -1814,9 +1814,9 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a radiographer safety poster to check the key physics idea. Which statement correctly compares contamination and irradiation?",
       "options": [
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Both words mean the same thing in radiation safety.",
+        "Irradiation always leaves radioactive atoms inside the object.",
+        "Contamination is exposure to radiation only, with no material transfer.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
@@ -1838,10 +1838,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a sealed-source demonstration to check the key physics idea. Which statement correctly compares contamination and irradiation?",
       "options": [
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Irradiation always leaves radioactive atoms inside the object.",
+        "Contamination is exposure to radiation only, with no material transfer.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body."
+        "Irradiation can be washed off the skin like dust."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 2,
@@ -1862,10 +1862,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a contamination clean-up note to check the key physics idea. Which statement correctly compares contamination and irradiation?",
       "options": [
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Contamination is exposure to radiation only, with no material transfer.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever."
+        "Irradiation can be washed off the skin like dust.",
+        "Contamination is impossible if the source is sealed."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 1,
@@ -1887,9 +1887,9 @@
       "question": "A learner uses a irradiation safety briefing to check the key physics idea. Which statement correctly compares contamination and irradiation?",
       "options": [
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used."
+        "Irradiation can be washed off the skin like dust.",
+        "Contamination is impossible if the source is sealed.",
+        "They both mean radioactive particles have entered the body."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 0,
@@ -1910,9 +1910,9 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a radiographer safety poster to prepare for an exam-style question. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
+        "Contamination is impossible if the source is sealed.",
         "They both mean radioactive particles have entered the body.",
         "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
@@ -1934,10 +1934,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a sealed-source demonstration to prepare for an exam-style question. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
+        "They both mean radioactive particles have entered the body.",
         "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body."
+        "Contamination and irradiation both stop as soon as a lead sheet is used."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 2,
@@ -1961,7 +1961,7 @@
         "Irradiation makes every object radioactive forever.",
         "Contamination and irradiation both stop as soon as a lead sheet is used.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body."
+        "Irradiation means radioactive material has stuck to clothing."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 2,
@@ -1984,8 +1984,8 @@
       "options": [
         "Contamination and irradiation both stop as soon as a lead sheet is used.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever."
+        "Irradiation means radioactive material has stuck to clothing.",
+        "Contamination means radiation passed through an object without leaving material behind."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 1,
@@ -2007,9 +2007,9 @@
       "question": "A learner uses a radiographer safety poster to test a common misconception. Which statement correctly compares contamination and irradiation?",
       "options": [
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used."
+        "Irradiation means radioactive material has stuck to clothing.",
+        "Contamination means radiation passed through an object without leaving material behind.",
+        "Both words mean the same thing in radiation safety."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 0,
@@ -2030,9 +2030,9 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a sealed-source demonstration to test a common misconception. Which statement correctly compares contamination and irradiation?",
       "options": [
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Contamination means radiation passed through an object without leaving material behind.",
+        "Both words mean the same thing in radiation safety.",
+        "Irradiation always leaves radioactive atoms inside the object.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
@@ -2054,10 +2054,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a contamination clean-up note to test a common misconception. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Both words mean the same thing in radiation safety.",
+        "Irradiation always leaves radioactive atoms inside the object.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body."
+        "Contamination is exposure to radiation only, with no material transfer."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 2,
@@ -2078,10 +2078,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a irradiation safety briefing to test a common misconception. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Irradiation always leaves radioactive atoms inside the object.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever."
+        "Contamination is exposure to radiation only, with no material transfer.",
+        "Irradiation can be washed off the skin like dust."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 1,
@@ -2102,10 +2102,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a radiographer safety poster to link the context to the GCSE model. Which statement correctly compares contamination and irradiation?",
       "options": [
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Contamination is exposure to radiation only, with no material transfer.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever."
+        "Irradiation can be washed off the skin like dust.",
+        "Contamination is impossible if the source is sealed."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 1,
@@ -2127,9 +2127,9 @@
       "question": "A learner uses a sealed-source demonstration to link the context to the GCSE model. Which statement correctly compares contamination and irradiation?",
       "options": [
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used."
+        "Irradiation can be washed off the skin like dust.",
+        "Contamination is impossible if the source is sealed.",
+        "They both mean radioactive particles have entered the body."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 0,
@@ -2150,9 +2150,9 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a contamination clean-up note to link the context to the GCSE model. Which statement correctly compares contamination and irradiation?",
       "options": [
+        "Contamination is impossible if the source is sealed.",
         "They both mean radioactive particles have entered the body.",
         "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
@@ -2174,10 +2174,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a irradiation safety briefing to link the context to the GCSE model. Which statement correctly compares contamination and irradiation?",
       "options": [
+        "They both mean radioactive particles have entered the body.",
         "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body."
+        "Contamination and irradiation both stop as soon as a lead sheet is used."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 2,
@@ -2198,10 +2198,10 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a radiographer safety poster to review the evidence in the setup. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Irradiation makes every object radioactive forever.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever."
+        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Irradiation means radioactive material has stuck to clothing."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 1,
@@ -2223,9 +2223,9 @@
       "question": "A learner uses a sealed-source demonstration to review the evidence in the setup. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used."
+        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Irradiation means radioactive material has stuck to clothing.",
+        "Contamination means radiation passed through an object without leaving material behind."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",
       "correctIndex": 0,
@@ -2246,9 +2246,9 @@
       "skill": "Compare contamination and irradiation",
       "question": "A learner uses a contamination clean-up note to review the evidence in the setup. Which statement correctly compares contamination and irradiation? Choose the best answer.",
       "options": [
-        "They both mean radioactive particles have entered the body.",
-        "Irradiation makes every object radioactive forever.",
-        "Contamination and irradiation both stop as soon as a lead sheet is used.",
+        "Irradiation means radioactive material has stuck to clothing.",
+        "Contamination means radiation passed through an object without leaving material behind.",
+        "Both words mean the same thing in radiation safety.",
         "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only."
       ],
       "correctAnswer": "Contamination means unwanted radioactive material is on or in an object, but irradiation means exposure to radiation only.",

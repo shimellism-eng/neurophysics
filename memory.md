@@ -5,6 +5,36 @@
 
 ## What Was Just Done (latest — 2026-05-02)
 
+### Adaptive Practice AQA National Grid authored
+- Fixed the final AQA Electricity slice with authored exam-style questions:
+  - AQA `National Grid`: 24/24 authored and passed.
+  - Covered AQA Physics `specRef`: `4.2.4.3`.
+  - Covered AQA Combined Science `combinedSpecRef`: `6.2.4.3`.
+  - `courseAvailability`: `combined` + `physics_only`.
+- Runtime quality checks:
+  - National Grid runtime count: 24.
+  - Authored IDs: 24.
+  - Bad scaffold/answer phrase count: 0.
+  - No visible objective wording, no "answer claims" wording, no answer leaked in top text.
+- Current Electricity good-to-go count after this fix:
+  - AQA: 144/144 good to go.
+  - Edexcel: 94/94 good to go.
+  - Combined Electricity: 238/238 good to go.
+- Verification:
+  - `npm run questions:regenerate` passes.
+  - `npm run audit:questions` passes.
+  - `npm test` passes.
+  - `npm run build` passes.
+  - `npx cap sync ios` passes.
+  - iOS simulator build passes on iPhone 17 Pro Max with `CODE_SIGNING_ALLOWED=NO`.
+  - Exact AQA National Grid route was shown live in Simulator after one extra wait for the Capacitor splash to clear.
+- Temporary simulator bypass was used only to jump straight to the fixed screen, then removed from source and the app was rebuilt/synced cleanly.
+
+### Next step
+- Move from Electricity to the next topic bucket:
+  - AQA `Energy`: 94 generated / 0 premium passed.
+  - Start with `Energy Stores`: 19 authored exam-style questions.
+
 ### Adaptive Practice AQA Resistance authored
 - Fixed the next AQA Electricity slice with authored exam-style questions:
   - AQA `Resistance`: 42/42 authored and passed.

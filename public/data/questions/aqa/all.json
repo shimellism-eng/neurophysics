@@ -1,7 +1,7 @@
 {
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
-  "generatedAt": "2026-05-02T08:37:37.066Z",
+  "generatedAt": "2026-05-02T08:52:03.131Z",
   "questions": [
     {
       "id": "aqa_atomic_isotopes_positive_ion_001",
@@ -3645,7 +3645,7 @@
       "senNote": "Checks: Choose the correct instrument for measuring current."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_grid_purpose_direct_recall_001",
+      "id": "aqa_electricity_national_grid_purpose_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3657,6 +3657,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -3667,56 +3668,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_purpose",
-        "statement": "Describe the purpose of the National Grid. (National Grid)",
+        "id": "aqa_electricity_national_grid_purpose_001_lo",
+        "statement": "Describe the purpose of the National Grid.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.4.3:grid_purpose:direct_recall",
-      "conceptFamily": "grid_purpose",
-      "contextType": "a safety decision",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_purpose_001",
+      "conceptFamily": "describe_the_purpose_of_the_national_grid",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "Which statement is correct for national grid? Check the clue before choosing: Describe the purpose of the National Grid.",
-      "question": "Which statement is correct for national grid? Check the clue before choosing: Describe the purpose of the National Grid.",
+      "stem": "What is the main purpose of the National Grid?",
+      "question": "What is the main purpose of the National Grid?",
       "options": [
-        "For national grid, it means that the National Grid only works inside houses.",
-        "For national grid, this would mean that the National Grid stores all electricity forever.",
-        "For national grid, the option says that the National Grid transfers electrical power from power stations to consumers.",
-        "For national grid, this would mean that the National Grid makes appliances use no energy."
+        "To transfer electrical power from power stations to consumers.",
+        "To store electrical energy until homes need it.",
+        "To make appliances use no energy.",
+        "To convert all alternating current into direct current."
       ],
-      "correctAnswer": "For national grid, the option says that the National Grid transfers electrical power from power stations to consumers.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Describe the purpose of the National Grid. Focus area: National Grid. For this question, The National Grid transfers electrical power from power stations to consumers. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_purpose",
+      "correctAnswer": "To transfer electrical power from power stations to consumers.",
+      "correctIndex": 0,
+      "explanation": "The National Grid is the network that transfers electrical power from power stations to consumers across the country.",
+      "misconceptionTag": "grid-purpose",
       "distractorRationales": [
         {
-          "text": "For national grid, this would mean that the National Grid stores all electricity forever.",
-          "misconception": "The National Grid stores all electricity forever."
+          "text": "To store electrical energy until homes need it.",
+          "misconception": "grid confused with energy storage"
         },
         {
-          "text": "For national grid, this would mean that the National Grid makes appliances use no energy.",
-          "misconception": "The National Grid makes appliances use no energy."
+          "text": "To make appliances use no energy.",
+          "misconception": "efficiency confused with supply network"
         },
         {
-          "text": "For national grid, it means that the National Grid only works inside houses.",
-          "misconception": "The National Grid only works inside houses."
+          "text": "To convert all alternating current into direct current.",
+          "misconception": "grid confused with rectification"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe the purpose of the National Grid."
+      "senNote": "Checks: Describe the purpose of the National Grid."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_step_up_concept_discrimination_002",
+      "id": "aqa_electricity_national_grid_step_up_location_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3728,6 +3730,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -3738,56 +3741,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_step_up",
-        "statement": "Explain why potential difference is stepped up. (National Grid)",
+        "id": "aqa_electricity_national_grid_step_up_location_002_lo",
+        "statement": "Identify where step-up transformers are used in the National Grid.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.4.3:step_up:concept_discrimination",
-      "conceptFamily": "step_up",
-      "contextType": "a graph-reading task",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_step_up_location_002",
+      "conceptFamily": "identify_where_step_up_transformers_are_used_in_the_national_grid",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "A student is comparing similar ideas in national grid. Which statement is correct? Use the wording carefully: this is about explain why potential difference is stepped up.",
-      "question": "A student is comparing similar ideas in national grid. Which statement is correct? Use the wording carefully: this is about explain why potential difference is stepped up.",
+      "stem": "Where is a step-up transformer used in the National Grid?",
+      "question": "Where is a step-up transformer used in the National Grid?",
       "options": [
-        "For national grid, the statement is that high potential difference is used because transformers cannot change voltage.",
-        "The answer for national grid says that high potential difference increases current to reduce losses.",
-        "For national grid, the answer claims that high potential difference reduces current for the same power, reducing heating losses in cables.",
-        "For national grid, the statement is that high potential difference removes the need for cables."
+        "Near a power station, before long-distance transmission.",
+        "Inside a low-voltage phone charger only.",
+        "At the end of the grid to reduce voltage for homes.",
+        "In the earth wire of a household plug."
       ],
-      "correctAnswer": "For national grid, the answer claims that high potential difference reduces current for the same power, reducing heating losses in cables.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Explain why potential difference is stepped up. Focus area: National Grid. For this question, High potential difference reduces current for the same power, reducing heating losses in cables. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:step_up",
+      "correctAnswer": "Near a power station, before long-distance transmission.",
+      "correctIndex": 0,
+      "explanation": "A step-up transformer is used near the power station to increase the potential difference before electricity is transmitted over long distances.",
+      "misconceptionTag": "step-up-location",
       "distractorRationales": [
         {
-          "text": "For national grid, the statement is that high potential difference is used because transformers cannot change voltage.",
-          "misconception": "High potential difference increases current to reduce losses."
+          "text": "Inside a low-voltage phone charger only.",
+          "misconception": "consumer transformer confused with grid transformer"
         },
         {
-          "text": "For national grid, the statement is that high potential difference removes the need for cables.",
-          "misconception": "High potential difference is used because transformers cannot change voltage."
+          "text": "At the end of the grid to reduce voltage for homes.",
+          "misconception": "step-up and step-down confused"
         },
         {
-          "text": "The answer for national grid says that high potential difference increases current to reduce losses.",
-          "misconception": "High potential difference removes the need for cables."
+          "text": "In the earth wire of a household plug.",
+          "misconception": "plug safety confused with grid transmission"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why potential difference is stepped up."
+      "senNote": "Checks: Identify where step-up transformers are used in the National Grid."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transformer_role_misconception_correction_003",
+      "id": "aqa_electricity_national_grid_step_down_location_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3799,6 +3803,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -3809,56 +3814,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transformer_role",
-        "statement": "Compare step-up and step-down transformers. (National Grid)",
+        "id": "aqa_electricity_national_grid_step_down_location_003_lo",
+        "statement": "Explain why step-down transformers are used near consumers.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.4.3:transformer_role:misconception_correction",
-      "conceptFamily": "transformer_role",
-      "contextType": "a comparison question",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_step_down_location_003",
+      "conceptFamily": "explain_why_step_down_transformers_are_used_near_consumers",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "A revision note about national grid contains an error. Which replacement is correct? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "question": "A revision note about national grid contains an error. Which replacement is correct? Use the wording carefully: this is about compare step-up and step-down transformers.",
+      "stem": "Why are step-down transformers needed before electricity is supplied to homes?",
+      "question": "Why are step-down transformers needed before electricity is supplied to homes?",
       "options": [
-        "In this item, it means that transformers work only with direct current.",
-        "For national grid, this would mean that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-        "For national grid: Step-down transformers are used to increase voltage in homes.",
-        "In this item, it means that step-up transformers reduce voltage at power stations."
+        "They reduce the potential difference to a safer value for domestic use.",
+        "They increase the current so cables waste more energy.",
+        "They store charge for use at night.",
+        "They change direct current into alternating current."
       ],
-      "correctAnswer": "For national grid, this would mean that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Compare step-up and step-down transformers. Focus area: National Grid. For this question, Step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transformer_role",
+      "correctAnswer": "They reduce the potential difference to a safer value for domestic use.",
+      "correctIndex": 0,
+      "explanation": "The transmission voltage is too high for homes. Step-down transformers reduce it to a much safer domestic potential difference.",
+      "misconceptionTag": "step-down-domestic-safety",
       "distractorRationales": [
         {
-          "text": "In this item, it means that transformers work only with direct current.",
-          "misconception": "Step-up transformers reduce voltage at power stations."
+          "text": "They increase the current so cables waste more energy.",
+          "misconception": "current increase treated as aim"
         },
         {
-          "text": "In this item, it means that step-up transformers reduce voltage at power stations.",
-          "misconception": "Step-down transformers are used to increase voltage in homes."
+          "text": "They store charge for use at night.",
+          "misconception": "transformer confused with battery"
         },
         {
-          "text": "For national grid: Step-down transformers are used to increase voltage in homes.",
-          "misconception": "Transformers work only with direct current."
+          "text": "They change direct current into alternating current.",
+          "misconception": "transformer function misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare step-up and step-down transformers."
+      "senNote": "Checks: Explain why step-down transformers are used near consumers."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transmission_loss_data_interpretation_004",
+      "id": "aqa_electricity_national_grid_high_voltage_reason_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3870,6 +3876,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -3880,56 +3887,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transmission_loss",
-        "statement": "Link cable losses to current. (National Grid)",
+        "id": "aqa_electricity_national_grid_high_voltage_reason_004_lo",
+        "statement": "Explain why high potential difference is used for transmission.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.4.3:transmission_loss:data_interpretation",
-      "conceptFamily": "transmission_loss",
-      "contextType": "a method-choice question",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_high_voltage_reason_004",
+      "conceptFamily": "explain_why_high_potential_difference_is_used_for_transmission",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "A small data set about national grid is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "question": "A small data set about national grid is being interpreted. Which conclusion is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
+      "stem": "Why is electricity transmitted across the National Grid at a very high potential difference?",
+      "question": "Why is electricity transmitted across the National Grid at a very high potential difference?",
       "options": [
-        "The claim for national grid is that only cable length matters, not current.",
-        "The claim for national grid is that cable losses are unrelated to current.",
-        "For national grid, this would mean that lower current reduces energy transfer to the surroundings because heating depends on current.",
-        "For national grid: Higher current always reduces heating."
+        "For the same power, the current is lower, so less energy is wasted heating the cables.",
+        "A higher potential difference makes the cables have no resistance.",
+        "A higher potential difference means no transformer is needed at the consumer end.",
+        "For the same power, the current is higher, so the cables stay cooler."
       ],
-      "correctAnswer": "For national grid, this would mean that lower current reduces energy transfer to the surroundings because heating depends on current.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Link cable losses to current. Focus area: National Grid. For this question, Lower current reduces energy transfer to the surroundings because heating depends on current. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transmission_loss",
+      "correctAnswer": "For the same power, the current is lower, so less energy is wasted heating the cables.",
+      "correctIndex": 0,
+      "explanation": "For a given power transfer, increasing the potential difference reduces the current. Lower current reduces heating losses in the cables.",
+      "misconceptionTag": "high-voltage-lower-current",
       "distractorRationales": [
         {
-          "text": "The claim for national grid is that cable losses are unrelated to current.",
-          "misconception": "Cable losses are unrelated to current."
+          "text": "A higher potential difference makes the cables have no resistance.",
+          "misconception": "resistance incorrectly removed"
         },
         {
-          "text": "For national grid: Higher current always reduces heating.",
-          "misconception": "Higher current always reduces heating."
+          "text": "A higher potential difference means no transformer is needed at the consumer end.",
+          "misconception": "step-down stage ignored"
         },
         {
-          "text": "The claim for national grid is that only cable length matters, not current.",
-          "misconception": "Only cable length matters, not current."
+          "text": "For the same power, the current is higher, so the cables stay cooler.",
+          "misconception": "current-loss relationship reversed"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Link cable losses to current."
+      "senNote": "Checks: Explain why high potential difference is used for transmission."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_grid_safety_representation_interpretation_005",
+      "id": "aqa_electricity_national_grid_power_current_005",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -3941,6 +3949,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -3951,56 +3960,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_safety",
-        "statement": "Explain why domestic voltage is lower. (National Grid)",
+        "id": "aqa_electricity_national_grid_power_current_005_lo",
+        "statement": "Use P = VI to link transmission voltage and current.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.4.3:grid_safety:representation_interpretation",
-      "conceptFamily": "grid_safety",
-      "contextType": "a results discussion",
+      "responseMode": "concept",
+      "patternId": "authored:aqa_electricity_national_grid_power_current_005",
+      "conceptFamily": "use_p_vi_to_link_transmission_voltage_and_current",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "Which option correctly reads the national grid model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "question": "Which option correctly reads the national grid model or diagram idea? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
+      "stem": "A power station transfers 200 MW through transmission cables. What happens to the current if the transmission potential difference is increased?",
+      "question": "A power station transfers 200 MW through transmission cables. What happens to the current if the transmission potential difference is increased?",
       "options": [
-        "For national grid, it means that a lower domestic potential difference is safer and suitable for appliances.",
-        "For national grid, the answer claims that domestic voltage is lowered to make current impossible.",
-        "For national grid, the statement is that voltage is lowered because energy cannot transfer at high voltage.",
-        "In this national grid item, homes use the highest grid voltage directly."
+        "The current decreases.",
+        "The current increases.",
+        "The current becomes zero.",
+        "The current is unchanged for every value of potential difference."
       ],
-      "correctAnswer": "For national grid, it means that a lower domestic potential difference is safer and suitable for appliances.",
+      "correctAnswer": "The current decreases.",
       "correctIndex": 0,
-      "explanation": "4.2.4.3 targets: Explain why domestic voltage is lower. Focus area: National Grid. For this question, A lower domestic potential difference is safer and suitable for appliances. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_safety",
+      "explanation": "Power = potential difference × current. If the same power is transferred at a larger potential difference, the current is smaller.",
+      "misconceptionTag": "power-voltage-current-grid",
       "distractorRationales": [
         {
-          "text": "For national grid, the answer claims that domestic voltage is lowered to make current impossible.",
-          "misconception": "Homes use the highest grid voltage directly."
+          "text": "The current increases.",
+          "misconception": ""
         },
         {
-          "text": "For national grid, the statement is that voltage is lowered because energy cannot transfer at high voltage.",
-          "misconception": "Domestic voltage is lowered to make current impossible."
+          "text": "The current becomes zero.",
+          "misconception": ""
         },
         {
-          "text": "In this national grid item, homes use the highest grid voltage directly.",
-          "misconception": "Voltage is lowered because energy cannot transfer at high voltage."
+          "text": "The current is unchanged for every value of potential difference.",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why domestic voltage is lower."
+      "senNote": "Checks: Use P = VI to link transmission voltage and current."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_grid_purpose_direct_recall_006",
+      "id": "aqa_electricity_national_grid_current_loss_006",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -4012,6 +4022,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -4022,127 +4033,130 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_purpose",
-        "statement": "Describe the purpose of the National Grid. (National Grid)",
+        "id": "aqa_electricity_national_grid_current_loss_006_lo",
+        "statement": "Link lower transmission current to reduced heating losses.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_current_loss_006",
+      "conceptFamily": "link_lower_transmission_current_to_reduced_heating_losses",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "The current in a transmission cable is reduced. Why does this reduce wasted power in the cable?",
+      "question": "The current in a transmission cable is reduced. Why does this reduce wasted power in the cable?",
+      "options": [
+        "Less energy is transferred by heating because cable losses depend on current.",
+        "The cable resistance becomes negative.",
+        "The cable stops carrying charge.",
+        "The potential difference across every home becomes zero."
+      ],
+      "correctAnswer": "Less energy is transferred by heating because cable losses depend on current.",
+      "correctIndex": 0,
+      "explanation": "A smaller current causes less heating in the resistance of the cable, so less power is wasted in the transmission lines.",
+      "misconceptionTag": "lower-current-reduces-losses",
+      "distractorRationales": [
+        {
+          "text": "The cable resistance becomes negative.",
+          "misconception": "resistance behaviour invented"
+        },
+        {
+          "text": "The cable stops carrying charge.",
+          "misconception": "current reduced confused with no current"
+        },
+        {
+          "text": "The potential difference across every home becomes zero.",
+          "misconception": "transmission confused with domestic supply"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Link lower transmission current to reduced heating losses."
+    },
+    {
+      "id": "aqa_electricity_national_grid_sequence_007",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_sequence_007_lo",
+        "statement": "Order the main stages of electricity transfer through the National Grid.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.4.3:grid_purpose:direct_recall",
-      "conceptFamily": "grid_purpose",
-      "contextType": "a classroom demonstration",
-      "skill": "National Grid practice",
-      "stem": "Which answer matches this national grid objective: Describe the purpose of the National Grid? Check the clue before choosing: Describe the purpose of the National Grid.",
-      "question": "Which answer matches this national grid objective: Describe the purpose of the National Grid? Check the clue before choosing: Describe the purpose of the National Grid.",
-      "options": [
-        "For national grid, the statement is that the National Grid only works inside houses.",
-        "In this national grid item, the National Grid transfers electrical power from power stations to consumers.",
-        "For national grid, the statement is that the National Grid stores all electricity forever.",
-        "The answer for national grid says that the National Grid makes appliances use no energy."
-      ],
-      "correctAnswer": "In this national grid item, the National Grid transfers electrical power from power stations to consumers.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Describe the purpose of the National Grid. Focus area: National Grid. For this question, The National Grid transfers electrical power from power stations to consumers. Context used: a classroom demonstration; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_purpose",
-      "distractorRationales": [
-        {
-          "text": "For national grid, the statement is that the National Grid only works inside houses.",
-          "misconception": "The National Grid stores all electricity forever."
-        },
-        {
-          "text": "For national grid, the statement is that the National Grid stores all electricity forever.",
-          "misconception": "The National Grid makes appliances use no energy."
-        },
-        {
-          "text": "The answer for national grid says that the National Grid makes appliances use no energy.",
-          "misconception": "The National Grid only works inside houses."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe the purpose of the National Grid."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_step_up_applied_context_007",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_step_up",
-        "statement": "Explain why potential difference is stepped up. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.2.4.3:step_up:applied_context",
-      "conceptFamily": "step_up",
-      "contextType": "a revision checkpoint",
+      "commandWord": "select",
+      "responseMode": "sequence",
+      "patternId": "authored:aqa_electricity_national_grid_sequence_007",
+      "conceptFamily": "order_the_main_stages_of_electricity_transfer_through_the_national_grid",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "In a revision checkpoint, which conclusion is correct for national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
-      "question": "In a revision checkpoint, which conclusion is correct for national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
+      "stem": "Which sequence correctly shows how electricity is transferred from a power station to homes?",
+      "question": "Which sequence correctly shows how electricity is transferred from a power station to homes?",
       "options": [
-        "For national grid, the statement is that high potential difference reduces current for the same power, reducing heating losses in cables.",
-        "For national grid, the statement is that high potential difference removes the need for cables.",
-        "For national grid, it means that high potential difference is used because transformers cannot change voltage.",
-        "The answer for national grid says that high potential difference increases current to reduce losses."
+        "Power station → step-up transformer → transmission cables → step-down transformer → homes",
+        "Power station → step-down transformer → transmission cables → step-up transformer → homes",
+        "Homes → step-up transformer → transmission cables → power station",
+        "Power station → fuse → earth wire → homes"
       ],
-      "correctAnswer": "For national grid, the statement is that high potential difference reduces current for the same power, reducing heating losses in cables.",
+      "correctAnswer": "Power station → step-up transformer → transmission cables → step-down transformer → homes",
       "correctIndex": 0,
-      "explanation": "4.2.4.3 targets: Explain why potential difference is stepped up. Focus area: National Grid. For this question, High potential difference reduces current for the same power, reducing heating losses in cables. Context used: a revision checkpoint; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:step_up",
+      "explanation": "The potential difference is stepped up before transmission, then stepped down before electricity is supplied to homes.",
+      "misconceptionTag": "grid-stage-order",
       "distractorRationales": [
         {
-          "text": "The answer for national grid says that high potential difference increases current to reduce losses.",
-          "misconception": "High potential difference increases current to reduce losses."
+          "text": "Power station → step-down transformer → transmission cables → step-up transformer → homes",
+          "misconception": "transformer order reversed"
         },
         {
-          "text": "For national grid, it means that high potential difference is used because transformers cannot change voltage.",
-          "misconception": "High potential difference is used because transformers cannot change voltage."
+          "text": "Homes → step-up transformer → transmission cables → power station",
+          "misconception": "direction of supply reversed"
         },
         {
-          "text": "For national grid, the statement is that high potential difference removes the need for cables.",
-          "misconception": "High potential difference removes the need for cables."
+          "text": "Power station → fuse → earth wire → homes",
+          "misconception": "plug safety confused with grid stages"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why potential difference is stepped up."
+      "senNote": "Checks: Order the main stages of electricity transfer through the National Grid."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transformer_role_misconception_correction_008",
+      "id": "aqa_electricity_national_grid_transformer_ac_008",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -4154,6 +4168,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -4164,56 +4179,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transformer_role",
-        "statement": "Compare step-up and step-down transformers. (National Grid)",
+        "id": "aqa_electricity_national_grid_transformer_ac_008_lo",
+        "statement": "Explain why transformers in the grid use alternating current.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.4.3:transformer_role:misconception_correction",
-      "conceptFamily": "transformer_role",
-      "contextType": "an exam-style data table",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_transformer_ac_008",
+      "conceptFamily": "explain_why_transformers_in_the_grid_use_alternating_current",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "question": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
+      "stem": "Why is alternating current needed for transformers in the National Grid?",
+      "question": "Why is alternating current needed for transformers in the National Grid?",
       "options": [
-        "For national grid, it means that step-down transformers are used to increase voltage in homes.",
-        "For national grid, it means that transformers work only with direct current.",
-        "For national grid, the statement is that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-        "For national grid, the answer claims that step-up transformers reduce voltage at power stations."
+        "Transformers require a changing current to induce a changing potential difference.",
+        "Direct current always has a higher frequency than alternating current.",
+        "Alternating current has no charge carriers.",
+        "Transformers work by storing direct current in the core."
       ],
-      "correctAnswer": "For national grid, the statement is that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Compare step-up and step-down transformers. Focus area: National Grid. For this question, Step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use. Context used: an exam-style data table; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transformer_role",
+      "correctAnswer": "Transformers require a changing current to induce a changing potential difference.",
+      "correctIndex": 0,
+      "explanation": "A transformer needs a changing magnetic field. Alternating current provides this changing field; steady direct current does not.",
+      "misconceptionTag": "transformer-ac-required",
       "distractorRationales": [
         {
-          "text": "For national grid, it means that step-down transformers are used to increase voltage in homes.",
-          "misconception": "Step-up transformers reduce voltage at power stations."
+          "text": "Direct current always has a higher frequency than alternating current.",
+          "misconception": "dc frequency misconception"
         },
         {
-          "text": "For national grid, it means that transformers work only with direct current.",
-          "misconception": "Step-down transformers are used to increase voltage in homes."
+          "text": "Alternating current has no charge carriers.",
+          "misconception": "current mechanism misunderstood"
         },
         {
-          "text": "For national grid, the answer claims that step-up transformers reduce voltage at power stations.",
-          "misconception": "Transformers work only with direct current."
+          "text": "Transformers work by storing direct current in the core.",
+          "misconception": "transformer storage misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare step-up and step-down transformers."
+      "senNote": "Checks: Explain why transformers in the grid use alternating current."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transmission_loss_exam_decision_009",
+      "id": "aqa_electricity_national_grid_step_up_effect_009",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -4225,6 +4241,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -4235,269 +4252,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transmission_loss",
-        "statement": "Link cable losses to current. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.2.4.3:transmission_loss:exam_decision",
-      "conceptFamily": "transmission_loss",
-      "contextType": "a required-practical notebook",
-      "skill": "National Grid practice",
-      "stem": "The mark scheme is testing link cable losses to current. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "question": "The mark scheme is testing link cable losses to current. Which answer matches that point? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "options": [
-        "In this item, it means that cable losses are unrelated to current.",
-        "In this item, it means that only cable length matters, not current.",
-        "In this item, it means that higher current always reduces heating.",
-        "For national grid, this would mean that lower current reduces energy transfer to the surroundings because heating depends on current."
-      ],
-      "correctAnswer": "For national grid, this would mean that lower current reduces energy transfer to the surroundings because heating depends on current.",
-      "correctIndex": 3,
-      "explanation": "4.2.4.3 targets: Link cable losses to current. Focus area: National Grid. For this question, Lower current reduces energy transfer to the surroundings because heating depends on current. Context used: a required-practical notebook; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transmission_loss",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that only cable length matters, not current.",
-          "misconception": "Cable losses are unrelated to current."
-        },
-        {
-          "text": "In this item, it means that cable losses are unrelated to current.",
-          "misconception": "Higher current always reduces heating."
-        },
-        {
-          "text": "In this item, it means that higher current always reduces heating.",
-          "misconception": "Only cable length matters, not current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link cable losses to current."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_grid_safety_representation_interpretation_010",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_safety",
-        "statement": "Explain why domestic voltage is lower. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.4.3:grid_safety:representation_interpretation",
-      "conceptFamily": "grid_safety",
-      "contextType": "a technician report",
-      "skill": "National Grid practice",
-      "stem": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "question": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "options": [
-        "For national grid: Domestic voltage is lowered to make current impossible.",
-        "The claim for national grid is that homes use the highest grid voltage directly.",
-        "For national grid, this would mean that voltage is lowered because energy cannot transfer at high voltage.",
-        "For national grid, it means that a lower domestic potential difference is safer and suitable for appliances."
-      ],
-      "correctAnswer": "For national grid, it means that a lower domestic potential difference is safer and suitable for appliances.",
-      "correctIndex": 3,
-      "explanation": "4.2.4.3 targets: Explain why domestic voltage is lower. Focus area: National Grid. For this question, A lower domestic potential difference is safer and suitable for appliances. Context used: a technician report; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_safety",
-      "distractorRationales": [
-        {
-          "text": "The claim for national grid is that homes use the highest grid voltage directly.",
-          "misconception": "Homes use the highest grid voltage directly."
-        },
-        {
-          "text": "For national grid: Domestic voltage is lowered to make current impossible.",
-          "misconception": "Domestic voltage is lowered to make current impossible."
-        },
-        {
-          "text": "For national grid, this would mean that voltage is lowered because energy cannot transfer at high voltage.",
-          "misconception": "Voltage is lowered because energy cannot transfer at high voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain why domestic voltage is lower."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_grid_purpose_concept_discrimination_011",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_purpose",
-        "statement": "Describe the purpose of the National Grid. (National Grid)",
+        "id": "aqa_electricity_national_grid_step_up_effect_009_lo",
+        "statement": "Identify a step-up transformer from its effect on potential difference.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.4.3:grid_purpose:concept_discrimination",
-      "conceptFamily": "grid_purpose",
-      "contextType": "a labelled diagram",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_step_up_effect_009",
+      "conceptFamily": "identify_a_step_up_transformer_from_its_effect_on_potential_difference",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "A student is comparing similar ideas in national grid. Which statement is correct? Check the clue before choosing: Describe the purpose of the National Grid.",
-      "question": "A student is comparing similar ideas in national grid. Which statement is correct? Check the clue before choosing: Describe the purpose of the National Grid.",
+      "stem": "A transformer increases the potential difference from 25 kV to 400 kV before transmission. What type of transformer is it?",
+      "question": "A transformer increases the potential difference from 25 kV to 400 kV before transmission. What type of transformer is it?",
       "options": [
-        "The answer for national grid says that the National Grid makes appliances use no energy.",
-        "For national grid, the statement is that the National Grid stores all electricity forever.",
-        "For national grid, the statement is that the National Grid transfers electrical power from power stations to consumers.",
-        "For national grid, it means that the National Grid only works inside houses."
+        "step-up transformer",
+        "step-down transformer",
+        "rectifier",
+        "variable resistor"
       ],
-      "correctAnswer": "For national grid, the statement is that the National Grid transfers electrical power from power stations to consumers.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Describe the purpose of the National Grid. Focus area: National Grid. For this question, The National Grid transfers electrical power from power stations to consumers. Context used: a labelled diagram; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_purpose",
-      "distractorRationales": [
-        {
-          "text": "The answer for national grid says that the National Grid makes appliances use no energy.",
-          "misconception": "The National Grid stores all electricity forever."
-        },
-        {
-          "text": "For national grid, it means that the National Grid only works inside houses.",
-          "misconception": "The National Grid makes appliances use no energy."
-        },
-        {
-          "text": "For national grid, the statement is that the National Grid stores all electricity forever.",
-          "misconception": "The National Grid only works inside houses."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe the purpose of the National Grid."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_step_up_applied_context_012",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_step_up",
-        "statement": "Explain why potential difference is stepped up. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.2.4.3:step_up:applied_context",
-      "conceptFamily": "step_up",
-      "contextType": "a short calculation",
-      "skill": "National Grid practice",
-      "stem": "A question set in a short calculation tests national grid. Which answer applies the idea correctly? Use the wording carefully: this is about explain why potential difference is stepped up.",
-      "question": "A question set in a short calculation tests national grid. Which answer applies the idea correctly? Use the wording carefully: this is about explain why potential difference is stepped up.",
-      "options": [
-        "In this item, it means that high potential difference reduces current for the same power, reducing heating losses in cables.",
-        "For national grid, the option says that high potential difference removes the need for cables.",
-        "For national grid, it means that high potential difference increases current to reduce losses.",
-        "In this item, it means that high potential difference is used because transformers cannot change voltage."
-      ],
-      "correctAnswer": "In this item, it means that high potential difference reduces current for the same power, reducing heating losses in cables.",
+      "correctAnswer": "step-up transformer",
       "correctIndex": 0,
-      "explanation": "4.2.4.3 targets: Explain why potential difference is stepped up. Focus area: National Grid. For this question, High potential difference reduces current for the same power, reducing heating losses in cables. Context used: a short calculation; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:step_up",
+      "explanation": "A step-up transformer increases the potential difference.",
+      "misconceptionTag": "step-up-effect",
       "distractorRationales": [
         {
-          "text": "For national grid, the option says that high potential difference removes the need for cables.",
-          "misconception": "High potential difference increases current to reduce losses."
+          "text": "step-down transformer",
+          "misconception": "transformer effect reversed"
         },
         {
-          "text": "For national grid, it means that high potential difference increases current to reduce losses.",
-          "misconception": "High potential difference is used because transformers cannot change voltage."
+          "text": "rectifier",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that high potential difference is used because transformers cannot change voltage.",
-          "misconception": "High potential difference removes the need for cables."
+          "text": "variable resistor",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why potential difference is stepped up."
+      "senNote": "Checks: Identify a step-up transformer from its effect on potential difference."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transformer_role_data_interpretation_013",
+      "id": "aqa_electricity_national_grid_step_down_effect_010",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -4509,6 +4314,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -4519,269 +4325,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transformer_role",
-        "statement": "Compare step-up and step-down transformers. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.4.3:transformer_role:data_interpretation",
-      "conceptFamily": "transformer_role",
-      "contextType": "a safety decision",
-      "skill": "National Grid practice",
-      "stem": "A small data set about national grid is being interpreted. Which conclusion is valid? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "question": "A small data set about national grid is being interpreted. Which conclusion is valid? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "options": [
-        "For national grid, it means that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-        "For national grid, it means that transformers work only with direct current.",
-        "The answer for national grid says that step-down transformers are used to increase voltage in homes.",
-        "In this national grid item, step-up transformers reduce voltage at power stations."
-      ],
-      "correctAnswer": "For national grid, it means that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-      "correctIndex": 0,
-      "explanation": "4.2.4.3 targets: Compare step-up and step-down transformers. Focus area: National Grid. For this question, Step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use. Context used: a safety decision; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transformer_role",
-      "distractorRationales": [
-        {
-          "text": "In this national grid item, step-up transformers reduce voltage at power stations.",
-          "misconception": "Step-up transformers reduce voltage at power stations."
-        },
-        {
-          "text": "The answer for national grid says that step-down transformers are used to increase voltage in homes.",
-          "misconception": "Step-down transformers are used to increase voltage in homes."
-        },
-        {
-          "text": "For national grid, it means that transformers work only with direct current.",
-          "misconception": "Transformers work only with direct current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare step-up and step-down transformers."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_transmission_loss_exam_decision_014",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transmission_loss",
-        "statement": "Link cable losses to current. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.2.4.3:transmission_loss:exam_decision",
-      "conceptFamily": "transmission_loss",
-      "contextType": "a graph-reading task",
-      "skill": "National Grid practice",
-      "stem": "Which answer is the strongest GCSE Physics response for national grid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "question": "Which answer is the strongest GCSE Physics response for national grid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "options": [
-        "For national grid, it means that higher current always reduces heating.",
-        "For national grid, it means that cable losses are unrelated to current.",
-        "For national grid, the statement is that lower current reduces energy transfer to the surroundings because heating depends on current.",
-        "For national grid, it means that only cable length matters, not current."
-      ],
-      "correctAnswer": "For national grid, the statement is that lower current reduces energy transfer to the surroundings because heating depends on current.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Link cable losses to current. Focus area: National Grid. For this question, Lower current reduces energy transfer to the surroundings because heating depends on current. Context used: a graph-reading task; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transmission_loss",
-      "distractorRationales": [
-        {
-          "text": "For national grid, it means that higher current always reduces heating.",
-          "misconception": "Cable losses are unrelated to current."
-        },
-        {
-          "text": "For national grid, it means that only cable length matters, not current.",
-          "misconception": "Higher current always reduces heating."
-        },
-        {
-          "text": "For national grid, it means that cable losses are unrelated to current.",
-          "misconception": "Only cable length matters, not current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link cable losses to current."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_grid_safety_direct_recall_015",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_safety",
-        "statement": "Explain why domestic voltage is lower. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.4.3:grid_safety:direct_recall",
-      "conceptFamily": "grid_safety",
-      "contextType": "a comparison question",
-      "skill": "National Grid practice",
-      "stem": "Which answer matches this national grid objective: Explain why domestic voltage is lower? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "question": "Which answer matches this national grid objective: Explain why domestic voltage is lower? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "options": [
-        "For national grid, this would mean that domestic voltage is lowered to make current impossible.",
-        "For national grid, this would mean that homes use the highest grid voltage directly.",
-        "For national grid, this would mean that voltage is lowered because energy cannot transfer at high voltage.",
-        "For national grid, the option says that a lower domestic potential difference is safer and suitable for appliances."
-      ],
-      "correctAnswer": "For national grid, the option says that a lower domestic potential difference is safer and suitable for appliances.",
-      "correctIndex": 3,
-      "explanation": "4.2.4.3 targets: Explain why domestic voltage is lower. Focus area: National Grid. For this question, A lower domestic potential difference is safer and suitable for appliances. Context used: a comparison question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_safety",
-      "distractorRationales": [
-        {
-          "text": "For national grid, this would mean that voltage is lowered because energy cannot transfer at high voltage.",
-          "misconception": "Homes use the highest grid voltage directly."
-        },
-        {
-          "text": "For national grid, this would mean that homes use the highest grid voltage directly.",
-          "misconception": "Domestic voltage is lowered to make current impossible."
-        },
-        {
-          "text": "For national grid, this would mean that domestic voltage is lowered to make current impossible.",
-          "misconception": "Voltage is lowered because energy cannot transfer at high voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain why domestic voltage is lower."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_grid_purpose_concept_discrimination_016",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_purpose",
-        "statement": "Describe the purpose of the National Grid. (National Grid)",
+        "id": "aqa_electricity_national_grid_step_down_effect_010_lo",
+        "statement": "Identify a step-down transformer from its effect on potential difference.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.4.3:grid_purpose:concept_discrimination",
-      "conceptFamily": "grid_purpose",
-      "contextType": "a method-choice question",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_step_down_effect_010",
+      "conceptFamily": "identify_a_step_down_transformer_from_its_effect_on_potential_difference",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "Which option best separates the correct national grid idea from a common mix-up? Check the clue before choosing: Describe the purpose of the National Grid.",
-      "question": "Which option best separates the correct national grid idea from a common mix-up? Check the clue before choosing: Describe the purpose of the National Grid.",
+      "stem": "A transformer reduces the potential difference before electricity enters a street of houses. What type of transformer is it?",
+      "question": "A transformer reduces the potential difference before electricity enters a street of houses. What type of transformer is it?",
       "options": [
-        "For national grid, the option says that the National Grid stores all electricity forever.",
-        "For national grid, it means that the National Grid makes appliances use no energy.",
-        "For national grid: The National Grid transfers electrical power from power stations to consumers.",
-        "In this item, it means that the National Grid only works inside houses."
+        "step-down transformer",
+        "step-up transformer",
+        "diode",
+        "ammeter"
       ],
-      "correctAnswer": "For national grid: The National Grid transfers electrical power from power stations to consumers.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Describe the purpose of the National Grid. Focus area: National Grid. For this question, The National Grid transfers electrical power from power stations to consumers. Context used: a method-choice question; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_purpose",
+      "correctAnswer": "step-down transformer",
+      "correctIndex": 0,
+      "explanation": "A step-down transformer reduces the potential difference before the supply reaches consumers.",
+      "misconceptionTag": "step-down-effect",
       "distractorRationales": [
         {
-          "text": "For national grid, the option says that the National Grid stores all electricity forever.",
-          "misconception": "The National Grid stores all electricity forever."
+          "text": "step-up transformer",
+          "misconception": "transformer effect reversed"
         },
         {
-          "text": "For national grid, it means that the National Grid makes appliances use no energy.",
-          "misconception": "The National Grid makes appliances use no energy."
+          "text": "diode",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that the National Grid only works inside houses.",
-          "misconception": "The National Grid only works inside houses."
+          "text": "ammeter",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe the purpose of the National Grid."
+      "senNote": "Checks: Identify a step-down transformer from its effect on potential difference."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_step_up_misconception_correction_017",
+      "id": "aqa_electricity_national_grid_same_power_011",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -4793,6 +4387,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -4803,8 +4398,519 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_step_up",
-        "statement": "Explain why potential difference is stepped up. (National Grid)",
+        "id": "aqa_electricity_national_grid_same_power_011_lo",
+        "statement": "Compare transmission currents at different potential differences.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_electricity_national_grid_same_power_011",
+      "conceptFamily": "compare_transmission_currents_at_different_potential_differences",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "The same power is transmitted at 100 kV and then at 400 kV. Which statement is correct?",
+      "question": "The same power is transmitted at 100 kV and then at 400 kV. Which statement is correct?",
+      "options": [
+        "At 400 kV the current is smaller, so cable heating is reduced.",
+        "At 400 kV the current is larger, so cable heating is reduced.",
+        "At 100 kV the cable resistance is always zero.",
+        "At both voltages the current must be exactly the same."
+      ],
+      "correctAnswer": "At 400 kV the current is smaller, so cable heating is reduced.",
+      "correctIndex": 0,
+      "explanation": "For the same power, a larger potential difference means a smaller current. Smaller current gives less heating in the cables.",
+      "misconceptionTag": "same-power-current-comparison",
+      "distractorRationales": [
+        {
+          "text": "At 400 kV the current is larger, so cable heating is reduced.",
+          "misconception": "current direction wrong"
+        },
+        {
+          "text": "At 100 kV the cable resistance is always zero.",
+          "misconception": "resistance incorrectly removed"
+        },
+        {
+          "text": "At both voltages the current must be exactly the same.",
+          "misconception": "P=VI relationship ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare transmission currents at different potential differences."
+    },
+    {
+      "id": "aqa_electricity_national_grid_loss_squared_012",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_loss_squared_012_lo",
+        "statement": "Apply the squared current relationship to cable losses.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_national_grid_loss_squared_012",
+      "conceptFamily": "apply_the_squared_current_relationship_to_cable_losses",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "In a transmission cable, the wasted power is proportional to current squared. If the current is halved, what happens to the wasted power?",
+      "question": "In a transmission cable, the wasted power is proportional to current squared. If the current is halved, what happens to the wasted power?",
+      "options": [
+        "It becomes one quarter as large.",
+        "It halves.",
+        "It doubles.",
+        "It becomes four times as large."
+      ],
+      "correctAnswer": "It becomes one quarter as large.",
+      "correctIndex": 0,
+      "explanation": "Heating loss depends on current squared. Halving the current makes the loss (1/2)^2 = 1/4 of the original value.",
+      "misconceptionTag": "current-squared-loss",
+      "distractorRationales": [
+        {
+          "text": "It halves.",
+          "misconception": ""
+        },
+        {
+          "text": "It doubles.",
+          "misconception": ""
+        },
+        {
+          "text": "It becomes four times as large.",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Apply the squared current relationship to cable losses."
+    },
+    {
+      "id": "aqa_electricity_national_grid_loss_factor_013",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_loss_factor_013_lo",
+        "statement": "Calculate the reduction in cable loss when current changes.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_national_grid_loss_factor_013",
+      "conceptFamily": "calculate_the_reduction_in_cable_loss_when_current_changes",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "A transmission current is reduced from 80 A to 20 A. By what factor is the heating loss in the same cable reduced?",
+      "question": "A transmission current is reduced from 80 A to 20 A. By what factor is the heating loss in the same cable reduced?",
+      "options": [
+        "16",
+        "4",
+        "2",
+        "64"
+      ],
+      "correctAnswer": "16",
+      "correctIndex": 0,
+      "explanation": "The current is four times smaller. Since heating loss depends on current squared, the loss is reduced by 4 squared = 16.",
+      "misconceptionTag": "loss-factor-square",
+      "distractorRationales": [
+        {
+          "text": "4",
+          "misconception": ""
+        },
+        {
+          "text": "2",
+          "misconception": ""
+        },
+        {
+          "text": "64",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate the reduction in cable loss when current changes."
+    },
+    {
+      "id": "aqa_electricity_national_grid_table_loss_014",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_table_loss_014_lo",
+        "statement": "Use current size to compare heating losses in transmission cables.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:aqa_electricity_national_grid_table_loss_014",
+      "conceptFamily": "use_current_size_to_compare_heating_losses_in_transmission_cables",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "A cable has the same resistance in two tests. Test X uses a current of 10 A. Test Y uses a current of 30 A. Which test wastes more power as heat?",
+      "question": "A cable has the same resistance in two tests. Test X uses a current of 10 A. Test Y uses a current of 30 A. Which test wastes more power as heat?",
+      "options": [
+        "Test Y, because the current is larger.",
+        "Test X, because smaller current always means more heating.",
+        "Both waste the same power because the cable resistance is the same.",
+        "Neither wastes power because cables do not have resistance."
+      ],
+      "correctAnswer": "Test Y, because the current is larger.",
+      "correctIndex": 0,
+      "explanation": "For the same cable resistance, a larger current produces more heating loss.",
+      "misconceptionTag": "compare-cable-current-loss",
+      "distractorRationales": [
+        {
+          "text": "Test X, because smaller current always means more heating.",
+          "misconception": "current-loss relationship reversed"
+        },
+        {
+          "text": "Both waste the same power because the cable resistance is the same.",
+          "misconception": "current ignored"
+        },
+        {
+          "text": "Neither wastes power because cables do not have resistance.",
+          "misconception": "ideal cable misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use current size to compare heating losses in transmission cables."
+    },
+    {
+      "id": "aqa_electricity_national_grid_why_not_low_voltage_015",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_why_not_low_voltage_015_lo",
+        "statement": "Explain why low-voltage transmission is inefficient over long distances.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_why_not_low_voltage_015",
+      "conceptFamily": "explain_why_low_voltage_transmission_is_inefficient_over_long_distances",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "Why would transmitting electricity over long distances at a low potential difference be inefficient?",
+      "question": "Why would transmitting electricity over long distances at a low potential difference be inefficient?",
+      "options": [
+        "The current would be large, causing large heating losses in the cables.",
+        "The current would be zero, so no energy could be transferred.",
+        "The cables would stop having resistance.",
+        "The supply would become direct current automatically."
+      ],
+      "correctAnswer": "The current would be large, causing large heating losses in the cables.",
+      "correctIndex": 0,
+      "explanation": "For the same power, a low potential difference requires a large current. Large current causes large energy losses by heating.",
+      "misconceptionTag": "low-voltage-transmission-loss",
+      "distractorRationales": [
+        {
+          "text": "The current would be zero, so no energy could be transferred.",
+          "misconception": "low voltage overgeneralised"
+        },
+        {
+          "text": "The cables would stop having resistance.",
+          "misconception": "resistance behaviour incorrect"
+        },
+        {
+          "text": "The supply would become direct current automatically.",
+          "misconception": "ac/dc confused with voltage size"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why low-voltage transmission is inefficient over long distances."
+    },
+    {
+      "id": "aqa_electricity_national_grid_domestic_voltage_016",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_domestic_voltage_016_lo",
+        "statement": "Explain why transmission voltage must be reduced for consumers.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_domestic_voltage_016",
+      "conceptFamily": "explain_why_transmission_voltage_must_be_reduced_for_consumers",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "The potential difference in transmission cables can be hundreds of thousands of volts. Why is this not supplied directly to homes?",
+      "question": "The potential difference in transmission cables can be hundreds of thousands of volts. Why is this not supplied directly to homes?",
+      "options": [
+        "It would be too dangerous for domestic circuits and appliances.",
+        "Homes can only use direct current from the grid.",
+        "High potential difference cannot transfer energy.",
+        "Appliances work only if the current in the cable is zero."
+      ],
+      "correctAnswer": "It would be too dangerous for domestic circuits and appliances.",
+      "correctIndex": 0,
+      "explanation": "Very high transmission voltages are dangerous. The potential difference is stepped down before the supply reaches homes.",
+      "misconceptionTag": "domestic-voltage-safety",
+      "distractorRationales": [
+        {
+          "text": "Homes can only use direct current from the grid.",
+          "misconception": "domestic ac/dc misconception"
+        },
+        {
+          "text": "High potential difference cannot transfer energy.",
+          "misconception": "voltage role misunderstood"
+        },
+        {
+          "text": "Appliances work only if the current in the cable is zero.",
+          "misconception": "current flow misconception"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why transmission voltage must be reduced for consumers."
+    },
+    {
+      "id": "aqa_electricity_national_grid_transformer_pair_017",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_transformer_pair_017_lo",
+        "statement": "Match transformer types to their roles in the National Grid.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "match",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_transformer_pair_017",
+      "conceptFamily": "match_transformer_types_to_their_roles_in_the_national_grid",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "Which pair of transformer actions is correct for the National Grid?",
+      "question": "Which pair of transformer actions is correct for the National Grid?",
+      "options": [
+        "Step-up before transmission; step-down before domestic use.",
+        "Step-down before transmission; step-up before domestic use.",
+        "Step-up at every house; no transformer near a power station.",
+        "No transformers are used because cables carry alternating current."
+      ],
+      "correctAnswer": "Step-up before transmission; step-down before domestic use.",
+      "correctIndex": 0,
+      "explanation": "The grid uses step-up transformers to reduce transmission current and step-down transformers to make the supply safer for consumers.",
+      "misconceptionTag": "transformer-role-pair",
+      "distractorRationales": [
+        {
+          "text": "Step-down before transmission; step-up before domestic use.",
+          "misconception": "actions reversed"
+        },
+        {
+          "text": "Step-up at every house; no transformer near a power station.",
+          "misconception": "consumer-only transformer misconception"
+        },
+        {
+          "text": "No transformers are used because cables carry alternating current.",
+          "misconception": "role of transformers ignored"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Match transformer types to their roles in the National Grid."
+    },
+    {
+      "id": "aqa_electricity_national_grid_efficiency_claim_018",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_efficiency_claim_018_lo",
+        "statement": "Correct a misconception about why high voltage is used for transmission.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
@@ -4812,47 +4918,48 @@
       "difficulty": "medium",
       "commandWord": "correct",
       "responseMode": "misconception_correction",
-      "patternId": "4.2.4.3:step_up:misconception_correction",
-      "conceptFamily": "step_up",
-      "contextType": "a results discussion",
+      "patternId": "authored:aqa_electricity_national_grid_efficiency_claim_018",
+      "conceptFamily": "correct_a_misconception_about_why_high_voltage_is_used_for_transmission",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
-      "question": "Which answer corrects a misconception about national grid? Use the wording carefully: this is about explain why potential difference is stepped up.",
+      "stem": "A student says, “The National Grid uses high voltage because it makes the energy travel faster.” What is the best correction?",
+      "question": "A student says, “The National Grid uses high voltage because it makes the energy travel faster.” What is the best correction?",
       "options": [
-        "For national grid: High potential difference removes the need for cables.",
-        "For national grid: High potential difference increases current to reduce losses.",
-        "For national grid, this would mean that high potential difference reduces current for the same power, reducing heating losses in cables.",
-        "For national grid: High potential difference is used because transformers cannot change voltage."
+        "High voltage reduces current for the same power, reducing heating losses.",
+        "High voltage removes the need for power stations.",
+        "High voltage makes cable resistance disappear.",
+        "High voltage changes the supply from AC to DC."
       ],
-      "correctAnswer": "For national grid, this would mean that high potential difference reduces current for the same power, reducing heating losses in cables.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Explain why potential difference is stepped up. Focus area: National Grid. For this question, High potential difference reduces current for the same power, reducing heating losses in cables. Context used: a results discussion; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:step_up",
+      "correctAnswer": "High voltage reduces current for the same power, reducing heating losses.",
+      "correctIndex": 0,
+      "explanation": "The key reason is efficiency: high transmission voltage gives lower current for the same power, so less energy is wasted heating the cables.",
+      "misconceptionTag": "high-voltage-speed-misconception",
       "distractorRationales": [
         {
-          "text": "For national grid: High potential difference is used because transformers cannot change voltage.",
-          "misconception": "High potential difference increases current to reduce losses."
+          "text": "High voltage removes the need for power stations.",
+          "misconception": "grid purpose misunderstood"
         },
         {
-          "text": "For national grid: High potential difference removes the need for cables.",
-          "misconception": "High potential difference is used because transformers cannot change voltage."
+          "text": "High voltage makes cable resistance disappear.",
+          "misconception": "resistance elimination misconception"
         },
         {
-          "text": "For national grid: High potential difference increases current to reduce losses.",
-          "misconception": "High potential difference removes the need for cables."
+          "text": "High voltage changes the supply from AC to DC.",
+          "misconception": "ac/dc misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why potential difference is stepped up."
+      "senNote": "Checks: Correct a misconception about why high voltage is used for transmission."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transformer_role_data_interpretation_018",
+      "id": "aqa_electricity_national_grid_energy_loss_place_019",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -4864,6 +4971,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -4874,269 +4982,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transformer_role",
-        "statement": "Compare step-up and step-down transformers. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.4.3:transformer_role:data_interpretation",
-      "conceptFamily": "transformer_role",
-      "contextType": "a classroom demonstration",
-      "skill": "National Grid practice",
-      "stem": "Which conclusion about national grid is supported by the evidence? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "question": "Which conclusion about national grid is supported by the evidence? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "options": [
-        "For national grid, it means that step-down transformers are used to increase voltage in homes.",
-        "For national grid, it means that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-        "For national grid, this would mean that transformers work only with direct current.",
-        "For national grid, the option says that step-up transformers reduce voltage at power stations."
-      ],
-      "correctAnswer": "For national grid, it means that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Compare step-up and step-down transformers. Focus area: National Grid. For this question, Step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use. Context used: a classroom demonstration; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transformer_role",
-      "distractorRationales": [
-        {
-          "text": "For national grid, this would mean that transformers work only with direct current.",
-          "misconception": "Step-up transformers reduce voltage at power stations."
-        },
-        {
-          "text": "For national grid, the option says that step-up transformers reduce voltage at power stations.",
-          "misconception": "Step-down transformers are used to increase voltage in homes."
-        },
-        {
-          "text": "For national grid, it means that step-down transformers are used to increase voltage in homes.",
-          "misconception": "Transformers work only with direct current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Compare step-up and step-down transformers."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_transmission_loss_representation_interpretation_019",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transmission_loss",
-        "statement": "Link cable losses to current. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.4.3:transmission_loss:representation_interpretation",
-      "conceptFamily": "transmission_loss",
-      "contextType": "a revision checkpoint",
-      "skill": "National Grid practice",
-      "stem": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "question": "A representation of national grid is described in words. Which interpretation is correct? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "options": [
-        "For national grid: Cable losses are unrelated to current.",
-        "For national grid, it means that lower current reduces energy transfer to the surroundings because heating depends on current.",
-        "For national grid, the option says that only cable length matters, not current.",
-        "For national grid: Higher current always reduces heating."
-      ],
-      "correctAnswer": "For national grid, it means that lower current reduces energy transfer to the surroundings because heating depends on current.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Link cable losses to current. Focus area: National Grid. For this question, Lower current reduces energy transfer to the surroundings because heating depends on current. Context used: a revision checkpoint; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transmission_loss",
-      "distractorRationales": [
-        {
-          "text": "For national grid: Cable losses are unrelated to current.",
-          "misconception": "Cable losses are unrelated to current."
-        },
-        {
-          "text": "For national grid: Higher current always reduces heating.",
-          "misconception": "Higher current always reduces heating."
-        },
-        {
-          "text": "For national grid, the option says that only cable length matters, not current.",
-          "misconception": "Only cable length matters, not current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link cable losses to current."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_grid_safety_direct_recall_020",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_safety",
-        "statement": "Explain why domestic voltage is lower. (National Grid)",
+        "id": "aqa_electricity_national_grid_energy_loss_place_019_lo",
+        "statement": "Identify where transmission losses occur in the National Grid.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.4.3:grid_safety:direct_recall",
-      "conceptFamily": "grid_safety",
-      "contextType": "an exam-style data table",
-      "skill": "National Grid practice",
-      "stem": "A student is revising national grid. Which statement should they keep? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "question": "A student is revising national grid. Which statement should they keep? Choose the statement that fits this exact GCSE Physics idea: explain why domestic voltage is lower.",
-      "options": [
-        "For national grid, the statement is that voltage is lowered because energy cannot transfer at high voltage.",
-        "For national grid, the statement is that domestic voltage is lowered to make current impossible.",
-        "In this national grid item, a lower domestic potential difference is safer and suitable for appliances.",
-        "For national grid, the statement is that homes use the highest grid voltage directly."
-      ],
-      "correctAnswer": "In this national grid item, a lower domestic potential difference is safer and suitable for appliances.",
-      "correctIndex": 2,
-      "explanation": "4.2.4.3 targets: Explain why domestic voltage is lower. Focus area: National Grid. For this question, A lower domestic potential difference is safer and suitable for appliances. Context used: an exam-style data table; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_safety",
-      "distractorRationales": [
-        {
-          "text": "For national grid, the statement is that domestic voltage is lowered to make current impossible.",
-          "misconception": "Homes use the highest grid voltage directly."
-        },
-        {
-          "text": "For national grid, the statement is that voltage is lowered because energy cannot transfer at high voltage.",
-          "misconception": "Domestic voltage is lowered to make current impossible."
-        },
-        {
-          "text": "For national grid, the statement is that homes use the highest grid voltage directly.",
-          "misconception": "Voltage is lowered because energy cannot transfer at high voltage."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain why domestic voltage is lower."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_grid_purpose_applied_context_021",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_grid_purpose",
-        "statement": "Describe the purpose of the National Grid. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "4.2.4.3:grid_purpose:applied_context",
-      "conceptFamily": "grid_purpose",
-      "contextType": "a required-practical notebook",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_national_grid_energy_loss_place_019",
+      "conceptFamily": "identify_where_transmission_losses_occur_in_the_national_grid",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "A question set in a required-practical notebook tests national grid. Which answer applies the idea correctly? Check the clue before choosing: Describe the purpose of the National Grid.",
-      "question": "A question set in a required-practical notebook tests national grid. Which answer applies the idea correctly? Check the clue before choosing: Describe the purpose of the National Grid.",
+      "stem": "Where is most of the unwanted energy transfer reduced by using a high transmission potential difference?",
+      "question": "Where is most of the unwanted energy transfer reduced by using a high transmission potential difference?",
       "options": [
-        "For national grid, it means that the National Grid transfers electrical power from power stations to consumers.",
-        "In this item, it means that the National Grid only works inside houses.",
-        "In this item, it means that the National Grid stores all electricity forever.",
-        "In this item, it means that the National Grid makes appliances use no energy."
+        "In the long transmission cables.",
+        "Inside the battery of the appliance.",
+        "In the switch of the plug only.",
+        "In the display screen of the appliance."
       ],
-      "correctAnswer": "For national grid, it means that the National Grid transfers electrical power from power stations to consumers.",
+      "correctAnswer": "In the long transmission cables.",
       "correctIndex": 0,
-      "explanation": "4.2.4.3 targets: Describe the purpose of the National Grid. Focus area: National Grid. For this question, The National Grid transfers electrical power from power stations to consumers. Context used: a required-practical notebook; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:grid_purpose",
+      "explanation": "High transmission voltage reduces the current in the long cables, reducing energy transferred by heating in those cables.",
+      "misconceptionTag": "loss-location-cables",
       "distractorRationales": [
         {
-          "text": "In this item, it means that the National Grid only works inside houses.",
-          "misconception": "The National Grid stores all electricity forever."
+          "text": "Inside the battery of the appliance.",
+          "misconception": "grid confused with appliance circuit"
         },
         {
-          "text": "In this item, it means that the National Grid stores all electricity forever.",
-          "misconception": "The National Grid makes appliances use no energy."
+          "text": "In the switch of the plug only.",
+          "misconception": "plug component confused with grid"
         },
         {
-          "text": "In this item, it means that the National Grid makes appliances use no energy.",
-          "misconception": "The National Grid only works inside houses."
+          "text": "In the display screen of the appliance.",
+          "misconception": "consumer energy use confused with grid loss"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe the purpose of the National Grid."
+      "senNote": "Checks: Identify where transmission losses occur in the National Grid."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_step_up_misconception_correction_022",
+      "id": "aqa_electricity_national_grid_calculate_current_020",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -5148,6 +5044,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -5158,56 +5055,276 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_step_up",
-        "statement": "Explain why potential difference is stepped up. (National Grid)",
+        "id": "aqa_electricity_national_grid_calculate_current_020_lo",
+        "statement": "Calculate transmission current using P = VI.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_national_grid_calculate_current_020",
+      "conceptFamily": "calculate_transmission_current_using_p_vi",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "A transmission line transfers 8.0 MW at 400 kV. What is the current in the line?",
+      "question": "A transmission line transfers 8.0 MW at 400 kV. What is the current in the line?",
+      "options": [
+        "20 A",
+        "50 A",
+        "3200 A",
+        "3.2 x 10^12 A"
+      ],
+      "correctAnswer": "20 A",
+      "correctIndex": 0,
+      "explanation": "Use P = VI. Current = 8.0 x 10^6 ÷ 4.0 x 10^5 = 20 A.",
+      "misconceptionTag": "transmission-current-calculation",
+      "distractorRationales": [
+        {
+          "text": "50 A",
+          "misconception": ""
+        },
+        {
+          "text": "3200 A",
+          "misconception": ""
+        },
+        {
+          "text": "3.2 x 10^12 A",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate transmission current using P = VI."
+    },
+    {
+      "id": "aqa_electricity_national_grid_compare_current_calc_021",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_compare_current_calc_021_lo",
+        "statement": "Compare transmission current when potential difference changes by a scale factor.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_national_grid_compare_current_calc_021",
+      "conceptFamily": "compare_transmission_current_when_potential_difference_changes_by_a_scale_factor",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "The same 2.0 MW is transmitted at 20 kV and at 200 kV. Which statement about the current is correct?",
+      "question": "The same 2.0 MW is transmitted at 20 kV and at 200 kV. Which statement about the current is correct?",
+      "options": [
+        "The current at 200 kV is one tenth of the current at 20 kV.",
+        "The current at 200 kV is ten times the current at 20 kV.",
+        "The current is the same because the power is the same.",
+        "The current at 20 kV is zero because the voltage is lower."
+      ],
+      "correctAnswer": "The current at 200 kV is one tenth of the current at 20 kV.",
+      "correctIndex": 0,
+      "explanation": "For the same power, current is inversely proportional to potential difference. Increasing the voltage by a factor of 10 reduces the current by a factor of 10.",
+      "misconceptionTag": "current-inverse-voltage",
+      "distractorRationales": [
+        {
+          "text": "The current at 200 kV is ten times the current at 20 kV.",
+          "misconception": "inverse relationship reversed"
+        },
+        {
+          "text": "The current is the same because the power is the same.",
+          "misconception": "voltage ignored in P=VI"
+        },
+        {
+          "text": "The current at 20 kV is zero because the voltage is lower.",
+          "misconception": "lower voltage mistaken for no current"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare transmission current when potential difference changes by a scale factor."
+    },
+    {
+      "id": "aqa_electricity_national_grid_choose_voltage_022",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_choose_voltage_022_lo",
+        "statement": "Choose a grid design that reduces cable losses.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "choose",
+      "responseMode": "unfamiliar_context",
+      "patternId": "authored:aqa_electricity_national_grid_choose_voltage_022",
+      "conceptFamily": "choose_a_grid_design_that_reduces_cable_losses",
+      "contextType": "exam_style",
+      "skill": "National Grid practice",
+      "stem": "A new transmission route must carry a large power over a long distance. Which design choice would reduce energy wasted in the cables?",
+      "question": "A new transmission route must carry a large power over a long distance. Which design choice would reduce energy wasted in the cables?",
+      "options": [
+        "Use a high transmission potential difference.",
+        "Use the lowest possible potential difference along the route.",
+        "Use no transformers anywhere in the network.",
+        "Use a larger current to make the cables warmer."
+      ],
+      "correctAnswer": "Use a high transmission potential difference.",
+      "correctIndex": 0,
+      "explanation": "A high transmission potential difference reduces the current needed for the same power, so less energy is wasted heating the cables.",
+      "misconceptionTag": "grid-design-high-voltage",
+      "distractorRationales": [
+        {
+          "text": "Use the lowest possible potential difference along the route.",
+          "misconception": "low voltage mistaken as safer transmission"
+        },
+        {
+          "text": "Use no transformers anywhere in the network.",
+          "misconception": "transformer role ignored"
+        },
+        {
+          "text": "Use a larger current to make the cables warmer.",
+          "misconception": "losses treated as benefit"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Choose a grid design that reduces cable losses."
+    },
+    {
+      "id": "aqa_electricity_national_grid_transfer_chain_023",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "National Grid",
+      "topicSlug": "electricity",
+      "subtopicSlug": "national_grid",
+      "topicId": "national_grid",
+      "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
+      "specStatement": "The National Grid and transformers.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_national_grid_transfer_chain_023_lo",
+        "statement": "Label the step-up stage in a National Grid diagram.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.4.3:step_up:misconception_correction",
-      "conceptFamily": "step_up",
-      "contextType": "a technician report",
+      "difficulty": "medium",
+      "commandWord": "label",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_electricity_national_grid_transfer_chain_023",
+      "conceptFamily": "label_the_step_up_stage_in_a_national_grid_diagram",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "A learner gives a wrong explanation for national grid. Which correction is best? Use the wording carefully: this is about explain why potential difference is stepped up.",
-      "question": "A learner gives a wrong explanation for national grid. Which correction is best? Use the wording carefully: this is about explain why potential difference is stepped up.",
+      "stem": "A diagram shows a power station connected to pylons and then to houses. Which label should be placed between the power station and the pylons?",
+      "question": "A diagram shows a power station connected to pylons and then to houses. Which label should be placed between the power station and the pylons?",
       "options": [
-        "For national grid, the answer claims that high potential difference increases current to reduce losses.",
-        "For national grid, the statement is that high potential difference reduces current for the same power, reducing heating losses in cables.",
-        "For national grid, the answer claims that high potential difference is used because transformers cannot change voltage.",
-        "For national grid, the answer claims that high potential difference removes the need for cables."
+        "step-up transformer",
+        "step-down transformer",
+        "domestic fuse",
+        "light-dependent resistor"
       ],
-      "correctAnswer": "For national grid, the statement is that high potential difference reduces current for the same power, reducing heating losses in cables.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Explain why potential difference is stepped up. Focus area: National Grid. For this question, High potential difference reduces current for the same power, reducing heating losses in cables. Context used: a technician report; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:step_up",
+      "correctAnswer": "step-up transformer",
+      "correctIndex": 0,
+      "explanation": "The transformer before the pylons is a step-up transformer because it increases the potential difference for efficient transmission.",
+      "misconceptionTag": "label-step-up-stage",
       "distractorRationales": [
         {
-          "text": "For national grid, the answer claims that high potential difference increases current to reduce losses.",
-          "misconception": "High potential difference increases current to reduce losses."
+          "text": "step-down transformer",
+          "misconception": "grid order reversed"
         },
         {
-          "text": "For national grid, the answer claims that high potential difference is used because transformers cannot change voltage.",
-          "misconception": "High potential difference is used because transformers cannot change voltage."
+          "text": "domestic fuse",
+          "misconception": ""
         },
         {
-          "text": "For national grid, the answer claims that high potential difference removes the need for cables.",
-          "misconception": "High potential difference removes the need for cables."
+          "text": "light-dependent resistor",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain why potential difference is stepped up."
+      "senNote": "Checks: Label the step-up stage in a National Grid diagram."
     },
     {
-      "id": "aqa_4_2_4_3_national_grid_transformer_role_exam_decision_023",
+      "id": "aqa_electricity_national_grid_end_stage_label_024",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -5219,6 +5336,7 @@
       "subtopicSlug": "national_grid",
       "topicId": "national_grid",
       "specRef": "4.2.4.3",
+      "combinedSpecRef": "6.2.4.3",
       "specStatement": "The National Grid and transformers.",
       "paper": "Paper 1",
       "courseAvailability": [
@@ -5229,124 +5347,54 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transformer_role",
-        "statement": "Compare step-up and step-down transformers. (National Grid)",
+        "id": "aqa_electricity_national_grid_end_stage_label_024_lo",
+        "statement": "Label the step-down stage in a National Grid diagram.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "4.2.4.3:transformer_role:exam_decision",
-      "conceptFamily": "transformer_role",
-      "contextType": "a labelled diagram",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "label",
+      "responseMode": "diagram_interpretation",
+      "patternId": "authored:aqa_electricity_national_grid_end_stage_label_024",
+      "conceptFamily": "label_the_step_down_stage_in_a_national_grid_diagram",
+      "contextType": "exam_style",
       "skill": "National Grid practice",
-      "stem": "Which answer is the strongest GCSE Physics response for national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
-      "question": "Which answer is the strongest GCSE Physics response for national grid? Use the wording carefully: this is about compare step-up and step-down transformers.",
+      "stem": "A diagram shows pylons connected to a group of houses. Which label should be placed just before the houses?",
+      "question": "A diagram shows pylons connected to a group of houses. Which label should be placed just before the houses?",
       "options": [
-        "For national grid, the option says that transformers work only with direct current.",
-        "For national grid, this would mean that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-        "For national grid, the option says that step-down transformers are used to increase voltage in homes.",
-        "In this item, it means that step-up transformers reduce voltage at power stations."
+        "step-down transformer",
+        "step-up transformer",
+        "generator",
+        "ammeter"
       ],
-      "correctAnswer": "For national grid, this would mean that step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Compare step-up and step-down transformers. Focus area: National Grid. For this question, Step-up transformers increase potential difference; step-down transformers reduce it for safe domestic use. Context used: a labelled diagram; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transformer_role",
+      "correctAnswer": "step-down transformer",
+      "correctIndex": 0,
+      "explanation": "A step-down transformer is used near consumers to reduce the potential difference before the supply enters homes.",
+      "misconceptionTag": "label-step-down-stage",
       "distractorRationales": [
         {
-          "text": "For national grid, the option says that step-down transformers are used to increase voltage in homes.",
-          "misconception": "Step-up transformers reduce voltage at power stations."
+          "text": "step-up transformer",
+          "misconception": "grid order reversed"
         },
         {
-          "text": "For national grid, the option says that transformers work only with direct current.",
-          "misconception": "Step-down transformers are used to increase voltage in homes."
+          "text": "generator",
+          "misconception": ""
         },
         {
-          "text": "In this item, it means that step-up transformers reduce voltage at power stations.",
-          "misconception": "Transformers work only with direct current."
+          "text": "ammeter",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.4.3.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Compare step-up and step-down transformers."
-    },
-    {
-      "id": "aqa_4_2_4_3_national_grid_transmission_loss_representation_interpretation_024",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "National Grid",
-      "topicSlug": "electricity",
-      "subtopicSlug": "national_grid",
-      "topicId": "national_grid",
-      "specRef": "4.2.4.3",
-      "specStatement": "The National Grid and transformers.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_4_3_national_grid_transmission_loss",
-        "statement": "Link cable losses to current. (National Grid)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.4.3:transmission_loss:representation_interpretation",
-      "conceptFamily": "transmission_loss",
-      "contextType": "a short calculation",
-      "skill": "National Grid practice",
-      "stem": "A labelled representation is used for national grid. Which statement is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "question": "A labelled representation is used for national grid. Which statement is valid? Choose the statement that fits this exact GCSE Physics idea: link cable losses to current.",
-      "options": [
-        "For national grid, the answer claims that only cable length matters, not current.",
-        "The answer for national grid says that lower current reduces energy transfer to the surroundings because heating depends on current.",
-        "For national grid, the answer claims that cable losses are unrelated to current.",
-        "In this national grid item, higher current always reduces heating."
-      ],
-      "correctAnswer": "The answer for national grid says that lower current reduces energy transfer to the surroundings because heating depends on current.",
-      "correctIndex": 1,
-      "explanation": "4.2.4.3 targets: Link cable losses to current. Focus area: National Grid. For this question, Lower current reduces energy transfer to the surroundings because heating depends on current. Context used: a short calculation; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:transmission_loss",
-      "distractorRationales": [
-        {
-          "text": "For national grid, the answer claims that only cable length matters, not current.",
-          "misconception": "Cable losses are unrelated to current."
-        },
-        {
-          "text": "For national grid, the answer claims that cable losses are unrelated to current.",
-          "misconception": "Higher current always reduces heating."
-        },
-        {
-          "text": "In this national grid item, higher current always reduces heating.",
-          "misconception": "Only cable length matters, not current."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.4.3; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Link cable losses to current."
+      "senNote": "Checks: Label the step-down stage in a National Grid diagram."
     },
     {
       "id": "aqa_electricity_resistance_v_over_i_001",

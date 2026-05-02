@@ -2,7 +2,7 @@
   "examBoard": "AQA",
   "qualification": "AQA GCSE Physics 8463",
   "topicSlug": "electricity",
-  "generatedAt": "2026-05-02T06:22:28.399Z",
+  "generatedAt": "2026-05-02T06:48:59.714Z",
   "questions": [
     {
       "id": "aqa_electricity_charge_current_definition_001",
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "The rate of flow of electric charge.",
       "correctIndex": 0,
-      "explanation": "Current is the rate of flow of electric charge. It is measured in amperes.",
+      "explanation": "A larger current means more charge passes the same point each second. The unit of current is the ampere.",
       "misconceptionTag": "current-rate-of-charge",
       "distractorRationales": [
         {
@@ -7970,7 +7970,7 @@
       "senNote": "This checks one idea only: Describe potential difference in parallel."
     },
     {
-      "id": "aqa_4_2_1_2_current_current_charge_direct_recall_001",
+      "id": "aqa_electricity_current_rate_of_flow_001",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -7992,127 +7992,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_1_2_current_current_charge",
-        "statement": "Use current as rate of flow of charge. (Current)",
+        "id": "aqa_electricity_current_rate_of_flow_001_lo",
+        "statement": "State current as the rate of flow of charge.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "4.2.1.2:current_charge:direct_recall",
-      "conceptFamily": "current_charge",
-      "contextType": "a safety decision",
-      "skill": "Use current as rate of flow of charge.",
-      "stem": "Which statement is correct for current? Keep the answer focused on current: use current as rate of flow of charge.",
-      "question": "Which statement is correct for current? Keep the answer focused on current: use current as rate of flow of charge.",
-      "options": [
-        "In this item, it means that current is the energy carried by each coulomb.",
-        "For current, this would mean that current is the rate of flow of charge, so charge = current × time.",
-        "In this item, it means that current is measured in volts.",
-        "In this item, it means that charge equals current divided by distance."
-      ],
-      "correctAnswer": "For current, this would mean that current is the rate of flow of charge, so charge = current × time.",
-      "correctIndex": 1,
-      "explanation": "4.2.1.2 targets: Use current as rate of flow of charge. Focus area: Current. For this question, Current is the rate of flow of charge, so charge = current × time. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:current_charge",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that current is the energy carried by each coulomb.",
-          "misconception": "Current is the energy carried by each coulomb."
-        },
-        {
-          "text": "In this item, it means that current is measured in volts.",
-          "misconception": "Current is measured in volts."
-        },
-        {
-          "text": "In this item, it means that charge equals current divided by distance.",
-          "misconception": "Charge equals current divided by distance."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.1.2; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use current as rate of flow of charge."
-    },
-    {
-      "id": "aqa_4_2_1_2_current_measuring_current_concept_discrimination_002",
-      "examBoard": "AQA",
-      "subject": "Physics",
-      "qualification": "AQA GCSE Physics 8463",
-      "specVersion": "Version 1.1 September 2019",
-      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
-      "topic": "Electricity",
-      "subtopic": "Current",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current",
-      "topicId": "circuit_basics",
-      "specRef": "4.2.1.2",
-      "specStatement": "Current is the rate of flow of charge.",
-      "paper": "Paper 1",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "aqa_4_2_1_2_current_measuring_current",
-        "statement": "Choose how to measure current. (Current)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "4.2.1.2:measuring_current:concept_discrimination",
-      "conceptFamily": "measuring_current",
-      "contextType": "a graph-reading task",
-      "skill": "Choose how to measure current.",
-      "stem": "A student is comparing similar ideas in current. Which statement is correct? Use the wording carefully: this is about choose how to measure current.",
-      "question": "A student is comparing similar ideas in current. Which statement is correct? Use the wording carefully: this is about choose how to measure current.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_current_rate_of_flow_001",
+      "conceptFamily": "state_current_as_the_rate_of_flow_of_charge",
+      "contextType": "exam_style",
+      "skill": "State current as the rate of flow of charge.",
+      "stem": "Which statement describes the current in a wire?",
+      "question": "Which statement describes the current in a wire?",
       "options": [
-        "The answer for current says that an ammeter is connected in parallel.",
-        "In this current item, an ammeter is connected in series to measure current.",
-        "For current, the statement is that current is measured with a ruler.",
-        "For current, the statement is that a voltmeter is connected in series to measure current."
+        "The rate at which electric charge flows past a point.",
+        "The energy transferred by each coulomb of charge.",
+        "The opposition to the flow of charge.",
+        "The total charge stored inside the wire."
       ],
-      "correctAnswer": "In this current item, an ammeter is connected in series to measure current.",
-      "correctIndex": 1,
-      "explanation": "4.2.1.2 targets: Choose how to measure current. Focus area: Current. For this question, An ammeter is connected in series to measure current. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:measuring_current",
+      "correctAnswer": "The rate at which electric charge flows past a point.",
+      "correctIndex": 0,
+      "explanation": "Current is the rate of flow of electric charge. It is measured in amperes.",
+      "misconceptionTag": "current-rate-of-charge",
       "distractorRationales": [
         {
-          "text": "For current, the statement is that a voltmeter is connected in series to measure current.",
-          "misconception": "An ammeter is connected in parallel."
+          "text": "The energy transferred by each coulomb of charge.",
+          "misconception": "potential difference confused with current"
         },
         {
-          "text": "For current, the statement is that current is measured with a ruler.",
-          "misconception": "A voltmeter is connected in series to measure current."
+          "text": "The opposition to the flow of charge.",
+          "misconception": "resistance confused with current"
         },
         {
-          "text": "The answer for current says that an ammeter is connected in parallel.",
-          "misconception": "Current is measured with a ruler."
+          "text": "The total charge stored inside the wire.",
+          "misconception": "charge storage confused with current"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Choose how to measure current."
+      "senNote": "Checks: State current as the rate of flow of charge."
     },
     {
-      "id": "aqa_4_2_1_2_current_charge_unit_misconception_correction_003",
+      "id": "aqa_electricity_current_ammeter_002",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -8134,56 +8064,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_1_2_current_charge_unit",
-        "statement": "Recall the unit of charge. (Current)",
+        "id": "aqa_electricity_current_ammeter_002_lo",
+        "statement": "Choose how to measure current in a circuit.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "4.2.1.2:charge_unit:misconception_correction",
-      "conceptFamily": "charge_unit",
-      "contextType": "a comparison question",
-      "skill": "Recall the unit of charge.",
-      "stem": "A revision note about current contains an error. Which replacement is correct? Use the wording carefully: this is about recall the unit of charge.",
-      "question": "A revision note about current contains an error. Which replacement is correct? Use the wording carefully: this is about recall the unit of charge.",
+      "commandWord": "choose",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_current_ammeter_002",
+      "conceptFamily": "choose_how_to_measure_current_in_a_circuit",
+      "contextType": "exam_style",
+      "skill": "Choose how to measure current in a circuit.",
+      "stem": "A student wants to measure the current through a lamp. How should the ammeter be connected?",
+      "question": "A student wants to measure the current through a lamp. How should the ammeter be connected?",
       "options": [
-        "For current, the option says that charge is measured in hertz.",
-        "In this item, it means that charge is measured in ohms.",
-        "The claim for current is that charge is measured in coulombs.",
-        "For current, the option says that charge is measured in watts."
+        "In series with the lamp.",
+        "In parallel with the lamp.",
+        "Across the cell only.",
+        "Not connected to the circuit."
       ],
-      "correctAnswer": "The claim for current is that charge is measured in coulombs.",
-      "correctIndex": 2,
-      "explanation": "4.2.1.2 targets: Recall the unit of charge. Focus area: Current. For this question, Charge is measured in coulombs. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:charge_unit",
+      "correctAnswer": "In series with the lamp.",
+      "correctIndex": 0,
+      "explanation": "An ammeter must be connected in series so the same current passes through the ammeter and the component.",
+      "misconceptionTag": "ammeter-series",
       "distractorRationales": [
         {
-          "text": "For current, the option says that charge is measured in hertz.",
-          "misconception": "Charge is measured in watts."
+          "text": "In parallel with the lamp.",
+          "misconception": "voltmeter connection confused with ammeter connection"
         },
         {
-          "text": "For current, the option says that charge is measured in watts.",
-          "misconception": "Charge is measured in ohms."
+          "text": "Across the cell only.",
+          "misconception": "measuring supply potential difference instead of lamp current"
         },
         {
-          "text": "In this item, it means that charge is measured in ohms.",
-          "misconception": "Charge is measured in hertz."
+          "text": "Not connected to the circuit.",
+          "misconception": "meter must be part of the current path"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Recall the unit of charge."
+      "senNote": "Checks: Choose how to measure current in a circuit."
     },
     {
-      "id": "aqa_4_2_1_2_current_potential_difference_data_interpretation_004",
+      "id": "aqa_electricity_current_charge_calculation_003",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -8205,56 +8136,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_1_2_current_potential_difference",
-        "statement": "Describe potential difference. (Current)",
+        "id": "aqa_electricity_current_charge_calculation_003_lo",
+        "statement": "Calculate charge using current and time.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
-      "demand": "high",
+      "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "4.2.1.2:potential_difference:data_interpretation",
-      "conceptFamily": "potential_difference",
-      "contextType": "a method-choice question",
-      "skill": "Describe potential difference.",
-      "stem": "A small data set about current is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe potential difference.",
-      "question": "A small data set about current is being interpreted. Which conclusion is valid? Use the wording carefully: this is about describe potential difference.",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_current_charge_calculation_003",
+      "conceptFamily": "calculate_charge_using_current_and_time",
+      "contextType": "exam_style",
+      "skill": "Calculate charge using current and time.",
+      "stem": "A current of 0.40 A flows through a lamp for 30 s. How much charge passes through the lamp?",
+      "question": "A current of 0.40 A flows through a lamp for 30 s. How much charge passes through the lamp?",
       "options": [
-        "For current, it means that potential difference is measured in amperes.",
-        "The answer for current says that potential difference is the energy transferred per unit charge between two points.",
-        "For current, it means that potential difference is the number of electrons in the wire.",
-        "For current, the answer claims that potential difference is the same as resistance."
+        "0.013 C",
+        "12 C",
+        "30.4 C",
+        "75 C"
       ],
-      "correctAnswer": "The answer for current says that potential difference is the energy transferred per unit charge between two points.",
+      "correctAnswer": "12 C",
       "correctIndex": 1,
-      "explanation": "4.2.1.2 targets: Describe potential difference. Focus area: Current. For this question, Potential difference is the energy transferred per unit charge between two points. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:potential_difference",
+      "explanation": "Use charge = current × time. Q = 0.40 × 30 = 12 C.",
+      "misconceptionTag": "charge-current-time",
       "distractorRationales": [
         {
-          "text": "For current, it means that potential difference is the number of electrons in the wire.",
-          "misconception": "Potential difference is the number of electrons in the wire."
+          "text": "0.013 C",
+          "misconception": ""
         },
         {
-          "text": "For current, it means that potential difference is measured in amperes.",
-          "misconception": "Potential difference is measured in amperes."
+          "text": "30.4 C",
+          "misconception": ""
         },
         {
-          "text": "For current, the answer claims that potential difference is the same as resistance.",
-          "misconception": "Potential difference is the same as resistance."
+          "text": "75 C",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe potential difference."
+      "senNote": "Checks: Calculate charge using current and time."
     },
     {
-      "id": "aqa_4_2_1_2_current_current_charge_representation_interpretation_005",
+      "id": "aqa_electricity_current_from_charge_004",
       "examBoard": "AQA",
       "subject": "Physics",
       "qualification": "AQA GCSE Physics 8463",
@@ -8276,53 +8208,126 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "aqa_4_2_1_2_current_current_charge",
-        "statement": "Use current as rate of flow of charge. (Current)",
+        "id": "aqa_electricity_current_from_charge_004_lo",
+        "statement": "Calculate current from charge and time.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "4.2.1.2:current_charge:representation_interpretation",
-      "conceptFamily": "current_charge",
-      "contextType": "a results discussion",
-      "skill": "Use current as rate of flow of charge.",
-      "stem": "Which option correctly reads the current model or diagram idea? Use the wording carefully: this is about use current as rate of flow of charge.",
-      "question": "Which option correctly reads the current model or diagram idea? Use the wording carefully: this is about use current as rate of flow of charge.",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:aqa_electricity_current_from_charge_004",
+      "conceptFamily": "calculate_current_from_charge_and_time",
+      "contextType": "exam_style",
+      "skill": "Calculate current from charge and time.",
+      "stem": "A charge of 180 C passes a point in a circuit in 60 s. What is the current?",
+      "question": "A charge of 180 C passes a point in a circuit in 60 s. What is the current?",
       "options": [
-        "For current, it means that current is measured in volts.",
-        "For current, the statement is that charge equals current divided by distance.",
-        "For current, the answer claims that current is the energy carried by each coulomb.",
-        "For current, the answer claims that current is the rate of flow of charge, so charge = current × time."
+        "0.33 A",
+        "3.0 A",
+        "120 A",
+        "10 800 A"
       ],
-      "correctAnswer": "For current, the answer claims that current is the rate of flow of charge, so charge = current × time.",
-      "correctIndex": 3,
-      "explanation": "4.2.1.2 targets: Use current as rate of flow of charge. Focus area: Current. For this question, Current is the rate of flow of charge, so charge = current × time. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:current_charge",
+      "correctAnswer": "3.0 A",
+      "correctIndex": 1,
+      "explanation": "Use current = charge ÷ time. I = 180 ÷ 60 = 3.0 A.",
+      "misconceptionTag": "current-charge-time",
       "distractorRationales": [
         {
-          "text": "For current, it means that current is measured in volts.",
-          "misconception": "Current is the energy carried by each coulomb."
+          "text": "0.33 A",
+          "misconception": ""
         },
         {
-          "text": "For current, the statement is that charge equals current divided by distance.",
-          "misconception": "Current is measured in volts."
+          "text": "120 A",
+          "misconception": ""
         },
         {
-          "text": "For current, the answer claims that current is the energy carried by each coulomb.",
-          "misconception": "Charge equals current divided by distance."
+          "text": "10 800 A",
+          "misconception": ""
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from AQA 4.2.1.2; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for AQA 4.2.1.2.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "AQA GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use current as rate of flow of charge."
+      "senNote": "Checks: Calculate current from charge and time."
+    },
+    {
+      "id": "aqa_electricity_current_series_005",
+      "examBoard": "AQA",
+      "subject": "Physics",
+      "qualification": "AQA GCSE Physics 8463",
+      "specVersion": "Version 1.1 September 2019",
+      "sourceUrl": "https://media.aqa.org.uk/resources/physics/specifications/AQA-8463-SP-2016.PDF",
+      "topic": "Electricity",
+      "subtopic": "Current",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current",
+      "topicId": "circuit_basics",
+      "specRef": "4.2.1.2",
+      "specStatement": "Current is the rate of flow of charge.",
+      "paper": "Paper 1",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "aqa_electricity_current_series_005_lo",
+        "statement": "Describe current in a series circuit.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:aqa_electricity_current_series_005",
+      "conceptFamily": "describe_current_in_a_series_circuit",
+      "contextType": "exam_style",
+      "skill": "Describe current in a series circuit.",
+      "stem": "Two lamps are connected in series with a cell. Which statement about the current is correct?",
+      "question": "Two lamps are connected in series with a cell. Which statement about the current is correct?",
+      "options": [
+        "The current is the same through both lamps.",
+        "The first lamp uses up some of the current.",
+        "The current is zero after the first lamp.",
+        "The current is larger in the second lamp."
+      ],
+      "correctAnswer": "The current is the same through both lamps.",
+      "correctIndex": 0,
+      "explanation": "In a series circuit there is only one path, so the current is the same through each component.",
+      "misconceptionTag": "series-current-same",
+      "distractorRationales": [
+        {
+          "text": "The first lamp uses up some of the current.",
+          "misconception": "current consumed by components"
+        },
+        {
+          "text": "The current is zero after the first lamp.",
+          "misconception": "series current path misunderstood"
+        },
+        {
+          "text": "The current is larger in the second lamp.",
+          "misconception": "current changes around a series loop"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for AQA 4.2.1.2.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "AQA GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe current in a series circuit."
     },
     {
       "id": "aqa_4_2_1_3_potential_difference_potential_difference_direct_recall_001",

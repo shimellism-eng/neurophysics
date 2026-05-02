@@ -1,7 +1,7 @@
 {
   "examBoard": "Edexcel",
   "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-  "generatedAt": "2026-05-02T06:35:25.690Z",
+  "generatedAt": "2026-05-02T06:48:59.723Z",
   "questions": [
     {
       "id": "edexcel_atomic_structure_nucleus_001",
@@ -1799,7 +1799,7 @@
       "senNote": "Checks: Explain the risk from internal alpha contamination."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohms_law_direct_recall_001",
+      "id": "edexcel_electricity_cv_resistance_calculation_001",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -1821,127 +1821,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohms_law",
-        "statement": "Use the relationship between potential difference, current and resistance. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_resistance_calculation_001_lo",
+        "statement": "Calculate resistance using potential difference and current.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_cv_resistance_calculation_001",
+      "conceptFamily": "calculate_resistance_using_potential_difference_and_current",
+      "contextType": "exam_style",
+      "skill": "Calculate resistance using potential difference and current.",
+      "stem": "A resistor has a potential difference of 6.0 V across it and a current of 0.30 A through it. What is its resistance?",
+      "question": "A resistor has a potential difference of 6.0 V across it and a current of 0.30 A through it. What is its resistance?",
+      "options": [
+        "0.050 ohms",
+        "1.8 ohms",
+        "5.7 ohms",
+        "20 ohms"
+      ],
+      "correctAnswer": "20 ohms",
+      "correctIndex": 3,
+      "explanation": "Use resistance = potential difference ÷ current. R = 6.0 ÷ 0.30 = 20 ohms.",
+      "misconceptionTag": "resistance-v-over-i",
+      "distractorRationales": [
+        {
+          "text": "0.050 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "1.8 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "5.7 ohms",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resistance using potential difference and current."
+    },
+    {
+      "id": "edexcel_electricity_cv_ohmic_graph_002",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_ohmic_graph_002_lo",
+        "statement": "Identify the I-V graph for an ohmic conductor.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "low",
       "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.15:ohms_law:direct_recall",
-      "conceptFamily": "ohms_law",
-      "contextType": "a labelled diagram",
-      "skill": "Use the relationship between potential difference, current and resistance.",
-      "stem": "Which statement is correct for current-voltage characteristics? Demand focus: use the relationship between potential difference, current and resistance.",
-      "question": "Which statement is correct for current-voltage characteristics? Demand focus: use the relationship between potential difference, current and resistance.",
-      "options": [
-        "In this current-voltage characteristics item, for a resistor, resistance = potential difference ÷ current.",
-        "For current-voltage characteristics, the answer claims that resistance is independent of voltage and current for every component.",
-        "For current-voltage characteristics, the statement is that resistance = power × time.",
-        "For current-voltage characteristics, it means that resistance = current ÷ potential difference."
-      ],
-      "correctAnswer": "In this current-voltage characteristics item, for a resistor, resistance = potential difference ÷ current.",
-      "correctIndex": 0,
-      "explanation": "10.15 targets: Use the relationship between potential difference, current and resistance. Focus area: Current-Voltage Characteristics. For this question, For a resistor, resistance = potential difference ÷ current. Context used: a labelled diagram; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohms_law",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, it means that resistance = current ÷ potential difference.",
-          "misconception": "Resistance = current ÷ potential difference."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that resistance = power × time.",
-          "misconception": "Resistance = power × time."
-        },
-        {
-          "text": "For current-voltage characteristics, the answer claims that resistance is independent of voltage and current for every component.",
-          "misconception": "Resistance is independent of voltage and current for every component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the relationship between potential difference, current and resistance."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor_concept_discrimination_002",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor",
-        "statement": "Interpret an ohmic conductor. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "medium",
       "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.15:ohmic_conductor:concept_discrimination",
-      "conceptFamily": "ohmic_conductor",
-      "contextType": "a short calculation",
-      "skill": "Interpret an ohmic conductor.",
-      "stem": "A student is comparing similar ideas in current-voltage characteristics. Which statement is correct? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
-      "question": "A student is comparing similar ideas in current-voltage characteristics. Which statement is correct? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_ohmic_graph_002",
+      "conceptFamily": "identify_the_i_v_graph_for_an_ohmic_conductor",
+      "contextType": "exam_style",
+      "skill": "Identify the I-V graph for an ohmic conductor.",
+      "stem": "Which graph would show an ohmic conductor at constant temperature?",
+      "question": "Which graph would show an ohmic conductor at constant temperature?",
       "options": [
-        "For current-voltage characteristics, it means that an ohmic conductor has a curved I-V graph at all temperatures.",
-        "For current-voltage characteristics, the statement is that an ohmic conductor has current directly proportional to potential difference at constant temperature.",
-        "For current-voltage characteristics, it means that an ohmic conductor only works in parallel circuits.",
-        "For current-voltage characteristics, it means that an ohmic conductor has zero resistance."
+        "A straight line through the origin.",
+        "A curve that becomes flat as potential difference increases.",
+        "A line with current only in one direction.",
+        "A horizontal line at zero current."
       ],
-      "correctAnswer": "For current-voltage characteristics, the statement is that an ohmic conductor has current directly proportional to potential difference at constant temperature.",
-      "correctIndex": 1,
-      "explanation": "10.15 targets: Interpret an ohmic conductor. Focus area: Current-Voltage Characteristics. For this question, An ohmic conductor has current directly proportional to potential difference at constant temperature. Context used: a short calculation; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohmic_conductor",
+      "correctAnswer": "A straight line through the origin.",
+      "correctIndex": 0,
+      "explanation": "A straight line through the origin shows that current and potential difference increase in the same ratio.",
+      "misconceptionTag": "ohmic-straight-line",
       "distractorRationales": [
         {
-          "text": "For current-voltage characteristics, it means that an ohmic conductor has zero resistance.",
-          "misconception": "An ohmic conductor has a curved I-V graph at all temperatures."
+          "text": "A curve that becomes flat as potential difference increases.",
+          "misconception": "filament lamp confused with ohmic conductor"
         },
         {
-          "text": "For current-voltage characteristics, it means that an ohmic conductor only works in parallel circuits.",
-          "misconception": "An ohmic conductor has zero resistance."
+          "text": "A line with current only in one direction.",
+          "misconception": "diode confused with ohmic conductor"
         },
         {
-          "text": "For current-voltage characteristics, it means that an ohmic conductor has a curved I-V graph at all temperatures.",
-          "misconception": "An ohmic conductor only works in parallel circuits."
+          "text": "A horizontal line at zero current.",
+          "misconception": "open circuit confused with conductor behaviour"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret an ohmic conductor."
+      "senNote": "Checks: Identify the I-V graph for an ohmic conductor."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp_misconception_correction_003",
+      "id": "edexcel_electricity_cv_ohmic_temperature_003",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -1963,482 +1965,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp",
-        "statement": "Explain filament lamp resistance. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.15:filament_lamp:misconception_correction",
-      "conceptFamily": "filament_lamp",
-      "contextType": "a safety decision",
-      "skill": "Explain filament lamp resistance.",
-      "stem": "A revision note about current-voltage characteristics contains an error. Which replacement is correct? Use the wording carefully: this is about explain filament lamp resistance.",
-      "question": "A revision note about current-voltage characteristics contains an error. Which replacement is correct? Use the wording carefully: this is about explain filament lamp resistance.",
-      "options": [
-        "For current-voltage characteristics, the statement is that a filament lamp becomes superconducting as it heats.",
-        "For current-voltage characteristics, it means that a filament lamp resistance increases as the filament gets hotter.",
-        "For current-voltage characteristics, it means that a filament lamp has no resistance when glowing.",
-        "For current-voltage characteristics, it means that a filament lamp resistance falls because atoms disappear."
-      ],
-      "correctAnswer": "For current-voltage characteristics, it means that a filament lamp resistance increases as the filament gets hotter.",
-      "correctIndex": 1,
-      "explanation": "10.15 targets: Explain filament lamp resistance. Focus area: Current-Voltage Characteristics. For this question, A filament lamp resistance increases as the filament gets hotter. Context used: a safety decision; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:filament_lamp",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, it means that a filament lamp has no resistance when glowing.",
-          "misconception": "A filament lamp becomes superconducting as it heats."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that a filament lamp becomes superconducting as it heats.",
-          "misconception": "A filament lamp resistance falls because atoms disappear."
-        },
-        {
-          "text": "For current-voltage characteristics, it means that a filament lamp resistance falls because atoms disappear.",
-          "misconception": "A filament lamp has no resistance when glowing."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain filament lamp resistance."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_diode_data_interpretation_004",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_diode",
-        "statement": "Describe diode behaviour. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.15:diode:data_interpretation",
-      "conceptFamily": "diode",
-      "contextType": "a graph-reading task",
-      "skill": "Describe diode behaviour.",
-      "stem": "A small data set about current-voltage characteristics is being interpreted. Which conclusion is valid? Demand focus: describe diode behaviour.",
-      "question": "A small data set about current-voltage characteristics is being interpreted. Which conclusion is valid? Demand focus: describe diode behaviour.",
-      "options": [
-        "For current-voltage characteristics, the statement is that a diode changes alternating current into magnetism by itself.",
-        "For current-voltage characteristics, it means that a diode lets current pass much more easily in one direction than the other.",
-        "For current-voltage characteristics, the statement is that a diode has identical current in both directions.",
-        "For current-voltage characteristics, the statement is that a diode stores charge like a battery."
-      ],
-      "correctAnswer": "For current-voltage characteristics, it means that a diode lets current pass much more easily in one direction than the other.",
-      "correctIndex": 1,
-      "explanation": "10.15 targets: Describe diode behaviour. Focus area: Current-Voltage Characteristics. For this question, A diode lets current pass much more easily in one direction than the other. Context used: a graph-reading task; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:diode",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, the statement is that a diode has identical current in both directions.",
-          "misconception": "A diode has identical current in both directions."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that a diode stores charge like a battery.",
-          "misconception": "A diode stores charge like a battery."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that a diode changes alternating current into magnetism by itself.",
-          "misconception": "A diode changes alternating current into magnetism by itself."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe diode behaviour."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_ldr_thermistor_representation_interpretation_005",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ldr_thermistor",
-        "statement": "Describe sensors in circuits. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.15:ldr_thermistor:representation_interpretation",
-      "conceptFamily": "ldr_thermistor",
-      "contextType": "a comparison question",
-      "skill": "Describe sensors in circuits.",
-      "stem": "Which option correctly reads the current-voltage characteristics model or diagram idea? Demand focus: describe sensors in circuits.",
-      "question": "Which option correctly reads the current-voltage characteristics model or diagram idea? Demand focus: describe sensors in circuits.",
-      "options": [
-        "In this item, it means that both sensors are used only to measure mass.",
-        "In this item, it means that a thermistor resistance never changes.",
-        "For current-voltage characteristics, it means that an LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer.",
-        "In this item, it means that an LDR resistance rises in bright light."
-      ],
-      "correctAnswer": "For current-voltage characteristics, it means that an LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer.",
-      "correctIndex": 2,
-      "explanation": "10.15 targets: Describe sensors in circuits. Focus area: Current-Voltage Characteristics. For this question, An LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer. Context used: a comparison question; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ldr_thermistor",
-      "distractorRationales": [
-        {
-          "text": "In this item, it means that a thermistor resistance never changes.",
-          "misconception": "An LDR resistance rises in bright light."
-        },
-        {
-          "text": "In this item, it means that both sensors are used only to measure mass.",
-          "misconception": "A thermistor resistance never changes."
-        },
-        {
-          "text": "In this item, it means that an LDR resistance rises in bright light.",
-          "misconception": "Both sensors are used only to measure mass."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe sensors in circuits."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohms_law_direct_recall_006",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohms_law",
-        "statement": "Use the relationship between potential difference, current and resistance. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.15:ohms_law:direct_recall",
-      "conceptFamily": "ohms_law",
-      "contextType": "a method-choice question",
-      "skill": "Use the relationship between potential difference, current and resistance.",
-      "stem": "Which answer matches this current-voltage characteristics objective: Use the relationship between potential difference, current and resistance? Demand focus: use the relationship between potential difference, current and resistance.",
-      "question": "Which answer matches this current-voltage characteristics objective: Use the relationship between potential difference, current and resistance? Demand focus: use the relationship between potential difference, current and resistance.",
-      "options": [
-        "The claim for current-voltage characteristics is that resistance = power × time.",
-        "In this item, it means that resistance = current ÷ potential difference.",
-        "For current-voltage characteristics, this would mean that for a resistor, resistance = potential difference ÷ current.",
-        "For current-voltage characteristics, it means that resistance is independent of voltage and current for every component."
-      ],
-      "correctAnswer": "For current-voltage characteristics, this would mean that for a resistor, resistance = potential difference ÷ current.",
-      "correctIndex": 2,
-      "explanation": "10.15 targets: Use the relationship between potential difference, current and resistance. Focus area: Current-Voltage Characteristics. For this question, For a resistor, resistance = potential difference ÷ current. Context used: a method-choice question; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohms_law",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, it means that resistance is independent of voltage and current for every component.",
-          "misconception": "Resistance = current ÷ potential difference."
-        },
-        {
-          "text": "In this item, it means that resistance = current ÷ potential difference.",
-          "misconception": "Resistance = power × time."
-        },
-        {
-          "text": "The claim for current-voltage characteristics is that resistance = power × time.",
-          "misconception": "Resistance is independent of voltage and current for every component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the relationship between potential difference, current and resistance."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor_applied_context_007",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor",
-        "statement": "Interpret an ohmic conductor. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_ohmic_temperature_003_lo",
+        "statement": "Apply direct proportionality for an ohmic conductor.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
       "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.15:ohmic_conductor:applied_context",
-      "conceptFamily": "ohmic_conductor",
-      "contextType": "a results discussion",
-      "skill": "Interpret an ohmic conductor.",
-      "stem": "In a results discussion, which conclusion is correct for current-voltage characteristics? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
-      "question": "In a results discussion, which conclusion is correct for current-voltage characteristics? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_ohmic_temperature_003",
+      "conceptFamily": "apply_direct_proportionality_for_an_ohmic_conductor",
+      "contextType": "exam_style",
+      "skill": "Apply direct proportionality for an ohmic conductor.",
+      "stem": "A fixed resistor is kept at constant temperature. The potential difference across it is doubled. What happens to the current?",
+      "question": "A fixed resistor is kept at constant temperature. The potential difference across it is doubled. What happens to the current?",
       "options": [
-        "In this current-voltage characteristics item, an ohmic conductor only works in parallel circuits.",
-        "For current-voltage characteristics, it means that an ohmic conductor has current directly proportional to potential difference at constant temperature.",
-        "In this current-voltage characteristics item, an ohmic conductor has a curved I-V graph at all temperatures.",
-        "The answer for current-voltage characteristics says that an ohmic conductor has zero resistance."
+        "It doubles.",
+        "It halves.",
+        "It stays the same.",
+        "It becomes zero."
       ],
-      "correctAnswer": "For current-voltage characteristics, it means that an ohmic conductor has current directly proportional to potential difference at constant temperature.",
-      "correctIndex": 1,
-      "explanation": "10.15 targets: Interpret an ohmic conductor. Focus area: Current-Voltage Characteristics. For this question, An ohmic conductor has current directly proportional to potential difference at constant temperature. Context used: a results discussion; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohmic_conductor",
-      "distractorRationales": [
-        {
-          "text": "In this current-voltage characteristics item, an ohmic conductor has a curved I-V graph at all temperatures.",
-          "misconception": "An ohmic conductor has a curved I-V graph at all temperatures."
-        },
-        {
-          "text": "The answer for current-voltage characteristics says that an ohmic conductor has zero resistance.",
-          "misconception": "An ohmic conductor has zero resistance."
-        },
-        {
-          "text": "In this current-voltage characteristics item, an ohmic conductor only works in parallel circuits.",
-          "misconception": "An ohmic conductor only works in parallel circuits."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret an ohmic conductor."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp_misconception_correction_008",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp",
-        "statement": "Explain filament lamp resistance. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "standard",
-      "difficulty": "hard",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.15:filament_lamp:misconception_correction",
-      "conceptFamily": "filament_lamp",
-      "contextType": "a classroom demonstration",
-      "skill": "Explain filament lamp resistance.",
-      "stem": "Which answer corrects a misconception about current-voltage characteristics? Use the wording carefully: this is about explain filament lamp resistance.",
-      "question": "Which answer corrects a misconception about current-voltage characteristics? Use the wording carefully: this is about explain filament lamp resistance.",
-      "options": [
-        "For current-voltage characteristics, it means that a filament lamp becomes superconducting as it heats.",
-        "In this item, it means that a filament lamp has no resistance when glowing.",
-        "For current-voltage characteristics, it means that a filament lamp resistance falls because atoms disappear.",
-        "For current-voltage characteristics, it means that a filament lamp resistance increases as the filament gets hotter."
-      ],
-      "correctAnswer": "For current-voltage characteristics, it means that a filament lamp resistance increases as the filament gets hotter.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Explain filament lamp resistance. Focus area: Current-Voltage Characteristics. For this question, A filament lamp resistance increases as the filament gets hotter. Context used: a classroom demonstration; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:filament_lamp",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, it means that a filament lamp resistance falls because atoms disappear.",
-          "misconception": "A filament lamp becomes superconducting as it heats."
-        },
-        {
-          "text": "In this item, it means that a filament lamp has no resistance when glowing.",
-          "misconception": "A filament lamp resistance falls because atoms disappear."
-        },
-        {
-          "text": "For current-voltage characteristics, it means that a filament lamp becomes superconducting as it heats.",
-          "misconception": "A filament lamp has no resistance when glowing."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain filament lamp resistance."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_diode_exam_decision_009",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_diode",
-        "statement": "Describe diode behaviour. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.15:diode:exam_decision",
-      "conceptFamily": "diode",
-      "contextType": "a revision checkpoint",
-      "skill": "Describe diode behaviour.",
-      "stem": "The mark scheme is testing describe diode behaviour. Which answer matches that point? Demand focus: describe diode behaviour.",
-      "question": "The mark scheme is testing describe diode behaviour. Which answer matches that point? Demand focus: describe diode behaviour.",
-      "options": [
-        "The answer for current-voltage characteristics says that a diode lets current pass much more easily in one direction than the other.",
-        "In this current-voltage characteristics item, a diode has identical current in both directions.",
-        "For current-voltage characteristics, the statement is that a diode changes alternating current into magnetism by itself.",
-        "For current-voltage characteristics, the statement is that a diode stores charge like a battery."
-      ],
-      "correctAnswer": "The answer for current-voltage characteristics says that a diode lets current pass much more easily in one direction than the other.",
+      "correctAnswer": "It doubles.",
       "correctIndex": 0,
-      "explanation": "10.15 targets: Describe diode behaviour. Focus area: Current-Voltage Characteristics. For this question, A diode lets current pass much more easily in one direction than the other. Context used: a revision checkpoint; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:diode",
+      "explanation": "For an ohmic conductor at constant temperature, current is directly proportional to potential difference.",
+      "misconceptionTag": "ohmic-direct-proportion",
       "distractorRationales": [
         {
-          "text": "For current-voltage characteristics, the statement is that a diode changes alternating current into magnetism by itself.",
-          "misconception": "A diode has identical current in both directions."
+          "text": "It halves.",
+          "misconception": "inverse relationship assumed"
         },
         {
-          "text": "In this current-voltage characteristics item, a diode has identical current in both directions.",
-          "misconception": "A diode stores charge like a battery."
+          "text": "It stays the same.",
+          "misconception": "resistance confused with current"
         },
         {
-          "text": "For current-voltage characteristics, the statement is that a diode stores charge like a battery.",
-          "misconception": "A diode changes alternating current into magnetism by itself."
+          "text": "It becomes zero.",
+          "misconception": "larger potential difference confused with circuit break"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe diode behaviour."
+      "senNote": "Checks: Apply direct proportionality for an ohmic conductor."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_ldr_thermistor_representation_interpretation_010",
+      "id": "edexcel_electricity_cv_filament_lamp_shape_004",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -2460,56 +2037,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ldr_thermistor",
-        "statement": "Describe sensors in circuits. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_filament_lamp_shape_004_lo",
+        "statement": "Explain the shape of a filament lamp I-V graph.",
         "prerequisites": []
       },
-      "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.15:ldr_thermistor:representation_interpretation",
-      "conceptFamily": "ldr_thermistor",
-      "contextType": "an exam-style data table",
-      "skill": "Describe sensors in circuits.",
-      "stem": "A representation of current-voltage characteristics is described in words. Which interpretation is correct? Demand focus: describe sensors in circuits.",
-      "question": "A representation of current-voltage characteristics is described in words. Which interpretation is correct? Demand focus: describe sensors in circuits.",
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_filament_lamp_shape_004",
+      "conceptFamily": "explain_the_shape_of_a_filament_lamp_i_v_graph",
+      "contextType": "exam_style",
+      "skill": "Explain the shape of a filament lamp I-V graph.",
+      "stem": "The I-V graph for a filament lamp curves as the potential difference increases. Why does the graph curve?",
+      "question": "The I-V graph for a filament lamp curves as the potential difference increases. Why does the graph curve?",
       "options": [
-        "For current-voltage characteristics, it means that a thermistor resistance never changes.",
-        "For current-voltage characteristics, it means that an LDR resistance rises in bright light.",
-        "For current-voltage characteristics, it means that both sensors are used only to measure mass.",
-        "The answer for current-voltage characteristics says that an LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer."
+        "The filament gets hotter, so its resistance increases.",
+        "The filament loses all resistance when it glows.",
+        "The current changes direction every second.",
+        "The cell runs out of charge at high potential difference."
       ],
-      "correctAnswer": "The answer for current-voltage characteristics says that an LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Describe sensors in circuits. Focus area: Current-Voltage Characteristics. For this question, An LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer. Context used: an exam-style data table; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ldr_thermistor",
+      "correctAnswer": "The filament gets hotter, so its resistance increases.",
+      "correctIndex": 0,
+      "explanation": "As the filament heats up, the metal ions vibrate more and the resistance increases, so current rises less quickly.",
+      "misconceptionTag": "filament-heating-resistance",
       "distractorRationales": [
         {
-          "text": "For current-voltage characteristics, it means that an LDR resistance rises in bright light.",
-          "misconception": "An LDR resistance rises in bright light."
+          "text": "The filament loses all resistance when it glows.",
+          "misconception": "hot filament resistance decreases to zero"
         },
         {
-          "text": "For current-voltage characteristics, it means that a thermistor resistance never changes.",
-          "misconception": "A thermistor resistance never changes."
+          "text": "The current changes direction every second.",
+          "misconception": "alternating current confused with lamp characteristic"
         },
         {
-          "text": "For current-voltage characteristics, it means that both sensors are used only to measure mass.",
-          "misconception": "Both sensors are used only to measure mass."
+          "text": "The cell runs out of charge at high potential difference.",
+          "misconception": "charge supply misconception"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe sensors in circuits."
+      "senNote": "Checks: Explain the shape of a filament lamp I-V graph."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohms_law_concept_discrimination_011",
+      "id": "edexcel_electricity_cv_diode_direction_005",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -2531,56 +2109,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohms_law",
-        "statement": "Use the relationship between potential difference, current and resistance. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_diode_direction_005_lo",
+        "statement": "Describe the current-voltage characteristic of a diode.",
         "prerequisites": []
       },
       "assessmentObjective": "AO1",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.15:ohms_law:concept_discrimination",
-      "conceptFamily": "ohms_law",
-      "contextType": "a required-practical notebook",
-      "skill": "Use the relationship between potential difference, current and resistance.",
-      "stem": "A student is comparing similar ideas in current-voltage characteristics. Which statement is correct? Demand focus: use the relationship between potential difference, current and resistance.",
-      "question": "A student is comparing similar ideas in current-voltage characteristics. Which statement is correct? Demand focus: use the relationship between potential difference, current and resistance.",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_diode_direction_005",
+      "conceptFamily": "describe_the_current_voltage_characteristic_of_a_diode",
+      "contextType": "exam_style",
+      "skill": "Describe the current-voltage characteristic of a diode.",
+      "stem": "Which statement about a diode is correct?",
+      "question": "Which statement about a diode is correct?",
       "options": [
-        "For current-voltage characteristics, it means that resistance is independent of voltage and current for every component.",
-        "For current-voltage characteristics, it means that resistance = power × time.",
-        "For current-voltage characteristics, it means that resistance = current ÷ potential difference.",
-        "For current-voltage characteristics: For a resistor, resistance = potential difference ÷ current."
+        "It allows current to flow much more easily in one direction than the other.",
+        "It has the same resistance in both directions.",
+        "It stores charge like a cell.",
+        "It changes alternating current into a magnetic field."
       ],
-      "correctAnswer": "For current-voltage characteristics: For a resistor, resistance = potential difference ÷ current.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Use the relationship between potential difference, current and resistance. Focus area: Current-Voltage Characteristics. For this question, For a resistor, resistance = potential difference ÷ current. Context used: a required-practical notebook; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohms_law",
+      "correctAnswer": "It allows current to flow much more easily in one direction than the other.",
+      "correctIndex": 0,
+      "explanation": "A diode has a low resistance in the forward direction and a very high resistance in the reverse direction.",
+      "misconceptionTag": "diode-one-direction",
       "distractorRationales": [
         {
-          "text": "For current-voltage characteristics, it means that resistance = power × time.",
-          "misconception": "Resistance = current ÷ potential difference."
+          "text": "It has the same resistance in both directions.",
+          "misconception": "diode treated as ohmic conductor"
         },
         {
-          "text": "For current-voltage characteristics, it means that resistance is independent of voltage and current for every component.",
-          "misconception": "Resistance = power × time."
+          "text": "It stores charge like a cell.",
+          "misconception": "diode confused with energy source"
         },
         {
-          "text": "For current-voltage characteristics, it means that resistance = current ÷ potential difference.",
-          "misconception": "Resistance is independent of voltage and current for every component."
+          "text": "It changes alternating current into a magnetic field.",
+          "misconception": "component purpose confused"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Use the relationship between potential difference, current and resistance."
+      "senNote": "Checks: Describe the current-voltage characteristic of a diode."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor_applied_context_012",
+      "id": "edexcel_electricity_cv_diode_reverse_006",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -2602,127 +2181,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor",
-        "statement": "Interpret an ohmic conductor. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_diode_reverse_006_lo",
+        "statement": "Interpret reverse-bias behaviour for a diode.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "apply",
-      "responseMode": "applied_context",
-      "patternId": "10.15:ohmic_conductor:applied_context",
-      "conceptFamily": "ohmic_conductor",
-      "contextType": "a technician report",
-      "skill": "Interpret an ohmic conductor.",
-      "stem": "A question set in a technician report tests current-voltage characteristics. Which answer applies the idea correctly? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
-      "question": "A question set in a technician report tests current-voltage characteristics. Which answer applies the idea correctly? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
-      "options": [
-        "For current-voltage characteristics, this would mean that an ohmic conductor only works in parallel circuits.",
-        "For current-voltage characteristics, the option says that an ohmic conductor has a curved I-V graph at all temperatures.",
-        "For current-voltage characteristics, this would mean that an ohmic conductor has zero resistance.",
-        "For current-voltage characteristics, it means that an ohmic conductor has current directly proportional to potential difference at constant temperature."
-      ],
-      "correctAnswer": "For current-voltage characteristics, it means that an ohmic conductor has current directly proportional to potential difference at constant temperature.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Interpret an ohmic conductor. Focus area: Current-Voltage Characteristics. For this question, An ohmic conductor has current directly proportional to potential difference at constant temperature. Context used: a technician report; response mode: applied_context. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohmic_conductor",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, this would mean that an ohmic conductor only works in parallel circuits.",
-          "misconception": "An ohmic conductor has a curved I-V graph at all temperatures."
-        },
-        {
-          "text": "For current-voltage characteristics, the option says that an ohmic conductor has a curved I-V graph at all temperatures.",
-          "misconception": "An ohmic conductor has zero resistance."
-        },
-        {
-          "text": "For current-voltage characteristics, this would mean that an ohmic conductor has zero resistance.",
-          "misconception": "An ohmic conductor only works in parallel circuits."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Interpret an ohmic conductor."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp_data_interpretation_013",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp",
-        "statement": "Explain filament lamp resistance. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "medium",
       "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.15:filament_lamp:data_interpretation",
-      "conceptFamily": "filament_lamp",
-      "contextType": "a labelled diagram",
-      "skill": "Explain filament lamp resistance.",
-      "stem": "A small data set about current-voltage characteristics is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain filament lamp resistance.",
-      "question": "A small data set about current-voltage characteristics is being interpreted. Which conclusion is valid? Use the wording carefully: this is about explain filament lamp resistance.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_diode_reverse_006",
+      "conceptFamily": "interpret_reverse_bias_behaviour_for_a_diode",
+      "contextType": "exam_style",
+      "skill": "Interpret reverse-bias behaviour for a diode.",
+      "stem": "A diode is connected in reverse bias. What current would you expect?",
+      "question": "A diode is connected in reverse bias. What current would you expect?",
       "options": [
-        "The claim for current-voltage characteristics is that a filament lamp resistance falls because atoms disappear.",
-        "In this item, it means that a filament lamp resistance increases as the filament gets hotter.",
-        "The claim for current-voltage characteristics is that a filament lamp becomes superconducting as it heats.",
-        "For current-voltage characteristics, this would mean that a filament lamp has no resistance when glowing."
+        "A very small current, close to zero.",
+        "A larger current than in forward bias.",
+        "The same current as a fixed resistor.",
+        "A current that increases linearly with negative potential difference."
       ],
-      "correctAnswer": "In this item, it means that a filament lamp resistance increases as the filament gets hotter.",
-      "correctIndex": 1,
-      "explanation": "10.15 targets: Explain filament lamp resistance. Focus area: Current-Voltage Characteristics. For this question, A filament lamp resistance increases as the filament gets hotter. Context used: a labelled diagram; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:filament_lamp",
+      "correctAnswer": "A very small current, close to zero.",
+      "correctIndex": 0,
+      "explanation": "In reverse bias a diode has a very high resistance, so only a tiny current flows.",
+      "misconceptionTag": "diode-reverse-bias",
       "distractorRationales": [
         {
-          "text": "The claim for current-voltage characteristics is that a filament lamp becomes superconducting as it heats.",
-          "misconception": "A filament lamp becomes superconducting as it heats."
+          "text": "A larger current than in forward bias.",
+          "misconception": "reverse bias confused with forward bias"
         },
         {
-          "text": "The claim for current-voltage characteristics is that a filament lamp resistance falls because atoms disappear.",
-          "misconception": "A filament lamp resistance falls because atoms disappear."
+          "text": "The same current as a fixed resistor.",
+          "misconception": "diode treated as ohmic conductor"
         },
         {
-          "text": "For current-voltage characteristics, this would mean that a filament lamp has no resistance when glowing.",
-          "misconception": "A filament lamp has no resistance when glowing."
+          "text": "A current that increases linearly with negative potential difference.",
+          "misconception": "straight-line graph applied to diode"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Explain filament lamp resistance."
+      "senNote": "Checks: Interpret reverse-bias behaviour for a diode."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_diode_exam_decision_014",
+      "id": "edexcel_electricity_cv_filament_table_007",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -2744,56 +2253,129 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_diode",
-        "statement": "Describe diode behaviour. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_filament_table_007_lo",
+        "statement": "Use data to decide whether a component is ohmic.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "analyse",
+      "responseMode": "data_interpretation",
+      "patternId": "authored:edexcel_electricity_cv_filament_table_007",
+      "conceptFamily": "use_data_to_decide_whether_a_component_is_ohmic",
+      "contextType": "exam_style",
+      "skill": "Use data to decide whether a component is ohmic.",
+      "stem": "A lamp has a current of 0.20 A at 2.0 V and 0.32 A at 4.0 V. What does this show?",
+      "question": "A lamp has a current of 0.20 A at 2.0 V and 0.32 A at 4.0 V. What does this show?",
+      "options": [
+        "The lamp is not ohmic because current has not doubled.",
+        "The lamp is ohmic because potential difference has doubled.",
+        "The lamp has zero resistance at 4.0 V.",
+        "The lamp transfers no energy at 2.0 V."
+      ],
+      "correctAnswer": "The lamp is not ohmic because current has not doubled.",
+      "correctIndex": 0,
+      "explanation": "If the lamp were ohmic, doubling the potential difference would double the current. The current rises by less, so resistance has increased.",
+      "misconceptionTag": "non-ohmic-data",
+      "distractorRationales": [
+        {
+          "text": "The lamp is ohmic because potential difference has doubled.",
+          "misconception": "only voltage compared"
+        },
+        {
+          "text": "The lamp has zero resistance at 4.0 V.",
+          "misconception": "non-linear graph confused with no resistance"
+        },
+        {
+          "text": "The lamp transfers no energy at 2.0 V.",
+          "misconception": "current flow confused with no energy transfer"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Use data to decide whether a component is ohmic."
+    },
+    {
+      "id": "edexcel_electricity_cv_voltmeter_ammeter_008",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_voltmeter_ammeter_008_lo",
+        "statement": "Choose meter connections for an I-V practical.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
       "commandWord": "choose",
-      "responseMode": "exam_decision",
-      "patternId": "10.15:diode:exam_decision",
-      "conceptFamily": "diode",
-      "contextType": "a short calculation",
-      "skill": "Describe diode behaviour.",
-      "stem": "Which answer is the strongest GCSE Physics response for current-voltage characteristics? Demand focus: describe diode behaviour.",
-      "question": "Which answer is the strongest GCSE Physics response for current-voltage characteristics? Demand focus: describe diode behaviour.",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_voltmeter_ammeter_008",
+      "conceptFamily": "choose_meter_connections_for_an_i_v_practical",
+      "contextType": "exam_style",
+      "skill": "Choose meter connections for an I-V practical.",
+      "stem": "In an I-V investigation, how should the meters be connected to test a resistor?",
+      "question": "In an I-V investigation, how should the meters be connected to test a resistor?",
       "options": [
-        "For current-voltage characteristics, this would mean that a diode changes alternating current into magnetism by itself.",
-        "For current-voltage characteristics: A diode stores charge like a battery.",
-        "For current-voltage characteristics, the option says that a diode lets current pass much more easily in one direction than the other.",
-        "For current-voltage characteristics: A diode has identical current in both directions."
+        "Ammeter in series; voltmeter in parallel with the resistor.",
+        "Ammeter in parallel; voltmeter in series.",
+        "Both meters in series with the resistor.",
+        "Both meters in parallel with the resistor."
       ],
-      "correctAnswer": "For current-voltage characteristics, the option says that a diode lets current pass much more easily in one direction than the other.",
-      "correctIndex": 2,
-      "explanation": "10.15 targets: Describe diode behaviour. Focus area: Current-Voltage Characteristics. For this question, A diode lets current pass much more easily in one direction than the other. Context used: a short calculation; response mode: exam_decision. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:diode",
+      "correctAnswer": "Ammeter in series; voltmeter in parallel with the resistor.",
+      "correctIndex": 0,
+      "explanation": "Current is measured with an ammeter in series. Potential difference is measured with a voltmeter in parallel.",
+      "misconceptionTag": "iv-meter-connections",
       "distractorRationales": [
         {
-          "text": "For current-voltage characteristics: A diode stores charge like a battery.",
-          "misconception": "A diode has identical current in both directions."
+          "text": "Ammeter in parallel; voltmeter in series.",
+          "misconception": "meter connections reversed"
         },
         {
-          "text": "For current-voltage characteristics, this would mean that a diode changes alternating current into magnetism by itself.",
-          "misconception": "A diode stores charge like a battery."
+          "text": "Both meters in series with the resistor.",
+          "misconception": "voltmeter connection misunderstood"
         },
         {
-          "text": "For current-voltage characteristics: A diode has identical current in both directions.",
-          "misconception": "A diode changes alternating current into magnetism by itself."
+          "text": "Both meters in parallel with the resistor.",
+          "misconception": "ammeter connection misunderstood"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe diode behaviour."
+      "senNote": "Checks: Choose meter connections for an I-V practical."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_ldr_thermistor_direct_recall_015",
+      "id": "edexcel_electricity_cv_variable_resistor_009",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -2815,198 +2397,57 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ldr_thermistor",
-        "statement": "Describe sensors in circuits. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "low",
-      "difficulty": "easy",
-      "commandWord": "state",
-      "responseMode": "direct_recall",
-      "patternId": "10.15:ldr_thermistor:direct_recall",
-      "conceptFamily": "ldr_thermistor",
-      "contextType": "a safety decision",
-      "skill": "Describe sensors in circuits.",
-      "stem": "Which answer matches this current-voltage characteristics objective: Describe sensors in circuits? Demand focus: describe sensors in circuits.",
-      "question": "Which answer matches this current-voltage characteristics objective: Describe sensors in circuits? Demand focus: describe sensors in circuits.",
-      "options": [
-        "For current-voltage characteristics, the statement is that both sensors are used only to measure mass.",
-        "The answer for current-voltage characteristics says that an LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer.",
-        "For current-voltage characteristics, the statement is that a thermistor resistance never changes.",
-        "For current-voltage characteristics, the answer claims that an LDR resistance rises in bright light."
-      ],
-      "correctAnswer": "The answer for current-voltage characteristics says that an LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer.",
-      "correctIndex": 1,
-      "explanation": "10.15 targets: Describe sensors in circuits. Focus area: Current-Voltage Characteristics. For this question, An LDR resistance falls in brighter light and an NTC thermistor resistance falls when warmer. Context used: a safety decision; response mode: direct_recall. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ldr_thermistor",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, the statement is that both sensors are used only to measure mass.",
-          "misconception": "An LDR resistance rises in bright light."
-        },
-        {
-          "text": "For current-voltage characteristics, the answer claims that an LDR resistance rises in bright light.",
-          "misconception": "A thermistor resistance never changes."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that a thermistor resistance never changes.",
-          "misconception": "Both sensors are used only to measure mass."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Describe sensors in circuits."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohms_law_concept_discrimination_016",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohms_law",
-        "statement": "Use the relationship between potential difference, current and resistance. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO1",
-      "demand": "standard",
-      "difficulty": "easy",
-      "commandWord": "identify",
-      "responseMode": "concept_discrimination",
-      "patternId": "10.15:ohms_law:concept_discrimination",
-      "conceptFamily": "ohms_law",
-      "contextType": "a graph-reading task",
-      "skill": "Use the relationship between potential difference, current and resistance.",
-      "stem": "Which option best separates the correct current-voltage characteristics idea from a common mix-up? Demand focus: use the relationship between potential difference, current and resistance.",
-      "question": "Which option best separates the correct current-voltage characteristics idea from a common mix-up? Demand focus: use the relationship between potential difference, current and resistance.",
-      "options": [
-        "The answer for current-voltage characteristics says that resistance = power × time.",
-        "The answer for current-voltage characteristics says that resistance = current ÷ potential difference.",
-        "For current-voltage characteristics, the answer claims that for a resistor, resistance = potential difference ÷ current.",
-        "The answer for current-voltage characteristics says that resistance is independent of voltage and current for every component."
-      ],
-      "correctAnswer": "For current-voltage characteristics, the answer claims that for a resistor, resistance = potential difference ÷ current.",
-      "correctIndex": 2,
-      "explanation": "10.15 targets: Use the relationship between potential difference, current and resistance. Focus area: Current-Voltage Characteristics. For this question, For a resistor, resistance = potential difference ÷ current. Context used: a graph-reading task; response mode: concept_discrimination. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohms_law",
-      "distractorRationales": [
-        {
-          "text": "The answer for current-voltage characteristics says that resistance = current ÷ potential difference.",
-          "misconception": "Resistance = current ÷ potential difference."
-        },
-        {
-          "text": "The answer for current-voltage characteristics says that resistance = power × time.",
-          "misconception": "Resistance = power × time."
-        },
-        {
-          "text": "The answer for current-voltage characteristics says that resistance is independent of voltage and current for every component.",
-          "misconception": "Resistance is independent of voltage and current for every component."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Use the relationship between potential difference, current and resistance."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor_misconception_correction_017",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_ohmic_conductor",
-        "statement": "Interpret an ohmic conductor. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_variable_resistor_009_lo",
+        "statement": "Describe the purpose of a variable resistor in an I-V practical.",
         "prerequisites": []
       },
       "assessmentObjective": "AO2",
       "demand": "standard",
       "difficulty": "medium",
-      "commandWord": "correct",
-      "responseMode": "misconception_correction",
-      "patternId": "10.15:ohmic_conductor:misconception_correction",
-      "conceptFamily": "ohmic_conductor",
-      "contextType": "a comparison question",
-      "skill": "Interpret an ohmic conductor.",
-      "stem": "Which answer corrects a misconception about current-voltage characteristics? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
-      "question": "Which answer corrects a misconception about current-voltage characteristics? Keep the answer focused on current-voltage characteristics: interpret an ohmic conductor.",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_variable_resistor_009",
+      "conceptFamily": "describe_the_purpose_of_a_variable_resistor_in_an_i_v_practical",
+      "contextType": "exam_style",
+      "skill": "Describe the purpose of a variable resistor in an I-V practical.",
+      "stem": "Why is a variable resistor used in an I-V characteristics experiment?",
+      "question": "Why is a variable resistor used in an I-V characteristics experiment?",
       "options": [
-        "For current-voltage characteristics, this would mean that an ohmic conductor has a curved I-V graph at all temperatures.",
-        "The claim for current-voltage characteristics is that an ohmic conductor has zero resistance.",
-        "The claim for current-voltage characteristics is that an ohmic conductor only works in parallel circuits.",
-        "In this item, it means that an ohmic conductor has current directly proportional to potential difference at constant temperature."
+        "To change the current and potential difference readings.",
+        "To keep the potential difference fixed for every reading.",
+        "To measure resistance directly.",
+        "To stop charge flowing through the circuit."
       ],
-      "correctAnswer": "In this item, it means that an ohmic conductor has current directly proportional to potential difference at constant temperature.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Interpret an ohmic conductor. Focus area: Current-Voltage Characteristics. For this question, An ohmic conductor has current directly proportional to potential difference at constant temperature. Context used: a comparison question; response mode: misconception_correction. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:ohmic_conductor",
+      "correctAnswer": "To change the current and potential difference readings.",
+      "correctIndex": 0,
+      "explanation": "A variable resistor allows different current and potential difference readings to be taken for the component being tested.",
+      "misconceptionTag": "variable-resistor-purpose",
       "distractorRationales": [
         {
-          "text": "The claim for current-voltage characteristics is that an ohmic conductor has zero resistance.",
-          "misconception": "An ohmic conductor has a curved I-V graph at all temperatures."
+          "text": "To keep the potential difference fixed for every reading.",
+          "misconception": "control confused with independent variable"
         },
         {
-          "text": "The claim for current-voltage characteristics is that an ohmic conductor only works in parallel circuits.",
-          "misconception": "An ohmic conductor has zero resistance."
+          "text": "To measure resistance directly.",
+          "misconception": "variable resistor confused with meter"
         },
         {
-          "text": "For current-voltage characteristics, this would mean that an ohmic conductor has a curved I-V graph at all temperatures.",
-          "misconception": "An ohmic conductor only works in parallel circuits."
+          "text": "To stop charge flowing through the circuit.",
+          "misconception": "open switch confused with variable resistor"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Interpret an ohmic conductor."
+      "senNote": "Checks: Describe the purpose of a variable resistor in an I-V practical."
     },
     {
-      "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp_data_interpretation_018",
+      "id": "edexcel_electricity_cv_repeat_readings_010",
       "examBoard": "Edexcel",
       "subject": "Physics",
       "qualification": "Pearson Edexcel GCSE Physics 1PH0",
@@ -3028,124 +2469,702 @@
       "mathsSkills": [],
       "workingScientifically": [],
       "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_filament_lamp",
-        "statement": "Explain filament lamp resistance. (Current-Voltage Characteristics)",
-        "prerequisites": []
-      },
-      "assessmentObjective": "AO2",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "interpret",
-      "responseMode": "data_interpretation",
-      "patternId": "10.15:filament_lamp:data_interpretation",
-      "conceptFamily": "filament_lamp",
-      "contextType": "a method-choice question",
-      "skill": "Explain filament lamp resistance.",
-      "stem": "Which conclusion about current-voltage characteristics is supported by the evidence? Use the wording carefully: this is about explain filament lamp resistance.",
-      "question": "Which conclusion about current-voltage characteristics is supported by the evidence? Use the wording carefully: this is about explain filament lamp resistance.",
-      "options": [
-        "For current-voltage characteristics, the statement is that a filament lamp becomes superconducting as it heats.",
-        "For current-voltage characteristics, the statement is that a filament lamp resistance falls because atoms disappear.",
-        "For current-voltage characteristics, the statement is that a filament lamp has no resistance when glowing.",
-        "For current-voltage characteristics, it means that a filament lamp resistance increases as the filament gets hotter."
-      ],
-      "correctAnswer": "For current-voltage characteristics, it means that a filament lamp resistance increases as the filament gets hotter.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Explain filament lamp resistance. Focus area: Current-Voltage Characteristics. For this question, A filament lamp resistance increases as the filament gets hotter. Context used: a method-choice question; response mode: data_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:filament_lamp",
-      "distractorRationales": [
-        {
-          "text": "For current-voltage characteristics, the statement is that a filament lamp has no resistance when glowing.",
-          "misconception": "A filament lamp becomes superconducting as it heats."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that a filament lamp becomes superconducting as it heats.",
-          "misconception": "A filament lamp resistance falls because atoms disappear."
-        },
-        {
-          "text": "For current-voltage characteristics, the statement is that a filament lamp resistance falls because atoms disappear.",
-          "misconception": "A filament lamp has no resistance when glowing."
-        }
-      ],
-      "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
-      "review": {
-        "status": "reviewed",
-        "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
-      },
-      "senNote": "This checks one idea only: Explain filament lamp resistance."
-    },
-    {
-      "id": "edexcel_10_15_current_voltage_characteristics_diode_representation_interpretation_019",
-      "examBoard": "Edexcel",
-      "subject": "Physics",
-      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
-      "specVersion": "Issue 4 March 2024",
-      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
-      "topic": "Electricity",
-      "subtopic": "Current-Voltage Characteristics",
-      "topicSlug": "electricity",
-      "subtopicSlug": "current-voltage_characteristics",
-      "topicId": "circuit_components",
-      "specRef": "10.15",
-      "specStatement": "Investigate and interpret current-potential difference graphs.",
-      "paper": "Paper 2",
-      "courseAvailability": [
-        "combined",
-        "physics_only"
-      ],
-      "tier": "foundation_and_higher",
-      "mathsSkills": [],
-      "workingScientifically": [],
-      "learningObjective": {
-        "id": "edexcel_10_15_current_voltage_characteristics_diode",
-        "statement": "Describe diode behaviour. (Current-Voltage Characteristics)",
+        "id": "edexcel_electricity_cv_repeat_readings_010_lo",
+        "statement": "Explain why repeat readings improve an I-V investigation.",
         "prerequisites": []
       },
       "assessmentObjective": "AO3",
-      "demand": "high",
-      "difficulty": "hard",
-      "commandWord": "deduce",
-      "responseMode": "representation_interpretation",
-      "patternId": "10.15:diode:representation_interpretation",
-      "conceptFamily": "diode",
-      "contextType": "a results discussion",
-      "skill": "Describe diode behaviour.",
-      "stem": "A representation of current-voltage characteristics is described in words. Which interpretation is correct? Demand focus: describe diode behaviour.",
-      "question": "A representation of current-voltage characteristics is described in words. Which interpretation is correct? Demand focus: describe diode behaviour.",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_repeat_readings_010",
+      "conceptFamily": "explain_why_repeat_readings_improve_an_i_v_investigation",
+      "contextType": "exam_style",
+      "skill": "Explain why repeat readings improve an I-V investigation.",
+      "stem": "A student repeats each current reading three times in an I-V investigation. Why is this useful?",
+      "question": "A student repeats each current reading three times in an I-V investigation. Why is this useful?",
       "options": [
-        "For current-voltage characteristics, the statement is that a diode changes alternating current into magnetism by itself.",
-        "For current-voltage characteristics, the answer claims that a diode stores charge like a battery.",
-        "For current-voltage characteristics, the statement is that a diode has identical current in both directions.",
-        "The answer for current-voltage characteristics says that a diode lets current pass much more easily in one direction than the other."
+        "It helps identify anomalous readings and calculate a mean.",
+        "It changes the resistance of an ohmic conductor to zero.",
+        "It removes the need for a voltmeter.",
+        "It makes all components ohmic."
       ],
-      "correctAnswer": "The answer for current-voltage characteristics says that a diode lets current pass much more easily in one direction than the other.",
-      "correctIndex": 3,
-      "explanation": "10.15 targets: Describe diode behaviour. Focus area: Current-Voltage Characteristics. For this question, A diode lets current pass much more easily in one direction than the other. Context used: a results discussion; response mode: representation_interpretation. The rejected options each confuse this with a different misconception rather than the named specification point.",
-      "misconceptionTag": "misconception:diode",
+      "correctAnswer": "It helps identify anomalous readings and calculate a mean.",
+      "correctIndex": 0,
+      "explanation": "Repeats make the data more reliable because anomalies can be spotted and a mean can be calculated.",
+      "misconceptionTag": "repeat-readings-reliability",
       "distractorRationales": [
         {
-          "text": "For current-voltage characteristics, the statement is that a diode has identical current in both directions.",
-          "misconception": "A diode has identical current in both directions."
+          "text": "It changes the resistance of an ohmic conductor to zero.",
+          "misconception": "repeat readings confused with component change"
         },
         {
-          "text": "For current-voltage characteristics, the answer claims that a diode stores charge like a battery.",
-          "misconception": "A diode stores charge like a battery."
+          "text": "It removes the need for a voltmeter.",
+          "misconception": "measurement equipment still needed"
         },
         {
-          "text": "For current-voltage characteristics, the statement is that a diode changes alternating current into magnetism by itself.",
-          "misconception": "A diode changes alternating current into magnetism by itself."
+          "text": "It makes all components ohmic.",
+          "misconception": "practical method confused with component behaviour"
         }
       ],
       "diagramJson": null,
-      "authorNotes": "Generated from Edexcel 10.15; review required if spec changes.",
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
       "review": {
         "status": "reviewed",
         "reviewerRole": "Edexcel GCSE Physics content QA",
-        "reviewedAt": "2026-05-02"
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
       },
-      "senNote": "This checks one idea only: Describe diode behaviour."
+      "senNote": "Checks: Explain why repeat readings improve an I-V investigation."
+    },
+    {
+      "id": "edexcel_electricity_cv_graph_compare_011",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_graph_compare_011_lo",
+        "statement": "Compare resistance from I-V graph data.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "higher",
+      "difficulty": "medium",
+      "commandWord": "compare",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:edexcel_electricity_cv_graph_compare_011",
+      "conceptFamily": "compare_resistance_from_i_v_graph_data",
+      "contextType": "exam_style",
+      "skill": "Compare resistance from I-V graph data.",
+      "stem": "Two straight I-V graphs pass through the origin. At 4 V, component X has a larger current than component Y. Which component has the lower resistance?",
+      "question": "Two straight I-V graphs pass through the origin. At 4 V, component X has a larger current than component Y. Which component has the lower resistance?",
+      "options": [
+        "Component X.",
+        "Component Y.",
+        "They must have the same resistance.",
+        "Neither component has resistance."
+      ],
+      "correctAnswer": "Component X.",
+      "correctIndex": 0,
+      "explanation": "For the same potential difference, the component with the larger current has the lower resistance.",
+      "misconceptionTag": "graph-current-resistance",
+      "distractorRationales": [
+        {
+          "text": "Component Y.",
+          "misconception": "larger current interpreted as larger resistance"
+        },
+        {
+          "text": "They must have the same resistance.",
+          "misconception": "both straight lines assumed equal"
+        },
+        {
+          "text": "Neither component has resistance.",
+          "misconception": "straight line confused with zero resistance"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Compare resistance from I-V graph data."
+    },
+    {
+      "id": "edexcel_electricity_cv_resistance_from_table_012",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_resistance_from_table_012_lo",
+        "statement": "Calculate resistance from one point on an I-V graph.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "calculate",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_cv_resistance_from_table_012",
+      "conceptFamily": "calculate_resistance_from_one_point_on_an_i_v_graph",
+      "contextType": "exam_style",
+      "skill": "Calculate resistance from one point on an I-V graph.",
+      "stem": "A component has a current of 0.25 A when the potential difference is 5.0 V. What is its resistance?",
+      "question": "A component has a current of 0.25 A when the potential difference is 5.0 V. What is its resistance?",
+      "options": [
+        "1.25 ohms",
+        "4.75 ohms",
+        "20 ohms",
+        "25 ohms"
+      ],
+      "correctAnswer": "20 ohms",
+      "correctIndex": 2,
+      "explanation": "Use R = V ÷ I. R = 5.0 ÷ 0.25 = 20 ohms.",
+      "misconceptionTag": "single-point-resistance",
+      "distractorRationales": [
+        {
+          "text": "1.25 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "4.75 ohms",
+          "misconception": ""
+        },
+        {
+          "text": "25 ohms",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Calculate resistance from one point on an I-V graph."
+    },
+    {
+      "id": "edexcel_electricity_cv_constant_temperature_013",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_constant_temperature_013_lo",
+        "statement": "Explain why temperature is controlled in an ohmic conductor investigation.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_constant_temperature_013",
+      "conceptFamily": "explain_why_temperature_is_controlled_in_an_ohmic_conductor_investigation",
+      "contextType": "exam_style",
+      "skill": "Explain why temperature is controlled in an ohmic conductor investigation.",
+      "stem": "Why is constant temperature important when testing whether a conductor is ohmic?",
+      "question": "Why is constant temperature important when testing whether a conductor is ohmic?",
+      "options": [
+        "The resistance of a metal conductor can change when its temperature changes.",
+        "Temperature changes the unit of current.",
+        "Temperature makes potential difference equal to charge.",
+        "A conductor cannot have current at room temperature."
+      ],
+      "correctAnswer": "The resistance of a metal conductor can change when its temperature changes.",
+      "correctIndex": 0,
+      "explanation": "Ohm’s law applies to an ohmic conductor only when temperature is constant. Heating can change resistance.",
+      "misconceptionTag": "constant-temperature-ohmic",
+      "distractorRationales": [
+        {
+          "text": "Temperature changes the unit of current.",
+          "misconception": "unit confused with condition"
+        },
+        {
+          "text": "Temperature makes potential difference equal to charge.",
+          "misconception": "equation confusion"
+        },
+        {
+          "text": "A conductor cannot have current at room temperature.",
+          "misconception": "conduction misunderstood"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain why temperature is controlled in an ohmic conductor investigation."
+    },
+    {
+      "id": "edexcel_electricity_cv_lamp_resistance_014",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_lamp_resistance_014_lo",
+        "statement": "Describe how filament lamp resistance changes with temperature.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "describe",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_lamp_resistance_014",
+      "conceptFamily": "describe_how_filament_lamp_resistance_changes_with_temperature",
+      "contextType": "exam_style",
+      "skill": "Describe how filament lamp resistance changes with temperature.",
+      "stem": "A filament lamp is connected to a larger potential difference. What happens to the resistance of the filament?",
+      "question": "A filament lamp is connected to a larger potential difference. What happens to the resistance of the filament?",
+      "options": [
+        "It increases because the filament gets hotter.",
+        "It decreases to zero because the lamp is brighter.",
+        "It stays exactly the same at all currents.",
+        "It becomes negative because current reverses."
+      ],
+      "correctAnswer": "It increases because the filament gets hotter.",
+      "correctIndex": 0,
+      "explanation": "A larger potential difference gives a larger current, heating the filament. Its resistance increases.",
+      "misconceptionTag": "filament-resistance-increases",
+      "distractorRationales": [
+        {
+          "text": "It decreases to zero because the lamp is brighter.",
+          "misconception": "brightness confused with no resistance"
+        },
+        {
+          "text": "It stays exactly the same at all currents.",
+          "misconception": "filament lamp treated as ohmic"
+        },
+        {
+          "text": "It becomes negative because current reverses.",
+          "misconception": "negative voltage confused with resistance sign"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Describe how filament lamp resistance changes with temperature."
+    },
+    {
+      "id": "edexcel_electricity_cv_diode_graph_015",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_diode_graph_015_lo",
+        "statement": "Recognise the I-V graph feature of a reverse-biased diode.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO1",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "recognise",
+      "responseMode": "graph_interpretation",
+      "patternId": "authored:edexcel_electricity_cv_diode_graph_015",
+      "conceptFamily": "recognise_the_i_v_graph_feature_of_a_reverse_biased_diode",
+      "contextType": "exam_style",
+      "skill": "Recognise the I-V graph feature of a reverse-biased diode.",
+      "stem": "Which feature would you expect on the I-V graph for a diode?",
+      "question": "Which feature would you expect on the I-V graph for a diode?",
+      "options": [
+        "Almost no current for reverse potential differences.",
+        "A straight line through the origin in both directions.",
+        "The same curve as a filament lamp.",
+        "A larger reverse current than forward current."
+      ],
+      "correctAnswer": "Almost no current for reverse potential differences.",
+      "correctIndex": 0,
+      "explanation": "A diode has very high resistance in the reverse direction, so the current is almost zero there.",
+      "misconceptionTag": "diode-graph-reverse",
+      "distractorRationales": [
+        {
+          "text": "A straight line through the origin in both directions.",
+          "misconception": "diode treated as resistor"
+        },
+        {
+          "text": "The same curve as a filament lamp.",
+          "misconception": "diode confused with lamp"
+        },
+        {
+          "text": "A larger reverse current than forward current.",
+          "misconception": "reverse and forward behaviour swapped"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Recognise the I-V graph feature of a reverse-biased diode."
+    },
+    {
+      "id": "edexcel_electricity_cv_component_choice_016",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_component_choice_016_lo",
+        "statement": "Identify a component that follows Ohm’s law.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "identify",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_component_choice_016",
+      "conceptFamily": "identify_a_component_that_follows_ohms_law",
+      "contextType": "exam_style",
+      "skill": "Identify a component that follows Ohm’s law.",
+      "stem": "A component has the same resistance for a range of potential differences, provided its temperature is constant. Which component is this most likely to be?",
+      "question": "A component has the same resistance for a range of potential differences, provided its temperature is constant. Which component is this most likely to be?",
+      "options": [
+        "A fixed resistor.",
+        "A filament lamp.",
+        "A diode in reverse bias only.",
+        "A fuse that has melted."
+      ],
+      "correctAnswer": "A fixed resistor.",
+      "correctIndex": 0,
+      "explanation": "A fixed resistor behaves as an ohmic conductor when its temperature is constant.",
+      "misconceptionTag": "fixed-resistor-ohmic",
+      "distractorRationales": [
+        {
+          "text": "A filament lamp.",
+          "misconception": "lamp resistance changes as it heats"
+        },
+        {
+          "text": "A diode in reverse bias only.",
+          "misconception": "diode is directional and non-ohmic"
+        },
+        {
+          "text": "A fuse that has melted.",
+          "misconception": "broken circuit confused with resistor"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Identify a component that follows Ohm’s law."
+    },
+    {
+      "id": "edexcel_electricity_cv_anomalous_reading_017",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_anomalous_reading_017_lo",
+        "statement": "Respond appropriately to an anomalous I-V reading.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "evaluate",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_anomalous_reading_017",
+      "conceptFamily": "respond_appropriately_to_an_anomalous_i_v_reading",
+      "contextType": "exam_style",
+      "skill": "Respond appropriately to an anomalous I-V reading.",
+      "stem": "In an I-V practical, one current reading is much higher than the pattern of the other readings. What should the student do first?",
+      "question": "In an I-V practical, one current reading is much higher than the pattern of the other readings. What should the student do first?",
+      "options": [
+        "Repeat the reading to check whether it is anomalous.",
+        "Delete all the results.",
+        "Change the unit from amperes to volts.",
+        "Assume the component is a diode."
+      ],
+      "correctAnswer": "Repeat the reading to check whether it is anomalous.",
+      "correctIndex": 0,
+      "explanation": "A suspect reading should be repeated before deciding whether it is anomalous.",
+      "misconceptionTag": "anomalous-reading-repeat",
+      "distractorRationales": [
+        {
+          "text": "Delete all the results.",
+          "misconception": "overreaction to one anomaly"
+        },
+        {
+          "text": "Change the unit from amperes to volts.",
+          "misconception": "unit change does not fix data quality"
+        },
+        {
+          "text": "Assume the component is a diode.",
+          "misconception": "anomaly confused with component identification"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Respond appropriately to an anomalous I-V reading."
+    },
+    {
+      "id": "edexcel_electricity_cv_safe_setup_018",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_safe_setup_018_lo",
+        "statement": "Explain a method choice in a filament lamp I-V practical.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO3",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "explain",
+      "responseMode": "exam_mcq",
+      "patternId": "authored:edexcel_electricity_cv_safe_setup_018",
+      "conceptFamily": "explain_a_method_choice_in_a_filament_lamp_i_v_practical",
+      "contextType": "exam_style",
+      "skill": "Explain a method choice in a filament lamp I-V practical.",
+      "stem": "Why should the switch be opened between readings when testing a filament lamp?",
+      "question": "Why should the switch be opened between readings when testing a filament lamp?",
+      "options": [
+        "To reduce heating of the filament between readings.",
+        "To make the ammeter read potential difference.",
+        "To reverse the direction of conventional current.",
+        "To make the lamp an ohmic conductor."
+      ],
+      "correctAnswer": "To reduce heating of the filament between readings.",
+      "correctIndex": 0,
+      "explanation": "Opening the switch reduces heating, which helps limit changes in resistance during the investigation.",
+      "misconceptionTag": "lamp-heating-method",
+      "distractorRationales": [
+        {
+          "text": "To make the ammeter read potential difference.",
+          "misconception": "meter function confused"
+        },
+        {
+          "text": "To reverse the direction of conventional current.",
+          "misconception": "switch confused with polarity reversal"
+        },
+        {
+          "text": "To make the lamp an ohmic conductor.",
+          "misconception": "cooling does not make all lamp data ohmic"
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Explain a method choice in a filament lamp I-V practical."
+    },
+    {
+      "id": "edexcel_electricity_cv_prediction_019",
+      "examBoard": "Edexcel",
+      "subject": "Physics",
+      "qualification": "Pearson Edexcel GCSE Physics 1PH0",
+      "specVersion": "Issue 4 March 2024",
+      "sourceUrl": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Science/2016/Specification/gcse-physics-spec.pdf",
+      "topic": "Electricity",
+      "subtopic": "Current-Voltage Characteristics",
+      "topicSlug": "electricity",
+      "subtopicSlug": "current-voltage_characteristics",
+      "topicId": "circuit_components",
+      "specRef": "10.15",
+      "specStatement": "Investigate and interpret current-potential difference graphs.",
+      "paper": "Paper 2",
+      "courseAvailability": [
+        "combined",
+        "physics_only"
+      ],
+      "tier": "foundation_and_higher",
+      "mathsSkills": [],
+      "workingScientifically": [],
+      "learningObjective": {
+        "id": "edexcel_electricity_cv_prediction_019_lo",
+        "statement": "Predict current for an ohmic conductor using proportionality.",
+        "prerequisites": []
+      },
+      "assessmentObjective": "AO2",
+      "demand": "standard",
+      "difficulty": "medium",
+      "commandWord": "predict",
+      "responseMode": "calculation",
+      "patternId": "authored:edexcel_electricity_cv_prediction_019",
+      "conceptFamily": "predict_current_for_an_ohmic_conductor_using_proportionality",
+      "contextType": "exam_style",
+      "skill": "Predict current for an ohmic conductor using proportionality.",
+      "stem": "A resistor has a current of 0.10 A at 2.0 V and behaves ohmically. What current is expected at 6.0 V?",
+      "question": "A resistor has a current of 0.10 A at 2.0 V and behaves ohmically. What current is expected at 6.0 V?",
+      "options": [
+        "0.03 A",
+        "0.10 A",
+        "0.30 A",
+        "3.0 A"
+      ],
+      "correctAnswer": "0.30 A",
+      "correctIndex": 2,
+      "explanation": "For an ohmic conductor, current is directly proportional to potential difference. Tripling 2.0 V to 6.0 V triples 0.10 A to 0.30 A.",
+      "misconceptionTag": "ohmic-prediction",
+      "distractorRationales": [
+        {
+          "text": "0.03 A",
+          "misconception": ""
+        },
+        {
+          "text": "0.10 A",
+          "misconception": ""
+        },
+        {
+          "text": "3.0 A",
+          "misconception": ""
+        }
+      ],
+      "diagramJson": null,
+      "authorNotes": "Authored exam-style item for Edexcel 10.15.",
+      "review": {
+        "status": "reviewed",
+        "reviewerRole": "Edexcel GCSE Physics content QA",
+        "reviewedAt": "2026-05-02",
+        "source": "authored"
+      },
+      "senNote": "Checks: Predict current for an ohmic conductor using proportionality."
     },
     {
       "id": "edexcel_10_39_domestic_electricity_mains_ac_direct_recall_001",
